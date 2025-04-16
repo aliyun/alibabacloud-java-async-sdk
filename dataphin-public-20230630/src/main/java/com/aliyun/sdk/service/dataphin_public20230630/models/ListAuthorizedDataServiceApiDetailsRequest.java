@@ -46,7 +46,7 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -184,6 +184,15 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends Request {
             private Long appKey; 
             private Integer page; 
             private Integer pageSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListQuery model) {
+                this.appKey = model.appKey;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+            } 
 
             /**
              * <p>AppKey</p>

@@ -52,6 +52,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetClusterQueueInfoByEnvResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -355,6 +371,27 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             private String resourceVersion; 
             private String spec; 
             private String vvpClusterType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.annotations = model.annotations;
+                this.clusterId = model.clusterId;
+                this.createAt = model.createAt;
+                this.flinkImageRegistry = model.flinkImageRegistry;
+                this.flinkImageRepository = model.flinkImageRepository;
+                this.flinkImageTag = model.flinkImageTag;
+                this.flinkVersion = model.flinkVersion;
+                this.labels = model.labels;
+                this.maxVcore = model.maxVcore;
+                this.modifiedAt = model.modifiedAt;
+                this.namespace = model.namespace;
+                this.queueName = model.queueName;
+                this.resourceVersion = model.resourceVersion;
+                this.spec = model.spec;
+                this.vvpClusterType = model.vvpClusterType;
+            } 
 
             /**
              * Annotations.

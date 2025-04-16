@@ -52,6 +52,10 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSupplementDagrunResponseBody model) {
+            this.code = model.code;
+            this.dagrunList = model.dagrunList;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -259,6 +275,19 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
             private Long startExecuteTime; 
             private String status; 
             private String supplementId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DagrunList model) {
+                this.bizDate = model.bizDate;
+                this.duration = model.duration;
+                this.endExecuteTime = model.endExecuteTime;
+                this.id = model.id;
+                this.startExecuteTime = model.startExecuteTime;
+                this.status = model.status;
+                this.supplementId = model.supplementId;
+            } 
 
             /**
              * BizDate.

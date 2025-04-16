@@ -67,7 +67,7 @@ public class GetInstanceUpDownStreamRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -266,6 +266,14 @@ public class GetInstanceUpDownStreamRequest extends Request {
         public static final class Builder {
             private java.util.List<String> fieldInstanceIdList; 
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceId model) {
+                this.fieldInstanceIdList = model.fieldInstanceIdList;
+                this.id = model.id;
+            } 
 
             /**
              * FieldInstanceIdList.

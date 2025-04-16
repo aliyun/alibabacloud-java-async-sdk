@@ -46,7 +46,7 @@ public class ListAddableUsersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -181,6 +181,15 @@ public class ListAddableUsersRequest extends Request {
             private Integer page; 
             private Integer pageSize; 
             private String searchText; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListQuery model) {
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.searchText = model.searchText;
+            } 
 
             /**
              * Page.

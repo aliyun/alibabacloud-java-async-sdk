@@ -52,6 +52,10 @@ public class CreateNodeSupplementResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CreateNodeSupplementResponseBody extends TeaModel {
         private String requestId; 
         private String submitId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNodeSupplementResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.submitId = model.submitId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.

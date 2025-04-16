@@ -46,7 +46,7 @@ public class ListUserGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -219,6 +219,18 @@ public class ListUserGroupsRequest extends Request {
             private String keyword; 
             private Integer pageNo; 
             private Integer pageSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListQuery model) {
+                this.active = model.active;
+                this.adminIdList = model.adminIdList;
+                this.filterMine = model.filterMine;
+                this.keyword = model.keyword;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+            } 
 
             /**
              * Active.

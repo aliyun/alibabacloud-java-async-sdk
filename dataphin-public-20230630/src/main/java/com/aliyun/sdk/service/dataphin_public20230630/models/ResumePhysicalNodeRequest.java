@@ -51,7 +51,7 @@ public class ResumePhysicalNodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -194,6 +194,14 @@ public class ResumePhysicalNodeRequest extends Request {
         public static final class Builder {
             private java.util.List<String> nodeIdList; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResumeCommand model) {
+                this.nodeIdList = model.nodeIdList;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

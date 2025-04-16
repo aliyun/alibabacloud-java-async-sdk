@@ -52,6 +52,10 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
         private String requestId; 
         private SubmitResult submitResult; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitBatchTaskResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.submitResult = model.submitResult;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -199,6 +215,14 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
         public static final class Builder {
             private String nodeId; 
             private Long submitId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubmitResult model) {
+                this.nodeId = model.nodeId;
+                this.submitId = model.submitId;
+            } 
 
             /**
              * NodeId.

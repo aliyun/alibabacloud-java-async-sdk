@@ -45,7 +45,7 @@ public class ListAlertNotificationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -293,6 +293,24 @@ public class ListAlertNotificationsRequest extends Request {
             private String sourceSystem; 
             private java.util.List<String> statusList; 
             private java.util.List<String> userIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListQuery model) {
+                this.alertReasonList = model.alertReasonList;
+                this.channelTypeList = model.channelTypeList;
+                this.customChannelIdList = model.customChannelIdList;
+                this.keyword = model.keyword;
+                this.monitoredItemIdList = model.monitoredItemIdList;
+                this.notifyEndTime = model.notifyEndTime;
+                this.notifyStartTime = model.notifyStartTime;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.sourceSystem = model.sourceSystem;
+                this.statusList = model.statusList;
+                this.userIdList = model.userIdList;
+            } 
 
             /**
              * AlertReasonList.

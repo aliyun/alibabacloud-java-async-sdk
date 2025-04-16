@@ -46,7 +46,7 @@ public class GetLatestSubmitDetailRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -171,6 +171,14 @@ public class GetLatestSubmitDetailRequest extends Request {
         public static final class Builder {
             private String objectId; 
             private String objectType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubmitDetailQuery model) {
+                this.objectId = model.objectId;
+                this.objectType = model.objectType;
+            } 
 
             /**
              * <p>This parameter is required.</p>

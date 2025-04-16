@@ -52,6 +52,10 @@ public class CreateBizEntityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CreateBizEntityResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateBizEntityResponseBody model) {
+            this.code = model.code;
+            this.createResult = model.createResult;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -187,6 +203,13 @@ public class CreateBizEntityResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long bizEntityId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateResult model) {
+                this.bizEntityId = model.bizEntityId;
+            } 
 
             /**
              * BizEntityId.

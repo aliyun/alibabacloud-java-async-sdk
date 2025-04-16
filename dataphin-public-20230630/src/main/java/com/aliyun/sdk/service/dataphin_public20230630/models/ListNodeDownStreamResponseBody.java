@@ -52,6 +52,10 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
         private java.util.List<NodeInfoList> nodeInfoList; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNodeDownStreamResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.nodeInfoList = model.nodeInfoList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -235,6 +251,17 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeInfoList model) {
+                this.depth = model.depth;
+                this.fieldIdList = model.fieldIdList;
+                this.id = model.id;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * Depth.

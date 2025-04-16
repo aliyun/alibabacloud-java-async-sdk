@@ -46,7 +46,7 @@ public class DeleteBatchTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -184,6 +184,15 @@ public class DeleteBatchTaskRequest extends Request {
             private String comment; 
             private Long fileId; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeleteCommand model) {
+                this.comment = model.comment;
+                this.fileId = model.fileId;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

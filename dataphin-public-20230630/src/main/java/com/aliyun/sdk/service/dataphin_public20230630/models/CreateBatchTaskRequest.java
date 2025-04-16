@@ -46,7 +46,7 @@ public class CreateBatchTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -283,6 +283,23 @@ public class CreateBatchTaskRequest extends Request {
             private java.util.List<String> pythonModuleList; 
             private Integer scheduleType; 
             private Integer taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateCommand model) {
+                this.dataSourceCatalog = model.dataSourceCatalog;
+                this.dataSourceId = model.dataSourceId;
+                this.dataSourceSchema = model.dataSourceSchema;
+                this.description = model.description;
+                this.directory = model.directory;
+                this.engine = model.engine;
+                this.name = model.name;
+                this.projectId = model.projectId;
+                this.pythonModuleList = model.pythonModuleList;
+                this.scheduleType = model.scheduleType;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * DataSourceCatalog.

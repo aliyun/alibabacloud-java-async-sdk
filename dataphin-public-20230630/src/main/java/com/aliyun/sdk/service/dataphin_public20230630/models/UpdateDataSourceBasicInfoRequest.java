@@ -46,7 +46,7 @@ public class UpdateDataSourceBasicInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -184,6 +184,15 @@ public class UpdateDataSourceBasicInfoRequest extends Request {
             private String description; 
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateCommand model) {
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>This parameter is required.</p>

@@ -52,6 +52,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListPublishRecordsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPublishRecordsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.listResult = model.listResult;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -368,6 +384,28 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             private String publisher; 
             private String publisherName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.changeType = model.changeType;
+                this.errorMessage = model.errorMessage;
+                this.finishTime = model.finishTime;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModify = model.gmtModify;
+                this.id = model.id;
+                this.nodeId = model.nodeId;
+                this.objectId = model.objectId;
+                this.objectName = model.objectName;
+                this.objectType = model.objectType;
+                this.objectVersion = model.objectVersion;
+                this.projectId = model.projectId;
+                this.publishName = model.publishName;
+                this.publishStatus = model.publishStatus;
+                this.publisher = model.publisher;
+                this.publisherName = model.publisherName;
+            } 
+
             /**
              * ChangeType.
              */
@@ -546,6 +584,14 @@ public class ListPublishRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListResult model) {
+                this.data = model.data;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * Data.

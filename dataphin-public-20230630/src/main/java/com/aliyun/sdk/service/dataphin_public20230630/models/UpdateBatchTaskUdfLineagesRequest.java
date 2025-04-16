@@ -46,7 +46,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -198,6 +198,16 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             private Boolean fullTable; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputLineageList model) {
+                this.columnList = model.columnList;
+                this.env = model.env;
+                this.fullTable = model.fullTable;
+                this.name = model.name;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -315,6 +325,16 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             private Boolean fullTable; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputLineageList model) {
+                this.columnList = model.columnList;
+                this.env = model.env;
+                this.fullTable = model.fullTable;
+                this.name = model.name;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -406,6 +426,14 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             private java.util.List<InputLineageList> inputLineageList; 
             private java.util.List<OutputLineageList> outputLineageList; 
 
+            private Builder() {
+            } 
+
+            private Builder(LineageGroupList model) {
+                this.inputLineageList = model.inputLineageList;
+                this.outputLineageList = model.outputLineageList;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -487,6 +515,15 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             private Long fileId; 
             private java.util.List<LineageGroupList> lineageGroupList; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateCommand model) {
+                this.fileId = model.fileId;
+                this.lineageGroupList = model.lineageGroupList;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

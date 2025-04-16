@@ -46,7 +46,7 @@ public class ListDataSourceWithConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -231,6 +231,19 @@ public class ListDataSourceWithConfigRequest extends Request {
             private java.util.List<String> scopeList; 
             private String tag; 
             private java.util.List<String> typeList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListQuery model) {
+                this.name = model.name;
+                this.ownerList = model.ownerList;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.scopeList = model.scopeList;
+                this.tag = model.tag;
+                this.typeList = model.typeList;
+            } 
 
             /**
              * Name.

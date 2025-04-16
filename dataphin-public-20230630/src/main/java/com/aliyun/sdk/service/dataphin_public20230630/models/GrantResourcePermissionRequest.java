@@ -46,7 +46,7 @@ public class GrantResourcePermissionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -157,6 +157,13 @@ public class GrantResourcePermissionRequest extends Request {
 
         public static final class Builder {
             private String resourceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceList model) {
+                this.resourceId = model.resourceId;
+            } 
 
             /**
              * ResourceId.
@@ -269,6 +276,18 @@ public class GrantResourcePermissionRequest extends Request {
             private java.util.List<ResourceList> resourceList; 
             private String resourceType; 
             private java.util.List<String> userIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(GrantCommand model) {
+                this.effectiveEnd = model.effectiveEnd;
+                this.operateList = model.operateList;
+                this.reason = model.reason;
+                this.resourceList = model.resourceList;
+                this.resourceType = model.resourceType;
+                this.userIdList = model.userIdList;
+            } 
 
             /**
              * <p>This parameter is required.</p>

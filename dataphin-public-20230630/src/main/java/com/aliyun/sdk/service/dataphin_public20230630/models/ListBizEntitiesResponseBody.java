@@ -52,6 +52,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListBizEntitiesResponseBody extends TeaModel {
         private PageResult pageResult; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBizEntitiesResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageResult = model.pageResult;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -452,6 +468,35 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             private java.util.List<Long> suffixBizEntityIdList; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(BizEntityList model) {
+                this.belongToBizEntityIdList = model.belongToBizEntityIdList;
+                this.bizUnitId = model.bizUnitId;
+                this.childBizEntityIdList = model.childBizEntityIdList;
+                this.dataDomainId = model.dataDomainId;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.hasChildBizEntity = model.hasChildBizEntity;
+                this.id = model.id;
+                this.lastModifier = model.lastModifier;
+                this.lastModifierName = model.lastModifierName;
+                this.levelSubBizObject = model.levelSubBizObject;
+                this.name = model.name;
+                this.onlineStatus = model.onlineStatus;
+                this.ownerName = model.ownerName;
+                this.ownerUserId = model.ownerUserId;
+                this.refBizEntityIdList = model.refBizEntityIdList;
+                this.refTableCount = model.refTableCount;
+                this.status = model.status;
+                this.subType = model.subType;
+                this.suffixBizEntityIdList = model.suffixBizEntityIdList;
+                this.type = model.type;
+            } 
+
             /**
              * BelongToBizEntityIdList.
              */
@@ -686,6 +731,14 @@ public class ListBizEntitiesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BizEntityList> bizEntityList; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageResult model) {
+                this.bizEntityList = model.bizEntityList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * BizEntityList.

@@ -52,6 +52,10 @@ public class GetAdHocFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetAdHocFileResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAdHocFileResponseBody model) {
+            this.code = model.code;
+            this.fileInfo = model.fileInfo;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -259,6 +275,19 @@ public class GetAdHocFileResponseBody extends TeaModel {
             private String lastModifier; 
             private String name; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileInfo model) {
+                this.content = model.content;
+                this.creator = model.creator;
+                this.directory = model.directory;
+                this.id = model.id;
+                this.lastModifier = model.lastModifier;
+                this.name = model.name;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * Content.

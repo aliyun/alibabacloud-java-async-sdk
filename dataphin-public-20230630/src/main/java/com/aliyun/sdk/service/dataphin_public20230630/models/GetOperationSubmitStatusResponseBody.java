@@ -52,6 +52,10 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
         private OperationSubmitJob operationSubmitJob; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOperationSubmitStatusResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.operationSubmitJob = model.operationSubmitJob;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -247,6 +263,18 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
             private String operationStatus; 
             private String operator; 
             private String progress; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationSubmitJob model) {
+                this.externalBizId = model.externalBizId;
+                this.jobId = model.jobId;
+                this.operation = model.operation;
+                this.operationStatus = model.operationStatus;
+                this.operator = model.operator;
+                this.progress = model.progress;
+            } 
 
             /**
              * ExternalBizId.

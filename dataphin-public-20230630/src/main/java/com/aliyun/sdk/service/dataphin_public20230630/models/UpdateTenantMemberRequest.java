@@ -46,7 +46,7 @@ public class UpdateTenantMemberRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -206,6 +206,17 @@ public class UpdateTenantMemberRequest extends Request {
             private java.util.List<String> roleList; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(MemberList model) {
+                this.dingNumber = model.dingNumber;
+                this.mail = model.mail;
+                this.mobilePhone = model.mobilePhone;
+                this.roleList = model.roleList;
+                this.userId = model.userId;
+            } 
+
             /**
              * DingNumber.
              */
@@ -285,6 +296,13 @@ public class UpdateTenantMemberRequest extends Request {
 
         public static final class Builder {
             private java.util.List<MemberList> memberList; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateCommand model) {
+                this.memberList = model.memberList;
+            } 
 
             /**
              * <p>This parameter is required.</p>

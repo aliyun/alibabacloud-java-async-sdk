@@ -52,6 +52,10 @@ public class GetUserGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetUserGroupResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private UserGroupInfo userGroupInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserGroupResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.userGroupInfo = model.userGroupInfo;
+        } 
 
         /**
          * Code.
@@ -211,6 +227,15 @@ public class GetUserGroupResponseBody extends TeaModel {
             private String accountName; 
             private String displayName; 
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdminList model) {
+                this.accountName = model.accountName;
+                this.displayName = model.displayName;
+                this.id = model.id;
+            } 
 
             /**
              * AccountName.
@@ -334,6 +359,18 @@ public class GetUserGroupResponseBody extends TeaModel {
             private String id; 
             private String myRole; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserGroupInfo model) {
+                this.active = model.active;
+                this.adminList = model.adminList;
+                this.description = model.description;
+                this.id = model.id;
+                this.myRole = model.myRole;
+                this.name = model.name;
+            } 
 
             /**
              * Active.

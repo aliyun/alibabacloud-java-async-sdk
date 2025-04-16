@@ -51,7 +51,7 @@ public class ListNodeDownStreamRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -205,6 +205,15 @@ public class ListNodeDownStreamRequest extends Request {
             private String key; 
             private java.util.List<String> valueList; 
 
+            private Builder() {
+            } 
+
+            private Builder(FilterList model) {
+                this.exclude = model.exclude;
+                this.key = model.key;
+                this.valueList = model.valueList;
+            } 
+
             /**
              * Exclude.
              */
@@ -279,6 +288,14 @@ public class ListNodeDownStreamRequest extends Request {
         public static final class Builder {
             private java.util.List<String> fieldIdList; 
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeIdList model) {
+                this.fieldIdList = model.fieldIdList;
+                this.id = model.id;
+            } 
 
             /**
              * FieldIdList.
@@ -371,6 +388,16 @@ public class ListNodeDownStreamRequest extends Request {
             private java.util.List<FilterList> filterList; 
             private java.util.List<NodeIdList> nodeIdList; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListQuery model) {
+                this.downStreamDepth = model.downStreamDepth;
+                this.filterList = model.filterList;
+                this.nodeIdList = model.nodeIdList;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * DownStreamDepth.

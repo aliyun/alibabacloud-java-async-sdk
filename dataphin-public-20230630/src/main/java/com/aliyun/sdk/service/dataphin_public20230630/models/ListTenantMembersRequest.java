@@ -46,7 +46,7 @@ public class ListTenantMembersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -207,6 +207,17 @@ public class ListTenantMembersRequest extends Request {
             private java.util.List<String> roleList; 
             private String searchText; 
             private java.util.List<String> userGroupIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListQuery model) {
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.roleList = model.roleList;
+                this.searchText = model.searchText;
+                this.userGroupIdList = model.userGroupIdList;
+            } 
 
             /**
              * <p>This parameter is required.</p>

@@ -46,7 +46,7 @@ public class ExecuteAdHocTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -171,6 +171,14 @@ public class ExecuteAdHocTaskRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParamList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -307,6 +315,19 @@ public class ExecuteAdHocTaskRequest extends Request {
             private String operatorType; 
             private java.util.List<ParamList> paramList; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExecuteCommand model) {
+                this.code = model.code;
+                this.dataSourceCatalog = model.dataSourceCatalog;
+                this.dataSourceId = model.dataSourceId;
+                this.dataSourceSchema = model.dataSourceSchema;
+                this.operatorType = model.operatorType;
+                this.paramList = model.paramList;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

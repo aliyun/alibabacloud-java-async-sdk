@@ -46,7 +46,7 @@ public class CheckDataSourceConnectivityRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -172,6 +172,14 @@ public class CheckDataSourceConnectivityRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigItemList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -246,6 +254,14 @@ public class CheckDataSourceConnectivityRequest extends Request {
         public static final class Builder {
             private java.util.List<ConfigItemList> configItemList; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckCommand model) {
+                this.configItemList = model.configItemList;
+                this.type = model.type;
+            } 
 
             /**
              * <p>This parameter is required.</p>

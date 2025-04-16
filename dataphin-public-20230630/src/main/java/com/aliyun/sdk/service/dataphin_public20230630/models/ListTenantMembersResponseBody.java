@@ -52,6 +52,10 @@ public class ListTenantMembersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListTenantMembersResponseBody extends TeaModel {
         private PageResult pageResult; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTenantMembersResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageResult = model.pageResult;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -223,6 +239,16 @@ public class ListTenantMembersResponseBody extends TeaModel {
             private String description; 
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserGroupList model) {
+                this.active = model.active;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * Active.
@@ -499,6 +525,30 @@ public class ListTenantMembersResponseBody extends TeaModel {
             private java.util.List<UserGroupList> userGroupList; 
             private String whiteIp; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserList model) {
+                this.accountName = model.accountName;
+                this.dingNumber = model.dingNumber;
+                this.displayName = model.displayName;
+                this.displayNameWithoutStatus = model.displayNameWithoutStatus;
+                this.enableWhiteIp = model.enableWhiteIp;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.mail = model.mail;
+                this.mobilePhone = model.mobilePhone;
+                this.name = model.name;
+                this.nickName = model.nickName;
+                this.realName = model.realName;
+                this.roleList = model.roleList;
+                this.sourceId = model.sourceId;
+                this.sourceType = model.sourceType;
+                this.userGroupList = model.userGroupList;
+                this.whiteIp = model.whiteIp;
+            } 
+
             /**
              * AccountName.
              */
@@ -693,6 +743,14 @@ public class ListTenantMembersResponseBody extends TeaModel {
         public static final class Builder {
             private Integer totalCount; 
             private java.util.List<UserList> userList; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageResult model) {
+                this.totalCount = model.totalCount;
+                this.userList = model.userList;
+            } 
 
             /**
              * TotalCount.

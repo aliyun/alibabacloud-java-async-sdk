@@ -46,7 +46,7 @@ public class AddTenantMembersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -170,6 +170,14 @@ public class AddTenantMembersRequest extends Request {
             private String id; 
             private java.util.List<String> roleList; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserList model) {
+                this.id = model.id;
+                this.roleList = model.roleList;
+            } 
+
             /**
              * Id.
              */
@@ -225,6 +233,13 @@ public class AddTenantMembersRequest extends Request {
 
         public static final class Builder {
             private java.util.List<UserList> userList; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddCommand model) {
+                this.userList = model.userList;
+            } 
 
             /**
              * <p>This parameter is required.</p>

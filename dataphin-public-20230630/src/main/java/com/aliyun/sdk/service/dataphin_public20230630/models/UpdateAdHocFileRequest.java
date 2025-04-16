@@ -46,7 +46,7 @@ public class UpdateAdHocFileRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -184,6 +184,15 @@ public class UpdateAdHocFileRequest extends Request {
             private String content; 
             private Long fileId; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateCommand model) {
+                this.content = model.content;
+                this.fileId = model.fileId;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

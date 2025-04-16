@@ -52,6 +52,10 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAdHocTaskLogResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.logInfo = model.logInfo;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -259,6 +275,19 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
             private Integer subTaskId; 
             private String taskId; 
             private String taskStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogInfo model) {
+                this.content = model.content;
+                this.hasNext = model.hasNext;
+                this.hasResult = model.hasResult;
+                this.nextOffset = model.nextOffset;
+                this.subTaskId = model.subTaskId;
+                this.taskId = model.taskId;
+                this.taskStatus = model.taskStatus;
+            } 
 
             /**
              * Content.

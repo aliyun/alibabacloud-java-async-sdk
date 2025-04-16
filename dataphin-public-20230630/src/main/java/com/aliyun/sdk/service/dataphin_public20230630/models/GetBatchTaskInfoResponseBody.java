@@ -52,6 +52,10 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private TaskInfo taskInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBatchTaskInfoResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskInfo = model.taskInfo;
+        } 
 
         /**
          * Code.
@@ -236,6 +252,17 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
             private String schedulePeriod; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomScheduleConfig model) {
+                this.endTime = model.endTime;
+                this.interval = model.interval;
+                this.intervalUnit = model.intervalUnit;
+                this.schedulePeriod = model.schedulePeriod;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * EndTime.
              */
@@ -327,6 +354,14 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParamList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -381,6 +416,13 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String sparkClientVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(SparkClientInfo model) {
+                this.sparkClientVersion = model.sparkClientVersion;
+            } 
 
             /**
              * SparkClientVersion.
@@ -440,6 +482,14 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         public static final class Builder {
             private Integer periodOffset; 
             private String periodType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DependPeriod model) {
+                this.periodOffset = model.periodOffset;
+                this.periodType = model.periodType;
+            } 
 
             /**
              * PeriodOffset.
@@ -615,6 +665,23 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
             private String sourceNodeOutputName; 
             private String sourceNodeUserName; 
             private String sourceTableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpStreamList model) {
+                this.dependPeriod = model.dependPeriod;
+                this.dependStrategy = model.dependStrategy;
+                this.fieldList = model.fieldList;
+                this.nodeType = model.nodeType;
+                this.periodDiff = model.periodDiff;
+                this.sourceNodeEnabled = model.sourceNodeEnabled;
+                this.sourceNodeId = model.sourceNodeId;
+                this.sourceNodeName = model.sourceNodeName;
+                this.sourceNodeOutputName = model.sourceNodeOutputName;
+                this.sourceNodeUserName = model.sourceNodeUserName;
+                this.sourceTableName = model.sourceTableName;
+            } 
 
             /**
              * DependPeriod.
@@ -1126,6 +1193,45 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
             private String status; 
             private Integer taskType; 
             private java.util.List<UpStreamList> upStreamList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskInfo model) {
+                this.code = model.code;
+                this.cronExpression = model.cronExpression;
+                this.customScheduleConfig = model.customScheduleConfig;
+                this.dagId = model.dagId;
+                this.dataSourceCatalog = model.dataSourceCatalog;
+                this.dataSourceId = model.dataSourceId;
+                this.dataSourceSchema = model.dataSourceSchema;
+                this.fileId = model.fileId;
+                this.hasDevNode = model.hasDevNode;
+                this.name = model.name;
+                this.needPublish = model.needPublish;
+                this.nodeDescription = model.nodeDescription;
+                this.nodeFrom = model.nodeFrom;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.nodeOutputNameList = model.nodeOutputNameList;
+                this.nodeStatus = model.nodeStatus;
+                this.operatorUserId = model.operatorUserId;
+                this.ownerName = model.ownerName;
+                this.ownerUserId = model.ownerUserId;
+                this.paramList = model.paramList;
+                this.paused = model.paused;
+                this.priority = model.priority;
+                this.projectId = model.projectId;
+                this.published = model.published;
+                this.remark = model.remark;
+                this.rerunable = model.rerunable;
+                this.schedulePeriod = model.schedulePeriod;
+                this.scheduleType = model.scheduleType;
+                this.sparkClientInfo = model.sparkClientInfo;
+                this.status = model.status;
+                this.taskType = model.taskType;
+                this.upStreamList = model.upStreamList;
+            } 
 
             /**
              * Code.

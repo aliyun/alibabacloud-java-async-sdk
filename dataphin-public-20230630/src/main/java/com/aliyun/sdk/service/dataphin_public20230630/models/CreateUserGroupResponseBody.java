@@ -52,6 +52,10 @@ public class CreateUserGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CreateUserGroupResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String userGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateUserGroupResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.userGroupId = model.userGroupId;
+        } 
 
         /**
          * Code.

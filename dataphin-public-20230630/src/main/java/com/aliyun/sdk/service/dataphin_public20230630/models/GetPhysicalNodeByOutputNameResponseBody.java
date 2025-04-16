@@ -52,6 +52,10 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
         private NodeInfo nodeInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPhysicalNodeByOutputNameResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.nodeInfo = model.nodeInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -200,6 +216,14 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             private String id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Creator model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * Id.
              */
@@ -266,6 +290,14 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Modifier model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * Id.
@@ -334,6 +366,14 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             private String id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Owner model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * Id.
              */
@@ -400,6 +440,14 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectInfo model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * Id.
@@ -623,6 +671,27 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
             private String scheduleType; 
             private String status; 
             private String triggerConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeInfo model) {
+                this.createTime = model.createTime;
+                this.creator = model.creator;
+                this.description = model.description;
+                this.from = model.from;
+                this.id = model.id;
+                this.lastModifiedTime = model.lastModifiedTime;
+                this.modifier = model.modifier;
+                this.name = model.name;
+                this.operatorType = model.operatorType;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.projectInfo = model.projectInfo;
+                this.scheduleType = model.scheduleType;
+                this.status = model.status;
+                this.triggerConfig = model.triggerConfig;
+            } 
 
             /**
              * CreateTime.

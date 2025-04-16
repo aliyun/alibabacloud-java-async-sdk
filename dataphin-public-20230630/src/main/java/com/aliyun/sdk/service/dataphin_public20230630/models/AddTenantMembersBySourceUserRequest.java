@@ -45,7 +45,7 @@ public class AddTenantMembersBySourceUserRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -217,6 +217,18 @@ public class AddTenantMembersBySourceUserRequest extends Request {
             private String mobilePhone; 
             private String sourceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceUserList model) {
+                this.accountName = model.accountName;
+                this.dingNumber = model.dingNumber;
+                this.displayName = model.displayName;
+                this.mail = model.mail;
+                this.mobilePhone = model.mobilePhone;
+                this.sourceId = model.sourceId;
+            } 
+
             /**
              * AccountName.
              */
@@ -303,6 +315,13 @@ public class AddTenantMembersBySourceUserRequest extends Request {
 
         public static final class Builder {
             private java.util.List<SourceUserList> sourceUserList; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddCommand model) {
+                this.sourceUserList = model.sourceUserList;
+            } 
 
             /**
              * SourceUserList.

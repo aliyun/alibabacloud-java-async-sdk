@@ -52,6 +52,10 @@ public class ListDataDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListDataDomainsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataDomainsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -332,6 +348,25 @@ public class ListDataDomainsResponseBody extends TeaModel {
             private String ownerUserId; 
             private Long parentId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDomainList model) {
+                this.abbreviation = model.abbreviation;
+                this.bizUnitId = model.bizUnitId;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.lastModifier = model.lastModifier;
+                this.lastModifierName = model.lastModifierName;
+                this.name = model.name;
+                this.ownerName = model.ownerName;
+                this.ownerUserId = model.ownerUserId;
+                this.parentId = model.parentId;
+            } 
+
             /**
              * Abbreviation.
              */
@@ -474,6 +509,13 @@ public class ListDataDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataDomainList> dataDomainList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataDomainList = model.dataDomainList;
+            } 
 
             /**
              * DataDomainList.

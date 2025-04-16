@@ -52,6 +52,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         private PageResult pageResult; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataSourceWithConfigResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageResult = model.pageResult;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -199,6 +215,14 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigItemList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -399,6 +423,25 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             private String scope; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DevDataSourceInfo model) {
+                this.configItemList = model.configItemList;
+                this.createTime = model.createTime;
+                this.creator = model.creator;
+                this.creatorName = model.creatorName;
+                this.description = model.description;
+                this.env = model.env;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.ownerName = model.ownerName;
+                this.scope = model.scope;
+                this.type = model.type;
+            } 
+
             /**
              * ConfigItemList.
              */
@@ -553,6 +596,14 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProdDataSourceInfoConfigItemList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -753,6 +804,25 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             private String scope; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProdDataSourceInfo model) {
+                this.configItemList = model.configItemList;
+                this.createTime = model.createTime;
+                this.creator = model.creator;
+                this.creatorName = model.creatorName;
+                this.description = model.description;
+                this.env = model.env;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.ownerName = model.ownerName;
+                this.scope = model.scope;
+                this.type = model.type;
+            } 
+
             /**
              * ConfigItemList.
              */
@@ -908,6 +978,14 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             private DevDataSourceInfo devDataSourceInfo; 
             private ProdDataSourceInfo prodDataSourceInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSourceList model) {
+                this.devDataSourceInfo = model.devDataSourceInfo;
+                this.prodDataSourceInfo = model.prodDataSourceInfo;
+            } 
+
             /**
              * <p>开发环境数据源信息</p>
              */
@@ -974,6 +1052,14 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DataSourceList> dataSourceList; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageResult model) {
+                this.dataSourceList = model.dataSourceList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * DataSourceList.

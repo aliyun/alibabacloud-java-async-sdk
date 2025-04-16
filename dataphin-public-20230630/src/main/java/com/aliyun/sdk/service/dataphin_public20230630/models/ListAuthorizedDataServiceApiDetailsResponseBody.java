@@ -52,6 +52,10 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAuthorizedDataServiceApiDetailsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -236,6 +252,17 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
             private String parameterDescription; 
             private String parameterName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthorizedDevReturnParameters model) {
+                this.exampleValue = model.exampleValue;
+                this.isAuthorized = model.isAuthorized;
+                this.parameterDataType = model.parameterDataType;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+            } 
+
             /**
              * ExampleValue.
              */
@@ -362,6 +389,17 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
             private Integer parameterDataType; 
             private String parameterDescription; 
             private String parameterName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthorizedProdReturnParameters model) {
+                this.exampleValue = model.exampleValue;
+                this.isAuthorized = model.isAuthorized;
+                this.parameterDataType = model.parameterDataType;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+            } 
 
             /**
              * ExampleValue.
@@ -550,6 +588,22 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
             private String prodAuthPeriod; 
             private Long projectId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.appId = model.appId;
+                this.authType = model.authType;
+                this.authorizedDevReturnParameters = model.authorizedDevReturnParameters;
+                this.authorizedProdReturnParameters = model.authorizedProdReturnParameters;
+                this.description = model.description;
+                this.devAuthPeriod = model.devAuthPeriod;
+                this.prodAuthPeriod = model.prodAuthPeriod;
+                this.projectId = model.projectId;
+            } 
+
             /**
              * <p>API_ID</p>
              * 
@@ -683,6 +737,14 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.data = model.data;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * Data.

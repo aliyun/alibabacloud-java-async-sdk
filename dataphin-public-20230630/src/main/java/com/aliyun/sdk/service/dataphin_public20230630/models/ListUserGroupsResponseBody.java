@@ -52,6 +52,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListUserGroupsResponseBody extends TeaModel {
         private PageResult pageResult; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserGroupsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageResult = model.pageResult;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -211,6 +227,15 @@ public class ListUserGroupsResponseBody extends TeaModel {
             private String accountName; 
             private String displayName; 
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdminList model) {
+                this.accountName = model.accountName;
+                this.displayName = model.displayName;
+                this.id = model.id;
+            } 
 
             /**
              * AccountName.
@@ -335,6 +360,18 @@ public class ListUserGroupsResponseBody extends TeaModel {
             private String myRole; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserGroupList model) {
+                this.active = model.active;
+                this.adminList = model.adminList;
+                this.description = model.description;
+                this.id = model.id;
+                this.myRole = model.myRole;
+                this.name = model.name;
+            } 
+
             /**
              * Active.
              */
@@ -433,6 +470,14 @@ public class ListUserGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer totalCount; 
             private java.util.List<UserGroupList> userGroupList; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageResult model) {
+                this.totalCount = model.totalCount;
+                this.userGroupList = model.userGroupList;
+            } 
 
             /**
              * TotalCount.

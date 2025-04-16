@@ -52,6 +52,10 @@ public class OfflineBatchTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class OfflineBatchTaskResponseBody extends TeaModel {
         private OfflineResult offlineResult; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(OfflineBatchTaskResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.offlineResult = model.offlineResult;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -187,6 +203,13 @@ public class OfflineBatchTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long publishObjectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OfflineResult model) {
+                this.publishObjectId = model.publishObjectId;
+            } 
 
             /**
              * PublishObjectId.

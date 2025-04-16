@@ -46,7 +46,7 @@ public class OfflineBizEntityRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -197,6 +197,16 @@ public class OfflineBizEntityRequest extends Request {
             private String comment; 
             private Long id; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(OfflineCommand model) {
+                this.bizUnitId = model.bizUnitId;
+                this.comment = model.comment;
+                this.id = model.id;
+                this.type = model.type;
+            } 
 
             /**
              * <p>This parameter is required.</p>

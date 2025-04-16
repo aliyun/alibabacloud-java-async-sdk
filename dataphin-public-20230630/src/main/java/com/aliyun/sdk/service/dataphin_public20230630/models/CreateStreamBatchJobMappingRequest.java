@@ -46,7 +46,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -274,6 +274,22 @@ public class CreateStreamBatchJobMappingRequest extends Request {
             private Long projectId; 
             private String queueName; 
             private String vvpClusterType; 
+
+            private Builder() {
+            } 
+
+            private Builder(StreamBatchJobMappingCreateCommand model) {
+                this.clusterId = model.clusterId;
+                this.description = model.description;
+                this.directory = model.directory;
+                this.engineVersion = model.engineVersion;
+                this.env = model.env;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.projectId = model.projectId;
+                this.queueName = model.queueName;
+                this.vvpClusterType = model.vvpClusterType;
+            } 
 
             /**
              * <p>This parameter is required.</p>

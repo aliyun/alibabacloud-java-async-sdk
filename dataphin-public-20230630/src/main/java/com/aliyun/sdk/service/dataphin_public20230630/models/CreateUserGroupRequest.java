@@ -45,7 +45,7 @@ public class CreateUserGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -192,6 +192,16 @@ public class CreateUserGroupRequest extends Request {
             private java.util.List<String> adminUserIdList; 
             private String description; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateCommand model) {
+                this.active = model.active;
+                this.adminUserIdList = model.adminUserIdList;
+                this.description = model.description;
+                this.name = model.name;
+            } 
 
             /**
              * Active.

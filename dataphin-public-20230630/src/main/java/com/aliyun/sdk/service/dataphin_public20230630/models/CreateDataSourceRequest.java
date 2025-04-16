@@ -45,7 +45,7 @@ public class CreateDataSourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -171,6 +171,14 @@ public class CreateDataSourceRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigItemList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -218,9 +226,11 @@ public class CreateDataSourceRequest extends Request {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private DataSourceCreate(Builder builder) {
@@ -281,6 +291,17 @@ public class CreateDataSourceRequest extends Request {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSourceCreate model) {
+                this.checkActivity = model.checkActivity;
+                this.configItemList = model.configItemList;
+                this.description = model.description;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * CheckActivity.
              */
@@ -306,7 +327,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dp_test_dev</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -314,7 +338,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAX_COMPUTE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -371,6 +398,14 @@ public class CreateDataSourceRequest extends Request {
         public static final class Builder {
             private DataSourceCreate dataSourceCreate; 
             private Long prodDataSourceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DevDataSourceCreate model) {
+                this.dataSourceCreate = model.dataSourceCreate;
+                this.prodDataSourceId = model.prodDataSourceId;
+            } 
 
             /**
              * <p>数据源创建结构体</p>
@@ -441,6 +476,14 @@ public class CreateDataSourceRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProdDataSourceCreateConfigItemList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -488,9 +531,11 @@ public class CreateDataSourceRequest extends Request {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private ProdDataSourceCreate(Builder builder) {
@@ -551,6 +596,17 @@ public class CreateDataSourceRequest extends Request {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProdDataSourceCreate model) {
+                this.checkActivity = model.checkActivity;
+                this.configItemList = model.configItemList;
+                this.description = model.description;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * CheckActivity.
              */
@@ -576,7 +632,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dp_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -584,7 +643,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAX_COMPUTE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -641,6 +703,14 @@ public class CreateDataSourceRequest extends Request {
         public static final class Builder {
             private DevDataSourceCreate devDataSourceCreate; 
             private ProdDataSourceCreate prodDataSourceCreate; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateCommand model) {
+                this.devDataSourceCreate = model.devDataSourceCreate;
+                this.prodDataSourceCreate = model.prodDataSourceCreate;
+            } 
 
             /**
              * DevDataSourceCreate.

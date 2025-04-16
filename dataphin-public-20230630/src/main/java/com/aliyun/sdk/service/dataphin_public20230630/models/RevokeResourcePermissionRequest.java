@@ -46,7 +46,7 @@ public class RevokeResourcePermissionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -158,6 +158,13 @@ public class RevokeResourcePermissionRequest extends Request {
         public static final class Builder {
             private String resourceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceList model) {
+                this.resourceId = model.resourceId;
+            } 
+
             /**
              * ResourceId.
              */
@@ -255,6 +262,17 @@ public class RevokeResourcePermissionRequest extends Request {
             private java.util.List<ResourceList> resourceList; 
             private String resourceType; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RevokeCommand model) {
+                this.operateList = model.operateList;
+                this.reason = model.reason;
+                this.resourceList = model.resourceList;
+                this.resourceType = model.resourceType;
+                this.userId = model.userId;
+            } 
 
             /**
              * OperateList.

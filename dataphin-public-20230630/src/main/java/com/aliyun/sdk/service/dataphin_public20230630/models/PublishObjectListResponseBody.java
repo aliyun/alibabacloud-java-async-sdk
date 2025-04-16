@@ -52,6 +52,10 @@ public class PublishObjectListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class PublishObjectListResponseBody extends TeaModel {
         private PublishResult publishResult; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(PublishObjectListResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.publishResult = model.publishResult;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -187,6 +203,13 @@ public class PublishObjectListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Long> submitIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublishResult model) {
+                this.submitIdList = model.submitIdList;
+            } 
 
             /**
              * SubmitIdList.

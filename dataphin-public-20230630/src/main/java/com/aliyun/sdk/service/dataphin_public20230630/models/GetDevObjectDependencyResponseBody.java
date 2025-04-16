@@ -52,6 +52,10 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDevObjectDependencyResponseBody model) {
+            this.code = model.code;
+            this.devObjectDependencyList = model.devObjectDependencyList;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -200,6 +216,14 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
             private Integer periodOffset; 
             private String periodType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DependencyPeriod model) {
+                this.periodOffset = model.periodOffset;
+                this.periodType = model.periodType;
+            } 
+
             /**
              * PeriodOffset.
              */
@@ -279,6 +303,15 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
             private String description; 
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputContextParamList model) {
+                this.defaultValue = model.defaultValue;
+                this.description = model.description;
+                this.key = model.key;
+            } 
+
             /**
              * DefaultValue.
              */
@@ -353,6 +386,14 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(OwnerList model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * Id.
@@ -720,6 +761,39 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
             private Boolean selfDepend; 
             private String subBizType; 
             private Boolean valid; 
+
+            private Builder() {
+            } 
+
+            private Builder(DevObjectDependencyList model) {
+                this.autoParse = model.autoParse;
+                this.bizType = model.bizType;
+                this.bizUnitId = model.bizUnitId;
+                this.bizUnitName = model.bizUnitName;
+                this.cronExpression = model.cronExpression;
+                this.customCronExpression = model.customCronExpression;
+                this.dependFieldList = model.dependFieldList;
+                this.dependencyPeriod = model.dependencyPeriod;
+                this.dependencyStrategy = model.dependencyStrategy;
+                this.dimMidNode = model.dimMidNode;
+                this.effectFieldList = model.effectFieldList;
+                this.externalBizInfo = model.externalBizInfo;
+                this.manuallyAdd = model.manuallyAdd;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.nodeOutputName = model.nodeOutputName;
+                this.nodeOutputTableName = model.nodeOutputTableName;
+                this.nodeType = model.nodeType;
+                this.outputContextParamList = model.outputContextParamList;
+                this.ownerList = model.ownerList;
+                this.periodDiff = model.periodDiff;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+                this.scheduleType = model.scheduleType;
+                this.selfDepend = model.selfDepend;
+                this.subBizType = model.subBizType;
+                this.valid = model.valid;
+            } 
 
             /**
              * AutoParse.

@@ -52,6 +52,10 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBatchTaskVersionsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -284,6 +300,21 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
             private String userName; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(BatchTaskVersionList model) {
+                this.comment = model.comment;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.nodeId = model.nodeId;
+                this.projectId = model.projectId;
+                this.published = model.published;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.version = model.version;
+            } 
+
             /**
              * Comment.
              */
@@ -394,6 +425,13 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BatchTaskVersionList> batchTaskVersionList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.batchTaskVersionList = model.batchTaskVersionList;
+            } 
 
             /**
              * BatchTaskVersionList.

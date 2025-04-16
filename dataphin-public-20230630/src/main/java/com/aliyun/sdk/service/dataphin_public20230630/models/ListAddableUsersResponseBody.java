@@ -52,6 +52,10 @@ public class ListAddableUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListAddableUsersResponseBody extends TeaModel {
         private PageResult pageResult; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAddableUsersResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageResult = model.pageResult;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -404,6 +420,31 @@ public class ListAddableUsersResponseBody extends TeaModel {
             private String weChatRobot; 
             private String whiteIp; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserList model) {
+                this.accountName = model.accountName;
+                this.dingNumber = model.dingNumber;
+                this.displayName = model.displayName;
+                this.displayNameWithoutStatus = model.displayNameWithoutStatus;
+                this.enableWhiteIp = model.enableWhiteIp;
+                this.feiShuRobot = model.feiShuRobot;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.mail = model.mail;
+                this.mobilePhone = model.mobilePhone;
+                this.name = model.name;
+                this.nickName = model.nickName;
+                this.parentId = model.parentId;
+                this.realName = model.realName;
+                this.sourceId = model.sourceId;
+                this.sourceType = model.sourceType;
+                this.weChatRobot = model.weChatRobot;
+                this.whiteIp = model.whiteIp;
+            } 
+
             /**
              * AccountName.
              */
@@ -606,6 +647,14 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public static final class Builder {
             private Integer totalCount; 
             private java.util.List<UserList> userList; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageResult model) {
+                this.totalCount = model.totalCount;
+                this.userList = model.userList;
+            } 
 
             /**
              * TotalCount.

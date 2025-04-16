@@ -52,6 +52,10 @@ public class ListAlertEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListAlertEventsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAlertEventsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.listResult = model.listResult;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -212,6 +228,15 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private String sourceSystemType; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertObject model) {
+                this.name = model.name;
+                this.sourceSystemType = model.sourceSystemType;
+                this.type = model.type;
+            } 
+
             /**
              * Name.
              */
@@ -286,6 +311,14 @@ public class ListAlertEventsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertReasonParamList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -378,6 +411,16 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private String type; 
             private String uniqueKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertReason model) {
+                this.alertReasonParamList = model.alertReasonParamList;
+                this.bizDate = model.bizDate;
+                this.type = model.type;
+                this.uniqueKey = model.uniqueKey;
+            } 
+
             /**
              * AlertReasonParamList.
              */
@@ -448,6 +491,13 @@ public class ListAlertEventsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserList model) {
+                this.name = model.name;
+            } 
 
             /**
              * Name.
@@ -544,6 +594,17 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private String type; 
             private java.util.List<UserList> userList; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertReceiverList model) {
+                this.alertChannelTypeList = model.alertChannelTypeList;
+                this.customAlertChannelIdList = model.customAlertChannelIdList;
+                this.onCallTableName = model.onCallTableName;
+                this.type = model.type;
+                this.userList = model.userList;
+            } 
+
             /**
              * AlertChannelTypeList.
              */
@@ -635,6 +696,14 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private String bizName; 
             private String projectName; 
 
+            private Builder() {
+            } 
+
+            private Builder(BelongProject model) {
+                this.bizName = model.bizName;
+                this.projectName = model.projectName;
+            } 
+
             /**
              * BizName.
              */
@@ -713,6 +782,15 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private String alertConfigUrl; 
             private String logUrl; 
             private String objectUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(UrlConfig model) {
+                this.alertConfigUrl = model.alertConfigUrl;
+                this.logUrl = model.logUrl;
+                this.objectUrl = model.objectUrl;
+            } 
 
             /**
              * AlertConfigUrl.
@@ -909,6 +987,24 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private Long totalAlertTimes; 
             private UrlConfig urlConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alertFrequency = model.alertFrequency;
+                this.alertObject = model.alertObject;
+                this.alertReason = model.alertReason;
+                this.alertReceiverList = model.alertReceiverList;
+                this.belongProject = model.belongProject;
+                this.doNotDisturbEndTime = model.doNotDisturbEndTime;
+                this.firstAlertTime = model.firstAlertTime;
+                this.id = model.id;
+                this.latestAlertTime = model.latestAlertTime;
+                this.status = model.status;
+                this.totalAlertTimes = model.totalAlertTimes;
+                this.urlConfig = model.urlConfig;
+            } 
+
             /**
              * AlertFrequency.
              */
@@ -1055,6 +1151,14 @@ public class ListAlertEventsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListResult model) {
+                this.data = model.data;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * Data.

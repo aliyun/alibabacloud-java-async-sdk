@@ -52,6 +52,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         private PageResult pageResult; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourcePermissionOperationLogResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageResult = model.pageResult;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -212,6 +228,15 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Account model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * Id.
              */
@@ -286,6 +311,14 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         public static final class Builder {
             private String endTime; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Period model) {
+                this.endTime = model.endTime;
+                this.type = model.type;
+            } 
 
             /**
              * EndTime.
@@ -377,6 +410,16 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             private String env; 
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(BizUnitInfo model) {
+                this.displayName = model.displayName;
+                this.env = model.env;
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * DisplayName.
@@ -487,6 +530,16 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             private String env; 
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectInfo model) {
+                this.displayName = model.displayName;
+                this.env = model.env;
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * DisplayName.
@@ -634,6 +687,19 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             private ProjectInfo projectInfo; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceInfo model) {
+                this.bizUnitInfo = model.bizUnitInfo;
+                this.displayName = model.displayName;
+                this.env = model.env;
+                this.id = model.id;
+                this.name = model.name;
+                this.projectInfo = model.projectInfo;
+                this.type = model.type;
+            } 
+
             /**
              * BizUnitInfo.
              */
@@ -755,6 +821,15 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetAccount model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Id</p>
@@ -918,6 +993,21 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             private ResourceInfo resourceInfo; 
             private TargetAccount targetAccount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.account = model.account;
+                this.authScope = model.authScope;
+                this.operateId = model.operateId;
+                this.operateTime = model.operateTime;
+                this.operateType = model.operateType;
+                this.period = model.period;
+                this.reason = model.reason;
+                this.resourceInfo = model.resourceInfo;
+                this.targetAccount = model.targetAccount;
+            } 
+
             /**
              * Account.
              */
@@ -1040,6 +1130,14 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageResult model) {
+                this.data = model.data;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * Data.

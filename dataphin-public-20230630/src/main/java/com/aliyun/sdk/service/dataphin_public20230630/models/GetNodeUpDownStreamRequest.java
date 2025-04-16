@@ -66,7 +66,7 @@ public class GetNodeUpDownStreamRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -262,6 +262,14 @@ public class GetNodeUpDownStreamRequest extends Request {
         public static final class Builder {
             private String fieldIdList; 
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeId model) {
+                this.fieldIdList = model.fieldIdList;
+                this.id = model.id;
+            } 
 
             /**
              * FieldIdList.

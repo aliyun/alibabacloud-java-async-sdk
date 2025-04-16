@@ -46,7 +46,7 @@ public class CreateBizEntityRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -232,6 +232,19 @@ public class CreateBizEntityRequest extends Request {
             private Long parentId; 
             private java.util.List<Long> refBizEntityIdList; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(BizObject model) {
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.name = model.name;
+                this.ownerUserId = model.ownerUserId;
+                this.parentId = model.parentId;
+                this.refBizEntityIdList = model.refBizEntityIdList;
+                this.type = model.type;
+            } 
 
             /**
              * Description.
@@ -424,6 +437,20 @@ public class CreateBizEntityRequest extends Request {
             private java.util.List<Long> refBizEntityIdList; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(BizProcess model) {
+                this.bizEventEntityIdList = model.bizEventEntityIdList;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.name = model.name;
+                this.ownerUserId = model.ownerUserId;
+                this.preBizProcessIdList = model.preBizProcessIdList;
+                this.refBizEntityIdList = model.refBizEntityIdList;
+                this.type = model.type;
+            } 
+
             /**
              * BizEventEntityIdList.
              */
@@ -586,6 +613,17 @@ public class CreateBizEntityRequest extends Request {
             private Long bizUnitId; 
             private Long dataDomainId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateCommand model) {
+                this.bizObject = model.bizObject;
+                this.bizProcess = model.bizProcess;
+                this.bizUnitId = model.bizUnitId;
+                this.dataDomainId = model.dataDomainId;
+                this.type = model.type;
+            } 
 
             /**
              * BizObject.

@@ -52,6 +52,10 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         private NodeDagInfo nodeDagInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNodeUpDownStreamResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.nodeDagInfo = model.nodeDagInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -224,6 +240,16 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DownStreamNodeList model) {
+                this.fieldIdList = model.fieldIdList;
+                this.id = model.id;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * FieldIdList.
              */
@@ -330,6 +356,16 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(StartNodeList model) {
+                this.fieldIdList = model.fieldIdList;
+                this.id = model.id;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * FieldIdList.
@@ -438,6 +474,16 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(UpStreamNodeList model) {
+                this.fieldIdList = model.fieldIdList;
+                this.id = model.id;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * FieldIdList.
              */
@@ -532,6 +578,15 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
             private java.util.List<DownStreamNodeList> downStreamNodeList; 
             private java.util.List<StartNodeList> startNodeList; 
             private java.util.List<UpStreamNodeList> upStreamNodeList; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeDagInfo model) {
+                this.downStreamNodeList = model.downStreamNodeList;
+                this.startNodeList = model.startNodeList;
+                this.upStreamNodeList = model.upStreamNodeList;
+            } 
 
             /**
              * DownStreamNodeList.

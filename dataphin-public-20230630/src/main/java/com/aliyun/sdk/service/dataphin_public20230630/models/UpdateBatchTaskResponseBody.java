@@ -52,6 +52,10 @@ public class UpdateBatchTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class UpdateBatchTaskResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private UpdateResult updateResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateBatchTaskResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.updateResult = model.updateResult;
+        } 
 
         /**
          * Code.
@@ -187,6 +203,13 @@ public class UpdateBatchTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long fileId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateResult model) {
+                this.fileId = model.fileId;
+            } 
 
             /**
              * FileId.

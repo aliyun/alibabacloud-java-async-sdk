@@ -46,7 +46,7 @@ public class ListResourcePermissionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -196,6 +196,16 @@ public class ListResourcePermissionsRequest extends Request {
             private Integer pageSize; 
             private String searchText; 
             private String tabType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListQuery model) {
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.searchText = model.searchText;
+                this.tabType = model.tabType;
+            } 
 
             /**
              * <p>This parameter is required.</p>

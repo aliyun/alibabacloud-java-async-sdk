@@ -52,6 +52,10 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSparkLocalClientInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -223,6 +239,16 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
             private String clientFileResourceName; 
             private String clientName; 
             private Boolean editable; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clientFileResourceId = model.clientFileResourceId;
+                this.clientFileResourceName = model.clientFileResourceName;
+                this.clientName = model.clientName;
+                this.editable = model.editable;
+            } 
 
             /**
              * ClientFileResourceId.

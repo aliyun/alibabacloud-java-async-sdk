@@ -52,6 +52,10 @@ public class GetMyTenantsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetMyTenantsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.List<TenantList> tenantList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMyTenantsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tenantList = model.tenantList;
+        } 
 
         /**
          * Code.
@@ -307,6 +323,23 @@ public class GetMyTenantsResponseBody extends TeaModel {
             private java.util.List<String> tenantTypeList; 
             private String titleType; 
             private Boolean visible; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantList model) {
+                this.deleteTime = model.deleteTime;
+                this.deleted = model.deleted;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.opsTenant = model.opsTenant;
+                this.ownerId = model.ownerId;
+                this.resourceLimited = model.resourceLimited;
+                this.tenantTypeList = model.tenantTypeList;
+                this.titleType = model.titleType;
+                this.visible = model.visible;
+            } 
 
             /**
              * DeleteTime.

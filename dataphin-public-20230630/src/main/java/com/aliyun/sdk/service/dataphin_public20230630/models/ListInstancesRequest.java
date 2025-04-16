@@ -50,7 +50,7 @@ public class ListInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -387,6 +387,30 @@ public class ListInstancesRequest extends Request {
             private String scheduleType; 
             private String searchText; 
             private java.util.List<String> subBizTypeList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListQuery model) {
+                this.bizType = model.bizType;
+                this.bizUnitId = model.bizUnitId;
+                this.maxBizDate = model.maxBizDate;
+                this.maxRunDate = model.maxRunDate;
+                this.minBizDate = model.minBizDate;
+                this.minRunDate = model.minRunDate;
+                this.nodeId = model.nodeId;
+                this.ownerList = model.ownerList;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.priorityList = model.priorityList;
+                this.projectId = model.projectId;
+                this.runStatusList = model.runStatusList;
+                this.schedulePaused = model.schedulePaused;
+                this.schedulePeriodList = model.schedulePeriodList;
+                this.scheduleType = model.scheduleType;
+                this.searchText = model.searchText;
+                this.subBizTypeList = model.subBizTypeList;
+            } 
 
             /**
              * BizType.

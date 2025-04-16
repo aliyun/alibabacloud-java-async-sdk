@@ -52,6 +52,10 @@ public class ListBizUnitsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListBizUnitsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBizUnitsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -187,6 +203,13 @@ public class ListBizUnitsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountList model) {
+                this.id = model.id;
+            } 
 
             /**
              * Id.
@@ -391,6 +414,26 @@ public class ListBizUnitsResponseBody extends TeaModel {
             private String ownerName; 
             private String ownerUserId; 
 
+            private Builder() {
+            } 
+
+            private Builder(BizUnitList model) {
+                this.accountList = model.accountList;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.env = model.env;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.icon = model.icon;
+                this.id = model.id;
+                this.lastModifier = model.lastModifier;
+                this.lastModifierName = model.lastModifierName;
+                this.mode = model.mode;
+                this.name = model.name;
+                this.ownerName = model.ownerName;
+                this.ownerUserId = model.ownerUserId;
+            } 
+
             /**
              * AccountList.
              */
@@ -541,6 +584,13 @@ public class ListBizUnitsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BizUnitList> bizUnitList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bizUnitList = model.bizUnitList;
+            } 
 
             /**
              * BizUnitList.

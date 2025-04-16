@@ -51,7 +51,7 @@ public class CreateNodeSupplementRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -193,6 +193,14 @@ public class CreateNodeSupplementRequest extends Request {
             private java.util.List<String> fieldIdList; 
             private String id; 
 
+            private Builder() {
+            } 
+
+            private Builder(DownStreamNodeIdList model) {
+                this.fieldIdList = model.fieldIdList;
+                this.id = model.id;
+            } 
+
             /**
              * FieldIdList.
              */
@@ -272,6 +280,15 @@ public class CreateNodeSupplementRequest extends Request {
             private String key; 
             private java.util.List<String> valueList; 
 
+            private Builder() {
+            } 
+
+            private Builder(FilterList model) {
+                this.exclude = model.exclude;
+                this.key = model.key;
+                this.valueList = model.valueList;
+            } 
+
             /**
              * Exclude.
              */
@@ -347,6 +364,14 @@ public class CreateNodeSupplementRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(GlobalParamList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -415,6 +440,14 @@ public class CreateNodeSupplementRequest extends Request {
             private java.util.List<String> fieldIdList; 
             private String id; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeIdList model) {
+                this.fieldIdList = model.fieldIdList;
+                this.id = model.id;
+            } 
+
             /**
              * FieldIdList.
              */
@@ -482,6 +515,14 @@ public class CreateNodeSupplementRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParamList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -548,6 +589,14 @@ public class CreateNodeSupplementRequest extends Request {
         public static final class Builder {
             private String nodeId; 
             private java.util.List<ParamList> paramList; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeParamsList model) {
+                this.nodeId = model.nodeId;
+                this.paramList = model.paramList;
+            } 
 
             /**
              * NodeId.
@@ -751,6 +800,25 @@ public class CreateNodeSupplementRequest extends Request {
             private Integer parallelism; 
             private Long projectId; 
             private String startBizDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateCommand model) {
+                this.containAllDownStream = model.containAllDownStream;
+                this.downStreamNodeIdList = model.downStreamNodeIdList;
+                this.endBizDate = model.endBizDate;
+                this.filterList = model.filterList;
+                this.globalParamList = model.globalParamList;
+                this.maxDueTime = model.maxDueTime;
+                this.minDueTime = model.minDueTime;
+                this.name = model.name;
+                this.nodeIdList = model.nodeIdList;
+                this.nodeParamsList = model.nodeParamsList;
+                this.parallelism = model.parallelism;
+                this.projectId = model.projectId;
+                this.startBizDate = model.startBizDate;
+            } 
 
             /**
              * ContainAllDownStream.

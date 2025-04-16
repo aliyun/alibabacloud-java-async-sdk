@@ -52,6 +52,10 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.List<TaskrunLogList> taskrunLogList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPhysicalInstanceLogResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskrunLogList = model.taskrunLogList;
+        } 
 
         /**
          * Code.
@@ -247,6 +263,18 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private String taskrunId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskrunLogList model) {
+                this.duration = model.duration;
+                this.endTime = model.endTime;
+                this.logContent = model.logContent;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.taskrunId = model.taskrunId;
+            } 
 
             /**
              * Duration.

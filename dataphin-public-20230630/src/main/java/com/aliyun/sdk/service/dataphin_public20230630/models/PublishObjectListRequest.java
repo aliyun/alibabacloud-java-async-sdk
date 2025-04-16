@@ -46,7 +46,7 @@ public class PublishObjectListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -184,6 +184,15 @@ public class PublishObjectListRequest extends Request {
             private String comment; 
             private Long projectId; 
             private java.util.List<Long> submitIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublishCommand model) {
+                this.comment = model.comment;
+                this.projectId = model.projectId;
+                this.submitIdList = model.submitIdList;
+            } 
 
             /**
              * <p>This parameter is required.</p>

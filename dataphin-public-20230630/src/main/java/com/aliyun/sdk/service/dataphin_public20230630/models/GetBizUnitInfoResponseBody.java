@@ -52,6 +52,10 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bizUnitInfo
      */
@@ -101,6 +105,18 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBizUnitInfoResponseBody model) {
+            this.bizUnitInfo = model.bizUnitInfo;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * BizUnitInfo.
@@ -188,6 +204,13 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccountList model) {
+                this.id = model.id;
+            } 
+
             /**
              * Id.
              */
@@ -235,6 +258,13 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
 
+            private Builder() {
+            } 
+
+            private Builder(BusinessLeaderList model) {
+                this.id = model.id;
+            } 
+
             /**
              * Id.
              */
@@ -281,6 +311,13 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataLeaderList model) {
+                this.id = model.id;
+            } 
 
             /**
              * Id.
@@ -352,6 +389,15 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
             private String displayName; 
             private String envName; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnvList model) {
+                this.displayName = model.displayName;
+                this.envName = model.envName;
+                this.name = model.name;
+            } 
 
             /**
              * DisplayName.
@@ -631,6 +677,31 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
             private String name; 
             private String ownerName; 
             private String ownerUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BizUnitInfo model) {
+                this.accountList = model.accountList;
+                this.bizObjectCount = model.bizObjectCount;
+                this.bizProcessCount = model.bizProcessCount;
+                this.businessLeaderList = model.businessLeaderList;
+                this.dataDomainCount = model.dataDomainCount;
+                this.dataLeaderList = model.dataLeaderList;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.envList = model.envList;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.icon = model.icon;
+                this.id = model.id;
+                this.lastModifier = model.lastModifier;
+                this.lastModifierName = model.lastModifierName;
+                this.mode = model.mode;
+                this.name = model.name;
+                this.ownerName = model.ownerName;
+                this.ownerUserId = model.ownerUserId;
+            } 
 
             /**
              * AccountList.

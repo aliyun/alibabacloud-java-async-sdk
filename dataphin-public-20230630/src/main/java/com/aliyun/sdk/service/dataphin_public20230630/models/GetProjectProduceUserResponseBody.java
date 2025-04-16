@@ -52,6 +52,10 @@ public class GetProjectProduceUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetProjectProduceUserResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private User user; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProjectProduceUserResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.user = model.user;
+        } 
 
         /**
          * Code.
@@ -187,6 +203,13 @@ public class GetProjectProduceUserResponseBody extends TeaModel {
 
         public static final class Builder {
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.id = model.id;
+            } 
 
             /**
              * Id.

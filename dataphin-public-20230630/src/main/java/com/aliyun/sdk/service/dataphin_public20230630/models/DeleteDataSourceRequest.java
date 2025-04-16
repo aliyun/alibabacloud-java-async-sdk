@@ -46,7 +46,7 @@ public class DeleteDataSourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -171,6 +171,14 @@ public class DeleteDataSourceRequest extends Request {
         public static final class Builder {
             private String mode; 
             private Long prodDataSourceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeleteCommand model) {
+                this.mode = model.mode;
+                this.prodDataSourceId = model.prodDataSourceId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

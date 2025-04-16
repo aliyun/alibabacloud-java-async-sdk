@@ -52,6 +52,10 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
         private PageResult pageResult; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserGroupMembersResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageResult = model.pageResult;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -212,6 +228,15 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
             private String displayName; 
             private String id; 
 
+            private Builder() {
+            } 
+
+            private Builder(Creator model) {
+                this.accountName = model.accountName;
+                this.displayName = model.displayName;
+                this.id = model.id;
+            } 
+
             /**
              * AccountName.
              */
@@ -298,6 +323,15 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
             private String accountName; 
             private String displayName; 
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.accountName = model.accountName;
+                this.displayName = model.displayName;
+                this.id = model.id;
+            } 
 
             /**
              * AccountName.
@@ -422,6 +456,18 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
             private UserInfo userInfo; 
             private String userRole; 
 
+            private Builder() {
+            } 
+
+            private Builder(MemberList model) {
+                this.creator = model.creator;
+                this.gmtCreate = model.gmtCreate;
+                this.id = model.id;
+                this.userGroupId = model.userGroupId;
+                this.userInfo = model.userInfo;
+                this.userRole = model.userRole;
+            } 
+
             /**
              * Creator.
              */
@@ -520,6 +566,14 @@ public class ListUserGroupMembersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<MemberList> memberList; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageResult model) {
+                this.memberList = model.memberList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * MemberList.

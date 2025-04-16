@@ -52,6 +52,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBatchTaskUdfLineagesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -247,6 +263,18 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             private String name; 
             private Boolean partitionKey; 
             private Boolean primaryKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColumnList model) {
+                this.dataType = model.dataType;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.partitionKey = model.partitionKey;
+                this.primaryKey = model.primaryKey;
+            } 
 
             /**
              * DataType.
@@ -491,6 +519,26 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             private String projectName; 
             private String subType; 
 
+            private Builder() {
+            } 
+
+            private Builder(InputLineageList model) {
+                this.bizUnitId = model.bizUnitId;
+                this.bizUnitName = model.bizUnitName;
+                this.columnList = model.columnList;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.env = model.env;
+                this.fullTable = model.fullTable;
+                this.guid = model.guid;
+                this.name = model.name;
+                this.ownerName = model.ownerName;
+                this.ownerUserId = model.ownerUserId;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+                this.subType = model.subType;
+            } 
+
             /**
              * BizUnitId.
              */
@@ -701,6 +749,18 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             private String name; 
             private Boolean partitionKey; 
             private Boolean primaryKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputLineageListColumnList model) {
+                this.dataType = model.dataType;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.partitionKey = model.partitionKey;
+                this.primaryKey = model.primaryKey;
+            } 
 
             /**
              * DataType.
@@ -945,6 +1005,26 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             private String projectName; 
             private String subType; 
 
+            private Builder() {
+            } 
+
+            private Builder(OutputLineageList model) {
+                this.bizUnitId = model.bizUnitId;
+                this.bizUnitName = model.bizUnitName;
+                this.columnList = model.columnList;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.env = model.env;
+                this.fullTable = model.fullTable;
+                this.guid = model.guid;
+                this.name = model.name;
+                this.ownerName = model.ownerName;
+                this.ownerUserId = model.ownerUserId;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+                this.subType = model.subType;
+            } 
+
             /**
              * BizUnitId.
              */
@@ -1108,6 +1188,14 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             private java.util.List<InputLineageList> inputLineageList; 
             private java.util.List<OutputLineageList> outputLineageList; 
 
+            private Builder() {
+            } 
+
+            private Builder(LineageGroupList model) {
+                this.inputLineageList = model.inputLineageList;
+                this.outputLineageList = model.outputLineageList;
+            } 
+
             /**
              * InputLineageList.
              */
@@ -1162,6 +1250,13 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LineageGroupList> lineageGroupList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.lineageGroupList = model.lineageGroupList;
+            } 
 
             /**
              * LineageGroupList.

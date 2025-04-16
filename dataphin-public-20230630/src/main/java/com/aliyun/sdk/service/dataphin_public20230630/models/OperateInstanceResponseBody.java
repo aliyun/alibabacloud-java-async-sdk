@@ -52,6 +52,10 @@ public class OperateInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class OperateInstanceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(OperateInstanceResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instanceStatusList = model.instanceStatusList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -259,6 +275,19 @@ public class OperateInstanceResponseBody extends TeaModel {
             private String ownerId; 
             private String ownerName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceStatusList model) {
+                this.displayName = model.displayName;
+                this.errorMessage = model.errorMessage;
+                this.id = model.id;
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.ownerName = model.ownerName;
+                this.status = model.status;
+            } 
 
             /**
              * DisplayName.

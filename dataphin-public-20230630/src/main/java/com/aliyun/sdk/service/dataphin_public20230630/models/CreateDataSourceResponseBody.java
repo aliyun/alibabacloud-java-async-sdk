@@ -52,6 +52,10 @@ public class CreateDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CreateDataSourceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDataSourceResponseBody model) {
+            this.code = model.code;
+            this.createResult = model.createResult;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -199,6 +215,14 @@ public class CreateDataSourceResponseBody extends TeaModel {
         public static final class Builder {
             private Long devDataSourceId; 
             private Long prodDataSourceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateResult model) {
+                this.devDataSourceId = model.devDataSourceId;
+                this.prodDataSourceId = model.prodDataSourceId;
+            } 
 
             /**
              * DevDataSourceId.

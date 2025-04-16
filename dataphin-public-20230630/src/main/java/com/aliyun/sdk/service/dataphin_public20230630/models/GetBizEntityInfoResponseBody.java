@@ -52,6 +52,10 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bizEntityInfo
      */
@@ -101,6 +105,18 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBizEntityInfoResponseBody model) {
+            this.bizEntityInfo = model.bizEntityInfo;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * BizEntityInfo.
@@ -415,6 +431,32 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
             private Integer refSummaryTableCount; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(BizObject model) {
+                this.approvalId = model.approvalId;
+                this.approvalStatus = model.approvalStatus;
+                this.childBizEntityIdList = model.childBizEntityIdList;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.lastModifier = model.lastModifier;
+                this.lastModifierName = model.lastModifierName;
+                this.name = model.name;
+                this.onlineStatus = model.onlineStatus;
+                this.ownerName = model.ownerName;
+                this.ownerUserId = model.ownerUserId;
+                this.parentId = model.parentId;
+                this.refBizEntityIdList = model.refBizEntityIdList;
+                this.refDimTableCount = model.refDimTableCount;
+                this.refSummaryTableCount = model.refSummaryTableCount;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * ApprovalId.
@@ -843,6 +885,32 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(BizProcess model) {
+                this.approvalId = model.approvalId;
+                this.approvalStatus = model.approvalStatus;
+                this.bizEventEntityIdList = model.bizEventEntityIdList;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.hasDependent = model.hasDependent;
+                this.id = model.id;
+                this.lastModifier = model.lastModifier;
+                this.lastModifierName = model.lastModifierName;
+                this.name = model.name;
+                this.onlineStatus = model.onlineStatus;
+                this.ownerName = model.ownerName;
+                this.ownerUserId = model.ownerUserId;
+                this.preBizProcessIdList = model.preBizProcessIdList;
+                this.refBizEntityIdList = model.refBizEntityIdList;
+                this.refFactTableCount = model.refFactTableCount;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * ApprovalId.
              */
@@ -1089,6 +1157,17 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
             private Long bizUnitId; 
             private Long dataDomainId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(BizEntityInfo model) {
+                this.bizObject = model.bizObject;
+                this.bizProcess = model.bizProcess;
+                this.bizUnitId = model.bizUnitId;
+                this.dataDomainId = model.dataDomainId;
+                this.type = model.type;
+            } 
 
             /**
              * BizObject.

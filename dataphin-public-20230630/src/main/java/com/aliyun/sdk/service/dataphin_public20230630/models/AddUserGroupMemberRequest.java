@@ -45,7 +45,7 @@ public class AddUserGroupMemberRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -169,6 +169,14 @@ public class AddUserGroupMemberRequest extends Request {
         public static final class Builder {
             private String userGroupId; 
             private java.util.List<String> userIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddCommand model) {
+                this.userGroupId = model.userGroupId;
+                this.userIdList = model.userIdList;
+            } 
 
             /**
              * <p>This parameter is required.</p>

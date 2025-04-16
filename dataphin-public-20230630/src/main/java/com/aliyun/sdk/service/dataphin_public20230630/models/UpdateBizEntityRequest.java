@@ -46,7 +46,7 @@ public class UpdateBizEntityRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -221,6 +221,18 @@ public class UpdateBizEntityRequest extends Request {
             private Long parentId; 
             private java.util.List<Long> refBizEntityIdList; 
 
+            private Builder() {
+            } 
+
+            private Builder(BizObject model) {
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.name = model.name;
+                this.ownerUserId = model.ownerUserId;
+                this.parentId = model.parentId;
+                this.refBizEntityIdList = model.refBizEntityIdList;
+            } 
+
             /**
              * Description.
              */
@@ -392,6 +404,19 @@ public class UpdateBizEntityRequest extends Request {
             private java.util.List<Long> preBizProcessIdList; 
             private java.util.List<Long> refBizEntityIdList; 
 
+            private Builder() {
+            } 
+
+            private Builder(BizProcess model) {
+                this.bizEventEntityIdList = model.bizEventEntityIdList;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.name = model.name;
+                this.ownerUserId = model.ownerUserId;
+                this.preBizProcessIdList = model.preBizProcessIdList;
+                this.refBizEntityIdList = model.refBizEntityIdList;
+            } 
+
             /**
              * BizEventEntityIdList.
              */
@@ -559,6 +584,18 @@ public class UpdateBizEntityRequest extends Request {
             private Long dataDomainId; 
             private Long id; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateCommand model) {
+                this.bizObject = model.bizObject;
+                this.bizProcess = model.bizProcess;
+                this.bizUnitId = model.bizUnitId;
+                this.dataDomainId = model.dataDomainId;
+                this.id = model.id;
+                this.type = model.type;
+            } 
 
             /**
              * BizObject.

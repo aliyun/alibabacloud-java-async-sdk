@@ -46,7 +46,7 @@ public class ListSubmitRecordsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -233,6 +233,19 @@ public class ListSubmitRecordsRequest extends Request {
             private String submitStartTime; 
             private java.util.List<String> submitterList; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchFilter model) {
+                this.changeTypeList = model.changeTypeList;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.projectIdList = model.projectIdList;
+                this.submitEndTime = model.submitEndTime;
+                this.submitStartTime = model.submitStartTime;
+                this.submitterList = model.submitterList;
+            } 
+
             /**
              * ChangeTypeList.
              */
@@ -346,6 +359,14 @@ public class ListSubmitRecordsRequest extends Request {
         public static final class Builder {
             private String keyword; 
             private SearchFilter searchFilter; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListQuery model) {
+                this.keyword = model.keyword;
+                this.searchFilter = model.searchFilter;
+            } 
 
             /**
              * Keyword.

@@ -46,7 +46,7 @@ public class CreatePipelineNodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -183,6 +183,15 @@ public class CreatePipelineNodeRequest extends Request {
             private String directory; 
             private String fileName; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileInfo model) {
+                this.description = model.description;
+                this.directory = model.directory;
+                this.fileName = model.fileName;
+            } 
+
             /**
              * Description.
              */
@@ -301,6 +310,17 @@ public class CreatePipelineNodeRequest extends Request {
             private String pipelineName; 
             private String pipelineType; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreatePipelineNodeCommand model) {
+                this.fileInfo = model.fileInfo;
+                this.nodeType = model.nodeType;
+                this.pipelineName = model.pipelineName;
+                this.pipelineType = model.pipelineType;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

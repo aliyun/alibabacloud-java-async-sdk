@@ -52,6 +52,10 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         private ParseResult parseResult; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ParseBatchTaskDependencyResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.parseResult = model.parseResult;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -260,6 +276,19 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             private String ownerUserId; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScheduleNodeInfoList model) {
+                this.fieldList = model.fieldList;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.outputName = model.outputName;
+                this.ownerName = model.ownerName;
+                this.ownerUserId = model.ownerUserId;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * FieldList.
              */
@@ -367,6 +396,14 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             private String nodeIoType; 
             private java.util.List<ScheduleNodeInfoList> scheduleNodeInfoList; 
 
+            private Builder() {
+            } 
+
+            private Builder(DependNodeList model) {
+                this.nodeIoType = model.nodeIoType;
+                this.scheduleNodeInfoList = model.scheduleNodeInfoList;
+            } 
+
             /**
              * NodeIoType.
              */
@@ -421,6 +458,13 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DependNodeList> dependNodeList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParseResult model) {
+                this.dependNodeList = model.dependNodeList;
+            } 
 
             /**
              * DependNodeList.

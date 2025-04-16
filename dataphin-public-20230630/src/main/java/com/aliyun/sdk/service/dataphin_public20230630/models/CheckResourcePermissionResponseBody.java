@@ -52,6 +52,10 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ResourcePermissionList> resourcePermissionList; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckResourcePermissionResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resourcePermissionList = model.resourcePermissionList;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -199,6 +215,14 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean hasPermission; 
             private String resourceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePermissionList model) {
+                this.hasPermission = model.hasPermission;
+                this.resourceId = model.resourceId;
+            } 
 
             /**
              * HasPermission.

@@ -52,6 +52,10 @@ public class ListNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListNodesResponseBody extends TeaModel {
         private PageResult pageResult; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNodesResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageResult = model.pageResult;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -200,6 +216,14 @@ public class ListNodesResponseBody extends TeaModel {
             private String id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Creator model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * Id.
              */
@@ -266,6 +290,14 @@ public class ListNodesResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Modifier model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * Id.
@@ -334,6 +366,14 @@ public class ListNodesResponseBody extends TeaModel {
             private String id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(OwnerList model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * Id.
              */
@@ -400,6 +440,14 @@ public class ListNodesResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectInfo model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * Id.
@@ -684,6 +732,32 @@ public class ListNodesResponseBody extends TeaModel {
             private String subDetailType; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeList model) {
+                this.bizUnitName = model.bizUnitName;
+                this.createTime = model.createTime;
+                this.creator = model.creator;
+                this.description = model.description;
+                this.dryRun = model.dryRun;
+                this.extendInfo = model.extendInfo;
+                this.from = model.from;
+                this.hasDev = model.hasDev;
+                this.hasProd = model.hasProd;
+                this.id = model.id;
+                this.lastModifiedTime = model.lastModifiedTime;
+                this.modifier = model.modifier;
+                this.name = model.name;
+                this.ownerList = model.ownerList;
+                this.priorityList = model.priorityList;
+                this.projectInfo = model.projectInfo;
+                this.schedulePaused = model.schedulePaused;
+                this.schedulePeriodList = model.schedulePeriodList;
+                this.subDetailType = model.subDetailType;
+                this.type = model.type;
+            } 
+
             /**
              * BizUnitName.
              */
@@ -894,6 +968,14 @@ public class ListNodesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<NodeList> nodeList; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageResult model) {
+                this.nodeList = model.nodeList;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * NodeList.

@@ -46,7 +46,7 @@ public class CheckResourcePermissionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -159,6 +159,13 @@ public class CheckResourcePermissionRequest extends Request {
         public static final class Builder {
             private String resourceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceList model) {
+                this.resourceId = model.resourceId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -248,6 +255,16 @@ public class CheckResourcePermissionRequest extends Request {
             private java.util.List<ResourceList> resourceList; 
             private String resourceType; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckCommand model) {
+                this.operate = model.operate;
+                this.resourceList = model.resourceList;
+                this.resourceType = model.resourceType;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

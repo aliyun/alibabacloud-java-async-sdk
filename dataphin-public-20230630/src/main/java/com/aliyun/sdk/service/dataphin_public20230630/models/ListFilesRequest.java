@@ -46,7 +46,7 @@ public class ListFilesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -210,6 +210,17 @@ public class ListFilesRequest extends Request {
             private String env; 
             private Long projectId; 
             private Boolean recursive; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListQuery model) {
+                this.category = model.category;
+                this.directory = model.directory;
+                this.env = model.env;
+                this.projectId = model.projectId;
+                this.recursive = model.recursive;
+            } 
 
             /**
              * <p>This parameter is required.</p>

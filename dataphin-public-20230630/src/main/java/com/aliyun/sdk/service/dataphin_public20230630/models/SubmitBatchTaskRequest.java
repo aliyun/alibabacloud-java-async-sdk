@@ -46,7 +46,7 @@ public class SubmitBatchTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -211,6 +211,17 @@ public class SubmitBatchTaskRequest extends Request {
             private String schedulePeriod; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomScheduleConfig model) {
+                this.endTime = model.endTime;
+                this.interval = model.interval;
+                this.intervalUnit = model.intervalUnit;
+                this.schedulePeriod = model.schedulePeriod;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -319,6 +330,14 @@ public class SubmitBatchTaskRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParamList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -380,6 +399,13 @@ public class SubmitBatchTaskRequest extends Request {
 
         public static final class Builder {
             private String sparkClientVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(SparkClientInfo model) {
+                this.sparkClientVersion = model.sparkClientVersion;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -443,6 +469,14 @@ public class SubmitBatchTaskRequest extends Request {
         public static final class Builder {
             private Integer periodOffset; 
             private String periodType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DependPeriod model) {
+                this.periodOffset = model.periodOffset;
+                this.periodType = model.periodType;
+            } 
 
             /**
              * PeriodOffset.
@@ -599,6 +633,21 @@ public class SubmitBatchTaskRequest extends Request {
             private String sourceNodeId; 
             private String sourceNodeOutputName; 
             private String sourceTableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpStreamList model) {
+                this.dependPeriod = model.dependPeriod;
+                this.dependStrategy = model.dependStrategy;
+                this.fieldList = model.fieldList;
+                this.nodeType = model.nodeType;
+                this.periodDiff = model.periodDiff;
+                this.sourceNodeEnabled = model.sourceNodeEnabled;
+                this.sourceNodeId = model.sourceNodeId;
+                this.sourceNodeOutputName = model.sourceNodeOutputName;
+                this.sourceTableName = model.sourceTableName;
+            } 
 
             /**
              * DependPeriod.
@@ -913,6 +962,29 @@ public class SubmitBatchTaskRequest extends Request {
             private String schedulePeriod; 
             private SparkClientInfo sparkClientInfo; 
             private java.util.List<UpStreamList> upStreamList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubmitCommand model) {
+                this.code = model.code;
+                this.comment = model.comment;
+                this.cronExpression = model.cronExpression;
+                this.customScheduleConfig = model.customScheduleConfig;
+                this.engine = model.engine;
+                this.fileId = model.fileId;
+                this.name = model.name;
+                this.nodeDescription = model.nodeDescription;
+                this.nodeOutputNameList = model.nodeOutputNameList;
+                this.nodeStatus = model.nodeStatus;
+                this.paramList = model.paramList;
+                this.priority = model.priority;
+                this.projectId = model.projectId;
+                this.pythonModuleList = model.pythonModuleList;
+                this.schedulePeriod = model.schedulePeriod;
+                this.sparkClientInfo = model.sparkClientInfo;
+                this.upStreamList = model.upStreamList;
+            } 
 
             /**
              * <p>This parameter is required.</p>

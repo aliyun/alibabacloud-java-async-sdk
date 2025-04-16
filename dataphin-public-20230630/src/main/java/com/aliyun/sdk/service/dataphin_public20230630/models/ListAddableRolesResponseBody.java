@@ -52,6 +52,10 @@ public class ListAddableRolesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListAddableRolesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<RoleList> roleList; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAddableRolesResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.roleList = model.roleList;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -199,6 +215,14 @@ public class ListAddableRolesResponseBody extends TeaModel {
         public static final class Builder {
             private String code; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoleList model) {
+                this.code = model.code;
+                this.name = model.name;
+            } 
 
             /**
              * Code.

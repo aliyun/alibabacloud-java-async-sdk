@@ -46,7 +46,7 @@ public class CreateBizUnitRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -158,6 +158,13 @@ public class CreateBizUnitRequest extends Request {
 
         public static final class Builder {
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BizUnitAccountList model) {
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -272,6 +279,18 @@ public class CreateBizUnitRequest extends Request {
             private String icon; 
             private String mode; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateCommand model) {
+                this.bizUnitAccountList = model.bizUnitAccountList;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.icon = model.icon;
+                this.mode = model.mode;
+                this.name = model.name;
+            } 
 
             /**
              * <p>This parameter is required.</p>

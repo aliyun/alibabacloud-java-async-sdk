@@ -52,6 +52,10 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         private java.util.List<OperationLogList> operationLogList; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPhysicalNodeOperationLogResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.operationLogList = model.operationLogList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -235,6 +251,17 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
             private String operationType; 
             private String operator; 
             private String operatorName; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationLogList model) {
+                this.context = model.context;
+                this.operationTime = model.operationTime;
+                this.operationType = model.operationType;
+                this.operator = model.operator;
+                this.operatorName = model.operatorName;
+            } 
 
             /**
              * Context.

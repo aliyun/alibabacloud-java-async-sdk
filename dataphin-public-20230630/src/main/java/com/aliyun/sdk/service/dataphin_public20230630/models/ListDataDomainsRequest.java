@@ -46,7 +46,7 @@ public class ListDataDomainsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -181,6 +181,15 @@ public class ListDataDomainsRequest extends Request {
             private java.util.List<Long> bizUnitIdList; 
             private String keyword; 
             private java.util.List<Long> parentIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListQuery model) {
+                this.bizUnitIdList = model.bizUnitIdList;
+                this.keyword = model.keyword;
+                this.parentIdList = model.parentIdList;
+            } 
 
             /**
              * BizUnitIdList.

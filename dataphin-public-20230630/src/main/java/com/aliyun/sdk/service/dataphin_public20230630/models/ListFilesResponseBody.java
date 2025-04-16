@@ -52,6 +52,10 @@ public class ListFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListFilesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFilesResponseBody model) {
+            this.code = model.code;
+            this.fileList = model.fileList;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -307,6 +323,23 @@ public class ListFilesResponseBody extends TeaModel {
             private String lastModifier; 
             private String name; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileList model) {
+                this.category = model.category;
+                this.content = model.content;
+                this.creator = model.creator;
+                this.directory = model.directory;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.lastModifier = model.lastModifier;
+                this.name = model.name;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * Category.

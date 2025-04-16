@@ -52,6 +52,10 @@ public class CreatePipelineNodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CreatePipelineNodeResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePipelineNodeResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -211,6 +227,15 @@ public class CreatePipelineNodeResponseBody extends TeaModel {
             private java.util.List<String> errorCodeList; 
             private java.util.List<String> errorMessageList; 
             private Long pipelineId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorCodeList = model.errorCodeList;
+                this.errorMessageList = model.errorMessageList;
+                this.pipelineId = model.pipelineId;
+            } 
 
             /**
              * ErrorCodeList.

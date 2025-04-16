@@ -46,7 +46,7 @@ public class ListPublishRecordsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -245,6 +245,20 @@ public class ListPublishRecordsRequest extends Request {
             private java.util.List<Integer> publishStatusList; 
             private java.util.List<String> submitterList; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchFilter model) {
+                this.changeTypeList = model.changeTypeList;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.projectIdList = model.projectIdList;
+                this.publishEndTime = model.publishEndTime;
+                this.publishStartTime = model.publishStartTime;
+                this.publishStatusList = model.publishStatusList;
+                this.submitterList = model.submitterList;
+            } 
+
             /**
              * ChangeTypeList.
              */
@@ -366,6 +380,14 @@ public class ListPublishRecordsRequest extends Request {
         public static final class Builder {
             private String keyword; 
             private SearchFilter searchFilter; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListQuery model) {
+                this.keyword = model.keyword;
+                this.searchFilter = model.searchFilter;
+            } 
 
             /**
              * Keyword.

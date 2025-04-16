@@ -46,7 +46,7 @@ public class CreateAdHocFileRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -197,6 +197,16 @@ public class CreateAdHocFileRequest extends Request {
             private String directory; 
             private String name; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateCommand model) {
+                this.content = model.content;
+                this.directory = model.directory;
+                this.name = model.name;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

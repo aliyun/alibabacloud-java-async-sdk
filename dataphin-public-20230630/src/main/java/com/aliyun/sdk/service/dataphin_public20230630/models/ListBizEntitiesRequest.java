@@ -46,7 +46,7 @@ public class ListBizEntitiesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -242,6 +242,20 @@ public class ListBizEntitiesRequest extends Request {
             private java.util.List<String> statusList; 
             private java.util.List<String> subTypeList; 
 
+            private Builder() {
+            } 
+
+            private Builder(FilterCriteria model) {
+                this.bizUnitIdList = model.bizUnitIdList;
+                this.bizUnitNameList = model.bizUnitNameList;
+                this.dataDomainIdList = model.dataDomainIdList;
+                this.dataDomainNameList = model.dataDomainNameList;
+                this.hasTableRef = model.hasTableRef;
+                this.ownerUserIdList = model.ownerUserIdList;
+                this.statusList = model.statusList;
+                this.subTypeList = model.subTypeList;
+            } 
+
             /**
              * BizUnitIdList.
              */
@@ -380,6 +394,16 @@ public class ListBizEntitiesRequest extends Request {
             private String keyword; 
             private Integer page; 
             private Integer pageSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListQuery model) {
+                this.filterCriteria = model.filterCriteria;
+                this.keyword = model.keyword;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+            } 
 
             /**
              * FilterCriteria.

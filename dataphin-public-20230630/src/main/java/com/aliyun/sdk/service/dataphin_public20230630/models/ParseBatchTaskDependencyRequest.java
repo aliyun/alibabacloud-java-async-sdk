@@ -46,7 +46,7 @@ public class ParseBatchTaskDependencyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -244,6 +244,20 @@ public class ParseBatchTaskDependencyRequest extends Request {
             private Boolean needQueryLineages; 
             private String operatorType; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParseCommand model) {
+                this.code = model.code;
+                this.dataSourceCatalog = model.dataSourceCatalog;
+                this.dataSourceId = model.dataSourceId;
+                this.dataSourceSchema = model.dataSourceSchema;
+                this.includeAllInputTables = model.includeAllInputTables;
+                this.needQueryLineages = model.needQueryLineages;
+                this.operatorType = model.operatorType;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

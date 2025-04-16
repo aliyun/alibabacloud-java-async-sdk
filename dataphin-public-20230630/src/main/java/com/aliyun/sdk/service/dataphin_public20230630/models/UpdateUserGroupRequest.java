@@ -45,7 +45,7 @@ public class UpdateUserGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -193,6 +193,16 @@ public class UpdateUserGroupRequest extends Request {
             private String description; 
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateCommand model) {
+                this.adminUserIdList = model.adminUserIdList;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * AdminUserIdList.

@@ -52,6 +52,10 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         private String requestId; 
         private SubmitDetailResult submitDetailResult; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLatestSubmitDetailResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.submitDetailResult = model.submitDetailResult;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -211,6 +227,15 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             private String objectId; 
             private String objectName; 
             private String objectType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubmitObject model) {
+                this.objectId = model.objectId;
+                this.objectName = model.objectName;
+                this.objectType = model.objectType;
+            } 
 
             /**
              * ObjectId.
@@ -334,6 +359,18 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             private Long projectId; 
             private String submitComment; 
             private SubmitObject submitObject; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReleaseObject model) {
+                this.changeType = model.changeType;
+                this.nodeId = model.nodeId;
+                this.objectVersion = model.objectVersion;
+                this.projectId = model.projectId;
+                this.submitComment = model.submitComment;
+                this.submitObject = model.submitObject;
+            } 
 
             /**
              * ChangeType.
@@ -469,6 +506,17 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             private ReleaseObject releaseObject; 
             private String submitStatus; 
             private String tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubmitDetailResult model) {
+                this.id = model.id;
+                this.publishStatus = model.publishStatus;
+                this.releaseObject = model.releaseObject;
+                this.submitStatus = model.submitStatus;
+                this.tag = model.tag;
+            } 
 
             /**
              * Id.

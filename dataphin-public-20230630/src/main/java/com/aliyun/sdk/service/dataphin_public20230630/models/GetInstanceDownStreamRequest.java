@@ -62,7 +62,7 @@ public class GetInstanceDownStreamRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -244,6 +244,14 @@ public class GetInstanceDownStreamRequest extends Request {
         public static final class Builder {
             private String instanceId; 
             private String nodeType; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceGet model) {
+                this.instanceId = model.instanceId;
+                this.nodeType = model.nodeType;
+            } 
 
             /**
              * <p>This parameter is required.</p>

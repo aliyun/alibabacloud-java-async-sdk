@@ -46,7 +46,7 @@ public class CreateDataDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -221,6 +221,18 @@ public class CreateDataDomainRequest extends Request {
             private String displayName; 
             private String name; 
             private Long parentId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateCommand model) {
+                this.abbreviation = model.abbreviation;
+                this.bizUnitId = model.bizUnitId;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.name = model.name;
+                this.parentId = model.parentId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

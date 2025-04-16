@@ -51,7 +51,7 @@ public class OperateInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -194,6 +194,14 @@ public class OperateInstanceRequest extends Request {
             private java.util.List<String> fieldInstanceIdList; 
             private String id; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceIdList model) {
+                this.fieldInstanceIdList = model.fieldInstanceIdList;
+                this.id = model.id;
+            } 
+
             /**
              * FieldInstanceIdList.
              */
@@ -278,6 +286,15 @@ public class OperateInstanceRequest extends Request {
             private java.util.List<InstanceIdList> instanceIdList; 
             private String operation; 
             private Long projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperateCommand model) {
+                this.instanceIdList = model.instanceIdList;
+                this.operation = model.operation;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

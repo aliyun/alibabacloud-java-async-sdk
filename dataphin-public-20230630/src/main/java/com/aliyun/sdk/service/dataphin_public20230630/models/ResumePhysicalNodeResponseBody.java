@@ -52,6 +52,10 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
         private java.util.List<NodeOperateResultList> nodeOperateResultList; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResumePhysicalNodeResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.nodeOperateResultList = model.nodeOperateResultList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -211,6 +227,15 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
             private String errorMessage; 
             private String nodeId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeOperateResultList model) {
+                this.errorMessage = model.errorMessage;
+                this.nodeId = model.nodeId;
+                this.status = model.status;
+            } 
 
             /**
              * ErrorMessage.

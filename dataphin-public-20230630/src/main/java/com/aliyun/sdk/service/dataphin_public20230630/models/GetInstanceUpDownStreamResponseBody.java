@@ -52,6 +52,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceUpDownStreamResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instanceDagInfo = model.instanceDagInfo;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -236,6 +252,17 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             private String nodeId; 
             private String nodeType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DownInstanceList model) {
+                this.fieldInstanceIdList = model.fieldInstanceIdList;
+                this.id = model.id;
+                this.name = model.name;
+                this.nodeId = model.nodeId;
+                this.nodeType = model.nodeType;
+            } 
+
             /**
              * FieldInstanceIdList.
              */
@@ -362,6 +389,17 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             private String name; 
             private String nodeId; 
             private String nodeType; 
+
+            private Builder() {
+            } 
+
+            private Builder(StartInstanceList model) {
+                this.fieldInstanceIdList = model.fieldInstanceIdList;
+                this.id = model.id;
+                this.name = model.name;
+                this.nodeId = model.nodeId;
+                this.nodeType = model.nodeType;
+            } 
 
             /**
              * FieldInstanceIdList.
@@ -490,6 +528,17 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             private String nodeId; 
             private String nodeType; 
 
+            private Builder() {
+            } 
+
+            private Builder(UpInstanceList model) {
+                this.fieldInstanceIdList = model.fieldInstanceIdList;
+                this.id = model.id;
+                this.name = model.name;
+                this.nodeId = model.nodeId;
+                this.nodeType = model.nodeType;
+            } 
+
             /**
              * FieldInstanceIdList.
              */
@@ -592,6 +641,15 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             private java.util.List<DownInstanceList> downInstanceList; 
             private java.util.List<StartInstanceList> startInstanceList; 
             private java.util.List<UpInstanceList> upInstanceList; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceDagInfo model) {
+                this.downInstanceList = model.downInstanceList;
+                this.startInstanceList = model.startInstanceList;
+                this.upInstanceList = model.upInstanceList;
+            } 
 
             /**
              * DownInstanceList.

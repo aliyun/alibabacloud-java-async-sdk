@@ -52,6 +52,10 @@ public class ListInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListInstancesResponseBody extends TeaModel {
         private PageResult pageResult; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageResult = model.pageResult;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -200,6 +216,14 @@ public class ListInstancesResponseBody extends TeaModel {
             private String id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Creator model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * Id.
              */
@@ -267,6 +291,14 @@ public class ListInstancesResponseBody extends TeaModel {
             private String id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Modifier model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * Id.
              */
@@ -333,6 +365,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(OwnerList model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * Id.
@@ -604,6 +644,31 @@ public class ListInstancesResponseBody extends TeaModel {
             private java.util.List<String> schedulePeriodList; 
             private String subDetailType; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeInfo model) {
+                this.bizUnitName = model.bizUnitName;
+                this.createTime = model.createTime;
+                this.creator = model.creator;
+                this.description = model.description;
+                this.dryRun = model.dryRun;
+                this.from = model.from;
+                this.hasDev = model.hasDev;
+                this.hasProd = model.hasProd;
+                this.id = model.id;
+                this.lastModifiedTime = model.lastModifiedTime;
+                this.modifier = model.modifier;
+                this.name = model.name;
+                this.ownerList = model.ownerList;
+                this.priorityList = model.priorityList;
+                this.resourceGroupList = model.resourceGroupList;
+                this.schedulePaused = model.schedulePaused;
+                this.schedulePeriodList = model.schedulePeriodList;
+                this.subDetailType = model.subDetailType;
+                this.type = model.type;
+            } 
 
             /**
              * BizUnitName.
@@ -904,6 +969,22 @@ public class ListInstancesResponseBody extends TeaModel {
             private Long startExecuteTime; 
             private java.util.List<String> statusList; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bizDate = model.bizDate;
+                this.dueTime = model.dueTime;
+                this.duration = model.duration;
+                this.endExecuteTime = model.endExecuteTime;
+                this.extendInfo = model.extendInfo;
+                this.id = model.id;
+                this.index = model.index;
+                this.nodeInfo = model.nodeInfo;
+                this.startExecuteTime = model.startExecuteTime;
+                this.statusList = model.statusList;
+            } 
+
             /**
              * BizDate.
              */
@@ -1034,6 +1115,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageResult model) {
+                this.data = model.data;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * Data.

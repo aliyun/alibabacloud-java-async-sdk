@@ -51,7 +51,7 @@ public class ExecuteManualNodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -193,6 +193,14 @@ public class ExecuteManualNodeRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParamList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -311,6 +319,18 @@ public class ExecuteManualNodeRequest extends Request {
             private java.util.List<ParamList> paramList; 
             private Long projectId; 
             private String startBizDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExecuteCommand model) {
+                this.endBizDate = model.endBizDate;
+                this.flowName = model.flowName;
+                this.nodeId = model.nodeId;
+                this.paramList = model.paramList;
+                this.projectId = model.projectId;
+                this.startBizDate = model.startBizDate;
+            } 
 
             /**
              * <p>This parameter is required.</p>

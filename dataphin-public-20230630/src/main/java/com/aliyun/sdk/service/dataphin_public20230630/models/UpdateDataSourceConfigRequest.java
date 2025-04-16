@@ -46,7 +46,7 @@ public class UpdateDataSourceConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -172,6 +172,14 @@ public class UpdateDataSourceConfigRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigItemList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -246,6 +254,14 @@ public class UpdateDataSourceConfigRequest extends Request {
         public static final class Builder {
             private java.util.List<ConfigItemList> configItemList; 
             private Long id; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateCommand model) {
+                this.configItemList = model.configItemList;
+                this.id = model.id;
+            } 
 
             /**
              * <p>This parameter is required.</p>

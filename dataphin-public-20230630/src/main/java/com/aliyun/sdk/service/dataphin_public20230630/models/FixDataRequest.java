@@ -51,7 +51,7 @@ public class FixDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -193,6 +193,14 @@ public class FixDataRequest extends Request {
             private java.util.List<String> fieldInstanceIdList; 
             private String id; 
 
+            private Builder() {
+            } 
+
+            private Builder(DownStreamInstanceIdList model) {
+                this.fieldInstanceIdList = model.fieldInstanceIdList;
+                this.id = model.id;
+            } 
+
             /**
              * FieldInstanceIdList.
              */
@@ -260,6 +268,14 @@ public class FixDataRequest extends Request {
         public static final class Builder {
             private java.util.List<String> fieldInstanceIdList; 
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(RootInstanceId model) {
+                this.fieldInstanceIdList = model.fieldInstanceIdList;
+                this.id = model.id;
+            } 
 
             /**
              * FieldInstanceIdList.
@@ -380,6 +396,18 @@ public class FixDataRequest extends Request {
             private Boolean forceRerun; 
             private Long projectId; 
             private RootInstanceId rootInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FixDataCommand model) {
+                this.containRootInstance = model.containRootInstance;
+                this.downStreamInstanceIdList = model.downStreamInstanceIdList;
+                this.downstreamRange = model.downstreamRange;
+                this.forceRerun = model.forceRerun;
+                this.projectId = model.projectId;
+                this.rootInstanceId = model.rootInstanceId;
+            } 
 
             /**
              * ContainRootInstance.

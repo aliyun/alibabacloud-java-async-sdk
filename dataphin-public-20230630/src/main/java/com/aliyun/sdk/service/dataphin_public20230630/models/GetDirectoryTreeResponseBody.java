@@ -52,6 +52,10 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDirectoryTreeResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -343,6 +359,26 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             private Long projectId; 
             private String stringId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Children model) {
+                this.categoryType = model.categoryType;
+                this.creator = model.creator;
+                this.creatorName = model.creatorName;
+                this.dataCellId = model.dataCellId;
+                this.dirName = model.dirName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.lastModifier = model.lastModifier;
+                this.lastModifierName = model.lastModifierName;
+                this.name = model.name;
+                this.projectId = model.projectId;
+                this.stringId = model.stringId;
+                this.type = model.type;
+            } 
 
             /**
              * CategoryType.
@@ -651,6 +687,26 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
             private String stringId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parent model) {
+                this.categoryType = model.categoryType;
+                this.creator = model.creator;
+                this.creatorName = model.creatorName;
+                this.dataCellId = model.dataCellId;
+                this.dirName = model.dirName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.lastModifier = model.lastModifier;
+                this.lastModifierName = model.lastModifierName;
+                this.name = model.name;
+                this.projectId = model.projectId;
+                this.stringId = model.stringId;
+                this.type = model.type;
+            } 
+
             /**
              * CategoryType.
              */
@@ -813,6 +869,14 @@ public class GetDirectoryTreeResponseBody extends TeaModel {
         public static final class Builder {
             private Children children; 
             private Parent parent; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.children = model.children;
+                this.parent = model.parent;
+            } 
 
             /**
              * Children.

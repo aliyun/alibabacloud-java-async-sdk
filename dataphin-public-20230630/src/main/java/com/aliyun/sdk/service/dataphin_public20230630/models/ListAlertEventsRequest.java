@@ -46,7 +46,7 @@ public class ListAlertEventsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -306,6 +306,25 @@ public class ListAlertEventsRequest extends Request {
             private String sourceSystem; 
             private java.util.List<String> statusList; 
             private java.util.List<String> userIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListQuery model) {
+                this.alertEndTime = model.alertEndTime;
+                this.alertObjectTypeList = model.alertObjectTypeList;
+                this.alertReasonList = model.alertReasonList;
+                this.alertStartTime = model.alertStartTime;
+                this.bizNameList = model.bizNameList;
+                this.keyword = model.keyword;
+                this.monitoredItemIdList = model.monitoredItemIdList;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.projectNameList = model.projectNameList;
+                this.sourceSystem = model.sourceSystem;
+                this.statusList = model.statusList;
+                this.userIdList = model.userIdList;
+            } 
 
             /**
              * <p>This parameter is required.</p>

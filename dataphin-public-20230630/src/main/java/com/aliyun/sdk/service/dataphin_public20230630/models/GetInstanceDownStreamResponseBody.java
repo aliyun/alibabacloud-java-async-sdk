@@ -52,6 +52,10 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceDownStreamResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instanceRelationList = model.instanceRelationList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -212,6 +228,15 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             private String runStatus; 
             private String selectStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(FieldInstanceList model) {
+                this.fieldInstanceId = model.fieldInstanceId;
+                this.runStatus = model.runStatus;
+                this.selectStatus = model.selectStatus;
+            } 
+
             /**
              * FieldInstanceId.
              */
@@ -298,6 +323,15 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceInfo model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * Id.
@@ -433,6 +467,19 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             private String runStatus; 
             private String selectStatus; 
             private String selectStatusCause; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceRelationList model) {
+                this.downStreamDepth = model.downStreamDepth;
+                this.extendInfo = model.extendInfo;
+                this.fieldInstanceList = model.fieldInstanceList;
+                this.instanceInfo = model.instanceInfo;
+                this.runStatus = model.runStatus;
+                this.selectStatus = model.selectStatus;
+                this.selectStatusCause = model.selectStatusCause;
+            } 
 
             /**
              * DownStreamDepth.

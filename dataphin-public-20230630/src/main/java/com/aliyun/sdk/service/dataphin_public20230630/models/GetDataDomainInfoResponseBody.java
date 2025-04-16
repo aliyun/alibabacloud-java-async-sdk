@@ -52,6 +52,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataDomainInfoResponseBody model) {
+            this.code = model.code;
+            this.dataDomainInfo = model.dataDomainInfo;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -331,6 +347,25 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
             private String ownerName; 
             private String ownerUserId; 
             private Long parentId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDomainInfo model) {
+                this.abbreviation = model.abbreviation;
+                this.bizUnitId = model.bizUnitId;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.lastModifier = model.lastModifier;
+                this.lastModifierName = model.lastModifierName;
+                this.name = model.name;
+                this.ownerName = model.ownerName;
+                this.ownerUserId = model.ownerUserId;
+                this.parentId = model.parentId;
+            } 
 
             /**
              * Abbreviation.
