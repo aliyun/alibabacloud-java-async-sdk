@@ -176,7 +176,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

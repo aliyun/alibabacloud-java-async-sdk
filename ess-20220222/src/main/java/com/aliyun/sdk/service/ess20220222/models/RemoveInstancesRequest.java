@@ -35,6 +35,10 @@ public class RemoveInstancesRequest extends Request {
     private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecycleHookContext")
+    private LifecycleHookContext lifecycleHookContext;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -73,6 +77,7 @@ public class RemoveInstancesRequest extends Request {
         this.decreaseDesiredCapacity = builder.decreaseDesiredCapacity;
         this.ignoreInvalidInstance = builder.ignoreInvalidInstance;
         this.instanceIds = builder.instanceIds;
+        this.lifecycleHookContext = builder.lifecycleHookContext;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -122,6 +127,13 @@ public class RemoveInstancesRequest extends Request {
      */
     public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
+    }
+
+    /**
+     * @return lifecycleHookContext
+     */
+    public LifecycleHookContext getLifecycleHookContext() {
+        return this.lifecycleHookContext;
     }
 
     /**
@@ -185,6 +197,7 @@ public class RemoveInstancesRequest extends Request {
         private Boolean decreaseDesiredCapacity; 
         private Boolean ignoreInvalidInstance; 
         private java.util.List<String> instanceIds; 
+        private LifecycleHookContext lifecycleHookContext; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -204,6 +217,7 @@ public class RemoveInstancesRequest extends Request {
             this.decreaseDesiredCapacity = request.decreaseDesiredCapacity;
             this.ignoreInvalidInstance = request.ignoreInvalidInstance;
             this.instanceIds = request.instanceIds;
+            this.lifecycleHookContext = request.lifecycleHookContext;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -267,6 +281,16 @@ public class RemoveInstancesRequest extends Request {
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * LifecycleHookContext.
+         */
+        public Builder lifecycleHookContext(LifecycleHookContext lifecycleHookContext) {
+            String lifecycleHookContextShrink = shrink(lifecycleHookContext, "LifecycleHookContext", "json");
+            this.putQueryParameter("LifecycleHookContext", lifecycleHookContextShrink);
+            this.lifecycleHookContext = lifecycleHookContext;
             return this;
         }
 
@@ -390,4 +414,79 @@ public class RemoveInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RemoveInstancesRequest</p>
+     */
+    public static class LifecycleHookContext extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisableLifecycleHook")
+        private Boolean disableLifecycleHook;
+
+        @com.aliyun.core.annotation.NameInMap("IgnoredLifecycleHookIds")
+        private java.util.List<String> ignoredLifecycleHookIds;
+
+        private LifecycleHookContext(Builder builder) {
+            this.disableLifecycleHook = builder.disableLifecycleHook;
+            this.ignoredLifecycleHookIds = builder.ignoredLifecycleHookIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LifecycleHookContext create() {
+            return builder().build();
+        }
+
+        /**
+         * @return disableLifecycleHook
+         */
+        public Boolean getDisableLifecycleHook() {
+            return this.disableLifecycleHook;
+        }
+
+        /**
+         * @return ignoredLifecycleHookIds
+         */
+        public java.util.List<String> getIgnoredLifecycleHookIds() {
+            return this.ignoredLifecycleHookIds;
+        }
+
+        public static final class Builder {
+            private Boolean disableLifecycleHook; 
+            private java.util.List<String> ignoredLifecycleHookIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(LifecycleHookContext model) {
+                this.disableLifecycleHook = model.disableLifecycleHook;
+                this.ignoredLifecycleHookIds = model.ignoredLifecycleHookIds;
+            } 
+
+            /**
+             * DisableLifecycleHook.
+             */
+            public Builder disableLifecycleHook(Boolean disableLifecycleHook) {
+                this.disableLifecycleHook = disableLifecycleHook;
+                return this;
+            }
+
+            /**
+             * IgnoredLifecycleHookIds.
+             */
+            public Builder ignoredLifecycleHookIds(java.util.List<String> ignoredLifecycleHookIds) {
+                this.ignoredLifecycleHookIds = ignoredLifecycleHookIds;
+                return this;
+            }
+
+            public LifecycleHookContext build() {
+                return new LifecycleHookContext(this);
+            } 
+
+        } 
+
+    }
 }
