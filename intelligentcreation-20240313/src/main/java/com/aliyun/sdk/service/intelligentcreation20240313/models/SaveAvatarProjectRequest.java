@@ -58,6 +58,10 @@ public class SaveAvatarProjectRequest extends Request {
     private String scaleType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scriptModelTag")
+    private String scriptModelTag;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("synchronizedDisplay")
     private String synchronizedDisplay;
 
@@ -73,6 +77,7 @@ public class SaveAvatarProjectRequest extends Request {
         this.resSpecType = builder.resSpecType;
         this.resolution = builder.resolution;
         this.scaleType = builder.scaleType;
+        this.scriptModelTag = builder.scriptModelTag;
         this.synchronizedDisplay = builder.synchronizedDisplay;
     }
 
@@ -160,6 +165,13 @@ public class SaveAvatarProjectRequest extends Request {
     }
 
     /**
+     * @return scriptModelTag
+     */
+    public String getScriptModelTag() {
+        return this.scriptModelTag;
+    }
+
+    /**
      * @return synchronizedDisplay
      */
     public String getSynchronizedDisplay() {
@@ -177,6 +189,7 @@ public class SaveAvatarProjectRequest extends Request {
         private String resSpecType; 
         private String resolution; 
         private String scaleType; 
+        private String scriptModelTag; 
         private String synchronizedDisplay; 
 
         private Builder() {
@@ -195,6 +208,7 @@ public class SaveAvatarProjectRequest extends Request {
             this.resSpecType = request.resSpecType;
             this.resolution = request.resolution;
             this.scaleType = request.scaleType;
+            this.scriptModelTag = request.scriptModelTag;
             this.synchronizedDisplay = request.synchronizedDisplay;
         } 
 
@@ -285,6 +299,15 @@ public class SaveAvatarProjectRequest extends Request {
         public Builder scaleType(String scaleType) {
             this.putBodyParameter("scaleType", scaleType);
             this.scaleType = scaleType;
+            return this;
+        }
+
+        /**
+         * scriptModelTag.
+         */
+        public Builder scriptModelTag(String scriptModelTag) {
+            this.putBodyParameter("scriptModelTag", scriptModelTag);
+            this.scriptModelTag = scriptModelTag;
             return this;
         }
 
@@ -410,6 +433,9 @@ public class SaveAvatarProjectRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("height")
         private Integer height;
 
+        @com.aliyun.core.annotation.NameInMap("index")
+        private Integer index;
+
         @com.aliyun.core.annotation.NameInMap("material")
         private Material material;
 
@@ -427,6 +453,7 @@ public class SaveAvatarProjectRequest extends Request {
 
         private Layers(Builder builder) {
             this.height = builder.height;
+            this.index = builder.index;
             this.material = builder.material;
             this.positionX = builder.positionX;
             this.positionY = builder.positionY;
@@ -447,6 +474,13 @@ public class SaveAvatarProjectRequest extends Request {
          */
         public Integer getHeight() {
             return this.height;
+        }
+
+        /**
+         * @return index
+         */
+        public Integer getIndex() {
+            return this.index;
         }
 
         /**
@@ -486,6 +520,7 @@ public class SaveAvatarProjectRequest extends Request {
 
         public static final class Builder {
             private Integer height; 
+            private Integer index; 
             private Material material; 
             private Integer positionX; 
             private Integer positionY; 
@@ -497,6 +532,7 @@ public class SaveAvatarProjectRequest extends Request {
 
             private Builder(Layers model) {
                 this.height = model.height;
+                this.index = model.index;
                 this.material = model.material;
                 this.positionX = model.positionX;
                 this.positionY = model.positionY;
@@ -509,6 +545,14 @@ public class SaveAvatarProjectRequest extends Request {
              */
             public Builder height(Integer height) {
                 this.height = height;
+                return this;
+            }
+
+            /**
+             * index.
+             */
+            public Builder index(Integer index) {
+                this.index = index;
                 return this;
             }
 
@@ -566,8 +610,17 @@ public class SaveAvatarProjectRequest extends Request {
      * <p>SaveAvatarProjectRequest</p>
      */
     public static class VideoScript extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("emotion")
+        private String emotion;
+
+        @com.aliyun.core.annotation.NameInMap("pitchRate")
+        private String pitchRate;
+
         @com.aliyun.core.annotation.NameInMap("speedRate")
         private String speedRate;
+
+        @com.aliyun.core.annotation.NameInMap("textContent")
+        private String textContent;
 
         @com.aliyun.core.annotation.NameInMap("voiceLanguage")
         private String voiceLanguage;
@@ -579,7 +632,10 @@ public class SaveAvatarProjectRequest extends Request {
         private String volume;
 
         private VideoScript(Builder builder) {
+            this.emotion = builder.emotion;
+            this.pitchRate = builder.pitchRate;
             this.speedRate = builder.speedRate;
+            this.textContent = builder.textContent;
             this.voiceLanguage = builder.voiceLanguage;
             this.voiceTemplateId = builder.voiceTemplateId;
             this.volume = builder.volume;
@@ -594,10 +650,31 @@ public class SaveAvatarProjectRequest extends Request {
         }
 
         /**
+         * @return emotion
+         */
+        public String getEmotion() {
+            return this.emotion;
+        }
+
+        /**
+         * @return pitchRate
+         */
+        public String getPitchRate() {
+            return this.pitchRate;
+        }
+
+        /**
          * @return speedRate
          */
         public String getSpeedRate() {
             return this.speedRate;
+        }
+
+        /**
+         * @return textContent
+         */
+        public String getTextContent() {
+            return this.textContent;
         }
 
         /**
@@ -622,7 +699,10 @@ public class SaveAvatarProjectRequest extends Request {
         }
 
         public static final class Builder {
+            private String emotion; 
+            private String pitchRate; 
             private String speedRate; 
+            private String textContent; 
             private String voiceLanguage; 
             private String voiceTemplateId; 
             private String volume; 
@@ -631,17 +711,44 @@ public class SaveAvatarProjectRequest extends Request {
             } 
 
             private Builder(VideoScript model) {
+                this.emotion = model.emotion;
+                this.pitchRate = model.pitchRate;
                 this.speedRate = model.speedRate;
+                this.textContent = model.textContent;
                 this.voiceLanguage = model.voiceLanguage;
                 this.voiceTemplateId = model.voiceTemplateId;
                 this.volume = model.volume;
             } 
 
             /**
+             * emotion.
+             */
+            public Builder emotion(String emotion) {
+                this.emotion = emotion;
+                return this;
+            }
+
+            /**
+             * pitchRate.
+             */
+            public Builder pitchRate(String pitchRate) {
+                this.pitchRate = pitchRate;
+                return this;
+            }
+
+            /**
              * speedRate.
              */
             public Builder speedRate(String speedRate) {
                 this.speedRate = speedRate;
+                return this;
+            }
+
+            /**
+             * textContent.
+             */
+            public Builder textContent(String textContent) {
+                this.textContent = textContent;
                 return this;
             }
 
@@ -683,6 +790,9 @@ public class SaveAvatarProjectRequest extends Request {
      * <p>SaveAvatarProjectRequest</p>
      */
     public static class Frames extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("index")
+        private Integer index;
+
         @com.aliyun.core.annotation.NameInMap("layers")
         private java.util.List<Layers> layers;
 
@@ -690,6 +800,7 @@ public class SaveAvatarProjectRequest extends Request {
         private VideoScript videoScript;
 
         private Frames(Builder builder) {
+            this.index = builder.index;
             this.layers = builder.layers;
             this.videoScript = builder.videoScript;
         }
@@ -700,6 +811,13 @@ public class SaveAvatarProjectRequest extends Request {
 
         public static Frames create() {
             return builder().build();
+        }
+
+        /**
+         * @return index
+         */
+        public Integer getIndex() {
+            return this.index;
         }
 
         /**
@@ -717,6 +835,7 @@ public class SaveAvatarProjectRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer index; 
             private java.util.List<Layers> layers; 
             private VideoScript videoScript; 
 
@@ -724,9 +843,18 @@ public class SaveAvatarProjectRequest extends Request {
             } 
 
             private Builder(Frames model) {
+                this.index = model.index;
                 this.layers = model.layers;
                 this.videoScript = model.videoScript;
             } 
+
+            /**
+             * index.
+             */
+            public Builder index(Integer index) {
+                this.index = index;
+                return this;
+            }
 
             /**
              * layers.

@@ -329,6 +329,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateProductImage  CreateProductImageRequest
+     * @return CreateProductImageResponse
+     */
+    @Override
+    public CompletableFuture<CreateProductImageResponse> createProductImage(CreateProductImageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateProductImage").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/images/products").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateProductImageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateProductImageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateRealisticPortrait  CreateRealisticPortraitRequest
      * @return CreateRealisticPortraitResponse
      */
@@ -467,6 +485,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<FinishAICoachTaskSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAICoachAssessmentPoint  GetAICoachAssessmentPointRequest
+     * @return GetAICoachAssessmentPointResponse
+     */
+    @Override
+    public CompletableFuture<GetAICoachAssessmentPointResponse> getAICoachAssessmentPoint(GetAICoachAssessmentPointRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAICoachAssessmentPoint").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/aicoach/getAssessmentPoint").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAICoachAssessmentPointResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAICoachAssessmentPointResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -915,6 +951,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryImageToVideoTask  QueryImageToVideoTaskRequest
+     * @return QueryImageToVideoTaskResponse
+     */
+    @Override
+    public CompletableFuture<QueryImageToVideoTaskResponse> queryImageToVideoTask(QueryImageToVideoTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryImageToVideoTask").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/video/imageToVideo/task").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryImageToVideoTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryImageToVideoTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QueryIndividuationTextTask  QueryIndividuationTextTaskRequest
      * @return QueryIndividuationTextTaskResponse
      */
@@ -1051,6 +1105,49 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SendSdkStreamMessage  SendSdkStreamMessageRequest
+     * @return SendSdkStreamMessageResponse
+     */
+    @Override
+    public CompletableFuture<SendSdkStreamMessageResponse> sendSdkStreamMessage(SendSdkStreamMessageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SendSdkStreamMessage").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/sdk/stream/sendMessage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SendSdkStreamMessageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SendSdkStreamMessageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public <ReturnT> CompletableFuture<ReturnT> sendSdkStreamMessageWithAsyncResponseHandler(SendSdkStreamMessageRequest request, AsyncResponseHandler<SendSdkStreamMessageResponse, ReturnT> responseHandler) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SendSdkStreamMessage").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/sdk/stream/sendMessage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withResponseHandler(responseHandler).withOutput(SendSdkStreamMessageResponse.create());
+            return this.handler.execute(params)
+                    .thenCompose((output) -> CompletableFuture.completedFuture(responseHandler.transform((SendSdkStreamMessageResponse)output)));
+        } catch (Exception e) {
+            CompletableFuture<ReturnT> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<SendSdkStreamMessageResponseBody> sendSdkStreamMessageWithResponseIterable(SendSdkStreamMessageRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("SendSdkStreamMessage").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/sdk/stream/sendMessage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        SendSdkStreamMessageResponseBodyIterator iterator = SendSdkStreamMessageResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of SendTextMsg  SendTextMsgRequest
      * @return SendTextMsgResponse
      */
@@ -1117,6 +1214,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StopProjectTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitImageToVideoTask  SubmitImageToVideoTaskRequest
+     * @return SubmitImageToVideoTaskResponse
+     */
+    @Override
+    public CompletableFuture<SubmitImageToVideoTaskResponse> submitImageToVideoTask(SubmitImageToVideoTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SubmitImageToVideoTask").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/video/imageToVideo/task").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitImageToVideoTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitImageToVideoTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

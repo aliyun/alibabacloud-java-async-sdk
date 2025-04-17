@@ -431,6 +431,9 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("assessmentPoint")
         private Integer assessmentPoint;
 
+        @com.aliyun.core.annotation.NameInMap("assessmentPointEnabled")
+        private Boolean assessmentPointEnabled;
+
         @com.aliyun.core.annotation.NameInMap("expressiveness")
         private Integer expressiveness;
 
@@ -451,6 +454,7 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
 
         private Weights(Builder builder) {
             this.assessmentPoint = builder.assessmentPoint;
+            this.assessmentPointEnabled = builder.assessmentPointEnabled;
             this.expressiveness = builder.expressiveness;
             this.expressivenessEnabled = builder.expressivenessEnabled;
             this.pointDeductionRule = builder.pointDeductionRule;
@@ -472,6 +476,13 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
          */
         public Integer getAssessmentPoint() {
             return this.assessmentPoint;
+        }
+
+        /**
+         * @return assessmentPointEnabled
+         */
+        public Boolean getAssessmentPointEnabled() {
+            return this.assessmentPointEnabled;
         }
 
         /**
@@ -518,6 +529,7 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer assessmentPoint; 
+            private Boolean assessmentPointEnabled; 
             private Integer expressiveness; 
             private Boolean expressivenessEnabled; 
             private Integer pointDeductionRule; 
@@ -530,6 +542,7 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
 
             private Builder(Weights model) {
                 this.assessmentPoint = model.assessmentPoint;
+                this.assessmentPointEnabled = model.assessmentPointEnabled;
                 this.expressiveness = model.expressiveness;
                 this.expressivenessEnabled = model.expressivenessEnabled;
                 this.pointDeductionRule = model.pointDeductionRule;
@@ -543,6 +556,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
              */
             public Builder assessmentPoint(Integer assessmentPoint) {
                 this.assessmentPoint = assessmentPoint;
+                return this;
+            }
+
+            /**
+             * assessmentPointEnabled.
+             */
+            public Builder assessmentPointEnabled(Boolean assessmentPointEnabled) {
+                this.assessmentPointEnabled = assessmentPointEnabled;
                 return this;
             }
 
@@ -614,6 +635,9 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("assessmentScope")
         private String assessmentScope;
 
+        @com.aliyun.core.annotation.NameInMap("closingRemarks")
+        private String closingRemarks;
+
         @com.aliyun.core.annotation.NameInMap("completeStrategy")
         private CompleteStrategy completeStrategy;
 
@@ -632,6 +656,12 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expressiveness")
         private java.util.Map<String, String> expressiveness;
 
+        @com.aliyun.core.annotation.NameInMap("gifDynamicUrl")
+        private String gifDynamicUrl;
+
+        @com.aliyun.core.annotation.NameInMap("gifStaticUrl")
+        private String gifStaticUrl;
+
         @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
@@ -649,6 +679,9 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("openingRemarks")
+        private String openingRemarks;
 
         @com.aliyun.core.annotation.NameInMap("orderAckFlag")
         private Boolean orderAckFlag;
@@ -683,18 +716,22 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         private List(Builder builder) {
             this.appendQuestionFlag = builder.appendQuestionFlag;
             this.assessmentScope = builder.assessmentScope;
+            this.closingRemarks = builder.closingRemarks;
             this.completeStrategy = builder.completeStrategy;
             this.coverUrl = builder.coverUrl;
             this.dialogueTextFlag = builder.dialogueTextFlag;
             this.dialogueTipFlag = builder.dialogueTipFlag;
             this.evaluateReportFlag = builder.evaluateReportFlag;
             this.expressiveness = builder.expressiveness;
+            this.gifDynamicUrl = builder.gifDynamicUrl;
+            this.gifStaticUrl = builder.gifStaticUrl;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.initiator = builder.initiator;
             this.interactionType = builder.interactionType;
             this.introduce = builder.introduce;
             this.name = builder.name;
+            this.openingRemarks = builder.openingRemarks;
             this.orderAckFlag = builder.orderAckFlag;
             this.sampleDialogueList = builder.sampleDialogueList;
             this.scoreConfig = builder.scoreConfig;
@@ -727,6 +764,13 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
          */
         public String getAssessmentScope() {
             return this.assessmentScope;
+        }
+
+        /**
+         * @return closingRemarks
+         */
+        public String getClosingRemarks() {
+            return this.closingRemarks;
         }
 
         /**
@@ -772,6 +816,20 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return gifDynamicUrl
+         */
+        public String getGifDynamicUrl() {
+            return this.gifDynamicUrl;
+        }
+
+        /**
+         * @return gifStaticUrl
+         */
+        public String getGifStaticUrl() {
+            return this.gifStaticUrl;
+        }
+
+        /**
          * @return gmtCreate
          */
         public String getGmtCreate() {
@@ -811,6 +869,13 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return openingRemarks
+         */
+        public String getOpeningRemarks() {
+            return this.openingRemarks;
         }
 
         /**
@@ -886,18 +951,22 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         public static final class Builder {
             private String appendQuestionFlag; 
             private String assessmentScope; 
+            private String closingRemarks; 
             private CompleteStrategy completeStrategy; 
             private String coverUrl; 
             private Boolean dialogueTextFlag; 
             private Boolean dialogueTipFlag; 
             private Boolean evaluateReportFlag; 
             private java.util.Map<String, String> expressiveness; 
+            private String gifDynamicUrl; 
+            private String gifStaticUrl; 
             private String gmtCreate; 
             private String gmtModified; 
             private String initiator; 
             private String interactionType; 
             private String introduce; 
             private String name; 
+            private String openingRemarks; 
             private Boolean orderAckFlag; 
             private java.util.List<SampleDialogueList> sampleDialogueList; 
             private ScoreConfig scoreConfig; 
@@ -915,18 +984,22 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             private Builder(List model) {
                 this.appendQuestionFlag = model.appendQuestionFlag;
                 this.assessmentScope = model.assessmentScope;
+                this.closingRemarks = model.closingRemarks;
                 this.completeStrategy = model.completeStrategy;
                 this.coverUrl = model.coverUrl;
                 this.dialogueTextFlag = model.dialogueTextFlag;
                 this.dialogueTipFlag = model.dialogueTipFlag;
                 this.evaluateReportFlag = model.evaluateReportFlag;
                 this.expressiveness = model.expressiveness;
+                this.gifDynamicUrl = model.gifDynamicUrl;
+                this.gifStaticUrl = model.gifStaticUrl;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
                 this.initiator = model.initiator;
                 this.interactionType = model.interactionType;
                 this.introduce = model.introduce;
                 this.name = model.name;
+                this.openingRemarks = model.openingRemarks;
                 this.orderAckFlag = model.orderAckFlag;
                 this.sampleDialogueList = model.sampleDialogueList;
                 this.scoreConfig = model.scoreConfig;
@@ -952,6 +1025,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
              */
             public Builder assessmentScope(String assessmentScope) {
                 this.assessmentScope = assessmentScope;
+                return this;
+            }
+
+            /**
+             * closingRemarks.
+             */
+            public Builder closingRemarks(String closingRemarks) {
+                this.closingRemarks = closingRemarks;
                 return this;
             }
 
@@ -1004,6 +1085,22 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             }
 
             /**
+             * gifDynamicUrl.
+             */
+            public Builder gifDynamicUrl(String gifDynamicUrl) {
+                this.gifDynamicUrl = gifDynamicUrl;
+                return this;
+            }
+
+            /**
+             * gifStaticUrl.
+             */
+            public Builder gifStaticUrl(String gifStaticUrl) {
+                this.gifStaticUrl = gifStaticUrl;
+                return this;
+            }
+
+            /**
              * gmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
@@ -1048,6 +1145,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * openingRemarks.
+             */
+            public Builder openingRemarks(String openingRemarks) {
+                this.openingRemarks = openingRemarks;
                 return this;
             }
 

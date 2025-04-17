@@ -116,6 +116,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateIndividuationTextTaskResponse> createIndividuationTextTask(CreateIndividuationTextTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateProductImage  CreateProductImageRequest
+     * @return CreateProductImageResponse
+     */
+    CompletableFuture<CreateProductImageResponse> createProductImage(CreateProductImageRequest request);
+
+    /**
      * @param request the request parameters of CreateRealisticPortrait  CreateRealisticPortraitRequest
      * @return CreateRealisticPortraitResponse
      */
@@ -162,6 +168,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return FinishAICoachTaskSessionResponse
      */
     CompletableFuture<FinishAICoachTaskSessionResponse> finishAICoachTaskSession(FinishAICoachTaskSessionRequest request);
+
+    /**
+     * @param request the request parameters of GetAICoachAssessmentPoint  GetAICoachAssessmentPointRequest
+     * @return GetAICoachAssessmentPointResponse
+     */
+    CompletableFuture<GetAICoachAssessmentPointResponse> getAICoachAssessmentPoint(GetAICoachAssessmentPointRequest request);
 
     /**
      * @param request the request parameters of GetAICoachCheatDetection  GetAICoachCheatDetectionRequest
@@ -310,6 +322,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryAvatarResourceResponse> queryAvatarResource(QueryAvatarResourceRequest request);
 
     /**
+     * @param request the request parameters of QueryImageToVideoTask  QueryImageToVideoTaskRequest
+     * @return QueryImageToVideoTaskResponse
+     */
+    CompletableFuture<QueryImageToVideoTaskResponse> queryImageToVideoTask(QueryImageToVideoTaskRequest request);
+
+    /**
      * @param request the request parameters of QueryIndividuationTextTask  QueryIndividuationTextTaskRequest
      * @return QueryIndividuationTextTaskResponse
      */
@@ -354,6 +372,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SendSdkMessageResponse> sendSdkMessage(SendSdkMessageRequest request);
 
     /**
+     * @param request the request parameters of SendSdkStreamMessage  SendSdkStreamMessageRequest
+     * @return SendSdkStreamMessageResponse
+     */
+    CompletableFuture<SendSdkStreamMessageResponse> sendSdkStreamMessage(SendSdkStreamMessageRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> sendSdkStreamMessageWithAsyncResponseHandler(SendSdkStreamMessageRequest request, AsyncResponseHandler<SendSdkStreamMessageResponse, ReturnT> responseHandler);
+
+    ResponseIterable<SendSdkStreamMessageResponseBody> sendSdkStreamMessageWithResponseIterable(SendSdkStreamMessageRequest request);
+
+    /**
      * @param request the request parameters of SendTextMsg  SendTextMsgRequest
      * @return SendTextMsgResponse
      */
@@ -376,6 +404,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopProjectTaskResponse
      */
     CompletableFuture<StopProjectTaskResponse> stopProjectTask(StopProjectTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitImageToVideoTask  SubmitImageToVideoTaskRequest
+     * @return SubmitImageToVideoTaskResponse
+     */
+    CompletableFuture<SubmitImageToVideoTaskResponse> submitImageToVideoTask(SubmitImageToVideoTaskRequest request);
 
     /**
      * @param request the request parameters of SubmitProjectTask  SubmitProjectTaskRequest

@@ -26,6 +26,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("checkCheatConfig")
     private CheckCheatConfig checkCheatConfig;
 
+    @com.aliyun.core.annotation.NameInMap("closingRemarks")
+    private String closingRemarks;
+
     @com.aliyun.core.annotation.NameInMap("completeStrategy")
     private CompleteStrategy completeStrategy;
 
@@ -50,6 +53,15 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("expressiveness")
     private java.util.Map<String, Integer> expressiveness;
 
+    @com.aliyun.core.annotation.NameInMap("expressivenessList")
+    private java.util.List<ExpressivenessList> expressivenessList;
+
+    @com.aliyun.core.annotation.NameInMap("gifDynamicUrl")
+    private String gifDynamicUrl;
+
+    @com.aliyun.core.annotation.NameInMap("gifStaticUrl")
+    private String gifStaticUrl;
+
     @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private String gmtCreate;
 
@@ -70,6 +82,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
+
+    @com.aliyun.core.annotation.NameInMap("openingRemarks")
+    private String openingRemarks;
 
     @com.aliyun.core.annotation.NameInMap("orderAckFlag")
     private Boolean orderAckFlag;
@@ -114,6 +129,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         this.appendQuestionFlag = builder.appendQuestionFlag;
         this.assessmentScope = builder.assessmentScope;
         this.checkCheatConfig = builder.checkCheatConfig;
+        this.closingRemarks = builder.closingRemarks;
         this.completeStrategy = builder.completeStrategy;
         this.coverUrl = builder.coverUrl;
         this.dialogueInputTextLimit = builder.dialogueInputTextLimit;
@@ -122,6 +138,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         this.dialogueVoiceLimit = builder.dialogueVoiceLimit;
         this.evaluateReportFlag = builder.evaluateReportFlag;
         this.expressiveness = builder.expressiveness;
+        this.expressivenessList = builder.expressivenessList;
+        this.gifDynamicUrl = builder.gifDynamicUrl;
+        this.gifStaticUrl = builder.gifStaticUrl;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
         this.initiator = builder.initiator;
@@ -129,6 +148,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         this.interactionType = builder.interactionType;
         this.introduce = builder.introduce;
         this.name = builder.name;
+        this.openingRemarks = builder.openingRemarks;
         this.orderAckFlag = builder.orderAckFlag;
         this.pointDeductionRuleList = builder.pointDeductionRuleList;
         this.points = builder.points;
@@ -175,6 +195,13 @@ public class GetAICoachScriptResponseBody extends TeaModel {
      */
     public CheckCheatConfig getCheckCheatConfig() {
         return this.checkCheatConfig;
+    }
+
+    /**
+     * @return closingRemarks
+     */
+    public String getClosingRemarks() {
+        return this.closingRemarks;
     }
 
     /**
@@ -234,6 +261,27 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
 
     /**
+     * @return expressivenessList
+     */
+    public java.util.List<ExpressivenessList> getExpressivenessList() {
+        return this.expressivenessList;
+    }
+
+    /**
+     * @return gifDynamicUrl
+     */
+    public String getGifDynamicUrl() {
+        return this.gifDynamicUrl;
+    }
+
+    /**
+     * @return gifStaticUrl
+     */
+    public String getGifStaticUrl() {
+        return this.gifStaticUrl;
+    }
+
+    /**
      * @return gmtCreate
      */
     public String getGmtCreate() {
@@ -280,6 +328,13 @@ public class GetAICoachScriptResponseBody extends TeaModel {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return openingRemarks
+     */
+    public String getOpeningRemarks() {
+        return this.openingRemarks;
     }
 
     /**
@@ -377,6 +432,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         private Boolean appendQuestionFlag; 
         private String assessmentScope; 
         private CheckCheatConfig checkCheatConfig; 
+        private String closingRemarks; 
         private CompleteStrategy completeStrategy; 
         private String coverUrl; 
         private Integer dialogueInputTextLimit; 
@@ -385,6 +441,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         private Integer dialogueVoiceLimit; 
         private Boolean evaluateReportFlag; 
         private java.util.Map<String, Integer> expressiveness; 
+        private java.util.List<ExpressivenessList> expressivenessList; 
+        private String gifDynamicUrl; 
+        private String gifStaticUrl; 
         private String gmtCreate; 
         private String gmtModified; 
         private String initiator; 
@@ -392,6 +451,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         private Integer interactionType; 
         private String introduce; 
         private String name; 
+        private String openingRemarks; 
         private Boolean orderAckFlag; 
         private java.util.List<PointDeductionRuleList> pointDeductionRuleList; 
         private java.util.List<Points> points; 
@@ -413,6 +473,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             this.appendQuestionFlag = model.appendQuestionFlag;
             this.assessmentScope = model.assessmentScope;
             this.checkCheatConfig = model.checkCheatConfig;
+            this.closingRemarks = model.closingRemarks;
             this.completeStrategy = model.completeStrategy;
             this.coverUrl = model.coverUrl;
             this.dialogueInputTextLimit = model.dialogueInputTextLimit;
@@ -421,6 +482,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             this.dialogueVoiceLimit = model.dialogueVoiceLimit;
             this.evaluateReportFlag = model.evaluateReportFlag;
             this.expressiveness = model.expressiveness;
+            this.expressivenessList = model.expressivenessList;
+            this.gifDynamicUrl = model.gifDynamicUrl;
+            this.gifStaticUrl = model.gifStaticUrl;
             this.gmtCreate = model.gmtCreate;
             this.gmtModified = model.gmtModified;
             this.initiator = model.initiator;
@@ -428,6 +492,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             this.interactionType = model.interactionType;
             this.introduce = model.introduce;
             this.name = model.name;
+            this.openingRemarks = model.openingRemarks;
             this.orderAckFlag = model.orderAckFlag;
             this.pointDeductionRuleList = model.pointDeductionRuleList;
             this.points = model.points;
@@ -464,6 +529,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
          */
         public Builder checkCheatConfig(CheckCheatConfig checkCheatConfig) {
             this.checkCheatConfig = checkCheatConfig;
+            return this;
+        }
+
+        /**
+         * closingRemarks.
+         */
+        public Builder closingRemarks(String closingRemarks) {
+            this.closingRemarks = closingRemarks;
             return this;
         }
 
@@ -532,6 +605,30 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         }
 
         /**
+         * expressivenessList.
+         */
+        public Builder expressivenessList(java.util.List<ExpressivenessList> expressivenessList) {
+            this.expressivenessList = expressivenessList;
+            return this;
+        }
+
+        /**
+         * gifDynamicUrl.
+         */
+        public Builder gifDynamicUrl(String gifDynamicUrl) {
+            this.gifDynamicUrl = gifDynamicUrl;
+            return this;
+        }
+
+        /**
+         * gifStaticUrl.
+         */
+        public Builder gifStaticUrl(String gifStaticUrl) {
+            this.gifStaticUrl = gifStaticUrl;
+            return this;
+        }
+
+        /**
          * gmtCreate.
          */
         public Builder gmtCreate(String gmtCreate) {
@@ -584,6 +681,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * openingRemarks.
+         */
+        public Builder openingRemarks(String openingRemarks) {
+            this.openingRemarks = openingRemarks;
             return this;
         }
 
@@ -926,6 +1031,186 @@ public class GetAICoachScriptResponseBody extends TeaModel {
 
             public CompleteStrategy build() {
                 return new CompleteStrategy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAICoachScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAICoachScriptResponseBody</p>
+     */
+    public static class ExpressivenessList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("desc")
+        private String desc;
+
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("expressivenessId")
+        private String expressivenessId;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("rule")
+        private String rule;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("weight")
+        private Integer weight;
+
+        private ExpressivenessList(Builder builder) {
+            this.desc = builder.desc;
+            this.enabled = builder.enabled;
+            this.expressivenessId = builder.expressivenessId;
+            this.name = builder.name;
+            this.rule = builder.rule;
+            this.type = builder.type;
+            this.weight = builder.weight;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExpressivenessList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return desc
+         */
+        public String getDesc() {
+            return this.desc;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return expressivenessId
+         */
+        public String getExpressivenessId() {
+            return this.expressivenessId;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return rule
+         */
+        public String getRule() {
+            return this.rule;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return weight
+         */
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+        public static final class Builder {
+            private String desc; 
+            private Boolean enabled; 
+            private String expressivenessId; 
+            private String name; 
+            private String rule; 
+            private String type; 
+            private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExpressivenessList model) {
+                this.desc = model.desc;
+                this.enabled = model.enabled;
+                this.expressivenessId = model.expressivenessId;
+                this.name = model.name;
+                this.rule = model.rule;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
+
+            /**
+             * desc.
+             */
+            public Builder desc(String desc) {
+                this.desc = desc;
+                return this;
+            }
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * expressivenessId.
+             */
+            public Builder expressivenessId(String expressivenessId) {
+                this.expressivenessId = expressivenessId;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * rule.
+             */
+            public Builder rule(String rule) {
+                this.rule = rule;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * weight.
+             */
+            public Builder weight(Integer weight) {
+                this.weight = weight;
+                return this;
+            }
+
+            public ExpressivenessList build() {
+                return new ExpressivenessList(this);
             } 
 
         } 
@@ -1862,6 +2147,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("assessmentPoint")
         private Integer assessmentPoint;
 
+        @com.aliyun.core.annotation.NameInMap("assessmentPointEnabled")
+        private Boolean assessmentPointEnabled;
+
         @com.aliyun.core.annotation.NameInMap("expressiveness")
         private Integer expressiveness;
 
@@ -1884,6 +2172,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             this.abilityEvaluation = builder.abilityEvaluation;
             this.abilityEvaluationEnabled = builder.abilityEvaluationEnabled;
             this.assessmentPoint = builder.assessmentPoint;
+            this.assessmentPointEnabled = builder.assessmentPointEnabled;
             this.expressiveness = builder.expressiveness;
             this.expressivenessEnabled = builder.expressivenessEnabled;
             this.pointDeductionRule = builder.pointDeductionRule;
@@ -1919,6 +2208,13 @@ public class GetAICoachScriptResponseBody extends TeaModel {
          */
         public Integer getAssessmentPoint() {
             return this.assessmentPoint;
+        }
+
+        /**
+         * @return assessmentPointEnabled
+         */
+        public Boolean getAssessmentPointEnabled() {
+            return this.assessmentPointEnabled;
         }
 
         /**
@@ -1967,6 +2263,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             private Integer abilityEvaluation; 
             private Boolean abilityEvaluationEnabled; 
             private Integer assessmentPoint; 
+            private Boolean assessmentPointEnabled; 
             private Integer expressiveness; 
             private Boolean expressivenessEnabled; 
             private Integer pointDeductionRule; 
@@ -1981,6 +2278,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
                 this.abilityEvaluation = model.abilityEvaluation;
                 this.abilityEvaluationEnabled = model.abilityEvaluationEnabled;
                 this.assessmentPoint = model.assessmentPoint;
+                this.assessmentPointEnabled = model.assessmentPointEnabled;
                 this.expressiveness = model.expressiveness;
                 this.expressivenessEnabled = model.expressivenessEnabled;
                 this.pointDeductionRule = model.pointDeductionRule;
@@ -2010,6 +2308,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
              */
             public Builder assessmentPoint(Integer assessmentPoint) {
                 this.assessmentPoint = assessmentPoint;
+                return this;
+            }
+
+            /**
+             * assessmentPointEnabled.
+             */
+            public Builder assessmentPointEnabled(Boolean assessmentPointEnabled) {
+                this.assessmentPointEnabled = assessmentPointEnabled;
                 return this;
             }
 

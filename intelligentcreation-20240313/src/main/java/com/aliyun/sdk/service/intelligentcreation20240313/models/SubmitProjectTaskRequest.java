@@ -149,6 +149,60 @@ public class SubmitProjectTaskRequest extends Request {
      *
      * <p>SubmitProjectTaskRequest</p>
      */
+    public static class Mask extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
+
+        private Mask(Builder builder) {
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Mask create() {
+            return builder().build();
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Mask model) {
+                this.url = model.url;
+            } 
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public Mask build() {
+                return new Mask(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SubmitProjectTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitProjectTaskRequest</p>
+     */
     public static class Material extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("anchorStyleLevel")
         private String anchorStyleLevel;
@@ -158,6 +212,9 @@ public class SubmitProjectTaskRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
+
+        @com.aliyun.core.annotation.NameInMap("mask")
+        private Mask mask;
 
         @com.aliyun.core.annotation.NameInMap("speed")
         private String speed;
@@ -172,6 +229,7 @@ public class SubmitProjectTaskRequest extends Request {
             this.anchorStyleLevel = builder.anchorStyleLevel;
             this.format = builder.format;
             this.id = builder.id;
+            this.mask = builder.mask;
             this.speed = builder.speed;
             this.url = builder.url;
             this.volume = builder.volume;
@@ -207,6 +265,13 @@ public class SubmitProjectTaskRequest extends Request {
         }
 
         /**
+         * @return mask
+         */
+        public Mask getMask() {
+            return this.mask;
+        }
+
+        /**
          * @return speed
          */
         public String getSpeed() {
@@ -231,6 +296,7 @@ public class SubmitProjectTaskRequest extends Request {
             private String anchorStyleLevel; 
             private String format; 
             private String id; 
+            private Mask mask; 
             private String speed; 
             private String url; 
             private Integer volume; 
@@ -242,6 +308,7 @@ public class SubmitProjectTaskRequest extends Request {
                 this.anchorStyleLevel = model.anchorStyleLevel;
                 this.format = model.format;
                 this.id = model.id;
+                this.mask = model.mask;
                 this.speed = model.speed;
                 this.url = model.url;
                 this.volume = model.volume;
@@ -268,6 +335,14 @@ public class SubmitProjectTaskRequest extends Request {
              */
             public Builder id(String id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * mask.
+             */
+            public Builder mask(Mask mask) {
+                this.mask = mask;
                 return this;
             }
 

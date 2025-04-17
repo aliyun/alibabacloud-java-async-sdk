@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateAnchorRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("anchorCategory")
+    private String anchorCategory;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("anchorMaterialName")
     private String anchorMaterialName;
 
@@ -37,13 +41,19 @@ public class CreateAnchorRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("useScene")
     private String useScene;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("videoOssKey")
+    private String videoOssKey;
+
     private CreateAnchorRequest(Builder builder) {
         super(builder);
+        this.anchorCategory = builder.anchorCategory;
         this.anchorMaterialName = builder.anchorMaterialName;
         this.coverUrl = builder.coverUrl;
         this.digitalHumanType = builder.digitalHumanType;
         this.gender = builder.gender;
         this.useScene = builder.useScene;
+        this.videoOssKey = builder.videoOssKey;
     }
 
     public static Builder builder() {
@@ -57,6 +67,13 @@ public class CreateAnchorRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return anchorCategory
+     */
+    public String getAnchorCategory() {
+        return this.anchorCategory;
     }
 
     /**
@@ -94,12 +111,21 @@ public class CreateAnchorRequest extends Request {
         return this.useScene;
     }
 
+    /**
+     * @return videoOssKey
+     */
+    public String getVideoOssKey() {
+        return this.videoOssKey;
+    }
+
     public static final class Builder extends Request.Builder<CreateAnchorRequest, Builder> {
+        private String anchorCategory; 
         private String anchorMaterialName; 
         private String coverUrl; 
         private String digitalHumanType; 
         private String gender; 
         private String useScene; 
+        private String videoOssKey; 
 
         private Builder() {
             super();
@@ -107,12 +133,23 @@ public class CreateAnchorRequest extends Request {
 
         private Builder(CreateAnchorRequest request) {
             super(request);
+            this.anchorCategory = request.anchorCategory;
             this.anchorMaterialName = request.anchorMaterialName;
             this.coverUrl = request.coverUrl;
             this.digitalHumanType = request.digitalHumanType;
             this.gender = request.gender;
             this.useScene = request.useScene;
+            this.videoOssKey = request.videoOssKey;
         } 
+
+        /**
+         * anchorCategory.
+         */
+        public Builder anchorCategory(String anchorCategory) {
+            this.putBodyParameter("anchorCategory", anchorCategory);
+            this.anchorCategory = anchorCategory;
+            return this;
+        }
 
         /**
          * anchorMaterialName.
@@ -156,6 +193,15 @@ public class CreateAnchorRequest extends Request {
         public Builder useScene(String useScene) {
             this.putBodyParameter("useScene", useScene);
             this.useScene = useScene;
+            return this;
+        }
+
+        /**
+         * videoOssKey.
+         */
+        public Builder videoOssKey(String videoOssKey) {
+            this.putBodyParameter("videoOssKey", videoOssKey);
+            this.videoOssKey = videoOssKey;
             return this;
         }
 

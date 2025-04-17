@@ -38,6 +38,9 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("scaleType")
     private String scaleType;
 
+    @com.aliyun.core.annotation.NameInMap("scriptModelTag")
+    private String scriptModelTag;
+
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
@@ -49,6 +52,7 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resSpecType = builder.resSpecType;
         this.scaleType = builder.scaleType;
+        this.scriptModelTag = builder.scriptModelTag;
         this.status = builder.status;
     }
 
@@ -114,6 +118,13 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
     }
 
     /**
+     * @return scriptModelTag
+     */
+    public String getScriptModelTag() {
+        return this.scriptModelTag;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -128,6 +139,7 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
         private String requestId; 
         private String resSpecType; 
         private String scaleType; 
+        private String scriptModelTag; 
         private String status; 
 
         private Builder() {
@@ -141,6 +153,7 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.resSpecType = model.resSpecType;
             this.scaleType = model.scaleType;
+            this.scriptModelTag = model.scriptModelTag;
             this.status = model.status;
         } 
 
@@ -197,6 +210,14 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
          */
         public Builder scaleType(String scaleType) {
             this.scaleType = scaleType;
+            return this;
+        }
+
+        /**
+         * scriptModelTag.
+         */
+        public Builder scriptModelTag(String scriptModelTag) {
+            this.scriptModelTag = scriptModelTag;
             return this;
         }
 
@@ -320,6 +341,9 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("height")
         private Integer height;
 
+        @com.aliyun.core.annotation.NameInMap("index")
+        private Integer index;
+
         @com.aliyun.core.annotation.NameInMap("material")
         private Material material;
 
@@ -337,6 +361,7 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
 
         private Layers(Builder builder) {
             this.height = builder.height;
+            this.index = builder.index;
             this.material = builder.material;
             this.positionX = builder.positionX;
             this.positionY = builder.positionY;
@@ -357,6 +382,13 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
          */
         public Integer getHeight() {
             return this.height;
+        }
+
+        /**
+         * @return index
+         */
+        public Integer getIndex() {
+            return this.index;
         }
 
         /**
@@ -396,6 +428,7 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer height; 
+            private Integer index; 
             private Material material; 
             private Integer positionX; 
             private Integer positionY; 
@@ -407,6 +440,7 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
 
             private Builder(Layers model) {
                 this.height = model.height;
+                this.index = model.index;
                 this.material = model.material;
                 this.positionX = model.positionX;
                 this.positionY = model.positionY;
@@ -419,6 +453,14 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
              */
             public Builder height(Integer height) {
                 this.height = height;
+                return this;
+            }
+
+            /**
+             * index.
+             */
+            public Builder index(Integer index) {
+                this.index = index;
                 return this;
             }
 
@@ -476,15 +518,35 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
      * <p>QueryAvatarProjectResponseBody</p>
      */
     public static class VideoScript extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("emotion")
+        private String emotion;
+
+        @com.aliyun.core.annotation.NameInMap("pitchRate")
+        private String pitchRate;
+
         @com.aliyun.core.annotation.NameInMap("speedRate")
         private String speedRate;
+
+        @com.aliyun.core.annotation.NameInMap("textContent")
+        private String textContent;
+
+        @com.aliyun.core.annotation.NameInMap("voiceLanguage")
+        private String voiceLanguage;
 
         @com.aliyun.core.annotation.NameInMap("voiceTemplateId")
         private String voiceTemplateId;
 
+        @com.aliyun.core.annotation.NameInMap("volume")
+        private Integer volume;
+
         private VideoScript(Builder builder) {
+            this.emotion = builder.emotion;
+            this.pitchRate = builder.pitchRate;
             this.speedRate = builder.speedRate;
+            this.textContent = builder.textContent;
+            this.voiceLanguage = builder.voiceLanguage;
             this.voiceTemplateId = builder.voiceTemplateId;
+            this.volume = builder.volume;
         }
 
         public static Builder builder() {
@@ -496,10 +558,38 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
         }
 
         /**
+         * @return emotion
+         */
+        public String getEmotion() {
+            return this.emotion;
+        }
+
+        /**
+         * @return pitchRate
+         */
+        public String getPitchRate() {
+            return this.pitchRate;
+        }
+
+        /**
          * @return speedRate
          */
         public String getSpeedRate() {
             return this.speedRate;
+        }
+
+        /**
+         * @return textContent
+         */
+        public String getTextContent() {
+            return this.textContent;
+        }
+
+        /**
+         * @return voiceLanguage
+         */
+        public String getVoiceLanguage() {
+            return this.voiceLanguage;
         }
 
         /**
@@ -509,17 +599,50 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
             return this.voiceTemplateId;
         }
 
+        /**
+         * @return volume
+         */
+        public Integer getVolume() {
+            return this.volume;
+        }
+
         public static final class Builder {
+            private String emotion; 
+            private String pitchRate; 
             private String speedRate; 
+            private String textContent; 
+            private String voiceLanguage; 
             private String voiceTemplateId; 
+            private Integer volume; 
 
             private Builder() {
             } 
 
             private Builder(VideoScript model) {
+                this.emotion = model.emotion;
+                this.pitchRate = model.pitchRate;
                 this.speedRate = model.speedRate;
+                this.textContent = model.textContent;
+                this.voiceLanguage = model.voiceLanguage;
                 this.voiceTemplateId = model.voiceTemplateId;
+                this.volume = model.volume;
             } 
+
+            /**
+             * emotion.
+             */
+            public Builder emotion(String emotion) {
+                this.emotion = emotion;
+                return this;
+            }
+
+            /**
+             * pitchRate.
+             */
+            public Builder pitchRate(String pitchRate) {
+                this.pitchRate = pitchRate;
+                return this;
+            }
 
             /**
              * speedRate.
@@ -530,10 +653,34 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
             }
 
             /**
+             * textContent.
+             */
+            public Builder textContent(String textContent) {
+                this.textContent = textContent;
+                return this;
+            }
+
+            /**
+             * voiceLanguage.
+             */
+            public Builder voiceLanguage(String voiceLanguage) {
+                this.voiceLanguage = voiceLanguage;
+                return this;
+            }
+
+            /**
              * voiceTemplateId.
              */
             public Builder voiceTemplateId(String voiceTemplateId) {
                 this.voiceTemplateId = voiceTemplateId;
+                return this;
+            }
+
+            /**
+             * volume.
+             */
+            public Builder volume(Integer volume) {
+                this.volume = volume;
                 return this;
             }
 
@@ -551,6 +698,9 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
      * <p>QueryAvatarProjectResponseBody</p>
      */
     public static class Frames extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("index")
+        private Integer index;
+
         @com.aliyun.core.annotation.NameInMap("layers")
         private java.util.List<Layers> layers;
 
@@ -558,6 +708,7 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
         private VideoScript videoScript;
 
         private Frames(Builder builder) {
+            this.index = builder.index;
             this.layers = builder.layers;
             this.videoScript = builder.videoScript;
         }
@@ -568,6 +719,13 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
 
         public static Frames create() {
             return builder().build();
+        }
+
+        /**
+         * @return index
+         */
+        public Integer getIndex() {
+            return this.index;
         }
 
         /**
@@ -585,6 +743,7 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer index; 
             private java.util.List<Layers> layers; 
             private VideoScript videoScript; 
 
@@ -592,9 +751,18 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
             } 
 
             private Builder(Frames model) {
+                this.index = model.index;
                 this.layers = model.layers;
                 this.videoScript = model.videoScript;
             } 
+
+            /**
+             * index.
+             */
+            public Builder index(Integer index) {
+                this.index = index;
+                return this;
+            }
 
             /**
              * layers.

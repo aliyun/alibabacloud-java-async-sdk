@@ -22,6 +22,10 @@ public class ListAnchorRequest extends Request {
     private String anchorCategory;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("anchorId")
+    private String anchorId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("anchorType")
     private String anchorType;
 
@@ -52,6 +56,7 @@ public class ListAnchorRequest extends Request {
     private ListAnchorRequest(Builder builder) {
         super(builder);
         this.anchorCategory = builder.anchorCategory;
+        this.anchorId = builder.anchorId;
         this.anchorType = builder.anchorType;
         this.coverRate = builder.coverRate;
         this.digitalHumanType = builder.digitalHumanType;
@@ -79,6 +84,13 @@ public class ListAnchorRequest extends Request {
      */
     public String getAnchorCategory() {
         return this.anchorCategory;
+    }
+
+    /**
+     * @return anchorId
+     */
+    public String getAnchorId() {
+        return this.anchorId;
     }
 
     /**
@@ -132,6 +144,7 @@ public class ListAnchorRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListAnchorRequest, Builder> {
         private String anchorCategory; 
+        private String anchorId; 
         private String anchorType; 
         private String coverRate; 
         private String digitalHumanType; 
@@ -147,6 +160,7 @@ public class ListAnchorRequest extends Request {
         private Builder(ListAnchorRequest request) {
             super(request);
             this.anchorCategory = request.anchorCategory;
+            this.anchorId = request.anchorId;
             this.anchorType = request.anchorType;
             this.coverRate = request.coverRate;
             this.digitalHumanType = request.digitalHumanType;
@@ -162,6 +176,15 @@ public class ListAnchorRequest extends Request {
         public Builder anchorCategory(String anchorCategory) {
             this.putQueryParameter("anchorCategory", anchorCategory);
             this.anchorCategory = anchorCategory;
+            return this;
+        }
+
+        /**
+         * anchorId.
+         */
+        public Builder anchorId(String anchorId) {
+            this.putQueryParameter("anchorId", anchorId);
+            this.anchorId = anchorId;
             return this;
         }
 

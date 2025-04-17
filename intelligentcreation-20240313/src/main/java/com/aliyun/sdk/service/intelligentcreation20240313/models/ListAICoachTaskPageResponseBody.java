@@ -101,6 +101,9 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("finishTime")
         private String finishTime;
 
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
+        private String gmtCreate;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
@@ -112,6 +115,7 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
 
         private TaskList(Builder builder) {
             this.finishTime = builder.finishTime;
+            this.gmtCreate = builder.gmtCreate;
             this.status = builder.status;
             this.studentId = builder.studentId;
             this.taskId = builder.taskId;
@@ -130,6 +134,13 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
          */
         public String getFinishTime() {
             return this.finishTime;
+        }
+
+        /**
+         * @return gmtCreate
+         */
+        public String getGmtCreate() {
+            return this.gmtCreate;
         }
 
         /**
@@ -155,6 +166,7 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
 
         public static final class Builder {
             private String finishTime; 
+            private String gmtCreate; 
             private String status; 
             private String studentId; 
             private String taskId; 
@@ -164,6 +176,7 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
 
             private Builder(TaskList model) {
                 this.finishTime = model.finishTime;
+                this.gmtCreate = model.gmtCreate;
                 this.status = model.status;
                 this.studentId = model.studentId;
                 this.taskId = model.taskId;
@@ -174,6 +187,14 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
+                return this;
+            }
+
+            /**
+             * gmtCreate.
+             */
+            public Builder gmtCreate(String gmtCreate) {
+                this.gmtCreate = gmtCreate;
                 return this;
             }
 
