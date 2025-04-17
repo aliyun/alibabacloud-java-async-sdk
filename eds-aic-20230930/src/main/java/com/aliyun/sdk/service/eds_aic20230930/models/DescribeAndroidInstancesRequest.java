@@ -26,6 +26,10 @@ public class DescribeAndroidInstancesRequest extends Request {
     private String androidInstanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthorizedUserId")
+    private String authorizedUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BizRegionId")
     private String bizRegionId;
 
@@ -85,6 +89,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         super(builder);
         this.androidInstanceIds = builder.androidInstanceIds;
         this.androidInstanceName = builder.androidInstanceName;
+        this.authorizedUserId = builder.authorizedUserId;
         this.bizRegionId = builder.bizRegionId;
         this.chargeType = builder.chargeType;
         this.instanceGroupId = builder.instanceGroupId;
@@ -126,6 +131,13 @@ public class DescribeAndroidInstancesRequest extends Request {
      */
     public String getAndroidInstanceName() {
         return this.androidInstanceName;
+    }
+
+    /**
+     * @return authorizedUserId
+     */
+    public String getAuthorizedUserId() {
+        return this.authorizedUserId;
     }
 
     /**
@@ -229,6 +241,7 @@ public class DescribeAndroidInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAndroidInstancesRequest, Builder> {
         private java.util.List<String> androidInstanceIds; 
         private String androidInstanceName; 
+        private String authorizedUserId; 
         private String bizRegionId; 
         private String chargeType; 
         private String instanceGroupId; 
@@ -252,6 +265,7 @@ public class DescribeAndroidInstancesRequest extends Request {
             super(request);
             this.androidInstanceIds = request.androidInstanceIds;
             this.androidInstanceName = request.androidInstanceName;
+            this.authorizedUserId = request.authorizedUserId;
             this.bizRegionId = request.bizRegionId;
             this.chargeType = request.chargeType;
             this.instanceGroupId = request.instanceGroupId;
@@ -286,6 +300,15 @@ public class DescribeAndroidInstancesRequest extends Request {
         public Builder androidInstanceName(String androidInstanceName) {
             this.putQueryParameter("AndroidInstanceName", androidInstanceName);
             this.androidInstanceName = androidInstanceName;
+            return this;
+        }
+
+        /**
+         * AuthorizedUserId.
+         */
+        public Builder authorizedUserId(String authorizedUserId) {
+            this.putQueryParameter("AuthorizedUserId", authorizedUserId);
+            this.authorizedUserId = authorizedUserId;
             return this;
         }
 

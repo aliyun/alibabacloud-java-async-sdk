@@ -467,6 +467,81 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
      *
      * <p>ListPolicyGroupsResponseBody</p>
      */
+    public static class PolicyRelatedResources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AndroidInstanceGroupIds")
+        private java.util.List<String> androidInstanceGroupIds;
+
+        @com.aliyun.core.annotation.NameInMap("CloudPhoneMatrixIds")
+        private java.util.List<String> cloudPhoneMatrixIds;
+
+        private PolicyRelatedResources(Builder builder) {
+            this.androidInstanceGroupIds = builder.androidInstanceGroupIds;
+            this.cloudPhoneMatrixIds = builder.cloudPhoneMatrixIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PolicyRelatedResources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return androidInstanceGroupIds
+         */
+        public java.util.List<String> getAndroidInstanceGroupIds() {
+            return this.androidInstanceGroupIds;
+        }
+
+        /**
+         * @return cloudPhoneMatrixIds
+         */
+        public java.util.List<String> getCloudPhoneMatrixIds() {
+            return this.cloudPhoneMatrixIds;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> androidInstanceGroupIds; 
+            private java.util.List<String> cloudPhoneMatrixIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolicyRelatedResources model) {
+                this.androidInstanceGroupIds = model.androidInstanceGroupIds;
+                this.cloudPhoneMatrixIds = model.cloudPhoneMatrixIds;
+            } 
+
+            /**
+             * AndroidInstanceGroupIds.
+             */
+            public Builder androidInstanceGroupIds(java.util.List<String> androidInstanceGroupIds) {
+                this.androidInstanceGroupIds = androidInstanceGroupIds;
+                return this;
+            }
+
+            /**
+             * CloudPhoneMatrixIds.
+             */
+            public Builder cloudPhoneMatrixIds(java.util.List<String> cloudPhoneMatrixIds) {
+                this.cloudPhoneMatrixIds = cloudPhoneMatrixIds;
+                return this;
+            }
+
+            public PolicyRelatedResources build() {
+                return new PolicyRelatedResources(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListPolicyGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicyGroupsResponseBody</p>
+     */
     public static class PolicyGroupModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CameraRedirect")
         private String cameraRedirect;
@@ -495,6 +570,9 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PolicyGroupName")
         private String policyGroupName;
 
+        @com.aliyun.core.annotation.NameInMap("PolicyRelatedResources")
+        private PolicyRelatedResources policyRelatedResources;
+
         @com.aliyun.core.annotation.NameInMap("SessionResolutionHeight")
         private Integer sessionResolutionHeight;
 
@@ -511,6 +589,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             this.netRedirectPolicy = builder.netRedirectPolicy;
             this.policyGroupId = builder.policyGroupId;
             this.policyGroupName = builder.policyGroupName;
+            this.policyRelatedResources = builder.policyRelatedResources;
             this.sessionResolutionHeight = builder.sessionResolutionHeight;
             this.sessionResolutionWidth = builder.sessionResolutionWidth;
         }
@@ -587,6 +666,13 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return policyRelatedResources
+         */
+        public PolicyRelatedResources getPolicyRelatedResources() {
+            return this.policyRelatedResources;
+        }
+
+        /**
          * @return sessionResolutionHeight
          */
         public Integer getSessionResolutionHeight() {
@@ -610,6 +696,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             private NetRedirectPolicy netRedirectPolicy; 
             private String policyGroupId; 
             private String policyGroupName; 
+            private PolicyRelatedResources policyRelatedResources; 
             private Integer sessionResolutionHeight; 
             private Integer sessionResolutionWidth; 
 
@@ -626,6 +713,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
                 this.netRedirectPolicy = model.netRedirectPolicy;
                 this.policyGroupId = model.policyGroupId;
                 this.policyGroupName = model.policyGroupName;
+                this.policyRelatedResources = model.policyRelatedResources;
                 this.sessionResolutionHeight = model.sessionResolutionHeight;
                 this.sessionResolutionWidth = model.sessionResolutionWidth;
             } 
@@ -752,6 +840,14 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
              */
             public Builder policyGroupName(String policyGroupName) {
                 this.policyGroupName = policyGroupName;
+                return this;
+            }
+
+            /**
+             * PolicyRelatedResources.
+             */
+            public Builder policyRelatedResources(PolicyRelatedResources policyRelatedResources) {
+                this.policyRelatedResources = policyRelatedResources;
                 return this;
             }
 
