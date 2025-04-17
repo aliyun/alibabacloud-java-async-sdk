@@ -191,6 +191,9 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
 
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -198,6 +201,7 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
             this.billMonth = builder.billMonth;
             this.fileName = builder.fileName;
             this.fileUrl = builder.fileUrl;
+            this.status = builder.status;
             this.type = builder.type;
         }
 
@@ -231,6 +235,13 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -241,6 +252,7 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
             private String billMonth; 
             private String fileName; 
             private String fileUrl; 
+            private String status; 
             private String type; 
 
             private Builder() {
@@ -250,6 +262,7 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
                 this.billMonth = model.billMonth;
                 this.fileName = model.fileName;
                 this.fileUrl = model.fileUrl;
+                this.status = model.status;
                 this.type = model.type;
             } 
 
@@ -274,6 +287,14 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
