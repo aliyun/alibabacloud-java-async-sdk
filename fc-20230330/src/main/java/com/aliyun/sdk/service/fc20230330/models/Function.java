@@ -75,7 +75,7 @@ public class Function extends TeaModel {
     private Boolean internetAccess;
 
     @com.aliyun.core.annotation.NameInMap("invocationRestriction")
-    private OpenStructFunctionRestriction invocationRestriction;
+    private FunctionRestriction invocationRestriction;
 
     @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
     private String lastModifiedTime;
@@ -320,7 +320,7 @@ public class Function extends TeaModel {
     /**
      * @return invocationRestriction
      */
-    public OpenStructFunctionRestriction getInvocationRestriction() {
+    public FunctionRestriction getInvocationRestriction() {
         return this.invocationRestriction;
     }
 
@@ -470,7 +470,7 @@ public class Function extends TeaModel {
         private Integer instanceConcurrency; 
         private InstanceLifecycleConfig instanceLifecycleConfig; 
         private Boolean internetAccess; 
-        private OpenStructFunctionRestriction invocationRestriction; 
+        private FunctionRestriction invocationRestriction; 
         private String lastModifiedTime; 
         private String lastUpdateStatus; 
         private String lastUpdateStatusReason; 
@@ -689,7 +689,7 @@ public class Function extends TeaModel {
         /**
          * invocationRestriction.
          */
-        public Builder invocationRestriction(OpenStructFunctionRestriction invocationRestriction) {
+        public Builder invocationRestriction(FunctionRestriction invocationRestriction) {
             this.invocationRestriction = invocationRestriction;
             return this;
         }

@@ -24,7 +24,7 @@ public class DescribeRegionsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private OpenStructDescribeRegionsOutput body;
+    private DescribeRegionsOutput body;
 
     private DescribeRegionsResponse(BuilderImpl builder) {
         super(builder);
@@ -59,7 +59,7 @@ public class DescribeRegionsResponse extends Response {
     /**
      * @return body
      */
-    public OpenStructDescribeRegionsOutput getBody() {
+    public DescribeRegionsOutput getBody() {
         return this.body;
     }
 
@@ -69,7 +69,7 @@ public class DescribeRegionsResponse extends Response {
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(OpenStructDescribeRegionsOutput body);
+        Builder body(DescribeRegionsOutput body);
 
         @Override
         DescribeRegionsResponse build();
@@ -81,7 +81,7 @@ public class DescribeRegionsResponse extends Response {
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private OpenStructDescribeRegionsOutput body; 
+        private DescribeRegionsOutput body; 
 
         private BuilderImpl() {
             super();
@@ -116,7 +116,7 @@ public class DescribeRegionsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(OpenStructDescribeRegionsOutput body) {
+        public Builder body(DescribeRegionsOutput body) {
             this.body = body;
             return this;
         }

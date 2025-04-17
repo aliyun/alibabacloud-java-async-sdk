@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link OpenStructFunctionRestriction} extends {@link TeaModel}
+ * {@link FunctionRestriction} extends {@link TeaModel}
  *
- * <p>OpenStructFunctionRestriction</p>
+ * <p>FunctionRestriction</p>
  */
-public class OpenStructFunctionRestriction extends TeaModel {
+public class FunctionRestriction extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("disable")
     private Boolean disable;
 
@@ -26,7 +26,7 @@ public class OpenStructFunctionRestriction extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("reason")
     private String reason;
 
-    private OpenStructFunctionRestriction(Builder builder) {
+    private FunctionRestriction(Builder builder) {
         this.disable = builder.disable;
         this.lastModifiedTime = builder.lastModifiedTime;
         this.reason = builder.reason;
@@ -36,7 +36,7 @@ public class OpenStructFunctionRestriction extends TeaModel {
         return new Builder();
     }
 
-    public static OpenStructFunctionRestriction create() {
+    public static FunctionRestriction create() {
         return builder().build();
     }
 
@@ -73,7 +73,7 @@ public class OpenStructFunctionRestriction extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(OpenStructFunctionRestriction model) {
+        private Builder(FunctionRestriction model) {
             this.disable = model.disable;
             this.lastModifiedTime = model.lastModifiedTime;
             this.reason = model.reason;
@@ -103,8 +103,8 @@ public class OpenStructFunctionRestriction extends TeaModel {
             return this;
         }
 
-        public OpenStructFunctionRestriction build() {
-            return new OpenStructFunctionRestriction(this);
+        public FunctionRestriction build() {
+            return new FunctionRestriction(this);
         } 
 
     } 

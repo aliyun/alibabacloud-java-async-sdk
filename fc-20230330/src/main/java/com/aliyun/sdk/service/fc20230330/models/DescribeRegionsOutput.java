@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link OpenStructDescribeRegionsOutput} extends {@link TeaModel}
+ * {@link DescribeRegionsOutput} extends {@link TeaModel}
  *
- * <p>OpenStructDescribeRegionsOutput</p>
+ * <p>DescribeRegionsOutput</p>
  */
-public class OpenStructDescribeRegionsOutput extends TeaModel {
+public class DescribeRegionsOutput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Regions")
     private Regions regions;
 
-    private OpenStructDescribeRegionsOutput(Builder builder) {
+    private DescribeRegionsOutput(Builder builder) {
         this.regions = builder.regions;
     }
 
@@ -28,7 +28,7 @@ public class OpenStructDescribeRegionsOutput extends TeaModel {
         return new Builder();
     }
 
-    public static OpenStructDescribeRegionsOutput create() {
+    public static DescribeRegionsOutput create() {
         return builder().build();
     }
 
@@ -49,7 +49,7 @@ public class OpenStructDescribeRegionsOutput extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(OpenStructDescribeRegionsOutput model) {
+        private Builder(DescribeRegionsOutput model) {
             this.regions = model.regions;
         } 
 
@@ -61,17 +61,17 @@ public class OpenStructDescribeRegionsOutput extends TeaModel {
             return this;
         }
 
-        public OpenStructDescribeRegionsOutput build() {
-            return new OpenStructDescribeRegionsOutput(this);
+        public DescribeRegionsOutput build() {
+            return new DescribeRegionsOutput(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link OpenStructDescribeRegionsOutput} extends {@link TeaModel}
+     * {@link DescribeRegionsOutput} extends {@link TeaModel}
      *
-     * <p>OpenStructDescribeRegionsOutput</p>
+     * <p>DescribeRegionsOutput</p>
      */
     public static class Region extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
@@ -144,9 +144,9 @@ public class OpenStructDescribeRegionsOutput extends TeaModel {
     }
     /**
      * 
-     * {@link OpenStructDescribeRegionsOutput} extends {@link TeaModel}
+     * {@link DescribeRegionsOutput} extends {@link TeaModel}
      *
-     * <p>OpenStructDescribeRegionsOutput</p>
+     * <p>DescribeRegionsOutput</p>
      */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Region")
