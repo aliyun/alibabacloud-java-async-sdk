@@ -52,6 +52,10 @@ public class RunDocBrainmapRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("referenceContent")
+    private String referenceContent;
+
     private RunDocBrainmapRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -62,6 +66,7 @@ public class RunDocBrainmapRequest extends Request {
         this.sessionId = builder.sessionId;
         this.wordNumber = builder.wordNumber;
         this.workspaceId = builder.workspaceId;
+        this.referenceContent = builder.referenceContent;
     }
 
     public static Builder builder() {
@@ -133,6 +138,13 @@ public class RunDocBrainmapRequest extends Request {
         return this.workspaceId;
     }
 
+    /**
+     * @return referenceContent
+     */
+    public String getReferenceContent() {
+        return this.referenceContent;
+    }
+
     public static final class Builder extends Request.Builder<RunDocBrainmapRequest, Builder> {
         private String regionId; 
         private Boolean cleanCache; 
@@ -142,6 +154,7 @@ public class RunDocBrainmapRequest extends Request {
         private String sessionId; 
         private Integer wordNumber; 
         private String workspaceId; 
+        private String referenceContent; 
 
         private Builder() {
             super();
@@ -157,6 +170,7 @@ public class RunDocBrainmapRequest extends Request {
             this.sessionId = request.sessionId;
             this.wordNumber = request.wordNumber;
             this.workspaceId = request.workspaceId;
+            this.referenceContent = request.referenceContent;
         } 
 
         /**
@@ -237,6 +251,15 @@ public class RunDocBrainmapRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * referenceContent.
+         */
+        public Builder referenceContent(String referenceContent) {
+            this.putBodyParameter("referenceContent", referenceContent);
+            this.referenceContent = referenceContent;
             return this;
         }
 

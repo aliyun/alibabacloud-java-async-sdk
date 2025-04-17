@@ -21,7 +21,7 @@ public class RunDocIntroductionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CleanCache")
     private Boolean cleanCache;
 
@@ -52,6 +52,10 @@ public class RunDocIntroductionRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("referenceContent")
+    private String referenceContent;
+
     private RunDocIntroductionRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -62,6 +66,7 @@ public class RunDocIntroductionRequest extends Request {
         this.sessionId = builder.sessionId;
         this.summaryPrompt = builder.summaryPrompt;
         this.workspaceId = builder.workspaceId;
+        this.referenceContent = builder.referenceContent;
     }
 
     public static Builder builder() {
@@ -133,6 +138,13 @@ public class RunDocIntroductionRequest extends Request {
         return this.workspaceId;
     }
 
+    /**
+     * @return referenceContent
+     */
+    public String getReferenceContent() {
+        return this.referenceContent;
+    }
+
     public static final class Builder extends Request.Builder<RunDocIntroductionRequest, Builder> {
         private String regionId; 
         private Boolean cleanCache; 
@@ -142,6 +154,7 @@ public class RunDocIntroductionRequest extends Request {
         private String sessionId; 
         private String summaryPrompt; 
         private String workspaceId; 
+        private String referenceContent; 
 
         private Builder() {
             super();
@@ -157,6 +170,7 @@ public class RunDocIntroductionRequest extends Request {
             this.sessionId = request.sessionId;
             this.summaryPrompt = request.summaryPrompt;
             this.workspaceId = request.workspaceId;
+            this.referenceContent = request.referenceContent;
         } 
 
         /**
@@ -172,7 +186,7 @@ public class RunDocIntroductionRequest extends Request {
          * CleanCache.
          */
         public Builder cleanCache(Boolean cleanCache) {
-            this.putQueryParameter("CleanCache", cleanCache);
+            this.putBodyParameter("CleanCache", cleanCache);
             this.cleanCache = cleanCache;
             return this;
         }
@@ -237,6 +251,15 @@ public class RunDocIntroductionRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * referenceContent.
+         */
+        public Builder referenceContent(String referenceContent) {
+            this.putBodyParameter("referenceContent", referenceContent);
+            this.referenceContent = referenceContent;
             return this;
         }
 
