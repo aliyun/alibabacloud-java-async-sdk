@@ -35,6 +35,7 @@ public class BatchUpdateWafRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
 
     @com.aliyun.core.annotation.Query
@@ -177,6 +178,7 @@ public class BatchUpdateWafRulesRequest extends Request {
 
         /**
          * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -37,6 +37,9 @@ public class GetWafRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("RulesetId")
+    private Long rulesetId;
+
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -50,6 +53,7 @@ public class GetWafRuleResponseBody extends TeaModel {
         this.phase = builder.phase;
         this.position = builder.position;
         this.requestId = builder.requestId;
+        this.rulesetId = builder.rulesetId;
         this.status = builder.status;
         this.updateTime = builder.updateTime;
     }
@@ -109,6 +113,13 @@ public class GetWafRuleResponseBody extends TeaModel {
     }
 
     /**
+     * @return rulesetId
+     */
+    public Long getRulesetId() {
+        return this.rulesetId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -129,6 +140,7 @@ public class GetWafRuleResponseBody extends TeaModel {
         private String phase; 
         private Long position; 
         private String requestId; 
+        private Long rulesetId; 
         private String status; 
         private String updateTime; 
 
@@ -142,6 +154,7 @@ public class GetWafRuleResponseBody extends TeaModel {
             this.phase = model.phase;
             this.position = model.position;
             this.requestId = model.requestId;
+            this.rulesetId = model.rulesetId;
             this.status = model.status;
             this.updateTime = model.updateTime;
         } 
@@ -208,6 +221,14 @@ public class GetWafRuleResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * RulesetId.
+         */
+        public Builder rulesetId(Long rulesetId) {
+            this.rulesetId = rulesetId;
             return this;
         }
 

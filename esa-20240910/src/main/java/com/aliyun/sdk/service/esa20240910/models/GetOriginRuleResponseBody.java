@@ -26,6 +26,21 @@ public class GetOriginRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DnsRecord")
     private String dnsRecord;
 
+    @com.aliyun.core.annotation.NameInMap("Follow302Enable")
+    private String follow302Enable;
+
+    @com.aliyun.core.annotation.NameInMap("Follow302MaxTries")
+    private String follow302MaxTries;
+
+    @com.aliyun.core.annotation.NameInMap("Follow302RetainArgs")
+    private String follow302RetainArgs;
+
+    @com.aliyun.core.annotation.NameInMap("Follow302RetainHeader")
+    private String follow302RetainHeader;
+
+    @com.aliyun.core.annotation.NameInMap("Follow302TargetHost")
+    private String follow302TargetHost;
+
     @com.aliyun.core.annotation.NameInMap("OriginHost")
     private String originHost;
 
@@ -78,6 +93,11 @@ public class GetOriginRuleResponseBody extends TeaModel {
         this.configId = builder.configId;
         this.configType = builder.configType;
         this.dnsRecord = builder.dnsRecord;
+        this.follow302Enable = builder.follow302Enable;
+        this.follow302MaxTries = builder.follow302MaxTries;
+        this.follow302RetainArgs = builder.follow302RetainArgs;
+        this.follow302RetainHeader = builder.follow302RetainHeader;
+        this.follow302TargetHost = builder.follow302TargetHost;
         this.originHost = builder.originHost;
         this.originHttpPort = builder.originHttpPort;
         this.originHttpsPort = builder.originHttpsPort;
@@ -127,6 +147,41 @@ public class GetOriginRuleResponseBody extends TeaModel {
      */
     public String getDnsRecord() {
         return this.dnsRecord;
+    }
+
+    /**
+     * @return follow302Enable
+     */
+    public String getFollow302Enable() {
+        return this.follow302Enable;
+    }
+
+    /**
+     * @return follow302MaxTries
+     */
+    public String getFollow302MaxTries() {
+        return this.follow302MaxTries;
+    }
+
+    /**
+     * @return follow302RetainArgs
+     */
+    public String getFollow302RetainArgs() {
+        return this.follow302RetainArgs;
+    }
+
+    /**
+     * @return follow302RetainHeader
+     */
+    public String getFollow302RetainHeader() {
+        return this.follow302RetainHeader;
+    }
+
+    /**
+     * @return follow302TargetHost
+     */
+    public String getFollow302TargetHost() {
+        return this.follow302TargetHost;
     }
 
     /**
@@ -245,6 +300,11 @@ public class GetOriginRuleResponseBody extends TeaModel {
         private Long configId; 
         private String configType; 
         private String dnsRecord; 
+        private String follow302Enable; 
+        private String follow302MaxTries; 
+        private String follow302RetainArgs; 
+        private String follow302RetainHeader; 
+        private String follow302TargetHost; 
         private String originHost; 
         private String originHttpPort; 
         private String originHttpsPort; 
@@ -269,6 +329,11 @@ public class GetOriginRuleResponseBody extends TeaModel {
             this.configId = model.configId;
             this.configType = model.configType;
             this.dnsRecord = model.dnsRecord;
+            this.follow302Enable = model.follow302Enable;
+            this.follow302MaxTries = model.follow302MaxTries;
+            this.follow302RetainArgs = model.follow302RetainArgs;
+            this.follow302RetainHeader = model.follow302RetainHeader;
+            this.follow302TargetHost = model.follow302TargetHost;
             this.originHost = model.originHost;
             this.originHttpPort = model.originHttpPort;
             this.originHttpsPort = model.originHttpsPort;
@@ -321,6 +386,46 @@ public class GetOriginRuleResponseBody extends TeaModel {
          */
         public Builder dnsRecord(String dnsRecord) {
             this.dnsRecord = dnsRecord;
+            return this;
+        }
+
+        /**
+         * Follow302Enable.
+         */
+        public Builder follow302Enable(String follow302Enable) {
+            this.follow302Enable = follow302Enable;
+            return this;
+        }
+
+        /**
+         * Follow302MaxTries.
+         */
+        public Builder follow302MaxTries(String follow302MaxTries) {
+            this.follow302MaxTries = follow302MaxTries;
+            return this;
+        }
+
+        /**
+         * Follow302RetainArgs.
+         */
+        public Builder follow302RetainArgs(String follow302RetainArgs) {
+            this.follow302RetainArgs = follow302RetainArgs;
+            return this;
+        }
+
+        /**
+         * Follow302RetainHeader.
+         */
+        public Builder follow302RetainHeader(String follow302RetainHeader) {
+            this.follow302RetainHeader = follow302RetainHeader;
+            return this;
+        }
+
+        /**
+         * Follow302TargetHost.
+         */
+        public Builder follow302TargetHost(String follow302TargetHost) {
+            this.follow302TargetHost = follow302TargetHost;
             return this;
         }
 
