@@ -12,27 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateModelVersionResponseBody} extends {@link TeaModel}
+ * {@link SetUserConfigsResponseBody} extends {@link TeaModel}
  *
- * <p>CreateModelVersionResponseBody</p>
+ * <p>SetUserConfigsResponseBody</p>
  */
-public class CreateModelVersionResponseBody extends TeaModel {
+public class SetUserConfigsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("VersionName")
-    private String versionName;
-
-    private CreateModelVersionResponseBody(Builder builder) {
+    private SetUserConfigsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.versionName = builder.versionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateModelVersionResponseBody create() {
+    public static SetUserConfigsResponseBody create() {
         return builder().build();
     }
 
@@ -47,49 +43,29 @@ public class CreateModelVersionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return versionName
-     */
-    public String getVersionName() {
-        return this.versionName;
-    }
-
     public static final class Builder {
         private String requestId; 
-        private String versionName; 
 
         private Builder() {
         } 
 
-        private Builder(CreateModelVersionResponseBody model) {
+        private Builder(SetUserConfigsResponseBody model) {
             this.requestId = model.requestId;
-            this.versionName = model.versionName;
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>21645FCD-BAB9-5742-89AE-AEB27****B2E</p>
+         * <p>dsjk****dfjksdf</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        /**
-         * <p>The version of the model.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.1.0</p>
-         */
-        public Builder versionName(String versionName) {
-            this.versionName = versionName;
-            return this;
-        }
-
-        public CreateModelVersionResponseBody build() {
-            return new CreateModelVersionResponseBody(this);
+        public SetUserConfigsResponseBody build() {
+            return new SetUserConfigsResponseBody(this);
         } 
 
     } 

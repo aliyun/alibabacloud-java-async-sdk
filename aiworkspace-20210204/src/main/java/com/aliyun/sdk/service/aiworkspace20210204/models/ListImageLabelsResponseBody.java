@@ -80,7 +80,7 @@ public class ListImageLabelsResponseBody extends TeaModel {
         } 
 
         /**
-         * Labels.
+         * <p>The image tags.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
@@ -88,7 +88,10 @@ public class ListImageLabelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListImageLabelsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of the images that meet the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -162,7 +168,10 @@ public class ListImageLabelsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system.chipType</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -170,7 +179,10 @@ public class ListImageLabelsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GPU</p>
              */
             public Builder value(String value) {
                 this.value = value;

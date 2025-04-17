@@ -236,7 +236,14 @@ public class GetCodeSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * Accessibility.
+         * <p>The visibility of the code source. Valid values:</p>
+         * <ul>
+         * <li>PRIVATE: Visible only to you and the administrator of the workspace.</li>
+         * <li>PUBLIC: Visible to all members in the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -244,7 +251,10 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * CodeBranch.
+         * <p>The code repository branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         public Builder codeBranch(String codeBranch) {
             this.codeBranch = codeBranch;
@@ -252,7 +262,10 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * CodeCommit.
+         * <p>The code commit ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44da10***********</p>
          */
         public Builder codeCommit(String codeCommit) {
             this.codeCommit = codeCommit;
@@ -260,7 +273,10 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * CodeRepo.
+         * <p>The address of the code repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://code.aliyun.com/pai-dlc/examples.git">https://code.aliyun.com/pai-dlc/examples.git</a></p>
          */
         public Builder codeRepo(String codeRepo) {
             this.codeRepo = codeRepo;
@@ -268,7 +284,10 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * CodeRepoAccessToken.
+         * <p>The token used to access the code repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder codeRepoAccessToken(String codeRepoAccessToken) {
             this.codeRepoAccessToken = codeRepoAccessToken;
@@ -276,7 +295,10 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * CodeRepoUserName.
+         * <p>The username of the code repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder codeRepoUserName(String codeRepoUserName) {
             this.codeRepoUserName = codeRepoUserName;
@@ -284,7 +306,10 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * CodeSourceId.
+         * <p>The ID of the code source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code-202**********</p>
          */
         public Builder codeSourceId(String codeSourceId) {
             this.codeSourceId = codeSourceId;
@@ -292,7 +317,10 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the code source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is my data source 1.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -300,7 +328,10 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DisplayName.
+         * <p>The name of the code source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyCodeSource1</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -308,7 +339,10 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the code source was created, in the ISO8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T23:36:01.123Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -316,7 +350,10 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifyTime.
+         * <p>The time when the code source was modified, in the ISO8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T23:36:01.123Z</p>
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
             this.gmtModifyTime = gmtModifyTime;
@@ -324,7 +361,10 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * MountPath.
+         * <p>The local mount path of the code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/code</p>
          */
         public Builder mountPath(String mountPath) {
             this.mountPath = mountPath;
@@ -332,7 +372,10 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -340,7 +383,10 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1722********</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -348,7 +394,10 @@ public class GetCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

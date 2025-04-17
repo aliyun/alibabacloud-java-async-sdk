@@ -67,7 +67,10 @@ public class CreateRunResponseBody extends TeaModel {
         } 
 
         /**
-         * RunId.
+         * <p>The run ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run-1meoz7VJd2C6f****</p>
          */
         public Builder runId(String runId) {
             this.runId = runId;

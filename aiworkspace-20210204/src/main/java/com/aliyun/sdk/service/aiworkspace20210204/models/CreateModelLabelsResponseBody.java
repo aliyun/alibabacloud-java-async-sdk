@@ -54,7 +54,10 @@ public class CreateModelLabelsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F81D9EC0-1872-50F5-A96C-A0647D****1D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

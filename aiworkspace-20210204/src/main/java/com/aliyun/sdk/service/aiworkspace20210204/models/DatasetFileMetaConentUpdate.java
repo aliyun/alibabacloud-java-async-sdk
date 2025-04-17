@@ -45,6 +45,12 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MetaAttributes")
     private String metaAttributes;
 
+    @com.aliyun.core.annotation.NameInMap("SemanticIndexJobId")
+    private String semanticIndexJobId;
+
+    @com.aliyun.core.annotation.NameInMap("SemanticIndexUpdateTime")
+    private String semanticIndexUpdateTime;
+
     @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
@@ -58,6 +64,8 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         this.fileType = builder.fileType;
         this.fileUpdateTime = builder.fileUpdateTime;
         this.metaAttributes = builder.metaAttributes;
+        this.semanticIndexJobId = builder.semanticIndexJobId;
+        this.semanticIndexUpdateTime = builder.semanticIndexUpdateTime;
         this.tags = builder.tags;
     }
 
@@ -137,6 +145,20 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
     }
 
     /**
+     * @return semanticIndexJobId
+     */
+    public String getSemanticIndexJobId() {
+        return this.semanticIndexJobId;
+    }
+
+    /**
+     * @return semanticIndexUpdateTime
+     */
+    public String getSemanticIndexUpdateTime() {
+        return this.semanticIndexUpdateTime;
+    }
+
+    /**
      * @return tags
      */
     public String getTags() {
@@ -153,6 +175,8 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         private String fileType; 
         private String fileUpdateTime; 
         private String metaAttributes; 
+        private String semanticIndexJobId; 
+        private String semanticIndexUpdateTime; 
         private String tags; 
 
         private Builder() {
@@ -168,6 +192,8 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
             this.fileType = model.fileType;
             this.fileUpdateTime = model.fileUpdateTime;
             this.metaAttributes = model.metaAttributes;
+            this.semanticIndexJobId = model.semanticIndexJobId;
+            this.semanticIndexUpdateTime = model.semanticIndexUpdateTime;
             this.tags = model.tags;
         } 
 
@@ -207,7 +233,7 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-12T14:36:01Z</p>
+         * <p>2021-01-12T14:36:01.000Z</p>
          */
         public Builder fileCreateTime(String fileCreateTime) {
             this.fileCreateTime = fileCreateTime;
@@ -234,7 +260,7 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-12T14:36:01Z</p>
+         * <p>2021-01-12T14:36:01.000Z</p>
          */
         public Builder fileUpdateTime(String fileUpdateTime) {
             this.fileUpdateTime = fileUpdateTime;
@@ -246,6 +272,25 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
          */
         public Builder metaAttributes(String metaAttributes) {
             this.metaAttributes = metaAttributes;
+            return this;
+        }
+
+        /**
+         * SemanticIndexJobId.
+         */
+        public Builder semanticIndexJobId(String semanticIndexJobId) {
+            this.semanticIndexJobId = semanticIndexJobId;
+            return this;
+        }
+
+        /**
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01.000Z</p>
+         */
+        public Builder semanticIndexUpdateTime(String semanticIndexUpdateTime) {
+            this.semanticIndexUpdateTime = semanticIndexUpdateTime;
             return this;
         }
 

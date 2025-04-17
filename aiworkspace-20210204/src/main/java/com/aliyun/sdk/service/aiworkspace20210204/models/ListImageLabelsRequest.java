@@ -115,7 +115,10 @@ public class ListImageLabelsRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * <p>The image ID. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain the image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image-4c62******53uor</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -124,7 +127,10 @@ public class ListImageLabelsRequest extends Request {
         }
 
         /**
-         * LabelFilter.
+         * <p>The tag filter conditions, separated with commas (,). The format of a single condition filter is <code>key=value</code>. Takes effect independently from LabelKeys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system.framework=XGBoost 1.6.0,system.official=true</p>
          */
         public Builder labelFilter(String labelFilter) {
             this.putQueryParameter("LabelFilter", labelFilter);
@@ -133,7 +139,10 @@ public class ListImageLabelsRequest extends Request {
         }
 
         /**
-         * LabelKeys.
+         * <p>The tag keys, separated with commas (,). System tags start with system and take effect independently from LabelFilter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system.framework,system.official</p>
          */
         public Builder labelKeys(String labelKeys) {
             this.putQueryParameter("LabelKeys", labelKeys);
@@ -142,7 +151,10 @@ public class ListImageLabelsRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region where the image resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -151,7 +163,10 @@ public class ListImageLabelsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

@@ -73,7 +73,14 @@ public class CreateProductOrdersRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to automatically pay for the provided products.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putBodyParameter("AutoPay", autoPay);
@@ -82,7 +89,7 @@ public class CreateProductOrdersRequest extends Request {
         }
 
         /**
-         * Products.
+         * <p>The list of products to be purchased. Separate them with commas (,).</p>
          */
         public Builder products(java.util.List<Products> products) {
             this.putBodyParameter("Products", products);
@@ -163,7 +170,10 @@ public class CreateProductOrdersRequest extends Request {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>commodity_type。</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -171,7 +181,7 @@ public class CreateProductOrdersRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The property name.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -179,7 +189,10 @@ public class CreateProductOrdersRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss。</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -311,7 +324,14 @@ public class CreateProductOrdersRequest extends Request {
             } 
 
             /**
-             * AutoRenew.
+             * <p>Specifies whether to automatically renew the product.</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -319,7 +339,10 @@ public class CreateProductOrdersRequest extends Request {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing method. Only POSTPAY is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POSTPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -327,7 +350,10 @@ public class CreateProductOrdersRequest extends Request {
             }
 
             /**
-             * Duration.
+             * <p>The purchase duration. You can use this parameter together with pricingCycle. Only 1 is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -335,7 +361,14 @@ public class CreateProductOrdersRequest extends Request {
             }
 
             /**
-             * InstanceProperties.
+             * <p>The properties of the instance.</p>
+             * <ul>
+             * <li>DataWorks_share: [ { &quot;Code&quot;: &quot;region&quot;, &quot;Value&quot;: &quot;cn-shanghai&quot; } ]</li>
+             * <li>OSS_share: [ { &quot;Code&quot;: &quot;commodity_type&quot;, &quot;Value&quot;: &quot;oss&quot;, &quot;Name&quot;: &quot;Object Storage Service&quot; }, { &quot;Code&quot;: &quot;ord_time&quot;, &quot;Value&quot;: &quot;1:Hour&quot;, &quot;Name&quot;: &quot;1 Hour&quot; } ]</li>
+             * <li>PAI_share: None</li>
+             * <li>China bid MaxCompute_share: [ { &quot;Code&quot;: &quot;region&quot;, &quot;Value&quot;: &quot;cn-hangzhou&quot; }, { &quot;Code&quot;: &quot;odps_specification_type&quot;, &quot;Value&quot;: &quot;OdpsStandard&quot; }, { &quot;Code&quot;: &quot;ord_time&quot;, &quot;Value&quot;: &quot;1:Hour&quot; } ]</li>
+             * <li>International bid MaxCompute_share: [ { &quot;Code&quot;: &quot;region&quot;, &quot;Value&quot;: &quot;cn-hangzhou&quot; }, { &quot;Code&quot;: &quot;ord_time&quot;, &quot;Value&quot;: &quot;1:Hour&quot; } ]</li>
+             * </ul>
              */
             public Builder instanceProperties(java.util.List<InstanceProperties> instanceProperties) {
                 this.instanceProperties = instanceProperties;
@@ -343,7 +376,10 @@ public class CreateProductOrdersRequest extends Request {
             }
 
             /**
-             * OrderType.
+             * <p>The type of the order. Only BUY is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BUY</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -351,7 +387,14 @@ public class CreateProductOrdersRequest extends Request {
             }
 
             /**
-             * PricingCycle.
+             * <p>The billing cycle. Valid values:</p>
+             * <ul>
+             * <li>Month: The price is calculated every month. DataWorks_share only supports Month.</li>
+             * <li>Hour: The price is calculated every hour. OSS_share and MaxCompute_share only support Hour.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder pricingCycle(String pricingCycle) {
                 this.pricingCycle = pricingCycle;
@@ -359,7 +402,16 @@ public class CreateProductOrdersRequest extends Request {
             }
 
             /**
-             * ProductCode.
+             * <p>The product code. Valid values:</p>
+             * <ul>
+             * <li>DataWorks_share: pay-as-you-go DataWorks</li>
+             * <li>MaxCompute_share: pay-as-you-go MaxCompute</li>
+             * <li>PAI_share: pay-as-you-go PAI.</li>
+             * <li>OSS_share: pay-as-you-go OSS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DataWorks_share</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;

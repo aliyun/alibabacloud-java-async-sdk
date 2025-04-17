@@ -26,6 +26,9 @@ public class DatasetFileMeta extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DownloadUrl")
     private String downloadUrl;
 
+    @com.aliyun.core.annotation.NameInMap("FileCreateTime")
+    private String fileCreateTime;
+
     @com.aliyun.core.annotation.NameInMap("FileFingerPrint")
     private String fileFingerPrint;
 
@@ -35,11 +38,23 @@ public class DatasetFileMeta extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FileUpdateTime")
     private String fileUpdateTime;
 
+    @com.aliyun.core.annotation.NameInMap("MetaAttributes")
+    private String metaAttributes;
+
     @com.aliyun.core.annotation.NameInMap("Score")
     private Float score;
 
+    @com.aliyun.core.annotation.NameInMap("SemanticIndexJobId")
+    private String semanticIndexJobId;
+
+    @com.aliyun.core.annotation.NameInMap("SemanticIndexUpdateTime")
+    private String semanticIndexUpdateTime;
+
     @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
+
+    @com.aliyun.core.annotation.NameInMap("ThumbnailUrl")
+    private String thumbnailUrl;
 
     @com.aliyun.core.annotation.NameInMap("Uri")
     private String uri;
@@ -48,11 +63,16 @@ public class DatasetFileMeta extends TeaModel {
         this.dataSize = builder.dataSize;
         this.datasetFileMetaId = builder.datasetFileMetaId;
         this.downloadUrl = builder.downloadUrl;
+        this.fileCreateTime = builder.fileCreateTime;
         this.fileFingerPrint = builder.fileFingerPrint;
         this.fileName = builder.fileName;
         this.fileUpdateTime = builder.fileUpdateTime;
+        this.metaAttributes = builder.metaAttributes;
         this.score = builder.score;
+        this.semanticIndexJobId = builder.semanticIndexJobId;
+        this.semanticIndexUpdateTime = builder.semanticIndexUpdateTime;
         this.tags = builder.tags;
+        this.thumbnailUrl = builder.thumbnailUrl;
         this.uri = builder.uri;
     }
 
@@ -90,6 +110,13 @@ public class DatasetFileMeta extends TeaModel {
     }
 
     /**
+     * @return fileCreateTime
+     */
+    public String getFileCreateTime() {
+        return this.fileCreateTime;
+    }
+
+    /**
      * @return fileFingerPrint
      */
     public String getFileFingerPrint() {
@@ -111,6 +138,13 @@ public class DatasetFileMeta extends TeaModel {
     }
 
     /**
+     * @return metaAttributes
+     */
+    public String getMetaAttributes() {
+        return this.metaAttributes;
+    }
+
+    /**
      * @return score
      */
     public Float getScore() {
@@ -118,10 +152,31 @@ public class DatasetFileMeta extends TeaModel {
     }
 
     /**
+     * @return semanticIndexJobId
+     */
+    public String getSemanticIndexJobId() {
+        return this.semanticIndexJobId;
+    }
+
+    /**
+     * @return semanticIndexUpdateTime
+     */
+    public String getSemanticIndexUpdateTime() {
+        return this.semanticIndexUpdateTime;
+    }
+
+    /**
      * @return tags
      */
     public String getTags() {
         return this.tags;
+    }
+
+    /**
+     * @return thumbnailUrl
+     */
+    public String getThumbnailUrl() {
+        return this.thumbnailUrl;
     }
 
     /**
@@ -135,11 +190,16 @@ public class DatasetFileMeta extends TeaModel {
         private Long dataSize; 
         private String datasetFileMetaId; 
         private String downloadUrl; 
+        private String fileCreateTime; 
         private String fileFingerPrint; 
         private String fileName; 
         private String fileUpdateTime; 
+        private String metaAttributes; 
         private Float score; 
+        private String semanticIndexJobId; 
+        private String semanticIndexUpdateTime; 
         private String tags; 
+        private String thumbnailUrl; 
         private String uri; 
 
         private Builder() {
@@ -149,11 +209,16 @@ public class DatasetFileMeta extends TeaModel {
             this.dataSize = model.dataSize;
             this.datasetFileMetaId = model.datasetFileMetaId;
             this.downloadUrl = model.downloadUrl;
+            this.fileCreateTime = model.fileCreateTime;
             this.fileFingerPrint = model.fileFingerPrint;
             this.fileName = model.fileName;
             this.fileUpdateTime = model.fileUpdateTime;
+            this.metaAttributes = model.metaAttributes;
             this.score = model.score;
+            this.semanticIndexJobId = model.semanticIndexJobId;
+            this.semanticIndexUpdateTime = model.semanticIndexUpdateTime;
             this.tags = model.tags;
+            this.thumbnailUrl = model.thumbnailUrl;
             this.uri = model.uri;
         } 
 
@@ -182,6 +247,17 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01.000Z</p>
+         */
+        public Builder fileCreateTime(String fileCreateTime) {
+            this.fileCreateTime = fileCreateTime;
+            return this;
+        }
+
+        /**
          * FileFingerPrint.
          */
         public Builder fileFingerPrint(String fileFingerPrint) {
@@ -201,10 +277,18 @@ public class DatasetFileMeta extends TeaModel {
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-12T14:36:01Z</p>
+         * <p>2021-01-12T14:36:01.000Z</p>
          */
         public Builder fileUpdateTime(String fileUpdateTime) {
             this.fileUpdateTime = fileUpdateTime;
+            return this;
+        }
+
+        /**
+         * MetaAttributes.
+         */
+        public Builder metaAttributes(String metaAttributes) {
+            this.metaAttributes = metaAttributes;
             return this;
         }
 
@@ -217,10 +301,37 @@ public class DatasetFileMeta extends TeaModel {
         }
 
         /**
+         * SemanticIndexJobId.
+         */
+        public Builder semanticIndexJobId(String semanticIndexJobId) {
+            this.semanticIndexJobId = semanticIndexJobId;
+            return this;
+        }
+
+        /**
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01.000Z</p>
+         */
+        public Builder semanticIndexUpdateTime(String semanticIndexUpdateTime) {
+            this.semanticIndexUpdateTime = semanticIndexUpdateTime;
+            return this;
+        }
+
+        /**
          * Tags.
          */
         public Builder tags(String tags) {
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * ThumbnailUrl.
+         */
+        public Builder thumbnailUrl(String thumbnailUrl) {
+            this.thumbnailUrl = thumbnailUrl;
             return this;
         }
 

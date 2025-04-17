@@ -216,7 +216,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-12T14:36:01Z</p>
+         * <p>2021-01-12T14:36:01.000Z</p>
          */
         public Builder fileCreateTime(String fileCreateTime) {
             this.fileCreateTime = fileCreateTime;
@@ -252,7 +252,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-12T14:36:01Z</p>
+         * <p>2021-01-12T14:36:01.000Z</p>
          */
         public Builder fileUpdateTime(String fileUpdateTime) {
             this.fileUpdateTime = fileUpdateTime;

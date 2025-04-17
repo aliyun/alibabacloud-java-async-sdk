@@ -89,6 +89,7 @@ public class DeleteModelVersionLabelsRequest extends Request {
         } 
 
         /**
+         * <p>The model ID. You can call <a href="https://help.aliyun.com/document_detail/461944.html">ListModels</a> to obtain the model ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DeleteModelVersionLabelsRequest extends Request {
         }
 
         /**
+         * <p>The version of the model.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class DeleteModelVersionLabelsRequest extends Request {
         }
 
         /**
-         * LabelKeys.
+         * <p>The key of the tag to be deleted. Separate multiple tag keys with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1,key2</p>
          */
         public Builder labelKeys(String labelKeys) {
             this.putQueryParameter("LabelKeys", labelKeys);

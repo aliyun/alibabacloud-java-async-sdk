@@ -93,7 +93,10 @@ public class CreateProductOrdersResponseBody extends TeaModel {
         } 
 
         /**
-         * BuyProductRequestId.
+         * <p>The ID of the product purchase request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3ed6a882-0d85-4dd8-ad36-cd8d74ab9fdb</p>
          */
         public Builder buyProductRequestId(String buyProductRequestId) {
             this.buyProductRequestId = buyProductRequestId;
@@ -101,7 +104,7 @@ public class CreateProductOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,10 @@ public class CreateProductOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The purchase order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210292536260646</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -117,7 +123,10 @@ public class CreateProductOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ksdjf-jksd-*****slkdjf</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

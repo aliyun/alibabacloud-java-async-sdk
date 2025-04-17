@@ -760,6 +760,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteUserConfig  DeleteUserConfigRequest
+     * @return DeleteUserConfigResponse
+     */
+    @Override
+    public CompletableFuture<DeleteUserConfigResponse> deleteUserConfig(DeleteUserConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteUserConfig").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/userconfigs/{CategoryName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteUserConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteUserConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteWorkspace  DeleteWorkspaceRequest
      * @return DeleteWorkspaceResponse
      */
@@ -1390,6 +1408,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListUserConfigs  ListUserConfigsRequest
+     * @return ListUserConfigsResponse
+     */
+    @Override
+    public CompletableFuture<ListUserConfigsResponse> listUserConfigs(ListUserConfigsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListUserConfigs").setMethod(HttpMethod.GET).setPathRegex("/api/v1/userconfigs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUserConfigsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUserConfigsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListWorkspaceUsers  ListWorkspaceUsersRequest
      * @return ListWorkspaceUsersResponse
      */
@@ -1408,6 +1444,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can use the option parameter to specify query options, so as to obtain different information about the workspaces.</p>
+     * 
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
      * @return ListWorkspacesResponse
      */
@@ -1564,6 +1603,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SetExperimentLabelsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetUserConfigs  SetUserConfigsRequest
+     * @return SetUserConfigsResponse
+     */
+    @Override
+    public CompletableFuture<SetUserConfigsResponse> setUserConfigs(SetUserConfigsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SetUserConfigs").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/userconfigs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetUserConfigsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetUserConfigsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

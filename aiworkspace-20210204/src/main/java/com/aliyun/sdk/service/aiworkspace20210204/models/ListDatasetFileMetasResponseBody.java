@@ -26,10 +26,14 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DatasetVersion")
     private String datasetVersion;
 
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
+    @Deprecated
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
@@ -42,6 +46,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
         this.datasetFileMetas = builder.datasetFileMetas;
         this.datasetId = builder.datasetId;
         this.datasetVersion = builder.datasetVersion;
+        this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
         this.totalCount = builder.totalCount;
@@ -82,6 +87,13 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
      * @return nextToken
      */
     public String getNextToken() {
@@ -113,6 +125,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
         private java.util.List<DatasetFileMeta> datasetFileMetas; 
         private String datasetId; 
         private String datasetVersion; 
+        private Integer maxResults; 
         private String nextToken; 
         private Integer pageSize; 
         private Integer totalCount; 
@@ -125,6 +138,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
             this.datasetFileMetas = model.datasetFileMetas;
             this.datasetId = model.datasetId;
             this.datasetVersion = model.datasetVersion;
+            this.maxResults = model.maxResults;
             this.nextToken = model.nextToken;
             this.pageSize = model.pageSize;
             this.totalCount = model.totalCount;
@@ -152,6 +166,14 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
          */
         public Builder datasetVersion(String datasetVersion) {
             this.datasetVersion = datasetVersion;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
             return this;
         }
 

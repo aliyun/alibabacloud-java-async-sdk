@@ -73,7 +73,10 @@ public class GetExperimentRequest extends Request {
         } 
 
         /**
-         * ExperimentId.
+         * <p>The ID of the experiment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-1zpfthdx******</p>
          */
         public Builder experimentId(String experimentId) {
             this.putPathParameter("ExperimentId", experimentId);
@@ -82,7 +85,15 @@ public class GetExperimentRequest extends Request {
         }
 
         /**
-         * Verbose.
+         * <p>Specifies whether to obtain the latest run information associated with the experiment</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);

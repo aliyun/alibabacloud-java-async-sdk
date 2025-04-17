@@ -118,6 +118,7 @@ public class CreateWorkspaceRequest extends Request {
         } 
 
         /**
+         * <p>The description of the workspace. The description can be up to 80 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,10 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name of the workspace. You can set it based on the purpose of the workspace. If left empty, the name of the workspace is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>display name</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -139,6 +143,11 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The environment of the workspace.</p>
+         * <ul>
+         * <li>Workspaces in basic mode can run only in the production environment (prod).</li>
+         * <li>Workspaces in standard mode can run in both the development and production environments (dev and prod).</li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         public Builder envTypes(java.util.List<String> envTypes) {
@@ -157,6 +166,12 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The name of the workspace. Format:</p>
+         * <ul>
+         * <li>The name must be 3 to 23 characters in length, and can contain letters, underscores (_), and digits.</li>
+         * <li>The name must start with a letter.</li>
+         * <li>It must be unique in the current region.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

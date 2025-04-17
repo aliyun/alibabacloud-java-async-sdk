@@ -93,7 +93,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D7B2E70-F770-505B-A672-09F1D8F2EC1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +104,23 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceLimits.
+         * <p>The type and quantity of resources that can be activated in a workspace. This list is returned when the Option is set to GetResourceLimits. Valid values:</p>
+         * <ul>
+         * <li>MaxCompute_share: pay-as-you-go MaxCompute</li>
+         * <li>MaxCompute_isolate: subscription MaxCompute</li>
+         * <li>DLC_share: pay-as-you-go DLC</li>
+         * <li>PAI_Isolate: subscription PAI</li>
+         * <li>PAI_share: pay-as-you-go PAI</li>
+         * <li>DataWorks_isolate: subscription DataWorks</li>
+         * <li>DataWorks_share: pay-as-you-go DataWorks</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *    &quot;MaxCompute_share&quot;: 1,
+         *    &quot;MaxCompute_isolate&quot;: 1,
+         *    &quot;DLC_share&quot;: 1
+         * }</p>
          */
         public Builder resourceLimits(java.util.Map<String, ?> resourceLimits) {
             this.resourceLimits = resourceLimits;
@@ -109,7 +128,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of workspaces that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +139,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * Workspaces.
+         * <p>The list of workspace details. This list is returned when Option is set to GetWorkspaces.</p>
          */
         public Builder workspaces(java.util.List<Workspaces> workspaces) {
             this.workspaces = workspaces;
@@ -313,7 +335,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * AdminNames.
+             * <p>The names of the administrator accounts.</p>
              */
             public Builder adminNames(java.util.List<String> adminNames) {
                 this.adminNames = adminNames;
@@ -321,7 +343,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The user ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122424353535</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -329,7 +354,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace description example</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -337,7 +365,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * EnvTypes.
+             * <p>The environment types of the workspace.</p>
              */
             public Builder envTypes(java.util.List<String> envTypes) {
                 this.envTypes = envTypes;
@@ -345,7 +373,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraInfos.
+             * <p>the additional information. Only contains TenantId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;TenantId&quot;: &quot;4286******98&quot;}</p>
              */
             public Builder extraInfos(java.util.Map<String, ?> extraInfos) {
                 this.extraInfos = extraInfos;
@@ -353,7 +384,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The time when the workspace was created. The time (UTC+0) follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ss.SSSZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-21T17:12:35.232Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -361,7 +395,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The time when the workspace was modified. The time (UTC+0) follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ss.SSSZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-21T17:12:35.232Z</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -369,7 +406,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the workspace is the default workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -377,7 +417,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -385,7 +428,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -393,7 +439,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace-example</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -401,7 +450,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmwp7rky****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

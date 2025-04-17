@@ -213,7 +213,10 @@ public class ListWorkspacesRequest extends Request {
         } 
 
         /**
-         * Fields.
+         * <p>The list of returned fields of workspace details. Used to limit the fields in the returned results. Separate multiple fields with commas (,). Currently, only Id is supported, which is the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Id</p>
          */
         public Builder fields(String fields) {
             this.putQueryParameter("Fields", fields);
@@ -222,7 +225,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * ModuleList.
+         * <p>The modules, separated by commas (,). Default value: PAI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PAI</p>
          */
         public Builder moduleList(String moduleList) {
             this.putQueryParameter("ModuleList", moduleList);
@@ -231,7 +237,14 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * Option.
+         * <p>The query options. Valid values:</p>
+         * <ul>
+         * <li>GetWorkspaces (default): Obtains a list of Workspaces.</li>
+         * <li>GetResourceLimits: Obtains a list of ResourceLimits.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GetWorkspaces</p>
          */
         public Builder option(String option) {
             this.putQueryParameter("Option", option);
@@ -240,7 +253,14 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order of results (ascending or descending). Valid values:</p>
+         * <ul>
+         * <li>ASC: ascending order. This is the default value.</li>
+         * <li>DESC: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -249,7 +269,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the workspace list. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -258,7 +281,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -267,7 +293,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID. To obtain the ID of a resource group, see <a href="https://help.aliyun.com/zh/resource-management/resource-group/user-guide/view-basic-information-of-a-resource-group?spm=a2c4g.11186623.help-menu-94362.d_2_0_1.86386c21FKqhTk&scm=20140722.H_151181._.OR_help-T_cn~zh-V_1">View basic information of a resource group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwp7rky****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -276,7 +305,14 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>Specifies how to sort the results. Default value: GmtCreateTime. Valid values:</p>
+         * <ul>
+         * <li>GmtCreateTime: Sort by the time when created.</li>
+         * <li>GmtModifiedTime: Sort by the time when modified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -285,7 +321,18 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The workspace status. Valid values:</p>
+         * <ul>
+         * <li>ENABLED</li>
+         * <li>INITIALIZING</li>
+         * <li>FAILURE</li>
+         * <li>DISABLED</li>
+         * <li>FROZEN</li>
+         * <li>UPDATING</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLED</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -294,7 +341,14 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * Verbose.
+         * <p>Specifies whether to display workspace details. Valid values:</p>
+         * <ul>
+         * <li>false (default)</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);
@@ -303,7 +357,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * WorkspaceIds.
+         * <p>The workspace IDs. Separate multiple IDs by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123,234</p>
          */
         public Builder workspaceIds(String workspaceIds) {
             this.putQueryParameter("WorkspaceIds", workspaceIds);
@@ -312,7 +369,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putQueryParameter("WorkspaceName", workspaceName);

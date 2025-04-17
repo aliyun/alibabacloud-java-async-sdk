@@ -32,6 +32,9 @@ public class DatasetFileMetaContentGet extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FileCreateTime")
     private String fileCreateTime;
 
+    @com.aliyun.core.annotation.NameInMap("FileDir")
+    private String fileDir;
+
     @com.aliyun.core.annotation.NameInMap("FileFingerPrint")
     private String fileFingerPrint;
 
@@ -47,6 +50,15 @@ public class DatasetFileMetaContentGet extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MetaAttributes")
     private String metaAttributes;
 
+    @com.aliyun.core.annotation.NameInMap("SemanticIndexJobId")
+    private String semanticIndexJobId;
+
+    @com.aliyun.core.annotation.NameInMap("SemanticIndexUpdateTime")
+    private String semanticIndexUpdateTime;
+
+    @com.aliyun.core.annotation.NameInMap("TagUpdateTime")
+    private String tagUpdateTime;
+
     @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
@@ -59,11 +71,15 @@ public class DatasetFileMetaContentGet extends TeaModel {
         this.dataSize = builder.dataSize;
         this.datasetFileMetaId = builder.datasetFileMetaId;
         this.fileCreateTime = builder.fileCreateTime;
+        this.fileDir = builder.fileDir;
         this.fileFingerPrint = builder.fileFingerPrint;
         this.fileName = builder.fileName;
         this.fileType = builder.fileType;
         this.fileUpdateTime = builder.fileUpdateTime;
         this.metaAttributes = builder.metaAttributes;
+        this.semanticIndexJobId = builder.semanticIndexJobId;
+        this.semanticIndexUpdateTime = builder.semanticIndexUpdateTime;
+        this.tagUpdateTime = builder.tagUpdateTime;
         this.tags = builder.tags;
         this.uri = builder.uri;
     }
@@ -116,6 +132,13 @@ public class DatasetFileMetaContentGet extends TeaModel {
     }
 
     /**
+     * @return fileDir
+     */
+    public String getFileDir() {
+        return this.fileDir;
+    }
+
+    /**
      * @return fileFingerPrint
      */
     public String getFileFingerPrint() {
@@ -151,6 +174,27 @@ public class DatasetFileMetaContentGet extends TeaModel {
     }
 
     /**
+     * @return semanticIndexJobId
+     */
+    public String getSemanticIndexJobId() {
+        return this.semanticIndexJobId;
+    }
+
+    /**
+     * @return semanticIndexUpdateTime
+     */
+    public String getSemanticIndexUpdateTime() {
+        return this.semanticIndexUpdateTime;
+    }
+
+    /**
+     * @return tagUpdateTime
+     */
+    public String getTagUpdateTime() {
+        return this.tagUpdateTime;
+    }
+
+    /**
      * @return tags
      */
     public String getTags() {
@@ -170,11 +214,15 @@ public class DatasetFileMetaContentGet extends TeaModel {
         private Long dataSize; 
         private String datasetFileMetaId; 
         private String fileCreateTime; 
+        private String fileDir; 
         private String fileFingerPrint; 
         private String fileName; 
         private String fileType; 
         private String fileUpdateTime; 
         private String metaAttributes; 
+        private String semanticIndexJobId; 
+        private String semanticIndexUpdateTime; 
+        private String tagUpdateTime; 
         private String tags; 
         private String uri; 
 
@@ -187,11 +235,15 @@ public class DatasetFileMetaContentGet extends TeaModel {
             this.dataSize = model.dataSize;
             this.datasetFileMetaId = model.datasetFileMetaId;
             this.fileCreateTime = model.fileCreateTime;
+            this.fileDir = model.fileDir;
             this.fileFingerPrint = model.fileFingerPrint;
             this.fileName = model.fileName;
             this.fileType = model.fileType;
             this.fileUpdateTime = model.fileUpdateTime;
             this.metaAttributes = model.metaAttributes;
+            this.semanticIndexJobId = model.semanticIndexJobId;
+            this.semanticIndexUpdateTime = model.semanticIndexUpdateTime;
+            this.tagUpdateTime = model.tagUpdateTime;
             this.tags = model.tags;
             this.uri = model.uri;
         } 
@@ -232,10 +284,18 @@ public class DatasetFileMetaContentGet extends TeaModel {
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-12T14:36:01Z</p>
+         * <p>2021-01-12T14:36:01.000Z</p>
          */
         public Builder fileCreateTime(String fileCreateTime) {
             this.fileCreateTime = fileCreateTime;
+            return this;
+        }
+
+        /**
+         * FileDir.
+         */
+        public Builder fileDir(String fileDir) {
+            this.fileDir = fileDir;
             return this;
         }
 
@@ -267,7 +327,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-12T14:36:01Z</p>
+         * <p>2021-01-12T14:36:01.000Z</p>
          */
         public Builder fileUpdateTime(String fileUpdateTime) {
             this.fileUpdateTime = fileUpdateTime;
@@ -279,6 +339,36 @@ public class DatasetFileMetaContentGet extends TeaModel {
          */
         public Builder metaAttributes(String metaAttributes) {
             this.metaAttributes = metaAttributes;
+            return this;
+        }
+
+        /**
+         * SemanticIndexJobId.
+         */
+        public Builder semanticIndexJobId(String semanticIndexJobId) {
+            this.semanticIndexJobId = semanticIndexJobId;
+            return this;
+        }
+
+        /**
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01.000Z</p>
+         */
+        public Builder semanticIndexUpdateTime(String semanticIndexUpdateTime) {
+            this.semanticIndexUpdateTime = semanticIndexUpdateTime;
+            return this;
+        }
+
+        /**
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01.000Z</p>
+         */
+        public Builder tagUpdateTime(String tagUpdateTime) {
+            this.tagUpdateTime = tagUpdateTime;
             return this;
         }
 

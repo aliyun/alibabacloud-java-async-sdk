@@ -67,7 +67,10 @@ public class DeleteCodeSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * CodeSourceId.
+         * <p>The ID of the deleted code source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code-20210111103721-85qz78ia96lu</p>
          */
         public Builder codeSourceId(String codeSourceId) {
             this.codeSourceId = codeSourceId;
@@ -75,7 +78,10 @@ public class DeleteCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

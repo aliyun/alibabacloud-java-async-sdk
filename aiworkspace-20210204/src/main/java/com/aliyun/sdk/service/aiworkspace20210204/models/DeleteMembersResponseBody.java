@@ -80,7 +80,10 @@ public class DeleteMembersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100600017</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class DeleteMembersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Owner not allowed to delete</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -96,7 +102,10 @@ public class DeleteMembersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D5BFFEE3-6025-443F-8A03-02D619B5C4B9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

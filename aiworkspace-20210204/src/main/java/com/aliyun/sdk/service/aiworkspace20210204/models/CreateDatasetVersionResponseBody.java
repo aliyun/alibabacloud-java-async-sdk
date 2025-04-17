@@ -67,7 +67,7 @@ public class CreateDatasetVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +75,10 @@ public class CreateDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * VersionName.
+         * <p>The dataset version name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;

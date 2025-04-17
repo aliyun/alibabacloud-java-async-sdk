@@ -75,6 +75,7 @@ public class DeleteMembersRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteMembersRequest extends Request {
         }
 
         /**
+         * <p>The list of member IDs. Separate multiple member IDs with commas (,). You can call <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a> to obtain the member ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

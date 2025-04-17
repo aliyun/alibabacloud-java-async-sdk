@@ -214,7 +214,14 @@ public class CreateModelRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * <p>The visibility of the model in the workspace. Valid values:</p>
+         * <ul>
+         * <li>PRIVATE (default): Visible only to you and the administrator of the workspace.</li>
+         * <li>PUBLIC: Visible to all users in the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -223,7 +230,10 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>The domain of the model. Describes the domain in which the model is for. Example: nlp (Natural Language Processing), cv (computer vision), and others.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nlp</p>
          */
         public Builder domain(String domain) {
             this.putBodyParameter("Domain", domain);
@@ -232,7 +242,18 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * ExtraInfo.
+         * <p>Other information about the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;RatingCount&quot;: 2866,
+         *     &quot;Rating&quot;: 4.94,
+         *     &quot;FavoriteCount&quot;: 34992,
+         *     &quot;CommentCount&quot;: 754,
+         *     &quot;CoverUris&quot;: [&quot;<a href="https://e***u.oss-cn-hangzhou.aliyuncs.com/drea***w.png%22%5D">https://e***u.oss-cn-hangzhou.aliyuncs.com/drea***w.png&quot;]</a>,
+         *     &quot;TippedAmountCount&quot;: 32,
+         *     &quot;DownloadCount&quot;: 606056
+         * }</p>
          */
         public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
             this.putBodyParameter("ExtraInfo", extraInfo);
@@ -241,7 +262,7 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The tags.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);
@@ -250,7 +271,7 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * ModelDescription.
+         * <p>The model description, which is used to distinguish different models.</p>
          */
         public Builder modelDescription(String modelDescription) {
             this.putBodyParameter("ModelDescription", modelDescription);
@@ -259,7 +280,10 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * ModelDoc.
+         * <p>The documentation of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://*.md</p>
          */
         public Builder modelDoc(String modelDoc) {
             this.putBodyParameter("ModelDoc", modelDoc);
@@ -268,6 +292,7 @@ public class CreateModelRequest extends Request {
         }
 
         /**
+         * <p>The name of the model. The name must be 1 to 127 characters in length.</p>
          * <p>This parameter is required.</p>
          */
         public Builder modelName(String modelName) {
@@ -277,7 +302,10 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * ModelType.
+         * <p>The model type. Example: Checkpoint or LoRA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Checkpoint</p>
          */
         public Builder modelType(String modelType) {
             this.putBodyParameter("ModelType", modelType);
@@ -286,7 +314,10 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * OrderNumber.
+         * <p>The sequence number of the model. Can be used for custom sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder orderNumber(Long orderNumber) {
             this.putBodyParameter("OrderNumber", orderNumber);
@@ -295,7 +326,10 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * Origin.
+         * <p>The source of the model. The community or organization to which the source model belongs, such as ModelScope or HuggingFace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ModelScope</p>
          */
         public Builder origin(String origin) {
             this.putBodyParameter("Origin", origin);
@@ -304,7 +338,10 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * Task.
+         * <p>The task of the model. Describes the specific problem that the model solves. Example: text-classification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text-classification</p>
          */
         public Builder task(String task) {
             this.putBodyParameter("Task", task);
@@ -313,7 +350,10 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>796**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

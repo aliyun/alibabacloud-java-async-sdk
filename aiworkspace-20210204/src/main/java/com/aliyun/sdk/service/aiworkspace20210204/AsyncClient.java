@@ -260,6 +260,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRunLabelResponse> deleteRunLabel(DeleteRunLabelRequest request);
 
     /**
+     * @param request the request parameters of DeleteUserConfig  DeleteUserConfigRequest
+     * @return DeleteUserConfigResponse
+     */
+    CompletableFuture<DeleteUserConfigResponse> deleteUserConfig(DeleteUserConfigRequest request);
+
+    /**
      * @param request the request parameters of DeleteWorkspace  DeleteWorkspaceRequest
      * @return DeleteWorkspaceResponse
      */
@@ -470,12 +476,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRunsResponse> listRuns(ListRunsRequest request);
 
     /**
+     * @param request the request parameters of ListUserConfigs  ListUserConfigsRequest
+     * @return ListUserConfigsResponse
+     */
+    CompletableFuture<ListUserConfigsResponse> listUserConfigs(ListUserConfigsRequest request);
+
+    /**
      * @param request the request parameters of ListWorkspaceUsers  ListWorkspaceUsersRequest
      * @return ListWorkspaceUsersResponse
      */
     CompletableFuture<ListWorkspaceUsersResponse> listWorkspaceUsers(ListWorkspaceUsersRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can use the option parameter to specify query options, so as to obtain different information about the workspaces.</p>
+     * 
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
      * @return ListWorkspacesResponse
      */
@@ -528,6 +543,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetExperimentLabelsResponse
      */
     CompletableFuture<SetExperimentLabelsResponse> setExperimentLabels(SetExperimentLabelsRequest request);
+
+    /**
+     * @param request the request parameters of SetUserConfigs  SetUserConfigsRequest
+     * @return SetUserConfigsResponse
+     */
+    CompletableFuture<SetUserConfigsResponse> setUserConfigs(SetUserConfigsRequest request);
 
     /**
      * @param request the request parameters of StopDatasetJob  StopDatasetJobRequest
