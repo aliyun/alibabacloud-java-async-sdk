@@ -434,6 +434,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAlertNotificationsResponse> listAlertNotifications(ListAlertNotificationsRequest request);
 
     /**
+     * @param request the request parameters of ListApiByApp  ListApiByAppRequest
+     * @return ListApiByAppResponse
+     */
+    CompletableFuture<ListApiByAppResponse> listApiByApp(ListApiByAppRequest request);
+
+    /**
      * @param request the request parameters of ListAuthorizedDataServiceApiDetails  ListAuthorizedDataServiceApiDetailsRequest
      * @return ListAuthorizedDataServiceApiDetailsResponse
      */
