@@ -56,6 +56,10 @@ public class Car extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return boundary
      */
@@ -113,6 +117,19 @@ public class Car extends TeaModel {
         private Double carTypeConfidence; 
         private Double confidence; 
         private java.util.List<LicensePlate> licensePlates; 
+
+        private Builder() {
+        } 
+
+        private Builder(Car model) {
+            this.boundary = model.boundary;
+            this.carColor = model.carColor;
+            this.carColorConfidence = model.carColorConfidence;
+            this.carType = model.carType;
+            this.carTypeConfidence = model.carTypeConfidence;
+            this.confidence = model.confidence;
+            this.licensePlates = model.licensePlates;
+        } 
 
         /**
          * Boundary.

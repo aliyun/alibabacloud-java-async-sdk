@@ -76,7 +76,7 @@ public class CreateFileCompressionTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -348,6 +348,15 @@ public class CreateFileCompressionTaskRequest extends Request {
             private String alias; 
             private String mode; 
             private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.alias = model.alias;
+                this.mode = model.mode;
+                this.URI = model.URI;
+            } 
 
             /**
              * <p>Specifies the path of the object in the package, or renames the object in the package.</p>

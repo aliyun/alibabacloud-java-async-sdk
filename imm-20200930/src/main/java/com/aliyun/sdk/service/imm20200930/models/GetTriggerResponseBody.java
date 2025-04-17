@@ -36,6 +36,10 @@ public class GetTriggerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetTriggerResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private DataIngestion trigger; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTriggerResponseBody model) {
+            this.requestId = model.requestId;
+            this.trigger = model.trigger;
+        } 
 
         /**
          * <p>The request ID.</p>

@@ -61,7 +61,7 @@ public class UpdateTriggerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -163,7 +163,7 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * <p>The input data source.</p>
+         * <p>The data source configurations.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -248,6 +248,14 @@ public class UpdateTriggerRequest extends Request {
         public static final class Builder {
             private String name; 
             private java.util.List<String> parameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(Actions model) {
+                this.name = model.name;
+                this.parameters = model.parameters;
+            } 
 
             /**
              * <p>The template name.</p>

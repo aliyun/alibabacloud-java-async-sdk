@@ -58,7 +58,7 @@ public class RemoveStoryFilesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -215,6 +215,13 @@ public class RemoveStoryFilesRequest extends Request {
 
         public static final class Builder {
             private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.URI = model.URI;
+            } 
 
             /**
              * <p>The URI of the Object Storage Service (OSS) bucket where you store the files that you want to delete.</p>

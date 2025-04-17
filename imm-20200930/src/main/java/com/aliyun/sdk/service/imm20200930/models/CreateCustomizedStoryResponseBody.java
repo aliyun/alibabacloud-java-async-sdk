@@ -36,6 +36,10 @@ public class CreateCustomizedStoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return objectId
      */
@@ -53,6 +57,14 @@ public class CreateCustomizedStoryResponseBody extends TeaModel {
     public static final class Builder {
         private String objectId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCustomizedStoryResponseBody model) {
+            this.objectId = model.objectId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the story.</p>

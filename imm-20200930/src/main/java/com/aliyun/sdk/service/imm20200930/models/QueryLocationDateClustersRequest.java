@@ -111,7 +111,7 @@ public class QueryLocationDateClustersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -290,7 +290,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * <p>The time range during which the spatiotemporal clustering groups are generated.</p>
+         * <p>The time range during which the spatiotemporal clusters were generated.</p>
          */
         public Builder createTimeRange(TimeRange createTimeRange) {
             String createTimeRangeShrink = shrink(createTimeRange, "CreateTimeRange", "json");
@@ -325,7 +325,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * <p>The time range when the clustering groups are ended.</p>
+         * <p>The time range during which the latest photo in a cluster was taken.</p>
          */
         public Builder locationDateClusterEndTimeRange(TimeRange locationDateClusterEndTimeRange) {
             String locationDateClusterEndTimeRangeShrink = shrink(locationDateClusterEndTimeRange, "LocationDateClusterEndTimeRange", "json");
@@ -345,7 +345,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * <p>The time range when the clustering groups are started.</p>
+         * <p>The time range during which the earliest photo in a cluster was taken.</p>
          */
         public Builder locationDateClusterStartTimeRange(TimeRange locationDateClusterStartTimeRange) {
             String locationDateClusterStartTimeRangeShrink = shrink(locationDateClusterStartTimeRange, "LocationDateClusterStartTimeRange", "json");
@@ -449,7 +449,7 @@ public class QueryLocationDateClustersRequest extends Request {
         }
 
         /**
-         * <p>The time range during which the spatiotemporal clustering groups are updated.</p>
+         * <p>The time range during which the spatiotemporal clusters were updated.</p>
          */
         public Builder updateTimeRange(TimeRange updateTimeRange) {
             String updateTimeRangeShrink = shrink(updateTimeRange, "UpdateTimeRange", "json");

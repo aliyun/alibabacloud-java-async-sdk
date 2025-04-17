@@ -36,6 +36,10 @@ public class DetectTextAnomalyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DetectTextAnomalyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String suggestion; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetectTextAnomalyResponseBody model) {
+            this.requestId = model.requestId;
+            this.suggestion = model.suggestion;
+        } 
 
         /**
          * <p>The request ID.</p>

@@ -140,6 +140,10 @@ public class VideoStream extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return averageFrameRate
      */
@@ -365,6 +369,40 @@ public class VideoStream extends TeaModel {
         private Double startTime; 
         private String timeBase; 
         private Long width; 
+
+        private Builder() {
+        } 
+
+        private Builder(VideoStream model) {
+            this.averageFrameRate = model.averageFrameRate;
+            this.bitDepth = model.bitDepth;
+            this.bitrate = model.bitrate;
+            this.codecLongName = model.codecLongName;
+            this.codecName = model.codecName;
+            this.codecTag = model.codecTag;
+            this.codecTagString = model.codecTagString;
+            this.codecTimeBase = model.codecTimeBase;
+            this.colorPrimaries = model.colorPrimaries;
+            this.colorRange = model.colorRange;
+            this.colorSpace = model.colorSpace;
+            this.colorTransfer = model.colorTransfer;
+            this.displayAspectRatio = model.displayAspectRatio;
+            this.duration = model.duration;
+            this.frameCount = model.frameCount;
+            this.frameRate = model.frameRate;
+            this.hasBFrames = model.hasBFrames;
+            this.height = model.height;
+            this.index = model.index;
+            this.language = model.language;
+            this.level = model.level;
+            this.pixelFormat = model.pixelFormat;
+            this.profile = model.profile;
+            this.rotate = model.rotate;
+            this.sampleAspectRatio = model.sampleAspectRatio;
+            this.startTime = model.startTime;
+            this.timeBase = model.timeBase;
+            this.width = model.width;
+        } 
 
         /**
          * AverageFrameRate.

@@ -40,6 +40,10 @@ public class ListBatchesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return batches
      */
@@ -65,6 +69,15 @@ public class ListBatchesResponseBody extends TeaModel {
         private java.util.List<DataIngestion> batches; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBatchesResponseBody model) {
+            this.batches = model.batches;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The batch processing tasks.</p>

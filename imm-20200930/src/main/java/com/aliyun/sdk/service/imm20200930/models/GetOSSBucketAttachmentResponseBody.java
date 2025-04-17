@@ -48,6 +48,10 @@ public class GetOSSBucketAttachmentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -89,6 +93,17 @@ public class GetOSSBucketAttachmentResponseBody extends TeaModel {
         private String projectName; 
         private String requestId; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOSSBucketAttachmentResponseBody model) {
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.projectName = model.projectName;
+            this.requestId = model.requestId;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * <p>The time when the dataset was created.</p>

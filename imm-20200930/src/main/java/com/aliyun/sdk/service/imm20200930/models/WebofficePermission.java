@@ -52,6 +52,10 @@ public class WebofficePermission extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return copy
      */
@@ -101,6 +105,18 @@ public class WebofficePermission extends TeaModel {
         private Boolean print; 
         private Boolean readonly; 
         private Boolean rename; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebofficePermission model) {
+            this.copy = model.copy;
+            this.export = model.export;
+            this.history = model.history;
+            this.print = model.print;
+            this.readonly = model.readonly;
+            this.rename = model.rename;
+        } 
 
         /**
          * Copy.

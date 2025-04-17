@@ -32,6 +32,10 @@ public class Input extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return OSS
      */
@@ -41,6 +45,13 @@ public class Input extends TeaModel {
 
     public static final class Builder {
         private InputOSS OSS; 
+
+        private Builder() {
+        } 
+
+        private Builder(Input model) {
+            this.OSS = model.OSS;
+        } 
 
         /**
          * OSS.

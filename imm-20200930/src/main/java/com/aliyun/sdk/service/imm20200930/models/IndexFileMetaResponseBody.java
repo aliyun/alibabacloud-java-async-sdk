@@ -36,6 +36,10 @@ public class IndexFileMetaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eventId
      */
@@ -53,6 +57,14 @@ public class IndexFileMetaResponseBody extends TeaModel {
     public static final class Builder {
         private String eventId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IndexFileMetaResponseBody model) {
+            this.eventId = model.eventId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The event ID.</p>

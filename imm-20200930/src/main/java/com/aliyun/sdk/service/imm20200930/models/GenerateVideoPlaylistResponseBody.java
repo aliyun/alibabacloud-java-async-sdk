@@ -56,6 +56,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return audioPlaylist
      */
@@ -113,6 +117,19 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         private java.util.List<SubtitlePlaylist> subtitlePlaylist; 
         private String token; 
         private java.util.List<VideoPlaylist> videoPlaylist; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateVideoPlaylistResponseBody model) {
+            this.audioPlaylist = model.audioPlaylist;
+            this.duration = model.duration;
+            this.masterURI = model.masterURI;
+            this.requestId = model.requestId;
+            this.subtitlePlaylist = model.subtitlePlaylist;
+            this.token = model.token;
+            this.videoPlaylist = model.videoPlaylist;
+        } 
 
         /**
          * <p>The audio media playlist files.</p>
@@ -244,6 +261,15 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             private String token; 
             private String URI; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioPlaylist model) {
+                this.channels = model.channels;
+                this.token = model.token;
+                this.URI = model.URI;
+            } 
+
             /**
              * <p>The number of audio channels.</p>
              * 
@@ -351,6 +377,16 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             private String language; 
             private String token; 
             private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubtitlePlaylist model) {
+                this.index = model.index;
+                this.language = model.language;
+                this.token = model.token;
+                this.URI = model.URI;
+            } 
 
             /**
              * <p>The serial number of the subtitle stream. The value starts from 0.</p>
@@ -476,6 +512,16 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             private String resolution; 
             private String token; 
             private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoPlaylist model) {
+                this.frameRate = model.frameRate;
+                this.resolution = model.resolution;
+                this.token = model.token;
+                this.URI = model.URI;
+            } 
 
             /**
              * <p>The video frame rate.</p>

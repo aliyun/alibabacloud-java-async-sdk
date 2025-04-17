@@ -196,7 +196,7 @@ public class CreateOfficeConversionTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -1045,6 +1045,14 @@ public class CreateOfficeConversionTaskRequest extends Request {
         public static final class Builder {
             private Long rotate; 
             private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.rotate = model.rotate;
+                this.URI = model.URI;
+            } 
 
             /**
              * Rotate.

@@ -73,7 +73,7 @@ public class CreateLocationDateClusteringTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -326,6 +326,15 @@ public class CreateLocationDateClusteringTaskRequest extends Request {
             private Long maxDays; 
             private Long minDays; 
 
+            private Builder() {
+            } 
+
+            private Builder(DateOptions model) {
+                this.gapDays = model.gapDays;
+                this.maxDays = model.maxDays;
+                this.minDays = model.minDays;
+            } 
+
             /**
              * <p>The maximum number of days allowed in a gap for a single spatiotemporal cluster. Valid values: 0 to 99999.</p>
              * <p>For example, if travel photos were produced on March 4, 5, and 7, 2024, but not on Marh 6, 2024, and you set the parameter to 1, IMM considers the travel spanning the date range from March 4, 2024 to March 7, 2024 and includes photos within the data range in the same cluster.````</p>
@@ -405,6 +414,13 @@ public class CreateLocationDateClusteringTaskRequest extends Request {
 
         public static final class Builder {
             private java.util.List<String> locationDateClusterLevels; 
+
+            private Builder() {
+            } 
+
+            private Builder(LocationOptions model) {
+                this.locationDateClusterLevels = model.locationDateClusterLevels;
+            } 
 
             /**
              * <p>The administrative division levels. You can specify multiple administrative division levels.</p>

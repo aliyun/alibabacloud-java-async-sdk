@@ -40,6 +40,10 @@ public class QueryLocationDateClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return locationDateClusters
      */
@@ -66,8 +70,17 @@ public class QueryLocationDateClustersResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryLocationDateClustersResponseBody model) {
+            this.locationDateClusters = model.locationDateClusters;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The list of spatiotemporal groups.</p>
+         * <p>The list of spatiotemporal clusters.</p>
          */
         public Builder locationDateClusters(java.util.List<LocationDateCluster> locationDateClusters) {
             this.locationDateClusters = locationDateClusters;

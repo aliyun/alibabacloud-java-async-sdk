@@ -36,6 +36,10 @@ public class UpdateProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return project
      */
@@ -54,8 +58,16 @@ public class UpdateProjectResponseBody extends TeaModel {
         private Project project; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateProjectResponseBody model) {
+            this.project = model.project;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The project. For more information, see &quot;Project&quot;.</p>
+         * <p>The project.</p>
          */
         public Builder project(Project project) {
             this.project = project;

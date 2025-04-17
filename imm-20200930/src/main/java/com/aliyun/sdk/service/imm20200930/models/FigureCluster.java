@@ -104,6 +104,10 @@ public class FigureCluster extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return averageAge
      */
@@ -257,6 +261,31 @@ public class FigureCluster extends TeaModel {
         private String projectName; 
         private String updateTime; 
         private Long videoCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(FigureCluster model) {
+            this.averageAge = model.averageAge;
+            this.cover = model.cover;
+            this.createTime = model.createTime;
+            this.customId = model.customId;
+            this.customLabels = model.customLabels;
+            this.datasetName = model.datasetName;
+            this.faceCount = model.faceCount;
+            this.gender = model.gender;
+            this.imageCount = model.imageCount;
+            this.maxAge = model.maxAge;
+            this.metaLockVersion = model.metaLockVersion;
+            this.minAge = model.minAge;
+            this.name = model.name;
+            this.objectId = model.objectId;
+            this.objectType = model.objectType;
+            this.ownerId = model.ownerId;
+            this.projectName = model.projectName;
+            this.updateTime = model.updateTime;
+            this.videoCount = model.videoCount;
+        } 
 
         /**
          * AverageAge.

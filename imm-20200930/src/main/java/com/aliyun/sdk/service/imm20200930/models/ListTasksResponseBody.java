@@ -48,6 +48,10 @@ public class ListTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListTasksResponseBody extends TeaModel {
         private String projectName; 
         private String requestId; 
         private java.util.List<TaskInfo> tasks; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTasksResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.projectName = model.projectName;
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+        } 
 
         /**
          * <p>The length of the returned result list.</p>

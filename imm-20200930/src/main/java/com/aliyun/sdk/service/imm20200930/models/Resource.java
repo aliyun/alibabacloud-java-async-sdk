@@ -52,6 +52,10 @@ public class Resource extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return CPU
      */
@@ -101,6 +105,18 @@ public class Resource extends TeaModel {
         private Long GPUNum; 
         private String name; 
         private Long RAM; 
+
+        private Builder() {
+        } 
+
+        private Builder(Resource model) {
+            this.CPU = model.CPU;
+            this.ECSInstance = model.ECSInstance;
+            this.GPUModel = model.GPUModel;
+            this.GPUNum = model.GPUNum;
+            this.name = model.name;
+            this.RAM = model.RAM;
+        } 
 
         /**
          * CPU.

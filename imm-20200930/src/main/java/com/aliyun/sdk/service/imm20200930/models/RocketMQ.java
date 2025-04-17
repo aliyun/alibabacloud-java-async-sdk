@@ -36,6 +36,10 @@ public class RocketMQ extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -53,6 +57,14 @@ public class RocketMQ extends TeaModel {
     public static final class Builder {
         private String instanceId; 
         private String topicName; 
+
+        private Builder() {
+        } 
+
+        private Builder(RocketMQ model) {
+            this.instanceId = model.instanceId;
+            this.topicName = model.topicName;
+        } 
 
         /**
          * InstanceId.

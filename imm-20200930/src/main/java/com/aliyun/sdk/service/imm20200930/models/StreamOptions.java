@@ -32,6 +32,10 @@ public class StreamOptions extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return incrementalOutput
      */
@@ -41,6 +45,13 @@ public class StreamOptions extends TeaModel {
 
     public static final class Builder {
         private Boolean incrementalOutput; 
+
+        private Builder() {
+        } 
+
+        private Builder(StreamOptions model) {
+            this.incrementalOutput = model.incrementalOutput;
+        } 
 
         /**
          * IncrementalOutput.

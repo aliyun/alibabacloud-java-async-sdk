@@ -112,7 +112,7 @@ public class CreateImageSplicingTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -312,7 +312,7 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * <p>The authorization chain. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+         * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -367,7 +367,7 @@ public class CreateImageSplicingTaskRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For more information, click Notification. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification format</a>.</p>
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -534,6 +534,14 @@ public class CreateImageSplicingTaskRequest extends Request {
         public static final class Builder {
             private Long rotate; 
             private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.rotate = model.rotate;
+                this.URI = model.URI;
+            } 
 
             /**
              * <p>The rotation angle. Valid values:</p>

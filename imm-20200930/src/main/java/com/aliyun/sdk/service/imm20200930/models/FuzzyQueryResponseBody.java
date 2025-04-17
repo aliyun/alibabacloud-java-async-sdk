@@ -45,6 +45,10 @@ public class FuzzyQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return files
      */
@@ -78,6 +82,16 @@ public class FuzzyQueryResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalHits; 
+
+        private Builder() {
+        } 
+
+        private Builder(FuzzyQueryResponseBody model) {
+            this.files = model.files;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalHits = model.totalHits;
+        } 
 
         /**
          * <p>The files.</p>

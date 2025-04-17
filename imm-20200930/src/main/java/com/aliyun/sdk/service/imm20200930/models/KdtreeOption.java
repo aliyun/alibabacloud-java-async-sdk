@@ -42,6 +42,10 @@ public class KdtreeOption extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return compressionLevel
      */
@@ -67,6 +71,15 @@ public class KdtreeOption extends TeaModel {
         private Integer compressionLevel; 
         private String libraryName; 
         private Integer quantizationBits; 
+
+        private Builder() {
+        } 
+
+        private Builder(KdtreeOption model) {
+            this.compressionLevel = model.compressionLevel;
+            this.libraryName = model.libraryName;
+            this.quantizationBits = model.quantizationBits;
+        } 
 
         /**
          * CompressionLevel.

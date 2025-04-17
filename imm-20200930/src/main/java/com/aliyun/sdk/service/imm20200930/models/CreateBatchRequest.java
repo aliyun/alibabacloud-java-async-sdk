@@ -68,7 +68,7 @@ public class CreateBatchRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -156,7 +156,7 @@ public class CreateBatchRequest extends Request {
         }
 
         /**
-         * <p>The processing templates.</p>
+         * <p>The templates.</p>
          * <p>This parameter is required.</p>
          */
         public Builder actions(java.util.List<Actions> actions) {
@@ -179,7 +179,7 @@ public class CreateBatchRequest extends Request {
 
         /**
          * <p>The notification settings. The operation supports multiple messaging middleware options. For more information about notification messages, see Asynchronous message examples. You can use one of the following methods to receive notification messages:</p>
-         * <p>Activate and connect to EventBridge in the same region as the IMM project. For more information, see IMM events. Activate Simple Message Queue in the same region as the IMM project and configure a subscription.</p>
+         * <p>In the region in which the IMM project is located, use EventBridge to receive task notifications. For more information, see IMM events. In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task notifications.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -292,6 +292,15 @@ public class CreateBatchRequest extends Request {
             private String name; 
             private java.util.List<String> parameters; 
 
+            private Builder() {
+            } 
+
+            private Builder(Actions model) {
+                this.fastFailPolicy = model.fastFailPolicy;
+                this.name = model.name;
+                this.parameters = model.parameters;
+            } 
+
             /**
              * <p>The policy configurations for handling failures.</p>
              */
@@ -359,8 +368,15 @@ public class CreateBatchRequest extends Request {
         public static final class Builder {
             private MNS MNS; 
 
+            private Builder() {
+            } 
+
+            private Builder(Notification model) {
+                this.MNS = model.MNS;
+            } 
+
             /**
-             * <p>The Simple Message Queue notification message configurations.</p>
+             * <p>The SMQ notification settings.</p>
              */
             public Builder MNS(MNS MNS) {
                 this.MNS = MNS;

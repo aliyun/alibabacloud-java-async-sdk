@@ -64,6 +64,10 @@ public class AlgorithmDefinition extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return algorithmDefinitionId
      */
@@ -137,6 +141,21 @@ public class AlgorithmDefinition extends TeaModel {
         private String projectName; 
         private TrainingSpecification trainingSpecification; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlgorithmDefinition model) {
+            this.algorithmDefinitionId = model.algorithmDefinitionId;
+            this.createTime = model.createTime;
+            this.customLabels = model.customLabels;
+            this.description = model.description;
+            this.name = model.name;
+            this.ownerId = model.ownerId;
+            this.projectName = model.projectName;
+            this.trainingSpecification = model.trainingSpecification;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * AlgorithmDefinitionId.

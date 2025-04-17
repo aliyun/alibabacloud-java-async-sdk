@@ -36,6 +36,10 @@ public class DetectImageBodiesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bodies
      */
@@ -53,6 +57,14 @@ public class DetectImageBodiesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Body> bodies; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetectImageBodiesResponseBody model) {
+            this.bodies = model.bodies;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The human bodies.</p>

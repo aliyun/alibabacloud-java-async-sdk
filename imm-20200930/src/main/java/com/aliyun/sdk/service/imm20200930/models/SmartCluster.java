@@ -72,6 +72,10 @@ public class SmartCluster extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -161,6 +165,23 @@ public class SmartCluster extends TeaModel {
         private String projectName; 
         private SmartClusterRule rule; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(SmartCluster model) {
+            this.createTime = model.createTime;
+            this.datasetName = model.datasetName;
+            this.description = model.description;
+            this.name = model.name;
+            this.objectId = model.objectId;
+            this.objectStatus = model.objectStatus;
+            this.objectType = model.objectType;
+            this.ownerId = model.ownerId;
+            this.projectName = model.projectName;
+            this.rule = model.rule;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * CreateTime.

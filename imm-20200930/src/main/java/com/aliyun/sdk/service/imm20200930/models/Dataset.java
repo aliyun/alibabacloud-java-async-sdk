@@ -84,6 +84,10 @@ public class Dataset extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bindCount
      */
@@ -197,6 +201,26 @@ public class Dataset extends TeaModel {
         private String templateId; 
         private Long totalFileSize; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(Dataset model) {
+            this.bindCount = model.bindCount;
+            this.createTime = model.createTime;
+            this.datasetMaxBindCount = model.datasetMaxBindCount;
+            this.datasetMaxEntityCount = model.datasetMaxEntityCount;
+            this.datasetMaxFileCount = model.datasetMaxFileCount;
+            this.datasetMaxRelationCount = model.datasetMaxRelationCount;
+            this.datasetMaxTotalFileSize = model.datasetMaxTotalFileSize;
+            this.datasetName = model.datasetName;
+            this.description = model.description;
+            this.fileCount = model.fileCount;
+            this.projectName = model.projectName;
+            this.templateId = model.templateId;
+            this.totalFileSize = model.totalFileSize;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * BindCount.

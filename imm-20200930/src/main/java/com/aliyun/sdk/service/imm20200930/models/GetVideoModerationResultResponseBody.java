@@ -76,6 +76,10 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -173,6 +177,24 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         private String taskId; 
         private String taskType; 
         private String userData; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVideoModerationResultResponseBody model) {
+            this.code = model.code;
+            this.endTime = model.endTime;
+            this.eventId = model.eventId;
+            this.message = model.message;
+            this.moderationResult = model.moderationResult;
+            this.projectName = model.projectName;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.taskId = model.taskId;
+            this.taskType = model.taskType;
+            this.userData = model.userData;
+        } 
 
         /**
          * Code.
@@ -332,6 +354,15 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             private Integer offset; 
             private Double rate; 
 
+            private Builder() {
+            } 
+
+            private Builder(BlockFrames model) {
+                this.label = model.label;
+                this.offset = model.offset;
+                this.rate = model.rate;
+            } 
+
             /**
              * Label.
              */
@@ -406,6 +437,14 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BlockFrames> blockFrames; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Frames model) {
+                this.blockFrames = model.blockFrames;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * BlockFrames.
@@ -497,6 +536,16 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             private Frames frames; 
             private String suggestion; 
             private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModerationResult model) {
+                this.categories = model.categories;
+                this.frames = model.frames;
+                this.suggestion = model.suggestion;
+                this.URI = model.URI;
+            } 
 
             /**
              * Categories.

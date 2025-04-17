@@ -36,6 +36,10 @@ public class PointInt64 extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return x
      */
@@ -53,6 +57,14 @@ public class PointInt64 extends TeaModel {
     public static final class Builder {
         private Long x; 
         private Long y; 
+
+        private Builder() {
+        } 
+
+        private Builder(PointInt64 model) {
+            this.x = model.x;
+            this.y = model.y;
+        } 
 
         /**
          * X.

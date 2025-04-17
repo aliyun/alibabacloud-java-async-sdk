@@ -56,6 +56,10 @@ public class WebofficeWatermark extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fillStyle
      */
@@ -113,6 +117,19 @@ public class WebofficeWatermark extends TeaModel {
         private Long type; 
         private String value; 
         private Long vertical; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebofficeWatermark model) {
+            this.fillStyle = model.fillStyle;
+            this.font = model.font;
+            this.horizontal = model.horizontal;
+            this.rotate = model.rotate;
+            this.type = model.type;
+            this.value = model.value;
+            this.vertical = model.vertical;
+        } 
 
         /**
          * FillStyle.

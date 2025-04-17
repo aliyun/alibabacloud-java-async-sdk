@@ -100,6 +100,10 @@ public class Project extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -245,6 +249,30 @@ public class Project extends TeaModel {
         private String templateId; 
         private Long totalFileSize; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(Project model) {
+            this.createTime = model.createTime;
+            this.datasetCount = model.datasetCount;
+            this.datasetMaxBindCount = model.datasetMaxBindCount;
+            this.datasetMaxEntityCount = model.datasetMaxEntityCount;
+            this.datasetMaxFileCount = model.datasetMaxFileCount;
+            this.datasetMaxRelationCount = model.datasetMaxRelationCount;
+            this.datasetMaxTotalFileSize = model.datasetMaxTotalFileSize;
+            this.description = model.description;
+            this.engineConcurrency = model.engineConcurrency;
+            this.fileCount = model.fileCount;
+            this.projectMaxDatasetCount = model.projectMaxDatasetCount;
+            this.projectName = model.projectName;
+            this.projectQueriesPerSecond = model.projectQueriesPerSecond;
+            this.serviceRole = model.serviceRole;
+            this.tags = model.tags;
+            this.templateId = model.templateId;
+            this.totalFileSize = model.totalFileSize;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * CreateTime.
@@ -439,6 +467,14 @@ public class Project extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * TagKey.

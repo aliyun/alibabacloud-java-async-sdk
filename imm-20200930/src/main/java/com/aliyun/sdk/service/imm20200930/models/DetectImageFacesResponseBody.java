@@ -36,6 +36,10 @@ public class DetectImageFacesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return faces
      */
@@ -53,6 +57,14 @@ public class DetectImageFacesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Figure> faces; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetectImageFacesResponseBody model) {
+            this.faces = model.faces;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The faces.</p>

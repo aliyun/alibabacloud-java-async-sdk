@@ -48,6 +48,10 @@ public class ClusterForReq extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cover
      */
@@ -89,6 +93,17 @@ public class ClusterForReq extends TeaModel {
         private java.util.Map<String, ?> customLabels; 
         private String name; 
         private String objectId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ClusterForReq model) {
+            this.cover = model.cover;
+            this.customId = model.customId;
+            this.customLabels = model.customLabels;
+            this.name = model.name;
+            this.objectId = model.objectId;
+        } 
 
         /**
          * Cover.
@@ -168,6 +183,13 @@ public class ClusterForReq extends TeaModel {
         public static final class Builder {
             private String figureId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Figures model) {
+                this.figureId = model.figureId;
+            } 
+
             /**
              * FigureId.
              */
@@ -214,6 +236,13 @@ public class ClusterForReq extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Figures> figures; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cover model) {
+                this.figures = model.figures;
+            } 
 
             /**
              * Figures.

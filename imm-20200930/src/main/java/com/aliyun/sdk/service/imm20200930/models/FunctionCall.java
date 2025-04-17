@@ -37,6 +37,10 @@ public class FunctionCall extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return arguments
      */
@@ -54,6 +58,14 @@ public class FunctionCall extends TeaModel {
     public static final class Builder {
         private String arguments; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(FunctionCall model) {
+            this.arguments = model.arguments;
+            this.name = model.name;
+        } 
 
         /**
          * Arguments.

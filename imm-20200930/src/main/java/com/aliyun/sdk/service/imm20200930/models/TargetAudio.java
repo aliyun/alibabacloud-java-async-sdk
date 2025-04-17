@@ -44,6 +44,10 @@ public class TargetAudio extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return disableAudio
      */
@@ -77,6 +81,16 @@ public class TargetAudio extends TeaModel {
         private FilterAudio filterAudio; 
         private java.util.List<Long> stream; 
         private TranscodeAudio transcodeAudio; 
+
+        private Builder() {
+        } 
+
+        private Builder(TargetAudio model) {
+            this.disableAudio = model.disableAudio;
+            this.filterAudio = model.filterAudio;
+            this.stream = model.stream;
+            this.transcodeAudio = model.transcodeAudio;
+        } 
 
         /**
          * DisableAudio.
@@ -147,6 +161,13 @@ public class TargetAudio extends TeaModel {
 
         public static final class Builder {
             private Boolean mixing; 
+
+            private Builder() {
+            } 
+
+            private Builder(FilterAudio model) {
+                this.mixing = model.mixing;
+            } 
 
             /**
              * Mixing.
@@ -278,6 +299,20 @@ public class TargetAudio extends TeaModel {
             private Integer quality; 
             private Integer sampleRate; 
             private String sampleRateOption; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeAudio model) {
+                this.bitrate = model.bitrate;
+                this.bitrateOption = model.bitrateOption;
+                this.bitsPerSample = model.bitsPerSample;
+                this.channel = model.channel;
+                this.codec = model.codec;
+                this.quality = model.quality;
+                this.sampleRate = model.sampleRate;
+                this.sampleRateOption = model.sampleRateOption;
+            } 
 
             /**
              * Bitrate.

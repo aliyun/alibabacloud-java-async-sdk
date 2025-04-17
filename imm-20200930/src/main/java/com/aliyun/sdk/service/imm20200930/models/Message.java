@@ -76,6 +76,10 @@ public class Message extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assistantType
      */
@@ -173,6 +177,24 @@ public class Message extends TeaModel {
         private String suggestion; 
         private String tone; 
         private String topic; 
+
+        private Builder() {
+        } 
+
+        private Builder(Message model) {
+            this.assistantType = model.assistantType;
+            this.content = model.content;
+            this.createTime = model.createTime;
+            this.datasetName = model.datasetName;
+            this.language = model.language;
+            this.regenerate = model.regenerate;
+            this.reply = model.reply;
+            this.score = model.score;
+            this.sourceURI = model.sourceURI;
+            this.suggestion = model.suggestion;
+            this.tone = model.tone;
+            this.topic = model.topic;
+        } 
 
         /**
          * AssistantType.

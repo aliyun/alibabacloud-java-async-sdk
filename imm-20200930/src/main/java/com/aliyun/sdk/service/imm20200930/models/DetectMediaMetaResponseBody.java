@@ -124,6 +124,10 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addresses
      */
@@ -317,6 +321,36 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         private Long videoHeight; 
         private java.util.List<VideoStream> videoStreams; 
         private Long videoWidth; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetectMediaMetaResponseBody model) {
+            this.addresses = model.addresses;
+            this.album = model.album;
+            this.albumArtist = model.albumArtist;
+            this.artist = model.artist;
+            this.audioStreams = model.audioStreams;
+            this.bitrate = model.bitrate;
+            this.composer = model.composer;
+            this.duration = model.duration;
+            this.formatLongName = model.formatLongName;
+            this.formatName = model.formatName;
+            this.language = model.language;
+            this.latLong = model.latLong;
+            this.performer = model.performer;
+            this.produceTime = model.produceTime;
+            this.programCount = model.programCount;
+            this.requestId = model.requestId;
+            this.size = model.size;
+            this.startTime = model.startTime;
+            this.streamCount = model.streamCount;
+            this.subtitles = model.subtitles;
+            this.title = model.title;
+            this.videoHeight = model.videoHeight;
+            this.videoStreams = model.videoStreams;
+            this.videoWidth = model.videoWidth;
+        } 
 
         /**
          * <p>The addresses.</p>

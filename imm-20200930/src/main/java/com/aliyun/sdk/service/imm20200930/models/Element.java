@@ -48,6 +48,10 @@ public class Element extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return elementContents
      */
@@ -89,6 +93,17 @@ public class Element extends TeaModel {
         private String elementType; 
         private String objectId; 
         private Float semanticSimilarity; 
+
+        private Builder() {
+        } 
+
+        private Builder(Element model) {
+            this.elementContents = model.elementContents;
+            this.elementRelations = model.elementRelations;
+            this.elementType = model.elementType;
+            this.objectId = model.objectId;
+            this.semanticSimilarity = model.semanticSimilarity;
+        } 
 
         /**
          * ElementContents.

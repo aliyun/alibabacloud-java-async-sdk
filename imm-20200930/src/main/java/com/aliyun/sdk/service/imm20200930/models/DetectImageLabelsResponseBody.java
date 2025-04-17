@@ -36,6 +36,10 @@ public class DetectImageLabelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return labels
      */
@@ -54,8 +58,16 @@ public class DetectImageLabelsResponseBody extends TeaModel {
         private java.util.List<Label> labels; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DetectImageLabelsResponseBody model) {
+            this.labels = model.labels;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The labels that are detected.</p>
+         * <p>The list of labels detected.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;

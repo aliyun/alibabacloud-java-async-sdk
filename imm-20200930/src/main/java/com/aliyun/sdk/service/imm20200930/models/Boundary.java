@@ -48,6 +48,10 @@ public class Boundary extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return height
      */
@@ -89,6 +93,17 @@ public class Boundary extends TeaModel {
         private java.util.List<PointInt64> polygon; 
         private Long top; 
         private Long width; 
+
+        private Builder() {
+        } 
+
+        private Builder(Boundary model) {
+            this.height = model.height;
+            this.left = model.left;
+            this.polygon = model.polygon;
+            this.top = model.top;
+            this.width = model.width;
+        } 
 
         /**
          * Height.

@@ -76,6 +76,10 @@ public class SubtitleStream extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bitrate
      */
@@ -173,6 +177,24 @@ public class SubtitleStream extends TeaModel {
         private String language; 
         private Double startTime; 
         private Long width; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubtitleStream model) {
+            this.bitrate = model.bitrate;
+            this.codecLongName = model.codecLongName;
+            this.codecName = model.codecName;
+            this.codecTag = model.codecTag;
+            this.codecTagString = model.codecTagString;
+            this.content = model.content;
+            this.duration = model.duration;
+            this.height = model.height;
+            this.index = model.index;
+            this.language = model.language;
+            this.startTime = model.startTime;
+            this.width = model.width;
+        } 
 
         /**
          * Bitrate.

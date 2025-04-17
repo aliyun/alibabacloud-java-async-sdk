@@ -73,7 +73,7 @@ public class AddImageMosaicRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -171,7 +171,7 @@ public class AddImageMosaicRequest extends Request {
 
         /**
          * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
-         * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+         * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -347,6 +347,17 @@ public class AddImageMosaicRequest extends Request {
             private Float width; 
             private Float x; 
             private Float y; 
+
+            private Builder() {
+            } 
+
+            private Builder(Boundary model) {
+                this.height = model.height;
+                this.referPos = model.referPos;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * <p>The height of the bounding box. The value can be an integer greater than or equal to 0 or a decimal within the range of [0,1):</p>
@@ -529,6 +540,18 @@ public class AddImageMosaicRequest extends Request {
             private Integer mosaicRadius; 
             private Integer sigma; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.blurRadius = model.blurRadius;
+                this.boundary = model.boundary;
+                this.color = model.color;
+                this.mosaicRadius = model.mosaicRadius;
+                this.sigma = model.sigma;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The radius of the Gaussian blur. Valid values: 1 to 50. Default value: 3. Unit: pixels.</p>

@@ -52,6 +52,10 @@ public class FigureClusterForReq extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cover
      */
@@ -101,6 +105,18 @@ public class FigureClusterForReq extends TeaModel {
         private Long metaLockVersion; 
         private String name; 
         private String objectId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FigureClusterForReq model) {
+            this.cover = model.cover;
+            this.customId = model.customId;
+            this.customLabels = model.customLabels;
+            this.metaLockVersion = model.metaLockVersion;
+            this.name = model.name;
+            this.objectId = model.objectId;
+        } 
 
         /**
          * Cover.
@@ -188,6 +204,13 @@ public class FigureClusterForReq extends TeaModel {
         public static final class Builder {
             private String figureId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Figures model) {
+                this.figureId = model.figureId;
+            } 
+
             /**
              * FigureId.
              */
@@ -234,6 +257,13 @@ public class FigureClusterForReq extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Figures> figures; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cover model) {
+                this.figures = model.figures;
+            } 
 
             /**
              * Figures.

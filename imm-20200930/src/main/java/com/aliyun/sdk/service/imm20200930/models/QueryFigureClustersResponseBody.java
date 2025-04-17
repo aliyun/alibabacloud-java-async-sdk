@@ -44,6 +44,10 @@ public class QueryFigureClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return figureClusters
      */
@@ -77,6 +81,16 @@ public class QueryFigureClustersResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryFigureClustersResponseBody model) {
+            this.figureClusters = model.figureClusters;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The face groups.</p>

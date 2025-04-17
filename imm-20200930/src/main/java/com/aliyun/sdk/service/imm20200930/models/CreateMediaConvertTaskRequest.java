@@ -77,7 +77,7 @@ public class CreateMediaConvertTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -335,6 +335,15 @@ public class CreateMediaConvertTaskRequest extends Request {
             private Double timeOffset; 
             private String URI; 
 
+            private Builder() {
+            } 
+
+            private Builder(Subtitles model) {
+                this.language = model.language;
+                this.timeOffset = model.timeOffset;
+                this.URI = model.URI;
+            } 
+
             /**
              * <p>The subtitle language. If you specify this parameter, comply with the ISO 639-2 standard. This parameter is left empty by default.</p>
              * 
@@ -382,6 +391,18 @@ public class CreateMediaConvertTaskRequest extends Request {
      * <p>CreateMediaConvertTaskRequest</p>
      */
     public static class Sources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlignMode")
+        private String alignMode;
+
+        @com.aliyun.core.annotation.NameInMap("Attached")
+        private Boolean attached;
+
+        @com.aliyun.core.annotation.NameInMap("DisableAudio")
+        private Boolean disableAudio;
+
+        @com.aliyun.core.annotation.NameInMap("DisableVideo")
+        private Boolean disableVideo;
+
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Double duration;
 
@@ -395,6 +416,10 @@ public class CreateMediaConvertTaskRequest extends Request {
         private String URI;
 
         private Sources(Builder builder) {
+            this.alignMode = builder.alignMode;
+            this.attached = builder.attached;
+            this.disableAudio = builder.disableAudio;
+            this.disableVideo = builder.disableVideo;
             this.duration = builder.duration;
             this.startTime = builder.startTime;
             this.subtitles = builder.subtitles;
@@ -407,6 +432,34 @@ public class CreateMediaConvertTaskRequest extends Request {
 
         public static Sources create() {
             return builder().build();
+        }
+
+        /**
+         * @return alignMode
+         */
+        public String getAlignMode() {
+            return this.alignMode;
+        }
+
+        /**
+         * @return attached
+         */
+        public Boolean getAttached() {
+            return this.attached;
+        }
+
+        /**
+         * @return disableAudio
+         */
+        public Boolean getDisableAudio() {
+            return this.disableAudio;
+        }
+
+        /**
+         * @return disableVideo
+         */
+        public Boolean getDisableVideo() {
+            return this.disableVideo;
         }
 
         /**
@@ -438,10 +491,60 @@ public class CreateMediaConvertTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private String alignMode; 
+            private Boolean attached; 
+            private Boolean disableAudio; 
+            private Boolean disableVideo; 
             private Double duration; 
             private Double startTime; 
             private java.util.List<Subtitles> subtitles; 
             private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.alignMode = model.alignMode;
+                this.attached = model.attached;
+                this.disableAudio = model.disableAudio;
+                this.disableVideo = model.disableVideo;
+                this.duration = model.duration;
+                this.startTime = model.startTime;
+                this.subtitles = model.subtitles;
+                this.URI = model.URI;
+            } 
+
+            /**
+             * AlignMode.
+             */
+            public Builder alignMode(String alignMode) {
+                this.alignMode = alignMode;
+                return this;
+            }
+
+            /**
+             * Attached.
+             */
+            public Builder attached(Boolean attached) {
+                this.attached = attached;
+                return this;
+            }
+
+            /**
+             * DisableAudio.
+             */
+            public Builder disableAudio(Boolean disableAudio) {
+                this.disableAudio = disableAudio;
+                return this;
+            }
+
+            /**
+             * DisableVideo.
+             */
+            public Builder disableVideo(Boolean disableVideo) {
+                this.disableVideo = disableVideo;
+                return this;
+            }
 
             /**
              * <p>The transcoding duration of the media. Unit: seconds. Default value: 0. A value of 0 specifies that the transcoding duration lasts until the end of the video.</p>
@@ -550,6 +653,15 @@ public class CreateMediaConvertTaskRequest extends Request {
             private Double duration; 
             private String format; 
             private Integer startNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(Segment model) {
+                this.duration = model.duration;
+                this.format = model.format;
+                this.startNumber = model.startNumber;
+            } 
 
             /**
              * <p>The duration of the segment. Unit: seconds.</p>
@@ -722,6 +834,21 @@ public class CreateMediaConvertTaskRequest extends Request {
             private TargetSubtitle subtitle; 
             private String URI; 
             private TargetVideo video; 
+
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.audio = model.audio;
+                this.container = model.container;
+                this.image = model.image;
+                this.segment = model.segment;
+                this.speed = model.speed;
+                this.stripMetadata = model.stripMetadata;
+                this.subtitle = model.subtitle;
+                this.URI = model.URI;
+                this.video = model.video;
+            } 
 
             /**
              * <p>The audio processing settings.</p>

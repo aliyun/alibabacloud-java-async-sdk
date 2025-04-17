@@ -52,6 +52,10 @@ public class Label extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return centricScore
      */
@@ -101,6 +105,18 @@ public class Label extends TeaModel {
         private String labelName; 
         private String language; 
         private String parentLabelName; 
+
+        private Builder() {
+        } 
+
+        private Builder(Label model) {
+            this.centricScore = model.centricScore;
+            this.labelConfidence = model.labelConfidence;
+            this.labelLevel = model.labelLevel;
+            this.labelName = model.labelName;
+            this.language = model.language;
+            this.parentLabelName = model.parentLabelName;
+        } 
 
         /**
          * CentricScore.

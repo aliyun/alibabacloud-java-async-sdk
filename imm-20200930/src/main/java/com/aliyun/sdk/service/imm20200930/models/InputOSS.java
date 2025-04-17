@@ -41,6 +41,10 @@ public class InputOSS extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucket
      */
@@ -66,6 +70,15 @@ public class InputOSS extends TeaModel {
         private String bucket; 
         private java.util.List<String> matchExpressions; 
         private String prefix; 
+
+        private Builder() {
+        } 
+
+        private Builder(InputOSS model) {
+            this.bucket = model.bucket;
+            this.matchExpressions = model.matchExpressions;
+            this.prefix = model.prefix;
+        } 
 
         /**
          * <p>This parameter is required.</p>

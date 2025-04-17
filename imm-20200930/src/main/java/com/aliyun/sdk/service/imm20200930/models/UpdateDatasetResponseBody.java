@@ -36,6 +36,10 @@ public class UpdateDatasetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataset
      */
@@ -54,8 +58,16 @@ public class UpdateDatasetResponseBody extends TeaModel {
         private Dataset dataset; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateDatasetResponseBody model) {
+            this.dataset = model.dataset;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Dataset.
+         * <p>The dataset.</p>
          */
         public Builder dataset(Dataset dataset) {
             this.dataset = dataset;

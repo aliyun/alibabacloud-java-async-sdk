@@ -36,6 +36,10 @@ public class Answer extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -53,6 +57,14 @@ public class Answer extends TeaModel {
     public static final class Builder {
         private String content; 
         private java.util.List<ReferenceFile> references; 
+
+        private Builder() {
+        } 
+
+        private Builder(Answer model) {
+            this.content = model.content;
+            this.references = model.references;
+        } 
 
         /**
          * Content.

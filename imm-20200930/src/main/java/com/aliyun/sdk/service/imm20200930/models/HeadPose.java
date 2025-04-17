@@ -40,6 +40,10 @@ public class HeadPose extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pitch
      */
@@ -65,6 +69,15 @@ public class HeadPose extends TeaModel {
         private Float pitch; 
         private Float roll; 
         private Float yaw; 
+
+        private Builder() {
+        } 
+
+        private Builder(HeadPose model) {
+            this.pitch = model.pitch;
+            this.roll = model.roll;
+            this.yaw = model.yaw;
+        } 
 
         /**
          * Pitch.

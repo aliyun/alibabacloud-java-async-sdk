@@ -40,6 +40,10 @@ public class CredentialConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return chain
      */
@@ -65,6 +69,15 @@ public class CredentialConfig extends TeaModel {
         private java.util.List<Chain> chain; 
         private String policy; 
         private String serviceRole; 
+
+        private Builder() {
+        } 
+
+        private Builder(CredentialConfig model) {
+            this.chain = model.chain;
+            this.policy = model.policy;
+            this.serviceRole = model.serviceRole;
+        } 
 
         /**
          * Chain.
@@ -151,6 +164,15 @@ public class CredentialConfig extends TeaModel {
             private String assumeRoleFor; 
             private String role; 
             private String roleType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Chain model) {
+                this.assumeRoleFor = model.assumeRoleFor;
+                this.role = model.role;
+                this.roleType = model.roleType;
+            } 
 
             /**
              * AssumeRoleFor.

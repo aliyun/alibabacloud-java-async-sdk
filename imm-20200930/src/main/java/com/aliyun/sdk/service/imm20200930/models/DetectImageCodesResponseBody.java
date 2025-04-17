@@ -37,6 +37,10 @@ public class DetectImageCodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return codes
      */
@@ -54,6 +58,14 @@ public class DetectImageCodesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Codes> codes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetectImageCodesResponseBody model) {
+            this.codes = model.codes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The barcodes or QR codes.</p>

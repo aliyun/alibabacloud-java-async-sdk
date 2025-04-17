@@ -61,7 +61,7 @@ public class UpdateBatchRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -248,6 +248,14 @@ public class UpdateBatchRequest extends Request {
         public static final class Builder {
             private String name; 
             private java.util.List<String> parameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(Actions model) {
+                this.name = model.name;
+                this.parameters = model.parameters;
+            } 
 
             /**
              * <p>The name of the template.</p>

@@ -40,6 +40,10 @@ public class ListTriggersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListTriggersResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<DataIngestion> triggers; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTriggersResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.triggers = model.triggers;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>

@@ -60,6 +60,10 @@ public class Binding extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -125,6 +129,20 @@ public class Binding extends TeaModel {
         private String state; 
         private String URI; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(Binding model) {
+            this.createTime = model.createTime;
+            this.datasetName = model.datasetName;
+            this.phase = model.phase;
+            this.projectName = model.projectName;
+            this.reason = model.reason;
+            this.state = model.state;
+            this.URI = model.URI;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * CreateTime.

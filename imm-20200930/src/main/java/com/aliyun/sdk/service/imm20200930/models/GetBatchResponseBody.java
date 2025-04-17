@@ -36,6 +36,10 @@ public class GetBatchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return batch
      */
@@ -53,6 +57,14 @@ public class GetBatchResponseBody extends TeaModel {
     public static final class Builder {
         private DataIngestion batch; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBatchResponseBody model) {
+            this.batch = model.batch;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the batch processing task.</p>

@@ -81,7 +81,7 @@ public class CreateCustomizedStoryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -326,6 +326,13 @@ public class CreateCustomizedStoryRequest extends Request {
         public static final class Builder {
             private String URI; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cover model) {
+                this.URI = model.URI;
+            } 
+
             /**
              * <p>The URI of the cover image.</p>
              * <p>This parameter is required.</p>
@@ -377,6 +384,13 @@ public class CreateCustomizedStoryRequest extends Request {
 
         public static final class Builder {
             private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.URI = model.URI;
+            } 
 
             /**
              * <p>The URIs of the files.</p>

@@ -36,6 +36,10 @@ public class Body extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return boundary
      */
@@ -53,6 +57,14 @@ public class Body extends TeaModel {
     public static final class Builder {
         private Boundary boundary; 
         private Float confidence; 
+
+        private Builder() {
+        } 
+
+        private Builder(Body model) {
+            this.boundary = model.boundary;
+            this.confidence = model.confidence;
+        } 
 
         /**
          * Boundary.

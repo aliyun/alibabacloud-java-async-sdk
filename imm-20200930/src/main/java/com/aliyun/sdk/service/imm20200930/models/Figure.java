@@ -132,6 +132,10 @@ public class Figure extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return age
      */
@@ -341,6 +345,38 @@ public class Figure extends TeaModel {
         private String mouth; 
         private Float mouthConfidence; 
         private Float sharpness; 
+
+        private Builder() {
+        } 
+
+        private Builder(Figure model) {
+            this.age = model.age;
+            this.ageSD = model.ageSD;
+            this.attractive = model.attractive;
+            this.beard = model.beard;
+            this.beardConfidence = model.beardConfidence;
+            this.boundary = model.boundary;
+            this.emotion = model.emotion;
+            this.emotionConfidence = model.emotionConfidence;
+            this.faceQuality = model.faceQuality;
+            this.figureClusterConfidence = model.figureClusterConfidence;
+            this.figureClusterId = model.figureClusterId;
+            this.figureConfidence = model.figureConfidence;
+            this.figureId = model.figureId;
+            this.figureType = model.figureType;
+            this.gender = model.gender;
+            this.genderConfidence = model.genderConfidence;
+            this.glasses = model.glasses;
+            this.glassesConfidence = model.glassesConfidence;
+            this.hat = model.hat;
+            this.hatConfidence = model.hatConfidence;
+            this.headPose = model.headPose;
+            this.mask = model.mask;
+            this.maskConfidence = model.maskConfidence;
+            this.mouth = model.mouth;
+            this.mouthConfidence = model.mouthConfidence;
+            this.sharpness = model.sharpness;
+        } 
 
         /**
          * Age.

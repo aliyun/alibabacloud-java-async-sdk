@@ -40,6 +40,10 @@ public class CreateVideoLabelClassificationTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eventId
      */
@@ -65,6 +69,15 @@ public class CreateVideoLabelClassificationTaskResponseBody extends TeaModel {
         private String eventId; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVideoLabelClassificationTaskResponseBody model) {
+            this.eventId = model.eventId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The event ID of the current task. You can use <a href="https://www.alibabacloud.com/en/product/eventbridge">EventBridge</a> to query the ID and obtain the task information notification.</p>

@@ -76,6 +76,10 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -173,6 +177,24 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
         private String taskId; 
         private String taskType; 
         private String userData; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDecodeBlindWatermarkResultResponseBody model) {
+            this.code = model.code;
+            this.content = model.content;
+            this.endTime = model.endTime;
+            this.eventId = model.eventId;
+            this.message = model.message;
+            this.projectName = model.projectName;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.taskId = model.taskId;
+            this.taskType = model.taskType;
+            this.userData = model.userData;
+        } 
 
         /**
          * <p>The error code of the task.</p>

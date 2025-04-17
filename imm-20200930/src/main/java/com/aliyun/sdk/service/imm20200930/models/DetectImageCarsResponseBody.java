@@ -37,6 +37,10 @@ public class DetectImageCarsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cars
      */
@@ -54,6 +58,14 @@ public class DetectImageCarsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Car> cars; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetectImageCarsResponseBody model) {
+            this.cars = model.cars;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The vehicles.</p>

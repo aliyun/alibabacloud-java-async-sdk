@@ -77,7 +77,7 @@ public class FuzzyQueryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -272,7 +272,7 @@ public class FuzzyQueryRequest extends Request {
         }
 
         /**
-         * <p>The sort field. For more information, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</p>
+         * <p>The sort fields. For more information, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</p>
          * <ul>
          * <li>Separate multiple sort fields with commas (,). Example: <code>Size,Filename</code>.</li>
          * <li>You can specify up to five sort fields.</li>

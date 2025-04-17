@@ -48,6 +48,10 @@ public class SimilarImageCluster extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -89,6 +93,17 @@ public class SimilarImageCluster extends TeaModel {
         private java.util.List<SimilarImage> files; 
         private String objectId; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(SimilarImageCluster model) {
+            this.createTime = model.createTime;
+            this.customLabels = model.customLabels;
+            this.files = model.files;
+            this.objectId = model.objectId;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * CreateTime.

@@ -38,6 +38,10 @@ public class ModelSpecification extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metaData
      */
@@ -55,6 +59,14 @@ public class ModelSpecification extends TeaModel {
     public static final class Builder {
         private MetaData metaData; 
         private Spec spec; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModelSpecification model) {
+            this.metaData = model.metaData;
+            this.spec = model.spec;
+        } 
 
         /**
          * <p>This parameter is required.</p>

@@ -44,6 +44,10 @@ public class Codes extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return boundary
      */
@@ -77,6 +81,16 @@ public class Codes extends TeaModel {
         private Float confidence; 
         private String content; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(Codes model) {
+            this.boundary = model.boundary;
+            this.confidence = model.confidence;
+            this.content = model.content;
+            this.type = model.type;
+        } 
 
         /**
          * Boundary.

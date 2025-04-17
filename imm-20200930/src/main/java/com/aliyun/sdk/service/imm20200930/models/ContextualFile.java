@@ -64,6 +64,10 @@ public class ContextualFile extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contentType
      */
@@ -137,6 +141,21 @@ public class ContextualFile extends TeaModel {
         private String ownerId; 
         private String projectName; 
         private String URI; 
+
+        private Builder() {
+        } 
+
+        private Builder(ContextualFile model) {
+            this.contentType = model.contentType;
+            this.datasetName = model.datasetName;
+            this.elements = model.elements;
+            this.mediaType = model.mediaType;
+            this.OSSURI = model.OSSURI;
+            this.objectId = model.objectId;
+            this.ownerId = model.ownerId;
+            this.projectName = model.projectName;
+            this.URI = model.URI;
+        } 
 
         /**
          * ContentType.

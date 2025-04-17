@@ -36,6 +36,10 @@ public class GetFigureClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return figureCluster
      */
@@ -54,8 +58,16 @@ public class GetFigureClusterResponseBody extends TeaModel {
         private FigureCluster figureCluster; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetFigureClusterResponseBody model) {
+            this.figureCluster = model.figureCluster;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The information about the face clustering task.</p>
+         * <p>The information about the face cluster.</p>
          */
         public Builder figureCluster(FigureCluster figureCluster) {
             this.figureCluster = figureCluster;

@@ -86,7 +86,7 @@ public class SimpleQueryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -408,6 +408,14 @@ public class SimpleQueryRequest extends Request {
         public static final class Builder {
             private String field; 
             private String operation; 
+
+            private Builder() {
+            } 
+
+            private Builder(Aggregations model) {
+                this.field = model.field;
+                this.operation = model.operation;
+            } 
 
             /**
              * <p>The name of the field. For more information about supported fields, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</p>

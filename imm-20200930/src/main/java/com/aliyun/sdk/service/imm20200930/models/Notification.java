@@ -40,6 +40,10 @@ public class Notification extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return extendedMessageURI
      */
@@ -65,6 +69,15 @@ public class Notification extends TeaModel {
         private String extendedMessageURI; 
         private MNS MNS; 
         private RocketMQ rocketMQ; 
+
+        private Builder() {
+        } 
+
+        private Builder(Notification model) {
+            this.extendedMessageURI = model.extendedMessageURI;
+            this.MNS = model.MNS;
+            this.rocketMQ = model.rocketMQ;
+        } 
 
         /**
          * ExtendedMessageURI.

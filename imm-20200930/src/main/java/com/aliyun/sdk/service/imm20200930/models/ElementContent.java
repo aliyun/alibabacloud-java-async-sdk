@@ -44,6 +44,10 @@ public class ElementContent extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -77,6 +81,16 @@ public class ElementContent extends TeaModel {
         private java.util.List<Long> timeRange; 
         private String type; 
         private String URL; 
+
+        private Builder() {
+        } 
+
+        private Builder(ElementContent model) {
+            this.content = model.content;
+            this.timeRange = model.timeRange;
+            this.type = model.type;
+            this.URL = model.URL;
+        } 
 
         /**
          * Content.

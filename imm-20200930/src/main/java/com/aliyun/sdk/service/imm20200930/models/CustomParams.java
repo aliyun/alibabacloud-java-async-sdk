@@ -36,6 +36,10 @@ public class CustomParams extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -53,6 +57,14 @@ public class CustomParams extends TeaModel {
     public static final class Builder {
         private String name; 
         private java.util.List<Property> properties; 
+
+        private Builder() {
+        } 
+
+        private Builder(CustomParams model) {
+            this.name = model.name;
+            this.properties = model.properties;
+        } 
 
         /**
          * Name.

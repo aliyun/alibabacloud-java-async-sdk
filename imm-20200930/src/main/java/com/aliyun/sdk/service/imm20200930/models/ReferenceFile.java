@@ -44,6 +44,10 @@ public class ReferenceFile extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return datasetName
      */
@@ -77,6 +81,16 @@ public class ReferenceFile extends TeaModel {
         private String objectId; 
         private String projectName; 
         private String URI; 
+
+        private Builder() {
+        } 
+
+        private Builder(ReferenceFile model) {
+            this.datasetName = model.datasetName;
+            this.objectId = model.objectId;
+            this.projectName = model.projectName;
+            this.URI = model.URI;
+        } 
 
         /**
          * DatasetName.

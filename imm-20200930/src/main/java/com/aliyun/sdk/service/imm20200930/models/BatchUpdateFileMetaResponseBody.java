@@ -36,6 +36,10 @@ public class BatchUpdateFileMetaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return files
      */
@@ -53,6 +57,14 @@ public class BatchUpdateFileMetaResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Files> files; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchUpdateFileMetaResponseBody model) {
+            this.files = model.files;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The files whose metadata was updated.</p>
@@ -134,6 +146,15 @@ public class BatchUpdateFileMetaResponseBody extends TeaModel {
             private String message; 
             private Boolean success; 
             private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.message = model.message;
+                this.success = model.success;
+                this.URI = model.URI;
+            } 
 
             /**
              * <p>The error message returned when the value of the Success parameter is false.</p>

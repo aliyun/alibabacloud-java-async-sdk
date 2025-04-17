@@ -72,6 +72,10 @@ public class TaskInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -161,6 +165,23 @@ public class TaskInfo extends TeaModel {
         private String taskRequestDefinition; 
         private String taskType; 
         private String userData; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskInfo model) {
+            this.code = model.code;
+            this.endTime = model.endTime;
+            this.message = model.message;
+            this.progress = model.progress;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.tags = model.tags;
+            this.taskId = model.taskId;
+            this.taskRequestDefinition = model.taskRequestDefinition;
+            this.taskType = model.taskType;
+            this.userData = model.userData;
+        } 
 
         /**
          * Code.

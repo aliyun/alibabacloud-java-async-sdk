@@ -44,6 +44,10 @@ public class OCRContents extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return boundary
      */
@@ -77,6 +81,16 @@ public class OCRContents extends TeaModel {
         private Float confidence; 
         private String contents; 
         private String language; 
+
+        private Builder() {
+        } 
+
+        private Builder(OCRContents model) {
+            this.boundary = model.boundary;
+            this.confidence = model.confidence;
+            this.contents = model.contents;
+            this.language = model.language;
+        } 
 
         /**
          * Boundary.

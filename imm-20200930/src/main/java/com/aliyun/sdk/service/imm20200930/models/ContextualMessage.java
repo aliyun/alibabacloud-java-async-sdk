@@ -40,6 +40,10 @@ public class ContextualMessage extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -65,6 +69,15 @@ public class ContextualMessage extends TeaModel {
         private String content; 
         private java.util.List<ContextualFile> files; 
         private String role; 
+
+        private Builder() {
+        } 
+
+        private Builder(ContextualMessage model) {
+            this.content = model.content;
+            this.files = model.files;
+            this.role = model.role;
+        } 
 
         /**
          * Content.

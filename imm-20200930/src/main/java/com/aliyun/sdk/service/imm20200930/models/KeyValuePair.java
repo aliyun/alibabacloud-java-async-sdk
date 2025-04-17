@@ -36,6 +36,10 @@ public class KeyValuePair extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return key
      */
@@ -53,6 +57,14 @@ public class KeyValuePair extends TeaModel {
     public static final class Builder {
         private String key; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(KeyValuePair model) {
+            this.key = model.key;
+            this.value = model.value;
+        } 
 
         /**
          * Key.

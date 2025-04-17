@@ -36,6 +36,10 @@ public class DetectImageCroppingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return croppings
      */
@@ -54,8 +58,16 @@ public class DetectImageCroppingResponseBody extends TeaModel {
         private java.util.List<CroppingSuggestion> croppings; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DetectImageCroppingResponseBody model) {
+            this.croppings = model.croppings;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The image croppings.</p>
+         * <p>The image cropping suggestions.</p>
          */
         public Builder croppings(java.util.List<CroppingSuggestion> croppings) {
             this.croppings = croppings;

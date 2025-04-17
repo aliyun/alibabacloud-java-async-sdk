@@ -40,6 +40,10 @@ public class CreateOfficeConversionTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eventId
      */
@@ -65,6 +69,15 @@ public class CreateOfficeConversionTaskResponseBody extends TeaModel {
         private String eventId; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOfficeConversionTaskResponseBody model) {
+            this.eventId = model.eventId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The event ID.</p>

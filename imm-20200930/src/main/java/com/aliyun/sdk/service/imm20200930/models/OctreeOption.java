@@ -46,6 +46,10 @@ public class OctreeOption extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return doVoxelGridDownDownSampling
      */
@@ -79,6 +83,16 @@ public class OctreeOption extends TeaModel {
         private String libraryName; 
         private Double octreeResolution; 
         private Double pointResolution; 
+
+        private Builder() {
+        } 
+
+        private Builder(OctreeOption model) {
+            this.doVoxelGridDownDownSampling = model.doVoxelGridDownDownSampling;
+            this.libraryName = model.libraryName;
+            this.octreeResolution = model.octreeResolution;
+            this.pointResolution = model.pointResolution;
+        } 
 
         /**
          * DoVoxelGridDownDownSampling.

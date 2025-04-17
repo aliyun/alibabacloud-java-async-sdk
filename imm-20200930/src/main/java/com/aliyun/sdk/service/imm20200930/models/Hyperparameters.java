@@ -62,6 +62,10 @@ public class Hyperparameters extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupInterval
      */
@@ -127,6 +131,20 @@ public class Hyperparameters extends TeaModel {
         private Long maxEpoch; 
         private Optimization optimization; 
         private Schedule schedule; 
+
+        private Builder() {
+        } 
+
+        private Builder(Hyperparameters model) {
+            this.backupInterval = model.backupInterval;
+            this.batchSize = model.batchSize;
+            this.dataLoaderWorkers = model.dataLoaderWorkers;
+            this.evaluator = model.evaluator;
+            this.inputSize = model.inputSize;
+            this.maxEpoch = model.maxEpoch;
+            this.optimization = model.optimization;
+            this.schedule = model.schedule;
+        } 
 
         /**
          * BackupInterval.

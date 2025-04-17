@@ -36,6 +36,10 @@ public class SceneElement extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return frameTimes
      */
@@ -53,6 +57,14 @@ public class SceneElement extends TeaModel {
     public static final class Builder {
         private java.util.List<Long> frameTimes; 
         private java.util.List<Long> timeRange; 
+
+        private Builder() {
+        } 
+
+        private Builder(SceneElement model) {
+            this.frameTimes = model.frameTimes;
+            this.timeRange = model.timeRange;
+        } 
 
         /**
          * FrameTimes.

@@ -44,6 +44,10 @@ public class TargetVideo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return disableVideo
      */
@@ -77,6 +81,16 @@ public class TargetVideo extends TeaModel {
         private FilterVideo filterVideo; 
         private java.util.List<Integer> stream; 
         private TranscodeVideo transcodeVideo; 
+
+        private Builder() {
+        } 
+
+        private Builder(TargetVideo model) {
+            this.disableVideo = model.disableVideo;
+            this.filterVideo = model.filterVideo;
+            this.stream = model.stream;
+            this.transcodeVideo = model.transcodeVideo;
+        } 
 
         /**
          * DisableVideo.
@@ -219,6 +233,19 @@ public class TargetVideo extends TeaModel {
             private String referPos; 
             private Double startTime; 
             private Float width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Delogos model) {
+                this.duration = model.duration;
+                this.dx = model.dx;
+                this.dy = model.dy;
+                this.height = model.height;
+                this.referPos = model.referPos;
+                this.startTime = model.startTime;
+                this.width = model.width;
+            } 
 
             /**
              * Duration.
@@ -495,6 +522,28 @@ public class TargetVideo extends TeaModel {
             private String URI; 
             private Float width; 
 
+            private Builder() {
+            } 
+
+            private Builder(Watermarks model) {
+                this.borderColor = model.borderColor;
+                this.borderWidth = model.borderWidth;
+                this.content = model.content;
+                this.duration = model.duration;
+                this.dx = model.dx;
+                this.dy = model.dy;
+                this.fontApha = model.fontApha;
+                this.fontColor = model.fontColor;
+                this.fontName = model.fontName;
+                this.fontSize = model.fontSize;
+                this.height = model.height;
+                this.referPos = model.referPos;
+                this.startTime = model.startTime;
+                this.type = model.type;
+                this.URI = model.URI;
+                this.width = model.width;
+            } 
+
             /**
              * BorderColor.
              */
@@ -673,6 +722,14 @@ public class TargetVideo extends TeaModel {
         public static final class Builder {
             private java.util.List<Delogos> delogos; 
             private java.util.List<Watermarks> watermarks; 
+
+            private Builder() {
+            } 
+
+            private Builder(FilterVideo model) {
+                this.delogos = model.delogos;
+                this.watermarks = model.watermarks;
+            } 
 
             /**
              * Delogos.
@@ -920,6 +977,29 @@ public class TargetVideo extends TeaModel {
             private String resolutionOption; 
             private Integer rotation; 
             private String scaleType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeVideo model) {
+                this.adaptiveResolutionDirection = model.adaptiveResolutionDirection;
+                this.bFrames = model.bFrames;
+                this.bitrate = model.bitrate;
+                this.bitrateOption = model.bitrateOption;
+                this.bufferSize = model.bufferSize;
+                this.CRF = model.CRF;
+                this.codec = model.codec;
+                this.frameRate = model.frameRate;
+                this.frameRateOption = model.frameRateOption;
+                this.GOPSize = model.GOPSize;
+                this.maxBitrate = model.maxBitrate;
+                this.pixelFormat = model.pixelFormat;
+                this.refs = model.refs;
+                this.resolution = model.resolution;
+                this.resolutionOption = model.resolutionOption;
+                this.rotation = model.rotation;
+                this.scaleType = model.scaleType;
+            } 
 
             /**
              * AdaptiveResolutionDirection.

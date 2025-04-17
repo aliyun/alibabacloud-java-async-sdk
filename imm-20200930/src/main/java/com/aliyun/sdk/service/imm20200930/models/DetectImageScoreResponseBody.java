@@ -36,6 +36,10 @@ public class DetectImageScoreResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageScore
      */
@@ -53,6 +57,14 @@ public class DetectImageScoreResponseBody extends TeaModel {
     public static final class Builder {
         private ImageScore imageScore; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetectImageScoreResponseBody model) {
+            this.imageScore = model.imageScore;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The quality score of the image.</p>
@@ -110,6 +122,13 @@ public class DetectImageScoreResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float overallQualityScore; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageScore model) {
+                this.overallQualityScore = model.overallQualityScore;
+            } 
 
             /**
              * <p>The overall quality score.</p>

@@ -40,6 +40,10 @@ public class ListDatasetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return datasets
      */
@@ -65,6 +69,15 @@ public class ListDatasetsResponseBody extends TeaModel {
         private java.util.List<Dataset> datasets; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDatasetsResponseBody model) {
+            this.datasets = model.datasets;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of datasets.</p>

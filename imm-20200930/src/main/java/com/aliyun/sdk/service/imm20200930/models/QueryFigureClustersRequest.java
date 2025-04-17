@@ -86,7 +86,7 @@ public class QueryFigureClustersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -210,7 +210,7 @@ public class QueryFigureClustersRequest extends Request {
         }
 
         /**
-         * <p>The time period during which the faces are grouped together.</p>
+         * <p>The time range within which the face group was created.</p>
          */
         public Builder createTimeRange(TimeRange createTimeRange) {
             String createTimeRangeShrink = shrink(createTimeRange, "CreateTimeRange", "json");
@@ -323,7 +323,7 @@ public class QueryFigureClustersRequest extends Request {
         }
 
         /**
-         * <p>The time period during which the faces in the group are updated.</p>
+         * <p>The time range within which the face group was last updated.</p>
          */
         public Builder updateTimeRange(TimeRange updateTimeRange) {
             String updateTimeRangeShrink = shrink(updateTimeRange, "UpdateTimeRange", "json");

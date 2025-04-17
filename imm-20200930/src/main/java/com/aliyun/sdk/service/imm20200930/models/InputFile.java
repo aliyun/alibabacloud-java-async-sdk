@@ -100,6 +100,10 @@ public class InputFile extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addresses
      */
@@ -245,6 +249,30 @@ public class InputFile extends TeaModel {
         private String produceTime; 
         private String title; 
         private String URI; 
+
+        private Builder() {
+        } 
+
+        private Builder(InputFile model) {
+            this.addresses = model.addresses;
+            this.album = model.album;
+            this.albumArtist = model.albumArtist;
+            this.artist = model.artist;
+            this.composer = model.composer;
+            this.contentType = model.contentType;
+            this.customId = model.customId;
+            this.customLabels = model.customLabels;
+            this.figures = model.figures;
+            this.fileHash = model.fileHash;
+            this.labels = model.labels;
+            this.latLong = model.latLong;
+            this.mediaType = model.mediaType;
+            this.OSSURI = model.OSSURI;
+            this.performer = model.performer;
+            this.produceTime = model.produceTime;
+            this.title = model.title;
+            this.URI = model.URI;
+        } 
 
         /**
          * Addresses.
@@ -451,6 +479,15 @@ public class InputFile extends TeaModel {
             private String figureClusterId; 
             private String figureId; 
             private String figureType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Figures model) {
+                this.figureClusterId = model.figureClusterId;
+                this.figureId = model.figureId;
+                this.figureType = model.figureType;
+            } 
 
             /**
              * FigureClusterId.

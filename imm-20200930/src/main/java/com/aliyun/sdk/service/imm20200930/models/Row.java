@@ -36,6 +36,10 @@ public class Row extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return customLabels
      */
@@ -53,6 +57,14 @@ public class Row extends TeaModel {
     public static final class Builder {
         private java.util.List<KeyValuePair> customLabels; 
         private String URI; 
+
+        private Builder() {
+        } 
+
+        private Builder(Row model) {
+            this.customLabels = model.customLabels;
+            this.URI = model.URI;
+        } 
 
         /**
          * CustomLabels.

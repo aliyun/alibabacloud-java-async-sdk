@@ -36,6 +36,10 @@ public class AddStoryFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return files
      */
@@ -53,6 +57,14 @@ public class AddStoryFilesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Files> files; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddStoryFilesResponseBody model) {
+            this.files = model.files;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The objects that were added.</p>
@@ -134,6 +146,15 @@ public class AddStoryFilesResponseBody extends TeaModel {
             private String errorCode; 
             private String errorMessage; 
             private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.URI = model.URI;
+            } 
 
             /**
              * <p>The error code.</p>

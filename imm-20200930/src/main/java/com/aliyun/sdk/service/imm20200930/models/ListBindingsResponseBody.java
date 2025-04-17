@@ -40,6 +40,10 @@ public class ListBindingsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bindings
      */
@@ -65,6 +69,15 @@ public class ListBindingsResponseBody extends TeaModel {
         private java.util.List<Binding> bindings; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBindingsResponseBody model) {
+            this.bindings = model.bindings;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The bindings between the dataset and OSS buckets.</p>

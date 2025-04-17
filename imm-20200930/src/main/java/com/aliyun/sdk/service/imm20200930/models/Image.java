@@ -52,6 +52,10 @@ public class Image extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return croppingSuggestions
      */
@@ -101,6 +105,18 @@ public class Image extends TeaModel {
         private ImageScore imageScore; 
         private Long imageWidth; 
         private java.util.List<OCRContents> OCRContents; 
+
+        private Builder() {
+        } 
+
+        private Builder(Image model) {
+            this.croppingSuggestions = model.croppingSuggestions;
+            this.EXIF = model.EXIF;
+            this.imageHeight = model.imageHeight;
+            this.imageScore = model.imageScore;
+            this.imageWidth = model.imageWidth;
+            this.OCRContents = model.OCRContents;
+        } 
 
         /**
          * CroppingSuggestions.

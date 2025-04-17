@@ -36,6 +36,10 @@ public class SearchImageFigureClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusters
      */
@@ -53,6 +57,14 @@ public class SearchImageFigureClusterResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Clusters> clusters; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchImageFigureClusterResponseBody model) {
+            this.clusters = model.clusters;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The face clusters.</p>
@@ -134,6 +146,15 @@ public class SearchImageFigureClusterResponseBody extends TeaModel {
             private Boundary boundary; 
             private String clusterId; 
             private Float similarity; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clusters model) {
+                this.boundary = model.boundary;
+                this.clusterId = model.clusterId;
+                this.similarity = model.similarity;
+            } 
 
             /**
              * <p>The bounding box of the face.</p>

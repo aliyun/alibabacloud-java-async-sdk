@@ -40,6 +40,10 @@ public class ListProjectsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListProjectsResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<Project> projects; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.projects = model.projects;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>

@@ -90,7 +90,7 @@ public class ListTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -223,7 +223,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * <p>The range of task end time. You can specify this parameter to filter tasks that end within the specified range.</p>
+         * <p>The task end time range. You can specify this parameter to filter tasks that end within the specified range.</p>
          */
         public Builder endTimeRange(TimeRange endTimeRange) {
             String endTimeRangeShrink = shrink(endTimeRange, "EndTimeRange", "json");
@@ -263,8 +263,8 @@ public class ListTasksRequest extends Request {
         /**
          * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li>ASC: sorts the results in ascending order. This is the default sort order.</li>
-         * <li>DES: sorts the results in descending order.</li>
+         * <li>asc: in ascending order. This is the default value.</li>
+         * <li>desc: in descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -319,7 +319,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * <p>The range of task start time. You can specify this parameter to filter tasks that start within the specified range.</p>
+         * <p>The task start time range. You can specify this parameter to filter tasks that start within the specified range.</p>
          */
         public Builder startTimeRange(TimeRange startTimeRange) {
             String startTimeRangeShrink = shrink(startTimeRange, "StartTimeRange", "json");

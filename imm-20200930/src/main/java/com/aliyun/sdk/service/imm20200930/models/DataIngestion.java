@@ -80,6 +80,10 @@ public class DataIngestion extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actions
      */
@@ -185,6 +189,25 @@ public class DataIngestion extends TeaModel {
         private Statistic statistic; 
         private java.util.Map<String, ?> tags; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataIngestion model) {
+            this.actions = model.actions;
+            this.createTime = model.createTime;
+            this.error = model.error;
+            this.id = model.id;
+            this.input = model.input;
+            this.marker = model.marker;
+            this.notification = model.notification;
+            this.phase = model.phase;
+            this.serviceRole = model.serviceRole;
+            this.state = model.state;
+            this.statistic = model.statistic;
+            this.tags = model.tags;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * Actions.
@@ -352,6 +375,15 @@ public class DataIngestion extends TeaModel {
             private String name; 
             private java.util.List<String> parameters; 
 
+            private Builder() {
+            } 
+
+            private Builder(Actions model) {
+                this.fastFailPolicy = model.fastFailPolicy;
+                this.name = model.name;
+                this.parameters = model.parameters;
+            } 
+
             /**
              * FastFailPolicy.
              */
@@ -451,6 +483,16 @@ public class DataIngestion extends TeaModel {
             private RocketMQ rocketMQ; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(Notification model) {
+                this.endpoint = model.endpoint;
+                this.MNS = model.MNS;
+                this.rocketMQ = model.rocketMQ;
+                this.topic = model.topic;
+            } 
+
             /**
              * Endpoint.
              */
@@ -545,6 +587,15 @@ public class DataIngestion extends TeaModel {
             private Long skipFiles; 
             private Long submitFailure; 
             private Long submitSuccess; 
+
+            private Builder() {
+            } 
+
+            private Builder(Statistic model) {
+                this.skipFiles = model.skipFiles;
+                this.submitFailure = model.submitFailure;
+                this.submitSuccess = model.submitSuccess;
+            } 
 
             /**
              * SkipFiles.

@@ -62,7 +62,7 @@ public class IndexFileMetaRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -154,7 +154,7 @@ public class IndexFileMetaRequest extends Request {
         }
 
         /**
-         * <p>The file for which you want to create an index. The value must be in the JSON format.</p>
+         * <p>The file for which you want to create a metadata index. The value must be in the JSON format.</p>
          * <p>This parameter is required.</p>
          */
         public Builder file(InputFile file) {
@@ -165,7 +165,7 @@ public class IndexFileMetaRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For more information, click Notification. For information about the formats of asynchronous notifications, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</p>
+         * <p>The notification settings. For more information, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");

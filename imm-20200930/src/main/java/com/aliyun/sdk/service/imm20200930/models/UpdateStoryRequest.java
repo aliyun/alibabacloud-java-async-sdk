@@ -72,7 +72,7 @@ public class UpdateStoryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -292,6 +292,13 @@ public class UpdateStoryRequest extends Request {
 
         public static final class Builder {
             private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cover model) {
+                this.URI = model.URI;
+            } 
 
             /**
              * <p>The URI of the cover image.</p>

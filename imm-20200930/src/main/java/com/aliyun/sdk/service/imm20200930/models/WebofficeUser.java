@@ -40,6 +40,10 @@ public class WebofficeUser extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return avatar
      */
@@ -65,6 +69,15 @@ public class WebofficeUser extends TeaModel {
         private String avatar; 
         private String id; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(WebofficeUser model) {
+            this.avatar = model.avatar;
+            this.id = model.id;
+            this.name = model.name;
+        } 
 
         /**
          * Avatar.

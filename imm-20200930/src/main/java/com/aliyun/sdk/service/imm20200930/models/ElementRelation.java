@@ -36,6 +36,10 @@ public class ElementRelation extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return objectId
      */
@@ -53,6 +57,14 @@ public class ElementRelation extends TeaModel {
     public static final class Builder {
         private String objectId; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(ElementRelation model) {
+            this.objectId = model.objectId;
+            this.type = model.type;
+        } 
 
         /**
          * ObjectId.

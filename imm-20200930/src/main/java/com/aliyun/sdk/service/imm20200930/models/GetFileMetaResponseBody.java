@@ -36,6 +36,10 @@ public class GetFileMetaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return files
      */
@@ -53,6 +57,14 @@ public class GetFileMetaResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<File> files; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileMetaResponseBody model) {
+            this.files = model.files;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The metadata returned.</p>

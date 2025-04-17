@@ -44,6 +44,10 @@ public class Property extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return itemsType
      */
@@ -77,6 +81,16 @@ public class Property extends TeaModel {
         private String name; 
         private String value; 
         private String valueType; 
+
+        private Builder() {
+        } 
+
+        private Builder(Property model) {
+            this.itemsType = model.itemsType;
+            this.name = model.name;
+            this.value = model.value;
+            this.valueType = model.valueType;
+        } 
 
         /**
          * ItemsType.

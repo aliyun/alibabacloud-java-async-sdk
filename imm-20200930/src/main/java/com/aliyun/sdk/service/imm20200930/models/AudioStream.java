@@ -96,6 +96,10 @@ public class AudioStream extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bitrate
      */
@@ -233,6 +237,29 @@ public class AudioStream extends TeaModel {
         private Long sampleRate; 
         private Double startTime; 
         private String timeBase; 
+
+        private Builder() {
+        } 
+
+        private Builder(AudioStream model) {
+            this.bitrate = model.bitrate;
+            this.channelLayout = model.channelLayout;
+            this.channels = model.channels;
+            this.codecLongName = model.codecLongName;
+            this.codecName = model.codecName;
+            this.codecTag = model.codecTag;
+            this.codecTagString = model.codecTagString;
+            this.codecTimeBase = model.codecTimeBase;
+            this.duration = model.duration;
+            this.frameCount = model.frameCount;
+            this.index = model.index;
+            this.language = model.language;
+            this.lyric = model.lyric;
+            this.sampleFormat = model.sampleFormat;
+            this.sampleRate = model.sampleRate;
+            this.startTime = model.startTime;
+            this.timeBase = model.timeBase;
+        } 
 
         /**
          * Bitrate.

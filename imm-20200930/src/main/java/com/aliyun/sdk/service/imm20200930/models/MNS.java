@@ -32,6 +32,10 @@ public class MNS extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return topicName
      */
@@ -41,6 +45,13 @@ public class MNS extends TeaModel {
 
     public static final class Builder {
         private String topicName; 
+
+        private Builder() {
+        } 
+
+        private Builder(MNS model) {
+            this.topicName = model.topicName;
+        } 
 
         /**
          * TopicName.

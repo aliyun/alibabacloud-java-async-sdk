@@ -36,6 +36,10 @@ public class GetBindingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return binding
      */
@@ -54,8 +58,16 @@ public class GetBindingResponseBody extends TeaModel {
         private Binding binding; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetBindingResponseBody model) {
+            this.binding = model.binding;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The binding relationship.</p>
+         * <p>The details of the binding.</p>
          */
         public Builder binding(Binding binding) {
             this.binding = binding;

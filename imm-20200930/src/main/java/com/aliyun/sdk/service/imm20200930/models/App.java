@@ -64,6 +64,10 @@ public class App extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appDescription
      */
@@ -137,6 +141,21 @@ public class App extends TeaModel {
         private String englishName; 
         private String ownerId; 
         private String packageName; 
+
+        private Builder() {
+        } 
+
+        private Builder(App model) {
+            this.appDescription = model.appDescription;
+            this.appId = model.appId;
+            this.appKey = model.appKey;
+            this.appName = model.appName;
+            this.appRegion = model.appRegion;
+            this.appType = model.appType;
+            this.englishName = model.englishName;
+            this.ownerId = model.ownerId;
+            this.packageName = model.packageName;
+        } 
 
         /**
          * AppDescription.

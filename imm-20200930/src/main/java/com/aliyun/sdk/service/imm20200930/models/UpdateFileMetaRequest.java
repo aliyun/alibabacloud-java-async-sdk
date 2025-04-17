@@ -52,7 +52,7 @@ public class UpdateFileMetaRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -126,7 +126,7 @@ public class UpdateFileMetaRequest extends Request {
         }
 
         /**
-         * <p>The file whose metadata you want to update. The value must be in the JSON format.</p>
+         * <p>The file and its metadata items to be updated. The value must be in the JSON format.</p>
          * <p>This parameter is required.</p>
          */
         public Builder file(InputFile file) {

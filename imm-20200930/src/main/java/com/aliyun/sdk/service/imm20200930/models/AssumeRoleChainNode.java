@@ -43,6 +43,10 @@ public class AssumeRoleChainNode extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ownerId
      */
@@ -68,6 +72,15 @@ public class AssumeRoleChainNode extends TeaModel {
         private String ownerId; 
         private String role; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(AssumeRoleChainNode model) {
+            this.ownerId = model.ownerId;
+            this.role = model.role;
+            this.type = model.type;
+        } 
 
         /**
          * <p>This parameter is required.</p>

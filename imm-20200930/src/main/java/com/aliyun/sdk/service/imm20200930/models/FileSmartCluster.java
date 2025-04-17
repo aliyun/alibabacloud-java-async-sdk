@@ -36,6 +36,10 @@ public class FileSmartCluster extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return similarity
      */
@@ -53,6 +57,14 @@ public class FileSmartCluster extends TeaModel {
     public static final class Builder {
         private Float similarity; 
         private String smartClusterId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FileSmartCluster model) {
+            this.similarity = model.similarity;
+            this.smartClusterId = model.smartClusterId;
+        } 
 
         /**
          * Similarity.

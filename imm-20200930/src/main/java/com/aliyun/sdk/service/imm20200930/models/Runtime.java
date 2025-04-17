@@ -38,6 +38,10 @@ public class Runtime extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hyperparameters
      */
@@ -55,6 +59,14 @@ public class Runtime extends TeaModel {
     public static final class Builder {
         private Hyperparameters hyperparameters; 
         private Resource resource; 
+
+        private Builder() {
+        } 
+
+        private Builder(Runtime model) {
+            this.hyperparameters = model.hyperparameters;
+            this.resource = model.resource;
+        } 
 
         /**
          * <p>This parameter is required.</p>

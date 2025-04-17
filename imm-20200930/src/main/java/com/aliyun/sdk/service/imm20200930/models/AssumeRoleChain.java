@@ -36,6 +36,10 @@ public class AssumeRoleChain extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return chain
      */
@@ -53,6 +57,14 @@ public class AssumeRoleChain extends TeaModel {
     public static final class Builder {
         private java.util.List<AssumeRoleChainNode> chain; 
         private String policy; 
+
+        private Builder() {
+        } 
+
+        private Builder(AssumeRoleChain model) {
+            this.chain = model.chain;
+            this.policy = model.policy;
+        } 
 
         /**
          * Chain.

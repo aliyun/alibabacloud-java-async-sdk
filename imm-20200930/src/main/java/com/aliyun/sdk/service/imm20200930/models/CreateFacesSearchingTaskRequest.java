@@ -66,7 +66,7 @@ public class CreateFacesSearchingTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -261,6 +261,13 @@ public class CreateFacesSearchingTaskRequest extends Request {
 
         public static final class Builder {
             private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.URI = model.URI;
+            } 
 
             /**
              * <p>The OSS URI of the image.</p>

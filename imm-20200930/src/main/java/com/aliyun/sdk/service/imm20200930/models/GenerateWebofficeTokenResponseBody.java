@@ -52,6 +52,10 @@ public class GenerateWebofficeTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessToken
      */
@@ -101,6 +105,18 @@ public class GenerateWebofficeTokenResponseBody extends TeaModel {
         private String refreshTokenExpiredTime; 
         private String requestId; 
         private String webofficeURL; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateWebofficeTokenResponseBody model) {
+            this.accessToken = model.accessToken;
+            this.accessTokenExpiredTime = model.accessTokenExpiredTime;
+            this.refreshToken = model.refreshToken;
+            this.refreshTokenExpiredTime = model.refreshTokenExpiredTime;
+            this.requestId = model.requestId;
+            this.webofficeURL = model.webofficeURL;
+        } 
 
         /**
          * AccessToken.

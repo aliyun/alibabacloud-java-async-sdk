@@ -116,7 +116,7 @@ public class GenerateWebofficeTokenRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -303,10 +303,7 @@ public class GenerateWebofficeTokenRequest extends Request {
          * <p> The pricing for document previews varies based on whether cache preview is enabled or disabled.</p>
          * </blockquote>
          * <blockquote>
-         * <p> If you specify this parameter, the Pemission.copy parameter does not take effect. &gt;</p>
-         * </blockquote>
-         * <blockquote>
-         * <p> Printing is not supported during cache preview.</p>
+         * <p> During a cache preview, document content search and printing are not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -374,7 +371,7 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. Only Simple Message Queue messages are supported. For more information, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.</p>
+         * <p>The notification settings. Only SMQ messages are supported. For more information, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.</p>
          * <blockquote>
          * <p> A notification is sent after the document is saved or renamed.</p>
          * </blockquote>

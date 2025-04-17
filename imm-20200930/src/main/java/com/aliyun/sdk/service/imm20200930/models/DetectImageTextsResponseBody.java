@@ -40,6 +40,10 @@ public class DetectImageTextsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return OCRContents
      */
@@ -65,6 +69,15 @@ public class DetectImageTextsResponseBody extends TeaModel {
         private java.util.List<OCRContents> OCRContents; 
         private String OCRTexts; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetectImageTextsResponseBody model) {
+            this.OCRContents = model.OCRContents;
+            this.OCRTexts = model.OCRTexts;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>OCR text blocks.</p>

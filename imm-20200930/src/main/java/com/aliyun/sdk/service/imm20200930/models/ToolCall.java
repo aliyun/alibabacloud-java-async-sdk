@@ -36,6 +36,10 @@ public class ToolCall extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return function
      */
@@ -53,6 +57,14 @@ public class ToolCall extends TeaModel {
     public static final class Builder {
         private FunctionCall function; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(ToolCall model) {
+            this.function = model.function;
+            this.type = model.type;
+        } 
 
         /**
          * Function.

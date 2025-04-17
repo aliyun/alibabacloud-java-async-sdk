@@ -36,6 +36,10 @@ public class RegionType extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return localName
      */
@@ -53,6 +57,14 @@ public class RegionType extends TeaModel {
     public static final class Builder {
         private String localName; 
         private String regionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RegionType model) {
+            this.localName = model.localName;
+            this.regionId = model.regionId;
+        } 
 
         /**
          * LocalName.

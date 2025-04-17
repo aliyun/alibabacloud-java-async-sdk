@@ -36,6 +36,10 @@ public class ContextualRetrievalResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ContextualRetrievalResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<File> results; 
+
+        private Builder() {
+        } 
+
+        private Builder(ContextualRetrievalResponseBody model) {
+            this.requestId = model.requestId;
+            this.results = model.results;
+        } 
 
         /**
          * RequestId.

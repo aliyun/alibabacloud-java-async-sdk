@@ -97,7 +97,7 @@ public class GenerateVideoPlaylistRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -460,6 +460,14 @@ public class GenerateVideoPlaylistRequest extends Request {
             private String language; 
             private String URI; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceSubtitles model) {
+                this.language = model.language;
+                this.URI = model.URI;
+            } 
+
             /**
              * <p>The subtitle language. If you configure this parameter, the value must comply with the ISO 639-2 standard. By default, this parameter is left empty.</p>
              * 
@@ -621,6 +629,21 @@ public class GenerateVideoPlaylistRequest extends Request {
             private Integer transcodeAhead; 
             private String URI; 
             private TargetVideo video; 
+
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.audio = model.audio;
+                this.duration = model.duration;
+                this.initialSegments = model.initialSegments;
+                this.initialTranscode = model.initialTranscode;
+                this.subtitle = model.subtitle;
+                this.tags = model.tags;
+                this.transcodeAhead = model.transcodeAhead;
+                this.URI = model.URI;
+                this.video = model.video;
+            } 
 
             /**
              * <p>The audio processing configuration. If you set this parameter to null (default), audio processing is disabled. The generated TS files do not contain audio streams.</p>

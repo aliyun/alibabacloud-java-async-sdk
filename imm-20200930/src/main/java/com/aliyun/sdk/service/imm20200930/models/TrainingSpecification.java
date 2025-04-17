@@ -69,6 +69,10 @@ public class TrainingSpecification extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return datasetName
      */
@@ -142,6 +146,21 @@ public class TrainingSpecification extends TeaModel {
         private java.util.List<CustomParams> transforms; 
         private String validationSourceURI; 
         private Float validationSplit; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrainingSpecification model) {
+            this.datasetName = model.datasetName;
+            this.endpoint = model.endpoint;
+            this.modelSpecification = model.modelSpecification;
+            this.runtime = model.runtime;
+            this.sourceURI = model.sourceURI;
+            this.targetURI = model.targetURI;
+            this.transforms = model.transforms;
+            this.validationSourceURI = model.validationSourceURI;
+            this.validationSplit = model.validationSplit;
+        } 
 
         /**
          * DatasetName.

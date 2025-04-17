@@ -49,6 +49,10 @@ public class SimpleQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aggregations
      */
@@ -90,6 +94,17 @@ public class SimpleQueryResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalHits; 
+
+        private Builder() {
+        } 
+
+        private Builder(SimpleQueryResponseBody model) {
+            this.aggregations = model.aggregations;
+            this.files = model.files;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalHits = model.totalHits;
+        } 
 
         /**
          * <p>The aggregations. This parameter is returned only when the value of the Aggregations request parameter is not empty.</p>
@@ -193,6 +208,14 @@ public class SimpleQueryResponseBody extends TeaModel {
             private Long count; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.count = model.count;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The number of results in the grouped aggregation.</p>
              * 
@@ -289,6 +312,16 @@ public class SimpleQueryResponseBody extends TeaModel {
             private java.util.List<Groups> groups; 
             private String operation; 
             private Double value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Aggregations model) {
+                this.field = model.field;
+                this.groups = model.groups;
+                this.operation = model.operation;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the field.</p>

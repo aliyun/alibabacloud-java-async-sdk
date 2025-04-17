@@ -36,6 +36,10 @@ public class Optimization extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return learningRate
      */
@@ -53,6 +57,14 @@ public class Optimization extends TeaModel {
     public static final class Builder {
         private Float learningRate; 
         private String optimizer; 
+
+        private Builder() {
+        } 
+
+        private Builder(Optimization model) {
+            this.learningRate = model.learningRate;
+            this.optimizer = model.optimizer;
+        } 
 
         /**
          * LearningRate.

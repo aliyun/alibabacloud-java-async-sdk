@@ -48,6 +48,10 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessToken
      */
@@ -89,6 +93,17 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
         private String refreshToken; 
         private String refreshTokenExpiredTime; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefreshWebofficeTokenResponseBody model) {
+            this.accessToken = model.accessToken;
+            this.accessTokenExpiredTime = model.accessTokenExpiredTime;
+            this.refreshToken = model.refreshToken;
+            this.refreshTokenExpiredTime = model.refreshTokenExpiredTime;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessToken.

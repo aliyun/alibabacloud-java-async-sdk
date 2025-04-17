@@ -40,6 +40,10 @@ public class MetaData extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return identifier
      */
@@ -65,6 +69,15 @@ public class MetaData extends TeaModel {
         private String identifier; 
         private String provider; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(MetaData model) {
+            this.identifier = model.identifier;
+            this.provider = model.provider;
+            this.version = model.version;
+        } 
 
         /**
          * Identifier.

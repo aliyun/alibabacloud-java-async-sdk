@@ -44,6 +44,10 @@ public class GetDRMLicenseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deviceInfo
      */
@@ -77,6 +81,16 @@ public class GetDRMLicenseResponseBody extends TeaModel {
         private String license; 
         private String requestId; 
         private Long states; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDRMLicenseResponseBody model) {
+            this.deviceInfo = model.deviceInfo;
+            this.license = model.license;
+            this.requestId = model.requestId;
+            this.states = model.states;
+        } 
 
         /**
          * DeviceInfo.

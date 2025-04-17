@@ -44,6 +44,10 @@ public class TrimPolicy extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return disableDeleteEmptyCell
      */
@@ -77,6 +81,16 @@ public class TrimPolicy extends TeaModel {
         private Boolean disableDeleteRepeatedStyle; 
         private Boolean disableDeleteUnusedPicture; 
         private Boolean disableDeleteUnusedShape; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrimPolicy model) {
+            this.disableDeleteEmptyCell = model.disableDeleteEmptyCell;
+            this.disableDeleteRepeatedStyle = model.disableDeleteRepeatedStyle;
+            this.disableDeleteUnusedPicture = model.disableDeleteUnusedPicture;
+            this.disableDeleteUnusedShape = model.disableDeleteUnusedShape;
+        } 
 
         /**
          * DisableDeleteEmptyCell.

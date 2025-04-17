@@ -100,6 +100,10 @@ public class Story extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addresses
      */
@@ -245,6 +249,30 @@ public class Story extends TeaModel {
         private String storySubType; 
         private String storyType; 
         private String updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(Story model) {
+            this.addresses = model.addresses;
+            this.cover = model.cover;
+            this.createTime = model.createTime;
+            this.customId = model.customId;
+            this.customLabels = model.customLabels;
+            this.datasetName = model.datasetName;
+            this.figureClusterIds = model.figureClusterIds;
+            this.files = model.files;
+            this.objectId = model.objectId;
+            this.objectType = model.objectType;
+            this.ownerId = model.ownerId;
+            this.projectName = model.projectName;
+            this.storyEndTime = model.storyEndTime;
+            this.storyName = model.storyName;
+            this.storyStartTime = model.storyStartTime;
+            this.storySubType = model.storySubType;
+            this.storyType = model.storyType;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * Addresses.

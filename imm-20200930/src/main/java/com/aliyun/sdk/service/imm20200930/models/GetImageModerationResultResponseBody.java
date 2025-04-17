@@ -76,6 +76,10 @@ public class GetImageModerationResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -173,6 +177,24 @@ public class GetImageModerationResultResponseBody extends TeaModel {
         private String taskId; 
         private String taskType; 
         private String userData; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetImageModerationResultResponseBody model) {
+            this.code = model.code;
+            this.endTime = model.endTime;
+            this.eventId = model.eventId;
+            this.message = model.message;
+            this.moderationResult = model.moderationResult;
+            this.projectName = model.projectName;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.taskId = model.taskId;
+            this.taskType = model.taskType;
+            this.userData = model.userData;
+        } 
 
         /**
          * <p>The error code of the task.</p>
@@ -372,6 +394,15 @@ public class GetImageModerationResultResponseBody extends TeaModel {
             private Integer offset; 
             private Double rate; 
 
+            private Builder() {
+            } 
+
+            private Builder(BlockFrames model) {
+                this.label = model.label;
+                this.offset = model.offset;
+                this.rate = model.rate;
+            } 
+
             /**
              * <p>The label of the violation.</p>
              * 
@@ -457,6 +488,14 @@ public class GetImageModerationResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BlockFrames> blockFrames; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Frames model) {
+                this.blockFrames = model.blockFrames;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The violated frames.</p>
@@ -551,6 +590,16 @@ public class GetImageModerationResultResponseBody extends TeaModel {
             private Frames frames; 
             private String suggestion; 
             private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModerationResult model) {
+                this.categories = model.categories;
+                this.frames = model.frames;
+                this.suggestion = model.suggestion;
+                this.URI = model.URI;
+            } 
 
             /**
              * <p>List of categories.</p>

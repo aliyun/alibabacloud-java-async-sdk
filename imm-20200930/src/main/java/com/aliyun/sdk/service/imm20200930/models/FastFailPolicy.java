@@ -32,6 +32,10 @@ public class FastFailPolicy extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return action
      */
@@ -41,6 +45,13 @@ public class FastFailPolicy extends TeaModel {
 
     public static final class Builder {
         private String action; 
+
+        private Builder() {
+        } 
+
+        private Builder(FastFailPolicy model) {
+            this.action = model.action;
+        } 
 
         /**
          * Action.

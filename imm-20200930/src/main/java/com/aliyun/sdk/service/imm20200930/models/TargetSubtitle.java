@@ -40,6 +40,10 @@ public class TargetSubtitle extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return disableSubtitle
      */
@@ -65,6 +69,15 @@ public class TargetSubtitle extends TeaModel {
         private Boolean disableSubtitle; 
         private ExtractSubtitle extractSubtitle; 
         private java.util.List<Integer> stream; 
+
+        private Builder() {
+        } 
+
+        private Builder(TargetSubtitle model) {
+            this.disableSubtitle = model.disableSubtitle;
+            this.extractSubtitle = model.extractSubtitle;
+            this.stream = model.stream;
+        } 
 
         /**
          * DisableSubtitle.
@@ -139,6 +152,14 @@ public class TargetSubtitle extends TeaModel {
         public static final class Builder {
             private String format; 
             private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtractSubtitle model) {
+                this.format = model.format;
+                this.URI = model.URI;
+            } 
 
             /**
              * Format.

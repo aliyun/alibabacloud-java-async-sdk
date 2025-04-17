@@ -40,6 +40,10 @@ public class CroppingSuggestion extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aspectRatio
      */
@@ -65,6 +69,15 @@ public class CroppingSuggestion extends TeaModel {
         private String aspectRatio; 
         private Boundary boundary; 
         private Float confidence; 
+
+        private Builder() {
+        } 
+
+        private Builder(CroppingSuggestion model) {
+            this.aspectRatio = model.aspectRatio;
+            this.boundary = model.boundary;
+            this.confidence = model.confidence;
+        } 
 
         /**
          * AspectRatio.

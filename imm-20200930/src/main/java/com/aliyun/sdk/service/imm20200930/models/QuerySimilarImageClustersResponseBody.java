@@ -40,6 +40,10 @@ public class QuerySimilarImageClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class QuerySimilarImageClustersResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<SimilarImageCluster> similarImageClusters; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySimilarImageClustersResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.similarImageClusters = model.similarImageClusters;
+        } 
 
         /**
          * <p>The pagination token. If the total number of clusters is greater than the value of MaxResults, this token can be used to retrieve the next page. This parameter has a value only if not all the clusters that meet the condition are returned.</p>

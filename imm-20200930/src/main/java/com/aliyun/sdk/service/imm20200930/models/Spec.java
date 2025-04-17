@@ -65,6 +65,10 @@ public class Spec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backbone
      */
@@ -138,6 +142,21 @@ public class Spec extends TeaModel {
         private CustomParams neck; 
         private Long numLandmarks; 
         private String pretrainedPath; 
+
+        private Builder() {
+        } 
+
+        private Builder(Spec model) {
+            this.backbone = model.backbone;
+            this.classNum = model.classNum;
+            this.head = model.head;
+            this.inputChannel = model.inputChannel;
+            this.loss = model.loss;
+            this.name = model.name;
+            this.neck = model.neck;
+            this.numLandmarks = model.numLandmarks;
+            this.pretrainedPath = model.pretrainedPath;
+        } 
 
         /**
          * Backbone.

@@ -40,6 +40,10 @@ public class QueryStoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class QueryStoriesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<Story> stories; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryStoriesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.stories = model.stories;
+        } 
 
         /**
          * <p>The pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>

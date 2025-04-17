@@ -36,6 +36,10 @@ public class BatchGetFigureClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return figureClusters
      */
@@ -53,6 +57,14 @@ public class BatchGetFigureClusterResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<FigureCluster> figureClusters; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchGetFigureClusterResponseBody model) {
+            this.figureClusters = model.figureClusters;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The clusters.</p>

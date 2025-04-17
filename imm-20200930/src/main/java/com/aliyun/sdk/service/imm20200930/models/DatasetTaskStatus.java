@@ -40,6 +40,10 @@ public class DatasetTaskStatus extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return lastSucceededTime
      */
@@ -65,6 +69,15 @@ public class DatasetTaskStatus extends TeaModel {
         private String lastSucceededTime; 
         private String startTime; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DatasetTaskStatus model) {
+            this.lastSucceededTime = model.lastSucceededTime;
+            this.startTime = model.startTime;
+            this.status = model.status;
+        } 
 
         /**
          * LastSucceededTime.

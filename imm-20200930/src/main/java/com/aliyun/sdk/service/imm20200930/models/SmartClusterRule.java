@@ -36,6 +36,10 @@ public class SmartClusterRule extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return keywords
      */
@@ -53,6 +57,14 @@ public class SmartClusterRule extends TeaModel {
     public static final class Builder {
         private java.util.List<String> keywords; 
         private Float sensitivity; 
+
+        private Builder() {
+        } 
+
+        private Builder(SmartClusterRule model) {
+            this.keywords = model.keywords;
+            this.sensitivity = model.sensitivity;
+        } 
 
         /**
          * Keywords.

@@ -44,6 +44,10 @@ public class ContextualAnswerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return answer
      */
@@ -77,6 +81,16 @@ public class ContextualAnswerResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ContextualAnswerResponseBody model) {
+            this.answer = model.answer;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Answer.

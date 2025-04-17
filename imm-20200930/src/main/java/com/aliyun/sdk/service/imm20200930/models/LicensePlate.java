@@ -40,6 +40,10 @@ public class LicensePlate extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return boundary
      */
@@ -65,6 +69,15 @@ public class LicensePlate extends TeaModel {
         private Boundary boundary; 
         private Double confidence; 
         private String content; 
+
+        private Builder() {
+        } 
+
+        private Builder(LicensePlate model) {
+            this.boundary = model.boundary;
+            this.confidence = model.confidence;
+            this.content = model.content;
+        } 
 
         /**
          * Boundary.

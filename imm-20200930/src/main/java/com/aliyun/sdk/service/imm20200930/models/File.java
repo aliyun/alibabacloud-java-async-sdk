@@ -360,6 +360,10 @@ public class File extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessControlAllowOrigin
      */
@@ -1025,6 +1029,95 @@ public class File extends TeaModel {
         private Long videoHeight; 
         private java.util.List<VideoStream> videoStreams; 
         private Long videoWidth; 
+
+        private Builder() {
+        } 
+
+        private Builder(File model) {
+            this.accessControlAllowOrigin = model.accessControlAllowOrigin;
+            this.accessControlRequestMethod = model.accessControlRequestMethod;
+            this.addresses = model.addresses;
+            this.album = model.album;
+            this.albumArtist = model.albumArtist;
+            this.artist = model.artist;
+            this.audioCovers = model.audioCovers;
+            this.audioStreams = model.audioStreams;
+            this.bitrate = model.bitrate;
+            this.cacheControl = model.cacheControl;
+            this.composer = model.composer;
+            this.contentDisposition = model.contentDisposition;
+            this.contentEncoding = model.contentEncoding;
+            this.contentLanguage = model.contentLanguage;
+            this.contentMd5 = model.contentMd5;
+            this.contentType = model.contentType;
+            this.createTime = model.createTime;
+            this.croppingSuggestions = model.croppingSuggestions;
+            this.customId = model.customId;
+            this.customLabels = model.customLabels;
+            this.datasetName = model.datasetName;
+            this.duration = model.duration;
+            this.eTag = model.eTag;
+            this.EXIF = model.EXIF;
+            this.elements = model.elements;
+            this.figureCount = model.figureCount;
+            this.figures = model.figures;
+            this.fileAccessTime = model.fileAccessTime;
+            this.fileCreateTime = model.fileCreateTime;
+            this.fileHash = model.fileHash;
+            this.fileModifiedTime = model.fileModifiedTime;
+            this.filename = model.filename;
+            this.formatLongName = model.formatLongName;
+            this.formatName = model.formatName;
+            this.imageHeight = model.imageHeight;
+            this.imageScore = model.imageScore;
+            this.imageWidth = model.imageWidth;
+            this.labels = model.labels;
+            this.language = model.language;
+            this.latLong = model.latLong;
+            this.mediaType = model.mediaType;
+            this.OCRContents = model.OCRContents;
+            this.OCRTexts = model.OCRTexts;
+            this.OSSCRC64 = model.OSSCRC64;
+            this.OSSDeleteMarker = model.OSSDeleteMarker;
+            this.OSSExpiration = model.OSSExpiration;
+            this.OSSObjectType = model.OSSObjectType;
+            this.OSSStorageClass = model.OSSStorageClass;
+            this.OSSTagging = model.OSSTagging;
+            this.OSSTaggingCount = model.OSSTaggingCount;
+            this.OSSURI = model.OSSURI;
+            this.OSSUserMeta = model.OSSUserMeta;
+            this.OSSVersionId = model.OSSVersionId;
+            this.objectACL = model.objectACL;
+            this.objectId = model.objectId;
+            this.objectStatus = model.objectStatus;
+            this.objectType = model.objectType;
+            this.orientation = model.orientation;
+            this.ownerId = model.ownerId;
+            this.pageCount = model.pageCount;
+            this.performer = model.performer;
+            this.produceTime = model.produceTime;
+            this.programCount = model.programCount;
+            this.projectName = model.projectName;
+            this.reason = model.reason;
+            this.sceneElements = model.sceneElements;
+            this.semanticTypes = model.semanticTypes;
+            this.serverSideDataEncryption = model.serverSideDataEncryption;
+            this.serverSideEncryption = model.serverSideEncryption;
+            this.serverSideEncryptionCustomerAlgorithm = model.serverSideEncryptionCustomerAlgorithm;
+            this.serverSideEncryptionKeyId = model.serverSideEncryptionKeyId;
+            this.size = model.size;
+            this.startTime = model.startTime;
+            this.streamCount = model.streamCount;
+            this.subtitles = model.subtitles;
+            this.timezone = model.timezone;
+            this.title = model.title;
+            this.travelClusterId = model.travelClusterId;
+            this.URI = model.URI;
+            this.updateTime = model.updateTime;
+            this.videoHeight = model.videoHeight;
+            this.videoStreams = model.videoStreams;
+            this.videoWidth = model.videoWidth;
+        } 
 
         /**
          * AccessControlAllowOrigin.

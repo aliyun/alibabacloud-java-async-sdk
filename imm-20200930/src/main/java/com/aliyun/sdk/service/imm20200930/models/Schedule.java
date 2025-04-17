@@ -40,6 +40,10 @@ public class Schedule extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gamma
      */
@@ -65,6 +69,15 @@ public class Schedule extends TeaModel {
         private Float gamma; 
         private String LRScheduler; 
         private Long stepSize; 
+
+        private Builder() {
+        } 
+
+        private Builder(Schedule model) {
+            this.gamma = model.gamma;
+            this.LRScheduler = model.LRScheduler;
+            this.stepSize = model.stepSize;
+        } 
 
         /**
          * Gamma.

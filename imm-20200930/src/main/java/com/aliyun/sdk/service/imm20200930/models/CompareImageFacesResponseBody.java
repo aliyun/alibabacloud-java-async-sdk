@@ -36,6 +36,10 @@ public class CompareImageFacesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CompareImageFacesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Float similarity; 
+
+        private Builder() {
+        } 
+
+        private Builder(CompareImageFacesResponseBody model) {
+            this.requestId = model.requestId;
+            this.similarity = model.similarity;
+        } 
 
         /**
          * <p>The request ID.</p>

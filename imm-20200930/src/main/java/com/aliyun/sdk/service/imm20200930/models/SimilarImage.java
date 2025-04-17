@@ -36,6 +36,10 @@ public class SimilarImage extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageScore
      */
@@ -53,6 +57,14 @@ public class SimilarImage extends TeaModel {
     public static final class Builder {
         private Double imageScore; 
         private String URI; 
+
+        private Builder() {
+        } 
+
+        private Builder(SimilarImage model) {
+            this.imageScore = model.imageScore;
+            this.URI = model.URI;
+        } 
 
         /**
          * ImageScore.

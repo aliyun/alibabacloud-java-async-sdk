@@ -40,6 +40,10 @@ public class TargetImage extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return animations
      */
@@ -65,6 +69,15 @@ public class TargetImage extends TeaModel {
         private java.util.List<Animations> animations; 
         private java.util.List<Snapshots> snapshots; 
         private java.util.List<Sprites> sprites; 
+
+        private Builder() {
+        } 
+
+        private Builder(TargetImage model) {
+            this.animations = model.animations;
+            this.snapshots = model.snapshots;
+            this.sprites = model.sprites;
+        } 
 
         /**
          * Animations.
@@ -226,6 +239,21 @@ public class TargetImage extends TeaModel {
             private String URI; 
             private Double width; 
 
+            private Builder() {
+            } 
+
+            private Builder(Animations model) {
+                this.format = model.format;
+                this.frameRate = model.frameRate;
+                this.height = model.height;
+                this.interval = model.interval;
+                this.number = model.number;
+                this.scaleType = model.scaleType;
+                this.startTime = model.startTime;
+                this.URI = model.URI;
+                this.width = model.width;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -322,6 +350,9 @@ public class TargetImage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Interval")
         private Double interval;
 
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        private String mode;
+
         @com.aliyun.core.annotation.NameInMap("Number")
         private Integer number;
 
@@ -330,6 +361,9 @@ public class TargetImage extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Double startTime;
+
+        @com.aliyun.core.annotation.NameInMap("Threshold")
+        private Integer threshold;
 
         @com.aliyun.core.annotation.NameInMap("URI")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -342,9 +376,11 @@ public class TargetImage extends TeaModel {
             this.format = builder.format;
             this.height = builder.height;
             this.interval = builder.interval;
+            this.mode = builder.mode;
             this.number = builder.number;
             this.scaleType = builder.scaleType;
             this.startTime = builder.startTime;
+            this.threshold = builder.threshold;
             this.URI = builder.URI;
             this.width = builder.width;
         }
@@ -379,6 +415,13 @@ public class TargetImage extends TeaModel {
         }
 
         /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
          * @return number
          */
         public Integer getNumber() {
@@ -400,6 +443,13 @@ public class TargetImage extends TeaModel {
         }
 
         /**
+         * @return threshold
+         */
+        public Integer getThreshold() {
+            return this.threshold;
+        }
+
+        /**
          * @return URI
          */
         public String getURI() {
@@ -417,11 +467,29 @@ public class TargetImage extends TeaModel {
             private String format; 
             private Double height; 
             private Double interval; 
+            private String mode; 
             private Integer number; 
             private String scaleType; 
             private Double startTime; 
+            private Integer threshold; 
             private String URI; 
             private Double width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.format = model.format;
+                this.height = model.height;
+                this.interval = model.interval;
+                this.mode = model.mode;
+                this.number = model.number;
+                this.scaleType = model.scaleType;
+                this.startTime = model.startTime;
+                this.threshold = model.threshold;
+                this.URI = model.URI;
+                this.width = model.width;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -448,6 +516,14 @@ public class TargetImage extends TeaModel {
             }
 
             /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
              * Number.
              */
             public Builder number(Integer number) {
@@ -468,6 +544,14 @@ public class TargetImage extends TeaModel {
              */
             public Builder startTime(Double startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * Threshold.
+             */
+            public Builder threshold(Integer threshold) {
+                this.threshold = threshold;
                 return this;
             }
 
@@ -511,6 +595,9 @@ public class TargetImage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Margin")
         private Integer margin;
 
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        private String mode;
+
         @com.aliyun.core.annotation.NameInMap("Number")
         private Integer number;
 
@@ -529,6 +616,9 @@ public class TargetImage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Double startTime;
 
+        @com.aliyun.core.annotation.NameInMap("Threshold")
+        private Integer threshold;
+
         @com.aliyun.core.annotation.NameInMap("TileHeight")
         private Integer tileHeight;
 
@@ -543,12 +633,14 @@ public class TargetImage extends TeaModel {
             this.format = builder.format;
             this.interval = builder.interval;
             this.margin = builder.margin;
+            this.mode = builder.mode;
             this.number = builder.number;
             this.pad = builder.pad;
             this.scaleHeight = builder.scaleHeight;
             this.scaleType = builder.scaleType;
             this.scaleWidth = builder.scaleWidth;
             this.startTime = builder.startTime;
+            this.threshold = builder.threshold;
             this.tileHeight = builder.tileHeight;
             this.tileWidth = builder.tileWidth;
             this.URI = builder.URI;
@@ -581,6 +673,13 @@ public class TargetImage extends TeaModel {
          */
         public Integer getMargin() {
             return this.margin;
+        }
+
+        /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
         }
 
         /**
@@ -626,6 +725,13 @@ public class TargetImage extends TeaModel {
         }
 
         /**
+         * @return threshold
+         */
+        public Integer getThreshold() {
+            return this.threshold;
+        }
+
+        /**
          * @return tileHeight
          */
         public Integer getTileHeight() {
@@ -650,15 +756,37 @@ public class TargetImage extends TeaModel {
             private String format; 
             private Double interval; 
             private Integer margin; 
+            private String mode; 
             private Integer number; 
             private Integer pad; 
             private Float scaleHeight; 
             private String scaleType; 
             private Float scaleWidth; 
             private Double startTime; 
+            private Integer threshold; 
             private Integer tileHeight; 
             private Integer tileWidth; 
             private String URI; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sprites model) {
+                this.format = model.format;
+                this.interval = model.interval;
+                this.margin = model.margin;
+                this.mode = model.mode;
+                this.number = model.number;
+                this.pad = model.pad;
+                this.scaleHeight = model.scaleHeight;
+                this.scaleType = model.scaleType;
+                this.scaleWidth = model.scaleWidth;
+                this.startTime = model.startTime;
+                this.threshold = model.threshold;
+                this.tileHeight = model.tileHeight;
+                this.tileWidth = model.tileWidth;
+                this.URI = model.URI;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -681,6 +809,14 @@ public class TargetImage extends TeaModel {
              */
             public Builder margin(Integer margin) {
                 this.margin = margin;
+                return this;
+            }
+
+            /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
                 return this;
             }
 
@@ -729,6 +865,14 @@ public class TargetImage extends TeaModel {
              */
             public Builder startTime(Double startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * Threshold.
+             */
+            public Builder threshold(Integer threshold) {
+                this.threshold = threshold;
                 return this;
             }
 
