@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gwlb20240415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRegionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Regions")
-    private java.util.List < Regions> regions;
+    private java.util.List<Regions> regions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
-    public java.util.List < Regions> getRegions() {
+    public java.util.List<Regions> getRegions() {
         return this.regions;
     }
 
@@ -46,19 +55,30 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Regions> regions; 
+        private java.util.List<Regions> regions; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Regions.
+         * <p>A list of regions.</p>
          */
-        public Builder regions(java.util.List < Regions> regions) {
+        public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>162FCE8D-CEEC-5083-90BF-B45D8C4F81FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -127,8 +147,20 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionEndpoint; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.localName = model.localName;
+                this.regionEndpoint = model.regionEndpoint;
+                this.regionId = model.regionId;
+            } 
+
             /**
-             * LocalName.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -136,7 +168,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionEndpoint.
+             * <p>The region endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gwlb.cn-hangzhou.aliyuncs.com</p>
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -144,7 +179,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

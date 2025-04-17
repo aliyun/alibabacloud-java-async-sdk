@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gwlb20240415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,11 +31,11 @@ public class ListServerGroupServersRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ServerIds")
-    private java.util.List < String > serverIds;
+    private java.util.List<String> serverIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ServerIps")
-    private java.util.List < String > serverIps;
+    private java.util.List<String> serverIps;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Skip")
@@ -54,7 +59,7 @@ public class ListServerGroupServersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,14 +88,14 @@ public class ListServerGroupServersRequest extends Request {
     /**
      * @return serverIds
      */
-    public java.util.List < String > getServerIds() {
+    public java.util.List<String> getServerIds() {
         return this.serverIds;
     }
 
     /**
      * @return serverIps
      */
-    public java.util.List < String > getServerIps() {
+    public java.util.List<String> getServerIps() {
         return this.serverIps;
     }
 
@@ -105,8 +110,8 @@ public class ListServerGroupServersRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String serverGroupId; 
-        private java.util.List < String > serverIds; 
-        private java.util.List < String > serverIps; 
+        private java.util.List<String> serverIds; 
+        private java.util.List<String> serverIps; 
         private Integer skip; 
 
         private Builder() {
@@ -124,7 +129,12 @@ public class ListServerGroupServersRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 1000.</p>
+         * <p>Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -133,7 +143,14 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -142,7 +159,10 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * ServerGroupId.
+         * <p>The server group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-atstuj3rtoptyui****</p>
          */
         public Builder serverGroupId(String serverGroupId) {
             this.putBodyParameter("ServerGroupId", serverGroupId);
@@ -151,25 +171,30 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * ServerIds.
+         * <p>The server IDs.</p>
+         * <p>You can specify at most 200 servers in each call.</p>
          */
-        public Builder serverIds(java.util.List < String > serverIds) {
+        public Builder serverIds(java.util.List<String> serverIds) {
             this.putBodyParameter("ServerIds", serverIds);
             this.serverIds = serverIds;
             return this;
         }
 
         /**
-         * ServerIps.
+         * <p>The server IP addresses.</p>
+         * <p>You can specify at most 200 servers in each call.</p>
          */
-        public Builder serverIps(java.util.List < String > serverIps) {
+        public Builder serverIps(java.util.List<String> serverIps) {
             this.putBodyParameter("ServerIps", serverIps);
             this.serverIps = serverIps;
             return this;
         }
 
         /**
-         * Skip.
+         * <p>The number of entries to be skipped in the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder skip(Integer skip) {
             this.putBodyParameter("Skip", skip);

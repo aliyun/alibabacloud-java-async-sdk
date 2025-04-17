@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gwlb20240415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetListenerHealthStatusRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ListenerId")
@@ -51,7 +56,7 @@ public class GetListenerHealthStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,7 +64,7 @@ public class GetListenerHealthStatusRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -92,7 +97,7 @@ public class GetListenerHealthStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetListenerHealthStatusRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private String listenerId; 
         private Integer maxResults; 
         private String nextToken; 
@@ -112,15 +117,16 @@ public class GetListenerHealthStatusRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * <p>The filter conditions. You can specify at most 20 filter conditions.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putBodyParameter("Filter", filter);
             this.filter = filter;
             return this;
         }
 
         /**
+         * <p>The listener ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +139,10 @@ public class GetListenerHealthStatusRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: 1 to 1000. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -142,7 +151,14 @@ public class GetListenerHealthStatusRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4f1d7cc9f51e18904e8a063603a6b0c3d03bc69f78734254e0b5e8707e68****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -151,7 +167,10 @@ public class GetListenerHealthStatusRequest extends Request {
         }
 
         /**
-         * Skip.
+         * <p>The number of entries to be skipped in the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder skip(Integer skip) {
             this.putBodyParameter("Skip", skip);
@@ -177,7 +196,7 @@ public class GetListenerHealthStatusRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private Filter(Builder builder) {
             this.name = builder.name;
@@ -202,16 +221,33 @@ public class GetListenerHealthStatusRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.name = model.name;
+                this.values = model.values;
+            } 
 
             /**
-             * Name.
+             * <p>The filter condition name. You can filter by one or more filter condition names. The URL must meet the following requirements:</p>
+             * <ul>
+             * <li><strong>Status</strong>: the health status.</li>
+             * <li><strong>ReasonCode</strong>: the cause of an unhealthy server.</li>
+             * <li><strong>ServerId</strong>: the ID of the backend server.</li>
+             * <li><strong>ServerIp</strong>: the IP address of the backend server.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Status</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -219,9 +255,9 @@ public class GetListenerHealthStatusRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The filter condition values. You can specify at most 20 condition values.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }

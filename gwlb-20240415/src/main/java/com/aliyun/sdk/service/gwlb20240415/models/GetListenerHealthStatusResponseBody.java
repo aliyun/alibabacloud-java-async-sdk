@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gwlb20240415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetListenerHealthStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ListenerHealthStatus")
-    private java.util.List < ListenerHealthStatus> listenerHealthStatus;
+    private java.util.List<ListenerHealthStatus> listenerHealthStatus;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -43,10 +48,14 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return listenerHealthStatus
      */
-    public java.util.List < ListenerHealthStatus> getListenerHealthStatus() {
+    public java.util.List<ListenerHealthStatus> getListenerHealthStatus() {
         return this.listenerHealthStatus;
     }
 
@@ -79,22 +88,36 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ListenerHealthStatus> listenerHealthStatus; 
+        private java.util.List<ListenerHealthStatus> listenerHealthStatus; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetListenerHealthStatusResponseBody model) {
+            this.listenerHealthStatus = model.listenerHealthStatus;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * ListenerHealthStatus.
+         * <p>The health check status of the server groups that are associated with the listener.</p>
          */
-        public Builder listenerHealthStatus(java.util.List < ListenerHealthStatus> listenerHealthStatus) {
+        public Builder listenerHealthStatus(java.util.List<ListenerHealthStatus> listenerHealthStatus) {
             this.listenerHealthStatus = listenerHealthStatus;
             return this;
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: 1 to 1000. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +125,14 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>U12WEI6Ro2ol3wA54rBNSwdC5+lYy6q5SjIQEvc1wz5mjZxV+YjsHRdXV8XauY1BpOQIvwX63E0en54H3D****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +140,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED4F222-36A0-5470-8A9A-AAB4E96BAC1A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +151,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -163,8 +199,26 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String reasonCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Reason model) {
+                this.reasonCode = model.reasonCode;
+            } 
+
             /**
-             * ReasonCode.
+             * <p>The reason why <strong>Status</strong> indicates an unhealthy status. Valid values:</p>
+             * <ul>
+             * <li><strong>CONNECT_TIMEOUT</strong>: The GWLB instance failed to connect to the backend server within the specified period of time.</li>
+             * <li><strong>CONNECT_FAILED</strong>: The GWLB instance failed to connect to the backend server.</li>
+             * <li><strong>RECV_RESPONSE_TIMEOUT</strong>: The GWLB instance failed to receive a response from the backend server within the specified period of time.</li>
+             * <li><strong>CONNECT_INTERRUPT</strong>: The connection between the health check and the backend server was interrupted.</li>
+             * <li><strong>HTTP_CODE_NOT_MATCH</strong>: The HTTP status code from the backend server is not the expected one.</li>
+             * <li><strong>HTTP_INVALID_HEADER</strong>: The format of the response from the backend servers is invalid.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CONNECT_TIMEOUT</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -258,8 +312,22 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String serverIp; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Servers model) {
+                this.port = model.port;
+                this.reason = model.reason;
+                this.serverId = model.serverId;
+                this.serverIp = model.serverIp;
+                this.status = model.status;
+            } 
+
             /**
-             * Port.
+             * <p>The backend port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6081</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -267,7 +335,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason why <strong>Status</strong> indicates an unhealthy status.</p>
              */
             public Builder reason(Reason reason) {
                 this.reason = reason;
@@ -275,7 +343,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ServerId.
+             * <p>The backend server ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2ze4rnh8yj9kif3z****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -283,7 +354,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ServerIp.
+             * <p>The IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.XXX</p>
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -291,7 +365,17 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The health status of the backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>Initial</strong>: Health checks are configured for the GWLB instance, but no data is found.</li>
+             * <li><strong>Unhealthy</strong>: The backend server consecutively fails health checks.</li>
+             * <li><strong>Unused</strong>: The backend server is not in use.</li>
+             * <li><strong>Unavailable</strong>: Health checks are disabled.</li>
+             * <li><strong>Healthy</strong>: The backend server is healthy.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Healthy</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -319,7 +403,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         private String serverGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Servers")
-        private java.util.List < Servers> servers;
+        private java.util.List<Servers> servers;
 
         private ServerGroupInfos(Builder builder) {
             this.healthCheckEnabled = builder.healthCheckEnabled;
@@ -352,17 +436,33 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         /**
          * @return servers
          */
-        public java.util.List < Servers> getServers() {
+        public java.util.List<Servers> getServers() {
             return this.servers;
         }
 
         public static final class Builder {
             private Boolean healthCheckEnabled; 
             private String serverGroupId; 
-            private java.util.List < Servers> servers; 
+            private java.util.List<Servers> servers; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerGroupInfos model) {
+                this.healthCheckEnabled = model.healthCheckEnabled;
+                this.serverGroupId = model.serverGroupId;
+                this.servers = model.servers;
+            } 
 
             /**
-             * HealthCheckEnabled.
+             * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder healthCheckEnabled(Boolean healthCheckEnabled) {
                 this.healthCheckEnabled = healthCheckEnabled;
@@ -370,7 +470,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ServerGroupId.
+             * <p>The server group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgp-0vdsbyszro3nr6****</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -378,9 +481,9 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Servers.
+             * <p>The backend servers.</p>
              */
-            public Builder servers(java.util.List < Servers> servers) {
+            public Builder servers(java.util.List<Servers> servers) {
                 this.servers = servers;
                 return this;
             }
@@ -403,7 +506,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         private String listenerId;
 
         @com.aliyun.core.annotation.NameInMap("ServerGroupInfos")
-        private java.util.List < ServerGroupInfos> serverGroupInfos;
+        private java.util.List<ServerGroupInfos> serverGroupInfos;
 
         private ListenerHealthStatus(Builder builder) {
             this.listenerId = builder.listenerId;
@@ -428,16 +531,27 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         /**
          * @return serverGroupInfos
          */
-        public java.util.List < ServerGroupInfos> getServerGroupInfos() {
+        public java.util.List<ServerGroupInfos> getServerGroupInfos() {
             return this.serverGroupInfos;
         }
 
         public static final class Builder {
             private String listenerId; 
-            private java.util.List < ServerGroupInfos> serverGroupInfos; 
+            private java.util.List<ServerGroupInfos> serverGroupInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListenerHealthStatus model) {
+                this.listenerId = model.listenerId;
+                this.serverGroupInfos = model.serverGroupInfos;
+            } 
 
             /**
-             * ListenerId.
+             * <p>The listener ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lsn-sg8aha6pzjavvo****</p>
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -445,9 +559,9 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ServerGroupInfos.
+             * <p>The information about the server groups.</p>
              */
-            public Builder serverGroupInfos(java.util.List < ServerGroupInfos> serverGroupInfos) {
+            public Builder serverGroupInfos(java.util.List<ServerGroupInfos> serverGroupInfos) {
                 this.serverGroupInfos = serverGroupInfos;
                 return this;
             }

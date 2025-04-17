@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gwlb20240415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeZonesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Zones")
-    private java.util.List < Zones> zones;
+    private java.util.List<Zones> zones;
 
     private DescribeZonesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,16 +50,27 @@ public class DescribeZonesResponseBody extends TeaModel {
     /**
      * @return zones
      */
-    public java.util.List < Zones> getZones() {
+    public java.util.List<Zones> getZones() {
         return this.zones;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Zones> zones; 
+        private java.util.List<Zones> zones; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeZonesResponseBody model) {
+            this.requestId = model.requestId;
+            this.zones = model.zones;
+        } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C605F7E-D0F6-54E2-B004-F9B132F0D8B2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +78,9 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * Zones.
+         * <p>A list of zones.</p>
          */
-        public Builder zones(java.util.List < Zones> zones) {
+        public Builder zones(java.util.List<Zones> zones) {
             this.zones = zones;
             return this;
         }
@@ -115,8 +135,19 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String localName; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.localName = model.localName;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * LocalName.
+             * <p>The zone name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou Zone G</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -124,7 +155,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

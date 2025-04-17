@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gwlb20240415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     private String serverGroupId;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private GetListenerAttributeResponseBody(Builder builder) {
         this.listenerDescription = builder.listenerDescription;
@@ -53,6 +58,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
     public static GetListenerAttributeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -107,7 +116,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -119,10 +128,28 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private String serverGroupId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetListenerAttributeResponseBody model) {
+            this.listenerDescription = model.listenerDescription;
+            this.listenerId = model.listenerId;
+            this.listenerStatus = model.listenerStatus;
+            this.loadBalancerId = model.loadBalancerId;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.serverGroupId = model.serverGroupId;
+            this.tags = model.tags;
+        } 
 
         /**
-         * ListenerDescription.
+         * <p>The listener description.</p>
+         * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>listener_description</p>
          */
         public Builder listenerDescription(String listenerDescription) {
             this.listenerDescription = listenerDescription;
@@ -130,7 +157,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ListenerId.
+         * <p>The listener ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsn-3kbj3587mqhm3p****</p>
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -138,7 +168,16 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ListenerStatus.
+         * <p>The listener status. Valid values:</p>
+         * <ul>
+         * <li><strong>Provisioning</strong>: The listener is being created.</li>
+         * <li><strong>Running</strong>: The listener is running.</li>
+         * <li><strong>Configuring</strong>: The listener is being configured.</li>
+         * <li><strong>Deleting</strong>: The listener is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Provisioning</p>
          */
         public Builder listenerStatus(String listenerStatus) {
             this.listenerStatus = listenerStatus;
@@ -146,7 +185,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * LoadBalancerId.
+         * <p>The GWLB instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gwlb-te609d6696632f76****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -154,7 +196,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the GWLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -162,7 +207,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75CC3312-7757-5EE1-90D8-49CEA66608AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +218,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ServerGroupId.
+         * <p>The server group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-sp8d2r6y7t0xtl****</p>
          */
         public Builder serverGroupId(String serverGroupId) {
             this.serverGroupId = serverGroupId;
@@ -178,9 +229,9 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -235,8 +286,19 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key. The tag key cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with <code>acs: </code>or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -244,7 +306,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be up to 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

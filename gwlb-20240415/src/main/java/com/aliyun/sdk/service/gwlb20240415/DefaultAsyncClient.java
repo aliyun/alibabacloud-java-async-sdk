@@ -29,7 +29,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "Gwlb";
         this.version = "2024-04-15";
-        this.endpointRule = "";
+        this.endpointRule = "regional";
         this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -40,6 +40,23 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</p>
+     * <ol>
+     * <li>You can call the ListServerGroups operation to query the status of the server group.</li>
+     * </ol>
+     * <ul>
+     * <li>If the server group is in the <strong>Configuring</strong> state, the server group is being modified.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the server group is running.</li>
+     * </ul>
+     * <ol start="2">
+     * <li>You can call the ListServerGroupServers operation to query the status of the backend server.</li>
+     * </ol>
+     * <ul>
+     * <li>If the backend server is in the <strong>Adding</strong> state, the backend server is being added to the server group.</li>
+     * <li>If the backend server is in the <strong>Available</strong> state, the server is running.</li>
+     * </ul>
+     * 
      * @param request the request parameters of AddServersToServerGroup  AddServersToServerGroupRequest
      * @return AddServersToServerGroupResponse
      */
@@ -58,6 +75,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>CreateListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <strong>GetListenerAttribute</strong> operation to query the status of the task.</p>
+     * <ul>
+     * <li>If the listener is in the <strong>Provisioning</strong> state, the listener is being created.</li>
+     * <li>If the listener is in the <strong>Running</strong> state, the listener is running.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateListener  CreateListenerRequest
      * @return CreateListenerResponse
      */
@@ -76,6 +100,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2806160.html">pricing</a> of GWLB before calling this operation</em>*.</p>
+     * <ul>
+     * <li>When you create a GWLB instance, the service-linked role AliyunServiceRoleForGwlb is automatically created.</li>
+     * <li>CreateLoadBalancer is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of a GWLB instance.<ul>
+     * <li>If the GWLB instance is in the Provisioning state, the GWLB instance is being created.</li>
+     * <li>If the GWLB instance is in the Active state, the GWLB instance is created.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateLoadBalancer  CreateLoadBalancerRequest
      * @return CreateLoadBalancerResponse
      */
@@ -94,6 +129,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the ListServerGroups operation to query the status of the task.</p>
+     * <ul>
+     * <li>If the server group is in the <strong>Creating</strong> state, it indicates that the server group is being created.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, it indicates that the server group is created.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateServerGroup  CreateServerGroupRequest
      * @return CreateServerGroupResponse
      */
@@ -112,6 +154,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>DeleteListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <strong>GetListenerAttribute</strong> operation to query the status of the task.</p>
+     * <ul>
+     * <li>If the listener is in the <strong>Deleting</strong> state, the listener is being deleted.</li>
+     * <li>If the listener cannot be found, the listener is deleted.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteListener  DeleteListenerRequest
      * @return DeleteListenerResponse
      */
@@ -148,6 +197,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can delete server groups that are not associated with listeners.</p>
+     * 
      * @param request the request parameters of DeleteServerGroup  DeleteServerGroupRequest
      * @return DeleteServerGroupResponse
      */
@@ -364,6 +416,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>RemoveServersFromServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</p>
+     * <ol>
+     * <li>You can call the ListServerGroups operation to query the status of a server group.<ul>
+     * <li>If the server group is in the <strong>Configuring</strong> state, the server group is being modified.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the server group is running.</li>
+     * </ul>
+     * </li>
+     * <li>You can call the ListServerGroupServers operation to query the status of a backend server.<ul>
+     * <li>If the backend server is in the <strong>Removing</strong> state, the backend server is being removed from the server group.</li>
+     * <li>If the backend server cannot be found, the backend server is no longer in the server group.<blockquote>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * </ol>
+     * <ul>
+     * <li>If connection draining id enabled (<strong>ConnectionDrainEnabled</strong> set to true) for the server group of the backend server, the backend server that you remove enters the <strong>Removing</strong> state before entering the <strong>Draining</strong> state. When the connection draining timeout period (<strong>ConnectionDrainTimeout</strong>) ends, the backend server is removed from the server group.</li>
+     * <li>You can add the backend server to the server group again before the connection draining timeout period ends. In this case, the status of the backend server changes from <strong>Draining</strong> to <strong>Adding</strong>. After the backend server is added to the server group, the backend server enters the <strong>Available</strong> state.</li>
+     * </ul>
+     * 
      * @param request the request parameters of RemoveServersFromServerGroup  RemoveServersFromServerGroupRequest
      * @return RemoveServersFromServerGroupResponse
      */
@@ -418,6 +491,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <strong>GetListenerAttribute</strong> operation to query the status of a listener.</p>
+     * <ul>
+     * <li>If the listener is in the <strong>Configuring</strong> state, the listener is being modified.</li>
+     * <li>If the listener is in the <strong>Running</strong> state, the listener is modified.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateListenerAttribute  UpdateListenerAttributeRequest
      * @return UpdateListenerAttributeResponse
      */
@@ -436,6 +516,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  UpdateLoadBalancerAttribute is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of the GWLB instance.
+     *     *   If the GWLB instance is in the Configuring state, the GWLB instance is being modified.
+     *     *   If the GWLB instance is in the Active state, the GWLB instance is modified.</p>
+     * 
      * @param request the request parameters of UpdateLoadBalancerAttribute  UpdateLoadBalancerAttributeRequest
      * @return UpdateLoadBalancerAttributeResponse
      */
@@ -454,6 +539,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2806160.html">pricing</a> of GWLB before calling this operation</em>*.
+     * UpdateLoadBalancerZones is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of the GWLB instance.</p>
+     * <ul>
+     * <li>If the GWLB instance is in the Configuring state, the GWLB instance is being modified.</li>
+     * <li>If the GWLB instance is in the Active state, the GWLB instance is modified.<blockquote>
+     * <p> Before you call this operation, make sure that all zone parameters, including the current zones and the zones that you want to add, are specified. If you do not specify the current zones, the current zones are deleted. You can call the GetLoadBalancerAttribute operation to query the current zones of a GWLB instance.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateLoadBalancerZones  UpdateLoadBalancerZonesRequest
      * @return UpdateLoadBalancerZonesResponse
      */
@@ -472,6 +568,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>UpdateServerGroupAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the ListServerGroups operation to query the status of the task.</p>
+     * <ul>
+     * <li>If the server group is in the <strong>Configuring</strong> state, the configuration of the server group is being modified.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the configuration of the server group is modified.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateServerGroupAttribute  UpdateServerGroupAttributeRequest
      * @return UpdateServerGroupAttributeResponse
      */

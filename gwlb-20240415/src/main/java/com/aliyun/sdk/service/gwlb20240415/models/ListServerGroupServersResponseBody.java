@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gwlb20240415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Servers")
-    private java.util.List < Servers> servers;
+    private java.util.List<Servers> servers;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -41,6 +46,10 @@ public class ListServerGroupServersResponseBody extends TeaModel {
 
     public static ListServerGroupServersResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
     /**
      * @return servers
      */
-    public java.util.List < Servers> getServers() {
+    public java.util.List<Servers> getServers() {
         return this.servers;
     }
 
@@ -82,11 +91,26 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Servers> servers; 
+        private java.util.List<Servers> servers; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListServerGroupServersResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.servers = model.servers;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +118,14 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If NextToken is empty, no next page exists.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +133,10 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,15 +144,18 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         }
 
         /**
-         * Servers.
+         * <p>The backend servers.</p>
          */
-        public Builder servers(java.util.List < Servers> servers) {
+        public Builder servers(java.util.List<Servers> servers) {
             this.servers = servers;
             return this;
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -223,8 +260,26 @@ public class ListServerGroupServersResponseBody extends TeaModel {
             private String serverType; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Servers model) {
+                this.port = model.port;
+                this.serverGroupId = model.serverGroupId;
+                this.serverId = model.serverId;
+                this.serverIp = model.serverIp;
+                this.serverType = model.serverType;
+                this.status = model.status;
+            } 
+
             /**
-             * Port.
+             * <p>The backend server port. Valid values:</p>
+             * <ul>
+             * <li><strong>6081</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>6081</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -232,7 +287,10 @@ public class ListServerGroupServersResponseBody extends TeaModel {
             }
 
             /**
-             * ServerGroupId.
+             * <p>The server group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgp-atstuj3rtoptyui****</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -240,7 +298,10 @@ public class ListServerGroupServersResponseBody extends TeaModel {
             }
 
             /**
-             * ServerId.
+             * <p>The backend server ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4p****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -248,7 +309,10 @@ public class ListServerGroupServersResponseBody extends TeaModel {
             }
 
             /**
-             * ServerIp.
+             * <p>The IP address of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.xxx.xxx</p>
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -256,7 +320,16 @@ public class ListServerGroupServersResponseBody extends TeaModel {
             }
 
             /**
-             * ServerType.
+             * <p>The type of the backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>Ecs</strong>: Elastic Compute Service (ECS) instance</li>
+             * <li><strong>Eni</strong>: elastic network interface (ENI)</li>
+             * <li><strong>Eci</strong>: elastic container instance</li>
+             * <li><strong>Ip</strong>: IP address</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Ecs</p>
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -264,7 +337,17 @@ public class ListServerGroupServersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Indicates the status of the backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>Adding</strong>: The backend server is being added.</li>
+             * <li><strong>Available</strong>: The backend server is available.</li>
+             * <li><strong>Draining</strong>: The backend server is in connection draining.</li>
+             * <li><strong>Removing</strong>: The backend server is being removed.</li>
+             * <li><strong>Replacing</strong>: The backend server is being replaced.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;

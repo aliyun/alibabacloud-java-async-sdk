@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gwlb20240415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loadBalancerId
      */
@@ -49,8 +58,19 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         private String loadBalancerId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateLoadBalancerResponseBody model) {
+            this.loadBalancerId = model.loadBalancerId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * LoadBalancerId.
+         * <p>The GWLB instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gwlb-9njtjmqt7zfcqm****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -58,7 +78,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00B19438-66BB-58C3-8C2F-DA5B6F95CBDA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

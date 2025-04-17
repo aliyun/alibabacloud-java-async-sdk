@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gwlb20240415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListLoadBalancersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LoadBalancers")
-    private java.util.List < LoadBalancers> loadBalancers;
+    private java.util.List<LoadBalancers> loadBalancers;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -43,10 +48,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loadBalancers
      */
-    public java.util.List < LoadBalancers> getLoadBalancers() {
+    public java.util.List<LoadBalancers> getLoadBalancers() {
         return this.loadBalancers;
     }
 
@@ -79,22 +88,36 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LoadBalancers> loadBalancers; 
+        private java.util.List<LoadBalancers> loadBalancers; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListLoadBalancersResponseBody model) {
+            this.loadBalancers = model.loadBalancers;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * LoadBalancers.
+         * <p>The GWLB instances.</p>
          */
-        public Builder loadBalancers(java.util.List < LoadBalancers> loadBalancers) {
+        public Builder loadBalancers(java.util.List<LoadBalancers> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: 1 to 1000. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +125,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If NextToken is empty, no next page exists.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAIldD2UAAAAACjMDLgAAADFTNzMyZDMwMzAzMDY5NzQzNDM0NmI3NzM2NjUzNzc4NzM2YTc0NjYzOTYz****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +140,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>378A80E9-4262-5D8E-8D62-0969E52D7358</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +151,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -175,8 +211,20 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testTagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -184,7 +232,11 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value. You can specify at most 20 tag values. The tag value cannot be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testTagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -242,8 +294,19 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String eniId; 
             private String privateIpv4Address; 
 
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancerAddresses model) {
+                this.eniId = model.eniId;
+                this.privateIpv4Address = model.privateIpv4Address;
+            } 
+
             /**
-             * EniId.
+             * <p>The ID of the elastic network interface (ENI) used by the GWLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-bp17qv9zbzyqy629****</p>
              */
             public Builder eniId(String eniId) {
                 this.eniId = eniId;
@@ -251,7 +314,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpv4Address.
+             * <p>The private IPv4 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder privateIpv4Address(String privateIpv4Address) {
                 this.privateIpv4Address = privateIpv4Address;
@@ -273,7 +339,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
      */
     public static class ZoneMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LoadBalancerAddresses")
-        private java.util.List < LoadBalancerAddresses> loadBalancerAddresses;
+        private java.util.List<LoadBalancerAddresses> loadBalancerAddresses;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
@@ -298,7 +364,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         /**
          * @return loadBalancerAddresses
          */
-        public java.util.List < LoadBalancerAddresses> getLoadBalancerAddresses() {
+        public java.util.List<LoadBalancerAddresses> getLoadBalancerAddresses() {
             return this.loadBalancerAddresses;
         }
 
@@ -317,20 +383,32 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < LoadBalancerAddresses> loadBalancerAddresses; 
+            private java.util.List<LoadBalancerAddresses> loadBalancerAddresses; 
             private String vSwitchId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ZoneMappings model) {
+                this.loadBalancerAddresses = model.loadBalancerAddresses;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * LoadBalancerAddresses.
+             * <p>The GWLB instance addresses.</p>
              */
-            public Builder loadBalancerAddresses(java.util.List < LoadBalancerAddresses> loadBalancerAddresses) {
+            public Builder loadBalancerAddresses(java.util.List<LoadBalancerAddresses> loadBalancerAddresses) {
                 this.loadBalancerAddresses = loadBalancerAddresses;
                 return this;
             }
 
             /**
-             * VSwitchId.
+             * <p>The ID of the vSwitch in the zone. By default, each zone contains one vSwitch and one subnet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2zemule5dz7okwqfv****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -338,7 +416,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID. You can call the DescribeZones operation to query the most recent zone list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -381,13 +462,13 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         @com.aliyun.core.annotation.NameInMap("ZoneMappings")
-        private java.util.List < ZoneMappings> zoneMappings;
+        private java.util.List<ZoneMappings> zoneMappings;
 
         private LoadBalancers(Builder builder) {
             this.addressIpVersion = builder.addressIpVersion;
@@ -462,7 +543,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -476,7 +557,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         /**
          * @return zoneMappings
          */
-        public java.util.List < ZoneMappings> getZoneMappings() {
+        public java.util.List<ZoneMappings> getZoneMappings() {
             return this.zoneMappings;
         }
 
@@ -488,12 +569,34 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String loadBalancerName; 
             private String loadBalancerStatus; 
             private String resourceGroupId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String vpcId; 
-            private java.util.List < ZoneMappings> zoneMappings; 
+            private java.util.List<ZoneMappings> zoneMappings; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancers model) {
+                this.addressIpVersion = model.addressIpVersion;
+                this.createTime = model.createTime;
+                this.loadBalancerBusinessStatus = model.loadBalancerBusinessStatus;
+                this.loadBalancerId = model.loadBalancerId;
+                this.loadBalancerName = model.loadBalancerName;
+                this.loadBalancerStatus = model.loadBalancerStatus;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+                this.zoneMappings = model.zoneMappings;
+            } 
 
             /**
-             * AddressIpVersion.
+             * <p>The IP version. Valid values:</p>
+             * <ul>
+             * <li><strong>IPv4</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder addressIpVersion(String addressIpVersion) {
                 this.addressIpVersion = addressIpVersion;
@@ -501,7 +604,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the resource was created. The time follows the ISO 8601 standard in the <strong>yyyy-MM-ddTHH:mm:ssZ</strong> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-05 18:24:07</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -509,7 +615,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerBusinessStatus.
+             * <p>The business status of the GWLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: running as expected</li>
+             * <li><strong>FinancialLocked</strong>: locked due to overdue payments</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder loadBalancerBusinessStatus(String loadBalancerBusinessStatus) {
                 this.loadBalancerBusinessStatus = loadBalancerBusinessStatus;
@@ -517,7 +630,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerId.
+             * <p>The GWLB instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gwlb-9njtjmqt7zfcqm****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -525,7 +641,11 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerName.
+             * <p>The GWLB instance name.</p>
+             * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testGwlbName</p>
              */
             public Builder loadBalancerName(String loadBalancerName) {
                 this.loadBalancerName = loadBalancerName;
@@ -533,7 +653,16 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerStatus.
+             * <p>The GWLB instance status. Valid values:</p>
+             * <ul>
+             * <li><strong>Active</strong>: The GWLB instance is running.</li>
+             * <li><strong>Inactive</strong>: The GWLB instance is disabled. Listeners of GWLB instances in the Inactive state do not forward traffic.</li>
+             * <li><strong>Provisioning</strong>: The GWLB instance is being created.</li>
+             * <li><strong>Configuring</strong>: The GWLB instance is being modified.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder loadBalancerStatus(String loadBalancerStatus) {
                 this.loadBalancerStatus = loadBalancerStatus;
@@ -541,7 +670,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek26jasguy****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -549,15 +681,18 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6eg0vndlsa84n7r****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -565,9 +700,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneMappings.
+             * <p>The mappings between zones and vSwitches. You must specify at least one zone. You can specify at most 20 zones. If the region supports two or more zones, specify at least two zones.</p>
              */
-            public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
+            public Builder zoneMappings(java.util.List<ZoneMappings> zoneMappings) {
                 this.zoneMappings = zoneMappings;
                 return this;
             }

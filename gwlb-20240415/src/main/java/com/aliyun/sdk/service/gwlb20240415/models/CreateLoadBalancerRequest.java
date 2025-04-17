@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gwlb20240415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class CreateLoadBalancerRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VpcId")
@@ -44,7 +49,7 @@ public class CreateLoadBalancerRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ZoneMappings")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ZoneMappings> zoneMappings;
+    private java.util.List<ZoneMappings> zoneMappings;
 
     private CreateLoadBalancerRequest(Builder builder) {
         super(builder);
@@ -66,7 +71,7 @@ public class CreateLoadBalancerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -109,7 +114,7 @@ public class CreateLoadBalancerRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -123,7 +128,7 @@ public class CreateLoadBalancerRequest extends Request {
     /**
      * @return zoneMappings
      */
-    public java.util.List < ZoneMappings> getZoneMappings() {
+    public java.util.List<ZoneMappings> getZoneMappings() {
         return this.zoneMappings;
     }
 
@@ -133,9 +138,9 @@ public class CreateLoadBalancerRequest extends Request {
         private Boolean dryRun; 
         private String loadBalancerName; 
         private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vpcId; 
-        private java.util.List < ZoneMappings> zoneMappings; 
+        private java.util.List<ZoneMappings> zoneMappings; 
 
         private Builder() {
             super();
@@ -154,7 +159,13 @@ public class CreateLoadBalancerRequest extends Request {
         } 
 
         /**
-         * AddressIpVersion.
+         * <p>The IP version. Valid values:</p>
+         * <ul>
+         * <li><strong>Ipv4</strong> (default): IPv4</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder addressIpVersion(String addressIpVersion) {
             this.putBodyParameter("AddressIpVersion", addressIpVersion);
@@ -163,7 +174,14 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -172,7 +190,14 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -181,7 +206,11 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * LoadBalancerName.
+         * <p>The GWLB instance name.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGwlbName</p>
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.putBodyParameter("LoadBalancerName", loadBalancerName);
@@ -190,7 +219,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwbufq6q3****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -199,15 +231,16 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag keys. You can specify at most 20 tags in each call.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
+         * <p>The virtual private cloud (VPC) ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,9 +253,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
+         * <p>The mappings between zones and vSwitches. You must specify at least one zone. You can specify at most 20 zones. If the region supports two or more zones, specify at least two zones.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
+        public Builder zoneMappings(java.util.List<ZoneMappings> zoneMappings) {
             this.putBodyParameter("ZoneMappings", zoneMappings);
             this.zoneMappings = zoneMappings;
             return this;
@@ -279,8 +313,20 @@ public class CreateLoadBalancerRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testTagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -288,7 +334,10 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be up to 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testTagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -348,7 +397,16 @@ public class CreateLoadBalancerRequest extends Request {
             private String vSwitchId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ZoneMappings model) {
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
+             * <p>The ID of the vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of a GWLB instance.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -360,6 +418,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
+             * <p>The zone ID. You can call the DescribeZones operation to query the most recent zone list.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

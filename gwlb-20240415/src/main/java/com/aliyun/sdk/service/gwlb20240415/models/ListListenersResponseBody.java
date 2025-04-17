@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gwlb20240415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListListenersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Listeners")
-    private java.util.List < Listeners> listeners;
+    private java.util.List<Listeners> listeners;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -43,10 +48,14 @@ public class ListListenersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return listeners
      */
-    public java.util.List < Listeners> getListeners() {
+    public java.util.List<Listeners> getListeners() {
         return this.listeners;
     }
 
@@ -79,22 +88,36 @@ public class ListListenersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Listeners> listeners; 
+        private java.util.List<Listeners> listeners; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListListenersResponseBody model) {
+            this.listeners = model.listeners;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Listeners.
+         * <p>The GWLB listeners.</p>
          */
-        public Builder listeners(java.util.List < Listeners> listeners) {
+        public Builder listeners(java.util.List<Listeners> listeners) {
             this.listeners = listeners;
             return this;
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to be returned from a single query when the NextToken parameter is used in the query. Valid values: 1 to 1000. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +125,14 @@ public class ListListenersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5c281c0a0d6bfb6355ed088c2108aca8e0b5e8707e68****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +140,10 @@ public class ListListenersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7DBFC67C-A272-5952-8287-6C3EBE4E04D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +151,10 @@ public class ListListenersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -175,8 +211,19 @@ public class ListListenersResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -184,7 +231,10 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -221,7 +271,7 @@ public class ListListenersResponseBody extends TeaModel {
         private String serverGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private Listeners(Builder builder) {
             this.listenerDescription = builder.listenerDescription;
@@ -278,7 +328,7 @@ public class ListListenersResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -288,10 +338,25 @@ public class ListListenersResponseBody extends TeaModel {
             private String listenerStatus; 
             private String loadBalancerId; 
             private String serverGroupId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Listeners model) {
+                this.listenerDescription = model.listenerDescription;
+                this.listenerId = model.listenerId;
+                this.listenerStatus = model.listenerStatus;
+                this.loadBalancerId = model.loadBalancerId;
+                this.serverGroupId = model.serverGroupId;
+                this.tags = model.tags;
+            } 
 
             /**
-             * ListenerDescription.
+             * <p>The description of the listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>listener-description</p>
              */
             public Builder listenerDescription(String listenerDescription) {
                 this.listenerDescription = listenerDescription;
@@ -299,7 +364,10 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * ListenerId.
+             * <p>The listener ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lsn-vu7folhh5ntm8u****</p>
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -307,7 +375,16 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * ListenerStatus.
+             * <p>The status of the listener. Valid values:</p>
+             * <ul>
+             * <li><strong>Provisioning</strong>: The listener is being created.</li>
+             * <li><strong>Running</strong>: The listener is running.</li>
+             * <li><strong>Configuring</strong>: The listener is being configured.</li>
+             * <li><strong>Deleting</strong>: The listener is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder listenerStatus(String listenerStatus) {
                 this.listenerStatus = listenerStatus;
@@ -315,7 +392,10 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerId.
+             * <p>The GWLB instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gwlb-uf6hbeh795xlqln7g****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -323,7 +403,10 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * ServerGroupId.
+             * <p>The server group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgp-5yapcb422i51ru****</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -331,9 +414,9 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

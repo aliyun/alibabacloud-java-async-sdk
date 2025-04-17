@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gwlb20240415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class TagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > resourceId;
+    private java.util.List<String> resourceId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -33,7 +38,7 @@ public class TagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tag")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private TagResourcesRequest(Builder builder) {
         super(builder);
@@ -52,7 +57,7 @@ public class TagResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +79,7 @@ public class TagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -88,16 +93,16 @@ public class TagResourcesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -113,7 +118,10 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters. If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -122,7 +130,14 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -131,15 +146,22 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource IDs. You can specify at most 50 resource IDs in each call.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
         }
 
         /**
+         * <p>The type of resource. Valid values:</p>
+         * <ul>
+         * <li><strong>loadbalancer</strong>: Gateway Load Balancer (GWLB) instance</li>
+         * <li><strong>listener</strong>: listener</li>
+         * <li><strong>servergroup</strong>: server group</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,9 +174,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The tags. You can specify at most 20 tags in each call.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -213,7 +236,16 @@ public class TagResourcesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
+             * <p>The tag key. The tag key cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -225,6 +257,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
+             * <p>The tag value. The tag value can be up to 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

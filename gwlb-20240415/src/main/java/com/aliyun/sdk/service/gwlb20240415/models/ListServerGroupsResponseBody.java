@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gwlb20240415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ServerGroups")
-    private java.util.List < ServerGroups> serverGroups;
+    private java.util.List<ServerGroups> serverGroups;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -41,6 +46,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     public static ListServerGroupsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
     /**
      * @return serverGroups
      */
-    public java.util.List < ServerGroups> getServerGroups() {
+    public java.util.List<ServerGroups> getServerGroups() {
         return this.serverGroups;
     }
 
@@ -82,11 +91,26 @@ public class ListServerGroupsResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ServerGroups> serverGroups; 
+        private java.util.List<ServerGroups> serverGroups; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListServerGroupsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.serverGroups = model.serverGroups;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +118,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +133,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,15 +144,18 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * ServerGroups.
+         * <p>The configurations of the server group.</p>
          */
-        public Builder serverGroups(java.util.List < ServerGroups> serverGroups) {
+        public Builder serverGroups(java.util.List<ServerGroups> serverGroups) {
             this.serverGroups = serverGroups;
             return this;
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -175,8 +212,23 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private Boolean connectionDrainEnabled; 
             private Integer connectionDrainTimeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConnectionDrainConfig model) {
+                this.connectionDrainEnabled = model.connectionDrainEnabled;
+                this.connectionDrainTimeout = model.connectionDrainTimeout;
+            } 
+
             /**
-             * ConnectionDrainEnabled.
+             * <p>Indicates whether connection draining is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder connectionDrainEnabled(Boolean connectionDrainEnabled) {
                 this.connectionDrainEnabled = connectionDrainEnabled;
@@ -184,7 +236,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionDrainTimeout.
+             * <p>The timeout period of connection draining.</p>
+             * <p>Unit: seconds</p>
+             * <p>Valid values: 1 to 3600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder connectionDrainTimeout(Integer connectionDrainTimeout) {
                 this.connectionDrainTimeout = connectionDrainTimeout;
@@ -218,7 +275,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         private Boolean healthCheckEnabled;
 
         @com.aliyun.core.annotation.NameInMap("HealthCheckHttpCode")
-        private java.util.List < String > healthCheckHttpCode;
+        private java.util.List<String> healthCheckHttpCode;
 
         @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
         private Integer healthCheckInterval;
@@ -287,7 +344,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * @return healthCheckHttpCode
          */
-        public java.util.List < String > getHealthCheckHttpCode() {
+        public java.util.List<String> getHealthCheckHttpCode() {
             return this.healthCheckHttpCode;
         }
 
@@ -331,15 +388,35 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private Integer healthCheckConnectTimeout; 
             private String healthCheckDomain; 
             private Boolean healthCheckEnabled; 
-            private java.util.List < String > healthCheckHttpCode; 
+            private java.util.List<String> healthCheckHttpCode; 
             private Integer healthCheckInterval; 
             private String healthCheckPath; 
             private String healthCheckProtocol; 
             private Integer healthyThreshold; 
             private Integer unhealthyThreshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(HealthCheckConfig model) {
+                this.healthCheckConnectPort = model.healthCheckConnectPort;
+                this.healthCheckConnectTimeout = model.healthCheckConnectTimeout;
+                this.healthCheckDomain = model.healthCheckDomain;
+                this.healthCheckEnabled = model.healthCheckEnabled;
+                this.healthCheckHttpCode = model.healthCheckHttpCode;
+                this.healthCheckInterval = model.healthCheckInterval;
+                this.healthCheckPath = model.healthCheckPath;
+                this.healthCheckProtocol = model.healthCheckProtocol;
+                this.healthyThreshold = model.healthyThreshold;
+                this.unhealthyThreshold = model.unhealthyThreshold;
+            } 
+
             /**
-             * HealthCheckConnectPort.
+             * <p>The backend server port that is used for health checks.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
                 this.healthCheckConnectPort = healthCheckConnectPort;
@@ -347,7 +424,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckConnectTimeout.
+             * <p>The maximum timeout period of a health check.</p>
+             * <p>Unit: seconds</p>
+             * <p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
                 this.healthCheckConnectTimeout = healthCheckConnectTimeout;
@@ -355,7 +437,17 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckDomain.
+             * <p>The domain name that is used for health checks. Valid values:</p>
+             * <ul>
+             * <li><strong>$SERVER_IP</strong>: the internal IP address of a backend server.</li>
+             * <li><strong>domain</strong>: a domain name. The domain name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), and periods (.).</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>$SERVER_IP</p>
              */
             public Builder healthCheckDomain(String healthCheckDomain) {
                 this.healthCheckDomain = healthCheckDomain;
@@ -363,7 +455,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckEnabled.
+             * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder healthCheckEnabled(Boolean healthCheckEnabled) {
                 this.healthCheckEnabled = healthCheckEnabled;
@@ -371,15 +470,20 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckHttpCode.
+             * <p>The HTTP status codes that the system returns for health checks.</p>
              */
-            public Builder healthCheckHttpCode(java.util.List < String > healthCheckHttpCode) {
+            public Builder healthCheckHttpCode(java.util.List<String> healthCheckHttpCode) {
                 this.healthCheckHttpCode = healthCheckHttpCode;
                 return this;
             }
 
             /**
-             * HealthCheckInterval.
+             * <p>The interval at which health checks are performed.</p>
+             * <p>Unit: seconds</p>
+             * <p>Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder healthCheckInterval(Integer healthCheckInterval) {
                 this.healthCheckInterval = healthCheckInterval;
@@ -387,7 +491,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckPath.
+             * <p>The URL that is used for health checks.</p>
+             * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <code>- / . % ? # &amp; </code>The URL must start with a forward slash (/).</p>
+             * <blockquote>
+             * <p>This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>/test/index.html</p>
              */
             public Builder healthCheckPath(String healthCheckPath) {
                 this.healthCheckPath = healthCheckPath;
@@ -395,7 +506,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckProtocol.
+             * <p>The protocol that is used for health checks. Valid values:</p>
+             * <ul>
+             * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</li>
+             * <li><strong>HTTP</strong>: HTTP health checks simulate a process that uses a web browser to access resources by sending HEAD or GET requests to an instance. These requests are used to check whether the instance is healthy.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder healthCheckProtocol(String healthCheckProtocol) {
                 this.healthCheckProtocol = healthCheckProtocol;
@@ -403,7 +521,11 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthyThreshold.
+             * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <strong>fail</strong> to <strong>success</strong>.</p>
+             * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder healthyThreshold(Integer healthyThreshold) {
                 this.healthyThreshold = healthyThreshold;
@@ -411,7 +533,11 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UnhealthyThreshold.
+             * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <strong>success</strong> to <strong>fail</strong>.</p>
+             * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder unhealthyThreshold(Integer unhealthyThreshold) {
                 this.unhealthyThreshold = unhealthyThreshold;
@@ -469,8 +595,19 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key. The tag key cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testTagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -478,7 +615,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be up to 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testTagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -512,7 +652,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         private String protocol;
 
         @com.aliyun.core.annotation.NameInMap("RelatedLoadBalancerIds")
-        private java.util.List < String > relatedLoadBalancerIds;
+        private java.util.List<String> relatedLoadBalancerIds;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -522,6 +662,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ServerCount")
         private Integer serverCount;
+
+        @com.aliyun.core.annotation.NameInMap("ServerFailoverMode")
+        private String serverFailoverMode;
 
         @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
@@ -536,7 +679,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         private String serverGroupType;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -550,6 +693,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             this.resourceGroupId = builder.resourceGroupId;
             this.scheduler = builder.scheduler;
             this.serverCount = builder.serverCount;
+            this.serverFailoverMode = builder.serverFailoverMode;
             this.serverGroupId = builder.serverGroupId;
             this.serverGroupName = builder.serverGroupName;
             this.serverGroupStatus = builder.serverGroupStatus;
@@ -597,7 +741,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * @return relatedLoadBalancerIds
          */
-        public java.util.List < String > getRelatedLoadBalancerIds() {
+        public java.util.List<String> getRelatedLoadBalancerIds() {
             return this.relatedLoadBalancerIds;
         }
 
@@ -620,6 +764,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
          */
         public Integer getServerCount() {
             return this.serverCount;
+        }
+
+        /**
+         * @return serverFailoverMode
+         */
+        public String getServerFailoverMode() {
+            return this.serverFailoverMode;
         }
 
         /**
@@ -653,7 +804,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -669,19 +820,41 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private String createTime; 
             private HealthCheckConfig healthCheckConfig; 
             private String protocol; 
-            private java.util.List < String > relatedLoadBalancerIds; 
+            private java.util.List<String> relatedLoadBalancerIds; 
             private String resourceGroupId; 
             private String scheduler; 
             private Integer serverCount; 
+            private String serverFailoverMode; 
             private String serverGroupId; 
             private String serverGroupName; 
             private String serverGroupStatus; 
             private String serverGroupType; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServerGroups model) {
+                this.connectionDrainConfig = model.connectionDrainConfig;
+                this.createTime = model.createTime;
+                this.healthCheckConfig = model.healthCheckConfig;
+                this.protocol = model.protocol;
+                this.relatedLoadBalancerIds = model.relatedLoadBalancerIds;
+                this.resourceGroupId = model.resourceGroupId;
+                this.scheduler = model.scheduler;
+                this.serverCount = model.serverCount;
+                this.serverFailoverMode = model.serverFailoverMode;
+                this.serverGroupId = model.serverGroupId;
+                this.serverGroupName = model.serverGroupName;
+                this.serverGroupStatus = model.serverGroupStatus;
+                this.serverGroupType = model.serverGroupType;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * ConnectionDrainConfig.
+             * <p>The configurations of connection draining.</p>
              */
             public Builder connectionDrainConfig(ConnectionDrainConfig connectionDrainConfig) {
                 this.connectionDrainConfig = connectionDrainConfig;
@@ -689,7 +862,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the resource was created. The time follows the ISO 8601 standard in the <strong>yyyy-MM-ddTHH:mm:ssZ</strong> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-05T18:24:07Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -697,7 +873,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckConfig.
+             * <p>The configuration of health checks.</p>
              */
             public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
                 this.healthCheckConfig = healthCheckConfig;
@@ -705,7 +881,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The backend protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>GENEVE</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>GENEVE</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -713,15 +895,18 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedLoadBalancerIds.
+             * <p>The IDs of the GWLB instances that are associated with the server group.</p>
              */
-            public Builder relatedLoadBalancerIds(java.util.List < String > relatedLoadBalancerIds) {
+            public Builder relatedLoadBalancerIds(java.util.List<String> relatedLoadBalancerIds) {
                 this.relatedLoadBalancerIds = relatedLoadBalancerIds;
                 return this;
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-atstuj3rtop****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -729,7 +914,15 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Scheduler.
+             * <p>The scheduling algorithm. Valid values:</p>
+             * <ul>
+             * <li><strong>5TCH</strong>: indicates consistent hashing that is based on the following factors: source IP address, destination IP address, source port, protocol, and destination port. Requests that contain the same information based on the preceding factors are forwarded to the same backend server.</li>
+             * <li><strong>3TCH</strong>: indicates consistent hashing that is based on the following factors: source IP address, destination IP address, and protocol. Requests that contain the same information based on the preceding factors are forwarded to the same backend server.</li>
+             * <li><strong>2TCH</strong>: indicates consistent hashing that is based on the following factors: source IP address and destination IP address. Requests that contain the same information based on the preceding factors are forwarded to the same backend server.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5TCH</p>
              */
             public Builder scheduler(String scheduler) {
                 this.scheduler = scheduler;
@@ -737,7 +930,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ServerCount.
+             * <p>The number of server groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder serverCount(Integer serverCount) {
                 this.serverCount = serverCount;
@@ -745,7 +941,18 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ServerGroupId.
+             * ServerFailoverMode.
+             */
+            public Builder serverFailoverMode(String serverFailoverMode) {
+                this.serverFailoverMode = serverFailoverMode;
+                return this;
+            }
+
+            /**
+             * <p>The server group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgp-atstuj3rtoptyui****</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -753,7 +960,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ServerGroupName.
+             * <p>The server group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testServerGroupName</p>
              */
             public Builder serverGroupName(String serverGroupName) {
                 this.serverGroupName = serverGroupName;
@@ -761,7 +971,15 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ServerGroupStatus.
+             * <p>The status of the server group. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Available</strong></li>
+             * <li><strong>Configuring</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder serverGroupStatus(String serverGroupStatus) {
                 this.serverGroupStatus = serverGroupStatus;
@@ -769,7 +987,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ServerGroupType.
+             * <p>The server group type. Valid values:</p>
+             * <ul>
+             * <li><strong>Instance</strong>: allows you to specify servers of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
+             * <li><strong>Ip</strong>: allows you to add servers of by specifying IP addresses.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance</p>
              */
             public Builder serverGroupType(String serverGroupType) {
                 this.serverGroupType = serverGroupType;
@@ -777,15 +1002,18 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp15zckdt37pq72zv****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

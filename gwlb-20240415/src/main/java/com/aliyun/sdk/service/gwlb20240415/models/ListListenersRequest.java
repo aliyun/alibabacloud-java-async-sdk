@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gwlb20240415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListListenersRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ListenerIds")
-    private java.util.List < String > listenerIds;
+    private java.util.List<String> listenerIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LoadBalancerIds")
-    private java.util.List < String > loadBalancerIds;
+    private java.util.List<String> loadBalancerIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -34,7 +39,7 @@ public class ListListenersRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListListenersRequest(Builder builder) {
         super(builder);
@@ -54,7 +59,7 @@ public class ListListenersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -62,14 +67,14 @@ public class ListListenersRequest extends Request {
     /**
      * @return listenerIds
      */
-    public java.util.List < String > getListenerIds() {
+    public java.util.List<String> getListenerIds() {
         return this.listenerIds;
     }
 
     /**
      * @return loadBalancerIds
      */
-    public java.util.List < String > getLoadBalancerIds() {
+    public java.util.List<String> getLoadBalancerIds() {
         return this.loadBalancerIds;
     }
 
@@ -97,17 +102,17 @@ public class ListListenersRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListListenersRequest, Builder> {
-        private java.util.List < String > listenerIds; 
-        private java.util.List < String > loadBalancerIds; 
+        private java.util.List<String> listenerIds; 
+        private java.util.List<String> loadBalancerIds; 
         private Integer maxResults; 
         private String nextToken; 
         private Integer skip; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -124,25 +129,28 @@ public class ListListenersRequest extends Request {
         } 
 
         /**
-         * ListenerIds.
+         * <p>The listener IDs. You can specify at most 20 listener IDs.</p>
          */
-        public Builder listenerIds(java.util.List < String > listenerIds) {
+        public Builder listenerIds(java.util.List<String> listenerIds) {
             this.putBodyParameter("ListenerIds", listenerIds);
             this.listenerIds = listenerIds;
             return this;
         }
 
         /**
-         * LoadBalancerIds.
+         * <p>The GWLB instance IDs. You can specify at most 20 instance IDs.</p>
          */
-        public Builder loadBalancerIds(java.util.List < String > loadBalancerIds) {
+        public Builder loadBalancerIds(java.util.List<String> loadBalancerIds) {
             this.putBodyParameter("LoadBalancerIds", loadBalancerIds);
             this.loadBalancerIds = loadBalancerIds;
             return this;
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to be returned from a single query when the NextToken parameter is used in the query. Valid values: 1 to 1000. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -151,7 +159,14 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>d209f4e63ec942c967c50c888a13****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -160,7 +175,10 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * Skip.
+         * <p>The number of entries to be skipped in the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder skip(Integer skip) {
             this.putBodyParameter("Skip", skip);
@@ -169,9 +187,9 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags. You can specify at most 20 tags in each call.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -228,8 +246,20 @@ public class ListListenersRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -237,7 +267,10 @@ public class ListListenersRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be up to 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

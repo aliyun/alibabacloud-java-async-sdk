@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gwlb20240415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TagResources")
-    private java.util.List < TagResources> tagResources;
+    private java.util.List<TagResources> tagResources;
 
     private ListTagResourcesResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -33,6 +38,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static ListTagResourcesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,17 +61,33 @@ public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * @return tagResources
      */
-    public java.util.List < TagResources> getTagResources() {
+    public java.util.List<TagResources> getTagResources() {
         return this.tagResources;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < TagResources> tagResources; 
+        private java.util.List<TagResources> tagResources; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagResourcesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.tagResources = model.tagResources;
+        } 
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>d209f4e63ec942c967c50c888a13****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +95,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A95325A2-E421-58A6-88AD-7A26CE610F45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +106,9 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TagResources.
+         * <p>The tags.</p>
          */
-        public Builder tagResources(java.util.List < TagResources> tagResources) {
+        public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
             return this;
         }
@@ -159,8 +187,21 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagResources model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gwlb-nrnrxwd15en27r****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -168,7 +209,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type. Valid values:</p>
+             * <ul>
+             * <li><strong>loadbalancer</strong>: GWLB instance</li>
+             * <li><strong>listener</strong>: listener</li>
+             * <li><strong>servergroup</strong>: server group</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>loadbalancer</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -176,7 +225,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -184,7 +236,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gwlb20240415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CreateServerGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -49,8 +58,19 @@ public class CreateServerGroupResponseBody extends TeaModel {
         private String requestId; 
         private String serverGroupId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateServerGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.serverGroupId = model.serverGroupId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,10 @@ public class CreateServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ServerGroupId.
+         * <p>The server group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-atstuj3rtoptyui****</p>
          */
         public Builder serverGroupId(String serverGroupId) {
             this.serverGroupId = serverGroupId;
