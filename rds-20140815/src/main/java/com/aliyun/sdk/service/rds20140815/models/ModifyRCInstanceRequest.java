@@ -38,6 +38,14 @@ public class ModifyRCInstanceRequest extends Request {
     private String instanceType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RebootTime")
+    private String rebootTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RebootWhenFinished")
+    private Boolean rebootWhenFinished;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -48,6 +56,8 @@ public class ModifyRCInstanceRequest extends Request {
         this.dryRun = builder.dryRun;
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
+        this.rebootTime = builder.rebootTime;
+        this.rebootWhenFinished = builder.rebootWhenFinished;
         this.regionId = builder.regionId;
     }
 
@@ -100,6 +110,20 @@ public class ModifyRCInstanceRequest extends Request {
     }
 
     /**
+     * @return rebootTime
+     */
+    public String getRebootTime() {
+        return this.rebootTime;
+    }
+
+    /**
+     * @return rebootWhenFinished
+     */
+    public Boolean getRebootWhenFinished() {
+        return this.rebootWhenFinished;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -112,6 +136,8 @@ public class ModifyRCInstanceRequest extends Request {
         private Boolean dryRun; 
         private String instanceId; 
         private String instanceType; 
+        private String rebootTime; 
+        private Boolean rebootWhenFinished; 
         private String regionId; 
 
         private Builder() {
@@ -125,6 +151,8 @@ public class ModifyRCInstanceRequest extends Request {
             this.dryRun = request.dryRun;
             this.instanceId = request.instanceId;
             this.instanceType = request.instanceType;
+            this.rebootTime = request.rebootTime;
+            this.rebootWhenFinished = request.rebootWhenFinished;
             this.regionId = request.regionId;
         } 
 
@@ -203,6 +231,24 @@ public class ModifyRCInstanceRequest extends Request {
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
             this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * RebootTime.
+         */
+        public Builder rebootTime(String rebootTime) {
+            this.putQueryParameter("RebootTime", rebootTime);
+            this.rebootTime = rebootTime;
+            return this;
+        }
+
+        /**
+         * RebootWhenFinished.
+         */
+        public Builder rebootWhenFinished(Boolean rebootWhenFinished) {
+            this.putQueryParameter("RebootWhenFinished", rebootWhenFinished);
+            this.rebootWhenFinished = rebootWhenFinished;
             return this;
         }
 

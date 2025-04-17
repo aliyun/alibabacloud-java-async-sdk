@@ -67,7 +67,7 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceTypes.
+         * <p>The information about the instance types.</p>
          */
         public Builder instanceTypes(InstanceTypes instanceTypes) {
             this.instanceTypes = instanceTypes;
@@ -75,7 +75,10 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F2911788-25E8-42E5-A3A3-1B38D263F01E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * CpuCoreCount.
+             * <p>The maximum number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder cpuCoreCount(Integer cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
@@ -175,7 +181,10 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeFamily.
+             * <p>The ID of the instance family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gn8.cm</p>
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -183,7 +192,10 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeId.
+             * <p>The instance type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds.gna8.2xlarge.8cm</p>
              */
             public Builder instanceTypeId(String instanceTypeId) {
                 this.instanceTypeId = instanceTypeId;
@@ -191,7 +203,10 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * MemorySize.
+             * <p>The memory size of the instance type. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>256</p>
              */
             public Builder memorySize(Integer memorySize) {
                 this.memorySize = memorySize;
@@ -245,7 +260,7 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceType.
+             * <p>The instance types.</p>
              */
             public Builder instanceType(java.util.List<InstanceType> instanceType) {
                 this.instanceType = instanceType;

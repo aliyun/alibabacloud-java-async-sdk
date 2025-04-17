@@ -200,6 +200,9 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private Integer taskId;
 
+        @com.aliyun.core.annotation.NameInMap("UpgradeMode")
+        private String upgradeMode;
+
         private Items(Builder builder) {
             this.checkTime = builder.checkTime;
             this.detail = builder.detail;
@@ -211,6 +214,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             this.sourceMajorVersion = builder.sourceMajorVersion;
             this.targetMajorVersion = builder.targetMajorVersion;
             this.taskId = builder.taskId;
+            this.upgradeMode = builder.upgradeMode;
         }
 
         public static Builder builder() {
@@ -291,6 +295,13 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             return this.taskId;
         }
 
+        /**
+         * @return upgradeMode
+         */
+        public String getUpgradeMode() {
+            return this.upgradeMode;
+        }
+
         public static final class Builder {
             private String checkTime; 
             private String detail; 
@@ -302,6 +313,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             private String sourceMajorVersion; 
             private String targetMajorVersion; 
             private Integer taskId; 
+            private String upgradeMode; 
 
             private Builder() {
             } 
@@ -317,6 +329,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
                 this.sourceMajorVersion = model.sourceMajorVersion;
                 this.targetMajorVersion = model.targetMajorVersion;
                 this.taskId = model.taskId;
+                this.upgradeMode = model.upgradeMode;
             } 
 
             /**
@@ -446,6 +459,14 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * UpgradeMode.
+             */
+            public Builder upgradeMode(String upgradeMode) {
+                this.upgradeMode = upgradeMode;
                 return this;
             }
 

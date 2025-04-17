@@ -258,7 +258,10 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -267,7 +270,22 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable the auto-renewal feature. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is valid only when you change the billing method from pay-as-you-go to subscription.</p>
+         * </li>
+         * <li><p>All strings except <strong>true</strong> are considered <strong>false</strong>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -276,7 +294,14 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * AutoUseCoupon.
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default)</li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -285,7 +310,10 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * BusinessInfo.
+         * <p>The additional business information about the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -294,7 +322,13 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The custom client token that is used to ensure the idempotence of the request.</p>
+         * <blockquote>
+         * <p> The value can contain ASCII characters and can be up to 64 characters in length.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOC****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -303,7 +337,10 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -312,7 +349,10 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * IncludeDataDisks.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder includeDataDisks(Boolean includeDataDisks) {
             this.putQueryParameter("IncludeDataDisks", includeDataDisks);
@@ -321,7 +361,15 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PrePaid</li>
+         * <li>PostPaid</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -330,6 +378,7 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance or disk.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -342,7 +391,10 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -351,6 +403,11 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         }
 
         /**
+         * <p>The new billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -363,7 +420,17 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The renewal cycle of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter must be specified if you set the PayType parameter to <strong>Prepaid</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -372,7 +439,10 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * PromotionCode.
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72802442****</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putQueryParameter("PromotionCode", promotionCode);
@@ -381,6 +451,7 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -393,7 +464,17 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * <p>The subscription duration of the instance.</p>
+         * <ul>
+         * <li>**If you set the <strong><strong>Period</strong></strong> parameter to **Year, the value of the UsedTime parameter ranges from 1 to 5.</li>
+         * <li>If the <strong>Period</strong> parameter is set to <strong>Month</strong>, the value of the <strong>UsedTime</strong> parameter ranges from 1 to 11.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set the PayType parameter to <strong>Prepaid</strong>, you must also specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);

@@ -119,7 +119,14 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * ChargeType.
+         * <p>The billing method.</p>
+         * <ul>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
+         * <li><strong>PREPAY</strong>: subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -127,7 +134,10 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiredTime.
+         * <p>The time when the instance expires.</p>
+         * <blockquote>
+         * <p> If you change the billing method from subscription to pay-as-you-go, this parameter is not returned.</p>
+         * </blockquote>
          */
         public Builder expiredTime(java.util.List<String> expiredTime) {
             this.expiredTime = expiredTime;
@@ -135,7 +145,7 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * FeeOfInstances.
+         * <p>The reserved parameter. This parameter is not supported.</p>
          */
         public Builder feeOfInstances(java.util.List<FeeOfInstances> feeOfInstances) {
             this.feeOfInstances = feeOfInstances;
@@ -143,7 +153,7 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceIds.
+         * <p>The instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.instanceIds = instanceIds;
@@ -151,7 +161,10 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2133400000****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -159,7 +172,10 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EF82B07-28D2-48D1-B5D6-7E78FED277C7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +254,10 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * Currency.
+             * <p>The reserved parameter. This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -246,7 +265,10 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Fee.
+             * <p>The reserved parameter. This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder fee(String fee) {
                 this.fee = fee;
@@ -254,7 +276,10 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The reserved parameter. This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

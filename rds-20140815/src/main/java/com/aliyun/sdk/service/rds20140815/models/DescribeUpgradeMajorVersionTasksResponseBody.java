@@ -209,6 +209,21 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UpgradeMode")
         private String upgradeMode;
 
+        @com.aliyun.core.annotation.NameInMap("cutOver")
+        private Boolean cutOver;
+
+        @com.aliyun.core.annotation.NameInMap("totalLogicRepDelayTime")
+        private Integer totalLogicRepDelayTime;
+
+        @com.aliyun.core.annotation.NameInMap("totalLogicRepLatencyMB")
+        private Integer totalLogicRepLatencyMB;
+
+        @com.aliyun.core.annotation.NameInMap("zeroDownTimeConnectionString")
+        private String zeroDownTimeConnectionString;
+
+        @com.aliyun.core.annotation.NameInMap("zeroDownTimePort")
+        private Integer zeroDownTimePort;
+
         private Items(Builder builder) {
             this.collectStatMode = builder.collectStatMode;
             this.detail = builder.detail;
@@ -223,6 +238,11 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             this.targetMajorVersion = builder.targetMajorVersion;
             this.taskId = builder.taskId;
             this.upgradeMode = builder.upgradeMode;
+            this.cutOver = builder.cutOver;
+            this.totalLogicRepDelayTime = builder.totalLogicRepDelayTime;
+            this.totalLogicRepLatencyMB = builder.totalLogicRepLatencyMB;
+            this.zeroDownTimeConnectionString = builder.zeroDownTimeConnectionString;
+            this.zeroDownTimePort = builder.zeroDownTimePort;
         }
 
         public static Builder builder() {
@@ -324,6 +344,41 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             return this.upgradeMode;
         }
 
+        /**
+         * @return cutOver
+         */
+        public Boolean getCutOver() {
+            return this.cutOver;
+        }
+
+        /**
+         * @return totalLogicRepDelayTime
+         */
+        public Integer getTotalLogicRepDelayTime() {
+            return this.totalLogicRepDelayTime;
+        }
+
+        /**
+         * @return totalLogicRepLatencyMB
+         */
+        public Integer getTotalLogicRepLatencyMB() {
+            return this.totalLogicRepLatencyMB;
+        }
+
+        /**
+         * @return zeroDownTimeConnectionString
+         */
+        public String getZeroDownTimeConnectionString() {
+            return this.zeroDownTimeConnectionString;
+        }
+
+        /**
+         * @return zeroDownTimePort
+         */
+        public Integer getZeroDownTimePort() {
+            return this.zeroDownTimePort;
+        }
+
         public static final class Builder {
             private String collectStatMode; 
             private String detail; 
@@ -338,6 +393,11 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             private String targetMajorVersion; 
             private Integer taskId; 
             private String upgradeMode; 
+            private Boolean cutOver; 
+            private Integer totalLogicRepDelayTime; 
+            private Integer totalLogicRepLatencyMB; 
+            private String zeroDownTimeConnectionString; 
+            private Integer zeroDownTimePort; 
 
             private Builder() {
             } 
@@ -356,6 +416,11 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
                 this.targetMajorVersion = model.targetMajorVersion;
                 this.taskId = model.taskId;
                 this.upgradeMode = model.upgradeMode;
+                this.cutOver = model.cutOver;
+                this.totalLogicRepDelayTime = model.totalLogicRepDelayTime;
+                this.totalLogicRepLatencyMB = model.totalLogicRepLatencyMB;
+                this.zeroDownTimeConnectionString = model.zeroDownTimeConnectionString;
+                this.zeroDownTimePort = model.zeroDownTimePort;
             } 
 
             /**
@@ -525,6 +590,46 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
              */
             public Builder upgradeMode(String upgradeMode) {
                 this.upgradeMode = upgradeMode;
+                return this;
+            }
+
+            /**
+             * cutOver.
+             */
+            public Builder cutOver(Boolean cutOver) {
+                this.cutOver = cutOver;
+                return this;
+            }
+
+            /**
+             * totalLogicRepDelayTime.
+             */
+            public Builder totalLogicRepDelayTime(Integer totalLogicRepDelayTime) {
+                this.totalLogicRepDelayTime = totalLogicRepDelayTime;
+                return this;
+            }
+
+            /**
+             * totalLogicRepLatencyMB.
+             */
+            public Builder totalLogicRepLatencyMB(Integer totalLogicRepLatencyMB) {
+                this.totalLogicRepLatencyMB = totalLogicRepLatencyMB;
+                return this;
+            }
+
+            /**
+             * zeroDownTimeConnectionString.
+             */
+            public Builder zeroDownTimeConnectionString(String zeroDownTimeConnectionString) {
+                this.zeroDownTimeConnectionString = zeroDownTimeConnectionString;
+                return this;
+            }
+
+            /**
+             * zeroDownTimePort.
+             */
+            public Builder zeroDownTimePort(Integer zeroDownTimePort) {
+                this.zeroDownTimePort = zeroDownTimePort;
                 return this;
             }
 

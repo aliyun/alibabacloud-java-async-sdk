@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link StopRCInstancesResponseBody} extends {@link TeaModel}
+ * {@link SwitchOverMajorVersionUpgradeResponseBody} extends {@link TeaModel}
  *
- * <p>StopRCInstancesResponseBody</p>
+ * <p>SwitchOverMajorVersionUpgradeResponseBody</p>
  */
-public class StopRCInstancesResponseBody extends TeaModel {
+public class SwitchOverMajorVersionUpgradeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private StopRCInstancesResponseBody(Builder builder) {
+    private SwitchOverMajorVersionUpgradeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class StopRCInstancesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static StopRCInstancesResponseBody create() {
+    public static SwitchOverMajorVersionUpgradeResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,20 @@ public class StopRCInstancesResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(StopRCInstancesResponseBody model) {
+        private Builder(SwitchOverMajorVersionUpgradeResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>481BC3B1-7069-5D37-9B6C-21757F8F9FB1</p>
+         * <p>Id of the request</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public StopRCInstancesResponseBody build() {
-            return new StopRCInstancesResponseBody(this);
+        public SwitchOverMajorVersionUpgradeResponseBody build() {
+            return new SwitchOverMajorVersionUpgradeResponseBody(this);
         } 
 
     } 

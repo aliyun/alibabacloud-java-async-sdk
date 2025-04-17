@@ -670,7 +670,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engine</h3>
      * <ul>
-     * <li>MySQL</li>
+     * <li>MySQL
+     * &lt;props=&quot;china&quot;&gt;</li>
      * </ul>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
@@ -4331,6 +4332,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyParameterGroupResponse> modifyParameterGroup(ModifyParameterGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> To minimize the impacts on your business, we recommend that you change specifications during off-peak hours.
+     * Take note of the following items:</p>
+     * </blockquote>
+     * <ul>
+     * <li>For a pay-as-you-go Enterprise SSD (ESSD), you can upgrade or downgrade its PL. However, you cannot downgrade the performance level to PL0.</li>
+     * <li>The ESSD must be in the In Use (In_Use) or Unattached (Available) state.</li>
+     * <li>If the ESSD is attached to an instance, the instance must be in the Running or Stopped state. The instance cannot be in the Expired state or stopped due to overdue payments.</li>
+     * <li>The performance level of an ESSD is limited by the capacity of the ESSD. If you cannot upgrade the PL of an ESSD, you can expand the capacity of the ESSD.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyRCDiskSpec  ModifyRCDiskSpecRequest
      * @return ModifyRCDiskSpecResponse
      */
@@ -5017,6 +5030,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartRCInstanceResponse> startRCInstance(StartRCInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * 
      * @param request the request parameters of StartRCInstances  StartRCInstancesRequest
      * @return StartRCInstancesResponse
      */
@@ -5048,6 +5065,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopRCInstanceResponse> stopRCInstance(StopRCInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * 
      * @param request the request parameters of StopRCInstances  StopRCInstancesRequest
      * @return StopRCInstancesResponse
      */
@@ -5122,6 +5143,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SwitchDBInstanceVpcResponse
      */
     CompletableFuture<SwitchDBInstanceVpcResponse> switchDBInstanceVpc(SwitchDBInstanceVpcRequest request);
+
+    /**
+     * @param request the request parameters of SwitchOverMajorVersionUpgrade  SwitchOverMajorVersionUpgradeRequest
+     * @return SwitchOverMajorVersionUpgradeResponse
+     */
+    CompletableFuture<SwitchOverMajorVersionUpgradeResponse> switchOverMajorVersionUpgrade(SwitchOverMajorVersionUpgradeRequest request);
 
     /**
      * <b>description</b> :

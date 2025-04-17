@@ -129,7 +129,17 @@ public class ModifyRCDiskSpecRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true (default)</strong>: automatically completes the payment. Make sure that your account balance is sufficient.</li>
+         * <li><strong>false</strong>: does not automatically complete the payment. An unpaid order is generated.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If your account balance is insufficient, you can set the AutoPay parameter to false. In this case, an unpaid order is generated. You can complete the payment in the Expenses and Costs console.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -138,7 +148,15 @@ public class ModifyRCDiskSpecRequest extends Request {
         }
 
         /**
-         * DiskCategory.
+         * <p>The new disk type. Valid values:</p>
+         * <ul>
+         * <li><strong>cloud_essd</strong>: ESSD.</li>
+         * <li><strong>cloud_auto</strong>: ESSD AutoPL disk</li>
+         * </ul>
+         * <p>This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder diskCategory(String diskCategory) {
             this.putQueryParameter("DiskCategory", diskCategory);
@@ -147,7 +165,10 @@ public class ModifyRCDiskSpecRequest extends Request {
         }
 
         /**
-         * DiskId.
+         * <p>The cloud disk ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rcd-wz9f3peueu5npsl****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -156,7 +177,14 @@ public class ModifyRCDiskSpecRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform a dry run. Valid values: Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run and does not perform the actual request. The system checks the request parameters, request syntax, limits, and available resources.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -165,7 +193,15 @@ public class ModifyRCDiskSpecRequest extends Request {
         }
 
         /**
-         * PerformanceLevel.
+         * <p>The PL of the disk. Valid values:</p>
+         * <ul>
+         * <li><strong>PL1</strong> (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li><strong>PL2</strong>: A single ESSD delivers up to 100,000 random read/write IOPS.</li>
+         * <li><strong>PL3</strong>: A single ESSD delivers up to 1,000,000 random read/write IOPS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PL2</p>
          */
         public Builder performanceLevel(String performanceLevel) {
             this.putQueryParameter("PerformanceLevel", performanceLevel);
@@ -174,7 +210,10 @@ public class ModifyRCDiskSpecRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

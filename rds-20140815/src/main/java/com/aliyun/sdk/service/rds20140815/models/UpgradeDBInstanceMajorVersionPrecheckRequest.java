@@ -31,11 +31,16 @@ public class UpgradeDBInstanceMajorVersionPrecheckRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String targetMajorVersion;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpgradeMode")
+    private String upgradeMode;
+
     private UpgradeDBInstanceMajorVersionPrecheckRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.targetMajorVersion = builder.targetMajorVersion;
+        this.upgradeMode = builder.upgradeMode;
     }
 
     public static Builder builder() {
@@ -72,10 +77,18 @@ public class UpgradeDBInstanceMajorVersionPrecheckRequest extends Request {
         return this.targetMajorVersion;
     }
 
+    /**
+     * @return upgradeMode
+     */
+    public String getUpgradeMode() {
+        return this.upgradeMode;
+    }
+
     public static final class Builder extends Request.Builder<UpgradeDBInstanceMajorVersionPrecheckRequest, Builder> {
         private String DBInstanceId; 
         private Long resourceOwnerId; 
         private String targetMajorVersion; 
+        private String upgradeMode; 
 
         private Builder() {
             super();
@@ -86,6 +99,7 @@ public class UpgradeDBInstanceMajorVersionPrecheckRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.resourceOwnerId = request.resourceOwnerId;
             this.targetMajorVersion = request.targetMajorVersion;
+            this.upgradeMode = request.upgradeMode;
         } 
 
         /**
@@ -120,6 +134,15 @@ public class UpgradeDBInstanceMajorVersionPrecheckRequest extends Request {
         public Builder targetMajorVersion(String targetMajorVersion) {
             this.putQueryParameter("TargetMajorVersion", targetMajorVersion);
             this.targetMajorVersion = targetMajorVersion;
+            return this;
+        }
+
+        /**
+         * UpgradeMode.
+         */
+        public Builder upgradeMode(String upgradeMode) {
+            this.putQueryParameter("UpgradeMode", upgradeMode);
+            this.upgradeMode = upgradeMode;
             return this;
         }
 
