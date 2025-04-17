@@ -993,7 +993,7 @@ public class GetCipStatsResponseBody extends TeaModel {
         private java.util.List<LabelStatChart> labelStatChart;
 
         @com.aliyun.core.annotation.NameInMap("TotalStat")
-        private java.util.Map<String, ?> totalStat;
+        private java.util.Map<String, java.util.Map<String, ?>> totalStat;
 
         @com.aliyun.core.annotation.NameInMap("Uids")
         private java.util.List<String> uids;
@@ -1034,7 +1034,7 @@ public class GetCipStatsResponseBody extends TeaModel {
         /**
          * @return totalStat
          */
-        public java.util.Map<String, ?> getTotalStat() {
+        public java.util.Map<String, java.util.Map<String, ?>> getTotalStat() {
             return this.totalStat;
         }
 
@@ -1068,7 +1068,7 @@ public class GetCipStatsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LabelStatChart> labelStatChart; 
-            private java.util.Map<String, ?> totalStat; 
+            private java.util.Map<String, java.util.Map<String, ?>> totalStat; 
             private java.util.List<String> uids; 
             private java.util.List<String> x; 
             private java.util.List<DataY> y; 
@@ -1097,7 +1097,7 @@ public class GetCipStatsResponseBody extends TeaModel {
             /**
              * TotalStat.
              */
-            public Builder totalStat(java.util.Map<String, ?> totalStat) {
+            public Builder totalStat(java.util.Map<String, java.util.Map<String, ?>> totalStat) {
                 this.totalStat = totalStat;
                 return this;
             }
