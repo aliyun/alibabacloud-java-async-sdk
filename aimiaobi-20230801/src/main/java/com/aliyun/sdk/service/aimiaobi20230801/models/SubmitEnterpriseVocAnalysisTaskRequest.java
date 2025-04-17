@@ -22,6 +22,10 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiKey")
+    private String apiKey;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ContentTags")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<ContentTags> contentTags;
@@ -67,6 +71,7 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
     private SubmitEnterpriseVocAnalysisTaskRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.apiKey = builder.apiKey;
         this.contentTags = builder.contentTags;
         this.contents = builder.contents;
         this.fileKey = builder.fileKey;
@@ -97,6 +102,13 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return apiKey
+     */
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     /**
@@ -171,6 +183,7 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubmitEnterpriseVocAnalysisTaskRequest, Builder> {
         private String regionId; 
+        private String apiKey; 
         private java.util.List<ContentTags> contentTags; 
         private java.util.List<Contents> contents; 
         private String fileKey; 
@@ -189,6 +202,7 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
         private Builder(SubmitEnterpriseVocAnalysisTaskRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.apiKey = request.apiKey;
             this.contentTags = request.contentTags;
             this.contents = request.contents;
             this.fileKey = request.fileKey;
@@ -207,6 +221,15 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ApiKey.
+         */
+        public Builder apiKey(String apiKey) {
+            this.putBodyParameter("ApiKey", apiKey);
+            this.apiKey = apiKey;
             return this;
         }
 
