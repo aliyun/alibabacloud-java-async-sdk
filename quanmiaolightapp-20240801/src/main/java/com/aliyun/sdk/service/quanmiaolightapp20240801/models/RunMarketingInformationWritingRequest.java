@@ -26,6 +26,10 @@ public class RunMarketingInformationWritingRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("apiKey")
+    private String apiKey;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("customLimitation")
     private String customLimitation;
 
@@ -57,6 +61,7 @@ public class RunMarketingInformationWritingRequest extends Request {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.regionId = builder.regionId;
+        this.apiKey = builder.apiKey;
         this.customLimitation = builder.customLimitation;
         this.customPrompt = builder.customPrompt;
         this.inputExample = builder.inputExample;
@@ -91,6 +96,13 @@ public class RunMarketingInformationWritingRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return apiKey
+     */
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     /**
@@ -145,6 +157,7 @@ public class RunMarketingInformationWritingRequest extends Request {
     public static final class Builder extends Request.Builder<RunMarketingInformationWritingRequest, Builder> {
         private String workspaceId; 
         private String regionId; 
+        private String apiKey; 
         private String customLimitation; 
         private String customPrompt; 
         private String inputExample; 
@@ -161,6 +174,7 @@ public class RunMarketingInformationWritingRequest extends Request {
             super(request);
             this.workspaceId = request.workspaceId;
             this.regionId = request.regionId;
+            this.apiKey = request.apiKey;
             this.customLimitation = request.customLimitation;
             this.customPrompt = request.customPrompt;
             this.inputExample = request.inputExample;
@@ -185,6 +199,15 @@ public class RunMarketingInformationWritingRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("regionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * apiKey.
+         */
+        public Builder apiKey(String apiKey) {
+            this.putBodyParameter("apiKey", apiKey);
+            this.apiKey = apiKey;
             return this;
         }
 

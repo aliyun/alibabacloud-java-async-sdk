@@ -26,6 +26,10 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
     private String workspaceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("apiKey")
+    private String apiKey;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("contents")
     private java.util.List<Contents> contents;
 
@@ -65,6 +69,7 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.workspaceId = builder.workspaceId;
+        this.apiKey = builder.apiKey;
         this.contents = builder.contents;
         this.extraInfo = builder.extraInfo;
         this.fileKey = builder.fileKey;
@@ -101,6 +106,13 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
      */
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    /**
+     * @return apiKey
+     */
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     /**
@@ -169,6 +181,7 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitEnterpriseVocAnalysisTaskRequest, Builder> {
         private String regionId; 
         private String workspaceId; 
+        private String apiKey; 
         private java.util.List<Contents> contents; 
         private String extraInfo; 
         private String fileKey; 
@@ -187,6 +200,7 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.workspaceId = request.workspaceId;
+            this.apiKey = request.apiKey;
             this.contents = request.contents;
             this.extraInfo = request.extraInfo;
             this.fileKey = request.fileKey;
@@ -213,6 +227,15 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * apiKey.
+         */
+        public Builder apiKey(String apiKey) {
+            this.putBodyParameter("apiKey", apiKey);
+            this.apiKey = apiKey;
             return this;
         }
 

@@ -116,6 +116,9 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
      * <p>RunMarketingInformationWritingResponseBody</p>
      */
     public static class RunMarketingInformationWritingResponseBodyHeader extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("errorMessage")
+        private String errorMessage;
+
         @com.aliyun.core.annotation.NameInMap("event")
         private String event;
 
@@ -135,6 +138,7 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
         private String traceId;
 
         private RunMarketingInformationWritingResponseBodyHeader(Builder builder) {
+            this.errorMessage = builder.errorMessage;
             this.event = builder.event;
             this.eventInfo = builder.eventInfo;
             this.requestId = builder.requestId;
@@ -149,6 +153,13 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
 
         public static RunMarketingInformationWritingResponseBodyHeader create() {
             return builder().build();
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         /**
@@ -194,6 +205,7 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String errorMessage; 
             private String event; 
             private String eventInfo; 
             private String requestId; 
@@ -205,6 +217,7 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
             } 
 
             private Builder(RunMarketingInformationWritingResponseBodyHeader model) {
+                this.errorMessage = model.errorMessage;
                 this.event = model.event;
                 this.eventInfo = model.eventInfo;
                 this.requestId = model.requestId;
@@ -212,6 +225,14 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
                 this.taskId = model.taskId;
                 this.traceId = model.traceId;
             } 
+
+            /**
+             * errorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
 
             /**
              * event.

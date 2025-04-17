@@ -27,6 +27,14 @@ public class RunEnterpriseVocAnalysisRequest extends Request {
     private String workspaceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("akProxy")
+    private String akProxy;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("apiKey")
+    private String apiKey;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("content")
     private String content;
 
@@ -58,6 +66,8 @@ public class RunEnterpriseVocAnalysisRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.workspaceId = builder.workspaceId;
+        this.akProxy = builder.akProxy;
+        this.apiKey = builder.apiKey;
         this.content = builder.content;
         this.extraInfo = builder.extraInfo;
         this.filterTags = builder.filterTags;
@@ -92,6 +102,20 @@ public class RunEnterpriseVocAnalysisRequest extends Request {
      */
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    /**
+     * @return akProxy
+     */
+    public String getAkProxy() {
+        return this.akProxy;
+    }
+
+    /**
+     * @return apiKey
+     */
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     /**
@@ -146,6 +170,8 @@ public class RunEnterpriseVocAnalysisRequest extends Request {
     public static final class Builder extends Request.Builder<RunEnterpriseVocAnalysisRequest, Builder> {
         private String regionId; 
         private String workspaceId; 
+        private String akProxy; 
+        private String apiKey; 
         private String content; 
         private String extraInfo; 
         private java.util.List<FilterTags> filterTags; 
@@ -162,6 +188,8 @@ public class RunEnterpriseVocAnalysisRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.workspaceId = request.workspaceId;
+            this.akProxy = request.akProxy;
+            this.apiKey = request.apiKey;
             this.content = request.content;
             this.extraInfo = request.extraInfo;
             this.filterTags = request.filterTags;
@@ -189,6 +217,24 @@ public class RunEnterpriseVocAnalysisRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * akProxy.
+         */
+        public Builder akProxy(String akProxy) {
+            this.putBodyParameter("akProxy", akProxy);
+            this.akProxy = akProxy;
+            return this;
+        }
+
+        /**
+         * apiKey.
+         */
+        public Builder apiKey(String apiKey) {
+            this.putBodyParameter("apiKey", apiKey);
+            this.apiKey = apiKey;
             return this;
         }
 
