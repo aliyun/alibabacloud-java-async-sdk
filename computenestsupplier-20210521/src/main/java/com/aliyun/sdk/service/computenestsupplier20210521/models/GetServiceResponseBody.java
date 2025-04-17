@@ -146,6 +146,9 @@ public class GetServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SupplierUrl")
     private String supplierUrl;
 
+    @com.aliyun.core.annotation.NameInMap("SupportContacts")
+    private java.util.List<SupportContacts> supportContacts;
+
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
@@ -223,6 +226,7 @@ public class GetServiceResponseBody extends TeaModel {
         this.statusDetail = builder.statusDetail;
         this.supplierName = builder.supplierName;
         this.supplierUrl = builder.supplierUrl;
+        this.supportContacts = builder.supportContacts;
         this.tags = builder.tags;
         this.tenantType = builder.tenantType;
         this.testStatus = builder.testStatus;
@@ -550,6 +554,13 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     /**
+     * @return supportContacts
+     */
+    public java.util.List<SupportContacts> getSupportContacts() {
+        return this.supportContacts;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List<Tags> getTags() {
@@ -670,6 +681,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String statusDetail; 
         private String supplierName; 
         private String supplierUrl; 
+        private java.util.List<SupportContacts> supportContacts; 
         private java.util.List<Tags> tags; 
         private String tenantType; 
         private String testStatus; 
@@ -729,6 +741,7 @@ public class GetServiceResponseBody extends TeaModel {
             this.statusDetail = model.statusDetail;
             this.supplierName = model.supplierName;
             this.supplierUrl = model.supplierUrl;
+            this.supportContacts = model.supportContacts;
             this.tags = model.tags;
             this.tenantType = model.tenantType;
             this.testStatus = model.testStatus;
@@ -1269,6 +1282,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder supplierUrl(String supplierUrl) {
             this.supplierUrl = supplierUrl;
+            return this;
+        }
+
+        /**
+         * SupportContacts.
+         */
+        public Builder supportContacts(java.util.List<SupportContacts> supportContacts) {
+            this.supportContacts = supportContacts;
             return this;
         }
 
@@ -3473,6 +3494,88 @@ public class GetServiceResponseBody extends TeaModel {
 
             public Statistic build() {
                 return new Statistic(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceResponseBody</p>
+     */
+    public static class SupportContacts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SupportContacts(Builder builder) {
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportContacts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String type; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportContacts model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The service type. Valid values:</p>
+             * <ul>
+             * <li>marketplace: Alibaba Cloud Marketplace.</li>
+             * <li>Css: Lingxiao.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Marketplace</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SupportContacts build() {
+                return new SupportContacts(this);
             } 
 
         } 

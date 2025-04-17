@@ -46,6 +46,10 @@ public class UpdateSupplierInformationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SupplierUrl")
     private String supplierUrl;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportContacts")
+    private java.util.List<SupportContacts> supportContacts;
+
     private UpdateSupplierInformationRequest(Builder builder) {
         super(builder);
         this.deliverySettings = builder.deliverySettings;
@@ -55,6 +59,7 @@ public class UpdateSupplierInformationRequest extends Request {
         this.supplierDesc = builder.supplierDesc;
         this.supplierLogo = builder.supplierLogo;
         this.supplierUrl = builder.supplierUrl;
+        this.supportContacts = builder.supportContacts;
     }
 
     public static Builder builder() {
@@ -119,6 +124,13 @@ public class UpdateSupplierInformationRequest extends Request {
         return this.supplierUrl;
     }
 
+    /**
+     * @return supportContacts
+     */
+    public java.util.List<SupportContacts> getSupportContacts() {
+        return this.supportContacts;
+    }
+
     public static final class Builder extends Request.Builder<UpdateSupplierInformationRequest, Builder> {
         private DeliverySettings deliverySettings; 
         private String operationIp; 
@@ -127,6 +139,7 @@ public class UpdateSupplierInformationRequest extends Request {
         private String supplierDesc; 
         private String supplierLogo; 
         private String supplierUrl; 
+        private java.util.List<SupportContacts> supportContacts; 
 
         private Builder() {
             super();
@@ -141,6 +154,7 @@ public class UpdateSupplierInformationRequest extends Request {
             this.supplierDesc = request.supplierDesc;
             this.supplierLogo = request.supplierLogo;
             this.supplierUrl = request.supplierUrl;
+            this.supportContacts = request.supportContacts;
         } 
 
         /**
@@ -222,6 +236,15 @@ public class UpdateSupplierInformationRequest extends Request {
         public Builder supplierUrl(String supplierUrl) {
             this.putQueryParameter("SupplierUrl", supplierUrl);
             this.supplierUrl = supplierUrl;
+            return this;
+        }
+
+        /**
+         * SupportContacts.
+         */
+        public Builder supportContacts(java.util.List<SupportContacts> supportContacts) {
+            this.putQueryParameter("SupportContacts", supportContacts);
+            this.supportContacts = supportContacts;
             return this;
         }
 
@@ -360,6 +383,81 @@ public class UpdateSupplierInformationRequest extends Request {
 
             public DeliverySettings build() {
                 return new DeliverySettings(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateSupplierInformationRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateSupplierInformationRequest</p>
+     */
+    public static class SupportContacts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SupportContacts(Builder builder) {
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportContacts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String type; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportContacts model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SupportContacts build() {
+                return new SupportContacts(this);
             } 
 
         } 
