@@ -267,6 +267,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetRayDashboard  GetRayDashboardRequest
+     * @return GetRayDashboardResponse
+     */
+    @Override
+    public CompletableFuture<GetRayDashboardResponse> getRayDashboard(GetRayDashboardRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRayDashboard").setMethod(HttpMethod.GET).setPathRegex("/api/v1/jobs/{jobId}/rayDashboard").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRayDashboardResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRayDashboardResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTensorboard  GetTensorboardRequest
      * @return GetTensorboardResponse
      */

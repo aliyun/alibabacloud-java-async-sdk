@@ -474,7 +474,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The job type. You can query any job type. The default value null indicates any job type. Valid values:</p>
+         * <p>The job type. The default value null indicates any type. Valid values:</p>
          * <ul>
          * <li>TFJob</li>
          * <li>PyTorchJob</li>
@@ -539,7 +539,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of jobs per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -608,7 +608,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The sorting field in the returned job list. Valid values:</p>
+         * <p>The sorting field. Valid values:</p>
          * <ul>
          * <li>DisplayName</li>
          * <li>JobType</li>

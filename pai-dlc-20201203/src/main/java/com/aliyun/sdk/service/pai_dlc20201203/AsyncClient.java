@@ -83,6 +83,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPodLogsResponse> getPodLogs(GetPodLogsRequest request);
 
     /**
+     * @param request the request parameters of GetRayDashboard  GetRayDashboardRequest
+     * @return GetRayDashboardResponse
+     */
+    CompletableFuture<GetRayDashboardResponse> getRayDashboard(GetRayDashboardRequest request);
+
+    /**
      * @param request the request parameters of GetTensorboard  GetTensorboardRequest
      * @return GetTensorboardResponse
      */

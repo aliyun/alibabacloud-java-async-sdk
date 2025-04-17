@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-pai_dlc20201203</artifactId>
-  <version>1.2.19</version>
+  <version>1.2.20</version>
   <packaging>jar</packaging>
   <name>alibabacloud-pai_dlc20201203</name>
   <description>Alibaba Cloud pai-dlc (20201203) Async SDK for Java
