@@ -23,6 +23,10 @@ public class LlmSmartCallRequest extends Request {
     private String applicationCode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizParam")
+    private java.util.Map<String, ?> bizParam;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CalledNumber")
     @com.aliyun.core.annotation.Validation(required = true)
     private String calledNumber;
@@ -47,6 +51,7 @@ public class LlmSmartCallRequest extends Request {
     private LlmSmartCallRequest(Builder builder) {
         super(builder);
         this.applicationCode = builder.applicationCode;
+        this.bizParam = builder.bizParam;
         this.calledNumber = builder.calledNumber;
         this.callerNumber = builder.callerNumber;
         this.outId = builder.outId;
@@ -72,6 +77,13 @@ public class LlmSmartCallRequest extends Request {
      */
     public String getApplicationCode() {
         return this.applicationCode;
+    }
+
+    /**
+     * @return bizParam
+     */
+    public java.util.Map<String, ?> getBizParam() {
+        return this.bizParam;
     }
 
     /**
@@ -111,6 +123,7 @@ public class LlmSmartCallRequest extends Request {
 
     public static final class Builder extends Request.Builder<LlmSmartCallRequest, Builder> {
         private String applicationCode; 
+        private java.util.Map<String, ?> bizParam; 
         private String calledNumber; 
         private String callerNumber; 
         private String outId; 
@@ -124,6 +137,7 @@ public class LlmSmartCallRequest extends Request {
         private Builder(LlmSmartCallRequest request) {
             super(request);
             this.applicationCode = request.applicationCode;
+            this.bizParam = request.bizParam;
             this.calledNumber = request.calledNumber;
             this.callerNumber = request.callerNumber;
             this.outId = request.outId;
@@ -140,6 +154,16 @@ public class LlmSmartCallRequest extends Request {
         public Builder applicationCode(String applicationCode) {
             this.putQueryParameter("ApplicationCode", applicationCode);
             this.applicationCode = applicationCode;
+            return this;
+        }
+
+        /**
+         * BizParam.
+         */
+        public Builder bizParam(java.util.Map<String, ?> bizParam) {
+            String bizParamShrink = shrink(bizParam, "BizParam", "json");
+            this.putQueryParameter("BizParam", bizParamShrink);
+            this.bizParam = bizParam;
             return this;
         }
 
