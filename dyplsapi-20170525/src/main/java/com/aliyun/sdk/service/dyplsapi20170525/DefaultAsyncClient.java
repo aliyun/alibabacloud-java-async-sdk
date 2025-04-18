@@ -320,6 +320,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateFixedNoAReport  CreateFixedNoAReportRequest
+     * @return CreateFixedNoAReportResponse
+     */
+    @Override
+    public CompletableFuture<CreateFixedNoAReportResponse> createFixedNoAReport(CreateFixedNoAReportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateFixedNoAReport").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateFixedNoAReportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateFixedNoAReportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreatePhoneNoAReport  CreatePhoneNoAReportRequest
      * @return CreatePhoneNoAReportResponse
      */

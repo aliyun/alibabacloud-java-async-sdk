@@ -144,6 +144,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAxgGroupResponse> createAxgGroup(CreateAxgGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateFixedNoAReport  CreateFixedNoAReportRequest
+     * @return CreateFixedNoAReportResponse
+     */
+    CompletableFuture<CreateFixedNoAReportResponse> createFixedNoAReport(CreateFixedNoAReportRequest request);
+
+    /**
      * @param request the request parameters of CreatePhoneNoAReport  CreatePhoneNoAReportRequest
      * @return CreatePhoneNoAReportResponse
      */
