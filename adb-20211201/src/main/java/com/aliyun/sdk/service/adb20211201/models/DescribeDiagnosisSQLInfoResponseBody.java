@@ -119,6 +119,9 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
      * <p>DescribeDiagnosisSQLInfoResponseBody</p>
      */
     public static class StageInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExecutionType")
+        private String executionType;
+
         @com.aliyun.core.annotation.NameInMap("InputDataSize")
         private Long inputDataSize;
 
@@ -147,6 +150,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         private String state;
 
         private StageInfos(Builder builder) {
+            this.executionType = builder.executionType;
             this.inputDataSize = builder.inputDataSize;
             this.inputRows = builder.inputRows;
             this.operatorCost = builder.operatorCost;
@@ -164,6 +168,13 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
 
         public static StageInfos create() {
             return builder().build();
+        }
+
+        /**
+         * @return executionType
+         */
+        public String getExecutionType() {
+            return this.executionType;
         }
 
         /**
@@ -230,6 +241,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String executionType; 
             private Long inputDataSize; 
             private Long inputRows; 
             private Long operatorCost; 
@@ -244,6 +256,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             } 
 
             private Builder(StageInfos model) {
+                this.executionType = model.executionType;
                 this.inputDataSize = model.inputDataSize;
                 this.inputRows = model.inputRows;
                 this.operatorCost = model.operatorCost;
@@ -254,6 +267,14 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
                 this.stageId = model.stageId;
                 this.state = model.state;
             } 
+
+            /**
+             * ExecutionType.
+             */
+            public Builder executionType(String executionType) {
+                this.executionType = executionType;
+                return this;
+            }
 
             /**
              * <p>The total amount of input data in the stage. Unit: bytes.</p>
