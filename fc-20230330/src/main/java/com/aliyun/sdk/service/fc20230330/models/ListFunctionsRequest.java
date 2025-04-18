@@ -26,6 +26,10 @@ public class ListFunctionsRequest extends Request {
     private String fcVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("functionName")
+    private String functionName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("gpuType")
     private String gpuType;
 
@@ -53,6 +57,7 @@ public class ListFunctionsRequest extends Request {
         super(builder);
         this.description = builder.description;
         this.fcVersion = builder.fcVersion;
+        this.functionName = builder.functionName;
         this.gpuType = builder.gpuType;
         this.limit = builder.limit;
         this.nextToken = builder.nextToken;
@@ -86,6 +91,13 @@ public class ListFunctionsRequest extends Request {
      */
     public String getFcVersion() {
         return this.fcVersion;
+    }
+
+    /**
+     * @return functionName
+     */
+    public String getFunctionName() {
+        return this.functionName;
     }
 
     /**
@@ -133,6 +145,7 @@ public class ListFunctionsRequest extends Request {
     public static final class Builder extends Request.Builder<ListFunctionsRequest, Builder> {
         private String description; 
         private String fcVersion; 
+        private String functionName; 
         private String gpuType; 
         private Integer limit; 
         private String nextToken; 
@@ -148,6 +161,7 @@ public class ListFunctionsRequest extends Request {
             super(request);
             this.description = request.description;
             this.fcVersion = request.fcVersion;
+            this.functionName = request.functionName;
             this.gpuType = request.gpuType;
             this.limit = request.limit;
             this.nextToken = request.nextToken;
@@ -182,6 +196,15 @@ public class ListFunctionsRequest extends Request {
         public Builder fcVersion(String fcVersion) {
             this.putQueryParameter("fcVersion", fcVersion);
             this.fcVersion = fcVersion;
+            return this;
+        }
+
+        /**
+         * functionName.
+         */
+        public Builder functionName(String functionName) {
+            this.putQueryParameter("functionName", functionName);
+            this.functionName = functionName;
             return this;
         }
 
