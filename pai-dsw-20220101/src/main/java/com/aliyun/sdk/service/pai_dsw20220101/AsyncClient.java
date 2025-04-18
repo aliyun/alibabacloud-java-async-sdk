@@ -110,6 +110,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceSnapshotResponse> getInstanceSnapshot(GetInstanceSnapshotRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Obtains the lifecycle transition information for an instance, including details on the status an instance transitions to at a specific point in time.</p>
+     * 
      * @param request the request parameters of GetLifecycle  GetLifecycleRequest
      * @return GetLifecycleResponse
      */

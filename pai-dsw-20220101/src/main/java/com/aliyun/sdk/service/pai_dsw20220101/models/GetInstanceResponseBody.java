@@ -44,6 +44,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Driver")
     private String driver;
 
+    @com.aliyun.core.annotation.NameInMap("DynamicMount")
+    private DynamicMount dynamicMount;
+
     @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
 
@@ -174,6 +177,7 @@ public class GetInstanceResponseBody extends TeaModel {
         this.credentialConfig = builder.credentialConfig;
         this.datasets = builder.datasets;
         this.driver = builder.driver;
+        this.dynamicMount = builder.dynamicMount;
         this.ecsSpec = builder.ecsSpec;
         this.environmentVariables = builder.environmentVariables;
         this.gmtCreateTime = builder.gmtCreateTime;
@@ -222,6 +226,10 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static GetInstanceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -285,6 +293,13 @@ public class GetInstanceResponseBody extends TeaModel {
      */
     public String getDriver() {
         return this.driver;
+    }
+
+    /**
+     * @return dynamicMount
+     */
+    public DynamicMount getDynamicMount() {
+        return this.dynamicMount;
     }
 
     /**
@@ -577,6 +592,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private CredentialConfig credentialConfig; 
         private java.util.List<Datasets> datasets; 
         private String driver; 
+        private DynamicMount dynamicMount; 
         private String ecsSpec; 
         private java.util.Map<String, String> environmentVariables; 
         private String gmtCreateTime; 
@@ -618,8 +634,72 @@ public class GetInstanceResponseBody extends TeaModel {
         private String workspaceName; 
         private String workspaceSource; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceResponseBody model) {
+            this.acceleratorType = model.acceleratorType;
+            this.accessibility = model.accessibility;
+            this.accumulatedRunningTimeInMs = model.accumulatedRunningTimeInMs;
+            this.affinity = model.affinity;
+            this.cloudDisks = model.cloudDisks;
+            this.code = model.code;
+            this.credentialConfig = model.credentialConfig;
+            this.datasets = model.datasets;
+            this.driver = model.driver;
+            this.dynamicMount = model.dynamicMount;
+            this.ecsSpec = model.ecsSpec;
+            this.environmentVariables = model.environmentVariables;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.httpStatusCode = model.httpStatusCode;
+            this.idleInstanceCuller = model.idleInstanceCuller;
+            this.imageAuth = model.imageAuth;
+            this.imageId = model.imageId;
+            this.imageName = model.imageName;
+            this.imageUrl = model.imageUrl;
+            this.instanceId = model.instanceId;
+            this.instanceName = model.instanceName;
+            this.instanceShutdownTimer = model.instanceShutdownTimer;
+            this.instanceSnapshotList = model.instanceSnapshotList;
+            this.instanceUrl = model.instanceUrl;
+            this.jupyterlabUrl = model.jupyterlabUrl;
+            this.labels = model.labels;
+            this.latestSnapshot = model.latestSnapshot;
+            this.message = model.message;
+            this.nodeErrorRecovery = model.nodeErrorRecovery;
+            this.paymentType = model.paymentType;
+            this.priority = model.priority;
+            this.proxyPath = model.proxyPath;
+            this.reasonCode = model.reasonCode;
+            this.reasonMessage = model.reasonMessage;
+            this.requestId = model.requestId;
+            this.requestedResource = model.requestedResource;
+            this.resourceId = model.resourceId;
+            this.resourceName = model.resourceName;
+            this.status = model.status;
+            this.success = model.success;
+            this.tags = model.tags;
+            this.terminalUrl = model.terminalUrl;
+            this.userId = model.userId;
+            this.userName = model.userName;
+            this.userVpc = model.userVpc;
+            this.webIDEUrl = model.webIDEUrl;
+            this.workspaceId = model.workspaceId;
+            this.workspaceName = model.workspaceName;
+            this.workspaceSource = model.workspaceSource;
+        } 
+
         /**
-         * AcceleratorType.
+         * <p>The accelerator type of the instance.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CPU</li>
+         * <li>GPU</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU</p>
          */
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = acceleratorType;
@@ -627,7 +707,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Accessibility.
+         * <p>The accessibility. Valid values:</p>
+         * <ul>
+         * <li>PRIVATE: Accessible only to you and the administrator of the workspace.</li>
+         * <li>PUBLIC: Accessible to all members in the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -635,7 +722,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AccumulatedRunningTimeInMs.
+         * <p>The accumulated running duration. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600000</p>
          */
         public Builder accumulatedRunningTimeInMs(Long accumulatedRunningTimeInMs) {
             this.accumulatedRunningTimeInMs = accumulatedRunningTimeInMs;
@@ -643,7 +733,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Affinity.
+         * <p>The affinity configuration.</p>
          */
         public Builder affinity(Affinity affinity) {
             this.affinity = affinity;
@@ -651,7 +741,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CloudDisks.
+         * <p>The cloud disks of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder cloudDisks(java.util.List<CloudDisks> cloudDisks) {
             this.cloudDisks = cloudDisks;
@@ -659,7 +752,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code. Valid values:</p>
+         * <ul>
+         * <li>InternalError: All errors, except for parameter validation errors, are internal errors.</li>
+         * <li>ValidationError: A parameter validation error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -667,7 +767,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CredentialConfig.
+         * <p>The credential injection configuration.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             this.credentialConfig = credentialConfig;
@@ -675,7 +775,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Datasets.
+         * <p>The datasets.</p>
          */
         public Builder datasets(java.util.List<Datasets> datasets) {
             this.datasets = datasets;
@@ -683,7 +783,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Driver.
+         * <p>The NVIDIA driver configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>535.54.03</p>
          */
         public Builder driver(String driver) {
             this.driver = driver;
@@ -691,7 +794,18 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EcsSpec.
+         * <p>The dynamic mount configuration.</p>
+         */
+        public Builder dynamicMount(DynamicMount dynamicMount) {
+            this.dynamicMount = dynamicMount;
+            return this;
+        }
+
+        /**
+         * <p>The ECS instance type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
          */
         public Builder ecsSpec(String ecsSpec) {
             this.ecsSpec = ecsSpec;
@@ -699,7 +813,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EnvironmentVariables.
+         * <p>The environment variables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{userName: &quot;Chris&quot;}</p>
          */
         public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             this.environmentVariables = environmentVariables;
@@ -707,7 +824,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -715,7 +835,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The last modified time of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -723,7 +846,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li>400</li>
+         * <li>404</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -731,7 +861,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * IdleInstanceCuller.
+         * <p>The automatic shutdown settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;InstanceId&quot;:&quot;dsw-05cefd0be2e5a278&quot;,&quot;CpuPercentThreshold&quot;:20,&quot;GpuPercentThreshold&quot;:10,&quot;MaxIdleTimeInMinutes&quot;:120,&quot;IdleTimeInMinutes&quot;:30}</p>
          */
         public Builder idleInstanceCuller(IdleInstanceCuller idleInstanceCuller) {
             this.idleInstanceCuller = idleInstanceCuller;
@@ -739,7 +872,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ImageAuth.
+         * <p>The Base64-encoded account and password for the user‘s private image. The password will be hidden.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YWxpeXVuNjUzMzM5MjIwMzoqKioqKio=</p>
          */
         public Builder imageAuth(String imageAuth) {
             this.imageAuth = imageAuth;
@@ -747,7 +883,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ImageId.
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image-05cefd0be2exxxx</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -755,7 +894,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ImageName.
+         * <p>The image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>py36_cpu_tf1.12_ubuntu</p>
          */
         public Builder imageName(String imageName) {
             this.imageName = imageName;
@@ -763,7 +905,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ImageUrl.
+         * <p>The image address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
          */
         public Builder imageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
@@ -771,7 +916,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -779,7 +927,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>training_data</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -787,7 +938,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceShutdownTimer.
+         * <p>The scheduled stop tasks.</p>
          */
         public Builder instanceShutdownTimer(InstanceShutdownTimer instanceShutdownTimer) {
             this.instanceShutdownTimer = instanceShutdownTimer;
@@ -795,7 +946,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceSnapshotList.
+         * <p>The instance snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder instanceSnapshotList(java.util.List<InstanceSnapshotList> instanceSnapshotList) {
             this.instanceSnapshotList = instanceSnapshotList;
@@ -803,7 +957,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceUrl.
+         * <p>The instance URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dsw-cn-shanghai.data.aliyun.com/notebook.htm?instance=39772#/">https://dsw-cn-shanghai.data.aliyun.com/notebook.htm?instance=39772#/</a></p>
          */
         public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = instanceUrl;
@@ -811,7 +968,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Jupyterlab Url。</p>
+         * <p>The JupyterLab URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/lab/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/lab/</a></p>
@@ -822,7 +979,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The custom tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;foo&quot;: &quot;bar&quot;}</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
@@ -830,7 +990,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * LatestSnapshot.
+         * <p>The latest user image saved.</p>
          */
         public Builder latestSnapshot(LatestSnapshot latestSnapshot) {
             this.latestSnapshot = latestSnapshot;
@@ -838,7 +998,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. Valid values:</p>
+         * <ul>
+         * <li>If the request is successful, null is returned.</li>
+         * <li>If the request fails, the cause for the failure is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;XXX&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -846,7 +1013,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * NodeErrorRecovery.
+         * <p>The error recovery configuration of the node.</p>
          */
         public Builder nodeErrorRecovery(NodeErrorRecovery nodeErrorRecovery) {
             this.nodeErrorRecovery = nodeErrorRecovery;
@@ -854,7 +1021,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PaymentType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>PayAsYouGo</li>
+         * <li>Subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -862,7 +1036,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Priority.
+         * <p>The priority based on which resources are allocated to instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Long priority) {
             this.priority = priority;
@@ -870,7 +1047,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyPath.
+         * <p>The proxy path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-170197/proxy/</p>
          */
         public Builder proxyPath(String proxyPath) {
             this.proxyPath = proxyPath;
@@ -878,7 +1058,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ReasonCode.
+         * <p>The error code of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal Error</p>
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -886,7 +1069,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ReasonMessage.
+         * <p>The cause of the instance error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ImagePullBackOff</p>
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -894,7 +1080,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -902,7 +1091,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestedResource.
+         * <p>The resource configurations in subscription scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;CPU&quot;:&quot;4&quot;,&quot;Memory&quot;:&quot;8Gi&quot;,&quot;SharedMemory&quot;:&quot;4Gi&quot;,&quot;GPU&quot;:&quot;1&quot;,&quot;GPUType&quot;:&quot;Tesla-V100-16G&quot;}</p>
          */
         public Builder requestedResource(RequestedResource requestedResource) {
             this.requestedResource = requestedResource;
@@ -910,7 +1102,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource ID. This parameter is available if the billing method is subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-123456789</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -918,7 +1113,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceName.
+         * <p>The specification type.</p>
+         * <ul>
+         * <li>For subscription, this is the requested CPU and memory size.</li>
+         * <li>For pay-as-you-go, this is the selected ECS instance type.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g7.xlarge</p>
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;
@@ -926,7 +1128,28 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The instance status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Creating</li>
+         * <li>SaveFailed</li>
+         * <li>Stopped</li>
+         * <li>Failed</li>
+         * <li>ResourceAllocating</li>
+         * <li>Stopping</li>
+         * <li>Updating</li>
+         * <li>Saving</li>
+         * <li>Queuing</li>
+         * <li>Recovering</li>
+         * <li>Starting</li>
+         * <li>Running</li>
+         * <li>Saved</li>
+         * <li>Deleting</li>
+         * <li>EnvPreparing</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -934,7 +1157,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -942,7 +1172,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -950,7 +1180,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TerminalUrl.
+         * <p>The terminal URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/tty/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/tty/</a></p>
          */
         public Builder terminalUrl(String terminalUrl) {
             this.terminalUrl = terminalUrl;
@@ -958,7 +1191,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1612285282502324</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -966,7 +1202,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * UserName.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试用户</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;
@@ -974,7 +1213,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * UserVpc.
+         * <p>The virtual private cloud (VPC) configurations.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.userVpc = userVpc;
@@ -982,7 +1221,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Web IDE url。</p>
+         * <p>The Web IDE URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/ide/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/ide/</a></p>
@@ -993,7 +1232,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40823</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -1001,7 +1243,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>training_data</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;
@@ -1009,7 +1254,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceSource.
+         * <p>The storage for the workspace. If you leave this parameter empty, the workspace uses File Storage NAS (NAS) storage, cloud disks, or local disks in sequence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-123456789</p>
          */
         public Builder workspaceSource(String workspaceSource) {
             this.workspaceSource = workspaceSource;
@@ -1054,8 +1302,19 @@ public class GetInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enable; 
 
+            private Builder() {
+            } 
+
+            private Builder(CPU model) {
+                this.enable = model.enable;
+            } 
+
             /**
-             * Enable.
+             * <p>Indicates whether CPU affinity is enabled.</p>
+             * <p>true false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1101,8 +1360,15 @@ public class GetInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private CPU CPU; 
 
+            private Builder() {
+            } 
+
+            private Builder(Affinity model) {
+                this.CPU = model.CPU;
+            } 
+
             /**
-             * CPU.
+             * <p>The CPU affinity configuration. Only subscription instances that use general-purpose computing resources support CPU affinity configuration.</p>
              */
             public Builder CPU(CPU CPU) {
                 this.CPU = CPU;
@@ -1184,8 +1450,21 @@ public class GetInstanceResponseBody extends TeaModel {
             private String path; 
             private String subType; 
 
+            private Builder() {
+            } 
+
+            private Builder(CloudDisks model) {
+                this.capacity = model.capacity;
+                this.mountPath = model.mountPath;
+                this.path = model.path;
+                this.subType = model.subType;
+            } 
+
             /**
-             * Capacity.
+             * <p>Disk Capacity</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30Gi</p>
              */
             public Builder capacity(String capacity) {
                 this.capacity = capacity;
@@ -1193,7 +1472,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MountPath.
+             * <p>The mount path of the cloud disk in the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mmt/workspace</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1201,7 +1483,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The directory on the cloud disk that is mounted to the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/workspace</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1209,7 +1494,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SubType.
+             * <p>The usage mode of the cloud disk. The value rootfs indicates that the cloud disk is used as the root file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rootfs</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -1236,6 +1524,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasetVersion")
         private String datasetVersion;
 
+        @com.aliyun.core.annotation.NameInMap("Dynamic")
+        private Boolean dynamic;
+
         @com.aliyun.core.annotation.NameInMap("MountAccess")
         private String mountAccess;
 
@@ -1254,6 +1545,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private Datasets(Builder builder) {
             this.datasetId = builder.datasetId;
             this.datasetVersion = builder.datasetVersion;
+            this.dynamic = builder.dynamic;
             this.mountAccess = builder.mountAccess;
             this.mountPath = builder.mountPath;
             this.optionType = builder.optionType;
@@ -1281,6 +1573,13 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public String getDatasetVersion() {
             return this.datasetVersion;
+        }
+
+        /**
+         * @return dynamic
+         */
+        public Boolean getDynamic() {
+            return this.dynamic;
         }
 
         /**
@@ -1321,14 +1620,32 @@ public class GetInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String datasetId; 
             private String datasetVersion; 
+            private Boolean dynamic; 
             private String mountAccess; 
             private String mountPath; 
             private String optionType; 
             private String options; 
             private String uri; 
 
+            private Builder() {
+            } 
+
+            private Builder(Datasets model) {
+                this.datasetId = model.datasetId;
+                this.datasetVersion = model.datasetVersion;
+                this.dynamic = model.dynamic;
+                this.mountAccess = model.mountAccess;
+                this.mountPath = model.mountPath;
+                this.optionType = model.optionType;
+                this.options = model.options;
+                this.uri = model.uri;
+            } 
+
             /**
-             * DatasetId.
+             * <p>The dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-vsqjvsjp4orp5l206u</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -1336,7 +1653,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetVersion.
+             * <p>The dataset version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder datasetVersion(String datasetVersion) {
                 this.datasetVersion = datasetVersion;
@@ -1344,7 +1664,21 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MountAccess.
+             * <p>Indicates whether dynamic mounting is enabled. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder dynamic(Boolean dynamic) {
+                this.dynamic = dynamic;
+                return this;
+            }
+
+            /**
+             * <p>The read and write permissions. Valid values: RW and RO.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RW</p>
              */
             public Builder mountAccess(String mountAccess) {
                 this.mountAccess = mountAccess;
@@ -1352,7 +1686,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MountPath.
+             * <p>The mount path in the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt/data</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1360,7 +1697,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OptionType.
+             * <p>The mount type of the dataset (deprecated).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FastReadWrite</p>
              */
             public Builder optionType(String optionType) {
                 this.optionType = optionType;
@@ -1368,7 +1708,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Options.
+             * <p>The mount type of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;fs.oss.download.thread.concurrency&quot;: &quot;10&quot;,
+             *   &quot;fs.oss.upload.thread.concurrency&quot;: &quot;10&quot;,
+             *   &quot;fs.jindo.args&quot;: &quot;-oattr_timeout=3 -oentry_timeout=0 -onegative_timeout=0 -oauto_cache -ono_symlink&quot;
+             * }</p>
              */
             public Builder options(String options) {
                 this.options = options;
@@ -1376,7 +1723,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Uri.
+             * <p>The dataset URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket-name.oss-cn-shanghai-internal.aliyuncs.com/data/path/</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -1470,8 +1820,22 @@ public class GetInstanceResponseBody extends TeaModel {
             private String instanceId; 
             private Integer maxIdleTimeInMinutes; 
 
+            private Builder() {
+            } 
+
+            private Builder(IdleInstanceCuller model) {
+                this.cpuPercentThreshold = model.cpuPercentThreshold;
+                this.gpuPercentThreshold = model.gpuPercentThreshold;
+                this.idleTimeInMinutes = model.idleTimeInMinutes;
+                this.instanceId = model.instanceId;
+                this.maxIdleTimeInMinutes = model.maxIdleTimeInMinutes;
+            } 
+
             /**
-             * CpuPercentThreshold.
+             * <p>The CPU utilization threshold. Unit: percentage. Valid values: 1 to 100. If the CPU utilization of the instance is lower than this threshold, the instance is considered idle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder cpuPercentThreshold(Integer cpuPercentThreshold) {
                 this.cpuPercentThreshold = cpuPercentThreshold;
@@ -1479,7 +1843,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GpuPercentThreshold.
+             * <p>The GPU utilization threshold. Unit: percentage. Valid values: 1 to 100. This parameter takes effect only if the instance is of the GPU instance type. If both CPU and GPU utilization is lower than the thresholds, the instance is considered idle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder gpuPercentThreshold(Integer gpuPercentThreshold) {
                 this.gpuPercentThreshold = gpuPercentThreshold;
@@ -1487,7 +1854,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IdleTimeInMinutes.
+             * <p>The current time duration for which the instance is idle. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder idleTimeInMinutes(Integer idleTimeInMinutes) {
                 this.idleTimeInMinutes = idleTimeInMinutes;
@@ -1495,7 +1865,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dsw-730xxxxxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1503,7 +1876,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxIdleTimeInMinutes.
+             * <p>The maximum time duration for which the instance is idle. Unit: minutes. If the time duration for which the instance is idle exceeds this value, the system automatically stops the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder maxIdleTimeInMinutes(Integer maxIdleTimeInMinutes) {
                 this.maxIdleTimeInMinutes = maxIdleTimeInMinutes;
@@ -1597,8 +1973,22 @@ public class GetInstanceResponseBody extends TeaModel {
             private String instanceId; 
             private Long remainingTimeInMs; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceShutdownTimer model) {
+                this.dueTime = model.dueTime;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.instanceId = model.instanceId;
+                this.remainingTimeInMs = model.remainingTimeInMs;
+            } 
+
             /**
-             * DueTime.
+             * <p>The scheduled stop time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder dueTime(String dueTime) {
                 this.dueTime = dueTime;
@@ -1606,7 +1996,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -1614,7 +2007,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The modified time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -1622,7 +2018,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dsw-730xxxxxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1630,7 +2029,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RemainingTimeInMs.
+             * <p>The remaining time before the instance is stopped. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600000</p>
              */
             public Builder remainingTimeInMs(Long remainingTimeInMs) {
                 this.remainingTimeInMs = remainingTimeInMs;
@@ -1772,8 +2174,23 @@ public class GetInstanceResponseBody extends TeaModel {
             private String repositoryUrl; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceSnapshotList model) {
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageUrl = model.imageUrl;
+                this.reasonCode = model.reasonCode;
+                this.reasonMessage = model.reasonMessage;
+                this.repositoryUrl = model.repositoryUrl;
+                this.status = model.status;
+            } 
+
             /**
-             * <p>快照创建时间</p>
+             * <p>The time when the snapshot was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-12T14:36:01Z</p>
@@ -1784,7 +2201,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>快照修改时间</p>
+             * <p>The time when the snapshot was modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-12T14:36:01Z</p>
@@ -1795,7 +2212,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>镜像Id</p>
+             * <p>The image ID.</p>
              * 
              * <strong>example:</strong>
              * <p>image-05cefd0be2exxxx</p>
@@ -1806,7 +2223,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>镜像名称</p>
+             * <p>The image name.</p>
              * 
              * <strong>example:</strong>
              * <p>py36_cpu_tf1.12_ubuntu</p>
@@ -1817,7 +2234,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>镜像Url</p>
+             * <p>The image URL.</p>
              * 
              * <strong>example:</strong>
              * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
@@ -1828,7 +2245,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例快照错误代码</p>
+             * <p>The error code of the instance snapshot.</p>
              * 
              * <strong>example:</strong>
              * <p>Internal Error</p>
@@ -1839,7 +2256,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例快照错误消息</p>
+             * <p>The error message of the instance snapshot.</p>
              * 
              * <strong>example:</strong>
              * <p>ImagePullBackOff</p>
@@ -1850,7 +2267,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>镜像仓库Url</p>
+             * <p>The image repository URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images">https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images</a></p>
@@ -1861,7 +2278,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例快照状态</p>
+             * <p>The instance snapshot status.</p>
              * 
              * <strong>example:</strong>
              * <p>Pushing</p>
@@ -1922,8 +2339,19 @@ public class GetInstanceResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stsTokenOwner</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1931,7 +2359,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123xxxxxxxx</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2073,8 +2504,23 @@ public class GetInstanceResponseBody extends TeaModel {
             private String repositoryUrl; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(LatestSnapshot model) {
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageUrl = model.imageUrl;
+                this.reasonCode = model.reasonCode;
+                this.reasonMessage = model.reasonMessage;
+                this.repositoryUrl = model.repositoryUrl;
+                this.status = model.status;
+            } 
+
             /**
-             * <p>快照创建时间</p>
+             * <p>The time when the snapshot was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-12T14:36:01Z</p>
@@ -2085,7 +2531,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>快照修改时间</p>
+             * <p>The time when the snapshot was modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-12T14:36:01Z</p>
@@ -2096,7 +2542,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>镜像Id</p>
+             * <p>The image ID.</p>
              * 
              * <strong>example:</strong>
              * <p>image-05cefd0be2exxxx</p>
@@ -2107,7 +2553,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>镜像名称</p>
+             * <p>The image name.</p>
              * 
              * <strong>example:</strong>
              * <p>py36_cpu_tf1.12_ubuntu</p>
@@ -2118,7 +2564,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>镜像Url</p>
+             * <p>The image URL.</p>
              * 
              * <strong>example:</strong>
              * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
@@ -2129,7 +2575,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例快照错误代码</p>
+             * <p>The error code of the instance snapshot.</p>
              * 
              * <strong>example:</strong>
              * <p>Internal Error</p>
@@ -2140,7 +2586,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例快照错误消息</p>
+             * <p>The error message of the instance snapshot.</p>
              * 
              * <strong>example:</strong>
              * <p>ImagePullBackOff</p>
@@ -2151,7 +2597,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>镜像仓库Url</p>
+             * <p>The image repository URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images">https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images</a></p>
@@ -2162,7 +2608,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例快照状态</p>
+             * <p>The instance snapshot status.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Committing</li>
+             * <li>Pushing</li>
+             * <li>Failed</li>
+             * <li>Saved</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Pushing</p>
@@ -2235,8 +2688,20 @@ public class GetInstanceResponseBody extends TeaModel {
             private Boolean enableAutoSwitchOnNodeError; 
             private Boolean hasNodeError; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeErrorRecovery model) {
+                this.autoSwitchCountdownSeconds = model.autoSwitchCountdownSeconds;
+                this.enableAutoSwitchOnNodeError = model.enableAutoSwitchOnNodeError;
+                this.hasNodeError = model.hasNodeError;
+            } 
+
             /**
-             * autoSwitchCountdownSeconds.
+             * <p>The number of seconds to wait before automatic switchover.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder autoSwitchCountdownSeconds(Long autoSwitchCountdownSeconds) {
                 this.autoSwitchCountdownSeconds = autoSwitchCountdownSeconds;
@@ -2244,7 +2709,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * enableAutoSwitchOnNodeError.
+             * <p>Indicates whether to enable automatic switchover when a node error occurs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableAutoSwitchOnNodeError(Boolean enableAutoSwitchOnNodeError) {
                 this.enableAutoSwitchOnNodeError = enableAutoSwitchOnNodeError;
@@ -2252,7 +2720,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * hasNodeError.
+             * <p>Indicates whether the node has an error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasNodeError(Boolean hasNodeError) {
                 this.hasNodeError = hasNodeError;
@@ -2346,8 +2817,22 @@ public class GetInstanceResponseBody extends TeaModel {
             private String memory; 
             private String sharedMemory; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestedResource model) {
+                this.CPU = model.CPU;
+                this.GPU = model.GPU;
+                this.GPUType = model.GPUType;
+                this.memory = model.memory;
+                this.sharedMemory = model.sharedMemory;
+            } 
+
             /**
-             * CPU.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder CPU(String CPU) {
                 this.CPU = CPU;
@@ -2355,7 +2840,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GPU.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder GPU(String GPU) {
                 this.GPU = GPU;
@@ -2363,7 +2851,17 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GPUType.
+             * <p>The GPU type. Valid values:</p>
+             * <ul>
+             * <li>V100</li>
+             * <li>A100</li>
+             * <li>T4</li>
+             * <li>A10</li>
+             * <li>P100</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>v100</p>
              */
             public Builder GPUType(String GPUType) {
                 this.GPUType = GPUType;
@@ -2371,7 +2869,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -2379,7 +2880,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SharedMemory.
+             * <p>The shared memory size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder sharedMemory(String sharedMemory) {
                 this.sharedMemory = sharedMemory;
@@ -2437,8 +2941,19 @@ public class GetInstanceResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -2446,7 +2961,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -2467,6 +2985,9 @@ public class GetInstanceResponseBody extends TeaModel {
      * <p>GetInstanceResponseBody</p>
      */
     public static class UserVpc extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BandwidthLimit")
+        private BandwidthLimit bandwidthLimit;
+
         @com.aliyun.core.annotation.NameInMap("DefaultRoute")
         private String defaultRoute;
 
@@ -2486,6 +3007,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String vpcId;
 
         private UserVpc(Builder builder) {
+            this.bandwidthLimit = builder.bandwidthLimit;
             this.defaultRoute = builder.defaultRoute;
             this.extendedCIDRs = builder.extendedCIDRs;
             this.forwardInfos = builder.forwardInfos;
@@ -2500,6 +3022,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static UserVpc create() {
             return builder().build();
+        }
+
+        /**
+         * @return bandwidthLimit
+         */
+        public BandwidthLimit getBandwidthLimit() {
+            return this.bandwidthLimit;
         }
 
         /**
@@ -2545,6 +3074,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private BandwidthLimit bandwidthLimit; 
             private String defaultRoute; 
             private java.util.List<String> extendedCIDRs; 
             private java.util.List<ForwardInfoResponse> forwardInfos; 
@@ -2552,8 +3082,32 @@ public class GetInstanceResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserVpc model) {
+                this.bandwidthLimit = model.bandwidthLimit;
+                this.defaultRoute = model.defaultRoute;
+                this.extendedCIDRs = model.extendedCIDRs;
+                this.forwardInfos = model.forwardInfos;
+                this.securityGroupId = model.securityGroupId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * DefaultRoute.
+             * BandwidthLimit.
+             */
+            public Builder bandwidthLimit(BandwidthLimit bandwidthLimit) {
+                this.bandwidthLimit = bandwidthLimit;
+                return this;
+            }
+
+            /**
+             * <p>Default Route</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eth0 | eth1</p>
              */
             public Builder defaultRoute(String defaultRoute) {
                 this.defaultRoute = defaultRoute;
@@ -2561,7 +3115,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendedCIDRs.
+             * <p>The extended CIDR block.</p>
+             * <ul>
+             * <li>If you leave VSwitchId empty, this parameter is not required and the system automatically obtains all CIDR blocks in the VPC.</li>
+             * <li>If VSwitchId is not empty, this parameter is required. Specify all CIDR blocks in the VPC.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;192.168.0.1/24&quot;, &quot;192.168.1.1/24&quot;]</p>
              */
             public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
@@ -2569,7 +3130,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ForwardInfos.
+             * <p>The forward information.</p>
              */
             public Builder forwardInfos(java.util.List<ForwardInfoResponse> forwardInfos) {
                 this.forwardInfos = forwardInfos;
@@ -2577,7 +3138,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxxxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -2585,7 +3149,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxxxx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -2593,7 +3160,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Vpc Id。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-xxxxx</p>

@@ -55,7 +55,7 @@ public class GetInstanceEventsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,6 +116,7 @@ public class GetInstanceEventsRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class GetInstanceEventsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T15:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -137,7 +141,10 @@ public class GetInstanceEventsRequest extends Request {
         }
 
         /**
-         * MaxEventsNum.
+         * <p>The maximum number of events. Default value: 2000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder maxEventsNum(Integer maxEventsNum) {
             this.putQueryParameter("MaxEventsNum", maxEventsNum);
@@ -146,7 +153,10 @@ public class GetInstanceEventsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T15:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -155,7 +165,7 @@ public class GetInstanceEventsRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>The token used to share the URL.</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

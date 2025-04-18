@@ -56,7 +56,7 @@ public class GetInstanceMetricsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -117,6 +117,7 @@ public class GetInstanceMetricsRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/470439.html">ListInstances</a> to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,10 @@ public class GetInstanceMetricsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T15:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -138,6 +142,17 @@ public class GetInstanceMetricsRequest extends Request {
         }
 
         /**
+         * <p>The metric type. Valid values:</p>
+         * <ul>
+         * <li>GpuCoreUsage: the GPU utilization.</li>
+         * <li>GpuMemoryUsage: the GPU memory utilization.</li>
+         * <li>CpuCoreUsage: the CPU utilization.</li>
+         * <li>MemoryUsage: the memory utilization.</li>
+         * <li>NetworkInputRate: the network ingress rate.</li>
+         * <li>NetworkOutputRate: the network egress rate.</li>
+         * <li>DiskReadRate: the disk read rate.</li>
+         * <li>DiskWriteRate: the disk write rate.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +165,10 @@ public class GetInstanceMetricsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T15:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -159,7 +177,10 @@ public class GetInstanceMetricsRequest extends Request {
         }
 
         /**
-         * TimeStep.
+         * <p>The interval at which metrics are returned. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15m</p>
          */
         public Builder timeStep(String timeStep) {
             this.putQueryParameter("TimeStep", timeStep);

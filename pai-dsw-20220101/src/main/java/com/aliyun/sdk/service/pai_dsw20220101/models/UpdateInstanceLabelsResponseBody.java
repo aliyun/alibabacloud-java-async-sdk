@@ -32,6 +32,10 @@ public class UpdateInstanceLabelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,18 @@ public class UpdateInstanceLabelsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateInstanceLabelsResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

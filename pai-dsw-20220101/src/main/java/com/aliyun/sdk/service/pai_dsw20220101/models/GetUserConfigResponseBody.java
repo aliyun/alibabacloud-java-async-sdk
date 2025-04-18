@@ -64,6 +64,10 @@ public class GetUserConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountSufficient
      */
@@ -137,6 +141,21 @@ public class GetUserConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserConfigResponseBody model) {
+            this.accountSufficient = model.accountSufficient;
+            this.code = model.code;
+            this.enableEciDisk = model.enableEciDisk;
+            this.freeTier = model.freeTier;
+            this.freeTierSpecAvailable = model.freeTierSpecAvailable;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AccountSufficient.
@@ -379,6 +398,24 @@ public class GetUserConfigResponseBody extends TeaModel {
             private String periodShowValue; 
             private String startTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(FreeTier model) {
+                this.endTime = model.endTime;
+                this.initBaseUnit = model.initBaseUnit;
+                this.initBaseValue = model.initBaseValue;
+                this.initShowUnit = model.initShowUnit;
+                this.initShowValue = model.initShowValue;
+                this.isFreeTierUser = model.isFreeTierUser;
+                this.periodBaseUnit = model.periodBaseUnit;
+                this.periodBaseValue = model.periodBaseValue;
+                this.periodShowUnit = model.periodShowUnit;
+                this.periodShowValue = model.periodShowValue;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
 
             /**
              * EndTime.

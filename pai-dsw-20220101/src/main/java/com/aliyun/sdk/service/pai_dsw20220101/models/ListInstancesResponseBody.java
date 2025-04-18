@@ -56,6 +56,10 @@ public class ListInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,8 +118,28 @@ public class ListInstancesResponseBody extends TeaModel {
         private Boolean success; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instances = model.instances;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Code.
+         * <p>The status code. Valid values:</p>
+         * <ul>
+         * <li>InternalError: an internal error. All errors, except for parameter validation errors, are classified as internal errors.</li>
+         * <li>ValidationError: a parameter validation error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +147,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li>400</li>
+         * <li>404</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -131,7 +162,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Instances.
+         * <p>The instances returned on this page.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -139,7 +170,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;XXX&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -147,7 +181,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -155,7 +192,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -163,7 +207,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -208,8 +255,19 @@ public class ListInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enable; 
 
+            private Builder() {
+            } 
+
+            private Builder(CPU model) {
+                this.enable = model.enable;
+            } 
+
             /**
-             * Enable.
+             * <p>Indicates whether the CPU affinity feature was enabled.</p>
+             * <p>true false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -255,8 +313,15 @@ public class ListInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private CPU CPU; 
 
+            private Builder() {
+            } 
+
+            private Builder(Affinity model) {
+                this.CPU = model.CPU;
+            } 
+
             /**
-             * CPU.
+             * <p>The CPU affinity configuration. Only subscription instances that use general-purpose computing resources support CPU affinity configuration.</p>
              */
             public Builder CPU(CPU CPU) {
                 this.CPU = CPU;
@@ -338,8 +403,21 @@ public class ListInstancesResponseBody extends TeaModel {
             private String path; 
             private String subType; 
 
+            private Builder() {
+            } 
+
+            private Builder(CloudDisks model) {
+                this.capacity = model.capacity;
+                this.mountPath = model.mountPath;
+                this.path = model.path;
+                this.subType = model.subType;
+            } 
+
             /**
-             * Capacity.
+             * <p>The cloud disk capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30Gi</p>
              */
             public Builder capacity(String capacity) {
                 this.capacity = capacity;
@@ -347,7 +425,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MountPath.
+             * <p>The mount path of the cloud disk in the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mmt/workspace</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -355,7 +436,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The directory on the cloud disk that is mounted to the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/workspace</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -363,7 +447,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SubType.
+             * <p>The cloud disk type. The value rootfs indicates that the cloud disk is used as the root file system (rootfs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rootfs</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -390,6 +477,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasetVersion")
         private String datasetVersion;
 
+        @com.aliyun.core.annotation.NameInMap("Dynamic")
+        private Boolean dynamic;
+
         @com.aliyun.core.annotation.NameInMap("MountAccess")
         private String mountAccess;
 
@@ -408,6 +498,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private Datasets(Builder builder) {
             this.datasetId = builder.datasetId;
             this.datasetVersion = builder.datasetVersion;
+            this.dynamic = builder.dynamic;
             this.mountAccess = builder.mountAccess;
             this.mountPath = builder.mountPath;
             this.optionType = builder.optionType;
@@ -435,6 +526,13 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public String getDatasetVersion() {
             return this.datasetVersion;
+        }
+
+        /**
+         * @return dynamic
+         */
+        public Boolean getDynamic() {
+            return this.dynamic;
         }
 
         /**
@@ -475,14 +573,32 @@ public class ListInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String datasetId; 
             private String datasetVersion; 
+            private Boolean dynamic; 
             private String mountAccess; 
             private String mountPath; 
             private String optionType; 
             private String options; 
             private String uri; 
 
+            private Builder() {
+            } 
+
+            private Builder(Datasets model) {
+                this.datasetId = model.datasetId;
+                this.datasetVersion = model.datasetVersion;
+                this.dynamic = model.dynamic;
+                this.mountAccess = model.mountAccess;
+                this.mountPath = model.mountPath;
+                this.optionType = model.optionType;
+                this.options = model.options;
+                this.uri = model.uri;
+            } 
+
             /**
-             * DatasetId.
+             * <p>The dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-vsqjvsjp4orp5l206u</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -490,7 +606,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetVersion.
+             * <p>The dataset version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder datasetVersion(String datasetVersion) {
                 this.datasetVersion = datasetVersion;
@@ -498,7 +617,21 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MountAccess.
+             * <p>Indicates whether dynamic mounting was enabled. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder dynamic(Boolean dynamic) {
+                this.dynamic = dynamic;
+                return this;
+            }
+
+            /**
+             * <p>The read and write permissions. Valid values: RW and RO.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RW</p>
              */
             public Builder mountAccess(String mountAccess) {
                 this.mountAccess = mountAccess;
@@ -506,7 +639,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MountPath.
+             * <p>The mount path in the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt/data</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -514,7 +650,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OptionType.
+             * <p>The type of the mount option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FastReadWrite</p>
              */
             public Builder optionType(String optionType) {
                 this.optionType = optionType;
@@ -522,7 +661,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Options.
+             * <p>The mount type of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;fs.oss.download.thread.concurrency&quot;: &quot;10&quot;,
+             *   &quot;fs.oss.upload.thread.concurrency&quot;: &quot;10&quot;,
+             *   &quot;fs.jindo.args&quot;: &quot;-oattr_timeout=3 -oentry_timeout=0 -onegative_timeout=0 -oauto_cache -ono_symlink&quot;
+             * }</p>
              */
             public Builder options(String options) {
                 this.options = options;
@@ -530,7 +676,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Uri.
+             * <p>The dataset URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket-name.oss-cn-shanghai-internal.aliyuncs.com/data/path/</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -624,8 +773,22 @@ public class ListInstancesResponseBody extends TeaModel {
             private String instanceId; 
             private Integer maxIdleTimeInMinutes; 
 
+            private Builder() {
+            } 
+
+            private Builder(IdleInstanceCuller model) {
+                this.cpuPercentThreshold = model.cpuPercentThreshold;
+                this.gpuPercentThreshold = model.gpuPercentThreshold;
+                this.idleTimeInMinutes = model.idleTimeInMinutes;
+                this.instanceId = model.instanceId;
+                this.maxIdleTimeInMinutes = model.maxIdleTimeInMinutes;
+            } 
+
             /**
-             * CpuPercentThreshold.
+             * <p>The CPU utilization threshold. Unit: percentage. Valid values: 1 to 100. If the CPU utilization of the instance is lower than this threshold, the instance is considered idle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder cpuPercentThreshold(Integer cpuPercentThreshold) {
                 this.cpuPercentThreshold = cpuPercentThreshold;
@@ -633,7 +796,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GpuPercentThreshold.
+             * <p>The GPU utilization threshold. Unit: percentage. Valid values: 1 to 100. This parameter takes effect only if the instance is of the GPU instance type. If both CPU and GPU utilization is lower than the thresholds, the instance is considered idle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder gpuPercentThreshold(Integer gpuPercentThreshold) {
                 this.gpuPercentThreshold = gpuPercentThreshold;
@@ -641,7 +807,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IdleTimeInMinutes.
+             * <p>The time duration for which the instance is idle. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder idleTimeInMinutes(Integer idleTimeInMinutes) {
                 this.idleTimeInMinutes = idleTimeInMinutes;
@@ -649,7 +818,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dsw-730xxxxxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -657,7 +829,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxIdleTimeInMinutes.
+             * <p>The maximum time duration for which the instance is idle. Unit: minutes. If the time duration for which the instance is idle exceeds this value, the system automatically stops the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder maxIdleTimeInMinutes(Integer maxIdleTimeInMinutes) {
                 this.maxIdleTimeInMinutes = maxIdleTimeInMinutes;
@@ -751,8 +926,22 @@ public class ListInstancesResponseBody extends TeaModel {
             private String instanceId; 
             private Long remainingTimeInMs; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceShutdownTimer model) {
+                this.dueTime = model.dueTime;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.instanceId = model.instanceId;
+                this.remainingTimeInMs = model.remainingTimeInMs;
+            } 
+
             /**
-             * DueTime.
+             * <p>The scheduled stop time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder dueTime(String dueTime) {
                 this.dueTime = dueTime;
@@ -760,7 +949,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -768,7 +960,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The time when the instance was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -776,7 +971,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dsw-730xxxxxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -784,7 +982,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RemainingTimeInMs.
+             * <p>The remaining time before the instance is stopped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600000</p>
              */
             public Builder remainingTimeInMs(Long remainingTimeInMs) {
                 this.remainingTimeInMs = remainingTimeInMs;
@@ -926,8 +1127,26 @@ public class ListInstancesResponseBody extends TeaModel {
             private String repositoryUrl; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceSnapshotList model) {
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageUrl = model.imageUrl;
+                this.reasonCode = model.reasonCode;
+                this.reasonMessage = model.reasonMessage;
+                this.repositoryUrl = model.repositoryUrl;
+                this.status = model.status;
+            } 
+
             /**
-             * GmtCreateTime.
+             * <p>The time when the snapshot was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -935,7 +1154,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The time when the snapshot was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -943,7 +1165,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image-05cefd0be2exxxx</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -951,7 +1176,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>py36_cpu_tf1.12_ubuntu</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -959,7 +1187,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The image URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -967,7 +1198,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonCode.
+             * <p>The error code of the instance snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internal Error</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -975,7 +1209,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonMessage.
+             * <p>The error message of the instance snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImagePullBackOff</p>
              */
             public Builder reasonMessage(String reasonMessage) {
                 this.reasonMessage = reasonMessage;
@@ -983,7 +1220,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RepositoryUrl.
+             * <p>The URL of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images">https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images</a></p>
              */
             public Builder repositoryUrl(String repositoryUrl) {
                 this.repositoryUrl = repositoryUrl;
@@ -991,7 +1231,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the instance snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pushing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1049,8 +1292,19 @@ public class ListInstancesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The custom label key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stsTokenOwner</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1058,7 +1312,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The custom label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123xxxxxxxx</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1200,8 +1457,26 @@ public class ListInstancesResponseBody extends TeaModel {
             private String repositoryUrl; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(LatestSnapshot model) {
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageUrl = model.imageUrl;
+                this.reasonCode = model.reasonCode;
+                this.reasonMessage = model.reasonMessage;
+                this.repositoryUrl = model.repositoryUrl;
+                this.status = model.status;
+            } 
+
             /**
-             * GmtCreateTime.
+             * <p>The time when the snapshot was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -1209,7 +1484,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The time when the snapshot was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -1217,7 +1495,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image-05cefd0be2exxxx</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1225,7 +1506,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>py36_cpu_tf1.12_ubuntu</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -1233,7 +1517,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The image URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -1241,7 +1528,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonCode.
+             * <p>The error code of the instance snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internal Error</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -1249,7 +1539,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonMessage.
+             * <p>The error message of the instance snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImagePullBackOff</p>
              */
             public Builder reasonMessage(String reasonMessage) {
                 this.reasonMessage = reasonMessage;
@@ -1257,7 +1550,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RepositoryUrl.
+             * <p>The URL of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images">https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images</a></p>
              */
             public Builder repositoryUrl(String repositoryUrl) {
                 this.repositoryUrl = repositoryUrl;
@@ -1265,7 +1561,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the instance snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pushing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1359,8 +1658,22 @@ public class ListInstancesResponseBody extends TeaModel {
             private String memory; 
             private String sharedMemory; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestedResource model) {
+                this.CPU = model.CPU;
+                this.GPU = model.GPU;
+                this.GPUType = model.GPUType;
+                this.memory = model.memory;
+                this.sharedMemory = model.sharedMemory;
+            } 
+
             /**
-             * CPU.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder CPU(String CPU) {
                 this.CPU = CPU;
@@ -1368,7 +1681,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GPU.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder GPU(String GPU) {
                 this.GPU = GPU;
@@ -1376,7 +1692,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GPUType.
+             * <p>The GPU memory type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v100</p>
              */
             public Builder GPUType(String GPUType) {
                 this.GPUType = GPUType;
@@ -1384,7 +1703,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -1392,7 +1714,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SharedMemory.
+             * <p>The size of the shared memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder sharedMemory(String sharedMemory) {
                 this.sharedMemory = sharedMemory;
@@ -1450,8 +1775,19 @@ public class ListInstancesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1459,7 +1795,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1480,6 +1819,9 @@ public class ListInstancesResponseBody extends TeaModel {
      * <p>ListInstancesResponseBody</p>
      */
     public static class UserVpc extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BandwidthLimit")
+        private BandwidthLimit bandwidthLimit;
+
         @com.aliyun.core.annotation.NameInMap("DefaultRoute")
         private String defaultRoute;
 
@@ -1499,6 +1841,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private String vpcId;
 
         private UserVpc(Builder builder) {
+            this.bandwidthLimit = builder.bandwidthLimit;
             this.defaultRoute = builder.defaultRoute;
             this.extendedCIDRs = builder.extendedCIDRs;
             this.forwardInfos = builder.forwardInfos;
@@ -1513,6 +1856,13 @@ public class ListInstancesResponseBody extends TeaModel {
 
         public static UserVpc create() {
             return builder().build();
+        }
+
+        /**
+         * @return bandwidthLimit
+         */
+        public BandwidthLimit getBandwidthLimit() {
+            return this.bandwidthLimit;
         }
 
         /**
@@ -1558,6 +1908,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private BandwidthLimit bandwidthLimit; 
             private String defaultRoute; 
             private java.util.List<String> extendedCIDRs; 
             private java.util.List<ForwardInfoResponse> forwardInfos; 
@@ -1565,8 +1916,32 @@ public class ListInstancesResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserVpc model) {
+                this.bandwidthLimit = model.bandwidthLimit;
+                this.defaultRoute = model.defaultRoute;
+                this.extendedCIDRs = model.extendedCIDRs;
+                this.forwardInfos = model.forwardInfos;
+                this.securityGroupId = model.securityGroupId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * DefaultRoute.
+             * BandwidthLimit.
+             */
+            public Builder bandwidthLimit(BandwidthLimit bandwidthLimit) {
+                this.bandwidthLimit = bandwidthLimit;
+                return this;
+            }
+
+            /**
+             * <p>The default route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eth0 | eth1</p>
              */
             public Builder defaultRoute(String defaultRoute) {
                 this.defaultRoute = defaultRoute;
@@ -1574,7 +1949,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendedCIDRs.
+             * <p>The extended CIDR blocks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;192.168.0.1/24&quot;, &quot;192.168.1.1/24&quot;]</p>
              */
             public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
@@ -1582,7 +1960,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ForwardInfos.
+             * <p>The forward information.</p>
              */
             public Builder forwardInfos(java.util.List<ForwardInfoResponse> forwardInfos) {
                 this.forwardInfos = forwardInfos;
@@ -1590,7 +1968,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxxxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1598,7 +1979,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxxxx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1606,7 +1990,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxxxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1650,6 +2037,9 @@ public class ListInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Driver")
         private String driver;
+
+        @com.aliyun.core.annotation.NameInMap("DynamicMount")
+        private DynamicMount dynamicMount;
 
         @com.aliyun.core.annotation.NameInMap("EcsSpec")
         private String ecsSpec;
@@ -1701,6 +2091,12 @@ public class ListInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("LatestSnapshot")
         private LatestSnapshot latestSnapshot;
+
+        @com.aliyun.core.annotation.NameInMap("OversoldInfo")
+        private String oversoldInfo;
+
+        @com.aliyun.core.annotation.NameInMap("OversoldType")
+        private String oversoldType;
 
         @com.aliyun.core.annotation.NameInMap("PaymentType")
         private String paymentType;
@@ -1762,6 +2158,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.credentialConfig = builder.credentialConfig;
             this.datasets = builder.datasets;
             this.driver = builder.driver;
+            this.dynamicMount = builder.dynamicMount;
             this.ecsSpec = builder.ecsSpec;
             this.environmentVariables = builder.environmentVariables;
             this.gmtCreateTime = builder.gmtCreateTime;
@@ -1779,6 +2176,8 @@ public class ListInstancesResponseBody extends TeaModel {
             this.jupyterlabUrl = builder.jupyterlabUrl;
             this.labels = builder.labels;
             this.latestSnapshot = builder.latestSnapshot;
+            this.oversoldInfo = builder.oversoldInfo;
+            this.oversoldType = builder.oversoldType;
             this.paymentType = builder.paymentType;
             this.priority = builder.priority;
             this.reasonCode = builder.reasonCode;
@@ -1860,6 +2259,13 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public String getDriver() {
             return this.driver;
+        }
+
+        /**
+         * @return dynamicMount
+         */
+        public DynamicMount getDynamicMount() {
+            return this.dynamicMount;
         }
 
         /**
@@ -1979,6 +2385,20 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public LatestSnapshot getLatestSnapshot() {
             return this.latestSnapshot;
+        }
+
+        /**
+         * @return oversoldInfo
+         */
+        public String getOversoldInfo() {
+            return this.oversoldInfo;
+        }
+
+        /**
+         * @return oversoldType
+         */
+        public String getOversoldType() {
+            return this.oversoldType;
         }
 
         /**
@@ -2109,6 +2529,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private CredentialConfig credentialConfig; 
             private java.util.List<Datasets> datasets; 
             private String driver; 
+            private DynamicMount dynamicMount; 
             private String ecsSpec; 
             private java.util.Map<String, String> environmentVariables; 
             private String gmtCreateTime; 
@@ -2126,6 +2547,8 @@ public class ListInstancesResponseBody extends TeaModel {
             private String jupyterlabUrl; 
             private java.util.List<Labels> labels; 
             private LatestSnapshot latestSnapshot; 
+            private String oversoldInfo; 
+            private String oversoldType; 
             private String paymentType; 
             private Long priority; 
             private String reasonCode; 
@@ -2144,8 +2567,66 @@ public class ListInstancesResponseBody extends TeaModel {
             private String workspaceName; 
             private String workspaceSource; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.acceleratorType = model.acceleratorType;
+                this.accessibility = model.accessibility;
+                this.accumulatedRunningTimeInMs = model.accumulatedRunningTimeInMs;
+                this.affinity = model.affinity;
+                this.cloudDisks = model.cloudDisks;
+                this.credentialConfig = model.credentialConfig;
+                this.datasets = model.datasets;
+                this.driver = model.driver;
+                this.dynamicMount = model.dynamicMount;
+                this.ecsSpec = model.ecsSpec;
+                this.environmentVariables = model.environmentVariables;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.idleInstanceCuller = model.idleInstanceCuller;
+                this.imageAuth = model.imageAuth;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageUrl = model.imageUrl;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceShutdownTimer = model.instanceShutdownTimer;
+                this.instanceSnapshotList = model.instanceSnapshotList;
+                this.instanceUrl = model.instanceUrl;
+                this.jupyterlabUrl = model.jupyterlabUrl;
+                this.labels = model.labels;
+                this.latestSnapshot = model.latestSnapshot;
+                this.oversoldInfo = model.oversoldInfo;
+                this.oversoldType = model.oversoldType;
+                this.paymentType = model.paymentType;
+                this.priority = model.priority;
+                this.reasonCode = model.reasonCode;
+                this.reasonMessage = model.reasonMessage;
+                this.requestedResource = model.requestedResource;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.terminalUrl = model.terminalUrl;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.userVpc = model.userVpc;
+                this.webIDEUrl = model.webIDEUrl;
+                this.workspaceId = model.workspaceId;
+                this.workspaceName = model.workspaceName;
+                this.workspaceSource = model.workspaceSource;
+            } 
+
             /**
-             * AcceleratorType.
+             * <p>The accelerator type of the instance. Valid values:</p>
+             * <ul>
+             * <li>CPU</li>
+             * <li>GPU</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU</p>
              */
             public Builder acceleratorType(String acceleratorType) {
                 this.acceleratorType = acceleratorType;
@@ -2153,7 +2634,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Accessibility.
+             * <p>The accessibility. Valid values:</p>
+             * <ul>
+             * <li>PRIVATE (default): The instances are accessible only to you and the administrator of the workspace.</li>
+             * <li>PUBLIC: The instances are accessible only to all members in the workspace.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder accessibility(String accessibility) {
                 this.accessibility = accessibility;
@@ -2161,7 +2649,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AccumulatedRunningTimeInMs.
+             * <p>The accumulated running duration. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600000</p>
              */
             public Builder accumulatedRunningTimeInMs(Long accumulatedRunningTimeInMs) {
                 this.accumulatedRunningTimeInMs = accumulatedRunningTimeInMs;
@@ -2169,7 +2660,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Affinity.
+             * <p>The affinity configuration.</p>
              */
             public Builder affinity(Affinity affinity) {
                 this.affinity = affinity;
@@ -2177,7 +2668,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CloudDisks.
+             * <p>The cloud disks of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder cloudDisks(java.util.List<CloudDisks> cloudDisks) {
                 this.cloudDisks = cloudDisks;
@@ -2185,7 +2679,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialConfig.
+             * <p>The credential configuration.</p>
              */
             public Builder credentialConfig(CredentialConfig credentialConfig) {
                 this.credentialConfig = credentialConfig;
@@ -2193,7 +2687,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Datasets.
+             * <p>The datasets.</p>
              */
             public Builder datasets(java.util.List<Datasets> datasets) {
                 this.datasets = datasets;
@@ -2201,7 +2695,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Driver.
+             * <p>The NVIDIA driver configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>535.54.03</p>
              */
             public Builder driver(String driver) {
                 this.driver = driver;
@@ -2209,7 +2706,18 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EcsSpec.
+             * <p>The dynamic mount configurations.</p>
+             */
+            public Builder dynamicMount(DynamicMount dynamicMount) {
+                this.dynamicMount = dynamicMount;
+                return this;
+            }
+
+            /**
+             * <p>The ECS instance type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c6.large</p>
              */
             public Builder ecsSpec(String ecsSpec) {
                 this.ecsSpec = ecsSpec;
@@ -2217,7 +2725,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnvironmentVariables.
+             * <p>The environment variables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{userName: &quot;Chris&quot;}</p>
              */
             public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
                 this.environmentVariables = environmentVariables;
@@ -2225,7 +2736,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -2233,7 +2747,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The time when the instance was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -2241,7 +2758,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IdleInstanceCuller.
+             * <p>The rule for stopping idle instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;InstanceId&quot;:&quot;dsw-05cefd0be2e5a278&quot;,&quot;CpuPercentThreshold&quot;:20,&quot;GpuPercentThreshold&quot;:10,&quot;MaxIdleTimeInMinutes&quot;:120,&quot;IdleTimeInMinutes&quot;:30}</p>
              */
             public Builder idleInstanceCuller(IdleInstanceCuller idleInstanceCuller) {
                 this.idleInstanceCuller = idleInstanceCuller;
@@ -2249,7 +2769,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageAuth.
+             * <p>The Base64-encoded account and password for the user&quot;s private image. The password will be hidden.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aGFyYm9yYWlAeGltYWxheWE6KioqKioq</p>
              */
             public Builder imageAuth(String imageAuth) {
                 this.imageAuth = imageAuth;
@@ -2257,7 +2780,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image-05cefd0be2exxxx</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -2265,7 +2791,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>py36_cpu_tf1.12_ubuntu</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -2273,7 +2802,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The image address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -2281,7 +2813,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dsw-730xxxxxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -2289,7 +2824,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>training_data</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -2297,7 +2835,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceShutdownTimer.
+             * <p>The scheduled stop task.</p>
              */
             public Builder instanceShutdownTimer(InstanceShutdownTimer instanceShutdownTimer) {
                 this.instanceShutdownTimer = instanceShutdownTimer;
@@ -2305,7 +2843,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSnapshotList.
+             * <p>The instance snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder instanceSnapshotList(java.util.List<InstanceSnapshotList> instanceSnapshotList) {
                 this.instanceSnapshotList = instanceSnapshotList;
@@ -2313,7 +2854,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceUrl.
+             * <p>The instance URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dsw-cn-shanghai.data.aliyun.com/notebook.htm?instance=39772#/">https://dsw-cn-shanghai.data.aliyun.com/notebook.htm?instance=39772#/</a></p>
              */
             public Builder instanceUrl(String instanceUrl) {
                 this.instanceUrl = instanceUrl;
@@ -2321,7 +2865,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Jupyterlab Url。</p>
+             * <p>The JupyterLab URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/lab/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/lab/</a></p>
@@ -2332,7 +2876,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The custom labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;foo&quot;: &quot;bar&quot;}</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
@@ -2340,7 +2887,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LatestSnapshot.
+             * <p>The user image that was latest saved.</p>
              */
             public Builder latestSnapshot(LatestSnapshot latestSnapshot) {
                 this.latestSnapshot = latestSnapshot;
@@ -2348,7 +2895,30 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentType.
+             * OversoldInfo.
+             */
+            public Builder oversoldInfo(String oversoldInfo) {
+                this.oversoldInfo = oversoldInfo;
+                return this;
+            }
+
+            /**
+             * OversoldType.
+             */
+            public Builder oversoldType(String oversoldType) {
+                this.oversoldType = oversoldType;
+                return this;
+            }
+
+            /**
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>PayAsYouGo</li>
+             * <li>Subscription</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PayAsYouGo</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -2356,7 +2926,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority based on which resources are allocated to instances. Resources are preferentially allocated to instances with higher priorities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
@@ -2364,7 +2937,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonCode.
+             * <p>The error code of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internal Error</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -2372,7 +2948,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonMessage.
+             * <p>The cause of the instance error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImagePullBackOff</p>
              */
             public Builder reasonMessage(String reasonMessage) {
                 this.reasonMessage = reasonMessage;
@@ -2380,7 +2959,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RequestedResource.
+             * <p>The resource configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;CPU&quot;:&quot;4&quot;,&quot;Memory&quot;:&quot;8Gi&quot;,&quot;SharedMemory&quot;:&quot;4Gi&quot;,&quot;GPU&quot;:&quot;1&quot;,&quot;GPUType&quot;:&quot;Tesla-V100-16G&quot;}</p>
              */
             public Builder requestedResource(RequestedResource requestedResource) {
                 this.requestedResource = requestedResource;
@@ -2388,7 +2970,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID. This parameter is valid only if you set PaymentType to Subscription.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dsw-123456789</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -2396,7 +2981,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>The specifications.</p>
+             * <ul>
+             * <li>In pay-as-you-go scenarios, the value is the specifications of the purchased ECS instance type.</li>
+             * <li>In subscription scenarios, the value is the requested number of CPU cores and memory size.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>resource_group</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -2404,7 +2996,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2412,7 +3007,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -2420,7 +3015,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TerminalUrl.
+             * <p>The terminal URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/tty/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/tty/</a></p>
              */
             public Builder terminalUrl(String terminalUrl) {
                 this.terminalUrl = terminalUrl;
@@ -2428,7 +3026,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1612285282502324</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -2436,7 +3037,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试用户</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -2444,7 +3048,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UserVpc.
+             * <p>The virtual private cloud (VPC) configurations.</p>
              */
             public Builder userVpc(UserVpc userVpc) {
                 this.userVpc = userVpc;
@@ -2452,7 +3056,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Web IDE url。</p>
+             * <p>The Web IDE URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/ide/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/ide/</a></p>
@@ -2463,7 +3067,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40823</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -2471,7 +3078,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>training_data</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -2479,7 +3089,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceSource.
+             * <p>The storage for the workspace. If you leave this parameter empty, the workspace uses File Storage NAS (NAS) storage, cloud disks, or local disks in sequence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-123456789</p>
              */
             public Builder workspaceSource(String workspaceSource) {
                 this.workspaceSource = workspaceSource;

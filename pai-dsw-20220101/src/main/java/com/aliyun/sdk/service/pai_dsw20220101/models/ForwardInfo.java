@@ -64,6 +64,10 @@ public class ForwardInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessType
      */
@@ -137,6 +141,21 @@ public class ForwardInfo extends TeaModel {
         private String name; 
         private String natGatewayId; 
         private String SSHPublicKey; 
+
+        private Builder() {
+        } 
+
+        private Builder(ForwardInfo model) {
+            this.accessType = model.accessType;
+            this.containerName = model.containerName;
+            this.eipAllocationId = model.eipAllocationId;
+            this.enable = model.enable;
+            this.externalPort = model.externalPort;
+            this.forwardPort = model.forwardPort;
+            this.name = model.name;
+            this.natGatewayId = model.natGatewayId;
+            this.SSHPublicKey = model.SSHPublicKey;
+        } 
 
         /**
          * AccessType.

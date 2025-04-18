@@ -65,7 +65,7 @@ public class GetLifecycleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -144,6 +144,7 @@ public class GetLifecycleRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/470439.html">ListInstances</a> to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +157,10 @@ public class GetLifecycleRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T15:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -165,7 +169,10 @@ public class GetLifecycleRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The number of sessions to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -174,7 +181,14 @@ public class GetLifecycleRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sorting order of the results. Valid values:</p>
+         * <ul>
+         * <li>ASC: sorted by time in ascending order.</li>
+         * <li>DESC: sorted by time in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -183,7 +197,10 @@ public class GetLifecycleRequest extends Request {
         }
 
         /**
-         * SessionNumber.
+         * <p>A session refers to the process of an instance from startup to failure or shutdown. The sessionNumber indicates the offset value for the instance&quot;s session sequence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sessionNumber(Integer sessionNumber) {
             this.putQueryParameter("SessionNumber", sessionNumber);
@@ -192,7 +209,10 @@ public class GetLifecycleRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T15:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -201,7 +221,7 @@ public class GetLifecycleRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>The token used to share the URL.</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

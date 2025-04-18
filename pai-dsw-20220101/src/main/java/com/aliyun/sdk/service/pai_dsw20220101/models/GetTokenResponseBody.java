@@ -48,6 +48,10 @@ public class GetTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -90,8 +94,26 @@ public class GetTokenResponseBody extends TeaModel {
         private Boolean success; 
         private String token; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetTokenResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.token = model.token;
+        } 
+
         /**
-         * Code.
+         * <p>The status code. Valid values:</p>
+         * <ul>
+         * <li>InternalError: All errors, except for parameter validation errors, are internal errors.</li>
+         * <li>ValidationError: A parameter validation error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ValidationError</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -99,7 +121,10 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;XXX&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -107,7 +132,10 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,7 +143,14 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -123,7 +158,10 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Token.
+         * <p>The temporary authentication information of the DSW instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder token(String token) {
             this.token = token;

@@ -68,6 +68,10 @@ public class GetInstanceShutdownTimerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -149,6 +153,22 @@ public class GetInstanceShutdownTimerResponseBody extends TeaModel {
         private Long remainingTimeInMs; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceShutdownTimerResponseBody model) {
+            this.code = model.code;
+            this.dueTime = model.dueTime;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instanceId = model.instanceId;
+            this.message = model.message;
+            this.remainingTimeInMs = model.remainingTimeInMs;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.

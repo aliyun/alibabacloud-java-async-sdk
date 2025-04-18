@@ -56,6 +56,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEcsSpecsResponseBody model) {
+            this.code = model.code;
+            this.ecsSpecs = model.ecsSpecs;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -219,6 +236,14 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -406,6 +431,24 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             private Float memory; 
             private Double price; 
             private Long systemDiskCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(EcsSpecs model) {
+                this.acceleratorType = model.acceleratorType;
+                this.CPU = model.CPU;
+                this.currency = model.currency;
+                this.GPU = model.GPU;
+                this.GPUType = model.GPUType;
+                this.instanceBandwidthRx = model.instanceBandwidthRx;
+                this.instanceType = model.instanceType;
+                this.isAvailable = model.isAvailable;
+                this.labels = model.labels;
+                this.memory = model.memory;
+                this.price = model.price;
+                this.systemDiskCapacity = model.systemDiskCapacity;
+            } 
 
             /**
              * AcceleratorType.

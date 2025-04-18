@@ -56,6 +56,10 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,8 +118,28 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceMetricsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instanceId = model.instanceId;
+            this.message = model.message;
+            this.podMetrics = model.podMetrics;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The status code. Valid values:</p>
+         * <ul>
+         * <li>InternalError: an internal error. All errors, except for parameter validation errors, are classified as internal errors.</li>
+         * <li>ValidationError: a parameter validation error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +147,14 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li>400</li>
+         * <li>404</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -131,7 +162,10 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -139,7 +173,10 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;XXX&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -147,7 +184,7 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * PodMetrics.
+         * <p>The information about the metrics of the pod that corresponds to the instance.</p>
          */
         public Builder podMetrics(java.util.List<PodMetrics> podMetrics) {
             this.podMetrics = podMetrics;
@@ -155,7 +192,10 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,7 +203,14 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -220,8 +267,19 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
             private Long time; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.time = model.time;
+                this.value = model.value;
+            } 
+
             /**
-             * Time.
+             * <p>The timestamp corresponding to the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1670890560</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -229,7 +287,10 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25.901031</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -287,8 +348,16 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
             private java.util.List<Metrics> metrics; 
             private String podId; 
 
+            private Builder() {
+            } 
+
+            private Builder(PodMetrics model) {
+                this.metrics = model.metrics;
+                this.podId = model.podId;
+            } 
+
             /**
-             * Metrics.
+             * <p>The metrics of the pod that corresponds to the instance.</p>
              */
             public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
@@ -296,7 +365,10 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * PodId.
+             * <p>The ID of the pod that corresponds to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dsw-15870-695f44c5bc-hd6xm</p>
              */
             public Builder podId(String podId) {
                 this.podId = podId;

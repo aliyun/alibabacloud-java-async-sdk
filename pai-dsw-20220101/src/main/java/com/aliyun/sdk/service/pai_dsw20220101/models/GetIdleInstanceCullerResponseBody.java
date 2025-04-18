@@ -64,6 +64,10 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -138,8 +142,30 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetIdleInstanceCullerResponseBody model) {
+            this.code = model.code;
+            this.cpuPercentThreshold = model.cpuPercentThreshold;
+            this.gpuPercentThreshold = model.gpuPercentThreshold;
+            this.idleTimeInMinutes = model.idleTimeInMinutes;
+            this.instanceId = model.instanceId;
+            this.maxIdleTimeInMinutes = model.maxIdleTimeInMinutes;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The status code. Valid values:</p>
+         * <ul>
+         * <li>InternalError: an internal error. All errors, except for parameter validation errors, are classified as internal errors.</li>
+         * <li>ValidationError: a parameter validation error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ValidationError</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -147,7 +173,10 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
         }
 
         /**
-         * CpuPercentThreshold.
+         * <p>The CPU utilization threshold. Unit: percentage. Valid values: 1 to 100. If the CPU utilization of the instance is lower than this threshold, the instance is considered idle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder cpuPercentThreshold(Integer cpuPercentThreshold) {
             this.cpuPercentThreshold = cpuPercentThreshold;
@@ -155,7 +184,10 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
         }
 
         /**
-         * GpuPercentThreshold.
+         * <p>The GPU utilization threshold. Unit: percentage. Valid values: 1 to 100. This parameter takes effect only if the instance is of the GPU instance type. If both CPU and GPU utilization is lower than the thresholds, the instance is considered idle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder gpuPercentThreshold(Integer gpuPercentThreshold) {
             this.gpuPercentThreshold = gpuPercentThreshold;
@@ -163,7 +195,10 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
         }
 
         /**
-         * IdleTimeInMinutes.
+         * <p>The time duration for which the instance is idle. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder idleTimeInMinutes(Integer idleTimeInMinutes) {
             this.idleTimeInMinutes = idleTimeInMinutes;
@@ -171,7 +206,10 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -179,7 +217,10 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
         }
 
         /**
-         * MaxIdleTimeInMinutes.
+         * <p>The maximum time duration for which the instance is idle. Unit: minutes. If the time duration for which the instance is idle exceeds this value, the system automatically stops the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder maxIdleTimeInMinutes(Integer maxIdleTimeInMinutes) {
             this.maxIdleTimeInMinutes = maxIdleTimeInMinutes;
@@ -187,7 +228,10 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;XXX&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -195,7 +239,10 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -203,7 +250,14 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

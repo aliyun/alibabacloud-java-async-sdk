@@ -40,7 +40,7 @@ public class GetTokenRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +74,10 @@ public class GetTokenRequest extends Request {
         } 
 
         /**
-         * ExpireTime.
+         * <p>The validity period. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder expireTime(Integer expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -83,6 +86,7 @@ public class GetTokenRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

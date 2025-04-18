@@ -65,7 +65,7 @@ public class ForwardInfoResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -340,6 +340,14 @@ public class ForwardInfoResponse extends Response {
             private String endpoint; 
             private String port; 
 
+            private Builder() {
+            } 
+
+            private Builder(Internet model) {
+                this.endpoint = model.endpoint;
+                this.port = model.port;
+            } 
+
             /**
              * Endpoint.
              */
@@ -406,6 +414,14 @@ public class ForwardInfoResponse extends Response {
         public static final class Builder {
             private String endpoint; 
             private String port; 
+
+            private Builder() {
+            } 
+
+            private Builder(Intranet model) {
+                this.endpoint = model.endpoint;
+                this.port = model.port;
+            } 
 
             /**
              * Endpoint.
@@ -497,6 +513,16 @@ public class ForwardInfoResponse extends Response {
             private Intranet intranet; 
             private String message; 
             private String phase; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConnectInfo model) {
+                this.internet = model.internet;
+                this.intranet = model.intranet;
+                this.message = model.message;
+                this.phase = model.phase;
+            } 
 
             /**
              * Internet.

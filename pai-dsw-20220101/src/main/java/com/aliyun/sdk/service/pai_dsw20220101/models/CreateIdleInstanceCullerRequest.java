@@ -50,7 +50,7 @@ public class CreateIdleInstanceCullerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -102,6 +102,7 @@ public class CreateIdleInstanceCullerRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/470439.html">ListInstances</a> to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class CreateIdleInstanceCullerRequest extends Request {
         }
 
         /**
-         * CpuPercentThreshold.
+         * <p>The CPU utilization threshold. Unit: percentage. Valid values: 1 to 100. If the CPU utilization of the instance is lower than this threshold, the instance is considered idle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder cpuPercentThreshold(Integer cpuPercentThreshold) {
             this.putBodyParameter("CpuPercentThreshold", cpuPercentThreshold);
@@ -123,7 +127,10 @@ public class CreateIdleInstanceCullerRequest extends Request {
         }
 
         /**
-         * GpuPercentThreshold.
+         * <p>The GPU utilization threshold. Unit: percentage. Valid values: 1 to 100. This parameter takes effect only if the instance is of the GPU instance type. If both CPU and GPU utilization is lower than the thresholds, the instance is considered idle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder gpuPercentThreshold(Integer gpuPercentThreshold) {
             this.putBodyParameter("GpuPercentThreshold", gpuPercentThreshold);
@@ -132,7 +139,10 @@ public class CreateIdleInstanceCullerRequest extends Request {
         }
 
         /**
-         * MaxIdleTimeInMinutes.
+         * <p>The maximum time duration for which the instance is idle. Unit: minutes. If the time duration for which the instance is idle exceeds this value, the system automatically stops the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder maxIdleTimeInMinutes(Integer maxIdleTimeInMinutes) {
             this.putBodyParameter("MaxIdleTimeInMinutes", maxIdleTimeInMinutes);

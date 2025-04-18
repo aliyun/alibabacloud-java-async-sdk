@@ -52,6 +52,10 @@ public class GetResourceGroupStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetResourceGroupStatisticsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.Map<String, java.util.Map<String, ?>> statistics; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceGroupStatisticsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.statistics = model.statistics;
+            this.success = model.success;
+        } 
 
         /**
          * Code.

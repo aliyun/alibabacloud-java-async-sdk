@@ -52,6 +52,10 @@ public class GetLifecycleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,8 +106,27 @@ public class GetLifecycleResponseBody extends TeaModel {
         private Boolean success; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetLifecycleResponseBody model) {
+            this.code = model.code;
+            this.lifecycle = model.lifecycle;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Code.
+         * <p>The status code. Valid values:</p>
+         * <ul>
+         * <li>InternalError: All errors, except for parameter validation errors, are internal errors.</li>
+         * <li>ValidationError: A parameter validation error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -111,7 +134,10 @@ public class GetLifecycleResponseBody extends TeaModel {
         }
 
         /**
-         * Lifecycle.
+         * <p>The lifecycle details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[[{&quot;Status&quot;:&quot;Creating&quot;,&quot;GmtCreateTime&quot;:&quot;2022-09-19T22:38:00Z&quot;,&quot;Reason&quot;:&quot;&quot;,&quot;ReasonCode&quot;:&quot;&quot;}]]</p>
          */
         public Builder lifecycle(java.util.List<java.util.List<Lifecycle>> lifecycle) {
             this.lifecycle = lifecycle;
@@ -119,7 +145,10 @@ public class GetLifecycleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;XXX&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -127,7 +156,10 @@ public class GetLifecycleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +167,14 @@ public class GetLifecycleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -143,7 +182,10 @@ public class GetLifecycleResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of queried sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -224,8 +266,39 @@ public class GetLifecycleResponseBody extends TeaModel {
             private String reasonMessage; 
             private String gmtCreateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Lifecycle model) {
+                this.status = model.status;
+                this.reasonCode = model.reasonCode;
+                this.reasonMessage = model.reasonMessage;
+                this.gmtCreateTime = model.gmtCreateTime;
+            } 
+
             /**
-             * Status.
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li>Creating</li>
+             * <li>SaveFailed: The instance image failed to be saved.</li>
+             * <li>Stopped</li>
+             * <li>Failed</li>
+             * <li>ResourceAllocating</li>
+             * <li>Stopping</li>
+             * <li>Updating</li>
+             * <li>Saving</li>
+             * <li>Starting</li>
+             * <li>Running</li>
+             * <li>Saved</li>
+             * <li>EnvPreparing: Preparing environment.</li>
+             * <li>ArrearStopping: The service is being stopped due to overdue payments.</li>
+             * <li>Arrearge: The service is stopped due to overdue payments.</li>
+             * <li>Queuing</li>
+             * <li>Recovering</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Starting</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -233,7 +306,10 @@ public class GetLifecycleResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonCode.
+             * <p>The reason code that corresponds to an event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -241,7 +317,10 @@ public class GetLifecycleResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonMessage.
+             * <p>The reason message that corresponds to an event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder reasonMessage(String reasonMessage) {
                 this.reasonMessage = reasonMessage;
@@ -249,7 +328,10 @@ public class GetLifecycleResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The time the status was created, specifically the time the instance transitioned to this status (in GMT).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-21T07:27:44Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;

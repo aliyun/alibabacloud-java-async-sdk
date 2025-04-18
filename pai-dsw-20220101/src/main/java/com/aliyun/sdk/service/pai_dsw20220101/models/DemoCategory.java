@@ -44,6 +44,10 @@ public class DemoCategory extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return categoryCode
      */
@@ -77,6 +81,16 @@ public class DemoCategory extends TeaModel {
         private String categoryName; 
         private Long order; 
         private java.util.List<DemoCategory> subCategories; 
+
+        private Builder() {
+        } 
+
+        private Builder(DemoCategory model) {
+            this.categoryCode = model.categoryCode;
+            this.categoryName = model.categoryName;
+            this.order = model.order;
+            this.subCategories = model.subCategories;
+        } 
 
         /**
          * CategoryCode.

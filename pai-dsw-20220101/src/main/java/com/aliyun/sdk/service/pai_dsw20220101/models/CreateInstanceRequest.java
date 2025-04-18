@@ -42,6 +42,10 @@ public class CreateInstanceRequest extends Request {
     private String driver;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DynamicMount")
+    private DynamicMount dynamicMount;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
 
@@ -109,6 +113,7 @@ public class CreateInstanceRequest extends Request {
         this.credentialConfig = builder.credentialConfig;
         this.datasets = builder.datasets;
         this.driver = builder.driver;
+        this.dynamicMount = builder.dynamicMount;
         this.ecsSpec = builder.ecsSpec;
         this.environmentVariables = builder.environmentVariables;
         this.imageAuth = builder.imageAuth;
@@ -134,7 +139,7 @@ public class CreateInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -179,6 +184,13 @@ public class CreateInstanceRequest extends Request {
      */
     public String getDriver() {
         return this.driver;
+    }
+
+    /**
+     * @return dynamicMount
+     */
+    public DynamicMount getDynamicMount() {
+        return this.dynamicMount;
     }
 
     /**
@@ -293,6 +305,7 @@ public class CreateInstanceRequest extends Request {
         private CredentialConfig credentialConfig; 
         private java.util.List<Datasets> datasets; 
         private String driver; 
+        private DynamicMount dynamicMount; 
         private String ecsSpec; 
         private java.util.Map<String, String> environmentVariables; 
         private String imageAuth; 
@@ -321,6 +334,7 @@ public class CreateInstanceRequest extends Request {
             this.credentialConfig = request.credentialConfig;
             this.datasets = request.datasets;
             this.driver = request.driver;
+            this.dynamicMount = request.dynamicMount;
             this.ecsSpec = request.ecsSpec;
             this.environmentVariables = request.environmentVariables;
             this.imageAuth = request.imageAuth;
@@ -339,7 +353,15 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * <p>The instance accessibility.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: The instances are accessible to all members in the workspace.</li>
+         * <li>PRIVATE: The instances are accessible only to you and the administrator of the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -348,7 +370,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Affinity.
+         * <p>The affinity configuration.</p>
          */
         public Builder affinity(Affinity affinity) {
             this.putBodyParameter("Affinity", affinity);
@@ -357,7 +379,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * CloudDisks.
+         * <p>The cloud disks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder cloudDisks(java.util.List<CloudDisks> cloudDisks) {
             this.putBodyParameter("CloudDisks", cloudDisks);
@@ -366,7 +391,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p>The credential configuration.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             this.putBodyParameter("CredentialConfig", credentialConfig);
@@ -375,7 +400,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Datasets.
+         * <p>The datasets.</p>
          */
         public Builder datasets(java.util.List<Datasets> datasets) {
             this.putBodyParameter("Datasets", datasets);
@@ -384,7 +409,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Driver.
+         * <p>The NVIDIA driver configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>535.54.03</p>
          */
         public Builder driver(String driver) {
             this.putBodyParameter("Driver", driver);
@@ -393,7 +421,19 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * EcsSpec.
+         * <p>The dynamic mount configuration.</p>
+         */
+        public Builder dynamicMount(DynamicMount dynamicMount) {
+            this.putBodyParameter("DynamicMount", dynamicMount);
+            this.dynamicMount = dynamicMount;
+            return this;
+        }
+
+        /**
+         * <p>The ECS instance type of the instance. You can call <a href="https://help.aliyun.com/document_detail/470423.html">ListEcsSpecs</a> to obtain the ECS instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
          */
         public Builder ecsSpec(String ecsSpec) {
             this.putBodyParameter("EcsSpec", ecsSpec);
@@ -402,7 +442,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * EnvironmentVariables.
+         * <p>The environment variables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{userName: &quot;Chris&quot;}</p>
          */
         public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             this.putBodyParameter("EnvironmentVariables", environmentVariables);
@@ -411,7 +454,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ImageAuth.
+         * <p>The Base64-encoded account and password for the user&quot;s private image. The password will be hidden.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder imageAuth(String imageAuth) {
             this.putBodyParameter("ImageAuth", imageAuth);
@@ -420,7 +466,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The image ID. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain the image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image-05cefd0be2exxxx</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -429,7 +478,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ImageUrl.
+         * <p>The image address. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain the image address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putBodyParameter("ImageUrl", imageUrl);
@@ -438,7 +490,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name can contain only letters, digits, and underscores (_).</li>
+         * <li>The name can be up to 27 characters in length.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>training_data</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
@@ -447,7 +506,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The custom labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;foo&quot;: &quot;bar&quot;}</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
@@ -456,7 +518,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority based on which resources are allocated to instances. Valid values: 1 to 9.</p>
+         * <ul>
+         * <li>1: the lowest priority.</li>
+         * <li>9: the highest priority.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Long priority) {
             this.putBodyParameter("Priority", priority);
@@ -465,7 +534,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * RequestedResource.
+         * <p>The resource configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;CPU&quot;:&quot;4&quot;,&quot;Memory&quot;:&quot;8Gi&quot;,&quot;SharedMemory&quot;:&quot;4Gi&quot;,&quot;GPU&quot;:&quot;1&quot;,&quot;GPUType&quot;:&quot;Tesla-V100-16G&quot;}</p>
          */
         public Builder requestedResource(RequestedResource requestedResource) {
             this.putBodyParameter("RequestedResource", requestedResource);
@@ -474,7 +546,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource group. This parameter is configured during prepayment. For information about how to create a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/202827.html">Create a dedicated resource group and purchase general computing resources</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-123456789</p>
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
@@ -483,7 +558,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -492,7 +567,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the instance owner. Valid values: Alibaba Cloud account and RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>161228528250****</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("UserId", userId);
@@ -501,7 +579,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * UserVpc.
+         * <p>The virtual private cloud (VPC) configurations.</p>
          */
         public Builder userVpc(UserVpc userVpc) {
             this.putBodyParameter("UserVpc", userVpc);
@@ -510,7 +588,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40823</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -519,7 +600,22 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * WorkspaceSource.
+         * <p>The storage corresponding to the working directory. You can mount disks or datasets to /mnt/workspace at the same time. OSS datasets and dynamically mounted datasets are not supported.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>rootfsCloudDisk: Mount the disk to the working directory.</li>
+         * <li>Mount path of the dataset, such as /mnt/data: Datasets in URI format only support this method.</li>
+         * <li>Dataset ID, such as d-vsqjvs****rp5l206u: If a single dataset is mounted to multiple paths, the first path is selected. We recommend that you do not use this method, use the mount path instead.</li>
+         * </ul>
+         * <p>If you leave this parameter empty:</p>
+         * <ul>
+         * <li>If the instance uses cloud disks, cloud disks are selected by default.</li>
+         * <li>if no cloud disks are available, the first NAS or CPFS dataset is selected as the working directory.</li>
+         * <li>If no cloud disks, and NAS or CPFS datasets are available, the host space is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rootfsCloudDisk</p>
          */
         public Builder workspaceSource(String workspaceSource) {
             this.putBodyParameter("WorkspaceSource", workspaceSource);
@@ -566,8 +662,22 @@ public class CreateInstanceRequest extends Request {
         public static final class Builder {
             private Boolean enable; 
 
+            private Builder() {
+            } 
+
+            private Builder(CPU model) {
+                this.enable = model.enable;
+            } 
+
             /**
-             * Enable.
+             * <p>Specifies whether to enable the CPU affinity feature.</p>
+             * <ul>
+             * <li>false</li>
+             * <li>true</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -613,8 +723,15 @@ public class CreateInstanceRequest extends Request {
         public static final class Builder {
             private CPU CPU; 
 
+            private Builder() {
+            } 
+
+            private Builder(Affinity model) {
+                this.CPU = model.CPU;
+            } 
+
             /**
-             * CPU.
+             * <p>The CPU affinity configuration. Only subscription instances that use general-purpose computing resources support CPU affinity configuration.</p>
              */
             public Builder CPU(CPU CPU) {
                 this.CPU = CPU;
@@ -684,8 +801,20 @@ public class CreateInstanceRequest extends Request {
             private Long capacity; 
             private Long usage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Status model) {
+                this.available = model.available;
+                this.capacity = model.capacity;
+                this.usage = model.usage;
+            } 
+
             /**
-             * Available.
+             * <p>The available capacity. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31841058816</p>
              */
             public Builder available(Long available) {
                 this.available = available;
@@ -693,7 +822,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * Capacity.
+             * <p>The capacity. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32212254720</p>
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -701,7 +833,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * Usage.
+             * <p>The used capacity. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>371195904</p>
              */
             public Builder usage(Long usage) {
                 this.usage = usage;
@@ -795,8 +930,34 @@ public class CreateInstanceRequest extends Request {
             private Status status; 
             private String subType; 
 
+            private Builder() {
+            } 
+
+            private Builder(CloudDisks model) {
+                this.capacity = model.capacity;
+                this.mountPath = model.mountPath;
+                this.path = model.path;
+                this.status = model.status;
+                this.subType = model.subType;
+            } 
+
             /**
-             * Capacity.
+             * <p>If <strong>Resource Type</strong> is <strong>Public Resource</strong> or if <strong>Resource Quota</strong> is subscription-based general-purpose computing resources (CPU cores ≥ 2 and memory ≥ 4 GB, or configured with GPU):</p>
+             * <p>Each instance has a free system disk of 100 GiB for persistent storage. <strong>If the DSW instance is stopped and not launched for more than 15 days, the disk is cleared</strong>. The disk can be expanded. For specific pricing, refer to the console.</p>
+             * <p>**</p>
+             * <p><strong>Warning</strong></p>
+             * <ul>
+             * <li><p>After the expansion, you cannot reduce the storage space. Proceed with caution.</p>
+             * </li>
+             * <li><p>After the expansion, the disk is not cleared if the instance is stopped for more than 15 days. However, it will continue to incur fees.</p>
+             * </li>
+             * <li><p>If you delete the instance, the system disk is also released and the data stored in the disk is deleted. Make sure that you have backed up your data before you delete the instance.</p>
+             * </li>
+             * </ul>
+             * <p>If you need persistent storage, you can <strong>mount a dataset</strong> or add the OSS, NAS, or CPFS path to the <strong>storage path</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100Gi</p>
              */
             public Builder capacity(String capacity) {
                 this.capacity = capacity;
@@ -804,7 +965,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * MountPath.
+             * <p>The mount path of the cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt/systemDisk</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -812,7 +976,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * Path.
+             * <p>The subpath of the cloud disk that is mounted to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -820,7 +987,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>The disk or snapshot usage.</p>
              */
             public Builder status(Status status) {
                 this.status = status;
@@ -828,7 +995,13 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * SubType.
+             * <p>The cloud disk type.</p>
+             * <ul>
+             * <li>rootfs: Mounts the disk as a system disk. The system environment is stored on the disk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>rootfs</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -855,6 +1028,9 @@ public class CreateInstanceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DatasetVersion")
         private String datasetVersion;
 
+        @com.aliyun.core.annotation.NameInMap("Dynamic")
+        private Boolean dynamic;
+
         @com.aliyun.core.annotation.NameInMap("MountAccess")
         private String mountAccess;
 
@@ -874,6 +1050,7 @@ public class CreateInstanceRequest extends Request {
         private Datasets(Builder builder) {
             this.datasetId = builder.datasetId;
             this.datasetVersion = builder.datasetVersion;
+            this.dynamic = builder.dynamic;
             this.mountAccess = builder.mountAccess;
             this.mountPath = builder.mountPath;
             this.optionType = builder.optionType;
@@ -901,6 +1078,13 @@ public class CreateInstanceRequest extends Request {
          */
         public String getDatasetVersion() {
             return this.datasetVersion;
+        }
+
+        /**
+         * @return dynamic
+         */
+        public Boolean getDynamic() {
+            return this.dynamic;
         }
 
         /**
@@ -941,14 +1125,33 @@ public class CreateInstanceRequest extends Request {
         public static final class Builder {
             private String datasetId; 
             private String datasetVersion; 
+            private Boolean dynamic; 
             private String mountAccess; 
             private String mountPath; 
             private String optionType; 
             private String options; 
             private String uri; 
 
+            private Builder() {
+            } 
+
+            private Builder(Datasets model) {
+                this.datasetId = model.datasetId;
+                this.datasetVersion = model.datasetVersion;
+                this.dynamic = model.dynamic;
+                this.mountAccess = model.mountAccess;
+                this.mountPath = model.mountPath;
+                this.optionType = model.optionType;
+                this.options = model.options;
+                this.uri = model.uri;
+            } 
+
             /**
-             * DatasetId.
+             * <p>The dataset ID. If the dataset is read-only, you cannot change the dataset permission from read-only to read and write by using MountAccess.</p>
+             * <p>You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID. If you configure the dataset ID, you cannot configure the dataset URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-vsqjvsjp4orp5l206u</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -956,7 +1159,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * DatasetVersion.
+             * <p>The dataset version. You must also configure DatasetId. If you leave this parameter empty, the value v1 is used by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder datasetVersion(String datasetVersion) {
                 this.datasetVersion = datasetVersion;
@@ -964,7 +1170,27 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * MountAccess.
+             * <p>Specifies whether to enable dynamic mounting. Default value: false.</p>
+             * <ul>
+             * <li>Currently, only instances using general-purpose computing resources are supported.</li>
+             * <li>Currently, only OSS datasets are supported. The mounted datasets are read-only.</li>
+             * <li>The mount path of the dynamically mounted dataset must be a subpath of the root path. Example: /mnt/dynamic/data1/</li>
+             * <li>A dynamically mounted dataset must be after non-dynamic datasets.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder dynamic(Boolean dynamic) {
+                this.dynamic = dynamic;
+                return this;
+            }
+
+            /**
+             * <p>The read and write permissions of the dataset. If the dataset is read-only, it cannot be changed to read and write.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RW</p>
              */
             public Builder mountAccess(String mountAccess) {
                 this.mountAccess = mountAccess;
@@ -972,7 +1198,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * MountPath.
+             * <p>The mount path of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt/data</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -980,7 +1209,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * OptionType.
+             * <p>The mount type. You cannot specify Options at the same time. This is deprecated, and you can use Options instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ReadOnly</p>
              */
             public Builder optionType(String optionType) {
                 this.optionType = optionType;
@@ -988,7 +1220,14 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * Options.
+             * <p>The custom dataset mount options. Only OSS is supported. You cannot specify OptionType at the same time. For more information, see <a href="https://help.aliyun.com/zh/pai/user-guide/read-and-write-dataset-data">DSW mount configurations</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;fs.oss.download.thread.concurrency&quot;: &quot;10&quot;,
+             *   &quot;fs.oss.upload.thread.concurrency&quot;: &quot;10&quot;,
+             *   &quot;fs.jindo.args&quot;: &quot;-oattr_timeout=3 -oentry_timeout=0 -onegative_timeout=0 -oauto_cache -ono_symlink&quot;
+             * }</p>
              */
             public Builder options(String options) {
                 this.options = options;
@@ -996,7 +1235,18 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * Uri.
+             * <p>The URI of the storage service directory, which can be directly mounted. This parameter is mutually exclusive with DatasetId.</p>
+             * <p>URI formats of different types of storage:</p>
+             * <ul>
+             * <li>OSS: oss://bucket-name.oss-cn-shanghai-internal.aliyuncs.com/data/path/</li>
+             * <li>NAS: nas://29**d-b12****446.cn-hangzhou.nas.aliyuncs.com/data/path/</li>
+             * <li>Extreme NAS: nas://29****123-y**r.cn-hangzhou.extreme.nas.aliyuncs.com/data/path/</li>
+             * <li>CPFS: cpfs://cpfs-213****87.cn-wulanchabu/ptc-292*****cbb/exp-290********03e/data/path/</li>
+             * <li>Lingjun CPFS: bmcpfs://cpfs-290******foflh-vpc-x****8r.cn-wulanchabu.cpfs.aliyuncs.com/data/path/</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket-name.oss-cn-shanghai-internal.aliyuncs.com/data/path/</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -1054,8 +1304,19 @@ public class CreateInstanceRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The custom label key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stsTokenOwner</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1063,7 +1324,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The custom label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123xxxxxxxx</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1157,8 +1421,22 @@ public class CreateInstanceRequest extends Request {
             private String memory; 
             private String sharedMemory; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestedResource model) {
+                this.CPU = model.CPU;
+                this.GPU = model.GPU;
+                this.GPUType = model.GPUType;
+                this.memory = model.memory;
+                this.sharedMemory = model.sharedMemory;
+            } 
+
             /**
-             * CPU.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder CPU(String CPU) {
                 this.CPU = CPU;
@@ -1166,7 +1444,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * GPU.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder GPU(String GPU) {
                 this.GPU = GPU;
@@ -1174,7 +1455,17 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * GPUType.
+             * <p>The GPU memory type. Valid values:</p>
+             * <ul>
+             * <li>V100</li>
+             * <li>A100</li>
+             * <li>T4</li>
+             * <li>A10</li>
+             * <li>P100</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>v100</p>
              */
             public Builder GPUType(String GPUType) {
                 this.GPUType = GPUType;
@@ -1182,7 +1473,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * Memory.
+             * <p>The memory size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -1190,7 +1484,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * SharedMemory.
+             * <p>The size of the shared memory. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder sharedMemory(String sharedMemory) {
                 this.sharedMemory = sharedMemory;
@@ -1248,8 +1545,19 @@ public class CreateInstanceRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1257,7 +1565,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1278,6 +1589,9 @@ public class CreateInstanceRequest extends Request {
      * <p>CreateInstanceRequest</p>
      */
     public static class UserVpc extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BandwidthLimit")
+        private BandwidthLimit bandwidthLimit;
+
         @com.aliyun.core.annotation.NameInMap("DefaultRoute")
         private String defaultRoute;
 
@@ -1297,6 +1611,7 @@ public class CreateInstanceRequest extends Request {
         private String vpcId;
 
         private UserVpc(Builder builder) {
+            this.bandwidthLimit = builder.bandwidthLimit;
             this.defaultRoute = builder.defaultRoute;
             this.extendedCIDRs = builder.extendedCIDRs;
             this.forwardInfos = builder.forwardInfos;
@@ -1311,6 +1626,13 @@ public class CreateInstanceRequest extends Request {
 
         public static UserVpc create() {
             return builder().build();
+        }
+
+        /**
+         * @return bandwidthLimit
+         */
+        public BandwidthLimit getBandwidthLimit() {
+            return this.bandwidthLimit;
         }
 
         /**
@@ -1356,6 +1678,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         public static final class Builder {
+            private BandwidthLimit bandwidthLimit; 
             private String defaultRoute; 
             private java.util.List<String> extendedCIDRs; 
             private java.util.List<ForwardInfo> forwardInfos; 
@@ -1363,8 +1686,36 @@ public class CreateInstanceRequest extends Request {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserVpc model) {
+                this.bandwidthLimit = model.bandwidthLimit;
+                this.defaultRoute = model.defaultRoute;
+                this.extendedCIDRs = model.extendedCIDRs;
+                this.forwardInfos = model.forwardInfos;
+                this.securityGroupId = model.securityGroupId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * DefaultRoute.
+             * BandwidthLimit.
+             */
+            public Builder bandwidthLimit(BandwidthLimit bandwidthLimit) {
+                this.bandwidthLimit = bandwidthLimit;
+                return this;
+            }
+
+            /**
+             * <p>The default route. Valid values:</p>
+             * <ul>
+             * <li>eth0: The default network interface is used to access the Internet through the public gateway.</li>
+             * <li>eth1: The user&quot;s elastic network interface (ENI) is used to access the Internet through the private gateway. For more information about the configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Enable Internet access for a DSW instance by using a private Internet NAT gateway</a>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>eth0</p>
              */
             public Builder defaultRoute(String defaultRoute) {
                 this.defaultRoute = defaultRoute;
@@ -1372,7 +1723,14 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * ExtendedCIDRs.
+             * <p>The extended CIDR blocks.</p>
+             * <ul>
+             * <li>If you leave the SwitchId and ExtendedCIDRs parameters empty, the system automatically obtains all CIDR blocks in a VPC.</li>
+             * <li>If you configure the SwitchId and ExtendedCIDRs parameters, we recommend that you specify all CIDR blocks in a VPC.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;192.168.0.1/24&quot;, &quot;192.168.1.1/24&quot;]</p>
              */
             public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
@@ -1380,7 +1738,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * ForwardInfos.
+             * <p>The forward information.</p>
              */
             public Builder forwardInfos(java.util.List<ForwardInfo> forwardInfos) {
                 this.forwardInfos = forwardInfos;
@@ -1388,7 +1746,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxxxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1396,7 +1757,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxxxx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1404,7 +1768,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxxxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -96,6 +96,10 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -233,6 +237,29 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         private String snapshotName; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceSnapshotResponseBody model) {
+            this.code = model.code;
+            this.excludePaths = model.excludePaths;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.httpStatusCode = model.httpStatusCode;
+            this.imageId = model.imageId;
+            this.imageUrl = model.imageUrl;
+            this.instanceId = model.instanceId;
+            this.labels = model.labels;
+            this.message = model.message;
+            this.reasonCode = model.reasonCode;
+            this.reasonMessage = model.reasonMessage;
+            this.requestId = model.requestId;
+            this.snapshotId = model.snapshotId;
+            this.snapshotName = model.snapshotName;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -419,6 +446,14 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

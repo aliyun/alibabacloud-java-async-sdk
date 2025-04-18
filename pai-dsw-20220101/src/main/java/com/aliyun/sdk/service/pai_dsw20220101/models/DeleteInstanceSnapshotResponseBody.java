@@ -56,6 +56,10 @@ public class DeleteInstanceSnapshotResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class DeleteInstanceSnapshotResponseBody extends TeaModel {
         private String requestId; 
         private String snapshotId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteInstanceSnapshotResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instanceId = model.instanceId;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.snapshotId = model.snapshotId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.

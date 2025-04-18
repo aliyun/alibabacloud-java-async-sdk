@@ -41,7 +41,7 @@ public class UpdateInstanceLabelsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,6 +75,7 @@ public class UpdateInstanceLabelsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the DSW instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class UpdateInstanceLabelsRequest extends Request {
         }
 
         /**
+         * <p>The tags that you want to update.</p>
          * <p>This parameter is required.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
@@ -148,7 +150,16 @@ public class UpdateInstanceLabelsRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
+             * <p>The key of the custom tag.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -160,6 +171,7 @@ public class UpdateInstanceLabelsRequest extends Request {
             }
 
             /**
+             * <p>The value of the custom tag.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

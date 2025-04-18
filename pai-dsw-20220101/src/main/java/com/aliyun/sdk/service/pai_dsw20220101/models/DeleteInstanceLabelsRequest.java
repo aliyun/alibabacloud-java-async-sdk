@@ -41,7 +41,7 @@ public class DeleteInstanceLabelsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,6 +75,7 @@ public class DeleteInstanceLabelsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the DSW instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteInstanceLabelsRequest extends Request {
         }
 
         /**
+         * <p>The keys of the tags that you want to delete. Separate multiple tags with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

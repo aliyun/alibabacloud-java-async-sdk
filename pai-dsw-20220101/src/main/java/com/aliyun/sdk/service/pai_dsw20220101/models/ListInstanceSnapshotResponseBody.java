@@ -56,6 +56,10 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         private java.util.List<Snapshots> snapshots; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceSnapshotResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.snapshots = model.snapshots;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -219,6 +236,14 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -406,6 +431,24 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
             private String snapshotId; 
             private String snapshotName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.excludePaths = model.excludePaths;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.imageId = model.imageId;
+                this.imageUrl = model.imageUrl;
+                this.instanceId = model.instanceId;
+                this.labels = model.labels;
+                this.reasonCode = model.reasonCode;
+                this.reasonMessage = model.reasonMessage;
+                this.snapshotId = model.snapshotId;
+                this.snapshotName = model.snapshotName;
+                this.status = model.status;
+            } 
 
             /**
              * ExcludePaths.

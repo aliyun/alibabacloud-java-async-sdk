@@ -40,6 +40,10 @@ public class CredentialConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliyunEnvRoleKey
      */
@@ -65,6 +69,15 @@ public class CredentialConfig extends TeaModel {
         private String aliyunEnvRoleKey; 
         private java.util.List<Configs> configs; 
         private Boolean enable; 
+
+        private Builder() {
+        } 
+
+        private Builder(CredentialConfig model) {
+            this.aliyunEnvRoleKey = model.aliyunEnvRoleKey;
+            this.configs = model.configs;
+            this.enable = model.enable;
+        } 
 
         /**
          * AliyunEnvRoleKey.
@@ -163,6 +176,16 @@ public class CredentialConfig extends TeaModel {
             private String id; 
             private String securityToken; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.accessKeyId = model.accessKeyId;
+                this.id = model.id;
+                this.securityToken = model.securityToken;
+                this.type = model.type;
+            } 
 
             /**
              * AccessKeyId.
@@ -285,6 +308,17 @@ public class CredentialConfig extends TeaModel {
             private String roleType; 
             private UserInfo userInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Roles model) {
+                this.assumeRoleFor = model.assumeRoleFor;
+                this.policy = model.policy;
+                this.roleArn = model.roleArn;
+                this.roleType = model.roleType;
+                this.userInfo = model.userInfo;
+            } 
+
             /**
              * AssumeRoleFor.
              */
@@ -395,6 +429,15 @@ public class CredentialConfig extends TeaModel {
             private String key; 
             private java.util.List<Roles> roles; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configs model) {
+                this.key = model.key;
+                this.roles = model.roles;
+                this.type = model.type;
+            } 
 
             /**
              * <p>This parameter is required.</p>

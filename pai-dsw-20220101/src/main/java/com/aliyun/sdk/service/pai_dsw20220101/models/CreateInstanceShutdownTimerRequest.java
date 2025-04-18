@@ -45,7 +45,7 @@ public class CreateInstanceShutdownTimerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -88,6 +88,7 @@ public class CreateInstanceShutdownTimerRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/470439.html">ListInstances</a> to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class CreateInstanceShutdownTimerRequest extends Request {
         }
 
         /**
-         * DueTime.
+         * <p>The scheduled stop time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
          */
         public Builder dueTime(String dueTime) {
             this.putBodyParameter("DueTime", dueTime);
@@ -109,7 +113,10 @@ public class CreateInstanceShutdownTimerRequest extends Request {
         }
 
         /**
-         * RemainingTimeInMs.
+         * <p>The time duration before the instance is stopped. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600000</p>
          */
         public Builder remainingTimeInMs(Long remainingTimeInMs) {
             this.putBodyParameter("RemainingTimeInMs", remainingTimeInMs);

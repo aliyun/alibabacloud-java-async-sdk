@@ -56,6 +56,10 @@ public class GetInstanceEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -114,8 +118,28 @@ public class GetInstanceEventsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceEventsResponseBody model) {
+            this.code = model.code;
+            this.events = model.events;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instanceId = model.instanceId;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The status code. Valid values:</p>
+         * <ul>
+         * <li>InternalError: an internal error. All errors, except for parameter validation errors, are classified as internal errors.</li>
+         * <li>ValidationError: a parameter validation error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +147,7 @@ public class GetInstanceEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Events.
+         * <p>The events.</p>
          */
         public Builder events(java.util.List<String> events) {
             this.events = events;
@@ -131,7 +155,15 @@ public class GetInstanceEventsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li>400: One or more parameters are invalid.</li>
+         * <li>404: The instance does not exist.</li>
+         * <li>200: The request is normal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -139,7 +171,10 @@ public class GetInstanceEventsResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -147,7 +182,10 @@ public class GetInstanceEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXX</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -155,7 +193,10 @@ public class GetInstanceEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,7 +204,14 @@ public class GetInstanceEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

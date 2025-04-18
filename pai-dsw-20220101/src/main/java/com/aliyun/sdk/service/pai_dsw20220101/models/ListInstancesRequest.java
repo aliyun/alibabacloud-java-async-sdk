@@ -86,6 +86,14 @@ public class ListInstancesRequest extends Request {
     private String order;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OversoldInfo")
+    private String oversoldInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OversoldType")
+    private String oversoldType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -136,6 +144,8 @@ public class ListInstancesRequest extends Request {
         this.minGpuMemory = builder.minGpuMemory;
         this.minMemory = builder.minMemory;
         this.order = builder.order;
+        this.oversoldInfo = builder.oversoldInfo;
+        this.oversoldType = builder.oversoldType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.paymentType = builder.paymentType;
@@ -154,7 +164,7 @@ public class ListInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -279,6 +289,20 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
+     * @return oversoldInfo
+     */
+    public String getOversoldInfo() {
+        return this.oversoldInfo;
+    }
+
+    /**
+     * @return oversoldType
+     */
+    public String getOversoldType() {
+        return this.oversoldType;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -352,6 +376,8 @@ public class ListInstancesRequest extends Request {
         private String minGpuMemory; 
         private String minMemory; 
         private String order; 
+        private String oversoldInfo; 
+        private String oversoldType; 
         private Long pageNumber; 
         private Long pageSize; 
         private String paymentType; 
@@ -384,6 +410,8 @@ public class ListInstancesRequest extends Request {
             this.minGpuMemory = request.minGpuMemory;
             this.minMemory = request.minMemory;
             this.order = request.order;
+            this.oversoldInfo = request.oversoldInfo;
+            this.oversoldType = request.oversoldType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.paymentType = request.paymentType;
@@ -395,7 +423,14 @@ public class ListInstancesRequest extends Request {
         } 
 
         /**
-         * AcceleratorType.
+         * <p>The accelerator type.</p>
+         * <ul>
+         * <li>CPU: Only CPU computing is used.</li>
+         * <li>GPU: GPUs are used to accelerate computing.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU</p>
          */
         public Builder acceleratorType(String acceleratorType) {
             this.putQueryParameter("AcceleratorType", acceleratorType);
@@ -404,7 +439,14 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Accessibility.
+         * <p>The accessibility. Valid values:</p>
+         * <ul>
+         * <li>PRIVATE (default): The instances are accessible only to you and the administrator of the workspace.</li>
+         * <li>PUBLIC: The instances are accessible only to all members in the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putQueryParameter("Accessibility", accessibility);
@@ -413,7 +455,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * CreateUserId.
+         * <p>The UID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345*****67890</p>
          */
         public Builder createUserId(String createUserId) {
             this.putQueryParameter("CreateUserId", createUserId);
@@ -422,7 +467,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * GpuType.
+         * <p>The GPU type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NVIDIA A10</p>
          */
         public Builder gpuType(String gpuType) {
             this.putQueryParameter("GpuType", gpuType);
@@ -431,7 +479,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * <p>The image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>modelscope:1.9.4-pytorch2.0.1tensorflow2.13.0-cpu-py38-ubuntu20.04</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -440,7 +491,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/470439.html">ListInstances</a> to obtain the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -449,7 +503,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>training_data</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -458,7 +515,14 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The labels. A maximum of four labels are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;key1&quot;: &quot;value1&quot;,
+         *   &quot;key2&quot;: &quot;value2&quot;,
+         *   &quot;key3&quot;: &quot;value3&quot;
+         * }</p>
          */
         public Builder labels(java.util.Map<String, ?> labels) {
             String labelsShrink = shrink(labels, "Labels", "json");
@@ -468,7 +532,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * MaxCpu.
+         * <p>The maximum number of CPUs. Unit: 0.001 CPU. The value 1000 indicates one CPU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000</p>
          */
         public Builder maxCpu(String maxCpu) {
             this.putQueryParameter("MaxCpu", maxCpu);
@@ -477,7 +544,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * MaxGpu.
+         * <p>The maximum number of GPUs. Unit: 0.001 GPU. The value 1000 indicates one GPU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8000</p>
          */
         public Builder maxGpu(String maxGpu) {
             this.putQueryParameter("MaxGpu", maxGpu);
@@ -486,7 +556,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * MaxGpuMemory.
+         * <p>The maximum memory size per GPU card. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder maxGpuMemory(String maxGpuMemory) {
             this.putQueryParameter("MaxGpuMemory", maxGpuMemory);
@@ -495,7 +568,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * MaxMemory.
+         * <p>The maximum memory size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48</p>
          */
         public Builder maxMemory(String maxMemory) {
             this.putQueryParameter("MaxMemory", maxMemory);
@@ -504,7 +580,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * MinCpu.
+         * <p>The minimum number of CPUs. Unit: 0.001 CPU. The value 1000 indicates one CPU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder minCpu(String minCpu) {
             this.putQueryParameter("MinCpu", minCpu);
@@ -513,7 +592,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * MinGpu.
+         * <p>The minimum number of GPUs. Unit: 0.001 GPU. The value 1000 indicates one GPU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder minGpu(String minGpu) {
             this.putQueryParameter("MinGpu", minGpu);
@@ -522,7 +604,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * MinGpuMemory.
+         * <p>The minimum memory size per GPU card. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder minGpuMemory(String minGpuMemory) {
             this.putQueryParameter("MinGpuMemory", minGpuMemory);
@@ -531,7 +616,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * MinMemory.
+         * <p>The minimum memory size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder minMemory(String minMemory) {
             this.putQueryParameter("MinMemory", minMemory);
@@ -540,7 +628,15 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order that you use to sort the query results.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ASC</li>
+         * <li>DESC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -549,7 +645,28 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * OversoldInfo.
+         */
+        public Builder oversoldInfo(String oversoldInfo) {
+            this.putQueryParameter("OversoldInfo", oversoldInfo);
+            this.oversoldInfo = oversoldInfo;
+            return this;
+        }
+
+        /**
+         * OversoldType.
+         */
+        public Builder oversoldType(String oversoldType) {
+            this.putQueryParameter("OversoldType", oversoldType);
+            this.oversoldType = oversoldType;
+            return this;
+        }
+
+        /**
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -558,7 +675,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -567,7 +687,15 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * PaymentType.
+         * <p>The billing method.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PayAsYouGo</li>
+         * <li>Subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
@@ -576,7 +704,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource group ID. If you leave this parameter empty, the instances in the pay-as-you-go resource group are queried. If you set this parameter to ALL, all instances are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-123456789</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -585,7 +716,16 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field that you use to sort the query results.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Priority</li>
+         * <li>GmtCreateTime</li>
+         * <li>GmtModifiedTime</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>gmtCreate</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -594,7 +734,28 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The instance status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Creating</li>
+         * <li>SaveFailed</li>
+         * <li>Stopped</li>
+         * <li>Failed</li>
+         * <li>ResourceAllocating</li>
+         * <li>Stopping</li>
+         * <li>Updating</li>
+         * <li>Saving</li>
+         * <li>Queuing</li>
+         * <li>Recovering</li>
+         * <li>Starting</li>
+         * <li>Running</li>
+         * <li>Saved</li>
+         * <li>Deleting</li>
+         * <li>EnvPreparing</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -603,7 +764,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -613,7 +774,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40823</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -672,8 +836,19 @@ public class ListInstancesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -681,7 +856,10 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
