@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAndAnalyzeNetworkPathRequest} extends {@link RequestModel}
  *
  * <p>CreateAndAnalyzeNetworkPathRequest</p>
@@ -75,7 +81,7 @@ public class CreateAndAnalyzeNetworkPathRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -181,12 +187,15 @@ public class CreateAndAnalyzeNetworkPathRequest extends Request {
         } 
 
         /**
-         * The protocol type. Valid values:
-         * <p>
+         * <p>The protocol type. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong>: Transmission Control Protocol (TCP)</li>
+         * <li><strong>udp</strong>: User Datagram Protocol (UDP)</li>
+         * <li><strong>icmp</strong>: Internet Control Message Protocol (ICMP)</li>
+         * </ul>
          * 
-         * *   **tcp**: Transmission Control Protocol (TCP)
-         * *   **udp**: User Datagram Protocol (UDP)
-         * *   **icmp**: Internet Control Message Protocol (ICMP)
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -195,7 +204,10 @@ public class CreateAndAnalyzeNetworkPathRequest extends Request {
         }
 
         /**
-         * The ID of the region for which you want to initiate a task for analyzing network reachability.
+         * <p>The ID of the region for which you want to initiate a task for analyzing network reachability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -204,7 +216,11 @@ public class CreateAndAnalyzeNetworkPathRequest extends Request {
         }
 
         /**
-         * The ID of the source resource.
+         * <p>The ID of the source resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf62y8khhbkbdrp6****</p>
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -213,7 +229,10 @@ public class CreateAndAnalyzeNetworkPathRequest extends Request {
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder sourceIpAddress(String sourceIpAddress) {
             this.putQueryParameter("SourceIpAddress", sourceIpAddress);
@@ -222,7 +241,10 @@ public class CreateAndAnalyzeNetworkPathRequest extends Request {
         }
 
         /**
-         * The source port.
+         * <p>The source port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder sourcePort(Integer sourcePort) {
             this.putQueryParameter("SourcePort", sourcePort);
@@ -231,14 +253,18 @@ public class CreateAndAnalyzeNetworkPathRequest extends Request {
         }
 
         /**
-         * The type of the source resource. Valid values:
-         * <p>
+         * <p>The type of the source resource. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong>: the Elastic Compute Service (ECS) instance</li>
+         * <li><strong>internetIp</strong>: the public IP address</li>
+         * <li><strong>vsw</strong>: the vSwitch</li>
+         * <li><strong>vpn</strong>: the VPN gateway</li>
+         * <li><strong>vbr</strong>: the virtual border router (VBR)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ecs**: the Elastic Compute Service (ECS) instance
-         * *   **internetIp**: the public IP address
-         * *   **vsw**: the vSwitch
-         * *   **vpn**: the VPN gateway
-         * *   **vbr**: the virtual border router (VBR)
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -247,7 +273,10 @@ public class CreateAndAnalyzeNetworkPathRequest extends Request {
         }
 
         /**
-         * The ID of the destination resource.
+         * <p>The ID of the destination resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-m5eactvw7wtpktv5****</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -256,7 +285,10 @@ public class CreateAndAnalyzeNetworkPathRequest extends Request {
         }
 
         /**
-         * The destination IP address.
+         * <p>The destination IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.50.XX.XX</p>
          */
         public Builder targetIpAddress(String targetIpAddress) {
             this.putQueryParameter("TargetIpAddress", targetIpAddress);
@@ -265,7 +297,10 @@ public class CreateAndAnalyzeNetworkPathRequest extends Request {
         }
 
         /**
-         * The destination port.
+         * <p>The destination port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder targetPort(Integer targetPort) {
             this.putQueryParameter("TargetPort", targetPort);
@@ -274,15 +309,18 @@ public class CreateAndAnalyzeNetworkPathRequest extends Request {
         }
 
         /**
-         * The type of the destination resource. Valid values:
-         * <p>
+         * <p>The type of the destination resource. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong>: the ECS instance</li>
+         * <li><strong>internetIp</strong>: the public IP address</li>
+         * <li><strong>vsw</strong>: the vSwitch</li>
+         * <li><strong>vpn</strong>: the VPN gateway</li>
+         * <li><strong>vbr</strong>: the VBR</li>
+         * <li><strong>clb</strong>: the Classic Load Balancer (CLB) instance</li>
+         * </ul>
          * 
-         * *   **ecs**: the ECS instance
-         * *   **internetIp**: the public IP address
-         * *   **vsw**: the vSwitch
-         * *   **vpn**: the VPN gateway
-         * *   **vbr**: the VBR
-         * *   **clb**: the Classic Load Balancer (CLB) instance
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

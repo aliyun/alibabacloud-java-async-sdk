@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAndAnalyzeNetworkPathResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAndAnalyzeNetworkPathResponseBody</p>
@@ -64,6 +70,10 @@ public class CreateAndAnalyzeNetworkPathResponseBody extends TeaModel {
 
     public static CreateAndAnalyzeNetworkPathResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -156,8 +166,28 @@ public class CreateAndAnalyzeNetworkPathResponseBody extends TeaModel {
         private String targetPort; 
         private String targetType; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateAndAnalyzeNetworkPathResponseBody model) {
+            this.networkReachableAnalysisId = model.networkReachableAnalysisId;
+            this.protocol = model.protocol;
+            this.requestId = model.requestId;
+            this.sourceId = model.sourceId;
+            this.sourceIpAddress = model.sourceIpAddress;
+            this.sourcePort = model.sourcePort;
+            this.sourceType = model.sourceType;
+            this.targetId = model.targetId;
+            this.targetIpAddress = model.targetIpAddress;
+            this.targetPort = model.targetPort;
+            this.targetType = model.targetType;
+        } 
+
         /**
-         * The ID of the task for analyzing network reachability that you initiated.
+         * <p>The ID of the task for analyzing network reachability that you initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nra-dfe9e53d2b524568****</p>
          */
         public Builder networkReachableAnalysisId(String networkReachableAnalysisId) {
             this.networkReachableAnalysisId = networkReachableAnalysisId;
@@ -165,7 +195,10 @@ public class CreateAndAnalyzeNetworkPathResponseBody extends TeaModel {
         }
 
         /**
-         * The protocol type.
+         * <p>The protocol type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -173,7 +206,10 @@ public class CreateAndAnalyzeNetworkPathResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D5E98683-355B-5867-8D3D-A24755F6895B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,7 +217,10 @@ public class CreateAndAnalyzeNetworkPathResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the source resource.
+         * <p>The ID of the source resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf62y8khhbkbdrp6****</p>
          */
         public Builder sourceId(String sourceId) {
             this.sourceId = sourceId;
@@ -189,7 +228,10 @@ public class CreateAndAnalyzeNetworkPathResponseBody extends TeaModel {
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder sourceIpAddress(String sourceIpAddress) {
             this.sourceIpAddress = sourceIpAddress;
@@ -197,7 +239,10 @@ public class CreateAndAnalyzeNetworkPathResponseBody extends TeaModel {
         }
 
         /**
-         * The source port.
+         * <p>The source port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder sourcePort(String sourcePort) {
             this.sourcePort = sourcePort;
@@ -205,7 +250,10 @@ public class CreateAndAnalyzeNetworkPathResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the source resource.
+         * <p>The type of the source resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -213,7 +261,10 @@ public class CreateAndAnalyzeNetworkPathResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the destination resource.
+         * <p>The ID of the destination resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-m5eactvw7wtpktv5****</p>
          */
         public Builder targetId(String targetId) {
             this.targetId = targetId;
@@ -221,7 +272,10 @@ public class CreateAndAnalyzeNetworkPathResponseBody extends TeaModel {
         }
 
         /**
-         * The destination IP address.
+         * <p>The destination IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.50.XX.XX</p>
          */
         public Builder targetIpAddress(String targetIpAddress) {
             this.targetIpAddress = targetIpAddress;
@@ -229,7 +283,10 @@ public class CreateAndAnalyzeNetworkPathResponseBody extends TeaModel {
         }
 
         /**
-         * The destination port.
+         * <p>The destination port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder targetPort(String targetPort) {
             this.targetPort = targetPort;
@@ -237,7 +294,10 @@ public class CreateAndAnalyzeNetworkPathResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the destination resource.
+         * <p>The type of the destination resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder targetType(String targetType) {
             this.targetType = targetType;

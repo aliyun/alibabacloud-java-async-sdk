@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNetworkReachableAnalysisRequest} extends {@link RequestModel}
  *
  * <p>GetNetworkReachableAnalysisRequest</p>
@@ -34,7 +40,7 @@ public class GetNetworkReachableAnalysisRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +74,11 @@ public class GetNetworkReachableAnalysisRequest extends Request {
         } 
 
         /**
-         * The ID of the task for analyzing network reachability. You can call the **CreateNetworkRearchableAnalysis** operation to obtain the ID of the task for analyzing network reachability.
+         * <p>The ID of the task for analyzing network reachability. You can call the <strong>CreateNetworkRearchableAnalysis</strong> operation to obtain the ID of the task for analyzing network reachability.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nra-90eef36a9e6e4662****</p>
          */
         public Builder networkReachableAnalysisId(String networkReachableAnalysisId) {
             this.putQueryParameter("NetworkReachableAnalysisId", networkReachableAnalysisId);
@@ -77,7 +87,10 @@ public class GetNetworkReachableAnalysisRequest extends Request {
         }
 
         /**
-         * The ID of the region for which you want to obtain the result of network reachability analysis.
+         * <p>The ID of the region for which you want to obtain the result of network reachability analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

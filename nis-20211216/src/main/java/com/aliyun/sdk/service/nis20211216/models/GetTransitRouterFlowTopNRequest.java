@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTransitRouterFlowTopNRequest} extends {@link RequestModel}
  *
  * <p>GetTransitRouterFlowTopNRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetTransitRouterFlowTopNRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountIds")
-    private java.util.List < Long > accountIds;
+    private java.util.List<Long> accountIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BandwithPackageId")
@@ -118,7 +124,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -126,7 +132,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
     /**
      * @return accountIds
      */
-    public java.util.List < Long > getAccountIds() {
+    public java.util.List<Long> getAccountIds() {
         return this.accountIds;
     }
 
@@ -250,7 +256,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetTransitRouterFlowTopNRequest, Builder> {
-        private java.util.List < Long > accountIds; 
+        private java.util.List<Long> accountIds; 
         private String bandwithPackageId; 
         private Long beginTime; 
         private String cenId; 
@@ -296,9 +302,9 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         } 
 
         /**
-         * The IDs of the member accounts.
+         * <p>The IDs of the member accounts.</p>
          */
-        public Builder accountIds(java.util.List < Long > accountIds) {
+        public Builder accountIds(java.util.List<Long> accountIds) {
             String accountIdsShrink = shrink(accountIds, "AccountIds", "json");
             this.putQueryParameter("AccountIds", accountIdsShrink);
             this.accountIds = accountIds;
@@ -306,7 +312,10 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * The ID of the CEN bandwidth plan.
+         * <p>The ID of the CEN bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cenbwp-ia8kw1zjv4hyal*****</p>
          */
         public Builder bandwithPackageId(String bandwithPackageId) {
             this.putQueryParameter("BandwithPackageId", bandwithPackageId);
@@ -315,7 +324,11 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The maximum time range that you can query is 24 hours.
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The maximum time range that you can query is 24 hours.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684373600099</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -324,7 +337,10 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * The CEN instance ID.
+         * <p>The CEN instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-ia8kw1zjv4hyal****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -333,11 +349,15 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * The direction of the inter-region traffic in the local regions or for the local IP addresses. Valid values:
-         * <p>
+         * <p>The direction of the inter-region traffic in the local regions or for the local IP addresses. Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound traffic</li>
+         * <li><strong>out</strong>: outbound traffic</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **in**: inbound traffic
-         * *   **out**: outbound traffic
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -346,7 +366,11 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The maximum time range that you can query is 24 hours.
+         * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The maximum time range that you can query is 24 hours.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638239093000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -355,16 +379,20 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * The dimension for ranking inter-region traffic data. The value of this parameter is case-sensitive. Valid values:
-         * <p>
+         * <p>The dimension for ranking inter-region traffic data. The value of this parameter is case-sensitive. Valid values:</p>
+         * <ul>
+         * <li><strong>1Tuple</strong>: queries the rankings of inter-region traffic data for the local regions, Cloud Enterprise Network (CEN) instances, and IP addresses.</li>
+         * <li><strong>2Tuple</strong>: queries the rankings of inter-region traffic data for the local and remote regions, and the local and remote IP addresses.</li>
+         * <li><strong>5Tuple</strong>: queries the rankings of inter-region traffic data for the local and remote IP addresses, local and remote ports, and protocols.</li>
+         * <li><strong>Cen</strong>: queries the rankings of inter-region traffic data for CEN instances.</li>
+         * <li><strong>RegionPair</strong>: queries the rankings of inter-region traffic data for the local and remote regions.</li>
+         * <li><strong>Port</strong>: queries the rankings of inter-region traffic data for the local and remote ports.</li>
+         * <li><strong>Protocol</strong>: queries the rankings of inter-region traffic data for the protocols.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1Tuple**: queries the rankings of inter-region traffic data for the local regions, Cloud Enterprise Network (CEN) instances, and IP addresses.
-         * *   **2Tuple**: queries the rankings of inter-region traffic data for the local and remote regions, and the local and remote IP addresses.
-         * *   **5Tuple**: queries the rankings of inter-region traffic data for the local and remote IP addresses, local and remote ports, and protocols.
-         * *   **Cen**: queries the rankings of inter-region traffic data for CEN instances.
-         * *   **RegionPair**: queries the rankings of inter-region traffic data for the local and remote regions.
-         * *   **Port**: queries the rankings of inter-region traffic data for the local and remote ports.
-         * *   **Protocol**: queries the rankings of inter-region traffic data for the protocols.
+         * <strong>example:</strong>
+         * <p>1Tuple</p>
          */
         public Builder groupBy(String groupBy) {
             this.putQueryParameter("GroupBy", groupBy);
@@ -373,7 +401,10 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * The metric for ranking inter-region traffic data. Default value: Bytes. This value specifies that inter-region traffic data is ranked by traffic volume.
+         * <p>The metric for ranking inter-region traffic data. Default value: Bytes. This value specifies that inter-region traffic data is ranked by traffic volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bytes</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -382,7 +413,10 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * The remote IP address.
+         * <p>The remote IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122.112.XX.XX</p>
          */
         public Builder otherIp(String otherIp) {
             this.putQueryParameter("OtherIp", otherIp);
@@ -391,7 +425,10 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * The remote port.
+         * <p>The remote port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10869</p>
          */
         public Builder otherPort(String otherPort) {
             this.putQueryParameter("OtherPort", otherPort);
@@ -400,7 +437,10 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * The remote region.
+         * <p>The remote region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1</p>
          */
         public Builder otherRegion(String otherRegion) {
             this.putQueryParameter("OtherRegion", otherRegion);
@@ -409,10 +449,13 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * The protocol number.
-         * <p>
+         * <p>The protocol number.</p>
+         * <blockquote>
+         * <p> All protocols are supported. This parameter is required only if you set <strong>GroupBy</strong> to <strong>5Tuple</strong> or <strong>Protocol</strong>.</p>
+         * </blockquote>
          * 
-         * >  All protocols are supported. This parameter is required only if you set **GroupBy** to **5Tuple** or **Protocol**.
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -421,11 +464,14 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * The order for ranking inter-region traffic data. Valid values:
-         * <p>
+         * <p>The order for ranking inter-region traffic data. Valid values:</p>
+         * <ul>
+         * <li><strong>desc</strong>: descending order</li>
+         * <li><strong>asc</strong>: ascending order</li>
+         * </ul>
          * 
-         * *   **desc**: descending order
-         * *   **asc**: ascending order
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -434,7 +480,10 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * The local IP address.
+         * <p>The local IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.8.XX.XX</p>
          */
         public Builder thisIp(String thisIp) {
             this.putQueryParameter("ThisIp", thisIp);
@@ -443,7 +492,10 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * The local port.
+         * <p>The local port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder thisPort(String thisPort) {
             this.putQueryParameter("ThisPort", thisPort);
@@ -452,7 +504,10 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * The local region where the **local IP address** resides.
+         * <p>The local region where the <strong>local IP address</strong> resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder thisRegion(String thisRegion) {
             this.putQueryParameter("ThisRegion", thisRegion);
@@ -461,7 +516,10 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * Specifies the maximum number of data entries to display. Default value: **10**. Maximum value: 100.
+         * <p>Specifies the maximum number of data entries to display. Default value: <strong>10</strong>. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder topN(Integer topN) {
             this.putQueryParameter("TopN", topN);
@@ -470,10 +528,13 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.
-         * <p>
+         * <p>Specifies whether to enable the multi-account management feature. Default value: <strong>false</strong>. This value specifies that the multi-account management feature is disabled.</p>
+         * <blockquote>
+         * <p> By default, the multi-account management feature is not available. If you want to use this feature, contact your account manager to apply for permissions.</p>
+         * </blockquote>
          * 
-         * >  By default, the multi-account management feature is not available. If you want to use this feature, contact your account manager to apply for permissions.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useMultiAccount(Boolean useMultiAccount) {
             this.putQueryParameter("UseMultiAccount", useMultiAccount);

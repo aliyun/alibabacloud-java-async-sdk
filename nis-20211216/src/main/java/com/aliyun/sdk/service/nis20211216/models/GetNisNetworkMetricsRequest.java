@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNisNetworkMetricsRequest} extends {@link RequestModel}
  *
  * <p>GetNisNetworkMetricsRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetNisNetworkMetricsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountIds")
-    private java.util.List < String > accountIds;
+    private java.util.List<String> accountIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BeginTime")
@@ -23,7 +29,7 @@ public class GetNisNetworkMetricsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Dimensions")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Dimensions> dimensions;
+    private java.util.List<Dimensions> dimensions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
@@ -74,7 +80,7 @@ public class GetNisNetworkMetricsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +88,7 @@ public class GetNisNetworkMetricsRequest extends Request {
     /**
      * @return accountIds
      */
-    public java.util.List < String > getAccountIds() {
+    public java.util.List<String> getAccountIds() {
         return this.accountIds;
     }
 
@@ -96,7 +102,7 @@ public class GetNisNetworkMetricsRequest extends Request {
     /**
      * @return dimensions
      */
-    public java.util.List < Dimensions> getDimensions() {
+    public java.util.List<Dimensions> getDimensions() {
         return this.dimensions;
     }
 
@@ -143,9 +149,9 @@ public class GetNisNetworkMetricsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetNisNetworkMetricsRequest, Builder> {
-        private java.util.List < String > accountIds; 
+        private java.util.List<String> accountIds; 
         private Long beginTime; 
-        private java.util.List < Dimensions> dimensions; 
+        private java.util.List<Dimensions> dimensions; 
         private Long endTime; 
         private String metricName; 
         private String regionNo; 
@@ -173,7 +179,7 @@ public class GetNisNetworkMetricsRequest extends Request {
         /**
          * AccountIds.
          */
-        public Builder accountIds(java.util.List < String > accountIds) {
+        public Builder accountIds(java.util.List<String> accountIds) {
             this.putQueryParameter("AccountIds", accountIds);
             this.accountIds = accountIds;
             return this;
@@ -189,9 +195,9 @@ public class GetNisNetworkMetricsRequest extends Request {
         }
 
         /**
-         * Dimensions.
+         * <p>This parameter is required.</p>
          */
-        public Builder dimensions(java.util.List < Dimensions> dimensions) {
+        public Builder dimensions(java.util.List<Dimensions> dimensions) {
             String dimensionsShrink = shrink(dimensions, "Dimensions", "json");
             this.putQueryParameter("Dimensions", dimensionsShrink);
             this.dimensions = dimensions;
@@ -208,7 +214,10 @@ public class GetNisNetworkMetricsRequest extends Request {
         }
 
         /**
-         * MetricName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bps</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -217,7 +226,10 @@ public class GetNisNetworkMetricsRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -226,7 +238,10 @@ public class GetNisNetworkMetricsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AccessInternetIPV4</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -259,6 +274,12 @@ public class GetNisNetworkMetricsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetNisNetworkMetricsRequest} extends {@link TeaModel}
+     *
+     * <p>GetNisNetworkMetricsRequest</p>
+     */
     public static class Dimensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -296,6 +317,14 @@ public class GetNisNetworkMetricsRequest extends Request {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * Name.

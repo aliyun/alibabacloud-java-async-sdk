@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNisInspectionReportSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNisInspectionReportSummaryResponseBody</p>
@@ -48,6 +54,10 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
 
     public static DescribeNisInspectionReportSummaryResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -107,6 +117,19 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
         private String startTime; 
         private String status; 
         private Summary summary; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNisInspectionReportSummaryResponseBody model) {
+            this.endTime = model.endTime;
+            this.inspectionReportId = model.inspectionReportId;
+            this.inspectionTaskId = model.inspectionTaskId;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.summary = model.summary;
+        } 
 
         /**
          * EndTime.
@@ -170,6 +193,12 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNisInspectionReportSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNisInspectionReportSummaryResponseBody</p>
+     */
     public static class PassRateSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PassRate")
         private Double passRate;
@@ -208,6 +237,14 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
             private Double passRate; 
             private String passRateScope; 
 
+            private Builder() {
+            } 
+
+            private Builder(PassRateSummary model) {
+                this.passRate = model.passRate;
+                this.passRateScope = model.passRateScope;
+            } 
+
             /**
              * PassRate.
              */
@@ -231,6 +268,12 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNisInspectionReportSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNisInspectionReportSummaryResponseBody</p>
+     */
     public static class RiskSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceCount")
         private Integer resourceCount;
@@ -293,6 +336,16 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
             private String riskLevel; 
             private String riskType; 
 
+            private Builder() {
+            } 
+
+            private Builder(RiskSummary model) {
+                this.resourceCount = model.resourceCount;
+                this.riskCount = model.riskCount;
+                this.riskLevel = model.riskLevel;
+                this.riskType = model.riskType;
+            } 
+
             /**
              * ResourceCount.
              */
@@ -332,6 +385,12 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNisInspectionReportSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNisInspectionReportSummaryResponseBody</p>
+     */
     public static class Summary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckItemCount")
         private Integer checkItemCount;
@@ -340,10 +399,10 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
         private Integer checkResourceCount;
 
         @com.aliyun.core.annotation.NameInMap("PassRateSummary")
-        private java.util.List < PassRateSummary> passRateSummary;
+        private java.util.List<PassRateSummary> passRateSummary;
 
         @com.aliyun.core.annotation.NameInMap("RiskSummary")
-        private java.util.List < RiskSummary> riskSummary;
+        private java.util.List<RiskSummary> riskSummary;
 
         private Summary(Builder builder) {
             this.checkItemCount = builder.checkItemCount;
@@ -377,22 +436,32 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
         /**
          * @return passRateSummary
          */
-        public java.util.List < PassRateSummary> getPassRateSummary() {
+        public java.util.List<PassRateSummary> getPassRateSummary() {
             return this.passRateSummary;
         }
 
         /**
          * @return riskSummary
          */
-        public java.util.List < RiskSummary> getRiskSummary() {
+        public java.util.List<RiskSummary> getRiskSummary() {
             return this.riskSummary;
         }
 
         public static final class Builder {
             private Integer checkItemCount; 
             private Integer checkResourceCount; 
-            private java.util.List < PassRateSummary> passRateSummary; 
-            private java.util.List < RiskSummary> riskSummary; 
+            private java.util.List<PassRateSummary> passRateSummary; 
+            private java.util.List<RiskSummary> riskSummary; 
+
+            private Builder() {
+            } 
+
+            private Builder(Summary model) {
+                this.checkItemCount = model.checkItemCount;
+                this.checkResourceCount = model.checkResourceCount;
+                this.passRateSummary = model.passRateSummary;
+                this.riskSummary = model.riskSummary;
+            } 
 
             /**
              * CheckItemCount.
@@ -413,7 +482,7 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
             /**
              * PassRateSummary.
              */
-            public Builder passRateSummary(java.util.List < PassRateSummary> passRateSummary) {
+            public Builder passRateSummary(java.util.List<PassRateSummary> passRateSummary) {
                 this.passRateSummary = passRateSummary;
                 return this;
             }
@@ -421,7 +490,7 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
             /**
              * RiskSummary.
              */
-            public Builder riskSummary(java.util.List < RiskSummary> riskSummary) {
+            public Builder riskSummary(java.util.List<RiskSummary> riskSummary) {
                 this.riskSummary = riskSummary;
                 return this;
             }

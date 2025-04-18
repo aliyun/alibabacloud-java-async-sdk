@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNisInspectionReportCheckItemsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNisInspectionReportCheckItemsResponseBody</p>
  */
 public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CheckItemList")
-    private java.util.List < CheckItemList> checkItemList;
+    private java.util.List<CheckItemList> checkItemList;
 
     @com.aliyun.core.annotation.NameInMap("InspectionReportId")
     private String inspectionReportId;
@@ -46,10 +52,14 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkItemList
      */
-    public java.util.List < CheckItemList> getCheckItemList() {
+    public java.util.List<CheckItemList> getCheckItemList() {
         return this.checkItemList;
     }
 
@@ -89,17 +99,29 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
     }
 
     public static final class Builder {
-        private java.util.List < CheckItemList> checkItemList; 
+        private java.util.List<CheckItemList> checkItemList; 
         private String inspectionReportId; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeNisInspectionReportCheckItemsResponseBody model) {
+            this.checkItemList = model.checkItemList;
+            this.inspectionReportId = model.inspectionReportId;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * CheckItemList.
          */
-        public Builder checkItemList(java.util.List < CheckItemList> checkItemList) {
+        public Builder checkItemList(java.util.List<CheckItemList> checkItemList) {
             this.checkItemList = checkItemList;
             return this;
         }
@@ -150,6 +172,12 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNisInspectionReportCheckItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNisInspectionReportCheckItemsResponseBody</p>
+     */
     public static class CheckResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -188,6 +216,14 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
             private Integer count; 
             private String riskLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckResultList model) {
+                this.count = model.count;
+                this.riskLevel = model.riskLevel;
+            } 
+
             /**
              * Count.
              */
@@ -211,6 +247,12 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNisInspectionReportCheckItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNisInspectionReportCheckItemsResponseBody</p>
+     */
     public static class RecommendationList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Abnormality")
         private String abnormality;
@@ -221,6 +263,9 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
+        @com.aliyun.core.annotation.NameInMap("ReasonCode")
+        private String reasonCode;
+
         @com.aliyun.core.annotation.NameInMap("RecommendationCode")
         private String recommendationCode;
 
@@ -230,13 +275,18 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
+        @com.aliyun.core.annotation.NameInMap("SuggestionCode")
+        private String suggestionCode;
+
         private RecommendationList(Builder builder) {
             this.abnormality = builder.abnormality;
             this.metadata = builder.metadata;
             this.reason = builder.reason;
+            this.reasonCode = builder.reasonCode;
             this.recommendationCode = builder.recommendationCode;
             this.riskLevel = builder.riskLevel;
             this.suggestion = builder.suggestion;
+            this.suggestionCode = builder.suggestionCode;
         }
 
         public static Builder builder() {
@@ -269,6 +319,13 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         }
 
         /**
+         * @return reasonCode
+         */
+        public String getReasonCode() {
+            return this.reasonCode;
+        }
+
+        /**
          * @return recommendationCode
          */
         public String getRecommendationCode() {
@@ -289,13 +346,36 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
             return this.suggestion;
         }
 
+        /**
+         * @return suggestionCode
+         */
+        public String getSuggestionCode() {
+            return this.suggestionCode;
+        }
+
         public static final class Builder {
             private String abnormality; 
             private String metadata; 
             private String reason; 
+            private String reasonCode; 
             private String recommendationCode; 
             private String riskLevel; 
             private String suggestion; 
+            private String suggestionCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecommendationList model) {
+                this.abnormality = model.abnormality;
+                this.metadata = model.metadata;
+                this.reason = model.reason;
+                this.reasonCode = model.reasonCode;
+                this.recommendationCode = model.recommendationCode;
+                this.riskLevel = model.riskLevel;
+                this.suggestion = model.suggestion;
+                this.suggestionCode = model.suggestionCode;
+            } 
 
             /**
              * Abnormality.
@@ -318,6 +398,14 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
              */
             public Builder reason(String reason) {
                 this.reason = reason;
+                return this;
+            }
+
+            /**
+             * ReasonCode.
+             */
+            public Builder reasonCode(String reasonCode) {
+                this.reasonCode = reasonCode;
                 return this;
             }
 
@@ -345,6 +433,14 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
                 return this;
             }
 
+            /**
+             * SuggestionCode.
+             */
+            public Builder suggestionCode(String suggestionCode) {
+                this.suggestionCode = suggestionCode;
+                return this;
+            }
+
             public RecommendationList build() {
                 return new RecommendationList(this);
             } 
@@ -352,6 +448,12 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNisInspectionReportCheckItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNisInspectionReportCheckItemsResponseBody</p>
+     */
     public static class CheckItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryCode")
         private String categoryCode;
@@ -363,13 +465,13 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         private String checkItemName;
 
         @com.aliyun.core.annotation.NameInMap("CheckResultList")
-        private java.util.List < CheckResultList> checkResultList;
+        private java.util.List<CheckResultList> checkResultList;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("RecommendationList")
-        private java.util.List < RecommendationList> recommendationList;
+        private java.util.List<RecommendationList> recommendationList;
 
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
@@ -416,7 +518,7 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         /**
          * @return checkResultList
          */
-        public java.util.List < CheckResultList> getCheckResultList() {
+        public java.util.List<CheckResultList> getCheckResultList() {
             return this.checkResultList;
         }
 
@@ -430,7 +532,7 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         /**
          * @return recommendationList
          */
-        public java.util.List < RecommendationList> getRecommendationList() {
+        public java.util.List<RecommendationList> getRecommendationList() {
             return this.recommendationList;
         }
 
@@ -445,10 +547,23 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
             private String categoryCode; 
             private String checkItemCode; 
             private String checkItemName; 
-            private java.util.List < CheckResultList> checkResultList; 
+            private java.util.List<CheckResultList> checkResultList; 
             private String description; 
-            private java.util.List < RecommendationList> recommendationList; 
+            private java.util.List<RecommendationList> recommendationList; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckItemList model) {
+                this.categoryCode = model.categoryCode;
+                this.checkItemCode = model.checkItemCode;
+                this.checkItemName = model.checkItemName;
+                this.checkResultList = model.checkResultList;
+                this.description = model.description;
+                this.recommendationList = model.recommendationList;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * CategoryCode.
@@ -477,7 +592,7 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
             /**
              * CheckResultList.
              */
-            public Builder checkResultList(java.util.List < CheckResultList> checkResultList) {
+            public Builder checkResultList(java.util.List<CheckResultList> checkResultList) {
                 this.checkResultList = checkResultList;
                 return this;
             }
@@ -493,7 +608,7 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
             /**
              * RecommendationList.
              */
-            public Builder recommendationList(java.util.List < RecommendationList> recommendationList) {
+            public Builder recommendationList(java.util.List<RecommendationList> recommendationList) {
                 this.recommendationList = recommendationList;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNisNetworkMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>GetNisNetworkMetricsResponseBody</p>
@@ -30,6 +36,10 @@ public class GetNisNetworkMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -47,6 +57,14 @@ public class GetNisNetworkMetricsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNisNetworkMetricsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -70,6 +88,12 @@ public class GetNisNetworkMetricsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNisNetworkMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNisNetworkMetricsResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private Long timeStamp;
@@ -108,6 +132,14 @@ public class GetNisNetworkMetricsResponseBody extends TeaModel {
             private Long timeStamp; 
             private Double value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
              * TimeStamp.
              */
@@ -131,9 +163,15 @@ public class GetNisNetworkMetricsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNisNetworkMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNisNetworkMetricsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Metrics")
-        private java.util.List < Metrics> metrics;
+        private java.util.List<Metrics> metrics;
 
         @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
@@ -154,7 +192,7 @@ public class GetNisNetworkMetricsResponseBody extends TeaModel {
         /**
          * @return metrics
          */
-        public java.util.List < Metrics> getMetrics() {
+        public java.util.List<Metrics> getMetrics() {
             return this.metrics;
         }
 
@@ -166,13 +204,21 @@ public class GetNisNetworkMetricsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Metrics> metrics; 
+            private java.util.List<Metrics> metrics; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.metrics = model.metrics;
+                this.unit = model.unit;
+            } 
 
             /**
              * Metrics.
              */
-            public Builder metrics(java.util.List < Metrics> metrics) {
+            public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
                 return this;
             }

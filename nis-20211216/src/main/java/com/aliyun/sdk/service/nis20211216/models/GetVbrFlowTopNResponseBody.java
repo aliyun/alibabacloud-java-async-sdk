@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVbrFlowTopNResponseBody} extends {@link TeaModel}
  *
  * <p>GetVbrFlowTopNResponseBody</p>
@@ -15,7 +21,7 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("VirtualBorderRouterFlowlogTopN")
-    private java.util.List < VirtualBorderRouterFlowlogTopN> virtualBorderRouterFlowlogTopN;
+    private java.util.List<VirtualBorderRouterFlowlogTopN> virtualBorderRouterFlowlogTopN;
 
     private GetVbrFlowTopNResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
     /**
      * @return virtualBorderRouterFlowlogTopN
      */
-    public java.util.List < VirtualBorderRouterFlowlogTopN> getVirtualBorderRouterFlowlogTopN() {
+    public java.util.List<VirtualBorderRouterFlowlogTopN> getVirtualBorderRouterFlowlogTopN() {
         return this.virtualBorderRouterFlowlogTopN;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < VirtualBorderRouterFlowlogTopN> virtualBorderRouterFlowlogTopN; 
+        private java.util.List<VirtualBorderRouterFlowlogTopN> virtualBorderRouterFlowlogTopN; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVbrFlowTopNResponseBody model) {
+            this.requestId = model.requestId;
+            this.virtualBorderRouterFlowlogTopN = model.virtualBorderRouterFlowlogTopN;
+        } 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7F0D6EC-E19E-58AC-AC9F-08036763960F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
         }
 
         /**
-         * The ranking result of hybrid cloud traffic data.
+         * <p>The ranking result of hybrid cloud traffic data.</p>
          */
-        public Builder virtualBorderRouterFlowlogTopN(java.util.List < VirtualBorderRouterFlowlogTopN> virtualBorderRouterFlowlogTopN) {
+        public Builder virtualBorderRouterFlowlogTopN(java.util.List<VirtualBorderRouterFlowlogTopN> virtualBorderRouterFlowlogTopN) {
             this.virtualBorderRouterFlowlogTopN = virtualBorderRouterFlowlogTopN;
             return this;
         }
@@ -70,6 +91,12 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetVbrFlowTopNResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVbrFlowTopNResponseBody</p>
+     */
     public static class VirtualBorderRouterFlowlogTopN extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -216,8 +243,28 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             private String protocol; 
             private String virtualBorderRouterId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VirtualBorderRouterFlowlogTopN model) {
+                this.accountId = model.accountId;
+                this.attachmentId = model.attachmentId;
+                this.bytes = model.bytes;
+                this.cloudIp = model.cloudIp;
+                this.cloudPort = model.cloudPort;
+                this.cloudRegion = model.cloudRegion;
+                this.otherIp = model.otherIp;
+                this.otherPort = model.otherPort;
+                this.packets = model.packets;
+                this.protocol = model.protocol;
+                this.virtualBorderRouterId = model.virtualBorderRouterId;
+            } 
+
             /**
-             * The account ID.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>156237031628****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -225,7 +272,10 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The CEN connection ID.
+             * <p>The CEN connection ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-attach-u6v1j3jre0fe9h****</p>
              */
             public Builder attachmentId(String attachmentId) {
                 this.attachmentId = attachmentId;
@@ -233,7 +283,10 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The total volume of traffic in the specified time range.
+             * <p>The total volume of traffic in the specified time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>108</p>
              */
             public Builder bytes(Double bytes) {
                 this.bytes = bytes;
@@ -241,7 +294,10 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The local IP address.
+             * <p>The local IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.24.X.X</p>
              */
             public Builder cloudIp(String cloudIp) {
                 this.cloudIp = cloudIp;
@@ -249,7 +305,10 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The local port.
+             * <p>The local port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder cloudPort(String cloudPort) {
                 this.cloudPort = cloudPort;
@@ -257,7 +316,10 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The local region where the local IP address resides.
+             * <p>The local region where the local IP address resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder cloudRegion(String cloudRegion) {
                 this.cloudRegion = cloudRegion;
@@ -265,7 +327,10 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The remote IP address.
+             * <p>The remote IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222.85.X.X</p>
              */
             public Builder otherIp(String otherIp) {
                 this.otherIp = otherIp;
@@ -273,7 +338,10 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The remote port.
+             * <p>The remote port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10965</p>
              */
             public Builder otherPort(String otherPort) {
                 this.otherPort = otherPort;
@@ -281,7 +349,10 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of packets in the specified time range.
+             * <p>The total number of packets in the specified time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66</p>
              */
             public Builder packets(Double packets) {
                 this.packets = packets;
@@ -289,7 +360,10 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol number.
+             * <p>The protocol number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -297,7 +371,10 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VBR that is associated with the Express Connect circuit.
+             * <p>The ID of the VBR that is associated with the Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vbr-k1atj46citwuek42j****</p>
              */
             public Builder virtualBorderRouterId(String virtualBorderRouterId) {
                 this.virtualBorderRouterId = virtualBorderRouterId;

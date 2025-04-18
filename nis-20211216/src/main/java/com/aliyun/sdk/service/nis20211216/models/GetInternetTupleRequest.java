@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInternetTupleRequest} extends {@link RequestModel}
  *
  * <p>GetInternetTupleRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetInternetTupleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountIds")
-    private java.util.List < Long > accountIds;
+    private java.util.List<Long> accountIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BeginTime")
@@ -26,7 +32,7 @@ public class GetInternetTupleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CloudIpList")
-    private java.util.List < String > cloudIpList;
+    private java.util.List<String> cloudIpList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CloudIsp")
@@ -52,7 +58,7 @@ public class GetInternetTupleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceList")
-    private java.util.List < String > instanceList;
+    private java.util.List<String> instanceList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderBy")
@@ -138,7 +144,7 @@ public class GetInternetTupleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -146,7 +152,7 @@ public class GetInternetTupleRequest extends Request {
     /**
      * @return accountIds
      */
-    public java.util.List < Long > getAccountIds() {
+    public java.util.List<Long> getAccountIds() {
         return this.accountIds;
     }
 
@@ -167,7 +173,7 @@ public class GetInternetTupleRequest extends Request {
     /**
      * @return cloudIpList
      */
-    public java.util.List < String > getCloudIpList() {
+    public java.util.List<String> getCloudIpList() {
         return this.cloudIpList;
     }
 
@@ -209,7 +215,7 @@ public class GetInternetTupleRequest extends Request {
     /**
      * @return instanceList
      */
-    public java.util.List < String > getInstanceList() {
+    public java.util.List<String> getInstanceList() {
         return this.instanceList;
     }
 
@@ -298,16 +304,16 @@ public class GetInternetTupleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetInternetTupleRequest, Builder> {
-        private java.util.List < Long > accountIds; 
+        private java.util.List<Long> accountIds; 
         private Long beginTime; 
         private String cloudIp; 
-        private java.util.List < String > cloudIpList; 
+        private java.util.List<String> cloudIpList; 
         private String cloudIsp; 
         private String cloudPort; 
         private String direction; 
         private Long endTime; 
         private String instanceId; 
-        private java.util.List < String > instanceList; 
+        private java.util.List<String> instanceList; 
         private String orderBy; 
         private String otherCity; 
         private String otherCountry; 
@@ -352,16 +358,20 @@ public class GetInternetTupleRequest extends Request {
         } 
 
         /**
-         * The IDs of member accounts.
+         * <p>The IDs of member accounts.</p>
          */
-        public Builder accountIds(java.util.List < Long > accountIds) {
+        public Builder accountIds(java.util.List<Long> accountIds) {
             this.putQueryParameter("AccountIds", accountIds);
             this.accountIds = accountIds;
             return this;
         }
 
         /**
-         * The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684373600099</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -370,7 +380,10 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The local IP address.
+         * <p>The local IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112.74.XX.XX</p>
          */
         public Builder cloudIp(String cloudIp) {
             this.putQueryParameter("CloudIp", cloudIp);
@@ -379,9 +392,9 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The local IP addresses for filtering.
+         * <p>The local IP addresses for filtering.</p>
          */
-        public Builder cloudIpList(java.util.List < String > cloudIpList) {
+        public Builder cloudIpList(java.util.List<String> cloudIpList) {
             String cloudIpListShrink = shrink(cloudIpList, "CloudIpList", "json");
             this.putQueryParameter("CloudIpList", cloudIpListShrink);
             this.cloudIpList = cloudIpList;
@@ -389,10 +402,13 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The local Internet service provider (ISP).
-         * <p>
+         * <p>The local Internet service provider (ISP).</p>
+         * <blockquote>
+         * <p> In most cases, the value is Alibaba or Alibaba Cloud.</p>
+         * </blockquote>
          * 
-         * >  In most cases, the value is Alibaba or Alibaba Cloud.
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
          */
         public Builder cloudIsp(String cloudIsp) {
             this.putQueryParameter("CloudIsp", cloudIsp);
@@ -401,10 +417,13 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The local port.
-         * <p>
+         * <p>The local port.</p>
+         * <blockquote>
+         * <p> This parameter is required only if you set GroupBy to CloudPort.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only if you set GroupBy to CloudPort.
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         public Builder cloudPort(String cloudPort) {
             this.putQueryParameter("CloudPort", cloudPort);
@@ -413,11 +432,15 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The direction of the Internet traffic that you want to query. Valid values:
-         * <p>
+         * <p>The direction of the Internet traffic that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound</li>
+         * <li><strong>out</strong>: outbound</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **in**: inbound
-         * *   **out**: outbound
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -426,7 +449,11 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684373700099</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -435,7 +462,10 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud instance.
+         * <p>The ID of the Alibaba Cloud instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-sample*</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -444,9 +474,9 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The instance IDs for filtering.
+         * <p>The instance IDs for filtering.</p>
          */
-        public Builder instanceList(java.util.List < String > instanceList) {
+        public Builder instanceList(java.util.List<String> instanceList) {
             String instanceListShrink = shrink(instanceList, "InstanceList", "json");
             this.putQueryParameter("InstanceList", instanceListShrink);
             this.instanceList = instanceList;
@@ -454,15 +484,17 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The metric for data ranking. Default value: **ByteCount**. This value indicates that Internet traffic data is ranked by traffic volume.
-         * <p>
+         * <p>The metric for data ranking. Default value: <strong>ByteCount</strong>. This value indicates that Internet traffic data is ranked by traffic volume.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Rtt</li>
+         * <li>ByteCount</li>
+         * <li>PacketCount</li>
+         * <li>RetransmitRate</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   Rtt
-         * *   ByteCount
-         * *   PacketCount
-         * *   RetransmitRate
+         * <strong>example:</strong>
+         * <p>ByteCount</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -471,10 +503,13 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The remote city.
-         * <p>
+         * <p>The remote city.</p>
+         * <blockquote>
+         * <p> This parameter is required only if you set <strong>TupleType</strong> to <strong>2</strong> or <strong>5</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only if you set **TupleType** to **2** or **5**.
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder otherCity(String otherCity) {
             this.putQueryParameter("OtherCity", otherCity);
@@ -483,10 +518,13 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The remote country.
-         * <p>
+         * <p>The remote country.</p>
+         * <blockquote>
+         * <p> This parameter is required only if you set <strong>TupleType</strong> to <strong>2</strong> or <strong>5</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only if you set **TupleType** to **2** or **5**.
+         * <strong>example:</strong>
+         * <p>China</p>
          */
         public Builder otherCountry(String otherCountry) {
             this.putQueryParameter("OtherCountry", otherCountry);
@@ -495,10 +533,13 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The remote IP address.
-         * <p>
+         * <p>The remote IP address.</p>
+         * <blockquote>
+         * <p>This parameter is required only when you set <strong>TupleType</strong> to <strong>2</strong> or <strong>5</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required only when you set **TupleType** to **2** or **5**.
+         * <strong>example:</strong>
+         * <p>122.112.XX.XX</p>
          */
         public Builder otherIp(String otherIp) {
             this.putQueryParameter("OtherIp", otherIp);
@@ -507,10 +548,13 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The remote ISP.
-         * <p>
+         * <p>The remote ISP.</p>
+         * <blockquote>
+         * <p>This parameter is required if you want to view the information about the remote ISP.</p>
+         * </blockquote>
          * 
-         * > This parameter is required if you want to view the information about the remote ISP.
+         * <strong>example:</strong>
+         * <p>China Mobile</p>
          */
         public Builder otherIsp(String otherIsp) {
             this.putQueryParameter("OtherIsp", otherIsp);
@@ -519,10 +563,13 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The remote port.
-         * <p>
+         * <p>The remote port.</p>
+         * <blockquote>
+         * <p>This parameter is required only when you set <strong>TupleType</strong> to <strong>5</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required only when you set **TupleType** to **5**.
+         * <strong>example:</strong>
+         * <p>40002</p>
          */
         public Builder otherPort(String otherPort) {
             this.putQueryParameter("OtherPort", otherPort);
@@ -531,10 +578,13 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The protocol number.
-         * <p>
+         * <p>The protocol number.</p>
+         * <blockquote>
+         * <p>All protocols are supported. This parameter is required only when you set <strong>TupleType</strong> to <strong>5</strong>.</p>
+         * </blockquote>
          * 
-         * > All protocols are supported. This parameter is required only when you set **TupleType** to **5**.
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -543,7 +593,11 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The ID of the region for which you want to query the Internet traffic.
+         * <p>The ID of the region for which you want to query the Internet traffic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -552,11 +606,14 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The order in which instances are ranked by Internet traffic. Valid values:
-         * <p>
+         * <p>The order in which instances are ranked by Internet traffic. Valid values:</p>
+         * <ul>
+         * <li><strong>desc</strong>: the descending order</li>
+         * <li><strong>asc</strong>: the ascending order</li>
+         * </ul>
          * 
-         * *   **desc**: the descending order
-         * *   **asc**: the ascending order
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -565,7 +622,10 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default. Max value: **100**.
+         * <p>Specifies top-N traffic data to display. Default value: <strong>10</strong>. This value specifies to display top-10 traffic data by default. Max value: <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder topN(Integer topN) {
             this.putQueryParameter("TopN", topN);
@@ -574,12 +634,16 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The type of the tuple. Valid values:
-         * <p>
+         * <p>The type of the tuple. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: 1-tuple</li>
+         * <li><strong>2</strong>: 2-tuple</li>
+         * <li><strong>5</strong>: 5-tuple</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: 1-tuple
-         * *   **2**: 2-tuple
-         * *   **5**: 5-tuple
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tupleType(Integer tupleType) {
             this.putQueryParameter("TupleType", tupleType);
@@ -588,10 +652,13 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.
-         * <p>
+         * <p>Specifies whether to enable the multi-account management feature. Default value: <strong>false</strong>. This value specifies that the multi-account management feature is disabled.</p>
+         * <blockquote>
+         * <p> By default, the multi-account management feature is not available. If you want to use this feature, contact your account manager to apply for permissions.</p>
+         * </blockquote>
          * 
-         * >  By default, the multi-account management feature is not available. If you want to use this feature, contact your account manager to apply for permissions.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useMultiAccount(Boolean useMultiAccount) {
             this.putQueryParameter("UseMultiAccount", useMultiAccount);

@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNisInspectionTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNisInspectionTaskResponseBody</p>
  */
 public class DescribeNisInspectionTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CheckResourceList")
-    private java.util.List < CheckResourceList> checkResourceList;
+    private java.util.List<CheckResourceList> checkResourceList;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -66,10 +72,14 @@ public class DescribeNisInspectionTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkResourceList
      */
-    public java.util.List < CheckResourceList> getCheckResourceList() {
+    public java.util.List<CheckResourceList> getCheckResourceList() {
         return this.checkResourceList;
     }
 
@@ -144,7 +154,7 @@ public class DescribeNisInspectionTaskResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CheckResourceList> checkResourceList; 
+        private java.util.List<CheckResourceList> checkResourceList; 
         private String createTime; 
         private String inspectionInterval; 
         private String inspectionName; 
@@ -156,10 +166,27 @@ public class DescribeNisInspectionTaskResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeNisInspectionTaskResponseBody model) {
+            this.checkResourceList = model.checkResourceList;
+            this.createTime = model.createTime;
+            this.inspectionInterval = model.inspectionInterval;
+            this.inspectionName = model.inspectionName;
+            this.inspectionProject = model.inspectionProject;
+            this.inspectionTaskId = model.inspectionTaskId;
+            this.inspectionTriggerTime = model.inspectionTriggerTime;
+            this.lastUpdateReportId = model.lastUpdateReportId;
+            this.lastUpdateTime = model.lastUpdateTime;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
+
         /**
          * CheckResourceList.
          */
-        public Builder checkResourceList(java.util.List < CheckResourceList> checkResourceList) {
+        public Builder checkResourceList(java.util.List<CheckResourceList> checkResourceList) {
             this.checkResourceList = checkResourceList;
             return this;
         }
@@ -250,6 +277,12 @@ public class DescribeNisInspectionTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNisInspectionTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNisInspectionTaskResponseBody</p>
+     */
     public static class CheckResourceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckScope")
         private String checkScope;
@@ -287,6 +320,14 @@ public class DescribeNisInspectionTaskResponseBody extends TeaModel {
         public static final class Builder {
             private String checkScope; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckResourceList model) {
+                this.checkScope = model.checkScope;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * CheckScope.

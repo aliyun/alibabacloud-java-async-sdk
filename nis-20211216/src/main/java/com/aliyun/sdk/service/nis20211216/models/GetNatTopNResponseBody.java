@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNatTopNResponseBody} extends {@link TeaModel}
  *
  * <p>GetNatTopNResponseBody</p>
@@ -15,7 +21,7 @@ public class GetNatTopNResponseBody extends TeaModel {
     private Boolean isTopNOpen;
 
     @com.aliyun.core.annotation.NameInMap("NatGatewayTopN")
-    private java.util.List < NatGatewayTopN> natGatewayTopN;
+    private java.util.List<NatGatewayTopN> natGatewayTopN;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,6 +40,10 @@ public class GetNatTopNResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isTopNOpen
      */
@@ -44,7 +54,7 @@ public class GetNatTopNResponseBody extends TeaModel {
     /**
      * @return natGatewayTopN
      */
-    public java.util.List < NatGatewayTopN> getNatGatewayTopN() {
+    public java.util.List<NatGatewayTopN> getNatGatewayTopN() {
         return this.natGatewayTopN;
     }
 
@@ -57,15 +67,27 @@ public class GetNatTopNResponseBody extends TeaModel {
 
     public static final class Builder {
         private Boolean isTopNOpen; 
-        private java.util.List < NatGatewayTopN> natGatewayTopN; 
+        private java.util.List<NatGatewayTopN> natGatewayTopN; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetNatTopNResponseBody model) {
+            this.isTopNOpen = model.isTopNOpen;
+            this.natGatewayTopN = model.natGatewayTopN;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Indicates whether Network Intelligence Service (NIS) is activated. The NatGatewayTopN parameter returns an empty array when NIS is not activated.
-         * <p>
+         * <p>Indicates whether Network Intelligence Service (NIS) is activated. The NatGatewayTopN parameter returns an empty array when NIS is not activated.</p>
+         * <ul>
+         * <li><strong>true</strong>: activated</li>
+         * <li><strong>false</strong>: not activated</li>
+         * </ul>
          * 
-         * *   **true**: activated
-         * *   **false**: not activated
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTopNOpen(Boolean isTopNOpen) {
             this.isTopNOpen = isTopNOpen;
@@ -73,15 +95,18 @@ public class GetNatTopNResponseBody extends TeaModel {
         }
 
         /**
-         * An array of statistics about real-time SNAT performance ranking.
+         * <p>An array of statistics about real-time SNAT performance ranking.</p>
          */
-        public Builder natGatewayTopN(java.util.List < NatGatewayTopN> natGatewayTopN) {
+        public Builder natGatewayTopN(java.util.List<NatGatewayTopN> natGatewayTopN) {
             this.natGatewayTopN = natGatewayTopN;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>77C512B5-12f3-f892-BD94-88A98271C1A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -94,6 +119,12 @@ public class GetNatTopNResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNatTopNResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNatTopNResponseBody</p>
+     */
     public static class NatGatewayTopN extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveSessionCount")
         private Float activeSessionCount;
@@ -216,8 +247,26 @@ public class GetNatTopNResponseBody extends TeaModel {
             private Float outFlowPerMinute; 
             private Float outPps; 
 
+            private Builder() {
+            } 
+
+            private Builder(NatGatewayTopN model) {
+                this.activeSessionCount = model.activeSessionCount;
+                this.inBps = model.inBps;
+                this.inFlowPerMinute = model.inFlowPerMinute;
+                this.inPps = model.inPps;
+                this.ip = model.ip;
+                this.newSessionPerSecond = model.newSessionPerSecond;
+                this.outBps = model.outBps;
+                this.outFlowPerMinute = model.outFlowPerMinute;
+                this.outPps = model.outPps;
+            } 
+
             /**
-             * The number of concurrent connections. Unit: connections.
+             * <p>The number of concurrent connections. Unit: connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder activeSessionCount(Float activeSessionCount) {
                 this.activeSessionCount = activeSessionCount;
@@ -225,7 +274,10 @@ public class GetNatTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound data transfer. Unit: bit/s.
+             * <p>The inbound data transfer. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder inBps(Float inBps) {
                 this.inBps = inBps;
@@ -233,7 +285,10 @@ public class GetNatTopNResponseBody extends TeaModel {
             }
 
             /**
-             * This field is reserved and not in use.
+             * <p>This field is reserved and not in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder inFlowPerMinute(Float inFlowPerMinute) {
                 this.inFlowPerMinute = inFlowPerMinute;
@@ -241,7 +296,10 @@ public class GetNatTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound packet forwarding rate. Unit: packets per second.
+             * <p>The inbound packet forwarding rate. Unit: packets per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder inPps(Float inPps) {
                 this.inPps = inPps;
@@ -249,7 +307,10 @@ public class GetNatTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.156.101</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -257,7 +318,10 @@ public class GetNatTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The new connection creation rate. Unit: connections per second.
+             * <p>The new connection creation rate. Unit: connections per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder newSessionPerSecond(Float newSessionPerSecond) {
                 this.newSessionPerSecond = newSessionPerSecond;
@@ -265,7 +329,10 @@ public class GetNatTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound data transfer. Unit: bit/s.
+             * <p>The outbound data transfer. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder outBps(Float outBps) {
                 this.outBps = outBps;
@@ -273,7 +340,10 @@ public class GetNatTopNResponseBody extends TeaModel {
             }
 
             /**
-             * This field is reserved and not in use.
+             * <p>This field is reserved and not in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder outFlowPerMinute(Float outFlowPerMinute) {
                 this.outFlowPerMinute = outFlowPerMinute;
@@ -281,7 +351,10 @@ public class GetNatTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound packet forwarding rate. Unit: packets per second.
+             * <p>The outbound packet forwarding rate. Unit: packets per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder outPps(Float outPps) {
                 this.outPps = outPps;

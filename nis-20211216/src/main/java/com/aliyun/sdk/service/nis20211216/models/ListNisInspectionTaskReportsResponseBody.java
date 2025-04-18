@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNisInspectionTaskReportsResponseBody} extends {@link TeaModel}
  *
  * <p>ListNisInspectionTaskReportsResponseBody</p>
  */
 public class ListNisInspectionTaskReportsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InspectionReportList")
-    private java.util.List < InspectionReportList> inspectionReportList;
+    private java.util.List<InspectionReportList> inspectionReportList;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -42,10 +48,14 @@ public class ListNisInspectionTaskReportsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return inspectionReportList
      */
-    public java.util.List < InspectionReportList> getInspectionReportList() {
+    public java.util.List<InspectionReportList> getInspectionReportList() {
         return this.inspectionReportList;
     }
 
@@ -78,16 +88,27 @@ public class ListNisInspectionTaskReportsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InspectionReportList> inspectionReportList; 
+        private java.util.List<InspectionReportList> inspectionReportList; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListNisInspectionTaskReportsResponseBody model) {
+            this.inspectionReportList = model.inspectionReportList;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * InspectionReportList.
          */
-        public Builder inspectionReportList(java.util.List < InspectionReportList> inspectionReportList) {
+        public Builder inspectionReportList(java.util.List<InspectionReportList> inspectionReportList) {
             this.inspectionReportList = inspectionReportList;
             return this;
         }
@@ -130,6 +151,12 @@ public class ListNisInspectionTaskReportsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNisInspectionTaskReportsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNisInspectionTaskReportsResponseBody</p>
+     */
     public static class InspectionReportList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InspectionReportId")
         private String inspectionReportId;
@@ -155,6 +182,13 @@ public class ListNisInspectionTaskReportsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String inspectionReportId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InspectionReportList model) {
+                this.inspectionReportId = model.inspectionReportId;
+            } 
 
             /**
              * InspectionReportId.

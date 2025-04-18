@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNetworkReachableAnalysisResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteNetworkReachableAnalysisResponseBody</p>
@@ -30,6 +36,10 @@ public class DeleteNetworkReachableAnalysisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,11 +58,23 @@ public class DeleteNetworkReachableAnalysisResponseBody extends TeaModel {
         private Boolean data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteNetworkReachableAnalysisResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Result of operation.
-         * <p>
-         * - **true**: Delete Success.
-         * - **false**: Delete Fail.
+         * <p>Result of operation.</p>
+         * <ul>
+         * <li><strong>true</strong>: Delete Success.</li>
+         * <li><strong>false</strong>: Delete Fail.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -60,7 +82,10 @@ public class DeleteNetworkReachableAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4838F3F2-30E1-5D82-B25A-B9FE33BC3E25</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

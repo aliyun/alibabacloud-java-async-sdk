@@ -40,8 +40,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the **createNetworkReachableAnalysis** operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the <strong>createNetworkReachableAnalysis</strong> operation.</p>
+     * 
+     * @param request the request parameters of CreateAndAnalyzeNetworkPath  CreateAndAnalyzeNetworkPathRequest
+     * @return CreateAndAnalyzeNetworkPathResponse
      */
     @Override
     public CompletableFuture<CreateAndAnalyzeNetworkPathResponse> createAndAnalyzeNetworkPath(CreateAndAnalyzeNetworkPathRequest request) {
@@ -58,9 +61,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can call the **CreateNetworkPath** operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.
-      * *   You can create up to 100 network paths within one Alibaba Cloud account.
-      *
+     * <b>description</b> :
+     * <p>  You can call the <strong>CreateNetworkPath</strong> operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.</p>
+     * <ul>
+     * <li>You can create up to 100 network paths within one Alibaba Cloud account.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateNetworkPath  CreateNetworkPathRequest
+     * @return CreateNetworkPathResponse
      */
     @Override
     public CompletableFuture<CreateNetworkPathResponse> createNetworkPath(CreateNetworkPathRequest request) {
@@ -77,10 +85,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The **CreateNetworkReachableAnalysis** operation is used to create a task for analyzing the reachability of the network path that is created by calling the **CreateNetworkPath** operation and record the analysis results.
-      * *   The **CreateNetworkReachableAnalysis** operation can be called to repeatedly analyze the reachability of a network path.
-      * *   You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.
-      *
+     * <b>description</b> :
+     * <p>  The <strong>CreateNetworkReachableAnalysis</strong> operation is used to create a task for analyzing the reachability of the network path that is created by calling the <strong>CreateNetworkPath</strong> operation and record the analysis results.</p>
+     * <ul>
+     * <li>The <strong>CreateNetworkReachableAnalysis</strong> operation can be called to repeatedly analyze the reachability of a network path.</li>
+     * <li>You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateNetworkReachableAnalysis  CreateNetworkReachableAnalysisRequest
+     * @return CreateNetworkReachableAnalysisResponse
      */
     @Override
     public CompletableFuture<CreateNetworkReachableAnalysisResponse> createNetworkReachableAnalysis(CreateNetworkReachableAnalysisRequest request) {
@@ -96,6 +109,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteNetworkPath  DeleteNetworkPathRequest
+     * @return DeleteNetworkPathResponse
+     */
     @Override
     public CompletableFuture<DeleteNetworkPathResponse> deleteNetworkPath(DeleteNetworkPathRequest request) {
         try {
@@ -110,6 +127,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteNetworkReachableAnalysis  DeleteNetworkReachableAnalysisRequest
+     * @return DeleteNetworkReachableAnalysisResponse
+     */
     @Override
     public CompletableFuture<DeleteNetworkReachableAnalysisResponse> deleteNetworkReachableAnalysis(DeleteNetworkReachableAnalysisRequest request) {
         try {
@@ -124,6 +145,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteNisInspectionReport  DeleteNisInspectionReportRequest
+     * @return DeleteNisInspectionReportResponse
+     */
     @Override
     public CompletableFuture<DeleteNisInspectionReportResponse> deleteNisInspectionReport(DeleteNisInspectionReportRequest request) {
         try {
@@ -138,6 +163,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteNisInspectionTask  DeleteNisInspectionTaskRequest
+     * @return DeleteNisInspectionTaskResponse
+     */
     @Override
     public CompletableFuture<DeleteNisInspectionTaskResponse> deleteNisInspectionTask(DeleteNisInspectionTaskRequest request) {
         try {
@@ -152,6 +181,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNisInspectionRecommendationResources  DescribeNisInspectionRecommendationResourcesRequest
+     * @return DescribeNisInspectionRecommendationResourcesResponse
+     */
     @Override
     public CompletableFuture<DescribeNisInspectionRecommendationResourcesResponse> describeNisInspectionRecommendationResources(DescribeNisInspectionRecommendationResourcesRequest request) {
         try {
@@ -166,6 +199,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNisInspectionReportCheckItems  DescribeNisInspectionReportCheckItemsRequest
+     * @return DescribeNisInspectionReportCheckItemsResponse
+     */
     @Override
     public CompletableFuture<DescribeNisInspectionReportCheckItemsResponse> describeNisInspectionReportCheckItems(DescribeNisInspectionReportCheckItemsRequest request) {
         try {
@@ -180,6 +217,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNisInspectionReportStatus  DescribeNisInspectionReportStatusRequest
+     * @return DescribeNisInspectionReportStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeNisInspectionReportStatusResponse> describeNisInspectionReportStatus(DescribeNisInspectionReportStatusRequest request) {
         try {
@@ -194,6 +235,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNisInspectionReportSummary  DescribeNisInspectionReportSummaryRequest
+     * @return DescribeNisInspectionReportSummaryResponse
+     */
     @Override
     public CompletableFuture<DescribeNisInspectionReportSummaryResponse> describeNisInspectionReportSummary(DescribeNisInspectionReportSummaryRequest request) {
         try {
@@ -208,6 +253,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNisInspectionTask  DescribeNisInspectionTaskRequest
+     * @return DescribeNisInspectionTaskResponse
+     */
     @Override
     public CompletableFuture<DescribeNisInspectionTaskResponse> describeNisInspectionTask(DescribeNisInspectionTaskRequest request) {
         try {
@@ -223,9 +272,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI GetInternetTuple is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.  * @param request  the request parameters of GetInternetTuple  GetInternetTupleRequest
+     * @return GetInternetTupleResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetInternetTupleResponse> getInternetTuple(GetInternetTupleRequest request) {
         try {
@@ -241,9 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI GetNatTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.  * @param request  the request parameters of GetNatTopN  GetNatTopNRequest
+     * @return GetNatTopNResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetNatTopNResponse> getNatTopN(GetNatTopNRequest request) {
         try {
@@ -259,10 +310,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **GetNetworkReachableAnalysis** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.
-      * *   The **init** state indicates that the task is in progress.
-      * *   The **finish** state indicates that the task is complete. In this state, you can obtain the analysis result.
-      *
+     * <b>description</b> :
+     * <p><em>GetNetworkReachableAnalysis</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.</p>
+     * <ul>
+     * <li>The <strong>init</strong> state indicates that the task is in progress.</li>
+     * <li>The <strong>finish</strong> state indicates that the task is complete. In this state, you can obtain the analysis result.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetNetworkReachableAnalysis  GetNetworkReachableAnalysisRequest
+     * @return GetNetworkReachableAnalysisResponse
      */
     @Override
     public CompletableFuture<GetNetworkReachableAnalysisResponse> getNetworkReachableAnalysis(GetNetworkReachableAnalysisRequest request) {
@@ -278,6 +334,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetNisNetworkMetrics  GetNisNetworkMetricsRequest
+     * @return GetNisNetworkMetricsResponse
+     */
     @Override
     public CompletableFuture<GetNisNetworkMetricsResponse> getNisNetworkMetrics(GetNisNetworkMetricsRequest request) {
         try {
@@ -292,6 +352,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetNisNetworkRanking  GetNisNetworkRankingRequest
+     * @return GetNisNetworkRankingResponse
+     */
     @Override
     public CompletableFuture<GetNisNetworkRankingResponse> getNisNetworkRanking(GetNisNetworkRankingRequest request) {
         try {
@@ -307,9 +371,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI GetTransitRouterFlowTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.  * @param request  the request parameters of GetTransitRouterFlowTopN  GetTransitRouterFlowTopNRequest
+     * @return GetTransitRouterFlowTopNResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetTransitRouterFlowTopNResponse> getTransitRouterFlowTopN(GetTransitRouterFlowTopNRequest request) {
         try {
@@ -325,9 +390,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI GetVbrFlowTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.  * @param request  the request parameters of GetVbrFlowTopN  GetVbrFlowTopNRequest
+     * @return GetVbrFlowTopNResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetVbrFlowTopNResponse> getVbrFlowTopN(GetVbrFlowTopNRequest request) {
         try {
@@ -342,6 +408,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNisInspectionResourceType  ListNisInspectionResourceTypeRequest
+     * @return ListNisInspectionResourceTypeResponse
+     */
     @Override
     public CompletableFuture<ListNisInspectionResourceTypeResponse> listNisInspectionResourceType(ListNisInspectionResourceTypeRequest request) {
         try {
@@ -356,6 +426,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNisInspectionTaskReports  ListNisInspectionTaskReportsRequest
+     * @return ListNisInspectionTaskReportsResponse
+     */
     @Override
     public CompletableFuture<ListNisInspectionTaskReportsResponse> listNisInspectionTaskReports(ListNisInspectionTaskReportsRequest request) {
         try {
@@ -370,6 +444,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNisInspectionTasks  ListNisInspectionTasksRequest
+     * @return ListNisInspectionTasksResponse
+     */
     @Override
     public CompletableFuture<ListNisInspectionTasksResponse> listNisInspectionTasks(ListNisInspectionTasksRequest request) {
         try {
@@ -384,6 +462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartNisInspectionTask  StartNisInspectionTaskRequest
+     * @return StartNisInspectionTaskResponse
+     */
     @Override
     public CompletableFuture<StartNisInspectionTaskResponse> startNisInspectionTask(StartNisInspectionTaskRequest request) {
         try {
@@ -398,6 +480,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateNisInspectionTask  UpdateNisInspectionTaskRequest
+     * @return UpdateNisInspectionTaskResponse
+     */
     @Override
     public CompletableFuture<UpdateNisInspectionTaskResponse> updateNisInspectionTask(UpdateNisInspectionTaskRequest request) {
         try {

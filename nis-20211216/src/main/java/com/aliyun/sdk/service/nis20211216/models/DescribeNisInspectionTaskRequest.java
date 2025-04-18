@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNisInspectionTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeNisInspectionTaskRequest</p>
@@ -29,7 +35,7 @@ public class DescribeNisInspectionTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +60,10 @@ public class DescribeNisInspectionTaskRequest extends Request {
         } 
 
         /**
-         * InspectionTaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ni-8svmpe0yso2bhzr7fh79</p>
          */
         public Builder inspectionTaskId(String inspectionTaskId) {
             this.putQueryParameter("InspectionTaskId", inspectionTaskId);

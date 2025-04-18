@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkReachableAnalysisRequest} extends {@link RequestModel}
  *
  * <p>CreateNetworkReachableAnalysisRequest</p>
@@ -22,7 +28,7 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private CreateNetworkReachableAnalysisRequest(Builder builder) {
         super(builder);
@@ -39,7 +45,7 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -61,14 +67,14 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CreateNetworkReachableAnalysisRequest, Builder> {
         private String networkPathId; 
         private String regionId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -82,7 +88,11 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
         } 
 
         /**
-         * The ID of the network path. You can call the [CreateNetworkPath](~~2366522~~) operation to obtain the ID of the network path.
+         * <p>The ID of the network path. You can call the <a href="https://help.aliyun.com/document_detail/2366522.html">CreateNetworkPath</a> operation to obtain the ID of the network path.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np-b2f618ceb2c84057****</p>
          */
         public Builder networkPathId(String networkPathId) {
             this.putQueryParameter("NetworkPathId", networkPathId);
@@ -91,7 +101,10 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
         }
 
         /**
-         * The ID of the region for which you want to create a task for analyzing network reachability.
+         * <p>The ID of the region for which you want to create a task for analyzing network reachability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -100,9 +113,9 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
         }
 
         /**
-         * The tags to add to the resource.
+         * <p>The tags to add to the resource.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -115,6 +128,12 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNetworkReachableAnalysisRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNetworkReachableAnalysisRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -153,11 +172,20 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The key of the tag to add to the resource. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
-             * <p>
+             * <p>The key of the tag to add to the resource. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>You can add up to 20 tags in each call.</p>
              * 
-             * You can add up to 20 tags in each call.
+             * <strong>example:</strong>
+             * <p>Team</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -165,10 +193,11 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
             }
 
             /**
-             * The value of the tag to add to the resource. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:` or `aliyun`. The tag value can be an empty string.
-             * <p>
+             * <p>The value of the tag to add to the resource. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value can be an empty string.</p>
+             * <p>You can add up to 20 tag values in each call.</p>
              * 
-             * You can add up to 20 tag values in each call.
+             * <strong>example:</strong>
+             * <p>ops</p>
              */
             public Builder value(String value) {
                 this.value = value;

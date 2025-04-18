@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInternetTupleResponseBody} extends {@link TeaModel}
  *
  * <p>GetInternetTupleResponseBody</p>
  */
 public class GetInternetTupleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -30,10 +36,14 @@ public class GetInternetTupleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,19 +55,30 @@ public class GetInternetTupleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetInternetTupleResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ranking result of Internet traffic data.
+         * <p>The ranking result of Internet traffic data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D5E98683-355B-5867-8D3D-A24755F6895B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class GetInternetTupleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInternetTupleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInternetTupleResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessRegion")
         private String accessRegion;
@@ -468,11 +495,52 @@ public class GetInternetTupleResponseBody extends TeaModel {
             private Double retransmitRate; 
             private Double rtt; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessRegion = model.accessRegion;
+                this.beginTime = model.beginTime;
+                this.byteCount = model.byteCount;
+                this.cloudCity = model.cloudCity;
+                this.cloudCountry = model.cloudCountry;
+                this.cloudIp = model.cloudIp;
+                this.cloudIsp = model.cloudIsp;
+                this.cloudPort = model.cloudPort;
+                this.cloudProduct = model.cloudProduct;
+                this.cloudProvince = model.cloudProvince;
+                this.direction = model.direction;
+                this.inByteCount = model.inByteCount;
+                this.inOutOrderCount = model.inOutOrderCount;
+                this.inPacketCount = model.inPacketCount;
+                this.inRetranCount = model.inRetranCount;
+                this.instanceId = model.instanceId;
+                this.otherCity = model.otherCity;
+                this.otherCountry = model.otherCountry;
+                this.otherIp = model.otherIp;
+                this.otherIsp = model.otherIsp;
+                this.otherPort = model.otherPort;
+                this.otherProduct = model.otherProduct;
+                this.otherProvince = model.otherProvince;
+                this.outByteCount = model.outByteCount;
+                this.outOrderCount = model.outOrderCount;
+                this.outOutOrderCount = model.outOutOrderCount;
+                this.outPacketCount = model.outPacketCount;
+                this.outRetranCount = model.outRetranCount;
+                this.packetCount = model.packetCount;
+                this.protocol = model.protocol;
+                this.retransmitRate = model.retransmitRate;
+                this.rtt = model.rtt;
+            } 
+
             /**
-             * The access point of Alibaba Cloud.
-             * <p>
+             * <p>The access point of Alibaba Cloud.</p>
+             * <blockquote>
+             * <p> This parameter is valid only if you set <strong>InstanceId</strong> to the instance ID of an Anycast elastic IP address (EIP).</p>
+             * </blockquote>
              * 
-             * >  This parameter is valid only if you set **InstanceId** to the instance ID of an Anycast elastic IP address (EIP).
+             * <strong>example:</strong>
+             * <p>cn-hongkong-pop</p>
              */
             public Builder accessRegion(String accessRegion) {
                 this.accessRegion = accessRegion;
@@ -480,7 +548,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range that you queried. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The beginning of the time range that you queried. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684373600099</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -488,7 +559,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic volume. Unit: bytes.
+             * <p>The traffic volume. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88</p>
              */
             public Builder byteCount(Double byteCount) {
                 this.byteCount = byteCount;
@@ -496,7 +570,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The local city.
+             * <p>The local city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Nanjing</p>
              */
             public Builder cloudCity(String cloudCity) {
                 this.cloudCity = cloudCity;
@@ -504,7 +581,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The local country or region.
+             * <p>The local country or region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder cloudCountry(String cloudCountry) {
                 this.cloudCountry = cloudCountry;
@@ -512,7 +592,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The local IP address.
+             * <p>The local IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112.74.XX.XX</p>
              */
             public Builder cloudIp(String cloudIp) {
                 this.cloudIp = cloudIp;
@@ -520,7 +603,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The local ISP.
+             * <p>The local ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China Mobile</p>
              */
             public Builder cloudIsp(String cloudIsp) {
                 this.cloudIsp = cloudIsp;
@@ -528,7 +614,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The local port.
+             * <p>The local port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder cloudPort(String cloudPort) {
                 this.cloudPort = cloudPort;
@@ -536,7 +625,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The service code of the instance to which the local IP address belongs.
+             * <p>The service code of the instance to which the local IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EIP</p>
              */
             public Builder cloudProduct(String cloudProduct) {
                 this.cloudProduct = cloudProduct;
@@ -544,7 +636,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The local province.
+             * <p>The local province.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Jiangsu</p>
              */
             public Builder cloudProvince(String cloudProvince) {
                 this.cloudProvince = cloudProvince;
@@ -552,11 +647,14 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The direction of Internet traffic. Valid values:
-             * <p>
+             * <p>The direction of Internet traffic. Valid values:</p>
+             * <ul>
+             * <li><strong>in</strong>: inbound</li>
+             * <li><strong>out</strong>: outbound</li>
+             * </ul>
              * 
-             * *   **in**: inbound
-             * *   **out**: outbound
+             * <strong>example:</strong>
+             * <p>in</p>
              */
             public Builder direction(String direction) {
                 this.direction = direction;
@@ -564,7 +662,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound traffic volume. Unit: bytes.
+             * <p>The inbound traffic volume. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88</p>
              */
             public Builder inByteCount(Double inByteCount) {
                 this.inByteCount = inByteCount;
@@ -572,7 +673,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of inbound disordered packets.
+             * <p>The number of inbound disordered packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder inOutOrderCount(Double inOutOrderCount) {
                 this.inOutOrderCount = inOutOrderCount;
@@ -580,7 +684,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of inbound packets.
+             * <p>The number of inbound packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33</p>
              */
             public Builder inPacketCount(Double inPacketCount) {
                 this.inPacketCount = inPacketCount;
@@ -588,7 +695,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of inbound repeated packets.
+             * <p>The number of inbound repeated packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder inRetranCount(Double inRetranCount) {
                 this.inRetranCount = inRetranCount;
@@ -596,7 +706,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the local IP address belongs.
+             * <p>The ID of the instance to which the local IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-sample*</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -604,7 +717,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The remote city. In most cases, this parameter is empty if you set **OtherCountry** to a country except China.
+             * <p>The remote city. In most cases, this parameter is empty if you set <strong>OtherCountry</strong> to a country except China.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Austin</p>
              */
             public Builder otherCity(String otherCity) {
                 this.otherCity = otherCity;
@@ -612,7 +728,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The remote country or region.
+             * <p>The remote country or region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>United States</p>
              */
             public Builder otherCountry(String otherCountry) {
                 this.otherCountry = otherCountry;
@@ -620,7 +739,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The remote IP address.
+             * <p>The remote IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122.112.XX.XX</p>
              */
             public Builder otherIp(String otherIp) {
                 this.otherIp = otherIp;
@@ -628,7 +750,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The remote ISP.
+             * <p>The remote ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amazon.com</p>
              */
             public Builder otherIsp(String otherIsp) {
                 this.otherIsp = otherIsp;
@@ -636,7 +761,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The remote port.
+             * <p>The remote port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40002</p>
              */
             public Builder otherPort(String otherPort) {
                 this.otherPort = otherPort;
@@ -644,7 +772,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The service code of the instance to which the remote IP address belongs. If the IP address is not on the cloud, this parameter is empty.
+             * <p>The service code of the instance to which the remote IP address belongs. If the IP address is not on the cloud, this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder otherProduct(String otherProduct) {
                 this.otherProduct = otherProduct;
@@ -652,7 +783,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The remote province. In most cases, this parameter is empty if you set **OtherCountry** to a country except China.
+             * <p>The remote province. In most cases, this parameter is empty if you set <strong>OtherCountry</strong> to a country except China.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Texas</p>
              */
             public Builder otherProvince(String otherProvince) {
                 this.otherProvince = otherProvince;
@@ -660,7 +794,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound traffic volume. Unit: bytes.
+             * <p>The outbound traffic volume. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66</p>
              */
             public Builder outByteCount(Double outByteCount) {
                 this.outByteCount = outByteCount;
@@ -668,7 +805,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of disordered packets.
+             * <p>The number of disordered packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder outOrderCount(Double outOrderCount) {
                 this.outOrderCount = outOrderCount;
@@ -676,7 +816,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of outbound disordered packets.
+             * <p>The number of outbound disordered packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder outOutOrderCount(Double outOutOrderCount) {
                 this.outOutOrderCount = outOutOrderCount;
@@ -684,7 +827,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of outbound packets.
+             * <p>The number of outbound packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder outPacketCount(Double outPacketCount) {
                 this.outPacketCount = outPacketCount;
@@ -692,7 +838,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of outbound repeated packets.
+             * <p>The number of outbound repeated packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder outRetranCount(Double outRetranCount) {
                 this.outRetranCount = outRetranCount;
@@ -700,7 +849,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of packets.
+             * <p>The number of packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66</p>
              */
             public Builder packetCount(Double packetCount) {
                 this.packetCount = packetCount;
@@ -708,7 +860,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol number.
+             * <p>The protocol number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -716,7 +871,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The retransmission rate of TCP packets.
+             * <p>The retransmission rate of TCP packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder retransmitRate(Double retransmitRate) {
                 this.retransmitRate = retransmitRate;
@@ -724,7 +882,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The round-trip time (RTT). Unit: milliseconds.
+             * <p>The round-trip time (RTT). Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder rtt(Double rtt) {
                 this.rtt = rtt;

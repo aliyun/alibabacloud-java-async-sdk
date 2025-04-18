@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNisNetworkRankingRequest} extends {@link RequestModel}
  *
  * <p>GetNisNetworkRankingRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetNisNetworkRankingRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountIds")
-    private java.util.List < String > accountIds;
+    private java.util.List<String> accountIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BeginTime")
@@ -32,7 +38,7 @@ public class GetNisNetworkRankingRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupBy")
@@ -91,7 +97,7 @@ public class GetNisNetworkRankingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +105,7 @@ public class GetNisNetworkRankingRequest extends Request {
     /**
      * @return accountIds
      */
-    public java.util.List < String > getAccountIds() {
+    public java.util.List<String> getAccountIds() {
         return this.accountIds;
     }
 
@@ -127,7 +133,7 @@ public class GetNisNetworkRankingRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -181,11 +187,11 @@ public class GetNisNetworkRankingRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetNisNetworkRankingRequest, Builder> {
-        private java.util.List < String > accountIds; 
+        private java.util.List<String> accountIds; 
         private Long beginTime; 
         private String direction; 
         private Long endTime; 
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private String groupBy; 
         private String orderBy; 
         private String regionNo; 
@@ -217,7 +223,7 @@ public class GetNisNetworkRankingRequest extends Request {
         /**
          * AccountIds.
          */
-        public Builder accountIds(java.util.List < String > accountIds) {
+        public Builder accountIds(java.util.List<String> accountIds) {
             this.putQueryParameter("AccountIds", accountIds);
             this.accountIds = accountIds;
             return this;
@@ -233,7 +239,10 @@ public class GetNisNetworkRankingRequest extends Request {
         }
 
         /**
-         * Direction.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -253,7 +262,7 @@ public class GetNisNetworkRankingRequest extends Request {
         /**
          * Filter.
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             String filterShrink = shrink(filter, "Filter", "json");
             this.putQueryParameter("Filter", filterShrink);
             this.filter = filter;
@@ -261,7 +270,10 @@ public class GetNisNetworkRankingRequest extends Request {
         }
 
         /**
-         * GroupBy.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Protocol</p>
          */
         public Builder groupBy(String groupBy) {
             this.putQueryParameter("GroupBy", groupBy);
@@ -270,7 +282,10 @@ public class GetNisNetworkRankingRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bps</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -279,7 +294,10 @@ public class GetNisNetworkRankingRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -288,7 +306,10 @@ public class GetNisNetworkRankingRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AccessInternetIpV4</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -330,6 +351,12 @@ public class GetNisNetworkRankingRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetNisNetworkRankingRequest} extends {@link TeaModel}
+     *
+     * <p>GetNisNetworkRankingRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -367,6 +394,14 @@ public class GetNisNetworkRankingRequest extends Request {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * Name.

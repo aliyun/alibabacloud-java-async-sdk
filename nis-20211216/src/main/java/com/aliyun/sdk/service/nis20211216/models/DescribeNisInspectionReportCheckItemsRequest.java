@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNisInspectionReportCheckItemsRequest} extends {@link RequestModel}
  *
  * <p>DescribeNisInspectionReportCheckItemsRequest</p>
@@ -35,11 +41,11 @@ public class DescribeNisInspectionReportCheckItemsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
-    private java.util.List < String > resourceType;
+    private java.util.List<String> resourceType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RiskLevel")
-    private java.util.List < String > riskLevel;
+    private java.util.List<String> riskLevel;
 
     private DescribeNisInspectionReportCheckItemsRequest(Builder builder) {
         super(builder);
@@ -60,7 +66,7 @@ public class DescribeNisInspectionReportCheckItemsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,14 +109,14 @@ public class DescribeNisInspectionReportCheckItemsRequest extends Request {
     /**
      * @return resourceType
      */
-    public java.util.List < String > getResourceType() {
+    public java.util.List<String> getResourceType() {
         return this.resourceType;
     }
 
     /**
      * @return riskLevel
      */
-    public java.util.List < String > getRiskLevel() {
+    public java.util.List<String> getRiskLevel() {
         return this.riskLevel;
     }
 
@@ -120,8 +126,8 @@ public class DescribeNisInspectionReportCheckItemsRequest extends Request {
         private String language; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > resourceType; 
-        private java.util.List < String > riskLevel; 
+        private java.util.List<String> resourceType; 
+        private java.util.List<String> riskLevel; 
 
         private Builder() {
             super();
@@ -148,7 +154,10 @@ public class DescribeNisInspectionReportCheckItemsRequest extends Request {
         }
 
         /**
-         * InspectionReportId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nir-ffd1af****196d0</p>
          */
         public Builder inspectionReportId(String inspectionReportId) {
             this.putQueryParameter("InspectionReportId", inspectionReportId);
@@ -186,7 +195,7 @@ public class DescribeNisInspectionReportCheckItemsRequest extends Request {
         /**
          * ResourceType.
          */
-        public Builder resourceType(java.util.List < String > resourceType) {
+        public Builder resourceType(java.util.List<String> resourceType) {
             String resourceTypeShrink = shrink(resourceType, "ResourceType", "json");
             this.putQueryParameter("ResourceType", resourceTypeShrink);
             this.resourceType = resourceType;
@@ -196,7 +205,7 @@ public class DescribeNisInspectionReportCheckItemsRequest extends Request {
         /**
          * RiskLevel.
          */
-        public Builder riskLevel(java.util.List < String > riskLevel) {
+        public Builder riskLevel(java.util.List<String> riskLevel) {
             String riskLevelShrink = shrink(riskLevel, "RiskLevel", "json");
             this.putQueryParameter("RiskLevel", riskLevelShrink);
             this.riskLevel = riskLevel;

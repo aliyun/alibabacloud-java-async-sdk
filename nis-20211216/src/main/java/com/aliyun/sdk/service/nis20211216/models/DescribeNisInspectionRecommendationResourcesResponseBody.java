@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNisInspectionRecommendationResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNisInspectionRecommendationResourcesResponseBody</p>
@@ -24,7 +30,7 @@ public class DescribeNisInspectionRecommendationResourcesResponseBody extends Te
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceList")
-    private java.util.List < ResourceList> resourceList;
+    private java.util.List<ResourceList> resourceList;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -44,6 +50,10 @@ public class DescribeNisInspectionRecommendationResourcesResponseBody extends Te
 
     public static DescribeNisInspectionRecommendationResourcesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -77,7 +87,7 @@ public class DescribeNisInspectionRecommendationResourcesResponseBody extends Te
     /**
      * @return resourceList
      */
-    public java.util.List < ResourceList> getResourceList() {
+    public java.util.List<ResourceList> getResourceList() {
         return this.resourceList;
     }
 
@@ -93,8 +103,20 @@ public class DescribeNisInspectionRecommendationResourcesResponseBody extends Te
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ResourceList> resourceList; 
+        private java.util.List<ResourceList> resourceList; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNisInspectionRecommendationResourcesResponseBody model) {
+            this.inspectionReportId = model.inspectionReportId;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.resourceList = model.resourceList;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * InspectionReportId.
@@ -131,7 +153,7 @@ public class DescribeNisInspectionRecommendationResourcesResponseBody extends Te
         /**
          * ResourceList.
          */
-        public Builder resourceList(java.util.List < ResourceList> resourceList) {
+        public Builder resourceList(java.util.List<ResourceList> resourceList) {
             this.resourceList = resourceList;
             return this;
         }
@@ -150,6 +172,12 @@ public class DescribeNisInspectionRecommendationResourcesResponseBody extends Te
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNisInspectionRecommendationResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNisInspectionRecommendationResourcesResponseBody</p>
+     */
     public static class ResourceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnalysisData")
         private String analysisData;
@@ -199,6 +227,15 @@ public class DescribeNisInspectionRecommendationResourcesResponseBody extends Te
             private String analysisData; 
             private String resourceId; 
             private String resourceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceList model) {
+                this.analysisData = model.analysisData;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+            } 
 
             /**
              * AnalysisData.

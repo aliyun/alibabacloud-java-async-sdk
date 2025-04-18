@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNetworkPathRequest} extends {@link RequestModel}
  *
  * <p>DeleteNetworkPathRequest</p>
@@ -14,7 +20,7 @@ public class DeleteNetworkPathRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkPathIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > networkPathIds;
+    private java.util.List<String> networkPathIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -34,7 +40,7 @@ public class DeleteNetworkPathRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -42,7 +48,7 @@ public class DeleteNetworkPathRequest extends Request {
     /**
      * @return networkPathIds
      */
-    public java.util.List < String > getNetworkPathIds() {
+    public java.util.List<String> getNetworkPathIds() {
         return this.networkPathIds;
     }
 
@@ -54,7 +60,7 @@ public class DeleteNetworkPathRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteNetworkPathRequest, Builder> {
-        private java.util.List < String > networkPathIds; 
+        private java.util.List<String> networkPathIds; 
         private String regionId; 
 
         private Builder() {
@@ -68,9 +74,10 @@ public class DeleteNetworkPathRequest extends Request {
         } 
 
         /**
-         * The IDs of network paths.
+         * <p>The IDs of network paths.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder networkPathIds(java.util.List < String > networkPathIds) {
+        public Builder networkPathIds(java.util.List<String> networkPathIds) {
             String networkPathIdsShrink = shrink(networkPathIds, "NetworkPathIds", "json");
             this.putQueryParameter("NetworkPathIds", networkPathIdsShrink);
             this.networkPathIds = networkPathIds;
@@ -78,7 +85,10 @@ public class DeleteNetworkPathRequest extends Request {
         }
 
         /**
-         * The region ID of the network path that you want to delete.
+         * <p>The region ID of the network path that you want to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

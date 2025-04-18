@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNatTopNRequest} extends {@link RequestModel}
  *
  * <p>GetNatTopNRequest</p>
@@ -60,7 +66,7 @@ public class GetNatTopNRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,7 +145,11 @@ public class GetNatTopNRequest extends Request {
         } 
 
         /**
-         * The beginning of the time range to query in milliseconds. If you do not specify **EndTime**, the point in time specified by **BeginTime** is queried.
+         * <p>The beginning of the time range to query in milliseconds. If you do not specify <strong>EndTime</strong>, the point in time specified by <strong>BeginTime</strong> is queried.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638239092000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -148,7 +158,10 @@ public class GetNatTopNRequest extends Request {
         }
 
         /**
-         * The end of the time range to query in milliseconds. The time range specified by **BeginTime** and **EndTime** cannot exceed **86400000** milliseconds (24 hours).
+         * <p>The end of the time range to query in milliseconds. The time range specified by <strong>BeginTime</strong> and <strong>EndTime</strong> cannot exceed <strong>86400000</strong> milliseconds (24 hours).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638239093000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -157,7 +170,10 @@ public class GetNatTopNRequest extends Request {
         }
 
         /**
-         * Query ranking statistics for a specific IP address. If you specify this parameter, you do not need to specify **TopN** or **OrderBy**.
+         * <p>Query ranking statistics for a specific IP address. If you specify this parameter, you do not need to specify <strong>TopN</strong> or <strong>OrderBy</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.156.101</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -166,7 +182,11 @@ public class GetNatTopNRequest extends Request {
         }
 
         /**
-         * The ID of the NAT gateway.
+         * <p>The ID of the NAT gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-sample***</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -175,15 +195,18 @@ public class GetNatTopNRequest extends Request {
         }
 
         /**
-         * The metric that is used for real-time SNAT performance ranking. Valid values:
-         * <p>
+         * <p>The metric that is used for real-time SNAT performance ranking. Valid values:</p>
+         * <ul>
+         * <li><strong>InBps</strong>: inbound data transfer. Unit: bit/s.</li>
+         * <li><strong>OutBps</strong>: outbound data transfer. Unit: bit/s.</li>
+         * <li><strong>InPps</strong>: inbound packet forwarding rate. Unit: packets per second.</li>
+         * <li><strong>OutPps</strong>: outbound packet forwarding rate. Unit: packets per second.</li>
+         * <li><strong>NewSessionPerSecond</strong>: new connection creation rate. Unit: connections per second.</li>
+         * <li><strong>ActiveSessionCount</strong>: number of concurrent connections. Unit: connections.</li>
+         * </ul>
          * 
-         * *   **InBps**: inbound data transfer. Unit: bit/s.
-         * *   **OutBps**: outbound data transfer. Unit: bit/s.
-         * *   **InPps**: inbound packet forwarding rate. Unit: packets per second.
-         * *   **OutPps**: outbound packet forwarding rate. Unit: packets per second.
-         * *   **NewSessionPerSecond**: new connection creation rate. Unit: connections per second.
-         * *   **ActiveSessionCount**: number of concurrent connections. Unit: connections.
+         * <strong>example:</strong>
+         * <p>InBps</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -192,7 +215,10 @@ public class GetNatTopNRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the NAT gateway is deployed.
+         * <p>The ID of the region in which the NAT gateway is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -201,7 +227,10 @@ public class GetNatTopNRequest extends Request {
         }
 
         /**
-         * The number of entries to return for real-time SNAT performance ranking. Valid values: **1 to 100**. Default value: **10**.
+         * <p>The number of entries to return for real-time SNAT performance ranking. Valid values: <strong>1 to 100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder topN(Integer topN) {
             this.putQueryParameter("TopN", topN);

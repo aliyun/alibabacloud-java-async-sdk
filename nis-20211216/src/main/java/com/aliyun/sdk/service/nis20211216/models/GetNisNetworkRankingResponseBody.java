@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNisNetworkRankingResponseBody} extends {@link TeaModel}
  *
  * <p>GetNisNetworkRankingResponseBody</p>
  */
 public class GetNisNetworkRankingResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -30,10 +36,14 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,13 +55,21 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNisNetworkRankingResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -70,6 +88,12 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNisNetworkRankingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNisNetworkRankingResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveSessionCount")
         private Double activeSessionCount;
@@ -455,6 +479,43 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
             private String sourcePort; 
             private String sourceZone; 
             private String vbrId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.activeSessionCount = model.activeSessionCount;
+                this.asn = model.asn;
+                this.attachmentId = model.attachmentId;
+                this.bandwidthPackageId = model.bandwidthPackageId;
+                this.byteCount = model.byteCount;
+                this.city = model.city;
+                this.country = model.country;
+                this.destinationIp = model.destinationIp;
+                this.destinationIsp = model.destinationIsp;
+                this.destinationPort = model.destinationPort;
+                this.destinationRegionNo = model.destinationRegionNo;
+                this.destinationZone = model.destinationZone;
+                this.ip = model.ip;
+                this.inBps = model.inBps;
+                this.inPps = model.inPps;
+                this.instanceId = model.instanceId;
+                this.isp = model.isp;
+                this.newSessionPerSecond = model.newSessionPerSecond;
+                this.outBps = model.outBps;
+                this.outPps = model.outPps;
+                this.packetCount = model.packetCount;
+                this.protocol = model.protocol;
+                this.province = model.province;
+                this.RTT = model.RTT;
+                this.regionNo = model.regionNo;
+                this.retransmitRate = model.retransmitRate;
+                this.sourceIp = model.sourceIp;
+                this.sourceIsp = model.sourceIsp;
+                this.sourcePort = model.sourcePort;
+                this.sourceZone = model.sourceZone;
+                this.vbrId = model.vbrId;
+            } 
 
             /**
              * ActiveSessionCount.

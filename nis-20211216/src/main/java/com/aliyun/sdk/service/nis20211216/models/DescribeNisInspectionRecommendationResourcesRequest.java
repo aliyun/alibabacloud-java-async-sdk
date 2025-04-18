@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNisInspectionRecommendationResourcesRequest} extends {@link RequestModel}
  *
  * <p>DescribeNisInspectionRecommendationResourcesRequest</p>
@@ -51,7 +57,7 @@ public class DescribeNisInspectionRecommendationResourcesRequest extends Request
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +118,10 @@ public class DescribeNisInspectionRecommendationResourcesRequest extends Request
         } 
 
         /**
-         * InspectionReportId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nir-ffd1af****196d0</p>
          */
         public Builder inspectionReportId(String inspectionReportId) {
             this.putQueryParameter("InspectionReportId", inspectionReportId);
@@ -148,7 +157,10 @@ public class DescribeNisInspectionRecommendationResourcesRequest extends Request
         }
 
         /**
-         * RecommendationCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nat_snat_cross_az_warn</p>
          */
         public Builder recommendationCode(String recommendationCode) {
             this.putQueryParameter("RecommendationCode", recommendationCode);

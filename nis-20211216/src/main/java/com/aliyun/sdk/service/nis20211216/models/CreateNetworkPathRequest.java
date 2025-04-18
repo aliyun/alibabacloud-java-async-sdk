@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkPathRequest} extends {@link RequestModel}
  *
  * <p>CreateNetworkPathRequest</p>
@@ -52,7 +58,7 @@ public class CreateNetworkPathRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetId")
@@ -96,7 +102,7 @@ public class CreateNetworkPathRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -167,7 +173,7 @@ public class CreateNetworkPathRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -209,7 +215,7 @@ public class CreateNetworkPathRequest extends Request {
         private String sourceIpAddress; 
         private Integer sourcePort; 
         private String sourceType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String targetId; 
         private String targetIpAddress; 
         private Integer targetPort; 
@@ -238,7 +244,10 @@ public class CreateNetworkPathRequest extends Request {
         } 
 
         /**
-         * The description of the network path.
+         * <p>The description of the network path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Analyze the path from ECS to ECS</p>
          */
         public Builder networkPathDescription(String networkPathDescription) {
             this.putQueryParameter("NetworkPathDescription", networkPathDescription);
@@ -247,7 +256,11 @@ public class CreateNetworkPathRequest extends Request {
         }
 
         /**
-         * The name of the network path.
+         * <p>The name of the network path.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs2PublicIp</p>
          */
         public Builder networkPathName(String networkPathName) {
             this.putQueryParameter("NetworkPathName", networkPathName);
@@ -256,12 +269,15 @@ public class CreateNetworkPathRequest extends Request {
         }
 
         /**
-         * The protocol type. Valid values:
-         * <p>
+         * <p>The protocol type. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong>: Transmission Control Protocol (TCP)</li>
+         * <li><strong>udp</strong>: User Datagram Protocol (UDP)</li>
+         * <li><strong>icmp</strong>: Internet Control Message Protocol (ICMP)</li>
+         * </ul>
          * 
-         * *   **tcp**: Transmission Control Protocol (TCP)
-         * *   **udp**: User Datagram Protocol (UDP)
-         * *   **icmp**: Internet Control Message Protocol (ICMP)
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -270,7 +286,10 @@ public class CreateNetworkPathRequest extends Request {
         }
 
         /**
-         * The region ID of the network path that you want to create.
+         * <p>The region ID of the network path that you want to create.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -279,7 +298,10 @@ public class CreateNetworkPathRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm27qsxjj****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -288,7 +310,11 @@ public class CreateNetworkPathRequest extends Request {
         }
 
         /**
-         * The ID of the source resource.
+         * <p>The ID of the source resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2zef4ngqfarepyun****</p>
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -297,7 +323,10 @@ public class CreateNetworkPathRequest extends Request {
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.17.XX.XX</p>
          */
         public Builder sourceIpAddress(String sourceIpAddress) {
             this.putQueryParameter("SourceIpAddress", sourceIpAddress);
@@ -306,7 +335,10 @@ public class CreateNetworkPathRequest extends Request {
         }
 
         /**
-         * The source port.
+         * <p>The source port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         public Builder sourcePort(Integer sourcePort) {
             this.putQueryParameter("SourcePort", sourcePort);
@@ -315,14 +347,18 @@ public class CreateNetworkPathRequest extends Request {
         }
 
         /**
-         * The type of the source resource. Valid values:
-         * <p>
+         * <p>The type of the source resource. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong>: the Elastic Compute Service (ECS) instance</li>
+         * <li><strong>internetIp</strong>: the public IP address</li>
+         * <li><strong>vsw</strong>: the vSwitch</li>
+         * <li><strong>vpn</strong>: the VPN gateway</li>
+         * <li><strong>vbr</strong>: the virtual border router (VBR)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ecs**: the Elastic Compute Service (ECS) instance
-         * *   **internetIp**: the public IP address
-         * *   **vsw**: the vSwitch
-         * *   **vpn**: the VPN gateway
-         * *   **vbr**: the virtual border router (VBR)
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -331,16 +367,19 @@ public class CreateNetworkPathRequest extends Request {
         }
 
         /**
-         * The tags to add to the resource.
+         * <p>The tags to add to the resource.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the destination resource.
+         * <p>The ID of the destination resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp13d0e064gubm****</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -349,7 +388,10 @@ public class CreateNetworkPathRequest extends Request {
         }
 
         /**
-         * The destination IP address.
+         * <p>The destination IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.210</p>
          */
         public Builder targetIpAddress(String targetIpAddress) {
             this.putQueryParameter("TargetIpAddress", targetIpAddress);
@@ -358,7 +400,10 @@ public class CreateNetworkPathRequest extends Request {
         }
 
         /**
-         * The destination port.
+         * <p>The destination port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder targetPort(Integer targetPort) {
             this.putQueryParameter("TargetPort", targetPort);
@@ -367,15 +412,18 @@ public class CreateNetworkPathRequest extends Request {
         }
 
         /**
-         * The type of the destination resource. Valid values:
-         * <p>
+         * <p>The type of the destination resource. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong>: the ECS instance</li>
+         * <li><strong>internetIp</strong>: the public IP address</li>
+         * <li><strong>vsw</strong>: the vSwitch</li>
+         * <li><strong>vpn</strong>: the VPN gateway</li>
+         * <li><strong>vbr</strong>: the VBR</li>
+         * <li><strong>clb</strong>: the Classic Load Balancer (CLB) instance</li>
+         * </ul>
          * 
-         * *   **ecs**: the ECS instance
-         * *   **internetIp**: the public IP address
-         * *   **vsw**: the vSwitch
-         * *   **vpn**: the VPN gateway
-         * *   **vbr**: the VBR
-         * *   **clb**: the Classic Load Balancer (CLB) instance
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -390,6 +438,12 @@ public class CreateNetworkPathRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNetworkPathRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNetworkPathRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -428,11 +482,20 @@ public class CreateNetworkPathRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The key of tag N to add to the resource. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
-             * <p>
+             * <p>The key of tag N to add to the resource. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>You can add up to 20 tags in each call.</p>
              * 
-             * You can add up to 20 tags in each call.
+             * <strong>example:</strong>
+             * <p>role</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -440,10 +503,11 @@ public class CreateNetworkPathRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>ops</p>
              */
             public Builder value(String value) {
                 this.value = value;

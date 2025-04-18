@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVbrFlowTopNRequest} extends {@link RequestModel}
  *
  * <p>GetVbrFlowTopNRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetVbrFlowTopNRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountIds")
-    private java.util.List < Long > accountIds;
+    private java.util.List<Long> accountIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AttachmentId")
@@ -119,7 +125,7 @@ public class GetVbrFlowTopNRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -127,7 +133,7 @@ public class GetVbrFlowTopNRequest extends Request {
     /**
      * @return accountIds
      */
-    public java.util.List < Long > getAccountIds() {
+    public java.util.List<Long> getAccountIds() {
         return this.accountIds;
     }
 
@@ -251,7 +257,7 @@ public class GetVbrFlowTopNRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetVbrFlowTopNRequest, Builder> {
-        private java.util.List < Long > accountIds; 
+        private java.util.List<Long> accountIds; 
         private String attachmentId; 
         private Long beginTime; 
         private String cenId; 
@@ -297,9 +303,9 @@ public class GetVbrFlowTopNRequest extends Request {
         } 
 
         /**
-         * The IDs of member accounts.
+         * <p>The IDs of member accounts.</p>
          */
-        public Builder accountIds(java.util.List < Long > accountIds) {
+        public Builder accountIds(java.util.List<Long> accountIds) {
             String accountIdsShrink = shrink(accountIds, "AccountIds", "json");
             this.putQueryParameter("AccountIds", accountIdsShrink);
             this.accountIds = accountIds;
@@ -307,7 +313,10 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * The CEN connection ID.
+         * <p>The CEN connection ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-dnv870gmqzmb5u****</p>
          */
         public Builder attachmentId(String attachmentId) {
             this.putQueryParameter("AttachmentId", attachmentId);
@@ -316,7 +325,11 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The maximum time range that you can query is 24 hours.
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The maximum time range that you can query is 24 hours.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638239092000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -325,7 +338,10 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * The CEN instance ID.
+         * <p>The CEN instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-ia8kw1zjv4hyal****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -334,7 +350,10 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * The local IP address.
+         * <p>The local IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112.74.XX.XX</p>
          */
         public Builder cloudIp(String cloudIp) {
             this.putQueryParameter("CloudIp", cloudIp);
@@ -343,10 +362,13 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * The local port.
-         * <p>
+         * <p>The local port.</p>
+         * <blockquote>
+         * <p> This parameter is required only if you set <strong>GroupBy</strong> to <strong>CloudPort</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only if you set **GroupBy** to **CloudPort**.
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         public Builder cloudPort(String cloudPort) {
             this.putQueryParameter("CloudPort", cloudPort);
@@ -355,11 +377,15 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * The direction of the hybrid cloud traffic in the local regions or for the local IP addresses. Valid values:
-         * <p>
+         * <p>The direction of the hybrid cloud traffic in the local regions or for the local IP addresses. Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: traffic from a data center to Alibaba Cloud</li>
+         * <li><strong>out</strong>: traffic from Alibaba Cloud to a data center</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **in**: traffic from a data center to Alibaba Cloud
-         * *   **out**: traffic from Alibaba Cloud to a data center
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -368,7 +394,11 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The maximum time range that you can query is 24 hours.
+         * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The maximum time range that you can query is 24 hours.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638239093000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -377,15 +407,19 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * The dimension for ranking hybrid cloud traffic data. The value of this parameter is case-sensitive. Valid values:
-         * <p>
+         * <p>The dimension for ranking hybrid cloud traffic data. The value of this parameter is case-sensitive. Valid values:</p>
+         * <ul>
+         * <li><strong>1Tuple</strong>: queries the rankings of hybrid cloud traffic data for the Cloud Enterprise Network (CEN) instances, CEN connections, virtual border routers (VBRs), and IP addresses.</li>
+         * <li><strong>2Tuple</strong>: queries the rankings of hybrid cloud traffic data for the local and remote IP addresses.</li>
+         * <li><strong>5Tuple</strong>: queries the rankings of hybrid cloud traffic data for the local and remote IP addresses, local and remote ports, and protocols.</li>
+         * <li><strong>CloudPort</strong>: queries the rankings of hybrid cloud traffic data for the local ports.</li>
+         * <li><strong>OtherPort</strong>: queries the rankings of hybrid cloud traffic data for the remote ports.</li>
+         * <li><strong>Protocol</strong>: queries the rankings of hybrid cloud traffic data for the protocols.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1Tuple**: queries the rankings of hybrid cloud traffic data for the Cloud Enterprise Network (CEN) instances, CEN connections, virtual border routers (VBRs), and IP addresses.
-         * *   **2Tuple**: queries the rankings of hybrid cloud traffic data for the local and remote IP addresses.
-         * *   **5Tuple**: queries the rankings of hybrid cloud traffic data for the local and remote IP addresses, local and remote ports, and protocols.
-         * *   **CloudPort**: queries the rankings of hybrid cloud traffic data for the local ports.
-         * *   **OtherPort**: queries the rankings of hybrid cloud traffic data for the remote ports.
-         * *   **Protocol**: queries the rankings of hybrid cloud traffic data for the protocols.
+         * <strong>example:</strong>
+         * <p>1Tuple</p>
          */
         public Builder groupBy(String groupBy) {
             this.putQueryParameter("GroupBy", groupBy);
@@ -394,7 +428,10 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * The metric for ranking hybrid cloud traffic data. Default value: Bytes. This value specifies that hybrid cloud traffic data is ranked by traffic volumes.
+         * <p>The metric for ranking hybrid cloud traffic data. Default value: Bytes. This value specifies that hybrid cloud traffic data is ranked by traffic volumes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bytes</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -403,7 +440,10 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * The remote IP address.
+         * <p>The remote IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122.112.XX.XX</p>
          */
         public Builder otherIp(String otherIp) {
             this.putQueryParameter("OtherIp", otherIp);
@@ -412,10 +452,13 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * The remote port.
-         * <p>
+         * <p>The remote port.</p>
+         * <blockquote>
+         * <p> This parameter is required only if you set <strong>GroupBy</strong> to <strong>OtherPort</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only if you set **GroupBy** to **OtherPort**.
+         * <strong>example:</strong>
+         * <p>40002</p>
          */
         public Builder otherPort(String otherPort) {
             this.putQueryParameter("OtherPort", otherPort);
@@ -424,10 +467,13 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * The protocol number.
-         * <p>
+         * <p>The protocol number.</p>
+         * <blockquote>
+         * <p> All protocols are supported. This parameter is required only if you set <strong>GroupBy</strong> to <strong>5Tuple</strong> or <strong>Protocol</strong>.</p>
+         * </blockquote>
          * 
-         * >  All protocols are supported. This parameter is required only if you set **GroupBy** to **5Tuple** or **Protocol**.
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -436,7 +482,11 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * The local region.
+         * <p>The local region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -445,11 +495,14 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * The order for ranking hybrid cloud traffic data. Valid values:
-         * <p>
+         * <p>The order for ranking hybrid cloud traffic data. Valid values:</p>
+         * <ul>
+         * <li><strong>desc</strong>: descending order</li>
+         * <li><strong>asc</strong>: ascending order</li>
+         * </ul>
          * 
-         * *   **desc**: descending order
-         * *   **asc**: ascending order
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -458,7 +511,10 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * Specifies top-N traffic data to display. Default value: **10**. This value specifies that top-10 traffic data is displayed by default. Maximum value: **100**.
+         * <p>Specifies top-N traffic data to display. Default value: <strong>10</strong>. This value specifies that top-10 traffic data is displayed by default. Maximum value: <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder topN(Integer topN) {
             this.putQueryParameter("TopN", topN);
@@ -467,10 +523,13 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.
-         * <p>
+         * <p>Specifies whether to enable the multi-account management feature. Default value: <strong>false</strong>. This value specifies that the multi-account management feature is disabled.</p>
+         * <blockquote>
+         * <p> By default, the multi-account management feature is not available. If you want to use this feature, contact your account manager to apply for permissions.</p>
+         * </blockquote>
          * 
-         * >  By default, the multi-account management feature is not available. If you want to use this feature, contact your account manager to apply for permissions.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useMultiAccount(Boolean useMultiAccount) {
             this.putQueryParameter("UseMultiAccount", useMultiAccount);
@@ -479,7 +538,10 @@ public class GetVbrFlowTopNRequest extends Request {
         }
 
         /**
-         * The ID of the VBR that is associated with the Express Connect circuit.
+         * <p>The ID of the VBR that is associated with the Express Connect circuit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-k1atj46citwuek42j****</p>
          */
         public Builder virtualBorderRouterId(String virtualBorderRouterId) {
             this.putQueryParameter("VirtualBorderRouterId", virtualBorderRouterId);

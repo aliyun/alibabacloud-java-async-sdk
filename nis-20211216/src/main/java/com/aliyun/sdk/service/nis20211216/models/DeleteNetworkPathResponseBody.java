@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNetworkPathResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteNetworkPathResponseBody</p>
@@ -30,6 +36,10 @@ public class DeleteNetworkPathResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,12 +58,23 @@ public class DeleteNetworkPathResponseBody extends TeaModel {
         private Boolean data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteNetworkPathResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Result of operation.
-         * <p>
+         * <p>Result of operation.</p>
+         * <ul>
+         * <li><strong>true</strong>: Delete Success.</li>
+         * <li><strong>false</strong>: Delete Fail.</li>
+         * </ul>
          * 
-         * - **true**: Delete Success.
-         * - **false**: Delete Fail.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -61,7 +82,10 @@ public class DeleteNetworkPathResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C4331873-C534-590F-A905-F66C53B88A47</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
