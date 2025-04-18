@@ -422,11 +422,15 @@ public class ListLniPrivateIpAddressResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List<Data> data;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Content(Builder builder) {
             this.data = builder.data;
+            this.resourceGroupId = builder.resourceGroupId;
             this.total = builder.total;
         }
 
@@ -446,6 +450,13 @@ public class ListLniPrivateIpAddressResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return total
          */
         public Long getTotal() {
@@ -454,6 +465,7 @@ public class ListLniPrivateIpAddressResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Data> data; 
+            private String resourceGroupId; 
             private Long total; 
 
             private Builder() {
@@ -461,6 +473,7 @@ public class ListLniPrivateIpAddressResponseBody extends TeaModel {
 
             private Builder(Content model) {
                 this.data = model.data;
+                this.resourceGroupId = model.resourceGroupId;
                 this.total = model.total;
             } 
 
@@ -469,6 +482,14 @@ public class ListLniPrivateIpAddressResponseBody extends TeaModel {
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

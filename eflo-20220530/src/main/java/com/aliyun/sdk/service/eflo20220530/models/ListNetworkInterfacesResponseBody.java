@@ -648,6 +648,9 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("ServiceMac")
         private String serviceMac;
 
@@ -678,6 +681,7 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
             this.privateIpAddressMacGroup = builder.privateIpAddressMacGroup;
             this.quota = builder.quota;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.serviceMac = builder.serviceMac;
             this.status = builder.status;
             this.subnetBaseInfo = builder.subnetBaseInfo;
@@ -772,6 +776,13 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return serviceMac
          */
         public String getServiceMac() {
@@ -825,6 +836,7 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
             private java.util.List<PrivateIpAddressMacGroup> privateIpAddressMacGroup; 
             private Integer quota; 
             private String regionId; 
+            private String resourceGroupId; 
             private String serviceMac; 
             private String status; 
             private SubnetBaseInfo subnetBaseInfo; 
@@ -847,6 +859,7 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
                 this.privateIpAddressMacGroup = model.privateIpAddressMacGroup;
                 this.quota = model.quota;
                 this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
                 this.serviceMac = model.serviceMac;
                 this.status = model.status;
                 this.subnetBaseInfo = model.subnetBaseInfo;
@@ -976,6 +989,14 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

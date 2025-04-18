@@ -710,6 +710,9 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
@@ -743,6 +746,7 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
             this.nodeId = builder.nodeId;
             this.privateIpAddresses = builder.privateIpAddresses;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.securityGroupId = builder.securityGroupId;
             this.status = builder.status;
             this.type = builder.type;
@@ -858,6 +862,13 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return securityGroupId
          */
         public String getSecurityGroupId() {
@@ -914,6 +925,7 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
             private String nodeId; 
             private java.util.List<PrivateIpAddresses> privateIpAddresses; 
             private String regionId; 
+            private String resourceGroupId; 
             private String securityGroupId; 
             private String status; 
             private String type; 
@@ -939,6 +951,7 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
                 this.nodeId = model.nodeId;
                 this.privateIpAddresses = model.privateIpAddresses;
                 this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
                 this.securityGroupId = model.securityGroupId;
                 this.status = model.status;
                 this.type = model.type;
@@ -1092,6 +1105,14 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

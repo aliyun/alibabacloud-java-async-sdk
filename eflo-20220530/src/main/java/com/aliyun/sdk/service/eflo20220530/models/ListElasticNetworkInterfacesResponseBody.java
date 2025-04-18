@@ -203,6 +203,9 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
@@ -233,6 +236,7 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
             this.message = builder.message;
             this.nodeId = builder.nodeId;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.securityGroupId = builder.securityGroupId;
             this.status = builder.status;
             this.type = builder.type;
@@ -327,6 +331,13 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return securityGroupId
          */
         public String getSecurityGroupId() {
@@ -380,6 +391,7 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
             private String message; 
             private String nodeId; 
             private String regionId; 
+            private String resourceGroupId; 
             private String securityGroupId; 
             private String status; 
             private String type; 
@@ -402,6 +414,7 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
                 this.message = model.message;
                 this.nodeId = model.nodeId;
                 this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
                 this.securityGroupId = model.securityGroupId;
                 this.status = model.status;
                 this.type = model.type;
@@ -528,6 +541,14 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

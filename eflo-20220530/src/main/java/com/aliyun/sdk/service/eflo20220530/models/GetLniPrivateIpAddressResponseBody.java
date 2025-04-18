@@ -194,6 +194,9 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -209,6 +212,7 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
             this.networkInterfaceId = builder.networkInterfaceId;
             this.privateIpAddress = builder.privateIpAddress;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
             this.subnetId = builder.subnetId;
         }
@@ -278,6 +282,13 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -300,6 +311,7 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
             private String networkInterfaceId; 
             private String privateIpAddress; 
             private String regionId; 
+            private String resourceGroupId; 
             private String status; 
             private String subnetId; 
 
@@ -315,6 +327,7 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
                 this.networkInterfaceId = model.networkInterfaceId;
                 this.privateIpAddress = model.privateIpAddress;
                 this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
                 this.status = model.status;
                 this.subnetId = model.subnetId;
             } 
@@ -404,6 +417,14 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

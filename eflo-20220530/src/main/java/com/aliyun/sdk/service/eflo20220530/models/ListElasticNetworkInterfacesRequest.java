@@ -47,6 +47,10 @@ public class ListElasticNetworkInterfacesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -75,6 +79,7 @@ public class ListElasticNetworkInterfacesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
         this.type = builder.type;
         this.vSwitchId = builder.vSwitchId;
@@ -145,6 +150,13 @@ public class ListElasticNetworkInterfacesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -187,6 +199,7 @@ public class ListElasticNetworkInterfacesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private String status; 
         private String type; 
         private String vSwitchId; 
@@ -206,6 +219,7 @@ public class ListElasticNetworkInterfacesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.status = request.status;
             this.type = request.type;
             this.vSwitchId = request.vSwitchId;
@@ -300,6 +314,15 @@ public class ListElasticNetworkInterfacesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

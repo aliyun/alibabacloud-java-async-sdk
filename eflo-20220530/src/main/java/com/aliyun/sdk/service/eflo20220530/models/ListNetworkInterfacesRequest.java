@@ -47,6 +47,10 @@ public class ListNetworkInterfacesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SubnetId")
     private String subnetId;
 
@@ -63,6 +67,7 @@ public class ListNetworkInterfacesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.subnetId = builder.subnetId;
         this.vpdId = builder.vpdId;
     }
@@ -130,6 +135,13 @@ public class ListNetworkInterfacesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return subnetId
      */
     public String getSubnetId() {
@@ -151,6 +163,7 @@ public class ListNetworkInterfacesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private String subnetId; 
         private String vpdId; 
 
@@ -167,6 +180,7 @@ public class ListNetworkInterfacesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.subnetId = request.subnetId;
             this.vpdId = request.vpdId;
         } 
@@ -253,6 +267,15 @@ public class ListNetworkInterfacesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

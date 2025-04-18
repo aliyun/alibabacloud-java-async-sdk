@@ -43,6 +43,10 @@ public class ListLeniPrivateIpAddressesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -54,6 +58,7 @@ public class ListLeniPrivateIpAddressesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.privateIpAddress = builder.privateIpAddress;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
     }
 
@@ -113,6 +118,13 @@ public class ListLeniPrivateIpAddressesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -126,6 +138,7 @@ public class ListLeniPrivateIpAddressesRequest extends Request {
         private Integer pageSize; 
         private String privateIpAddress; 
         private String regionId; 
+        private String resourceGroupId; 
         private String status; 
 
         private Builder() {
@@ -140,6 +153,7 @@ public class ListLeniPrivateIpAddressesRequest extends Request {
             this.pageSize = request.pageSize;
             this.privateIpAddress = request.privateIpAddress;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.status = request.status;
         } 
 
@@ -213,6 +227,15 @@ public class ListLeniPrivateIpAddressesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
