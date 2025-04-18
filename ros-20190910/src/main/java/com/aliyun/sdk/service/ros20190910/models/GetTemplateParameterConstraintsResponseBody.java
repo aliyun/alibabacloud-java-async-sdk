@@ -188,8 +188,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BehaviorReason")
         private String behaviorReason;
 
+        @com.aliyun.core.annotation.NameInMap("PropertiesData")
+        private String propertiesData;
+
         @com.aliyun.core.annotation.NameInMap("PropertyName")
         private String propertyName;
+
+        @com.aliyun.core.annotation.NameInMap("RequestInfo")
+        private String requestInfo;
 
         @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
@@ -201,7 +207,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             this.allowedValues = builder.allowedValues;
             this.behavior = builder.behavior;
             this.behaviorReason = builder.behaviorReason;
+            this.propertiesData = builder.propertiesData;
             this.propertyName = builder.propertyName;
+            this.requestInfo = builder.requestInfo;
             this.resourceName = builder.resourceName;
             this.resourceType = builder.resourceType;
         }
@@ -236,10 +244,24 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         }
 
         /**
+         * @return propertiesData
+         */
+        public String getPropertiesData() {
+            return this.propertiesData;
+        }
+
+        /**
          * @return propertyName
          */
         public String getPropertyName() {
             return this.propertyName;
+        }
+
+        /**
+         * @return requestInfo
+         */
+        public String getRequestInfo() {
+            return this.requestInfo;
         }
 
         /**
@@ -260,7 +282,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             private java.util.List<?> allowedValues; 
             private String behavior; 
             private String behaviorReason; 
+            private String propertiesData; 
             private String propertyName; 
+            private String requestInfo; 
             private String resourceName; 
             private String resourceType; 
 
@@ -271,7 +295,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
                 this.allowedValues = model.allowedValues;
                 this.behavior = model.behavior;
                 this.behaviorReason = model.behaviorReason;
+                this.propertiesData = model.propertiesData;
                 this.propertyName = model.propertyName;
+                this.requestInfo = model.requestInfo;
                 this.resourceName = model.resourceName;
                 this.resourceType = model.resourceType;
             } 
@@ -307,6 +333,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
+             * PropertiesData.
+             */
+            public Builder propertiesData(String propertiesData) {
+                this.propertiesData = propertiesData;
+                return this;
+            }
+
+            /**
              * <p>The name of the resource property.</p>
              * 
              * <strong>example:</strong>
@@ -314,6 +348,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
              */
             public Builder propertyName(String propertyName) {
                 this.propertyName = propertyName;
+                return this;
+            }
+
+            /**
+             * RequestInfo.
+             */
+            public Builder requestInfo(String requestInfo) {
+                this.requestInfo = requestInfo;
                 return this;
             }
 
