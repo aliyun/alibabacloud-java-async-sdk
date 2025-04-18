@@ -29,7 +29,6 @@ public class CreateFixedNoAReportRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustPhoneNo")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String custPhoneNo;
 
     @com.aliyun.core.annotation.Query
@@ -289,8 +288,7 @@ public class CreateFixedNoAReportRequest extends Request {
         }
 
         /**
-         * <p>法人/经办人手机号</p>
-         * <p>This parameter is required.</p>
+         * <p>经办人/法人电话</p>
          * 
          * <strong>example:</strong>
          * <p>130*****8888</p>
