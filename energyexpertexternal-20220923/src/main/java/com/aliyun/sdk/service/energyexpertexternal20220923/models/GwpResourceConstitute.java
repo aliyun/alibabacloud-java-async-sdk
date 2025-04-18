@@ -48,6 +48,10 @@ public class GwpResourceConstitute extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return carbonEmission
      */
@@ -89,6 +93,17 @@ public class GwpResourceConstitute extends TeaModel {
         private String percent; 
         private Integer resourceType; 
         private String unit; 
+
+        private Builder() {
+        } 
+
+        private Builder(GwpResourceConstitute model) {
+            this.carbonEmission = model.carbonEmission;
+            this.name = model.name;
+            this.percent = model.percent;
+            this.resourceType = model.resourceType;
+            this.unit = model.unit;
+        } 
 
         /**
          * carbonEmission.

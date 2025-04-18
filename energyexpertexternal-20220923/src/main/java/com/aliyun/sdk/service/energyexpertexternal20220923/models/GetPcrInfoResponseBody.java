@@ -36,6 +36,10 @@ public class GetPcrInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetPcrInfoResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPcrInfoResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -134,6 +146,15 @@ public class GetPcrInfoResponseBody extends TeaModel {
             private String createTime; 
             private String name; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.name = model.name;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The timestamp when the report was created. The timestamp is in milliseconds.</p>

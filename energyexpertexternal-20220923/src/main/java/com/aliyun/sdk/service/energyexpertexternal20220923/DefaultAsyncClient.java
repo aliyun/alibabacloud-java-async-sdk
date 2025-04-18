@@ -271,6 +271,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetDocExtractionResult  GetDocExtractionResultRequest
+     * @return GetDocExtractionResultResponse
+     */
+    @Override
+    public CompletableFuture<GetDocExtractionResultResponse> getDocExtractionResult(GetDocExtractionResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDocExtractionResult").setMethod(HttpMethod.POST).setPathRegex("/api/v2/aidoc/document/getDocExtractionResult").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDocExtractionResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDocExtractionResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDocParsingResult  GetDocParsingResultRequest
+     * @return GetDocParsingResultResponse
+     */
+    @Override
+    public CompletableFuture<GetDocParsingResultResponse> getDocParsingResult(GetDocParsingResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDocParsingResult").setMethod(HttpMethod.POST).setPathRegex("/api/v2/aidoc/document/getDocParsingResult").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDocParsingResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDocParsingResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetDocumentAnalyzeResult  GetDocumentAnalyzeResultRequest
      * @return GetDocumentAnalyzeResultResponse
      */
@@ -627,6 +663,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetReductionProposalResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetVLExtractionResult  GetVLExtractionResultRequest
+     * @return GetVLExtractionResultResponse
+     */
+    @Override
+    public CompletableFuture<GetVLExtractionResultResponse> getVLExtractionResult(GetVLExtractionResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetVLExtractionResult").setMethod(HttpMethod.POST).setPathRegex("/api/v2/aidoc/document/getVLExtractionResult").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetVLExtractionResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetVLExtractionResultResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

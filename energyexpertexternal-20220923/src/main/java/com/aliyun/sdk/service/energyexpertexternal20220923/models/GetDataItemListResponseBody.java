@@ -36,6 +36,10 @@ public class GetDataItemListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetDataItemListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataItemListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Response parameters.</p>
@@ -146,6 +158,16 @@ public class GetDataItemListResponseBody extends TeaModel {
             private String name; 
             private Integer period; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.code = model.code;
+                this.name = model.name;
+                this.period = model.period;
+                this.unit = model.unit;
+            } 
 
             /**
              * <p>The identifier of the data item.</p>

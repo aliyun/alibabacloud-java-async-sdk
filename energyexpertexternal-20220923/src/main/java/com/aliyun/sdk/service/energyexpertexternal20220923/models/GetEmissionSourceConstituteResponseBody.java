@@ -36,6 +36,10 @@ public class GetEmissionSourceConstituteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetEmissionSourceConstituteResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ConstituteItem> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEmissionSourceConstituteResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Response parameters</p>

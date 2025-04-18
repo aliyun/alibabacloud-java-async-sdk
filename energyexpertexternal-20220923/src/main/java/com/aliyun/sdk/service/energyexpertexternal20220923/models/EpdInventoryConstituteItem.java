@@ -104,6 +104,10 @@ public class EpdInventoryConstituteItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return carbonEmission
      */
@@ -257,6 +261,31 @@ public class EpdInventoryConstituteItem extends TeaModel {
         private String resourceType; 
         private Integer state; 
         private String unit; 
+
+        private Builder() {
+        } 
+
+        private Builder(EpdInventoryConstituteItem model) {
+            this.carbonEmission = model.carbonEmission;
+            this.factor = model.factor;
+            this.factorDataset = model.factorDataset;
+            this.factorId = model.factorId;
+            this.factorType = model.factorType;
+            this.factorUnit = model.factorUnit;
+            this.inventoryId = model.inventoryId;
+            this.inventoryUnit = model.inventoryUnit;
+            this.inventoryValue = model.inventoryValue;
+            this.inventoryValuePerProduct = model.inventoryValuePerProduct;
+            this.inventoryValuePerProductUnit = model.inventoryValuePerProductUnit;
+            this.items = model.items;
+            this.name = model.name;
+            this.num = model.num;
+            this.percent = model.percent;
+            this.quantity = model.quantity;
+            this.resourceType = model.resourceType;
+            this.state = model.state;
+            this.unit = model.unit;
+        } 
 
         /**
          * carbonEmission.

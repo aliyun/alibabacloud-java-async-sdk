@@ -48,6 +48,10 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         private Integer httpCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOrgAndFactoryResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The code returned for the request.</p>
@@ -192,6 +207,14 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             private String factoryId; 
             private String factoryName; 
 
+            private Builder() {
+            } 
+
+            private Builder(FactoryList model) {
+                this.factoryId = model.factoryId;
+                this.factoryName = model.factoryName;
+            } 
+
             /**
              * <p>The site ID.</p>
              * 
@@ -288,6 +311,16 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             private java.util.List<FactoryList> factoryList; 
             private String organizationId; 
             private String organizationName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aliyunPk = model.aliyunPk;
+                this.factoryList = model.factoryList;
+                this.organizationId = model.organizationId;
+                this.organizationName = model.organizationName;
+            } 
 
             /**
              * <p>The Alibaba Cloud account ID.</p>

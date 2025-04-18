@@ -48,6 +48,10 @@ public class GetDeviceInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetDeviceInfoResponseBody extends TeaModel {
         private Integer httpCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDeviceInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The code returned for the request. A value of Success indicates that the request was successful. Other values indicate that the request failed. You can troubleshoot the error by viewing the error message returned.</p>
@@ -239,6 +254,18 @@ public class GetDeviceInfoResponseBody extends TeaModel {
             private String type; 
             private String unit; 
             private Double value; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordList model) {
+                this.identifier = model.identifier;
+                this.paramName = model.paramName;
+                this.statisticsDate = model.statisticsDate;
+                this.type = model.type;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The device identifier.</p>
@@ -392,6 +419,17 @@ public class GetDeviceInfoResponseBody extends TeaModel {
             private String firstTypeName; 
             private java.util.List<RecordList> recordList; 
             private String secondTypeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deviceId = model.deviceId;
+                this.deviceName = model.deviceName;
+                this.firstTypeName = model.firstTypeName;
+                this.recordList = model.recordList;
+                this.secondTypeName = model.secondTypeName;
+            } 
 
             /**
              * <p>The ID of the device.</p>

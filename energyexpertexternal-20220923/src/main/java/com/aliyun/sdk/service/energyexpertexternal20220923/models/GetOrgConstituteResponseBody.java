@@ -36,6 +36,10 @@ public class GetOrgConstituteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetOrgConstituteResponseBody extends TeaModel {
     public static final class Builder {
         private OrgEmission data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOrgConstituteResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>

@@ -36,6 +36,10 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEmissionSummaryResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details of summarized data</p>
@@ -218,6 +230,22 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
             private Double totalCarbonEmissionData; 
             private Double weightingCarbonEmissionData; 
             private Double weightingRatio; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.actualEmissionRatio = model.actualEmissionRatio;
+                this.carbonSaveConversion = model.carbonSaveConversion;
+                this.currentPeriodCarbonEmissionData = model.currentPeriodCarbonEmissionData;
+                this.isWeighting = model.isWeighting;
+                this.lastPeriodCarbonEmissionData = model.lastPeriodCarbonEmissionData;
+                this.lastPeriodWeightingCarbonEmissionData = model.lastPeriodWeightingCarbonEmissionData;
+                this.ratio = model.ratio;
+                this.totalCarbonEmissionData = model.totalCarbonEmissionData;
+                this.weightingCarbonEmissionData = model.weightingCarbonEmissionData;
+                this.weightingRatio = model.weightingRatio;
+            } 
 
             /**
              * <p>Percentage of scheduled.</p>

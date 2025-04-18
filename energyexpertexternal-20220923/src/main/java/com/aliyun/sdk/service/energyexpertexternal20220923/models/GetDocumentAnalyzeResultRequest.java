@@ -35,7 +35,7 @@ public class GetDocumentAnalyzeResultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,6 +60,7 @@ public class GetDocumentAnalyzeResultRequest extends Request {
         } 
 
         /**
+         * <p>Job ID, specifying which document&quot;s parsing result to query. This is a return parameter from the &quot;Submit Document Parsing Job&quot; interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

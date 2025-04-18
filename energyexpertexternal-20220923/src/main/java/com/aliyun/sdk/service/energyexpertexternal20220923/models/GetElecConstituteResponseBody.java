@@ -36,6 +36,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetElecConstituteResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetElecConstituteResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -170,6 +182,18 @@ public class GetElecConstituteResponseBody extends TeaModel {
             private String nameKey; 
             private Double ratio; 
             private Double rawData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Light model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.dataUnit = model.dataUnit;
+                this.name = model.name;
+                this.nameKey = model.nameKey;
+                this.ratio = model.ratio;
+                this.rawData = model.rawData;
+            } 
 
             /**
              * <p>Carbon emission.</p>
@@ -336,6 +360,18 @@ public class GetElecConstituteResponseBody extends TeaModel {
             private Double ratio; 
             private Double rawData; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nuclear model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.dataUnit = model.dataUnit;
+                this.name = model.name;
+                this.nameKey = model.nameKey;
+                this.ratio = model.ratio;
+                this.rawData = model.rawData;
+            } 
+
             /**
              * <p>Carbon emission.</p>
              * 
@@ -500,6 +536,18 @@ public class GetElecConstituteResponseBody extends TeaModel {
             private String nameKey; 
             private Double ratio; 
             private Double rawData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Renewing model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.dataUnit = model.dataUnit;
+                this.name = model.name;
+                this.nameKey = model.nameKey;
+                this.ratio = model.ratio;
+                this.rawData = model.rawData;
+            } 
 
             /**
              * <p>Carbon emission.</p>
@@ -666,6 +714,18 @@ public class GetElecConstituteResponseBody extends TeaModel {
             private Double ratio; 
             private Double rawData; 
 
+            private Builder() {
+            } 
+
+            private Builder(Urban model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.dataUnit = model.dataUnit;
+                this.name = model.name;
+                this.nameKey = model.nameKey;
+                this.ratio = model.ratio;
+                this.rawData = model.rawData;
+            } 
+
             /**
              * <p>Carbon emission.</p>
              * 
@@ -830,6 +890,18 @@ public class GetElecConstituteResponseBody extends TeaModel {
             private String nameKey; 
             private Double ratio; 
             private Double rawData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Water model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.dataUnit = model.dataUnit;
+                this.name = model.name;
+                this.nameKey = model.nameKey;
+                this.ratio = model.ratio;
+                this.rawData = model.rawData;
+            } 
 
             /**
              * <p>Carbon emission.</p>
@@ -996,6 +1068,18 @@ public class GetElecConstituteResponseBody extends TeaModel {
             private Double ratio; 
             private Double rawData; 
 
+            private Builder() {
+            } 
+
+            private Builder(Wind model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.dataUnit = model.dataUnit;
+                this.name = model.name;
+                this.nameKey = model.nameKey;
+                this.ratio = model.ratio;
+                this.rawData = model.rawData;
+            } 
+
             /**
              * <p>Carbon emission.</p>
              * 
@@ -1160,6 +1244,18 @@ public class GetElecConstituteResponseBody extends TeaModel {
             private String nameKey; 
             private Double ratio; 
             private Double rawData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zero model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.dataUnit = model.dataUnit;
+                this.name = model.name;
+                this.nameKey = model.nameKey;
+                this.ratio = model.ratio;
+                this.rawData = model.rawData;
+            } 
 
             /**
              * <p>Carbon emission.</p>
@@ -1337,6 +1433,19 @@ public class GetElecConstituteResponseBody extends TeaModel {
             private Water water; 
             private Wind wind; 
             private Zero zero; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.light = model.light;
+                this.nuclear = model.nuclear;
+                this.renewing = model.renewing;
+                this.urban = model.urban;
+                this.water = model.water;
+                this.wind = model.wind;
+                this.zero = model.zero;
+            } 
 
             /**
              * <p>Photoelectric power consumption and carbon emission data of each enterprise.</p>

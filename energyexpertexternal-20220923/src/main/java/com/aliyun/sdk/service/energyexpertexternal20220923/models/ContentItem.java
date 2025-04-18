@@ -44,6 +44,10 @@ public class ContentItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return extInfo
      */
@@ -77,6 +81,16 @@ public class ContentItem extends TeaModel {
         private Double score; 
         private String text; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(ContentItem model) {
+            this.extInfo = model.extInfo;
+            this.score = model.score;
+            this.text = model.text;
+            this.type = model.type;
+        } 
 
         /**
          * extInfo.
@@ -159,6 +173,14 @@ public class ContentItem extends TeaModel {
         public static final class Builder {
             private Long x; 
             private Long y; 
+
+            private Builder() {
+            } 
+
+            private Builder(Pos model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * x.
@@ -310,6 +332,21 @@ public class ContentItem extends TeaModel {
             private String text; 
             private String type; 
             private String uniqueId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtInfo model) {
+                this.alignment = model.alignment;
+                this.index = model.index;
+                this.level = model.level;
+                this.pageNum = model.pageNum;
+                this.pos = model.pos;
+                this.subType = model.subType;
+                this.text = model.text;
+                this.type = model.type;
+                this.uniqueId = model.uniqueId;
+            } 
 
             /**
              * alignment.

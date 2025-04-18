@@ -72,6 +72,10 @@ public class ConstituteItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return carbonEmissionData
      */
@@ -161,6 +165,23 @@ public class ConstituteItem extends TeaModel {
         private Double ratio; 
         private Double rawData; 
         private java.util.List<ConstituteItem> subConstituteItems; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConstituteItem model) {
+            this.carbonEmissionData = model.carbonEmissionData;
+            this.dataUnit = model.dataUnit;
+            this.emissionSource = model.emissionSource;
+            this.emissionSourceKey = model.emissionSourceKey;
+            this.enterpriseName = model.enterpriseName;
+            this.envGasEmissions = model.envGasEmissions;
+            this.name = model.name;
+            this.nameKey = model.nameKey;
+            this.ratio = model.ratio;
+            this.rawData = model.rawData;
+            this.subConstituteItems = model.subConstituteItems;
+        } 
 
         /**
          * carbonEmissionData.
@@ -323,6 +344,16 @@ public class ConstituteItem extends TeaModel {
             private Double gasEmissionData; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnvGasEmissions model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.gasEmissionData = model.gasEmissionData;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * carbonEmissionData.

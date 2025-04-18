@@ -36,6 +36,10 @@ public class GetGwpBenchmarkSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetGwpBenchmarkSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetGwpBenchmarkSummaryResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -146,6 +158,16 @@ public class GetGwpBenchmarkSummaryResponseBody extends TeaModel {
             private String percent; 
             private Long quantity; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.name = model.name;
+                this.percent = model.percent;
+                this.quantity = model.quantity;
+                this.unit = model.unit;
+            } 
 
             /**
              * <p>Name of carbon reduction details.</p>
@@ -253,6 +275,15 @@ public class GetGwpBenchmarkSummaryResponseBody extends TeaModel {
             private java.util.List<Items> items; 
             private Long quantity; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+                this.quantity = model.quantity;
+                this.unit = model.unit;
+            } 
 
             /**
              * <p>Carbon Reduction Contribution Top4 Details.</p>

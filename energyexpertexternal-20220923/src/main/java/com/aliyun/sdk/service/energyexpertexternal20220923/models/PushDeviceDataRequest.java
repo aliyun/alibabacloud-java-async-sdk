@@ -41,7 +41,7 @@ public class PushDeviceDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -162,6 +162,15 @@ public class PushDeviceDataRequest extends Request {
             private java.util.Map<String, ?> data; 
             private String deviceId; 
             private String recordTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Devices model) {
+                this.data = model.data;
+                this.deviceId = model.deviceId;
+                this.recordTime = model.recordTime;
+            } 
 
             /**
              * <p>Measuring point information To avoid accuracy problems, the measurement point data is uniformly transmitted to the string. The function of missing required fields cannot be used normally. Some functions may be affected due to the lack of recommend fields. For details, please refer to the notes of equipment measuring points in the appendix. <a href="https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/Deviceappendixes-en.pdf">Reference Point Definition</a></p>

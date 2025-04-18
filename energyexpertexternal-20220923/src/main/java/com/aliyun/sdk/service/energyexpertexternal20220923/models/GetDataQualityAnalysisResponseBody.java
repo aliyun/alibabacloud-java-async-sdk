@@ -36,6 +36,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataQualityAnalysisResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -146,6 +158,16 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             private Double g2; 
             private Double g3; 
             private Double g4; 
+
+            private Builder() {
+            } 
+
+            private Builder(Score model) {
+                this.g1 = model.g1;
+                this.g2 = model.g2;
+                this.g3 = model.g3;
+                this.g4 = model.g4;
+            } 
 
             /**
              * <p>Data quality evaluation indicator 1: activity data credibility.</p>
@@ -241,6 +263,14 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         public static final class Builder {
             private String inventory; 
             private Score score; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataQuality model) {
+                this.inventory = model.inventory;
+                this.score = model.score;
+            } 
 
             /**
              * <p>Inventory name</p>
@@ -347,6 +377,17 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             private Double g2; 
             private Double g3; 
             private Double g4; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataQualityResult model) {
+                this.dataQualityScore = model.dataQualityScore;
+                this.g1 = model.g1;
+                this.g2 = model.g2;
+                this.g3 = model.g3;
+                this.g4 = model.g4;
+            } 
 
             /**
              * <p>The score. This parameter is applicable to DQR results. The distribution ranges from 1 to 5. A value closer to 1 indicates better data quality. The number of valid digits is kept to four decimal places.</p>
@@ -478,6 +519,16 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             private java.util.List<String> reductionList; 
             private Double sensitivity; 
 
+            private Builder() {
+            } 
+
+            private Builder(SensitivityList model) {
+                this.id = model.id;
+                this.inventory = model.inventory;
+                this.reductionList = model.reductionList;
+                this.sensitivity = model.sensitivity;
+            } 
+
             /**
              * <p>Inventory id</p>
              * 
@@ -569,6 +620,14 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         public static final class Builder {
             private String inventory; 
             private String uncertaintyContribution; 
+
+            private Builder() {
+            } 
+
+            private Builder(UncertaintyValues model) {
+                this.inventory = model.inventory;
+                this.uncertaintyContribution = model.uncertaintyContribution;
+            } 
 
             /**
              * <p>The name of the inventory. Format: process name / inventory name.</p>
@@ -678,6 +737,17 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             private java.util.List<SensitivityList> sensitivityList; 
             private String uncertainty; 
             private java.util.List<UncertaintyValues> uncertaintyValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataQuality = model.dataQuality;
+                this.dataQualityResult = model.dataQualityResult;
+                this.sensitivityList = model.sensitivityList;
+                this.uncertainty = model.uncertainty;
+                this.uncertaintyValues = model.uncertaintyValues;
+            } 
 
             /**
              * <p>Score of each inventory.</p>

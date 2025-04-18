@@ -36,6 +36,10 @@ public class GetEpdInventoryConstituteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetEpdInventoryConstituteResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<EpdInventoryConstituteItem> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEpdInventoryConstituteResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>List of environmental impact results.</p>

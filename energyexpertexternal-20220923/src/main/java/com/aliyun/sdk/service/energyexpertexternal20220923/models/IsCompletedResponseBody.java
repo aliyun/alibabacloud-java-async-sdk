@@ -36,6 +36,10 @@ public class IsCompletedResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class IsCompletedResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IsCompletedResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -146,6 +158,16 @@ public class IsCompletedResponseBody extends TeaModel {
             private String taskKey; 
             private String taskShortResult; 
             private String taskStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.modifiedTime = model.modifiedTime;
+                this.taskKey = model.taskKey;
+                this.taskShortResult = model.taskShortResult;
+                this.taskStatus = model.taskStatus;
+            } 
 
             /**
              * <p>Modified time in milliseconds, e.g. 1711438780000.</p>

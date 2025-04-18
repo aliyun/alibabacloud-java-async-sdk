@@ -36,6 +36,10 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetGwpBenchmarkListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -171,6 +183,18 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
             private String name; 
             private String percent; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.activeReduction = model.activeReduction;
+                this.benchmarkEmission = model.benchmarkEmission;
+                this.benchmarkName = model.benchmarkName;
+                this.carbonEmission = model.carbonEmission;
+                this.name = model.name;
+                this.percent = model.percent;
+            } 
+
             /**
              * <p><code>activeReduction=benchmarkEmission-carbonEmission</code> Generally, baseline emissions are greater than inventory emissions. Maintain four decimal places. Unit pertains to a higher-level unit.</p>
              * 
@@ -287,6 +311,14 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Items> items; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+                this.unit = model.unit;
+            } 
 
             /**
              * <p>Active carbon reduction ranking list.</p>

@@ -47,7 +47,7 @@ public class PushItemDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -190,6 +190,15 @@ public class PushItemDataRequest extends Request {
             private String code; 
             private String month; 
             private Double value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.code = model.code;
+                this.month = model.month;
+                this.value = model.value;
+            } 
 
             /**
              * <p>API data identification.&lt;props=&quot;intl&quot;&gt;For details: <a href="https://www.alibabacloud.com/help/en/energy-expert/developer-reference/api-energyexpertexternal-2022-09-23-getdataitemlist">GetDataItemList </a></p>

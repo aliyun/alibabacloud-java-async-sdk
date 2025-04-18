@@ -48,6 +48,10 @@ public class GetDeviceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetDeviceListResponseBody extends TeaModel {
         private Integer httpCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDeviceListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpCode = model.httpCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -227,6 +242,17 @@ public class GetDeviceListResponseBody extends TeaModel {
             private Integer magnification; 
             private Integer pressure; 
             private Integer pt; 
+
+            private Builder() {
+            } 
+
+            private Builder(Info model) {
+                this.constKva = model.constKva;
+                this.ct = model.ct;
+                this.magnification = model.magnification;
+                this.pressure = model.pressure;
+                this.pt = model.pt;
+            } 
 
             /**
              * <p>The rated capacity.
@@ -383,6 +409,18 @@ public class GetDeviceListResponseBody extends TeaModel {
             private String parentDevice; 
             private String secondTypeName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceList model) {
+                this.deviceId = model.deviceId;
+                this.deviceName = model.deviceName;
+                this.firstTypeName = model.firstTypeName;
+                this.info = model.info;
+                this.parentDevice = model.parentDevice;
+                this.secondTypeName = model.secondTypeName;
+            } 
+
             /**
              * <p>The device ID.</p>
              * 
@@ -532,6 +570,17 @@ public class GetDeviceListResponseBody extends TeaModel {
             private String factoryId; 
             private Integer httpCode; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.code = model.code;
+                this.deviceList = model.deviceList;
+                this.factoryId = model.factoryId;
+                this.httpCode = model.httpCode;
+                this.success = model.success;
+            } 
 
             /**
              * <p>The code returned for the request.</p>

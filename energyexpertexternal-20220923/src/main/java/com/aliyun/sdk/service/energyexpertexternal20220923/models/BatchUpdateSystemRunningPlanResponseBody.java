@@ -36,6 +36,10 @@ public class BatchUpdateSystemRunningPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class BatchUpdateSystemRunningPlanResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchUpdateSystemRunningPlanResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * data.

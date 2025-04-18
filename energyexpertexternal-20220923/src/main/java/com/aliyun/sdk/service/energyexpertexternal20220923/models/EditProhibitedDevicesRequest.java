@@ -47,7 +47,7 @@ public class EditProhibitedDevicesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -246,6 +246,20 @@ public class EditProhibitedDevicesRequest extends Request {
             private String floorId; 
             private Integer isForbidden; 
             private Integer isUnfavorableArea; 
+
+            private Builder() {
+            } 
+
+            private Builder(HvacDeviceConfigVOList model) {
+                this.buildingId = model.buildingId;
+                this.deviceId = model.deviceId;
+                this.deviceName = model.deviceName;
+                this.deviceType = model.deviceType;
+                this.fenceId = model.fenceId;
+                this.floorId = model.floorId;
+                this.isForbidden = model.isForbidden;
+                this.isUnfavorableArea = model.isUnfavorableArea;
+            } 
 
             /**
              * buildingId.

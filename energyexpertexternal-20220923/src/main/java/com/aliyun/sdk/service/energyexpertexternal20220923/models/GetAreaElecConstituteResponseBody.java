@@ -40,6 +40,10 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
         private String code; 
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAreaElecConstituteResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The code returned for the request. A value of Success indicates that the request was successful. Other values indicate that the request failed. You can troubleshoot the error by viewing the error message returned.</p>
@@ -205,6 +218,19 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
             private java.util.List<CarbonEmissionElecSummaryItem> water; 
             private java.util.List<CarbonEmissionElecSummaryItem> wind; 
             private java.util.List<CarbonEmissionElecSummaryItem> zero; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.light = model.light;
+                this.nuclear = model.nuclear;
+                this.renewing = model.renewing;
+                this.urban = model.urban;
+                this.water = model.water;
+                this.wind = model.wind;
+                this.zero = model.zero;
+            } 
 
             /**
              * <p>Photoelectric power consumption and carbon emission data of each enterprise.</p>

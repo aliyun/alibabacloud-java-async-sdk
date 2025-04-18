@@ -36,6 +36,10 @@ public class GetGasConstituteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetGasConstituteResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetGasConstituteResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -158,6 +170,17 @@ public class GetGasConstituteResponseBody extends TeaModel {
             private String name; 
             private Double ratio; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.gasEmissionData = model.gasEmissionData;
+                this.name = model.name;
+                this.ratio = model.ratio;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Carbon emissions</p>

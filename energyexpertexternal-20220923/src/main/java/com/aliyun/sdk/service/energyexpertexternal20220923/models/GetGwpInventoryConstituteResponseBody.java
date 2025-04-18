@@ -36,6 +36,10 @@ public class GetGwpInventoryConstituteResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetGwpInventoryConstituteResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetGwpInventoryConstituteResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -158,6 +170,17 @@ public class GetGwpInventoryConstituteResponseBody extends TeaModel {
             private java.util.List<GwpInventoryConstitute> items; 
             private String name; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.byResourceType = model.byResourceType;
+                this.carbonEmission = model.carbonEmission;
+                this.items = model.items;
+                this.name = model.name;
+                this.unit = model.unit;
+            } 
 
             /**
              * <p>Aggregated by resource type of an inventory.</p>

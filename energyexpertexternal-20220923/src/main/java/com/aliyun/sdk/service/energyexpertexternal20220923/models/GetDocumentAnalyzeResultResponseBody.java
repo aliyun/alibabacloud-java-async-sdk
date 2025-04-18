@@ -36,6 +36,10 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetDocumentAnalyzeResultResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * data.
+         * <p>Returned Data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +75,10 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,8 +135,19 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
             private Double keyConfidence; 
             private Double valueConfidence; 
 
+            private Builder() {
+            } 
+
+            private Builder(Confidence model) {
+                this.keyConfidence = model.keyConfidence;
+                this.valueConfidence = model.valueConfidence;
+            } 
+
             /**
-             * keyConfidence.
+             * <p>Confidence of Key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9994202852249146</p>
              */
             public Builder keyConfidence(Double keyConfidence) {
                 this.keyConfidence = keyConfidence;
@@ -129,7 +155,10 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
             }
 
             /**
-             * valueConfidence.
+             * <p>Confidence of Value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9794202852249146</p>
              */
             public Builder valueConfidence(Double valueConfidence) {
                 this.valueConfidence = valueConfidence;
@@ -199,8 +228,17 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
             private java.util.List<ContentItem> key; 
             private java.util.List<ContentItem> value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Context model) {
+                this.confidence = model.confidence;
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * confidence.
+             * <p>Confidence</p>
              */
             public Builder confidence(Confidence confidence) {
                 this.confidence = confidence;
@@ -208,7 +246,7 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
             }
 
             /**
-             * key.
+             * <p>Key Recall Information</p>
              */
             public Builder key(java.util.List<ContentItem> key) {
                 this.key = key;
@@ -216,7 +254,7 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>Value Recall Information</p>
              */
             public Builder value(java.util.List<ContentItem> value) {
                 this.value = value;
@@ -286,8 +324,17 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
             private String keyName; 
             private String keyValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(KvListInfo model) {
+                this.context = model.context;
+                this.keyName = model.keyName;
+                this.keyValue = model.keyValue;
+            } 
+
             /**
-             * context.
+             * <p>Recalled Content</p>
              */
             public Builder context(Context context) {
                 this.context = context;
@@ -295,7 +342,10 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
             }
 
             /**
-             * keyName.
+             * <p>Field Key Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tenant</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -303,7 +353,10 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
             }
 
             /**
-             * keyValue.
+             * <p>Field Key Value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun XXX Co., Ltd.</p>
              */
             public Builder keyValue(String keyValue) {
                 this.keyValue = keyValue;
@@ -349,8 +402,15 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<KvListInfo> kvListInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.kvListInfo = model.kvListInfo;
+            } 
+
             /**
-             * kvListInfo.
+             * <p>Document Parsing Result</p>
              */
             public Builder kvListInfo(java.util.List<KvListInfo> kvListInfo) {
                 this.kvListInfo = kvListInfo;

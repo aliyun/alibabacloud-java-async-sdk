@@ -36,6 +36,10 @@ public class GetFootprintListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetFootprintListResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFootprintListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -254,6 +266,25 @@ public class GetFootprintListResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.amount = model.amount;
+                this.authStatus = model.authStatus;
+                this.checkEndTime = model.checkEndTime;
+                this.checkStartTime = model.checkStartTime;
+                this.code = model.code;
+                this.createdBy = model.createdBy;
+                this.id = model.id;
+                this.isDemoModel = model.isDemoModel;
+                this.lifeCycle = model.lifeCycle;
+                this.lifeCycleType = model.lifeCycleType;
+                this.name = model.name;
+                this.type = model.type;
+                this.unit = model.unit;
+            } 
 
             /**
              * <p>The amount of the product.</p>
@@ -484,6 +515,17 @@ public class GetFootprintListResponseBody extends TeaModel {
             private java.util.List<Records> records; 
             private Long total; 
             private Long totalPage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.records = model.records;
+                this.total = model.total;
+                this.totalPage = model.totalPage;
+            } 
 
             /**
              * <p>The page number.</p>

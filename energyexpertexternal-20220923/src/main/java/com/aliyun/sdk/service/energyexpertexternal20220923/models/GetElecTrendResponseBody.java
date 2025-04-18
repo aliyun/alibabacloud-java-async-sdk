@@ -40,6 +40,10 @@ public class GetElecTrendResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class GetElecTrendResponseBody extends TeaModel {
         private String code; 
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetElecTrendResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The code returned for the request. A value of Success indicates that the request was successful. Other values indicate that the request failed. You can troubleshoot the error by viewing the error message returned.</p>
@@ -217,6 +230,20 @@ public class GetElecTrendResponseBody extends TeaModel {
             private Double ratio; 
             private Double rawData; 
             private String year; 
+
+            private Builder() {
+            } 
+
+            private Builder(Light model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.dataUnit = model.dataUnit;
+                this.month = model.month;
+                this.name = model.name;
+                this.nameKey = model.nameKey;
+                this.ratio = model.ratio;
+                this.rawData = model.rawData;
+                this.year = model.year;
+            } 
 
             /**
              * <p>Carbon emissions</p>
@@ -429,6 +456,20 @@ public class GetElecTrendResponseBody extends TeaModel {
             private Double rawData; 
             private String year; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nuclear model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.dataUnit = model.dataUnit;
+                this.month = model.month;
+                this.name = model.name;
+                this.nameKey = model.nameKey;
+                this.ratio = model.ratio;
+                this.rawData = model.rawData;
+                this.year = model.year;
+            } 
+
             /**
              * <p>Carbon emissions</p>
              * 
@@ -639,6 +680,20 @@ public class GetElecTrendResponseBody extends TeaModel {
             private Double ratio; 
             private Double rawData; 
             private String year; 
+
+            private Builder() {
+            } 
+
+            private Builder(Renewing model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.dataUnit = model.dataUnit;
+                this.month = model.month;
+                this.name = model.name;
+                this.nameKey = model.nameKey;
+                this.ratio = model.ratio;
+                this.rawData = model.rawData;
+                this.year = model.year;
+            } 
 
             /**
              * <p>Carbon emissions</p>
@@ -851,6 +906,20 @@ public class GetElecTrendResponseBody extends TeaModel {
             private Double rawData; 
             private String year; 
 
+            private Builder() {
+            } 
+
+            private Builder(Urban model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.dataUnit = model.dataUnit;
+                this.month = model.month;
+                this.name = model.name;
+                this.nameKey = model.nameKey;
+                this.ratio = model.ratio;
+                this.rawData = model.rawData;
+                this.year = model.year;
+            } 
+
             /**
              * <p>Carbon emissions</p>
              * 
@@ -1061,6 +1130,20 @@ public class GetElecTrendResponseBody extends TeaModel {
             private Double ratio; 
             private Double rawData; 
             private String year; 
+
+            private Builder() {
+            } 
+
+            private Builder(Water model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.dataUnit = model.dataUnit;
+                this.month = model.month;
+                this.name = model.name;
+                this.nameKey = model.nameKey;
+                this.ratio = model.ratio;
+                this.rawData = model.rawData;
+                this.year = model.year;
+            } 
 
             /**
              * <p>Carbon emissions</p>
@@ -1273,6 +1356,20 @@ public class GetElecTrendResponseBody extends TeaModel {
             private Double rawData; 
             private String year; 
 
+            private Builder() {
+            } 
+
+            private Builder(Wind model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.dataUnit = model.dataUnit;
+                this.month = model.month;
+                this.name = model.name;
+                this.nameKey = model.nameKey;
+                this.ratio = model.ratio;
+                this.rawData = model.rawData;
+                this.year = model.year;
+            } 
+
             /**
              * <p>Carbon emissions</p>
              * 
@@ -1484,6 +1581,20 @@ public class GetElecTrendResponseBody extends TeaModel {
             private Double rawData; 
             private String year; 
 
+            private Builder() {
+            } 
+
+            private Builder(Zero model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.dataUnit = model.dataUnit;
+                this.month = model.month;
+                this.name = model.name;
+                this.nameKey = model.nameKey;
+                this.ratio = model.ratio;
+                this.rawData = model.rawData;
+                this.year = model.year;
+            } 
+
             /**
              * <p>Carbon emissions</p>
              * 
@@ -1682,6 +1793,19 @@ public class GetElecTrendResponseBody extends TeaModel {
             private java.util.List<Water> water; 
             private java.util.List<Wind> wind; 
             private java.util.List<Zero> zero; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.light = model.light;
+                this.nuclear = model.nuclear;
+                this.renewing = model.renewing;
+                this.urban = model.urban;
+                this.water = model.water;
+                this.wind = model.wind;
+                this.zero = model.zero;
+            } 
 
             /**
              * <p>Photoelectricity monthly electricity consumption and carbon emissions and other data.</p>

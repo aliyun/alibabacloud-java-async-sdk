@@ -36,6 +36,10 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCarbonEmissionTrendResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -134,6 +146,15 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             private Double carbonEmissionData; 
             private Integer month; 
             private String year; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.month = model.month;
+                this.year = model.year;
+            } 
 
             /**
              * <p>Carbon emissions.</p>
@@ -219,6 +240,14 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             private java.util.List<Items> items; 
             private String year; 
 
+            private Builder() {
+            } 
+
+            private Builder(ActualEmissionList model) {
+                this.items = model.items;
+                this.year = model.year;
+            } 
+
             /**
              * <p>Data item list.</p>
              */
@@ -300,6 +329,15 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             private Double carbonEmissionData; 
             private Integer month; 
             private String year; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetEmissionListItems model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.month = model.month;
+                this.year = model.year;
+            } 
 
             /**
              * <p>Carbon emissions.</p>
@@ -385,6 +423,14 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             private java.util.List<TargetEmissionListItems> items; 
             private String year; 
 
+            private Builder() {
+            } 
+
+            private Builder(TargetEmissionList model) {
+                this.items = model.items;
+                this.year = model.year;
+            } 
+
             /**
              * <p>Data item list.</p>
              */
@@ -454,6 +500,14 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ActualEmissionList> actualEmissionList; 
             private java.util.List<TargetEmissionList> targetEmissionList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.actualEmissionList = model.actualEmissionList;
+                this.targetEmissionList = model.targetEmissionList;
+            } 
 
             /**
              * <p>Actual emission list.</p>

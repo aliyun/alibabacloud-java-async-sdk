@@ -36,6 +36,10 @@ public class GetEpdSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetEpdSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEpdSummaryResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Response parameters</p>
@@ -194,6 +206,20 @@ public class GetEpdSummaryResponseBody extends TeaModel {
             private Long num; 
             private String preUnit; 
             private Long state; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.carbonEmission = model.carbonEmission;
+                this.indicator = model.indicator;
+                this.key = model.key;
+                this.method = model.method;
+                this.name = model.name;
+                this.num = model.num;
+                this.preUnit = model.preUnit;
+                this.state = model.state;
+            } 
 
             /**
              * <p>Emissions. The result is maintained up to 31 decimal places for precise intermediate calculation and subsequently truncated for display. It is advised to pair the emissions figure with the unit of the environmental impact result for a comprehensive understanding.</p>

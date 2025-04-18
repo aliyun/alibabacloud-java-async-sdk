@@ -64,6 +64,10 @@ public class OrgEmission extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return carbonEmissionData
      */
@@ -137,6 +141,21 @@ public class OrgEmission extends TeaModel {
         private Double weightingCarbonEmissionData; 
         private Double weightingProportion; 
         private Double weightingRatio; 
+
+        private Builder() {
+        } 
+
+        private Builder(OrgEmission model) {
+            this.carbonEmissionData = model.carbonEmissionData;
+            this.moduleEmissionList = model.moduleEmissionList;
+            this.name = model.name;
+            this.nameKey = model.nameKey;
+            this.ratio = model.ratio;
+            this.subEmissionItems = model.subEmissionItems;
+            this.weightingCarbonEmissionData = model.weightingCarbonEmissionData;
+            this.weightingProportion = model.weightingProportion;
+            this.weightingRatio = model.weightingRatio;
+        } 
 
         /**
          * carbonEmissionData.
@@ -283,6 +302,16 @@ public class OrgEmission extends TeaModel {
             private String name; 
             private String nameKey; 
             private Double ratio; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModuleEmissionList model) {
+                this.carbonEmissionData = model.carbonEmissionData;
+                this.name = model.name;
+                this.nameKey = model.nameKey;
+                this.ratio = model.ratio;
+            } 
 
             /**
              * carbonEmissionData.

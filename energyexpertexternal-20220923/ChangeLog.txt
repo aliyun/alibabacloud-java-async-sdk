@@ -1,3 +1,6 @@
+2025-04-18 Version: 3.0.3
+- Generated java-async 2022-09-23 for energyExpertExternal.
+
 2025-02-21 Version: 3.0.2
 - Generated java-async 2022-09-23 for energyExpertExternal.
 

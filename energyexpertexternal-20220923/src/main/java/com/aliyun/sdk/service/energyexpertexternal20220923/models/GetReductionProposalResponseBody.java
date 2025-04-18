@@ -36,6 +36,10 @@ public class GetReductionProposalResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetReductionProposalResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetReductionProposalResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -122,6 +134,14 @@ public class GetReductionProposalResponseBody extends TeaModel {
         public static final class Builder {
             private String reduction; 
             private String reductionEvaluation; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.reduction = model.reduction;
+                this.reductionEvaluation = model.reductionEvaluation;
+            } 
 
             /**
              * <p>Proactive carbon reduction recommendations and advice.</p>

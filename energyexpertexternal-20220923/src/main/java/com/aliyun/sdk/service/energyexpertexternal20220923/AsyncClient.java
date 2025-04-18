@@ -119,6 +119,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDeviceListResponse> getDeviceList(GetDeviceListRequest request);
 
     /**
+     * @param request the request parameters of GetDocExtractionResult  GetDocExtractionResultRequest
+     * @return GetDocExtractionResultResponse
+     */
+    CompletableFuture<GetDocExtractionResultResponse> getDocExtractionResult(GetDocExtractionResultRequest request);
+
+    /**
+     * @param request the request parameters of GetDocParsingResult  GetDocParsingResultRequest
+     * @return GetDocParsingResultResponse
+     */
+    CompletableFuture<GetDocParsingResultResponse> getDocParsingResult(GetDocParsingResultRequest request);
+
+    /**
      * @param request the request parameters of GetDocumentAnalyzeResult  GetDocumentAnalyzeResultRequest
      * @return GetDocumentAnalyzeResultResponse
      */
@@ -263,6 +275,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetReductionProposalResponse
      */
     CompletableFuture<GetReductionProposalResponse> getReductionProposal(GetReductionProposalRequest request);
+
+    /**
+     * @param request the request parameters of GetVLExtractionResult  GetVLExtractionResultRequest
+     * @return GetVLExtractionResultResponse
+     */
+    CompletableFuture<GetVLExtractionResultResponse> getVLExtractionResult(GetVLExtractionResultRequest request);
 
     /**
      * <b>description</b> :

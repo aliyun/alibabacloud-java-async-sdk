@@ -36,6 +36,10 @@ public class SendDocumentAskQuestionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class SendDocumentAskQuestionResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(SendDocumentAskQuestionResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * data.
+         * <p>Returned data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +75,10 @@ public class SendDocumentAskQuestionResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,8 +135,19 @@ public class SendDocumentAskQuestionResponseBody extends TeaModel {
             private String answer; 
             private java.util.List<String> document; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.answer = model.answer;
+                this.document = model.document;
+            } 
+
             /**
-             * answer.
+             * <p>Q&amp;A result</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Carbon emissions in 2023 totaled 4.681 million tons</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -129,7 +155,7 @@ public class SendDocumentAskQuestionResponseBody extends TeaModel {
             }
 
             /**
-             * document.
+             * <p>Documents associated with the answer returned by the query</p>
              */
             public Builder document(java.util.List<String> document) {
                 this.document = document;

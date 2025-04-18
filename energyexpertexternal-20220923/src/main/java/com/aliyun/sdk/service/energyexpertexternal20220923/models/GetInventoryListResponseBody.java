@@ -36,6 +36,10 @@ public class GetInventoryListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetInventoryListResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInventoryListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -146,6 +158,16 @@ public class GetInventoryListResponseBody extends TeaModel {
             private String name; 
             private String percent; 
             private String processName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.carbonEmission = model.carbonEmission;
+                this.name = model.name;
+                this.percent = model.percent;
+                this.processName = model.processName;
+            } 
 
             /**
              * <p>Emission quantity: may be positive, negative, or 0. To ensure the calculation accuracy, 24 decimal places are reserved for the calculation process. We recommend that you intercept data based on your business requirements.</p>
@@ -256,6 +278,15 @@ public class GetInventoryListResponseBody extends TeaModel {
             private java.util.List<Items> items; 
             private String productUnit; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+                this.productUnit = model.productUnit;
+                this.unit = model.unit;
+            } 
 
             /**
              * <p>Inventory detail.</p>

@@ -56,6 +56,10 @@ public class GwpInventoryConstitute extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return byResourceType
      */
@@ -113,6 +117,19 @@ public class GwpInventoryConstitute extends TeaModel {
         private Double percent; 
         private Integer resourceType; 
         private String unit; 
+
+        private Builder() {
+        } 
+
+        private Builder(GwpInventoryConstitute model) {
+            this.byResourceType = model.byResourceType;
+            this.carbonEmission = model.carbonEmission;
+            this.items = model.items;
+            this.name = model.name;
+            this.percent = model.percent;
+            this.resourceType = model.resourceType;
+            this.unit = model.unit;
+        } 
 
         /**
          * byResourceType.

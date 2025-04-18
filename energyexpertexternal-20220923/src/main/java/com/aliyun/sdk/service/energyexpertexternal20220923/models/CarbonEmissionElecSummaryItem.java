@@ -48,6 +48,10 @@ public class CarbonEmissionElecSummaryItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return carbonEmissionData
      */
@@ -89,6 +93,17 @@ public class CarbonEmissionElecSummaryItem extends TeaModel {
         private String name; 
         private Double ratio; 
         private Double rawData; 
+
+        private Builder() {
+        } 
+
+        private Builder(CarbonEmissionElecSummaryItem model) {
+            this.carbonEmissionData = model.carbonEmissionData;
+            this.dataUnit = model.dataUnit;
+            this.name = model.name;
+            this.ratio = model.ratio;
+            this.rawData = model.rawData;
+        } 
 
         /**
          * carbonEmissionData.

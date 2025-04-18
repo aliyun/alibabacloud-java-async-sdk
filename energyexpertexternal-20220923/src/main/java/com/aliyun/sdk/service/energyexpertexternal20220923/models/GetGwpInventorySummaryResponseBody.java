@@ -36,6 +36,10 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetGwpInventorySummaryResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned results.</p>
@@ -146,6 +158,16 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
             private String percent; 
             private Double quantity; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.name = model.name;
+                this.percent = model.percent;
+                this.quantity = model.quantity;
+                this.unit = model.unit;
+            } 
 
             /**
              * <p>Inventory resource type name.</p>
@@ -265,6 +287,16 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
             private Double quantity; 
             private Long resultGenerateTime; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+                this.quantity = model.quantity;
+                this.resultGenerateTime = model.resultGenerateTime;
+                this.unit = model.unit;
+            } 
 
             /**
              * <p>Top 4 types of carbon footprint contribution.</p>
