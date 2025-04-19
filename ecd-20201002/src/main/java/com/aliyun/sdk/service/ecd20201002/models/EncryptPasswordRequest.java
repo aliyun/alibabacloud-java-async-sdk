@@ -69,7 +69,7 @@ public class EncryptPasswordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -148,6 +148,7 @@ public class EncryptPasswordRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the client. The system generates a unique ID for each client.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +161,10 @@ public class EncryptPasswordRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * <p>The directory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing+dir-131196****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -169,6 +173,7 @@ public class EncryptPasswordRequest extends Request {
         }
 
         /**
+         * <p>The logon token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +186,10 @@ public class EncryptPasswordRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The office network ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing+dir-131196****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -190,6 +198,7 @@ public class EncryptPasswordRequest extends Request {
         }
 
         /**
+         * <p>The password that you want to encrypt.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +211,7 @@ public class EncryptPasswordRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,6 +224,7 @@ public class EncryptPasswordRequest extends Request {
         }
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

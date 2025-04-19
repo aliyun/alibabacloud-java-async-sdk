@@ -44,6 +44,10 @@ public class IsKeepAliveResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isKeepAlive
      */
@@ -77,6 +81,16 @@ public class IsKeepAliveResponseBody extends TeaModel {
         private String officeSiteId; 
         private String requestId; 
         private String tenantId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IsKeepAliveResponseBody model) {
+            this.isKeepAlive = model.isKeepAlive;
+            this.officeSiteId = model.officeSiteId;
+            this.requestId = model.requestId;
+            this.tenantId = model.tenantId;
+        } 
 
         /**
          * IsKeepAlive.

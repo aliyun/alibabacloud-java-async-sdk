@@ -36,6 +36,10 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return officeSites
      */
@@ -53,6 +57,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<OfficeSites> officeSites; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOfficeSitesResponseBody model) {
+            this.officeSites = model.officeSites;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * OfficeSites.
@@ -167,6 +179,18 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String officeSiteType; 
             private String providerId; 
             private String ssoServiceUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(OfficeSites model) {
+                this.desktopAccessType = model.desktopAccessType;
+                this.desktopVpcEndpoint = model.desktopVpcEndpoint;
+                this.officeSiteId = model.officeSiteId;
+                this.officeSiteType = model.officeSiteType;
+                this.providerId = model.providerId;
+                this.ssoServiceUrl = model.ssoServiceUrl;
+            } 
 
             /**
              * DesktopAccessType.

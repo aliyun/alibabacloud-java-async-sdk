@@ -36,6 +36,10 @@ public class EncryptPasswordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return encryptedPassword
      */
@@ -54,8 +58,19 @@ public class EncryptPasswordResponseBody extends TeaModel {
         private String encryptedPassword; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(EncryptPasswordResponseBody model) {
+            this.encryptedPassword = model.encryptedPassword;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * EncryptedPassword.
+         * <p>The encrypted password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d34601bc-e6b1-4433-b0cc-8f6c5e52;n4apvGub3OBoj4Grwg==;thhO4UEomJfdvwnwlA==</p>
          */
         public Builder encryptedPassword(String encryptedPassword) {
             this.encryptedPassword = encryptedPassword;
@@ -63,7 +78,10 @@ public class EncryptPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AF538DA8-FFC6-52DA-8FF8-7B92579F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

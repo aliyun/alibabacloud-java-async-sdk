@@ -69,7 +69,7 @@ public class UnbindUserDesktopRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -148,6 +148,7 @@ public class UnbindUserDesktopRequest extends Request {
         } 
 
         /**
+         * <p>The client ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +161,10 @@ public class UnbindUserDesktopRequest extends Request {
         }
 
         /**
-         * ClientType.
+         * <p>The client type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>windows</p>
          */
         public Builder clientType(String clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -169,7 +173,15 @@ public class UnbindUserDesktopRequest extends Request {
         }
 
         /**
-         * Force.
+         * <p>Specifies whether to enable forced unbinding.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: Even when end users connect to cloud computers, the forced unbinding is still enforced.</li>
+         * <li>false: Forced unbinding is only enforced when end users are disconnected from cloud computers.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -178,6 +190,7 @@ public class UnbindUserDesktopRequest extends Request {
         }
 
         /**
+         * <p>The logon token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,6 +203,7 @@ public class UnbindUserDesktopRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +216,7 @@ public class UnbindUserDesktopRequest extends Request {
         }
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,6 +229,7 @@ public class UnbindUserDesktopRequest extends Request {
         }
 
         /**
+         * <p>The cloud computer ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

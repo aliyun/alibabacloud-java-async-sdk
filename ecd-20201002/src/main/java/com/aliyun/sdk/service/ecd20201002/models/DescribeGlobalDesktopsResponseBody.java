@@ -40,6 +40,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return desktops
      */
@@ -65,6 +69,15 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         private java.util.List<Desktops> desktops; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGlobalDesktopsResponseBody model) {
+            this.desktops = model.desktops;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Desktops.
@@ -139,6 +152,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         public static final class Builder {
             private String clientType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clients model) {
+                this.clientType = model.clientType;
+                this.status = model.status;
+            } 
 
             /**
              * <p>客户端类型，取值：</p>
@@ -297,6 +318,20 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             private String resetType; 
             private String timerType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DesktopTimers model) {
+                this.allowClientSetting = model.allowClientSetting;
+                this.cronExpression = model.cronExpression;
+                this.enforce = model.enforce;
+                this.executionTime = model.executionTime;
+                this.interval = model.interval;
+                this.operationType = model.operationType;
+                this.resetType = model.resetType;
+                this.timerType = model.timerType;
+            } 
+
             /**
              * AllowClientSetting.
              */
@@ -423,6 +458,15 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             private String diskId; 
             private Integer diskSize; 
             private String diskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.diskId = model.diskId;
+                this.diskSize = model.diskSize;
+                this.diskType = model.diskType;
+            } 
 
             /**
              * DiskId.
@@ -595,6 +639,22 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             private String releaseNoteJp; 
             private String size; 
 
+            private Builder() {
+            } 
+
+            private Builder(FotaUpdate model) {
+                this.channel = model.channel;
+                this.currentAppVersion = model.currentAppVersion;
+                this.force = model.force;
+                this.newAppVersion = model.newAppVersion;
+                this.newDcdVersion = model.newDcdVersion;
+                this.project = model.project;
+                this.releaseNote = model.releaseNote;
+                this.releaseNoteEn = model.releaseNoteEn;
+                this.releaseNoteJp = model.releaseNoteJp;
+                this.size = model.size;
+            } 
+
             /**
              * Channel.
              */
@@ -725,6 +785,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         public static final class Builder {
             private String endUserId; 
             private String establishmentTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sessions model) {
+                this.endUserId = model.endUserId;
+                this.establishmentTime = model.establishmentTime;
+            } 
 
             /**
              * EndUserId.
@@ -1248,6 +1316,52 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             private java.util.List<Sessions> sessions; 
             private Boolean supportHibernation; 
             private String userCustomName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Desktops model) {
+                this.chargeType = model.chargeType;
+                this.clients = model.clients;
+                this.connectionStatus = model.connectionStatus;
+                this.cpu = model.cpu;
+                this.creationTime = model.creationTime;
+                this.desktopGroupId = model.desktopGroupId;
+                this.desktopId = model.desktopId;
+                this.desktopName = model.desktopName;
+                this.desktopStatus = model.desktopStatus;
+                this.desktopTimers = model.desktopTimers;
+                this.desktopType = model.desktopType;
+                this.directoryId = model.directoryId;
+                this.disks = model.disks;
+                this.endUserId = model.endUserId;
+                this.endUserIds = model.endUserIds;
+                this.expiredTime = model.expiredTime;
+                this.fotaUpdate = model.fotaUpdate;
+                this.gpuMemory = model.gpuMemory;
+                this.hibernationBeta = model.hibernationBeta;
+                this.hostName = model.hostName;
+                this.imageId = model.imageId;
+                this.lastStartTime = model.lastStartTime;
+                this.localName = model.localName;
+                this.managementFlags = model.managementFlags;
+                this.memory = model.memory;
+                this.networkInterfaceIp = model.networkInterfaceIp;
+                this.officeSiteId = model.officeSiteId;
+                this.os = model.os;
+                this.osDescription = model.osDescription;
+                this.osType = model.osType;
+                this.platform = model.platform;
+                this.policyGroupId = model.policyGroupId;
+                this.protocolType = model.protocolType;
+                this.realDesktopId = model.realDesktopId;
+                this.regionId = model.regionId;
+                this.regionLocation = model.regionLocation;
+                this.sessionType = model.sessionType;
+                this.sessions = model.sessions;
+                this.supportHibernation = model.supportHibernation;
+                this.userCustomName = model.userCustomName;
+            } 
 
             /**
              * ChargeType.

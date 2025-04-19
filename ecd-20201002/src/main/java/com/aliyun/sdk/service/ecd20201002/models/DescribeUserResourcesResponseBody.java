@@ -48,6 +48,10 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -89,6 +93,17 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         private Long rankVersion; 
         private String requestId; 
         private java.util.List<Resources> resources; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserResourcesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.queryFailedResourceTypes = model.queryFailedResourceTypes;
+            this.rankVersion = model.rankVersion;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+        } 
 
         /**
          * NextToken.
@@ -179,6 +194,14 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private String clientType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clients model) {
+                this.clientType = model.clientType;
+                this.status = model.status;
+            } 
 
             /**
              * ClientType.
@@ -366,6 +389,24 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             private Float postPaidLimitFee; 
             private Long totalDuration; 
             private Long usedDuration; 
+
+            private Builder() {
+            } 
+
+            private Builder(DesktopDurationList model) {
+                this.orderInstanceId = model.orderInstanceId;
+                this.packageCreationTime = model.packageCreationTime;
+                this.packageExpiredTime = model.packageExpiredTime;
+                this.packageId = model.packageId;
+                this.packageStatus = model.packageStatus;
+                this.packageType = model.packageType;
+                this.packageUsedUpStrategy = model.packageUsedUpStrategy;
+                this.periodEndTime = model.periodEndTime;
+                this.periodStartTime = model.periodStartTime;
+                this.postPaidLimitFee = model.postPaidLimitFee;
+                this.totalDuration = model.totalDuration;
+                this.usedDuration = model.usedDuration;
+            } 
 
             /**
              * OrderInstanceId.
@@ -586,6 +627,20 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             private String resetType; 
             private String timerType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DesktopTimers model) {
+                this.allowClientSetting = model.allowClientSetting;
+                this.cronExpression = model.cronExpression;
+                this.enforce = model.enforce;
+                this.executionTime = model.executionTime;
+                this.interval = model.interval;
+                this.operationType = model.operationType;
+                this.resetType = model.resetType;
+                this.timerType = model.timerType;
+            } 
+
             /**
              * AllowClientSetting.
              */
@@ -797,6 +852,22 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             private String releaseNoteJp; 
             private String size; 
 
+            private Builder() {
+            } 
+
+            private Builder(FotaUpdate model) {
+                this.channel = model.channel;
+                this.currentAppVersion = model.currentAppVersion;
+                this.force = model.force;
+                this.newAppVersion = model.newAppVersion;
+                this.newDcdVersion = model.newDcdVersion;
+                this.project = model.project;
+                this.releaseNote = model.releaseNote;
+                this.releaseNoteEn = model.releaseNoteEn;
+                this.releaseNoteJp = model.releaseNoteJp;
+                this.size = model.size;
+            } 
+
             /**
              * Channel.
              */
@@ -940,6 +1011,15 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             private String kb; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Packages model) {
+                this.description = model.description;
+                this.kb = model.kb;
+                this.title = model.title;
+            } 
+
             /**
              * Description.
              */
@@ -1051,6 +1131,17 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             private java.util.List<Packages> packages; 
             private String updateCatalogUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(OsUpdate model) {
+                this.checkId = model.checkId;
+                this.kbListString = model.kbListString;
+                this.packageCount = model.packageCount;
+                this.packages = model.packages;
+                this.updateCatalogUrl = model.updateCatalogUrl;
+            } 
+
             /**
              * CheckId.
              */
@@ -1153,6 +1244,15 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             private String resourceSessionStartTime; 
             private String userId; 
             private String userPrincipalName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sessions model) {
+                this.resourceSessionStartTime = model.resourceSessionStartTime;
+                this.userId = model.userId;
+                this.userPrincipalName = model.userPrincipalName;
+            } 
 
             /**
              * ResourceSessionStartTime.
@@ -1816,6 +1916,63 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             private String themeColor; 
             private String userCustomName; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.accessType = model.accessType;
+                this.aliUid = model.aliUid;
+                this.appId = model.appId;
+                this.authMode = model.authMode;
+                this.categoryId = model.categoryId;
+                this.categoryType = model.categoryType;
+                this.cdsName = model.cdsName;
+                this.centerResourceId = model.centerResourceId;
+                this.chargeType = model.chargeType;
+                this.clients = model.clients;
+                this.connectionProperties = model.connectionProperties;
+                this.createTime = model.createTime;
+                this.desktopDurationList = model.desktopDurationList;
+                this.desktopTimers = model.desktopTimers;
+                this.expiredTime = model.expiredTime;
+                this.externalDomainId = model.externalDomainId;
+                this.externalUserId = model.externalUserId;
+                this.fotaUpdate = model.fotaUpdate;
+                this.globalStatus = model.globalStatus;
+                this.hasUpgrade = model.hasUpgrade;
+                this.hibernationBeta = model.hibernationBeta;
+                this.icon = model.icon;
+                this.lastStartTime = model.lastStartTime;
+                this.localName = model.localName;
+                this.managementStatuses = model.managementStatuses;
+                this.officeSiteId = model.officeSiteId;
+                this.orderStatus = model.orderStatus;
+                this.os = model.os;
+                this.osDescription = model.osDescription;
+                this.osType = model.osType;
+                this.osUpdate = model.osUpdate;
+                this.productType = model.productType;
+                this.protocolType = model.protocolType;
+                this.realDesktopId = model.realDesktopId;
+                this.regionId = model.regionId;
+                this.regionLocation = model.regionLocation;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceId = model.resourceId;
+                this.resourceLevel = model.resourceLevel;
+                this.resourceName = model.resourceName;
+                this.resourceSessionStatus = model.resourceSessionStatus;
+                this.resourceStatus = model.resourceStatus;
+                this.resourceType = model.resourceType;
+                this.sessionType = model.sessionType;
+                this.sessions = model.sessions;
+                this.subPayType = model.subPayType;
+                this.supportHibernation = model.supportHibernation;
+                this.supportedActions = model.supportedActions;
+                this.themeColor = model.themeColor;
+                this.userCustomName = model.userCustomName;
+                this.version = model.version;
+            } 
 
             /**
              * AccessType.

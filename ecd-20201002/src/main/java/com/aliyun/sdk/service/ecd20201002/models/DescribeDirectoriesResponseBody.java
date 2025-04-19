@@ -36,6 +36,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return directories
      */
@@ -54,8 +58,16 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         private java.util.List<Directories> directories; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDirectoriesResponseBody model) {
+            this.directories = model.directories;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Directories.
+         * <p>The directories.</p>
          */
         public Builder directories(java.util.List<Directories> directories) {
             this.directories = directories;
@@ -63,7 +75,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F369A091-002F-49C8-AD55-02A77629****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -156,8 +171,28 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             private String providerId; 
             private String ssoServiceUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Directories model) {
+                this.desktopAccessType = model.desktopAccessType;
+                this.directoryId = model.directoryId;
+                this.directoryType = model.directoryType;
+                this.providerId = model.providerId;
+                this.ssoServiceUrl = model.ssoServiceUrl;
+            } 
+
             /**
-             * DesktopAccessType.
+             * <p>The connection method.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>VPC: End users connect to cloud computers over an enterprise virtual private cloud (VPC).</li>
+             * <li>INTERNET: End users connect to cloud computers over the Internet.</li>
+             * <li>ANY: End users connect to cloud computers over the Internet or an enterprise VPC.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INTERNET</p>
              */
             public Builder desktopAccessType(String desktopAccessType) {
                 this.desktopAccessType = desktopAccessType;
@@ -165,7 +200,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * <p>The directory ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-gx2x1dhsmu52rd****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -173,7 +211,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryType.
+             * <p>The directory type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AD_CONNECTOR</p>
              */
             public Builder directoryType(String directoryType) {
                 this.directoryType = directoryType;
@@ -181,7 +222,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderId.
+             * <p>The provider ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26842</p>
              */
             public Builder providerId(String providerId) {
                 this.providerId = providerId;
@@ -189,7 +233,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * SsoServiceUrl.
+             * <p>The URL of the SSO service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://eds-cn-shanghai-67726">https://eds-cn-shanghai-67726</a>****</p>
              */
             public Builder ssoServiceUrl(String ssoServiceUrl) {
                 this.ssoServiceUrl = ssoServiceUrl;

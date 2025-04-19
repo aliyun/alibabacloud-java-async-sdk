@@ -40,6 +40,10 @@ public class SetFingerPrintTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return encryptedPassword
      */
@@ -65,6 +69,15 @@ public class SetFingerPrintTemplateResponseBody extends TeaModel {
         private String encryptedPassword; 
         private Integer index; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetFingerPrintTemplateResponseBody model) {
+            this.encryptedPassword = model.encryptedPassword;
+            this.index = model.index;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * EncryptedPassword.

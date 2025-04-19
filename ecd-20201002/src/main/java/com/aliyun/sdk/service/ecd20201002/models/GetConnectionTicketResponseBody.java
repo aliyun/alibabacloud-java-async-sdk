@@ -52,6 +52,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -101,6 +105,18 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         private String taskMessage; 
         private String taskStatus; 
         private String ticket; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConnectionTicketResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskCode = model.taskCode;
+            this.taskId = model.taskId;
+            this.taskMessage = model.taskMessage;
+            this.taskStatus = model.taskStatus;
+            this.ticket = model.ticket;
+        } 
 
         /**
          * RequestId.

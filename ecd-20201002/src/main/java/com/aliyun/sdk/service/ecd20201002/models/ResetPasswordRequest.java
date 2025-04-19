@@ -68,7 +68,7 @@ public class ResetPasswordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -147,6 +147,7 @@ public class ResetPasswordRequest extends Request {
         } 
 
         /**
+         * <p>The client ID. The system generates a unique ID for each client.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +160,10 @@ public class ResetPasswordRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2f00ab32-a473-4c90-9aae-dd8842ae****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -168,7 +172,10 @@ public class ResetPasswordRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>The email address of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a***@example.edu</p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -177,6 +184,7 @@ public class ResetPasswordRequest extends Request {
         }
 
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +197,7 @@ public class ResetPasswordRequest extends Request {
         }
 
         /**
+         * <p>The office network ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,6 +210,7 @@ public class ResetPasswordRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +223,10 @@ public class ResetPasswordRequest extends Request {
         }
 
         /**
-         * phone.
+         * <p>The phone number of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1827912****</p>
          */
         public Builder phone(String phone) {
             this.putQueryParameter("phone", phone);

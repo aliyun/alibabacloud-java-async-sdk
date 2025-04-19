@@ -46,7 +46,7 @@ public class DescribeDirectoriesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -89,6 +89,7 @@ public class DescribeDirectoriesRequest extends Request {
         } 
 
         /**
+         * <p>The client ID. The system generates a unique ID for each client.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,7 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * <p>The directory IDs.</p>
          */
         public Builder directoryId(java.util.List<String> directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -110,6 +111,7 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

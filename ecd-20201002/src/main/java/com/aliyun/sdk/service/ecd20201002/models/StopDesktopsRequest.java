@@ -44,6 +44,10 @@ public class StopDesktopsRequest extends Request {
     private String loginToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsUpdate")
+    private Boolean osUpdate;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -56,6 +60,10 @@ public class StopDesktopsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SessionToken")
     private String sessionToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
+    private String uuid;
+
     private StopDesktopsRequest(Builder builder) {
         super(builder);
         this.clientId = builder.clientId;
@@ -64,9 +72,11 @@ public class StopDesktopsRequest extends Request {
         this.clientVersion = builder.clientVersion;
         this.desktopId = builder.desktopId;
         this.loginToken = builder.loginToken;
+        this.osUpdate = builder.osUpdate;
         this.regionId = builder.regionId;
         this.sessionId = builder.sessionId;
         this.sessionToken = builder.sessionToken;
+        this.uuid = builder.uuid;
     }
 
     public static Builder builder() {
@@ -77,7 +87,7 @@ public class StopDesktopsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -125,6 +135,13 @@ public class StopDesktopsRequest extends Request {
     }
 
     /**
+     * @return osUpdate
+     */
+    public Boolean getOsUpdate() {
+        return this.osUpdate;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -145,6 +162,13 @@ public class StopDesktopsRequest extends Request {
         return this.sessionToken;
     }
 
+    /**
+     * @return uuid
+     */
+    public String getUuid() {
+        return this.uuid;
+    }
+
     public static final class Builder extends Request.Builder<StopDesktopsRequest, Builder> {
         private String clientId; 
         private String clientOS; 
@@ -152,9 +176,11 @@ public class StopDesktopsRequest extends Request {
         private String clientVersion; 
         private java.util.List<String> desktopId; 
         private String loginToken; 
+        private Boolean osUpdate; 
         private String regionId; 
         private String sessionId; 
         private String sessionToken; 
+        private String uuid; 
 
         private Builder() {
             super();
@@ -168,9 +194,11 @@ public class StopDesktopsRequest extends Request {
             this.clientVersion = request.clientVersion;
             this.desktopId = request.desktopId;
             this.loginToken = request.loginToken;
+            this.osUpdate = request.osUpdate;
             this.regionId = request.regionId;
             this.sessionId = request.sessionId;
             this.sessionToken = request.sessionToken;
+            this.uuid = request.uuid;
         } 
 
         /**
@@ -248,6 +276,15 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
+         * OsUpdate.
+         */
+        public Builder osUpdate(Boolean osUpdate) {
+            this.putQueryParameter("OsUpdate", osUpdate);
+            this.osUpdate = osUpdate;
+            return this;
+        }
+
+        /**
          * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
@@ -281,6 +318,15 @@ public class StopDesktopsRequest extends Request {
         public Builder sessionToken(String sessionToken) {
             this.putQueryParameter("SessionToken", sessionToken);
             this.sessionToken = sessionToken;
+            return this;
+        }
+
+        /**
+         * Uuid.
+         */
+        public Builder uuid(String uuid) {
+            this.putQueryParameter("Uuid", uuid);
+            this.uuid = uuid;
             return this;
         }
 

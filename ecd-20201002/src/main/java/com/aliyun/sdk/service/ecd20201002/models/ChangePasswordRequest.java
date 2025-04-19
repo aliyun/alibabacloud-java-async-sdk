@@ -76,7 +76,7 @@ public class ChangePasswordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -164,6 +164,7 @@ public class ChangePasswordRequest extends Request {
         } 
 
         /**
+         * <p>The client ID. The system generates a unique ID for each client.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,6 +177,7 @@ public class ChangePasswordRequest extends Request {
         }
 
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +190,7 @@ public class ChangePasswordRequest extends Request {
         }
 
         /**
+         * <p>The logon token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,6 +203,7 @@ public class ChangePasswordRequest extends Request {
         }
 
         /**
+         * <p>The new password.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,6 +216,7 @@ public class ChangePasswordRequest extends Request {
         }
 
         /**
+         * <p>The office network ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,6 +229,7 @@ public class ChangePasswordRequest extends Request {
         }
 
         /**
+         * <p>The current password.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,6 +242,7 @@ public class ChangePasswordRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,7 +255,10 @@ public class ChangePasswordRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);

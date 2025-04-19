@@ -52,6 +52,10 @@ public class OssUploadCredential extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessKeyId
      */
@@ -101,6 +105,18 @@ public class OssUploadCredential extends TeaModel {
         private String ossPolicy; 
         private String ossSignature; 
         private String stsToken; 
+
+        private Builder() {
+        } 
+
+        private Builder(OssUploadCredential model) {
+            this.accessKeyId = model.accessKeyId;
+            this.endpoint = model.endpoint;
+            this.filePath = model.filePath;
+            this.ossPolicy = model.ossPolicy;
+            this.ossSignature = model.ossSignature;
+            this.stsToken = model.stsToken;
+        } 
 
         /**
          * AccessKeyId.

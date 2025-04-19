@@ -68,7 +68,7 @@ public class ResetSnapshotRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -147,6 +147,7 @@ public class ResetSnapshotRequest extends Request {
         } 
 
         /**
+         * <p>The client ID. The system generates a unique ID for each client.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +160,10 @@ public class ResetSnapshotRequest extends Request {
         }
 
         /**
-         * DesktopId.
+         * <p>The cloud computer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-e964cr92klwqb****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -168,6 +172,7 @@ public class ResetSnapshotRequest extends Request {
         }
 
         /**
+         * <p>The logon token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +185,7 @@ public class ResetSnapshotRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +198,10 @@ public class ResetSnapshotRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05182b8c-bb0d-49d3-963c-ee63a507****</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -201,6 +210,7 @@ public class ResetSnapshotRequest extends Request {
         }
 
         /**
+         * <p>The snapshot ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +223,10 @@ public class ResetSnapshotRequest extends Request {
         }
 
         /**
-         * StopDesktop.
+         * <p>Specifies whether to stop the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder stopDesktop(Boolean stopDesktop) {
             this.putQueryParameter("StopDesktop", stopDesktop);

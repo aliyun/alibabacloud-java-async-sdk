@@ -36,6 +36,10 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Token token; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCloudDriveServiceMountTokenResponseBody model) {
+            this.requestId = model.requestId;
+            this.token = model.token;
+        } 
 
         /**
          * RequestId.
@@ -167,6 +179,18 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
             private String token; 
             private Long totalSize; 
             private Long usedSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Token model) {
+                this.domainId = model.domainId;
+                this.expiredAfter = model.expiredAfter;
+                this.status = model.status;
+                this.token = model.token;
+                this.totalSize = model.totalSize;
+                this.usedSize = model.usedSize;
+            } 
 
             /**
              * DomainId.

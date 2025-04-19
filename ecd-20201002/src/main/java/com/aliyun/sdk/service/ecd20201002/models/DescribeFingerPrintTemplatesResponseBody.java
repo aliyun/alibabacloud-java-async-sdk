@@ -36,6 +36,10 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fingerPrintTemplates
      */
@@ -54,8 +58,16 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
         private java.util.List<FingerPrintTemplates> fingerPrintTemplates; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeFingerPrintTemplatesResponseBody model) {
+            this.fingerPrintTemplates = model.fingerPrintTemplates;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * FingerPrintTemplates.
+         * <p>The fingerprint templates.</p>
          */
         public Builder fingerPrintTemplates(java.util.List<FingerPrintTemplates> fingerPrintTemplates) {
             this.fingerPrintTemplates = fingerPrintTemplates;
@@ -63,7 +75,10 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C1D3FBE-84E1-5ABB-AD98-2003AC71****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,8 +195,24 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
             private String loginTime; 
             private String officeSiteId; 
 
+            private Builder() {
+            } 
+
+            private Builder(FingerPrintTemplates model) {
+                this.clientId = model.clientId;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.endUserId = model.endUserId;
+                this.index = model.index;
+                this.loginTime = model.loginTime;
+                this.officeSiteId = model.officeSiteId;
+            } 
+
             /**
-             * ClientId.
+             * <p>The client ID. The system generates a unique ID for each client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2258a3d5-b8f8-4d79-a221-eaecf211****</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -189,7 +220,10 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-13T13:26:29Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -197,7 +231,10 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Finger 1</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -205,7 +242,10 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liming</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -213,7 +253,10 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -221,7 +264,10 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * LoginTime.
+             * <p>The logon time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-13T13:26:29Z</p>
              */
             public Builder loginTime(String loginTime) {
                 this.loginTime = loginTime;
@@ -229,7 +275,10 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * <p>The office network ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-074949****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;

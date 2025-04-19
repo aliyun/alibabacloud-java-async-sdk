@@ -100,6 +100,10 @@ public class GetLoginTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return email
      */
@@ -245,6 +249,30 @@ public class GetLoginTokenResponseBody extends TeaModel {
         private String sessionId; 
         private Long tenantId; 
         private String windowDisplayMode; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLoginTokenResponseBody model) {
+            this.email = model.email;
+            this.endUserId = model.endUserId;
+            this.industry = model.industry;
+            this.keepAliveToken = model.keepAliveToken;
+            this.label = model.label;
+            this.loginToken = model.loginToken;
+            this.nextStage = model.nextStage;
+            this.passwordStrategy = model.passwordStrategy;
+            this.phone = model.phone;
+            this.props = model.props;
+            this.qrCodePng = model.qrCodePng;
+            this.reason = model.reason;
+            this.requestId = model.requestId;
+            this.riskVerifyInfo = model.riskVerifyInfo;
+            this.secret = model.secret;
+            this.sessionId = model.sessionId;
+            this.tenantId = model.tenantId;
+            this.windowDisplayMode = model.windowDisplayMode;
+        } 
 
         /**
          * <p>The email address of the user. The system returns the email address in the return value of the LoginToken parameter after the user logs on to the client.</p>
@@ -511,6 +539,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
             private java.util.List<String> tenantAlternativeChars; 
             private String tenantPasswordLength; 
 
+            private Builder() {
+            } 
+
+            private Builder(PasswordStrategy model) {
+                this.tenantAlternativeChars = model.tenantAlternativeChars;
+                this.tenantPasswordLength = model.tenantPasswordLength;
+            } 
+
             /**
              * <blockquote>
              * <p>This is a parameter only for internal use.</p>
@@ -608,6 +644,16 @@ public class GetLoginTokenResponseBody extends TeaModel {
             private Long lastLockDuration; 
             private String locked; 
             private String phone; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskVerifyInfo model) {
+                this.email = model.email;
+                this.lastLockDuration = model.lastLockDuration;
+                this.locked = model.locked;
+                this.phone = model.phone;
+            } 
 
             /**
              * <p>The email used for authentication.</p>

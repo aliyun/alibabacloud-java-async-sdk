@@ -40,6 +40,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<Snapshots> snapshots; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSnapshotsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.snapshots = model.snapshots;
+        } 
 
         /**
          * NextToken.
@@ -271,6 +284,25 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String sourceDiskSize; 
             private String sourceDiskType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.desktopId = model.desktopId;
+                this.progress = model.progress;
+                this.remainTime = model.remainTime;
+                this.restorePointId = model.restorePointId;
+                this.restorePointName = model.restorePointName;
+                this.snapshotId = model.snapshotId;
+                this.snapshotName = model.snapshotName;
+                this.snapshotType = model.snapshotType;
+                this.sourceDiskSize = model.sourceDiskSize;
+                this.sourceDiskType = model.sourceDiskType;
+                this.status = model.status;
+            } 
 
             /**
              * CreationTime.

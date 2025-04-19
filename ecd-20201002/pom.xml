@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-ecd20201002</artifactId>
-  <version>1.0.11</version>
+  <version>1.0.12</version>
   <packaging>jar</packaging>
   <name>alibabacloud-ecd20201002</name>
   <description>Alibaba Cloud ecd (20201002) Async SDK for Java
@@ -76,7 +76,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-gpg-plugin</artifactId>
-        <version>1.6</version>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>sign-artifacts</id>
