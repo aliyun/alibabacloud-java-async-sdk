@@ -95,6 +95,10 @@ public class CreateIndexRequest extends Request {
     private String structureType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("chunkMode")
+    private String chunkMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("enableHeaders")
     private Boolean enableHeaders;
 
@@ -122,6 +126,7 @@ public class CreateIndexRequest extends Request {
         this.sinkType = builder.sinkType;
         this.sourceType = builder.sourceType;
         this.structureType = builder.structureType;
+        this.chunkMode = builder.chunkMode;
         this.enableHeaders = builder.enableHeaders;
         this.metaExtractColumns = builder.metaExtractColumns;
     }
@@ -266,6 +271,13 @@ public class CreateIndexRequest extends Request {
     }
 
     /**
+     * @return chunkMode
+     */
+    public String getChunkMode() {
+        return this.chunkMode;
+    }
+
+    /**
      * @return enableHeaders
      */
     public Boolean getEnableHeaders() {
@@ -298,6 +310,7 @@ public class CreateIndexRequest extends Request {
         private String sinkType; 
         private String sourceType; 
         private String structureType; 
+        private String chunkMode; 
         private Boolean enableHeaders; 
         private java.util.List<MetaExtractColumns> metaExtractColumns; 
 
@@ -325,6 +338,7 @@ public class CreateIndexRequest extends Request {
             this.sinkType = request.sinkType;
             this.sourceType = request.sourceType;
             this.structureType = request.structureType;
+            this.chunkMode = request.chunkMode;
             this.enableHeaders = request.enableHeaders;
             this.metaExtractColumns = request.metaExtractColumns;
         } 
@@ -590,6 +604,15 @@ public class CreateIndexRequest extends Request {
         public Builder structureType(String structureType) {
             this.putQueryParameter("StructureType", structureType);
             this.structureType = structureType;
+            return this;
+        }
+
+        /**
+         * chunkMode.
+         */
+        public Builder chunkMode(String chunkMode) {
+            this.putQueryParameter("chunkMode", chunkMode);
+            this.chunkMode = chunkMode;
             return this;
         }
 
