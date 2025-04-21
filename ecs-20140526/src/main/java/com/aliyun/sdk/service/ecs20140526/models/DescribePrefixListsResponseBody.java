@@ -121,6 +121,135 @@ public class DescribePrefixListsResponseBody extends TeaModel {
      *
      * <p>DescribePrefixListsResponseBody</p>
      */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribePrefixListsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePrefixListsResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List<Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List<Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribePrefixListsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePrefixListsResponseBody</p>
+     */
     public static class PrefixList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressFamily")
         private String addressFamily;
@@ -143,6 +272,12 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrefixListName")
         private String prefixListName;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private Tags tags;
+
         private PrefixList(Builder builder) {
             this.addressFamily = builder.addressFamily;
             this.associationCount = builder.associationCount;
@@ -151,6 +286,8 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             this.maxEntries = builder.maxEntries;
             this.prefixListId = builder.prefixListId;
             this.prefixListName = builder.prefixListName;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -210,6 +347,20 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             return this.prefixListName;
         }
 
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String addressFamily; 
             private Integer associationCount; 
@@ -218,6 +369,8 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             private Integer maxEntries; 
             private String prefixListId; 
             private String prefixListName; 
+            private String resourceGroupId; 
+            private Tags tags; 
 
             private Builder() {
             } 
@@ -230,6 +383,8 @@ public class DescribePrefixListsResponseBody extends TeaModel {
                 this.maxEntries = model.maxEntries;
                 this.prefixListId = model.prefixListId;
                 this.prefixListName = model.prefixListName;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
             } 
 
             /**
@@ -310,6 +465,22 @@ public class DescribePrefixListsResponseBody extends TeaModel {
              */
             public Builder prefixListName(String prefixListName) {
                 this.prefixListName = prefixListName;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 

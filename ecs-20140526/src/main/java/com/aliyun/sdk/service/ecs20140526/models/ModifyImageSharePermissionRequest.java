@@ -210,7 +210,7 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * <p>The ID of Alibaba Cloud account N to which you want to share the custom image. Valid values of N: 1 to 10. If you specify more than 10 Alibaba Cloud account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.</p>
+         * <p>The IDs of Alibaba Cloud accounts to which you want to share the custom image. Valid values of N: 1 to 10. If you specify more than 10 Alibaba Cloud account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>
@@ -222,7 +222,10 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the custom image.</p>
+         * <p>The ID of the shared custom image.</p>
+         * <blockquote>
+         * <p> You can share images encrypted by using CMKs but cannot share images encrypted by using service keys. When you share an image encrypted by using a service key, an error is reported.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,7 +300,7 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * <p>The ID of Alibaba Cloud account N from which you want to unshare the custom image. Valid values of N: 1 to 10. If you specify more than 10 Alibaba Cloud account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.</p>
+         * <p>The IDs of Alibaba Cloud accounts from which you want to unshare the custom image. Valid values of N: 1 to 10. If you specify more than 10 Alibaba Cloud account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>
