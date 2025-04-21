@@ -32,6 +32,9 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
+
     @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
@@ -41,6 +44,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         this.listTemplate = builder.listTemplate;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
         this.total = builder.total;
     }
 
@@ -92,6 +96,13 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     }
 
     /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    /**
      * @return total
      */
     public Integer getTotal() {
@@ -104,6 +115,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         private java.util.List<ListTemplate> listTemplate; 
         private String message; 
         private String requestId; 
+        private Boolean success; 
         private Integer total; 
 
         private Builder() {
@@ -115,6 +127,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             this.listTemplate = model.listTemplate;
             this.message = model.message;
             this.requestId = model.requestId;
+            this.success = model.success;
             this.total = model.total;
         } 
 
@@ -171,6 +184,14 @@ public class ListChatappTemplateResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 

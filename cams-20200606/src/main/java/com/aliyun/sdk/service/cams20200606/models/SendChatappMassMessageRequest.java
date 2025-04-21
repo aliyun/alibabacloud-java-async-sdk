@@ -525,7 +525,7 @@ public class SendChatappMassMessageRequest extends Request {
      */
     public static class FlowAction extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FlowActionData")
-        private java.util.Map<String, String> flowActionData;
+        private java.util.Map<String, ?> flowActionData;
 
         @com.aliyun.core.annotation.NameInMap("FlowToken")
         private String flowToken;
@@ -546,7 +546,7 @@ public class SendChatappMassMessageRequest extends Request {
         /**
          * @return flowActionData
          */
-        public java.util.Map<String, String> getFlowActionData() {
+        public java.util.Map<String, ?> getFlowActionData() {
             return this.flowActionData;
         }
 
@@ -558,7 +558,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.Map<String, String> flowActionData; 
+            private java.util.Map<String, ?> flowActionData; 
             private String flowToken; 
 
             private Builder() {
@@ -572,7 +572,7 @@ public class SendChatappMassMessageRequest extends Request {
             /**
              * <p>The default parameter of the Flow.</p>
              */
-            public Builder flowActionData(java.util.Map<String, String> flowActionData) {
+            public Builder flowActionData(java.util.Map<String, ?> flowActionData) {
                 this.flowActionData = flowActionData;
                 return this;
             }

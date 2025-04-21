@@ -22,6 +22,10 @@ public class ListChatappTemplateRequest extends Request {
     private String auditStatus;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
+    private String category;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -47,8 +51,20 @@ public class ListChatappTemplateRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateType")
@@ -57,13 +73,17 @@ public class ListChatappTemplateRequest extends Request {
     private ListChatappTemplateRequest(Builder builder) {
         super(builder);
         this.auditStatus = builder.auditStatus;
+        this.category = builder.category;
         this.code = builder.code;
         this.custSpaceId = builder.custSpaceId;
         this.custWabaId = builder.custWabaId;
         this.isvCode = builder.isvCode;
         this.language = builder.language;
         this.name = builder.name;
+        this.ownerId = builder.ownerId;
         this.page = builder.page;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.templateType = builder.templateType;
     }
 
@@ -85,6 +105,13 @@ public class ListChatappTemplateRequest extends Request {
      */
     public String getAuditStatus() {
         return this.auditStatus;
+    }
+
+    /**
+     * @return category
+     */
+    public String getCategory() {
+        return this.category;
     }
 
     /**
@@ -130,10 +157,31 @@ public class ListChatappTemplateRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return page
      */
     public Page getPage() {
         return this.page;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
@@ -145,13 +193,17 @@ public class ListChatappTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListChatappTemplateRequest, Builder> {
         private String auditStatus; 
+        private String category; 
         private String code; 
         private String custSpaceId; 
         private String custWabaId; 
         private String isvCode; 
         private String language; 
         private String name; 
+        private Long ownerId; 
         private Page page; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String templateType; 
 
         private Builder() {
@@ -161,13 +213,17 @@ public class ListChatappTemplateRequest extends Request {
         private Builder(ListChatappTemplateRequest request) {
             super(request);
             this.auditStatus = request.auditStatus;
+            this.category = request.category;
             this.code = request.code;
             this.custSpaceId = request.custSpaceId;
             this.custWabaId = request.custWabaId;
             this.isvCode = request.isvCode;
             this.language = request.language;
             this.name = request.name;
+            this.ownerId = request.ownerId;
             this.page = request.page;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.templateType = request.templateType;
         } 
 
@@ -186,6 +242,15 @@ public class ListChatappTemplateRequest extends Request {
         public Builder auditStatus(String auditStatus) {
             this.putQueryParameter("AuditStatus", auditStatus);
             this.auditStatus = auditStatus;
+            return this;
+        }
+
+        /**
+         * Category.
+         */
+        public Builder category(String category) {
+            this.putQueryParameter("Category", category);
+            this.category = category;
             return this;
         }
 
@@ -265,6 +330,15 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
          * <p>The pagination settings.</p>
          * 
          * <strong>example:</strong>
@@ -274,6 +348,24 @@ public class ListChatappTemplateRequest extends Request {
             String pageShrink = shrink(page, "Page", "json");
             this.putQueryParameter("Page", pageShrink);
             this.page = page;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
