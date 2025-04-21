@@ -52,6 +52,10 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -101,6 +105,18 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSmartStatisticsPageListResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * CurrentPage.
@@ -259,6 +275,19 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
             private String sceneName; 
             private Integer successCount; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.date = model.date;
+                this.passRate = model.passRate;
+                this.productCode = model.productCode;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+                this.successCount = model.successCount;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * Date.

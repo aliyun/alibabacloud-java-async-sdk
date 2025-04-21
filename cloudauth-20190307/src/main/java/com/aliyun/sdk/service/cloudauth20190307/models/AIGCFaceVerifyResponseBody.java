@@ -44,6 +44,10 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private ResultObject resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(AIGCFaceVerifyResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
          * Code.
@@ -171,6 +185,15 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
             private String certifyId; 
             private String result; 
             private String score; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.certifyId = model.certifyId;
+                this.result = model.result;
+                this.score = model.score;
+            } 
 
             /**
              * CertifyId.

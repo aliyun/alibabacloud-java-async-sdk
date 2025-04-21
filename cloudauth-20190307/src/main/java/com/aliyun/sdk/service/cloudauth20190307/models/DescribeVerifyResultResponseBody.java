@@ -52,6 +52,10 @@ public class DescribeVerifyResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authorityComparisionScore
      */
@@ -101,6 +105,18 @@ public class DescribeVerifyResultResponseBody extends TeaModel {
         private Material material; 
         private String requestId; 
         private Integer verifyStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVerifyResultResponseBody model) {
+            this.authorityComparisionScore = model.authorityComparisionScore;
+            this.faceComparisonScore = model.faceComparisonScore;
+            this.idCardFaceComparisonScore = model.idCardFaceComparisonScore;
+            this.material = model.material;
+            this.requestId = model.requestId;
+            this.verifyStatus = model.verifyStatus;
+        } 
 
         /**
          * AuthorityComparisionScore.
@@ -295,6 +311,22 @@ public class DescribeVerifyResultResponseBody extends TeaModel {
             private String nationality; 
             private String number; 
             private String startDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(IdCardInfo model) {
+                this.address = model.address;
+                this.authority = model.authority;
+                this.backImageUrl = model.backImageUrl;
+                this.birth = model.birth;
+                this.endDate = model.endDate;
+                this.frontImageUrl = model.frontImageUrl;
+                this.name = model.name;
+                this.nationality = model.nationality;
+                this.number = model.number;
+                this.startDate = model.startDate;
+            } 
 
             /**
              * Address.
@@ -498,6 +530,20 @@ public class DescribeVerifyResultResponseBody extends TeaModel {
             private String idCardName; 
             private String idCardNumber; 
             private java.util.List<String> videoUrls; 
+
+            private Builder() {
+            } 
+
+            private Builder(Material model) {
+                this.faceGlobalUrl = model.faceGlobalUrl;
+                this.faceImageUrl = model.faceImageUrl;
+                this.faceMask = model.faceMask;
+                this.faceQuality = model.faceQuality;
+                this.idCardInfo = model.idCardInfo;
+                this.idCardName = model.idCardName;
+                this.idCardNumber = model.idCardNumber;
+                this.videoUrls = model.videoUrls;
+            } 
 
             /**
              * FaceGlobalUrl.

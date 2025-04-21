@@ -36,6 +36,10 @@ public class DescribeVerifySDKResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeVerifySDKResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String sdkUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVerifySDKResponseBody model) {
+            this.requestId = model.requestId;
+            this.sdkUrl = model.sdkUrl;
+        } 
 
         /**
          * RequestId.

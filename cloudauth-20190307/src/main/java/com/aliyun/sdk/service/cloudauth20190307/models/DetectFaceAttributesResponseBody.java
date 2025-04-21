@@ -48,6 +48,10 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetectFaceAttributesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -192,6 +207,15 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             private Float rollAngle; 
             private Float yawAngle; 
 
+            private Builder() {
+            } 
+
+            private Builder(Headpose model) {
+                this.pitchAngle = model.pitchAngle;
+                this.rollAngle = model.rollAngle;
+                this.yawAngle = model.yawAngle;
+            } 
+
             /**
              * PitchAngle.
              */
@@ -266,6 +290,14 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         public static final class Builder {
             private Float threshold; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Smiling model) {
+                this.threshold = model.threshold;
+                this.value = model.value;
+            } 
 
             /**
              * Threshold.
@@ -406,6 +438,20 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             private String respirator; 
             private Smiling smiling; 
 
+            private Builder() {
+            } 
+
+            private Builder(FaceAttributes model) {
+                this.blur = model.blur;
+                this.facequal = model.facequal;
+                this.facetype = model.facetype;
+                this.glasses = model.glasses;
+                this.headpose = model.headpose;
+                this.integrity = model.integrity;
+                this.respirator = model.respirator;
+                this.smiling = model.smiling;
+            } 
+
             /**
              * Blur.
              */
@@ -545,6 +591,16 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             private Integer top; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(FaceRect model) {
+                this.height = model.height;
+                this.left = model.left;
+                this.top = model.top;
+                this.width = model.width;
+            } 
+
             /**
              * Height.
              */
@@ -628,6 +684,14 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             private FaceAttributes faceAttributes; 
             private FaceRect faceRect; 
 
+            private Builder() {
+            } 
+
+            private Builder(FaceAttributesDetectInfo model) {
+                this.faceAttributes = model.faceAttributes;
+                this.faceRect = model.faceRect;
+            } 
+
             /**
              * FaceAttributes.
              */
@@ -682,6 +746,13 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FaceAttributesDetectInfo> faceAttributesDetectInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(FaceInfos model) {
+                this.faceAttributesDetectInfo = model.faceAttributesDetectInfo;
+            } 
 
             /**
              * FaceAttributesDetectInfo.
@@ -753,6 +824,15 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
             private FaceInfos faceInfos; 
             private Integer imgHeight; 
             private Integer imgWidth; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.faceInfos = model.faceInfos;
+                this.imgHeight = model.imgHeight;
+                this.imgWidth = model.imgWidth;
+            } 
 
             /**
              * FaceInfos.

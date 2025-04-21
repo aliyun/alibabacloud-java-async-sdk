@@ -64,6 +64,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         private Boolean success; 
         private Integer totalItem; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(PageQueryWhiteListSettingResponseBody model) {
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.message = model.message;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+            this.success = model.success;
+            this.totalItem = model.totalItem;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * Code.
@@ -370,6 +389,23 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
             private String status; 
             private String validEndDate; 
             private String validStartDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.certNo = model.certNo;
+                this.certifyId = model.certifyId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.remark = model.remark;
+                this.sceneId = model.sceneId;
+                this.serviceCode = model.serviceCode;
+                this.status = model.status;
+                this.validEndDate = model.validEndDate;
+                this.validStartDate = model.validStartDate;
+            } 
 
             /**
              * CertNo.

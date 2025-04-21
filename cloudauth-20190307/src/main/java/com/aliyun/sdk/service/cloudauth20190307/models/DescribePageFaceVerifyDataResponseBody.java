@@ -64,6 +64,10 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
         private String success; 
         private String totalCount; 
         private String totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePageFaceVerifyDataResponseBody model) {
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.items = model.items;
+            this.message = model.message;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * Code.
@@ -307,6 +326,18 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
             private String sceneName; 
             private String successCount; 
             private String totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.date = model.date;
+                this.productCode = model.productCode;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+                this.successCount = model.successCount;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * Date.

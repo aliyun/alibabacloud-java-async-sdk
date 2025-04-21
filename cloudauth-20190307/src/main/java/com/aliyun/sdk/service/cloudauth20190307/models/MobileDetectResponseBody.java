@@ -44,6 +44,10 @@ public class MobileDetectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class MobileDetectResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private ResultObject resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(MobileDetectResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
          * Code.
@@ -196,6 +210,17 @@ public class MobileDetectResponseBody extends TeaModel {
             private String mobile; 
             private String subCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.area = model.area;
+                this.bizCode = model.bizCode;
+                this.ispName = model.ispName;
+                this.mobile = model.mobile;
+                this.subCode = model.subCode;
+            } 
+
             /**
              * Area.
              */
@@ -286,6 +311,14 @@ public class MobileDetectResponseBody extends TeaModel {
         public static final class Builder {
             private String chargeCount; 
             private java.util.List<Items> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.chargeCount = model.chargeCount;
+                this.items = model.items;
+            } 
 
             /**
              * ChargeCount.

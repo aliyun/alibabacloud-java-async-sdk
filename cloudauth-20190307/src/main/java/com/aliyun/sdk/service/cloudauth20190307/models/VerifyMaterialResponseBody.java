@@ -52,6 +52,10 @@ public class VerifyMaterialResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authorityComparisionScore
      */
@@ -101,6 +105,18 @@ public class VerifyMaterialResponseBody extends TeaModel {
         private String requestId; 
         private Integer verifyStatus; 
         private String verifyToken; 
+
+        private Builder() {
+        } 
+
+        private Builder(VerifyMaterialResponseBody model) {
+            this.authorityComparisionScore = model.authorityComparisionScore;
+            this.idCardFaceComparisonScore = model.idCardFaceComparisonScore;
+            this.material = model.material;
+            this.requestId = model.requestId;
+            this.verifyStatus = model.verifyStatus;
+            this.verifyToken = model.verifyToken;
+        } 
 
         /**
          * AuthorityComparisionScore.
@@ -296,6 +312,22 @@ public class VerifyMaterialResponseBody extends TeaModel {
             private String number; 
             private String startDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(IdCardInfo model) {
+                this.address = model.address;
+                this.authority = model.authority;
+                this.backImageUrl = model.backImageUrl;
+                this.birth = model.birth;
+                this.endDate = model.endDate;
+                this.frontImageUrl = model.frontImageUrl;
+                this.name = model.name;
+                this.nationality = model.nationality;
+                this.number = model.number;
+                this.startDate = model.startDate;
+            } 
+
             /**
              * Address.
              */
@@ -486,6 +518,19 @@ public class VerifyMaterialResponseBody extends TeaModel {
             private IdCardInfo idCardInfo; 
             private String idCardName; 
             private String idCardNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(Material model) {
+                this.faceGlobalUrl = model.faceGlobalUrl;
+                this.faceImageUrl = model.faceImageUrl;
+                this.faceMask = model.faceMask;
+                this.faceQuality = model.faceQuality;
+                this.idCardInfo = model.idCardInfo;
+                this.idCardName = model.idCardName;
+                this.idCardNumber = model.idCardNumber;
+            } 
 
             /**
              * FaceGlobalUrl.

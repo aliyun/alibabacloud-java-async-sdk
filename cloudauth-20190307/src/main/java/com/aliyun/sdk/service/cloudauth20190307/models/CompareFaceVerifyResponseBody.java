@@ -44,6 +44,10 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private ResultObject resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(CompareFaceVerifyResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
          * Code.
@@ -171,6 +185,15 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
             private String certifyId; 
             private String passed; 
             private Float verifyScore; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.certifyId = model.certifyId;
+                this.passed = model.passed;
+                this.verifyScore = model.verifyScore;
+            } 
 
             /**
              * CertifyId.

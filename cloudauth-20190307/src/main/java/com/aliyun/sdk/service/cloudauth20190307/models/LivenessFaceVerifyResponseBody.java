@@ -44,6 +44,10 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private ResultObject resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(LivenessFaceVerifyResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
          * Code.
@@ -183,6 +197,16 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
             private String materialInfo; 
             private String passed; 
             private String subCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.certifyId = model.certifyId;
+                this.materialInfo = model.materialInfo;
+                this.passed = model.passed;
+                this.subCode = model.subCode;
+            } 
 
             /**
              * CertifyId.

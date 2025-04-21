@@ -44,6 +44,10 @@ public class DeepfakeDetectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DeepfakeDetectResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private ResultObject resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeepfakeDetectResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
          * Code.
@@ -174,6 +188,15 @@ public class DeepfakeDetectResponseBody extends TeaModel {
             private String result; 
             private java.util.Map<String, String> riskScore; 
             private String riskTag; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.result = model.result;
+                this.riskScore = model.riskScore;
+                this.riskTag = model.riskTag;
+            } 
 
             /**
              * Result.

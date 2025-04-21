@@ -48,6 +48,10 @@ public class CreateVerifySettingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bizName
      */
@@ -89,6 +93,17 @@ public class CreateVerifySettingResponseBody extends TeaModel {
         private String requestId; 
         private String solution; 
         private java.util.List<String> stepList; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVerifySettingResponseBody model) {
+            this.bizName = model.bizName;
+            this.bizType = model.bizType;
+            this.requestId = model.requestId;
+            this.solution = model.solution;
+            this.stepList = model.stepList;
+        } 
 
         /**
          * BizName.

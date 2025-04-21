@@ -44,6 +44,10 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private ResultObject resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFaceGuardRiskResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
          * Code.
@@ -174,6 +188,15 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
             private String certifyId; 
             private String riskExtends; 
             private String riskTags; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.certifyId = model.certifyId;
+                this.riskExtends = model.riskExtends;
+                this.riskTags = model.riskTags;
+            } 
 
             /**
              * CertifyId.

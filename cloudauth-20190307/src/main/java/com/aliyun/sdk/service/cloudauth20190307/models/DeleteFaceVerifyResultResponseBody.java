@@ -44,6 +44,10 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private ResultObject resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteFaceVerifyResultResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
          * Code.
@@ -174,6 +188,15 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
             private String certifyId; 
             private String deleteResult; 
             private String failReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.certifyId = model.certifyId;
+                this.deleteResult = model.deleteResult;
+                this.failReason = model.failReason;
+            } 
 
             /**
              * CertifyId.

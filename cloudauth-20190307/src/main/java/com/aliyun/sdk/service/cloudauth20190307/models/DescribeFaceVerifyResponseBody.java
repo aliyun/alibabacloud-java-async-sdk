@@ -44,6 +44,10 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private ResultObject resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFaceVerifyResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
          * Code.
@@ -231,6 +245,20 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
             private String subCode; 
             private String success; 
             private String userInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.deviceRisk = model.deviceRisk;
+                this.deviceToken = model.deviceToken;
+                this.identityInfo = model.identityInfo;
+                this.materialInfo = model.materialInfo;
+                this.passed = model.passed;
+                this.subCode = model.subCode;
+                this.success = model.success;
+                this.userInfo = model.userInfo;
+            } 
 
             /**
              * DeviceRisk.

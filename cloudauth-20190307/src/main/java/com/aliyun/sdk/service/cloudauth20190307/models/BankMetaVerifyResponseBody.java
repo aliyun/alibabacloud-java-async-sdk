@@ -44,6 +44,10 @@ public class BankMetaVerifyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class BankMetaVerifyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private ResultObject resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(BankMetaVerifyResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
          * Code.
@@ -159,6 +173,14 @@ public class BankMetaVerifyResponseBody extends TeaModel {
         public static final class Builder {
             private String bizCode; 
             private String subCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.bizCode = model.bizCode;
+                this.subCode = model.subCode;
+            } 
 
             /**
              * BizCode.

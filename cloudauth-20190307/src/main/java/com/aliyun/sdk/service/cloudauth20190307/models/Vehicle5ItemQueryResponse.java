@@ -37,7 +37,7 @@ public class Vehicle5ItemQueryResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }

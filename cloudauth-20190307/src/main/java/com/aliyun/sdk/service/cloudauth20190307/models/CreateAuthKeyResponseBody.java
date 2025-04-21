@@ -36,6 +36,10 @@ public class CreateAuthKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authKey
      */
@@ -53,6 +57,14 @@ public class CreateAuthKeyResponseBody extends TeaModel {
     public static final class Builder {
         private String authKey; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAuthKeyResponseBody model) {
+            this.authKey = model.authKey;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AuthKey.

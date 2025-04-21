@@ -48,6 +48,10 @@ public class InsertWhiteListSettingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class InsertWhiteListSettingResponseBody extends TeaModel {
         private String requestId; 
         private Boolean resultObject; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(InsertWhiteListSettingResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+            this.success = model.success;
+        } 
 
         /**
          * Code.

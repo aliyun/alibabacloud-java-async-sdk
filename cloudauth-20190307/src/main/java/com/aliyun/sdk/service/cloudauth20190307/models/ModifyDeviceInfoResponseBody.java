@@ -52,6 +52,10 @@ public class ModifyDeviceInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return beginDay
      */
@@ -101,6 +105,18 @@ public class ModifyDeviceInfoResponseBody extends TeaModel {
         private String expiredDay; 
         private String requestId; 
         private String userDeviceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDeviceInfoResponseBody model) {
+            this.beginDay = model.beginDay;
+            this.bizType = model.bizType;
+            this.deviceId = model.deviceId;
+            this.expiredDay = model.expiredDay;
+            this.requestId = model.requestId;
+            this.userDeviceId = model.userDeviceId;
+        } 
 
         /**
          * BeginDay.

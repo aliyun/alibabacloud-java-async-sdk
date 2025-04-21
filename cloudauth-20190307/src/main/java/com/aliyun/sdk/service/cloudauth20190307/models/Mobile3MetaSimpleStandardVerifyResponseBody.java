@@ -44,6 +44,10 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private ResultObject resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(Mobile3MetaSimpleStandardVerifyResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
          * Code.
@@ -162,6 +176,14 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
         public static final class Builder {
             private String bizCode; 
             private String ispName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.bizCode = model.bizCode;
+                this.ispName = model.ispName;
+            } 
 
             /**
              * BizCode.

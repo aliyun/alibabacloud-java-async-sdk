@@ -44,6 +44,10 @@ public class DescribeVerifyTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ossUploadToken
      */
@@ -77,6 +81,16 @@ public class DescribeVerifyTokenResponseBody extends TeaModel {
         private String requestId; 
         private String verifyPageUrl; 
         private String verifyToken; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVerifyTokenResponseBody model) {
+            this.ossUploadToken = model.ossUploadToken;
+            this.requestId = model.requestId;
+            this.verifyPageUrl = model.verifyPageUrl;
+            this.verifyToken = model.verifyToken;
+        } 
 
         /**
          * OssUploadToken.
@@ -219,6 +233,19 @@ public class DescribeVerifyTokenResponseBody extends TeaModel {
             private String path; 
             private String secret; 
             private String token; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssUploadToken model) {
+                this.bucket = model.bucket;
+                this.endPoint = model.endPoint;
+                this.expired = model.expired;
+                this.key = model.key;
+                this.path = model.path;
+                this.secret = model.secret;
+                this.token = model.token;
+            } 
 
             /**
              * Bucket.

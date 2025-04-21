@@ -44,6 +44,10 @@ public class MobileOnlineTimeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class MobileOnlineTimeResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private ResultObject resultObject; 
+
+        private Builder() {
+        } 
+
+        private Builder(MobileOnlineTimeResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+        } 
 
         /**
          * Code.
@@ -171,6 +185,15 @@ public class MobileOnlineTimeResponseBody extends TeaModel {
             private String bizCode; 
             private String ispName; 
             private String timeCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.bizCode = model.bizCode;
+                this.ispName = model.ispName;
+                this.timeCode = model.timeCode;
+            } 
 
             /**
              * BizCode.

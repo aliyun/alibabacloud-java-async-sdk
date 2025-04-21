@@ -48,6 +48,10 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDeviceInfoResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.deviceInfoList = model.deviceInfoList;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * CurrentPage.
@@ -216,6 +231,17 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
             private String expiredDay; 
             private String userDeviceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceInfo model) {
+                this.beginDay = model.beginDay;
+                this.bizType = model.bizType;
+                this.deviceId = model.deviceId;
+                this.expiredDay = model.expiredDay;
+                this.userDeviceId = model.userDeviceId;
+            } 
+
             /**
              * BeginDay.
              */
@@ -294,6 +320,13 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DeviceInfo> deviceInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeviceInfoList model) {
+                this.deviceInfo = model.deviceInfo;
+            } 
 
             /**
              * DeviceInfo.
