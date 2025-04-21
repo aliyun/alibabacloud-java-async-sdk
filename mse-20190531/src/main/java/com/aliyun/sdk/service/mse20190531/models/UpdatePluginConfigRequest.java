@@ -21,7 +21,7 @@ public class UpdatePluginConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
@@ -215,13 +215,10 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * <p>The plug-in configuration. Configurations of WebAssembly plug-ins are in the YAML format, and configurations of Lua plug-ins are in the Lua code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p># Configure a check for the required fields of the plug-in, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</p>
+         * Config.
          */
         public Builder config(String config) {
-            this.putQueryParameter("Config", config);
+            this.putBodyParameter("Config", config);
             this.config = config;
             return this;
         }

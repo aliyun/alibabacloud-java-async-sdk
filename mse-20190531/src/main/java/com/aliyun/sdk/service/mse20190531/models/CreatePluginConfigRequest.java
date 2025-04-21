@@ -21,7 +21,7 @@ public class CreatePluginConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
@@ -159,18 +159,10 @@ public class CreatePluginConfigRequest extends Request {
         }
 
         /**
-         * <p>The plug-in configuration. The configuration content of the WebAssembly (Wasm) plug-in is in the YAML format. The configuration content of the Lua plug-in is Lua code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>status_code: 200
-         * headers:</p>
-         * <ul>
-         * <li>Content-Type=application/json
-         * body: &quot;{&quot;rule&quot;: &quot;global&quot;}&quot;</li>
-         * </ul>
+         * Config.
          */
         public Builder config(String config) {
-            this.putQueryParameter("Config", config);
+            this.putBodyParameter("Config", config);
             this.config = config;
             return this;
         }
