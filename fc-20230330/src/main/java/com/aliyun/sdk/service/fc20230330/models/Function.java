@@ -110,6 +110,9 @@ public class Function extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("runtime")
     private String runtime;
 
+    @com.aliyun.core.annotation.NameInMap("sessionAffinity")
+    private String sessionAffinity;
+
     @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
@@ -163,6 +166,7 @@ public class Function extends TeaModel {
         this.ossMountConfig = builder.ossMountConfig;
         this.role = builder.role;
         this.runtime = builder.runtime;
+        this.sessionAffinity = builder.sessionAffinity;
         this.state = builder.state;
         this.stateReason = builder.stateReason;
         this.stateReasonCode = builder.stateReasonCode;
@@ -402,6 +406,13 @@ public class Function extends TeaModel {
     }
 
     /**
+     * @return sessionAffinity
+     */
+    public String getSessionAffinity() {
+        return this.sessionAffinity;
+    }
+
+    /**
      * @return state
      */
     public String getState() {
@@ -482,6 +493,7 @@ public class Function extends TeaModel {
         private OSSMountConfig ossMountConfig; 
         private String role; 
         private String runtime; 
+        private String sessionAffinity; 
         private String state; 
         private String stateReason; 
         private String stateReasonCode; 
@@ -525,6 +537,7 @@ public class Function extends TeaModel {
             this.ossMountConfig = model.ossMountConfig;
             this.role = model.role;
             this.runtime = model.runtime;
+            this.sessionAffinity = model.sessionAffinity;
             this.state = model.state;
             this.stateReason = model.stateReason;
             this.stateReasonCode = model.stateReasonCode;
@@ -779,6 +792,14 @@ public class Function extends TeaModel {
          */
         public Builder runtime(String runtime) {
             this.runtime = runtime;
+            return this;
+        }
+
+        /**
+         * sessionAffinity.
+         */
+        public Builder sessionAffinity(String sessionAffinity) {
+            this.sessionAffinity = sessionAffinity;
             return this;
         }
 

@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LifecycleHook</p>
  */
 public class LifecycleHook extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("command")
+    private java.util.List<String> command;
+
     @com.aliyun.core.annotation.NameInMap("handler")
     @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String handler;
@@ -25,6 +28,7 @@ public class LifecycleHook extends TeaModel {
     private Integer timeout;
 
     private LifecycleHook(Builder builder) {
+        this.command = builder.command;
         this.handler = builder.handler;
         this.timeout = builder.timeout;
     }
@@ -42,6 +46,13 @@ public class LifecycleHook extends TeaModel {
     }
 
     /**
+     * @return command
+     */
+    public java.util.List<String> getCommand() {
+        return this.command;
+    }
+
+    /**
      * @return handler
      */
     public String getHandler() {
@@ -56,6 +67,7 @@ public class LifecycleHook extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<String> command; 
         private String handler; 
         private Integer timeout; 
 
@@ -63,9 +75,18 @@ public class LifecycleHook extends TeaModel {
         } 
 
         private Builder(LifecycleHook model) {
+            this.command = model.command;
             this.handler = model.handler;
             this.timeout = model.timeout;
         } 
+
+        /**
+         * command.
+         */
+        public Builder command(java.util.List<String> command) {
+            this.command = command;
+            return this;
+        }
 
         /**
          * handler.

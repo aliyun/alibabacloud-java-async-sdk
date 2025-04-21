@@ -83,6 +83,9 @@ public class UpdateFunctionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("runtime")
     private String runtime;
 
+    @com.aliyun.core.annotation.NameInMap("sessionAffinity")
+    private String sessionAffinity;
+
     @com.aliyun.core.annotation.NameInMap("timeout")
     private Integer timeout;
 
@@ -114,6 +117,7 @@ public class UpdateFunctionInput extends TeaModel {
         this.ossMountConfig = builder.ossMountConfig;
         this.role = builder.role;
         this.runtime = builder.runtime;
+        this.sessionAffinity = builder.sessionAffinity;
         this.timeout = builder.timeout;
         this.tracingConfig = builder.tracingConfig;
         this.vpcConfig = builder.vpcConfig;
@@ -279,6 +283,13 @@ public class UpdateFunctionInput extends TeaModel {
     }
 
     /**
+     * @return sessionAffinity
+     */
+    public String getSessionAffinity() {
+        return this.sessionAffinity;
+    }
+
+    /**
      * @return timeout
      */
     public Integer getTimeout() {
@@ -321,6 +332,7 @@ public class UpdateFunctionInput extends TeaModel {
         private OSSMountConfig ossMountConfig; 
         private String role; 
         private String runtime; 
+        private String sessionAffinity; 
         private Integer timeout; 
         private TracingConfig tracingConfig; 
         private VPCConfig vpcConfig; 
@@ -350,6 +362,7 @@ public class UpdateFunctionInput extends TeaModel {
             this.ossMountConfig = model.ossMountConfig;
             this.role = model.role;
             this.runtime = model.runtime;
+            this.sessionAffinity = model.sessionAffinity;
             this.timeout = model.timeout;
             this.tracingConfig = model.tracingConfig;
             this.vpcConfig = model.vpcConfig;
@@ -520,6 +533,14 @@ public class UpdateFunctionInput extends TeaModel {
          */
         public Builder runtime(String runtime) {
             this.runtime = runtime;
+            return this;
+        }
+
+        /**
+         * sessionAffinity.
+         */
+        public Builder sessionAffinity(String sessionAffinity) {
+            this.sessionAffinity = sessionAffinity;
             return this;
         }
 

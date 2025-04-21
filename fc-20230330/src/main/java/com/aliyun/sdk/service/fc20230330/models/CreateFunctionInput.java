@@ -88,6 +88,9 @@ public class CreateFunctionInput extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String runtime;
 
+    @com.aliyun.core.annotation.NameInMap("sessionAffinity")
+    private String sessionAffinity;
+
     @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List<Tag> tags;
 
@@ -123,6 +126,7 @@ public class CreateFunctionInput extends TeaModel {
         this.ossMountConfig = builder.ossMountConfig;
         this.role = builder.role;
         this.runtime = builder.runtime;
+        this.sessionAffinity = builder.sessionAffinity;
         this.tags = builder.tags;
         this.timeout = builder.timeout;
         this.tracingConfig = builder.tracingConfig;
@@ -296,6 +300,13 @@ public class CreateFunctionInput extends TeaModel {
     }
 
     /**
+     * @return sessionAffinity
+     */
+    public String getSessionAffinity() {
+        return this.sessionAffinity;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List<Tag> getTags() {
@@ -346,6 +357,7 @@ public class CreateFunctionInput extends TeaModel {
         private OSSMountConfig ossMountConfig; 
         private String role; 
         private String runtime; 
+        private String sessionAffinity; 
         private java.util.List<Tag> tags; 
         private Integer timeout; 
         private TracingConfig tracingConfig; 
@@ -377,6 +389,7 @@ public class CreateFunctionInput extends TeaModel {
             this.ossMountConfig = model.ossMountConfig;
             this.role = model.role;
             this.runtime = model.runtime;
+            this.sessionAffinity = model.sessionAffinity;
             this.tags = model.tags;
             this.timeout = model.timeout;
             this.tracingConfig = model.tracingConfig;
@@ -565,6 +578,14 @@ public class CreateFunctionInput extends TeaModel {
          */
         public Builder runtime(String runtime) {
             this.runtime = runtime;
+            return this;
+        }
+
+        /**
+         * sessionAffinity.
+         */
+        public Builder sessionAffinity(String sessionAffinity) {
+            this.sessionAffinity = sessionAffinity;
             return this;
         }
 
