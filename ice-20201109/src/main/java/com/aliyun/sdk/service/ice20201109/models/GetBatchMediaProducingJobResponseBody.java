@@ -98,6 +98,9 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
      * <p>GetBatchMediaProducingJobResponseBody</p>
      */
     public static class SubJobList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        private Float duration;
+
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
@@ -120,6 +123,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         private String status;
 
         private SubJobList(Builder builder) {
+            this.duration = builder.duration;
             this.errorCode = builder.errorCode;
             this.errorMessage = builder.errorMessage;
             this.jobId = builder.jobId;
@@ -135,6 +139,13 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
 
         public static SubJobList create() {
             return builder().build();
+        }
+
+        /**
+         * @return duration
+         */
+        public Float getDuration() {
+            return this.duration;
         }
 
         /**
@@ -187,6 +198,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Float duration; 
             private String errorCode; 
             private String errorMessage; 
             private String jobId; 
@@ -199,6 +211,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
             } 
 
             private Builder(SubJobList model) {
+                this.duration = model.duration;
                 this.errorCode = model.errorCode;
                 this.errorMessage = model.errorMessage;
                 this.jobId = model.jobId;
@@ -207,6 +220,14 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
                 this.projectId = model.projectId;
                 this.status = model.status;
             } 
+
+            /**
+             * Duration.
+             */
+            public Builder duration(Float duration) {
+                this.duration = duration;
+                return this;
+            }
 
             /**
              * <p>The error code that is returned if the subjob failed. This parameter is not returned if the subjob is successful.</p>

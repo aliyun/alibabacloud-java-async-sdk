@@ -23,6 +23,9 @@ public class LiveManifestConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DateTimeInterval")
     private Integer dateTimeInterval;
 
+    @com.aliyun.core.annotation.NameInMap("ManifestDuration")
+    private Integer manifestDuration;
+
     @com.aliyun.core.annotation.NameInMap("MaxVideoBitrate")
     private Integer maxVideoBitrate;
 
@@ -35,8 +38,14 @@ public class LiveManifestConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MinVideoBitrate")
     private Integer minVideoBitrate;
 
+    @com.aliyun.core.annotation.NameInMap("PresentationDelay")
+    private Integer presentationDelay;
+
     @com.aliyun.core.annotation.NameInMap("SegmentCount")
     private Integer segmentCount;
+
+    @com.aliyun.core.annotation.NameInMap("SegmentTemplateFormat")
+    private String segmentTemplateFormat;
 
     @com.aliyun.core.annotation.NameInMap("StreamOrder")
     private String streamOrder;
@@ -44,11 +53,14 @@ public class LiveManifestConfig extends TeaModel {
     private LiveManifestConfig(Builder builder) {
         this.adMarkers = builder.adMarkers;
         this.dateTimeInterval = builder.dateTimeInterval;
+        this.manifestDuration = builder.manifestDuration;
         this.maxVideoBitrate = builder.maxVideoBitrate;
         this.minBufferTime = builder.minBufferTime;
         this.minUpdatePeriod = builder.minUpdatePeriod;
         this.minVideoBitrate = builder.minVideoBitrate;
+        this.presentationDelay = builder.presentationDelay;
         this.segmentCount = builder.segmentCount;
+        this.segmentTemplateFormat = builder.segmentTemplateFormat;
         this.streamOrder = builder.streamOrder;
     }
 
@@ -76,6 +88,13 @@ public class LiveManifestConfig extends TeaModel {
      */
     public Integer getDateTimeInterval() {
         return this.dateTimeInterval;
+    }
+
+    /**
+     * @return manifestDuration
+     */
+    public Integer getManifestDuration() {
+        return this.manifestDuration;
     }
 
     /**
@@ -107,10 +126,24 @@ public class LiveManifestConfig extends TeaModel {
     }
 
     /**
+     * @return presentationDelay
+     */
+    public Integer getPresentationDelay() {
+        return this.presentationDelay;
+    }
+
+    /**
      * @return segmentCount
      */
     public Integer getSegmentCount() {
         return this.segmentCount;
+    }
+
+    /**
+     * @return segmentTemplateFormat
+     */
+    public String getSegmentTemplateFormat() {
+        return this.segmentTemplateFormat;
     }
 
     /**
@@ -123,11 +156,14 @@ public class LiveManifestConfig extends TeaModel {
     public static final class Builder {
         private String adMarkers; 
         private Integer dateTimeInterval; 
+        private Integer manifestDuration; 
         private Integer maxVideoBitrate; 
         private Integer minBufferTime; 
         private Integer minUpdatePeriod; 
         private Integer minVideoBitrate; 
+        private Integer presentationDelay; 
         private Integer segmentCount; 
+        private String segmentTemplateFormat; 
         private String streamOrder; 
 
         private Builder() {
@@ -136,11 +172,14 @@ public class LiveManifestConfig extends TeaModel {
         private Builder(LiveManifestConfig model) {
             this.adMarkers = model.adMarkers;
             this.dateTimeInterval = model.dateTimeInterval;
+            this.manifestDuration = model.manifestDuration;
             this.maxVideoBitrate = model.maxVideoBitrate;
             this.minBufferTime = model.minBufferTime;
             this.minUpdatePeriod = model.minUpdatePeriod;
             this.minVideoBitrate = model.minVideoBitrate;
+            this.presentationDelay = model.presentationDelay;
             this.segmentCount = model.segmentCount;
+            this.segmentTemplateFormat = model.segmentTemplateFormat;
             this.streamOrder = model.streamOrder;
         } 
 
@@ -157,6 +196,14 @@ public class LiveManifestConfig extends TeaModel {
          */
         public Builder dateTimeInterval(Integer dateTimeInterval) {
             this.dateTimeInterval = dateTimeInterval;
+            return this;
+        }
+
+        /**
+         * ManifestDuration.
+         */
+        public Builder manifestDuration(Integer manifestDuration) {
+            this.manifestDuration = manifestDuration;
             return this;
         }
 
@@ -193,10 +240,26 @@ public class LiveManifestConfig extends TeaModel {
         }
 
         /**
+         * PresentationDelay.
+         */
+        public Builder presentationDelay(Integer presentationDelay) {
+            this.presentationDelay = presentationDelay;
+            return this;
+        }
+
+        /**
          * SegmentCount.
          */
         public Builder segmentCount(Integer segmentCount) {
             this.segmentCount = segmentCount;
+            return this;
+        }
+
+        /**
+         * SegmentTemplateFormat.
+         */
+        public Builder segmentTemplateFormat(String segmentTemplateFormat) {
+            this.segmentTemplateFormat = segmentTemplateFormat;
             return this;
         }
 

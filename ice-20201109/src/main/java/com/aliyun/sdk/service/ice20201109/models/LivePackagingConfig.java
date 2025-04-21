@@ -137,6 +137,9 @@ public class LivePackagingConfig extends TeaModel {
      * <p>LivePackagingConfig</p>
      */
     public static class DrmConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContentId")
+        private String contentId;
+
         @com.aliyun.core.annotation.NameInMap("EncryptionMethod")
         private String encryptionMethod;
 
@@ -153,6 +156,7 @@ public class LivePackagingConfig extends TeaModel {
         private String url;
 
         private DrmConfig(Builder builder) {
+            this.contentId = builder.contentId;
             this.encryptionMethod = builder.encryptionMethod;
             this.iv = builder.iv;
             this.rotatePeriod = builder.rotatePeriod;
@@ -166,6 +170,13 @@ public class LivePackagingConfig extends TeaModel {
 
         public static DrmConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return contentId
+         */
+        public String getContentId() {
+            return this.contentId;
         }
 
         /**
@@ -204,6 +215,7 @@ public class LivePackagingConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private String contentId; 
             private String encryptionMethod; 
             private String iv; 
             private Integer rotatePeriod; 
@@ -214,12 +226,21 @@ public class LivePackagingConfig extends TeaModel {
             } 
 
             private Builder(DrmConfig model) {
+                this.contentId = model.contentId;
                 this.encryptionMethod = model.encryptionMethod;
                 this.iv = model.iv;
                 this.rotatePeriod = model.rotatePeriod;
                 this.systemIds = model.systemIds;
                 this.url = model.url;
             } 
+
+            /**
+             * ContentId.
+             */
+            public Builder contentId(String contentId) {
+                this.contentId = contentId;
+                return this;
+            }
 
             /**
              * EncryptionMethod.
