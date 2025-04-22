@@ -36,6 +36,10 @@ public class SubmitAIImageJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -53,6 +57,14 @@ public class SubmitAIImageJobResponseBody extends TeaModel {
     public static final class Builder {
         private String jobId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitAIImageJobResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the image AI processing job.</p>

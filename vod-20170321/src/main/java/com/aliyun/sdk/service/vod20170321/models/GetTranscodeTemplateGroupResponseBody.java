@@ -36,6 +36,10 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TranscodeTemplateGroup transcodeTemplateGroup; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTranscodeTemplateGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.transcodeTemplateGroup = model.transcodeTemplateGroup;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -314,6 +326,30 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             private String type; 
             private String video; 
             private java.util.List<String> watermarkIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeTemplateList model) {
+                this.audio = model.audio;
+                this.clip = model.clip;
+                this.container = model.container;
+                this.copyrightMark = model.copyrightMark;
+                this.definition = model.definition;
+                this.encryptSetting = model.encryptSetting;
+                this.muxConfig = model.muxConfig;
+                this.packageSetting = model.packageSetting;
+                this.rotate = model.rotate;
+                this.subtitleList = model.subtitleList;
+                this.templateName = model.templateName;
+                this.traceMark = model.traceMark;
+                this.transConfig = model.transConfig;
+                this.transcodeFileRegular = model.transcodeFileRegular;
+                this.transcodeTemplateId = model.transcodeTemplateId;
+                this.type = model.type;
+                this.video = model.video;
+                this.watermarkIds = model.watermarkIds;
+            } 
 
             /**
              * <p>The transcoding configurations of the audio stream. The value is a JSON string.</p>
@@ -668,6 +704,20 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             private String name; 
             private String transcodeTemplateGroupId; 
             private java.util.List<TranscodeTemplateList> transcodeTemplateList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeTemplateGroup model) {
+                this.appId = model.appId;
+                this.creationTime = model.creationTime;
+                this.isDefault = model.isDefault;
+                this.locked = model.locked;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.transcodeTemplateGroupId = model.transcodeTemplateGroupId;
+                this.transcodeTemplateList = model.transcodeTemplateList;
+            } 
 
             /**
              * <p>The ID of the application.</p>

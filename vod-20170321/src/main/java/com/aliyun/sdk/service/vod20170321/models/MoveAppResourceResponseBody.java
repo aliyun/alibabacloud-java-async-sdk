@@ -40,6 +40,10 @@ public class MoveAppResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failedResourceIds
      */
@@ -65,6 +69,15 @@ public class MoveAppResourceResponseBody extends TeaModel {
         private java.util.List<String> failedResourceIds; 
         private java.util.List<String> nonExistResourceIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(MoveAppResourceResponseBody model) {
+            this.failedResourceIds = model.failedResourceIds;
+            this.nonExistResourceIds = model.nonExistResourceIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the resources that failed to be migrated.</p>

@@ -36,6 +36,10 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DNAResult
      */
@@ -53,6 +57,14 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
     public static final class Builder {
         private DNAResult DNAResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMediaDNAResultResponseBody model) {
+            this.DNAResult = model.DNAResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The media fingerprinting results.</p>
@@ -122,6 +134,14 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
         public static final class Builder {
             private String duration; 
             private String start; 
+
+            private Builder() {
+            } 
+
+            private Builder(Duplication model) {
+                this.duration = model.duration;
+                this.start = model.start;
+            } 
 
             /**
              * <p>The duration of the video. Unit: seconds.</p>
@@ -196,6 +216,14 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             private String duration; 
             private String start; 
 
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.duration = model.duration;
+                this.start = model.start;
+            } 
+
             /**
              * <p>The duration of the video. Unit: seconds.</p>
              * 
@@ -268,6 +296,14 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
         public static final class Builder {
             private Duplication duplication; 
             private Input input; 
+
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.duplication = model.duplication;
+                this.input = model.input;
+            } 
 
             /**
              * <p>The start time and duration of the matched video.</p>
@@ -348,6 +384,15 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             private String primaryKey; 
             private String similarity; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoDNA model) {
+                this.detail = model.detail;
+                this.primaryKey = model.primaryKey;
+                this.similarity = model.similarity;
+            } 
+
             /**
              * <p>The details of the matched video. Information such as the location and duration of the video is returned.</p>
              */
@@ -416,6 +461,13 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VideoDNA> videoDNA; 
+
+            private Builder() {
+            } 
+
+            private Builder(DNAResult model) {
+                this.videoDNA = model.videoDNA;
+            } 
 
             /**
              * <p>The video fingerprint recognition result.</p>

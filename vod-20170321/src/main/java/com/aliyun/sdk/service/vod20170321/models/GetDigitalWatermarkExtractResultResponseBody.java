@@ -36,6 +36,10 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aiExtractResultList
      */
@@ -53,6 +57,14 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AiExtractResultList> aiExtractResultList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDigitalWatermarkExtractResultResponseBody model) {
+            this.aiExtractResultList = model.aiExtractResultList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the watermark extraction job.</p>
@@ -170,6 +182,18 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             private String modifyTime; 
             private String status; 
             private String waterMarkText; 
+
+            private Builder() {
+            } 
+
+            private Builder(AiExtractResultList model) {
+                this.createTime = model.createTime;
+                this.errorMessage = model.errorMessage;
+                this.jobId = model.jobId;
+                this.modifyTime = model.modifyTime;
+                this.status = model.status;
+                this.waterMarkText = model.waterMarkText;
+            } 
 
             /**
              * <p>The time when the watermark extraction job was created.</p>

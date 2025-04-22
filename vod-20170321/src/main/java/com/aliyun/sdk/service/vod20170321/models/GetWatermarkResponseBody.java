@@ -36,6 +36,10 @@ public class GetWatermarkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetWatermarkResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private WatermarkInfo watermarkInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWatermarkResponseBody model) {
+            this.requestId = model.requestId;
+            this.watermarkInfo = model.watermarkInfo;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -194,6 +206,20 @@ public class GetWatermarkResponseBody extends TeaModel {
             private String type; 
             private String watermarkConfig; 
             private String watermarkId; 
+
+            private Builder() {
+            } 
+
+            private Builder(WatermarkInfo model) {
+                this.appId = model.appId;
+                this.creationTime = model.creationTime;
+                this.fileUrl = model.fileUrl;
+                this.isDefault = model.isDefault;
+                this.name = model.name;
+                this.type = model.type;
+                this.watermarkConfig = model.watermarkConfig;
+                this.watermarkId = model.watermarkId;
+            } 
 
             /**
              * <p>The ID of the application.</p>

@@ -36,6 +36,10 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaAuditAudioResultDetail
      */
@@ -53,6 +57,14 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
     public static final class Builder {
         private MediaAuditAudioResultDetail mediaAuditAudioResultDetail; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMediaAuditAudioResultDetailResponseBody model) {
+            this.mediaAuditAudioResultDetail = model.mediaAuditAudioResultDetail;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details of review results.</p>
@@ -146,6 +158,16 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             private String label; 
             private Long startTime; 
             private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.endTime = model.endTime;
+                this.label = model.label;
+                this.startTime = model.startTime;
+                this.text = model.text;
+            } 
 
             /**
              * <p>The end time of the audio that failed the review. Unit: seconds.</p>
@@ -262,6 +284,15 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             private java.util.List<List> list; 
             private Integer pageTotal; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaAuditAudioResultDetail model) {
+                this.list = model.list;
+                this.pageTotal = model.pageTotal;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The list of results.</p>

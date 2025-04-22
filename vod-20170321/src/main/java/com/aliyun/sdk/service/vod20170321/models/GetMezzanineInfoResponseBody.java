@@ -36,6 +36,10 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mezzanine
      */
@@ -53,6 +57,14 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
     public static final class Builder {
         private Mezzanine mezzanine; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMezzanineInfoResponseBody model) {
+            this.mezzanine = model.mezzanine;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the source file.</p>
@@ -290,6 +302,28 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             private String sampleRate; 
             private String startTime; 
             private String timebase; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioStreamList model) {
+                this.bitrate = model.bitrate;
+                this.channelLayout = model.channelLayout;
+                this.channels = model.channels;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.duration = model.duration;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.numFrames = model.numFrames;
+                this.sampleFmt = model.sampleFmt;
+                this.sampleRate = model.sampleRate;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+            } 
 
             /**
              * <p>The bitrate.</p>
@@ -785,6 +819,36 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             private String startTime; 
             private String timebase; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoStreamList model) {
+                this.avgFPS = model.avgFPS;
+                this.bitrate = model.bitrate;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.dar = model.dar;
+                this.duration = model.duration;
+                this.fps = model.fps;
+                this.HDRType = model.HDRType;
+                this.hasBFrames = model.hasBFrames;
+                this.height = model.height;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.level = model.level;
+                this.numFrames = model.numFrames;
+                this.pixFmt = model.pixFmt;
+                this.profile = model.profile;
+                this.rotate = model.rotate;
+                this.sar = model.sar;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The average frame rate.</p>
@@ -1292,6 +1356,30 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             private String videoId; 
             private java.util.List<VideoStreamList> videoStreamList; 
             private Long width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Mezzanine model) {
+                this.audioStreamList = model.audioStreamList;
+                this.bitrate = model.bitrate;
+                this.creationTime = model.creationTime;
+                this.duration = model.duration;
+                this.fileName = model.fileName;
+                this.fileURL = model.fileURL;
+                this.fps = model.fps;
+                this.height = model.height;
+                this.outputType = model.outputType;
+                this.preprocessStatus = model.preprocessStatus;
+                this.restoreExpiration = model.restoreExpiration;
+                this.restoreStatus = model.restoreStatus;
+                this.size = model.size;
+                this.status = model.status;
+                this.storageClass = model.storageClass;
+                this.videoId = model.videoId;
+                this.videoStreamList = model.videoStreamList;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The codec time base.</p>

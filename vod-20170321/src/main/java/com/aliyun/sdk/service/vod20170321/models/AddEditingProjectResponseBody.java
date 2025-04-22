@@ -36,6 +36,10 @@ public class AddEditingProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return project
      */
@@ -53,6 +57,14 @@ public class AddEditingProjectResponseBody extends TeaModel {
     public static final class Builder {
         private Project project; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddEditingProjectResponseBody model) {
+            this.project = model.project;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the online editing project. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/52839.html">EditingProject</a>.</p>
@@ -170,6 +182,18 @@ public class AddEditingProjectResponseBody extends TeaModel {
             private String projectId; 
             private String status; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Project model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.modifiedTime = model.modifiedTime;
+                this.projectId = model.projectId;
+                this.status = model.status;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The time when the online editing project was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>

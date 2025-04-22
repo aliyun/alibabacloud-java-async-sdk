@@ -36,6 +36,10 @@ public class GenerateDownloadSecretKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appEncryptKey
      */
@@ -53,6 +57,14 @@ public class GenerateDownloadSecretKeyResponseBody extends TeaModel {
     public static final class Builder {
         private String appEncryptKey; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateDownloadSecretKeyResponseBody model) {
+            this.appEncryptKey = model.appEncryptKey;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The key file for secure download.</p>

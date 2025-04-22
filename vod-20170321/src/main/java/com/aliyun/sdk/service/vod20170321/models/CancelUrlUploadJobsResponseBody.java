@@ -40,6 +40,10 @@ public class CancelUrlUploadJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return canceledJobs
      */
@@ -65,6 +69,15 @@ public class CancelUrlUploadJobsResponseBody extends TeaModel {
         private java.util.List<String> canceledJobs; 
         private java.util.List<String> nonExists; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CancelUrlUploadJobsResponseBody model) {
+            this.canceledJobs = model.canceledJobs;
+            this.nonExists = model.nonExists;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of canceled jobs.</p>

@@ -52,6 +52,10 @@ public class CreateUploadImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileURL
      */
@@ -101,6 +105,18 @@ public class CreateUploadImageResponseBody extends TeaModel {
         private String requestId; 
         private String uploadAddress; 
         private String uploadAuth; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateUploadImageResponseBody model) {
+            this.fileURL = model.fileURL;
+            this.imageId = model.imageId;
+            this.imageURL = model.imageURL;
+            this.requestId = model.requestId;
+            this.uploadAddress = model.uploadAddress;
+            this.uploadAuth = model.uploadAuth;
+        } 
 
         /**
          * <p>The OSS URL of the file. The URL does not contain the information used for URL signing. You can specify FileUrl when you call the <a href="https://help.aliyun.com/document_detail/98617.html">AddWatermark</a> operation.</p>

@@ -36,6 +36,10 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TranscodeTaskList> transcodeTaskList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTranscodeTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.transcodeTaskList = model.transcodeTaskList;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -182,6 +194,19 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             private String transcodeTemplateGroupId; 
             private String trigger; 
             private String videoId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeTaskList model) {
+                this.completeTime = model.completeTime;
+                this.creationTime = model.creationTime;
+                this.taskStatus = model.taskStatus;
+                this.transcodeTaskId = model.transcodeTaskId;
+                this.transcodeTemplateGroupId = model.transcodeTemplateGroupId;
+                this.trigger = model.trigger;
+                this.videoId = model.videoId;
+            } 
 
             /**
              * <p>The time when the transcoding task was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>

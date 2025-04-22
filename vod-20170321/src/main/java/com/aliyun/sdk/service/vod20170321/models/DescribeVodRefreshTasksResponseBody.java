@@ -48,6 +48,10 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         private String requestId; 
         private Tasks tasks; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodRefreshTasksResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -252,6 +267,19 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             private String status; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.objectPath = model.objectPath;
+                this.objectType = model.objectType;
+                this.process = model.process;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * <p>The time when the task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
              * 
@@ -383,6 +411,13 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Task> task; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.task = model.task;
+            } 
 
             /**
              * Task.

@@ -36,6 +36,10 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SecurityIpList> securityIpList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAuditSecurityIpResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityIpList = model.securityIpList;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -146,6 +158,16 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
             private String ips; 
             private String modificationTime; 
             private String securityGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityIpList model) {
+                this.creationTime = model.creationTime;
+                this.ips = model.ips;
+                this.modificationTime = model.modificationTime;
+                this.securityGroupName = model.securityGroupName;
+            } 
 
             /**
              * <p>The time when the review security group was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>

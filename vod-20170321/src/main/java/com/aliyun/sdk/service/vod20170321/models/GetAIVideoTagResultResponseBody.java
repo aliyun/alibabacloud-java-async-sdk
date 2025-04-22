@@ -36,6 +36,10 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private VideoTagResult videoTagResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAIVideoTagResultResponseBody model) {
+            this.requestId = model.requestId;
+            this.videoTagResult = model.videoTagResult;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -110,6 +122,13 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private String tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Category model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * <p>The tag string.</p>
@@ -172,6 +191,14 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         public static final class Builder {
             private String tag; 
             private java.util.List<String> times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Keyword model) {
+                this.tag = model.tag;
+                this.times = model.times;
+            } 
 
             /**
              * <p>The tag string.</p>
@@ -242,6 +269,14 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         public static final class Builder {
             private String tag; 
             private java.util.List<String> times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Location model) {
+                this.tag = model.tag;
+                this.times = model.times;
+            } 
 
             /**
              * <p>The tag string.</p>
@@ -324,6 +359,15 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private String faceUrl; 
             private String tag; 
             private java.util.List<String> times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Person model) {
+                this.faceUrl = model.faceUrl;
+                this.tag = model.tag;
+                this.times = model.times;
+            } 
 
             /**
              * <p>The URL of the profile photo.</p>
@@ -408,6 +452,14 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         public static final class Builder {
             private String tag; 
             private java.util.List<String> times; 
+
+            private Builder() {
+            } 
+
+            private Builder(Time model) {
+                this.tag = model.tag;
+                this.times = model.times;
+            } 
 
             /**
              * <p>The tag string.</p>
@@ -514,6 +566,17 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private java.util.List<Location> location; 
             private java.util.List<Person> person; 
             private java.util.List<Time> time; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoTagResult model) {
+                this.category = model.category;
+                this.keyword = model.keyword;
+                this.location = model.location;
+                this.person = model.person;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The video categories.</p>

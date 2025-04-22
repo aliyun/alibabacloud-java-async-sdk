@@ -36,6 +36,10 @@ public class DeleteTranscodeTemplateGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nonExistTranscodeTemplateIds
      */
@@ -53,6 +57,14 @@ public class DeleteTranscodeTemplateGroupResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> nonExistTranscodeTemplateIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteTranscodeTemplateGroupResponseBody model) {
+            this.nonExistTranscodeTemplateIds = model.nonExistTranscodeTemplateIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of transcoding templates that were not found.</p>

@@ -36,6 +36,10 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainLogDetails
      */
@@ -53,6 +57,14 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
     public static final class Builder {
         private DomainLogDetails domainLogDetails; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodDomainLogResponseBody model) {
+            this.domainLogDetails = model.domainLogDetails;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of CDN logs.</p>
@@ -159,6 +171,17 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             private Long logSize; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogInfoDetail model) {
+                this.endTime = model.endTime;
+                this.logName = model.logName;
+                this.logPath = model.logPath;
+                this.logSize = model.logSize;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
              * 
@@ -253,6 +276,13 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<LogInfoDetail> logInfoDetail; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogInfos model) {
+                this.logInfoDetail = model.logInfoDetail;
+            } 
+
             /**
              * LogInfoDetail.
              */
@@ -323,6 +353,15 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             private Long pageNumber; 
             private Long pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfos model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The page number.</p>
@@ -432,6 +471,16 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             private LogInfos logInfos; 
             private PageInfos pageInfos; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainLogDetail model) {
+                this.domainName = model.domainName;
+                this.logCount = model.logCount;
+                this.logInfos = model.logInfos;
+                this.pageInfos = model.pageInfos;
+            } 
+
             /**
              * <p>The domain name.</p>
              * 
@@ -508,6 +557,13 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DomainLogDetail> domainLogDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainLogDetails model) {
+                this.domainLogDetail = model.domainLogDetail;
+            } 
 
             /**
              * DomainLogDetail.

@@ -44,6 +44,10 @@ public class GetCategoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return category
      */
@@ -77,6 +81,16 @@ public class GetCategoriesResponseBody extends TeaModel {
         private String requestId; 
         private SubCategories subCategories; 
         private Long subTotal; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCategoriesResponseBody model) {
+            this.category = model.category;
+            this.requestId = model.requestId;
+            this.subCategories = model.subCategories;
+            this.subTotal = model.subTotal;
+        } 
 
         /**
          * <p>The information about the category.</p>
@@ -201,6 +215,17 @@ public class GetCategoriesResponseBody extends TeaModel {
             private Long level; 
             private Long parentId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Category model) {
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.level = model.level;
+                this.parentId = model.parentId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the category.</p>
@@ -365,6 +390,18 @@ public class GetCategoriesResponseBody extends TeaModel {
             private Long subTotal; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubCategoriesCategory model) {
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.level = model.level;
+                this.parentId = model.parentId;
+                this.subTotal = model.subTotal;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The ID of the category.</p>
              * 
@@ -478,6 +515,13 @@ public class GetCategoriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SubCategoriesCategory> category; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubCategories model) {
+                this.category = model.category;
+            } 
 
             /**
              * <p>The information about the category.</p>

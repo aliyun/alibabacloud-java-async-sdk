@@ -36,6 +36,10 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaAuditResultDetail
      */
@@ -53,6 +57,14 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
     public static final class Builder {
         private MediaAuditResultDetail mediaAuditResultDetail; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMediaAuditResultDetailResponseBody model) {
+            this.mediaAuditResultDetail = model.mediaAuditResultDetail;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about review results.</p>
@@ -242,6 +254,24 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             private String terrorismScore; 
             private String timestamp; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.adLabel = model.adLabel;
+                this.adScore = model.adScore;
+                this.liveLabel = model.liveLabel;
+                this.liveScore = model.liveScore;
+                this.logoLabel = model.logoLabel;
+                this.logoScore = model.logoScore;
+                this.pornLabel = model.pornLabel;
+                this.pornScore = model.pornScore;
+                this.terrorismLabel = model.terrorismLabel;
+                this.terrorismScore = model.terrorismScore;
+                this.timestamp = model.timestamp;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The category of the review result. Valid values:</p>
@@ -471,6 +501,14 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<List> list; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaAuditResultDetail model) {
+                this.list = model.list;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The review results returned.</p>

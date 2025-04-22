@@ -44,6 +44,10 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return editingData
      */
@@ -77,6 +81,16 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
         private String endTime; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodEditingUsageDataResponseBody model) {
+            this.editingData = model.editingData;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * EditingData.
@@ -183,6 +197,16 @@ public class DescribeVodEditingUsageDataResponseBody extends TeaModel {
             private String region; 
             private String specification; 
             private String timeStamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(EditingData model) {
+                this.duration = model.duration;
+                this.region = model.region;
+                this.specification = model.specification;
+                this.timeStamp = model.timeStamp;
+            } 
 
             /**
              * Duration.

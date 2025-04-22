@@ -60,6 +60,10 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return area
      */
@@ -125,6 +129,20 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         private String startTime; 
         private String type; 
         private UsageDataPerInterval usageDataPerInterval; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodDomainUsageDataResponseBody model) {
+            this.area = model.area;
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.type = model.type;
+            this.usageDataPerInterval = model.usageDataPerInterval;
+        } 
 
         /**
          * <p>The billable region where the data was collected.</p>
@@ -265,6 +283,14 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The timestamp of the returned data. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
              * 
@@ -325,6 +351,13 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsageDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.

@@ -36,6 +36,10 @@ public class UpdateImageInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nonExistImageIds
      */
@@ -53,6 +57,14 @@ public class UpdateImageInfosResponseBody extends TeaModel {
     public static final class Builder {
         private NonExistImageIds nonExistImageIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateImageInfosResponseBody model) {
+            this.nonExistImageIds = model.nonExistImageIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the images that do not exist.</p>
@@ -110,6 +122,13 @@ public class UpdateImageInfosResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> imageId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NonExistImageIds model) {
+                this.imageId = model.imageId;
+            } 
 
             /**
              * ImageId.

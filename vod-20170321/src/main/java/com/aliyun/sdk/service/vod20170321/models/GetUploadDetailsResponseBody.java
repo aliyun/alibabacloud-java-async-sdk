@@ -44,6 +44,10 @@ public class GetUploadDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return forbiddenMediaIds
      */
@@ -77,6 +81,16 @@ public class GetUploadDetailsResponseBody extends TeaModel {
         private java.util.List<String> nonExistMediaIds; 
         private String requestId; 
         private java.util.List<UploadDetails> uploadDetails; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUploadDetailsResponseBody model) {
+            this.forbiddenMediaIds = model.forbiddenMediaIds;
+            this.nonExistMediaIds = model.nonExistMediaIds;
+            this.requestId = model.requestId;
+            this.uploadDetails = model.uploadDetails;
+        } 
 
         /**
          * <p>The IDs of the media files that cannot be accessed.</p>
@@ -294,6 +308,25 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             private Long uploadSize; 
             private String uploadSource; 
             private String uploadStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(UploadDetails model) {
+                this.completionTime = model.completionTime;
+                this.creationTime = model.creationTime;
+                this.deviceModel = model.deviceModel;
+                this.fileSize = model.fileSize;
+                this.mediaId = model.mediaId;
+                this.modificationTime = model.modificationTime;
+                this.status = model.status;
+                this.title = model.title;
+                this.uploadIP = model.uploadIP;
+                this.uploadRatio = model.uploadRatio;
+                this.uploadSize = model.uploadSize;
+                this.uploadSource = model.uploadSource;
+                this.uploadStatus = model.uploadStatus;
+            } 
 
             /**
              * <p>The time when the upload job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>

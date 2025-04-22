@@ -36,6 +36,10 @@ public class SubmitAIJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return AIJobList
      */
@@ -53,6 +57,14 @@ public class SubmitAIJobResponseBody extends TeaModel {
     public static final class Builder {
         private AIJobList AIJobList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitAIJobResponseBody model) {
+            this.AIJobList = model.AIJobList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the AI jobs.</p>
@@ -135,6 +147,15 @@ public class SubmitAIJobResponseBody extends TeaModel {
             private String mediaId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(AIJob model) {
+                this.jobId = model.jobId;
+                this.mediaId = model.mediaId;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The ID of the AI job.</p>
              * 
@@ -210,6 +231,13 @@ public class SubmitAIJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AIJob> AIJob; 
+
+            private Builder() {
+            } 
+
+            private Builder(AIJobList model) {
+                this.AIJob = model.AIJob;
+            } 
 
             /**
              * AIJob.

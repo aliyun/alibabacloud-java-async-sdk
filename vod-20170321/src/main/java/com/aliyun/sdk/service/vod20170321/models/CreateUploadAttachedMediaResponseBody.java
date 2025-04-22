@@ -52,6 +52,10 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileURL
      */
@@ -101,6 +105,18 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
         private String requestId; 
         private String uploadAddress; 
         private String uploadAuth; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateUploadAttachedMediaResponseBody model) {
+            this.fileURL = model.fileURL;
+            this.mediaId = model.mediaId;
+            this.mediaURL = model.mediaURL;
+            this.requestId = model.requestId;
+            this.uploadAddress = model.uploadAddress;
+            this.uploadAuth = model.uploadAuth;
+        } 
 
         /**
          * <p>The URL of the auxiliary media asset file. The URL is an Object Storage Service (OSS) URL and does not contain the information used for URL signing.</p>

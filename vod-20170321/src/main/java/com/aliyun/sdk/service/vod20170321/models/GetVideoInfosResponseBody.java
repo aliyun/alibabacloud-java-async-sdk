@@ -40,6 +40,10 @@ public class GetVideoInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nonExistVideoIds
      */
@@ -65,6 +69,15 @@ public class GetVideoInfosResponseBody extends TeaModel {
         private java.util.List<String> nonExistVideoIds; 
         private String requestId; 
         private java.util.List<VideoList> videoList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVideoInfosResponseBody model) {
+            this.nonExistVideoIds = model.nonExistVideoIds;
+            this.requestId = model.requestId;
+            this.videoList = model.videoList;
+        } 
 
         /**
          * <p>The IDs of the videos that do not exist.</p>
@@ -370,6 +383,33 @@ public class GetVideoInfosResponseBody extends TeaModel {
             private String title; 
             private String userData; 
             private String videoId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoList model) {
+                this.appId = model.appId;
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.coverURL = model.coverURL;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.downloadSwitch = model.downloadSwitch;
+                this.duration = model.duration;
+                this.modificationTime = model.modificationTime;
+                this.restoreExpiration = model.restoreExpiration;
+                this.restoreStatus = model.restoreStatus;
+                this.size = model.size;
+                this.snapshots = model.snapshots;
+                this.status = model.status;
+                this.storageClass = model.storageClass;
+                this.storageLocation = model.storageLocation;
+                this.tags = model.tags;
+                this.templateGroupId = model.templateGroupId;
+                this.title = model.title;
+                this.userData = model.userData;
+                this.videoId = model.videoId;
+            } 
 
             /**
              * <p>The ID of the application.</p>

@@ -36,6 +36,10 @@ public class AddTranscodeTemplateGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class AddTranscodeTemplateGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String transcodeTemplateGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddTranscodeTemplateGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.transcodeTemplateGroupId = model.transcodeTemplateGroupId;
+        } 
 
         /**
          * <p>The request ID.</p>

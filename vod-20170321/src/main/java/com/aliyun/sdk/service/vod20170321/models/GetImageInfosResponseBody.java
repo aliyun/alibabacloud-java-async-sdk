@@ -40,6 +40,10 @@ public class GetImageInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageInfo
      */
@@ -65,6 +69,15 @@ public class GetImageInfosResponseBody extends TeaModel {
         private java.util.List<ImageInfo> imageInfo; 
         private java.util.List<String> nonExistImageIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetImageInfosResponseBody model) {
+            this.imageInfo = model.imageInfo;
+            this.nonExistImageIds = model.nonExistImageIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The image information.</p>
@@ -178,6 +191,17 @@ public class GetImageInfosResponseBody extends TeaModel {
             private Integer height; 
             private String originalFileName; 
             private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Mezzanine model) {
+                this.fileSize = model.fileSize;
+                this.fileURL = model.fileURL;
+                this.height = model.height;
+                this.originalFileName = model.originalFileName;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The size of the file to be uploaded. Unit: bytes.</p>
@@ -416,6 +440,25 @@ public class GetImageInfosResponseBody extends TeaModel {
             private String tags; 
             private String title; 
             private String URL; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageInfo model) {
+                this.appId = model.appId;
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.imageId = model.imageId;
+                this.imageType = model.imageType;
+                this.mezzanine = model.mezzanine;
+                this.status = model.status;
+                this.storageLocation = model.storageLocation;
+                this.tags = model.tags;
+                this.title = model.title;
+                this.URL = model.URL;
+            } 
 
             /**
              * <p>The ID of the application.</p>

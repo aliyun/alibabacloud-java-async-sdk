@@ -36,6 +36,10 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainDetail
      */
@@ -53,6 +57,14 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
     public static final class Builder {
         private DomainDetail domainDetail; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodDomainDetailResponseBody model) {
+            this.domainDetail = model.domainDetail;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The basic information about the domain name for CDN.</p>
@@ -171,6 +183,18 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             private String type; 
             private String weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(Source model) {
+                this.content = model.content;
+                this.enabled = model.enabled;
+                this.port = model.port;
+                this.priority = model.priority;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The address of the origin server.</p>
              * 
@@ -284,6 +308,13 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Source> source; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.source = model.source;
+            } 
 
             /**
              * Source.
@@ -463,6 +494,24 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             private String scope; 
             private Sources sources; 
             private String weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainDetail model) {
+                this.certName = model.certName;
+                this.cname = model.cname;
+                this.description = model.description;
+                this.domainName = model.domainName;
+                this.domainStatus = model.domainStatus;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.SSLProtocol = model.SSLProtocol;
+                this.SSLPub = model.SSLPub;
+                this.scope = model.scope;
+                this.sources = model.sources;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The name of the certificate. The value of this parameter is returned if HTTPS is enabled.</p>

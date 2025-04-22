@@ -52,6 +52,10 @@ public class DescribeVodDomainReqHitRateDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class DescribeVodDomainReqHitRateDataResponseBody extends TeaModel {
         private String endTime; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodDomainReqHitRateDataResponseBody model) {
+            this.data = model.data;
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The request hit rate data at each time interval.</p>
@@ -227,6 +243,15 @@ public class DescribeVodDomainReqHitRateDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.httpsValue = model.httpsValue;
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The HTTPS request hit rate.</p>
              * 
@@ -298,6 +323,13 @@ public class DescribeVodDomainReqHitRateDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.

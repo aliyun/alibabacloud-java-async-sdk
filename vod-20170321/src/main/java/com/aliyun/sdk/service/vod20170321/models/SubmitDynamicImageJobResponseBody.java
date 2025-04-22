@@ -36,6 +36,10 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dynamicImageJob
      */
@@ -53,6 +57,14 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
     public static final class Builder {
         private DynamicImageJob dynamicImageJob; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitDynamicImageJobResponseBody model) {
+            this.dynamicImageJob = model.dynamicImageJob;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the animated image job.</p>
@@ -110,6 +122,13 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String jobId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DynamicImageJob model) {
+                this.jobId = model.jobId;
+            } 
 
             /**
              * <p>The ID of the animated image job.</p>

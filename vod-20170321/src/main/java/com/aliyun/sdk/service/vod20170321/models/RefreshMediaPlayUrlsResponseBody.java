@@ -44,6 +44,10 @@ public class RefreshMediaPlayUrlsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return forbiddenMediaIds
      */
@@ -77,6 +81,16 @@ public class RefreshMediaPlayUrlsResponseBody extends TeaModel {
         private String mediaRefreshJobId; 
         private String nonExistMediaIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefreshMediaPlayUrlsResponseBody model) {
+            this.forbiddenMediaIds = model.forbiddenMediaIds;
+            this.mediaRefreshJobId = model.mediaRefreshJobId;
+            this.nonExistMediaIds = model.nonExistMediaIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the media files that cannot be operated on. In most cases, media files cannot be operated on because you are not authorized to perform the operations. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>

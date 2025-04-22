@@ -40,6 +40,10 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return AIData
      */
@@ -65,6 +69,15 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         private AIData AIData; 
         private String dataInterval; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodAIDataResponseBody model) {
+            this.AIData = model.AIData;
+            this.dataInterval = model.dataInterval;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The statistics on video AI.</p>
@@ -150,6 +163,14 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataItem model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The type of video AI. Valid values:</p>
              * <ul>
@@ -216,6 +237,13 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DataItem> dataItem; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataItem = model.dataItem;
+            } 
+
             /**
              * DataItem.
              */
@@ -275,6 +303,14 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
             private Data data; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(AIDataItem model) {
+                this.data = model.data;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The statistics on video AI of each type.</p>
              */
@@ -332,6 +368,13 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AIDataItem> AIDataItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(AIData model) {
+                this.AIDataItem = model.AIDataItem;
+            } 
 
             /**
              * AIDataItem.

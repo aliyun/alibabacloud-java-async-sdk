@@ -40,6 +40,10 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bpsDataInterval
      */
@@ -65,6 +69,15 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
         private BpsDataInterval bpsDataInterval; 
         private Integer dataInterval; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodDomainBpsDataByLayerResponseBody model) {
+            this.bpsDataInterval = model.bpsDataInterval;
+            this.dataInterval = model.dataInterval;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The bandwidth returned at each time interval. Unit: bit/s.</p>
@@ -158,6 +171,15 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
             private Long trafficValue; 
             private Double value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.timeStamp = model.timeStamp;
+                this.trafficValue = model.trafficValue;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(BpsDataInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.

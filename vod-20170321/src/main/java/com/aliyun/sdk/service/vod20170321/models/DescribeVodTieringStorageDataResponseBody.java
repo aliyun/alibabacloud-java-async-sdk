@@ -36,6 +36,10 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<StorageData> storageData; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodTieringStorageDataResponseBody model) {
+            this.requestId = model.requestId;
+            this.storageData = model.storageData;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -158,6 +170,17 @@ public class DescribeVodTieringStorageDataResponseBody extends TeaModel {
             private String storageClass; 
             private Long storageUtilization; 
             private String timeStamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(StorageData model) {
+                this.lessthanMonthDatasize = model.lessthanMonthDatasize;
+                this.region = model.region;
+                this.storageClass = model.storageClass;
+                this.storageUtilization = model.storageUtilization;
+                this.timeStamp = model.timeStamp;
+            } 
 
             /**
              * <p>The data that is stored less than a month. Unit: bytes.</p>

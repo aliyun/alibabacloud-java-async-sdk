@@ -44,6 +44,10 @@ public class GetAppInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appInfoList
      */
@@ -77,6 +81,16 @@ public class GetAppInfosResponseBody extends TeaModel {
         private String code; 
         private java.util.List<String> nonExistAppIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAppInfosResponseBody model) {
+            this.appInfoList = model.appInfoList;
+            this.code = model.code;
+            this.nonExistAppIds = model.nonExistAppIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of applications.</p>
@@ -237,6 +251,20 @@ public class GetAppInfosResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppInfoList model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.modificationTime = model.modificationTime;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the application.</p>

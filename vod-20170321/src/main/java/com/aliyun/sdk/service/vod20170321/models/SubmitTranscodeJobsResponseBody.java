@@ -40,6 +40,10 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
         private String requestId; 
         private TranscodeJobs transcodeJobs; 
         private String transcodeTaskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitTranscodeJobsResponseBody model) {
+            this.requestId = model.requestId;
+            this.transcodeJobs = model.transcodeJobs;
+            this.transcodeTaskId = model.transcodeTaskId;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -137,6 +150,13 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String jobId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TranscodeJob model) {
+                this.jobId = model.jobId;
+            } 
+
             /**
              * <p>The ID of the transcoding job.</p>
              * <blockquote>
@@ -189,6 +209,13 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TranscodeJob> transcodeJob; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeJobs model) {
+                this.transcodeJob = model.transcodeJob;
+            } 
 
             /**
              * TranscodeJob.

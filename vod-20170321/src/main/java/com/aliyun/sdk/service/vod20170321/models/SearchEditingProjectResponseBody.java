@@ -40,6 +40,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return projectList
      */
@@ -65,6 +69,15 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         private ProjectList projectList; 
         private String requestId; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchEditingProjectResponseBody model) {
+            this.projectList = model.projectList;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The list of online editing projects.</p>
@@ -242,6 +255,22 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             private String storageLocation; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Project model) {
+                this.coverURL = model.coverURL;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.duration = model.duration;
+                this.modifiedTime = model.modifiedTime;
+                this.projectId = model.projectId;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.storageLocation = model.storageLocation;
+                this.title = model.title;
+            } 
+
             /**
              * <p>The thumbnail URL of the online editing project.</p>
              * 
@@ -402,6 +431,13 @@ public class SearchEditingProjectResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Project> project; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectList model) {
+                this.project = model.project;
+            } 
 
             /**
              * Project.

@@ -60,6 +60,10 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bpsDataPerInterval
      */
@@ -125,6 +129,20 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
         private String locationNameEn; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodDomainBpsDataResponseBody model) {
+            this.bpsDataPerInterval = model.bpsDataPerInterval;
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.ispNameEn = model.ispNameEn;
+            this.locationNameEn = model.locationNameEn;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The bandwidth data that is collected for each interval.</p>
@@ -321,6 +339,19 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.domesticValue = model.domesticValue;
+                this.httpsDomesticValue = model.httpsDomesticValue;
+                this.httpsOverseasValue = model.httpsOverseasValue;
+                this.httpsValue = model.httpsValue;
+                this.overseasValue = model.overseasValue;
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The bandwidth in mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.</p>
              * 
@@ -436,6 +467,13 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(BpsDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.

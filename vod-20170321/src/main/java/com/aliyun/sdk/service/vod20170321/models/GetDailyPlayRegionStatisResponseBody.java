@@ -44,6 +44,10 @@ public class GetDailyPlayRegionStatisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dailyPlayRegionStatisList
      */
@@ -77,6 +81,16 @@ public class GetDailyPlayRegionStatisResponseBody extends TeaModel {
         private java.util.List<String> emptyDates; 
         private java.util.List<String> failDates; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDailyPlayRegionStatisResponseBody model) {
+            this.dailyPlayRegionStatisList = model.dailyPlayRegionStatisList;
+            this.emptyDates = model.emptyDates;
+            this.failDates = model.failDates;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DailyPlayRegionStatisList.
@@ -159,6 +173,14 @@ public class GetDailyPlayRegionStatisResponseBody extends TeaModel {
         public static final class Builder {
             private String date; 
             private String fileUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(DailyPlayRegionStatisList model) {
+                this.date = model.date;
+                this.fileUrl = model.fileUrl;
+            } 
 
             /**
              * Date.

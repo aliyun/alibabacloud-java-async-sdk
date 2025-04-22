@@ -40,6 +40,10 @@ public class GetVideoListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class GetVideoListResponseBody extends TeaModel {
         private String requestId; 
         private Integer total; 
         private VideoList videoList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVideoListResponseBody model) {
+            this.requestId = model.requestId;
+            this.total = model.total;
+            this.videoList = model.videoList;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -133,6 +146,13 @@ public class GetVideoListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> snapshot; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.snapshot = model.snapshot;
+            } 
 
             /**
              * Snapshot.
@@ -396,6 +416,31 @@ public class GetVideoListResponseBody extends TeaModel {
             private String title; 
             private String userData; 
             private String videoId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Video model) {
+                this.appId = model.appId;
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.coverURL = model.coverURL;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.duration = model.duration;
+                this.modificationTime = model.modificationTime;
+                this.restoreExpiration = model.restoreExpiration;
+                this.restoreStatus = model.restoreStatus;
+                this.size = model.size;
+                this.snapshots = model.snapshots;
+                this.status = model.status;
+                this.storageClass = model.storageClass;
+                this.storageLocation = model.storageLocation;
+                this.tags = model.tags;
+                this.title = model.title;
+                this.userData = model.userData;
+                this.videoId = model.videoId;
+            } 
 
             /**
              * <p>The ID of the application. Default value: <strong>app-1000000</strong>.</p>
@@ -666,6 +711,13 @@ public class GetVideoListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Video> video; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoList model) {
+                this.video = model.video;
+            } 
 
             /**
              * Video.

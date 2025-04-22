@@ -36,6 +36,10 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private VideoPlayStatisDetails videoPlayStatisDetails; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePlayVideoStatisResponseBody model) {
+            this.requestId = model.requestId;
+            this.videoPlayStatisDetails = model.videoPlayStatisDetails;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -171,6 +183,18 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             private String uv; 
             private String vv; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoPlayStatisDetail model) {
+                this.date = model.date;
+                this.playDuration = model.playDuration;
+                this.playRange = model.playRange;
+                this.title = model.title;
+                this.uv = model.uv;
+                this.vv = model.vv;
+            } 
+
             /**
              * <p>The date. The time follows the ISO 8601 standard in the <em>YYYY-MM-DD</em>T<em>hh:mm:ss</em> format. The time is displayed in UTC.</p>
              * 
@@ -275,6 +299,13 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VideoPlayStatisDetail> videoPlayStatisDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoPlayStatisDetails model) {
+                this.videoPlayStatisDetail = model.videoPlayStatisDetail;
+            } 
 
             /**
              * VideoPlayStatisDetail.

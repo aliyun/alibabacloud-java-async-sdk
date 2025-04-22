@@ -36,6 +36,10 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaRefreshJobs
      */
@@ -53,6 +57,14 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<MediaRefreshJobs> mediaRefreshJobs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMediaRefreshJobsResponseBody model) {
+            this.mediaRefreshJobs = model.mediaRefreshJobs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The media refresh or prefetch jobs.</p>
@@ -242,6 +254,24 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             private String taskIds; 
             private String taskType; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaRefreshJobs model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.filterPolicy = model.filterPolicy;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.mediaId = model.mediaId;
+                this.mediaRefreshJobId = model.mediaRefreshJobId;
+                this.status = model.status;
+                this.successPlayUrls = model.successPlayUrls;
+                this.taskIds = model.taskIds;
+                this.taskType = model.taskType;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The error code. This parameter is returned if the refresh or prefetch task fails.</p>

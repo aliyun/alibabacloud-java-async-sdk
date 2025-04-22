@@ -44,6 +44,10 @@ public class GetAuditHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return histories
      */
@@ -77,6 +81,16 @@ public class GetAuditHistoryResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAuditHistoryResponseBody model) {
+            this.histories = model.histories;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The review records.</p>
@@ -208,6 +222,17 @@ public class GetAuditHistoryResponseBody extends TeaModel {
             private String creationTime; 
             private String reason; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Histories model) {
+                this.auditor = model.auditor;
+                this.comment = model.comment;
+                this.creationTime = model.creationTime;
+                this.reason = model.reason;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The reviewer.</p>

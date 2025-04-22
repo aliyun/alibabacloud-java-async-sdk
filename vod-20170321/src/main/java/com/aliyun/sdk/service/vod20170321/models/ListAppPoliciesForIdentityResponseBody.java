@@ -36,6 +36,10 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appPolicyList
      */
@@ -53,6 +57,14 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AppPolicyList> appPolicyList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAppPoliciesForIdentityResponseBody model) {
+            this.appPolicyList = model.appPolicyList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of each policy.</p>
@@ -185,6 +197,19 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             private String policyName; 
             private String policyType; 
             private String policyValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppPolicyList model) {
+                this.appId = model.appId;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.modificationTime = model.modificationTime;
+                this.policyName = model.policyName;
+                this.policyType = model.policyType;
+                this.policyValue = model.policyValue;
+            } 
 
             /**
              * <p>The ID of the application.</p>

@@ -44,6 +44,10 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return forbiddenList
      */
@@ -77,6 +81,16 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
         private IgnoredList ignoredList; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateMediaStorageClassResponseBody model) {
+            this.forbiddenList = model.forbiddenList;
+            this.ignoredList = model.ignoredList;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The IDs of the media assets that failed to be processed.</p>
@@ -170,6 +184,14 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
             private String mediaId; 
             private String reason; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediaForbiddenReasonDTO model) {
+                this.mediaId = model.mediaId;
+                this.reason = model.reason;
+            } 
+
             /**
              * <p>The ID of the media asset.</p>
              * 
@@ -231,6 +253,13 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<MediaForbiddenReasonDTO> mediaForbiddenReasonDTO; 
 
+            private Builder() {
+            } 
+
+            private Builder(ForbiddenList model) {
+                this.mediaForbiddenReasonDTO = model.mediaForbiddenReasonDTO;
+            } 
+
             /**
              * MediaForbiddenReasonDTO.
              */
@@ -277,6 +306,13 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> mediaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(IgnoredList model) {
+                this.mediaId = model.mediaId;
+            } 
 
             /**
              * <p>The ID of the media asset.</p>

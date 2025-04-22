@@ -36,6 +36,10 @@ public class ListDynamicImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dynamicImageList
      */
@@ -53,6 +57,14 @@ public class ListDynamicImageResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DynamicImageList> dynamicImageList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDynamicImageResponseBody model) {
+            this.dynamicImageList = model.dynamicImageList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of animated stickers.</p>
@@ -230,6 +242,23 @@ public class ListDynamicImageResponseBody extends TeaModel {
             private String jobId; 
             private String videoId; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(DynamicImageList model) {
+                this.creationTime = model.creationTime;
+                this.duration = model.duration;
+                this.dynamicImageId = model.dynamicImageId;
+                this.fileSize = model.fileSize;
+                this.fileURL = model.fileURL;
+                this.format = model.format;
+                this.fps = model.fps;
+                this.height = model.height;
+                this.jobId = model.jobId;
+                this.videoId = model.videoId;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The time when the animated sticker was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>

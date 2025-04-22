@@ -36,6 +36,10 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificateListModel
      */
@@ -53,6 +57,14 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
     public static final class Builder {
         private CertificateListModel certificateListModel; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodCertificateListResponseBody model) {
+            this.certificateListModel = model.certificateListModel;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about each certificate.</p>
@@ -255,6 +267,25 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             private Long lastTime; 
             private String signAlgorithm; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cert model) {
+                this.algorithm = model.algorithm;
+                this.certId = model.certId;
+                this.certIdentifier = model.certIdentifier;
+                this.certName = model.certName;
+                this.common = model.common;
+                this.createTime = model.createTime;
+                this.domainMatchCert = model.domainMatchCert;
+                this.endTime = model.endTime;
+                this.fingerprint = model.fingerprint;
+                this.instanceId = model.instanceId;
+                this.issuer = model.issuer;
+                this.lastTime = model.lastTime;
+                this.signAlgorithm = model.signAlgorithm;
+            } 
+
             /**
              * <p>The algorithm.</p>
              * 
@@ -437,6 +468,13 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Cert> cert; 
 
+            private Builder() {
+            } 
+
+            private Builder(CertList model) {
+                this.cert = model.cert;
+            } 
+
             /**
              * Cert.
              */
@@ -495,6 +533,14 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         public static final class Builder {
             private CertList certList; 
             private Integer count; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertificateListModel model) {
+                this.certList = model.certList;
+                this.count = model.count;
+            } 
 
             /**
              * <p>The list of certificates.</p>

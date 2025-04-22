@@ -36,6 +36,10 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
     public static final class Builder {
         private String requestId; 
         private java.util.List<RetrievalData> retrievalData; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodTieringStorageRetrievalDataResponseBody model) {
+            this.requestId = model.requestId;
+            this.retrievalData = model.retrievalData;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -182,6 +194,19 @@ public class DescribeVodTieringStorageRetrievalDataResponseBody extends TeaModel
             private Long retrievalData; 
             private String storageClass; 
             private String timeStamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetrievalData model) {
+                this.CABulkRetrievalData = model.CABulkRetrievalData;
+                this.CAHighPriorRetrievalData = model.CAHighPriorRetrievalData;
+                this.CAStdRetrievalData = model.CAStdRetrievalData;
+                this.region = model.region;
+                this.retrievalData = model.retrievalData;
+                this.storageClass = model.storageClass;
+                this.timeStamp = model.timeStamp;
+            } 
 
             /**
              * <p>The retrieved Cold Archive data in the bulk mode.</p>

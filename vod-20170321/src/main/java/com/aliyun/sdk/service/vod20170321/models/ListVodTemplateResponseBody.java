@@ -36,6 +36,10 @@ public class ListVodTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListVodTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<VodTemplateInfoList> vodTemplateInfoList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVodTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.vodTemplateInfoList = model.vodTemplateInfoList;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -194,6 +206,20 @@ public class ListVodTemplateResponseBody extends TeaModel {
             private String templateConfig; 
             private String templateType; 
             private String vodTemplateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VodTemplateInfoList model) {
+                this.appId = model.appId;
+                this.creationTime = model.creationTime;
+                this.isDefault = model.isDefault;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.templateConfig = model.templateConfig;
+                this.templateType = model.templateType;
+                this.vodTemplateId = model.vodTemplateId;
+            } 
 
             /**
              * <p>The ID of the application.</p>

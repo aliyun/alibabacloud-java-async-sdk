@@ -44,6 +44,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nonExistJobIds
      */
@@ -77,6 +81,16 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<TranscodeJobInfoList> transcodeJobInfoList; 
         private TranscodeTask transcodeTask; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTranscodeTaskResponseBody model) {
+            this.nonExistJobIds = model.nonExistJobIds;
+            this.requestId = model.requestId;
+            this.transcodeJobInfoList = model.transcodeJobInfoList;
+            this.transcodeTask = model.transcodeTask;
+        } 
 
         /**
          * <p>The nonexistent job ID.</p>
@@ -294,6 +308,25 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             private String videoStreamList; 
             private java.util.List<String> watermarkIdList; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputFile model) {
+                this.audioStreamList = model.audioStreamList;
+                this.bitrate = model.bitrate;
+                this.duration = model.duration;
+                this.encryption = model.encryption;
+                this.filesize = model.filesize;
+                this.format = model.format;
+                this.fps = model.fps;
+                this.height = model.height;
+                this.outputFileUrl = model.outputFileUrl;
+                this.subtitleStreamList = model.subtitleStreamList;
+                this.videoStreamList = model.videoStreamList;
+                this.watermarkIdList = model.watermarkIdList;
+                this.width = model.width;
+            } 
 
             /**
              * <p>List of audio streams.</p>
@@ -609,6 +642,24 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             private String transcodeJobStatus; 
             private Long transcodeProgress; 
             private String transcodeTemplateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeJobInfoList model) {
+                this.completeTime = model.completeTime;
+                this.creationTime = model.creationTime;
+                this.definition = model.definition;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.inputFileUrl = model.inputFileUrl;
+                this.outputFile = model.outputFile;
+                this.priority = model.priority;
+                this.transcodeJobId = model.transcodeJobId;
+                this.transcodeJobStatus = model.transcodeJobStatus;
+                this.transcodeProgress = model.transcodeProgress;
+                this.transcodeTemplateId = model.transcodeTemplateId;
+            } 
 
             /**
              * <p>The complete time of the transcoding job. The format is yyyy-MM-dd&quot;T&quot;HH:mm:ssZ (UTC time).</p>
@@ -939,6 +990,25 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             private java.util.List<String> watermarkIdList; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(TranscodeJobInfoListOutputFile model) {
+                this.audioStreamList = model.audioStreamList;
+                this.bitrate = model.bitrate;
+                this.duration = model.duration;
+                this.encryption = model.encryption;
+                this.filesize = model.filesize;
+                this.format = model.format;
+                this.fps = model.fps;
+                this.height = model.height;
+                this.outputFileUrl = model.outputFileUrl;
+                this.subtitleStreamList = model.subtitleStreamList;
+                this.videoStreamList = model.videoStreamList;
+                this.watermarkIdList = model.watermarkIdList;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The audio streams.</p>
              * 
@@ -1254,6 +1324,24 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             private Long transcodeProgress; 
             private String transcodeTemplateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TranscodeTaskTranscodeJobInfoList model) {
+                this.completeTime = model.completeTime;
+                this.creationTime = model.creationTime;
+                this.definition = model.definition;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.inputFileUrl = model.inputFileUrl;
+                this.outputFile = model.outputFile;
+                this.priority = model.priority;
+                this.transcodeJobId = model.transcodeJobId;
+                this.transcodeJobStatus = model.transcodeJobStatus;
+                this.transcodeProgress = model.transcodeProgress;
+                this.transcodeTemplateId = model.transcodeTemplateId;
+            } 
+
             /**
              * <p>The time when the transcoding job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
              * 
@@ -1525,6 +1613,20 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             private String transcodeTemplateGroupId; 
             private String trigger; 
             private String videoId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeTask model) {
+                this.completeTime = model.completeTime;
+                this.creationTime = model.creationTime;
+                this.taskStatus = model.taskStatus;
+                this.transcodeJobInfoList = model.transcodeJobInfoList;
+                this.transcodeTaskId = model.transcodeTaskId;
+                this.transcodeTemplateGroupId = model.transcodeTemplateGroupId;
+                this.trigger = model.trigger;
+                this.videoId = model.videoId;
+            } 
 
             /**
              * <p>The time when the transcoding task was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>

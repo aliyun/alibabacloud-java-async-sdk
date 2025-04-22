@@ -36,6 +36,10 @@ public class GetImageInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageInfo
      */
@@ -53,6 +57,14 @@ public class GetImageInfoResponseBody extends TeaModel {
     public static final class Builder {
         private ImageInfo imageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetImageInfoResponseBody model) {
+            this.imageInfo = model.imageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the image.</p>
@@ -158,6 +170,17 @@ public class GetImageInfoResponseBody extends TeaModel {
             private Integer height; 
             private String originalFileName; 
             private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Mezzanine model) {
+                this.fileSize = model.fileSize;
+                this.fileURL = model.fileURL;
+                this.height = model.height;
+                this.originalFileName = model.originalFileName;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The size of the image. Unit: bytes.</p>
@@ -396,6 +419,25 @@ public class GetImageInfoResponseBody extends TeaModel {
             private String tags; 
             private String title; 
             private String URL; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageInfo model) {
+                this.appId = model.appId;
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.imageId = model.imageId;
+                this.imageType = model.imageType;
+                this.mezzanine = model.mezzanine;
+                this.status = model.status;
+                this.storageLocation = model.storageLocation;
+                this.tags = model.tags;
+                this.title = model.title;
+                this.URL = model.URL;
+            } 
 
             /**
              * <p>The ID of the application.</p>

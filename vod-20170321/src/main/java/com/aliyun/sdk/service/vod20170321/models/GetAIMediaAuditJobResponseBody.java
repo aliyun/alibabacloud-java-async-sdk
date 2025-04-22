@@ -36,6 +36,10 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaAuditJob
      */
@@ -53,6 +57,14 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     public static final class Builder {
         private MediaAuditJob mediaAuditJob; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAIMediaAuditJobResponseBody model) {
+            this.mediaAuditJob = model.mediaAuditJob;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the intelligent review job.</p>
@@ -146,6 +158,16 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String scene; 
             private String score; 
             private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioResult model) {
+                this.label = model.label;
+                this.scene = model.scene;
+                this.score = model.score;
+                this.suggestion = model.suggestion;
+            } 
 
             /**
              * <p>The category of the review result.</p>
@@ -282,6 +304,16 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String scene; 
             private String score; 
             private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.label = model.label;
+                this.scene = model.scene;
+                this.score = model.score;
+                this.suggestion = model.suggestion;
+            } 
 
             /**
              * <p>The category of the review result.</p>
@@ -477,6 +509,17 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String type; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageResult model) {
+                this.label = model.label;
+                this.result = model.result;
+                this.suggestion = model.suggestion;
+                this.type = model.type;
+                this.url = model.url;
+            } 
+
             /**
              * <p>The categories of the image review results. Multiple values are separated by commas (,). Valid values:</p>
              * <ul>
@@ -641,6 +684,18 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String suggestion; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextResult model) {
+                this.content = model.content;
+                this.label = model.label;
+                this.scene = model.scene;
+                this.score = model.score;
+                this.suggestion = model.suggestion;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The text content.</p>
              * 
@@ -772,6 +827,14 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private Integer count; 
             private String label; 
 
+            private Builder() {
+            } 
+
+            private Builder(CounterList model) {
+                this.count = model.count;
+                this.label = model.label;
+            } 
+
             /**
              * <p>The number of video snapshots.</p>
              * 
@@ -881,6 +944,16 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String score; 
             private String timestamp; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopList model) {
+                this.label = model.label;
+                this.score = model.score;
+                this.timestamp = model.timestamp;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The categories of the ad review results. Valid values:</p>
@@ -1038,6 +1111,18 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String suggestion; 
             private java.util.List<TopList> topList; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdResult model) {
+                this.averageScore = model.averageScore;
+                this.counterList = model.counterList;
+                this.label = model.label;
+                this.maxScore = model.maxScore;
+                this.suggestion = model.suggestion;
+                this.topList = model.topList;
+            } 
+
             /**
              * <p>The average score of the review results.</p>
              * 
@@ -1167,6 +1252,14 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private Integer count; 
             private String label; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveResultCounterList model) {
+                this.count = model.count;
+                this.label = model.label;
+            } 
+
             /**
              * <p>The number of video snapshots.</p>
              * 
@@ -1270,6 +1363,16 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String score; 
             private String timestamp; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(LiveResultTopList model) {
+                this.label = model.label;
+                this.score = model.score;
+                this.timestamp = model.timestamp;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The category of the review result. Valid values:</p>
@@ -1421,6 +1524,18 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String suggestion; 
             private java.util.List<LiveResultTopList> topList; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveResult model) {
+                this.averageScore = model.averageScore;
+                this.counterList = model.counterList;
+                this.label = model.label;
+                this.maxScore = model.maxScore;
+                this.suggestion = model.suggestion;
+                this.topList = model.topList;
+            } 
+
             /**
              * <p>The average score of the review results.</p>
              * 
@@ -1544,6 +1659,14 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private Integer count; 
             private String label; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogoResultCounterList model) {
+                this.count = model.count;
+                this.label = model.label;
+            } 
+
             /**
              * <p>The number of video snapshots.</p>
              * 
@@ -1645,6 +1768,16 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String score; 
             private String timestamp; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogoResultTopList model) {
+                this.label = model.label;
+                this.score = model.score;
+                this.timestamp = model.timestamp;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The category of the review result. Valid values:</p>
@@ -1794,6 +1927,18 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String suggestion; 
             private java.util.List<LogoResultTopList> topList; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogoResult model) {
+                this.averageScore = model.averageScore;
+                this.counterList = model.counterList;
+                this.label = model.label;
+                this.maxScore = model.maxScore;
+                this.suggestion = model.suggestion;
+                this.topList = model.topList;
+            } 
+
             /**
              * <p>The average score of the snapshots in the category indicated by Label.</p>
              * 
@@ -1915,6 +2060,14 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private Integer count; 
             private String label; 
 
+            private Builder() {
+            } 
+
+            private Builder(PornResultCounterList model) {
+                this.count = model.count;
+                this.label = model.label;
+            } 
+
             /**
              * <p>The number of video snapshots.</p>
              * 
@@ -2016,6 +2169,16 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String score; 
             private String timestamp; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(PornResultTopList model) {
+                this.label = model.label;
+                this.score = model.score;
+                this.timestamp = model.timestamp;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The results of pornographic content review. Valid values:</p>
@@ -2165,6 +2328,18 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String suggestion; 
             private java.util.List<PornResultTopList> topList; 
 
+            private Builder() {
+            } 
+
+            private Builder(PornResult model) {
+                this.averageScore = model.averageScore;
+                this.counterList = model.counterList;
+                this.label = model.label;
+                this.maxScore = model.maxScore;
+                this.suggestion = model.suggestion;
+                this.topList = model.topList;
+            } 
+
             /**
              * <p>The average score of the snapshots of the category that is indicated by Label. Valid values: <code>[0, 100]</code>. The value is accurate to 10 decimal places. The score is representative of the confidence.</p>
              * 
@@ -2286,6 +2461,14 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private Integer count; 
             private String label; 
 
+            private Builder() {
+            } 
+
+            private Builder(TerrorismResultCounterList model) {
+                this.count = model.count;
+                this.label = model.label;
+            } 
+
             /**
              * <p>The number of video snapshots.</p>
              * 
@@ -2398,6 +2581,16 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String score; 
             private String timestamp; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(TerrorismResultTopList model) {
+                this.label = model.label;
+                this.score = model.score;
+                this.timestamp = model.timestamp;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The results of terrorist content review. Valid values:</p>
@@ -2557,6 +2750,18 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String maxScore; 
             private String suggestion; 
             private java.util.List<TerrorismResultTopList> topList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TerrorismResult model) {
+                this.averageScore = model.averageScore;
+                this.counterList = model.counterList;
+                this.label = model.label;
+                this.maxScore = model.maxScore;
+                this.suggestion = model.suggestion;
+                this.topList = model.topList;
+            } 
 
             /**
              * <p>The average score of the snapshots of the category that is indicated by Label. Valid values: <code>[0, 100]</code>. The value is accurate to 10 decimal places. The score is representative of the confidence.</p>
@@ -2750,6 +2955,19 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String suggestion; 
             private TerrorismResult terrorismResult; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoResult model) {
+                this.adResult = model.adResult;
+                this.label = model.label;
+                this.liveResult = model.liveResult;
+                this.logoResult = model.logoResult;
+                this.pornResult = model.pornResult;
+                this.suggestion = model.suggestion;
+                this.terrorismResult = model.terrorismResult;
+            } 
+
             /**
              * <p>The results of ad review.</p>
              */
@@ -2935,6 +3153,19 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String suggestion; 
             private java.util.List<TextResult> textResult; 
             private VideoResult videoResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.abnormalModules = model.abnormalModules;
+                this.audioResult = model.audioResult;
+                this.imageResult = model.imageResult;
+                this.label = model.label;
+                this.suggestion = model.suggestion;
+                this.textResult = model.textResult;
+                this.videoResult = model.videoResult;
+            } 
 
             /**
              * <p>The content that violates the regulations. Separate multiple values with commas (,). Valid values:</p>
@@ -3154,6 +3385,21 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String message; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaAuditJob model) {
+                this.code = model.code;
+                this.completeTime = model.completeTime;
+                this.creationTime = model.creationTime;
+                this.data = model.data;
+                this.jobId = model.jobId;
+                this.mediaId = model.mediaId;
+                this.message = model.message;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The error code. This parameter is returned if the value of Status is fail.</p>

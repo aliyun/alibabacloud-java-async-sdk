@@ -40,6 +40,10 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attachedMediaList
      */
@@ -65,6 +69,15 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         private java.util.List<AttachedMediaList> attachedMediaList; 
         private java.util.List<String> nonExistMediaIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAttachedMediaInfoResponseBody model) {
+            this.attachedMediaList = model.attachedMediaList;
+            this.nonExistMediaIds = model.nonExistMediaIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the media assets.</p>
@@ -166,6 +179,16 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             private String cateName; 
             private Long level; 
             private Long parentId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Categories model) {
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.level = model.level;
+                this.parentId = model.parentId;
+            } 
 
             /**
              * <p>The ID of the category.</p>
@@ -381,6 +404,24 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             private String title; 
             private String type; 
             private String URL; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttachedMediaList model) {
+                this.appId = model.appId;
+                this.categories = model.categories;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.mediaId = model.mediaId;
+                this.modificationTime = model.modificationTime;
+                this.status = model.status;
+                this.storageLocation = model.storageLocation;
+                this.tags = model.tags;
+                this.title = model.title;
+                this.type = model.type;
+                this.URL = model.URL;
+            } 
 
             /**
              * <p>The ID of the application.</p>

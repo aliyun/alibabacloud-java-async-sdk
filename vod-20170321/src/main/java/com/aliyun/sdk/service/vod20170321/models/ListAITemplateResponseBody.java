@@ -36,6 +36,10 @@ public class ListAITemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListAITemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TemplateInfoList> templateInfoList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAITemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.templateInfoList = model.templateInfoList;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -194,6 +206,20 @@ public class ListAITemplateResponseBody extends TeaModel {
             private String templateId; 
             private String templateName; 
             private String templateType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateInfoList model) {
+                this.creationTime = model.creationTime;
+                this.isDefault = model.isDefault;
+                this.modifyTime = model.modifyTime;
+                this.source = model.source;
+                this.templateConfig = model.templateConfig;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateType = model.templateType;
+            } 
 
             /**
              * <p>The time when the AI template was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>

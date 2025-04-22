@@ -36,6 +36,10 @@ public class RefreshVodObjectCachesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return refreshTaskId
      */
@@ -53,6 +57,14 @@ public class RefreshVodObjectCachesResponseBody extends TeaModel {
     public static final class Builder {
         private String refreshTaskId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefreshVodObjectCachesResponseBody model) {
+            this.refreshTaskId = model.refreshTaskId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the refresh task. Multiple IDs are separated by commas (,). Refresh tasks are merged based on the following rules:</p>

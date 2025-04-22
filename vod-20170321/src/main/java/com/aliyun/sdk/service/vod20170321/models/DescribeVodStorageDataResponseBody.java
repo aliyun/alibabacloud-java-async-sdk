@@ -40,6 +40,10 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -65,6 +69,15 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
         private String dataInterval; 
         private String requestId; 
         private StorageData storageData; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodStorageDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.requestId = model.requestId;
+            this.storageData = model.storageData;
+        } 
 
         /**
          * <p>The time granularity at which the data was queried. Valid values:</p>
@@ -162,6 +175,15 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
             private String storageUtilization; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(StorageDataItem model) {
+                this.networkOut = model.networkOut;
+                this.storageUtilization = model.storageUtilization;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The outbound traffic. Unit: bytes. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration.</p>
              * 
@@ -233,6 +255,13 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<StorageDataItem> storageDataItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(StorageData model) {
+                this.storageDataItem = model.storageDataItem;
+            } 
 
             /**
              * StorageDataItem.

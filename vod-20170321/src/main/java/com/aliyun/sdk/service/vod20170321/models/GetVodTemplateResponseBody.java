@@ -36,6 +36,10 @@ public class GetVodTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetVodTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private VodTemplateInfo vodTemplateInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVodTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.vodTemplateInfo = model.vodTemplateInfo;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -182,6 +194,19 @@ public class GetVodTemplateResponseBody extends TeaModel {
             private String templateConfig; 
             private String templateType; 
             private String vodTemplateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VodTemplateInfo model) {
+                this.creationTime = model.creationTime;
+                this.isDefault = model.isDefault;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.templateConfig = model.templateConfig;
+                this.templateType = model.templateType;
+                this.vodTemplateId = model.vodTemplateId;
+            } 
 
             /**
              * <p>The time when the template was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>

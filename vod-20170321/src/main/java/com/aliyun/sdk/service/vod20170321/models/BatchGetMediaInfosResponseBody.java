@@ -44,6 +44,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return forbiddenMediaIds
      */
@@ -77,6 +81,16 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         private java.util.List<MediaInfos> mediaInfos; 
         private java.util.List<String> nonExistMediaIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchGetMediaInfosResponseBody model) {
+            this.forbiddenMediaIds = model.forbiddenMediaIds;
+            this.mediaInfos = model.mediaInfos;
+            this.nonExistMediaIds = model.nonExistMediaIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the media assets that do not support the operation typically because you are not authorized to perform the operation. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
@@ -366,6 +380,31 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             private String templateGroupId; 
             private String title; 
             private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaInfo model) {
+                this.appId = model.appId;
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.coverURL = model.coverURL;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.downloadSwitch = model.downloadSwitch;
+                this.mediaId = model.mediaId;
+                this.modificationTime = model.modificationTime;
+                this.restoreExpiration = model.restoreExpiration;
+                this.restoreStatus = model.restoreStatus;
+                this.snapshots = model.snapshots;
+                this.status = model.status;
+                this.storageClass = model.storageClass;
+                this.storageLocation = model.storageLocation;
+                this.tags = model.tags;
+                this.templateGroupId = model.templateGroupId;
+                this.title = model.title;
+                this.userData = model.userData;
+            } 
 
             /**
              * <p>The ID of the application.</p>
@@ -820,6 +859,28 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             private String sampleRate; 
             private String startTime; 
             private String timebase; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioStreamList model) {
+                this.bitrate = model.bitrate;
+                this.channelLayout = model.channelLayout;
+                this.channels = model.channels;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.duration = model.duration;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.numFrames = model.numFrames;
+                this.sampleFmt = model.sampleFmt;
+                this.sampleRate = model.sampleRate;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+            } 
 
             /**
              * <p>The bitrate.</p>
@@ -1316,6 +1377,36 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             private String timebase; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoStreamList model) {
+                this.avgFPS = model.avgFPS;
+                this.bitrate = model.bitrate;
+                this.codecLongName = model.codecLongName;
+                this.codecName = model.codecName;
+                this.codecTag = model.codecTag;
+                this.codecTagString = model.codecTagString;
+                this.codecTimeBase = model.codecTimeBase;
+                this.dar = model.dar;
+                this.duration = model.duration;
+                this.fps = model.fps;
+                this.HDRType = model.HDRType;
+                this.hasBFrames = model.hasBFrames;
+                this.height = model.height;
+                this.index = model.index;
+                this.lang = model.lang;
+                this.level = model.level;
+                this.numFrames = model.numFrames;
+                this.pixFmt = model.pixFmt;
+                this.profile = model.profile;
+                this.rotate = model.rotate;
+                this.sar = model.sar;
+                this.startTime = model.startTime;
+                this.timebase = model.timebase;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The average frame rate.</p>
              * 
@@ -1762,6 +1853,25 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             private String status; 
             private java.util.List<VideoStreamList> videoStreamList; 
             private Long width; 
+
+            private Builder() {
+            } 
+
+            private Builder(MezzanineInfo model) {
+                this.audioStreamList = model.audioStreamList;
+                this.bitrate = model.bitrate;
+                this.creationTime = model.creationTime;
+                this.duration = model.duration;
+                this.fileName = model.fileName;
+                this.fileURL = model.fileURL;
+                this.fps = model.fps;
+                this.height = model.height;
+                this.mediaId = model.mediaId;
+                this.size = model.size;
+                this.status = model.status;
+                this.videoStreamList = model.videoStreamList;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The information about the audio stream.</p>
@@ -2257,6 +2367,39 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             private String watermarkId; 
             private Long width; 
 
+            private Builder() {
+            } 
+
+            private Builder(PlayInfoList model) {
+                this.bitDepth = model.bitDepth;
+                this.bitrate = model.bitrate;
+                this.codecName = model.codecName;
+                this.creationTime = model.creationTime;
+                this.definition = model.definition;
+                this.duration = model.duration;
+                this.encrypt = model.encrypt;
+                this.encryptMode = model.encryptMode;
+                this.encryptType = model.encryptType;
+                this.format = model.format;
+                this.fps = model.fps;
+                this.HDRType = model.HDRType;
+                this.height = model.height;
+                this.jobExt = model.jobExt;
+                this.jobId = model.jobId;
+                this.jobType = model.jobType;
+                this.modificationTime = model.modificationTime;
+                this.narrowBandType = model.narrowBandType;
+                this.playURL = model.playURL;
+                this.size = model.size;
+                this.specification = model.specification;
+                this.status = model.status;
+                this.streamType = model.streamType;
+                this.templateGroupId = model.templateGroupId;
+                this.templateId = model.templateId;
+                this.watermarkId = model.watermarkId;
+                this.width = model.width;
+            } 
+
             /**
              * <p>The color depth. This value is an integer.</p>
              * 
@@ -2679,6 +2822,16 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             private MediaInfo mediaInfo; 
             private MezzanineInfo mezzanineInfo; 
             private java.util.List<PlayInfoList> playInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaInfos model) {
+                this.mediaId = model.mediaId;
+                this.mediaInfo = model.mediaInfo;
+                this.mezzanineInfo = model.mezzanineInfo;
+                this.playInfoList = model.playInfoList;
+            } 
 
             /**
              * <p>The ID of the media asset.</p>

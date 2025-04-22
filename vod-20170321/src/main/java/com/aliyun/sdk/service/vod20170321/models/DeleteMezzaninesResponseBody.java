@@ -40,6 +40,10 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nonExistVideoIds
      */
@@ -65,6 +69,15 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
         private java.util.List<String> nonExistVideoIds; 
         private String requestId; 
         private java.util.List<String> unRemoveableVideoIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteMezzaninesResponseBody model) {
+            this.nonExistVideoIds = model.nonExistVideoIds;
+            this.requestId = model.requestId;
+            this.unRemoveableVideoIds = model.unRemoveableVideoIds;
+        } 
 
         /**
          * <p>The IDs of the audio or video files that do not exist.</p>

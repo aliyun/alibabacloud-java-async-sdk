@@ -36,6 +36,10 @@ public class UpdateAttachedMediaInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nonExistMediaIds
      */
@@ -53,6 +57,14 @@ public class UpdateAttachedMediaInfosResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> nonExistMediaIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateAttachedMediaInfosResponseBody model) {
+            this.nonExistMediaIds = model.nonExistMediaIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the auxiliary media assets that do not exist.</p>

@@ -44,6 +44,10 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
         private String uploadAddress; 
         private String uploadAuth; 
         private String videoId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefreshUploadVideoResponseBody model) {
+            this.requestId = model.requestId;
+            this.uploadAddress = model.uploadAddress;
+            this.uploadAuth = model.uploadAuth;
+            this.videoId = model.videoId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

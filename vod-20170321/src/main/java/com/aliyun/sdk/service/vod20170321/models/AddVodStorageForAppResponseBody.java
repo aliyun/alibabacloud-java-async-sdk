@@ -36,6 +36,10 @@ public class AddVodStorageForAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class AddVodStorageForAppResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String storageLocation; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddVodStorageForAppResponseBody model) {
+            this.requestId = model.requestId;
+            this.storageLocation = model.storageLocation;
+        } 
 
         /**
          * <p>The ID of the request.</p>

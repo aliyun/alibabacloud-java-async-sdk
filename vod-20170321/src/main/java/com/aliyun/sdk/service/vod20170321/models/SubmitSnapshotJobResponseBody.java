@@ -36,6 +36,10 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SnapshotJob snapshotJob; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitSnapshotJobResponseBody model) {
+            this.requestId = model.requestId;
+            this.snapshotJob = model.snapshotJob;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -110,6 +122,13 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String jobId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnapshotJob model) {
+                this.jobId = model.jobId;
+            } 
 
             /**
              * <p>The ID of the snapshot job.</p>

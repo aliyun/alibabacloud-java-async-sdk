@@ -36,6 +36,10 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaAuditResultTimeline
      */
@@ -53,6 +57,14 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
     public static final class Builder {
         private MediaAuditResultTimeline mediaAuditResultTimeline; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMediaAuditResultTimelineResponseBody model) {
+            this.mediaAuditResultTimeline = model.mediaAuditResultTimeline;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The collection of review result timelines.</p>
@@ -134,6 +146,15 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private String label; 
             private String score; 
             private String timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ad model) {
+                this.label = model.label;
+                this.score = model.score;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The category of the review result. Valid values:</p>
@@ -244,6 +265,15 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private String score; 
             private String timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(Live model) {
+                this.label = model.label;
+                this.score = model.score;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
              * <p>The categories of undesired content review results. Valid values:</p>
              * <ul>
@@ -347,6 +377,15 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private String score; 
             private String timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(Logo model) {
+                this.label = model.label;
+                this.score = model.score;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
              * <p>The category of the review result. Valid values:</p>
              * <ul>
@@ -448,6 +487,15 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private String score; 
             private String timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(Porn model) {
+                this.label = model.label;
+                this.score = model.score;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
              * <p>The category of the review result. Valid values:</p>
              * <ul>
@@ -548,6 +596,15 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private String label; 
             private String score; 
             private String timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Terrorism model) {
+                this.label = model.label;
+                this.score = model.score;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The category of the review result. Valid values:</p>
@@ -684,6 +741,17 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
             private java.util.List<Logo> logo; 
             private java.util.List<Porn> porn; 
             private java.util.List<Terrorism> terrorism; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaAuditResultTimeline model) {
+                this.ad = model.ad;
+                this.live = model.live;
+                this.logo = model.logo;
+                this.porn = model.porn;
+                this.terrorism = model.terrorism;
+            } 
 
             /**
              * <p>The collection of ad timelines.</p>

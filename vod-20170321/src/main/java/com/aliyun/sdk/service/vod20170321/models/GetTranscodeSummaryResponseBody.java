@@ -40,6 +40,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nonExistVideoIds
      */
@@ -65,6 +69,15 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         private java.util.List<String> nonExistVideoIds; 
         private String requestId; 
         private java.util.List<TranscodeSummaryList> transcodeSummaryList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTranscodeSummaryResponseBody model) {
+            this.nonExistVideoIds = model.nonExistVideoIds;
+            this.requestId = model.requestId;
+            this.transcodeSummaryList = model.transcodeSummaryList;
+        } 
 
         /**
          * <p>The IDs of the audio or video files that do not exist.</p>
@@ -298,6 +311,27 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             private String transcodeTemplateId; 
             private java.util.List<String> watermarkIdList; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeJobInfoSummaryList model) {
+                this.bitrate = model.bitrate;
+                this.completeTime = model.completeTime;
+                this.creationTime = model.creationTime;
+                this.duration = model.duration;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.filesize = model.filesize;
+                this.format = model.format;
+                this.fps = model.fps;
+                this.height = model.height;
+                this.transcodeJobStatus = model.transcodeJobStatus;
+                this.transcodeProgress = model.transcodeProgress;
+                this.transcodeTemplateId = model.transcodeTemplateId;
+                this.watermarkIdList = model.watermarkIdList;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The average bitrate of the output video. Unit: Kbit/s.</p>
@@ -564,6 +598,18 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             private String transcodeStatus; 
             private String transcodeTemplateGroupId; 
             private String videoId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeSummaryList model) {
+                this.completeTime = model.completeTime;
+                this.creationTime = model.creationTime;
+                this.transcodeJobInfoSummaryList = model.transcodeJobInfoSummaryList;
+                this.transcodeStatus = model.transcodeStatus;
+                this.transcodeTemplateGroupId = model.transcodeTemplateGroupId;
+                this.videoId = model.videoId;
+            } 
 
             /**
              * <p>The time when the transcoding task was complete. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>

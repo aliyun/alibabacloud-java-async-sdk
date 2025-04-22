@@ -20,8 +20,12 @@ public class SubmitWorkflowJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private String taskId;
+
     private SubmitWorkflowJobResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -32,6 +36,10 @@ public class SubmitWorkflowJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -39,8 +47,24 @@ public class SubmitWorkflowJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitWorkflowJobResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -50,6 +74,14 @@ public class SubmitWorkflowJobResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
             return this;
         }
 

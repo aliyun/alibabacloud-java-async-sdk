@@ -36,6 +36,10 @@ public class AddVodTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class AddVodTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String vodTemplateId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddVodTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.vodTemplateId = model.vodTemplateId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

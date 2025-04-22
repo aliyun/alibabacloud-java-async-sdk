@@ -36,6 +36,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return materialList
      */
@@ -53,6 +57,14 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
     public static final class Builder {
         private MaterialList materialList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEditingProjectMaterialsResponseBody model) {
+            this.materialList = model.materialList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The materials.</p>
@@ -111,6 +123,13 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> snapshot; 
 
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.snapshot = model.snapshot;
+            } 
+
             /**
              * Snapshot.
              */
@@ -157,6 +176,13 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> sprite; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sprites model) {
+                this.sprite = model.sprite;
+            } 
 
             /**
              * Sprite.
@@ -397,6 +423,29 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             private String tags; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Material model) {
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.coverURL = model.coverURL;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.duration = model.duration;
+                this.materialId = model.materialId;
+                this.materialType = model.materialType;
+                this.modifiedTime = model.modifiedTime;
+                this.size = model.size;
+                this.snapshots = model.snapshots;
+                this.source = model.source;
+                this.spriteConfig = model.spriteConfig;
+                this.sprites = model.sprites;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.title = model.title;
+            } 
+
             /**
              * <p>The category ID of the material.</p>
              * 
@@ -624,6 +673,13 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Material> material; 
+
+            private Builder() {
+            } 
+
+            private Builder(MaterialList model) {
+                this.material = model.material;
+            } 
 
             /**
              * Material.

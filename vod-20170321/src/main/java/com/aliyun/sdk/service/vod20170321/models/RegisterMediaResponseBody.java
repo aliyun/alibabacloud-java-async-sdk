@@ -40,6 +40,10 @@ public class RegisterMediaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failedFileURLs
      */
@@ -65,6 +69,15 @@ public class RegisterMediaResponseBody extends TeaModel {
         private java.util.List<String> failedFileURLs; 
         private java.util.List<RegisteredMediaList> registeredMediaList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RegisterMediaResponseBody model) {
+            this.failedFileURLs = model.failedFileURLs;
+            this.registeredMediaList = model.registeredMediaList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The URLs of the media files that failed to be registered.</p>
@@ -154,6 +167,15 @@ public class RegisterMediaResponseBody extends TeaModel {
             private String fileURL; 
             private String mediaId; 
             private Boolean newRegister; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegisteredMediaList model) {
+                this.fileURL = model.fileURL;
+                this.mediaId = model.mediaId;
+                this.newRegister = model.newRegister;
+            } 
 
             /**
              * <p>The URL of the media file.</p>

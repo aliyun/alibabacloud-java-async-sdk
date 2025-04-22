@@ -52,6 +52,10 @@ public class AppInfoDTO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appName
      */
@@ -101,6 +105,18 @@ public class AppInfoDTO extends TeaModel {
         private String itemId; 
         private java.util.List<Platforms> platforms; 
         private Long userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AppInfoDTO model) {
+            this.appName = model.appName;
+            this.appType = model.appType;
+            this.gmtCreate = model.gmtCreate;
+            this.itemId = model.itemId;
+            this.platforms = model.platforms;
+            this.userId = model.userId;
+        } 
 
         /**
          * AppName.
@@ -247,6 +263,18 @@ public class AppInfoDTO extends TeaModel {
             private String pkgSignature; 
             private Long platformType; 
             private Long type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Platforms model) {
+                this.itemId = model.itemId;
+                this.licenseItemIds = model.licenseItemIds;
+                this.pkgName = model.pkgName;
+                this.pkgSignature = model.pkgSignature;
+                this.platformType = model.platformType;
+                this.type = model.type;
+            } 
 
             /**
              * ItemId.

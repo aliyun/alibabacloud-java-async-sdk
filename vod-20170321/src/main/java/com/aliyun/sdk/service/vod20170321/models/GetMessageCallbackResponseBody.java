@@ -36,6 +36,10 @@ public class GetMessageCallbackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return messageCallback
      */
@@ -53,6 +57,14 @@ public class GetMessageCallbackResponseBody extends TeaModel {
     public static final class Builder {
         private MessageCallback messageCallback; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMessageCallbackResponseBody model) {
+            this.messageCallback = model.messageCallback;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The configuration of the event notification.</p>
@@ -194,6 +206,20 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             private String eventTypeList; 
             private String mnsEndpoint; 
             private String mnsQueueName; 
+
+            private Builder() {
+            } 
+
+            private Builder(MessageCallback model) {
+                this.appId = model.appId;
+                this.authKey = model.authKey;
+                this.authSwitch = model.authSwitch;
+                this.callbackType = model.callbackType;
+                this.callbackURL = model.callbackURL;
+                this.eventTypeList = model.eventTypeList;
+                this.mnsEndpoint = model.mnsEndpoint;
+                this.mnsQueueName = model.mnsQueueName;
+            } 
 
             /**
              * <p>The ID of the application.</p>

@@ -44,6 +44,10 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileURL
      */
@@ -77,6 +81,16 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         private String requestId; 
         private String sourceURL; 
         private String streamJobId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadStreamByURLResponseBody model) {
+            this.fileURL = model.fileURL;
+            this.requestId = model.requestId;
+            this.sourceURL = model.sourceURL;
+            this.streamJobId = model.streamJobId;
+        } 
 
         /**
          * <p>The URL of the OSS object.</p>

@@ -48,6 +48,10 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNo
      */
@@ -89,6 +93,17 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
         private java.util.List<QoeInfoList> qoeInfoList; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodMediaPlayDataResponseBody model) {
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.qoeInfoList = model.qoeInfoList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -263,6 +278,20 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             private Float playSuccessVv; 
             private Float videoDuration; 
             private String videoTitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(QoeInfoList model) {
+                this.DAU = model.DAU;
+                this.mediaId = model.mediaId;
+                this.playDuration = model.playDuration;
+                this.playDurationPerUv = model.playDurationPerUv;
+                this.playPerVv = model.playPerVv;
+                this.playSuccessVv = model.playSuccessVv;
+                this.videoDuration = model.videoDuration;
+                this.videoTitle = model.videoTitle;
+            } 
 
             /**
              * <p>The number of visits to the audio or video per day.</p>

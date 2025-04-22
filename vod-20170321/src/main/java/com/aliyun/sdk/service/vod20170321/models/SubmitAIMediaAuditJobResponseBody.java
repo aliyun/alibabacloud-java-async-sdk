@@ -40,6 +40,10 @@ public class SubmitAIMediaAuditJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -65,6 +69,15 @@ public class SubmitAIMediaAuditJobResponseBody extends TeaModel {
         private String jobId; 
         private String mediaId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitAIMediaAuditJobResponseBody model) {
+            this.jobId = model.jobId;
+            this.mediaId = model.mediaId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the job.</p>

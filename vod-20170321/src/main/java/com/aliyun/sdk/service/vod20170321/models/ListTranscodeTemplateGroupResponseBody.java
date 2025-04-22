@@ -36,6 +36,10 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TranscodeTemplateGroupList> transcodeTemplateGroupList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTranscodeTemplateGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.transcodeTemplateGroupList = model.transcodeTemplateGroupList;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -182,6 +194,19 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             private String modifyTime; 
             private String name; 
             private String transcodeTemplateGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeTemplateGroupList model) {
+                this.appId = model.appId;
+                this.creationTime = model.creationTime;
+                this.isDefault = model.isDefault;
+                this.locked = model.locked;
+                this.modifyTime = model.modifyTime;
+                this.name = model.name;
+                this.transcodeTemplateGroupId = model.transcodeTemplateGroupId;
+            } 
 
             /**
              * <p>The ID of the application.</p>

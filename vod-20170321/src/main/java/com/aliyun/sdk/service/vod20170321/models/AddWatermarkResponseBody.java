@@ -36,6 +36,10 @@ public class AddWatermarkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class AddWatermarkResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private WatermarkInfo watermarkInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddWatermarkResponseBody model) {
+            this.requestId = model.requestId;
+            this.watermarkInfo = model.watermarkInfo;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -182,6 +194,19 @@ public class AddWatermarkResponseBody extends TeaModel {
             private String type; 
             private String watermarkConfig; 
             private String watermarkId; 
+
+            private Builder() {
+            } 
+
+            private Builder(WatermarkInfo model) {
+                this.creationTime = model.creationTime;
+                this.fileUrl = model.fileUrl;
+                this.isDefault = model.isDefault;
+                this.name = model.name;
+                this.type = model.type;
+                this.watermarkConfig = model.watermarkConfig;
+                this.watermarkId = model.watermarkId;
+            } 
 
             /**
              * <p>The time when the watermark template was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>

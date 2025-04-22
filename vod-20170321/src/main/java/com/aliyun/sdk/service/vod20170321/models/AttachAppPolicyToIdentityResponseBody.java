@@ -40,6 +40,10 @@ public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failedPolicyNames
      */
@@ -65,6 +69,15 @@ public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
         private java.util.List<String> failedPolicyNames; 
         private java.util.List<String> nonExistPolicyNames; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AttachAppPolicyToIdentityResponseBody model) {
+            this.failedPolicyNames = model.failedPolicyNames;
+            this.nonExistPolicyNames = model.nonExistPolicyNames;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The names of the policies that failed to be granted to the RAM user or RAM role.</p>

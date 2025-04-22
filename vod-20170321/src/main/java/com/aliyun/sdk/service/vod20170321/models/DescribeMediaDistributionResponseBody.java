@@ -40,6 +40,10 @@ public class DescribeMediaDistributionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaDistributionList
      */
@@ -65,6 +69,15 @@ public class DescribeMediaDistributionResponseBody extends TeaModel {
         private java.util.List<MediaDistributionList> mediaDistributionList; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMediaDistributionResponseBody model) {
+            this.mediaDistributionList = model.mediaDistributionList;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The distribution list of media assets. The data is displayed based on the statistical cycle of the natural hour, day, week, or month of the start and end time.</p>
@@ -157,6 +170,15 @@ public class DescribeMediaDistributionResponseBody extends TeaModel {
             private Long count; 
             private String endTime; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaDistributionList model) {
+                this.count = model.count;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The number of media assets that are queried during the specified time range.</p>

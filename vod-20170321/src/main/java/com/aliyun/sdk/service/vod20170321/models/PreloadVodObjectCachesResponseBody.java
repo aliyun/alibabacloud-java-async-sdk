@@ -36,6 +36,10 @@ public class PreloadVodObjectCachesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return preloadTaskId
      */
@@ -53,6 +57,14 @@ public class PreloadVodObjectCachesResponseBody extends TeaModel {
     public static final class Builder {
         private String preloadTaskId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PreloadVodObjectCachesResponseBody model) {
+            this.preloadTaskId = model.preloadTaskId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the prefetch task. Separate multiple task IDs with commas (,).</p>

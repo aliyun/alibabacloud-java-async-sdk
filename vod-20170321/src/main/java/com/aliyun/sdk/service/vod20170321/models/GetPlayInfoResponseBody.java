@@ -40,6 +40,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return playInfoList
      */
@@ -65,6 +69,15 @@ public class GetPlayInfoResponseBody extends TeaModel {
         private PlayInfoList playInfoList; 
         private String requestId; 
         private VideoBase videoBase; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPlayInfoResponseBody model) {
+            this.playInfoList = model.playInfoList;
+            this.requestId = model.requestId;
+            this.videoBase = model.videoBase;
+        } 
 
         /**
          * <p>The information about the audio or video stream.</p>
@@ -418,6 +431,37 @@ public class GetPlayInfoResponseBody extends TeaModel {
             private String streamType; 
             private String watermarkId; 
             private Long width; 
+
+            private Builder() {
+            } 
+
+            private Builder(PlayInfo model) {
+                this.bitDepth = model.bitDepth;
+                this.bitrate = model.bitrate;
+                this.codecName = model.codecName;
+                this.creationTime = model.creationTime;
+                this.definition = model.definition;
+                this.duration = model.duration;
+                this.encrypt = model.encrypt;
+                this.encryptMode = model.encryptMode;
+                this.encryptType = model.encryptType;
+                this.format = model.format;
+                this.fps = model.fps;
+                this.HDRType = model.HDRType;
+                this.height = model.height;
+                this.jobExt = model.jobExt;
+                this.jobId = model.jobId;
+                this.jobType = model.jobType;
+                this.modificationTime = model.modificationTime;
+                this.narrowBandType = model.narrowBandType;
+                this.playURL = model.playURL;
+                this.size = model.size;
+                this.specification = model.specification;
+                this.status = model.status;
+                this.streamType = model.streamType;
+                this.watermarkId = model.watermarkId;
+                this.width = model.width;
+            } 
 
             /**
              * <p>The color depth. This value is an integer.</p>
@@ -790,6 +834,13 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PlayInfo> playInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(PlayInfoList model) {
+                this.playInfo = model.playInfo;
+            } 
+
             /**
              * PlayInfo.
              */
@@ -932,6 +983,21 @@ public class GetPlayInfoResponseBody extends TeaModel {
             private String storageClass; 
             private String title; 
             private String videoId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoBase model) {
+                this.coverURL = model.coverURL;
+                this.creationTime = model.creationTime;
+                this.danMuURL = model.danMuURL;
+                this.duration = model.duration;
+                this.mediaType = model.mediaType;
+                this.status = model.status;
+                this.storageClass = model.storageClass;
+                this.title = model.title;
+                this.videoId = model.videoId;
+            } 
 
             /**
              * <p>The thumbnail URL of the audio or video file.</p>

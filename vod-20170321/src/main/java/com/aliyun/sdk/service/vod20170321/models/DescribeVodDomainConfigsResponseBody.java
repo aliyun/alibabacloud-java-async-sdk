@@ -36,6 +36,10 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainConfigs
      */
@@ -53,6 +57,14 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
     public static final class Builder {
         private DomainConfigs domainConfigs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodDomainConfigsResponseBody model) {
+            this.domainConfigs = model.domainConfigs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The configurations of the domain name.</p>
@@ -123,6 +135,14 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             private String argName; 
             private String argValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(FunctionArg model) {
+                this.argName = model.argName;
+                this.argValue = model.argValue;
+            } 
+
             /**
              * <p>The parameter name.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FunctionArg> functionArg; 
+
+            private Builder() {
+            } 
+
+            private Builder(FunctionArgs model) {
+                this.functionArg = model.functionArg;
+            } 
 
             /**
              * FunctionArg.
@@ -266,6 +293,16 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             private FunctionArgs functionArgs; 
             private String functionName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainConfig model) {
+                this.configId = model.configId;
+                this.functionArgs = model.functionArgs;
+                this.functionName = model.functionName;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The configuration ID.</p>
@@ -352,6 +389,13 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DomainConfig> domainConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainConfigs model) {
+                this.domainConfig = model.domainConfig;
+            } 
 
             /**
              * DomainConfig.

@@ -36,6 +36,10 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodDomainRealTimeQpsDataResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -123,6 +135,14 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
             private Float qps; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(QpsModel model) {
+                this.qps = model.qps;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The number of queries per second.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<QpsModel> qpsModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.qpsModel = model.qpsModel;
+            } 
 
             /**
              * QpsModel.

@@ -44,6 +44,10 @@ public class ListJobInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobInfoList
      */
@@ -77,6 +81,16 @@ public class ListJobInfoResponseBody extends TeaModel {
         private String jobType; 
         private String mediaId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListJobInfoResponseBody model) {
+            this.jobInfoList = model.jobInfoList;
+            this.jobType = model.jobType;
+            this.mediaId = model.mediaId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The historical tasks of the last 6 months.</p>
@@ -209,6 +223,17 @@ public class ListJobInfoResponseBody extends TeaModel {
             private String jobId; 
             private String status; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobInfoList model) {
+                this.completeTime = model.completeTime;
+                this.createTime = model.createTime;
+                this.jobId = model.jobId;
+                this.status = model.status;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The time when the task was complete.</p>

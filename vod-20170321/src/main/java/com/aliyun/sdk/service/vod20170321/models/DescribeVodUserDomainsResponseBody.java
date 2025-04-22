@@ -48,6 +48,10 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domains
      */
@@ -89,6 +93,17 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodUserDomainsResponseBody model) {
+            this.domains = model.domains;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The detailed information about each domain name for CDN. The returned information is displayed in the format that is specified by the PageData parameter.</p>
@@ -216,6 +231,16 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             private String priority; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Source model) {
+                this.content = model.content;
+                this.port = model.port;
+                this.priority = model.priority;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The address of the origin server.</p>
              * 
@@ -303,6 +328,13 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Source> source; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.source = model.source;
+            } 
 
             /**
              * Source.
@@ -446,6 +478,21 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             private String sandbox; 
             private Sources sources; 
             private String sslProtocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageData model) {
+                this.cname = model.cname;
+                this.description = model.description;
+                this.domainName = model.domainName;
+                this.domainStatus = model.domainStatus;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.sandbox = model.sandbox;
+                this.sources = model.sources;
+                this.sslProtocol = model.sslProtocol;
+            } 
 
             /**
              * <p>The CNAME that is assigned to the domain name for CDN.</p>
@@ -593,6 +640,13 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PageData> pageData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.pageData = model.pageData;
+            } 
 
             /**
              * PageData.

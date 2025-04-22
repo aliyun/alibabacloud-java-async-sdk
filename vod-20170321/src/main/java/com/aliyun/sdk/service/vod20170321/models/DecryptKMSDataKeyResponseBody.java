@@ -40,6 +40,10 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return keyId
      */
@@ -65,6 +69,15 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         private String keyId; 
         private String plaintext; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DecryptKMSDataKeyResponseBody model) {
+            this.keyId = model.keyId;
+            this.plaintext = model.plaintext;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the customer master key (CMK) that was used to decrypt the ciphertext.</p>

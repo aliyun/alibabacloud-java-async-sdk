@@ -40,6 +40,10 @@ public class ListAIJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return AIJobList
      */
@@ -65,6 +69,15 @@ public class ListAIJobResponseBody extends TeaModel {
         private AIJobList AIJobList; 
         private NonExistAIJobIds nonExistAIJobIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAIJobResponseBody model) {
+            this.AIJobList = model.AIJobList;
+            this.nonExistAIJobIds = model.nonExistAIJobIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of jobs.</p>
@@ -227,6 +240,21 @@ public class ListAIJobResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(AIJob model) {
+                this.code = model.code;
+                this.completeTime = model.completeTime;
+                this.creationTime = model.creationTime;
+                this.data = model.data;
+                this.jobId = model.jobId;
+                this.mediaId = model.mediaId;
+                this.message = model.message;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The error code. This parameter is returned if the value of Status is fail.</p>
              * 
@@ -375,6 +403,13 @@ public class ListAIJobResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AIJob> AIJob; 
 
+            private Builder() {
+            } 
+
+            private Builder(AIJobList model) {
+                this.AIJob = model.AIJob;
+            } 
+
             /**
              * AIJob.
              */
@@ -421,6 +456,13 @@ public class ListAIJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> string; 
+
+            private Builder() {
+            } 
+
+            private Builder(NonExistAIJobIds model) {
+                this.string = model.string;
+            } 
 
             /**
              * String.

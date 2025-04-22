@@ -40,6 +40,10 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return playAuth
      */
@@ -65,6 +69,15 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
         private String playAuth; 
         private String requestId; 
         private VideoMeta videoMeta; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVideoPlayAuthResponseBody model) {
+            this.playAuth = model.playAuth;
+            this.requestId = model.requestId;
+            this.videoMeta = model.videoMeta;
+        } 
 
         /**
          * <p>The credential for media playback.</p>
@@ -181,6 +194,17 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
             private String status; 
             private String title; 
             private String videoId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoMeta model) {
+                this.coverURL = model.coverURL;
+                this.duration = model.duration;
+                this.status = model.status;
+                this.title = model.title;
+                this.videoId = model.videoId;
+            } 
 
             /**
              * <p>The thumbnail URL of the media file.</p>

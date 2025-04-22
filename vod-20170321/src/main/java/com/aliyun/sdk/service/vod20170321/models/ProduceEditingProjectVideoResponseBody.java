@@ -40,6 +40,10 @@ public class ProduceEditingProjectVideoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaId
      */
@@ -65,6 +69,15 @@ public class ProduceEditingProjectVideoResponseBody extends TeaModel {
         private String mediaId; 
         private String projectId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProduceEditingProjectVideoResponseBody model) {
+            this.mediaId = model.mediaId;
+            this.projectId = model.projectId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the produced video.</p>

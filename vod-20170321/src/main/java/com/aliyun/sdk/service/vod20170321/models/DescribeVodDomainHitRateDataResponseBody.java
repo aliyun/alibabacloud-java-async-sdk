@@ -52,6 +52,10 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -101,6 +105,18 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
         private HitRateInterval hitRateInterval; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodDomainHitRateDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.hitRateInterval = model.hitRateInterval;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The time interval at which data is returned, which is the time granularity. Unit: seconds.</p>
@@ -227,6 +243,15 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.httpsValue = model.httpsValue;
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The HTTPS byte hit rate.</p>
              * 
@@ -298,6 +323,13 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(HitRateInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.

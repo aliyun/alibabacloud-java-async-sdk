@@ -36,6 +36,10 @@ public class ListAIImageInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return AIImageInfoList
      */
@@ -53,6 +57,14 @@ public class ListAIImageInfoResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AIImageInfoList> AIImageInfoList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAIImageInfoResponseBody model) {
+            this.AIImageInfoList = model.AIImageInfoList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The image files that are uploaded for AI processing.</p>
@@ -194,6 +206,20 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             private String score; 
             private String version; 
             private String videoId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AIImageInfoList model) {
+                this.AIImageInfoId = model.AIImageInfoId;
+                this.creationTime = model.creationTime;
+                this.fileURL = model.fileURL;
+                this.format = model.format;
+                this.jobId = model.jobId;
+                this.score = model.score;
+                this.version = model.version;
+                this.videoId = model.videoId;
+            } 
 
             /**
              * <p>The ID of the image information.</p>

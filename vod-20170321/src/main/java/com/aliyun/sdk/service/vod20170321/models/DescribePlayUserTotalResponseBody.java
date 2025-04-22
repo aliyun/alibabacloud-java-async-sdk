@@ -36,6 +36,10 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UserPlayStatisTotals userPlayStatisTotals; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePlayUserTotalResponseBody model) {
+            this.requestId = model.requestId;
+            this.userPlayStatisTotals = model.userPlayStatisTotals;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -146,6 +158,16 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             private String flash; 
             private String HTML5; 
             private String iOS; 
+
+            private Builder() {
+            } 
+
+            private Builder(Uv model) {
+                this.android = model.android;
+                this.flash = model.flash;
+                this.HTML5 = model.HTML5;
+                this.iOS = model.iOS;
+            } 
 
             /**
              * <p>The total number of unique visitors who use ApsaraVideo Player SDK for Android.</p>
@@ -265,6 +287,16 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             private String flash; 
             private String HTML5; 
             private String iOS; 
+
+            private Builder() {
+            } 
+
+            private Builder(Vv model) {
+                this.android = model.android;
+                this.flash = model.flash;
+                this.HTML5 = model.HTML5;
+                this.iOS = model.iOS;
+            } 
 
             /**
              * <p>The total number of video views played by using ApsaraVideo Player SDK for Android.</p>
@@ -397,6 +429,17 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             private Uv uv; 
             private Vv vv; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserPlayStatisTotal model) {
+                this.date = model.date;
+                this.playDuration = model.playDuration;
+                this.playRange = model.playRange;
+                this.uv = model.uv;
+                this.vv = model.vv;
+            } 
+
             /**
              * <p>The date. The date is displayed in the yyyy-MM-dd format.</p>
              * 
@@ -484,6 +527,13 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<UserPlayStatisTotal> userPlayStatisTotal; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserPlayStatisTotals model) {
+                this.userPlayStatisTotal = model.userPlayStatisTotal;
+            } 
 
             /**
              * UserPlayStatisTotal.

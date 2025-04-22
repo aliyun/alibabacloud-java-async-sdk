@@ -36,6 +36,10 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UserPlayStatisAvgs userPlayStatisAvgs; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePlayUserAvgResponseBody model) {
+            this.requestId = model.requestId;
+            this.userPlayStatisAvgs = model.userPlayStatisAvgs;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -135,6 +147,15 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
             private String avgPlayDuration; 
             private String date; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserPlayStatisAvg model) {
+                this.avgPlayCount = model.avgPlayCount;
+                this.avgPlayDuration = model.avgPlayDuration;
+                this.date = model.date;
+            } 
+
             /**
              * <p>The average number of video views.</p>
              * 
@@ -206,6 +227,13 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<UserPlayStatisAvg> userPlayStatisAvg; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserPlayStatisAvgs model) {
+                this.userPlayStatisAvg = model.userPlayStatisAvg;
+            } 
 
             /**
              * UserPlayStatisAvg.

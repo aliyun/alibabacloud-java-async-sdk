@@ -36,6 +36,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaSnapshot
      */
@@ -53,6 +57,14 @@ public class ListSnapshotsResponseBody extends TeaModel {
     public static final class Builder {
         private MediaSnapshot mediaSnapshot; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSnapshotsResponseBody model) {
+            this.mediaSnapshot = model.mediaSnapshot;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the snapshot.</p>
@@ -123,6 +135,14 @@ public class ListSnapshotsResponseBody extends TeaModel {
             private Long index; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Snapshot model) {
+                this.index = model.index;
+                this.url = model.url;
+            } 
+
             /**
              * <p>The index of the snapshot.</p>
              * 
@@ -183,6 +203,13 @@ public class ListSnapshotsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Snapshot> snapshot; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.snapshot = model.snapshot;
+            } 
 
             /**
              * Snapshot.
@@ -278,6 +305,17 @@ public class ListSnapshotsResponseBody extends TeaModel {
             private String regular; 
             private Snapshots snapshots; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaSnapshot model) {
+                this.creationTime = model.creationTime;
+                this.jobId = model.jobId;
+                this.regular = model.regular;
+                this.snapshots = model.snapshots;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The time when the snapshot job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>

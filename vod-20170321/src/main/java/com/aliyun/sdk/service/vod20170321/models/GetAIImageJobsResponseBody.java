@@ -36,6 +36,10 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return AIImageJobList
      */
@@ -53,6 +57,14 @@ public class GetAIImageJobsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AIImageJobList> AIImageJobList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAIImageJobsResponseBody model) {
+            this.AIImageJobList = model.AIImageJobList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The image AI processing jobs.</p>
@@ -218,6 +230,22 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             private String templateId; 
             private String userData; 
             private String videoId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AIImageJobList model) {
+                this.AIImageResult = model.AIImageResult;
+                this.code = model.code;
+                this.creationTime = model.creationTime;
+                this.jobId = model.jobId;
+                this.message = model.message;
+                this.status = model.status;
+                this.templateConfig = model.templateConfig;
+                this.templateId = model.templateId;
+                this.userData = model.userData;
+                this.videoId = model.videoId;
+            } 
 
             /**
              * <p>The Object Storage Service (OSS) URL of the image file.</p>

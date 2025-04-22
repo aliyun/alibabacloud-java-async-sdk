@@ -40,6 +40,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return liveRecordVideoList
      */
@@ -65,6 +69,15 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         private LiveRecordVideoList liveRecordVideoList; 
         private String requestId; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLiveRecordVideoResponseBody model) {
+            this.liveRecordVideoList = model.liveRecordVideoList;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The list of videos.</p>
@@ -133,6 +146,13 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> snapshot; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.snapshot = model.snapshot;
+            } 
 
             /**
              * Snapshot.
@@ -336,6 +356,26 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             private String templateGroupId; 
             private String title; 
             private String videoId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Video model) {
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.coverURL = model.coverURL;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.duration = model.duration;
+                this.modifyTime = model.modifyTime;
+                this.size = model.size;
+                this.snapshots = model.snapshots;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.templateGroupId = model.templateGroupId;
+                this.title = model.title;
+                this.videoId = model.videoId;
+            } 
 
             /**
              * <p>The ID of the video category.</p>
@@ -608,6 +648,19 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             private String streamName; 
             private Video video; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveRecordVideo model) {
+                this.appName = model.appName;
+                this.domainName = model.domainName;
+                this.playlistId = model.playlistId;
+                this.recordEndTime = model.recordEndTime;
+                this.recordStartTime = model.recordStartTime;
+                this.streamName = model.streamName;
+                this.video = model.video;
+            } 
+
             /**
              * <p>The name of the app.</p>
              * 
@@ -720,6 +773,13 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LiveRecordVideo> liveRecordVideo; 
+
+            private Builder() {
+            } 
+
+            private Builder(LiveRecordVideoList model) {
+                this.liveRecordVideo = model.liveRecordVideo;
+            } 
 
             /**
              * LiveRecordVideo.

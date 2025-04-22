@@ -64,6 +64,10 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return blockQuota
      */
@@ -137,6 +141,21 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         private String urlQuota; 
         private String urlRemain; 
         private String blockRemain; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodRefreshQuotaResponseBody model) {
+            this.blockQuota = model.blockQuota;
+            this.dirQuota = model.dirQuota;
+            this.dirRemain = model.dirRemain;
+            this.preloadQuota = model.preloadQuota;
+            this.preloadRemain = model.preloadRemain;
+            this.requestId = model.requestId;
+            this.urlQuota = model.urlQuota;
+            this.urlRemain = model.urlRemain;
+            this.blockRemain = model.blockRemain;
+        } 
 
         /**
          * <p>The maximum number of Object Storage Service (OSS) buckets that can be refreshed each day.</p>

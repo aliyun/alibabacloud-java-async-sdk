@@ -44,6 +44,10 @@ public class SearchMediaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mediaList
      */
@@ -77,6 +81,16 @@ public class SearchMediaResponseBody extends TeaModel {
         private String requestId; 
         private String scrollToken; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchMediaResponseBody model) {
+            this.mediaList = model.mediaList;
+            this.requestId = model.requestId;
+            this.scrollToken = model.scrollToken;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The information about the media assets.</p>
@@ -180,6 +194,15 @@ public class SearchMediaResponseBody extends TeaModel {
             private Double from; 
             private Double score; 
             private Double to; 
+
+            private Builder() {
+            } 
+
+            private Builder(Occurrences model) {
+                this.from = model.from;
+                this.score = model.score;
+                this.to = model.to;
+            } 
 
             /**
              * <p>The start time of the clip.</p>
@@ -289,6 +312,16 @@ public class SearchMediaResponseBody extends TeaModel {
             private String labelName; 
             private java.util.List<Occurrences> occurrences; 
 
+            private Builder() {
+            } 
+
+            private Builder(AiLabelInfo model) {
+                this.category = model.category;
+                this.labelId = model.labelId;
+                this.labelName = model.labelName;
+                this.occurrences = model.occurrences;
+            } 
+
             /**
              * <p>The category.</p>
              * 
@@ -393,6 +426,15 @@ public class SearchMediaResponseBody extends TeaModel {
             private Double from; 
             private Double to; 
 
+            private Builder() {
+            } 
+
+            private Builder(OcrInfo model) {
+                this.content = model.content;
+                this.from = model.from;
+                this.to = model.to;
+            } 
+
             /**
              * <p>The text content.</p>
              * 
@@ -476,6 +518,14 @@ public class SearchMediaResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AiLabelInfo> aiLabelInfo; 
             private java.util.List<OcrInfo> ocrInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(AiData model) {
+                this.aiLabelInfo = model.aiLabelInfo;
+                this.ocrInfo = model.ocrInfo;
+            } 
 
             /**
              * <p>The AI tags.</p>
@@ -567,6 +617,16 @@ public class SearchMediaResponseBody extends TeaModel {
             private String aiJobId; 
             private String saveType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AiRoughData model) {
+                this.aiCategory = model.aiCategory;
+                this.aiJobId = model.aiJobId;
+                this.saveType = model.saveType;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The AI category.</p>
@@ -686,6 +746,16 @@ public class SearchMediaResponseBody extends TeaModel {
             private String cateName; 
             private Long level; 
             private Long parentId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Categories model) {
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.level = model.level;
+                this.parentId = model.parentId;
+            } 
 
             /**
              * <p>The category ID of the auxiliary media asset.</p>
@@ -901,6 +971,24 @@ public class SearchMediaResponseBody extends TeaModel {
             private String tags; 
             private String title; 
             private String URL; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttachedMedia model) {
+                this.appId = model.appId;
+                this.businessType = model.businessType;
+                this.categories = model.categories;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.mediaId = model.mediaId;
+                this.modificationTime = model.modificationTime;
+                this.status = model.status;
+                this.storageLocation = model.storageLocation;
+                this.tags = model.tags;
+                this.title = model.title;
+                this.URL = model.URL;
+            } 
 
             /**
              * <p>The ID of the application.</p>
@@ -1343,6 +1431,35 @@ public class SearchMediaResponseBody extends TeaModel {
             private String tags; 
             private String title; 
             private String transcodeMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Audio model) {
+                this.appId = model.appId;
+                this.audioId = model.audioId;
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.coverURL = model.coverURL;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.downloadSwitch = model.downloadSwitch;
+                this.duration = model.duration;
+                this.mediaSource = model.mediaSource;
+                this.modificationTime = model.modificationTime;
+                this.preprocessStatus = model.preprocessStatus;
+                this.restoreExpiration = model.restoreExpiration;
+                this.restoreStatus = model.restoreStatus;
+                this.size = model.size;
+                this.snapshots = model.snapshots;
+                this.spriteSnapshots = model.spriteSnapshots;
+                this.status = model.status;
+                this.storageClass = model.storageClass;
+                this.storageLocation = model.storageLocation;
+                this.tags = model.tags;
+                this.title = model.title;
+                this.transcodeMode = model.transcodeMode;
+            } 
 
             /**
              * <p>The ID of the application.</p>
@@ -1804,6 +1921,24 @@ public class SearchMediaResponseBody extends TeaModel {
             private String title; 
             private String URL; 
 
+            private Builder() {
+            } 
+
+            private Builder(Image model) {
+                this.appId = model.appId;
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.imageId = model.imageId;
+                this.modificationTime = model.modificationTime;
+                this.status = model.status;
+                this.storageLocation = model.storageLocation;
+                this.tags = model.tags;
+                this.title = model.title;
+                this.URL = model.URL;
+            } 
+
             /**
              * <p>The ID of the application.</p>
              * 
@@ -2244,6 +2379,35 @@ public class SearchMediaResponseBody extends TeaModel {
             private String transcodeMode; 
             private String videoId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Video model) {
+                this.appId = model.appId;
+                this.cateId = model.cateId;
+                this.cateName = model.cateName;
+                this.coverURL = model.coverURL;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.downloadSwitch = model.downloadSwitch;
+                this.duration = model.duration;
+                this.mediaSource = model.mediaSource;
+                this.modificationTime = model.modificationTime;
+                this.preprocessStatus = model.preprocessStatus;
+                this.restoreExpiration = model.restoreExpiration;
+                this.restoreStatus = model.restoreStatus;
+                this.size = model.size;
+                this.snapshots = model.snapshots;
+                this.spriteSnapshots = model.spriteSnapshots;
+                this.status = model.status;
+                this.storageClass = model.storageClass;
+                this.storageLocation = model.storageLocation;
+                this.tags = model.tags;
+                this.title = model.title;
+                this.transcodeMode = model.transcodeMode;
+                this.videoId = model.videoId;
+            } 
+
             /**
              * <p>The ID of the application.</p>
              * 
@@ -2671,6 +2835,21 @@ public class SearchMediaResponseBody extends TeaModel {
             private String mediaId; 
             private String mediaType; 
             private Video video; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaList model) {
+                this.aiData = model.aiData;
+                this.aiRoughData = model.aiRoughData;
+                this.attachedMedia = model.attachedMedia;
+                this.audio = model.audio;
+                this.creationTime = model.creationTime;
+                this.image = model.image;
+                this.mediaId = model.mediaId;
+                this.mediaType = model.mediaType;
+                this.video = model.video;
+            } 
 
             /**
              * <p>Details about AI data.</p>

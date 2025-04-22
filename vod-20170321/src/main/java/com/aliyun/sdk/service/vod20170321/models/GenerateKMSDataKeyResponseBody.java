@@ -44,6 +44,10 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ciphertextBlob
      */
@@ -77,6 +81,16 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
         private String keyId; 
         private String plaintext; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateKMSDataKeyResponseBody model) {
+            this.ciphertextBlob = model.ciphertextBlob;
+            this.keyId = model.keyId;
+            this.plaintext = model.plaintext;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ciphertext of the encrypted data key. This is used as CipherText when you create a transcoding job.</p>

@@ -40,6 +40,10 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -65,6 +69,15 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         private String dataInterval; 
         private String requestId; 
         private TranscodeData transcodeData; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodTranscodeDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.requestId = model.requestId;
+            this.transcodeData = model.transcodeData;
+        } 
 
         /**
          * <p>The interval at which the data was queried. Valid values:</p>
@@ -150,6 +163,14 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataItem model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The transcoding specification. Valid values:</p>
              * <ul>
@@ -216,6 +237,13 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DataItem> dataItem; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataItem = model.dataItem;
+            } 
+
             /**
              * DataItem.
              */
@@ -275,6 +303,14 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
             private Data data; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(TranscodeDataItem model) {
+                this.data = model.data;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The statistics on transcoding of different specifications.</p>
              */
@@ -332,6 +368,13 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TranscodeDataItem> transcodeDataItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeData model) {
+                this.transcodeDataItem = model.transcodeDataItem;
+            } 
 
             /**
              * TranscodeDataItem.

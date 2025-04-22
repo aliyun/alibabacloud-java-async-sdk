@@ -40,6 +40,10 @@ public class UpdateVideoInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return forbiddenVideoIds
      */
@@ -65,6 +69,15 @@ public class UpdateVideoInfosResponseBody extends TeaModel {
         private java.util.List<String> forbiddenVideoIds; 
         private java.util.List<String> nonExistVideoIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateVideoInfosResponseBody model) {
+            this.forbiddenVideoIds = model.forbiddenVideoIds;
+            this.nonExistVideoIds = model.nonExistVideoIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the videos that cannot be modified. Generally, videos cannot be modified if you do not have required <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</p>

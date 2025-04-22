@@ -36,6 +36,10 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return preprocessJobs
      */
@@ -53,6 +57,14 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
     public static final class Builder {
         private PreprocessJobs preprocessJobs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitPreprocessJobsResponseBody model) {
+            this.preprocessJobs = model.preprocessJobs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the job.</p>
@@ -111,6 +123,13 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String jobId; 
 
+            private Builder() {
+            } 
+
+            private Builder(PreprocessJob model) {
+                this.jobId = model.jobId;
+            } 
+
             /**
              * <p>The ID of the job.</p>
              * 
@@ -160,6 +179,13 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PreprocessJob> preprocessJob; 
+
+            private Builder() {
+            } 
+
+            private Builder(PreprocessJobs model) {
+                this.preprocessJob = model.preprocessJob;
+            } 
 
             /**
              * PreprocessJob.

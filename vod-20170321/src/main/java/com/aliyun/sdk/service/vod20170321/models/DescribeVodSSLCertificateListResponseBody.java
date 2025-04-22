@@ -36,6 +36,10 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificateListModel
      */
@@ -53,6 +57,14 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
     public static final class Builder {
         private CertificateListModel certificateListModel; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodSSLCertificateListResponseBody model) {
+            this.certificateListModel = model.certificateListModel;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about certificates.</p>
@@ -183,6 +195,19 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
             private String issuer; 
             private Long lastTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cert model) {
+                this.certId = model.certId;
+                this.certName = model.certName;
+                this.certRegion = model.certRegion;
+                this.common = model.common;
+                this.fingerprint = model.fingerprint;
+                this.issuer = model.issuer;
+                this.lastTime = model.lastTime;
+            } 
+
             /**
              * <p>The ID of the certificate.</p>
              * 
@@ -299,6 +324,13 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Cert> cert; 
 
+            private Builder() {
+            } 
+
+            private Builder(CertList model) {
+                this.cert = model.cert;
+            } 
+
             /**
              * Cert.
              */
@@ -381,6 +413,16 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
             private Integer count; 
             private Long pageNumber; 
             private Long pageSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertificateListModel model) {
+                this.certList = model.certList;
+                this.count = model.count;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+            } 
 
             /**
              * <p>The list of certificates.</p>

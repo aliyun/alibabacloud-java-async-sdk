@@ -48,6 +48,10 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNo
      */
@@ -89,6 +93,17 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         private String requestId; 
         private TopPlayVideos topPlayVideos; 
         private Long totalNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePlayTopVideosResponseBody model) {
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.topPlayVideos = model.topPlayVideos;
+            this.totalNum = model.totalNum;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -228,6 +243,17 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             private String vv; 
             private String videoId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TopPlayVideoStatis model) {
+                this.playDuration = model.playDuration;
+                this.title = model.title;
+                this.uv = model.uv;
+                this.vv = model.vv;
+                this.videoId = model.videoId;
+            } 
+
             /**
              * <p>The total playback duration. Unit: milliseconds.</p>
              * 
@@ -321,6 +347,13 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TopPlayVideoStatis> topPlayVideoStatis; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopPlayVideos model) {
+                this.topPlayVideoStatis = model.topPlayVideoStatis;
+            } 
 
             /**
              * TopPlayVideoStatis.

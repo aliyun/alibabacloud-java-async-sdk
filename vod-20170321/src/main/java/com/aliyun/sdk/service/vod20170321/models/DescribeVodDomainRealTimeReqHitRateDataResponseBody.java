@@ -36,6 +36,10 @@ public class DescribeVodDomainRealTimeReqHitRateDataResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeVodDomainRealTimeReqHitRateDataResponseBody extends TeaMode
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodDomainRealTimeReqHitRateDataResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned results.</p>
@@ -123,6 +135,14 @@ public class DescribeVodDomainRealTimeReqHitRateDataResponseBody extends TeaMode
             private Float reqHitRate; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReqHitRateDataModel model) {
+                this.reqHitRate = model.reqHitRate;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The cache hit ratio that is calculated based on requests. The cache hit ratio is measured in percentage.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeVodDomainRealTimeReqHitRateDataResponseBody extends TeaMode
 
         public static final class Builder {
             private java.util.List<ReqHitRateDataModel> reqHitRateDataModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.reqHitRateDataModel = model.reqHitRateDataModel;
+            } 
 
             /**
              * ReqHitRateDataModel.

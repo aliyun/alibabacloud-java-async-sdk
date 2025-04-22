@@ -36,6 +36,10 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certInfos
      */
@@ -53,6 +57,14 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
     public static final class Builder {
         private CertInfos certInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodDomainCertificateInfoResponseBody model) {
+            this.certInfos = model.certInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The certificate information.</p>
@@ -278,6 +290,27 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             private String serverCertificate; 
             private String serverCertificateStatus; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertInfo model) {
+                this.certDomainName = model.certDomainName;
+                this.certExpireTime = model.certExpireTime;
+                this.certId = model.certId;
+                this.certLife = model.certLife;
+                this.certName = model.certName;
+                this.certOrg = model.certOrg;
+                this.certRegion = model.certRegion;
+                this.certStartTime = model.certStartTime;
+                this.certType = model.certType;
+                this.certUpdateTime = model.certUpdateTime;
+                this.domainCnameStatus = model.domainCnameStatus;
+                this.domainName = model.domainName;
+                this.serverCertificate = model.serverCertificate;
+                this.serverCertificateStatus = model.serverCertificateStatus;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The domain name that matches the certificate.</p>
@@ -509,6 +542,13 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CertInfo> certInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertInfos model) {
+                this.certInfo = model.certInfo;
+            } 
 
             /**
              * CertInfo.

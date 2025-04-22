@@ -32,12 +32,16 @@ public class GetJobDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TranscodeJobDetail")
     private TranscodeJobDetail transcodeJobDetail;
 
+    @com.aliyun.core.annotation.NameInMap("WorkflowTaskDetail")
+    private WorkflowTaskDetail workflowTaskDetail;
+
     private GetJobDetailResponseBody(Builder builder) {
         this.AIJobDetail = builder.AIJobDetail;
         this.jobType = builder.jobType;
         this.requestId = builder.requestId;
         this.snapshotJobDetail = builder.snapshotJobDetail;
         this.transcodeJobDetail = builder.transcodeJobDetail;
+        this.workflowTaskDetail = builder.workflowTaskDetail;
     }
 
     public static Builder builder() {
@@ -46,6 +50,10 @@ public class GetJobDetailResponseBody extends TeaModel {
 
     public static GetJobDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -83,12 +91,32 @@ public class GetJobDetailResponseBody extends TeaModel {
         return this.transcodeJobDetail;
     }
 
+    /**
+     * @return workflowTaskDetail
+     */
+    public WorkflowTaskDetail getWorkflowTaskDetail() {
+        return this.workflowTaskDetail;
+    }
+
     public static final class Builder {
         private AIJobDetail AIJobDetail; 
         private String jobType; 
         private String requestId; 
         private SnapshotJobDetail snapshotJobDetail; 
         private TranscodeJobDetail transcodeJobDetail; 
+        private WorkflowTaskDetail workflowTaskDetail; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetJobDetailResponseBody model) {
+            this.AIJobDetail = model.AIJobDetail;
+            this.jobType = model.jobType;
+            this.requestId = model.requestId;
+            this.snapshotJobDetail = model.snapshotJobDetail;
+            this.transcodeJobDetail = model.transcodeJobDetail;
+            this.workflowTaskDetail = model.workflowTaskDetail;
+        } 
 
         /**
          * <p>The details of the AI task. This parameter takes effect only when the TaskType parameter is set to AI.</p>
@@ -133,6 +161,14 @@ public class GetJobDetailResponseBody extends TeaModel {
          */
         public Builder transcodeJobDetail(TranscodeJobDetail transcodeJobDetail) {
             this.transcodeJobDetail = transcodeJobDetail;
+            return this;
+        }
+
+        /**
+         * WorkflowTaskDetail.
+         */
+        public Builder workflowTaskDetail(WorkflowTaskDetail workflowTaskDetail) {
+            this.workflowTaskDetail = workflowTaskDetail;
             return this;
         }
 
@@ -269,6 +305,21 @@ public class GetJobDetailResponseBody extends TeaModel {
             private String templateConfig; 
             private String trigger; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AIJobDetail model) {
+                this.completeTime = model.completeTime;
+                this.createTime = model.createTime;
+                this.jobId = model.jobId;
+                this.jobType = model.jobType;
+                this.mediaId = model.mediaId;
+                this.status = model.status;
+                this.templateConfig = model.templateConfig;
+                this.trigger = model.trigger;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The end time of the task.</p>
@@ -516,6 +567,21 @@ public class GetJobDetailResponseBody extends TeaModel {
             private Long userId; 
             private String videoId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SnapshotJobDetail model) {
+                this.completeTime = model.completeTime;
+                this.createTime = model.createTime;
+                this.jobId = model.jobId;
+                this.normalConfig = model.normalConfig;
+                this.spriteConfig = model.spriteConfig;
+                this.status = model.status;
+                this.trigger = model.trigger;
+                this.userId = model.userId;
+                this.videoId = model.videoId;
+            } 
+
             /**
              * <p>The time when the task was complete.</p>
              * 
@@ -747,6 +813,20 @@ public class GetJobDetailResponseBody extends TeaModel {
             private Long userId; 
             private String videoId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TranscodeJobDetail model) {
+                this.completeTime = model.completeTime;
+                this.createTime = model.createTime;
+                this.definition = model.definition;
+                this.jobId = model.jobId;
+                this.status = model.status;
+                this.templateId = model.templateId;
+                this.userId = model.userId;
+                this.videoId = model.videoId;
+            } 
+
             /**
              * <p>The time when the task was complete.</p>
              * 
@@ -844,6 +924,413 @@ public class GetJobDetailResponseBody extends TeaModel {
 
             public TranscodeJobDetail build() {
                 return new TranscodeJobDetail(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobDetailResponseBody</p>
+     */
+    public static class Workflow extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppId")
+        private String appId;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
+        private String modifiedTime;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("WorkflowId")
+        private String workflowId;
+
+        private Workflow(Builder builder) {
+            this.appId = builder.appId;
+            this.createTime = builder.createTime;
+            this.modifiedTime = builder.modifiedTime;
+            this.name = builder.name;
+            this.status = builder.status;
+            this.type = builder.type;
+            this.workflowId = builder.workflowId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Workflow create() {
+            return builder().build();
+        }
+
+        /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return modifiedTime
+         */
+        public String getModifiedTime() {
+            return this.modifiedTime;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return workflowId
+         */
+        public String getWorkflowId() {
+            return this.workflowId;
+        }
+
+        public static final class Builder {
+            private String appId; 
+            private String createTime; 
+            private String modifiedTime; 
+            private String name; 
+            private String status; 
+            private String type; 
+            private String workflowId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Workflow model) {
+                this.appId = model.appId;
+                this.createTime = model.createTime;
+                this.modifiedTime = model.modifiedTime;
+                this.name = model.name;
+                this.status = model.status;
+                this.type = model.type;
+                this.workflowId = model.workflowId;
+            } 
+
+            /**
+             * AppId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
+
+            /**
+             * <p>The time when the task was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-14T07:39:25Z</p>
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * ModifiedTime.
+             */
+            public Builder modifiedTime(String modifiedTime) {
+                this.modifiedTime = modifiedTime;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li>Submitted</li>
+             * <li>Transcoding</li>
+             * <li>TranscodeSuccess</li>
+             * <li>TranscodeFail</li>
+             * <li>TranscodeCancelled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TranscodeSuccess</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * WorkflowId.
+             */
+            public Builder workflowId(String workflowId) {
+                this.workflowId = workflowId;
+                return this;
+            }
+
+            public Workflow build() {
+                return new Workflow(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobDetailResponseBody</p>
+     */
+    public static class WorkflowTaskDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActivityResults")
+        private String activityResults;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
+        private String finishTime;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private String taskId;
+
+        @com.aliyun.core.annotation.NameInMap("TaskInput")
+        private String taskInput;
+
+        @com.aliyun.core.annotation.NameInMap("UserData")
+        private String userData;
+
+        @com.aliyun.core.annotation.NameInMap("Workflow")
+        private Workflow workflow;
+
+        private WorkflowTaskDetail(Builder builder) {
+            this.activityResults = builder.activityResults;
+            this.createTime = builder.createTime;
+            this.finishTime = builder.finishTime;
+            this.status = builder.status;
+            this.taskId = builder.taskId;
+            this.taskInput = builder.taskInput;
+            this.userData = builder.userData;
+            this.workflow = builder.workflow;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WorkflowTaskDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return activityResults
+         */
+        public String getActivityResults() {
+            return this.activityResults;
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return finishTime
+         */
+        public String getFinishTime() {
+            return this.finishTime;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        /**
+         * @return taskInput
+         */
+        public String getTaskInput() {
+            return this.taskInput;
+        }
+
+        /**
+         * @return userData
+         */
+        public String getUserData() {
+            return this.userData;
+        }
+
+        /**
+         * @return workflow
+         */
+        public Workflow getWorkflow() {
+            return this.workflow;
+        }
+
+        public static final class Builder {
+            private String activityResults; 
+            private String createTime; 
+            private String finishTime; 
+            private String status; 
+            private String taskId; 
+            private String taskInput; 
+            private String userData; 
+            private Workflow workflow; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkflowTaskDetail model) {
+                this.activityResults = model.activityResults;
+                this.createTime = model.createTime;
+                this.finishTime = model.finishTime;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskInput = model.taskInput;
+                this.userData = model.userData;
+                this.workflow = model.workflow;
+            } 
+
+            /**
+             * ActivityResults.
+             */
+            public Builder activityResults(String activityResults) {
+                this.activityResults = activityResults;
+                return this;
+            }
+
+            /**
+             * <p>The time when the task was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-14T07:39:25Z</p>
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * FinishTime.
+             */
+            public Builder finishTime(String finishTime) {
+                this.finishTime = finishTime;
+                return this;
+            }
+
+            /**
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li>Submitted</li>
+             * <li>Transcoding</li>
+             * <li>TranscodeSuccess</li>
+             * <li>TranscodeFail</li>
+             * <li>TranscodeCancelled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TranscodeSuccess</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * TaskId.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * TaskInput.
+             */
+            public Builder taskInput(String taskInput) {
+                this.taskInput = taskInput;
+                return this;
+            }
+
+            /**
+             * UserData.
+             */
+            public Builder userData(String userData) {
+                this.userData = userData;
+                return this;
+            }
+
+            /**
+             * Workflow.
+             */
+            public Builder workflow(Workflow workflow) {
+                this.workflow = workflow;
+                return this;
+            }
+
+            public WorkflowTaskDetail build() {
+                return new WorkflowTaskDetail(this);
             } 
 
         } 

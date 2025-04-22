@@ -36,6 +36,10 @@ public class DescribeVodRangeDataByLocateAndIspServiceResponseBody extends TeaMo
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jsonResult
      */
@@ -53,6 +57,14 @@ public class DescribeVodRangeDataByLocateAndIspServiceResponseBody extends TeaMo
     public static final class Builder {
         private String jsonResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodRangeDataByLocateAndIspServiceResponseBody model) {
+            this.jsonResult = model.jsonResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned result. The value is in the JSON format. These parameters indicate the following information in sequence: UNIX time, region, ISP, distribution of HTTP status codes, response time, bandwidth (bit/s), average response rate, page views, cache hit ratio, and request hit ratio.</p>
