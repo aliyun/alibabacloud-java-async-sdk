@@ -66,6 +66,10 @@ public class ListModelsRequest extends Request {
     private String sortBy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Task")
     private String task;
 
@@ -87,6 +91,7 @@ public class ListModelsRequest extends Request {
         this.provider = builder.provider;
         this.query = builder.query;
         this.sortBy = builder.sortBy;
+        this.tag = builder.tag;
         this.task = builder.task;
         this.workspaceId = builder.workspaceId;
     }
@@ -189,6 +194,13 @@ public class ListModelsRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return task
      */
     public String getTask() {
@@ -215,6 +227,7 @@ public class ListModelsRequest extends Request {
         private String provider; 
         private String query; 
         private String sortBy; 
+        private java.util.List<Tag> tag; 
         private String task; 
         private String workspaceId; 
 
@@ -236,12 +249,16 @@ public class ListModelsRequest extends Request {
             this.provider = request.provider;
             this.query = request.query;
             this.sortBy = request.sortBy;
+            this.tag = request.tag;
             this.task = request.task;
             this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * Collections.
+         * <p>The collection where the model is located. You can specify multiple collections and separate them with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI4D,QuickStart</p>
          */
         public Builder collections(String collections) {
             this.putQueryParameter("Collections", collections);
@@ -250,7 +267,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>The domain. Only models in the domain are returned. Valid values: nlp (Natural Language Processing) and cv (Computer Vision).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nlp</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -259,7 +279,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * Label.
+         * <p>The label. Models whose label key or label value contains a specific label are filtered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         public Builder label(String label) {
             this.putQueryParameter("Label", label);
@@ -268,7 +291,7 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * ModelName.
+         * <p>The model name used to filter the returned models.</p>
          */
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);
@@ -277,7 +300,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * ModelType.
+         * <p>The model type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Endpoint</p>
          */
         public Builder modelType(String modelType) {
             this.putQueryParameter("ModelType", modelType);
@@ -286,7 +312,14 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order in which the entries are sorted by the specific field on the returned page. Default value: ASC.</p>
+         * <ul>
+         * <li>ASC</li>
+         * <li>DESC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -295,7 +328,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * Origin.
+         * <p>The model source used to filter the models that belong to a community or organization, such as ModelScope and Hugging Face.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ModelScope</p>
          */
         public Builder origin(String origin) {
             this.putQueryParameter("Origin", origin);
@@ -304,7 +340,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -313,7 +352,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -322,7 +364,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * Provider.
+         * <p>The provider. If you configure this parameter, only the models exposed by the provider are returned. If you leave this parameter empty, only models owned by the user are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pai</p>
          */
         public Builder provider(String provider) {
             this.putQueryParameter("Provider", provider);
@@ -331,7 +376,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>The query condition. For example, if you set the value to nlp, all models that match ModelName, Domain, Task, LabelKey, and LabelValue are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nlp</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -340,7 +388,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field used to sort the results. The GmtCreateTime field is used for sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -349,7 +400,20 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * Task.
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * <p>The task used to filter the models that belong to the task type. Example: text-classification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text-classification</p>
          */
         public Builder task(String task) {
             this.putQueryParameter("Task", task);
@@ -358,7 +422,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. Only models in this workspace are queried. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>324**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -373,4 +440,79 @@ public class ListModelsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListModelsRequest} extends {@link TeaModel}
+     *
+     * <p>ListModelsRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

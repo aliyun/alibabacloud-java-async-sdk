@@ -386,6 +386,7 @@ public class ListDatasetFileMetasRequest extends Request {
         } 
 
         /**
+         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -398,6 +399,7 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
+         * <p>The dataset version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -410,6 +412,7 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
+         * <p>The end time when the file is updated. This parameter is used when you want to query file metadata during a period of time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -440,7 +443,13 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * <blockquote>
+         * <p> If you do not configure this parameter, the data on the first page is returned. A return value other than Null of this parameter indicates that not all entries have been returned. You can use this value as an input parameter to obtain entries on the next page. The value Null indicates that all query results have been returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>90a6ee35-****-4cd4-927e-1f45e1cb8b62_1729644433000</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -449,7 +458,14 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order in which the entries are sorted by the specific field on the returned page. This parameter must be used together with SortBy. Default value: ASC.</p>
+         * <ul>
+         * <li>ASC</li>
+         * <li>DESC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -458,7 +474,10 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -534,7 +553,7 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * QueryText.
+         * <p>The text content to be queried.</p>
          */
         public Builder queryText(String queryText) {
             this.putQueryParameter("QueryText", queryText);
@@ -543,7 +562,14 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * QueryType.
+         * <p>The retrieval type.</p>
+         * <ul>
+         * <li>TAG (default)</li>
+         * <li>VECTOR</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TAG</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -552,7 +578,10 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * ScoreThreshold.
+         * <p>The similarity score. Only dataset files whose similarity score is greater than the value of ScoreThreshold are returned. This parameter is valid only when QueryType is set to VECTOR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.6</p>
          */
         public Builder scoreThreshold(Float scoreThreshold) {
             this.putQueryParameter("ScoreThreshold", scoreThreshold);
@@ -561,7 +590,14 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field used to sort the results. Default value: GmtCreateTime. Valid values:</p>
+         * <ul>
+         * <li>FileCreateTime (default): The results are sorted by the time when the file is created.</li>
+         * <li>FileUpdateTime: The results are sorted by the time when the file is last modified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FileCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -570,6 +606,7 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
+         * <p>The start time when the file is updated. This parameter is used when you want to query file metadata during a period of time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -600,7 +637,10 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * TopK.
+         * <p>The number of search results to return. A maximum of Top K search results can be returned. This parameter is valid only when QueryType is set to VECTOR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder topK(Integer topK) {
             this.putQueryParameter("TopK", topK);
@@ -609,6 +649,7 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace to which the dataset belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

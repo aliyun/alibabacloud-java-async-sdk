@@ -80,7 +80,7 @@ public class ListCodeSourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * CodeSources.
+         * <p>The code sources.</p>
          */
         public Builder codeSources(java.util.List<CodeSourceItem> codeSources) {
             this.codeSources = codeSources;
@@ -88,7 +88,10 @@ public class ListCodeSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListCodeSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of code sources that meet the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

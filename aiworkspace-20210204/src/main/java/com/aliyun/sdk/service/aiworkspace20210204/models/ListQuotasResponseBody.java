@@ -80,7 +80,7 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
         /**
-         * Quotas.
+         * <p>The returned quotas.</p>
          */
         public Builder quotas(java.util.List<Quotas> quotas) {
             this.quotas = quotas;
@@ -88,7 +88,10 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of quotas that meet the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -175,7 +181,10 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The specification name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cu</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -183,7 +192,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The specification type. The parameter can be left empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -191,7 +203,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The specification value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11500</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -323,7 +338,7 @@ public class ListQuotasResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The alias of the quota.</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -331,7 +346,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The quota ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1828233</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -339,7 +357,14 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>isolate: subscription</li>
+             * <li>share: pay-as-you-go</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>isolate</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -347,7 +372,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The quota name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quota-name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -355,7 +383,14 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The product code. Valid values:</p>
+             * <ul>
+             * <li>PAI_isolate: CPU subscription resource groups of PAI</li>
+             * <li>PAI_share: GPU pay-as-you-go resource groups of PAI</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute_share</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -363,7 +398,11 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaType.
+             * <p>The quota type. Valid value:</p>
+             * <p>PAI: indicates GPU resource groups of MaxCompute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder quotaType(String quotaType) {
                 this.quotaType = quotaType;
@@ -371,7 +410,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Specs.
+             * <p>The quota specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cu&quot;:&quot;11500&quot;,&quot;minCu&quot;:&quot;2300&quot;,&quot;parentId&quot;:&quot;0&quot;}</p>
              */
             public Builder specs(java.util.List<Specs> specs) {
                 this.specs = specs;

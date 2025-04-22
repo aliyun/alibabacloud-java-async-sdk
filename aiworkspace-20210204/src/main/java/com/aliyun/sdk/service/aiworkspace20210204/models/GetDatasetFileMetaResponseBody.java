@@ -106,7 +106,7 @@ public class GetDatasetFileMetaResponseBody extends TeaModel {
         } 
 
         /**
-         * DatasetFileMeta.
+         * <p>The queried metadata records of dataset files.</p>
          */
         public Builder datasetFileMeta(DatasetFileMetaContentGet datasetFileMeta) {
             this.datasetFileMeta = datasetFileMeta;
@@ -114,7 +114,10 @@ public class GetDatasetFileMetaResponseBody extends TeaModel {
         }
 
         /**
-         * DatasetId.
+         * <p>The dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-rbvg5wz****c9ks92</p>
          */
         public Builder datasetId(String datasetId) {
             this.datasetId = datasetId;
@@ -122,7 +125,10 @@ public class GetDatasetFileMetaResponseBody extends TeaModel {
         }
 
         /**
-         * DatasetVersion.
+         * <p>The dataset version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder datasetVersion(String datasetVersion) {
             this.datasetVersion = datasetVersion;
@@ -130,7 +136,10 @@ public class GetDatasetFileMetaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class GetDatasetFileMetaResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

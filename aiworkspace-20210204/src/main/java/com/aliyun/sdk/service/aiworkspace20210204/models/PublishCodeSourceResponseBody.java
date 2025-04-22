@@ -67,7 +67,10 @@ public class PublishCodeSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * CodeSourceId.
+         * <p>The ID of the code source that is successfully published.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code-a797*******</p>
          */
         public Builder codeSourceId(String codeSourceId) {
             this.codeSourceId = codeSourceId;
@@ -75,7 +78,10 @@ public class PublishCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

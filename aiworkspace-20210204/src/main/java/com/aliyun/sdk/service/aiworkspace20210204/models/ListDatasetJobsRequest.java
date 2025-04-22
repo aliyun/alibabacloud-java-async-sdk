@@ -130,6 +130,7 @@ public class ListDatasetJobsRequest extends Request {
         } 
 
         /**
+         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +143,10 @@ public class ListDatasetJobsRequest extends Request {
         }
 
         /**
-         * DatasetVersion.
+         * <p>The dataset version name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder datasetVersion(String datasetVersion) {
             this.putQueryParameter("DatasetVersion", datasetVersion);
@@ -151,7 +155,10 @@ public class ListDatasetJobsRequest extends Request {
         }
 
         /**
-         * JobAction.
+         * <p>The action to be performed on the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SemanticIndex</p>
          */
         public Builder jobAction(String jobAction) {
             this.putQueryParameter("JobAction", jobAction);
@@ -160,7 +167,10 @@ public class ListDatasetJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -169,7 +179,10 @@ public class ListDatasetJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -178,7 +191,10 @@ public class ListDatasetJobsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

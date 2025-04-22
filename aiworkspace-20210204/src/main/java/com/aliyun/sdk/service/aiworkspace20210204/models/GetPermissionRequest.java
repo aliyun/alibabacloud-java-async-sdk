@@ -145,6 +145,7 @@ public class GetPermissionRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +158,7 @@ public class GetPermissionRequest extends Request {
         }
 
         /**
+         * <p>The permission name, which is unique in a region. For more information about permissions, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>. For more information about how to obtain the permission name, see <a href="https://help.aliyun.com/document_detail/449132.html">ListPermissions</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +171,14 @@ public class GetPermissionRequest extends Request {
         }
 
         /**
-         * Accessibility.
+         * <p>The accessibility. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: All members in the workspace can access the workspace.</li>
+         * <li>PRIVATE: Only the creator can access the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder accessibility(String accessibility) {
             this.putQueryParameter("Accessibility", accessibility);
@@ -178,7 +187,10 @@ public class GetPermissionRequest extends Request {
         }
 
         /**
-         * Creator.
+         * <p>The UID of the Alibaba Cloud account that is used to create the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17915******4216</p>
          */
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
@@ -197,7 +209,14 @@ public class GetPermissionRequest extends Request {
         }
 
         /**
-         * Option.
+         * <p>The configuration. Separate multiple configurations with commas (,). Valid values:</p>
+         * <ul>
+         * <li>ResourceEmpty: The Resource parameter is not configured.</li>
+         * <li>DisableRam: The RAM check is not performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceEmpty,DisableRam</p>
          */
         public Builder option(String option) {
             this.putQueryParameter("Option", option);
@@ -206,7 +225,10 @@ public class GetPermissionRequest extends Request {
         }
 
         /**
-         * Resource.
+         * <p>The resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job/dlc-ksd******s12</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);

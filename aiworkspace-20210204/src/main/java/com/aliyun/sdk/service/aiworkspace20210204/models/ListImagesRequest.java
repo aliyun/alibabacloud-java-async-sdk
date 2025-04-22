@@ -199,7 +199,14 @@ public class ListImagesRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * <p>The visibility of the image. This parameter is valid only for custom images.</p>
+         * <ul>
+         * <li>PUBLIC: The image is visible to all users.</li>
+         * <li>PRIVATE: The image is visible only to you and the administrator of the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder accessibility(String accessibility) {
             this.putQueryParameter("Accessibility", accessibility);
@@ -217,7 +224,30 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The tag filter conditions. Multiple conditions are separated by commas (,). The format of a single condition filter is <code>key=value</code>. The following keys are supported:</p>
+         * <ul>
+         * <li>system.chipType</li>
+         * <li>system.dsw.cudaVersion</li>
+         * <li>system.dsw.fromImageId</li>
+         * <li>system.dsw.fromInstanceId</li>
+         * <li>system.dsw.id</li>
+         * <li>system.dsw.os</li>
+         * <li>system.dsw.osVersion</li>
+         * <li>system.dsw.resourceType</li>
+         * <li>system.dsw.rootImageId</li>
+         * <li>system.dsw.stage</li>
+         * <li>system.dsw.tag</li>
+         * <li>system.dsw.type</li>
+         * <li>system.framework</li>
+         * <li>system.origin</li>
+         * <li>system.pythonVersion</li>
+         * <li>system.source</li>
+         * <li>system.supported.dlc</li>
+         * <li>system.supported.dsw</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system.framework=XGBoost 1.6.0,system.official=true</p>
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -226,7 +256,10 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The image name. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tensorflow_2.9</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -235,7 +268,14 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order in which the entries are sorted by the specific field on the returned page. This parameter must be used together with SortBy. Default value: ASC. Valid values:</p>
+         * <ul>
+         * <li>ASC: ascending order</li>
+         * <li>DESC: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -244,7 +284,10 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -253,7 +296,10 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -262,7 +308,10 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>The image name and description that are used for fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -271,7 +320,10 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field used for sorting. The GmtCreateTime field is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -280,7 +332,14 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * Verbose.
+         * <p>Specifies whether to display non-essential information, which contains tags. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);
@@ -289,7 +348,10 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20******55</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

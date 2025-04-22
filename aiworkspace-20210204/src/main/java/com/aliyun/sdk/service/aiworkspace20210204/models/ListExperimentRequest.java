@@ -213,7 +213,10 @@ public class ListExperimentRequest extends Request {
         } 
 
         /**
-         * Labels.
+         * <p>The tag filter conditions. Multiple conditions are separated by commas (,). The format of a single condition filter is <code>key=value</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>is_evaluation:true</p>
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -222,7 +225,10 @@ public class ListExperimentRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries in the request. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -231,7 +237,10 @@ public class ListExperimentRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The experiment name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -240,7 +249,7 @@ public class ListExperimentRequest extends Request {
         }
 
         /**
-         * Options.
+         * <p>The optional parameters.</p>
          */
         public Builder options(Options options) {
             String optionsShrink = shrink(options, "Options", "json");
@@ -250,7 +259,14 @@ public class ListExperimentRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order of specific fields of results in a paged query (ascending or descending).</p>
+         * <ul>
+         * <li>ASC: ascending order</li>
+         * <li>DESC: descending order. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -259,7 +275,10 @@ public class ListExperimentRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The strings used for sorting. The following fields can be used for sorting: GmtCreateTime, Name, GmtModifiedTime, and ExperimentId. The sorting order can be ASC (default) and DESC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime DESC,Name ASC</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -268,7 +287,10 @@ public class ListExperimentRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value starts from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -277,7 +299,10 @@ public class ListExperimentRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -286,7 +311,10 @@ public class ListExperimentRequest extends Request {
         }
 
         /**
-         * PageToken.
+         * <p>The pagination token, which starts from 0. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageToken(Long pageToken) {
             this.putQueryParameter("PageToken", pageToken);
@@ -295,7 +323,10 @@ public class ListExperimentRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field used for sorting. The GmtCreateTime field is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -304,7 +335,10 @@ public class ListExperimentRequest extends Request {
         }
 
         /**
-         * Verbose.
+         * <p>Specifies whether to obtain the LatestRun value that is related to the experiment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);
@@ -313,7 +347,13 @@ public class ListExperimentRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the experiment belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <blockquote>
+         * <p> If you do not specify a workspace ID, the system returns the experiments in the default workspace.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>151739</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -368,7 +408,10 @@ public class ListExperimentRequest extends Request {
             } 
 
             /**
-             * match_name_exactly.
+             * <p>Specifies whether to exactly match the experiment by name. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder matchNameExactly(String matchNameExactly) {
                 this.matchNameExactly = matchNameExactly;

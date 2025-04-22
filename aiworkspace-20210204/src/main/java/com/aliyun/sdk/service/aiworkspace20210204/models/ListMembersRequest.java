@@ -116,6 +116,7 @@ public class ListMembersRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class ListMembersRequest extends Request {
         }
 
         /**
-         * MemberName.
+         * <p>The member name. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
          */
         public Builder memberName(String memberName) {
             this.putQueryParameter("MemberName", memberName);
@@ -137,7 +141,10 @@ public class ListMembersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the workspace list. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -146,7 +153,10 @@ public class ListMembersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -155,7 +165,19 @@ public class ListMembersRequest extends Request {
         }
 
         /**
-         * Roles.
+         * <p>The roles that are used to filter members. Multiple roles are separated by commas (,). Valid values:</p>
+         * <ul>
+         * <li>PAI.AlgoDeveloper: algorithm developer</li>
+         * <li>PAI.AlgoOperator: algorithm O&amp;M engineer</li>
+         * <li>PAI.LabelManager: labeling administrator</li>
+         * <li>PAI.MaxComputeDeveloper: MaxCompute developer</li>
+         * <li>PAI.WorkspaceAdmin: administrator</li>
+         * <li>PAI.WorkspaceGuest: guest</li>
+         * <li>PAI.WorkspaceOwner: owner</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PAI.AlgoDeveloper</p>
          */
         public Builder roles(String roles) {
             this.putQueryParameter("Roles", roles);

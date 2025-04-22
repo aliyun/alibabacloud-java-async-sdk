@@ -40,6 +40,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation can be called only by the internal system and cannot be called by external users.</p>
+     * 
      * @param request the request parameters of AcceptDataworksEvent  AcceptDataworksEventRequest
      * @return AcceptDataworksEventResponse
      */
@@ -220,6 +223,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>The tag key and value are not empty strings and cannot exceed 128 characters in length.</li>
+     * <li>The tag key cannot start with any of the following strings: &quot;aliyun&quot;, &quot;acs&quot;, &quot;http://&quot;, and &quot;https://&quot;.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateDatasetLabels  CreateDatasetLabelsRequest
      * @return CreateDatasetLabelsResponse
      */
@@ -862,6 +872,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetDatasetFileMetaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDatasetFileMetasStatistics  GetDatasetFileMetasStatisticsRequest
+     * @return GetDatasetFileMetasStatisticsResponse
+     */
+    @Override
+    public CompletableFuture<GetDatasetFileMetasStatisticsResponse> getDatasetFileMetasStatistics(GetDatasetFileMetasStatisticsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDatasetFileMetasStatistics").setMethod(HttpMethod.GET).setPathRegex("/api/v1/statistics/datasets/{DatasetId}/datasetfilemetas").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDatasetFileMetasStatisticsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDatasetFileMetasStatisticsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

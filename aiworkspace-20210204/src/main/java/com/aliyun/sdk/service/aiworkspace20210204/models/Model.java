@@ -65,6 +65,9 @@ public class Model extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Provider")
     private String provider;
 
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Label> tags;
+
     @com.aliyun.core.annotation.NameInMap("Task")
     private String task;
 
@@ -91,6 +94,7 @@ public class Model extends TeaModel {
         this.origin = builder.origin;
         this.ownerId = builder.ownerId;
         this.provider = builder.provider;
+        this.tags = builder.tags;
         this.task = builder.task;
         this.userId = builder.userId;
         this.workspaceId = builder.workspaceId;
@@ -221,6 +225,13 @@ public class Model extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List<Label> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return task
      */
     public String getTask() {
@@ -258,6 +269,7 @@ public class Model extends TeaModel {
         private String origin; 
         private String ownerId; 
         private String provider; 
+        private java.util.List<Label> tags; 
         private String task; 
         private String userId; 
         private String workspaceId; 
@@ -282,6 +294,7 @@ public class Model extends TeaModel {
             this.origin = model.origin;
             this.ownerId = model.ownerId;
             this.provider = model.provider;
+            this.tags = model.tags;
             this.task = model.task;
             this.userId = model.userId;
             this.workspaceId = model.workspaceId;
@@ -412,6 +425,14 @@ public class Model extends TeaModel {
          */
         public Builder provider(String provider) {
             this.provider = provider;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Label> tags) {
+            this.tags = tags;
             return this;
         }
 

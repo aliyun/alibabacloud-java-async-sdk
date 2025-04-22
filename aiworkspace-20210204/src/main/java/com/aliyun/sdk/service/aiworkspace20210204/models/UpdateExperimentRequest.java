@@ -88,6 +88,7 @@ public class UpdateExperimentRequest extends Request {
         } 
 
         /**
+         * <p>The experiment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,14 @@ public class UpdateExperimentRequest extends Request {
         }
 
         /**
-         * Accessibility.
+         * <p>The accessibility of the experiment in the workspace. Valid values:</p>
+         * <ul>
+         * <li>PRIVATE: The experiment is accessible only to you and the administrator of the workspace.</li>
+         * <li>PUBLIC: The experiment is accessible to all users in the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -109,7 +117,12 @@ public class UpdateExperimentRequest extends Request {
         }
 
         /**
-         * <p>名称</p>
+         * <p>The experiment name. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must start with a letter.</li>
+         * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The name must be 1 to 63 characters in length.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>myName</p>

@@ -74,6 +74,7 @@ public class SetExperimentLabelsRequest extends Request {
         } 
 
         /**
+         * <p>The experiment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class SetExperimentLabelsRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The tags.</p>
          */
         public Builder labels(java.util.List<LabelInfo> labels) {
             this.putBodyParameter("Labels", labels);

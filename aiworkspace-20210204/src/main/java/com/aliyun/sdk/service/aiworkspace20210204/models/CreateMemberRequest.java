@@ -75,6 +75,7 @@ public class CreateMemberRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class CreateMemberRequest extends Request {
         }
 
         /**
+         * <p>The members.</p>
          * <p>This parameter is required.</p>
          */
         public Builder members(java.util.List<Members> members) {
@@ -157,6 +159,7 @@ public class CreateMemberRequest extends Request {
             } 
 
             /**
+             * <p>The list of roles.</p>
              * <p>This parameter is required.</p>
              */
             public Builder roles(java.util.List<String> roles) {
@@ -165,6 +168,7 @@ public class CreateMemberRequest extends Request {
             }
 
             /**
+             * <p>The member IDs. Multiple member IDs are separated by commas (,). You can call <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a> to obtain the member IDs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

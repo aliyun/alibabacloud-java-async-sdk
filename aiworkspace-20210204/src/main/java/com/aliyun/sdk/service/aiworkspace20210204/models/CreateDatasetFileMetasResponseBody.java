@@ -93,7 +93,7 @@ public class CreateDatasetFileMetasResponseBody extends TeaModel {
         } 
 
         /**
-         * FailedDetails.
+         * <p>The metadata that failed to be created.</p>
          */
         public Builder failedDetails(java.util.List<DatasetFileMetaResponse> failedDetails) {
             this.failedDetails = failedDetails;
@@ -101,7 +101,10 @@ public class CreateDatasetFileMetasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +112,15 @@ public class CreateDatasetFileMetasResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Indicates whether the metadata records of all dataset files were created. The value true indicates that the metadata records of all dataset files are created. If the value is false, view the failure details specified by FailedDetails.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;
@@ -117,7 +128,7 @@ public class CreateDatasetFileMetasResponseBody extends TeaModel {
         }
 
         /**
-         * SucceedDetails.
+         * <p>The metadata that is created.</p>
          */
         public Builder succeedDetails(java.util.List<DatasetFileMetaResponse> succeedDetails) {
             this.succeedDetails = succeedDetails;

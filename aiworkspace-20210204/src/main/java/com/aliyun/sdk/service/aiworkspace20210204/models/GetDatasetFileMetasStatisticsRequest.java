@@ -12,39 +12,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateDatasetJobRequest} extends {@link RequestModel}
+ * {@link GetDatasetFileMetasStatisticsRequest} extends {@link RequestModel}
  *
- * <p>UpdateDatasetJobRequest</p>
+ * <p>GetDatasetFileMetasStatisticsRequest</p>
  */
-public class UpdateDatasetJobRequest extends Request {
+public class GetDatasetFileMetasStatisticsRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("DatasetId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String datasetId;
 
-    @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("DatasetJobId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String datasetJobId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggregateBy")
+    private String aggregateBy;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatasetVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String datasetVersion;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Description")
-    private String description;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    private UpdateDatasetJobRequest(Builder builder) {
+    private GetDatasetFileMetasStatisticsRequest(Builder builder) {
         super(builder);
         this.datasetId = builder.datasetId;
-        this.datasetJobId = builder.datasetJobId;
+        this.aggregateBy = builder.aggregateBy;
         this.datasetVersion = builder.datasetVersion;
-        this.description = builder.description;
+        this.maxResults = builder.maxResults;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -52,7 +53,7 @@ public class UpdateDatasetJobRequest extends Request {
         return new Builder();
     }
 
-    public static UpdateDatasetJobRequest create() {
+    public static GetDatasetFileMetasStatisticsRequest create() {
         return builder().build();
     }
 
@@ -69,10 +70,10 @@ public class UpdateDatasetJobRequest extends Request {
     }
 
     /**
-     * @return datasetJobId
+     * @return aggregateBy
      */
-    public String getDatasetJobId() {
-        return this.datasetJobId;
+    public String getAggregateBy() {
+        return this.aggregateBy;
     }
 
     /**
@@ -83,10 +84,10 @@ public class UpdateDatasetJobRequest extends Request {
     }
 
     /**
-     * @return description
+     * @return maxResults
      */
-    public String getDescription() {
-        return this.description;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
@@ -96,32 +97,31 @@ public class UpdateDatasetJobRequest extends Request {
         return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<UpdateDatasetJobRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetDatasetFileMetasStatisticsRequest, Builder> {
         private String datasetId; 
-        private String datasetJobId; 
+        private String aggregateBy; 
         private String datasetVersion; 
-        private String description; 
+        private Integer maxResults; 
         private String workspaceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateDatasetJobRequest request) {
+        private Builder(GetDatasetFileMetasStatisticsRequest request) {
             super(request);
             this.datasetId = request.datasetId;
-            this.datasetJobId = request.datasetJobId;
+            this.aggregateBy = request.aggregateBy;
             this.datasetVersion = request.datasetVersion;
-            this.description = request.description;
+            this.maxResults = request.maxResults;
             this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>d-rbvg5*****jhc9ks92</p>
+         * <p>d-rbvg5wz****c9ks92</p>
          */
         public Builder datasetId(String datasetId) {
             this.putPathParameter("DatasetId", datasetId);
@@ -130,54 +130,50 @@ public class UpdateDatasetJobRequest extends Request {
         }
 
         /**
-         * <p>The dataset job ID.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dsjob-9jx1*****uj9e</p>
+         * AggregateBy.
          */
-        public Builder datasetJobId(String datasetJobId) {
-            this.putPathParameter("DatasetJobId", datasetJobId);
-            this.datasetJobId = datasetJobId;
+        public Builder aggregateBy(String aggregateBy) {
+            this.putQueryParameter("AggregateBy", aggregateBy);
+            this.aggregateBy = aggregateBy;
             return this;
         }
 
         /**
-         * <p>The dataset version name.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
         public Builder datasetVersion(String datasetVersion) {
-            this.putBodyParameter("DatasetVersion", datasetVersion);
+            this.putQueryParameter("DatasetVersion", datasetVersion);
             this.datasetVersion = datasetVersion;
             return this;
         }
 
         /**
-         * <p>The dataset job description.</p>
+         * MaxResults.
          */
-        public Builder description(String description) {
-            this.putBodyParameter("Description", description);
-            this.description = description;
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
             return this;
         }
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>478**</p>
+         * <p>145883</p>
          */
         public Builder workspaceId(String workspaceId) {
-            this.putBodyParameter("WorkspaceId", workspaceId);
+            this.putQueryParameter("WorkspaceId", workspaceId);
             this.workspaceId = workspaceId;
             return this;
         }
 
         @Override
-        public UpdateDatasetJobRequest build() {
-            return new UpdateDatasetJobRequest(this);
+        public GetDatasetFileMetasStatisticsRequest build() {
+            return new GetDatasetFileMetasStatisticsRequest(this);
         } 
 
     } 

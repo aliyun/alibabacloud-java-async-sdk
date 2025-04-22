@@ -59,6 +59,10 @@ public class CreateModelRequest extends Request {
     private String origin;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Label> tag;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Task")
     private String task;
 
@@ -78,6 +82,7 @@ public class CreateModelRequest extends Request {
         this.modelType = builder.modelType;
         this.orderNumber = builder.orderNumber;
         this.origin = builder.origin;
+        this.tag = builder.tag;
         this.task = builder.task;
         this.workspaceId = builder.workspaceId;
     }
@@ -166,6 +171,13 @@ public class CreateModelRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Label> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return task
      */
     public String getTask() {
@@ -190,6 +202,7 @@ public class CreateModelRequest extends Request {
         private String modelType; 
         private Long orderNumber; 
         private String origin; 
+        private java.util.List<Label> tag; 
         private String task; 
         private String workspaceId; 
 
@@ -209,6 +222,7 @@ public class CreateModelRequest extends Request {
             this.modelType = request.modelType;
             this.orderNumber = request.orderNumber;
             this.origin = request.origin;
+            this.tag = request.tag;
             this.task = request.task;
             this.workspaceId = request.workspaceId;
         } 
@@ -334,6 +348,15 @@ public class CreateModelRequest extends Request {
         public Builder origin(String origin) {
             this.putBodyParameter("Origin", origin);
             this.origin = origin;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Label> tag) {
+            this.putBodyParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 

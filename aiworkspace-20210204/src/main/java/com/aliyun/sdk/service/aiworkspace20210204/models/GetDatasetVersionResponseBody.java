@@ -265,7 +265,10 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>数据集的数据量</p>
+         * <p>The number of data records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder dataCount(Long dataCount) {
             this.dataCount = dataCount;
@@ -273,7 +276,10 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据集版本的数据大小。</p>
+         * <p>The size of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder dataSize(Long dataSize) {
             this.dataSize = dataSize;
@@ -281,11 +287,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据源类型。支持以下取值：</p>
-         * <ul>
-         * <li>OSS：阿里云对象存储（OSS）。</li>
-         * <li>NAS：阿里云文件存储（NAS）。</li>
-         * </ul>
+         * <p>The type of the data source.</p>
          * <p>This parameter is required.</p>
          */
         public Builder dataSourceType(String dataSourceType) {
@@ -294,7 +296,10 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-dkdbnnap0g7b6su4yg</p>
          */
         public Builder datasetId(String datasetId) {
             this.datasetId = datasetId;
@@ -302,7 +307,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据集版本的描述信息。</p>
+         * <p>The version description.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -310,7 +315,10 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-13T10:22:05.694Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -318,7 +326,10 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间。</p>
+         * <p>The last modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-13T10:22:05.694Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -326,7 +337,21 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * ImportInfo.
+         * <p>The dataset configurations to be imported to a storage, such as Object Storage Service (OSS), File Storage NAS (NAS), or Cloud Parallel File Storage (CPFS).</p>
+         * <p><strong>OSS</strong></p>
+         * <p>{ &quot;region&quot;: &quot;${region}&quot;,// The region ID. $bucket = $options[&quot;bucket&quot;]; // The bucket name. &quot;path&quot;: &quot;${path}&quot; // The file path. }</p>
+         * <p><strong>NAS</strong></p>
+         * <p><strong>CPFS</strong></p>
+         * <p><strong>CPFS for Lingjun</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;region&quot;: &quot;cn-wulanchabu&quot;,
+         *     &quot;fileSystemId&quot;: &quot;bmcpfs-xxxxxxxxxxx&quot;,
+         *     &quot;path&quot;: &quot;/mnt&quot;,
+         *     &quot;mountTarget&quot;: &quot;cpfs-xxxxxxxxxxxx-vpc-gacs9f.cn-wulanchabu.cpfs.aliyuncs.com&quot;,
+         *     &quot;isVpcMount&quot;: true
+         * }</p>
          */
         public Builder importInfo(String importInfo) {
             this.importInfo = importInfo;
@@ -334,7 +359,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>代表资源标签的资源属性字段</p>
+         * <p>The resource tags.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
@@ -342,7 +367,14 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * MountAccess.
+         * <p>The access permission on the dataset when the dataset is mounted. Valid values:</p>
+         * <ul>
+         * <li>RO: read-only permissions</li>
+         * <li>RW: read and write permissions</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RO</p>
          */
         public Builder mountAccess(String mountAccess) {
             this.mountAccess = mountAccess;
@@ -350,8 +382,12 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>扩展字段，JsonString类型。
-         * 当DLC使用数据集时，可通过配置mountPath字段指定数据集默认挂载路径。</p>
+         * <p>The extended fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;mountPath&quot;: &quot;/mnt/data/&quot;
+         * }</p>
          */
         public Builder options(String options) {
             this.options = options;
@@ -359,12 +395,11 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据集的属性。支持以下取值：</p>
-         * <ul>
-         * <li>FILE：文件。</li>
-         * <li>DIRECTORY：文件夹。</li>
-         * </ul>
+         * <p>The property of the dataset.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DIRECTORY</p>
          */
         public Builder property(String property) {
             this.property = property;
@@ -372,7 +407,10 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C55DF3DA-F120-5E37-A374-F49365531701</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -380,7 +418,10 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据来源ID。</p>
+         * <p>The ID of the source dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-rbvg5wzljzjhc9ks92</p>
          */
         public Builder sourceId(String sourceId) {
             this.sourceId = sourceId;
@@ -388,12 +429,10 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据来源类型，默认为USER。支持以下取值：</p>
-         * <ul>
-         * <li>PAI-PUBLIC-DATASET：PAI公共数据集。</li>
-         * <li>ITAG：iTAG模块标注结果生成的数据集。</li>
-         * <li>USER：用户注册的数据集。</li>
-         * </ul>
+         * <p>The type of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -401,16 +440,11 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Uri配置样例如下：</p>
-         * <ul>
-         * <li>数据源类型为OSS：<code>oss://bucket.endpoint/object</code></li>
-         * <li>数据源类型为NAS：
-         * 通用型NAS格式为：<code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>；
-         * CPFS1.0：<code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>；
-         * CPFS2.0：<code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code>。
-         * CPFS1.0和CPFS2.0根据fsid的格式来区分：CPFS1.0 格式为cpfs-&lt;8位ascii字符&gt;；CPFS2.0 格式为cpfs-&lt;16为ascii字符&gt;。</li>
-         * </ul>
+         * <p>The sample URI of the dataset.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://ai4d-br7hx9ngzelo2o6uip.oss-cn-shanghai.aliyuncs.com/365349/data-1157703270994901/datasets/aka108o/</p>
          */
         public Builder uri(String uri) {
             this.uri = uri;
@@ -418,7 +452,10 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>代表资源名称的资源属性字段</p>
+         * <p>The version name of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;

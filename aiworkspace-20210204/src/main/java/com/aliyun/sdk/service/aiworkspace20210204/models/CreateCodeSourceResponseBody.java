@@ -67,7 +67,10 @@ public class CreateCodeSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * CodeSourceId.
+         * <p>The ID of the created code build.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code-20********</p>
          */
         public Builder codeSourceId(String codeSourceId) {
             this.codeSourceId = codeSourceId;
@@ -75,7 +78,10 @@ public class CreateCodeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

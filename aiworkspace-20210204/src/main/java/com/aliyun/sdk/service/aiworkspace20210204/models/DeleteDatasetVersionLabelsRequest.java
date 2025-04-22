@@ -90,6 +90,7 @@ public class DeleteDatasetVersionLabelsRequest extends Request {
         } 
 
         /**
+         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteDatasetVersionLabelsRequest extends Request {
         }
 
         /**
+         * <p>The dataset version name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DeleteDatasetVersionLabelsRequest extends Request {
         }
 
         /**
+         * <p>The tag keys. Multiple tags are separated by commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

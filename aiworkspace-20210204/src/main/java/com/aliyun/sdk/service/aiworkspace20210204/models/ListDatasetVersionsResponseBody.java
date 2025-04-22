@@ -106,7 +106,7 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * DatasetVersions.
+         * <p>The dataset versions.</p>
          */
         public Builder datasetVersions(java.util.List<DatasetVersion> datasetVersions) {
             this.datasetVersions = datasetVersions;
@@ -114,7 +114,10 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0648C5BB-68D0-54D2-92A5-607135B8806B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of dataset versions that meet the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

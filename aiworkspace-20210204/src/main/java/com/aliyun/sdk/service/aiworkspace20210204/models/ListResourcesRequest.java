@@ -213,7 +213,10 @@ public class ListResourcesRequest extends Request {
         } 
 
         /**
-         * GroupName.
+         * <p>The name of the resource group. You can call <a href="https://help.aliyun.com/document_detail/449143.html">ListResources</a> to obtain the name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -222,7 +225,11 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>Tag-based filter conditions. Multiple conditions are separated by commas (,). Only resources that meet all the specified tag-based filter conditions are returned.</p>
+         * <p>This parameter is available only for resources whose ProductType is ACS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system.supported.dsw=true,system.supported.dlc=true</p>
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -231,7 +238,14 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * Option.
+         * <p>The operation to perform. Valid values:</p>
+         * <ul>
+         * <li>ListResourceByWorkspace: obtains the resources in the workspace. This is the default value.</li>
+         * <li>ListResource: obtains the resources of the user.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ListResourceByWorkspace</p>
          */
         public Builder option(String option) {
             this.putQueryParameter("Option", option);
@@ -240,7 +254,10 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -249,7 +266,10 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -258,7 +278,10 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * ProductTypes.
+         * <p>**This field is no longer used and will be removed. Use the ResourceType field instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
          */
         public Builder productTypes(String productTypes) {
             this.putQueryParameter("ProductTypes", productTypes);
@@ -267,7 +290,13 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * QuotaIds.
+         * <p>The quota IDs, which are separated by commas (,). Only resources that contain all the specified quotas are returned.</p>
+         * <blockquote>
+         * <p> This parameter is available only for resources whose ResourceTypes is ACS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>quota-k<strong><strong><strong>da,quota-cd</strong></strong></strong>w</p>
          */
         public Builder quotaIds(String quotaIds) {
             this.putQueryParameter("QuotaIds", quotaIds);
@@ -276,7 +305,14 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * ResourceName.
+         * <p>The resource name. The value must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 3 to 28 characters in length.</li>
+         * <li>The name is unique in the region.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>resource</p>
          */
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
@@ -285,7 +321,17 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * ResourceTypes.
+         * <p>The resource types. Valid values:</p>
+         * <ul>
+         * <li>MaxCompute</li>
+         * <li>ECS</li>
+         * <li>Lingjun</li>
+         * <li>ACS</li>
+         * <li>FLINK</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
          */
         public Builder resourceTypes(String resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);
@@ -294,7 +340,14 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * Verbose.
+         * <p>Specifies whether to show detailed information, which includes the Quotas field. Valid values:</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);
@@ -303,7 +356,15 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * VerboseFields.
+         * <p>The fields to return. Multiple fields are separated by commas (,). Valid values:</p>
+         * <ul>
+         * <li>Quota</li>
+         * <li>Label</li>
+         * <li>IsDefault</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Quota,IsDefault</p>
          */
         public Builder verboseFields(String verboseFields) {
             this.putQueryParameter("VerboseFields", verboseFields);
@@ -312,7 +373,14 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <ul>
+         * <li>This parameter is required when the Option parameter is set to ListResourceByWorkspace.</li>
+         * <li>You do not need to configure this parameter when the Option parameter is set to ListResource.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

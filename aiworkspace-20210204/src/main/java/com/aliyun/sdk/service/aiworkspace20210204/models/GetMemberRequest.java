@@ -88,6 +88,7 @@ public class GetMemberRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class GetMemberRequest extends Request {
         }
 
         /**
-         * MemberId.
+         * <p>The member ID. You must specify only one of the following parameters: UserId and MemberId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145883-21513926******88039</p>
          */
         public Builder memberId(String memberId) {
             this.putQueryParameter("MemberId", memberId);
@@ -109,7 +113,10 @@ public class GetMemberRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the Alibaba Cloud account. You can call <a href="https://help.aliyun.com/document_detail/449133.html">ListWorkspaceUsers</a> to obtain the ID of the Alibaba Cloud account. You must specify only one of the following parameters: UserId and MemberId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21513926******88039</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

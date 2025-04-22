@@ -392,7 +392,14 @@ public class GetDatasetResponseBody extends TeaModel {
         } 
 
         /**
-         * Accessibility.
+         * <p>The visibility of the workspace. Valid values:</p>
+         * <ul>
+         * <li>PRIVATE: The workspace is visible only to you and the administrator of the workspace.</li>
+         * <li>PUBLIC: The workspace is visible to all users.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -400,7 +407,14 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceType.
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li>OSS: Object Storage Service (OSS)</li>
+         * <li>NAS: File Storage NAS (NAS)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NAS</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.dataSourceType = dataSourceType;
@@ -408,7 +422,17 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * DataType.
+         * <p>The data type. Valid values:</p>
+         * <ul>
+         * <li>COMMON: common</li>
+         * <li>PIC: picture</li>
+         * <li>TEXT: text</li>
+         * <li>VIDEO: video</li>
+         * <li>AUDIO: audio</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMON</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -416,7 +440,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * DatasetId.
+         * <p>The dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-rbvg5wz****c9ks92</p>
          */
         public Builder datasetId(String datasetId) {
             this.datasetId = datasetId;
@@ -424,7 +451,7 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -432,7 +459,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -440,7 +470,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -448,7 +481,24 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * ImportInfo.
+         * <p>The dataset configurations to be imported to a storage, such as OSS, NAS, or CPFS.</p>
+         * <p><strong>OSS</strong></p>
+         * <p>{<br>&quot;region&quot;: &quot;${region}&quot;,// The region ID<br>&quot;bucket&quot;: &quot;${bucket}&quot;,// The bucket name<br>&quot;path&quot;: &quot;${path}&quot; // The file path<br>}\</p>
+         * <p><strong>NAS</strong></p>
+         * <p>{<br>&quot;region&quot;: &quot;${region}&quot;,// The region ID<br>&quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID<br>&quot;path&quot;: &quot;${path}&quot;, // The file system path<br>&quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system<br>}\</p>
+         * <p><strong>CPFS</strong></p>
+         * <p>{<br>&quot;region&quot;: &quot;${region}&quot;,// The region ID<br>&quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID<br>&quot;protocolServiceId&quot;:&quot;${protocol_service_id}&quot;, // The file system protocol service<br>&quot;exportId&quot;: &quot;${export_id}&quot;, // The file system export directory<br>&quot;path&quot;: &quot;${path}&quot;, // The file system path<br>}\</p>
+         * <p><strong>CPFS for Lingjun</strong></p>
+         * <p>{<br>&quot;region&quot;: &quot;${region}&quot;,// The region ID<br>&quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID<br>&quot;path&quot;: &quot;${path}&quot;, // The file system path<br>&quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system, CPFS for Lingjun only<br>&quot;isVpcMount&quot;: boolean, // Whether the mount point is a VPC mount point, CPFS for Lingjun only<br>}\</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;region&quot;: &quot;cn-wulanchabu&quot;,
+         *     &quot;fileSystemId&quot;: &quot;bmcpfs-xxxxxxxxxxx&quot;,
+         *     &quot;path&quot;: &quot;/mnt&quot;,
+         *     &quot;mountTarget&quot;: &quot;cpfs-xxxxxxxxxxxx-vpc-gacs9f.cn-wulanchabu.cpfs.aliyuncs.com&quot;,
+         *     &quot;isVpcMount&quot;: true
+         * }</p>
          */
         public Builder importInfo(String importInfo) {
             this.importInfo = importInfo;
@@ -456,7 +506,7 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The tags.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
@@ -464,7 +514,7 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * LatestVersion.
+         * <p>The latest version of the dataset.</p>
          */
         public Builder latestVersion(DatasetVersion latestVersion) {
             this.latestVersion = latestVersion;
@@ -472,7 +522,14 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * MountAccess.
+         * <p>The access permission on the dataset when the dataset is mounted. Valid values:</p>
+         * <ul>
+         * <li>RO: read-only permissions</li>
+         * <li>RW: read and write permissions</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RW</p>
          */
         public Builder mountAccess(String mountAccess) {
             this.mountAccess = mountAccess;
@@ -480,7 +537,7 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * MountAccessReadWriteRoleIdList.
+         * <p>The list of role names in the workspace that have read and write permissions on the mounted database. The names start with PAI are basic role names and the names start with role- are custom role names. If the list contains asterisks (*), all roles have read and write permissions.</p>
          */
         public Builder mountAccessReadWriteRoleIdList(java.util.List<String> mountAccessReadWriteRoleIdList) {
             this.mountAccessReadWriteRoleIdList = mountAccessReadWriteRoleIdList;
@@ -488,7 +545,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myName</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -496,7 +556,12 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * Options.
+         * <p>The extended fields of the dataset v1 (initial version). The value is a JSON string. When you use the dataset in Deep Learning Containers (DLC), you can use the mountPath field to specify the default mount path of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;mountPath&quot;: &quot;/mnt/data/&quot;
+         * }</p>
          */
         public Builder options(String options) {
             this.options = options;
@@ -504,7 +569,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * <p>The ID of the Alibaba Could account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1631044****3440</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -512,7 +580,14 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * Property.
+         * <p>The property of the dataset of the initial version v1. Valid values:</p>
+         * <ul>
+         * <li>FILE</li>
+         * <li>DIRECTORY</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DIRECTORY</p>
          */
         public Builder property(String property) {
             this.property = property;
@@ -520,7 +595,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * Provider.
+         * <p>The dataset provider. If the value pai is returned, the dataset is a public dataset in PAI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pai</p>
          */
         public Builder provider(String provider) {
             this.provider = provider;
@@ -528,7 +606,14 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * ProviderType.
+         * <p>The type of the data source for the dataset. Valid values:</p>
+         * <ul>
+         * <li>Ecs (default)</li>
+         * <li>Lingjun</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ecs</p>
          */
         public Builder providerType(String providerType) {
             this.providerType = providerType;
@@ -536,7 +621,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -544,7 +632,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * SourceDatasetId.
+         * <p>The ID of the source dataset generated from a labeling job of iTAG.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-rcdg3wxxxxxhc5jk87</p>
          */
         public Builder sourceDatasetId(String sourceDatasetId) {
             this.sourceDatasetId = sourceDatasetId;
@@ -552,7 +643,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * SourceDatasetVersion.
+         * <p>The version of the source dataset generated from a labeling job of iTAG.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder sourceDatasetVersion(String sourceDatasetVersion) {
             this.sourceDatasetVersion = sourceDatasetVersion;
@@ -560,7 +654,15 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * SourceId.
+         * <p>The ID of the source for the dataset v1 (initial version). Valid values:</p>
+         * <ul>
+         * <li>If SourceType is set to USER, the value of SourceId can be a custom string.</li>
+         * <li>If SourceType is set to ITAG, the value of SourceId is the ID of the labeling job of iTAG.</li>
+         * <li>If SourceType is set to PAI_PUBLIC_DATASET, SourceId is empty by default.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>jdnhf***fnrimv</p>
          */
         public Builder sourceId(String sourceId) {
             this.sourceId = sourceId;
@@ -568,7 +670,15 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * SourceType.
+         * <p>The type of the source for the dataset v1 (initial version). Valid values:</p>
+         * <ul>
+         * <li>PAI-PUBLIC-DATASET: a public dataset of Platform for AI (PAI).</li>
+         * <li>ITAG: a dataset generated from a labeling job of iTAG.</li>
+         * <li>USER: a dataset registered by a user.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -576,7 +686,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * TagTemplateType.
+         * <p>The labeling template for the source dataset generated from a labeling job of iTAG.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TextClassification</p>
          */
         public Builder tagTemplateType(String tagTemplateType) {
             this.tagTemplateType = tagTemplateType;
@@ -584,7 +697,14 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * Uri.
+         * <p>The URI of the initial version v1.</p>
+         * <ul>
+         * <li>Sample format for the OSS data source: <code>oss://bucket.endpoint/object</code></li>
+         * <li>Sample formats for the NAS data source: <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>: General-purpose NAS. <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>: Cloud Parallel File Storage (CPFS) 1.0. <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code>: CPFS 2.0. You can distinguish CPFS 1.0 and CPFS 2.0 file systems based on the format of the file system ID. The ID for CPFS 1.0 is in the cpfs-&lt;8-bit ASCII characters&gt; format. The ID for CPFS 2.0 is in the cpfs-&lt;16-bit ASCII characters&gt; format.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>nas://09f****f2.cn-hangzhou/</p>
          */
         public Builder uri(String uri) {
             this.uri = uri;
@@ -592,7 +712,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The ID of the user to which the dataset belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2485765****023475</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -600,7 +723,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the dataset belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

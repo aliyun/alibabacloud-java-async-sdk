@@ -144,6 +144,7 @@ public class DeleteWorkspaceResourceRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +157,10 @@ public class DeleteWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the resource group. You can call <a href="https://help.aliyun.com/document_detail/449143.html">ListResources</a> to obtain the name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -165,7 +169,10 @@ public class DeleteWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The tags. Multiple tags are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system.supported.eas=true</p>
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -174,7 +181,14 @@ public class DeleteWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * Option.
+         * <p>The operation to perform. Valid values:</p>
+         * <ul>
+         * <li>DetachAndDelete: disassociates a resource from a workspace and deletes the resource in the workspace. This is the default value.</li>
+         * <li>Detach: disassociates a resource group from a workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DetachAndDelete</p>
          */
         public Builder option(String option) {
             this.putQueryParameter("Option", option);
@@ -183,7 +197,10 @@ public class DeleteWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>**This field is no longer used and will be removed. Use the ResourceType field instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DLC</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -192,7 +209,10 @@ public class DeleteWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * <p>The resource IDs. Multiple resource IDs are separated by commas (,). The GroupName values for the specified resources must be the same. You cannot leave both GroupName and ResourceIds empty. You can specify both parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource-dks<strong><strong><strong>jkf,Resource-adf</strong></strong></strong>dss</p>
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -201,7 +221,17 @@ public class DeleteWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>ECS</li>
+         * <li>Lingjun</li>
+         * <li>ACS</li>
+         * <li>FLINK</li>
+         * <li>MaxCompute (This resource type is valid only if Option is set to Detach.)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DLC</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

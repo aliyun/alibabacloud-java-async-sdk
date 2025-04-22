@@ -54,7 +54,10 @@ public class DeleteDatasetJobConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DA869D1B-035A-43B2-ACC1-C56681BD9FAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

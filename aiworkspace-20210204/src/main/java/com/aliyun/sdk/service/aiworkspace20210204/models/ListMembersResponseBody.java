@@ -80,7 +80,7 @@ public class ListMembersResponseBody extends TeaModel {
         } 
 
         /**
-         * Members.
+         * <p>The members.</p>
          */
         public Builder members(java.util.List<Members> members) {
             this.members = members;
@@ -88,7 +88,10 @@ public class ListMembersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListMembersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of members that meet the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -235,7 +241,10 @@ public class ListMembersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myDisplayName</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -243,7 +252,10 @@ public class ListMembersResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The time when the user is created, in UTC. The time follows the ISO 8601 standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-21T17:12:35.232Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -251,7 +263,10 @@ public class ListMembersResponseBody extends TeaModel {
             }
 
             /**
-             * MemberId.
+             * <p>The member ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14588*****51688039</p>
              */
             public Builder memberId(String memberId) {
                 this.memberId = memberId;
@@ -259,7 +274,10 @@ public class ListMembersResponseBody extends TeaModel {
             }
 
             /**
-             * MemberName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder memberName(String memberName) {
                 this.memberName = memberName;
@@ -267,7 +285,7 @@ public class ListMembersResponseBody extends TeaModel {
             }
 
             /**
-             * Roles.
+             * <p>The list of roles.</p>
              */
             public Builder roles(java.util.List<String> roles) {
                 this.roles = roles;
@@ -275,7 +293,10 @@ public class ListMembersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>215139******88039</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

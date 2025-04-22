@@ -173,7 +173,7 @@ public class CreateProductOrdersRequest extends Request {
              * <p>The property code.</p>
              * 
              * <strong>example:</strong>
-             * <p>commodity_type。</p>
+             * <p>commodity_type</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -192,7 +192,7 @@ public class CreateProductOrdersRequest extends Request {
              * <p>The property value.</p>
              * 
              * <strong>example:</strong>
-             * <p>oss。</p>
+             * <p>oss</p>
              */
             public Builder value(String value) {
                 this.value = value;

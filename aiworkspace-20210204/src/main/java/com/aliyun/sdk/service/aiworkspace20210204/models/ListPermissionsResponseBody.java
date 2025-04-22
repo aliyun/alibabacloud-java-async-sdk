@@ -80,7 +80,7 @@ public class ListPermissionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Permissions.
+         * <p>The permissions.</p>
          */
         public Builder permissions(java.util.List<Permissions> permissions) {
             this.permissions = permissions;
@@ -88,7 +88,10 @@ public class ListPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2AE63638-5420-56DC-B******8174039A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of permissions that meet the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -162,7 +168,15 @@ public class ListPermissionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Accessibility.
+             * <p>The accessibility of the permission rule. Valid values:</p>
+             * <ul>
+             * <li>PUBLIC: All members in the workspace can access the permission rule.</li>
+             * <li>PRIVATE: Only the creator can access the permission rule.</li>
+             * <li>ANY: All users can access the permission rule.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder accessibility(String accessibility) {
                 this.accessibility = accessibility;
@@ -170,7 +184,14 @@ public class ListPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * EntityAccessType.
+             * <p>The type of access. If you set Accessibility to PUBLIC, all users can access the workspace. This parameter is invalid. If you set Accessibility to PRIVATE, the permissions are determined based on the value of EntityAccessType. The value of EntityAccessType can be:</p>
+             * <ul>
+             * <li>CREATOR: Only the creator can access the workspace.</li>
+             * <li>ANY: All users can access the workspace.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATOR</p>
              */
             public Builder entityAccessType(String entityAccessType) {
                 this.entityAccessType = entityAccessType;
@@ -237,7 +258,10 @@ public class ListPermissionsResponseBody extends TeaModel {
             } 
 
             /**
-             * PermissionCode.
+             * <p>The permission name, which is unique in a region. For more information about permissions, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>. The example value PaiDLC:GetTensorboard indicates the permission to view details about a TensorBoard job on the Deep Learning Containers (DLC) page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PaiDLC:GetTensorboard</p>
              */
             public Builder permissionCode(String permissionCode) {
                 this.permissionCode = permissionCode;
@@ -245,7 +269,7 @@ public class ListPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * PermissionRules.
+             * <p>The permission rules.</p>
              */
             public Builder permissionRules(java.util.List<PermissionRules> permissionRules) {
                 this.permissionRules = permissionRules;

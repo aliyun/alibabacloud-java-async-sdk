@@ -75,6 +75,7 @@ public class RemoveImageLabelsRequest extends Request {
         } 
 
         /**
+         * <p>The image ID. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain the image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class RemoveImageLabelsRequest extends Request {
         }
 
         /**
+         * <p>The tag key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

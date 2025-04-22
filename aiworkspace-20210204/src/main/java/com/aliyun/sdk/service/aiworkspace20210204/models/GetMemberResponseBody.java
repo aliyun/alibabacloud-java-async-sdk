@@ -132,7 +132,10 @@ public class GetMemberResponseBody extends TeaModel {
         } 
 
         /**
-         * DisplayName.
+         * <p>The display name of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myDisplayName</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -140,7 +143,10 @@ public class GetMemberResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the workspace is created, in UTC. The time follows the ISO 8601 standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -148,7 +154,10 @@ public class GetMemberResponseBody extends TeaModel {
         }
 
         /**
-         * MemberId.
+         * <p>The member ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145883-21513926******88039</p>
          */
         public Builder memberId(String memberId) {
             this.memberId = memberId;
@@ -156,7 +165,10 @@ public class GetMemberResponseBody extends TeaModel {
         }
 
         /**
-         * MemberName.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder memberName(String memberName) {
             this.memberName = memberName;
@@ -164,7 +176,10 @@ public class GetMemberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +187,7 @@ public class GetMemberResponseBody extends TeaModel {
         }
 
         /**
-         * Roles.
+         * <p>The list of roles.</p>
          */
         public Builder roles(java.util.List<String> roles) {
             this.roles = roles;
@@ -180,7 +195,10 @@ public class GetMemberResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21513926******88039</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

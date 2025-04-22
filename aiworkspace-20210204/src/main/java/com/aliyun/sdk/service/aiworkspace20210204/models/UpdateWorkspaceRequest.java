@@ -88,6 +88,7 @@ public class UpdateWorkspaceRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The workspace description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -109,7 +113,15 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name of the workspace.</p>
+         * <ul>
+         * <li>The name must be 3 to 23 characters in length, and can contain letters, underscores (_), and digits.</li>
+         * <li>The name must start with a letter.</li>
+         * <li>The name must be unique in the current region.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-example</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);

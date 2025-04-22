@@ -59,7 +59,14 @@ public class GetDefaultWorkspaceRequest extends Request {
         } 
 
         /**
-         * Verbose.
+         * <p>Specifies whether to show the details of the default workspace. The details include the conditions of the workspace in different phases. Valid values:</p>
+         * <ul>
+         * <li>false (default)</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);

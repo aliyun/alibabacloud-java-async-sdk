@@ -197,7 +197,7 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * Conditions.
+         * <p>The conditions of the default workspace in the creation process.</p>
          */
         public Builder conditions(java.util.List<Conditions> conditions) {
             this.conditions = conditions;
@@ -205,7 +205,10 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Creator.
+         * <p>The UID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17915******4216</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -213,7 +216,10 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The workspace description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace description example</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -221,7 +227,10 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-example</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -229,7 +238,11 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * EnvTypes.
+         * <p>The environments of the workspace. Valid values:</p>
+         * <ul>
+         * <li>Workspaces in basic mode can run only in the production environment.</li>
+         * <li>Workspaces in standard mode can run in both the development and production environments.</li>
+         * </ul>
          */
         public Builder envTypes(java.util.List<String> envTypes) {
             this.envTypes = envTypes;
@@ -237,7 +250,10 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the workspace was created, in UTC. The time follows the ISO 8601 standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -245,7 +261,10 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time when the workspace was modified, in UTC. The time follows the ISO 8601 standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -253,7 +272,7 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Owner.
+         * <p>The UID of the Alibaba Cloud account.</p>
          */
         public Builder owner(Owner owner) {
             this.owner = owner;
@@ -261,7 +280,10 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -269,7 +291,18 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The workspace status. Valid values:</p>
+         * <ul>
+         * <li>ENABLED</li>
+         * <li>INITIALIZING</li>
+         * <li>FAILURE</li>
+         * <li>DISABLED</li>
+         * <li>FROZEN</li>
+         * <li>UPDATING</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLED</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -277,7 +310,10 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -285,7 +321,10 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The workspace name, which is unique in a region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-example</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;
@@ -364,7 +403,10 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The returned status code. HTTP status code 200 indicates that the request was successful. Other HTTP status codes indicate that the request failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(Long code) {
                 this.code = code;
@@ -372,7 +414,10 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message. If the returned status code is 200, this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create Failed</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -380,7 +425,16 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The task type. Valid values:</p>
+             * <ul>
+             * <li>CREATING: The workspace is being created.</li>
+             * <li>WORKSPACE_CREATED: The workspace is created.</li>
+             * <li>MEMBERS_ADDED: The member is added.</li>
+             * <li>ENABLED: The workspace is created and the member is added.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATING</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -460,7 +514,10 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17915******4216</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -468,7 +525,10 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * UserKp.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17915******4216</p>
              */
             public Builder userKp(String userKp) {
                 this.userKp = userKp;
@@ -476,7 +536,10 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>username</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

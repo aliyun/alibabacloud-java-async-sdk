@@ -200,6 +200,7 @@ public class UpdateModelRequest extends Request {
         } 
 
         /**
+         * <p>The model ID. You can call <a href="https://help.aliyun.com/document_detail/461944.html">ListModels</a> to obtain the model ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +213,14 @@ public class UpdateModelRequest extends Request {
         }
 
         /**
-         * Accessibility.
+         * <p>The visibility of the model in the workspace. Valid values:</p>
+         * <ul>
+         * <li>PRIVATE: The model is visible only to you and the administrator of the workspace.</li>
+         * <li>PUBLIC: The model is visible to all users in the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -221,7 +229,10 @@ public class UpdateModelRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>The domain. This parameter describes the domain in which the model is applied. Valid values: nlp (natural language processing) and cv (computer vision).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nlp</p>
          */
         public Builder domain(String domain) {
             this.putBodyParameter("Domain", domain);
@@ -230,7 +241,18 @@ public class UpdateModelRequest extends Request {
         }
 
         /**
-         * ExtraInfo.
+         * <p>Other information about the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;RatingCount&quot;: 2866,
+         *     &quot;Rating&quot;: 4.94,
+         *     &quot;FavoriteCount&quot;: 34992,
+         *     &quot;CommentCount&quot;: 754,
+         *     &quot;CoverUris&quot;: [&quot;<a href="https://e***u.oss-cn-hangzhou.aliyuncs.com/drea***w.png%22%5D">https://e***u.oss-cn-hangzhou.aliyuncs.com/drea***w.png&quot;]</a>,
+         *     &quot;TippedAmountCount&quot;: 32,
+         *     &quot;DownloadCount&quot;: 606056
+         * }</p>
          */
         public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
             this.putBodyParameter("ExtraInfo", extraInfo);
@@ -239,7 +261,7 @@ public class UpdateModelRequest extends Request {
         }
 
         /**
-         * ModelDescription.
+         * <p>The model description.</p>
          */
         public Builder modelDescription(String modelDescription) {
             this.putBodyParameter("ModelDescription", modelDescription);
@@ -248,7 +270,10 @@ public class UpdateModelRequest extends Request {
         }
 
         /**
-         * ModelDoc.
+         * <p>The documentation of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://*.md</p>
          */
         public Builder modelDoc(String modelDoc) {
             this.putBodyParameter("ModelDoc", modelDoc);
@@ -257,7 +282,7 @@ public class UpdateModelRequest extends Request {
         }
 
         /**
-         * ModelName.
+         * <p>The model name, which must be 1 to 127 characters in length.</p>
          */
         public Builder modelName(String modelName) {
             this.putBodyParameter("ModelName", modelName);
@@ -266,7 +291,10 @@ public class UpdateModelRequest extends Request {
         }
 
         /**
-         * ModelType.
+         * <p>The model type. Valid values: Checkpoint and LoRA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Checkpoint</p>
          */
         public Builder modelType(String modelType) {
             this.putBodyParameter("ModelType", modelType);
@@ -275,7 +303,10 @@ public class UpdateModelRequest extends Request {
         }
 
         /**
-         * OrderNumber.
+         * <p>The sequence number of the model. This parameter can be used for custom sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder orderNumber(Long orderNumber) {
             this.putBodyParameter("OrderNumber", orderNumber);
@@ -284,7 +315,10 @@ public class UpdateModelRequest extends Request {
         }
 
         /**
-         * Origin.
+         * <p>The source of the model. This parameter describes the community or organization to which the source model belongs. Valid values: ModelScope and HuggingFace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ModelScope</p>
          */
         public Builder origin(String origin) {
             this.putBodyParameter("Origin", origin);
@@ -293,7 +327,10 @@ public class UpdateModelRequest extends Request {
         }
 
         /**
-         * Task.
+         * <p>The task. This parameter specifies the specific issue that the model resolves. Example: text-classification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text-classification</p>
          */
         public Builder task(String task) {
             this.putBodyParameter("Task", task);

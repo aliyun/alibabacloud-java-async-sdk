@@ -187,7 +187,14 @@ public class CreateCodeSourceRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * <p>The visibility of the code build. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: The code build is visible to all members in the workspace.</li>
+         * <li>PRIVATE: The code build is visible only to you and the administrator of the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -196,7 +203,10 @@ public class CreateCodeSourceRequest extends Request {
         }
 
         /**
-         * CodeBranch.
+         * <p>The code branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         public Builder codeBranch(String codeBranch) {
             this.putBodyParameter("CodeBranch", codeBranch);
@@ -214,7 +224,10 @@ public class CreateCodeSourceRequest extends Request {
         }
 
         /**
-         * CodeRepo.
+         * <p>The URL of the code repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://code.aliyun.com/">https://code.aliyun.com/</a>******</p>
          */
         public Builder codeRepo(String codeRepo) {
             this.putBodyParameter("CodeRepo", codeRepo);
@@ -223,7 +236,10 @@ public class CreateCodeSourceRequest extends Request {
         }
 
         /**
-         * CodeRepoAccessToken.
+         * <p>The token used to access the code repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder codeRepoAccessToken(String codeRepoAccessToken) {
             this.putBodyParameter("CodeRepoAccessToken", codeRepoAccessToken);
@@ -232,7 +248,10 @@ public class CreateCodeSourceRequest extends Request {
         }
 
         /**
-         * CodeRepoUserName.
+         * <p>The username of the code repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>use***</p>
          */
         public Builder codeRepoUserName(String codeRepoUserName) {
             this.putBodyParameter("CodeRepoUserName", codeRepoUserName);
@@ -241,7 +260,10 @@ public class CreateCodeSourceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the code build, which helps you distinguish between code builds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code source of dlc examples</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -250,6 +272,7 @@ public class CreateCodeSourceRequest extends Request {
         }
 
         /**
+         * <p>The name of the code build.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +285,10 @@ public class CreateCodeSourceRequest extends Request {
         }
 
         /**
-         * MountPath.
+         * <p>The local mount path of the code. By default, the code is mounted to the /root/code/ path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/code/code-source-1</p>
          */
         public Builder mountPath(String mountPath) {
             this.putBodyParameter("MountPath", mountPath);
@@ -271,6 +297,7 @@ public class CreateCodeSourceRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -172,6 +172,7 @@ public class UpdateCodeSourceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the code build. You can call CreateCodeSource, GetCodeSource, or ListCodeSources to obtain the ID of the code build.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +185,10 @@ public class UpdateCodeSourceRequest extends Request {
         }
 
         /**
-         * CodeBranch.
+         * <p>The name of the code branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         public Builder codeBranch(String codeBranch) {
             this.putBodyParameter("CodeBranch", codeBranch);
@@ -193,7 +197,10 @@ public class UpdateCodeSourceRequest extends Request {
         }
 
         /**
-         * CodeCommit.
+         * <p>The code commit ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3a6*****</p>
          */
         public Builder codeCommit(String codeCommit) {
             this.putBodyParameter("CodeCommit", codeCommit);
@@ -202,7 +209,10 @@ public class UpdateCodeSourceRequest extends Request {
         }
 
         /**
-         * CodeRepo.
+         * <p>The address of the code repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://code.aliyun.com/">https://code.aliyun.com/</a>******</p>
          */
         public Builder codeRepo(String codeRepo) {
             this.putBodyParameter("CodeRepo", codeRepo);
@@ -211,7 +221,10 @@ public class UpdateCodeSourceRequest extends Request {
         }
 
         /**
-         * CodeRepoAccessToken.
+         * <p>The access token corresponding to the username.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder codeRepoAccessToken(String codeRepoAccessToken) {
             this.putBodyParameter("CodeRepoAccessToken", codeRepoAccessToken);
@@ -220,7 +233,10 @@ public class UpdateCodeSourceRequest extends Request {
         }
 
         /**
-         * CodeRepoUserName.
+         * <p>The username used to access the code repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-user</p>
          */
         public Builder codeRepoUserName(String codeRepoUserName) {
             this.putBodyParameter("CodeRepoUserName", codeRepoUserName);
@@ -229,7 +245,7 @@ public class UpdateCodeSourceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the code build.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -238,7 +254,10 @@ public class UpdateCodeSourceRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The name of the code build.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyCodeSource1</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -247,7 +266,10 @@ public class UpdateCodeSourceRequest extends Request {
         }
 
         /**
-         * MountPath.
+         * <p>The default mount path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/code/code-source-1</p>
          */
         public Builder mountPath(String mountPath) {
             this.putBodyParameter("MountPath", mountPath);

@@ -59,7 +59,10 @@ public class ListQuotasRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The quota name. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota-name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

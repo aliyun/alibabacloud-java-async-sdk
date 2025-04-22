@@ -80,7 +80,10 @@ public class ListWorkspaceUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1e195c5116124202371861018d5bde</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class ListWorkspaceUsersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of users who meet the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -96,7 +102,7 @@ public class ListWorkspaceUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * <p>The users.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -162,7 +168,10 @@ public class ListWorkspaceUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1611******3000</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -170,7 +179,10 @@ public class ListWorkspaceUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>she******mo</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

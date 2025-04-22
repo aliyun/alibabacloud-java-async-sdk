@@ -229,6 +229,7 @@ public class UpdateModelVersionRequest extends Request {
         } 
 
         /**
+         * <p>The model ID. You can call <a href="https://help.aliyun.com/document_detail/461944.html">ListModels</a> to obtain the model ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,6 +242,7 @@ public class UpdateModelVersionRequest extends Request {
         }
 
         /**
+         * <p>The model version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +255,15 @@ public class UpdateModelVersionRequest extends Request {
         }
 
         /**
-         * ApprovalStatus.
+         * <p>The approval status. Valid values:</p>
+         * <ul>
+         * <li>Pending</li>
+         * <li>Approved</li>
+         * <li>Rejected</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Approved</p>
          */
         public Builder approvalStatus(String approvalStatus) {
             this.putBodyParameter("ApprovalStatus", approvalStatus);
@@ -262,7 +272,10 @@ public class UpdateModelVersionRequest extends Request {
         }
 
         /**
-         * CompressionSpec.
+         * <p>The compression configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder compressionSpec(java.util.Map<String, ?> compressionSpec) {
             this.putBodyParameter("CompressionSpec", compressionSpec);
@@ -271,7 +284,10 @@ public class UpdateModelVersionRequest extends Request {
         }
 
         /**
-         * EvaluationSpec.
+         * <p>The evaluation configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder evaluationSpec(java.util.Map<String, ?> evaluationSpec) {
             this.putBodyParameter("EvaluationSpec", evaluationSpec);
@@ -280,7 +296,13 @@ public class UpdateModelVersionRequest extends Request {
         }
 
         /**
-         * ExtraInfo.
+         * <p>The additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;CoverUris&quot;: [&quot;<a href="https://e***u.oss-cn-hangzhou.aliyuncs.com/st****017.preview.png%22%5D">https://e***u.oss-cn-hangzhou.aliyuncs.com/st****017.preview.png&quot;]</a>,
+         *     &quot;TrainedWords&quot;: [&quot;albedo_overlord&quot;]
+         * }</p>
          */
         public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
             this.putBodyParameter("ExtraInfo", extraInfo);
@@ -289,7 +311,10 @@ public class UpdateModelVersionRequest extends Request {
         }
 
         /**
-         * InferenceSpec.
+         * <p>Describes how to apply to downstream inference services. For example, describes the processor and container of Elastic Algorithm Service (EAS). Example: <code>{ &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</p>
          */
         public Builder inferenceSpec(java.util.Map<String, ?> inferenceSpec) {
             this.putBodyParameter("InferenceSpec", inferenceSpec);
@@ -298,7 +323,26 @@ public class UpdateModelVersionRequest extends Request {
         }
 
         /**
-         * Metrics.
+         * <p>The model metrics. The length after serialization is limited to 8,192.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;Results&quot;: [{
+         *     &quot;Dataset&quot;: {
+         *       &quot;DatasetId&quot;: &quot;d-sdkjanksaklerhfd&quot;
+         *     },
+         *     &quot;Metrics&quot;: {
+         *       &quot;cer&quot;: 0.175
+         *     }
+         *   }, {
+         *     &quot;Dataset&quot;: {
+         *       &quot;Uri&quot;: &quot;oss://xxxx/&quot;
+         *     },
+         *     &quot;Metrics&quot;: {
+         *       &quot;cer&quot;: 0.172
+         *     }
+         *   }]
+         * }</p>
          */
         public Builder metrics(java.util.Map<String, ?> metrics) {
             this.putBodyParameter("Metrics", metrics);
@@ -307,7 +351,10 @@ public class UpdateModelVersionRequest extends Request {
         }
 
         /**
-         * Options.
+         * <p>The extended field, which is of the JsonString type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder options(String options) {
             this.putBodyParameter("Options", options);
@@ -316,7 +363,25 @@ public class UpdateModelVersionRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * <p>The source ID.</p>
+         * <ul>
+         * <li>If the source type is Custom, this field is not limited.</li>
+         * <li>If the source type is PAIFlow or TrainingService, the format is:</li>
+         * </ul>
+         * <!---->
+         * 
+         * <pre><code>region=&lt;region_id&gt;,workspaceId=&lt;workspace_id&gt;,kind=&lt;kind&gt;,id=&lt;id&gt;
+         * </code></pre>
+         * <p>Take note of the following parameters:</p>
+         * <ul>
+         * <li>region is the region ID.</li>
+         * <li>workspaceId is the ID of the workspace.</li>
+         * <li>kind is the type. Valid values: PipelineRun (PAIFlow) and ServiceJob (training service).</li>
+         * <li>id is a unique identifier.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>region=cn-shanghai,workspaceId=13**,kind=PipelineRun,id=run-sakdb****jdf</p>
          */
         public Builder sourceId(String sourceId) {
             this.putBodyParameter("SourceId", sourceId);
@@ -325,7 +390,15 @@ public class UpdateModelVersionRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The type of the model source. Valid values:</p>
+         * <ul>
+         * <li>Custom (default)</li>
+         * <li>PAIFlow</li>
+         * <li>TrainingService</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PAIFlow</p>
          */
         public Builder sourceType(String sourceType) {
             this.putBodyParameter("SourceType", sourceType);
@@ -334,7 +407,10 @@ public class UpdateModelVersionRequest extends Request {
         }
 
         /**
-         * TrainingSpec.
+         * <p>The training configurations used for fine-tuning and incremental training.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder trainingSpec(java.util.Map<String, ?> trainingSpec) {
             this.putBodyParameter("TrainingSpec", trainingSpec);
@@ -343,7 +419,7 @@ public class UpdateModelVersionRequest extends Request {
         }
 
         /**
-         * VersionDescription.
+         * <p>The model version description.</p>
          */
         public Builder versionDescription(String versionDescription) {
             this.putBodyParameter("VersionDescription", versionDescription);

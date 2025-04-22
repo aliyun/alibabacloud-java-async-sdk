@@ -236,7 +236,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * AdminNames.
+         * <p>The names of the administrator accounts.</p>
          */
         public Builder adminNames(java.util.List<String> adminNames) {
             this.adminNames = adminNames;
@@ -244,7 +244,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Creator.
+         * <p>The ID of the user who creates the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1157******94123</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -252,7 +255,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace description example</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -260,7 +266,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-example</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -268,7 +277,11 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * EnvTypes.
+         * <p>The environment information of the workspace.</p>
+         * <ul>
+         * <li>Workspaces in basic mode can run only in the production environment.</li>
+         * <li>Workspaces in standard mode can run in both the development and production environments.</li>
+         * </ul>
          */
         public Builder envTypes(java.util.List<String> envTypes) {
             this.envTypes = envTypes;
@@ -276,7 +289,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * ExtraInfos.
+         * <p>The additional information, which only contains the TenantId field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;TenantId&quot;: &quot;4286******98&quot;}</p>
          */
         public Builder extraInfos(java.util.Map<String, ?> extraInfos) {
             this.extraInfos = extraInfos;
@@ -284,7 +300,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the workspace is created, in UTC. The time follows the ISO 8601 standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -292,7 +311,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time when the workspace is modified, in UTC. The time follows the ISO 8601 standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -300,7 +322,14 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * IsDefault.
+         * <p>Indicates whether the workspace is the default workspace. Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isDefault(Boolean isDefault) {
             this.isDefault = isDefault;
@@ -308,7 +337,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Owner.
+         * <p>The information about the workspace owner. This parameter is valid only when Verbose is set to true.</p>
          */
         public Builder owner(Owner owner) {
             this.owner = owner;
@@ -316,7 +345,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A0F049F0-8D69-5BAC-8F10-B4DED1B5A34C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -324,7 +356,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwp7rkyq****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -332,7 +367,18 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The workspace state. Valid values:</p>
+         * <ul>
+         * <li>ENABLED</li>
+         * <li>INITIALIZING</li>
+         * <li>FAILURE:</li>
+         * <li>DISABLED</li>
+         * <li>FROZEN</li>
+         * <li>UPDATING</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLED</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -340,7 +386,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -348,7 +397,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceName.
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-example</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;
@@ -440,7 +492,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mings****t</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -448,7 +503,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1157******94123</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -456,7 +514,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * UserKp.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1157******94123</p>
              */
             public Builder userKp(String userKp) {
                 this.userKp = userKp;
@@ -464,7 +525,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mings****t</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

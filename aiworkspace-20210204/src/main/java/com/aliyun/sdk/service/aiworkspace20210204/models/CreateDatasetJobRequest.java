@@ -147,6 +147,7 @@ public class CreateDatasetJobRequest extends Request {
         } 
 
         /**
+         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +160,10 @@ public class CreateDatasetJobRequest extends Request {
         }
 
         /**
-         * DatasetVersion.
+         * <p>The dataset version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder datasetVersion(String datasetVersion) {
             this.putBodyParameter("DatasetVersion", datasetVersion);
@@ -168,7 +172,7 @@ public class CreateDatasetJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The job description.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -177,6 +181,13 @@ public class CreateDatasetJobRequest extends Request {
         }
 
         /**
+         * <p>The job action.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SemanticIndex</li>
+         * <li>IntelligentTag</li>
+         * <li>FileMetaExport</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +200,14 @@ public class CreateDatasetJobRequest extends Request {
         }
 
         /**
-         * JobMode.
+         * <p>The job mode.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Full: full mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Full</p>
          */
         public Builder jobMode(String jobMode) {
             this.putBodyParameter("JobMode", jobMode);
@@ -198,6 +216,7 @@ public class CreateDatasetJobRequest extends Request {
         }
 
         /**
+         * <p>The job configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,6 +229,7 @@ public class CreateDatasetJobRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

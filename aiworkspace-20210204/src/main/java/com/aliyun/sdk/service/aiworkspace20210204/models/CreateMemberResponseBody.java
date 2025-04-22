@@ -67,7 +67,7 @@ public class CreateMemberResponseBody extends TeaModel {
         } 
 
         /**
-         * Members.
+         * <p>The returned members.</p>
          */
         public Builder members(java.util.List<Members> members) {
             this.members = members;
@@ -75,7 +75,10 @@ public class CreateMemberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DA869D1B-035A-43B2-ACC1-C56681BD9FAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class CreateMemberResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myDisplayName</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -175,7 +181,10 @@ public class CreateMemberResponseBody extends TeaModel {
             }
 
             /**
-             * MemberId.
+             * <p>The member ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>145883-21513926******88039</p>
              */
             public Builder memberId(String memberId) {
                 this.memberId = memberId;
@@ -183,7 +192,7 @@ public class CreateMemberResponseBody extends TeaModel {
             }
 
             /**
-             * Roles.
+             * <p>The list of roles.</p>
              */
             public Builder roles(java.util.List<String> roles) {
                 this.roles = roles;
@@ -191,7 +200,10 @@ public class CreateMemberResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21513926******88039</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

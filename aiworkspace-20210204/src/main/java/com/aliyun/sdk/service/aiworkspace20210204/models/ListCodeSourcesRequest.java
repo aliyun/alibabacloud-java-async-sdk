@@ -129,7 +129,10 @@ public class ListCodeSourcesRequest extends Request {
         } 
 
         /**
-         * DisplayName.
+         * <p>The display name of the code source. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyDataSource</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -138,7 +141,15 @@ public class ListCodeSourcesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order in which the entries are sorted by the specific field on the returned page.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>asc: ascending order. This is the default value.</li>
+         * <li>desc: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -147,7 +158,10 @@ public class ListCodeSourcesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -156,7 +170,10 @@ public class ListCodeSourcesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +182,16 @@ public class ListCodeSourcesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field used for sorting. Valid values:</p>
+         * <ul>
+         * <li>GmtModifyTime: the time when the source code is modified.</li>
+         * <li>DisplayName: the display name.</li>
+         * <li>CodeSourceId: the ID of the code source.</li>
+         * <li>GmtCreateTime: the time when the code source is created. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtModifyTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -174,7 +200,10 @@ public class ListCodeSourcesRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

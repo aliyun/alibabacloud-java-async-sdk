@@ -116,6 +116,7 @@ public class UpdateDatasetRequest extends Request {
         } 
 
         /**
+         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the dataset.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -137,7 +138,12 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * MountAccessReadWriteRoleIdList.
+         * <p>The list of role names in the workspace that have read and write permissions on the mounted database. The names start with PAI are basic role names and the names start with role- are custom role names. If the list contains asterisks (*), all roles have read and write permissions.</p>
+         * <ul>
+         * <li>If you set the value to [&quot;PAI.AlgoOperator&quot;, &quot;role-hiuwpd01ncrokkgp21&quot;], the account of the specified role is granted the read and write permissions.</li>
+         * <li>If you set the value to [&quot;*&quot;], all accounts are granted the read and write permissions.</li>
+         * <li>If you set the value to [], only the creator of the dataset has the read and write permissions.</li>
+         * </ul>
          */
         public Builder mountAccessReadWriteRoleIdList(java.util.List<String> mountAccessReadWriteRoleIdList) {
             this.putBodyParameter("MountAccessReadWriteRoleIdList", mountAccessReadWriteRoleIdList);
@@ -146,7 +152,10 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The dataset name. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myName</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -155,7 +164,12 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * Options.
+         * <p>The extended field, which is a JSON string. When you use the dataset in Deep Learning Containers (DLC), you can configure the mountPath field to specify the default mount path of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;mountPath&quot;: &quot;/mnt/data/&quot;
+         * }</p>
          */
         public Builder options(String options) {
             this.putBodyParameter("Options", options);

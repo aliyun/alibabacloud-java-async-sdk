@@ -75,6 +75,7 @@ public class AddImageLabelsRequest extends Request {
         } 
 
         /**
+         * <p>The image ID. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain the image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class AddImageLabelsRequest extends Request {
         }
 
         /**
+         * <p>The list of image tags.</p>
          * <p>This parameter is required.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
@@ -155,7 +157,30 @@ public class AddImageLabelsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key. The following keys can be added:</p>
+             * <ul>
+             * <li>system.chipType</li>
+             * <li>system.dsw.cudaVersion</li>
+             * <li>system.dsw.fromImageId</li>
+             * <li>system.dsw.fromInstanceId</li>
+             * <li>system.dsw.id</li>
+             * <li>system.dsw.os</li>
+             * <li>system.dsw.osVersion</li>
+             * <li>system.dsw.resourceType</li>
+             * <li>system.dsw.rootImageId</li>
+             * <li>system.dsw.stage</li>
+             * <li>system.dsw.tag</li>
+             * <li>system.dsw.type</li>
+             * <li>system.framework</li>
+             * <li>system.origin</li>
+             * <li>system.pythonVersion</li>
+             * <li>system.source</li>
+             * <li>system.supported.dlc</li>
+             * <li>system.supported.dsw</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>system.chipType</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -163,7 +188,10 @@ public class AddImageLabelsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GPU</p>
              */
             public Builder value(String value) {
                 this.value = value;

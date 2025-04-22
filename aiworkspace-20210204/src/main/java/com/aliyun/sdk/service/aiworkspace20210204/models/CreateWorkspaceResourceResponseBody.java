@@ -80,7 +80,10 @@ public class CreateWorkspaceResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1e195c5116124202371861018d5bde</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class CreateWorkspaceResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * <p>The resources.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
@@ -96,7 +99,10 @@ public class CreateWorkspaceResourceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -149,7 +155,10 @@ public class CreateWorkspaceResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(String id) {
                 this.id = id;

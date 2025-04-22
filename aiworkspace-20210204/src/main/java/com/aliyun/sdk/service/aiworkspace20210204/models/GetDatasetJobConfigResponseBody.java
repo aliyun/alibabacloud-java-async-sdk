@@ -132,7 +132,13 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Config.
+         * <p>The configuration content. Configuration format for MultimodalIntelligentTag:</p>
+         * <p>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</p>
+         * <p>MultimodalSemanticIndex</p>
+         * <p>{ &quot;defaultModelId&quot;: &quot;xxx&quot; &quot;defaultModelVersion&quot;:&quot;1.0.0&quot; }</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -140,7 +146,14 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigType.
+         * <p>The configuration type. Valid values:</p>
+         * <ul>
+         * <li>MultimodalIntelligentTag</li>
+         * <li>MultimodalSemanticIndex</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MultimodalIntelligentTag</p>
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -148,7 +161,10 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the configuration is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-16T01:44:10Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -156,7 +172,10 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * DatasetId.
+         * <p>The dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-lfd60v0p****ujtsdx</p>
          */
         public Builder datasetId(String datasetId) {
             this.datasetId = datasetId;
@@ -164,7 +183,10 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The time when the configuration is modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-12-26T02:17:18Z</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -172,7 +194,7 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D5BFFEE3-6025-443F-8A03-02D619B5C4B9</p>
@@ -183,7 +205,10 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114243</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

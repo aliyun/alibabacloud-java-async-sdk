@@ -117,7 +117,10 @@ public class CreateExperimentRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * <p>The visibility of the experiment. Valid values: PRIVATE (the experiment is visible only to the creator and the Alibaba Cloud account) and PUBLIC (the experiment is visible to all users). This parameter is optional and the default value is PRIVATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -126,7 +129,7 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * <p>Artifact的OSS存储路径</p>
+         * <p>The default artifact output path of all jobs that are associated with the experiment. Only Object Storage Service (OSS) paths are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://test-bucket.oss-cn-hangzhou.aliyuncs.com/test</p>
@@ -138,7 +141,7 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * <p>标签</p>
+         * <p>The tags.</p>
          */
         public Builder labels(java.util.List<LabelInfo> labels) {
             this.putBodyParameter("Labels", labels);
@@ -147,7 +150,12 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * <p>名称</p>
+         * <p>The experiment name. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must start with a letter.</li>
+         * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The name must be 1 to 63 characters in length.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +168,7 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * <p>工作空间ID</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

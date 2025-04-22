@@ -241,7 +241,14 @@ public class ListDatasetsRequest extends Request {
         } 
 
         /**
-         * DataSourceTypes.
+         * <p>The storage types of the data source. Multiple data source types are separated by commas (,). Valid values:</p>
+         * <ul>
+         * <li>NAS: File Storage NAS (NAS).</li>
+         * <li>OSS: Object Storage Service (OSS).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder dataSourceTypes(String dataSourceTypes) {
             this.putQueryParameter("DataSourceTypes", dataSourceTypes);
@@ -250,7 +257,17 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * DataTypes.
+         * <p>The dataset types. Multiple dataset types are separated by commas (,). Valid values:</p>
+         * <ul>
+         * <li>Video: video</li>
+         * <li>COMMON: common</li>
+         * <li>TEXT: text</li>
+         * <li>PIC: picture</li>
+         * <li>AUDIO: audio</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMON,TEXT</p>
          */
         public Builder dataTypes(String dataTypes) {
             this.putQueryParameter("DataTypes", dataTypes);
@@ -259,7 +276,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * Label.
+         * <p>The dataset tag, which is used to filter datasets. Datasets whose tag key or tag value contains a specified string are filtered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder label(String label) {
             this.putQueryParameter("Label", label);
@@ -268,7 +288,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The dataset name. Fuzzy search based on the dataset name is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -277,7 +300,14 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order of specific fields of the entries on the returned page. Valid values: ASC and DESC. Default value: ASC.</p>
+         * <ul>
+         * <li>ASC: The entries are sorted in ascending order.</li>
+         * <li>DESC: The entries are sorted in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -286,7 +316,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -295,7 +328,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -304,7 +340,14 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * Properties.
+         * <p>The dataset properties. Multiple properties are separated by commas (,). Valid values:</p>
+         * <ul>
+         * <li>DIRECTORY</li>
+         * <li>FILE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE</p>
          */
         public Builder properties(String properties) {
             this.putQueryParameter("Properties", properties);
@@ -313,7 +356,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * Provider.
+         * <p>The dataset provider. If the value pai is returned, the dataset is a public dataset provided by PAI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pai</p>
          */
         public Builder provider(String provider) {
             this.putQueryParameter("Provider", provider);
@@ -322,7 +368,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field used for sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -331,7 +380,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * SourceDatasetId.
+         * <p>The ID of the iTAG labeled dataset that is used as the source dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-rcdg3wxxxxxhc5jk87</p>
          */
         public Builder sourceDatasetId(String sourceDatasetId) {
             this.putQueryParameter("SourceDatasetId", sourceDatasetId);
@@ -340,7 +392,15 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * <p>The data source ID.</p>
+         * <ul>
+         * <li>If SourceType is set to USER, the value of SourceId is a custom string.</li>
+         * <li>If SourceType is set to ITAG, the value of SourceId is the ID of the labeling job of iTAG.</li>
+         * <li>If SourceType is set to PAI_PUBLIC_DATASET, SourceId is empty by default.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>d-rbvg5wzljzjhc9ks92</p>
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -349,7 +409,22 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * SourceTypes.
+         * <p>The source types. Multiple source types are separated by commas (,). Valid values:</p>
+         * <ul>
+         * <li>PAI-PUBLIC-DATASET: a public dataset of Platform for AI (PAI).</li>
+         * <li>ITAG: a dataset generated from a labeling job of iTAG.</li>
+         * <li>USER: a dataset registered by a user.</li>
+         * </ul>
+         * <!---->
+         * 
+         * <ul>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USER,ITAG</p>
          */
         public Builder sourceTypes(String sourceTypes) {
             this.putQueryParameter("SourceTypes", sourceTypes);
@@ -358,7 +433,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the dataset belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID. If you do not specify this parameter, the default workspace is used. If the default workspace does not exist, an error is reported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>324**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

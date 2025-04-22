@@ -301,7 +301,14 @@ public class GetModelResponseBody extends TeaModel {
         } 
 
         /**
-         * Accessibility.
+         * <p>The visibility of the workspace.</p>
+         * <ul>
+         * <li>PRIVATE: The workspace is visible only to you and the administrator of the workspace.</li>
+         * <li>PUBLIC: The workspace is visible to all users.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -309,7 +316,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * Domain.
+         * <p>The domain. This parameter specifies the domain for which the model is developed. Valid values: nlp and cv. nlp indicates natural language processing and cv indicates computer vision.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cv</p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -317,7 +327,18 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * ExtraInfo.
+         * <p>Other information about the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;RatingCount&quot;: 2866,
+         *     &quot;Rating&quot;: 4.94,
+         *     &quot;FavoriteCount&quot;: 34992,
+         *     &quot;CommentCount&quot;: 754,
+         *     &quot;CoverUris&quot;: [&quot;<a href="https://e***u.oss-cn-hangzhou.aliyuncs.com/drea***w.png%22%5D">https://e***u.oss-cn-hangzhou.aliyuncs.com/drea***w.png&quot;]</a>,
+         *     &quot;TippedAmountCount&quot;: 32,
+         *     &quot;DownloadCount&quot;: 606056
+         * }</p>
          */
         public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
             this.extraInfo = extraInfo;
@@ -325,7 +346,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the model is created, in UTC. The time follows the ISO 8601 standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -333,7 +357,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time when the model is last modified, in UTC. The time follows the ISO 8601 standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -341,7 +368,7 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The model tags.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
@@ -349,7 +376,7 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * LatestVersion.
+         * <p>The latest version of the model.</p>
          */
         public Builder latestVersion(ModelVersion latestVersion) {
             this.latestVersion = latestVersion;
@@ -357,7 +384,7 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * ModelDescription.
+         * <p>The model description.</p>
          */
         public Builder modelDescription(String modelDescription) {
             this.modelDescription = modelDescription;
@@ -365,7 +392,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * ModelDoc.
+         * <p>The documentation of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://***.md</p>
          */
         public Builder modelDoc(String modelDoc) {
             this.modelDoc = modelDoc;
@@ -373,7 +403,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * ModelId.
+         * <p>The model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model-rbvg5wzljz****ks92</p>
          */
         public Builder modelId(String modelId) {
             this.modelId = modelId;
@@ -381,7 +414,7 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * ModelName.
+         * <p>The model name.</p>
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
@@ -389,7 +422,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * ModelType.
+         * <p>The model type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Checkpoint</p>
          */
         public Builder modelType(String modelType) {
             this.modelType = modelType;
@@ -397,7 +433,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * OrderNumber.
+         * <p>The sequence number of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder orderNumber(Long orderNumber) {
             this.orderNumber = orderNumber;
@@ -405,7 +444,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * Origin.
+         * <p>The source of the model. The community or organization to which the model belongs, such as ModelScope or HuggingFace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ModelScope</p>
          */
         public Builder origin(String origin) {
             this.origin = origin;
@@ -413,7 +455,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890******</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -421,7 +466,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * Provider.
+         * <p>The provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pai</p>
          */
         public Builder provider(String provider) {
             this.provider = provider;
@@ -429,7 +477,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -437,7 +488,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * Task.
+         * <p>The task of the model. This parameter describes specific issues that the model solves, such as text-classification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text-classification</p>
          */
         public Builder task(String task) {
             this.task = task;
@@ -445,7 +499,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890******</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -453,7 +510,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234**</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

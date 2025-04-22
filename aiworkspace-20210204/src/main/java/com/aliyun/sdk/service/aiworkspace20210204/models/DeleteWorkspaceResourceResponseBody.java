@@ -67,7 +67,10 @@ public class DeleteWorkspaceResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DeleteWorkspaceResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceIds.
+         * <p>The resource IDs.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             this.resourceIds = resourceIds;

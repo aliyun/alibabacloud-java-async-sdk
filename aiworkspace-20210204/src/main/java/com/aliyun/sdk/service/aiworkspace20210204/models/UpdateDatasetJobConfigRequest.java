@@ -117,6 +117,7 @@ public class UpdateDatasetJobConfigRequest extends Request {
         } 
 
         /**
+         * <p>The dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class UpdateDatasetJobConfigRequest extends Request {
         }
 
         /**
+         * <p>The configuration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,18 @@ public class UpdateDatasetJobConfigRequest extends Request {
         }
 
         /**
-         * Config.
+         * <p>The configuration content. Formats:</p>
+         * <ul>
+         * <li>MultimodalIntelligentTag</li>
+         * </ul>
+         * <p>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</p>
+         * <ul>
+         * <li>MultimodalSemanticIndex</li>
+         * </ul>
+         * <p>{ &quot;defaultModelId&quot;: &quot;xxx&quot; &quot;defaultModelVersion&quot;:&quot;1.0.0&quot; }</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("Config", config);
@@ -150,7 +163,14 @@ public class UpdateDatasetJobConfigRequest extends Request {
         }
 
         /**
-         * ConfigType.
+         * <p>The configuration type.</p>
+         * <ul>
+         * <li>MultimodalIntelligentTag</li>
+         * <li>MultimodalSemanticIndex</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MultimodalSemanticIndex</p>
          */
         public Builder configType(String configType) {
             this.putBodyParameter("ConfigType", configType);
@@ -159,7 +179,10 @@ public class UpdateDatasetJobConfigRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>167497</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

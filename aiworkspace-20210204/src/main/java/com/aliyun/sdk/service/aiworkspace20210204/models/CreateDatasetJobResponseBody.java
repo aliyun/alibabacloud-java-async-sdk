@@ -67,7 +67,10 @@ public class CreateDatasetJobResponseBody extends TeaModel {
         } 
 
         /**
-         * DatasetJobId.
+         * <p>The ID of the dataset job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsjob-9jx1******uj9e</p>
          */
         public Builder datasetJobId(String datasetJobId) {
             this.datasetJobId = datasetJobId;
@@ -75,7 +78,10 @@ public class CreateDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99341606-****-0757724D97EE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

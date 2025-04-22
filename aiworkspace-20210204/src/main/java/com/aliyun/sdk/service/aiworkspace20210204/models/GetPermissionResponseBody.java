@@ -80,7 +80,10 @@ public class GetPermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * PermissionCode.
+         * <p>The permission name, which is unique in a region. For more information about permissions, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PaiDLC:ListJobs</p>
          */
         public Builder permissionCode(String permissionCode) {
             this.permissionCode = permissionCode;
@@ -88,7 +91,7 @@ public class GetPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * PermissionRules.
+         * <p>The permission rules.</p>
          */
         public Builder permissionRules(java.util.List<PermissionRules> permissionRules) {
             this.permissionRules = permissionRules;
@@ -96,7 +99,10 @@ public class GetPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +168,15 @@ public class GetPermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * Accessibility.
+             * <p>The accessibility. Valid values:</p>
+             * <ul>
+             * <li>PUBLIC: All members can access the workspace.</li>
+             * <li>PRIVATE: Only the creator can access the workspace.</li>
+             * <li>ANY: All users can access the workspace.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder accessibility(String accessibility) {
                 this.accessibility = accessibility;
@@ -170,7 +184,14 @@ public class GetPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * EntityAccessType.
+             * <p>The access type. If you set Accessibility to PUBLIC, all users can access the workspace. This parameter is invalid. If you set Accessibility to PRIVATE, the value of this parameter can be:</p>
+             * <ul>
+             * <li>PRIVATE: Only the creator can access the workspace.</li>
+             * <li>ANY: All users can access the workspace.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATOR</p>
              */
             public Builder entityAccessType(String entityAccessType) {
                 this.entityAccessType = entityAccessType;

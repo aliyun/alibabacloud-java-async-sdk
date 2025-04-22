@@ -197,7 +197,10 @@ public class GetDatasetJobResponseBody extends TeaModel {
         } 
 
         /**
-         * CompletedFileCount.
+         * <p>The total number of completed files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>990</p>
          */
         public Builder completedFileCount(Long completedFileCount) {
             this.completedFileCount = completedFileCount;
@@ -205,7 +208,10 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the job is started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-15T07:06:42Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -213,7 +219,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The job description.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -221,7 +227,10 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * FailedFileCount.
+         * <p>The total number of failed files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder failedFileCount(Long failedFileCount) {
             this.failedFileCount = failedFileCount;
@@ -229,7 +238,10 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * FinishTime.
+         * <p>The time when the job ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-16T02:03:23Z</p>
          */
         public Builder finishTime(String finishTime) {
             this.finishTime = finishTime;
@@ -237,7 +249,16 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobAction.
+         * <p>The action that is performed on the job.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SemanticIndex: semantic indexing</li>
+         * <li>IntelligentTag: smart labeling</li>
+         * <li>FileMetaExport: metadata export</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SemanticIndex</p>
          */
         public Builder jobAction(String jobAction) {
             this.jobAction = jobAction;
@@ -245,7 +266,14 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobMode.
+         * <p>The job mode.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>Full: full data mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Full</p>
          */
         public Builder jobMode(String jobMode) {
             this.jobMode = jobMode;
@@ -253,7 +281,10 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobSpec.
+         * <p>The job details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;modelId&quot;:&quot;xxx&quot;}</p>
          */
         public Builder jobSpec(String jobSpec) {
             this.jobSpec = jobSpec;
@@ -261,7 +292,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * Logs.
+         * <p>The job logs.</p>
          */
         public Builder logs(java.util.List<String> logs) {
             this.logs = logs;
@@ -269,7 +300,10 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64B50C1D-D4C2-560C-86A3-A6ED****16D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -277,7 +311,20 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The job state.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Succeeded</li>
+         * <li>Failed</li>
+         * <li>Running</li>
+         * <li>Pending</li>
+         * <li>PartialFailed</li>
+         * <li>Deleting</li>
+         * <li>ManuallyStop</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -285,7 +332,10 @@ public class GetDatasetJobResponseBody extends TeaModel {
         }
 
         /**
-         * TotalFileCount.
+         * <p>The total number of job files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalFileCount(Long totalFileCount) {
             this.totalFileCount = totalFileCount;

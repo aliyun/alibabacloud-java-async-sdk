@@ -93,7 +93,7 @@ public class ListExperimentResponseBody extends TeaModel {
         } 
 
         /**
-         * Experiments.
+         * <p>The list of experiments.</p>
          */
         public Builder experiments(java.util.List<Experiment> experiments) {
             this.experiments = experiments;
@@ -101,7 +101,10 @@ public class ListExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * NextPageToken.
+         * <p>The pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder nextPageToken(Long nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -109,7 +112,10 @@ public class ListExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +123,10 @@ public class ListExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C6835C5-A424-5AFB-ACC2-F1E3CA1ABF7C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

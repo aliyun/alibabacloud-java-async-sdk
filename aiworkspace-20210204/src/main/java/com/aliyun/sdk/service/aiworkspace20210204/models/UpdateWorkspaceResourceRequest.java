@@ -158,6 +158,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +171,10 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group-kjds******sd</p>
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("GroupName", groupName);
@@ -179,7 +183,10 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * IsDefault.
+         * <p>Specifies whether the resource is the default resource. This parameter can only be set to true and cannot be set to false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isDefault(Boolean isDefault) {
             this.putBodyParameter("IsDefault", isDefault);
@@ -188,7 +195,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The resource tags. If you specify multiple tags, only resources that meet all the specified tag-based filter conditions are returned.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
@@ -197,7 +204,10 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>**This field is no longer used and will be removed. Use the ResourceType field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
@@ -206,7 +216,8 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * <p>The resource IDs.</p>
+         * <p>You cannot leave both GroupName and ResourceIds empty. If you specify both the parameters, the value of GroupName of each resource ID in the dataset must be the same.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putBodyParameter("ResourceIds", resourceIds);
@@ -215,7 +226,17 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>MaxCompute</li>
+         * <li>ECS</li>
+         * <li>Lingjun</li>
+         * <li>ACS</li>
+         * <li>FLINK</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -224,7 +245,12 @@ public class UpdateWorkspaceResourceRequest extends Request {
         }
 
         /**
-         * Spec.
+         * <p>The specification of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;clusterType&quot;: &quot;share&quot;
+         * }</p>
          */
         public Builder spec(java.util.Map<String, ?> spec) {
             this.putBodyParameter("Spec", spec);
@@ -292,7 +318,10 @@ public class UpdateWorkspaceResourceRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system.******</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -300,7 +329,10 @@ public class UpdateWorkspaceResourceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder value(String value) {
                 this.value = value;

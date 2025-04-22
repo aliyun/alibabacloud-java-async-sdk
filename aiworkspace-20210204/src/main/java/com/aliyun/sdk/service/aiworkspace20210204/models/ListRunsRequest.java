@@ -255,7 +255,10 @@ public class ListRunsRequest extends Request {
         } 
 
         /**
-         * ExperimentId.
+         * <p>The ID of the experiment that the run belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exp-1zpfthdx******</p>
          */
         public Builder experimentId(String experimentId) {
             this.putQueryParameter("ExperimentId", experimentId);
@@ -264,7 +267,10 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.putQueryParameter("GmtCreateTime", gmtCreateTime);
@@ -273,7 +279,14 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The label. Exact match is supported. Valid values:</p>
+         * <ul>
+         * <li>Single-label query: Set the value to is_evaluation.</li>
+         * <li>Multi-label query (not recommended in non-special scenarios and may have performance issues): Set the value to is_evaluation:true,LLM_evaluation:true. Multiple labels are separated with commas (,), indicating that the key-value pairs of multiple labels must be matched at the same time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>is_evaluation:true</p>
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -282,7 +295,10 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries in the request. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -291,7 +307,10 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The run name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -300,7 +319,14 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order in which the entries are sorted by the specific field on the returned page. This parameter must be used together with SortBy.</p>
+         * <ul>
+         * <li>ASC</li>
+         * <li>DESC (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -309,7 +335,10 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The strings by which the results are sorted. The following parameters can be used to sort the results: GmtCreateTime and Name. The sorting order can be ASC (default) and DESC. Separate multiple strings with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime DESC,Name ASC</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -318,7 +347,10 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value must be greater than 0. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -327,7 +359,10 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -336,7 +371,10 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * PageToken.
+         * <p>The pagination token, which starts from 0. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageToken(Long pageToken) {
             this.putQueryParameter("PageToken", pageToken);
@@ -345,7 +383,14 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field used for sorting. Valid values:</p>
+         * <ul>
+         * <li>Name: the name of the run.</li>
+         * <li>GmtCreateTime: the time when the run is created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -354,7 +399,10 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * <p>The ID of the workload associated with the run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-rbvg5wzlj****</p>
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -363,7 +411,10 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The type of the workload associated with the run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TrainingService</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -372,7 +423,14 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * Verbose.
+         * <p>Specifies whether to show detailed information, including Metrics, Params, and Labels. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);
@@ -381,7 +439,13 @@ public class ListRunsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace to which the experiment belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <blockquote>
+         * <p> If you do not specify a workspace ID, the system returns the runs of the default workspace.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>22840</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

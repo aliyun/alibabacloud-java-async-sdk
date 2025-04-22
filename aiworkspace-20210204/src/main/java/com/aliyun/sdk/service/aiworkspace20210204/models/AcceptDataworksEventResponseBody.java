@@ -54,7 +54,10 @@ public class AcceptDataworksEventResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADF6D849-*****-7E7030F0CE53</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

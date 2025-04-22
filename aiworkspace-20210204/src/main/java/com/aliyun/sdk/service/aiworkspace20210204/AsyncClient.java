@@ -20,6 +20,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation can be called only by the internal system and cannot be called by external users.</p>
+     * 
      * @param request the request parameters of AcceptDataworksEvent  AcceptDataworksEventRequest
      * @return AcceptDataworksEventResponse
      */
@@ -80,6 +83,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDatasetJobConfigResponse> createDatasetJobConfig(CreateDatasetJobConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>The tag key and value are not empty strings and cannot exceed 128 characters in length.</li>
+     * <li>The tag key cannot start with any of the following strings: &quot;aliyun&quot;, &quot;acs&quot;, &quot;http://&quot;, and &quot;https://&quot;.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateDatasetLabels  CreateDatasetLabelsRequest
      * @return CreateDatasetLabelsResponse
      */
@@ -294,6 +304,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDatasetFileMetaResponse
      */
     CompletableFuture<GetDatasetFileMetaResponse> getDatasetFileMeta(GetDatasetFileMetaRequest request);
+
+    /**
+     * @param request the request parameters of GetDatasetFileMetasStatistics  GetDatasetFileMetasStatisticsRequest
+     * @return GetDatasetFileMetasStatisticsResponse
+     */
+    CompletableFuture<GetDatasetFileMetasStatisticsResponse> getDatasetFileMetasStatistics(GetDatasetFileMetasStatisticsRequest request);
 
     /**
      * @param request the request parameters of GetDatasetJob  GetDatasetJobRequest

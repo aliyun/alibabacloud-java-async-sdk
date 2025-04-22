@@ -73,7 +73,10 @@ public class DeleteDatasetLabelsRequest extends Request {
         } 
 
         /**
-         * DatasetId.
+         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-rbvg5****jhc9ks92</p>
          */
         public Builder datasetId(String datasetId) {
             this.putPathParameter("DatasetId", datasetId);
@@ -82,7 +85,10 @@ public class DeleteDatasetLabelsRequest extends Request {
         }
 
         /**
-         * LabelKeys.
+         * <p>The tag key. You can call <a href="https://help.aliyun.com/document_detail/457218.html">GetDataset</a> to obtain the tag key. Multiple tag keys are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1,key2</p>
          */
         public Builder labelKeys(String labelKeys) {
             this.putQueryParameter("LabelKeys", labelKeys);

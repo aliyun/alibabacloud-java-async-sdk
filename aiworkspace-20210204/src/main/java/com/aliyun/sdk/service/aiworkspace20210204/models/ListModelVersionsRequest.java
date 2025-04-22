@@ -214,6 +214,7 @@ public class ListModelVersionsRequest extends Request {
         } 
 
         /**
+         * <p>The model ID. You can call <a href="https://help.aliyun.com/document_detail/461944.html">ListModels</a> to obtain the model ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +227,15 @@ public class ListModelVersionsRequest extends Request {
         }
 
         /**
-         * ApprovalStatus.
+         * <p>The approval status based on which the model versions are queried. Valid values:</p>
+         * <ul>
+         * <li>Pending</li>
+         * <li>Approved</li>
+         * <li>Rejected</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Approved</p>
          */
         public Builder approvalStatus(String approvalStatus) {
             this.putQueryParameter("ApprovalStatus", approvalStatus);
@@ -235,7 +244,22 @@ public class ListModelVersionsRequest extends Request {
         }
 
         /**
-         * FormatType.
+         * <p>The model format used to filter model versions. Valid values:</p>
+         * <ul>
+         * <li>OfflineModel</li>
+         * <li>SavedModel</li>
+         * <li>Keras H5</li>
+         * <li>Frozen Pb</li>
+         * <li>Caffe Prototxt</li>
+         * <li>TorchScript</li>
+         * <li>XGBoost</li>
+         * <li>PMML</li>
+         * <li>AlinkModel</li>
+         * <li>ONNX</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SavedModel</p>
          */
         public Builder formatType(String formatType) {
             this.putQueryParameter("FormatType", formatType);
@@ -244,7 +268,18 @@ public class ListModelVersionsRequest extends Request {
         }
 
         /**
-         * FrameworkType.
+         * <p>The framework used to filter model versions.</p>
+         * <ul>
+         * <li>Pytorch -XGBoost</li>
+         * <li>Keras</li>
+         * <li>Caffe</li>
+         * <li>Alink</li>
+         * <li>Xflow</li>
+         * <li>TensorFlow</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TensorFlow</p>
          */
         public Builder frameworkType(String frameworkType) {
             this.putQueryParameter("FrameworkType", frameworkType);
@@ -253,7 +288,10 @@ public class ListModelVersionsRequest extends Request {
         }
 
         /**
-         * Label.
+         * <p>The label. Model versions whose label key or label value contains a specific label are filtered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         public Builder label(String label) {
             this.putQueryParameter("Label", label);
@@ -262,7 +300,14 @@ public class ListModelVersionsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order in which the entries are sorted by the specific field on the returned page. Default value: ASC.</p>
+         * <ul>
+         * <li>ASC</li>
+         * <li>DESC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -271,7 +316,10 @@ public class ListModelVersionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -280,7 +328,10 @@ public class ListModelVersionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -289,7 +340,10 @@ public class ListModelVersionsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field used to sort the results. The GmtCreateTime field is used for sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -298,7 +352,25 @@ public class ListModelVersionsRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * <p>The source ID.</p>
+         * <ul>
+         * <li>If the source type is Custom, this field is not limited.</li>
+         * <li>If the source type is PAIFlow or TrainingService, the format is:</li>
+         * </ul>
+         * <!---->
+         * 
+         * <pre><code>region=&lt;region_id&gt;,workspaceId=&lt;workspace_id&gt;,kind=&lt;kind&gt;,id=&lt;id&gt;
+         * </code></pre>
+         * <p>Take note of the following parameters:</p>
+         * <ul>
+         * <li>region is the region ID.</li>
+         * <li>workspaceId is the ID of the workspace.</li>
+         * <li>kind is the type. Valid values: PipelineRun (PAIFlow) and ServiceJob (training service).</li>
+         * <li>id is a unique identifier.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>region=cn-shanghai,workspaceId=13**,kind=PipelineRun,id=run-sakdb****jdf</p>
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -307,7 +379,15 @@ public class ListModelVersionsRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The source type used to filter model versions. Valid values:</p>
+         * <ul>
+         * <li>Custom (default)</li>
+         * <li>PAIFlow</li>
+         * <li>TrainingService</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PAIFlow</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -316,7 +396,10 @@ public class ListModelVersionsRequest extends Request {
         }
 
         /**
-         * VersionName.
+         * <p>The model version used to filter model versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.1</p>
          */
         public Builder versionName(String versionName) {
             this.putQueryParameter("VersionName", versionName);

@@ -80,7 +80,7 @@ public class ListDatasetJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * DatasetJobs.
+         * <p>The jobs in the dataset.</p>
          */
         public Builder datasetJobs(java.util.List<DatasetJob> datasetJobs) {
             this.datasetJobs = datasetJobs;
@@ -88,7 +88,10 @@ public class ListDatasetJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D7B2E70-F770-505B-A672-09F1D8F2EC1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class ListDatasetJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of jobs.</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

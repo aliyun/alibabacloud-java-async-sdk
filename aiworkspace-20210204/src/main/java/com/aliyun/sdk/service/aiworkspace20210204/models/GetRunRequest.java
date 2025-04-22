@@ -74,6 +74,7 @@ public class GetRunRequest extends Request {
         } 
 
         /**
+         * <p>The run ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetRunRequest extends Request {
         }
 
         /**
-         * Verbose.
+         * <p>Specifies whether to obtain the Metrics, Params, and Labels information. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);

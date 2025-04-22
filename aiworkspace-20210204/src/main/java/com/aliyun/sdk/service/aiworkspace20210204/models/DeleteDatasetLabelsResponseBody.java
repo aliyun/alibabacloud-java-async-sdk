@@ -54,7 +54,10 @@ public class DeleteDatasetLabelsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64B50C1D-D4C2-560C-86A3-A6ED****16D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

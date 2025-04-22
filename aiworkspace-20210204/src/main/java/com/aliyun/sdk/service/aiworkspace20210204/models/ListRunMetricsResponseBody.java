@@ -80,7 +80,7 @@ public class ListRunMetricsResponseBody extends TeaModel {
         } 
 
         /**
-         * Metrics.
+         * <p>The metrics.</p>
          */
         public Builder metrics(java.util.List<RunMetric> metrics) {
             this.metrics = metrics;
@@ -88,7 +88,10 @@ public class ListRunMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * NextPageToken.
+         * <p>The pagination token that is used to retrieve the next page. You do not need to specify this parameter for the first request. You must specify the pagination token in the result of the previous query. If the pagination token is 0, no next page exists. You can obtain the pagination token that is used to retrieve the next page in the value of the <strong>NextPageToken</strong> field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder nextPageToken(Long nextPageToken) {
             this.nextPageToken = nextPageToken;

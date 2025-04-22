@@ -116,6 +116,7 @@ public class ListDatasetJobConfigsRequest extends Request {
         } 
 
         /**
+         * <p>The dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,14 @@ public class ListDatasetJobConfigsRequest extends Request {
         }
 
         /**
-         * ConfigType.
+         * <p>The configuration type.</p>
+         * <ul>
+         * <li>MultimodalIntelligentTag</li>
+         * <li>MultimodalSemanticIndex</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MultimodalIntelligentTag</p>
          */
         public Builder configType(String configType) {
             this.putQueryParameter("ConfigType", configType);
@@ -137,7 +145,10 @@ public class ListDatasetJobConfigsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -146,7 +157,10 @@ public class ListDatasetJobConfigsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -155,7 +169,10 @@ public class ListDatasetJobConfigsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>431514</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

@@ -103,6 +103,7 @@ public class ListRunMetricsRequest extends Request {
         } 
 
         /**
+         * <p>The run ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class ListRunMetricsRequest extends Request {
         }
 
         /**
+         * <p>The metric key of the run.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class ListRunMetricsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries in the request. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -136,7 +141,10 @@ public class ListRunMetricsRequest extends Request {
         }
 
         /**
-         * PageToken.
+         * <p>The pagination token, which starts from 0. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageToken(Long pageToken) {
             this.putQueryParameter("PageToken", pageToken);

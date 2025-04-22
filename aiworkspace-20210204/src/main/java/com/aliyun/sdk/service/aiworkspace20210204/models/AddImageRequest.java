@@ -187,7 +187,14 @@ public class AddImageRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * <p>The accessibility of the image. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: The image is accessible to all members in the workspace.</li>
+         * <li>PRIVATE: The image is accessible only to the image creator.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -196,7 +203,7 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The image description.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -205,7 +212,10 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The image ID. If you do not specify this parameter, the system automatically generates an image ID. The image ID must start with image- followed by 18 characters in letters or digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image-k83*****cv</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -214,6 +224,7 @@ public class AddImageRequest extends Request {
         }
 
         /**
+         * <p>The URL of the image, which can be repeated. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImage</a> to view the image URL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +237,27 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The image tag, which is an array. Each element in the array contains a key-value pair. Alibaba Cloud images have the system.official=true tag. You can add the following keys to an image:</p>
+         * <ul>
+         * <li>system.chipType</li>
+         * <li>system.dsw.cudaVersion</li>
+         * <li>system.dsw.fromImageId</li>
+         * <li>system.dsw.fromInstanceId</li>
+         * <li>system.dsw.id</li>
+         * <li>system.dsw.os</li>
+         * <li>system.dsw.osVersion</li>
+         * <li>system.dsw.resourceType</li>
+         * <li>system.dsw.rootImageId</li>
+         * <li>system.dsw.stage</li>
+         * <li>system.dsw.tag</li>
+         * <li>system.dsw.type</li>
+         * <li>system.framework</li>
+         * <li>system.origin</li>
+         * <li>system.pythonVersion</li>
+         * <li>system.source</li>
+         * <li>system.supported.dlc</li>
+         * <li>system.supported.dsw</li>
+         * </ul>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
@@ -235,6 +266,12 @@ public class AddImageRequest extends Request {
         }
 
         /**
+         * <p>The image name. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 1 to 50 characters in length.</li>
+         * <li>The name can contain lowercase letters, digits, and hyphens (-). The name must start with a lowercase letter.</li>
+         * <li>The name must be unique in a workspace.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,7 +284,10 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * Size.
+         * <p>The size of the image. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder size(Integer size) {
             this.putBodyParameter("Size", size);
@@ -274,7 +314,10 @@ public class AddImageRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15******45</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -342,7 +385,10 @@ public class AddImageRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system.chipType</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -350,7 +396,10 @@ public class AddImageRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GPU</p>
              */
             public Builder value(String value) {
                 this.value = value;

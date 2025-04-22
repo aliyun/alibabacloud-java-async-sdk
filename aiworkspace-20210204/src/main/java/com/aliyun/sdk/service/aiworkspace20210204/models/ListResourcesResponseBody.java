@@ -80,7 +80,10 @@ public class ListResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1e195c5116124202371861018d5bde</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * <p>The resources.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
@@ -96,7 +99,10 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of resources that meet the filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -175,7 +181,10 @@ public class ListResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * Algorithm.
+             * <p>The encryption algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AESCTR</p>
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -183,7 +192,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the resources are encrypted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -191,7 +203,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The primary key for the encryption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -245,7 +260,10 @@ public class ListResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * OwnerId.
+             * <p>This parameter is invalid and deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110973******7793</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -312,7 +330,10 @@ public class ListResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system.supported.dsw</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -320,7 +341,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -387,7 +411,10 @@ public class ListResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The specification name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cu</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -395,7 +422,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The specification description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11500</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -540,7 +570,14 @@ public class ListResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * CardType.
+             * <p>The resource group type. Valid values:</p>
+             * <ul>
+             * <li>CPU</li>
+             * <li>GPU</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cpu</p>
              */
             public Builder cardType(String cardType) {
                 this.cardType = cardType;
@@ -548,7 +585,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The alias of the quota.</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -556,7 +593,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The quota ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -564,7 +604,14 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>isolate: subscription</li>
+             * <li>share: pay-as-you-go</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>develop</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -572,7 +619,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The quota name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QuotaName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -580,7 +630,19 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The product code. Valid values:</p>
+             * <ul>
+             * <li>PAI_isolate: CPU subscription resource groups of PAI</li>
+             * <li>PAI_share: GPU pay-as-you-go resource groups of PAI</li>
+             * <li>MaxCompute_share: pay-as-you-go resource groups of MaxCompute</li>
+             * <li>MaxCompute_isolate: subscription resource groups of MaxCompute</li>
+             * <li>DataWorks_isolate: subscription resource groups of DataWorks</li>
+             * <li>DataWorks_share: pay-as-you-go resource groups of DataWorks</li>
+             * <li>DLC_share: pay-as-you-go resource groups of Deep Learning Containers (DLC)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute_isolate</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -588,7 +650,15 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaType.
+             * <p>The quota type. Valid values:</p>
+             * <ul>
+             * <li>PAI</li>
+             * <li>MaxCompute</li>
+             * <li>DLC</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder quotaType(String quotaType) {
                 this.quotaType = quotaType;
@@ -596,7 +666,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Specs.
+             * <p>The quota specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cu&quot;:&quot;11500&quot;,&quot;minCu&quot;:&quot;2300&quot;,&quot;parentId&quot;:&quot;0&quot;}</p>
              */
             public Builder specs(java.util.List<Specs> specs) {
                 this.specs = specs;
@@ -819,7 +892,7 @@ public class ListResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * Encryption.
+             * <p>The encryption information, which is valid only for MaxCompute resources.</p>
              */
             public Builder encryption(Encryption encryption) {
                 this.encryption = encryption;
@@ -827,7 +900,14 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The environment type. Valid values:</p>
+             * <ul>
+             * <li>dev: development environment</li>
+             * <li>prod: production environment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -835,7 +915,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Executor.
+             * <p>This parameter is invalid and deprecated.</p>
              */
             public Builder executor(Executor executor) {
                 this.executor = executor;
@@ -843,7 +923,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The time when the resource group is created, in UTC. The time follows the ISO 8601 standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-21T17:12:35.232Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -851,7 +934,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the resource group, which is unique within the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>groupName</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -859,7 +945,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -867,7 +956,14 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the resource is the default resource. Each type of resources has a default resource. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -875,7 +971,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The tags.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
@@ -883,7 +979,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ResourceName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -891,7 +990,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductType.
+             * <p>**This field is no longer used and will be removed. Use the ResourceType field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -899,7 +1001,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Quotas.
+             * <p>The quotas.</p>
              */
             public Builder quotas(java.util.List<Quotas> quotas) {
                 this.quotas = quotas;
@@ -907,7 +1009,15 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type. Valid values:</p>
+             * <ul>
+             * <li>MaxCompute</li>
+             * <li>DLC</li>
+             * <li>FLINK</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -915,7 +1025,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>The resource specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>对于MaxCompute {&quot;Endpoint&quot;: &quot;odps.alibaba-inc.com&quot;, &quot;Project&quot;: &quot;mignshi&quot;}</p>
              */
             public Builder spec(java.util.Map<String, ?> spec) {
                 this.spec = spec;
@@ -923,7 +1036,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
