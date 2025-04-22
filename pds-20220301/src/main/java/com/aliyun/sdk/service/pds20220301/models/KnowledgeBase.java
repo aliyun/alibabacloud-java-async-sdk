@@ -72,6 +72,10 @@ public class KnowledgeBase extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return coverUri
      */
@@ -161,6 +165,23 @@ public class KnowledgeBase extends TeaModel {
         private String ownerName; 
         private String ownerType; 
         private Long updatedAt; 
+
+        private Builder() {
+        } 
+
+        private Builder(KnowledgeBase model) {
+            this.coverUri = model.coverUri;
+            this.createdAt = model.createdAt;
+            this.description = model.description;
+            this.fileFilter = model.fileFilter;
+            this.knowledgeBaseId = model.knowledgeBaseId;
+            this.linkRuleList = model.linkRuleList;
+            this.name = model.name;
+            this.ownerId = model.ownerId;
+            this.ownerName = model.ownerName;
+            this.ownerType = model.ownerType;
+            this.updatedAt = model.updatedAt;
+        } 
 
         /**
          * cover_uri.

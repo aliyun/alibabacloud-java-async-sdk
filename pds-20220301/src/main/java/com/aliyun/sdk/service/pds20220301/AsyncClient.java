@@ -41,6 +41,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssignRoleResponse> assignRole(AssignRoleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Log audit is a value-added feature that is provided by Drive and Photo Service (PDS) Developer Edition. Before you call this operation, make sure that you learn about the <a href="https://www.alibabacloud.com/help/document_detail/425220.html">value-added billable items</a>.</p>
+     * 
      * @param request the request parameters of AuditLogExport  AuditLogExportRequest
      * @return AuditLogExportResponse
      */

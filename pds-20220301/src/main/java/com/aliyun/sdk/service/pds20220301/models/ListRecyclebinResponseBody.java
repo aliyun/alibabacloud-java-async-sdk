@@ -36,6 +36,10 @@ public class ListRecyclebinResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class ListRecyclebinResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<File> items; 
         private String nextMarker; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRecyclebinResponseBody model) {
+            this.items = model.items;
+            this.nextMarker = model.nextMarker;
+        } 
 
         /**
          * <p>The information about the files and folders in the recycle bin.</p>

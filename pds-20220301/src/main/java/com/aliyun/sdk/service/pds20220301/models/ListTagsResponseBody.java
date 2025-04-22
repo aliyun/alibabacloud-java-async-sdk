@@ -32,6 +32,10 @@ public class ListTagsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return tags
      */
@@ -41,6 +45,13 @@ public class ListTagsResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<ImageTag> tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagsResponseBody model) {
+            this.tags = model.tags;
+        } 
 
         /**
          * <p>The information about the tags.</p>

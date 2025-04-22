@@ -68,6 +68,10 @@ public class LocationDateCluster extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return address
      */
@@ -149,6 +153,22 @@ public class LocationDateCluster extends TeaModel {
         private String startTime; 
         private String title; 
         private String updatedAt; 
+
+        private Builder() {
+        } 
+
+        private Builder(LocationDateCluster model) {
+            this.address = model.address;
+            this.clusterId = model.clusterId;
+            this.createdAt = model.createdAt;
+            this.customLabels = model.customLabels;
+            this.driveId = model.driveId;
+            this.endTime = model.endTime;
+            this.level = model.level;
+            this.startTime = model.startTime;
+            this.title = model.title;
+            this.updatedAt = model.updatedAt;
+        } 
 
         /**
          * address.

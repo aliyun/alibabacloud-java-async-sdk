@@ -76,6 +76,10 @@ public class KnowledgeCategory extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdAt
      */
@@ -173,6 +177,24 @@ public class KnowledgeCategory extends TeaModel {
         private String parentKnowledgeCategoryId; 
         private String status; 
         private Long updatedAt; 
+
+        private Builder() {
+        } 
+
+        private Builder(KnowledgeCategory model) {
+            this.createdAt = model.createdAt;
+            this.description = model.description;
+            this.keywords = model.keywords;
+            this.knowledgeBaseId = model.knowledgeBaseId;
+            this.knowledgeBaseName = model.knowledgeBaseName;
+            this.knowledgeCategoryId = model.knowledgeCategoryId;
+            this.name = model.name;
+            this.owner = model.owner;
+            this.ownerType = model.ownerType;
+            this.parentKnowledgeCategoryId = model.parentKnowledgeCategoryId;
+            this.status = model.status;
+            this.updatedAt = model.updatedAt;
+        } 
 
         /**
          * created_at.

@@ -58,6 +58,10 @@ public class FileDownloadCallbackInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucket
      */
@@ -107,6 +111,18 @@ public class FileDownloadCallbackInfo extends TeaModel {
         private String fileId; 
         private String object; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FileDownloadCallbackInfo model) {
+            this.bucket = model.bucket;
+            this.domainId = model.domainId;
+            this.driveId = model.driveId;
+            this.fileId = model.fileId;
+            this.object = model.object;
+            this.userId = model.userId;
+        } 
 
         /**
          * <p>This parameter is required.</p>

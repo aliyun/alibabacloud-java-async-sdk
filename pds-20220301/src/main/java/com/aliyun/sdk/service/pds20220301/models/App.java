@@ -76,6 +76,10 @@ public class App extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appId
      */
@@ -173,6 +177,24 @@ public class App extends TeaModel {
         private String stage; 
         private String type; 
         private String updatedAt; 
+
+        private Builder() {
+        } 
+
+        private Builder(App model) {
+            this.appId = model.appId;
+            this.appName = model.appName;
+            this.appSecret = model.appSecret;
+            this.createdAt = model.createdAt;
+            this.description = model.description;
+            this.logo = model.logo;
+            this.provider = model.provider;
+            this.redirectUri = model.redirectUri;
+            this.scope = model.scope;
+            this.stage = model.stage;
+            this.type = model.type;
+            this.updatedAt = model.updatedAt;
+        } 
 
         /**
          * app_id.

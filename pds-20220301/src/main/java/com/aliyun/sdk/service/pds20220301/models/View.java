@@ -64,6 +64,10 @@ public class View extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return category
      */
@@ -137,6 +141,21 @@ public class View extends TeaModel {
         private String owner; 
         private String updatedAt; 
         private String viewId; 
+
+        private Builder() {
+        } 
+
+        private Builder(View model) {
+            this.category = model.category;
+            this.createdAt = model.createdAt;
+            this.description = model.description;
+            this.exFieldsInfo = model.exFieldsInfo;
+            this.fileCount = model.fileCount;
+            this.name = model.name;
+            this.owner = model.owner;
+            this.updatedAt = model.updatedAt;
+            this.viewId = model.viewId;
+        } 
 
         /**
          * category.

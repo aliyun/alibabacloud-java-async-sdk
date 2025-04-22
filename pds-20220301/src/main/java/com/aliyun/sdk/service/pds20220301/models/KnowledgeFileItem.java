@@ -38,6 +38,10 @@ public class KnowledgeFileItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return driveId
      */
@@ -55,6 +59,14 @@ public class KnowledgeFileItem extends TeaModel {
     public static final class Builder {
         private String driveId; 
         private String fileId; 
+
+        private Builder() {
+        } 
+
+        private Builder(KnowledgeFileItem model) {
+            this.driveId = model.driveId;
+            this.fileId = model.fileId;
+        } 
 
         /**
          * <p>This parameter is required.</p>

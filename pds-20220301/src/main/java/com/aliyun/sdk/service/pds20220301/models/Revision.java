@@ -112,6 +112,10 @@ public class Revision extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contentHash
      */
@@ -281,6 +285,33 @@ public class Revision extends TeaModel {
         private String thumbnail; 
         private String updatedAt; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(Revision model) {
+            this.contentHash = model.contentHash;
+            this.contentHashName = model.contentHashName;
+            this.crc64Hash = model.crc64Hash;
+            this.createdAt = model.createdAt;
+            this.creatorId = model.creatorId;
+            this.creatorName = model.creatorName;
+            this.domainId = model.domainId;
+            this.downloadUrl = model.downloadUrl;
+            this.driveId = model.driveId;
+            this.fileExtension = model.fileExtension;
+            this.fileId = model.fileId;
+            this.isLatestVersion = model.isLatestVersion;
+            this.keepForever = model.keepForever;
+            this.revisionDescription = model.revisionDescription;
+            this.revisionId = model.revisionId;
+            this.revisionName = model.revisionName;
+            this.revisionVersion = model.revisionVersion;
+            this.size = model.size;
+            this.thumbnail = model.thumbnail;
+            this.updatedAt = model.updatedAt;
+            this.url = model.url;
+        } 
 
         /**
          * content_hash.

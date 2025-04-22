@@ -36,6 +36,10 @@ public class ListDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class ListDomainsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Domain> items; 
         private String nextMarker; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDomainsResponseBody model) {
+            this.items = model.items;
+            this.nextMarker = model.nextMarker;
+        } 
 
         /**
          * <p>The information about the domains.</p>

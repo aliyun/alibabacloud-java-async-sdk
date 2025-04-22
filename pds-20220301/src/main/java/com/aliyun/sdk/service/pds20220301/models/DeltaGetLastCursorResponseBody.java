@@ -32,6 +32,10 @@ public class DeltaGetLastCursorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cursor
      */
@@ -41,6 +45,13 @@ public class DeltaGetLastCursorResponseBody extends TeaModel {
 
     public static final class Builder {
         private String cursor; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeltaGetLastCursorResponseBody model) {
+            this.cursor = model.cursor;
+        } 
 
         /**
          * <p>The latest cursor of incremental information in the specified drive or synced folder.</p>

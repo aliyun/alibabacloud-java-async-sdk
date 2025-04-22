@@ -96,6 +96,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asyncTaskId
      */
@@ -233,6 +237,29 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         private Long totalProcess; 
         private java.util.List<UncompressedFileInfo> uncompressFileList; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAsyncTaskResponseBody model) {
+            this.asyncTaskId = model.asyncTaskId;
+            this.category = model.category;
+            this.consumedProcess = model.consumedProcess;
+            this.createdAt = model.createdAt;
+            this.errCode = model.errCode;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.failedProcess = model.failedProcess;
+            this.finishedAt = model.finishedAt;
+            this.message = model.message;
+            this.skippedProcess = model.skippedProcess;
+            this.startedAt = model.startedAt;
+            this.state = model.state;
+            this.status = model.status;
+            this.totalProcess = model.totalProcess;
+            this.uncompressFileList = model.uncompressFileList;
+            this.url = model.url;
+        } 
 
         /**
          * <p>The ID of the asynchronous task.</p>

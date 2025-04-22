@@ -40,6 +40,10 @@ public class SearchFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -65,6 +69,15 @@ public class SearchFileResponseBody extends TeaModel {
         private java.util.List<File> items; 
         private String nextMarker; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchFileResponseBody model) {
+            this.items = model.items;
+            this.nextMarker = model.nextMarker;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the files.</p>

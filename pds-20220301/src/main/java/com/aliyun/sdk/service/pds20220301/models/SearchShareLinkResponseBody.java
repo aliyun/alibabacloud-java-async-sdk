@@ -40,6 +40,10 @@ public class SearchShareLinkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -65,6 +69,15 @@ public class SearchShareLinkResponseBody extends TeaModel {
         private java.util.List<ShareLink> items; 
         private String nextMarker; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchShareLinkResponseBody model) {
+            this.items = model.items;
+            this.nextMarker = model.nextMarker;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The share URLs.</p>

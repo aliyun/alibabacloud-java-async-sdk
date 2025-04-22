@@ -28,7 +28,17 @@ public class DomainEndpoints extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     public static final class Builder {
+
+        private Builder() {
+        } 
+
+        private Builder(DomainEndpoints model) {
+        } 
 
         public DomainEndpoints build() {
             return new DomainEndpoints(this);

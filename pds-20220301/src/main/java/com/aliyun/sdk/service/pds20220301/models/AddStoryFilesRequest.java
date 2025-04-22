@@ -51,7 +51,7 @@ public class AddStoryFilesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -195,6 +195,14 @@ public class AddStoryFilesRequest extends Request {
         public static final class Builder {
             private String fileId; 
             private String revisionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.fileId = model.fileId;
+                this.revisionId = model.revisionId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

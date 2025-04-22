@@ -32,6 +32,10 @@ public class BatchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return responses
      */
@@ -41,6 +45,13 @@ public class BatchResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Responses> responses; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchResponseBody model) {
+            this.responses = model.responses;
+        } 
 
         /**
          * <p>All responses of the child requests.</p>
@@ -111,6 +122,15 @@ public class BatchResponseBody extends TeaModel {
             private java.util.Map<String, ?> body; 
             private String id; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Responses model) {
+                this.body = model.body;
+                this.id = model.id;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The response parameters of a child request. For more information, see the topic of the corresponding child request.</p>

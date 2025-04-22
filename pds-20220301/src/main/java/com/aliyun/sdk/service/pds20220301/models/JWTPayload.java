@@ -64,6 +64,10 @@ public class JWTPayload extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aud
      */
@@ -137,6 +141,21 @@ public class JWTPayload extends TeaModel {
         private Long nbf; 
         private String sub; 
         private String subType; 
+
+        private Builder() {
+        } 
+
+        private Builder(JWTPayload model) {
+            this.aud = model.aud;
+            this.autoCreate = model.autoCreate;
+            this.exp = model.exp;
+            this.iat = model.iat;
+            this.iss = model.iss;
+            this.jti = model.jti;
+            this.nbf = model.nbf;
+            this.sub = model.sub;
+            this.subType = model.subType;
+        } 
 
         /**
          * aud.

@@ -68,6 +68,10 @@ public class Membership extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdAt
      */
@@ -149,6 +153,22 @@ public class Membership extends TeaModel {
         private String subGroupId; 
         private Long updatedAt; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Membership model) {
+            this.createdAt = model.createdAt;
+            this.creator = model.creator;
+            this.description = model.description;
+            this.domainId = model.domainId;
+            this.groupId = model.groupId;
+            this.memberRole = model.memberRole;
+            this.memberType = model.memberType;
+            this.subGroupId = model.subGroupId;
+            this.updatedAt = model.updatedAt;
+            this.userId = model.userId;
+        } 
 
         /**
          * created_at.

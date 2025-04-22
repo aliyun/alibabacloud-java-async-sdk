@@ -44,6 +44,10 @@ public class AddStoryFile extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -77,6 +81,16 @@ public class AddStoryFile extends TeaModel {
         private String errorMessage; 
         private String fileId; 
         private String revisionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddStoryFile model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.fileId = model.fileId;
+            this.revisionId = model.revisionId;
+        } 
 
         /**
          * error_code.

@@ -52,7 +52,7 @@ public class FileRemovePermissionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -200,6 +200,14 @@ public class FileRemovePermissionRequest extends Request {
         public static final class Builder {
             private Identity identity; 
             private String roleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MemberList model) {
+                this.identity = model.identity;
+                this.roleId = model.roleId;
+            } 
 
             /**
              * <p>The identity to whom the permissions are granted, which is a user or a group.</p>

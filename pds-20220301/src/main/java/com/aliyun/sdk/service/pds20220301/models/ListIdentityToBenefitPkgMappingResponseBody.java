@@ -32,6 +32,10 @@ public class ListIdentityToBenefitPkgMappingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -41,6 +45,13 @@ public class ListIdentityToBenefitPkgMappingResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<IdentityToBenefitPkgMapping> items; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIdentityToBenefitPkgMappingResponseBody model) {
+            this.items = model.items;
+        } 
 
         /**
          * <p>The information about the benefit packages that are associated with an entity.</p>

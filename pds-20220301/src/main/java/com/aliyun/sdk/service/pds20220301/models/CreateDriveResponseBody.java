@@ -76,6 +76,10 @@ public class CreateDriveResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdAt
      */
@@ -173,6 +177,24 @@ public class CreateDriveResponseBody extends TeaModel {
         private String status; 
         private Long totalSize; 
         private Long usedSize; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDriveResponseBody model) {
+            this.createdAt = model.createdAt;
+            this.creator = model.creator;
+            this.description = model.description;
+            this.domainId = model.domainId;
+            this.driveId = model.driveId;
+            this.driveName = model.driveName;
+            this.driveType = model.driveType;
+            this.owner = model.owner;
+            this.ownerType = model.ownerType;
+            this.status = model.status;
+            this.totalSize = model.totalSize;
+            this.usedSize = model.usedSize;
+        } 
 
         /**
          * created_at.

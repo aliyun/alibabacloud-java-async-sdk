@@ -143,7 +143,7 @@ public class CreateFileRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -664,6 +664,14 @@ public class CreateFileRequest extends Request {
             private java.util.List<Long> h; 
             private Long partOffset; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParallelSha1Ctx model) {
+                this.h = model.h;
+                this.partOffset = model.partOffset;
+            } 
+
             /**
              * <p>The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
              */
@@ -745,6 +753,15 @@ public class CreateFileRequest extends Request {
             private String contentMd5; 
             private ParallelSha1Ctx parallelSha1Ctx; 
             private Integer partNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(PartInfoList model) {
+                this.contentMd5 = model.contentMd5;
+                this.parallelSha1Ctx = model.parallelSha1Ctx;
+                this.partNumber = model.partNumber;
+            } 
 
             /**
              * <p>The MD5 hash value of the file part. This parameter is required when the MD5 hash value of the file part needs to be verified during part upload.</p>

@@ -44,6 +44,10 @@ public class AddStoryFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return driveId
      */
@@ -77,6 +81,16 @@ public class AddStoryFilesResponseBody extends TeaModel {
         private java.util.List<AddStoryFile> files; 
         private String requestId; 
         private String storyId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddStoryFilesResponseBody model) {
+            this.driveId = model.driveId;
+            this.files = model.files;
+            this.requestId = model.requestId;
+            this.storyId = model.storyId;
+        } 
 
         /**
          * drive_id.

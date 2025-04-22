@@ -44,6 +44,10 @@ public class IDPermission extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return disinheritSubGroup
      */
@@ -77,6 +81,16 @@ public class IDPermission extends TeaModel {
         private Long expireTime; 
         private Permission permission; 
         private java.util.List<String> roles; 
+
+        private Builder() {
+        } 
+
+        private Builder(IDPermission model) {
+            this.disinheritSubGroup = model.disinheritSubGroup;
+            this.expireTime = model.expireTime;
+            this.permission = model.permission;
+            this.roles = model.roles;
+        } 
 
         /**
          * disinherit_sub_group.

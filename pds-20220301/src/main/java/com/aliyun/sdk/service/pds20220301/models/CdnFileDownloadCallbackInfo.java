@@ -68,6 +68,10 @@ public class CdnFileDownloadCallbackInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucket
      */
@@ -133,6 +137,20 @@ public class CdnFileDownloadCallbackInfo extends TeaModel {
         private String object; 
         private String token; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CdnFileDownloadCallbackInfo model) {
+            this.bucket = model.bucket;
+            this.domainId = model.domainId;
+            this.driveId = model.driveId;
+            this.expire = model.expire;
+            this.fileId = model.fileId;
+            this.object = model.object;
+            this.token = model.token;
+            this.userId = model.userId;
+        } 
 
         /**
          * <p>This parameter is required.</p>

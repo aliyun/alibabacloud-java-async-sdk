@@ -52,6 +52,10 @@ public class UserLogDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return email
      */
@@ -101,6 +105,18 @@ public class UserLogDetail extends TeaModel {
         private String phone; 
         private String roleId; 
         private UpdateTo updateTo; 
+
+        private Builder() {
+        } 
+
+        private Builder(UserLogDetail model) {
+            this.email = model.email;
+            this.expiredAt = model.expiredAt;
+            this.name = model.name;
+            this.phone = model.phone;
+            this.roleId = model.roleId;
+            this.updateTo = model.updateTo;
+        } 
 
         /**
          * email.
@@ -235,6 +251,17 @@ public class UserLogDetail extends TeaModel {
             private String name; 
             private String phone; 
             private String roleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateTo model) {
+                this.email = model.email;
+                this.expiredAt = model.expiredAt;
+                this.name = model.name;
+                this.phone = model.phone;
+                this.roleId = model.roleId;
+            } 
 
             /**
              * email.

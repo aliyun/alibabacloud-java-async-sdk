@@ -40,6 +40,10 @@ public class ListFacegroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -65,6 +69,15 @@ public class ListFacegroupsResponseBody extends TeaModel {
         private java.util.List<FaceGroup> items; 
         private String nextMarker; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFacegroupsResponseBody model) {
+            this.items = model.items;
+            this.nextMarker = model.nextMarker;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the face-based groups.</p>

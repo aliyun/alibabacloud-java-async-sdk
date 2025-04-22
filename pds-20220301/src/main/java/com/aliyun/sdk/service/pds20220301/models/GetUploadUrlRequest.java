@@ -63,7 +63,7 @@ public class GetUploadUrlRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -253,6 +253,14 @@ public class GetUploadUrlRequest extends Request {
             private java.util.List<Long> h; 
             private Long partOffset; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParallelSha1Ctx model) {
+                this.h = model.h;
+                this.partOffset = model.partOffset;
+            } 
+
             /**
              * <p>The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
              */
@@ -322,6 +330,14 @@ public class GetUploadUrlRequest extends Request {
         public static final class Builder {
             private java.util.List<Long> h; 
             private Long partOffset; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParallelSha256Ctx model) {
+                this.h = model.h;
+                this.partOffset = model.partOffset;
+            } 
 
             /**
              * <p>The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
@@ -428,6 +444,17 @@ public class GetUploadUrlRequest extends Request {
             private ParallelSha1Ctx parallelSha1Ctx; 
             private ParallelSha256Ctx parallelSha256Ctx; 
             private Integer partNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(PartInfoList model) {
+                this.contentMd5 = model.contentMd5;
+                this.contentType = model.contentType;
+                this.parallelSha1Ctx = model.parallelSha1Ctx;
+                this.parallelSha256Ctx = model.parallelSha256Ctx;
+                this.partNumber = model.partNumber;
+            } 
 
             /**
              * content_md5.

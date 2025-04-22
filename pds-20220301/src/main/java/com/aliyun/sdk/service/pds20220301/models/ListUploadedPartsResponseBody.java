@@ -48,6 +48,10 @@ public class ListUploadedPartsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileId
      */
@@ -89,6 +93,17 @@ public class ListUploadedPartsResponseBody extends TeaModel {
         private Boolean parallelUpload; 
         private String uploadId; 
         private java.util.List<UploadPartInfo> uploadedParts; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUploadedPartsResponseBody model) {
+            this.fileId = model.fileId;
+            this.nextPartNumberMarker = model.nextPartNumberMarker;
+            this.parallelUpload = model.parallelUpload;
+            this.uploadId = model.uploadId;
+            this.uploadedParts = model.uploadedParts;
+        } 
 
         /**
          * <p>The file ID.</p>

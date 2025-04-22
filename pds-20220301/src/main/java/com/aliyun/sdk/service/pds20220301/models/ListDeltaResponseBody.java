@@ -40,6 +40,10 @@ public class ListDeltaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cursor
      */
@@ -65,6 +69,15 @@ public class ListDeltaResponseBody extends TeaModel {
         private String cursor; 
         private Boolean hasMore; 
         private java.util.List<Items> items; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDeltaResponseBody model) {
+            this.cursor = model.cursor;
+            this.hasMore = model.hasMore;
+            this.items = model.items;
+        } 
 
         /**
          * <p>The cursor of the incremental information.</p>
@@ -157,6 +170,15 @@ public class ListDeltaResponseBody extends TeaModel {
             private File file; 
             private String fileId; 
             private String op; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.file = model.file;
+                this.fileId = model.fileId;
+                this.op = model.op;
+            } 
 
             /**
              * <p>The information about the file.</p>

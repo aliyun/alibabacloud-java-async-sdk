@@ -41,6 +41,10 @@ public class FaceThumbnail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return faceGroupId
      */
@@ -66,6 +70,15 @@ public class FaceThumbnail extends TeaModel {
         private String faceGroupId; 
         private String faceId; 
         private String faceThumbnail; 
+
+        private Builder() {
+        } 
+
+        private Builder(FaceThumbnail model) {
+            this.faceGroupId = model.faceGroupId;
+            this.faceId = model.faceId;
+            this.faceThumbnail = model.faceThumbnail;
+        } 
 
         /**
          * face_group_id.

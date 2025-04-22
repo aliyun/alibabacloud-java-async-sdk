@@ -40,6 +40,10 @@ public class ListGroupMemberResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupItems
      */
@@ -65,6 +69,15 @@ public class ListGroupMemberResponseBody extends TeaModel {
         private java.util.List<Group> groupItems; 
         private String nextMarker; 
         private java.util.List<User> userItems; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGroupMemberResponseBody model) {
+            this.groupItems = model.groupItems;
+            this.nextMarker = model.nextMarker;
+            this.userItems = model.userItems;
+        } 
 
         /**
          * <p>The information about the groups.</p>

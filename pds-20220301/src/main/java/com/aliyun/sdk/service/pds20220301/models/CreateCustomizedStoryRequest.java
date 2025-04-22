@@ -76,7 +76,7 @@ public class CreateCustomizedStoryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -299,6 +299,14 @@ public class CreateCustomizedStoryRequest extends Request {
             private String fileId; 
             private String revisionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(StoryCover model) {
+                this.fileId = model.fileId;
+                this.revisionId = model.revisionId;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -369,6 +377,14 @@ public class CreateCustomizedStoryRequest extends Request {
         public static final class Builder {
             private String fileId; 
             private String revisionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(StoryFiles model) {
+                this.fileId = model.fileId;
+                this.revisionId = model.revisionId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

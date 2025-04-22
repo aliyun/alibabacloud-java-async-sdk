@@ -36,6 +36,10 @@ public class CsiGetFileInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return investigationInfo
      */
@@ -53,6 +57,14 @@ public class CsiGetFileInfoResponseBody extends TeaModel {
     public static final class Builder {
         private InvestigationInfo investigationInfo; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(CsiGetFileInfoResponseBody model) {
+            this.investigationInfo = model.investigationInfo;
+            this.url = model.url;
+        } 
 
         /**
          * investigation_info.

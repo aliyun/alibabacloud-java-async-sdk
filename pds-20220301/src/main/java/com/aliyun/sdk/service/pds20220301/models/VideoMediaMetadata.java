@@ -44,6 +44,10 @@ public class VideoMediaMetadata extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return height
      */
@@ -77,6 +81,16 @@ public class VideoMediaMetadata extends TeaModel {
         private java.util.List<VideoMediaAudioStream> videoMediaAudioStream; 
         private java.util.List<VideoMediaVideoStream> videoMediaVideoStream; 
         private Long width; 
+
+        private Builder() {
+        } 
+
+        private Builder(VideoMediaMetadata model) {
+            this.height = model.height;
+            this.videoMediaAudioStream = model.videoMediaAudioStream;
+            this.videoMediaVideoStream = model.videoMediaVideoStream;
+            this.width = model.width;
+        } 
 
         /**
          * height.

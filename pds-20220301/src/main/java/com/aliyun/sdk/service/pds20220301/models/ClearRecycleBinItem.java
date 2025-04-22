@@ -44,6 +44,10 @@ public class ClearRecycleBinItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asyncTaskId
      */
@@ -77,6 +81,16 @@ public class ClearRecycleBinItem extends TeaModel {
         private String domainId; 
         private String driveId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ClearRecycleBinItem model) {
+            this.asyncTaskId = model.asyncTaskId;
+            this.domainId = model.domainId;
+            this.driveId = model.driveId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * async_task_id.

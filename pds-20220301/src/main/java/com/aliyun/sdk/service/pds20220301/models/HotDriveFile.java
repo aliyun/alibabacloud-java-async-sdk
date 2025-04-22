@@ -60,6 +60,10 @@ public class HotDriveFile extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actionCount
      */
@@ -125,6 +129,20 @@ public class HotDriveFile extends TeaModel {
         private String fileId; 
         private String name; 
         private String revisionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotDriveFile model) {
+            this.actionCount = model.actionCount;
+            this.actionList = model.actionList;
+            this.category = model.category;
+            this.countAt = model.countAt;
+            this.driveId = model.driveId;
+            this.fileId = model.fileId;
+            this.name = model.name;
+            this.revisionId = model.revisionId;
+        } 
 
         /**
          * action_count.

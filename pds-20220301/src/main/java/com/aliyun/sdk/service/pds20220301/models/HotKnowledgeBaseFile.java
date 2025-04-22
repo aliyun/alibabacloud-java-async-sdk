@@ -64,6 +64,10 @@ public class HotKnowledgeBaseFile extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actionCount
      */
@@ -137,6 +141,21 @@ public class HotKnowledgeBaseFile extends TeaModel {
         private String knowledgeBaseId; 
         private String name; 
         private String revisionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotKnowledgeBaseFile model) {
+            this.actionCount = model.actionCount;
+            this.actionList = model.actionList;
+            this.category = model.category;
+            this.countAt = model.countAt;
+            this.driveId = model.driveId;
+            this.fileId = model.fileId;
+            this.knowledgeBaseId = model.knowledgeBaseId;
+            this.name = model.name;
+            this.revisionId = model.revisionId;
+        } 
 
         /**
          * action_count.

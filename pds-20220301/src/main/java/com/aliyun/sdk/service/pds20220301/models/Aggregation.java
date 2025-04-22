@@ -44,6 +44,10 @@ public class Aggregation extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return field
      */
@@ -77,6 +81,16 @@ public class Aggregation extends TeaModel {
         private java.util.List<AggregationsGroup> groups; 
         private byte[] operation; 
         private Double value; 
+
+        private Builder() {
+        } 
+
+        private Builder(Aggregation model) {
+            this.field = model.field;
+            this.groups = model.groups;
+            this.operation = model.operation;
+            this.value = model.value;
+        } 
 
         /**
          * field.

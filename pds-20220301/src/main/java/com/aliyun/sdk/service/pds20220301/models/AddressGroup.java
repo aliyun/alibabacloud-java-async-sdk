@@ -52,6 +52,10 @@ public class AddressGroup extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addressDetail
      */
@@ -101,6 +105,18 @@ public class AddressGroup extends TeaModel {
         private String coverUrl; 
         private String location; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddressGroup model) {
+            this.addressDetail = model.addressDetail;
+            this.count = model.count;
+            this.coverFileId = model.coverFileId;
+            this.coverUrl = model.coverUrl;
+            this.location = model.location;
+            this.name = model.name;
+        } 
 
         /**
          * address_detail.

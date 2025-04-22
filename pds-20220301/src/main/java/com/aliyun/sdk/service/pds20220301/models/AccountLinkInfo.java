@@ -64,6 +64,10 @@ public class AccountLinkInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authenticationType
      */
@@ -137,6 +141,21 @@ public class AccountLinkInfo extends TeaModel {
         private Long lastLoginTime; 
         private String status; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AccountLinkInfo model) {
+            this.authenticationType = model.authenticationType;
+            this.createdAt = model.createdAt;
+            this.displayName = model.displayName;
+            this.domainId = model.domainId;
+            this.extra = model.extra;
+            this.identity = model.identity;
+            this.lastLoginTime = model.lastLoginTime;
+            this.status = model.status;
+            this.userId = model.userId;
+        } 
 
         /**
          * authentication_type.

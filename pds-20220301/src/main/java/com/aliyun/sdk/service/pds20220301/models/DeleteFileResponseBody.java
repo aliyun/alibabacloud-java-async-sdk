@@ -44,6 +44,10 @@ public class DeleteFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asyncTaskId
      */
@@ -77,6 +81,16 @@ public class DeleteFileResponseBody extends TeaModel {
         private String domainId; 
         private String driveId; 
         private String fileId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteFileResponseBody model) {
+            this.asyncTaskId = model.asyncTaskId;
+            this.domainId = model.domainId;
+            this.driveId = model.driveId;
+            this.fileId = model.fileId;
+        } 
 
         /**
          * <p>The ID of the asynchronous task. This parameter is returned only in asynchronous processing scenarios. You can call the <a href="https://help.aliyun.com/document_detail/440456.html">GetAsyncTask</a> operation to query the information about the asynchronous task based on the task ID.</p>

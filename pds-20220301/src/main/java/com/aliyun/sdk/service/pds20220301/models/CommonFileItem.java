@@ -40,6 +40,10 @@ public class CommonFileItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return driveId
      */
@@ -65,6 +69,15 @@ public class CommonFileItem extends TeaModel {
         private String driveId; 
         private String fileId; 
         private String revisionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CommonFileItem model) {
+            this.driveId = model.driveId;
+            this.fileId = model.fileId;
+            this.revisionId = model.revisionId;
+        } 
 
         /**
          * drive_id.

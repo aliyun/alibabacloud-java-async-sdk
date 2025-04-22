@@ -93,7 +93,7 @@ public class CreateUserRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -442,6 +442,13 @@ public class CreateUserRequest extends Request {
 
         public static final class Builder {
             private String groupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupInfoList model) {
+                this.groupId = model.groupId;
+            } 
 
             /**
              * <p>The group ID.</p>

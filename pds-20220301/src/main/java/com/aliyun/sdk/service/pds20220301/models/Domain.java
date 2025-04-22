@@ -56,6 +56,9 @@ public class Domain extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("status")
     private Long status;
 
+    @com.aliyun.core.annotation.NameInMap("store_redundancy_type")
+    private String storeRedundancyType;
+
     @com.aliyun.core.annotation.NameInMap("updated_at")
     private String updatedAt;
 
@@ -79,6 +82,7 @@ public class Domain extends TeaModel {
         this.sizeQuota = builder.sizeQuota;
         this.sizeQuotaUsed = builder.sizeQuotaUsed;
         this.status = builder.status;
+        this.storeRedundancyType = builder.storeRedundancyType;
         this.updatedAt = builder.updatedAt;
         this.usedSize = builder.usedSize;
         this.userCountQuota = builder.userCountQuota;
@@ -90,6 +94,10 @@ public class Domain extends TeaModel {
 
     public static Domain create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -184,6 +192,13 @@ public class Domain extends TeaModel {
     }
 
     /**
+     * @return storeRedundancyType
+     */
+    public String getStoreRedundancyType() {
+        return this.storeRedundancyType;
+    }
+
+    /**
      * @return updatedAt
      */
     public String getUpdatedAt() {
@@ -218,9 +233,33 @@ public class Domain extends TeaModel {
         private Long sizeQuota; 
         private Long sizeQuotaUsed; 
         private Long status; 
+        private String storeRedundancyType; 
         private String updatedAt; 
         private Long usedSize; 
         private Long userCountQuota; 
+
+        private Builder() {
+        } 
+
+        private Builder(Domain model) {
+            this.createdAt = model.createdAt;
+            this.dataHashName = model.dataHashName;
+            this.description = model.description;
+            this.domainId = model.domainId;
+            this.domainName = model.domainName;
+            this.initDriveEnable = model.initDriveEnable;
+            this.initDriveSize = model.initDriveSize;
+            this.parentDomainId = model.parentDomainId;
+            this.publishedAppAccessStrategy = model.publishedAppAccessStrategy;
+            this.sharable = model.sharable;
+            this.sizeQuota = model.sizeQuota;
+            this.sizeQuotaUsed = model.sizeQuotaUsed;
+            this.status = model.status;
+            this.storeRedundancyType = model.storeRedundancyType;
+            this.updatedAt = model.updatedAt;
+            this.usedSize = model.usedSize;
+            this.userCountQuota = model.userCountQuota;
+        } 
 
         /**
          * created_at.
@@ -323,6 +362,14 @@ public class Domain extends TeaModel {
          */
         public Builder status(Long status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * store_redundancy_type.
+         */
+        public Builder storeRedundancyType(String storeRedundancyType) {
+            this.storeRedundancyType = storeRedundancyType;
             return this;
         }
 

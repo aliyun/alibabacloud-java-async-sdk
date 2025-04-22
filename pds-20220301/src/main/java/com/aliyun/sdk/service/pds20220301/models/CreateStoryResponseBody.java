@@ -32,6 +32,10 @@ public class CreateStoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return driveId
      */
@@ -41,6 +45,13 @@ public class CreateStoryResponseBody extends TeaModel {
 
     public static final class Builder {
         private String driveId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateStoryResponseBody model) {
+            this.driveId = model.driveId;
+        } 
 
         /**
          * drive_id.

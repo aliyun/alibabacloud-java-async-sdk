@@ -40,6 +40,10 @@ public class ImageProcess extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageThumbnailProcess
      */
@@ -65,6 +69,15 @@ public class ImageProcess extends TeaModel {
         private String imageThumbnailProcess; 
         private String officeThumbnailProcess; 
         private String videoThumbnailProcess; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImageProcess model) {
+            this.imageThumbnailProcess = model.imageThumbnailProcess;
+            this.officeThumbnailProcess = model.officeThumbnailProcess;
+            this.videoThumbnailProcess = model.videoThumbnailProcess;
+        } 
 
         /**
          * image_thumbnail_process.

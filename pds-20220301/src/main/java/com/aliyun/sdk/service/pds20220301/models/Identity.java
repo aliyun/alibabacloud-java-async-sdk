@@ -36,6 +36,10 @@ public class Identity extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return identityId
      */
@@ -53,6 +57,14 @@ public class Identity extends TeaModel {
     public static final class Builder {
         private String identityId; 
         private String identityType; 
+
+        private Builder() {
+        } 
+
+        private Builder(Identity model) {
+            this.identityId = model.identityId;
+            this.identityType = model.identityType;
+        } 
 
         /**
          * identity_id.

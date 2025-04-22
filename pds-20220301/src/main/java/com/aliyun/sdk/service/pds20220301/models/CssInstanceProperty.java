@@ -48,6 +48,10 @@ public class CssInstanceProperty extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CssInstanceProperty extends TeaModel {
         private String name; 
         private String unit; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(CssInstanceProperty model) {
+            this.code = model.code;
+            this.globalKey = model.globalKey;
+            this.name = model.name;
+            this.unit = model.unit;
+            this.value = model.value;
+        } 
 
         /**
          * code.

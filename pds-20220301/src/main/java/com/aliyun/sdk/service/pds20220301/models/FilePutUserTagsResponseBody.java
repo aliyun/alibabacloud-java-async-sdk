@@ -33,6 +33,10 @@ public class FilePutUserTagsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileId
      */
@@ -42,6 +46,13 @@ public class FilePutUserTagsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String fileId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FilePutUserTagsResponseBody model) {
+            this.fileId = model.fileId;
+        } 
 
         /**
          * <p>The file ID.</p>

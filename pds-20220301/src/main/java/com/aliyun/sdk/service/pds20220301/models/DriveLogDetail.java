@@ -60,6 +60,10 @@ public class DriveLogDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return forceDelete
      */
@@ -125,6 +129,20 @@ public class DriveLogDetail extends TeaModel {
         private String ownerType; 
         private Long totalSize; 
         private UpdateTo updateTo; 
+
+        private Builder() {
+        } 
+
+        private Builder(DriveLogDetail model) {
+            this.forceDelete = model.forceDelete;
+            this.handoverOwnerName = model.handoverOwnerName;
+            this.name = model.name;
+            this.ownerId = model.ownerId;
+            this.ownerName = model.ownerName;
+            this.ownerType = model.ownerType;
+            this.totalSize = model.totalSize;
+            this.updateTo = model.updateTo;
+        } 
 
         /**
          * force_delete.
@@ -275,6 +293,17 @@ public class DriveLogDetail extends TeaModel {
             private String ownerName; 
             private String ownerType; 
             private Long totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateTo model) {
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.ownerName = model.ownerName;
+                this.ownerType = model.ownerType;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * name.

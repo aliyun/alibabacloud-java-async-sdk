@@ -48,6 +48,10 @@ public class MoveFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asyncTaskId
      */
@@ -89,6 +93,17 @@ public class MoveFileResponseBody extends TeaModel {
         private String driveId; 
         private Boolean exist; 
         private String fileId; 
+
+        private Builder() {
+        } 
+
+        private Builder(MoveFileResponseBody model) {
+            this.asyncTaskId = model.asyncTaskId;
+            this.domainId = model.domainId;
+            this.driveId = model.driveId;
+            this.exist = model.exist;
+            this.fileId = model.fileId;
+        } 
 
         /**
          * <p>The ID of the asynchronous task.</p>

@@ -60,6 +60,10 @@ public class FileStreamInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contentHash
      */
@@ -125,6 +129,20 @@ public class FileStreamInfo extends TeaModel {
         private String proofCode; 
         private String proofVersion; 
         private Long size; 
+
+        private Builder() {
+        } 
+
+        private Builder(FileStreamInfo model) {
+            this.contentHash = model.contentHash;
+            this.contentHashName = model.contentHashName;
+            this.contentMd5 = model.contentMd5;
+            this.partInfoList = model.partInfoList;
+            this.preHash = model.preHash;
+            this.proofCode = model.proofCode;
+            this.proofVersion = model.proofVersion;
+            this.size = model.size;
+        } 
 
         /**
          * content_hash.

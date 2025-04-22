@@ -44,6 +44,10 @@ public class RestoreFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asyncTaskId
      */
@@ -77,6 +81,16 @@ public class RestoreFileResponseBody extends TeaModel {
         private String domainId; 
         private String driveId; 
         private String fileId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RestoreFileResponseBody model) {
+            this.asyncTaskId = model.asyncTaskId;
+            this.domainId = model.domainId;
+            this.driveId = model.driveId;
+            this.fileId = model.fileId;
+        } 
 
         /**
          * <p>The ID of the asynchronous task.</p>

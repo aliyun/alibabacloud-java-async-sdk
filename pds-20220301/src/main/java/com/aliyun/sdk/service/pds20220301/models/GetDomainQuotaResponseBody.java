@@ -44,6 +44,10 @@ public class GetDomainQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return sizeQuota
      */
@@ -77,6 +81,16 @@ public class GetDomainQuotaResponseBody extends TeaModel {
         private Long sizeUsed; 
         private Long userCountQuota; 
         private Long userCountUsed; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDomainQuotaResponseBody model) {
+            this.sizeQuota = model.sizeQuota;
+            this.sizeUsed = model.sizeUsed;
+            this.userCountQuota = model.userCountQuota;
+            this.userCountUsed = model.userCountUsed;
+        } 
 
         /**
          * size_quota.

@@ -48,6 +48,10 @@ public class GetVideoPreviewPlayMetaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainId
      */
@@ -89,6 +93,17 @@ public class GetVideoPreviewPlayMetaResponseBody extends TeaModel {
         private String fileId; 
         private String shareId; 
         private VideoPreviewPlayMeta videoPreviewPlayMeta; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVideoPreviewPlayMetaResponseBody model) {
+            this.domainId = model.domainId;
+            this.driveId = model.driveId;
+            this.fileId = model.fileId;
+            this.shareId = model.shareId;
+            this.videoPreviewPlayMeta = model.videoPreviewPlayMeta;
+        } 
 
         /**
          * <p>The domain ID.</p>

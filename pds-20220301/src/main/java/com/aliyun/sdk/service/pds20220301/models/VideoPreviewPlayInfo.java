@@ -64,6 +64,10 @@ public class VideoPreviewPlayInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return category
      */
@@ -137,6 +141,21 @@ public class VideoPreviewPlayInfo extends TeaModel {
         private java.util.List<VideoPreviewSubtitleInfo> offlineVideoTranscodingSubtitleList; 
         private java.util.List<QuickVideoList> quickVideoList; 
         private java.util.List<VideoPreviewSubtitleInfo> quickVideoSubtitleList; 
+
+        private Builder() {
+        } 
+
+        private Builder(VideoPreviewPlayInfo model) {
+            this.category = model.category;
+            this.liveTranscodingSubtitleTaskList = model.liveTranscodingSubtitleTaskList;
+            this.liveTranscodingTaskList = model.liveTranscodingTaskList;
+            this.masterUrl = model.masterUrl;
+            this.meta = model.meta;
+            this.offlineVideoTranscodingList = model.offlineVideoTranscodingList;
+            this.offlineVideoTranscodingSubtitleList = model.offlineVideoTranscodingSubtitleList;
+            this.quickVideoList = model.quickVideoList;
+            this.quickVideoSubtitleList = model.quickVideoSubtitleList;
+        } 
 
         /**
          * category.
@@ -284,6 +303,16 @@ public class VideoPreviewPlayInfo extends TeaModel {
             private String templateId; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveTranscodingTaskList model) {
+                this.keepOriginalResolution = model.keepOriginalResolution;
+                this.status = model.status;
+                this.templateId = model.templateId;
+                this.url = model.url;
+            } 
+
             /**
              * keep_original_resolution.
              */
@@ -378,6 +407,15 @@ public class VideoPreviewPlayInfo extends TeaModel {
             private Double duration; 
             private Long height; 
             private Long width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Meta model) {
+                this.duration = model.duration;
+                this.height = model.height;
+                this.width = model.width;
+            } 
 
             /**
              * duration.
@@ -478,6 +516,16 @@ public class VideoPreviewPlayInfo extends TeaModel {
             private String templateId; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(OfflineVideoTranscodingList model) {
+                this.keepOriginalResolution = model.keepOriginalResolution;
+                this.status = model.status;
+                this.templateId = model.templateId;
+                this.url = model.url;
+            } 
+
             /**
              * keep_original_resolution.
              */
@@ -572,6 +620,15 @@ public class VideoPreviewPlayInfo extends TeaModel {
             private String status; 
             private String templateId; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuickVideoList model) {
+                this.status = model.status;
+                this.templateId = model.templateId;
+                this.url = model.url;
+            } 
 
             /**
              * status.

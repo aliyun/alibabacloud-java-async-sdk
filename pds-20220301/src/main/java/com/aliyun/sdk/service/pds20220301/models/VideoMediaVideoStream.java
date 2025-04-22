@@ -44,6 +44,10 @@ public class VideoMediaVideoStream extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bitrate
      */
@@ -77,6 +81,16 @@ public class VideoMediaVideoStream extends TeaModel {
         private String codeName; 
         private String duration; 
         private String frameCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(VideoMediaVideoStream model) {
+            this.bitrate = model.bitrate;
+            this.codeName = model.codeName;
+            this.duration = model.duration;
+            this.frameCount = model.frameCount;
+        } 
 
         /**
          * bitrate.

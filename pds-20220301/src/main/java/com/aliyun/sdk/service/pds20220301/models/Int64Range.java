@@ -36,6 +36,10 @@ public class Int64Range extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return from
      */
@@ -53,6 +57,14 @@ public class Int64Range extends TeaModel {
     public static final class Builder {
         private Long from; 
         private Long to; 
+
+        private Builder() {
+        } 
+
+        private Builder(Int64Range model) {
+            this.from = model.from;
+            this.to = model.to;
+        } 
 
         /**
          * from.

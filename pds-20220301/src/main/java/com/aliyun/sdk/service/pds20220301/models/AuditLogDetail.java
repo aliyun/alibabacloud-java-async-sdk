@@ -40,6 +40,10 @@ public class AuditLogDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return driveLogDetail
      */
@@ -65,6 +69,15 @@ public class AuditLogDetail extends TeaModel {
         private DriveLogDetail driveLogDetail; 
         private FileLogDetail fileLogDetail; 
         private UserLogDetail userLogDetail; 
+
+        private Builder() {
+        } 
+
+        private Builder(AuditLogDetail model) {
+            this.driveLogDetail = model.driveLogDetail;
+            this.fileLogDetail = model.fileLogDetail;
+            this.userLogDetail = model.userLogDetail;
+        } 
 
         /**
          * drive_log_detail.

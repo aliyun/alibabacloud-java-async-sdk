@@ -36,6 +36,10 @@ public class ListAssignmentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return assignmentList
      */
@@ -53,6 +57,14 @@ public class ListAssignmentResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AssignmentList> assignmentList; 
         private String nextMarker; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAssignmentResponseBody model) {
+            this.assignmentList = model.assignmentList;
+            this.nextMarker = model.nextMarker;
+        } 
 
         /**
          * <p>The assigned roles.</p>
@@ -182,6 +194,19 @@ public class ListAssignmentResponseBody extends TeaModel {
             private String manageResourceId; 
             private String manageResourceType; 
             private String roleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssignmentList model) {
+                this.createdAt = model.createdAt;
+                this.creator = model.creator;
+                this.domainId = model.domainId;
+                this.identity = model.identity;
+                this.manageResourceId = model.manageResourceId;
+                this.manageResourceType = model.manageResourceType;
+                this.roleId = model.roleId;
+            } 
 
             /**
              * <p>The time when the role was assigned. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>

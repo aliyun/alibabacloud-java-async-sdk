@@ -44,6 +44,10 @@ public class BaseAlbumFileOperationResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -77,6 +81,16 @@ public class BaseAlbumFileOperationResult extends TeaModel {
         private String errorMessage; 
         private CommonFileItem file; 
         private Boolean isSucceed; 
+
+        private Builder() {
+        } 
+
+        private Builder(BaseAlbumFileOperationResult model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.file = model.file;
+            this.isSucceed = model.isSucceed;
+        } 
 
         /**
          * error_code.

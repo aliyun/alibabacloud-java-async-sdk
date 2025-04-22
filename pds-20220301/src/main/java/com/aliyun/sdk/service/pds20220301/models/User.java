@@ -88,6 +88,10 @@ public class User extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return avatar
      */
@@ -209,6 +213,27 @@ public class User extends TeaModel {
         private java.util.Map<String, String> userData; 
         private String userId; 
         private String userName; 
+
+        private Builder() {
+        } 
+
+        private Builder(User model) {
+            this.avatar = model.avatar;
+            this.createdAt = model.createdAt;
+            this.creator = model.creator;
+            this.defaultDriveId = model.defaultDriveId;
+            this.description = model.description;
+            this.domainId = model.domainId;
+            this.email = model.email;
+            this.nickName = model.nickName;
+            this.phone = model.phone;
+            this.role = model.role;
+            this.status = model.status;
+            this.updatedAt = model.updatedAt;
+            this.userData = model.userData;
+            this.userId = model.userId;
+            this.userName = model.userName;
+        } 
 
         /**
          * avatar.

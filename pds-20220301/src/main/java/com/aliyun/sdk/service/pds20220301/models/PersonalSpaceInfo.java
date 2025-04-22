@@ -36,6 +36,10 @@ public class PersonalSpaceInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return totalSize
      */
@@ -53,6 +57,14 @@ public class PersonalSpaceInfo extends TeaModel {
     public static final class Builder {
         private Long totalSize; 
         private Long usedSize; 
+
+        private Builder() {
+        } 
+
+        private Builder(PersonalSpaceInfo model) {
+            this.totalSize = model.totalSize;
+            this.usedSize = model.usedSize;
+        } 
 
         /**
          * total_size.

@@ -40,6 +40,10 @@ public class CustomSideLinkConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return icon
      */
@@ -65,6 +69,15 @@ public class CustomSideLinkConfig extends TeaModel {
         private String icon; 
         private String link; 
         private String text; 
+
+        private Builder() {
+        } 
+
+        private Builder(CustomSideLinkConfig model) {
+            this.icon = model.icon;
+            this.link = model.link;
+            this.text = model.text;
+        } 
 
         /**
          * icon.

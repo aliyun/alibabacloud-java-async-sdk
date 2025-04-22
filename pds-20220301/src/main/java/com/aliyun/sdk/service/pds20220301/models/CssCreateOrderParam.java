@@ -144,6 +144,10 @@ public class CssCreateOrderParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return agentId
      */
@@ -377,6 +381,41 @@ public class CssCreateOrderParam extends TeaModel {
         private Object transientAccess; 
         private String umidToken; 
         private Long userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CssCreateOrderParam model) {
+            this.agentId = model.agentId;
+            this.autoPay = model.autoPay;
+            this.autoUseCoupon = model.autoUseCoupon;
+            this.bid = model.bid;
+            this.buyerId = model.buyerId;
+            this.certificate = model.certificate;
+            this.childId = model.childId;
+            this.cilentIp = model.cilentIp;
+            this.commodities = model.commodities;
+            this.createrNick = model.createrNick;
+            this.cssAuthRequestParam = model.cssAuthRequestParam;
+            this.fromApp = model.fromApp;
+            this.language = model.language;
+            this.marketType = model.marketType;
+            this.memo = model.memo;
+            this.orderOrigin = model.orderOrigin;
+            this.orderParams = model.orderParams;
+            this.payerId = model.payerId;
+            this.planGroupId = model.planGroupId;
+            this.planId = model.planId;
+            this.planInstanceId = model.planInstanceId;
+            this.promotionCode = model.promotionCode;
+            this.promotionInputParam = model.promotionInputParam;
+            this.requestId = model.requestId;
+            this.skipChannel = model.skipChannel;
+            this.token = model.token;
+            this.transientAccess = model.transientAccess;
+            this.umidToken = model.umidToken;
+            this.userId = model.userId;
+        } 
 
         /**
          * agentId.

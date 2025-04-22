@@ -36,6 +36,10 @@ public class AggregationsGroup extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -53,6 +57,14 @@ public class AggregationsGroup extends TeaModel {
     public static final class Builder {
         private Long count; 
         private byte[] value; 
+
+        private Builder() {
+        } 
+
+        private Builder(AggregationsGroup model) {
+            this.count = model.count;
+            this.value = model.value;
+        } 
 
         /**
          * count.

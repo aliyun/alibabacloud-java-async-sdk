@@ -172,6 +172,10 @@ public class AlbumFile extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return albumId
      */
@@ -461,6 +465,48 @@ public class AlbumFile extends TeaModel {
         private String updatedAt; 
         private String uploadId; 
         private String userMeta; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlbumFile model) {
+            this.albumId = model.albumId;
+            this.category = model.category;
+            this.contentHash = model.contentHash;
+            this.contentHashName = model.contentHashName;
+            this.contentType = model.contentType;
+            this.crc64Hash = model.crc64Hash;
+            this.createdAt = model.createdAt;
+            this.description = model.description;
+            this.domainId = model.domainId;
+            this.downloadUrl = model.downloadUrl;
+            this.driveId = model.driveId;
+            this.exFieldsInfo = model.exFieldsInfo;
+            this.fileExtension = model.fileExtension;
+            this.fileId = model.fileId;
+            this.hidden = model.hidden;
+            this.imageMediaMetadata = model.imageMediaMetadata;
+            this.investigationInfo = model.investigationInfo;
+            this.joinedAt = model.joinedAt;
+            this.labels = model.labels;
+            this.localCreatedAt = model.localCreatedAt;
+            this.localModifiedAt = model.localModifiedAt;
+            this.mimeType = model.mimeType;
+            this.name = model.name;
+            this.objectUri = model.objectUri;
+            this.parentFileId = model.parentFileId;
+            this.revisionId = model.revisionId;
+            this.size = model.size;
+            this.starred = model.starred;
+            this.status = model.status;
+            this.thumbnail = model.thumbnail;
+            this.thumbnailUrls = model.thumbnailUrls;
+            this.transhedAt = model.transhedAt;
+            this.type = model.type;
+            this.updatedAt = model.updatedAt;
+            this.uploadId = model.uploadId;
+            this.userMeta = model.userMeta;
+        } 
 
         /**
          * album_id.

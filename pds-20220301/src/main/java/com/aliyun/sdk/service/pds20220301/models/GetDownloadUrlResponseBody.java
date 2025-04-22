@@ -60,6 +60,10 @@ public class GetDownloadUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cdnUrl
      */
@@ -125,6 +129,20 @@ public class GetDownloadUrlResponseBody extends TeaModel {
         private String internalUrl; 
         private Long size; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDownloadUrlResponseBody model) {
+            this.cdnUrl = model.cdnUrl;
+            this.contentHash = model.contentHash;
+            this.contentHashName = model.contentHashName;
+            this.crc64Hash = model.crc64Hash;
+            this.expiration = model.expiration;
+            this.internalUrl = model.internalUrl;
+            this.size = model.size;
+            this.url = model.url;
+        } 
 
         /**
          * <p>The download URL of a file that is downloaded by using Alibaba Cloud CDN.</p>

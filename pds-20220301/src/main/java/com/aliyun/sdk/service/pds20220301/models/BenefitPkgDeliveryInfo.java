@@ -44,6 +44,10 @@ public class BenefitPkgDeliveryInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return amount
      */
@@ -77,6 +81,16 @@ public class BenefitPkgDeliveryInfo extends TeaModel {
         private String createdAt; 
         private String expireTime; 
         private Boolean isPermanent; 
+
+        private Builder() {
+        } 
+
+        private Builder(BenefitPkgDeliveryInfo model) {
+            this.amount = model.amount;
+            this.createdAt = model.createdAt;
+            this.expireTime = model.expireTime;
+            this.isPermanent = model.isPermanent;
+        } 
 
         /**
          * amount.

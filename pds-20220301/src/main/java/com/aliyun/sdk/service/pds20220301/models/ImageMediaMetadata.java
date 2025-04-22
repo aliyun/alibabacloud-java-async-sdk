@@ -84,6 +84,10 @@ public class ImageMediaMetadata extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addressLine
      */
@@ -197,6 +201,26 @@ public class ImageMediaMetadata extends TeaModel {
         private String time; 
         private String township; 
         private Long width; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImageMediaMetadata model) {
+            this.addressLine = model.addressLine;
+            this.city = model.city;
+            this.country = model.country;
+            this.district = model.district;
+            this.exif = model.exif;
+            this.facesThumbnail = model.facesThumbnail;
+            this.height = model.height;
+            this.imageQuality = model.imageQuality;
+            this.imageTags = model.imageTags;
+            this.location = model.location;
+            this.province = model.province;
+            this.time = model.time;
+            this.township = model.township;
+            this.width = model.width;
+        } 
 
         /**
          * address_line.

@@ -32,6 +32,10 @@ public class ImageQuality extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return overallScore
      */
@@ -41,6 +45,13 @@ public class ImageQuality extends TeaModel {
 
     public static final class Builder {
         private Double overallScore; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImageQuality model) {
+            this.overallScore = model.overallScore;
+        } 
 
         /**
          * overall_score.

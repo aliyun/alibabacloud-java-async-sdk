@@ -36,6 +36,10 @@ public class DomainBuildClientConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return copyright
      */
@@ -53,6 +57,14 @@ public class DomainBuildClientConfig extends TeaModel {
     public static final class Builder {
         private String copyright; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(DomainBuildClientConfig model) {
+            this.copyright = model.copyright;
+            this.name = model.name;
+        } 
 
         /**
          * copyright.

@@ -52,6 +52,10 @@ public class DataCName extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certExpireTime
      */
@@ -101,6 +105,18 @@ public class DataCName extends TeaModel {
         private String cnameType; 
         private String location; 
         private String storeId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataCName model) {
+            this.certExpireTime = model.certExpireTime;
+            this.certName = model.certName;
+            this.cname = model.cname;
+            this.cnameType = model.cnameType;
+            this.location = model.location;
+            this.storeId = model.storeId;
+        } 
 
         /**
          * cert_expire_time.

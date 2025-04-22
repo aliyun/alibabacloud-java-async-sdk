@@ -36,6 +36,10 @@ public class NameCheckResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return existFileId
      */
@@ -53,6 +57,14 @@ public class NameCheckResult extends TeaModel {
     public static final class Builder {
         private String existFileId; 
         private String existFileType; 
+
+        private Builder() {
+        } 
+
+        private Builder(NameCheckResult model) {
+            this.existFileId = model.existFileId;
+            this.existFileType = model.existFileType;
+        } 
 
         /**
          * exist_file_id.

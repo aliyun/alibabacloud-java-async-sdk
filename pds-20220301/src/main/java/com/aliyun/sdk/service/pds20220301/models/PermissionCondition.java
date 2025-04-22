@@ -44,6 +44,10 @@ public class PermissionCondition extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipEquals
      */
@@ -77,6 +81,16 @@ public class PermissionCondition extends TeaModel {
         private IpNotEquals ipNotEquals; 
         private StringLike stringLike; 
         private StringNotLike stringNotLike; 
+
+        private Builder() {
+        } 
+
+        private Builder(PermissionCondition model) {
+            this.ipEquals = model.ipEquals;
+            this.ipNotEquals = model.ipNotEquals;
+            this.stringLike = model.stringLike;
+            this.stringNotLike = model.stringNotLike;
+        } 
 
         /**
          * ip_equals.
@@ -148,6 +162,13 @@ public class PermissionCondition extends TeaModel {
         public static final class Builder {
             private java.util.List<String> clientIp; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpEquals model) {
+                this.clientIp = model.clientIp;
+            } 
+
             /**
              * client_ip.
              */
@@ -194,6 +215,13 @@ public class PermissionCondition extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> clientIp; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpNotEquals model) {
+                this.clientIp = model.clientIp;
+            } 
 
             /**
              * client_ip.
@@ -242,6 +270,13 @@ public class PermissionCondition extends TeaModel {
         public static final class Builder {
             private java.util.List<String> vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(StringLike model) {
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * vpc_id.
              */
@@ -288,6 +323,13 @@ public class PermissionCondition extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(StringNotLike model) {
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * vpc_id.

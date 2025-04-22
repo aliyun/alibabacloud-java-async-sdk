@@ -160,6 +160,10 @@ public class ViewFile extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return category
      */
@@ -425,6 +429,45 @@ public class ViewFile extends TeaModel {
         private String updatedAt; 
         private String uploadId; 
         private String viewId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ViewFile model) {
+            this.category = model.category;
+            this.contentHash = model.contentHash;
+            this.contentHashName = model.contentHashName;
+            this.contentType = model.contentType;
+            this.crc64Hash = model.crc64Hash;
+            this.createdAt = model.createdAt;
+            this.description = model.description;
+            this.domainId = model.domainId;
+            this.downloadUrl = model.downloadUrl;
+            this.driveId = model.driveId;
+            this.fields = model.fields;
+            this.fileExtension = model.fileExtension;
+            this.fileId = model.fileId;
+            this.fileRevisionId = model.fileRevisionId;
+            this.hidden = model.hidden;
+            this.investigationInfo = model.investigationInfo;
+            this.joinedAt = model.joinedAt;
+            this.labels = model.labels;
+            this.localCreatedAt = model.localCreatedAt;
+            this.localModifiedAt = model.localModifiedAt;
+            this.name = model.name;
+            this.parentFileId = model.parentFileId;
+            this.revisionId = model.revisionId;
+            this.size = model.size;
+            this.starred = model.starred;
+            this.status = model.status;
+            this.thumbnail = model.thumbnail;
+            this.thumbnailUrls = model.thumbnailUrls;
+            this.trashedAt = model.trashedAt;
+            this.type = model.type;
+            this.updatedAt = model.updatedAt;
+            this.uploadId = model.uploadId;
+            this.viewId = model.viewId;
+        } 
 
         /**
          * category.
@@ -739,6 +782,14 @@ public class ViewFile extends TeaModel {
         public static final class Builder {
             private Long status; 
             private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvestigationInfo model) {
+                this.status = model.status;
+                this.suggestion = model.suggestion;
+            } 
 
             /**
              * status.

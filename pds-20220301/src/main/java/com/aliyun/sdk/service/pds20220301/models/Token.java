@@ -120,6 +120,10 @@ public class Token extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessToken
      */
@@ -305,6 +309,35 @@ public class Token extends TeaModel {
         private java.util.Map<String, String> userData; 
         private String userId; 
         private String userName; 
+
+        private Builder() {
+        } 
+
+        private Builder(Token model) {
+            this.accessToken = model.accessToken;
+            this.avatar = model.avatar;
+            this.defaultDriveId = model.defaultDriveId;
+            this.defaultSboxDriveId = model.defaultSboxDriveId;
+            this.deviceId = model.deviceId;
+            this.deviceName = model.deviceName;
+            this.domainId = model.domainId;
+            this.existLink = model.existLink;
+            this.expireTime = model.expireTime;
+            this.expiresIn = model.expiresIn;
+            this.isFirstLogin = model.isFirstLogin;
+            this.needLink = model.needLink;
+            this.needRpVerify = model.needRpVerify;
+            this.nickName = model.nickName;
+            this.pinSetup = model.pinSetup;
+            this.refreshToken = model.refreshToken;
+            this.role = model.role;
+            this.state = model.state;
+            this.status = model.status;
+            this.tokenType = model.tokenType;
+            this.userData = model.userData;
+            this.userId = model.userId;
+            this.userName = model.userName;
+        } 
 
         /**
          * access_token.

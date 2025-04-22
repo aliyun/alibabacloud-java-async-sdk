@@ -36,6 +36,10 @@ public class UpdateFacegroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return driveId
      */
@@ -53,6 +57,14 @@ public class UpdateFacegroupResponseBody extends TeaModel {
     public static final class Builder {
         private String driveId; 
         private String groupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateFacegroupResponseBody model) {
+            this.driveId = model.driveId;
+            this.groupId = model.groupId;
+        } 
 
         /**
          * <p>The drive ID.</p>

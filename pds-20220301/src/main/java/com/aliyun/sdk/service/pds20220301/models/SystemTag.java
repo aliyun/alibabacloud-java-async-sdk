@@ -48,6 +48,10 @@ public class SystemTag extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return centricScore
      */
@@ -89,6 +93,17 @@ public class SystemTag extends TeaModel {
         private String name; 
         private String parentName; 
         private Integer tagLevel; 
+
+        private Builder() {
+        } 
+
+        private Builder(SystemTag model) {
+            this.centricScore = model.centricScore;
+            this.confidence = model.confidence;
+            this.name = model.name;
+            this.parentName = model.parentName;
+            this.tagLevel = model.tagLevel;
+        } 
 
         /**
          * centric_score.

@@ -40,6 +40,10 @@ public class LinkInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return extra
      */
@@ -65,6 +69,15 @@ public class LinkInfo extends TeaModel {
         private String extra; 
         private String identity; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(LinkInfo model) {
+            this.extra = model.extra;
+            this.identity = model.identity;
+            this.type = model.type;
+        } 
 
         /**
          * extra.

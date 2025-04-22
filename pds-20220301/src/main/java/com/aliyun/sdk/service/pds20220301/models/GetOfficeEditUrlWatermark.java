@@ -56,6 +56,10 @@ public class GetOfficeEditUrlWatermark extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fillstyle
      */
@@ -113,6 +117,19 @@ public class GetOfficeEditUrlWatermark extends TeaModel {
         private Integer type; 
         private String value; 
         private Long vertical; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOfficeEditUrlWatermark model) {
+            this.fillstyle = model.fillstyle;
+            this.font = model.font;
+            this.horizontal = model.horizontal;
+            this.rotate = model.rotate;
+            this.type = model.type;
+            this.value = model.value;
+            this.vertical = model.vertical;
+        } 
 
         /**
          * fillstyle.

@@ -32,6 +32,10 @@ public class SearchAddressGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -41,6 +45,13 @@ public class SearchAddressGroupsResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<AddressGroup> items; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchAddressGroupsResponseBody model) {
+            this.items = model.items;
+        } 
 
         /**
          * <p>The location-based groups.</p>

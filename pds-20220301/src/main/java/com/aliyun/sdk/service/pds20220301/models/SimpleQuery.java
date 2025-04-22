@@ -44,6 +44,10 @@ public class SimpleQuery extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return field
      */
@@ -77,6 +81,16 @@ public class SimpleQuery extends TeaModel {
         private byte[] operation; 
         private java.util.List<SimpleQuery> subQueries; 
         private byte[] value; 
+
+        private Builder() {
+        } 
+
+        private Builder(SimpleQuery model) {
+            this.field = model.field;
+            this.operation = model.operation;
+            this.subQueries = model.subQueries;
+            this.value = model.value;
+        } 
 
         /**
          * field.

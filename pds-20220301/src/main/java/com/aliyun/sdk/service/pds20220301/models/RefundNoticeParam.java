@@ -60,6 +60,10 @@ public class RefundNoticeParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliuid
      */
@@ -125,6 +129,20 @@ public class RefundNoticeParam extends TeaModel {
         private java.util.List<Long> orderIds; 
         private java.util.Map<String, String> refundParamMap; 
         private String refundType; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefundNoticeParam model) {
+            this.aliuid = model.aliuid;
+            this.aliyunProduceCode = model.aliyunProduceCode;
+            this.commodityCode = model.commodityCode;
+            this.instanceId = model.instanceId;
+            this.newExpireTime = model.newExpireTime;
+            this.orderIds = model.orderIds;
+            this.refundParamMap = model.refundParamMap;
+            this.refundType = model.refundType;
+        } 
 
         /**
          * aliuid.

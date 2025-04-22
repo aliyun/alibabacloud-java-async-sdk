@@ -40,6 +40,10 @@ public class GetOfficeEditUrlOption extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return copy
      */
@@ -65,6 +69,15 @@ public class GetOfficeEditUrlOption extends TeaModel {
         private Boolean copy; 
         private Boolean print; 
         private Boolean readonly; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOfficeEditUrlOption model) {
+            this.copy = model.copy;
+            this.print = model.print;
+            this.readonly = model.readonly;
+        } 
 
         /**
          * copy.

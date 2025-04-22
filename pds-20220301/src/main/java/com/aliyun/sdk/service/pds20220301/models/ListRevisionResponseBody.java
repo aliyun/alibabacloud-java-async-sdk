@@ -36,6 +36,10 @@ public class ListRevisionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class ListRevisionResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Revision> items; 
         private String nextMarker; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRevisionResponseBody model) {
+            this.items = model.items;
+            this.nextMarker = model.nextMarker;
+        } 
 
         /**
          * <p>The information about the versions.</p>

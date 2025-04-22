@@ -40,6 +40,10 @@ public class CertInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certBody
      */
@@ -65,6 +69,15 @@ public class CertInfo extends TeaModel {
         private String certBody; 
         private String certName; 
         private String certPrivatekey; 
+
+        private Builder() {
+        } 
+
+        private Builder(CertInfo model) {
+            this.certBody = model.certBody;
+            this.certName = model.certName;
+            this.certPrivatekey = model.certPrivatekey;
+        } 
 
         /**
          * cert_body.

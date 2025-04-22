@@ -76,6 +76,10 @@ public class DomainSeniorConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clientDownloadEnable
      */
@@ -173,6 +177,24 @@ public class DomainSeniorConfig extends TeaModel {
         private String homePageSlogan; 
         private Boolean refererEnable; 
         private WxTrustedDomainConfig wxTxtList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DomainSeniorConfig model) {
+            this.clientDownloadEnable = model.clientDownloadEnable;
+            this.cspFrameAncestors = model.cspFrameAncestors;
+            this.customLoginAppid = model.customLoginAppid;
+            this.customLoginUrl = model.customLoginUrl;
+            this.customLogoutUrl = model.customLogoutUrl;
+            this.customSideLinkList = model.customSideLinkList;
+            this.homePageBgImageUrl = model.homePageBgImageUrl;
+            this.homePageFooter = model.homePageFooter;
+            this.homePageFooter2 = model.homePageFooter2;
+            this.homePageSlogan = model.homePageSlogan;
+            this.refererEnable = model.refererEnable;
+            this.wxTxtList = model.wxTxtList;
+        } 
 
         /**
          * client_download_enable.

@@ -40,6 +40,10 @@ public class WxTrustedDomainConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -65,6 +69,15 @@ public class WxTrustedDomainConfig extends TeaModel {
         private String content; 
         private String name; 
         private Boolean show; 
+
+        private Builder() {
+        } 
+
+        private Builder(WxTrustedDomainConfig model) {
+            this.content = model.content;
+            this.name = model.name;
+            this.show = model.show;
+        } 
 
         /**
          * content.

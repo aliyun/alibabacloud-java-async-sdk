@@ -64,6 +64,10 @@ public class CssPurchase extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return chargeType
      */
@@ -137,6 +141,21 @@ public class CssPurchase extends TeaModel {
         private String orderType; 
         private java.util.Map<String, String> purchaseParams; 
         private Long startDate; 
+
+        private Builder() {
+        } 
+
+        private Builder(CssPurchase model) {
+            this.chargeType = model.chargeType;
+            this.commodityCode = model.commodityCode;
+            this.endDate = model.endDate;
+            this.gmtCreate = model.gmtCreate;
+            this.instanceComponents = model.instanceComponents;
+            this.instanceId = model.instanceId;
+            this.orderType = model.orderType;
+            this.purchaseParams = model.purchaseParams;
+            this.startDate = model.startDate;
+        } 
 
         /**
          * chargeType.

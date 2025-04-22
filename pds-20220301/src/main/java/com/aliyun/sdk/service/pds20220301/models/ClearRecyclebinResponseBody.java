@@ -40,6 +40,10 @@ public class ClearRecyclebinResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asyncTaskId
      */
@@ -65,6 +69,15 @@ public class ClearRecyclebinResponseBody extends TeaModel {
         private String asyncTaskId; 
         private String domainId; 
         private String driveId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ClearRecyclebinResponseBody model) {
+            this.asyncTaskId = model.asyncTaskId;
+            this.domainId = model.domainId;
+            this.driveId = model.driveId;
+        } 
 
         /**
          * <p>The ID of the asynchronous task.</p>

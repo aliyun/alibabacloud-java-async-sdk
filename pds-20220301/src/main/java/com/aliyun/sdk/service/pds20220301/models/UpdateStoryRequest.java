@@ -62,7 +62,7 @@ public class UpdateStoryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -241,6 +241,14 @@ public class UpdateStoryRequest extends Request {
         public static final class Builder {
             private String fileId; 
             private String revisionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cover model) {
+                this.fileId = model.fileId;
+                this.revisionId = model.revisionId;
+            } 
 
             /**
              * file_id.

@@ -36,6 +36,10 @@ public class SearchSimilarImageClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextMarker
      */
@@ -53,6 +57,14 @@ public class SearchSimilarImageClustersResponseBody extends TeaModel {
     public static final class Builder {
         private String nextMarker; 
         private java.util.List<SimilarImageClusters> similarImageClusters; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchSimilarImageClustersResponseBody model) {
+            this.nextMarker = model.nextMarker;
+            this.similarImageClusters = model.similarImageClusters;
+        } 
 
         /**
          * next_marker.
@@ -107,6 +119,13 @@ public class SearchSimilarImageClustersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<File> files; 
+
+            private Builder() {
+            } 
+
+            private Builder(SimilarImageClusters model) {
+                this.files = model.files;
+            } 
 
             /**
              * files.

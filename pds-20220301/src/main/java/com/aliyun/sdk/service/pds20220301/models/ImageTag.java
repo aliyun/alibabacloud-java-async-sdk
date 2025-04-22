@@ -56,6 +56,10 @@ public class ImageTag extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -113,6 +117,19 @@ public class ImageTag extends TeaModel {
         private Float coverTagConfidence; 
         private String coverUrl; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImageTag model) {
+            this.count = model.count;
+            this.coverFileCategory = model.coverFileCategory;
+            this.coverFileId = model.coverFileId;
+            this.coverOverallScore = model.coverOverallScore;
+            this.coverTagConfidence = model.coverTagConfidence;
+            this.coverUrl = model.coverUrl;
+            this.name = model.name;
+        } 
 
         /**
          * count.

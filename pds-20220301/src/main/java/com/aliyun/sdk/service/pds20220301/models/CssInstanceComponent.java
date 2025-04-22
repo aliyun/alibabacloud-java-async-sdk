@@ -52,6 +52,10 @@ public class CssInstanceComponent extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return componentCode
      */
@@ -101,6 +105,18 @@ public class CssInstanceComponent extends TeaModel {
         private java.util.List<CssInstanceProperty> instanceProperty; 
         private Long moduleAttrStatus; 
         private String tag; 
+
+        private Builder() {
+        } 
+
+        private Builder(CssInstanceComponent model) {
+            this.componentCode = model.componentCode;
+            this.componentName = model.componentName;
+            this.globalKey = model.globalKey;
+            this.instanceProperty = model.instanceProperty;
+            this.moduleAttrStatus = model.moduleAttrStatus;
+            this.tag = model.tag;
+        } 
 
         /**
          * componentCode.

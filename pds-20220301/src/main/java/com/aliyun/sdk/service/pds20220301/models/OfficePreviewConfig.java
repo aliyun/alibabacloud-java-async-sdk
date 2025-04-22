@@ -32,6 +32,10 @@ public class OfficePreviewConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enabled
      */
@@ -41,6 +45,13 @@ public class OfficePreviewConfig extends TeaModel {
 
     public static final class Builder {
         private Boolean enabled; 
+
+        private Builder() {
+        } 
+
+        private Builder(OfficePreviewConfig model) {
+            this.enabled = model.enabled;
+        } 
 
         /**
          * enabled.

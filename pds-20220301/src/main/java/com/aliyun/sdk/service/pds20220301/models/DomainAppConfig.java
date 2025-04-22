@@ -48,6 +48,10 @@ public class DomainAppConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allowUploadCustomFileExtList
      */
@@ -89,6 +93,17 @@ public class DomainAppConfig extends TeaModel {
         private String sameNameFileUploadMode; 
         private Long singleFileUploadSizeLimit; 
         private String webClientDownloadMode; 
+
+        private Builder() {
+        } 
+
+        private Builder(DomainAppConfig model) {
+            this.allowUploadCustomFileExtList = model.allowUploadCustomFileExtList;
+            this.allowUploadFileCategoryList = model.allowUploadFileCategoryList;
+            this.sameNameFileUploadMode = model.sameNameFileUploadMode;
+            this.singleFileUploadSizeLimit = model.singleFileUploadSizeLimit;
+            this.webClientDownloadMode = model.webClientDownloadMode;
+        } 
 
         /**
          * allow_upload_custom_file_ext_list.

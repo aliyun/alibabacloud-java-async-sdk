@@ -32,6 +32,10 @@ public class ShareLinkDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enableOfficeEditable
      */
@@ -41,6 +45,13 @@ public class ShareLinkDetail extends TeaModel {
 
     public static final class Builder {
         private Boolean enableOfficeEditable; 
+
+        private Builder() {
+        } 
+
+        private Builder(ShareLinkDetail model) {
+            this.enableOfficeEditable = model.enableOfficeEditable;
+        } 
 
         /**
          * enable_office_editable.

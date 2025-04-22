@@ -32,6 +32,10 @@ public class ShareLinkConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enableShareLinkOfficeEdit
      */
@@ -41,6 +45,13 @@ public class ShareLinkConfig extends TeaModel {
 
     public static final class Builder {
         private Boolean enableShareLinkOfficeEdit; 
+
+        private Builder() {
+        } 
+
+        private Builder(ShareLinkConfig model) {
+            this.enableShareLinkOfficeEdit = model.enableShareLinkOfficeEdit;
+        } 
 
         /**
          * enable_share_link_office_edit.

@@ -36,6 +36,10 @@ public class AppAccessStrategy extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return effect
      */
@@ -53,6 +57,14 @@ public class AppAccessStrategy extends TeaModel {
     public static final class Builder {
         private String effect; 
         private java.util.List<String> exceptAppIdList; 
+
+        private Builder() {
+        } 
+
+        private Builder(AppAccessStrategy model) {
+            this.effect = model.effect;
+            this.exceptAppIdList = model.exceptAppIdList;
+        } 
 
         /**
          * effect.

@@ -100,6 +100,10 @@ public class KnowledgeFile extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return creatorId
      */
@@ -245,6 +249,30 @@ public class KnowledgeFile extends TeaModel {
         private String knowledgeBaseId; 
         private String knowledgeCategoryId; 
         private String revisionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(KnowledgeFile model) {
+            this.creatorId = model.creatorId;
+            this.driveId = model.driveId;
+            this.driveName = model.driveName;
+            this.fileCategory = model.fileCategory;
+            this.fileCreatedAt = model.fileCreatedAt;
+            this.fileCreatorId = model.fileCreatorId;
+            this.fileId = model.fileId;
+            this.fileImageTime = model.fileImageTime;
+            this.fileLastModifierId = model.fileLastModifierId;
+            this.fileLastModifierType = model.fileLastModifierType;
+            this.fileName = model.fileName;
+            this.fileNamePath = model.fileNamePath;
+            this.fileSize = model.fileSize;
+            this.fileUpdatedAt = model.fileUpdatedAt;
+            this.joinedAt = model.joinedAt;
+            this.knowledgeBaseId = model.knowledgeBaseId;
+            this.knowledgeCategoryId = model.knowledgeCategoryId;
+            this.revisionId = model.revisionId;
+        } 
 
         /**
          * creator_id.

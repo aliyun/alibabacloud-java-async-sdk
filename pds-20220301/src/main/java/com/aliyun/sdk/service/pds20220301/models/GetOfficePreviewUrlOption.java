@@ -36,6 +36,10 @@ public class GetOfficePreviewUrlOption extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return copy
      */
@@ -53,6 +57,14 @@ public class GetOfficePreviewUrlOption extends TeaModel {
     public static final class Builder {
         private Boolean copy; 
         private Boolean print; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOfficePreviewUrlOption model) {
+            this.copy = model.copy;
+            this.print = model.print;
+        } 
 
         /**
          * copy.

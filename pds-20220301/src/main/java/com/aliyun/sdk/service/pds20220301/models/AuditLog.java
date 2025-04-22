@@ -88,6 +88,10 @@ public class AuditLog extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actedAt
      */
@@ -209,6 +213,27 @@ public class AuditLog extends TeaModel {
         private String logId; 
         private String objectId; 
         private String objectName; 
+
+        private Builder() {
+        } 
+
+        private Builder(AuditLog model) {
+            this.actedAt = model.actedAt;
+            this.actionCategory = model.actionCategory;
+            this.actionType = model.actionType;
+            this.actorId = model.actorId;
+            this.actorName = model.actorName;
+            this.actorType = model.actorType;
+            this.clientDevice = model.clientDevice;
+            this.clientIp = model.clientIp;
+            this.clientType = model.clientType;
+            this.clientVersion = model.clientVersion;
+            this.detail = model.detail;
+            this.filePathType = model.filePathType;
+            this.logId = model.logId;
+            this.objectId = model.objectId;
+            this.objectName = model.objectName;
+        } 
 
         /**
          * acted_at.

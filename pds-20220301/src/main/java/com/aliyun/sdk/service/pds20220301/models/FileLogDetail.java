@@ -64,6 +64,10 @@ public class FileLogDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return decompressFileList
      */
@@ -137,6 +141,21 @@ public class FileLogDetail extends TeaModel {
         private String toParentPath; 
         private String toParentPathType; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(FileLogDetail model) {
+            this.decompressFileList = model.decompressFileList;
+            this.newName = model.newName;
+            this.parentPath = model.parentPath;
+            this.revVersion = model.revVersion;
+            this.revisionId = model.revisionId;
+            this.size = model.size;
+            this.toParentPath = model.toParentPath;
+            this.toParentPathType = model.toParentPathType;
+            this.type = model.type;
+        } 
 
         /**
          * decompress_file_list.

@@ -56,6 +56,10 @@ public class UncompressedFileInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return driveId
      */
@@ -113,6 +117,19 @@ public class UncompressedFileInfo extends TeaModel {
         private String name; 
         private Long size; 
         private Long updatedAt; 
+
+        private Builder() {
+        } 
+
+        private Builder(UncompressedFileInfo model) {
+            this.driveId = model.driveId;
+            this.fileId = model.fileId;
+            this.isFolder = model.isFolder;
+            this.items = model.items;
+            this.name = model.name;
+            this.size = model.size;
+            this.updatedAt = model.updatedAt;
+        } 
 
         /**
          * drive_id.

@@ -44,6 +44,10 @@ public class SearchFromThirdPartyItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authenticationType
      */
@@ -77,6 +81,16 @@ public class SearchFromThirdPartyItem extends TeaModel {
         private String extra; 
         private String identity; 
         private java.util.Map<String, ?> others; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchFromThirdPartyItem model) {
+            this.authenticationType = model.authenticationType;
+            this.extra = model.extra;
+            this.identity = model.identity;
+            this.others = model.others;
+        } 
 
         /**
          * authentication_type.

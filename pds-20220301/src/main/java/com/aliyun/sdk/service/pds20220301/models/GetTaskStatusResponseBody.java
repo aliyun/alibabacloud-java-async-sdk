@@ -32,6 +32,10 @@ public class GetTaskStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return status
      */
@@ -41,6 +45,13 @@ public class GetTaskStatusResponseBody extends TeaModel {
 
     public static final class Builder {
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskStatusResponseBody model) {
+            this.status = model.status;
+        } 
 
         /**
          * <p>The state of the task.</p>

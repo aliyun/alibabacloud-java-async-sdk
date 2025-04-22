@@ -32,6 +32,10 @@ public class AuditLogExportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asyncTaskId
      */
@@ -42,8 +46,18 @@ public class AuditLogExportResponseBody extends TeaModel {
     public static final class Builder {
         private String asyncTaskId; 
 
+        private Builder() {
+        } 
+
+        private Builder(AuditLogExportResponseBody model) {
+            this.asyncTaskId = model.asyncTaskId;
+        } 
+
         /**
-         * async_task_id.
+         * <p>The ID of the asynchronous task used to export audit logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4221bf6e6ab43c255edc4463bf3a6f5f5d31****</p>
          */
         public Builder asyncTaskId(String asyncTaskId) {
             this.asyncTaskId = asyncTaskId;

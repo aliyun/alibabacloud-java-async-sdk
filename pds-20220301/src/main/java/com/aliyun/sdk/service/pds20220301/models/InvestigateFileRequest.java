@@ -40,7 +40,7 @@ public class InvestigateFileRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,6 +143,14 @@ public class InvestigateFileRequest extends Request {
         public static final class Builder {
             private String driveId; 
             private String fileId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DriveFileIds model) {
+                this.driveId = model.driveId;
+                this.fileId = model.fileId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

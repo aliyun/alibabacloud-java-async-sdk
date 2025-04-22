@@ -72,6 +72,10 @@ public class FaceGroup extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdAt
      */
@@ -161,6 +165,23 @@ public class FaceGroup extends TeaModel {
         private Long imageCount; 
         private String remarks; 
         private String updatedAt; 
+
+        private Builder() {
+        } 
+
+        private Builder(FaceGroup model) {
+            this.createdAt = model.createdAt;
+            this.groupCoverFaceBoundary = model.groupCoverFaceBoundary;
+            this.groupCoverFileId = model.groupCoverFileId;
+            this.groupCoverHeight = model.groupCoverHeight;
+            this.groupCoverUrl = model.groupCoverUrl;
+            this.groupCoverWidth = model.groupCoverWidth;
+            this.groupId = model.groupId;
+            this.groupName = model.groupName;
+            this.imageCount = model.imageCount;
+            this.remarks = model.remarks;
+            this.updatedAt = model.updatedAt;
+        } 
 
         /**
          * created_at.
@@ -323,6 +344,16 @@ public class FaceGroup extends TeaModel {
             private Integer left; 
             private Integer top; 
             private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupCoverFaceBoundary model) {
+                this.height = model.height;
+                this.left = model.left;
+                this.top = model.top;
+                this.width = model.width;
+            } 
 
             /**
              * Height.

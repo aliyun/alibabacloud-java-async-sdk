@@ -48,6 +48,10 @@ public class VideoPreviewPlayMeta extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return category
      */
@@ -89,6 +93,17 @@ public class VideoPreviewPlayMeta extends TeaModel {
         private Meta meta; 
         private java.util.List<OfflineVideoTranscodingList> offlineVideoTranscodingList; 
         private java.util.List<QuickVideoList> quickVideoList; 
+
+        private Builder() {
+        } 
+
+        private Builder(VideoPreviewPlayMeta model) {
+            this.category = model.category;
+            this.liveTranscodingTaskList = model.liveTranscodingTaskList;
+            this.meta = model.meta;
+            this.offlineVideoTranscodingList = model.offlineVideoTranscodingList;
+            this.quickVideoList = model.quickVideoList;
+        } 
 
         /**
          * category.
@@ -192,6 +207,15 @@ public class VideoPreviewPlayMeta extends TeaModel {
             private String status; 
             private String templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveTranscodingTaskList model) {
+                this.keepOriginalResolution = model.keepOriginalResolution;
+                this.status = model.status;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * keep_original_resolution.
              */
@@ -278,6 +302,15 @@ public class VideoPreviewPlayMeta extends TeaModel {
             private Double duration; 
             private Long height; 
             private Long width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Meta model) {
+                this.duration = model.duration;
+                this.height = model.height;
+                this.width = model.width;
+            } 
 
             /**
              * duration.
@@ -366,6 +399,15 @@ public class VideoPreviewPlayMeta extends TeaModel {
             private String status; 
             private String templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(OfflineVideoTranscodingList model) {
+                this.keepOriginalResolution = model.keepOriginalResolution;
+                this.status = model.status;
+                this.templateId = model.templateId;
+            } 
+
             /**
              * keep_original_resolution.
              */
@@ -440,6 +482,14 @@ public class VideoPreviewPlayMeta extends TeaModel {
         public static final class Builder {
             private String status; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuickVideoList model) {
+                this.status = model.status;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * status.

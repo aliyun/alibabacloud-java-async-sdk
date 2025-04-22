@@ -125,7 +125,7 @@ public class SearchStoriesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -518,6 +518,14 @@ public class SearchStoriesRequest extends Request {
             private String end; 
             private String start; 
 
+            private Builder() {
+            } 
+
+            private Builder(CreateTimeRange model) {
+                this.end = model.end;
+                this.start = model.start;
+            } 
+
             /**
              * end.
              */
@@ -585,6 +593,14 @@ public class SearchStoriesRequest extends Request {
             private String end; 
             private String start; 
 
+            private Builder() {
+            } 
+
+            private Builder(StoryEndTimeRange model) {
+                this.end = model.end;
+                this.start = model.start;
+            } 
+
             /**
              * end.
              */
@@ -651,6 +667,14 @@ public class SearchStoriesRequest extends Request {
         public static final class Builder {
             private String end; 
             private String start; 
+
+            private Builder() {
+            } 
+
+            private Builder(StoryStartTimeRange model) {
+                this.end = model.end;
+                this.start = model.start;
+            } 
 
             /**
              * end.

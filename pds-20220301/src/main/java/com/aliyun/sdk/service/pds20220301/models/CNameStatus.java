@@ -40,6 +40,10 @@ public class CNameStatus extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bingdingState
      */
@@ -65,6 +69,15 @@ public class CNameStatus extends TeaModel {
         private String bingdingState; 
         private String legalState; 
         private String remark; 
+
+        private Builder() {
+        } 
+
+        private Builder(CNameStatus model) {
+            this.bingdingState = model.bingdingState;
+            this.legalState = model.legalState;
+            this.remark = model.remark;
+        } 
 
         /**
          * bingding_state.

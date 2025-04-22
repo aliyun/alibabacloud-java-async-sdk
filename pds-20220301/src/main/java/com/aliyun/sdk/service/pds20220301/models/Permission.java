@@ -72,6 +72,10 @@ public class Permission extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actionList
      */
@@ -161,6 +165,23 @@ public class Permission extends TeaModel {
         private String resourceType; 
         private Long updatedAt; 
         private java.util.List<String> userTags; 
+
+        private Builder() {
+        } 
+
+        private Builder(Permission model) {
+            this.actionList = model.actionList;
+            this.collection = model.collection;
+            this.condition = model.condition;
+            this.createdAt = model.createdAt;
+            this.effect = model.effect;
+            this.identityId = model.identityId;
+            this.identityType = model.identityType;
+            this.resource = model.resource;
+            this.resourceType = model.resourceType;
+            this.updatedAt = model.updatedAt;
+            this.userTags = model.userTags;
+        } 
 
         /**
          * action_list.
@@ -287,6 +308,13 @@ public class Permission extends TeaModel {
 
         public static final class Builder {
             private String action; 
+
+            private Builder() {
+            } 
+
+            private Builder(ActionList model) {
+                this.action = model.action;
+            } 
 
             /**
              * action.

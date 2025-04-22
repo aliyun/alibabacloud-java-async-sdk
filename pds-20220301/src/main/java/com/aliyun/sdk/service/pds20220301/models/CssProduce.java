@@ -72,6 +72,10 @@ public class CssProduce extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bid
      */
@@ -161,6 +165,23 @@ public class CssProduce extends TeaModel {
         private Boolean skipChannel; 
         private String token; 
         private Long userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CssProduce model) {
+            this.bid = model.bid;
+            this.buyerId = model.buyerId;
+            this.childId = model.childId;
+            this.fromApp = model.fromApp;
+            this.orderId = model.orderId;
+            this.payerId = model.payerId;
+            this.purchases = model.purchases;
+            this.requestId = model.requestId;
+            this.skipChannel = model.skipChannel;
+            this.token = model.token;
+            this.userId = model.userId;
+        } 
 
         /**
          * bid.

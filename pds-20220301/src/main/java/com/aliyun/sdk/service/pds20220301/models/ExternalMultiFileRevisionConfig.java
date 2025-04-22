@@ -40,6 +40,10 @@ public class ExternalMultiFileRevisionConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return revisionCount
      */
@@ -65,6 +69,15 @@ public class ExternalMultiFileRevisionConfig extends TeaModel {
         private Long revisionCount; 
         private Boolean revisionMergeEnabled; 
         private Long revisionRecyclePeriod; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExternalMultiFileRevisionConfig model) {
+            this.revisionCount = model.revisionCount;
+            this.revisionMergeEnabled = model.revisionMergeEnabled;
+            this.revisionRecyclePeriod = model.revisionRecyclePeriod;
+        } 
 
         /**
          * revision_count.

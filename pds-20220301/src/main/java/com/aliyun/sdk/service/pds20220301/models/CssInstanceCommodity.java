@@ -120,6 +120,10 @@ public class CssInstanceCommodity extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activityId
      */
@@ -305,6 +309,35 @@ public class CssInstanceCommodity extends TeaModel {
         private java.util.List<String> specUpgradeOriginSpecCodes; 
         private Long specifyStartDate; 
         private Boolean upgradeInquireFinancialValue; 
+
+        private Builder() {
+        } 
+
+        private Builder(CssInstanceCommodity model) {
+            this.activityId = model.activityId;
+            this.aliyunProduceCode = model.aliyunProduceCode;
+            this.chargeType = model.chargeType;
+            this.commodityCode = model.commodityCode;
+            this.components = model.components;
+            this.duration = model.duration;
+            this.instanceId = model.instanceId;
+            this.isFree = model.isFree;
+            this.isPrePayPostCharge = model.isPrePayPostCharge;
+            this.isRenewChange = model.isRenewChange;
+            this.isSyncToSubscription = model.isSyncToSubscription;
+            this.orderParams = model.orderParams;
+            this.orderType = model.orderType;
+            this.planItemId = model.planItemId;
+            this.pricingCycle = model.pricingCycle;
+            this.quantity = model.quantity;
+            this.redeemNoList = model.redeemNoList;
+            this.redeemOrderType = model.redeemOrderType;
+            this.refundSpecCode = model.refundSpecCode;
+            this.specCode = model.specCode;
+            this.specUpgradeOriginSpecCodes = model.specUpgradeOriginSpecCodes;
+            this.specifyStartDate = model.specifyStartDate;
+            this.upgradeInquireFinancialValue = model.upgradeInquireFinancialValue;
+        } 
 
         /**
          * activityId.

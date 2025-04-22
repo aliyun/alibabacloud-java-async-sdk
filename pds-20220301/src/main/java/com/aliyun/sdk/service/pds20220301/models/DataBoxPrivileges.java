@@ -40,6 +40,10 @@ public class DataBoxPrivileges extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return featureAttrId
      */
@@ -65,6 +69,15 @@ public class DataBoxPrivileges extends TeaModel {
         private String featureAttrId; 
         private String featureId; 
         private Long quota; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataBoxPrivileges model) {
+            this.featureAttrId = model.featureAttrId;
+            this.featureId = model.featureId;
+            this.quota = model.quota;
+        } 
 
         /**
          * feature_attr_id.

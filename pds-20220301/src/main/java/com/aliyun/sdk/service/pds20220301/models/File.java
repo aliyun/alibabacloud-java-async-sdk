@@ -172,6 +172,10 @@ public class File extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actionList
      */
@@ -461,6 +465,48 @@ public class File extends TeaModel {
         private String uploadId; 
         private java.util.Map<String, String> userTags; 
         private VideoMediaMetadata videoMediaMetadata; 
+
+        private Builder() {
+        } 
+
+        private Builder(File model) {
+            this.actionList = model.actionList;
+            this.autoDeleteLeftSec = model.autoDeleteLeftSec;
+            this.category = model.category;
+            this.contentHash = model.contentHash;
+            this.contentHashName = model.contentHashName;
+            this.contentType = model.contentType;
+            this.crc64Hash = model.crc64Hash;
+            this.createdAt = model.createdAt;
+            this.description = model.description;
+            this.dirSizeInfo = model.dirSizeInfo;
+            this.domainId = model.domainId;
+            this.downloadUrl = model.downloadUrl;
+            this.driveId = model.driveId;
+            this.fileExtension = model.fileExtension;
+            this.fileId = model.fileId;
+            this.hidden = model.hidden;
+            this.idPath = model.idPath;
+            this.imageMediaMetadata = model.imageMediaMetadata;
+            this.labels = model.labels;
+            this.localCreatedAt = model.localCreatedAt;
+            this.localModifiedAt = model.localModifiedAt;
+            this.name = model.name;
+            this.namePath = model.namePath;
+            this.parentFileId = model.parentFileId;
+            this.revisionId = model.revisionId;
+            this.size = model.size;
+            this.starred = model.starred;
+            this.status = model.status;
+            this.thumbnail = model.thumbnail;
+            this.thumbnailUrls = model.thumbnailUrls;
+            this.trashedAt = model.trashedAt;
+            this.type = model.type;
+            this.updatedAt = model.updatedAt;
+            this.uploadId = model.uploadId;
+            this.userTags = model.userTags;
+            this.videoMediaMetadata = model.videoMediaMetadata;
+        } 
 
         /**
          * action_list.
@@ -799,6 +845,14 @@ public class File extends TeaModel {
         public static final class Builder {
             private Long dirCount; 
             private Long fileCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(DirSizeInfo model) {
+                this.dirCount = model.dirCount;
+                this.fileCount = model.fileCount;
+            } 
 
             /**
              * dir_count.

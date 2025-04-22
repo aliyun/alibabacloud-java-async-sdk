@@ -72,6 +72,10 @@ public class Album extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return albumId
      */
@@ -161,6 +165,23 @@ public class Album extends TeaModel {
         private String owner; 
         private String updatedAt; 
         private java.util.Map<String, String> userTags; 
+
+        private Builder() {
+        } 
+
+        private Builder(Album model) {
+            this.albumId = model.albumId;
+            this.baseFaceFile = model.baseFaceFile;
+            this.baseFaceGroupId = model.baseFaceGroupId;
+            this.coverFile = model.coverFile;
+            this.createdAt = model.createdAt;
+            this.description = model.description;
+            this.fileCount = model.fileCount;
+            this.name = model.name;
+            this.owner = model.owner;
+            this.updatedAt = model.updatedAt;
+            this.userTags = model.userTags;
+        } 
 
         /**
          * album_id.

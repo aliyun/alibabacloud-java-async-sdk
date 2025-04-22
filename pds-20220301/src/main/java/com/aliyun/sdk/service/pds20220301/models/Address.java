@@ -48,6 +48,10 @@ public class Address extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return city
      */
@@ -89,6 +93,17 @@ public class Address extends TeaModel {
         private String district; 
         private String province; 
         private String township; 
+
+        private Builder() {
+        } 
+
+        private Builder(Address model) {
+            this.city = model.city;
+            this.country = model.country;
+            this.district = model.district;
+            this.province = model.province;
+            this.township = model.township;
+        } 
 
         /**
          * city.

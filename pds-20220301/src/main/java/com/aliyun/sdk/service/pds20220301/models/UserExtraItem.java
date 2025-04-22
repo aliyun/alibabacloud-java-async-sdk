@@ -136,6 +136,10 @@ public class UserExtraItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return account
      */
@@ -353,6 +357,39 @@ public class UserExtraItem extends TeaModel {
         private java.util.Map<String, ?> userData; 
         private String userId; 
         private String userName; 
+
+        private Builder() {
+        } 
+
+        private Builder(UserExtraItem model) {
+            this.account = model.account;
+            this.avatar = model.avatar;
+            this.createdAt = model.createdAt;
+            this.creator = model.creator;
+            this.defaultDrive = model.defaultDrive;
+            this.defaultDriveId = model.defaultDriveId;
+            this.defaultLocation = model.defaultLocation;
+            this.denyChangePasswordBySelf = model.denyChangePasswordBySelf;
+            this.description = model.description;
+            this.domainId = model.domainId;
+            this.email = model.email;
+            this.expiredAt = model.expiredAt;
+            this.isSync = model.isSync;
+            this.lastLoginTime = model.lastLoginTime;
+            this.needChangePasswordNextLogin = model.needChangePasswordNextLogin;
+            this.nickName = model.nickName;
+            this.parentGroup = model.parentGroup;
+            this.pathStatus = model.pathStatus;
+            this.permission = model.permission;
+            this.phone = model.phone;
+            this.phoneRegion = model.phoneRegion;
+            this.role = model.role;
+            this.status = model.status;
+            this.updatedAt = model.updatedAt;
+            this.userData = model.userData;
+            this.userId = model.userId;
+            this.userName = model.userName;
+        } 
 
         /**
          * account.

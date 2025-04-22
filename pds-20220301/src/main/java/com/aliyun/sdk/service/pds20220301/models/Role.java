@@ -64,6 +64,10 @@ public class Role extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdAt
      */
@@ -137,6 +141,21 @@ public class Role extends TeaModel {
         private String roleId; 
         private String status; 
         private Long updatedAt; 
+
+        private Builder() {
+        } 
+
+        private Builder(Role model) {
+            this.createdAt = model.createdAt;
+            this.creator = model.creator;
+            this.description = model.description;
+            this.manageResourceType = model.manageResourceType;
+            this.name = model.name;
+            this.permissions = model.permissions;
+            this.roleId = model.roleId;
+            this.status = model.status;
+            this.updatedAt = model.updatedAt;
+        } 
 
         /**
          * created_at.

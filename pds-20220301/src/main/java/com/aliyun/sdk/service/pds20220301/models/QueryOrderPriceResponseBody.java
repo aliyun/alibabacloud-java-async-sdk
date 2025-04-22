@@ -40,6 +40,10 @@ public class QueryOrderPriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return discountPrice
      */
@@ -65,6 +69,15 @@ public class QueryOrderPriceResponseBody extends TeaModel {
         private Double discountPrice; 
         private Double originalPrice; 
         private Double tradePrice; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryOrderPriceResponseBody model) {
+            this.discountPrice = model.discountPrice;
+            this.originalPrice = model.originalPrice;
+            this.tradePrice = model.tradePrice;
+        } 
 
         /**
          * discount_price.

@@ -64,6 +64,10 @@ public class UploadFormInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucketName
      */
@@ -137,6 +141,21 @@ public class UploadFormInfo extends TeaModel {
         private String ossSecurityToken; 
         private String policy; 
         private String signature; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadFormInfo model) {
+            this.bucketName = model.bucketName;
+            this.endpoint = model.endpoint;
+            this.formData = model.formData;
+            this.objectKey = model.objectKey;
+            this.ossAccessKeyId = model.ossAccessKeyId;
+            this.ossEndPoint = model.ossEndPoint;
+            this.ossSecurityToken = model.ossSecurityToken;
+            this.policy = model.policy;
+            this.signature = model.signature;
+        } 
 
         /**
          * bucket_name.

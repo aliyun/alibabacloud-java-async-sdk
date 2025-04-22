@@ -36,6 +36,10 @@ public class RemoveStoryFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return driveId
      */
@@ -53,6 +57,14 @@ public class RemoveStoryFilesResponseBody extends TeaModel {
     public static final class Builder {
         private String driveId; 
         private String storyId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RemoveStoryFilesResponseBody model) {
+            this.driveId = model.driveId;
+            this.storyId = model.storyId;
+        } 
 
         /**
          * drive_id.

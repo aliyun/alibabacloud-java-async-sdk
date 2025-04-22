@@ -40,6 +40,10 @@ public class RecycleBinConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoDeleteEnabled
      */
@@ -65,6 +69,15 @@ public class RecycleBinConfig extends TeaModel {
         private Boolean autoDeleteEnabled; 
         private Integer autoDeleteKeepSecond; 
         private Boolean deleteTrashNormalFileDisabled; 
+
+        private Builder() {
+        } 
+
+        private Builder(RecycleBinConfig model) {
+            this.autoDeleteEnabled = model.autoDeleteEnabled;
+            this.autoDeleteKeepSecond = model.autoDeleteKeepSecond;
+            this.deleteTrashNormalFileDisabled = model.deleteTrashNormalFileDisabled;
+        } 
 
         /**
          * auto_delete_enabled.

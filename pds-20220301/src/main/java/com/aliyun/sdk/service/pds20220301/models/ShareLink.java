@@ -136,6 +136,10 @@ public class ShareLink extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessCount
      */
@@ -353,6 +357,39 @@ public class ShareLink extends TeaModel {
         private String status; 
         private String updatedAt; 
         private Long videoPreviewCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ShareLink model) {
+            this.accessCount = model.accessCount;
+            this.createdAt = model.createdAt;
+            this.creator = model.creator;
+            this.description = model.description;
+            this.disableDownload = model.disableDownload;
+            this.disablePreview = model.disablePreview;
+            this.disableSave = model.disableSave;
+            this.downloadCount = model.downloadCount;
+            this.downloadLimit = model.downloadLimit;
+            this.driveId = model.driveId;
+            this.expiration = model.expiration;
+            this.expired = model.expired;
+            this.fileIdList = model.fileIdList;
+            this.officeEditable = model.officeEditable;
+            this.previewCount = model.previewCount;
+            this.previewLimit = model.previewLimit;
+            this.reportCount = model.reportCount;
+            this.saveCount = model.saveCount;
+            this.saveDownloadLimit = model.saveDownloadLimit;
+            this.saveLimit = model.saveLimit;
+            this.shareAllFiles = model.shareAllFiles;
+            this.shareId = model.shareId;
+            this.shareName = model.shareName;
+            this.sharePwd = model.sharePwd;
+            this.status = model.status;
+            this.updatedAt = model.updatedAt;
+            this.videoPreviewCount = model.videoPreviewCount;
+        } 
 
         /**
          * access_count.

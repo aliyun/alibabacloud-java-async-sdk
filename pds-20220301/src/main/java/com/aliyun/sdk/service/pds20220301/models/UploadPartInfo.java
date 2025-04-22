@@ -58,6 +58,10 @@ public class UploadPartInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return etag
      */
@@ -115,6 +119,19 @@ public class UploadPartInfo extends TeaModel {
         private Integer partNumber; 
         private Long partSize; 
         private String uploadUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadPartInfo model) {
+            this.etag = model.etag;
+            this.internalUploadUrl = model.internalUploadUrl;
+            this.parallelSha1Ctx = model.parallelSha1Ctx;
+            this.parallelSha256Ctx = model.parallelSha256Ctx;
+            this.partNumber = model.partNumber;
+            this.partSize = model.partSize;
+            this.uploadUrl = model.uploadUrl;
+        } 
 
         /**
          * etag.
@@ -225,6 +242,14 @@ public class UploadPartInfo extends TeaModel {
             private java.util.List<Long> h; 
             private Long partOffset; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParallelSha1Ctx model) {
+                this.h = model.h;
+                this.partOffset = model.partOffset;
+            } 
+
             /**
              * h.
              */
@@ -291,6 +316,14 @@ public class UploadPartInfo extends TeaModel {
         public static final class Builder {
             private java.util.List<Long> h; 
             private Long partOffset; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParallelSha256Ctx model) {
+                this.h = model.h;
+                this.partOffset = model.partOffset;
+            } 
 
             /**
              * h.

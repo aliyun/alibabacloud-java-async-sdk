@@ -40,6 +40,10 @@ public class VideoDRMLicenseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class VideoDRMLicenseResponseBody extends TeaModel {
         private String data; 
         private String deviceInfo; 
         private String states; 
+
+        private Builder() {
+        } 
+
+        private Builder(VideoDRMLicenseResponseBody model) {
+            this.data = model.data;
+            this.deviceInfo = model.deviceInfo;
+            this.states = model.states;
+        } 
 
         /**
          * <p>The returned DRM license.</p>

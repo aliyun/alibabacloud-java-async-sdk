@@ -72,6 +72,10 @@ public class IdentityToBenefitPkgMapping extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return benefitPkgComputationRule
      */
@@ -161,6 +165,23 @@ public class IdentityToBenefitPkgMapping extends TeaModel {
         private String identityId; 
         private String identityType; 
         private String updatedAt; 
+
+        private Builder() {
+        } 
+
+        private Builder(IdentityToBenefitPkgMapping model) {
+            this.benefitPkgComputationRule = model.benefitPkgComputationRule;
+            this.benefitPkgId = model.benefitPkgId;
+            this.benefitPkgName = model.benefitPkgName;
+            this.benefitPkgOwnerId = model.benefitPkgOwnerId;
+            this.benefitPkgPriority = model.benefitPkgPriority;
+            this.benefitPkgType = model.benefitPkgType;
+            this.createdAt = model.createdAt;
+            this.deliveryInfoList = model.deliveryInfoList;
+            this.identityId = model.identityId;
+            this.identityType = model.identityType;
+            this.updatedAt = model.updatedAt;
+        } 
 
         /**
          * benefit_pkg_computation_rule.

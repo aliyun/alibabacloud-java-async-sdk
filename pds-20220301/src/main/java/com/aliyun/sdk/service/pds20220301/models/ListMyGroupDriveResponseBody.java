@@ -40,6 +40,10 @@ public class ListMyGroupDriveResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -65,6 +69,15 @@ public class ListMyGroupDriveResponseBody extends TeaModel {
         private java.util.List<Drive> items; 
         private String nextMarker; 
         private Drive rootGroupDrive; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMyGroupDriveResponseBody model) {
+            this.items = model.items;
+            this.nextMarker = model.nextMarker;
+            this.rootGroupDrive = model.rootGroupDrive;
+        } 
 
         /**
          * <p>The information about the team drives.</p>

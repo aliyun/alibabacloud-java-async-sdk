@@ -46,7 +46,7 @@ public class BatchRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -219,6 +219,17 @@ public class BatchRequest extends Request {
             private String id; 
             private String method; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Requests model) {
+                this.body = model.body;
+                this.headers = model.headers;
+                this.id = model.id;
+                this.method = model.method;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The request parameters of a child request. The parameter value must be a JSON string. For more information, see the topic of the corresponding child request.</p>

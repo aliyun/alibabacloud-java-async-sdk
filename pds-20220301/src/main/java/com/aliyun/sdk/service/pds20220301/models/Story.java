@@ -80,6 +80,10 @@ public class Story extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return coverFileId
      */
@@ -185,6 +189,25 @@ public class Story extends TeaModel {
         private String storySubType; 
         private String storyType; 
         private String updatedAt; 
+
+        private Builder() {
+        } 
+
+        private Builder(Story model) {
+            this.coverFileId = model.coverFileId;
+            this.coverFileThumbnailUrl = model.coverFileThumbnailUrl;
+            this.createdAt = model.createdAt;
+            this.customLabels = model.customLabels;
+            this.faceGroupIds = model.faceGroupIds;
+            this.storyEndTime = model.storyEndTime;
+            this.storyFileList = model.storyFileList;
+            this.storyId = model.storyId;
+            this.storyName = model.storyName;
+            this.storyStartTime = model.storyStartTime;
+            this.storySubType = model.storySubType;
+            this.storyType = model.storyType;
+            this.updatedAt = model.updatedAt;
+        } 
 
         /**
          * cover_file_id.

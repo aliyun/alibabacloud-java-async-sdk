@@ -72,6 +72,10 @@ public class CreateFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainId
      */
@@ -161,6 +165,23 @@ public class CreateFileResponseBody extends TeaModel {
         private String status; 
         private String type; 
         private String uploadId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateFileResponseBody model) {
+            this.domainId = model.domainId;
+            this.driveId = model.driveId;
+            this.exist = model.exist;
+            this.fileId = model.fileId;
+            this.fileName = model.fileName;
+            this.parentFileId = model.parentFileId;
+            this.partInfoList = model.partInfoList;
+            this.rapidUpload = model.rapidUpload;
+            this.status = model.status;
+            this.type = model.type;
+            this.uploadId = model.uploadId;
+        } 
 
         /**
          * <p>The domain ID.</p>

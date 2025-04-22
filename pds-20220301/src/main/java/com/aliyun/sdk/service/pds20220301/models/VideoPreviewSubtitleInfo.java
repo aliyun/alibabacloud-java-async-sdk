@@ -40,6 +40,10 @@ public class VideoPreviewSubtitleInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return language
      */
@@ -65,6 +69,15 @@ public class VideoPreviewSubtitleInfo extends TeaModel {
         private String language; 
         private String status; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(VideoPreviewSubtitleInfo model) {
+            this.language = model.language;
+            this.status = model.status;
+            this.url = model.url;
+        } 
 
         /**
          * language.

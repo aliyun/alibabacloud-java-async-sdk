@@ -48,6 +48,10 @@ public class FilePermissionMember extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actionList
      */
@@ -89,6 +93,17 @@ public class FilePermissionMember extends TeaModel {
         private Long expireTime; 
         private Identity identity; 
         private String roleId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FilePermissionMember model) {
+            this.actionList = model.actionList;
+            this.disinheritSubGroup = model.disinheritSubGroup;
+            this.expireTime = model.expireTime;
+            this.identity = model.identity;
+            this.roleId = model.roleId;
+        } 
 
         /**
          * action_list.

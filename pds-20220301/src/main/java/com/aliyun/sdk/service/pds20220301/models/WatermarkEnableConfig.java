@@ -44,6 +44,10 @@ public class WatermarkEnableConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return displayAccessUserName
      */
@@ -77,6 +81,16 @@ public class WatermarkEnableConfig extends TeaModel {
         private String displayCustomText; 
         private Boolean displayShareLinkCreatorName; 
         private Boolean enableDocPreview; 
+
+        private Builder() {
+        } 
+
+        private Builder(WatermarkEnableConfig model) {
+            this.displayAccessUserName = model.displayAccessUserName;
+            this.displayCustomText = model.displayCustomText;
+            this.displayShareLinkCreatorName = model.displayShareLinkCreatorName;
+            this.enableDocPreview = model.enableDocPreview;
+        } 
 
         /**
          * display_access_user_name.

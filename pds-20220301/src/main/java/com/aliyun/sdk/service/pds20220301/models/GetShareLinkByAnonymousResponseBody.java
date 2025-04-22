@@ -50,6 +50,9 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("expiration")
     private String expiration;
 
+    @com.aliyun.core.annotation.NameInMap("has_pwd")
+    private Boolean hasPwd;
+
     @com.aliyun.core.annotation.NameInMap("preview_count")
     private Long previewCount;
 
@@ -89,6 +92,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         this.downloadCount = builder.downloadCount;
         this.downloadLimit = builder.downloadLimit;
         this.expiration = builder.expiration;
+        this.hasPwd = builder.hasPwd;
         this.previewCount = builder.previewCount;
         this.previewLimit = builder.previewLimit;
         this.reportCount = builder.reportCount;
@@ -106,6 +110,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
 
     public static GetShareLinkByAnonymousResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -186,6 +194,13 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     }
 
     /**
+     * @return hasPwd
+     */
+    public Boolean getHasPwd() {
+        return this.hasPwd;
+    }
+
+    /**
      * @return previewCount
      */
     public Long getPreviewCount() {
@@ -260,6 +275,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         private Long downloadCount; 
         private Long downloadLimit; 
         private String expiration; 
+        private Boolean hasPwd; 
         private Long previewCount; 
         private Long previewLimit; 
         private Long reportCount; 
@@ -269,6 +285,33 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         private String shareName; 
         private String updatedAt; 
         private Long videoPreviewCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetShareLinkByAnonymousResponseBody model) {
+            this.accessCount = model.accessCount;
+            this.avatar = model.avatar;
+            this.creatorId = model.creatorId;
+            this.creatorName = model.creatorName;
+            this.creatorPhone = model.creatorPhone;
+            this.disableDownload = model.disableDownload;
+            this.disablePreview = model.disablePreview;
+            this.disableSave = model.disableSave;
+            this.downloadCount = model.downloadCount;
+            this.downloadLimit = model.downloadLimit;
+            this.expiration = model.expiration;
+            this.hasPwd = model.hasPwd;
+            this.previewCount = model.previewCount;
+            this.previewLimit = model.previewLimit;
+            this.reportCount = model.reportCount;
+            this.saveCount = model.saveCount;
+            this.saveDownloadLimit = model.saveDownloadLimit;
+            this.saveLimit = model.saveLimit;
+            this.shareName = model.shareName;
+            this.updatedAt = model.updatedAt;
+            this.videoPreviewCount = model.videoPreviewCount;
+        } 
 
         /**
          * <p>The number of times that the shared files are visited.</p>
@@ -388,6 +431,14 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
          */
         public Builder expiration(String expiration) {
             this.expiration = expiration;
+            return this;
+        }
+
+        /**
+         * has_pwd.
+         */
+        public Builder hasPwd(Boolean hasPwd) {
+            this.hasPwd = hasPwd;
             return this;
         }
 

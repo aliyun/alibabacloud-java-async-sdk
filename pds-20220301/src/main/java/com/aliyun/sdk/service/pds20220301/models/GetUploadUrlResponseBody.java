@@ -52,6 +52,10 @@ public class GetUploadUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createAt
      */
@@ -101,6 +105,18 @@ public class GetUploadUrlResponseBody extends TeaModel {
         private String fileId; 
         private java.util.List<UploadPartInfo> partInfoList; 
         private String uploadId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUploadUrlResponseBody model) {
+            this.createAt = model.createAt;
+            this.domainId = model.domainId;
+            this.driveId = model.driveId;
+            this.fileId = model.fileId;
+            this.partInfoList = model.partInfoList;
+            this.uploadId = model.uploadId;
+        } 
 
         /**
          * <p>The time when the upload task was created.</p>

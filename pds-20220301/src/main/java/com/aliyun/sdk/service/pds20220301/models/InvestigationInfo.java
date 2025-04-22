@@ -40,6 +40,10 @@ public class InvestigationInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return status
      */
@@ -65,6 +69,15 @@ public class InvestigationInfo extends TeaModel {
         private Long status; 
         private String suggestion; 
         private VideoDetail videoDetail; 
+
+        private Builder() {
+        } 
+
+        private Builder(InvestigationInfo model) {
+            this.status = model.status;
+            this.suggestion = model.suggestion;
+            this.videoDetail = model.videoDetail;
+        } 
 
         /**
          * status.
@@ -152,6 +165,15 @@ public class InvestigationInfo extends TeaModel {
             private Long offset; 
             private Double rate; 
 
+            private Builder() {
+            } 
+
+            private Builder(BlockFrames model) {
+                this.label = model.label;
+                this.offset = model.offset;
+                this.rate = model.rate;
+            } 
+
             /**
              * label.
              */
@@ -214,6 +236,13 @@ public class InvestigationInfo extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BlockFrames> blockFrames; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoDetail model) {
+                this.blockFrames = model.blockFrames;
+            } 
 
             /**
              * block_frames.

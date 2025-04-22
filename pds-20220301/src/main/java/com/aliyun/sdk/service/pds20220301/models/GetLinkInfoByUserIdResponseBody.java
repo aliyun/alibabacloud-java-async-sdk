@@ -32,6 +32,10 @@ public class GetLinkInfoByUserIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -41,6 +45,13 @@ public class GetLinkInfoByUserIdResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<AccountLinkInfo> items; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLinkInfoByUserIdResponseBody model) {
+            this.items = model.items;
+        } 
 
         /**
          * <p>The information about the users.</p>

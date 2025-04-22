@@ -36,6 +36,10 @@ public class ListReceivedFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -53,6 +57,14 @@ public class ListReceivedFileResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<File> items; 
         private String nextMarker; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListReceivedFileResponseBody model) {
+            this.items = model.items;
+            this.nextMarker = model.nextMarker;
+        } 
 
         /**
          * <p>The queried files.</p>

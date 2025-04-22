@@ -56,6 +56,10 @@ public class Group extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdAt
      */
@@ -113,6 +117,19 @@ public class Group extends TeaModel {
         private String groupId; 
         private String groupName; 
         private Long updatedAt; 
+
+        private Builder() {
+        } 
+
+        private Builder(Group model) {
+            this.createdAt = model.createdAt;
+            this.creator = model.creator;
+            this.description = model.description;
+            this.domainId = model.domainId;
+            this.groupId = model.groupId;
+            this.groupName = model.groupName;
+            this.updatedAt = model.updatedAt;
+        } 
 
         /**
          * created_at.

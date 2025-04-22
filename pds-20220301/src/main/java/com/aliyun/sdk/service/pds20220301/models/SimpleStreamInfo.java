@@ -56,6 +56,10 @@ public class SimpleStreamInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contentHash
      */
@@ -113,6 +117,19 @@ public class SimpleStreamInfo extends TeaModel {
         private Long size; 
         private String thumbnail; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(SimpleStreamInfo model) {
+            this.contentHash = model.contentHash;
+            this.contentHashName = model.contentHashName;
+            this.crc64Hash = model.crc64Hash;
+            this.downloadUrl = model.downloadUrl;
+            this.size = model.size;
+            this.thumbnail = model.thumbnail;
+            this.url = model.url;
+        } 
 
         /**
          * content_hash.

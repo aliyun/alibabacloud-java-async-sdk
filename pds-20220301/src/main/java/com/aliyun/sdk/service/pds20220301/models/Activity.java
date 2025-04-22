@@ -64,6 +64,10 @@ public class Activity extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activityId
      */
@@ -137,6 +141,21 @@ public class Activity extends TeaModel {
         private java.util.List<java.util.Map<String, ?>> resourceList; 
         private Long totalResourceCount; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Activity model) {
+            this.activityId = model.activityId;
+            this.device = model.device;
+            this.driveId = model.driveId;
+            this.eventType = model.eventType;
+            this.latestEventTime = model.latestEventTime;
+            this.resourceCategory = model.resourceCategory;
+            this.resourceList = model.resourceList;
+            this.totalResourceCount = model.totalResourceCount;
+            this.userId = model.userId;
+        } 
 
         /**
          * activity_id.

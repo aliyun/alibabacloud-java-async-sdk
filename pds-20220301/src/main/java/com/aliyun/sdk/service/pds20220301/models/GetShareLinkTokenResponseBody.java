@@ -36,6 +36,10 @@ public class GetShareLinkTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return expiresIn
      */
@@ -53,6 +57,14 @@ public class GetShareLinkTokenResponseBody extends TeaModel {
     public static final class Builder {
         private Long expiresIn; 
         private String shareToken; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetShareLinkTokenResponseBody model) {
+            this.expiresIn = model.expiresIn;
+            this.shareToken = model.shareToken;
+        } 
 
         /**
          * <p>The validity period of the token. Unit: seconds. For example, a value of 7200 indicates two hours.</p>

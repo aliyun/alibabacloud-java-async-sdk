@@ -52,6 +52,10 @@ public class LinkRule extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return linkType
      */
@@ -101,6 +105,18 @@ public class LinkRule extends TeaModel {
         private String srcFileId; 
         private String srcFileName; 
         private Boolean srcValid; 
+
+        private Builder() {
+        } 
+
+        private Builder(LinkRule model) {
+            this.linkType = model.linkType;
+            this.srcDriveId = model.srcDriveId;
+            this.srcDriveName = model.srcDriveName;
+            this.srcFileId = model.srcFileId;
+            this.srcFileName = model.srcFileName;
+            this.srcValid = model.srcValid;
+        } 
 
         /**
          * link_type.
