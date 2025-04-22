@@ -26,6 +26,10 @@ public class RefreshAdvisorCostCheckRequest extends Request {
     private java.util.List<String> checkIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckPlanId")
+    private Long checkPlanId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
@@ -41,6 +45,7 @@ public class RefreshAdvisorCostCheckRequest extends Request {
         super(builder);
         this.assumeAliyunIdList = builder.assumeAliyunIdList;
         this.checkIds = builder.checkIds;
+        this.checkPlanId = builder.checkPlanId;
         this.product = builder.product;
         this.refreshResource = builder.refreshResource;
         this.resourceIds = builder.resourceIds;
@@ -74,6 +79,13 @@ public class RefreshAdvisorCostCheckRequest extends Request {
     }
 
     /**
+     * @return checkPlanId
+     */
+    public Long getCheckPlanId() {
+        return this.checkPlanId;
+    }
+
+    /**
      * @return product
      */
     public String getProduct() {
@@ -97,6 +109,7 @@ public class RefreshAdvisorCostCheckRequest extends Request {
     public static final class Builder extends Request.Builder<RefreshAdvisorCostCheckRequest, Builder> {
         private java.util.List<Long> assumeAliyunIdList; 
         private java.util.List<String> checkIds; 
+        private Long checkPlanId; 
         private String product; 
         private Boolean refreshResource; 
         private java.util.List<String> resourceIds; 
@@ -109,6 +122,7 @@ public class RefreshAdvisorCostCheckRequest extends Request {
             super(request);
             this.assumeAliyunIdList = request.assumeAliyunIdList;
             this.checkIds = request.checkIds;
+            this.checkPlanId = request.checkPlanId;
             this.product = request.product;
             this.refreshResource = request.refreshResource;
             this.resourceIds = request.resourceIds;
@@ -131,6 +145,15 @@ public class RefreshAdvisorCostCheckRequest extends Request {
             String checkIdsShrink = shrink(checkIds, "CheckIds", "json");
             this.putQueryParameter("CheckIds", checkIdsShrink);
             this.checkIds = checkIds;
+            return this;
+        }
+
+        /**
+         * CheckPlanId.
+         */
+        public Builder checkPlanId(Long checkPlanId) {
+            this.putQueryParameter("CheckPlanId", checkPlanId);
+            this.checkPlanId = checkPlanId;
             return this;
         }
 

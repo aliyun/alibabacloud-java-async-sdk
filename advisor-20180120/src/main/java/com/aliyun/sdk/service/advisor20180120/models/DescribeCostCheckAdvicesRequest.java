@@ -26,6 +26,10 @@ public class DescribeCostCheckAdvicesRequest extends Request {
     private String checkId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckPlanId")
+    private Long checkPlanId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
@@ -40,6 +44,14 @@ public class DescribeCostCheckAdvicesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionIds")
     private java.util.List<String> regionIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupIdList")
+    private java.util.List<String> resourceGroupIdList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    private String resourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceIds")
@@ -69,10 +81,13 @@ public class DescribeCostCheckAdvicesRequest extends Request {
         super(builder);
         this.assumeAliyunIdList = builder.assumeAliyunIdList;
         this.checkId = builder.checkId;
+        this.checkPlanId = builder.checkPlanId;
         this.language = builder.language;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionIds = builder.regionIds;
+        this.resourceGroupIdList = builder.resourceGroupIdList;
+        this.resourceId = builder.resourceId;
         this.resourceIds = builder.resourceIds;
         this.resourceName = builder.resourceName;
         this.severity = builder.severity;
@@ -109,6 +124,13 @@ public class DescribeCostCheckAdvicesRequest extends Request {
     }
 
     /**
+     * @return checkPlanId
+     */
+    public Long getCheckPlanId() {
+        return this.checkPlanId;
+    }
+
+    /**
      * @return language
      */
     public String getLanguage() {
@@ -134,6 +156,20 @@ public class DescribeCostCheckAdvicesRequest extends Request {
      */
     public java.util.List<String> getRegionIds() {
         return this.regionIds;
+    }
+
+    /**
+     * @return resourceGroupIdList
+     */
+    public java.util.List<String> getResourceGroupIdList() {
+        return this.resourceGroupIdList;
+    }
+
+    /**
+     * @return resourceId
+     */
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     /**
@@ -181,10 +217,13 @@ public class DescribeCostCheckAdvicesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeCostCheckAdvicesRequest, Builder> {
         private java.util.List<Long> assumeAliyunIdList; 
         private String checkId; 
+        private Long checkPlanId; 
         private String language; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private java.util.List<String> regionIds; 
+        private java.util.List<String> resourceGroupIdList; 
+        private String resourceId; 
         private java.util.List<String> resourceIds; 
         private String resourceName; 
         private String severity; 
@@ -200,10 +239,13 @@ public class DescribeCostCheckAdvicesRequest extends Request {
             super(request);
             this.assumeAliyunIdList = request.assumeAliyunIdList;
             this.checkId = request.checkId;
+            this.checkPlanId = request.checkPlanId;
             this.language = request.language;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionIds = request.regionIds;
+            this.resourceGroupIdList = request.resourceGroupIdList;
+            this.resourceId = request.resourceId;
             this.resourceIds = request.resourceIds;
             this.resourceName = request.resourceName;
             this.severity = request.severity;
@@ -228,6 +270,15 @@ public class DescribeCostCheckAdvicesRequest extends Request {
         public Builder checkId(String checkId) {
             this.putQueryParameter("CheckId", checkId);
             this.checkId = checkId;
+            return this;
+        }
+
+        /**
+         * CheckPlanId.
+         */
+        public Builder checkPlanId(Long checkPlanId) {
+            this.putQueryParameter("CheckPlanId", checkPlanId);
+            this.checkPlanId = checkPlanId;
             return this;
         }
 
@@ -265,6 +316,25 @@ public class DescribeCostCheckAdvicesRequest extends Request {
             String regionIdsShrink = shrink(regionIds, "RegionIds", "json");
             this.putQueryParameter("RegionIds", regionIdsShrink);
             this.regionIds = regionIds;
+            return this;
+        }
+
+        /**
+         * ResourceGroupIdList.
+         */
+        public Builder resourceGroupIdList(java.util.List<String> resourceGroupIdList) {
+            String resourceGroupIdListShrink = shrink(resourceGroupIdList, "ResourceGroupIdList", "json");
+            this.putQueryParameter("ResourceGroupIdList", resourceGroupIdListShrink);
+            this.resourceGroupIdList = resourceGroupIdList;
+            return this;
+        }
+
+        /**
+         * ResourceId.
+         */
+        public Builder resourceId(String resourceId) {
+            this.putQueryParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
             return this;
         }
 

@@ -26,6 +26,10 @@ public class DescribeCostCheckResultsRequest extends Request {
     private java.util.List<String> checkIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckPlanId")
+    private Long checkPlanId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupBy")
     private String groupBy;
 
@@ -40,6 +44,10 @@ public class DescribeCostCheckResultsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupIdList")
     private java.util.List<String> resourceGroupIdList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    private String resourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceIds")
@@ -69,10 +77,12 @@ public class DescribeCostCheckResultsRequest extends Request {
         super(builder);
         this.assumeAliyunIdList = builder.assumeAliyunIdList;
         this.checkIds = builder.checkIds;
+        this.checkPlanId = builder.checkPlanId;
         this.groupBy = builder.groupBy;
         this.product = builder.product;
         this.regionIds = builder.regionIds;
         this.resourceGroupIdList = builder.resourceGroupIdList;
+        this.resourceId = builder.resourceId;
         this.resourceIds = builder.resourceIds;
         this.resourceName = builder.resourceName;
         this.severity = builder.severity;
@@ -109,6 +119,13 @@ public class DescribeCostCheckResultsRequest extends Request {
     }
 
     /**
+     * @return checkPlanId
+     */
+    public Long getCheckPlanId() {
+        return this.checkPlanId;
+    }
+
+    /**
      * @return groupBy
      */
     public String getGroupBy() {
@@ -134,6 +151,13 @@ public class DescribeCostCheckResultsRequest extends Request {
      */
     public java.util.List<String> getResourceGroupIdList() {
         return this.resourceGroupIdList;
+    }
+
+    /**
+     * @return resourceId
+     */
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     /**
@@ -181,10 +205,12 @@ public class DescribeCostCheckResultsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeCostCheckResultsRequest, Builder> {
         private java.util.List<Long> assumeAliyunIdList; 
         private java.util.List<String> checkIds; 
+        private Long checkPlanId; 
         private String groupBy; 
         private String product; 
         private java.util.List<String> regionIds; 
         private java.util.List<String> resourceGroupIdList; 
+        private String resourceId; 
         private java.util.List<String> resourceIds; 
         private String resourceName; 
         private Integer severity; 
@@ -200,10 +226,12 @@ public class DescribeCostCheckResultsRequest extends Request {
             super(request);
             this.assumeAliyunIdList = request.assumeAliyunIdList;
             this.checkIds = request.checkIds;
+            this.checkPlanId = request.checkPlanId;
             this.groupBy = request.groupBy;
             this.product = request.product;
             this.regionIds = request.regionIds;
             this.resourceGroupIdList = request.resourceGroupIdList;
+            this.resourceId = request.resourceId;
             this.resourceIds = request.resourceIds;
             this.resourceName = request.resourceName;
             this.severity = request.severity;
@@ -229,6 +257,15 @@ public class DescribeCostCheckResultsRequest extends Request {
             String checkIdsShrink = shrink(checkIds, "CheckIds", "json");
             this.putQueryParameter("CheckIds", checkIdsShrink);
             this.checkIds = checkIds;
+            return this;
+        }
+
+        /**
+         * CheckPlanId.
+         */
+        public Builder checkPlanId(Long checkPlanId) {
+            this.putQueryParameter("CheckPlanId", checkPlanId);
+            this.checkPlanId = checkPlanId;
             return this;
         }
 
@@ -267,6 +304,15 @@ public class DescribeCostCheckResultsRequest extends Request {
             String resourceGroupIdListShrink = shrink(resourceGroupIdList, "ResourceGroupIdList", "json");
             this.putQueryParameter("ResourceGroupIdList", resourceGroupIdListShrink);
             this.resourceGroupIdList = resourceGroupIdList;
+            return this;
+        }
+
+        /**
+         * ResourceId.
+         */
+        public Builder resourceId(String resourceId) {
+            this.putQueryParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
             return this;
         }
 

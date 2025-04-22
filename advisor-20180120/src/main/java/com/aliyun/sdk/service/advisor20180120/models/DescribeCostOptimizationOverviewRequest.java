@@ -26,6 +26,10 @@ public class DescribeCostOptimizationOverviewRequest extends Request {
     private java.util.List<Long> assumeAliyunIdList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckPlanId")
+    private Long checkPlanId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
@@ -33,6 +37,7 @@ public class DescribeCostOptimizationOverviewRequest extends Request {
         super(builder);
         this.assumeAliyunId = builder.assumeAliyunId;
         this.assumeAliyunIdList = builder.assumeAliyunIdList;
+        this.checkPlanId = builder.checkPlanId;
         this.token = builder.token;
     }
 
@@ -64,6 +69,13 @@ public class DescribeCostOptimizationOverviewRequest extends Request {
     }
 
     /**
+     * @return checkPlanId
+     */
+    public Long getCheckPlanId() {
+        return this.checkPlanId;
+    }
+
+    /**
      * @return token
      */
     public String getToken() {
@@ -73,6 +85,7 @@ public class DescribeCostOptimizationOverviewRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeCostOptimizationOverviewRequest, Builder> {
         private Long assumeAliyunId; 
         private java.util.List<Long> assumeAliyunIdList; 
+        private Long checkPlanId; 
         private String token; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class DescribeCostOptimizationOverviewRequest extends Request {
             super(request);
             this.assumeAliyunId = request.assumeAliyunId;
             this.assumeAliyunIdList = request.assumeAliyunIdList;
+            this.checkPlanId = request.checkPlanId;
             this.token = request.token;
         } 
 
@@ -102,6 +116,15 @@ public class DescribeCostOptimizationOverviewRequest extends Request {
             String assumeAliyunIdListShrink = shrink(assumeAliyunIdList, "AssumeAliyunIdList", "json");
             this.putQueryParameter("AssumeAliyunIdList", assumeAliyunIdListShrink);
             this.assumeAliyunIdList = assumeAliyunIdList;
+            return this;
+        }
+
+        /**
+         * CheckPlanId.
+         */
+        public Builder checkPlanId(Long checkPlanId) {
+            this.putQueryParameter("CheckPlanId", checkPlanId);
+            this.checkPlanId = checkPlanId;
             return this;
         }
 

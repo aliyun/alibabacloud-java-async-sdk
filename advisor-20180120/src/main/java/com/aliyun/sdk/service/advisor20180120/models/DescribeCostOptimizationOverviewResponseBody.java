@@ -383,8 +383,17 @@ public class DescribeCostOptimizationOverviewResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OptResourceNum")
         private String optResourceNum;
 
+        @com.aliyun.core.annotation.NameInMap("ProcessedResourceCount")
+        private String processedResourceCount;
+
+        @com.aliyun.core.annotation.NameInMap("ProcessedSaveAmount")
+        private String processedSaveAmount;
+
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
+
+        @com.aliyun.core.annotation.NameInMap("WaitProcessResourceCount")
+        private String waitProcessResourceCount;
 
         private Data(Builder builder) {
             this.billingCycleDate = builder.billingCycleDate;
@@ -393,7 +402,10 @@ public class DescribeCostOptimizationOverviewResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.optCheckItemNum = builder.optCheckItemNum;
             this.optResourceNum = builder.optResourceNum;
+            this.processedResourceCount = builder.processedResourceCount;
+            this.processedSaveAmount = builder.processedSaveAmount;
             this.taskId = builder.taskId;
+            this.waitProcessResourceCount = builder.waitProcessResourceCount;
         }
 
         public static Builder builder() {
@@ -447,10 +459,31 @@ public class DescribeCostOptimizationOverviewResponseBody extends TeaModel {
         }
 
         /**
+         * @return processedResourceCount
+         */
+        public String getProcessedResourceCount() {
+            return this.processedResourceCount;
+        }
+
+        /**
+         * @return processedSaveAmount
+         */
+        public String getProcessedSaveAmount() {
+            return this.processedSaveAmount;
+        }
+
+        /**
          * @return taskId
          */
         public Long getTaskId() {
             return this.taskId;
+        }
+
+        /**
+         * @return waitProcessResourceCount
+         */
+        public String getWaitProcessResourceCount() {
+            return this.waitProcessResourceCount;
         }
 
         public static final class Builder {
@@ -460,7 +493,10 @@ public class DescribeCostOptimizationOverviewResponseBody extends TeaModel {
             private Long gmtModified; 
             private String optCheckItemNum; 
             private String optResourceNum; 
+            private String processedResourceCount; 
+            private String processedSaveAmount; 
             private Long taskId; 
+            private String waitProcessResourceCount; 
 
             private Builder() {
             } 
@@ -472,7 +508,10 @@ public class DescribeCostOptimizationOverviewResponseBody extends TeaModel {
                 this.gmtModified = model.gmtModified;
                 this.optCheckItemNum = model.optCheckItemNum;
                 this.optResourceNum = model.optResourceNum;
+                this.processedResourceCount = model.processedResourceCount;
+                this.processedSaveAmount = model.processedSaveAmount;
                 this.taskId = model.taskId;
+                this.waitProcessResourceCount = model.waitProcessResourceCount;
             } 
 
             /**
@@ -524,10 +563,34 @@ public class DescribeCostOptimizationOverviewResponseBody extends TeaModel {
             }
 
             /**
+             * ProcessedResourceCount.
+             */
+            public Builder processedResourceCount(String processedResourceCount) {
+                this.processedResourceCount = processedResourceCount;
+                return this;
+            }
+
+            /**
+             * ProcessedSaveAmount.
+             */
+            public Builder processedSaveAmount(String processedSaveAmount) {
+                this.processedSaveAmount = processedSaveAmount;
+                return this;
+            }
+
+            /**
              * TaskId.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * WaitProcessResourceCount.
+             */
+            public Builder waitProcessResourceCount(String waitProcessResourceCount) {
+                this.waitProcessResourceCount = waitProcessResourceCount;
                 return this;
             }
 
