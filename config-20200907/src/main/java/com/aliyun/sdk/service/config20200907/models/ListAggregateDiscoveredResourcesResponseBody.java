@@ -67,7 +67,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried resources.</p>
+         * <p>The information about the resources.</p>
          */
         public Builder discoveredResourceProfiles(DiscoveredResourceProfiles discoveredResourceProfiles) {
             this.discoveredResourceProfiles = discoveredResourceProfiles;
@@ -416,7 +416,10 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the resource was last updated. The value must be a timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1722441600000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -520,7 +523,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried resource.</p>
+             * <p>The details of the resources.</p>
              */
             public Builder discoveredResourceProfileList(java.util.List<DiscoveredResourceProfileList> discoveredResourceProfileList) {
                 this.discoveredResourceProfileList = discoveredResourceProfileList;

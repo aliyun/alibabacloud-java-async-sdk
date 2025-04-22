@@ -131,7 +131,16 @@ public class ListManagedRulesRequest extends Request {
         } 
 
         /**
-         * FilterType.
+         * <p>The scope for filtering managed rules allows you to filter out managed rules without resource coverage. The possible values are:</p>
+         * <ul>
+         * <li><p>ALL: All rules.</p>
+         * </li>
+         * <li><p>UNCOVERED_RESOURCE: Filters managed rules where some resources are not covered.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder filterType(String filterType) {
             this.putQueryParameter("FilterType", filterType);

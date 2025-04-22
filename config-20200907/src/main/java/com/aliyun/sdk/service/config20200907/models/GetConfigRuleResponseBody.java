@@ -1474,7 +1474,6 @@ public class GetConfigRuleResponseBody extends TeaModel {
         private Source source;
 
         @com.aliyun.core.annotation.NameInMap("TagKeyLogicScope")
-        @Deprecated
         private String tagKeyLogicScope;
 
         @com.aliyun.core.annotation.NameInMap("TagKeyScope")
@@ -2099,7 +2098,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceNameScope.
+             * <p>The names of the resource to which the rule applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-xxx</p>
              */
             public Builder resourceNameScope(String resourceNameScope) {
                 this.resourceNameScope = resourceNameScope;
@@ -2150,10 +2152,15 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule.</p>
-             * <blockquote>
-             * <p>This parameter applies only to a managed rule.</p>
-             * </blockquote>
+             * <p>When retrieving details of rules created using the parameter <code>TagsScope</code>, this field will not be returned.</p>
+             * <p>To retrieve rules created using the deprecated field <code>TagKeyScope</code> (not recommended): for example, when the parameter <code>TagKeyScope</code> has a value of ECS,OSS, if this parameter is set to <code>AND</code>, it means that the rule only applies to resources bound with both labels ECS and OSS.</p>
+             * <p>Values:</p>
+             * <ul>
+             * <li><p>AND: And.</p>
+             * </li>
+             * <li><p>OR: Or.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>120886317861****</p>
@@ -2164,9 +2171,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
+             * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
              * <p>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</p>
              * <blockquote>
-             * <p>The <code>TagKeyScope</code> and <code>TagValueScope</code> parameters are returned at the same time.</p>
+             * <p> The TagKeyScope and <code>TagValueScope</code> parameters are returned at the same time.``</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2178,9 +2186,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value used to filter resources. The rule applies only to the resources with the specified tag value.</p>
+             * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
+             * <p>The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.</p>
              * <blockquote>
-             * <p>The <code>TagKeyScope</code> and <code>TagValueScope</code> parameters are returned at the same time.</p>
+             * <p> The TagKeyScope and <code>TagValueScope</code> parameters are returned at the same time.``</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

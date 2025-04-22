@@ -255,7 +255,7 @@ public class GetAggregateResourceConfigurationTimelineRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource in the account group belongs.</p>
+         * <p>Required. The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.</p>
          * 
          * <strong>example:</strong>
          * <p>100931896542****</p>

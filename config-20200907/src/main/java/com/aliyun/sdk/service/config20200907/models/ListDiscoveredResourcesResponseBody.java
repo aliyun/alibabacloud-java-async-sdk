@@ -392,7 +392,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the resource was last updated. The value must be a timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1722441600000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

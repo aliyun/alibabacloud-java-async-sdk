@@ -1495,7 +1495,6 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         private Source source;
 
         @com.aliyun.core.annotation.NameInMap("TagKeyLogicScope")
-        @Deprecated
         private String tagKeyLogicScope;
 
         @com.aliyun.core.annotation.NameInMap("TagKeyScope")
@@ -2206,7 +2205,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The names of the resource groups to which the rule applies.</p>
+             * <p>The names of the resource to which the rule applies.</p>
              * 
              * <strong>example:</strong>
              * <p>i-xxx</p>
@@ -2252,11 +2251,14 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
-             * <p>The logical relationship among the tag keys if you specify multiple tag keys for the <code>TagKeyScope</code> parameter. For example, if you set the <code>TagKeyScope</code> parameter to <code>ECS,OSS</code> and the TagKeyLogicScope parameter to <code>AND</code>, the rule applies to resources with both the <code>ECS</code> and <code>OSS</code> tag keys. Valid values:</p>
+             * <p>When retrieving details of rules created using the parameter <code>TagsScope</code>, this field will not be returned.</p>
+             * <p>To retrieve rules created using the deprecated field <code>TagKeyScope</code> (not recommended): for example, when the parameter <code>TagKeyScope</code> has a value of ECS,OSS, if this parameter is set to <code>AND</code>, it means that the rule only applies to resources bound with both labels ECS and OSS.</p>
+             * <p>Values:</p>
              * <ul>
-             * <li>AND</li>
-             * <li>OR</li>
+             * <li><p>AND: And.</p>
+             * </li>
+             * <li><p>OR: Or.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

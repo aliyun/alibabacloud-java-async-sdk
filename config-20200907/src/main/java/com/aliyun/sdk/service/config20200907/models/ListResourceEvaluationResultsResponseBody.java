@@ -413,11 +413,17 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigRuleInvokedTimestamp")
         private Long configRuleInvokedTimestamp;
 
+        @com.aliyun.core.annotation.NameInMap("EvaluationId")
+        private String evaluationId;
+
         @com.aliyun.core.annotation.NameInMap("EvaluationResultIdentifier")
         private EvaluationResultIdentifier evaluationResultIdentifier;
 
         @com.aliyun.core.annotation.NameInMap("InvokingEventMessageType")
         private String invokingEventMessageType;
+
+        @com.aliyun.core.annotation.NameInMap("LastNonCompliantRecordTimestamp")
+        private Long lastNonCompliantRecordTimestamp;
 
         @com.aliyun.core.annotation.NameInMap("RemediationEnabled")
         private Boolean remediationEnabled;
@@ -432,8 +438,10 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
             this.annotation = builder.annotation;
             this.complianceType = builder.complianceType;
             this.configRuleInvokedTimestamp = builder.configRuleInvokedTimestamp;
+            this.evaluationId = builder.evaluationId;
             this.evaluationResultIdentifier = builder.evaluationResultIdentifier;
             this.invokingEventMessageType = builder.invokingEventMessageType;
+            this.lastNonCompliantRecordTimestamp = builder.lastNonCompliantRecordTimestamp;
             this.remediationEnabled = builder.remediationEnabled;
             this.resultRecordedTimestamp = builder.resultRecordedTimestamp;
             this.riskLevel = builder.riskLevel;
@@ -469,6 +477,13 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return evaluationId
+         */
+        public String getEvaluationId() {
+            return this.evaluationId;
+        }
+
+        /**
          * @return evaluationResultIdentifier
          */
         public EvaluationResultIdentifier getEvaluationResultIdentifier() {
@@ -480,6 +495,13 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
          */
         public String getInvokingEventMessageType() {
             return this.invokingEventMessageType;
+        }
+
+        /**
+         * @return lastNonCompliantRecordTimestamp
+         */
+        public Long getLastNonCompliantRecordTimestamp() {
+            return this.lastNonCompliantRecordTimestamp;
         }
 
         /**
@@ -507,8 +529,10 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
             private String annotation; 
             private String complianceType; 
             private Long configRuleInvokedTimestamp; 
+            private String evaluationId; 
             private EvaluationResultIdentifier evaluationResultIdentifier; 
             private String invokingEventMessageType; 
+            private Long lastNonCompliantRecordTimestamp; 
             private Boolean remediationEnabled; 
             private Long resultRecordedTimestamp; 
             private Integer riskLevel; 
@@ -520,8 +544,10 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
                 this.annotation = model.annotation;
                 this.complianceType = model.complianceType;
                 this.configRuleInvokedTimestamp = model.configRuleInvokedTimestamp;
+                this.evaluationId = model.evaluationId;
                 this.evaluationResultIdentifier = model.evaluationResultIdentifier;
                 this.invokingEventMessageType = model.invokingEventMessageType;
+                this.lastNonCompliantRecordTimestamp = model.lastNonCompliantRecordTimestamp;
                 this.remediationEnabled = model.remediationEnabled;
                 this.resultRecordedTimestamp = model.resultRecordedTimestamp;
                 this.riskLevel = model.riskLevel;
@@ -575,6 +601,14 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
+             * EvaluationId.
+             */
+            public Builder evaluationId(String evaluationId) {
+                this.evaluationId = evaluationId;
+                return this;
+            }
+
+            /**
              * <p>The identifying information about the compliance evaluation result.</p>
              */
             public Builder evaluationResultIdentifier(EvaluationResultIdentifier evaluationResultIdentifier) {
@@ -595,6 +629,14 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
              */
             public Builder invokingEventMessageType(String invokingEventMessageType) {
                 this.invokingEventMessageType = invokingEventMessageType;
+                return this;
+            }
+
+            /**
+             * LastNonCompliantRecordTimestamp.
+             */
+            public Builder lastNonCompliantRecordTimestamp(Long lastNonCompliantRecordTimestamp) {
+                this.lastNonCompliantRecordTimestamp = lastNonCompliantRecordTimestamp;
                 return this;
             }
 

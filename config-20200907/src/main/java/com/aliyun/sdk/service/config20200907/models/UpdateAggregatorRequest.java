@@ -209,7 +209,10 @@ public class UpdateAggregatorRequest extends Request {
         }
 
         /**
-         * FolderId.
+         * <p>The folder ID. Separate multiple folder IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-brHdgv****,fd-brHdgk****</p>
          */
         public Builder folderId(String folderId) {
             this.putBodyParameter("FolderId", folderId);
