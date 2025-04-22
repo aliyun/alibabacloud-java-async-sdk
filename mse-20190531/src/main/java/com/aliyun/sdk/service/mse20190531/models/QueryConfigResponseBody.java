@@ -201,8 +201,12 @@ public class QueryConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("emptyProtect")
         private Boolean emptyProtect;
 
+        @com.aliyun.core.annotation.NameInMap("grayAuth")
+        private String grayAuth;
+
         private NacosRunningEnv(Builder builder) {
             this.emptyProtect = builder.emptyProtect;
+            this.grayAuth = builder.grayAuth;
         }
 
         public static Builder builder() {
@@ -220,14 +224,23 @@ public class QueryConfigResponseBody extends TeaModel {
             return this.emptyProtect;
         }
 
+        /**
+         * @return grayAuth
+         */
+        public String getGrayAuth() {
+            return this.grayAuth;
+        }
+
         public static final class Builder {
             private Boolean emptyProtect; 
+            private String grayAuth; 
 
             private Builder() {
             } 
 
             private Builder(NacosRunningEnv model) {
                 this.emptyProtect = model.emptyProtect;
+                this.grayAuth = model.grayAuth;
             } 
 
             /**
@@ -238,6 +251,14 @@ public class QueryConfigResponseBody extends TeaModel {
              */
             public Builder emptyProtect(Boolean emptyProtect) {
                 this.emptyProtect = emptyProtect;
+                return this;
+            }
+
+            /**
+             * grayAuth.
+             */
+            public Builder grayAuth(String grayAuth) {
+                this.grayAuth = grayAuth;
                 return this;
             }
 
