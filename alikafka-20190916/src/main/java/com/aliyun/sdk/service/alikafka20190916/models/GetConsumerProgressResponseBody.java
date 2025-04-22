@@ -848,11 +848,15 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalDiff")
         private Long totalDiff;
 
+        @com.aliyun.core.annotation.NameInMap("state")
+        private String state;
+
         private ConsumerProgress(Builder builder) {
             this.lastTimestamp = builder.lastTimestamp;
             this.rebalanceInfoList = builder.rebalanceInfoList;
             this.topicList = builder.topicList;
             this.totalDiff = builder.totalDiff;
+            this.state = builder.state;
         }
 
         public static Builder builder() {
@@ -891,11 +895,19 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             return this.totalDiff;
         }
 
+        /**
+         * @return state
+         */
+        public String getState() {
+            return this.state;
+        }
+
         public static final class Builder {
             private Long lastTimestamp; 
             private ConsumerProgressRebalanceInfoList rebalanceInfoList; 
             private ConsumerProgressTopicList topicList; 
             private Long totalDiff; 
+            private String state; 
 
             private Builder() {
             } 
@@ -905,6 +917,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
                 this.rebalanceInfoList = model.rebalanceInfoList;
                 this.topicList = model.topicList;
                 this.totalDiff = model.totalDiff;
+                this.state = model.state;
             } 
 
             /**
@@ -942,6 +955,14 @@ public class GetConsumerProgressResponseBody extends TeaModel {
              */
             public Builder totalDiff(Long totalDiff) {
                 this.totalDiff = totalDiff;
+                return this;
+            }
+
+            /**
+             * state.
+             */
+            public Builder state(String state) {
+                this.state = state;
                 return this;
             }
 
