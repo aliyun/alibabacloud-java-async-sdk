@@ -3967,6 +3967,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SwitchMainOrg  SwitchMainOrgRequest
+     * @return SwitchMainOrgResponse
+     */
+    @Override
+    public CompletableFuture<SwitchMainOrgResponse> switchMainOrg(SwitchMainOrgRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SwitchMainOrg").setMethod(HttpMethod.POST).setPathRegex("/aliding/v1/user/switchMainOrg").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SwitchMainOrgResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SwitchMainOrgResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of SyncDingType  SyncDingTypeRequest
      * @return SyncDingTypeResponse
      */

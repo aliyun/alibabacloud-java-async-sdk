@@ -1326,6 +1326,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubscribeEventResponse> subscribeEvent(SubscribeEventRequest request);
 
     /**
+     * @param request the request parameters of SwitchMainOrg  SwitchMainOrgRequest
+     * @return SwitchMainOrgResponse
+     */
+    CompletableFuture<SwitchMainOrgResponse> switchMainOrg(SwitchMainOrgRequest request);
+
+    /**
      * @param request the request parameters of SyncDingType  SyncDingTypeRequest
      * @return SyncDingTypeResponse
      */
