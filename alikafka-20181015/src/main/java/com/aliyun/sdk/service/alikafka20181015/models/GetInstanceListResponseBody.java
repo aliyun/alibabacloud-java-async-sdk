@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20181015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceListResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceListResponseBody</p>
  */
 public class GetInstanceListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("InstanceList")
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
     private InstanceList instanceList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetInstanceListResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetInstanceListResponseBody extends TeaModel {
 
     public static GetInstanceListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetInstanceListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceListResponseBody model) {
+            this.code = model.code;
+            this.instanceList = model.instanceList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,8 +151,14 @@ public class GetInstanceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceListResponseBody</p>
+     */
     public static class UpgradeServiceDetailInfoVO extends TeaModel {
-        @NameInMap("Current2OpenSourceVersion")
+        @com.aliyun.core.annotation.NameInMap("Current2OpenSourceVersion")
         private String current2OpenSourceVersion;
 
         private UpgradeServiceDetailInfoVO(Builder builder) {
@@ -157,6 +183,13 @@ public class GetInstanceListResponseBody extends TeaModel {
         public static final class Builder {
             private String current2OpenSourceVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(UpgradeServiceDetailInfoVO model) {
+                this.current2OpenSourceVersion = model.current2OpenSourceVersion;
+            } 
+
             /**
              * Current2OpenSourceVersion.
              */
@@ -172,9 +205,15 @@ public class GetInstanceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceListResponseBody</p>
+     */
     public static class UpgradeServiceDetailInfo extends TeaModel {
-        @NameInMap("UpgradeServiceDetailInfoVO")
-        private java.util.List < UpgradeServiceDetailInfoVO> upgradeServiceDetailInfoVO;
+        @com.aliyun.core.annotation.NameInMap("UpgradeServiceDetailInfoVO")
+        private java.util.List<UpgradeServiceDetailInfoVO> upgradeServiceDetailInfoVO;
 
         private UpgradeServiceDetailInfo(Builder builder) {
             this.upgradeServiceDetailInfoVO = builder.upgradeServiceDetailInfoVO;
@@ -191,17 +230,24 @@ public class GetInstanceListResponseBody extends TeaModel {
         /**
          * @return upgradeServiceDetailInfoVO
          */
-        public java.util.List < UpgradeServiceDetailInfoVO> getUpgradeServiceDetailInfoVO() {
+        public java.util.List<UpgradeServiceDetailInfoVO> getUpgradeServiceDetailInfoVO() {
             return this.upgradeServiceDetailInfoVO;
         }
 
         public static final class Builder {
-            private java.util.List < UpgradeServiceDetailInfoVO> upgradeServiceDetailInfoVO; 
+            private java.util.List<UpgradeServiceDetailInfoVO> upgradeServiceDetailInfoVO; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpgradeServiceDetailInfo model) {
+                this.upgradeServiceDetailInfoVO = model.upgradeServiceDetailInfoVO;
+            } 
 
             /**
              * UpgradeServiceDetailInfoVO.
              */
-            public Builder upgradeServiceDetailInfoVO(java.util.List < UpgradeServiceDetailInfoVO> upgradeServiceDetailInfoVO) {
+            public Builder upgradeServiceDetailInfoVO(java.util.List<UpgradeServiceDetailInfoVO> upgradeServiceDetailInfoVO) {
                 this.upgradeServiceDetailInfoVO = upgradeServiceDetailInfoVO;
                 return this;
             }
@@ -213,41 +259,47 @@ public class GetInstanceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceListResponseBody</p>
+     */
     public static class InstanceVO extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DeployType")
+        @com.aliyun.core.annotation.NameInMap("DeployType")
         private Integer deployType;
 
-        @NameInMap("EndPoint")
+        @com.aliyun.core.annotation.NameInMap("EndPoint")
         private String endPoint;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private Long expiredTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ServiceStatus")
+        @com.aliyun.core.annotation.NameInMap("ServiceStatus")
         private Integer serviceStatus;
 
-        @NameInMap("SslEndPoint")
+        @com.aliyun.core.annotation.NameInMap("SslEndPoint")
         private String sslEndPoint;
 
-        @NameInMap("UpgradeServiceDetailInfo")
+        @com.aliyun.core.annotation.NameInMap("UpgradeServiceDetailInfo")
         private UpgradeServiceDetailInfo upgradeServiceDetailInfo;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private InstanceVO(Builder builder) {
@@ -371,6 +423,24 @@ public class GetInstanceListResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceVO model) {
+                this.createTime = model.createTime;
+                this.deployType = model.deployType;
+                this.endPoint = model.endPoint;
+                this.expiredTime = model.expiredTime;
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.serviceStatus = model.serviceStatus;
+                this.sslEndPoint = model.sslEndPoint;
+                this.upgradeServiceDetailInfo = model.upgradeServiceDetailInfo;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * CreateTime.
              */
@@ -452,7 +522,10 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitch ID。
+             * <p>VSwitch ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp13rg6bcpkxofr78****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -460,7 +533,10 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID。
+             * <p>VPC ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1l6hrlykj3405r7****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -474,9 +550,15 @@ public class GetInstanceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceListResponseBody</p>
+     */
     public static class InstanceList extends TeaModel {
-        @NameInMap("InstanceVO")
-        private java.util.List < InstanceVO> instanceVO;
+        @com.aliyun.core.annotation.NameInMap("InstanceVO")
+        private java.util.List<InstanceVO> instanceVO;
 
         private InstanceList(Builder builder) {
             this.instanceVO = builder.instanceVO;
@@ -493,17 +575,24 @@ public class GetInstanceListResponseBody extends TeaModel {
         /**
          * @return instanceVO
          */
-        public java.util.List < InstanceVO> getInstanceVO() {
+        public java.util.List<InstanceVO> getInstanceVO() {
             return this.instanceVO;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceVO> instanceVO; 
+            private java.util.List<InstanceVO> instanceVO; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceList model) {
+                this.instanceVO = model.instanceVO;
+            } 
 
             /**
              * InstanceVO.
              */
-            public Builder instanceVO(java.util.List < InstanceVO> instanceVO) {
+            public Builder instanceVO(java.util.List<InstanceVO> instanceVO) {
                 this.instanceVO = instanceVO;
                 return this;
             }

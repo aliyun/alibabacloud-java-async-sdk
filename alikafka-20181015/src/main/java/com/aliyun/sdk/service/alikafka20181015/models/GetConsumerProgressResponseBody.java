@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20181015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
  *
  * <p>GetConsumerProgressResponseBody</p>
  */
 public class GetConsumerProgressResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("ConsumerProgress")
+    @com.aliyun.core.annotation.NameInMap("ConsumerProgress")
     private ConsumerProgress consumerProgress;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetConsumerProgressResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
     public static GetConsumerProgressResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConsumerProgressResponseBody model) {
+            this.code = model.code;
+            this.consumerProgress = model.consumerProgress;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,17 +151,23 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class OffsetList extends TeaModel {
-        @NameInMap("BrokerOffset")
+        @com.aliyun.core.annotation.NameInMap("BrokerOffset")
         private Long brokerOffset;
 
-        @NameInMap("ConsumerOffset")
+        @com.aliyun.core.annotation.NameInMap("ConsumerOffset")
         private Long consumerOffset;
 
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private Long lastTimestamp;
 
-        @NameInMap("Partition")
+        @com.aliyun.core.annotation.NameInMap("Partition")
         private Integer partition;
 
         private OffsetList(Builder builder) {
@@ -193,6 +219,16 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             private Long lastTimestamp; 
             private Integer partition; 
 
+            private Builder() {
+            } 
+
+            private Builder(OffsetList model) {
+                this.brokerOffset = model.brokerOffset;
+                this.consumerOffset = model.consumerOffset;
+                this.lastTimestamp = model.lastTimestamp;
+                this.partition = model.partition;
+            } 
+
             /**
              * BrokerOffset.
              */
@@ -232,9 +268,15 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class TopicListOffsetList extends TeaModel {
-        @NameInMap("OffsetList")
-        private java.util.List < OffsetList> offsetList;
+        @com.aliyun.core.annotation.NameInMap("OffsetList")
+        private java.util.List<OffsetList> offsetList;
 
         private TopicListOffsetList(Builder builder) {
             this.offsetList = builder.offsetList;
@@ -251,17 +293,24 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         /**
          * @return offsetList
          */
-        public java.util.List < OffsetList> getOffsetList() {
+        public java.util.List<OffsetList> getOffsetList() {
             return this.offsetList;
         }
 
         public static final class Builder {
-            private java.util.List < OffsetList> offsetList; 
+            private java.util.List<OffsetList> offsetList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopicListOffsetList model) {
+                this.offsetList = model.offsetList;
+            } 
 
             /**
              * OffsetList.
              */
-            public Builder offsetList(java.util.List < OffsetList> offsetList) {
+            public Builder offsetList(java.util.List<OffsetList> offsetList) {
                 this.offsetList = offsetList;
                 return this;
             }
@@ -273,17 +322,23 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class TopicList extends TeaModel {
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private Long lastTimestamp;
 
-        @NameInMap("OffsetList")
+        @com.aliyun.core.annotation.NameInMap("OffsetList")
         private TopicListOffsetList offsetList;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("TotalDiff")
+        @com.aliyun.core.annotation.NameInMap("TotalDiff")
         private Long totalDiff;
 
         private TopicList(Builder builder) {
@@ -335,6 +390,16 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             private String topic; 
             private Long totalDiff; 
 
+            private Builder() {
+            } 
+
+            private Builder(TopicList model) {
+                this.lastTimestamp = model.lastTimestamp;
+                this.offsetList = model.offsetList;
+                this.topic = model.topic;
+                this.totalDiff = model.totalDiff;
+            } 
+
             /**
              * LastTimestamp.
              */
@@ -374,9 +439,15 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class ConsumerProgressTopicList extends TeaModel {
-        @NameInMap("TopicList")
-        private java.util.List < TopicList> topicList;
+        @com.aliyun.core.annotation.NameInMap("TopicList")
+        private java.util.List<TopicList> topicList;
 
         private ConsumerProgressTopicList(Builder builder) {
             this.topicList = builder.topicList;
@@ -393,17 +464,24 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         /**
          * @return topicList
          */
-        public java.util.List < TopicList> getTopicList() {
+        public java.util.List<TopicList> getTopicList() {
             return this.topicList;
         }
 
         public static final class Builder {
-            private java.util.List < TopicList> topicList; 
+            private java.util.List<TopicList> topicList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConsumerProgressTopicList model) {
+                this.topicList = model.topicList;
+            } 
 
             /**
              * TopicList.
              */
-            public Builder topicList(java.util.List < TopicList> topicList) {
+            public Builder topicList(java.util.List<TopicList> topicList) {
                 this.topicList = topicList;
                 return this;
             }
@@ -415,20 +493,30 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class ConsumerProgress extends TeaModel {
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private Long lastTimestamp;
 
-        @NameInMap("TopicList")
+        @com.aliyun.core.annotation.NameInMap("TopicList")
         private ConsumerProgressTopicList topicList;
 
-        @NameInMap("TotalDiff")
+        @com.aliyun.core.annotation.NameInMap("TotalDiff")
         private Long totalDiff;
+
+        @com.aliyun.core.annotation.NameInMap("state")
+        private String state;
 
         private ConsumerProgress(Builder builder) {
             this.lastTimestamp = builder.lastTimestamp;
             this.topicList = builder.topicList;
             this.totalDiff = builder.totalDiff;
+            this.state = builder.state;
         }
 
         public static Builder builder() {
@@ -460,10 +548,28 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             return this.totalDiff;
         }
 
+        /**
+         * @return state
+         */
+        public String getState() {
+            return this.state;
+        }
+
         public static final class Builder {
             private Long lastTimestamp; 
             private ConsumerProgressTopicList topicList; 
             private Long totalDiff; 
+            private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConsumerProgress model) {
+                this.lastTimestamp = model.lastTimestamp;
+                this.topicList = model.topicList;
+                this.totalDiff = model.totalDiff;
+                this.state = model.state;
+            } 
 
             /**
              * LastTimestamp.
@@ -486,6 +592,14 @@ public class GetConsumerProgressResponseBody extends TeaModel {
              */
             public Builder totalDiff(Long totalDiff) {
                 this.totalDiff = totalDiff;
+                return this;
+            }
+
+            /**
+             * state.
+             */
+            public Builder state(String state) {
+                this.state = state;
                 return this;
             }
 

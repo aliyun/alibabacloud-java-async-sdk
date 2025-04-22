@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20181015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTopicStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetTopicStatusResponseBody</p>
  */
 public class GetTopicStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TopicStatus")
+    @com.aliyun.core.annotation.NameInMap("TopicStatus")
     private TopicStatus topicStatus;
 
     private GetTopicStatusResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetTopicStatusResponseBody extends TeaModel {
 
     public static GetTopicStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetTopicStatusResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private TopicStatus topicStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTopicStatusResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.topicStatus = model.topicStatus;
+        } 
 
         /**
          * Code.
@@ -131,20 +151,26 @@ public class GetTopicStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTopicStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicStatusResponseBody</p>
+     */
     public static class OffsetTable extends TeaModel {
-        @NameInMap("LastUpdateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastUpdateTimestamp")
         private Long lastUpdateTimestamp;
 
-        @NameInMap("MaxOffset")
+        @com.aliyun.core.annotation.NameInMap("MaxOffset")
         private Long maxOffset;
 
-        @NameInMap("MinOffset")
+        @com.aliyun.core.annotation.NameInMap("MinOffset")
         private Long minOffset;
 
-        @NameInMap("Partition")
+        @com.aliyun.core.annotation.NameInMap("Partition")
         private Integer partition;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private OffsetTable(Builder builder) {
@@ -205,6 +231,17 @@ public class GetTopicStatusResponseBody extends TeaModel {
             private Integer partition; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(OffsetTable model) {
+                this.lastUpdateTimestamp = model.lastUpdateTimestamp;
+                this.maxOffset = model.maxOffset;
+                this.minOffset = model.minOffset;
+                this.partition = model.partition;
+                this.topic = model.topic;
+            } 
+
             /**
              * LastUpdateTimestamp.
              */
@@ -252,9 +289,15 @@ public class GetTopicStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicStatusResponseBody</p>
+     */
     public static class TopicStatusOffsetTable extends TeaModel {
-        @NameInMap("OffsetTable")
-        private java.util.List < OffsetTable> offsetTable;
+        @com.aliyun.core.annotation.NameInMap("OffsetTable")
+        private java.util.List<OffsetTable> offsetTable;
 
         private TopicStatusOffsetTable(Builder builder) {
             this.offsetTable = builder.offsetTable;
@@ -271,17 +314,24 @@ public class GetTopicStatusResponseBody extends TeaModel {
         /**
          * @return offsetTable
          */
-        public java.util.List < OffsetTable> getOffsetTable() {
+        public java.util.List<OffsetTable> getOffsetTable() {
             return this.offsetTable;
         }
 
         public static final class Builder {
-            private java.util.List < OffsetTable> offsetTable; 
+            private java.util.List<OffsetTable> offsetTable; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopicStatusOffsetTable model) {
+                this.offsetTable = model.offsetTable;
+            } 
 
             /**
              * OffsetTable.
              */
-            public Builder offsetTable(java.util.List < OffsetTable> offsetTable) {
+            public Builder offsetTable(java.util.List<OffsetTable> offsetTable) {
                 this.offsetTable = offsetTable;
                 return this;
             }
@@ -293,14 +343,20 @@ public class GetTopicStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicStatusResponseBody</p>
+     */
     public static class TopicStatus extends TeaModel {
-        @NameInMap("LastTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimeStamp")
         private Long lastTimeStamp;
 
-        @NameInMap("OffsetTable")
+        @com.aliyun.core.annotation.NameInMap("OffsetTable")
         private TopicStatusOffsetTable offsetTable;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private TopicStatus(Builder builder) {
@@ -342,6 +398,15 @@ public class GetTopicStatusResponseBody extends TeaModel {
             private Long lastTimeStamp; 
             private TopicStatusOffsetTable offsetTable; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopicStatus model) {
+                this.lastTimeStamp = model.lastTimeStamp;
+                this.offsetTable = model.offsetTable;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * LastTimeStamp.

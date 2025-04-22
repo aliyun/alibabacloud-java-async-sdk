@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20181015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTopicListResponseBody} extends {@link TeaModel}
  *
  * <p>GetTopicListResponseBody</p>
  */
 public class GetTopicListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TopicList")
+    @com.aliyun.core.annotation.NameInMap("TopicList")
     private TopicList topicList;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private GetTopicListResponseBody(Builder builder) {
@@ -53,6 +58,10 @@ public class GetTopicListResponseBody extends TeaModel {
 
     public static GetTopicListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class GetTopicListResponseBody extends TeaModel {
         private Boolean success; 
         private TopicList topicList; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTopicListResponseBody model) {
+            this.code = model.code;
+            this.currentPage = model.currentPage;
+            this.message = model.message;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.topicList = model.topicList;
+            this.total = model.total;
+        } 
 
         /**
          * Code.
@@ -191,26 +214,32 @@ public class GetTopicListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTopicListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicListResponseBody</p>
+     */
     public static class TopicVO extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("StatusName")
+        @com.aliyun.core.annotation.NameInMap("StatusName")
         private String statusName;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private TopicVO(Builder builder) {
@@ -289,6 +318,19 @@ public class GetTopicListResponseBody extends TeaModel {
             private String statusName; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(TopicVO model) {
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.remark = model.remark;
+                this.status = model.status;
+                this.statusName = model.statusName;
+                this.topic = model.topic;
+            } 
+
             /**
              * CreateTime.
              */
@@ -352,9 +394,15 @@ public class GetTopicListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicListResponseBody</p>
+     */
     public static class TopicList extends TeaModel {
-        @NameInMap("TopicVO")
-        private java.util.List < TopicVO> topicVO;
+        @com.aliyun.core.annotation.NameInMap("TopicVO")
+        private java.util.List<TopicVO> topicVO;
 
         private TopicList(Builder builder) {
             this.topicVO = builder.topicVO;
@@ -371,17 +419,24 @@ public class GetTopicListResponseBody extends TeaModel {
         /**
          * @return topicVO
          */
-        public java.util.List < TopicVO> getTopicVO() {
+        public java.util.List<TopicVO> getTopicVO() {
             return this.topicVO;
         }
 
         public static final class Builder {
-            private java.util.List < TopicVO> topicVO; 
+            private java.util.List<TopicVO> topicVO; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopicList model) {
+                this.topicVO = model.topicVO;
+            } 
 
             /**
              * TopicVO.
              */
-            public Builder topicVO(java.util.List < TopicVO> topicVO) {
+            public Builder topicVO(java.util.List<TopicVO> topicVO) {
                 this.topicVO = topicVO;
                 return this;
             }

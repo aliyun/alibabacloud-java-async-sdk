@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20181015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConsumerListResponseBody} extends {@link TeaModel}
  *
  * <p>GetConsumerListResponseBody</p>
  */
 public class GetConsumerListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("ConsumerList")
+    @com.aliyun.core.annotation.NameInMap("ConsumerList")
     private ConsumerList consumerList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetConsumerListResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetConsumerListResponseBody extends TeaModel {
 
     public static GetConsumerListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetConsumerListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConsumerListResponseBody model) {
+            this.code = model.code;
+            this.consumerList = model.consumerList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,14 +151,20 @@ public class GetConsumerListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConsumerListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerListResponseBody</p>
+     */
     public static class ConsumerVO extends TeaModel {
-        @NameInMap("ConsumerId")
+        @com.aliyun.core.annotation.NameInMap("ConsumerId")
         private String consumerId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private ConsumerVO(Builder builder) {
@@ -181,6 +207,15 @@ public class GetConsumerListResponseBody extends TeaModel {
             private String instanceId; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConsumerVO model) {
+                this.consumerId = model.consumerId;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * ConsumerId.
              */
@@ -212,9 +247,15 @@ public class GetConsumerListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerListResponseBody</p>
+     */
     public static class ConsumerList extends TeaModel {
-        @NameInMap("ConsumerVO")
-        private java.util.List < ConsumerVO> consumerVO;
+        @com.aliyun.core.annotation.NameInMap("ConsumerVO")
+        private java.util.List<ConsumerVO> consumerVO;
 
         private ConsumerList(Builder builder) {
             this.consumerVO = builder.consumerVO;
@@ -231,17 +272,24 @@ public class GetConsumerListResponseBody extends TeaModel {
         /**
          * @return consumerVO
          */
-        public java.util.List < ConsumerVO> getConsumerVO() {
+        public java.util.List<ConsumerVO> getConsumerVO() {
             return this.consumerVO;
         }
 
         public static final class Builder {
-            private java.util.List < ConsumerVO> consumerVO; 
+            private java.util.List<ConsumerVO> consumerVO; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConsumerList model) {
+                this.consumerVO = model.consumerVO;
+            } 
 
             /**
              * ConsumerVO.
              */
-            public Builder consumerVO(java.util.List < ConsumerVO> consumerVO) {
+            public Builder consumerVO(java.util.List<ConsumerVO> consumerVO) {
                 this.consumerVO = consumerVO;
                 return this;
             }

@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CreateConsumerGroup  CreateConsumerGroupRequest
+     * @return CreateConsumerGroupResponse
+     */
     @Override
     public CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTopic  CreateTopicRequest
+     * @return CreateTopicResponse
+     */
     @Override
     public CompletableFuture<CreateTopicResponse> createTopic(CreateTopicRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteConsumerGroup  DeleteConsumerGroupRequest
+     * @return DeleteConsumerGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteConsumerGroupResponse> deleteConsumerGroup(DeleteConsumerGroupRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTopic  DeleteTopicRequest
+     * @return DeleteTopicResponse
+     */
     @Override
     public CompletableFuture<DeleteTopicResponse> deleteTopic(DeleteTopicRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetConsumerList  GetConsumerListRequest
+     * @return GetConsumerListResponse
+     */
     @Override
     public CompletableFuture<GetConsumerListResponse> getConsumerList(GetConsumerListRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetConsumerProgress  GetConsumerProgressRequest
+     * @return GetConsumerProgressResponse
+     */
     @Override
     public CompletableFuture<GetConsumerProgressResponse> getConsumerProgress(GetConsumerProgressRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstanceList  GetInstanceListRequest
+     * @return GetInstanceListResponse
+     */
     @Override
     public CompletableFuture<GetInstanceListResponse> getInstanceList(GetInstanceListRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTopicList  GetTopicListRequest
+     * @return GetTopicListResponse
+     */
     @Override
     public CompletableFuture<GetTopicListResponse> getTopicList(GetTopicListRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTopicStatus  GetTopicStatusRequest
+     * @return GetTopicStatusResponse
+     */
     @Override
     public CompletableFuture<GetTopicStatusResponse> getTopicStatus(GetTopicStatusRequest request) {
         try {
