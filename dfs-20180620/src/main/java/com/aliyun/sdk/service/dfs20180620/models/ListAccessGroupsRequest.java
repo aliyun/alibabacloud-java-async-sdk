@@ -1,42 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccessGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListAccessGroupsRequest</p>
  */
 public class ListAccessGroupsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InputRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputRegionId;
 
-    @Query
-    @NameInMap("Limit")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer limit;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("StartOffset")
-    @Validation(maximum = 100000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartOffset")
+    @com.aliyun.core.annotation.Validation(maximum = 100000, minimum = 1)
     private Integer startOffset;
 
     private ListAccessGroupsRequest(Builder builder) {
@@ -44,6 +53,7 @@ public class ListAccessGroupsRequest extends Request {
         this.regionId = builder.regionId;
         this.inputRegionId = builder.inputRegionId;
         this.limit = builder.limit;
+        this.nextToken = builder.nextToken;
         this.orderBy = builder.orderBy;
         this.orderType = builder.orderType;
         this.startOffset = builder.startOffset;
@@ -57,7 +67,7 @@ public class ListAccessGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -81,6 +91,13 @@ public class ListAccessGroupsRequest extends Request {
      */
     public Integer getLimit() {
         return this.limit;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -108,6 +125,7 @@ public class ListAccessGroupsRequest extends Request {
         private String regionId; 
         private String inputRegionId; 
         private Integer limit; 
+        private String nextToken; 
         private String orderBy; 
         private String orderType; 
         private Integer startOffset; 
@@ -121,6 +139,7 @@ public class ListAccessGroupsRequest extends Request {
             this.regionId = request.regionId;
             this.inputRegionId = request.inputRegionId;
             this.limit = request.limit;
+            this.nextToken = request.nextToken;
             this.orderBy = request.orderBy;
             this.orderType = request.orderType;
             this.startOffset = request.startOffset;
@@ -136,7 +155,10 @@ public class ListAccessGroupsRequest extends Request {
         }
 
         /**
-         * InputRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder inputRegionId(String inputRegionId) {
             this.putQueryParameter("InputRegionId", inputRegionId);
@@ -150,6 +172,15 @@ public class ListAccessGroupsRequest extends Request {
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
             this.limit = limit;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

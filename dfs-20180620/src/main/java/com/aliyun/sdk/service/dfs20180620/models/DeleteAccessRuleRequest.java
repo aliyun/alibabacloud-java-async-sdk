@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAccessRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteAccessRuleRequest</p>
  */
 public class DeleteAccessRuleRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AccessGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessGroupId;
 
-    @Query
-    @NameInMap("AccessRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessRuleId;
 
-    @Query
-    @NameInMap("InputRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputRegionId;
 
     private DeleteAccessRuleRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class DeleteAccessRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -108,7 +113,10 @@ public class DeleteAccessRuleRequest extends Request {
         }
 
         /**
-         * AccessGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
          */
         public Builder accessGroupId(String accessGroupId) {
             this.putQueryParameter("AccessGroupId", accessGroupId);
@@ -117,7 +125,10 @@ public class DeleteAccessRuleRequest extends Request {
         }
 
         /**
-         * AccessRuleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acr-c38028f0-f313-4385-9456-3501b1f5****</p>
          */
         public Builder accessRuleId(String accessRuleId) {
             this.putQueryParameter("AccessRuleId", accessRuleId);
@@ -126,7 +137,10 @@ public class DeleteAccessRuleRequest extends Request {
         }
 
         /**
-         * InputRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder inputRegionId(String inputRegionId) {
             this.putQueryParameter("InputRegionId", inputRegionId);

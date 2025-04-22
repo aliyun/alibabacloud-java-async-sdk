@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVscMountPointResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVscMountPointResponseBody</p>
  */
 public class CreateVscMountPointResponseBody extends TeaModel {
-    @NameInMap("MountPointId")
+    @com.aliyun.core.annotation.NameInMap("MountPointId")
     private String mountPointId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateVscMountPointResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class CreateVscMountPointResponseBody extends TeaModel {
 
     public static CreateVscMountPointResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class CreateVscMountPointResponseBody extends TeaModel {
     public static final class Builder {
         private String mountPointId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateVscMountPointResponseBody model) {
+            this.mountPointId = model.mountPointId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * MountPointId.

@@ -1,28 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFileSystemsResponseBody} extends {@link TeaModel}
  *
  * <p>ListFileSystemsResponseBody</p>
  */
 public class ListFileSystemsResponseBody extends TeaModel {
-    @NameInMap("FileSystems")
-    private java.util.List < FileSystems> fileSystems;
+    @com.aliyun.core.annotation.NameInMap("FileSystems")
+    private java.util.List<FileSystems> fileSystems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListFileSystemsResponseBody(Builder builder) {
         this.fileSystems = builder.fileSystems;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
     }
@@ -35,11 +44,22 @@ public class ListFileSystemsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileSystems
      */
-    public java.util.List < FileSystems> getFileSystems() {
+    public java.util.List<FileSystems> getFileSystems() {
         return this.fileSystems;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -57,15 +77,34 @@ public class ListFileSystemsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FileSystems> fileSystems; 
+        private java.util.List<FileSystems> fileSystems; 
+        private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFileSystemsResponseBody model) {
+            this.fileSystems = model.fileSystems;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * FileSystems.
          */
-        public Builder fileSystems(java.util.List < FileSystems> fileSystems) {
+        public Builder fileSystems(java.util.List<FileSystems> fileSystems) {
             this.fileSystems = fileSystems;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -91,59 +130,65 @@ public class ListFileSystemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFileSystemsResponseBody</p>
+     */
     public static class FileSystems extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FileSystemId")
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
 
-        @NameInMap("FileSystemName")
+        @com.aliyun.core.annotation.NameInMap("FileSystemName")
         private String fileSystemName;
 
-        @NameInMap("MeteringSpaceSize")
+        @com.aliyun.core.annotation.NameInMap("MeteringSpaceSize")
         private Float meteringSpaceSize;
 
-        @NameInMap("MountPointCount")
+        @com.aliyun.core.annotation.NameInMap("MountPointCount")
         private Long mountPointCount;
 
-        @NameInMap("NumberOfDirectories")
+        @com.aliyun.core.annotation.NameInMap("NumberOfDirectories")
         private Long numberOfDirectories;
 
-        @NameInMap("NumberOfFiles")
+        @com.aliyun.core.annotation.NameInMap("NumberOfFiles")
         private Long numberOfFiles;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("ProvisionedThroughputInMiBps")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedThroughputInMiBps")
         private Long provisionedThroughputInMiBps;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SpaceCapacity")
+        @com.aliyun.core.annotation.NameInMap("SpaceCapacity")
         private Long spaceCapacity;
 
-        @NameInMap("StoragePackageId")
+        @com.aliyun.core.annotation.NameInMap("StoragePackageId")
         private String storagePackageId;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("ThroughputMode")
+        @com.aliyun.core.annotation.NameInMap("ThroughputMode")
         private String throughputMode;
 
-        @NameInMap("UsedSpaceSize")
+        @com.aliyun.core.annotation.NameInMap("UsedSpaceSize")
         private Float usedSpaceSize;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private FileSystems(Builder builder) {
@@ -320,6 +365,30 @@ public class ListFileSystemsResponseBody extends TeaModel {
             private Float usedSpaceSize; 
             private String version; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileSystems model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.fileSystemId = model.fileSystemId;
+                this.fileSystemName = model.fileSystemName;
+                this.meteringSpaceSize = model.meteringSpaceSize;
+                this.mountPointCount = model.mountPointCount;
+                this.numberOfDirectories = model.numberOfDirectories;
+                this.numberOfFiles = model.numberOfFiles;
+                this.protocolType = model.protocolType;
+                this.provisionedThroughputInMiBps = model.provisionedThroughputInMiBps;
+                this.regionId = model.regionId;
+                this.spaceCapacity = model.spaceCapacity;
+                this.storagePackageId = model.storagePackageId;
+                this.storageType = model.storageType;
+                this.throughputMode = model.throughputMode;
+                this.usedSpaceSize = model.usedSpaceSize;
+                this.version = model.version;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * CreateTime.

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccessRuleResponseBody} extends {@link TeaModel}
  *
  * <p>GetAccessRuleResponseBody</p>
  */
 public class GetAccessRuleResponseBody extends TeaModel {
-    @NameInMap("AccessRule")
+    @com.aliyun.core.annotation.NameInMap("AccessRule")
     private AccessRule accessRule;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAccessRuleResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetAccessRuleResponseBody extends TeaModel {
 
     public static GetAccessRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class GetAccessRuleResponseBody extends TeaModel {
     public static final class Builder {
         private AccessRule accessRule; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAccessRuleResponseBody model) {
+            this.accessRule = model.accessRule;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessRule.
@@ -71,29 +88,35 @@ public class GetAccessRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAccessRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccessRuleResponseBody</p>
+     */
     public static class AccessRule extends TeaModel {
-        @NameInMap("AccessGroupId")
+        @com.aliyun.core.annotation.NameInMap("AccessGroupId")
         private String accessGroupId;
 
-        @NameInMap("AccessRuleId")
+        @com.aliyun.core.annotation.NameInMap("AccessRuleId")
         private String accessRuleId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("NetworkSegment")
+        @com.aliyun.core.annotation.NameInMap("NetworkSegment")
         private String networkSegment;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("RWAccessType")
+        @com.aliyun.core.annotation.NameInMap("RWAccessType")
         private String RWAccessType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private AccessRule(Builder builder) {
@@ -180,6 +203,20 @@ public class GetAccessRuleResponseBody extends TeaModel {
             private Integer priority; 
             private String RWAccessType; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessRule model) {
+                this.accessGroupId = model.accessGroupId;
+                this.accessRuleId = model.accessRuleId;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.networkSegment = model.networkSegment;
+                this.priority = model.priority;
+                this.RWAccessType = model.RWAccessType;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * AccessGroupId.

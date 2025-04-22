@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileSystemResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileSystemResponseBody</p>
  */
 public class GetFileSystemResponseBody extends TeaModel {
-    @NameInMap("FileSystem")
+    @com.aliyun.core.annotation.NameInMap("FileSystem")
     private FileSystem fileSystem;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetFileSystemResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetFileSystemResponseBody extends TeaModel {
 
     public static GetFileSystemResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class GetFileSystemResponseBody extends TeaModel {
     public static final class Builder {
         private FileSystem fileSystem; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileSystemResponseBody model) {
+            this.fileSystem = model.fileSystem;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * FileSystem.
@@ -71,59 +88,65 @@ public class GetFileSystemResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileSystemResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileSystemResponseBody</p>
+     */
     public static class FileSystem extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FileSystemId")
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
 
-        @NameInMap("FileSystemName")
+        @com.aliyun.core.annotation.NameInMap("FileSystemName")
         private String fileSystemName;
 
-        @NameInMap("MeteringSpaceSize")
+        @com.aliyun.core.annotation.NameInMap("MeteringSpaceSize")
         private Float meteringSpaceSize;
 
-        @NameInMap("MountPointCount")
+        @com.aliyun.core.annotation.NameInMap("MountPointCount")
         private Long mountPointCount;
 
-        @NameInMap("NumberOfDirectories")
+        @com.aliyun.core.annotation.NameInMap("NumberOfDirectories")
         private Long numberOfDirectories;
 
-        @NameInMap("NumberOfFiles")
+        @com.aliyun.core.annotation.NameInMap("NumberOfFiles")
         private Long numberOfFiles;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("ProvisionedThroughputInMiBps")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedThroughputInMiBps")
         private Long provisionedThroughputInMiBps;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SpaceCapacity")
+        @com.aliyun.core.annotation.NameInMap("SpaceCapacity")
         private Long spaceCapacity;
 
-        @NameInMap("StoragePackageId")
+        @com.aliyun.core.annotation.NameInMap("StoragePackageId")
         private String storagePackageId;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("ThroughputMode")
+        @com.aliyun.core.annotation.NameInMap("ThroughputMode")
         private String throughputMode;
 
-        @NameInMap("UsedSpaceSize")
+        @com.aliyun.core.annotation.NameInMap("UsedSpaceSize")
         private Float usedSpaceSize;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private FileSystem(Builder builder) {
@@ -300,6 +323,30 @@ public class GetFileSystemResponseBody extends TeaModel {
             private Float usedSpaceSize; 
             private String version; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileSystem model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.fileSystemId = model.fileSystemId;
+                this.fileSystemName = model.fileSystemName;
+                this.meteringSpaceSize = model.meteringSpaceSize;
+                this.mountPointCount = model.mountPointCount;
+                this.numberOfDirectories = model.numberOfDirectories;
+                this.numberOfFiles = model.numberOfFiles;
+                this.protocolType = model.protocolType;
+                this.provisionedThroughputInMiBps = model.provisionedThroughputInMiBps;
+                this.regionId = model.regionId;
+                this.spaceCapacity = model.spaceCapacity;
+                this.storagePackageId = model.storagePackageId;
+                this.storageType = model.storageType;
+                this.throughputMode = model.throughputMode;
+                this.usedSpaceSize = model.usedSpaceSize;
+                this.version = model.version;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * CreateTime.

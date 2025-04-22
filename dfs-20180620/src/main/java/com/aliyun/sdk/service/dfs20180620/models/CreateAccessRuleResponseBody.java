@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAccessRuleResponseBody</p>
  */
 public class CreateAccessRuleResponseBody extends TeaModel {
-    @NameInMap("AccessRuleId")
+    @com.aliyun.core.annotation.NameInMap("AccessRuleId")
     private String accessRuleId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAccessRuleResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class CreateAccessRuleResponseBody extends TeaModel {
 
     public static CreateAccessRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class CreateAccessRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String accessRuleId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAccessRuleResponseBody model) {
+            this.accessRuleId = model.accessRuleId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessRuleId.

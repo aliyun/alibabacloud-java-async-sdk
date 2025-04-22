@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFileSystemRequest} extends {@link RequestModel}
  *
  * <p>DeleteFileSystemRequest</p>
  */
 public class DeleteFileSystemRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("InputRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputRegionId;
 
     private DeleteFileSystemRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class DeleteFileSystemRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -93,7 +98,7 @@ public class DeleteFileSystemRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * <p>This parameter is required.</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -102,7 +107,10 @@ public class DeleteFileSystemRequest extends Request {
         }
 
         /**
-         * InputRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder inputRegionId(String inputRegionId) {
             this.putQueryParameter("InputRegionId", inputRegionId);

@@ -1,53 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMountPointRequest} extends {@link RequestModel}
  *
  * <p>CreateMountPointRequest</p>
  */
 public class CreateMountPointRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AccessGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessGroupId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("InputRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputRegionId;
 
-    @Query
-    @NameInMap("NetworkType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkType;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsePerformanceMode")
+    private Boolean usePerformanceMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private CreateMountPointRequest(Builder builder) {
@@ -58,6 +67,7 @@ public class CreateMountPointRequest extends Request {
         this.fileSystemId = builder.fileSystemId;
         this.inputRegionId = builder.inputRegionId;
         this.networkType = builder.networkType;
+        this.usePerformanceMode = builder.usePerformanceMode;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
     }
@@ -70,7 +80,7 @@ public class CreateMountPointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -118,6 +128,13 @@ public class CreateMountPointRequest extends Request {
     }
 
     /**
+     * @return usePerformanceMode
+     */
+    public Boolean getUsePerformanceMode() {
+        return this.usePerformanceMode;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -138,6 +155,7 @@ public class CreateMountPointRequest extends Request {
         private String fileSystemId; 
         private String inputRegionId; 
         private String networkType; 
+        private Boolean usePerformanceMode; 
         private String vSwitchId; 
         private String vpcId; 
 
@@ -153,6 +171,7 @@ public class CreateMountPointRequest extends Request {
             this.fileSystemId = request.fileSystemId;
             this.inputRegionId = request.inputRegionId;
             this.networkType = request.networkType;
+            this.usePerformanceMode = request.usePerformanceMode;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
         } 
@@ -167,7 +186,10 @@ public class CreateMountPointRequest extends Request {
         }
 
         /**
-         * AccessGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
          */
         public Builder accessGroupId(String accessGroupId) {
             this.putQueryParameter("AccessGroupId", accessGroupId);
@@ -185,7 +207,7 @@ public class CreateMountPointRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * <p>This parameter is required.</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -194,7 +216,10 @@ public class CreateMountPointRequest extends Request {
         }
 
         /**
-         * InputRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder inputRegionId(String inputRegionId) {
             this.putQueryParameter("InputRegionId", inputRegionId);
@@ -203,7 +228,10 @@ public class CreateMountPointRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -212,7 +240,19 @@ public class CreateMountPointRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * UsePerformanceMode.
+         */
+        public Builder usePerformanceMode(Boolean usePerformanceMode) {
+            this.putQueryParameter("UsePerformanceMode", usePerformanceMode);
+            this.usePerformanceMode = usePerformanceMode;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-iq8fymi327krd14mt****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -221,7 +261,10 @@ public class CreateMountPointRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-iq8hhsk3ymzv9m4wn****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

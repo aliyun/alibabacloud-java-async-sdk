@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMountPointResponseBody} extends {@link TeaModel}
  *
  * <p>GetMountPointResponseBody</p>
  */
 public class GetMountPointResponseBody extends TeaModel {
-    @NameInMap("MountPoint")
+    @com.aliyun.core.annotation.NameInMap("MountPoint")
     private MountPoint mountPoint;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMountPointResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetMountPointResponseBody extends TeaModel {
 
     public static GetMountPointResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class GetMountPointResponseBody extends TeaModel {
     public static final class Builder {
         private MountPoint mountPoint; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMountPointResponseBody model) {
+            this.mountPoint = model.mountPoint;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * MountPoint.
@@ -71,38 +88,47 @@ public class GetMountPointResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMountPointResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMountPointResponseBody</p>
+     */
     public static class MountPoint extends TeaModel {
-        @NameInMap("AccessGroupId")
+        @com.aliyun.core.annotation.NameInMap("AccessGroupId")
         private String accessGroupId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FileSystemId")
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
 
-        @NameInMap("MountPointDomain")
+        @com.aliyun.core.annotation.NameInMap("MountPointAlias")
+        private String mountPointAlias;
+
+        @com.aliyun.core.annotation.NameInMap("MountPointDomain")
         private String mountPointDomain;
 
-        @NameInMap("MountPointId")
+        @com.aliyun.core.annotation.NameInMap("MountPointId")
         private String mountPointId;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private MountPoint(Builder builder) {
@@ -110,6 +136,7 @@ public class GetMountPointResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.fileSystemId = builder.fileSystemId;
+            this.mountPointAlias = builder.mountPointAlias;
             this.mountPointDomain = builder.mountPointDomain;
             this.mountPointId = builder.mountPointId;
             this.networkType = builder.networkType;
@@ -153,6 +180,13 @@ public class GetMountPointResponseBody extends TeaModel {
          */
         public String getFileSystemId() {
             return this.fileSystemId;
+        }
+
+        /**
+         * @return mountPointAlias
+         */
+        public String getMountPointAlias() {
+            return this.mountPointAlias;
         }
 
         /**
@@ -209,6 +243,7 @@ public class GetMountPointResponseBody extends TeaModel {
             private String createTime; 
             private String description; 
             private String fileSystemId; 
+            private String mountPointAlias; 
             private String mountPointDomain; 
             private String mountPointId; 
             private String networkType; 
@@ -216,6 +251,24 @@ public class GetMountPointResponseBody extends TeaModel {
             private String status; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MountPoint model) {
+                this.accessGroupId = model.accessGroupId;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.fileSystemId = model.fileSystemId;
+                this.mountPointAlias = model.mountPointAlias;
+                this.mountPointDomain = model.mountPointDomain;
+                this.mountPointId = model.mountPointId;
+                this.networkType = model.networkType;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * AccessGroupId.
@@ -246,6 +299,14 @@ public class GetMountPointResponseBody extends TeaModel {
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
+                return this;
+            }
+
+            /**
+             * MountPointAlias.
+             */
+            public Builder mountPointAlias(String mountPointAlias) {
+                this.mountPointAlias = mountPointAlias;
                 return this;
             }
 

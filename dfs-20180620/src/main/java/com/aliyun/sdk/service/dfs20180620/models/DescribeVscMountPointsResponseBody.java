@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVscMountPointsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVscMountPointsResponseBody</p>
  */
 public class DescribeVscMountPointsResponseBody extends TeaModel {
-    @NameInMap("MountPoints")
-    private java.util.List < MountPoints> mountPoints;
+    @com.aliyun.core.annotation.NameInMap("MountPoints")
+    private java.util.List<MountPoints> mountPoints;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeVscMountPointsResponseBody(Builder builder) {
@@ -35,10 +40,14 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mountPoints
      */
-    public java.util.List < MountPoints> getMountPoints() {
+    public java.util.List<MountPoints> getMountPoints() {
         return this.mountPoints;
     }
 
@@ -57,14 +66,23 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MountPoints> mountPoints; 
+        private java.util.List<MountPoints> mountPoints; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVscMountPointsResponseBody model) {
+            this.mountPoints = model.mountPoints;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * MountPoints.
          */
-        public Builder mountPoints(java.util.List < MountPoints> mountPoints) {
+        public Builder mountPoints(java.util.List<MountPoints> mountPoints) {
             this.mountPoints = mountPoints;
             return this;
         }
@@ -91,14 +109,20 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVscMountPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVscMountPointsResponseBody</p>
+     */
     public static class Vscs extends TeaModel {
-        @NameInMap("VscId")
+        @com.aliyun.core.annotation.NameInMap("VscId")
         private String vscId;
 
-        @NameInMap("VscStatus")
+        @com.aliyun.core.annotation.NameInMap("VscStatus")
         private String vscStatus;
 
-        @NameInMap("VscType")
+        @com.aliyun.core.annotation.NameInMap("VscType")
         private String vscType;
 
         private Vscs(Builder builder) {
@@ -141,6 +165,15 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
             private String vscStatus; 
             private String vscType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Vscs model) {
+                this.vscId = model.vscId;
+                this.vscStatus = model.vscStatus;
+                this.vscType = model.vscType;
+            } 
+
             /**
              * VscId.
              */
@@ -172,15 +205,21 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVscMountPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVscMountPointsResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Vscs")
-        private java.util.List < Vscs> vscs;
+        @com.aliyun.core.annotation.NameInMap("Vscs")
+        private java.util.List<Vscs> vscs;
 
         private Instances(Builder builder) {
             this.instanceId = builder.instanceId;
@@ -213,14 +252,23 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
         /**
          * @return vscs
          */
-        public java.util.List < Vscs> getVscs() {
+        public java.util.List<Vscs> getVscs() {
             return this.vscs;
         }
 
         public static final class Builder {
             private String instanceId; 
             private String status; 
-            private java.util.List < Vscs> vscs; 
+            private java.util.List<Vscs> vscs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instanceId = model.instanceId;
+                this.status = model.status;
+                this.vscs = model.vscs;
+            } 
 
             /**
              * InstanceId.
@@ -241,7 +289,7 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
             /**
              * Vscs.
              */
-            public Builder vscs(java.util.List < Vscs> vscs) {
+            public Builder vscs(java.util.List<Vscs> vscs) {
                 this.vscs = vscs;
                 return this;
             }
@@ -253,20 +301,26 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVscMountPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVscMountPointsResponseBody</p>
+     */
     public static class MountPoints extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InstanceTotalCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceTotalCount")
         private Integer instanceTotalCount;
 
-        @NameInMap("Instances")
-        private java.util.List < Instances> instances;
+        @com.aliyun.core.annotation.NameInMap("Instances")
+        private java.util.List<Instances> instances;
 
-        @NameInMap("MountPointAlias")
+        @com.aliyun.core.annotation.NameInMap("MountPointAlias")
         private String mountPointAlias;
 
-        @NameInMap("MountPointId")
+        @com.aliyun.core.annotation.NameInMap("MountPointId")
         private String mountPointId;
 
         private MountPoints(Builder builder) {
@@ -302,7 +356,7 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
         /**
          * @return instances
          */
-        public java.util.List < Instances> getInstances() {
+        public java.util.List<Instances> getInstances() {
             return this.instances;
         }
 
@@ -323,9 +377,20 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private Integer instanceTotalCount; 
-            private java.util.List < Instances> instances; 
+            private java.util.List<Instances> instances; 
             private String mountPointAlias; 
             private String mountPointId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MountPoints model) {
+                this.description = model.description;
+                this.instanceTotalCount = model.instanceTotalCount;
+                this.instances = model.instances;
+                this.mountPointAlias = model.mountPointAlias;
+                this.mountPointId = model.mountPointId;
+            } 
 
             /**
              * Description.
@@ -346,7 +411,7 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
             /**
              * Instances.
              */
-            public Builder instances(java.util.List < Instances> instances) {
+            public Builder instances(java.util.List<Instances> instances) {
                 this.instances = instances;
                 return this;
             }

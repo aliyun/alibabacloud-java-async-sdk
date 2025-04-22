@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMountPointResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMountPointResponseBody</p>
  */
 public class CreateMountPointResponseBody extends TeaModel {
-    @NameInMap("MountPointId")
+    @com.aliyun.core.annotation.NameInMap("MountPointId")
     private String mountPointId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateMountPointResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class CreateMountPointResponseBody extends TeaModel {
 
     public static CreateMountPointResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class CreateMountPointResponseBody extends TeaModel {
     public static final class Builder {
         private String mountPointId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMountPointResponseBody model) {
+            this.mountPointId = model.mountPointId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * MountPointId.

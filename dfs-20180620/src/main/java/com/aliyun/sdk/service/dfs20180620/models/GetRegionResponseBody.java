@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRegionResponseBody} extends {@link TeaModel}
  *
  * <p>GetRegionResponseBody</p>
  */
 public class GetRegionResponseBody extends TeaModel {
-    @NameInMap("AvailableZones")
-    private java.util.List < AvailableZones> availableZones;
+    @com.aliyun.core.annotation.NameInMap("AvailableZones")
+    private java.util.List<AvailableZones> availableZones;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetRegionResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class GetRegionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableZones
      */
-    public java.util.List < AvailableZones> getAvailableZones() {
+    public java.util.List<AvailableZones> getAvailableZones() {
         return this.availableZones;
     }
 
@@ -46,13 +55,21 @@ public class GetRegionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AvailableZones> availableZones; 
+        private java.util.List<AvailableZones> availableZones; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRegionResponseBody model) {
+            this.availableZones = model.availableZones;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AvailableZones.
          */
-        public Builder availableZones(java.util.List < AvailableZones> availableZones) {
+        public Builder availableZones(java.util.List<AvailableZones> availableZones) {
             this.availableZones = availableZones;
             return this;
         }
@@ -71,11 +88,17 @@ public class GetRegionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionResponseBody</p>
+     */
     public static class Options extends TeaModel {
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
         private Options(Builder builder) {
@@ -109,6 +132,14 @@ public class GetRegionResponseBody extends TeaModel {
             private String protocolType; 
             private String storageType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Options model) {
+                this.protocolType = model.protocolType;
+                this.storageType = model.storageType;
+            } 
+
             /**
              * ProtocolType.
              */
@@ -132,11 +163,17 @@ public class GetRegionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRegionResponseBody</p>
+     */
     public static class AvailableZones extends TeaModel {
-        @NameInMap("Options")
-        private java.util.List < Options> options;
+        @com.aliyun.core.annotation.NameInMap("Options")
+        private java.util.List<Options> options;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private AvailableZones(Builder builder) {
@@ -155,7 +192,7 @@ public class GetRegionResponseBody extends TeaModel {
         /**
          * @return options
          */
-        public java.util.List < Options> getOptions() {
+        public java.util.List<Options> getOptions() {
             return this.options;
         }
 
@@ -167,13 +204,21 @@ public class GetRegionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Options> options; 
+            private java.util.List<Options> options; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableZones model) {
+                this.options = model.options;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * Options.
              */
-            public Builder options(java.util.List < Options> options) {
+            public Builder options(java.util.List<Options> options) {
                 this.options = options;
                 return this;
             }

@@ -1,28 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccessGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAccessGroupsResponseBody</p>
  */
 public class ListAccessGroupsResponseBody extends TeaModel {
-    @NameInMap("AccessGroups")
-    private java.util.List < AccessGroups> accessGroups;
+    @com.aliyun.core.annotation.NameInMap("AccessGroups")
+    private java.util.List<AccessGroups> accessGroups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAccessGroupsResponseBody(Builder builder) {
         this.accessGroups = builder.accessGroups;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
     }
@@ -35,11 +44,22 @@ public class ListAccessGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessGroups
      */
-    public java.util.List < AccessGroups> getAccessGroups() {
+    public java.util.List<AccessGroups> getAccessGroups() {
         return this.accessGroups;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -57,15 +77,34 @@ public class ListAccessGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AccessGroups> accessGroups; 
+        private java.util.List<AccessGroups> accessGroups; 
+        private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAccessGroupsResponseBody model) {
+            this.accessGroups = model.accessGroups;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * AccessGroups.
          */
-        public Builder accessGroups(java.util.List < AccessGroups> accessGroups) {
+        public Builder accessGroups(java.util.List<AccessGroups> accessGroups) {
             this.accessGroups = accessGroups;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -91,32 +130,38 @@ public class ListAccessGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAccessGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccessGroupsResponseBody</p>
+     */
     public static class AccessGroups extends TeaModel {
-        @NameInMap("AccessGroupId")
+        @com.aliyun.core.annotation.NameInMap("AccessGroupId")
         private String accessGroupId;
 
-        @NameInMap("AccessGroupName")
+        @com.aliyun.core.annotation.NameInMap("AccessGroupName")
         private String accessGroupName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("MountPointCount")
+        @com.aliyun.core.annotation.NameInMap("MountPointCount")
         private Integer mountPointCount;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RuleCount")
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
         private Integer ruleCount;
 
         private AccessGroups(Builder builder) {
@@ -212,6 +257,21 @@ public class ListAccessGroupsResponseBody extends TeaModel {
             private String networkType; 
             private String regionId; 
             private Integer ruleCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessGroups model) {
+                this.accessGroupId = model.accessGroupId;
+                this.accessGroupName = model.accessGroupName;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.isDefault = model.isDefault;
+                this.mountPointCount = model.mountPointCount;
+                this.networkType = model.networkType;
+                this.regionId = model.regionId;
+                this.ruleCount = model.ruleCount;
+            } 
 
             /**
              * AccessGroupId.

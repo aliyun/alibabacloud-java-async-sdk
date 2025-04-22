@@ -1,47 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachVscMountPointRequest} extends {@link RequestModel}
  *
  * <p>DetachVscMountPointRequest</p>
  */
 public class DetachVscMountPointRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("InputRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputRegionId;
 
-    @Query
-    @NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
 
-    @Query
-    @NameInMap("MountPointId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MountPointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mountPointId;
 
-    @Query
-    @NameInMap("VscIds")
-    private java.util.List < String > vscIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseAssumeRoleChkServerPerm")
+    private Boolean useAssumeRoleChkServerPerm;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VscIds")
+    private java.util.List<String> vscIds;
 
     private DetachVscMountPointRequest(Builder builder) {
         super(builder);
@@ -51,6 +60,7 @@ public class DetachVscMountPointRequest extends Request {
         this.inputRegionId = builder.inputRegionId;
         this.instanceIds = builder.instanceIds;
         this.mountPointId = builder.mountPointId;
+        this.useAssumeRoleChkServerPerm = builder.useAssumeRoleChkServerPerm;
         this.vscIds = builder.vscIds;
     }
 
@@ -62,7 +72,7 @@ public class DetachVscMountPointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +108,7 @@ public class DetachVscMountPointRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -110,9 +120,16 @@ public class DetachVscMountPointRequest extends Request {
     }
 
     /**
+     * @return useAssumeRoleChkServerPerm
+     */
+    public Boolean getUseAssumeRoleChkServerPerm() {
+        return this.useAssumeRoleChkServerPerm;
+    }
+
+    /**
      * @return vscIds
      */
-    public java.util.List < String > getVscIds() {
+    public java.util.List<String> getVscIds() {
         return this.vscIds;
     }
 
@@ -121,9 +138,10 @@ public class DetachVscMountPointRequest extends Request {
         private String description; 
         private String fileSystemId; 
         private String inputRegionId; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String mountPointId; 
-        private java.util.List < String > vscIds; 
+        private Boolean useAssumeRoleChkServerPerm; 
+        private java.util.List<String> vscIds; 
 
         private Builder() {
             super();
@@ -137,6 +155,7 @@ public class DetachVscMountPointRequest extends Request {
             this.inputRegionId = request.inputRegionId;
             this.instanceIds = request.instanceIds;
             this.mountPointId = request.mountPointId;
+            this.useAssumeRoleChkServerPerm = request.useAssumeRoleChkServerPerm;
             this.vscIds = request.vscIds;
         } 
 
@@ -159,7 +178,10 @@ public class DetachVscMountPointRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>037****e1d</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -168,7 +190,10 @@ public class DetachVscMountPointRequest extends Request {
         }
 
         /**
-         * InputRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder inputRegionId(String inputRegionId) {
             this.putQueryParameter("InputRegionId", inputRegionId);
@@ -179,7 +204,7 @@ public class DetachVscMountPointRequest extends Request {
         /**
          * InstanceIds.
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
             this.putQueryParameter("InstanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;
@@ -187,7 +212,10 @@ public class DetachVscMountPointRequest extends Request {
         }
 
         /**
-         * MountPointId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>037cb49e1d-c***5</p>
          */
         public Builder mountPointId(String mountPointId) {
             this.putQueryParameter("MountPointId", mountPointId);
@@ -196,9 +224,18 @@ public class DetachVscMountPointRequest extends Request {
         }
 
         /**
+         * UseAssumeRoleChkServerPerm.
+         */
+        public Builder useAssumeRoleChkServerPerm(Boolean useAssumeRoleChkServerPerm) {
+            this.putQueryParameter("UseAssumeRoleChkServerPerm", useAssumeRoleChkServerPerm);
+            this.useAssumeRoleChkServerPerm = useAssumeRoleChkServerPerm;
+            return this;
+        }
+
+        /**
          * VscIds.
          */
-        public Builder vscIds(java.util.List < String > vscIds) {
+        public Builder vscIds(java.util.List<String> vscIds) {
             String vscIdsShrink = shrink(vscIds, "VscIds", "json");
             this.putQueryParameter("VscIds", vscIdsShrink);
             this.vscIds = vscIds;

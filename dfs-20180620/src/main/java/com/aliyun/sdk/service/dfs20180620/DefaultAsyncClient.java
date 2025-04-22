@@ -40,8 +40,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ****
-      *
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of AttachVscMountPoint  AttachVscMountPointRequest
+     * @return AttachVscMountPointResponse
      */
     @Override
     public CompletableFuture<AttachVscMountPointResponse> attachVscMountPoint(AttachVscMountPointRequest request) {
@@ -57,6 +60,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BindVscMountPointAlias  BindVscMountPointAliasRequest
+     * @return BindVscMountPointAliasResponse
+     */
     @Override
     public CompletableFuture<BindVscMountPointAliasResponse> bindVscMountPointAlias(BindVscMountPointAliasRequest request) {
         try {
@@ -71,6 +78,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAccessGroup  CreateAccessGroupRequest
+     * @return CreateAccessGroupResponse
+     */
     @Override
     public CompletableFuture<CreateAccessGroupResponse> createAccessGroup(CreateAccessGroupRequest request) {
         try {
@@ -85,6 +96,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAccessRule  CreateAccessRuleRequest
+     * @return CreateAccessRuleResponse
+     */
     @Override
     public CompletableFuture<CreateAccessRuleResponse> createAccessRule(CreateAccessRuleRequest request) {
         try {
@@ -99,6 +114,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateFileSystem  CreateFileSystemRequest
+     * @return CreateFileSystemResponse
+     */
     @Override
     public CompletableFuture<CreateFileSystemResponse> createFileSystem(CreateFileSystemRequest request) {
         try {
@@ -113,6 +132,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMountPoint  CreateMountPointRequest
+     * @return CreateMountPointResponse
+     */
     @Override
     public CompletableFuture<CreateMountPointResponse> createMountPoint(CreateMountPointRequest request) {
         try {
@@ -127,6 +150,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateQosPolicy  CreateQosPolicyRequest
+     * @return CreateQosPolicyResponse
+     */
+    @Override
+    public CompletableFuture<CreateQosPolicyResponse> createQosPolicy(CreateQosPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateQosPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateQosPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateQosPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateUserGroupsMapping  CreateUserGroupsMappingRequest
+     * @return CreateUserGroupsMappingResponse
+     */
     @Override
     public CompletableFuture<CreateUserGroupsMappingResponse> createUserGroupsMapping(CreateUserGroupsMappingRequest request) {
         try {
@@ -141,6 +186,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateVscMountPoint  CreateVscMountPointRequest
+     * @return CreateVscMountPointResponse
+     */
     @Override
     public CompletableFuture<CreateVscMountPointResponse> createVscMountPoint(CreateVscMountPointRequest request) {
         try {
@@ -155,6 +204,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAccessGroup  DeleteAccessGroupRequest
+     * @return DeleteAccessGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteAccessGroupResponse> deleteAccessGroup(DeleteAccessGroupRequest request) {
         try {
@@ -169,6 +222,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAccessRule  DeleteAccessRuleRequest
+     * @return DeleteAccessRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteAccessRuleResponse> deleteAccessRule(DeleteAccessRuleRequest request) {
         try {
@@ -183,6 +240,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFileSystem  DeleteFileSystemRequest
+     * @return DeleteFileSystemResponse
+     */
     @Override
     public CompletableFuture<DeleteFileSystemResponse> deleteFileSystem(DeleteFileSystemRequest request) {
         try {
@@ -197,6 +258,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMountPoint  DeleteMountPointRequest
+     * @return DeleteMountPointResponse
+     */
     @Override
     public CompletableFuture<DeleteMountPointResponse> deleteMountPoint(DeleteMountPointRequest request) {
         try {
@@ -211,6 +276,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteQosPolicy  DeleteQosPolicyRequest
+     * @return DeleteQosPolicyResponse
+     */
+    @Override
+    public CompletableFuture<DeleteQosPolicyResponse> deleteQosPolicy(DeleteQosPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteQosPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteQosPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteQosPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteUserGroupsMapping  DeleteUserGroupsMappingRequest
+     * @return DeleteUserGroupsMappingResponse
+     */
     @Override
     public CompletableFuture<DeleteUserGroupsMappingResponse> deleteUserGroupsMapping(DeleteUserGroupsMappingRequest request) {
         try {
@@ -225,6 +312,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteVscMountPoint  DeleteVscMountPointRequest
+     * @return DeleteVscMountPointResponse
+     */
     @Override
     public CompletableFuture<DeleteVscMountPointResponse> deleteVscMountPoint(DeleteVscMountPointRequest request) {
         try {
@@ -239,6 +330,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -253,6 +348,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVscMountPoints  DescribeVscMountPointsRequest
+     * @return DescribeVscMountPointsResponse
+     */
     @Override
     public CompletableFuture<DescribeVscMountPointsResponse> describeVscMountPoints(DescribeVscMountPointsRequest request) {
         try {
@@ -267,6 +366,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetachVscMountPoint  DetachVscMountPointRequest
+     * @return DetachVscMountPointResponse
+     */
     @Override
     public CompletableFuture<DetachVscMountPointResponse> detachVscMountPoint(DetachVscMountPointRequest request) {
         try {
@@ -281,6 +384,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAccessGroup  GetAccessGroupRequest
+     * @return GetAccessGroupResponse
+     */
     @Override
     public CompletableFuture<GetAccessGroupResponse> getAccessGroup(GetAccessGroupRequest request) {
         try {
@@ -295,6 +402,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAccessRule  GetAccessRuleRequest
+     * @return GetAccessRuleResponse
+     */
     @Override
     public CompletableFuture<GetAccessRuleResponse> getAccessRule(GetAccessRuleRequest request) {
         try {
@@ -309,6 +420,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFileSystem  GetFileSystemRequest
+     * @return GetFileSystemResponse
+     */
     @Override
     public CompletableFuture<GetFileSystemResponse> getFileSystem(GetFileSystemRequest request) {
         try {
@@ -323,6 +438,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMountPoint  GetMountPointRequest
+     * @return GetMountPointResponse
+     */
     @Override
     public CompletableFuture<GetMountPointResponse> getMountPoint(GetMountPointRequest request) {
         try {
@@ -337,6 +456,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRegion  GetRegionRequest
+     * @return GetRegionResponse
+     */
     @Override
     public CompletableFuture<GetRegionResponse> getRegion(GetRegionRequest request) {
         try {
@@ -351,6 +474,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAccessGroups  ListAccessGroupsRequest
+     * @return ListAccessGroupsResponse
+     */
     @Override
     public CompletableFuture<ListAccessGroupsResponse> listAccessGroups(ListAccessGroupsRequest request) {
         try {
@@ -365,6 +492,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAccessRules  ListAccessRulesRequest
+     * @return ListAccessRulesResponse
+     */
     @Override
     public CompletableFuture<ListAccessRulesResponse> listAccessRules(ListAccessRulesRequest request) {
         try {
@@ -379,6 +510,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFederations  ListFederationsRequest
+     * @return ListFederationsResponse
+     */
+    @Override
+    public CompletableFuture<ListFederationsResponse> listFederations(ListFederationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListFederations").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListFederationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListFederationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListFileSystems  ListFileSystemsRequest
+     * @return ListFileSystemsResponse
+     */
     @Override
     public CompletableFuture<ListFileSystemsResponse> listFileSystems(ListFileSystemsRequest request) {
         try {
@@ -393,6 +546,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMountPoints  ListMountPointsRequest
+     * @return ListMountPointsResponse
+     */
     @Override
     public CompletableFuture<ListMountPointsResponse> listMountPoints(ListMountPointsRequest request) {
         try {
@@ -407,6 +564,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListQosPolicies  ListQosPoliciesRequest
+     * @return ListQosPoliciesResponse
+     */
+    @Override
+    public CompletableFuture<ListQosPoliciesResponse> listQosPolicies(ListQosPoliciesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListQosPolicies").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListQosPoliciesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListQosPoliciesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListUserGroupsMappings  ListUserGroupsMappingsRequest
+     * @return ListUserGroupsMappingsResponse
+     */
     @Override
     public CompletableFuture<ListUserGroupsMappingsResponse> listUserGroupsMappings(ListUserGroupsMappingsRequest request) {
         try {
@@ -421,6 +600,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAccessGroup  ModifyAccessGroupRequest
+     * @return ModifyAccessGroupResponse
+     */
     @Override
     public CompletableFuture<ModifyAccessGroupResponse> modifyAccessGroup(ModifyAccessGroupRequest request) {
         try {
@@ -435,6 +618,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAccessRule  ModifyAccessRuleRequest
+     * @return ModifyAccessRuleResponse
+     */
     @Override
     public CompletableFuture<ModifyAccessRuleResponse> modifyAccessRule(ModifyAccessRuleRequest request) {
         try {
@@ -449,6 +636,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyFileSystem  ModifyFileSystemRequest
+     * @return ModifyFileSystemResponse
+     */
     @Override
     public CompletableFuture<ModifyFileSystemResponse> modifyFileSystem(ModifyFileSystemRequest request) {
         try {
@@ -463,6 +654,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyMountPoint  ModifyMountPointRequest
+     * @return ModifyMountPointResponse
+     */
     @Override
     public CompletableFuture<ModifyMountPointResponse> modifyMountPoint(ModifyMountPointRequest request) {
         try {
@@ -472,6 +667,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyMountPointResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyQosPolicy  ModifyQosPolicyRequest
+     * @return ModifyQosPolicyResponse
+     */
+    @Override
+    public CompletableFuture<ModifyQosPolicyResponse> modifyQosPolicy(ModifyQosPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyQosPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyQosPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyQosPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

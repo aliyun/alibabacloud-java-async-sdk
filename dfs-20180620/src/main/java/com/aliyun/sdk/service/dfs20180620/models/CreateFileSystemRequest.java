@@ -1,79 +1,89 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileSystemRequest} extends {@link RequestModel}
  *
  * <p>CreateFileSystemRequest</p>
  */
 public class CreateFileSystemRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DataRedundancyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataRedundancyType")
     private String dataRedundancyType;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedClusterId")
+    private String dedicatedClusterId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("FileSystemName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemName;
 
-    @Query
-    @NameInMap("InputRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputRegionId;
 
-    @Query
-    @NameInMap("PartitionNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PartitionNumber")
     private Integer partitionNumber;
 
-    @Query
-    @NameInMap("ProtocolType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String protocolType;
 
-    @Query
-    @NameInMap("ProvisionedThroughputInMiBps")
-    @Validation(maximum = 5120, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProvisionedThroughputInMiBps")
+    @com.aliyun.core.annotation.Validation(maximum = 5120, minimum = 1)
     private Long provisionedThroughputInMiBps;
 
-    @Query
-    @NameInMap("SpaceCapacity")
-    @Validation(required = true, maximum = 10485760, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpaceCapacity")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10485760, minimum = 1)
     private Long spaceCapacity;
 
-    @Query
-    @NameInMap("StorageSetName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageSetName")
     private String storageSetName;
 
-    @Query
-    @NameInMap("StorageType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String storageType;
 
-    @Query
-    @NameInMap("ThroughputMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThroughputMode")
     private String throughputMode;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateFileSystemRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.dataRedundancyType = builder.dataRedundancyType;
+        this.dedicatedClusterId = builder.dedicatedClusterId;
         this.description = builder.description;
         this.fileSystemName = builder.fileSystemName;
         this.inputRegionId = builder.inputRegionId;
@@ -95,7 +105,7 @@ public class CreateFileSystemRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,6 +122,13 @@ public class CreateFileSystemRequest extends Request {
      */
     public String getDataRedundancyType() {
         return this.dataRedundancyType;
+    }
+
+    /**
+     * @return dedicatedClusterId
+     */
+    public String getDedicatedClusterId() {
+        return this.dedicatedClusterId;
     }
 
     /**
@@ -194,6 +211,7 @@ public class CreateFileSystemRequest extends Request {
     public static final class Builder extends Request.Builder<CreateFileSystemRequest, Builder> {
         private String regionId; 
         private String dataRedundancyType; 
+        private String dedicatedClusterId; 
         private String description; 
         private String fileSystemName; 
         private String inputRegionId; 
@@ -214,6 +232,7 @@ public class CreateFileSystemRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.dataRedundancyType = request.dataRedundancyType;
+            this.dedicatedClusterId = request.dedicatedClusterId;
             this.description = request.description;
             this.fileSystemName = request.fileSystemName;
             this.inputRegionId = request.inputRegionId;
@@ -246,6 +265,15 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
+         * DedicatedClusterId.
+         */
+        public Builder dedicatedClusterId(String dedicatedClusterId) {
+            this.putQueryParameter("DedicatedClusterId", dedicatedClusterId);
+            this.dedicatedClusterId = dedicatedClusterId;
+            return this;
+        }
+
+        /**
          * Description.
          */
         public Builder description(String description) {
@@ -255,7 +283,10 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * FileSystemName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyFirstHDFS</p>
          */
         public Builder fileSystemName(String fileSystemName) {
             this.putQueryParameter("FileSystemName", fileSystemName);
@@ -264,7 +295,10 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * InputRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder inputRegionId(String inputRegionId) {
             this.putQueryParameter("InputRegionId", inputRegionId);
@@ -282,7 +316,10 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -300,7 +337,10 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * SpaceCapacity.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder spaceCapacity(Long spaceCapacity) {
             this.putQueryParameter("SpaceCapacity", spaceCapacity);
@@ -318,7 +358,10 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

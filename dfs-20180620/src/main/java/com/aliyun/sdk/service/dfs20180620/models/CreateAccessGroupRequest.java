@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateAccessGroupRequest</p>
  */
 public class CreateAccessGroupRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AccessGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessGroupName;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("InputRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputRegionId;
 
-    @Query
-    @NameInMap("NetworkType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkType;
 
     private CreateAccessGroupRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class CreateAccessGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -122,7 +127,10 @@ public class CreateAccessGroupRequest extends Request {
         }
 
         /**
-         * AccessGroupName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-online-cluster-policy</p>
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -140,7 +148,10 @@ public class CreateAccessGroupRequest extends Request {
         }
 
         /**
-         * InputRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder inputRegionId(String inputRegionId) {
             this.putQueryParameter("InputRegionId", inputRegionId);
@@ -149,7 +160,10 @@ public class CreateAccessGroupRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);

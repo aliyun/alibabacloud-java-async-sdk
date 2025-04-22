@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccessGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetAccessGroupResponseBody</p>
  */
 public class GetAccessGroupResponseBody extends TeaModel {
-    @NameInMap("AccessGroup")
+    @com.aliyun.core.annotation.NameInMap("AccessGroup")
     private AccessGroup accessGroup;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAccessGroupResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetAccessGroupResponseBody extends TeaModel {
 
     public static GetAccessGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class GetAccessGroupResponseBody extends TeaModel {
     public static final class Builder {
         private AccessGroup accessGroup; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAccessGroupResponseBody model) {
+            this.accessGroup = model.accessGroup;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessGroup.
@@ -71,32 +88,38 @@ public class GetAccessGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAccessGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccessGroupResponseBody</p>
+     */
     public static class AccessGroup extends TeaModel {
-        @NameInMap("AccessGroupId")
+        @com.aliyun.core.annotation.NameInMap("AccessGroupId")
         private String accessGroupId;
 
-        @NameInMap("AccessGroupName")
+        @com.aliyun.core.annotation.NameInMap("AccessGroupName")
         private String accessGroupName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("MountPointCount")
+        @com.aliyun.core.annotation.NameInMap("MountPointCount")
         private Integer mountPointCount;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RuleCount")
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
         private Integer ruleCount;
 
         private AccessGroup(Builder builder) {
@@ -192,6 +215,21 @@ public class GetAccessGroupResponseBody extends TeaModel {
             private String networkType; 
             private String regionId; 
             private Integer ruleCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessGroup model) {
+                this.accessGroupId = model.accessGroupId;
+                this.accessGroupName = model.accessGroupName;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.isDefault = model.isDefault;
+                this.mountPointCount = model.mountPointCount;
+                this.networkType = model.networkType;
+                this.regionId = model.regionId;
+                this.ruleCount = model.ruleCount;
+            } 
 
             /**
              * AccessGroupId.

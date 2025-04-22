@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindVscMountPointAliasRequest} extends {@link RequestModel}
  *
  * <p>BindVscMountPointAliasRequest</p>
  */
 public class BindVscMountPointAliasRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AliasPrefix")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliasPrefix")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aliasPrefix;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("InputRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputRegionId;
 
-    @Query
-    @NameInMap("MountPointId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MountPointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mountPointId;
 
     private BindVscMountPointAliasRequest(Builder builder) {
@@ -53,7 +58,7 @@ public class BindVscMountPointAliasRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -123,7 +128,10 @@ public class BindVscMountPointAliasRequest extends Request {
         }
 
         /**
-         * AliasPrefix.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdfe</p>
          */
         public Builder aliasPrefix(String aliasPrefix) {
             this.putQueryParameter("AliasPrefix", aliasPrefix);
@@ -132,7 +140,10 @@ public class BindVscMountPointAliasRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>037****e1d</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -141,7 +152,10 @@ public class BindVscMountPointAliasRequest extends Request {
         }
 
         /**
-         * InputRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder inputRegionId(String inputRegionId) {
             this.putQueryParameter("InputRegionId", inputRegionId);
@@ -150,7 +164,10 @@ public class BindVscMountPointAliasRequest extends Request {
         }
 
         /**
-         * MountPointId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>037cb49e1d-c***5</p>
          */
         public Builder mountPointId(String mountPointId) {
             this.putQueryParameter("MountPointId", mountPointId);

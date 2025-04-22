@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindVscMountPointAliasResponseBody} extends {@link TeaModel}
  *
  * <p>BindVscMountPointAliasResponseBody</p>
  */
 public class BindVscMountPointAliasResponseBody extends TeaModel {
-    @NameInMap("MountPointAlias")
+    @com.aliyun.core.annotation.NameInMap("MountPointAlias")
     private String mountPointAlias;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BindVscMountPointAliasResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class BindVscMountPointAliasResponseBody extends TeaModel {
 
     public static BindVscMountPointAliasResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class BindVscMountPointAliasResponseBody extends TeaModel {
     public static final class Builder {
         private String mountPointAlias; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BindVscMountPointAliasResponseBody model) {
+            this.mountPointAlias = model.mountPointAlias;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * MountPointAlias.

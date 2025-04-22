@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateAccessRuleRequest</p>
  */
 public class CreateAccessRuleRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AccessGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessGroupId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("InputRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputRegionId;
 
-    @Query
-    @NameInMap("NetworkSegment")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkSegment")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkSegment;
 
-    @Query
-    @NameInMap("Priority")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer priority;
 
-    @Query
-    @NameInMap("RWAccessType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RWAccessType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String RWAccessType;
 
     private CreateAccessRuleRequest(Builder builder) {
@@ -64,7 +69,7 @@ public class CreateAccessRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -152,7 +157,10 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
-         * AccessGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
          */
         public Builder accessGroupId(String accessGroupId) {
             this.putQueryParameter("AccessGroupId", accessGroupId);
@@ -170,7 +178,10 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
-         * InputRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder inputRegionId(String inputRegionId) {
             this.putQueryParameter("InputRegionId", inputRegionId);
@@ -179,7 +190,10 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
-         * NetworkSegment.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0/24</p>
          */
         public Builder networkSegment(String networkSegment) {
             this.putQueryParameter("NetworkSegment", networkSegment);
@@ -188,7 +202,10 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -197,7 +214,10 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
-         * RWAccessType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDWR</p>
          */
         public Builder RWAccessType(String RWAccessType) {
             this.putQueryParameter("RWAccessType", RWAccessType);

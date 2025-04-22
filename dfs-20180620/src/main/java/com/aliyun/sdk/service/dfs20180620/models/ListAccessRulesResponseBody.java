@@ -1,28 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccessRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAccessRulesResponseBody</p>
  */
 public class ListAccessRulesResponseBody extends TeaModel {
-    @NameInMap("AccessRules")
-    private java.util.List < AccessRules> accessRules;
+    @com.aliyun.core.annotation.NameInMap("AccessRules")
+    private java.util.List<AccessRules> accessRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAccessRulesResponseBody(Builder builder) {
         this.accessRules = builder.accessRules;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
     }
@@ -35,11 +44,22 @@ public class ListAccessRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessRules
      */
-    public java.util.List < AccessRules> getAccessRules() {
+    public java.util.List<AccessRules> getAccessRules() {
         return this.accessRules;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -57,15 +77,34 @@ public class ListAccessRulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AccessRules> accessRules; 
+        private java.util.List<AccessRules> accessRules; 
+        private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAccessRulesResponseBody model) {
+            this.accessRules = model.accessRules;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * AccessRules.
          */
-        public Builder accessRules(java.util.List < AccessRules> accessRules) {
+        public Builder accessRules(java.util.List<AccessRules> accessRules) {
             this.accessRules = accessRules;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -91,29 +130,35 @@ public class ListAccessRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAccessRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccessRulesResponseBody</p>
+     */
     public static class AccessRules extends TeaModel {
-        @NameInMap("AccessGroupId")
+        @com.aliyun.core.annotation.NameInMap("AccessGroupId")
         private String accessGroupId;
 
-        @NameInMap("AccessRuleId")
+        @com.aliyun.core.annotation.NameInMap("AccessRuleId")
         private String accessRuleId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("NetworkSegment")
+        @com.aliyun.core.annotation.NameInMap("NetworkSegment")
         private String networkSegment;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("RWAccessType")
+        @com.aliyun.core.annotation.NameInMap("RWAccessType")
         private String RWAccessType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private AccessRules(Builder builder) {
@@ -200,6 +245,20 @@ public class ListAccessRulesResponseBody extends TeaModel {
             private Integer priority; 
             private String RWAccessType; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessRules model) {
+                this.accessGroupId = model.accessGroupId;
+                this.accessRuleId = model.accessRuleId;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.networkSegment = model.networkSegment;
+                this.priority = model.priority;
+                this.RWAccessType = model.RWAccessType;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * AccessGroupId.

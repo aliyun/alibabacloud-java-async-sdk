@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserGroupsMappingsResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserGroupsMappingsResponseBody</p>
  */
 public class ListUserGroupsMappingsResponseBody extends TeaModel {
-    @NameInMap("HasMore")
+    @com.aliyun.core.annotation.NameInMap("HasMore")
     private Boolean hasMore;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserGroupsMappings")
-    private java.util.List < UserGroupsMappings> userGroupsMappings;
+    @com.aliyun.core.annotation.NameInMap("UserGroupsMappings")
+    private java.util.List<UserGroupsMappings> userGroupsMappings;
 
     private ListUserGroupsMappingsResponseBody(Builder builder) {
         this.hasMore = builder.hasMore;
@@ -37,6 +42,10 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
 
     public static ListUserGroupsMappingsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -63,7 +72,7 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
     /**
      * @return userGroupsMappings
      */
-    public java.util.List < UserGroupsMappings> getUserGroupsMappings() {
+    public java.util.List<UserGroupsMappings> getUserGroupsMappings() {
         return this.userGroupsMappings;
     }
 
@@ -71,7 +80,17 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
         private Boolean hasMore; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < UserGroupsMappings> userGroupsMappings; 
+        private java.util.List<UserGroupsMappings> userGroupsMappings; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserGroupsMappingsResponseBody model) {
+            this.hasMore = model.hasMore;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.userGroupsMappings = model.userGroupsMappings;
+        } 
 
         /**
          * HasMore.
@@ -100,7 +119,7 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
         /**
          * UserGroupsMappings.
          */
-        public Builder userGroupsMappings(java.util.List < UserGroupsMappings> userGroupsMappings) {
+        public Builder userGroupsMappings(java.util.List<UserGroupsMappings> userGroupsMappings) {
             this.userGroupsMappings = userGroupsMappings;
             return this;
         }
@@ -111,11 +130,17 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserGroupsMappingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserGroupsMappingsResponseBody</p>
+     */
     public static class UserGroupsMappings extends TeaModel {
-        @NameInMap("GroupNames")
-        private java.util.List < String > groupNames;
+        @com.aliyun.core.annotation.NameInMap("GroupNames")
+        private java.util.List<String> groupNames;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private UserGroupsMappings(Builder builder) {
@@ -134,7 +159,7 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
         /**
          * @return groupNames
          */
-        public java.util.List < String > getGroupNames() {
+        public java.util.List<String> getGroupNames() {
             return this.groupNames;
         }
 
@@ -146,13 +171,21 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > groupNames; 
+            private java.util.List<String> groupNames; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserGroupsMappings model) {
+                this.groupNames = model.groupNames;
+                this.userName = model.userName;
+            } 
 
             /**
              * GroupNames.
              */
-            public Builder groupNames(java.util.List < String > groupNames) {
+            public Builder groupNames(java.util.List<String> groupNames) {
                 this.groupNames = groupNames;
                 return this;
             }

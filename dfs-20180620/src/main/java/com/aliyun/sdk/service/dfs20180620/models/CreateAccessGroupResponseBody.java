@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAccessGroupResponseBody</p>
  */
 public class CreateAccessGroupResponseBody extends TeaModel {
-    @NameInMap("AccessGroupId")
+    @com.aliyun.core.annotation.NameInMap("AccessGroupId")
     private String accessGroupId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAccessGroupResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class CreateAccessGroupResponseBody extends TeaModel {
 
     public static CreateAccessGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class CreateAccessGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String accessGroupId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAccessGroupResponseBody model) {
+            this.accessGroupId = model.accessGroupId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessGroupId.

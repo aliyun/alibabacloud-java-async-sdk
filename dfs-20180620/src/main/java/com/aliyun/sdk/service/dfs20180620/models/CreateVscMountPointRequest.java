@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVscMountPointRequest} extends {@link RequestModel}
  *
  * <p>CreateVscMountPointRequest</p>
  */
 public class CreateVscMountPointRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("InputRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputRegionId;
 
-    @Query
-    @NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
 
     private CreateVscMountPointRequest(Builder builder) {
         super(builder);
@@ -51,7 +56,7 @@ public class CreateVscMountPointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,7 +92,7 @@ public class CreateVscMountPointRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -96,7 +101,7 @@ public class CreateVscMountPointRequest extends Request {
         private String description; 
         private String fileSystemId; 
         private String inputRegionId; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
 
         private Builder() {
             super();
@@ -130,7 +135,10 @@ public class CreateVscMountPointRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e389e5c7-bcb4-4558-846a-e5afc444****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -139,7 +147,10 @@ public class CreateVscMountPointRequest extends Request {
         }
 
         /**
-         * InputRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder inputRegionId(String inputRegionId) {
             this.putQueryParameter("InputRegionId", inputRegionId);
@@ -150,7 +161,7 @@ public class CreateVscMountPointRequest extends Request {
         /**
          * InstanceIds.
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
             this.putQueryParameter("InstanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;

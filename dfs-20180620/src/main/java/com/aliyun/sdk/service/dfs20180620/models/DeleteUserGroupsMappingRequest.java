@@ -1,39 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserGroupsMappingRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserGroupsMappingRequest</p>
  */
 public class DeleteUserGroupsMappingRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("GroupNames")
-    @Validation(required = true)
-    private java.util.Map < String, ? > groupNames;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupNames")
+    private java.util.List<String> groupNames;
 
-    @Query
-    @NameInMap("InputRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputRegionId;
 
-    @Query
-    @NameInMap("UserName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userName;
 
     private DeleteUserGroupsMappingRequest(Builder builder) {
@@ -53,7 +57,7 @@ public class DeleteUserGroupsMappingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,7 +79,7 @@ public class DeleteUserGroupsMappingRequest extends Request {
     /**
      * @return groupNames
      */
-    public java.util.Map < String, ? > getGroupNames() {
+    public java.util.List<String> getGroupNames() {
         return this.groupNames;
     }
 
@@ -96,7 +100,7 @@ public class DeleteUserGroupsMappingRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteUserGroupsMappingRequest, Builder> {
         private String regionId; 
         private String fileSystemId; 
-        private java.util.Map < String, ? > groupNames; 
+        private java.util.List<String> groupNames; 
         private String inputRegionId; 
         private String userName; 
 
@@ -123,7 +127,10 @@ public class DeleteUserGroupsMappingRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -134,7 +141,7 @@ public class DeleteUserGroupsMappingRequest extends Request {
         /**
          * GroupNames.
          */
-        public Builder groupNames(java.util.Map < String, ? > groupNames) {
+        public Builder groupNames(java.util.List<String> groupNames) {
             String groupNamesShrink = shrink(groupNames, "GroupNames", "json");
             this.putQueryParameter("GroupNames", groupNamesShrink);
             this.groupNames = groupNames;
@@ -142,7 +149,10 @@ public class DeleteUserGroupsMappingRequest extends Request {
         }
 
         /**
-         * InputRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder inputRegionId(String inputRegionId) {
             this.putQueryParameter("InputRegionId", inputRegionId);
@@ -151,7 +161,10 @@ public class DeleteUserGroupsMappingRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

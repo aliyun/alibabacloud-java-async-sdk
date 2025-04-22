@@ -1,28 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dfs20180620.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMountPointsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMountPointsResponseBody</p>
  */
 public class ListMountPointsResponseBody extends TeaModel {
-    @NameInMap("MountPoints")
-    private java.util.List < MountPoints> mountPoints;
+    @com.aliyun.core.annotation.NameInMap("MountPoints")
+    private java.util.List<MountPoints> mountPoints;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListMountPointsResponseBody(Builder builder) {
         this.mountPoints = builder.mountPoints;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
     }
@@ -35,11 +44,22 @@ public class ListMountPointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mountPoints
      */
-    public java.util.List < MountPoints> getMountPoints() {
+    public java.util.List<MountPoints> getMountPoints() {
         return this.mountPoints;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -57,15 +77,34 @@ public class ListMountPointsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MountPoints> mountPoints; 
+        private java.util.List<MountPoints> mountPoints; 
+        private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMountPointsResponseBody model) {
+            this.mountPoints = model.mountPoints;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * MountPoints.
          */
-        public Builder mountPoints(java.util.List < MountPoints> mountPoints) {
+        public Builder mountPoints(java.util.List<MountPoints> mountPoints) {
             this.mountPoints = mountPoints;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -91,38 +130,47 @@ public class ListMountPointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMountPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMountPointsResponseBody</p>
+     */
     public static class MountPoints extends TeaModel {
-        @NameInMap("AccessGroupId")
+        @com.aliyun.core.annotation.NameInMap("AccessGroupId")
         private String accessGroupId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FileSystemId")
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
 
-        @NameInMap("MountPointDomain")
+        @com.aliyun.core.annotation.NameInMap("MountPointAlias")
+        private String mountPointAlias;
+
+        @com.aliyun.core.annotation.NameInMap("MountPointDomain")
         private String mountPointDomain;
 
-        @NameInMap("MountPointId")
+        @com.aliyun.core.annotation.NameInMap("MountPointId")
         private String mountPointId;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private MountPoints(Builder builder) {
@@ -130,6 +178,7 @@ public class ListMountPointsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.fileSystemId = builder.fileSystemId;
+            this.mountPointAlias = builder.mountPointAlias;
             this.mountPointDomain = builder.mountPointDomain;
             this.mountPointId = builder.mountPointId;
             this.networkType = builder.networkType;
@@ -173,6 +222,13 @@ public class ListMountPointsResponseBody extends TeaModel {
          */
         public String getFileSystemId() {
             return this.fileSystemId;
+        }
+
+        /**
+         * @return mountPointAlias
+         */
+        public String getMountPointAlias() {
+            return this.mountPointAlias;
         }
 
         /**
@@ -229,6 +285,7 @@ public class ListMountPointsResponseBody extends TeaModel {
             private String createTime; 
             private String description; 
             private String fileSystemId; 
+            private String mountPointAlias; 
             private String mountPointDomain; 
             private String mountPointId; 
             private String networkType; 
@@ -236,6 +293,24 @@ public class ListMountPointsResponseBody extends TeaModel {
             private String status; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MountPoints model) {
+                this.accessGroupId = model.accessGroupId;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.fileSystemId = model.fileSystemId;
+                this.mountPointAlias = model.mountPointAlias;
+                this.mountPointDomain = model.mountPointDomain;
+                this.mountPointId = model.mountPointId;
+                this.networkType = model.networkType;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * AccessGroupId.
@@ -266,6 +341,14 @@ public class ListMountPointsResponseBody extends TeaModel {
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
+                return this;
+            }
+
+            /**
+             * MountPointAlias.
+             */
+            public Builder mountPointAlias(String mountPointAlias) {
+                this.mountPointAlias = mountPointAlias;
                 return this;
             }
 
