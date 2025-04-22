@@ -99,6 +99,10 @@ public class ListUserDevicesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Workshop")
+    private String workshop;
+
     private ListUserDevicesRequest(Builder builder) {
         super(builder);
         this.appStatuses = builder.appStatuses;
@@ -121,6 +125,7 @@ public class ListUserDevicesRequest extends Request {
         this.sharingStatus = builder.sharingStatus;
         this.sortBy = builder.sortBy;
         this.username = builder.username;
+        this.workshop = builder.workshop;
     }
 
     public static Builder builder() {
@@ -276,6 +281,13 @@ public class ListUserDevicesRequest extends Request {
         return this.username;
     }
 
+    /**
+     * @return workshop
+     */
+    public String getWorkshop() {
+        return this.workshop;
+    }
+
     public static final class Builder extends Request.Builder<ListUserDevicesRequest, Builder> {
         private java.util.List<String> appStatuses; 
         private java.util.List<String> appVersions; 
@@ -297,6 +309,7 @@ public class ListUserDevicesRequest extends Request {
         private Boolean sharingStatus; 
         private String sortBy; 
         private String username; 
+        private String workshop; 
 
         private Builder() {
             super();
@@ -324,6 +337,7 @@ public class ListUserDevicesRequest extends Request {
             this.sharingStatus = request.sharingStatus;
             this.sortBy = request.sortBy;
             this.username = request.username;
+            this.workshop = request.workshop;
         } 
 
         /**
@@ -509,6 +523,15 @@ public class ListUserDevicesRequest extends Request {
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
             this.username = username;
+            return this;
+        }
+
+        /**
+         * Workshop.
+         */
+        public Builder workshop(String workshop) {
+            this.putQueryParameter("Workshop", workshop);
+            this.workshop = workshop;
             return this;
         }
 

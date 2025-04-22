@@ -329,6 +329,9 @@ public class GetUserDeviceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
+        @com.aliyun.core.annotation.NameInMap("Workshop")
+        private String workshop;
+
         private Device(Builder builder) {
             this.appStatus = builder.appStatus;
             this.appVersion = builder.appVersion;
@@ -358,6 +361,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             this.srcIP = builder.srcIP;
             this.updateTime = builder.updateTime;
             this.username = builder.username;
+            this.workshop = builder.workshop;
         }
 
         public static Builder builder() {
@@ -564,6 +568,13 @@ public class GetUserDeviceResponseBody extends TeaModel {
             return this.username;
         }
 
+        /**
+         * @return workshop
+         */
+        public String getWorkshop() {
+            return this.workshop;
+        }
+
         public static final class Builder {
             private String appStatus; 
             private String appVersion; 
@@ -593,6 +604,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             private String srcIP; 
             private String updateTime; 
             private String username; 
+            private String workshop; 
 
             private Builder() {
             } 
@@ -626,6 +638,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
                 this.srcIP = model.srcIP;
                 this.updateTime = model.updateTime;
                 this.username = model.username;
+                this.workshop = model.workshop;
             } 
 
             /**
@@ -849,6 +862,14 @@ public class GetUserDeviceResponseBody extends TeaModel {
              */
             public Builder username(String username) {
                 this.username = username;
+                return this;
+            }
+
+            /**
+             * Workshop.
+             */
+            public Builder workshop(String workshop) {
+                this.workshop = workshop;
                 return this;
             }
 
