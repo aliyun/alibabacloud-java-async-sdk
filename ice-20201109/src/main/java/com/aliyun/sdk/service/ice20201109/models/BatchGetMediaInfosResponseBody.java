@@ -449,6 +449,9 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
      * <p>BatchGetMediaInfosResponseBody</p>
      */
     public static class MediaBasicInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Biz")
+        private String biz;
+
         @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
 
@@ -504,6 +507,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         private String userData;
 
         private MediaBasicInfo(Builder builder) {
+            this.biz = builder.biz;
             this.businessType = builder.businessType;
             this.category = builder.category;
             this.coverURL = builder.coverURL;
@@ -530,6 +534,13 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
 
         public static MediaBasicInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return biz
+         */
+        public String getBiz() {
+            return this.biz;
         }
 
         /**
@@ -659,6 +670,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String biz; 
             private String businessType; 
             private String category; 
             private String coverURL; 
@@ -682,6 +694,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             } 
 
             private Builder(MediaBasicInfo model) {
+                this.biz = model.biz;
                 this.businessType = model.businessType;
                 this.category = model.category;
                 this.coverURL = model.coverURL;
@@ -701,6 +714,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
                 this.transcodeStatus = model.transcodeStatus;
                 this.userData = model.userData;
             } 
+
+            /**
+             * Biz.
+             */
+            public Builder biz(String biz) {
+                this.biz = biz;
+                return this;
+            }
 
             /**
              * <p>The business type of the media asset.</p>
