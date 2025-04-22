@@ -287,6 +287,9 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GPU")
         private Long GPU;
 
+        @com.aliyun.core.annotation.NameInMap("GPUMemorySize")
+        private Float GPUMemorySize;
+
         @com.aliyun.core.annotation.NameInMap("GPUType")
         private String GPUType;
 
@@ -308,6 +311,9 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Price")
         private Double price;
 
+        @com.aliyun.core.annotation.NameInMap("SpotStockStatus")
+        private String spotStockStatus;
+
         @com.aliyun.core.annotation.NameInMap("SystemDiskCapacity")
         private Long systemDiskCapacity;
 
@@ -316,6 +322,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             this.CPU = builder.CPU;
             this.currency = builder.currency;
             this.GPU = builder.GPU;
+            this.GPUMemorySize = builder.GPUMemorySize;
             this.GPUType = builder.GPUType;
             this.instanceBandwidthRx = builder.instanceBandwidthRx;
             this.instanceType = builder.instanceType;
@@ -323,6 +330,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             this.labels = builder.labels;
             this.memory = builder.memory;
             this.price = builder.price;
+            this.spotStockStatus = builder.spotStockStatus;
             this.systemDiskCapacity = builder.systemDiskCapacity;
         }
 
@@ -360,6 +368,13 @@ public class ListEcsSpecsResponseBody extends TeaModel {
          */
         public Long getGPU() {
             return this.GPU;
+        }
+
+        /**
+         * @return GPUMemorySize
+         */
+        public Float getGPUMemorySize() {
+            return this.GPUMemorySize;
         }
 
         /**
@@ -412,6 +427,13 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
+         * @return spotStockStatus
+         */
+        public String getSpotStockStatus() {
+            return this.spotStockStatus;
+        }
+
+        /**
          * @return systemDiskCapacity
          */
         public Long getSystemDiskCapacity() {
@@ -423,6 +445,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             private Long CPU; 
             private String currency; 
             private Long GPU; 
+            private Float GPUMemorySize; 
             private String GPUType; 
             private Long instanceBandwidthRx; 
             private String instanceType; 
@@ -430,6 +453,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             private java.util.List<Labels> labels; 
             private Float memory; 
             private Double price; 
+            private String spotStockStatus; 
             private Long systemDiskCapacity; 
 
             private Builder() {
@@ -440,6 +464,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
                 this.CPU = model.CPU;
                 this.currency = model.currency;
                 this.GPU = model.GPU;
+                this.GPUMemorySize = model.GPUMemorySize;
                 this.GPUType = model.GPUType;
                 this.instanceBandwidthRx = model.instanceBandwidthRx;
                 this.instanceType = model.instanceType;
@@ -447,6 +472,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
                 this.labels = model.labels;
                 this.memory = model.memory;
                 this.price = model.price;
+                this.spotStockStatus = model.spotStockStatus;
                 this.systemDiskCapacity = model.systemDiskCapacity;
             } 
 
@@ -479,6 +505,14 @@ public class ListEcsSpecsResponseBody extends TeaModel {
              */
             public Builder GPU(Long GPU) {
                 this.GPU = GPU;
+                return this;
+            }
+
+            /**
+             * GPUMemorySize.
+             */
+            public Builder GPUMemorySize(Float GPUMemorySize) {
+                this.GPUMemorySize = GPUMemorySize;
                 return this;
             }
 
@@ -535,6 +569,14 @@ public class ListEcsSpecsResponseBody extends TeaModel {
              */
             public Builder price(Double price) {
                 this.price = price;
+                return this;
+            }
+
+            /**
+             * SpotStockStatus.
+             */
+            public Builder spotStockStatus(String spotStockStatus) {
+                this.spotStockStatus = spotStockStatus;
                 return this;
             }
 
