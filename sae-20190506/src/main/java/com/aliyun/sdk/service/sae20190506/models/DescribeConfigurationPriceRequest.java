@@ -28,6 +28,10 @@ public class DescribeConfigurationPriceRequest extends Request {
     private Integer memory;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewSaeVersion")
+    private String newSaeVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
@@ -39,6 +43,7 @@ public class DescribeConfigurationPriceRequest extends Request {
         super(builder);
         this.cpu = builder.cpu;
         this.memory = builder.memory;
+        this.newSaeVersion = builder.newSaeVersion;
         this.resourceType = builder.resourceType;
         this.workload = builder.workload;
     }
@@ -71,6 +76,13 @@ public class DescribeConfigurationPriceRequest extends Request {
     }
 
     /**
+     * @return newSaeVersion
+     */
+    public String getNewSaeVersion() {
+        return this.newSaeVersion;
+    }
+
+    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -87,6 +99,7 @@ public class DescribeConfigurationPriceRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeConfigurationPriceRequest, Builder> {
         private Integer cpu; 
         private Integer memory; 
+        private String newSaeVersion; 
         private String resourceType; 
         private String workload; 
 
@@ -98,6 +111,7 @@ public class DescribeConfigurationPriceRequest extends Request {
             super(request);
             this.cpu = request.cpu;
             this.memory = request.memory;
+            this.newSaeVersion = request.newSaeVersion;
             this.resourceType = request.resourceType;
             this.workload = request.workload;
         } 
@@ -147,6 +161,15 @@ public class DescribeConfigurationPriceRequest extends Request {
         public Builder memory(Integer memory) {
             this.putQueryParameter("Memory", memory);
             this.memory = memory;
+            return this;
+        }
+
+        /**
+         * NewSaeVersion.
+         */
+        public Builder newSaeVersion(String newSaeVersion) {
+            this.putQueryParameter("NewSaeVersion", newSaeVersion);
+            this.newSaeVersion = newSaeVersion;
             return this;
         }
 

@@ -236,11 +236,15 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
+        @com.aliyun.core.annotation.NameInMap("EphemeralStorage")
+        private Float ephemeralStorage;
+
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
         private RealTimeRes(Builder builder) {
             this.cpu = builder.cpu;
+            this.ephemeralStorage = builder.ephemeralStorage;
             this.memory = builder.memory;
         }
 
@@ -260,6 +264,13 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ephemeralStorage
+         */
+        public Float getEphemeralStorage() {
+            return this.ephemeralStorage;
+        }
+
+        /**
          * @return memory
          */
         public Float getMemory() {
@@ -268,6 +279,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float cpu; 
+            private Float ephemeralStorage; 
             private Float memory; 
 
             private Builder() {
@@ -275,6 +287,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
 
             private Builder(RealTimeRes model) {
                 this.cpu = model.cpu;
+                this.ephemeralStorage = model.ephemeralStorage;
                 this.memory = model.memory;
             } 
 
@@ -286,6 +299,14 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * EphemeralStorage.
+             */
+            public Builder ephemeralStorage(Float ephemeralStorage) {
+                this.ephemeralStorage = ephemeralStorage;
                 return this;
             }
 
@@ -320,6 +341,12 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
+        @com.aliyun.core.annotation.NameInMap("Cu")
+        private Float cu;
+
+        @com.aliyun.core.annotation.NameInMap("EphemeralStorage")
+        private Float ephemeralStorage;
+
         @com.aliyun.core.annotation.NameInMap("IdleCpu")
         private Float idleCpu;
 
@@ -329,6 +356,8 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         private Summary(Builder builder) {
             this.activeCpu = builder.activeCpu;
             this.cpu = builder.cpu;
+            this.cu = builder.cu;
+            this.ephemeralStorage = builder.ephemeralStorage;
             this.idleCpu = builder.idleCpu;
             this.memory = builder.memory;
         }
@@ -356,6 +385,20 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return cu
+         */
+        public Float getCu() {
+            return this.cu;
+        }
+
+        /**
+         * @return ephemeralStorage
+         */
+        public Float getEphemeralStorage() {
+            return this.ephemeralStorage;
+        }
+
+        /**
          * @return idleCpu
          */
         public Float getIdleCpu() {
@@ -372,6 +415,8 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         public static final class Builder {
             private Float activeCpu; 
             private Float cpu; 
+            private Float cu; 
+            private Float ephemeralStorage; 
             private Float idleCpu; 
             private Float memory; 
 
@@ -381,6 +426,8 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             private Builder(Summary model) {
                 this.activeCpu = model.activeCpu;
                 this.cpu = model.cpu;
+                this.cu = model.cu;
+                this.ephemeralStorage = model.ephemeralStorage;
                 this.idleCpu = model.idleCpu;
                 this.memory = model.memory;
             } 
@@ -401,6 +448,22 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * Cu.
+             */
+            public Builder cu(Float cu) {
+                this.cu = cu;
+                return this;
+            }
+
+            /**
+             * EphemeralStorage.
+             */
+            public Builder ephemeralStorage(Float ephemeralStorage) {
+                this.ephemeralStorage = ephemeralStorage;
                 return this;
             }
 
