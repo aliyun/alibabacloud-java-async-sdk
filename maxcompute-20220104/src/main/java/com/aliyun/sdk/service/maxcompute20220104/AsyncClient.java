@@ -424,6 +424,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryQuotaResponse> queryQuota(QueryQuotaRequest request);
 
     /**
+     * @param request the request parameters of QueryTunnelMetric  QueryTunnelMetricRequest
+     * @return QueryTunnelMetricResponse
+     */
+    CompletableFuture<QueryTunnelMetricResponse> queryTunnelMetric(QueryTunnelMetricRequest request);
+
+    /**
+     * @param request the request parameters of QueryTunnelMetricDetail  QueryTunnelMetricDetailRequest
+     * @return QueryTunnelMetricDetailResponse
+     */
+    CompletableFuture<QueryTunnelMetricDetailResponse> queryTunnelMetricDetail(QueryTunnelMetricDetailRequest request);
+
+    /**
      * @param request the request parameters of RetryMmsJob  RetryMmsJobRequest
      * @return RetryMmsJobResponse
      */

@@ -1291,6 +1291,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryTunnelMetric  QueryTunnelMetricRequest
+     * @return QueryTunnelMetricResponse
+     */
+    @Override
+    public CompletableFuture<QueryTunnelMetricResponse> queryTunnelMetric(QueryTunnelMetricRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryTunnelMetric").setMethod(HttpMethod.POST).setPathRegex("/api/v1/observations/tunnel/{metric}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryTunnelMetricResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryTunnelMetricResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryTunnelMetricDetail  QueryTunnelMetricDetailRequest
+     * @return QueryTunnelMetricDetailResponse
+     */
+    @Override
+    public CompletableFuture<QueryTunnelMetricDetailResponse> queryTunnelMetricDetail(QueryTunnelMetricDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryTunnelMetricDetail").setMethod(HttpMethod.POST).setPathRegex("/api/v1/observations/tunnel/{metric}/detail").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryTunnelMetricDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryTunnelMetricDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RetryMmsJob  RetryMmsJobRequest
      * @return RetryMmsJobResponse
      */
