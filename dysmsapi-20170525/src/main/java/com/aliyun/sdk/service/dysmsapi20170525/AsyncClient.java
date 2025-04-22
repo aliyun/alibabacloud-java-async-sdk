@@ -78,6 +78,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddSmsTemplateResponse> addSmsTemplate(AddSmsTemplateRequest request);
 
     /**
+     * @param request the request parameters of ChangeSignatureQualification  ChangeSignatureQualificationRequest
+     * @return ChangeSignatureQualificationResponse
+     */
+    CompletableFuture<ChangeSignatureQualificationResponse> changeSignatureQualification(ChangeSignatureQualificationRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
      * <p>You can call this operation up to 2,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
@@ -113,6 +119,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateSmartShortUrlResponse
      */
     CompletableFuture<CreateSmartShortUrlResponse> createSmartShortUrl(CreateSmartShortUrlRequest request);
+
+    /**
+     * @param request the request parameters of CreateSmsAuthorizationLetter  CreateSmsAuthorizationLetterRequest
+     * @return CreateSmsAuthorizationLetterResponse
+     */
+    CompletableFuture<CreateSmsAuthorizationLetterResponse> createSmsAuthorizationLetter(CreateSmsAuthorizationLetterRequest request);
 
     /**
      * <b>description</b> :
@@ -237,6 +249,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetOSSInfoForUploadFileResponse
      */
     CompletableFuture<GetOSSInfoForUploadFileResponse> getOSSInfoForUploadFile(GetOSSInfoForUploadFileRequest request);
+
+    /**
+     * @param request the request parameters of GetQualificationOssInfo  GetQualificationOssInfoRequest
+     * @return GetQualificationOssInfoResponse
+     */
+    CompletableFuture<GetQualificationOssInfoResponse> getQualificationOssInfo(GetQualificationOssInfoRequest request);
 
     /**
      * <b>description</b> :
@@ -371,6 +389,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryShortUrlResponse
      */
     CompletableFuture<QueryShortUrlResponse> queryShortUrl(QueryShortUrlRequest request);
+
+    /**
+     * @param request the request parameters of QuerySmsAuthorizationLetter  QuerySmsAuthorizationLetterRequest
+     * @return QuerySmsAuthorizationLetterResponse
+     */
+    CompletableFuture<QuerySmsAuthorizationLetterResponse> querySmsAuthorizationLetter(QuerySmsAuthorizationLetterRequest request);
 
     /**
      * <b>description</b> :

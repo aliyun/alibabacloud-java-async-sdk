@@ -27,7 +27,7 @@ public class GetSmsSignResponseBody extends TeaModel {
     private Boolean authorizationLetterAuditPass;
 
     @com.aliyun.core.annotation.NameInMap("AuthorizationLetterId")
-    private String authorizationLetterId;
+    private Long authorizationLetterId;
 
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
@@ -132,7 +132,7 @@ public class GetSmsSignResponseBody extends TeaModel {
     /**
      * @return authorizationLetterId
      */
-    public String getAuthorizationLetterId() {
+    public Long getAuthorizationLetterId() {
         return this.authorizationLetterId;
     }
 
@@ -245,7 +245,7 @@ public class GetSmsSignResponseBody extends TeaModel {
         private String applyScene; 
         private AuditInfo auditInfo; 
         private Boolean authorizationLetterAuditPass; 
-        private String authorizationLetterId; 
+        private Long authorizationLetterId; 
         private String code; 
         private String createDate; 
         private java.util.List<String> fileUrlList; 
@@ -317,7 +317,7 @@ public class GetSmsSignResponseBody extends TeaModel {
         /**
          * AuthorizationLetterId.
          */
-        public Builder authorizationLetterId(String authorizationLetterId) {
+        public Builder authorizationLetterId(Long authorizationLetterId) {
             this.authorizationLetterId = authorizationLetterId;
             return this;
         }

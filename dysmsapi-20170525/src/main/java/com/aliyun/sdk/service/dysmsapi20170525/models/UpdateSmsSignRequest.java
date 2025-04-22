@@ -23,7 +23,7 @@ public class UpdateSmsSignRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthorizationLetterId")
-    private String authorizationLetterId;
+    private Long authorizationLetterId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MoreData")
@@ -108,7 +108,7 @@ public class UpdateSmsSignRequest extends Request {
     /**
      * @return authorizationLetterId
      */
-    public String getAuthorizationLetterId() {
+    public Long getAuthorizationLetterId() {
         return this.authorizationLetterId;
     }
 
@@ -184,7 +184,7 @@ public class UpdateSmsSignRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateSmsSignRequest, Builder> {
         private String applySceneContent; 
-        private String authorizationLetterId; 
+        private Long authorizationLetterId; 
         private java.util.List<String> moreData; 
         private Long ownerId; 
         private Long qualificationId; 
@@ -237,7 +237,7 @@ public class UpdateSmsSignRequest extends Request {
         /**
          * AuthorizationLetterId.
          */
-        public Builder authorizationLetterId(String authorizationLetterId) {
+        public Builder authorizationLetterId(Long authorizationLetterId) {
             this.putQueryParameter("AuthorizationLetterId", authorizationLetterId);
             this.authorizationLetterId = authorizationLetterId;
             return this;

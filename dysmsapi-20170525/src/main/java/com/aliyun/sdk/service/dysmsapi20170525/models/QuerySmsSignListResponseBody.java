@@ -331,7 +331,7 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         private String auditStatus;
 
         @com.aliyun.core.annotation.NameInMap("AuthorizationLetterId")
-        private String authorizationLetterId;
+        private Long authorizationLetterId;
 
         @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
@@ -380,7 +380,7 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         /**
          * @return authorizationLetterId
          */
-        public String getAuthorizationLetterId() {
+        public Long getAuthorizationLetterId() {
             return this.authorizationLetterId;
         }
 
@@ -428,7 +428,7 @@ public class QuerySmsSignListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String auditStatus; 
-            private String authorizationLetterId; 
+            private Long authorizationLetterId; 
             private String businessType; 
             private String createDate; 
             private String orderId; 
@@ -470,7 +470,7 @@ public class QuerySmsSignListResponseBody extends TeaModel {
             /**
              * AuthorizationLetterId.
              */
-            public Builder authorizationLetterId(String authorizationLetterId) {
+            public Builder authorizationLetterId(Long authorizationLetterId) {
                 this.authorizationLetterId = authorizationLetterId;
                 return this;
             }
