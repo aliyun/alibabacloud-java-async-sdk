@@ -436,6 +436,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteSecretAPhoneNoToCust  DeleteSecretAPhoneNoToCustRequest
+     * @return DeleteSecretAPhoneNoToCustResponse
+     */
+    @Override
+    public CompletableFuture<DeleteSecretAPhoneNoToCustResponse> deleteSecretAPhoneNoToCust(DeleteSecretAPhoneNoToCustRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteSecretAPhoneNoToCust").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSecretAPhoneNoToCustResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteSecretAPhoneNoToCustResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h3><a href="#qps"></a>QPS limits</h3>
      * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
@@ -696,6 +714,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryRecordFileDownloadUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QuerySecretAPhoneNoToCust  QuerySecretAPhoneNoToCustRequest
+     * @return QuerySecretAPhoneNoToCustResponse
+     */
+    @Override
+    public CompletableFuture<QuerySecretAPhoneNoToCustResponse> querySecretAPhoneNoToCust(QuerySecretAPhoneNoToCustRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QuerySecretAPhoneNoToCust").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QuerySecretAPhoneNoToCustResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QuerySecretAPhoneNoToCustResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
