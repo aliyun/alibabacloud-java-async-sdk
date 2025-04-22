@@ -77,6 +77,9 @@ public class Product extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("servicePromises")
+    private java.util.List<String> servicePromises;
+
     @com.aliyun.core.annotation.NameInMap("shopId")
     private String shopId;
 
@@ -116,6 +119,7 @@ public class Product extends TeaModel {
         this.properties = builder.properties;
         this.quantity = builder.quantity;
         this.requestId = builder.requestId;
+        this.servicePromises = builder.servicePromises;
         this.shopId = builder.shopId;
         this.skus = builder.skus;
         this.soldQuantity = builder.soldQuantity;
@@ -277,6 +281,13 @@ public class Product extends TeaModel {
     }
 
     /**
+     * @return servicePromises
+     */
+    public java.util.List<String> getServicePromises() {
+        return this.servicePromises;
+    }
+
+    /**
      * @return shopId
      */
     public String getShopId() {
@@ -339,6 +350,7 @@ public class Product extends TeaModel {
         private java.util.List<ProductProperty> properties; 
         private Long quantity; 
         private String requestId; 
+        private java.util.List<String> servicePromises; 
         private String shopId; 
         private java.util.List<Sku> skus; 
         private String soldQuantity; 
@@ -370,6 +382,7 @@ public class Product extends TeaModel {
             this.properties = model.properties;
             this.quantity = model.quantity;
             this.requestId = model.requestId;
+            this.servicePromises = model.servicePromises;
             this.shopId = model.shopId;
             this.skus = model.skus;
             this.soldQuantity = model.soldQuantity;
@@ -535,6 +548,14 @@ public class Product extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * servicePromises.
+         */
+        public Builder servicePromises(java.util.List<String> servicePromises) {
+            this.servicePromises = servicePromises;
             return this;
         }
 
