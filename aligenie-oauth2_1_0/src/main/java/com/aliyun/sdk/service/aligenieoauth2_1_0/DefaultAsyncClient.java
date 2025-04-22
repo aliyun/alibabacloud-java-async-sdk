@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreatePlayingList  CreatePlayingListRequest
+     * @return CreatePlayingListResponse
+     */
+    @Override
+    public CompletableFuture<CreatePlayingListResponse> createPlayingList(CreatePlayingListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreatePlayingList").setMethod(HttpMethod.POST).setPathRegex("/v1.0/oauth2/content/playing/create").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePlayingListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePlayingListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ExecuteScene  ExecuteSceneRequest
      * @return ExecuteSceneResponse
      */

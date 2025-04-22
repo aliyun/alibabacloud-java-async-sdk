@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CreatePlayingList  CreatePlayingListRequest
+     * @return CreatePlayingListResponse
+     */
+    CompletableFuture<CreatePlayingListResponse> createPlayingList(CreatePlayingListRequest request);
+
+    /**
      * @param request the request parameters of ExecuteScene  ExecuteSceneRequest
      * @return ExecuteSceneResponse
      */
