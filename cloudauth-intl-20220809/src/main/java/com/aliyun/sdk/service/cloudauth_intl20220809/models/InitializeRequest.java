@@ -38,6 +38,18 @@ public class InitializeRequest extends Request {
     private String crop;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DateOfBirth")
+    private String dateOfBirth;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DateOfExpiry")
+    private String dateOfExpiry;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DocPageConfig")
+    private java.util.List<String> docPageConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DocScanMode")
     private String docScanMode;
 
@@ -48,6 +60,10 @@ public class InitializeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DocVideo")
     private String docVideo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DocumentNumber")
+    private String documentNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExperienceCode")
@@ -76,6 +92,10 @@ public class InitializeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LanguageConfig")
     private String languageConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MRTDInput")
+    private String MRTDInput;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MerchantBizId")
@@ -137,6 +157,10 @@ public class InitializeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StyleConfig")
     private String styleConfig;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseNFC")
+    private String useNFC;
+
     private InitializeRequest(Builder builder) {
         super(builder);
         this.appQualityCheck = builder.appQualityCheck;
@@ -144,9 +168,13 @@ public class InitializeRequest extends Request {
         this.callbackToken = builder.callbackToken;
         this.callbackUrl = builder.callbackUrl;
         this.crop = builder.crop;
+        this.dateOfBirth = builder.dateOfBirth;
+        this.dateOfExpiry = builder.dateOfExpiry;
+        this.docPageConfig = builder.docPageConfig;
         this.docScanMode = builder.docScanMode;
         this.docType = builder.docType;
         this.docVideo = builder.docVideo;
+        this.documentNumber = builder.documentNumber;
         this.experienceCode = builder.experienceCode;
         this.facePictureBase64 = builder.facePictureBase64;
         this.facePictureUrl = builder.facePictureUrl;
@@ -154,6 +182,7 @@ public class InitializeRequest extends Request {
         this.idSpoof = builder.idSpoof;
         this.idThreshold = builder.idThreshold;
         this.languageConfig = builder.languageConfig;
+        this.MRTDInput = builder.MRTDInput;
         this.merchantBizId = builder.merchantBizId;
         this.merchantUserId = builder.merchantUserId;
         this.metaInfo = builder.metaInfo;
@@ -169,6 +198,7 @@ public class InitializeRequest extends Request {
         this.showGuidePage = builder.showGuidePage;
         this.showOcrResult = builder.showOcrResult;
         this.styleConfig = builder.styleConfig;
+        this.useNFC = builder.useNFC;
     }
 
     public static Builder builder() {
@@ -220,6 +250,27 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return dateOfBirth
+     */
+    public String getDateOfBirth() {
+        return this.dateOfBirth;
+    }
+
+    /**
+     * @return dateOfExpiry
+     */
+    public String getDateOfExpiry() {
+        return this.dateOfExpiry;
+    }
+
+    /**
+     * @return docPageConfig
+     */
+    public java.util.List<String> getDocPageConfig() {
+        return this.docPageConfig;
+    }
+
+    /**
      * @return docScanMode
      */
     public String getDocScanMode() {
@@ -238,6 +289,13 @@ public class InitializeRequest extends Request {
      */
     public String getDocVideo() {
         return this.docVideo;
+    }
+
+    /**
+     * @return documentNumber
+     */
+    public String getDocumentNumber() {
+        return this.documentNumber;
     }
 
     /**
@@ -287,6 +345,13 @@ public class InitializeRequest extends Request {
      */
     public String getLanguageConfig() {
         return this.languageConfig;
+    }
+
+    /**
+     * @return MRTDInput
+     */
+    public String getMRTDInput() {
+        return this.MRTDInput;
     }
 
     /**
@@ -394,15 +459,26 @@ public class InitializeRequest extends Request {
         return this.styleConfig;
     }
 
+    /**
+     * @return useNFC
+     */
+    public String getUseNFC() {
+        return this.useNFC;
+    }
+
     public static final class Builder extends Request.Builder<InitializeRequest, Builder> {
         private String appQualityCheck; 
         private String authorize; 
         private String callbackToken; 
         private String callbackUrl; 
         private String crop; 
+        private String dateOfBirth; 
+        private String dateOfExpiry; 
+        private java.util.List<String> docPageConfig; 
         private String docScanMode; 
         private String docType; 
         private String docVideo; 
+        private String documentNumber; 
         private String experienceCode; 
         private String facePictureBase64; 
         private String facePictureUrl; 
@@ -410,6 +486,7 @@ public class InitializeRequest extends Request {
         private String idSpoof; 
         private String idThreshold; 
         private String languageConfig; 
+        private String MRTDInput; 
         private String merchantBizId; 
         private String merchantUserId; 
         private String metaInfo; 
@@ -425,6 +502,7 @@ public class InitializeRequest extends Request {
         private String showGuidePage; 
         private String showOcrResult; 
         private String styleConfig; 
+        private String useNFC; 
 
         private Builder() {
             super();
@@ -437,9 +515,13 @@ public class InitializeRequest extends Request {
             this.callbackToken = request.callbackToken;
             this.callbackUrl = request.callbackUrl;
             this.crop = request.crop;
+            this.dateOfBirth = request.dateOfBirth;
+            this.dateOfExpiry = request.dateOfExpiry;
+            this.docPageConfig = request.docPageConfig;
             this.docScanMode = request.docScanMode;
             this.docType = request.docType;
             this.docVideo = request.docVideo;
+            this.documentNumber = request.documentNumber;
             this.experienceCode = request.experienceCode;
             this.facePictureBase64 = request.facePictureBase64;
             this.facePictureUrl = request.facePictureUrl;
@@ -447,6 +529,7 @@ public class InitializeRequest extends Request {
             this.idSpoof = request.idSpoof;
             this.idThreshold = request.idThreshold;
             this.languageConfig = request.languageConfig;
+            this.MRTDInput = request.MRTDInput;
             this.merchantBizId = request.merchantBizId;
             this.merchantUserId = request.merchantUserId;
             this.metaInfo = request.metaInfo;
@@ -462,6 +545,7 @@ public class InitializeRequest extends Request {
             this.showGuidePage = request.showGuidePage;
             this.showOcrResult = request.showOcrResult;
             this.styleConfig = request.styleConfig;
+            this.useNFC = request.useNFC;
         } 
 
         /**
@@ -510,6 +594,34 @@ public class InitializeRequest extends Request {
         }
 
         /**
+         * DateOfBirth.
+         */
+        public Builder dateOfBirth(String dateOfBirth) {
+            this.putQueryParameter("DateOfBirth", dateOfBirth);
+            this.dateOfBirth = dateOfBirth;
+            return this;
+        }
+
+        /**
+         * DateOfExpiry.
+         */
+        public Builder dateOfExpiry(String dateOfExpiry) {
+            this.putQueryParameter("DateOfExpiry", dateOfExpiry);
+            this.dateOfExpiry = dateOfExpiry;
+            return this;
+        }
+
+        /**
+         * DocPageConfig.
+         */
+        public Builder docPageConfig(java.util.List<String> docPageConfig) {
+            String docPageConfigShrink = shrink(docPageConfig, "DocPageConfig", "json");
+            this.putQueryParameter("DocPageConfig", docPageConfigShrink);
+            this.docPageConfig = docPageConfig;
+            return this;
+        }
+
+        /**
          * DocScanMode.
          */
         public Builder docScanMode(String docScanMode) {
@@ -533,6 +645,15 @@ public class InitializeRequest extends Request {
         public Builder docVideo(String docVideo) {
             this.putQueryParameter("DocVideo", docVideo);
             this.docVideo = docVideo;
+            return this;
+        }
+
+        /**
+         * DocumentNumber.
+         */
+        public Builder documentNumber(String documentNumber) {
+            this.putQueryParameter("DocumentNumber", documentNumber);
+            this.documentNumber = documentNumber;
             return this;
         }
 
@@ -596,6 +717,15 @@ public class InitializeRequest extends Request {
         public Builder languageConfig(String languageConfig) {
             this.putQueryParameter("LanguageConfig", languageConfig);
             this.languageConfig = languageConfig;
+            return this;
+        }
+
+        /**
+         * MRTDInput.
+         */
+        public Builder MRTDInput(String MRTDInput) {
+            this.putQueryParameter("MRTDInput", MRTDInput);
+            this.MRTDInput = MRTDInput;
             return this;
         }
 
@@ -736,6 +866,15 @@ public class InitializeRequest extends Request {
         public Builder styleConfig(String styleConfig) {
             this.putQueryParameter("StyleConfig", styleConfig);
             this.styleConfig = styleConfig;
+            return this;
+        }
+
+        /**
+         * UseNFC.
+         */
+        public Builder useNFC(String useNFC) {
+            this.putQueryParameter("UseNFC", useNFC);
+            this.useNFC = useNFC;
             return this;
         }
 
