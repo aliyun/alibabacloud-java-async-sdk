@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetJobResponseBody</p>
@@ -30,6 +36,10 @@ public class GetJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return job
      */
@@ -47,6 +57,14 @@ public class GetJobResponseBody extends TeaModel {
     public static final class Builder {
         private Job job; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetJobResponseBody model) {
+            this.job = model.job;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * job.
@@ -70,6 +88,12 @@ public class GetJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class AssertCheckDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("comparison")
         private String comparison;
@@ -132,6 +156,16 @@ public class GetJobResponseBody extends TeaModel {
             private Boolean isPass; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssertCheckDetail model) {
+                this.comparison = model.comparison;
+                this.expectedValue = model.expectedValue;
+                this.isPass = model.isPass;
+                this.type = model.type;
+            } 
+
             /**
              * comparison.
              */
@@ -171,6 +205,12 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoApply")
         private Boolean autoApply;
@@ -245,6 +285,17 @@ public class GetJobResponseBody extends TeaModel {
             private String resourcesChanged; 
             private String subCommand; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.autoApply = model.autoApply;
+                this.isDestroy = model.isDestroy;
+                this.moduleVersion = model.moduleVersion;
+                this.resourcesChanged = model.resourcesChanged;
+                this.subCommand = model.subCommand;
+            } 
+
             /**
              * autoApply.
              */
@@ -292,9 +343,15 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class Job extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("assertCheckDetail")
-        private java.util.List < AssertCheckDetail> assertCheckDetail;
+        private java.util.List<AssertCheckDetail> assertCheckDetail;
 
         @com.aliyun.core.annotation.NameInMap("config")
         private Config config;
@@ -306,10 +363,13 @@ public class GetJobResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("downloadUrl")
-        private java.util.Map < String, ? > downloadUrl;
+        private java.util.Map<String, ?> downloadUrl;
 
         @com.aliyun.core.annotation.NameInMap("elapsedTime")
         private Long elapsedTime;
+
+        @com.aliyun.core.annotation.NameInMap("executeType")
+        private String executeType;
 
         @com.aliyun.core.annotation.NameInMap("isPassAssertCheck")
         private Boolean isPassAssertCheck;
@@ -321,7 +381,7 @@ public class GetJobResponseBody extends TeaModel {
         private String output;
 
         @com.aliyun.core.annotation.NameInMap("parameters")
-        private java.util.Map < String, String > parameters;
+        private java.util.Map<String, String> parameters;
 
         @com.aliyun.core.annotation.NameInMap("runtimeType")
         private String runtimeType;
@@ -330,10 +390,13 @@ public class GetJobResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("statusDetail")
-        private java.util.Map < String, JobStatusDetailValue > statusDetail;
+        private java.util.Map<String, JobStatusDetailValue> statusDetail;
 
         @com.aliyun.core.annotation.NameInMap("taskId")
         private String taskId;
+
+        @com.aliyun.core.annotation.NameInMap("taskType")
+        private String taskType;
 
         @com.aliyun.core.annotation.NameInMap("terraformProviderVersion")
         private String terraformProviderVersion;
@@ -345,6 +408,7 @@ public class GetJobResponseBody extends TeaModel {
             this.description = builder.description;
             this.downloadUrl = builder.downloadUrl;
             this.elapsedTime = builder.elapsedTime;
+            this.executeType = builder.executeType;
             this.isPassAssertCheck = builder.isPassAssertCheck;
             this.jobId = builder.jobId;
             this.output = builder.output;
@@ -353,6 +417,7 @@ public class GetJobResponseBody extends TeaModel {
             this.status = builder.status;
             this.statusDetail = builder.statusDetail;
             this.taskId = builder.taskId;
+            this.taskType = builder.taskType;
             this.terraformProviderVersion = builder.terraformProviderVersion;
         }
 
@@ -367,7 +432,7 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * @return assertCheckDetail
          */
-        public java.util.List < AssertCheckDetail> getAssertCheckDetail() {
+        public java.util.List<AssertCheckDetail> getAssertCheckDetail() {
             return this.assertCheckDetail;
         }
 
@@ -395,7 +460,7 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * @return downloadUrl
          */
-        public java.util.Map < String, ? > getDownloadUrl() {
+        public java.util.Map<String, ?> getDownloadUrl() {
             return this.downloadUrl;
         }
 
@@ -404,6 +469,13 @@ public class GetJobResponseBody extends TeaModel {
          */
         public Long getElapsedTime() {
             return this.elapsedTime;
+        }
+
+        /**
+         * @return executeType
+         */
+        public String getExecuteType() {
+            return this.executeType;
         }
 
         /**
@@ -430,7 +502,7 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.Map < String, String > getParameters() {
+        public java.util.Map<String, String> getParameters() {
             return this.parameters;
         }
 
@@ -451,7 +523,7 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * @return statusDetail
          */
-        public java.util.Map < String, JobStatusDetailValue > getStatusDetail() {
+        public java.util.Map<String, JobStatusDetailValue> getStatusDetail() {
             return this.statusDetail;
         }
 
@@ -463,6 +535,13 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskType
+         */
+        public String getTaskType() {
+            return this.taskType;
+        }
+
+        /**
          * @return terraformProviderVersion
          */
         public String getTerraformProviderVersion() {
@@ -470,26 +549,51 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AssertCheckDetail> assertCheckDetail; 
+            private java.util.List<AssertCheckDetail> assertCheckDetail; 
             private Config config; 
             private String createTime; 
             private String description; 
-            private java.util.Map < String, ? > downloadUrl; 
+            private java.util.Map<String, ?> downloadUrl; 
             private Long elapsedTime; 
+            private String executeType; 
             private Boolean isPassAssertCheck; 
             private String jobId; 
             private String output; 
-            private java.util.Map < String, String > parameters; 
+            private java.util.Map<String, String> parameters; 
             private String runtimeType; 
             private String status; 
-            private java.util.Map < String, JobStatusDetailValue > statusDetail; 
+            private java.util.Map<String, JobStatusDetailValue> statusDetail; 
             private String taskId; 
+            private String taskType; 
             private String terraformProviderVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Job model) {
+                this.assertCheckDetail = model.assertCheckDetail;
+                this.config = model.config;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.downloadUrl = model.downloadUrl;
+                this.elapsedTime = model.elapsedTime;
+                this.executeType = model.executeType;
+                this.isPassAssertCheck = model.isPassAssertCheck;
+                this.jobId = model.jobId;
+                this.output = model.output;
+                this.parameters = model.parameters;
+                this.runtimeType = model.runtimeType;
+                this.status = model.status;
+                this.statusDetail = model.statusDetail;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+                this.terraformProviderVersion = model.terraformProviderVersion;
+            } 
 
             /**
              * assertCheckDetail.
              */
-            public Builder assertCheckDetail(java.util.List < AssertCheckDetail> assertCheckDetail) {
+            public Builder assertCheckDetail(java.util.List<AssertCheckDetail> assertCheckDetail) {
                 this.assertCheckDetail = assertCheckDetail;
                 return this;
             }
@@ -521,7 +625,7 @@ public class GetJobResponseBody extends TeaModel {
             /**
              * downloadUrl.
              */
-            public Builder downloadUrl(java.util.Map < String, ? > downloadUrl) {
+            public Builder downloadUrl(java.util.Map<String, ?> downloadUrl) {
                 this.downloadUrl = downloadUrl;
                 return this;
             }
@@ -531,6 +635,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder elapsedTime(Long elapsedTime) {
                 this.elapsedTime = elapsedTime;
+                return this;
+            }
+
+            /**
+             * executeType.
+             */
+            public Builder executeType(String executeType) {
+                this.executeType = executeType;
                 return this;
             }
 
@@ -561,7 +673,7 @@ public class GetJobResponseBody extends TeaModel {
             /**
              * parameters.
              */
-            public Builder parameters(java.util.Map < String, String > parameters) {
+            public Builder parameters(java.util.Map<String, String> parameters) {
                 this.parameters = parameters;
                 return this;
             }
@@ -585,7 +697,7 @@ public class GetJobResponseBody extends TeaModel {
             /**
              * statusDetail.
              */
-            public Builder statusDetail(java.util.Map < String, JobStatusDetailValue > statusDetail) {
+            public Builder statusDetail(java.util.Map<String, JobStatusDetailValue> statusDetail) {
                 this.statusDetail = statusDetail;
                 return this;
             }
@@ -595,6 +707,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * taskType.
+             */
+            public Builder taskType(String taskType) {
+                this.taskType = taskType;
                 return this;
             }
 

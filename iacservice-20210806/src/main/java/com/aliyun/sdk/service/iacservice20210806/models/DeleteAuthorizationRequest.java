@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAuthorizationRequest} extends {@link RequestModel}
  *
  * <p>DeleteAuthorizationRequest</p>
@@ -29,7 +35,7 @@ public class DeleteAuthorizationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +60,10 @@ public class DeleteAuthorizationRequest extends Request {
         } 
 
         /**
-         * authorizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auth-433aead756057be3f6de6c17a7</p>
          */
         public Builder authorizationId(String authorizationId) {
             this.putPathParameter("authorizationId", authorizationId);

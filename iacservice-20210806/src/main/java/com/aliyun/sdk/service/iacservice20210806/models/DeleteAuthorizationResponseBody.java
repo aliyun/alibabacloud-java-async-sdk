@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAuthorizationResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAuthorizationResponseBody</p>
@@ -26,6 +32,10 @@ public class DeleteAuthorizationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -36,8 +46,18 @@ public class DeleteAuthorizationResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteAuthorizationResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BF72A6FB-B071-5F2E-A036-9D62545B962C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

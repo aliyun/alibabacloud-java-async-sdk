@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListParameterSetsResponseBody} extends {@link TeaModel}
  *
  * <p>ListParameterSetsResponseBody</p>
@@ -18,7 +24,7 @@ public class ListParameterSetsResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("parameterSets")
-    private java.util.List < ParameterSets> parameterSets;
+    private java.util.List<ParameterSets> parameterSets;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -42,6 +48,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -59,7 +69,7 @@ public class ListParameterSetsResponseBody extends TeaModel {
     /**
      * @return parameterSets
      */
-    public java.util.List < ParameterSets> getParameterSets() {
+    public java.util.List<ParameterSets> getParameterSets() {
         return this.parameterSets;
     }
 
@@ -80,9 +90,20 @@ public class ListParameterSetsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < ParameterSets> parameterSets; 
+        private java.util.List<ParameterSets> parameterSets; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListParameterSetsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.parameterSets = model.parameterSets;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * pageNumber.
@@ -103,7 +124,7 @@ public class ListParameterSetsResponseBody extends TeaModel {
         /**
          * parameterSets.
          */
-        public Builder parameterSets(java.util.List < ParameterSets> parameterSets) {
+        public Builder parameterSets(java.util.List<ParameterSets> parameterSets) {
             this.parameterSets = parameterSets;
             return this;
         }
@@ -130,6 +151,12 @@ public class ListParameterSetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListParameterSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListParameterSetsResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -180,6 +207,15 @@ public class ListParameterSetsResponseBody extends TeaModel {
             private String type; 
             private Object value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * name.
              */
@@ -211,6 +247,12 @@ public class ListParameterSetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListParameterSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListParameterSetsResponseBody</p>
+     */
     public static class RelationList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -261,6 +303,15 @@ public class ListParameterSetsResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelationList model) {
+                this.createTime = model.createTime;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * createTime.
              */
@@ -292,6 +343,12 @@ public class ListParameterSetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListParameterSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListParameterSetsResponseBody</p>
+     */
     public static class ParameterSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -309,10 +366,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
         private String parameterSetId;
 
         @com.aliyun.core.annotation.NameInMap("parameters")
-        private java.util.List < Parameters> parameters;
+        private java.util.List<Parameters> parameters;
 
         @com.aliyun.core.annotation.NameInMap("relationList")
-        private java.util.List < RelationList> relationList;
+        private java.util.List<RelationList> relationList;
 
         private ParameterSets(Builder builder) {
             this.createTime = builder.createTime;
@@ -370,14 +427,14 @@ public class ListParameterSetsResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.List < Parameters> getParameters() {
+        public java.util.List<Parameters> getParameters() {
             return this.parameters;
         }
 
         /**
          * @return relationList
          */
-        public java.util.List < RelationList> getRelationList() {
+        public java.util.List<RelationList> getRelationList() {
             return this.relationList;
         }
 
@@ -387,8 +444,21 @@ public class ListParameterSetsResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private String parameterSetId; 
-            private java.util.List < Parameters> parameters; 
-            private java.util.List < RelationList> relationList; 
+            private java.util.List<Parameters> parameters; 
+            private java.util.List<RelationList> relationList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParameterSets model) {
+                this.createTime = model.createTime;
+                this.deletionProtection = model.deletionProtection;
+                this.description = model.description;
+                this.name = model.name;
+                this.parameterSetId = model.parameterSetId;
+                this.parameters = model.parameters;
+                this.relationList = model.relationList;
+            } 
 
             /**
              * createTime.
@@ -433,7 +503,7 @@ public class ListParameterSetsResponseBody extends TeaModel {
             /**
              * parameters.
              */
-            public Builder parameters(java.util.List < Parameters> parameters) {
+            public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;
                 return this;
             }
@@ -441,7 +511,7 @@ public class ListParameterSetsResponseBody extends TeaModel {
             /**
              * relationList.
              */
-            public Builder relationList(java.util.List < RelationList> relationList) {
+            public Builder relationList(java.util.List<RelationList> relationList) {
                 this.relationList = relationList;
                 return this;
             }

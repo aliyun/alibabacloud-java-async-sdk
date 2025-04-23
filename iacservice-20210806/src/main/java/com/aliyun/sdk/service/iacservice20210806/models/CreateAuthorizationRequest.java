@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAuthorizationRequest} extends {@link RequestModel}
  *
  * <p>CreateAuthorizationRequest</p>
@@ -57,7 +63,7 @@ public class CreateAuthorizationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -127,7 +133,10 @@ public class CreateAuthorizationRequest extends Request {
         } 
 
         /**
-         * clientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -145,7 +154,10 @@ public class CreateAuthorizationRequest extends Request {
         }
 
         /**
-         * moduleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mod-148e7853433574fff6b316f4eb737e</p>
          */
         public Builder moduleId(String moduleId) {
             this.putBodyParameter("moduleId", moduleId);
@@ -154,7 +166,10 @@ public class CreateAuthorizationRequest extends Request {
         }
 
         /**
-         * moduleVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder moduleVersion(String moduleVersion) {
             this.putBodyParameter("moduleVersion", moduleVersion);
@@ -172,7 +187,10 @@ public class CreateAuthorizationRequest extends Request {
         }
 
         /**
-         * uid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5a220da4-f594-4776-87ed-f37888ec0473</p>
          */
         public Builder uid(Long uid) {
             this.putBodyParameter("uid", uid);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAvailableTerraformVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAvailableTerraformVersionsResponseBody</p>
@@ -18,7 +24,7 @@ public class ListAvailableTerraformVersionsResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("verisonList")
-    private java.util.List < String > verisonList;
+    private java.util.List<String> verisonList;
 
     private ListAvailableTerraformVersionsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -32,6 +38,10 @@ public class ListAvailableTerraformVersionsResponseBody extends TeaModel {
 
     public static ListAvailableTerraformVersionsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -51,14 +61,23 @@ public class ListAvailableTerraformVersionsResponseBody extends TeaModel {
     /**
      * @return verisonList
      */
-    public java.util.List < String > getVerisonList() {
+    public java.util.List<String> getVerisonList() {
         return this.verisonList;
     }
 
     public static final class Builder {
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < String > verisonList; 
+        private java.util.List<String> verisonList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAvailableTerraformVersionsResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.verisonList = model.verisonList;
+        } 
 
         /**
          * requestId.
@@ -79,7 +98,7 @@ public class ListAvailableTerraformVersionsResponseBody extends TeaModel {
         /**
          * verisonList.
          */
-        public Builder verisonList(java.util.List < String > verisonList) {
+        public Builder verisonList(java.util.List<String> verisonList) {
             this.verisonList = verisonList;
             return this;
         }

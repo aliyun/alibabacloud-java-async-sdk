@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTaskPolicyRequest} extends {@link RequestModel}
  *
  * <p>UpdateTaskPolicyRequest</p>
@@ -22,7 +28,7 @@ public class UpdateTaskPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("taskPolicies")
-    private java.util.List < TaskPolicies> taskPolicies;
+    private java.util.List<TaskPolicies> taskPolicies;
 
     private UpdateTaskPolicyRequest(Builder builder) {
         super(builder);
@@ -39,7 +45,7 @@ public class UpdateTaskPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -61,14 +67,14 @@ public class UpdateTaskPolicyRequest extends Request {
     /**
      * @return taskPolicies
      */
-    public java.util.List < TaskPolicies> getTaskPolicies() {
+    public java.util.List<TaskPolicies> getTaskPolicies() {
         return this.taskPolicies;
     }
 
     public static final class Builder extends Request.Builder<UpdateTaskPolicyRequest, Builder> {
         private String groupId; 
         private String clientToken; 
-        private java.util.List < TaskPolicies> taskPolicies; 
+        private java.util.List<TaskPolicies> taskPolicies; 
 
         private Builder() {
             super();
@@ -91,7 +97,10 @@ public class UpdateTaskPolicyRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -102,7 +111,7 @@ public class UpdateTaskPolicyRequest extends Request {
         /**
          * taskPolicies.
          */
-        public Builder taskPolicies(java.util.List < TaskPolicies> taskPolicies) {
+        public Builder taskPolicies(java.util.List<TaskPolicies> taskPolicies) {
             this.putBodyParameter("taskPolicies", taskPolicies);
             this.taskPolicies = taskPolicies;
             return this;
@@ -115,6 +124,12 @@ public class UpdateTaskPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTaskPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTaskPolicyRequest</p>
+     */
     public static class TaskPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("priority")
         private String priority;
@@ -164,6 +179,15 @@ public class UpdateTaskPolicyRequest extends Request {
             private String priority; 
             private String taskId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskPolicies model) {
+                this.priority = model.priority;
+                this.taskId = model.taskId;
+                this.type = model.type;
+            } 
 
             /**
              * priority.

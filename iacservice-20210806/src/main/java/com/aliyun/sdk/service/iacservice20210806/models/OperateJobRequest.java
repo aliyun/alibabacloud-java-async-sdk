@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateJobRequest} extends {@link RequestModel}
  *
  * <p>OperateJobRequest</p>
@@ -31,12 +37,17 @@ public class OperateJobRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
     private String comment;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("taskType")
+    private String taskType;
+
     private OperateJobRequest(Builder builder) {
         super(builder);
         this.taskId = builder.taskId;
         this.jobId = builder.jobId;
         this.operationType = builder.operationType;
         this.comment = builder.comment;
+        this.taskType = builder.taskType;
     }
 
     public static Builder builder() {
@@ -47,7 +58,7 @@ public class OperateJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -80,11 +91,19 @@ public class OperateJobRequest extends Request {
         return this.comment;
     }
 
+    /**
+     * @return taskType
+     */
+    public String getTaskType() {
+        return this.taskType;
+    }
+
     public static final class Builder extends Request.Builder<OperateJobRequest, Builder> {
         private String taskId; 
         private String jobId; 
         private String operationType; 
         private String comment; 
+        private String taskType; 
 
         private Builder() {
             super();
@@ -96,10 +115,14 @@ public class OperateJobRequest extends Request {
             this.jobId = request.jobId;
             this.operationType = request.operationType;
             this.comment = request.comment;
+            this.taskType = request.taskType;
         } 
 
         /**
-         * taskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-518855d9a058cfffe0e0a92745bbc</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);
@@ -108,7 +131,10 @@ public class OperateJobRequest extends Request {
         }
 
         /**
-         * jobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-5fd38c9b92d54fff865d936f22a39</p>
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("jobId", jobId);
@@ -117,7 +143,10 @@ public class OperateJobRequest extends Request {
         }
 
         /**
-         * operationType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>execute</p>
          */
         public Builder operationType(String operationType) {
             this.putPathParameter("operationType", operationType);
@@ -126,11 +155,23 @@ public class OperateJobRequest extends Request {
         }
 
         /**
-         * comment.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dasd</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("comment", comment);
             this.comment = comment;
+            return this;
+        }
+
+        /**
+         * taskType.
+         */
+        public Builder taskType(String taskType) {
+            this.putQueryParameter("taskType", taskType);
+            this.taskType = taskType;
             return this;
         }
 

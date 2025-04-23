@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloneModuleRequest} extends {@link RequestModel}
  *
  * <p>CloneModuleRequest</p>
@@ -53,7 +59,7 @@ public class CloneModuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -114,7 +120,10 @@ public class CloneModuleRequest extends Request {
         } 
 
         /**
-         * description.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -123,7 +132,10 @@ public class CloneModuleRequest extends Request {
         }
 
         /**
-         * moduleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mod-148e7853433574fff6b316f4eb737e</p>
          */
         public Builder moduleId(String moduleId) {
             this.putBodyParameter("moduleId", moduleId);
@@ -132,7 +144,10 @@ public class CloneModuleRequest extends Request {
         }
 
         /**
-         * moduleSource.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>market</p>
          */
         public Builder moduleSource(String moduleSource) {
             this.putBodyParameter("moduleSource", moduleSource);
@@ -141,7 +156,10 @@ public class CloneModuleRequest extends Request {
         }
 
         /**
-         * moduleVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder moduleVersion(String moduleVersion) {
             this.putBodyParameter("moduleVersion", moduleVersion);
@@ -150,7 +168,10 @@ public class CloneModuleRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

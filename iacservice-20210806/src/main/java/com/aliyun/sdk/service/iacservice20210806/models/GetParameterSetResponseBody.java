@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetParameterSetResponseBody} extends {@link TeaModel}
  *
  * <p>GetParameterSetResponseBody</p>
@@ -30,6 +36,10 @@ public class GetParameterSetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parameterSet
      */
@@ -47,6 +57,14 @@ public class GetParameterSetResponseBody extends TeaModel {
     public static final class Builder {
         private ParameterSet parameterSet; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetParameterSetResponseBody model) {
+            this.parameterSet = model.parameterSet;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * parameterSet.
@@ -70,6 +88,12 @@ public class GetParameterSetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetParameterSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetParameterSetResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -120,6 +144,15 @@ public class GetParameterSetResponseBody extends TeaModel {
             private String type; 
             private Object value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * name.
              */
@@ -151,6 +184,12 @@ public class GetParameterSetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetParameterSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetParameterSetResponseBody</p>
+     */
     public static class RelationList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -201,6 +240,15 @@ public class GetParameterSetResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelationList model) {
+                this.createTime = model.createTime;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
              * createTime.
              */
@@ -232,6 +280,12 @@ public class GetParameterSetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetParameterSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetParameterSetResponseBody</p>
+     */
     public static class ParameterSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -246,10 +300,10 @@ public class GetParameterSetResponseBody extends TeaModel {
         private String parameterSetId;
 
         @com.aliyun.core.annotation.NameInMap("parameters")
-        private java.util.List < Parameters> parameters;
+        private java.util.List<Parameters> parameters;
 
         @com.aliyun.core.annotation.NameInMap("relationList")
-        private java.util.List < RelationList> relationList;
+        private java.util.List<RelationList> relationList;
 
         private ParameterSet(Builder builder) {
             this.createTime = builder.createTime;
@@ -299,14 +353,14 @@ public class GetParameterSetResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.List < Parameters> getParameters() {
+        public java.util.List<Parameters> getParameters() {
             return this.parameters;
         }
 
         /**
          * @return relationList
          */
-        public java.util.List < RelationList> getRelationList() {
+        public java.util.List<RelationList> getRelationList() {
             return this.relationList;
         }
 
@@ -315,8 +369,20 @@ public class GetParameterSetResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private String parameterSetId; 
-            private java.util.List < Parameters> parameters; 
-            private java.util.List < RelationList> relationList; 
+            private java.util.List<Parameters> parameters; 
+            private java.util.List<RelationList> relationList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParameterSet model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.name = model.name;
+                this.parameterSetId = model.parameterSetId;
+                this.parameters = model.parameters;
+                this.relationList = model.relationList;
+            } 
 
             /**
              * createTime.
@@ -353,7 +419,7 @@ public class GetParameterSetResponseBody extends TeaModel {
             /**
              * parameters.
              */
-            public Builder parameters(java.util.List < Parameters> parameters) {
+            public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;
                 return this;
             }
@@ -361,7 +427,7 @@ public class GetParameterSetResponseBody extends TeaModel {
             /**
              * relationList.
              */
-            public Builder relationList(java.util.List < RelationList> relationList) {
+            public Builder relationList(java.util.List<RelationList> relationList) {
                 this.relationList = relationList;
                 return this;
             }

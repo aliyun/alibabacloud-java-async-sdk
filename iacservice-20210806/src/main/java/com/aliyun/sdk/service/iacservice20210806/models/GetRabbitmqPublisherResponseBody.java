@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRabbitmqPublisherResponseBody} extends {@link TeaModel}
  *
  * <p>GetRabbitmqPublisherResponseBody</p>
@@ -30,6 +36,10 @@ public class GetRabbitmqPublisherResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return publisher
      */
@@ -47,6 +57,14 @@ public class GetRabbitmqPublisherResponseBody extends TeaModel {
     public static final class Builder {
         private Publisher publisher; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRabbitmqPublisherResponseBody model) {
+            this.publisher = model.publisher;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * publisher.
@@ -70,6 +88,12 @@ public class GetRabbitmqPublisherResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRabbitmqPublisherResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRabbitmqPublisherResponseBody</p>
+     */
     public static class Publisher extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -96,7 +120,7 @@ public class GetRabbitmqPublisherResponseBody extends TeaModel {
         private String publisherId;
 
         @com.aliyun.core.annotation.NameInMap("taskIds")
-        private java.util.List < String > taskIds;
+        private java.util.List<String> taskIds;
 
         @com.aliyun.core.annotation.NameInMap("userName")
         private String userName;
@@ -185,7 +209,7 @@ public class GetRabbitmqPublisherResponseBody extends TeaModel {
         /**
          * @return taskIds
          */
-        public java.util.List < String > getTaskIds() {
+        public java.util.List<String> getTaskIds() {
             return this.taskIds;
         }
 
@@ -212,9 +236,26 @@ public class GetRabbitmqPublisherResponseBody extends TeaModel {
             private String name; 
             private Long port; 
             private String publisherId; 
-            private java.util.List < String > taskIds; 
+            private java.util.List<String> taskIds; 
             private String userName; 
             private String virtualHost; 
+
+            private Builder() {
+            } 
+
+            private Builder(Publisher model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.exchangeName = model.exchangeName;
+                this.exchangeType = model.exchangeType;
+                this.hostName = model.hostName;
+                this.name = model.name;
+                this.port = model.port;
+                this.publisherId = model.publisherId;
+                this.taskIds = model.taskIds;
+                this.userName = model.userName;
+                this.virtualHost = model.virtualHost;
+            } 
 
             /**
              * createTime.
@@ -283,7 +324,7 @@ public class GetRabbitmqPublisherResponseBody extends TeaModel {
             /**
              * taskIds.
              */
-            public Builder taskIds(java.util.List < String > taskIds) {
+            public Builder taskIds(java.util.List<String> taskIds) {
                 this.taskIds = taskIds;
                 return this;
             }

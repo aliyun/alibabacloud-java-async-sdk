@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobRequest} extends {@link RequestModel}
  *
  * <p>GetJobRequest</p>
@@ -21,10 +27,15 @@ public class GetJobRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("taskType")
+    private String taskType;
+
     private GetJobRequest(Builder builder) {
         super(builder);
         this.taskId = builder.taskId;
         this.jobId = builder.jobId;
+        this.taskType = builder.taskType;
     }
 
     public static Builder builder() {
@@ -35,7 +46,7 @@ public class GetJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,9 +65,17 @@ public class GetJobRequest extends Request {
         return this.jobId;
     }
 
+    /**
+     * @return taskType
+     */
+    public String getTaskType() {
+        return this.taskType;
+    }
+
     public static final class Builder extends Request.Builder<GetJobRequest, Builder> {
         private String taskId; 
         private String jobId; 
+        private String taskType; 
 
         private Builder() {
             super();
@@ -66,10 +85,14 @@ public class GetJobRequest extends Request {
             super(request);
             this.taskId = request.taskId;
             this.jobId = request.jobId;
+            this.taskType = request.taskType;
         } 
 
         /**
-         * taskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-55f1739d9050fffee8fe2a2c4a605</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);
@@ -78,11 +101,23 @@ public class GetJobRequest extends Request {
         }
 
         /**
-         * jobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-433aead756057ffef0028917e6f26</p>
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("jobId", jobId);
             this.jobId = jobId;
+            return this;
+        }
+
+        /**
+         * taskType.
+         */
+        public Builder taskType(String taskType) {
+            this.putQueryParameter("taskType", taskType);
+            this.taskType = taskType;
             return this;
         }
 

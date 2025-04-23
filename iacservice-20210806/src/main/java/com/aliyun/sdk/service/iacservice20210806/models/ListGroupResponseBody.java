@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListGroupResponseBody</p>
@@ -15,7 +21,7 @@ public class ListGroupResponseBody extends TeaModel {
     private Long count;
 
     @com.aliyun.core.annotation.NameInMap("groups")
-    private java.util.List < Groups> groups;
+    private java.util.List<Groups> groups;
 
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
@@ -42,6 +48,10 @@ public class ListGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -52,7 +62,7 @@ public class ListGroupResponseBody extends TeaModel {
     /**
      * @return groups
      */
-    public java.util.List < Groups> getGroups() {
+    public java.util.List<Groups> getGroups() {
         return this.groups;
     }
 
@@ -79,10 +89,21 @@ public class ListGroupResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long count; 
-        private java.util.List < Groups> groups; 
+        private java.util.List<Groups> groups; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGroupResponseBody model) {
+            this.count = model.count;
+            this.groups = model.groups;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * count.
@@ -95,7 +116,7 @@ public class ListGroupResponseBody extends TeaModel {
         /**
          * groups.
          */
-        public Builder groups(java.util.List < Groups> groups) {
+        public Builder groups(java.util.List<Groups> groups) {
             this.groups = groups;
             return this;
         }
@@ -130,6 +151,12 @@ public class ListGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGroupResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -168,6 +195,14 @@ public class ListGroupResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * key.
              */
@@ -191,6 +226,12 @@ public class ListGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGroupResponseBody</p>
+     */
     public static class Groups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -217,7 +258,7 @@ public class ListGroupResponseBody extends TeaModel {
         private Long sceneTestingTaskCnt;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("taskCnt")
         private Long taskCnt;
@@ -302,7 +343,7 @@ public class ListGroupResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -322,8 +363,24 @@ public class ListGroupResponseBody extends TeaModel {
             private String name; 
             private String projectId; 
             private Long sceneTestingTaskCnt; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Long taskCnt; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.isDefault = model.isDefault;
+                this.moduleCnt = model.moduleCnt;
+                this.name = model.name;
+                this.projectId = model.projectId;
+                this.sceneTestingTaskCnt = model.sceneTestingTaskCnt;
+                this.tags = model.tags;
+                this.taskCnt = model.taskCnt;
+            } 
 
             /**
              * createTime.
@@ -392,7 +449,7 @@ public class ListGroupResponseBody extends TeaModel {
             /**
              * tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

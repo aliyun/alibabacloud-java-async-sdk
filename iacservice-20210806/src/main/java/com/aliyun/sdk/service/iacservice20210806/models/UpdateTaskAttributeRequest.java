@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTaskAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateTaskAttributeRequest</p>
@@ -54,11 +60,11 @@ public class UpdateTaskAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("parameters")
-    private java.util.Map < String, String > parameters;
+    private java.util.Map<String, String> parameters;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("protectionStrategy")
-    private java.util.List < String > protectionStrategy;
+    private java.util.List<String> protectionStrategy;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ramRole")
@@ -110,7 +116,7 @@ public class UpdateTaskAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -181,14 +187,14 @@ public class UpdateTaskAttributeRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.Map < String, String > getParameters() {
+    public java.util.Map<String, String> getParameters() {
         return this.parameters;
     }
 
     /**
      * @return protectionStrategy
      */
-    public java.util.List < String > getProtectionStrategy() {
+    public java.util.List<String> getProtectionStrategy() {
         return this.protectionStrategy;
     }
 
@@ -237,8 +243,8 @@ public class UpdateTaskAttributeRequest extends Request {
         private String moduleId; 
         private String moduleVersion; 
         private String name; 
-        private java.util.Map < String, String > parameters; 
-        private java.util.List < String > protectionStrategy; 
+        private java.util.Map<String, String> parameters; 
+        private java.util.List<String> protectionStrategy; 
         private String ramRole; 
         private Boolean skipPropertyValidation; 
         private String terraformVersion; 
@@ -270,7 +276,10 @@ public class UpdateTaskAttributeRequest extends Request {
         } 
 
         /**
-         * taskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-4267dcfbf1b6dfff67fea425525e2</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);
@@ -279,7 +288,10 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * autoApply.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoApply(Boolean autoApply) {
             this.putBodyParameter("autoApply", autoApply);
@@ -324,7 +336,10 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * moduleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mod-148e7853433574fff6b316f4eb737e</p>
          */
         public Builder moduleId(String moduleId) {
             this.putBodyParameter("moduleId", moduleId);
@@ -333,7 +348,10 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * moduleVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder moduleVersion(String moduleVersion) {
             this.putBodyParameter("moduleVersion", moduleVersion);
@@ -342,7 +360,10 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -353,7 +374,7 @@ public class UpdateTaskAttributeRequest extends Request {
         /**
          * parameters.
          */
-        public Builder parameters(java.util.Map < String, String > parameters) {
+        public Builder parameters(java.util.Map<String, String> parameters) {
             this.putBodyParameter("parameters", parameters);
             this.parameters = parameters;
             return this;
@@ -362,14 +383,17 @@ public class UpdateTaskAttributeRequest extends Request {
         /**
          * protectionStrategy.
          */
-        public Builder protectionStrategy(java.util.List < String > protectionStrategy) {
+        public Builder protectionStrategy(java.util.List<String> protectionStrategy) {
             this.putBodyParameter("protectionStrategy", protectionStrategy);
             this.protectionStrategy = protectionStrategy;
             return this;
         }
 
         /**
-         * ramRole.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder ramRole(String ramRole) {
             this.putBodyParameter("ramRole", ramRole);
@@ -396,7 +420,10 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * triggerStrategy.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder triggerStrategy(String triggerStrategy) {
             this.putBodyParameter("triggerStrategy", triggerStrategy);
@@ -420,6 +447,12 @@ public class UpdateTaskAttributeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTaskAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTaskAttributeRequest</p>
+     */
     public static class GroupInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupId")
         private String groupId;
@@ -457,6 +490,14 @@ public class UpdateTaskAttributeRequest extends Request {
         public static final class Builder {
             private String groupId; 
             private String projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupInfo model) {
+                this.groupId = model.groupId;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * groupId.

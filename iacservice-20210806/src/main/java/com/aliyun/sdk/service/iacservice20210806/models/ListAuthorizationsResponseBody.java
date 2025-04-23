@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAuthorizationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAuthorizationsResponseBody</p>
  */
 public class ListAuthorizationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("authorizations")
-    private java.util.List < Authorizations> authorizations;
+    private java.util.List<Authorizations> authorizations;
 
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
@@ -42,10 +48,14 @@ public class ListAuthorizationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authorizations
      */
-    public java.util.List < Authorizations> getAuthorizations() {
+    public java.util.List<Authorizations> getAuthorizations() {
         return this.authorizations;
     }
 
@@ -78,16 +88,27 @@ public class ListAuthorizationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Authorizations> authorizations; 
+        private java.util.List<Authorizations> authorizations; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAuthorizationsResponseBody model) {
+            this.authorizations = model.authorizations;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * authorizations.
          */
-        public Builder authorizations(java.util.List < Authorizations> authorizations) {
+        public Builder authorizations(java.util.List<Authorizations> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
@@ -109,7 +130,10 @@ public class ListAuthorizationsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C67A913A-2A0F-53F6-A041-56CC4CA1E593</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +154,12 @@ public class ListAuthorizationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAuthorizationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAuthorizationsResponseBody</p>
+     */
     public static class Authorizations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("authorizationId")
         private String authorizationId;
@@ -239,6 +269,20 @@ public class ListAuthorizationsResponseBody extends TeaModel {
             private String name; 
             private Long ownerUid; 
             private Long uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Authorizations model) {
+                this.authorizationId = model.authorizationId;
+                this.createTime = model.createTime;
+                this.dueTime = model.dueTime;
+                this.moduleId = model.moduleId;
+                this.moduleVersion = model.moduleVersion;
+                this.name = model.name;
+                this.ownerUid = model.ownerUid;
+                this.uid = model.uid;
+            } 
 
             /**
              * authorizationId.

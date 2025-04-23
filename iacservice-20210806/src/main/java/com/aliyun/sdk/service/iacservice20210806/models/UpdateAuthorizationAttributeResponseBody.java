@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAuthorizationAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateAuthorizationAttributeResponseBody</p>
@@ -26,6 +32,10 @@ public class UpdateAuthorizationAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -36,8 +46,18 @@ public class UpdateAuthorizationAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateAuthorizationAttributeResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>712C87FE-7C24-5298-B3E3-2BCB7AB9ED01</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectResponseBody</p>
@@ -21,7 +27,7 @@ public class ListProjectResponseBody extends TeaModel {
     private Long pageSize;
 
     @com.aliyun.core.annotation.NameInMap("projects")
-    private java.util.List < Projects> projects;
+    private java.util.List<Projects> projects;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -40,6 +46,10 @@ public class ListProjectResponseBody extends TeaModel {
 
     public static ListProjectResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -66,7 +76,7 @@ public class ListProjectResponseBody extends TeaModel {
     /**
      * @return projects
      */
-    public java.util.List < Projects> getProjects() {
+    public java.util.List<Projects> getProjects() {
         return this.projects;
     }
 
@@ -81,8 +91,19 @@ public class ListProjectResponseBody extends TeaModel {
         private Long count; 
         private Long pageNumber; 
         private Long pageSize; 
-        private java.util.List < Projects> projects; 
+        private java.util.List<Projects> projects; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectResponseBody model) {
+            this.count = model.count;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.projects = model.projects;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * count.
@@ -111,7 +132,7 @@ public class ListProjectResponseBody extends TeaModel {
         /**
          * projects.
          */
-        public Builder projects(java.util.List < Projects> projects) {
+        public Builder projects(java.util.List<Projects> projects) {
             this.projects = projects;
             return this;
         }
@@ -130,6 +151,12 @@ public class ListProjectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -168,6 +195,14 @@ public class ListProjectResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * key.
              */
@@ -191,6 +226,12 @@ public class ListProjectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectResponseBody</p>
+     */
     public static class Projects extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -205,7 +246,7 @@ public class ListProjectResponseBody extends TeaModel {
         private String projectId;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("taskCnt")
         private Long taskCnt;
@@ -258,7 +299,7 @@ public class ListProjectResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -274,8 +315,20 @@ public class ListProjectResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private String projectId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Long taskCnt; 
+
+            private Builder() {
+            } 
+
+            private Builder(Projects model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.name = model.name;
+                this.projectId = model.projectId;
+                this.tags = model.tags;
+                this.taskCnt = model.taskCnt;
+            } 
 
             /**
              * createTime.
@@ -312,7 +365,7 @@ public class ListProjectResponseBody extends TeaModel {
             /**
              * tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

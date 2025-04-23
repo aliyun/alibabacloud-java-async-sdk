@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetModuleVersionResponseBody} extends {@link TeaModel}
  *
  * <p>GetModuleVersionResponseBody</p>
@@ -30,6 +36,10 @@ public class GetModuleVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -47,6 +57,14 @@ public class GetModuleVersionResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Version version; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetModuleVersionResponseBody model) {
+            this.requestId = model.requestId;
+            this.version = model.version;
+        } 
 
         /**
          * requestId.
@@ -70,6 +88,12 @@ public class GetModuleVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetModuleVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModuleVersionResponseBody</p>
+     */
     public static class Version extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -96,7 +120,7 @@ public class GetModuleVersionResponseBody extends TeaModel {
         private String statePath;
 
         @com.aliyun.core.annotation.NameInMap("terraformContext")
-        private java.util.Map < String, ? > terraformContext;
+        private java.util.Map<String, ?> terraformContext;
 
         @com.aliyun.core.annotation.NameInMap("versionStrategy")
         private String versionStrategy;
@@ -181,7 +205,7 @@ public class GetModuleVersionResponseBody extends TeaModel {
         /**
          * @return terraformContext
          */
-        public java.util.Map < String, ? > getTerraformContext() {
+        public java.util.Map<String, ?> getTerraformContext() {
             return this.terraformContext;
         }
 
@@ -201,8 +225,24 @@ public class GetModuleVersionResponseBody extends TeaModel {
             private String source; 
             private String sourcePath; 
             private String statePath; 
-            private java.util.Map < String, ? > terraformContext; 
+            private java.util.Map<String, ?> terraformContext; 
             private String versionStrategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(Version model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.moduleId = model.moduleId;
+                this.moduleVersion = model.moduleVersion;
+                this.name = model.name;
+                this.source = model.source;
+                this.sourcePath = model.sourcePath;
+                this.statePath = model.statePath;
+                this.terraformContext = model.terraformContext;
+                this.versionStrategy = model.versionStrategy;
+            } 
 
             /**
              * createTime.
@@ -271,7 +311,7 @@ public class GetModuleVersionResponseBody extends TeaModel {
             /**
              * terraformContext.
              */
-            public Builder terraformContext(java.util.Map < String, ? > terraformContext) {
+            public Builder terraformContext(java.util.Map<String, ?> terraformContext) {
                 this.terraformContext = terraformContext;
                 return this;
             }

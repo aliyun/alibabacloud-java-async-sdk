@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskResponseBody</p>
@@ -30,6 +36,10 @@ public class GetTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class GetTaskResponseBody extends TeaModel {
         private String requestId; 
         private Task task; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.task = model.task;
+        } 
+
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C24C498A-09CF-54D3-8972-8DC074CF8614</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class GetTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskResponseBody</p>
+     */
     public static class GroupInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupId")
         private String groupId;
@@ -132,6 +159,16 @@ public class GetTaskResponseBody extends TeaModel {
             private String projectId; 
             private String projectName; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupInfo model) {
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+            } 
+
             /**
              * groupId.
              */
@@ -171,6 +208,12 @@ public class GetTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskResponseBody</p>
+     */
     public static class Task extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoApply")
         private Boolean autoApply;
@@ -203,10 +246,10 @@ public class GetTaskResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("parameters")
-        private java.util.Map < String, String > parameters;
+        private java.util.Map<String, String> parameters;
 
         @com.aliyun.core.annotation.NameInMap("protectionStrategy")
-        private java.util.List < String > protectionStrategy;
+        private java.util.List<String> protectionStrategy;
 
         @com.aliyun.core.annotation.NameInMap("ramRole")
         private String ramRole;
@@ -336,14 +379,14 @@ public class GetTaskResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.Map < String, String > getParameters() {
+        public java.util.Map<String, String> getParameters() {
             return this.parameters;
         }
 
         /**
          * @return protectionStrategy
          */
-        public java.util.List < String > getProtectionStrategy() {
+        public java.util.List<String> getProtectionStrategy() {
             return this.protectionStrategy;
         }
 
@@ -414,8 +457,8 @@ public class GetTaskResponseBody extends TeaModel {
             private String moduleId; 
             private String moduleVersion; 
             private String name; 
-            private java.util.Map < String, String > parameters; 
-            private java.util.List < String > protectionStrategy; 
+            private java.util.Map<String, String> parameters; 
+            private java.util.List<String> protectionStrategy; 
             private String ramRole; 
             private Boolean skipPropertyValidation; 
             private String status; 
@@ -424,6 +467,32 @@ public class GetTaskResponseBody extends TeaModel {
             private String terraformVersion; 
             private String triggerStrategy; 
             private String triggerValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.autoApply = model.autoApply;
+                this.autoDestroy = model.autoDestroy;
+                this.createTime = model.createTime;
+                this.currentJobId = model.currentJobId;
+                this.description = model.description;
+                this.groupInfo = model.groupInfo;
+                this.initModuleState = model.initModuleState;
+                this.moduleId = model.moduleId;
+                this.moduleVersion = model.moduleVersion;
+                this.name = model.name;
+                this.parameters = model.parameters;
+                this.protectionStrategy = model.protectionStrategy;
+                this.ramRole = model.ramRole;
+                this.skipPropertyValidation = model.skipPropertyValidation;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskOutputPath = model.taskOutputPath;
+                this.terraformVersion = model.terraformVersion;
+                this.triggerStrategy = model.triggerStrategy;
+                this.triggerValue = model.triggerValue;
+            } 
 
             /**
              * autoApply.
@@ -508,7 +577,7 @@ public class GetTaskResponseBody extends TeaModel {
             /**
              * parameters.
              */
-            public Builder parameters(java.util.Map < String, String > parameters) {
+            public Builder parameters(java.util.Map<String, String> parameters) {
                 this.parameters = parameters;
                 return this;
             }
@@ -516,7 +585,7 @@ public class GetTaskResponseBody extends TeaModel {
             /**
              * protectionStrategy.
              */
-            public Builder protectionStrategy(java.util.List < String > protectionStrategy) {
+            public Builder protectionStrategy(java.util.List<String> protectionStrategy) {
                 this.protectionStrategy = protectionStrategy;
                 return this;
             }

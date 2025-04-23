@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProjectBuildContextResponseBody} extends {@link TeaModel}
  *
  * <p>GetProjectBuildContextResponseBody</p>
@@ -30,6 +36,10 @@ public class GetProjectBuildContextResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return projectBuild
      */
@@ -48,6 +58,14 @@ public class GetProjectBuildContextResponseBody extends TeaModel {
         private ProjectBuild projectBuild; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetProjectBuildContextResponseBody model) {
+            this.projectBuild = model.projectBuild;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * ProjectBuild.
          */
@@ -57,7 +75,10 @@ public class GetProjectBuildContextResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C54F3939-9112-5795-A5A7-5322E2FB2257</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class GetProjectBuildContextResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetProjectBuildContextResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectBuildContextResponseBody</p>
+     */
     public static class JobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("elapsedTime")
         private Long elapsedTime;
@@ -228,6 +255,24 @@ public class GetProjectBuildContextResponseBody extends TeaModel {
             private String terraformProviderVersion; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobList model) {
+                this.elapsedTime = model.elapsedTime;
+                this.isDeleted = model.isDeleted;
+                this.isPassAssertCheck = model.isPassAssertCheck;
+                this.jobId = model.jobId;
+                this.moduleId = model.moduleId;
+                this.moduleName = model.moduleName;
+                this.moduleVersion = model.moduleVersion;
+                this.name = model.name;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.terraformProviderVersion = model.terraformProviderVersion;
+                this.type = model.type;
+            } 
+
             /**
              * elapsedTime.
              */
@@ -331,9 +376,15 @@ public class GetProjectBuildContextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProjectBuildContextResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectBuildContextResponseBody</p>
+     */
     public static class ResourceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("info")
-        private java.util.Map < String, String > info;
+        private java.util.Map<String, String> info;
 
         @com.aliyun.core.annotation.NameInMap("resourceCnt")
         private Long resourceCnt;
@@ -358,7 +409,7 @@ public class GetProjectBuildContextResponseBody extends TeaModel {
         /**
          * @return info
          */
-        public java.util.Map < String, String > getInfo() {
+        public java.util.Map<String, String> getInfo() {
             return this.info;
         }
 
@@ -377,14 +428,23 @@ public class GetProjectBuildContextResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > info; 
+            private java.util.Map<String, String> info; 
             private Long resourceCnt; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceList model) {
+                this.info = model.info;
+                this.resourceCnt = model.resourceCnt;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * info.
              */
-            public Builder info(java.util.Map < String, String > info) {
+            public Builder info(java.util.Map<String, String> info) {
                 this.info = info;
                 return this;
             }
@@ -412,6 +472,12 @@ public class GetProjectBuildContextResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProjectBuildContextResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectBuildContextResponseBody</p>
+     */
     public static class ProjectBuild extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endTime")
         private String endTime;
@@ -420,7 +486,7 @@ public class GetProjectBuildContextResponseBody extends TeaModel {
         private Long failCnt;
 
         @com.aliyun.core.annotation.NameInMap("jobList")
-        private java.util.List < JobList> jobList;
+        private java.util.List<JobList> jobList;
 
         @com.aliyun.core.annotation.NameInMap("jobTotalCnt")
         private Long jobTotalCnt;
@@ -435,7 +501,7 @@ public class GetProjectBuildContextResponseBody extends TeaModel {
         private Long resourceCnt;
 
         @com.aliyun.core.annotation.NameInMap("resourceList")
-        private java.util.List < ResourceList> resourceList;
+        private java.util.List<ResourceList> resourceList;
 
         @com.aliyun.core.annotation.NameInMap("resourceTypeCnt")
         private Long resourceTypeCnt;
@@ -493,7 +559,7 @@ public class GetProjectBuildContextResponseBody extends TeaModel {
         /**
          * @return jobList
          */
-        public java.util.List < JobList> getJobList() {
+        public java.util.List<JobList> getJobList() {
             return this.jobList;
         }
 
@@ -528,7 +594,7 @@ public class GetProjectBuildContextResponseBody extends TeaModel {
         /**
          * @return resourceList
          */
-        public java.util.List < ResourceList> getResourceList() {
+        public java.util.List<ResourceList> getResourceList() {
             return this.resourceList;
         }
 
@@ -570,17 +636,36 @@ public class GetProjectBuildContextResponseBody extends TeaModel {
         public static final class Builder {
             private String endTime; 
             private Long failCnt; 
-            private java.util.List < JobList> jobList; 
+            private java.util.List<JobList> jobList; 
             private Long jobTotalCnt; 
             private String projectBuildId; 
             private String projectId; 
             private Long resourceCnt; 
-            private java.util.List < ResourceList> resourceList; 
+            private java.util.List<ResourceList> resourceList; 
             private Long resourceTypeCnt; 
             private String status; 
             private Long successCnt; 
             private String terraformProviderVersion; 
             private String triggerStrategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectBuild model) {
+                this.endTime = model.endTime;
+                this.failCnt = model.failCnt;
+                this.jobList = model.jobList;
+                this.jobTotalCnt = model.jobTotalCnt;
+                this.projectBuildId = model.projectBuildId;
+                this.projectId = model.projectId;
+                this.resourceCnt = model.resourceCnt;
+                this.resourceList = model.resourceList;
+                this.resourceTypeCnt = model.resourceTypeCnt;
+                this.status = model.status;
+                this.successCnt = model.successCnt;
+                this.terraformProviderVersion = model.terraformProviderVersion;
+                this.triggerStrategy = model.triggerStrategy;
+            } 
 
             /**
              * endTime.
@@ -601,7 +686,7 @@ public class GetProjectBuildContextResponseBody extends TeaModel {
             /**
              * jobList.
              */
-            public Builder jobList(java.util.List < JobList> jobList) {
+            public Builder jobList(java.util.List<JobList> jobList) {
                 this.jobList = jobList;
                 return this;
             }
@@ -641,7 +726,7 @@ public class GetProjectBuildContextResponseBody extends TeaModel {
             /**
              * resourceList.
              */
-            public Builder resourceList(java.util.List < ResourceList> resourceList) {
+            public Builder resourceList(java.util.List<ResourceList> resourceList) {
                 this.resourceList = resourceList;
                 return this;
             }

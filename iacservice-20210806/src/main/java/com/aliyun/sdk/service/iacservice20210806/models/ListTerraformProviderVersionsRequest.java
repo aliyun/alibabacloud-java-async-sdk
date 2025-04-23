@@ -1,33 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTerraformProviderVersionsRequest} extends {@link RequestModel}
  *
  * <p>ListTerraformProviderVersionsRequest</p>
  */
 public class ListTerraformProviderVersionsRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("keyWord")
-    private String keyWord;
+    @com.aliyun.core.annotation.NameInMap("keyword")
+    private String keyword;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("pageNumber")
-    private Long pageNumber;
+    @com.aliyun.core.annotation.NameInMap("maxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 200)
+    private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("pageSize")
-    private Long pageSize;
+    @com.aliyun.core.annotation.NameInMap("nextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("usage")
+    private String usage;
 
     private ListTerraformProviderVersionsRequest(Builder builder) {
         super(builder);
-        this.keyWord = builder.keyWord;
-        this.pageNumber = builder.pageNumber;
-        this.pageSize = builder.pageSize;
+        this.keyword = builder.keyword;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
+        this.usage = builder.usage;
     }
 
     public static Builder builder() {
@@ -38,36 +50,44 @@ public class ListTerraformProviderVersionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
 
     /**
-     * @return keyWord
+     * @return keyword
      */
-    public String getKeyWord() {
-        return this.keyWord;
+    public String getKeyword() {
+        return this.keyword;
     }
 
     /**
-     * @return pageNumber
+     * @return maxResults
      */
-    public Long getPageNumber() {
-        return this.pageNumber;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
-     * @return pageSize
+     * @return nextToken
      */
-    public Long getPageSize() {
-        return this.pageSize;
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return usage
+     */
+    public String getUsage() {
+        return this.usage;
     }
 
     public static final class Builder extends Request.Builder<ListTerraformProviderVersionsRequest, Builder> {
-        private String keyWord; 
-        private Long pageNumber; 
-        private Long pageSize; 
+        private String keyword; 
+        private Integer maxResults; 
+        private String nextToken; 
+        private String usage; 
 
         private Builder() {
             super();
@@ -75,35 +95,45 @@ public class ListTerraformProviderVersionsRequest extends Request {
 
         private Builder(ListTerraformProviderVersionsRequest request) {
             super(request);
-            this.keyWord = request.keyWord;
-            this.pageNumber = request.pageNumber;
-            this.pageSize = request.pageSize;
+            this.keyword = request.keyword;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.usage = request.usage;
         } 
 
         /**
-         * keyWord.
+         * keyword.
          */
-        public Builder keyWord(String keyWord) {
-            this.putQueryParameter("keyWord", keyWord);
-            this.keyWord = keyWord;
+        public Builder keyword(String keyword) {
+            this.putQueryParameter("keyword", keyword);
+            this.keyword = keyword;
             return this;
         }
 
         /**
-         * pageNumber.
+         * maxResults.
          */
-        public Builder pageNumber(Long pageNumber) {
-            this.putQueryParameter("pageNumber", pageNumber);
-            this.pageNumber = pageNumber;
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("maxResults", maxResults);
+            this.maxResults = maxResults;
             return this;
         }
 
         /**
-         * pageSize.
+         * nextToken.
          */
-        public Builder pageSize(Long pageSize) {
-            this.putQueryParameter("pageSize", pageSize);
-            this.pageSize = pageSize;
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("nextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * usage.
+         */
+        public Builder usage(String usage) {
+            this.putQueryParameter("usage", usage);
+            this.usage = usage;
             return this;
         }
 

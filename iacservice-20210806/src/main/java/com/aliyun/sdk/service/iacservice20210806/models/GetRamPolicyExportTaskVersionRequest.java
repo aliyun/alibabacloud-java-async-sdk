@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRamPolicyExportTaskVersionRequest} extends {@link RequestModel}
  *
  * <p>GetRamPolicyExportTaskVersionRequest</p>
@@ -35,7 +41,7 @@ public class GetRamPolicyExportTaskVersionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +75,10 @@ public class GetRamPolicyExportTaskVersionRequest extends Request {
         } 
 
         /**
-         * ramPolicyExportTaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rpe-433affe0252e48f9286a</p>
          */
         public Builder ramPolicyExportTaskId(String ramPolicyExportTaskId) {
             this.putPathParameter("ramPolicyExportTaskId", ramPolicyExportTaskId);
@@ -78,7 +87,10 @@ public class GetRamPolicyExportTaskVersionRequest extends Request {
         }
 
         /**
-         * exportVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder exportVersion(String exportVersion) {
             this.putPathParameter("exportVersion", exportVersion);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateModuleRequest} extends {@link RequestModel}
  *
  * <p>CreateModuleRequest</p>
@@ -65,7 +71,7 @@ public class CreateModuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -153,7 +159,10 @@ public class CreateModuleRequest extends Request {
         } 
 
         /**
-         * clientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -180,7 +189,10 @@ public class CreateModuleRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -231,6 +243,12 @@ public class CreateModuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateModuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateModuleRequest</p>
+     */
     public static class GroupInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupId")
         private String groupId;
@@ -268,6 +286,14 @@ public class CreateModuleRequest extends Request {
         public static final class Builder {
             private String groupId; 
             private String projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupInfo model) {
+                this.groupId = model.groupId;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * groupId.

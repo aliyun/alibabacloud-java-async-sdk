@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListModuleVersionResponseBody} extends {@link TeaModel}
  *
  * <p>ListModuleVersionResponseBody</p>
@@ -24,7 +30,7 @@ public class ListModuleVersionResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("versions")
-    private java.util.List < Versions> versions;
+    private java.util.List<Versions> versions;
 
     private ListModuleVersionResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
@@ -40,6 +46,10 @@ public class ListModuleVersionResponseBody extends TeaModel {
 
     public static ListModuleVersionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,7 +83,7 @@ public class ListModuleVersionResponseBody extends TeaModel {
     /**
      * @return versions
      */
-    public java.util.List < Versions> getVersions() {
+    public java.util.List<Versions> getVersions() {
         return this.versions;
     }
 
@@ -82,7 +92,18 @@ public class ListModuleVersionResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < Versions> versions; 
+        private java.util.List<Versions> versions; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListModuleVersionResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.versions = model.versions;
+        } 
 
         /**
          * pageNumber.
@@ -119,7 +140,7 @@ public class ListModuleVersionResponseBody extends TeaModel {
         /**
          * versions.
          */
-        public Builder versions(java.util.List < Versions> versions) {
+        public Builder versions(java.util.List<Versions> versions) {
             this.versions = versions;
             return this;
         }
@@ -130,6 +151,12 @@ public class ListModuleVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListModuleVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListModuleVersionResponseBody</p>
+     */
     public static class Versions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -215,6 +242,18 @@ public class ListModuleVersionResponseBody extends TeaModel {
             private String moduleVersion; 
             private String name; 
             private String sourcePath; 
+
+            private Builder() {
+            } 
+
+            private Builder(Versions model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.moduleId = model.moduleId;
+                this.moduleVersion = model.moduleVersion;
+                this.name = model.name;
+                this.sourcePath = model.sourcePath;
+            } 
 
             /**
              * createTime.

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProjectBuildContextRequest} extends {@link RequestModel}
  *
  * <p>GetProjectBuildContextRequest</p>
@@ -45,7 +51,7 @@ public class GetProjectBuildContextRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +103,10 @@ public class GetProjectBuildContextRequest extends Request {
         } 
 
         /**
-         * projectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-5fd38c9b92d541a6521a86432e0</p>
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("projectId", projectId);
@@ -106,7 +115,10 @@ public class GetProjectBuildContextRequest extends Request {
         }
 
         /**
-         * projectBuildId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pb-433aead75605718f20ba0375f99</p>
          */
         public Builder projectBuildId(String projectBuildId) {
             this.putPathParameter("projectBuildId", projectBuildId);

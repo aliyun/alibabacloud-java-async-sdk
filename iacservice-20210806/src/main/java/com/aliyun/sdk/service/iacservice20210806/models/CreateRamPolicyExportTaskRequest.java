@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRamPolicyExportTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateRamPolicyExportTaskRequest</p>
@@ -13,15 +19,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateRamPolicyExportTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("authorizationAccountIds")
-    private java.util.List < Long > authorizationAccountIds;
+    private java.util.List<Long> authorizationAccountIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("authorizationActions")
-    private java.util.List < String > authorizationActions;
+    private java.util.List<String> authorizationActions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("authorizationRegionIds")
-    private java.util.List < String > authorizationRegionIds;
+    private java.util.List<String> authorizationRegionIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("clientToken")
@@ -77,7 +83,7 @@ public class CreateRamPolicyExportTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,21 +91,21 @@ public class CreateRamPolicyExportTaskRequest extends Request {
     /**
      * @return authorizationAccountIds
      */
-    public java.util.List < Long > getAuthorizationAccountIds() {
+    public java.util.List<Long> getAuthorizationAccountIds() {
         return this.authorizationAccountIds;
     }
 
     /**
      * @return authorizationActions
      */
-    public java.util.List < String > getAuthorizationActions() {
+    public java.util.List<String> getAuthorizationActions() {
         return this.authorizationActions;
     }
 
     /**
      * @return authorizationRegionIds
      */
-    public java.util.List < String > getAuthorizationRegionIds() {
+    public java.util.List<String> getAuthorizationRegionIds() {
         return this.authorizationRegionIds;
     }
 
@@ -153,9 +159,9 @@ public class CreateRamPolicyExportTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRamPolicyExportTaskRequest, Builder> {
-        private java.util.List < Long > authorizationAccountIds; 
-        private java.util.List < String > authorizationActions; 
-        private java.util.List < String > authorizationRegionIds; 
+        private java.util.List<Long> authorizationAccountIds; 
+        private java.util.List<String> authorizationActions; 
+        private java.util.List<String> authorizationRegionIds; 
         private String clientToken; 
         private String moduleId; 
         private String moduleVersion; 
@@ -185,7 +191,7 @@ public class CreateRamPolicyExportTaskRequest extends Request {
         /**
          * authorizationAccountIds.
          */
-        public Builder authorizationAccountIds(java.util.List < Long > authorizationAccountIds) {
+        public Builder authorizationAccountIds(java.util.List<Long> authorizationAccountIds) {
             this.putBodyParameter("authorizationAccountIds", authorizationAccountIds);
             this.authorizationAccountIds = authorizationAccountIds;
             return this;
@@ -194,7 +200,7 @@ public class CreateRamPolicyExportTaskRequest extends Request {
         /**
          * authorizationActions.
          */
-        public Builder authorizationActions(java.util.List < String > authorizationActions) {
+        public Builder authorizationActions(java.util.List<String> authorizationActions) {
             this.putBodyParameter("authorizationActions", authorizationActions);
             this.authorizationActions = authorizationActions;
             return this;
@@ -203,14 +209,17 @@ public class CreateRamPolicyExportTaskRequest extends Request {
         /**
          * authorizationRegionIds.
          */
-        public Builder authorizationRegionIds(java.util.List < String > authorizationRegionIds) {
+        public Builder authorizationRegionIds(java.util.List<String> authorizationRegionIds) {
             this.putBodyParameter("authorizationRegionIds", authorizationRegionIds);
             this.authorizationRegionIds = authorizationRegionIds;
             return this;
         }
 
         /**
-         * clientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2da11a5501f18cc5e004</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -219,7 +228,10 @@ public class CreateRamPolicyExportTaskRequest extends Request {
         }
 
         /**
-         * moduleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mod-148e785fff6b316f4eb737e</p>
          */
         public Builder moduleId(String moduleId) {
             this.putBodyParameter("moduleId", moduleId);
@@ -228,7 +240,10 @@ public class CreateRamPolicyExportTaskRequest extends Request {
         }
 
         /**
-         * moduleVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder moduleVersion(String moduleVersion) {
             this.putBodyParameter("moduleVersion", moduleVersion);
@@ -237,7 +252,10 @@ public class CreateRamPolicyExportTaskRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateModuleAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateModuleAttributeRequest</p>
@@ -64,7 +70,7 @@ public class UpdateModuleAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -152,7 +158,10 @@ public class UpdateModuleAttributeRequest extends Request {
         } 
 
         /**
-         * moduleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mod-62ecaa43022ce189d65f8d4a794</p>
          */
         public Builder moduleId(String moduleId) {
             this.putPathParameter("moduleId", moduleId);
@@ -230,6 +239,12 @@ public class UpdateModuleAttributeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateModuleAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateModuleAttributeRequest</p>
+     */
     public static class GroupInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupId")
         private String groupId;
@@ -267,6 +282,14 @@ public class UpdateModuleAttributeRequest extends Request {
         public static final class Builder {
             private String groupId; 
             private String projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupInfo model) {
+                this.groupId = model.groupId;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * groupId.

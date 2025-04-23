@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloneGroupRequest} extends {@link RequestModel}
  *
  * <p>CloneGroupRequest</p>
@@ -36,7 +42,7 @@ public class CloneGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resourceTypes")
-    private java.util.List < String > resourceTypes;
+    private java.util.List<String> resourceTypes;
 
     private CloneGroupRequest(Builder builder) {
         super(builder);
@@ -56,7 +62,7 @@ public class CloneGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +105,7 @@ public class CloneGroupRequest extends Request {
     /**
      * @return resourceTypes
      */
-    public java.util.List < String > getResourceTypes() {
+    public java.util.List<String> getResourceTypes() {
         return this.resourceTypes;
     }
 
@@ -109,7 +115,7 @@ public class CloneGroupRequest extends Request {
         private String description; 
         private String name; 
         private String projectId; 
-        private java.util.List < String > resourceTypes; 
+        private java.util.List<String> resourceTypes; 
 
         private Builder() {
             super();
@@ -126,7 +132,10 @@ public class CloneGroupRequest extends Request {
         } 
 
         /**
-         * groupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-433aead756057fff9d63d69ede7ec</p>
          */
         public Builder groupId(String groupId) {
             this.putPathParameter("groupId", groupId);
@@ -135,7 +144,10 @@ public class CloneGroupRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -153,7 +165,10 @@ public class CloneGroupRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -173,7 +188,7 @@ public class CloneGroupRequest extends Request {
         /**
          * resourceTypes.
          */
-        public Builder resourceTypes(java.util.List < String > resourceTypes) {
+        public Builder resourceTypes(java.util.List<String> resourceTypes) {
             this.putBodyParameter("resourceTypes", resourceTypes);
             this.resourceTypes = resourceTypes;
             return this;

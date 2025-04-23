@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateParameterSetRequest} extends {@link RequestModel}
  *
  * <p>CreateParameterSetRequest</p>
@@ -27,7 +33,7 @@ public class CreateParameterSetRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     private CreateParameterSetRequest(Builder builder) {
         super(builder);
@@ -45,7 +51,7 @@ public class CreateParameterSetRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +80,7 @@ public class CreateParameterSetRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -82,7 +88,7 @@ public class CreateParameterSetRequest extends Request {
         private String clientToken; 
         private String description; 
         private String name; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
 
         private Builder() {
             super();
@@ -97,7 +103,10 @@ public class CreateParameterSetRequest extends Request {
         } 
 
         /**
-         * clientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -115,7 +124,10 @@ public class CreateParameterSetRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -126,7 +138,7 @@ public class CreateParameterSetRequest extends Request {
         /**
          * parameters.
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.putBodyParameter("parameters", parameters);
             this.parameters = parameters;
             return this;
@@ -139,6 +151,12 @@ public class CreateParameterSetRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateParameterSetRequest} extends {@link TeaModel}
+     *
+     * <p>CreateParameterSetRequest</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -189,8 +207,20 @@ public class CreateParameterSetRequest extends Request {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
-             * name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;

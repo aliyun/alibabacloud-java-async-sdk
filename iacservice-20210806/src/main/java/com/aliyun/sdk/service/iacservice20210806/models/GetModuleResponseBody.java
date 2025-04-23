@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetModuleResponseBody} extends {@link TeaModel}
  *
  * <p>GetModuleResponseBody</p>
@@ -30,6 +36,10 @@ public class GetModuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return module
      */
@@ -48,6 +58,14 @@ public class GetModuleResponseBody extends TeaModel {
         private Module module; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetModuleResponseBody model) {
+            this.module = model.module;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * module.
          */
@@ -57,7 +75,10 @@ public class GetModuleResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E7BA3EB-B0EF-53F5-9999-07CAD6D9F8A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class GetModuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetModuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModuleResponseBody</p>
+     */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -215,6 +242,23 @@ public class GetModuleResponseBody extends TeaModel {
             private String statePath; 
             private String status; 
             private String versionStrategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.latestVersion = model.latestVersion;
+                this.moduleId = model.moduleId;
+                this.name = model.name;
+                this.outputPath = model.outputPath;
+                this.source = model.source;
+                this.sourcePath = model.sourcePath;
+                this.statePath = model.statePath;
+                this.status = model.status;
+                this.versionStrategy = model.versionStrategy;
+            } 
 
             /**
              * createTime.

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTasksRequest} extends {@link RequestModel}
  *
  * <p>ListTasksRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListTasksRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("excludeTaskIds")
-    private java.util.List < String > excludeTaskIds;
+    private java.util.List<String> excludeTaskIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("groupId")
@@ -46,7 +52,7 @@ public class ListTasksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("taskId")
@@ -74,7 +80,7 @@ public class ListTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +88,7 @@ public class ListTasksRequest extends Request {
     /**
      * @return excludeTaskIds
      */
-    public java.util.List < String > getExcludeTaskIds() {
+    public java.util.List<String> getExcludeTaskIds() {
         return this.excludeTaskIds;
     }
 
@@ -138,7 +144,7 @@ public class ListTasksRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -150,7 +156,7 @@ public class ListTasksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTasksRequest, Builder> {
-        private java.util.List < String > excludeTaskIds; 
+        private java.util.List<String> excludeTaskIds; 
         private String groupId; 
         private String keyword; 
         private String moduleId; 
@@ -158,7 +164,7 @@ public class ListTasksRequest extends Request {
         private Integer pageSize; 
         private String projectId; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String taskId; 
 
         private Builder() {
@@ -182,7 +188,7 @@ public class ListTasksRequest extends Request {
         /**
          * excludeTaskIds.
          */
-        public Builder excludeTaskIds(java.util.List < String > excludeTaskIds) {
+        public Builder excludeTaskIds(java.util.List<String> excludeTaskIds) {
             String excludeTaskIdsShrink = shrink(excludeTaskIds, "excludeTaskIds", "simple");
             this.putQueryParameter("excludeTaskIds", excludeTaskIdsShrink);
             this.excludeTaskIds = excludeTaskIds;
@@ -255,7 +261,7 @@ public class ListTasksRequest extends Request {
         /**
          * tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
             this.putQueryParameter("tag", tagShrink);
             this.tag = tag;
@@ -278,6 +284,12 @@ public class ListTasksRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTasksRequest} extends {@link TeaModel}
+     *
+     * <p>ListTasksRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -315,6 +327,14 @@ public class ListTasksRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * key.

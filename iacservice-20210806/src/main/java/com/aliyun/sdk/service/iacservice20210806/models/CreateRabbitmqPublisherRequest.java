@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRabbitmqPublisherRequest} extends {@link RequestModel}
  *
  * <p>CreateRabbitmqPublisherRequest</p>
@@ -81,7 +87,7 @@ public class CreateRabbitmqPublisherRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -187,7 +193,10 @@ public class CreateRabbitmqPublisherRequest extends Request {
         } 
 
         /**
-         * clientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -205,7 +214,10 @@ public class CreateRabbitmqPublisherRequest extends Request {
         }
 
         /**
-         * exchangeName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExchangeTest</p>
          */
         public Builder exchangeName(String exchangeName) {
             this.putBodyParameter("exchangeName", exchangeName);
@@ -223,7 +235,7 @@ public class CreateRabbitmqPublisherRequest extends Request {
         }
 
         /**
-         * hostName.
+         * <p>This parameter is required.</p>
          */
         public Builder hostName(String hostName) {
             this.putBodyParameter("hostName", hostName);
@@ -232,7 +244,10 @@ public class CreateRabbitmqPublisherRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -241,7 +256,10 @@ public class CreateRabbitmqPublisherRequest extends Request {
         }
 
         /**
-         * password.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NDAxREVDQzI2MjA0OT****</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);
@@ -250,7 +268,10 @@ public class CreateRabbitmqPublisherRequest extends Request {
         }
 
         /**
-         * port.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5672</p>
          */
         public Builder port(Long port) {
             this.putBodyParameter("port", port);
@@ -259,7 +280,10 @@ public class CreateRabbitmqPublisherRequest extends Request {
         }
 
         /**
-         * userName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MjoxODgwNzcwODY5MD****</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("userName", userName);
@@ -268,7 +292,10 @@ public class CreateRabbitmqPublisherRequest extends Request {
         }
 
         /**
-         * virtualHost.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder virtualHost(String virtualHost) {
             this.putBodyParameter("virtualHost", virtualHost);

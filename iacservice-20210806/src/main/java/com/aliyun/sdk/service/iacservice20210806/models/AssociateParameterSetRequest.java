@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateParameterSetRequest} extends {@link RequestModel}
  *
  * <p>AssociateParameterSetRequest</p>
@@ -14,7 +20,7 @@ public class AssociateParameterSetRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("parameterSetIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > parameterSetIds;
+    private java.util.List<String> parameterSetIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resourceId")
@@ -41,7 +47,7 @@ public class AssociateParameterSetRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,7 +55,7 @@ public class AssociateParameterSetRequest extends Request {
     /**
      * @return parameterSetIds
      */
-    public java.util.List < String > getParameterSetIds() {
+    public java.util.List<String> getParameterSetIds() {
         return this.parameterSetIds;
     }
 
@@ -68,7 +74,7 @@ public class AssociateParameterSetRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AssociateParameterSetRequest, Builder> {
-        private java.util.List < String > parameterSetIds; 
+        private java.util.List<String> parameterSetIds; 
         private String resourceId; 
         private String resourceType; 
 
@@ -84,16 +90,19 @@ public class AssociateParameterSetRequest extends Request {
         } 
 
         /**
-         * parameterSetIds.
+         * <p>This parameter is required.</p>
          */
-        public Builder parameterSetIds(java.util.List < String > parameterSetIds) {
+        public Builder parameterSetIds(java.util.List<String> parameterSetIds) {
             this.putBodyParameter("parameterSetIds", parameterSetIds);
             this.parameterSetIds = parameterSetIds;
             return this;
         }
 
         /**
-         * resourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-433aead756057ffdf5326bf1e12ed</p>
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("resourceId", resourceId);
@@ -102,7 +111,10 @@ public class AssociateParameterSetRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Task</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resourceType", resourceType);

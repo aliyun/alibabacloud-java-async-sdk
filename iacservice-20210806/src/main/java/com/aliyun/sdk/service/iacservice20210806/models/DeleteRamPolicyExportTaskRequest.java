@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRamPolicyExportTaskRequest} extends {@link RequestModel}
  *
  * <p>DeleteRamPolicyExportTaskRequest</p>
@@ -29,7 +35,7 @@ public class DeleteRamPolicyExportTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +60,10 @@ public class DeleteRamPolicyExportTaskRequest extends Request {
         } 
 
         /**
-         * ramPolicyExportTaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rpe-47ffe0252e48f9286a</p>
          */
         public Builder ramPolicyExportTaskId(String ramPolicyExportTaskId) {
             this.putPathParameter("ramPolicyExportTaskId", ramPolicyExportTaskId);

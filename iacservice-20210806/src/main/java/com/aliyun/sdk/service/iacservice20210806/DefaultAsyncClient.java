@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AssociateGroup  AssociateGroupRequest
+     * @return AssociateGroupResponse
+     */
     @Override
     public CompletableFuture<AssociateGroupResponse> associateGroup(AssociateGroupRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AssociateParameterSet  AssociateParameterSetRequest
+     * @return AssociateParameterSetResponse
+     */
     @Override
     public CompletableFuture<AssociateParameterSetResponse> associateParameterSet(AssociateParameterSetRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AttachRabbitmqPublisher  AttachRabbitmqPublisherRequest
+     * @return AttachRabbitmqPublisherResponse
+     */
     @Override
     public CompletableFuture<AttachRabbitmqPublisherResponse> attachRabbitmqPublisher(AttachRabbitmqPublisherRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelProjectBuild  CancelProjectBuildRequest
+     * @return CancelProjectBuildResponse
+     */
     @Override
     public CompletableFuture<CancelProjectBuildResponse> cancelProjectBuild(CancelProjectBuildRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelRamPolicyExportTask  CancelRamPolicyExportTaskRequest
+     * @return CancelRamPolicyExportTaskResponse
+     */
     @Override
     public CompletableFuture<CancelRamPolicyExportTaskResponse> cancelRamPolicyExportTask(CancelRamPolicyExportTaskRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelResourceExportTask  CancelResourceExportTaskRequest
+     * @return CancelResourceExportTaskResponse
+     */
     @Override
     public CompletableFuture<CancelResourceExportTaskResponse> cancelResourceExportTask(CancelResourceExportTaskRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckResourceName  CheckResourceNameRequest
+     * @return CheckResourceNameResponse
+     */
     @Override
     public CompletableFuture<CheckResourceNameResponse> checkResourceName(CheckResourceNameRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CloneGroup  CloneGroupRequest
+     * @return CloneGroupResponse
+     */
     @Override
     public CompletableFuture<CloneGroupResponse> cloneGroup(CloneGroupRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CloneModule  CloneModuleRequest
+     * @return CloneModuleResponse
+     */
     @Override
     public CompletableFuture<CloneModuleResponse> cloneModule(CloneModuleRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAuthorization  CreateAuthorizationRequest
+     * @return CreateAuthorizationResponse
+     */
     @Override
     public CompletableFuture<CreateAuthorizationResponse> createAuthorization(CreateAuthorizationRequest request) {
         try {
@@ -179,6 +219,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateExplorerTask  CreateExplorerTaskRequest
+     * @return CreateExplorerTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateExplorerTaskResponse> createExplorerTask(CreateExplorerTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateExplorerTask").setMethod(HttpMethod.POST).setPathRegex("/explorerTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateExplorerTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateExplorerTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateGroup  CreateGroupRequest
+     * @return CreateGroupResponse
+     */
     @Override
     public CompletableFuture<CreateGroupResponse> createGroup(CreateGroupRequest request) {
         try {
@@ -193,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateJob  CreateJobRequest
+     * @return CreateJobResponse
+     */
     @Override
     public CompletableFuture<CreateJobResponse> createJob(CreateJobRequest request) {
         try {
@@ -207,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateModule  CreateModuleRequest
+     * @return CreateModuleResponse
+     */
     @Override
     public CompletableFuture<CreateModuleResponse> createModule(CreateModuleRequest request) {
         try {
@@ -221,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateModuleVersion  CreateModuleVersionRequest
+     * @return CreateModuleVersionResponse
+     */
     @Override
     public CompletableFuture<CreateModuleVersionResponse> createModuleVersion(CreateModuleVersionRequest request) {
         try {
@@ -235,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateParameterSet  CreateParameterSetRequest
+     * @return CreateParameterSetResponse
+     */
     @Override
     public CompletableFuture<CreateParameterSetResponse> createParameterSet(CreateParameterSetRequest request) {
         try {
@@ -249,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateProject  CreateProjectRequest
+     * @return CreateProjectResponse
+     */
     @Override
     public CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request) {
         try {
@@ -263,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateProjectBuild  CreateProjectBuildRequest
+     * @return CreateProjectBuildResponse
+     */
     @Override
     public CompletableFuture<CreateProjectBuildResponse> createProjectBuild(CreateProjectBuildRequest request) {
         try {
@@ -277,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRabbitmqPublisher  CreateRabbitmqPublisherRequest
+     * @return CreateRabbitmqPublisherResponse
+     */
     @Override
     public CompletableFuture<CreateRabbitmqPublisherResponse> createRabbitmqPublisher(CreateRabbitmqPublisherRequest request) {
         try {
@@ -291,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRamPolicyExportTask  CreateRamPolicyExportTaskRequest
+     * @return CreateRamPolicyExportTaskResponse
+     */
     @Override
     public CompletableFuture<CreateRamPolicyExportTaskResponse> createRamPolicyExportTask(CreateRamPolicyExportTaskRequest request) {
         try {
@@ -305,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateResourceExportTask  CreateResourceExportTaskRequest
+     * @return CreateResourceExportTaskResponse
+     */
     @Override
     public CompletableFuture<CreateResourceExportTaskResponse> createResourceExportTask(CreateResourceExportTaskRequest request) {
         try {
@@ -319,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTask  CreateTaskRequest
+     * @return CreateTaskResponse
+     */
     @Override
     public CompletableFuture<CreateTaskResponse> createTask(CreateTaskRequest request) {
         try {
@@ -333,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAuthorization  DeleteAuthorizationRequest
+     * @return DeleteAuthorizationResponse
+     */
     @Override
     public CompletableFuture<DeleteAuthorizationResponse> deleteAuthorization(DeleteAuthorizationRequest request) {
         try {
@@ -347,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteGroup  DeleteGroupRequest
+     * @return DeleteGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request) {
         try {
@@ -361,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteModule  DeleteModuleRequest
+     * @return DeleteModuleResponse
+     */
     @Override
     public CompletableFuture<DeleteModuleResponse> deleteModule(DeleteModuleRequest request) {
         try {
@@ -375,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteParameterSet  DeleteParameterSetRequest
+     * @return DeleteParameterSetResponse
+     */
     @Override
     public CompletableFuture<DeleteParameterSetResponse> deleteParameterSet(DeleteParameterSetRequest request) {
         try {
@@ -389,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteProject  DeleteProjectRequest
+     * @return DeleteProjectResponse
+     */
     @Override
     public CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request) {
         try {
@@ -403,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRabbitmqPublisher  DeleteRabbitmqPublisherRequest
+     * @return DeleteRabbitmqPublisherResponse
+     */
     @Override
     public CompletableFuture<DeleteRabbitmqPublisherResponse> deleteRabbitmqPublisher(DeleteRabbitmqPublisherRequest request) {
         try {
@@ -417,6 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRamPolicyExportTask  DeleteRamPolicyExportTaskRequest
+     * @return DeleteRamPolicyExportTaskResponse
+     */
     @Override
     public CompletableFuture<DeleteRamPolicyExportTaskResponse> deleteRamPolicyExportTask(DeleteRamPolicyExportTaskRequest request) {
         try {
@@ -431,6 +561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRamPolicyExportTaskVersion  DeleteRamPolicyExportTaskVersionRequest
+     * @return DeleteRamPolicyExportTaskVersionResponse
+     */
     @Override
     public CompletableFuture<DeleteRamPolicyExportTaskVersionResponse> deleteRamPolicyExportTaskVersion(DeleteRamPolicyExportTaskVersionRequest request) {
         try {
@@ -445,6 +579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteResourceExportTask  DeleteResourceExportTaskRequest
+     * @return DeleteResourceExportTaskResponse
+     */
     @Override
     public CompletableFuture<DeleteResourceExportTaskResponse> deleteResourceExportTask(DeleteResourceExportTaskRequest request) {
         try {
@@ -459,6 +597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSceneTestingTask  DeleteSceneTestingTaskRequest
+     * @return DeleteSceneTestingTaskResponse
+     */
     @Override
     public CompletableFuture<DeleteSceneTestingTaskResponse> deleteSceneTestingTask(DeleteSceneTestingTaskRequest request) {
         try {
@@ -473,6 +615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTask  DeleteTaskRequest
+     * @return DeleteTaskResponse
+     */
     @Override
     public CompletableFuture<DeleteTaskResponse> deleteTask(DeleteTaskRequest request) {
         try {
@@ -487,6 +633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetachRabbitmqPublisher  DetachRabbitmqPublisherRequest
+     * @return DetachRabbitmqPublisherResponse
+     */
     @Override
     public CompletableFuture<DetachRabbitmqPublisherResponse> detachRabbitmqPublisher(DetachRabbitmqPublisherRequest request) {
         try {
@@ -501,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DissociateGroup  DissociateGroupRequest
+     * @return DissociateGroupResponse
+     */
     @Override
     public CompletableFuture<DissociateGroupResponse> dissociateGroup(DissociateGroupRequest request) {
         try {
@@ -515,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DissociateParameterSet  DissociateParameterSetRequest
+     * @return DissociateParameterSetResponse
+     */
     @Override
     public CompletableFuture<DissociateParameterSetResponse> dissociateParameterSet(DissociateParameterSetRequest request) {
         try {
@@ -529,6 +687,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecuteRamPolicyExportTask  ExecuteRamPolicyExportTaskRequest
+     * @return ExecuteRamPolicyExportTaskResponse
+     */
     @Override
     public CompletableFuture<ExecuteRamPolicyExportTaskResponse> executeRamPolicyExportTask(ExecuteRamPolicyExportTaskRequest request) {
         try {
@@ -543,6 +705,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecuteResourceExportTask  ExecuteResourceExportTaskRequest
+     * @return ExecuteResourceExportTaskResponse
+     */
     @Override
     public CompletableFuture<ExecuteResourceExportTaskResponse> executeResourceExportTask(ExecuteResourceExportTaskRequest request) {
         try {
@@ -557,6 +723,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetExplorerTask  GetExplorerTaskRequest
+     * @return GetExplorerTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetExplorerTaskResponse> getExplorerTask(GetExplorerTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetExplorerTask").setMethod(HttpMethod.GET).setPathRegex("/explorerTask/{explorerTaskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetExplorerTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetExplorerTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetGroup  GetGroupRequest
+     * @return GetGroupResponse
+     */
     @Override
     public CompletableFuture<GetGroupResponse> getGroup(GetGroupRequest request) {
         try {
@@ -571,6 +759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJob  GetJobRequest
+     * @return GetJobResponse
+     */
     @Override
     public CompletableFuture<GetJobResponse> getJob(GetJobRequest request) {
         try {
@@ -585,6 +777,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetModule  GetModuleRequest
+     * @return GetModuleResponse
+     */
     @Override
     public CompletableFuture<GetModuleResponse> getModule(GetModuleRequest request) {
         try {
@@ -599,6 +795,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetModuleVersion  GetModuleVersionRequest
+     * @return GetModuleVersionResponse
+     */
     @Override
     public CompletableFuture<GetModuleVersionResponse> getModuleVersion(GetModuleVersionRequest request) {
         try {
@@ -613,6 +813,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetParameterSet  GetParameterSetRequest
+     * @return GetParameterSetResponse
+     */
     @Override
     public CompletableFuture<GetParameterSetResponse> getParameterSet(GetParameterSetRequest request) {
         try {
@@ -627,6 +831,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetProject  GetProjectRequest
+     * @return GetProjectResponse
+     */
     @Override
     public CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request) {
         try {
@@ -641,6 +849,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetProjectBuildContext  GetProjectBuildContextRequest
+     * @return GetProjectBuildContextResponse
+     */
     @Override
     public CompletableFuture<GetProjectBuildContextResponse> getProjectBuildContext(GetProjectBuildContextRequest request) {
         try {
@@ -655,6 +867,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRabbitmqPublisher  GetRabbitmqPublisherRequest
+     * @return GetRabbitmqPublisherResponse
+     */
     @Override
     public CompletableFuture<GetRabbitmqPublisherResponse> getRabbitmqPublisher(GetRabbitmqPublisherRequest request) {
         try {
@@ -669,6 +885,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRamPolicyExportTask  GetRamPolicyExportTaskRequest
+     * @return GetRamPolicyExportTaskResponse
+     */
     @Override
     public CompletableFuture<GetRamPolicyExportTaskResponse> getRamPolicyExportTask(GetRamPolicyExportTaskRequest request) {
         try {
@@ -683,6 +903,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRamPolicyExportTaskVersion  GetRamPolicyExportTaskVersionRequest
+     * @return GetRamPolicyExportTaskVersionResponse
+     */
     @Override
     public CompletableFuture<GetRamPolicyExportTaskVersionResponse> getRamPolicyExportTaskVersion(GetRamPolicyExportTaskVersionRequest request) {
         try {
@@ -697,6 +921,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResourceExportTask  GetResourceExportTaskRequest
+     * @return GetResourceExportTaskResponse
+     */
     @Override
     public CompletableFuture<GetResourceExportTaskResponse> getResourceExportTask(GetResourceExportTaskRequest request) {
         try {
@@ -711,6 +939,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTask  GetTaskRequest
+     * @return GetTaskResponse
+     */
     @Override
     public CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request) {
         try {
@@ -725,6 +957,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTaskPolicy  GetTaskPolicyRequest
+     * @return GetTaskPolicyResponse
+     */
     @Override
     public CompletableFuture<GetTaskPolicyResponse> getTaskPolicy(GetTaskPolicyRequest request) {
         try {
@@ -739,6 +975,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAuthorizations  ListAuthorizationsRequest
+     * @return ListAuthorizationsResponse
+     */
     @Override
     public CompletableFuture<ListAuthorizationsResponse> listAuthorizations(ListAuthorizationsRequest request) {
         try {
@@ -753,6 +993,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAvailableTerraformVersions  ListAvailableTerraformVersionsRequest
+     * @return ListAvailableTerraformVersionsResponse
+     */
     @Override
     public CompletableFuture<ListAvailableTerraformVersionsResponse> listAvailableTerraformVersions(ListAvailableTerraformVersionsRequest request) {
         try {
@@ -767,6 +1011,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListExplorerTasks  ListExplorerTasksRequest
+     * @return ListExplorerTasksResponse
+     */
+    @Override
+    public CompletableFuture<ListExplorerTasksResponse> listExplorerTasks(ListExplorerTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListExplorerTasks").setMethod(HttpMethod.GET).setPathRegex("/explorerTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListExplorerTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListExplorerTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListGroup  ListGroupRequest
+     * @return ListGroupResponse
+     */
     @Override
     public CompletableFuture<ListGroupResponse> listGroup(ListGroupRequest request) {
         try {
@@ -781,6 +1047,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListJobs  ListJobsRequest
+     * @return ListJobsResponse
+     */
     @Override
     public CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request) {
         try {
@@ -795,6 +1065,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListModuleVersion  ListModuleVersionRequest
+     * @return ListModuleVersionResponse
+     */
     @Override
     public CompletableFuture<ListModuleVersionResponse> listModuleVersion(ListModuleVersionRequest request) {
         try {
@@ -809,6 +1083,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListModules  ListModulesRequest
+     * @return ListModulesResponse
+     */
     @Override
     public CompletableFuture<ListModulesResponse> listModules(ListModulesRequest request) {
         try {
@@ -823,6 +1101,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListParameterSetRelation  ListParameterSetRelationRequest
+     * @return ListParameterSetRelationResponse
+     */
     @Override
     public CompletableFuture<ListParameterSetRelationResponse> listParameterSetRelation(ListParameterSetRelationRequest request) {
         try {
@@ -837,6 +1119,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListParameterSets  ListParameterSetsRequest
+     * @return ListParameterSetsResponse
+     */
     @Override
     public CompletableFuture<ListParameterSetsResponse> listParameterSets(ListParameterSetsRequest request) {
         try {
@@ -851,6 +1137,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProject  ListProjectRequest
+     * @return ListProjectResponse
+     */
     @Override
     public CompletableFuture<ListProjectResponse> listProject(ListProjectRequest request) {
         try {
@@ -865,6 +1155,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProjectBuilds  ListProjectBuildsRequest
+     * @return ListProjectBuildsResponse
+     */
     @Override
     public CompletableFuture<ListProjectBuildsResponse> listProjectBuilds(ListProjectBuildsRequest request) {
         try {
@@ -879,6 +1173,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRabbitmqPublishers  ListRabbitmqPublishersRequest
+     * @return ListRabbitmqPublishersResponse
+     */
     @Override
     public CompletableFuture<ListRabbitmqPublishersResponse> listRabbitmqPublishers(ListRabbitmqPublishersRequest request) {
         try {
@@ -893,6 +1191,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRamPolicyExportTaskVersions  ListRamPolicyExportTaskVersionsRequest
+     * @return ListRamPolicyExportTaskVersionsResponse
+     */
     @Override
     public CompletableFuture<ListRamPolicyExportTaskVersionsResponse> listRamPolicyExportTaskVersions(ListRamPolicyExportTaskVersionsRequest request) {
         try {
@@ -907,6 +1209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRamPolicyExportTasks  ListRamPolicyExportTasksRequest
+     * @return ListRamPolicyExportTasksResponse
+     */
     @Override
     public CompletableFuture<ListRamPolicyExportTasksResponse> listRamPolicyExportTasks(ListRamPolicyExportTasksRequest request) {
         try {
@@ -921,6 +1227,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListResourceExportTaskVersions  ListResourceExportTaskVersionsRequest
+     * @return ListResourceExportTaskVersionsResponse
+     */
     @Override
     public CompletableFuture<ListResourceExportTaskVersionsResponse> listResourceExportTaskVersions(ListResourceExportTaskVersionsRequest request) {
         try {
@@ -935,6 +1245,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListResourceExportTasks  ListResourceExportTasksRequest
+     * @return ListResourceExportTasksResponse
+     */
     @Override
     public CompletableFuture<ListResourceExportTasksResponse> listResourceExportTasks(ListResourceExportTasksRequest request) {
         try {
@@ -949,6 +1263,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListResources  ListResourcesRequest
+     * @return ListResourcesResponse
+     */
     @Override
     public CompletableFuture<ListResourcesResponse> listResources(ListResourcesRequest request) {
         try {
@@ -963,6 +1281,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTasks  ListTasksRequest
+     * @return ListTasksResponse
+     */
     @Override
     public CompletableFuture<ListTasksResponse> listTasks(ListTasksRequest request) {
         try {
@@ -977,6 +1299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTerraformProviderVersions  ListTerraformProviderVersionsRequest
+     * @return ListTerraformProviderVersionsResponse
+     */
     @Override
     public CompletableFuture<ListTerraformProviderVersionsResponse> listTerraformProviderVersions(ListTerraformProviderVersionsRequest request) {
         try {
@@ -991,6 +1317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateJob  OperateJobRequest
+     * @return OperateJobResponse
+     */
     @Override
     public CompletableFuture<OperateJobResponse> operateJob(OperateJobRequest request) {
         try {
@@ -1005,6 +1335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveResourceExportTaskVersion  RemoveResourceExportTaskVersionRequest
+     * @return RemoveResourceExportTaskVersionResponse
+     */
     @Override
     public CompletableFuture<RemoveResourceExportTaskVersionResponse> removeResourceExportTaskVersion(RemoveResourceExportTaskVersionRequest request) {
         try {
@@ -1019,6 +1353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -1033,6 +1371,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAuthorizationAttribute  UpdateAuthorizationAttributeRequest
+     * @return UpdateAuthorizationAttributeResponse
+     */
     @Override
     public CompletableFuture<UpdateAuthorizationAttributeResponse> updateAuthorizationAttribute(UpdateAuthorizationAttributeRequest request) {
         try {
@@ -1047,6 +1389,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateExplorerTaskAttribute  UpdateExplorerTaskAttributeRequest
+     * @return UpdateExplorerTaskAttributeResponse
+     */
+    @Override
+    public CompletableFuture<UpdateExplorerTaskAttributeResponse> updateExplorerTaskAttribute(UpdateExplorerTaskAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateExplorerTaskAttribute").setMethod(HttpMethod.PUT).setPathRegex("/explorerTask/{explorerTaskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateExplorerTaskAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateExplorerTaskAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateGroup  UpdateGroupRequest
+     * @return UpdateGroupResponse
+     */
     @Override
     public CompletableFuture<UpdateGroupResponse> updateGroup(UpdateGroupRequest request) {
         try {
@@ -1061,6 +1425,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateModuleAttribute  UpdateModuleAttributeRequest
+     * @return UpdateModuleAttributeResponse
+     */
     @Override
     public CompletableFuture<UpdateModuleAttributeResponse> updateModuleAttribute(UpdateModuleAttributeRequest request) {
         try {
@@ -1075,6 +1443,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateParameterSetAttribute  UpdateParameterSetAttributeRequest
+     * @return UpdateParameterSetAttributeResponse
+     */
     @Override
     public CompletableFuture<UpdateParameterSetAttributeResponse> updateParameterSetAttribute(UpdateParameterSetAttributeRequest request) {
         try {
@@ -1089,6 +1461,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateProject  UpdateProjectRequest
+     * @return UpdateProjectResponse
+     */
     @Override
     public CompletableFuture<UpdateProjectResponse> updateProject(UpdateProjectRequest request) {
         try {
@@ -1103,6 +1479,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRabbitmqPublisherAttribute  UpdateRabbitmqPublisherAttributeRequest
+     * @return UpdateRabbitmqPublisherAttributeResponse
+     */
     @Override
     public CompletableFuture<UpdateRabbitmqPublisherAttributeResponse> updateRabbitmqPublisherAttribute(UpdateRabbitmqPublisherAttributeRequest request) {
         try {
@@ -1117,6 +1497,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRamPolicyExportTaskAttribute  UpdateRamPolicyExportTaskAttributeRequest
+     * @return UpdateRamPolicyExportTaskAttributeResponse
+     */
     @Override
     public CompletableFuture<UpdateRamPolicyExportTaskAttributeResponse> updateRamPolicyExportTaskAttribute(UpdateRamPolicyExportTaskAttributeRequest request) {
         try {
@@ -1131,6 +1515,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateResourceExportTaskAttribute  UpdateResourceExportTaskAttributeRequest
+     * @return UpdateResourceExportTaskAttributeResponse
+     */
     @Override
     public CompletableFuture<UpdateResourceExportTaskAttributeResponse> updateResourceExportTaskAttribute(UpdateResourceExportTaskAttributeRequest request) {
         try {
@@ -1145,6 +1533,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTaskAttribute  UpdateTaskAttributeRequest
+     * @return UpdateTaskAttributeResponse
+     */
     @Override
     public CompletableFuture<UpdateTaskAttributeResponse> updateTaskAttribute(UpdateTaskAttributeRequest request) {
         try {
@@ -1159,6 +1551,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTaskPolicy  UpdateTaskPolicyRequest
+     * @return UpdateTaskPolicyResponse
+     */
     @Override
     public CompletableFuture<UpdateTaskPolicyResponse> updateTaskPolicy(UpdateTaskPolicyRequest request) {
         try {

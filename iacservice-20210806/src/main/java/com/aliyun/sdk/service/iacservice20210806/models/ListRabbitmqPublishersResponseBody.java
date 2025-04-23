@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRabbitmqPublishersResponseBody} extends {@link TeaModel}
  *
  * <p>ListRabbitmqPublishersResponseBody</p>
  */
 public class ListRabbitmqPublishersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("authorizations")
-    private java.util.List < Authorizations> authorizations;
+    private java.util.List<Authorizations> authorizations;
 
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
@@ -42,10 +48,14 @@ public class ListRabbitmqPublishersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return authorizations
      */
-    public java.util.List < Authorizations> getAuthorizations() {
+    public java.util.List<Authorizations> getAuthorizations() {
         return this.authorizations;
     }
 
@@ -78,16 +88,27 @@ public class ListRabbitmqPublishersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Authorizations> authorizations; 
+        private java.util.List<Authorizations> authorizations; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListRabbitmqPublishersResponseBody model) {
+            this.authorizations = model.authorizations;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * authorizations.
          */
-        public Builder authorizations(java.util.List < Authorizations> authorizations) {
+        public Builder authorizations(java.util.List<Authorizations> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
@@ -130,6 +151,12 @@ public class ListRabbitmqPublishersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRabbitmqPublishersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRabbitmqPublishersResponseBody</p>
+     */
     public static class Authorizations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -263,6 +290,22 @@ public class ListRabbitmqPublishersResponseBody extends TeaModel {
             private String publisherId; 
             private String userName; 
             private String virtualHost; 
+
+            private Builder() {
+            } 
+
+            private Builder(Authorizations model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.exchangeName = model.exchangeName;
+                this.exchangeType = model.exchangeType;
+                this.hostName = model.hostName;
+                this.name = model.name;
+                this.port = model.port;
+                this.publisherId = model.publisherId;
+                this.userName = model.userName;
+                this.virtualHost = model.virtualHost;
+            } 
 
             /**
              * createTime.

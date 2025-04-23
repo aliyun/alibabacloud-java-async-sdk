@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateGroupRequest</p>
@@ -43,11 +49,11 @@ public class UpdateGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("notifyConfig")
-    private java.util.List < NotifyConfig> notifyConfig;
+    private java.util.List<NotifyConfig> notifyConfig;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("notifyOperationTypes")
-    private java.util.List < String > notifyOperationTypes;
+    private java.util.List<String> notifyOperationTypes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ramRole")
@@ -55,7 +61,7 @@ public class UpdateGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("reportExportField")
-    private java.util.List < String > reportExportField;
+    private java.util.List<String> reportExportField;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("reportExportPath")
@@ -67,11 +73,11 @@ public class UpdateGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("triggerConfig")
-    private java.util.List < TriggerConfig> triggerConfig;
+    private java.util.List<TriggerConfig> triggerConfig;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("triggerResourceType")
-    private java.util.List < String > triggerResourceType;
+    private java.util.List<String> triggerResourceType;
 
     private UpdateGroupRequest(Builder builder) {
         super(builder);
@@ -100,7 +106,7 @@ public class UpdateGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -157,14 +163,14 @@ public class UpdateGroupRequest extends Request {
     /**
      * @return notifyConfig
      */
-    public java.util.List < NotifyConfig> getNotifyConfig() {
+    public java.util.List<NotifyConfig> getNotifyConfig() {
         return this.notifyConfig;
     }
 
     /**
      * @return notifyOperationTypes
      */
-    public java.util.List < String > getNotifyOperationTypes() {
+    public java.util.List<String> getNotifyOperationTypes() {
         return this.notifyOperationTypes;
     }
 
@@ -178,7 +184,7 @@ public class UpdateGroupRequest extends Request {
     /**
      * @return reportExportField
      */
-    public java.util.List < String > getReportExportField() {
+    public java.util.List<String> getReportExportField() {
         return this.reportExportField;
     }
 
@@ -199,14 +205,14 @@ public class UpdateGroupRequest extends Request {
     /**
      * @return triggerConfig
      */
-    public java.util.List < TriggerConfig> getTriggerConfig() {
+    public java.util.List<TriggerConfig> getTriggerConfig() {
         return this.triggerConfig;
     }
 
     /**
      * @return triggerResourceType
      */
-    public java.util.List < String > getTriggerResourceType() {
+    public java.util.List<String> getTriggerResourceType() {
         return this.triggerResourceType;
     }
 
@@ -218,14 +224,14 @@ public class UpdateGroupRequest extends Request {
         private String description; 
         private Boolean forcedSetting; 
         private String name; 
-        private java.util.List < NotifyConfig> notifyConfig; 
-        private java.util.List < String > notifyOperationTypes; 
+        private java.util.List<NotifyConfig> notifyConfig; 
+        private java.util.List<String> notifyOperationTypes; 
         private String ramRole; 
-        private java.util.List < String > reportExportField; 
+        private java.util.List<String> reportExportField; 
         private String reportExportPath; 
         private String terraformProviderVersion; 
-        private java.util.List < TriggerConfig> triggerConfig; 
-        private java.util.List < String > triggerResourceType; 
+        private java.util.List<TriggerConfig> triggerConfig; 
+        private java.util.List<String> triggerResourceType; 
 
         private Builder() {
             super();
@@ -251,7 +257,10 @@ public class UpdateGroupRequest extends Request {
         } 
 
         /**
-         * groupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-59d8d22e78792ffe3d3eb6154d727</p>
          */
         public Builder groupId(String groupId) {
             this.putPathParameter("groupId", groupId);
@@ -278,7 +287,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -316,7 +328,7 @@ public class UpdateGroupRequest extends Request {
         /**
          * notifyConfig.
          */
-        public Builder notifyConfig(java.util.List < NotifyConfig> notifyConfig) {
+        public Builder notifyConfig(java.util.List<NotifyConfig> notifyConfig) {
             this.putBodyParameter("notifyConfig", notifyConfig);
             this.notifyConfig = notifyConfig;
             return this;
@@ -325,7 +337,7 @@ public class UpdateGroupRequest extends Request {
         /**
          * notifyOperationTypes.
          */
-        public Builder notifyOperationTypes(java.util.List < String > notifyOperationTypes) {
+        public Builder notifyOperationTypes(java.util.List<String> notifyOperationTypes) {
             this.putBodyParameter("notifyOperationTypes", notifyOperationTypes);
             this.notifyOperationTypes = notifyOperationTypes;
             return this;
@@ -343,7 +355,7 @@ public class UpdateGroupRequest extends Request {
         /**
          * reportExportField.
          */
-        public Builder reportExportField(java.util.List < String > reportExportField) {
+        public Builder reportExportField(java.util.List<String> reportExportField) {
             this.putBodyParameter("reportExportField", reportExportField);
             this.reportExportField = reportExportField;
             return this;
@@ -370,7 +382,7 @@ public class UpdateGroupRequest extends Request {
         /**
          * triggerConfig.
          */
-        public Builder triggerConfig(java.util.List < TriggerConfig> triggerConfig) {
+        public Builder triggerConfig(java.util.List<TriggerConfig> triggerConfig) {
             this.putBodyParameter("triggerConfig", triggerConfig);
             this.triggerConfig = triggerConfig;
             return this;
@@ -379,7 +391,7 @@ public class UpdateGroupRequest extends Request {
         /**
          * triggerResourceType.
          */
-        public Builder triggerResourceType(java.util.List < String > triggerResourceType) {
+        public Builder triggerResourceType(java.util.List<String> triggerResourceType) {
             this.putBodyParameter("triggerResourceType", triggerResourceType);
             this.triggerResourceType = triggerResourceType;
             return this;
@@ -392,6 +404,12 @@ public class UpdateGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateGroupRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateGroupRequest</p>
+     */
     public static class NotifyConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("notifyPath")
         private String notifyPath;
@@ -430,6 +448,14 @@ public class UpdateGroupRequest extends Request {
             private String notifyPath; 
             private String notifyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(NotifyConfig model) {
+                this.notifyPath = model.notifyPath;
+                this.notifyType = model.notifyType;
+            } 
+
             /**
              * notifyPath.
              */
@@ -453,6 +479,12 @@ public class UpdateGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateGroupRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateGroupRequest</p>
+     */
     public static class TriggerConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("triggerStrategy")
         private String triggerStrategy;
@@ -490,6 +522,14 @@ public class UpdateGroupRequest extends Request {
         public static final class Builder {
             private String triggerStrategy; 
             private String triggerValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(TriggerConfig model) {
+                this.triggerStrategy = model.triggerStrategy;
+                this.triggerValue = model.triggerValue;
+            } 
 
             /**
              * triggerStrategy.

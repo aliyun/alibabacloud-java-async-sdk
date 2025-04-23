@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRabbitmqPublisherAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateRabbitmqPublisherAttributeRequest</p>
@@ -50,7 +56,7 @@ public class UpdateRabbitmqPublisherAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,7 +117,10 @@ public class UpdateRabbitmqPublisherAttributeRequest extends Request {
         } 
 
         /**
-         * publisherId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mqp-3b6cb9fa4751afff780436bcefbf1</p>
          */
         public Builder publisherId(String publisherId) {
             this.putPathParameter("publisherId", publisherId);
@@ -147,7 +156,7 @@ public class UpdateRabbitmqPublisherAttributeRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

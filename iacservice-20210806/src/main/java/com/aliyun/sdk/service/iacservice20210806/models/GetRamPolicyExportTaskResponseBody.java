@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRamPolicyExportTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetRamPolicyExportTaskResponseBody</p>
@@ -30,6 +36,10 @@ public class GetRamPolicyExportTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ramPolicyExportTask
      */
@@ -47,6 +57,14 @@ public class GetRamPolicyExportTaskResponseBody extends TeaModel {
     public static final class Builder {
         private RamPolicyExportTask ramPolicyExportTask; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRamPolicyExportTaskResponseBody model) {
+            this.ramPolicyExportTask = model.ramPolicyExportTask;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ramPolicyExportTask.
@@ -70,15 +88,21 @@ public class GetRamPolicyExportTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRamPolicyExportTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRamPolicyExportTaskResponseBody</p>
+     */
     public static class RamPolicyExportTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("authorizationAccountIds")
-        private java.util.List < Long > authorizationAccountIds;
+        private java.util.List<Long> authorizationAccountIds;
 
         @com.aliyun.core.annotation.NameInMap("authorizationActions")
-        private java.util.List < String > authorizationActions;
+        private java.util.List<String> authorizationActions;
 
         @com.aliyun.core.annotation.NameInMap("authorizationRegionIds")
-        private java.util.List < String > authorizationRegionIds;
+        private java.util.List<String> authorizationRegionIds;
 
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -137,21 +161,21 @@ public class GetRamPolicyExportTaskResponseBody extends TeaModel {
         /**
          * @return authorizationAccountIds
          */
-        public java.util.List < Long > getAuthorizationAccountIds() {
+        public java.util.List<Long> getAuthorizationAccountIds() {
             return this.authorizationAccountIds;
         }
 
         /**
          * @return authorizationActions
          */
-        public java.util.List < String > getAuthorizationActions() {
+        public java.util.List<String> getAuthorizationActions() {
             return this.authorizationActions;
         }
 
         /**
          * @return authorizationRegionIds
          */
-        public java.util.List < String > getAuthorizationRegionIds() {
+        public java.util.List<String> getAuthorizationRegionIds() {
             return this.authorizationRegionIds;
         }
 
@@ -226,9 +250,9 @@ public class GetRamPolicyExportTaskResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Long > authorizationAccountIds; 
-            private java.util.List < String > authorizationActions; 
-            private java.util.List < String > authorizationRegionIds; 
+            private java.util.List<Long> authorizationAccountIds; 
+            private java.util.List<String> authorizationActions; 
+            private java.util.List<String> authorizationRegionIds; 
             private String createTime; 
             private String moduleId; 
             private String moduleVersion; 
@@ -240,10 +264,29 @@ public class GetRamPolicyExportTaskResponseBody extends TeaModel {
             private String terraformProviderVersion; 
             private String triggerStrategy; 
 
+            private Builder() {
+            } 
+
+            private Builder(RamPolicyExportTask model) {
+                this.authorizationAccountIds = model.authorizationAccountIds;
+                this.authorizationActions = model.authorizationActions;
+                this.authorizationRegionIds = model.authorizationRegionIds;
+                this.createTime = model.createTime;
+                this.moduleId = model.moduleId;
+                this.moduleVersion = model.moduleVersion;
+                this.name = model.name;
+                this.ramPolicyExportTaskId = model.ramPolicyExportTaskId;
+                this.ramRole = model.ramRole;
+                this.status = model.status;
+                this.taskOutputPath = model.taskOutputPath;
+                this.terraformProviderVersion = model.terraformProviderVersion;
+                this.triggerStrategy = model.triggerStrategy;
+            } 
+
             /**
              * authorizationAccountIds.
              */
-            public Builder authorizationAccountIds(java.util.List < Long > authorizationAccountIds) {
+            public Builder authorizationAccountIds(java.util.List<Long> authorizationAccountIds) {
                 this.authorizationAccountIds = authorizationAccountIds;
                 return this;
             }
@@ -251,7 +294,7 @@ public class GetRamPolicyExportTaskResponseBody extends TeaModel {
             /**
              * authorizationActions.
              */
-            public Builder authorizationActions(java.util.List < String > authorizationActions) {
+            public Builder authorizationActions(java.util.List<String> authorizationActions) {
                 this.authorizationActions = authorizationActions;
                 return this;
             }
@@ -259,7 +302,7 @@ public class GetRamPolicyExportTaskResponseBody extends TeaModel {
             /**
              * authorizationRegionIds.
              */
-            public Builder authorizationRegionIds(java.util.List < String > authorizationRegionIds) {
+            public Builder authorizationRegionIds(java.util.List<String> authorizationRegionIds) {
                 this.authorizationRegionIds = authorizationRegionIds;
                 return this;
             }

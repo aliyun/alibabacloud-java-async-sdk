@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListTasksResponseBody</p>
@@ -21,7 +27,7 @@ public class ListTasksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("tasks")
-    private java.util.List < Tasks> tasks;
+    private java.util.List<Tasks> tasks;
 
     @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
@@ -40,6 +46,10 @@ public class ListTasksResponseBody extends TeaModel {
 
     public static ListTasksResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -66,7 +76,7 @@ public class ListTasksResponseBody extends TeaModel {
     /**
      * @return tasks
      */
-    public java.util.List < Tasks> getTasks() {
+    public java.util.List<Tasks> getTasks() {
         return this.tasks;
     }
 
@@ -81,8 +91,19 @@ public class ListTasksResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Tasks> tasks; 
+        private java.util.List<Tasks> tasks; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTasksResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * pageNumber.
@@ -111,7 +132,7 @@ public class ListTasksResponseBody extends TeaModel {
         /**
          * tasks.
          */
-        public Builder tasks(java.util.List < Tasks> tasks) {
+        public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
             return this;
         }
@@ -130,6 +151,12 @@ public class ListTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTasksResponseBody</p>
+     */
     public static class GroupInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupId")
         private String groupId;
@@ -192,6 +219,16 @@ public class ListTasksResponseBody extends TeaModel {
             private String projectId; 
             private String projectName; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupInfo model) {
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+            } 
+
             /**
              * groupId.
              */
@@ -231,6 +268,12 @@ public class ListTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTasksResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -269,6 +312,14 @@ public class ListTasksResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * key.
              */
@@ -292,6 +343,12 @@ public class ListTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTasksResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoApply")
         private Boolean autoApply;
@@ -327,7 +384,7 @@ public class ListTasksResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("taskId")
         private String taskId;
@@ -436,7 +493,7 @@ public class ListTasksResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -459,8 +516,27 @@ public class ListTasksResponseBody extends TeaModel {
             private String moduleVersion; 
             private String name; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.autoApply = model.autoApply;
+                this.createTime = model.createTime;
+                this.currentJobId = model.currentJobId;
+                this.currentJobStatus = model.currentJobStatus;
+                this.deletionProtection = model.deletionProtection;
+                this.groupInfo = model.groupInfo;
+                this.moduleId = model.moduleId;
+                this.moduleName = model.moduleName;
+                this.moduleVersion = model.moduleVersion;
+                this.name = model.name;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * autoApply.
@@ -553,7 +629,7 @@ public class ListTasksResponseBody extends TeaModel {
             /**
              * tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

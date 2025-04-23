@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourcesResponseBody</p>
  */
 public class ListResourcesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
@@ -42,10 +48,14 @@ public class ListResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
@@ -78,16 +88,27 @@ public class ListResourcesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListResourcesResponseBody model) {
+            this.resources = model.resources;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * Resources.
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
             return this;
         }
@@ -130,6 +151,12 @@ public class ListResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tagKey")
         private String tagKey;
@@ -168,6 +195,14 @@ public class ListResourcesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * tagKey.
              */
@@ -191,6 +226,12 @@ public class ListResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -199,16 +240,16 @@ public class ListResourcesResponseBody extends TeaModel {
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("dependsOnResourceIds")
-        private java.util.List < String > dependsOnResourceIds;
+        private java.util.List<String> dependsOnResourceIds;
 
         @com.aliyun.core.annotation.NameInMap("productCode")
         private String productCode;
 
         @com.aliyun.core.annotation.NameInMap("properties")
-        private java.util.Map < String, ? > properties;
+        private java.util.Map<String, ?> properties;
 
         @com.aliyun.core.annotation.NameInMap("propertyVariables")
-        private java.util.Map < String, ? > propertyVariables;
+        private java.util.Map<String, ?> propertyVariables;
 
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
@@ -232,7 +273,7 @@ public class ListResourcesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("terraformArn")
         private String terraformArn;
@@ -288,7 +329,7 @@ public class ListResourcesResponseBody extends TeaModel {
         /**
          * @return dependsOnResourceIds
          */
-        public java.util.List < String > getDependsOnResourceIds() {
+        public java.util.List<String> getDependsOnResourceIds() {
             return this.dependsOnResourceIds;
         }
 
@@ -302,14 +343,14 @@ public class ListResourcesResponseBody extends TeaModel {
         /**
          * @return properties
          */
-        public java.util.Map < String, ? > getProperties() {
+        public java.util.Map<String, ?> getProperties() {
             return this.properties;
         }
 
         /**
          * @return propertyVariables
          */
-        public java.util.Map < String, ? > getPropertyVariables() {
+        public java.util.Map<String, ?> getPropertyVariables() {
             return this.propertyVariables;
         }
 
@@ -365,7 +406,7 @@ public class ListResourcesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -393,10 +434,10 @@ public class ListResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private String accountId; 
             private String createTime; 
-            private java.util.List < String > dependsOnResourceIds; 
+            private java.util.List<String> dependsOnResourceIds; 
             private String productCode; 
-            private java.util.Map < String, ? > properties; 
-            private java.util.Map < String, ? > propertyVariables; 
+            private java.util.Map<String, ?> properties; 
+            private java.util.Map<String, ?> propertyVariables; 
             private String regionId; 
             private String resourceArn; 
             private String resourceGroupId; 
@@ -404,10 +445,33 @@ public class ListResourcesResponseBody extends TeaModel {
             private String resourceName; 
             private String resourceType; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String terraformArn; 
             private String terraformCode; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.accountId = model.accountId;
+                this.createTime = model.createTime;
+                this.dependsOnResourceIds = model.dependsOnResourceIds;
+                this.productCode = model.productCode;
+                this.properties = model.properties;
+                this.propertyVariables = model.propertyVariables;
+                this.regionId = model.regionId;
+                this.resourceArn = model.resourceArn;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.terraformArn = model.terraformArn;
+                this.terraformCode = model.terraformCode;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * accountId.
@@ -428,7 +492,7 @@ public class ListResourcesResponseBody extends TeaModel {
             /**
              * dependsOnResourceIds.
              */
-            public Builder dependsOnResourceIds(java.util.List < String > dependsOnResourceIds) {
+            public Builder dependsOnResourceIds(java.util.List<String> dependsOnResourceIds) {
                 this.dependsOnResourceIds = dependsOnResourceIds;
                 return this;
             }
@@ -444,7 +508,7 @@ public class ListResourcesResponseBody extends TeaModel {
             /**
              * properties.
              */
-            public Builder properties(java.util.Map < String, ? > properties) {
+            public Builder properties(java.util.Map<String, ?> properties) {
                 this.properties = properties;
                 return this;
             }
@@ -452,7 +516,7 @@ public class ListResourcesResponseBody extends TeaModel {
             /**
              * propertyVariables.
              */
-            public Builder propertyVariables(java.util.Map < String, ? > propertyVariables) {
+            public Builder propertyVariables(java.util.Map<String, ?> propertyVariables) {
                 this.propertyVariables = propertyVariables;
                 return this;
             }
@@ -516,7 +580,7 @@ public class ListResourcesResponseBody extends TeaModel {
             /**
              * tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

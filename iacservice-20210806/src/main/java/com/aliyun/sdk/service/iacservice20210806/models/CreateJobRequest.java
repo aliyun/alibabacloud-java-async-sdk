@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJobRequest} extends {@link RequestModel}
  *
  * <p>CreateJobRequest</p>
@@ -34,6 +40,10 @@ public class CreateJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("subCommand")
     private String subCommand;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("taskType")
+    private String taskType;
+
     private CreateJobRequest(Builder builder) {
         super(builder);
         this.taskId = builder.taskId;
@@ -41,6 +51,7 @@ public class CreateJobRequest extends Request {
         this.description = builder.description;
         this.executeType = builder.executeType;
         this.subCommand = builder.subCommand;
+        this.taskType = builder.taskType;
     }
 
     public static Builder builder() {
@@ -51,7 +62,7 @@ public class CreateJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -91,12 +102,20 @@ public class CreateJobRequest extends Request {
         return this.subCommand;
     }
 
+    /**
+     * @return taskType
+     */
+    public String getTaskType() {
+        return this.taskType;
+    }
+
     public static final class Builder extends Request.Builder<CreateJobRequest, Builder> {
         private String taskId; 
         private String clientToken; 
         private String description; 
         private String executeType; 
         private String subCommand; 
+        private String taskType; 
 
         private Builder() {
             super();
@@ -109,10 +128,14 @@ public class CreateJobRequest extends Request {
             this.description = request.description;
             this.executeType = request.executeType;
             this.subCommand = request.subCommand;
+            this.taskType = request.taskType;
         } 
 
         /**
-         * taskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-433aead756057fffeaba4828f5195</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);
@@ -121,7 +144,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2daf4227f747cbf11a5501f18cc5e004</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -130,7 +156,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -153,6 +182,15 @@ public class CreateJobRequest extends Request {
         public Builder subCommand(String subCommand) {
             this.putBodyParameter("subCommand", subCommand);
             this.subCommand = subCommand;
+            return this;
+        }
+
+        /**
+         * taskType.
+         */
+        public Builder taskType(String taskType) {
+            this.putBodyParameter("taskType", taskType);
+            this.taskType = taskType;
             return this;
         }
 

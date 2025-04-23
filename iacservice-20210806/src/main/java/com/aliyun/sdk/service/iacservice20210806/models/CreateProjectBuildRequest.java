@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProjectBuildRequest} extends {@link RequestModel}
  *
  * <p>CreateProjectBuildRequest</p>
@@ -32,11 +38,11 @@ public class CreateProjectBuildRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("taskIds")
-    private java.util.List < String > taskIds;
+    private java.util.List<String> taskIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("taskPolicies")
-    private java.util.List < TaskPolicies> taskPolicies;
+    private java.util.List<TaskPolicies> taskPolicies;
 
     private CreateProjectBuildRequest(Builder builder) {
         super(builder);
@@ -56,7 +62,7 @@ public class CreateProjectBuildRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -92,14 +98,14 @@ public class CreateProjectBuildRequest extends Request {
     /**
      * @return taskIds
      */
-    public java.util.List < String > getTaskIds() {
+    public java.util.List<String> getTaskIds() {
         return this.taskIds;
     }
 
     /**
      * @return taskPolicies
      */
-    public java.util.List < TaskPolicies> getTaskPolicies() {
+    public java.util.List<TaskPolicies> getTaskPolicies() {
         return this.taskPolicies;
     }
 
@@ -108,8 +114,8 @@ public class CreateProjectBuildRequest extends Request {
         private String clientToken; 
         private String groupId; 
         private String projectBuildAction; 
-        private java.util.List < String > taskIds; 
-        private java.util.List < TaskPolicies> taskPolicies; 
+        private java.util.List<String> taskIds; 
+        private java.util.List<TaskPolicies> taskPolicies; 
 
         private Builder() {
             super();
@@ -126,7 +132,10 @@ public class CreateProjectBuildRequest extends Request {
         } 
 
         /**
-         * projectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-433aead7560571e66e31274ffd2</p>
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("projectId", projectId);
@@ -135,7 +144,10 @@ public class CreateProjectBuildRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -153,7 +165,10 @@ public class CreateProjectBuildRequest extends Request {
         }
 
         /**
-         * projectBuildAction.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>refresh</p>
          */
         public Builder projectBuildAction(String projectBuildAction) {
             this.putBodyParameter("projectBuildAction", projectBuildAction);
@@ -164,7 +179,7 @@ public class CreateProjectBuildRequest extends Request {
         /**
          * taskIds.
          */
-        public Builder taskIds(java.util.List < String > taskIds) {
+        public Builder taskIds(java.util.List<String> taskIds) {
             this.putBodyParameter("taskIds", taskIds);
             this.taskIds = taskIds;
             return this;
@@ -173,7 +188,7 @@ public class CreateProjectBuildRequest extends Request {
         /**
          * taskPolicies.
          */
-        public Builder taskPolicies(java.util.List < TaskPolicies> taskPolicies) {
+        public Builder taskPolicies(java.util.List<TaskPolicies> taskPolicies) {
             this.putBodyParameter("taskPolicies", taskPolicies);
             this.taskPolicies = taskPolicies;
             return this;
@@ -186,6 +201,12 @@ public class CreateProjectBuildRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateProjectBuildRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProjectBuildRequest</p>
+     */
     public static class TaskPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("destroyAfterExecution")
         private Boolean destroyAfterExecution;
@@ -235,6 +256,15 @@ public class CreateProjectBuildRequest extends Request {
             private Boolean destroyAfterExecution; 
             private Long priority; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskPolicies model) {
+                this.destroyAfterExecution = model.destroyAfterExecution;
+                this.priority = model.priority;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * destroyAfterExecution.

@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListModulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListModulesResponseBody</p>
  */
 public class ListModulesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("modules")
-    private java.util.List < Modules> modules;
+    private java.util.List<Modules> modules;
 
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
@@ -42,10 +48,14 @@ public class ListModulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return modules
      */
-    public java.util.List < Modules> getModules() {
+    public java.util.List<Modules> getModules() {
         return this.modules;
     }
 
@@ -78,16 +88,27 @@ public class ListModulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Modules> modules; 
+        private java.util.List<Modules> modules; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListModulesResponseBody model) {
+            this.modules = model.modules;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * modules.
          */
-        public Builder modules(java.util.List < Modules> modules) {
+        public Builder modules(java.util.List<Modules> modules) {
             this.modules = modules;
             return this;
         }
@@ -130,6 +151,12 @@ public class ListModulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListModulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListModulesResponseBody</p>
+     */
     public static class GroupInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupId")
         private String groupId;
@@ -192,6 +219,16 @@ public class ListModulesResponseBody extends TeaModel {
             private String projectId; 
             private String projectName; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupInfo model) {
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+            } 
+
             /**
              * groupId.
              */
@@ -231,6 +268,12 @@ public class ListModulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListModulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListModulesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -269,6 +312,14 @@ public class ListModulesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * key.
              */
@@ -292,6 +343,12 @@ public class ListModulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListModulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListModulesResponseBody</p>
+     */
     public static class Modules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -309,7 +366,7 @@ public class ListModulesResponseBody extends TeaModel {
         private String latestVersion;
 
         @com.aliyun.core.annotation.NameInMap("meta")
-        private java.util.Map < String, ? > meta;
+        private java.util.Map<String, ?> meta;
 
         @com.aliyun.core.annotation.NameInMap("moduleId")
         private String moduleId;
@@ -321,13 +378,13 @@ public class ListModulesResponseBody extends TeaModel {
         private String source;
 
         @com.aliyun.core.annotation.NameInMap("sourceConfig")
-        private java.util.Map < String, ? > sourceConfig;
+        private java.util.Map<String, ?> sourceConfig;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private Modules(Builder builder) {
             this.createTime = builder.createTime;
@@ -390,7 +447,7 @@ public class ListModulesResponseBody extends TeaModel {
         /**
          * @return meta
          */
-        public java.util.Map < String, ? > getMeta() {
+        public java.util.Map<String, ?> getMeta() {
             return this.meta;
         }
 
@@ -418,7 +475,7 @@ public class ListModulesResponseBody extends TeaModel {
         /**
          * @return sourceConfig
          */
-        public java.util.Map < String, ? > getSourceConfig() {
+        public java.util.Map<String, ?> getSourceConfig() {
             return this.sourceConfig;
         }
 
@@ -432,7 +489,7 @@ public class ListModulesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -442,13 +499,31 @@ public class ListModulesResponseBody extends TeaModel {
             private String description; 
             private GroupInfo groupInfo; 
             private String latestVersion; 
-            private java.util.Map < String, ? > meta; 
+            private java.util.Map<String, ?> meta; 
             private String moduleId; 
             private String name; 
             private String source; 
-            private java.util.Map < String, ? > sourceConfig; 
+            private java.util.Map<String, ?> sourceConfig; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Modules model) {
+                this.createTime = model.createTime;
+                this.deletionProtection = model.deletionProtection;
+                this.description = model.description;
+                this.groupInfo = model.groupInfo;
+                this.latestVersion = model.latestVersion;
+                this.meta = model.meta;
+                this.moduleId = model.moduleId;
+                this.name = model.name;
+                this.source = model.source;
+                this.sourceConfig = model.sourceConfig;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * createTime.
@@ -493,7 +568,7 @@ public class ListModulesResponseBody extends TeaModel {
             /**
              * meta.
              */
-            public Builder meta(java.util.Map < String, ? > meta) {
+            public Builder meta(java.util.Map<String, ?> meta) {
                 this.meta = meta;
                 return this;
             }
@@ -525,7 +600,7 @@ public class ListModulesResponseBody extends TeaModel {
             /**
              * sourceConfig.
              */
-            public Builder sourceConfig(java.util.Map < String, ? > sourceConfig) {
+            public Builder sourceConfig(java.util.Map<String, ?> sourceConfig) {
                 this.sourceConfig = sourceConfig;
                 return this;
             }
@@ -541,7 +616,7 @@ public class ListModulesResponseBody extends TeaModel {
             /**
              * tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

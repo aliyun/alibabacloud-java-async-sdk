@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceExportTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceExportTaskResponseBody</p>
@@ -30,6 +36,10 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -47,6 +57,14 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Task task; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceExportTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.task = model.task;
+        } 
 
         /**
          * requestId.
@@ -70,12 +88,18 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceExportTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceExportTaskResponseBody</p>
+     */
     public static class ExcludeRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private ExcludeRules(Builder builder) {
             this.key = builder.key;
@@ -100,13 +124,21 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExcludeRules model) {
+                this.key = model.key;
+                this.values = model.values;
+            } 
 
             /**
              * key.
@@ -119,7 +151,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             /**
              * values.
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -131,6 +163,12 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceExportTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceExportTaskResponseBody</p>
+     */
     public static class ExportToModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("source")
         private String source;
@@ -181,6 +219,15 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             private String sourcePath; 
             private String statePath; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExportToModule model) {
+                this.source = model.source;
+                this.sourcePath = model.sourcePath;
+                this.statePath = model.statePath;
+            } 
+
             /**
              * source.
              */
@@ -212,12 +259,18 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceExportTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceExportTaskResponseBody</p>
+     */
     public static class IncludeRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private IncludeRules(Builder builder) {
             this.key = builder.key;
@@ -242,13 +295,21 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(IncludeRules model) {
+                this.key = model.key;
+                this.values = model.values;
+            } 
 
             /**
              * key.
@@ -261,7 +322,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             /**
              * values.
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -273,6 +334,12 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceExportTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceExportTaskResponseBody</p>
+     */
     public static class Modules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("source")
         private String source;
@@ -323,6 +390,15 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             private String sourcePath; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Modules model) {
+                this.source = model.source;
+                this.sourcePath = model.sourcePath;
+                this.version = model.version;
+            } 
+
             /**
              * source.
              */
@@ -354,9 +430,15 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceExportTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceExportTaskResponseBody</p>
+     */
     public static class Variables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("properties")
-        private java.util.List < String > properties;
+        private java.util.List<String> properties;
 
         @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
@@ -377,7 +459,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         /**
          * @return properties
          */
-        public java.util.List < String > getProperties() {
+        public java.util.List<String> getProperties() {
             return this.properties;
         }
 
@@ -389,13 +471,21 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > properties; 
+            private java.util.List<String> properties; 
             private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.properties = model.properties;
+                this.resourceType = model.resourceType;
+            } 
 
             /**
              * properties.
              */
-            public Builder properties(java.util.List < String > properties) {
+            public Builder properties(java.util.List<String> properties) {
                 this.properties = properties;
                 return this;
             }
@@ -415,6 +505,12 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceExportTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceExportTaskResponseBody</p>
+     */
     public static class Task extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configPath")
         private String configPath;
@@ -429,7 +525,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         private Long elapsedTime;
 
         @com.aliyun.core.annotation.NameInMap("excludeRules")
-        private java.util.List < ExcludeRules> excludeRules;
+        private java.util.List<ExcludeRules> excludeRules;
 
         @com.aliyun.core.annotation.NameInMap("exportTaskId")
         private String exportTaskId;
@@ -444,10 +540,10 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         private String failedReason;
 
         @com.aliyun.core.annotation.NameInMap("includeRules")
-        private java.util.List < IncludeRules> includeRules;
+        private java.util.List<IncludeRules> includeRules;
 
         @com.aliyun.core.annotation.NameInMap("modules")
-        private java.util.List < Modules> modules;
+        private java.util.List<Modules> modules;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -462,7 +558,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         private String taskOutputPath;
 
         @com.aliyun.core.annotation.NameInMap("terraformContext")
-        private java.util.Map < String, ? > terraformContext;
+        private java.util.Map<String, ?> terraformContext;
 
         @com.aliyun.core.annotation.NameInMap("terraformProviderVersion")
         private String terraformProviderVersion;
@@ -474,7 +570,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         private String triggerStrategy;
 
         @com.aliyun.core.annotation.NameInMap("variables")
-        private java.util.List < Variables> variables;
+        private java.util.List<Variables> variables;
 
         private Task(Builder builder) {
             this.configPath = builder.configPath;
@@ -538,7 +634,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         /**
          * @return excludeRules
          */
-        public java.util.List < ExcludeRules> getExcludeRules() {
+        public java.util.List<ExcludeRules> getExcludeRules() {
             return this.excludeRules;
         }
 
@@ -573,14 +669,14 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         /**
          * @return includeRules
          */
-        public java.util.List < IncludeRules> getIncludeRules() {
+        public java.util.List<IncludeRules> getIncludeRules() {
             return this.includeRules;
         }
 
         /**
          * @return modules
          */
-        public java.util.List < Modules> getModules() {
+        public java.util.List<Modules> getModules() {
             return this.modules;
         }
 
@@ -615,7 +711,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         /**
          * @return terraformContext
          */
-        public java.util.Map < String, ? > getTerraformContext() {
+        public java.util.Map<String, ?> getTerraformContext() {
             return this.terraformContext;
         }
 
@@ -643,7 +739,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         /**
          * @return variables
          */
-        public java.util.List < Variables> getVariables() {
+        public java.util.List<Variables> getVariables() {
             return this.variables;
         }
 
@@ -652,22 +748,48 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             private String createTime; 
             private String description; 
             private Long elapsedTime; 
-            private java.util.List < ExcludeRules> excludeRules; 
+            private java.util.List<ExcludeRules> excludeRules; 
             private String exportTaskId; 
             private ExportToModule exportToModule; 
             private String exportVersion; 
             private String failedReason; 
-            private java.util.List < IncludeRules> includeRules; 
-            private java.util.List < Modules> modules; 
+            private java.util.List<IncludeRules> includeRules; 
+            private java.util.List<Modules> modules; 
             private String name; 
             private String ramRole; 
             private String status; 
             private String taskOutputPath; 
-            private java.util.Map < String, ? > terraformContext; 
+            private java.util.Map<String, ?> terraformContext; 
             private String terraformProviderVersion; 
             private String terraformVersion; 
             private String triggerStrategy; 
-            private java.util.List < Variables> variables; 
+            private java.util.List<Variables> variables; 
+
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.configPath = model.configPath;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.elapsedTime = model.elapsedTime;
+                this.excludeRules = model.excludeRules;
+                this.exportTaskId = model.exportTaskId;
+                this.exportToModule = model.exportToModule;
+                this.exportVersion = model.exportVersion;
+                this.failedReason = model.failedReason;
+                this.includeRules = model.includeRules;
+                this.modules = model.modules;
+                this.name = model.name;
+                this.ramRole = model.ramRole;
+                this.status = model.status;
+                this.taskOutputPath = model.taskOutputPath;
+                this.terraformContext = model.terraformContext;
+                this.terraformProviderVersion = model.terraformProviderVersion;
+                this.terraformVersion = model.terraformVersion;
+                this.triggerStrategy = model.triggerStrategy;
+                this.variables = model.variables;
+            } 
 
             /**
              * configPath.
@@ -704,7 +826,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             /**
              * excludeRules.
              */
-            public Builder excludeRules(java.util.List < ExcludeRules> excludeRules) {
+            public Builder excludeRules(java.util.List<ExcludeRules> excludeRules) {
                 this.excludeRules = excludeRules;
                 return this;
             }
@@ -744,7 +866,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             /**
              * includeRules.
              */
-            public Builder includeRules(java.util.List < IncludeRules> includeRules) {
+            public Builder includeRules(java.util.List<IncludeRules> includeRules) {
                 this.includeRules = includeRules;
                 return this;
             }
@@ -752,7 +874,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             /**
              * modules.
              */
-            public Builder modules(java.util.List < Modules> modules) {
+            public Builder modules(java.util.List<Modules> modules) {
                 this.modules = modules;
                 return this;
             }
@@ -792,7 +914,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             /**
              * terraformContext.
              */
-            public Builder terraformContext(java.util.Map < String, ? > terraformContext) {
+            public Builder terraformContext(java.util.Map<String, ?> terraformContext) {
                 this.terraformContext = terraformContext;
                 return this;
             }
@@ -824,7 +946,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             /**
              * variables.
              */
-            public Builder variables(java.util.List < Variables> variables) {
+            public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
                 return this;
             }

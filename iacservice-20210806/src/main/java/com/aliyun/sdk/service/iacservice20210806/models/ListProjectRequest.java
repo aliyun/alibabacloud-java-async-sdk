@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectRequest} extends {@link RequestModel}
  *
  * <p>ListProjectRequest</p>
@@ -25,7 +31,7 @@ public class ListProjectRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListProjectRequest(Builder builder) {
         super(builder);
@@ -43,7 +49,7 @@ public class ListProjectRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -72,7 +78,7 @@ public class ListProjectRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -80,7 +86,7 @@ public class ListProjectRequest extends Request {
         private String keyword; 
         private String pageNumber; 
         private String pageSize; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -124,7 +130,7 @@ public class ListProjectRequest extends Request {
         /**
          * tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
             this.putQueryParameter("tag", tagShrink);
             this.tag = tag;
@@ -138,6 +144,12 @@ public class ListProjectRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectRequest} extends {@link TeaModel}
+     *
+     * <p>ListProjectRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -175,6 +187,14 @@ public class ListProjectRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * key.

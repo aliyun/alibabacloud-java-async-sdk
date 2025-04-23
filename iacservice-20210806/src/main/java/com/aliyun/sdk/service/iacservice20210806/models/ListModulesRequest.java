@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListModulesRequest} extends {@link RequestModel}
  *
  * <p>ListModulesRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListModulesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("excludeModuleIds")
-    private java.util.List < String > excludeModuleIds;
+    private java.util.List<String> excludeModuleIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("groupId")
@@ -38,7 +44,7 @@ public class ListModulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListModulesRequest(Builder builder) {
         super(builder);
@@ -59,7 +65,7 @@ public class ListModulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -67,7 +73,7 @@ public class ListModulesRequest extends Request {
     /**
      * @return excludeModuleIds
      */
-    public java.util.List < String > getExcludeModuleIds() {
+    public java.util.List<String> getExcludeModuleIds() {
         return this.excludeModuleIds;
     }
 
@@ -109,18 +115,18 @@ public class ListModulesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListModulesRequest, Builder> {
-        private java.util.List < String > excludeModuleIds; 
+        private java.util.List<String> excludeModuleIds; 
         private String groupId; 
         private String keyword; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String projectId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -140,7 +146,7 @@ public class ListModulesRequest extends Request {
         /**
          * excludeModuleIds.
          */
-        public Builder excludeModuleIds(java.util.List < String > excludeModuleIds) {
+        public Builder excludeModuleIds(java.util.List<String> excludeModuleIds) {
             String excludeModuleIdsShrink = shrink(excludeModuleIds, "excludeModuleIds", "simple");
             this.putQueryParameter("excludeModuleIds", excludeModuleIdsShrink);
             this.excludeModuleIds = excludeModuleIds;
@@ -195,7 +201,7 @@ public class ListModulesRequest extends Request {
         /**
          * tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
             this.putQueryParameter("tag", tagShrink);
             this.tag = tag;
@@ -209,6 +215,12 @@ public class ListModulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListModulesRequest} extends {@link TeaModel}
+     *
+     * <p>ListModulesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -246,6 +258,14 @@ public class ListModulesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * key.

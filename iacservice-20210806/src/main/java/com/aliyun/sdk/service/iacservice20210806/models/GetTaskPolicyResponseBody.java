@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskPolicyResponseBody</p>
@@ -30,6 +36,10 @@ public class GetTaskPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -47,6 +57,14 @@ public class GetTaskPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TaskPolicy taskPolicy; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskPolicyResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskPolicy = model.taskPolicy;
+        } 
 
         /**
          * requestId.
@@ -70,6 +88,12 @@ public class GetTaskPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTaskPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskPolicyResponseBody</p>
+     */
     public static class TaskPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("priority")
         private Long priority;
@@ -132,6 +156,16 @@ public class GetTaskPolicyResponseBody extends TeaModel {
             private String taskName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskPolicies model) {
+                this.priority = model.priority;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.type = model.type;
+            } 
+
             /**
              * priority.
              */
@@ -171,12 +205,18 @@ public class GetTaskPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTaskPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskPolicyResponseBody</p>
+     */
     public static class TaskPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupId")
         private String groupId;
 
         @com.aliyun.core.annotation.NameInMap("taskPolicies")
-        private java.util.List < TaskPolicies> taskPolicies;
+        private java.util.List<TaskPolicies> taskPolicies;
 
         private TaskPolicy(Builder builder) {
             this.groupId = builder.groupId;
@@ -201,13 +241,21 @@ public class GetTaskPolicyResponseBody extends TeaModel {
         /**
          * @return taskPolicies
          */
-        public java.util.List < TaskPolicies> getTaskPolicies() {
+        public java.util.List<TaskPolicies> getTaskPolicies() {
             return this.taskPolicies;
         }
 
         public static final class Builder {
             private String groupId; 
-            private java.util.List < TaskPolicies> taskPolicies; 
+            private java.util.List<TaskPolicies> taskPolicies; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskPolicy model) {
+                this.groupId = model.groupId;
+                this.taskPolicies = model.taskPolicies;
+            } 
 
             /**
              * groupId.
@@ -220,7 +268,7 @@ public class GetTaskPolicyResponseBody extends TeaModel {
             /**
              * taskPolicies.
              */
-            public Builder taskPolicies(java.util.List < TaskPolicies> taskPolicies) {
+            public Builder taskPolicies(java.util.List<TaskPolicies> taskPolicies) {
                 this.taskPolicies = taskPolicies;
                 return this;
             }

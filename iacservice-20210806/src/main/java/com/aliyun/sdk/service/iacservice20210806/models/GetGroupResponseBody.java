@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetGroupResponseBody</p>
@@ -30,6 +36,10 @@ public class GetGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return group
      */
@@ -47,6 +57,14 @@ public class GetGroupResponseBody extends TeaModel {
     public static final class Builder {
         private Group group; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetGroupResponseBody model) {
+            this.group = model.group;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * group.
@@ -70,6 +88,12 @@ public class GetGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGroupResponseBody</p>
+     */
     public static class NotifyConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("notifyPath")
         private String notifyPath;
@@ -108,6 +132,14 @@ public class GetGroupResponseBody extends TeaModel {
             private String notifyPath; 
             private String notifyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(NotifyConfig model) {
+                this.notifyPath = model.notifyPath;
+                this.notifyType = model.notifyType;
+            } 
+
             /**
              * notifyPath.
              */
@@ -131,6 +163,12 @@ public class GetGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGroupResponseBody</p>
+     */
     public static class TriggerConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("triggerStrategy")
         private String triggerStrategy;
@@ -169,6 +207,14 @@ public class GetGroupResponseBody extends TeaModel {
             private String triggerStrategy; 
             private String triggerValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(TriggerConfig model) {
+                this.triggerStrategy = model.triggerStrategy;
+                this.triggerValue = model.triggerValue;
+            } 
+
             /**
              * triggerStrategy.
              */
@@ -192,6 +238,12 @@ public class GetGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGroupResponseBody</p>
+     */
     public static class Group extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoDestroy")
         private Boolean autoDestroy;
@@ -215,10 +267,10 @@ public class GetGroupResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("notifyConfig")
-        private java.util.List < NotifyConfig> notifyConfig;
+        private java.util.List<NotifyConfig> notifyConfig;
 
         @com.aliyun.core.annotation.NameInMap("notifyOperationTypes")
-        private java.util.List < String > notifyOperationTypes;
+        private java.util.List<String> notifyOperationTypes;
 
         @com.aliyun.core.annotation.NameInMap("projectId")
         private String projectId;
@@ -227,7 +279,7 @@ public class GetGroupResponseBody extends TeaModel {
         private String ramRole;
 
         @com.aliyun.core.annotation.NameInMap("reportExportField")
-        private java.util.List < String > reportExportField;
+        private java.util.List<String> reportExportField;
 
         @com.aliyun.core.annotation.NameInMap("reportExportPath")
         private String reportExportPath;
@@ -239,10 +291,10 @@ public class GetGroupResponseBody extends TeaModel {
         private String terraformProviderVersion;
 
         @com.aliyun.core.annotation.NameInMap("triggerConfig")
-        private java.util.List < TriggerConfig> triggerConfig;
+        private java.util.List<TriggerConfig> triggerConfig;
 
         @com.aliyun.core.annotation.NameInMap("triggerResourceType")
-        private java.util.List < String > triggerResourceType;
+        private java.util.List<String> triggerResourceType;
 
         private Group(Builder builder) {
             this.autoDestroy = builder.autoDestroy;
@@ -324,14 +376,14 @@ public class GetGroupResponseBody extends TeaModel {
         /**
          * @return notifyConfig
          */
-        public java.util.List < NotifyConfig> getNotifyConfig() {
+        public java.util.List<NotifyConfig> getNotifyConfig() {
             return this.notifyConfig;
         }
 
         /**
          * @return notifyOperationTypes
          */
-        public java.util.List < String > getNotifyOperationTypes() {
+        public java.util.List<String> getNotifyOperationTypes() {
             return this.notifyOperationTypes;
         }
 
@@ -352,7 +404,7 @@ public class GetGroupResponseBody extends TeaModel {
         /**
          * @return reportExportField
          */
-        public java.util.List < String > getReportExportField() {
+        public java.util.List<String> getReportExportField() {
             return this.reportExportField;
         }
 
@@ -380,14 +432,14 @@ public class GetGroupResponseBody extends TeaModel {
         /**
          * @return triggerConfig
          */
-        public java.util.List < TriggerConfig> getTriggerConfig() {
+        public java.util.List<TriggerConfig> getTriggerConfig() {
             return this.triggerConfig;
         }
 
         /**
          * @return triggerResourceType
          */
-        public java.util.List < String > getTriggerResourceType() {
+        public java.util.List<String> getTriggerResourceType() {
             return this.triggerResourceType;
         }
 
@@ -399,16 +451,39 @@ public class GetGroupResponseBody extends TeaModel {
             private Boolean forcedSetting; 
             private String groupId; 
             private String name; 
-            private java.util.List < NotifyConfig> notifyConfig; 
-            private java.util.List < String > notifyOperationTypes; 
+            private java.util.List<NotifyConfig> notifyConfig; 
+            private java.util.List<String> notifyOperationTypes; 
             private String projectId; 
             private String ramRole; 
-            private java.util.List < String > reportExportField; 
+            private java.util.List<String> reportExportField; 
             private String reportExportPath; 
             private Long taskCnt; 
             private String terraformProviderVersion; 
-            private java.util.List < TriggerConfig> triggerConfig; 
-            private java.util.List < String > triggerResourceType; 
+            private java.util.List<TriggerConfig> triggerConfig; 
+            private java.util.List<String> triggerResourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.autoDestroy = model.autoDestroy;
+                this.autoTrigger = model.autoTrigger;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.forcedSetting = model.forcedSetting;
+                this.groupId = model.groupId;
+                this.name = model.name;
+                this.notifyConfig = model.notifyConfig;
+                this.notifyOperationTypes = model.notifyOperationTypes;
+                this.projectId = model.projectId;
+                this.ramRole = model.ramRole;
+                this.reportExportField = model.reportExportField;
+                this.reportExportPath = model.reportExportPath;
+                this.taskCnt = model.taskCnt;
+                this.terraformProviderVersion = model.terraformProviderVersion;
+                this.triggerConfig = model.triggerConfig;
+                this.triggerResourceType = model.triggerResourceType;
+            } 
 
             /**
              * autoDestroy.
@@ -469,7 +544,7 @@ public class GetGroupResponseBody extends TeaModel {
             /**
              * notifyConfig.
              */
-            public Builder notifyConfig(java.util.List < NotifyConfig> notifyConfig) {
+            public Builder notifyConfig(java.util.List<NotifyConfig> notifyConfig) {
                 this.notifyConfig = notifyConfig;
                 return this;
             }
@@ -477,7 +552,7 @@ public class GetGroupResponseBody extends TeaModel {
             /**
              * notifyOperationTypes.
              */
-            public Builder notifyOperationTypes(java.util.List < String > notifyOperationTypes) {
+            public Builder notifyOperationTypes(java.util.List<String> notifyOperationTypes) {
                 this.notifyOperationTypes = notifyOperationTypes;
                 return this;
             }
@@ -501,7 +576,7 @@ public class GetGroupResponseBody extends TeaModel {
             /**
              * reportExportField.
              */
-            public Builder reportExportField(java.util.List < String > reportExportField) {
+            public Builder reportExportField(java.util.List<String> reportExportField) {
                 this.reportExportField = reportExportField;
                 return this;
             }
@@ -533,7 +608,7 @@ public class GetGroupResponseBody extends TeaModel {
             /**
              * triggerConfig.
              */
-            public Builder triggerConfig(java.util.List < TriggerConfig> triggerConfig) {
+            public Builder triggerConfig(java.util.List<TriggerConfig> triggerConfig) {
                 this.triggerConfig = triggerConfig;
                 return this;
             }
@@ -541,7 +616,7 @@ public class GetGroupResponseBody extends TeaModel {
             /**
              * triggerResourceType.
              */
-            public Builder triggerResourceType(java.util.List < String > triggerResourceType) {
+            public Builder triggerResourceType(java.util.List<String> triggerResourceType) {
                 this.triggerResourceType = triggerResourceType;
                 return this;
             }

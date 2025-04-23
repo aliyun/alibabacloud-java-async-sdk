@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProjectResponseBody} extends {@link TeaModel}
  *
  * <p>GetProjectResponseBody</p>
@@ -30,6 +36,10 @@ public class GetProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return project
      */
@@ -47,6 +57,14 @@ public class GetProjectResponseBody extends TeaModel {
     public static final class Builder {
         private Project project; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProjectResponseBody model) {
+            this.project = model.project;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * project.
@@ -70,6 +88,12 @@ public class GetProjectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectResponseBody</p>
+     */
     public static class Project extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -143,6 +167,17 @@ public class GetProjectResponseBody extends TeaModel {
             private String name; 
             private String projectId; 
             private Long taskCnt; 
+
+            private Builder() {
+            } 
+
+            private Builder(Project model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.name = model.name;
+                this.projectId = model.projectId;
+                this.taskCnt = model.taskCnt;
+            } 
 
             /**
              * createTime.

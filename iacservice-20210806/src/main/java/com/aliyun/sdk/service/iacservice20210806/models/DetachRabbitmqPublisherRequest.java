@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachRabbitmqPublisherRequest} extends {@link RequestModel}
  *
  * <p>DetachRabbitmqPublisherRequest</p>
@@ -35,7 +41,7 @@ public class DetachRabbitmqPublisherRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +75,10 @@ public class DetachRabbitmqPublisherRequest extends Request {
         } 
 
         /**
-         * publisherId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mqp-518855d9a058cea8348cd901d0</p>
          */
         public Builder publisherId(String publisherId) {
             this.putPathParameter("publisherId", publisherId);
@@ -78,7 +87,10 @@ public class DetachRabbitmqPublisherRequest extends Request {
         }
 
         /**
-         * taskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-518855d9a058cf1127d082bec5</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("taskId", taskId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JobStatusDetailValue} extends {@link TeaModel}
  *
  * <p>JobStatusDetailValue</p>
@@ -34,6 +40,10 @@ public class JobStatusDetailValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return comment
      */
@@ -59,6 +69,15 @@ public class JobStatusDetailValue extends TeaModel {
         private String comment; 
         private String jobResult; 
         private String timeStamps; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobStatusDetailValue model) {
+            this.comment = model.comment;
+            this.jobResult = model.jobResult;
+            this.timeStamps = model.timeStamps;
+        } 
 
         /**
          * comment.

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRamPolicyExportTaskVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListRamPolicyExportTaskVersionsResponseBody</p>
@@ -18,7 +24,7 @@ public class ListRamPolicyExportTaskVersionsResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("ramPolicyExportTaskVersions")
-    private java.util.List < RamPolicyExportTaskVersions> ramPolicyExportTaskVersions;
+    private java.util.List<RamPolicyExportTaskVersions> ramPolicyExportTaskVersions;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -42,6 +48,10 @@ public class ListRamPolicyExportTaskVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -59,7 +69,7 @@ public class ListRamPolicyExportTaskVersionsResponseBody extends TeaModel {
     /**
      * @return ramPolicyExportTaskVersions
      */
-    public java.util.List < RamPolicyExportTaskVersions> getRamPolicyExportTaskVersions() {
+    public java.util.List<RamPolicyExportTaskVersions> getRamPolicyExportTaskVersions() {
         return this.ramPolicyExportTaskVersions;
     }
 
@@ -80,9 +90,20 @@ public class ListRamPolicyExportTaskVersionsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < RamPolicyExportTaskVersions> ramPolicyExportTaskVersions; 
+        private java.util.List<RamPolicyExportTaskVersions> ramPolicyExportTaskVersions; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRamPolicyExportTaskVersionsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.ramPolicyExportTaskVersions = model.ramPolicyExportTaskVersions;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * pageNumber.
@@ -103,7 +124,7 @@ public class ListRamPolicyExportTaskVersionsResponseBody extends TeaModel {
         /**
          * ramPolicyExportTaskVersions.
          */
-        public Builder ramPolicyExportTaskVersions(java.util.List < RamPolicyExportTaskVersions> ramPolicyExportTaskVersions) {
+        public Builder ramPolicyExportTaskVersions(java.util.List<RamPolicyExportTaskVersions> ramPolicyExportTaskVersions) {
             this.ramPolicyExportTaskVersions = ramPolicyExportTaskVersions;
             return this;
         }
@@ -130,6 +151,12 @@ public class ListRamPolicyExportTaskVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRamPolicyExportTaskVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRamPolicyExportTaskVersionsResponseBody</p>
+     */
     public static class RamPolicyExportTaskVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -227,6 +254,19 @@ public class ListRamPolicyExportTaskVersionsResponseBody extends TeaModel {
             private String moduleVersion; 
             private String ramPolicyExportTaskId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(RamPolicyExportTaskVersions model) {
+                this.createTime = model.createTime;
+                this.elapsedTime = model.elapsedTime;
+                this.exportVersion = model.exportVersion;
+                this.moduleId = model.moduleId;
+                this.moduleVersion = model.moduleVersion;
+                this.ramPolicyExportTaskId = model.ramPolicyExportTaskId;
+                this.status = model.status;
+            } 
 
             /**
              * createTime.

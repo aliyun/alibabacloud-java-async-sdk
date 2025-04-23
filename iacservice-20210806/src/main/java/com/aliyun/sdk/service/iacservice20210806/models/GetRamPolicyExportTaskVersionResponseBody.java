@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRamPolicyExportTaskVersionResponseBody} extends {@link TeaModel}
  *
  * <p>GetRamPolicyExportTaskVersionResponseBody</p>
@@ -30,6 +36,10 @@ public class GetRamPolicyExportTaskVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ramPolicyExportTaskVersion
      */
@@ -47,6 +57,14 @@ public class GetRamPolicyExportTaskVersionResponseBody extends TeaModel {
     public static final class Builder {
         private RamPolicyExportTaskVersion ramPolicyExportTaskVersion; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRamPolicyExportTaskVersionResponseBody model) {
+            this.ramPolicyExportTaskVersion = model.ramPolicyExportTaskVersion;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ramPolicyExportTaskVersion.
@@ -70,15 +88,21 @@ public class GetRamPolicyExportTaskVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRamPolicyExportTaskVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRamPolicyExportTaskVersionResponseBody</p>
+     */
     public static class RamPolicyExportTaskVersion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("authorizationAccountIds")
-        private java.util.List < Long > authorizationAccountIds;
+        private java.util.List<Long> authorizationAccountIds;
 
         @com.aliyun.core.annotation.NameInMap("authorizationActions")
-        private java.util.List < String > authorizationActions;
+        private java.util.List<String> authorizationActions;
 
         @com.aliyun.core.annotation.NameInMap("authorizationRegionIds")
-        private java.util.List < String > authorizationRegionIds;
+        private java.util.List<String> authorizationRegionIds;
 
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -93,7 +117,7 @@ public class GetRamPolicyExportTaskVersionResponseBody extends TeaModel {
         private String failedReason;
 
         @com.aliyun.core.annotation.NameInMap("missingActions")
-        private java.util.List < String > missingActions;
+        private java.util.List<String> missingActions;
 
         @com.aliyun.core.annotation.NameInMap("moduleId")
         private String moduleId;
@@ -102,7 +126,7 @@ public class GetRamPolicyExportTaskVersionResponseBody extends TeaModel {
         private String moduleVersion;
 
         @com.aliyun.core.annotation.NameInMap("noSupportResourceTypes")
-        private java.util.List < String > noSupportResourceTypes;
+        private java.util.List<String> noSupportResourceTypes;
 
         @com.aliyun.core.annotation.NameInMap("policyDocument")
         private String policyDocument;
@@ -117,7 +141,7 @@ public class GetRamPolicyExportTaskVersionResponseBody extends TeaModel {
         private String terraformProviderVersion;
 
         @com.aliyun.core.annotation.NameInMap("unauthorizedActions")
-        private java.util.List < String > unauthorizedActions;
+        private java.util.List<String> unauthorizedActions;
 
         @com.aliyun.core.annotation.NameInMap("warnMessage")
         private String warnMessage;
@@ -153,21 +177,21 @@ public class GetRamPolicyExportTaskVersionResponseBody extends TeaModel {
         /**
          * @return authorizationAccountIds
          */
-        public java.util.List < Long > getAuthorizationAccountIds() {
+        public java.util.List<Long> getAuthorizationAccountIds() {
             return this.authorizationAccountIds;
         }
 
         /**
          * @return authorizationActions
          */
-        public java.util.List < String > getAuthorizationActions() {
+        public java.util.List<String> getAuthorizationActions() {
             return this.authorizationActions;
         }
 
         /**
          * @return authorizationRegionIds
          */
-        public java.util.List < String > getAuthorizationRegionIds() {
+        public java.util.List<String> getAuthorizationRegionIds() {
             return this.authorizationRegionIds;
         }
 
@@ -202,7 +226,7 @@ public class GetRamPolicyExportTaskVersionResponseBody extends TeaModel {
         /**
          * @return missingActions
          */
-        public java.util.List < String > getMissingActions() {
+        public java.util.List<String> getMissingActions() {
             return this.missingActions;
         }
 
@@ -223,7 +247,7 @@ public class GetRamPolicyExportTaskVersionResponseBody extends TeaModel {
         /**
          * @return noSupportResourceTypes
          */
-        public java.util.List < String > getNoSupportResourceTypes() {
+        public java.util.List<String> getNoSupportResourceTypes() {
             return this.noSupportResourceTypes;
         }
 
@@ -258,7 +282,7 @@ public class GetRamPolicyExportTaskVersionResponseBody extends TeaModel {
         /**
          * @return unauthorizedActions
          */
-        public java.util.List < String > getUnauthorizedActions() {
+        public java.util.List<String> getUnauthorizedActions() {
             return this.unauthorizedActions;
         }
 
@@ -270,28 +294,51 @@ public class GetRamPolicyExportTaskVersionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Long > authorizationAccountIds; 
-            private java.util.List < String > authorizationActions; 
-            private java.util.List < String > authorizationRegionIds; 
+            private java.util.List<Long> authorizationAccountIds; 
+            private java.util.List<String> authorizationActions; 
+            private java.util.List<String> authorizationRegionIds; 
             private String createTime; 
             private Long elapsedTime; 
             private String exportVersion; 
             private String failedReason; 
-            private java.util.List < String > missingActions; 
+            private java.util.List<String> missingActions; 
             private String moduleId; 
             private String moduleVersion; 
-            private java.util.List < String > noSupportResourceTypes; 
+            private java.util.List<String> noSupportResourceTypes; 
             private String policyDocument; 
             private String ramPolicyExportTaskId; 
             private String status; 
             private String terraformProviderVersion; 
-            private java.util.List < String > unauthorizedActions; 
+            private java.util.List<String> unauthorizedActions; 
             private String warnMessage; 
+
+            private Builder() {
+            } 
+
+            private Builder(RamPolicyExportTaskVersion model) {
+                this.authorizationAccountIds = model.authorizationAccountIds;
+                this.authorizationActions = model.authorizationActions;
+                this.authorizationRegionIds = model.authorizationRegionIds;
+                this.createTime = model.createTime;
+                this.elapsedTime = model.elapsedTime;
+                this.exportVersion = model.exportVersion;
+                this.failedReason = model.failedReason;
+                this.missingActions = model.missingActions;
+                this.moduleId = model.moduleId;
+                this.moduleVersion = model.moduleVersion;
+                this.noSupportResourceTypes = model.noSupportResourceTypes;
+                this.policyDocument = model.policyDocument;
+                this.ramPolicyExportTaskId = model.ramPolicyExportTaskId;
+                this.status = model.status;
+                this.terraformProviderVersion = model.terraformProviderVersion;
+                this.unauthorizedActions = model.unauthorizedActions;
+                this.warnMessage = model.warnMessage;
+            } 
 
             /**
              * authorizationAccountIds.
              */
-            public Builder authorizationAccountIds(java.util.List < Long > authorizationAccountIds) {
+            public Builder authorizationAccountIds(java.util.List<Long> authorizationAccountIds) {
                 this.authorizationAccountIds = authorizationAccountIds;
                 return this;
             }
@@ -299,7 +346,7 @@ public class GetRamPolicyExportTaskVersionResponseBody extends TeaModel {
             /**
              * authorizationActions.
              */
-            public Builder authorizationActions(java.util.List < String > authorizationActions) {
+            public Builder authorizationActions(java.util.List<String> authorizationActions) {
                 this.authorizationActions = authorizationActions;
                 return this;
             }
@@ -307,7 +354,7 @@ public class GetRamPolicyExportTaskVersionResponseBody extends TeaModel {
             /**
              * authorizationRegionIds.
              */
-            public Builder authorizationRegionIds(java.util.List < String > authorizationRegionIds) {
+            public Builder authorizationRegionIds(java.util.List<String> authorizationRegionIds) {
                 this.authorizationRegionIds = authorizationRegionIds;
                 return this;
             }
@@ -347,7 +394,7 @@ public class GetRamPolicyExportTaskVersionResponseBody extends TeaModel {
             /**
              * missingActions.
              */
-            public Builder missingActions(java.util.List < String > missingActions) {
+            public Builder missingActions(java.util.List<String> missingActions) {
                 this.missingActions = missingActions;
                 return this;
             }
@@ -371,7 +418,7 @@ public class GetRamPolicyExportTaskVersionResponseBody extends TeaModel {
             /**
              * noSupportResourceTypes.
              */
-            public Builder noSupportResourceTypes(java.util.List < String > noSupportResourceTypes) {
+            public Builder noSupportResourceTypes(java.util.List<String> noSupportResourceTypes) {
                 this.noSupportResourceTypes = noSupportResourceTypes;
                 return this;
             }
@@ -411,7 +458,7 @@ public class GetRamPolicyExportTaskVersionResponseBody extends TeaModel {
             /**
              * unauthorizedActions.
              */
-            public Builder unauthorizedActions(java.util.List < String > unauthorizedActions) {
+            public Builder unauthorizedActions(java.util.List<String> unauthorizedActions) {
                 this.unauthorizedActions = unauthorizedActions;
                 return this;
             }

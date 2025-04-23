@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateGroupRequest} extends {@link RequestModel}
  *
  * <p>AssociateGroupRequest</p>
@@ -27,7 +33,7 @@ public class AssociateGroupRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resourceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > resourceIds;
+    private java.util.List<String> resourceIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resourceType")
@@ -50,7 +56,7 @@ public class AssociateGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -79,7 +85,7 @@ public class AssociateGroupRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -94,7 +100,7 @@ public class AssociateGroupRequest extends Request {
         private String groupId; 
         private String clientToken; 
         private String projectId; 
-        private java.util.List < String > resourceIds; 
+        private java.util.List<String> resourceIds; 
         private String resourceType; 
 
         private Builder() {
@@ -111,7 +117,10 @@ public class AssociateGroupRequest extends Request {
         } 
 
         /**
-         * groupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-4267dcfbf1b6d128c87adf0e95f</p>
          */
         public Builder groupId(String groupId) {
             this.putPathParameter("groupId", groupId);
@@ -138,9 +147,9 @@ public class AssociateGroupRequest extends Request {
         }
 
         /**
-         * resourceIds.
+         * <p>This parameter is required.</p>
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putBodyParameter("resourceIds", resourceIds);
             this.resourceIds = resourceIds;
             return this;

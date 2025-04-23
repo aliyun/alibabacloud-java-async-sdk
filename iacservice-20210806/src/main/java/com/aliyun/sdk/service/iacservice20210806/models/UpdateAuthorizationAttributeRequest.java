@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAuthorizationAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateAuthorizationAttributeRequest</p>
@@ -41,7 +47,7 @@ public class UpdateAuthorizationAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +90,10 @@ public class UpdateAuthorizationAttributeRequest extends Request {
         } 
 
         /**
-         * authorizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auth-1525e992f1b621ba86575aa4d32</p>
          */
         public Builder authorizationId(String authorizationId) {
             this.putPathParameter("authorizationId", authorizationId);
@@ -93,7 +102,7 @@ public class UpdateAuthorizationAttributeRequest extends Request {
         }
 
         /**
-         * dueTime.
+         * <p>This parameter is required.</p>
          */
         public Builder dueTime(String dueTime) {
             this.putBodyParameter("dueTime", dueTime);
@@ -102,7 +111,10 @@ public class UpdateAuthorizationAttributeRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

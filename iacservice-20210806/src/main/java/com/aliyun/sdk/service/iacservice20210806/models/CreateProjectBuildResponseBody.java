@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProjectBuildResponseBody} extends {@link TeaModel}
  *
  * <p>CreateProjectBuildResponseBody</p>
@@ -30,6 +36,10 @@ public class CreateProjectBuildResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -47,6 +57,14 @@ public class CreateProjectBuildResponseBody extends TeaModel {
     public static final class Builder {
         private String id; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateProjectBuildResponseBody model) {
+            this.id = model.id;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * id.

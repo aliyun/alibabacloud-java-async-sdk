@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectBuildsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectBuildsResponseBody</p>
  */
 public class ListProjectBuildsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ProjectBuilds")
-    private java.util.List < ProjectBuilds> projectBuilds;
+    private java.util.List<ProjectBuilds> projectBuilds;
 
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
@@ -42,10 +48,14 @@ public class ListProjectBuildsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return projectBuilds
      */
-    public java.util.List < ProjectBuilds> getProjectBuilds() {
+    public java.util.List<ProjectBuilds> getProjectBuilds() {
         return this.projectBuilds;
     }
 
@@ -78,16 +88,27 @@ public class ListProjectBuildsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ProjectBuilds> projectBuilds; 
+        private java.util.List<ProjectBuilds> projectBuilds; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListProjectBuildsResponseBody model) {
+            this.projectBuilds = model.projectBuilds;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * ProjectBuilds.
          */
-        public Builder projectBuilds(java.util.List < ProjectBuilds> projectBuilds) {
+        public Builder projectBuilds(java.util.List<ProjectBuilds> projectBuilds) {
             this.projectBuilds = projectBuilds;
             return this;
         }
@@ -109,7 +130,10 @@ public class ListProjectBuildsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89154E16-FB0A-573D-8AF5-CF3F2FE28913</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +154,12 @@ public class ListProjectBuildsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectBuildsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectBuildsResponseBody</p>
+     */
     public static class ProjectBuilds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -263,6 +293,22 @@ public class ListProjectBuildsResponseBody extends TeaModel {
             private String terraformProviderVersion; 
             private Long timestamp; 
             private String triggerStrategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProjectBuilds model) {
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.projectBuildAction = model.projectBuildAction;
+                this.projectBuildId = model.projectBuildId;
+                this.projectBuildIndex = model.projectBuildIndex;
+                this.projectId = model.projectId;
+                this.status = model.status;
+                this.terraformProviderVersion = model.terraformProviderVersion;
+                this.timestamp = model.timestamp;
+                this.triggerStrategy = model.triggerStrategy;
+            } 
 
             /**
              * createTime.

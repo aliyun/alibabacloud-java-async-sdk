@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iacservice20210806.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JobsStatusDetailValue} extends {@link TeaModel}
  *
  * <p>JobsStatusDetailValue</p>
@@ -14,16 +20,16 @@ public class JobsStatusDetailValue extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("comment")
     private String comment;
 
-    @com.aliyun.core.annotation.NameInMap("timeStamps")
-    private String timeStamps;
-
     @com.aliyun.core.annotation.NameInMap("jobResult")
     private String jobResult;
 
+    @com.aliyun.core.annotation.NameInMap("timeStamps")
+    private String timeStamps;
+
     private JobsStatusDetailValue(Builder builder) {
         this.comment = builder.comment;
-        this.timeStamps = builder.timeStamps;
         this.jobResult = builder.jobResult;
+        this.timeStamps = builder.timeStamps;
     }
 
     public static Builder builder() {
@@ -34,18 +40,15 @@ public class JobsStatusDetailValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return comment
      */
     public String getComment() {
         return this.comment;
-    }
-
-    /**
-     * @return timeStamps
-     */
-    public String getTimeStamps() {
-        return this.timeStamps;
     }
 
     /**
@@ -55,10 +58,26 @@ public class JobsStatusDetailValue extends TeaModel {
         return this.jobResult;
     }
 
+    /**
+     * @return timeStamps
+     */
+    public String getTimeStamps() {
+        return this.timeStamps;
+    }
+
     public static final class Builder {
         private String comment; 
-        private String timeStamps; 
         private String jobResult; 
+        private String timeStamps; 
+
+        private Builder() {
+        } 
+
+        private Builder(JobsStatusDetailValue model) {
+            this.comment = model.comment;
+            this.jobResult = model.jobResult;
+            this.timeStamps = model.timeStamps;
+        } 
 
         /**
          * comment.
@@ -69,18 +88,18 @@ public class JobsStatusDetailValue extends TeaModel {
         }
 
         /**
-         * timeStamps.
-         */
-        public Builder timeStamps(String timeStamps) {
-            this.timeStamps = timeStamps;
-            return this;
-        }
-
-        /**
          * jobResult.
          */
         public Builder jobResult(String jobResult) {
             this.jobResult = jobResult;
+            return this;
+        }
+
+        /**
+         * timeStamps.
+         */
+        public Builder timeStamps(String timeStamps) {
+            this.timeStamps = timeStamps;
             return this;
         }
 
