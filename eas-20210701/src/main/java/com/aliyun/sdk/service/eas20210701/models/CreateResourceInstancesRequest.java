@@ -57,6 +57,7 @@ public class CreateResourceInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserData")
+    @Deprecated
     private String userData;
 
     @com.aliyun.core.annotation.Body
