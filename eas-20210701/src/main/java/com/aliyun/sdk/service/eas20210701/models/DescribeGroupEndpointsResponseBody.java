@@ -104,7 +104,7 @@ public class DescribeGroupEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The endpoints of service groups.</p>
+         * <p>The endpoints of the service group.</p>
          */
         public Builder endpoints(java.util.List<Endpoints> endpoints) {
             this.endpoints = endpoints;

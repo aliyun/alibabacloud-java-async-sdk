@@ -28,6 +28,10 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
     private String gatewayId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    private String accountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableAuthoritativeDns")
     private Boolean enableAuthoritativeDns;
 
@@ -43,6 +47,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.gatewayId = builder.gatewayId;
+        this.accountId = builder.accountId;
         this.enableAuthoritativeDns = builder.enableAuthoritativeDns;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
@@ -76,6 +81,13 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
     }
 
     /**
+     * @return accountId
+     */
+    public String getAccountId() {
+        return this.accountId;
+    }
+
+    /**
      * @return enableAuthoritativeDns
      */
     public Boolean getEnableAuthoritativeDns() {
@@ -99,6 +111,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
     public static final class Builder extends Request.Builder<CreateGatewayIntranetLinkedVpcRequest, Builder> {
         private String clusterId; 
         private String gatewayId; 
+        private String accountId; 
         private Boolean enableAuthoritativeDns; 
         private String vSwitchId; 
         private String vpcId; 
@@ -111,6 +124,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.gatewayId = request.gatewayId;
+            this.accountId = request.accountId;
             this.enableAuthoritativeDns = request.enableAuthoritativeDns;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
@@ -139,6 +153,15 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("GatewayId", gatewayId);
             this.gatewayId = gatewayId;
+            return this;
+        }
+
+        /**
+         * AccountId.
+         */
+        public Builder accountId(String accountId) {
+            this.putQueryParameter("AccountId", accountId);
+            this.accountId = accountId;
             return this;
         }
 

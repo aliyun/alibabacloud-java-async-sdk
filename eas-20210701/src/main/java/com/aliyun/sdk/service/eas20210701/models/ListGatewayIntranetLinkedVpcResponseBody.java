@@ -122,6 +122,9 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
      * <p>ListGatewayIntranetLinkedVpcResponseBody</p>
      */
     public static class IntranetLinkedVpcList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountId")
+        private String accountId;
+
         @com.aliyun.core.annotation.NameInMap("AuthoritativeDnsEnabled")
         private Boolean authoritativeDnsEnabled;
 
@@ -141,6 +144,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         private String vpcId;
 
         private IntranetLinkedVpcList(Builder builder) {
+            this.accountId = builder.accountId;
             this.authoritativeDnsEnabled = builder.authoritativeDnsEnabled;
             this.ip = builder.ip;
             this.securityGroupId = builder.securityGroupId;
@@ -155,6 +159,13 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
 
         public static IntranetLinkedVpcList create() {
             return builder().build();
+        }
+
+        /**
+         * @return accountId
+         */
+        public String getAccountId() {
+            return this.accountId;
         }
 
         /**
@@ -200,6 +211,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accountId; 
             private Boolean authoritativeDnsEnabled; 
             private String ip; 
             private String securityGroupId; 
@@ -211,6 +223,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             } 
 
             private Builder(IntranetLinkedVpcList model) {
+                this.accountId = model.accountId;
                 this.authoritativeDnsEnabled = model.authoritativeDnsEnabled;
                 this.ip = model.ip;
                 this.securityGroupId = model.securityGroupId;
@@ -218,6 +231,14 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
             } 
+
+            /**
+             * AccountId.
+             */
+            public Builder accountId(String accountId) {
+                this.accountId = accountId;
+                return this;
+            }
 
             /**
              * AuthoritativeDnsEnabled.
