@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListJobTemplatesResponseBody</p>
  */
 public class ListJobTemplatesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Templates")
+    @com.aliyun.core.annotation.NameInMap("Templates")
     private Templates templates;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListJobTemplatesResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
 
     public static ListJobTemplatesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         private Templates templates; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListJobTemplatesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.templates = model.templates;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The page number returned.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +117,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +128,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +139,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of job templates.
+         * <p>The list of job templates.</p>
          */
         public Builder templates(Templates templates) {
             this.templates = templates;
@@ -118,7 +147,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,68 +163,74 @@ public class ListJobTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListJobTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobTemplatesResponseBody</p>
+     */
     public static class JobTemplates extends TeaModel {
-        @NameInMap("ArrayRequest")
+        @com.aliyun.core.annotation.NameInMap("ArrayRequest")
         private String arrayRequest;
 
-        @NameInMap("ClockTime")
+        @com.aliyun.core.annotation.NameInMap("ClockTime")
         private String clockTime;
 
-        @NameInMap("CommandLine")
+        @com.aliyun.core.annotation.NameInMap("CommandLine")
         private String commandLine;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("InputFileUrl")
+        @com.aliyun.core.annotation.NameInMap("InputFileUrl")
         private String inputFileUrl;
 
-        @NameInMap("Mem")
+        @com.aliyun.core.annotation.NameInMap("Mem")
         private String mem;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Node")
+        @com.aliyun.core.annotation.NameInMap("Node")
         private Integer node;
 
-        @NameInMap("PackagePath")
+        @com.aliyun.core.annotation.NameInMap("PackagePath")
         private String packagePath;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Queue")
+        @com.aliyun.core.annotation.NameInMap("Queue")
         private String queue;
 
-        @NameInMap("ReRunable")
+        @com.aliyun.core.annotation.NameInMap("ReRunable")
         private Boolean reRunable;
 
-        @NameInMap("RunasUser")
+        @com.aliyun.core.annotation.NameInMap("RunasUser")
         private String runasUser;
 
-        @NameInMap("StderrRedirectPath")
+        @com.aliyun.core.annotation.NameInMap("StderrRedirectPath")
         private String stderrRedirectPath;
 
-        @NameInMap("StdoutRedirectPath")
+        @com.aliyun.core.annotation.NameInMap("StdoutRedirectPath")
         private String stdoutRedirectPath;
 
-        @NameInMap("Task")
+        @com.aliyun.core.annotation.NameInMap("Task")
         private Integer task;
 
-        @NameInMap("Thread")
+        @com.aliyun.core.annotation.NameInMap("Thread")
         private Integer thread;
 
-        @NameInMap("UnzipCmd")
+        @com.aliyun.core.annotation.NameInMap("UnzipCmd")
         private String unzipCmd;
 
-        @NameInMap("Variables")
+        @com.aliyun.core.annotation.NameInMap("Variables")
         private String variables;
 
-        @NameInMap("WithUnzipCmd")
+        @com.aliyun.core.annotation.NameInMap("WithUnzipCmd")
         private Boolean withUnzipCmd;
 
         private JobTemplates(Builder builder) {
@@ -397,11 +435,39 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             private String variables; 
             private Boolean withUnzipCmd; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobTemplates model) {
+                this.arrayRequest = model.arrayRequest;
+                this.clockTime = model.clockTime;
+                this.commandLine = model.commandLine;
+                this.gpu = model.gpu;
+                this.id = model.id;
+                this.inputFileUrl = model.inputFileUrl;
+                this.mem = model.mem;
+                this.name = model.name;
+                this.node = model.node;
+                this.packagePath = model.packagePath;
+                this.priority = model.priority;
+                this.queue = model.queue;
+                this.reRunable = model.reRunable;
+                this.runasUser = model.runasUser;
+                this.stderrRedirectPath = model.stderrRedirectPath;
+                this.stdoutRedirectPath = model.stdoutRedirectPath;
+                this.task = model.task;
+                this.thread = model.thread;
+                this.unzipCmd = model.unzipCmd;
+                this.variables = model.variables;
+                this.withUnzipCmd = model.withUnzipCmd;
+            } 
+
             /**
-             * The queue of the job.
-             * <p>
+             * <p>The queue of the job.</p>
+             * <p>Format: X-Y:Z. X is the minimum index value. Y is the maximum index value. Z is the step size. For example, 2-7:2 indicates that three jobs need to be run and their index values are 2, 4, and 6.</p>
              * 
-             * Format: X-Y:Z. X is the minimum index value. Y is the maximum index value. Z is the step size. For example, 2-7:2 indicates that three jobs need to be run and their index values are 2, 4, and 6.
+             * <strong>example:</strong>
+             * <p>2-7:2</p>
              */
             public Builder arrayRequest(String arrayRequest) {
                 this.arrayRequest = arrayRequest;
@@ -409,12 +475,15 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum running time of the job. Valid formats:
-             * <p>
+             * <p>The maximum running time of the job. Valid formats:</p>
+             * <ul>
+             * <li>hh:mm:ss</li>
+             * <li>mm:ss</li>
+             * <li>ss</li>
+             * </ul>
              * 
-             * *   hh:mm:ss
-             * *   mm:ss
-             * *   ss
+             * <strong>example:</strong>
+             * <p>12:00:00</p>
              */
             public Builder clockTime(String clockTime) {
                 this.clockTime = clockTime;
@@ -422,7 +491,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The command that is used to run the job.
+             * <p>The command that is used to run the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>./LammpsTest/lammps.pbs</p>
              */
             public Builder commandLine(String commandLine) {
                 this.commandLine = commandLine;
@@ -430,10 +502,11 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum GPU usage for individual compute nodes. Valid values: 1 to 8.
-             * <p>
+             * <p>The maximum GPU usage for individual compute nodes. Valid values: 1 to 8.</p>
+             * <p>The parameter takes effect only when the cluster uses PBS and a compute node is a GPU-accelerated instance.</p>
              * 
-             * The parameter takes effect only when the cluster uses PBS and a compute node is a GPU-accelerated instance.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -441,7 +514,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job template.
+             * <p>The ID of the job template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ehpc-job-tmpl-6RxO5y****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -449,7 +525,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the job files that are uploaded to an Object Storage Service (OSS) bucket.
+             * <p>The URL of the job files that are uploaded to an Object Storage Service (OSS) bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://test.oss-cn-beijing.aliyuncs.com/test.py">https://test.oss-cn-beijing.aliyuncs.com/test.py</a></p>
              */
             public Builder inputFileUrl(String inputFileUrl) {
                 this.inputFileUrl = inputFileUrl;
@@ -457,7 +536,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum memory usage of a single compute node. The unit can be GB, MB, or KB, and is case-insensitive.
+             * <p>The maximum memory usage of a single compute node. The unit can be GB, MB, or KB, and is case-insensitive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1GB</p>
              */
             public Builder mem(String mem) {
                 this.mem = mem;
@@ -465,7 +547,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the job template.
+             * <p>The name of the job template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -473,7 +558,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of compute nodes. Valid values: 1 to 500.
+             * <p>The number of compute nodes. Valid values: 1 to 500.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder node(Integer node) {
                 this.node = node;
@@ -481,7 +569,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The path that is used to run the job.
+             * <p>The path that is used to run the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>./jobfolder</p>
              */
             public Builder packagePath(String packagePath) {
                 this.packagePath = packagePath;
@@ -489,7 +580,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.
+             * <p>The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -497,7 +591,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The queue of the job.
+             * <p>The queue of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workq</p>
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -505,11 +602,14 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether the job can be rerun. Valid values:
-             * <p>
+             * <p>Specifies whether the job can be rerun. Valid values:</p>
+             * <ul>
+             * <li>true: The job can be rerun.</li>
+             * <li>false: The job cannot be rerun.</li>
+             * </ul>
              * 
-             * *   true: The job can be rerun.
-             * *   false: The job cannot be rerun.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder reRunable(Boolean reRunable) {
                 this.reRunable = reRunable;
@@ -517,7 +617,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user that runs the job.
+             * <p>The name of the user that runs the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder runasUser(String runasUser) {
                 this.runasUser = runasUser;
@@ -525,7 +628,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The output file path of stderr.
+             * <p>The output file path of stderr.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>./LammpsTest</p>
              */
             public Builder stderrRedirectPath(String stderrRedirectPath) {
                 this.stderrRedirectPath = stderrRedirectPath;
@@ -533,7 +639,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The output file path of stdout.
+             * <p>The output file path of stdout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>./Lammps</p>
              */
             public Builder stdoutRedirectPath(String stdoutRedirectPath) {
                 this.stdoutRedirectPath = stdoutRedirectPath;
@@ -541,7 +650,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tasks required by a single compute node. Valid values: 1 to 1000.
+             * <p>The number of tasks required by a single compute node. Valid values: 1 to 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder task(Integer task) {
                 this.task = task;
@@ -549,7 +661,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of threads required by a single task. Valid values: 1 to 1000.
+             * <p>The number of threads required by a single task. Valid values: 1 to 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder thread(Integer thread) {
                 this.thread = thread;
@@ -557,12 +672,15 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The command that is used to decompress the job files downloaded from an OSS bucket. The parameter takes effect only when WithUnzipCmd is set to true. Valid values:
-             * <p>
+             * <p>The command that is used to decompress the job files downloaded from an OSS bucket. The parameter takes effect only when WithUnzipCmd is set to true. Valid values:</p>
+             * <ul>
+             * <li>tar xzf: decompresses GZIP files.</li>
+             * <li>tar xf: decompresses TAR files.</li>
+             * <li>unzip: decompresses ZIP files.</li>
+             * </ul>
              * 
-             * *   tar xzf: decompresses GZIP files.
-             * *   tar xf: decompresses TAR files.
-             * *   unzip: decompresses ZIP files.
+             * <strong>example:</strong>
+             * <p>tar xzf</p>
              */
             public Builder unzipCmd(String unzipCmd) {
                 this.unzipCmd = unzipCmd;
@@ -570,7 +688,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The environment variables of the job.
+             * <p>The environment variables of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{Name:,Value:},{Name:,Value:}]</p>
              */
             public Builder variables(String variables) {
                 this.variables = variables;
@@ -578,11 +699,14 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to decompress the job files downloaded from an OSS bucket. Valid value:
-             * <p>
+             * <p>Specifies whether to decompress the job files downloaded from an OSS bucket. Valid value:</p>
+             * <ul>
+             * <li>true: decompresses the job file.</li>
+             * <li>false: does not decompress the job file.</li>
+             * </ul>
              * 
-             * *   true: decompresses the job file.
-             * *   false: does not decompress the job file.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder withUnzipCmd(Boolean withUnzipCmd) {
                 this.withUnzipCmd = withUnzipCmd;
@@ -596,9 +720,15 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobTemplatesResponseBody</p>
+     */
     public static class Templates extends TeaModel {
-        @NameInMap("JobTemplates")
-        private java.util.List < JobTemplates> jobTemplates;
+        @com.aliyun.core.annotation.NameInMap("JobTemplates")
+        private java.util.List<JobTemplates> jobTemplates;
 
         private Templates(Builder builder) {
             this.jobTemplates = builder.jobTemplates;
@@ -615,17 +745,24 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         /**
          * @return jobTemplates
          */
-        public java.util.List < JobTemplates> getJobTemplates() {
+        public java.util.List<JobTemplates> getJobTemplates() {
             return this.jobTemplates;
         }
 
         public static final class Builder {
-            private java.util.List < JobTemplates> jobTemplates; 
+            private java.util.List<JobTemplates> jobTemplates; 
+
+            private Builder() {
+            } 
+
+            private Builder(Templates model) {
+                this.jobTemplates = model.jobTemplates;
+            } 
 
             /**
              * JobTemplates.
              */
-            public Builder jobTemplates(java.util.List < JobTemplates> jobTemplates) {
+            public Builder jobTemplates(java.util.List<JobTemplates> jobTemplates) {
                 this.jobTemplates = jobTemplates;
                 return this;
             }

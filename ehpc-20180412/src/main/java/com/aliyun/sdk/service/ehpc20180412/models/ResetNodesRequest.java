@@ -1,26 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetNodesRequest} extends {@link RequestModel}
  *
  * <p>ResetNodesRequest</p>
  */
 public class ResetNodesRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Instance")
-    @Validation(required = true)
-    private java.util.List < Instance> instance;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Instance")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Instance> instance;
 
     private ResetNodesRequest(Builder builder) {
         super(builder);
@@ -36,7 +41,7 @@ public class ResetNodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -51,13 +56,13 @@ public class ResetNodesRequest extends Request {
     /**
      * @return instance
      */
-    public java.util.List < Instance> getInstance() {
+    public java.util.List<Instance> getInstance() {
         return this.instance;
     }
 
     public static final class Builder extends Request.Builder<ResetNodesRequest, Builder> {
         private String clusterId; 
-        private java.util.List < Instance> instance; 
+        private java.util.List<Instance> instance; 
 
         private Builder() {
             super();
@@ -70,10 +75,12 @@ public class ResetNodesRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -82,9 +89,9 @@ public class ResetNodesRequest extends Request {
         }
 
         /**
-         * Instance.
+         * <p>This parameter is required.</p>
          */
-        public Builder instance(java.util.List < Instance> instance) {
+        public Builder instance(java.util.List<Instance> instance) {
             this.putQueryParameter("Instance", instance);
             this.instance = instance;
             return this;
@@ -97,8 +104,14 @@ public class ResetNodesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ResetNodesRequest} extends {@link TeaModel}
+     *
+     * <p>ResetNodesRequest</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         private Instance(Builder builder) {
@@ -123,11 +136,19 @@ public class ResetNodesRequest extends Request {
         public static final class Builder {
             private String id; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.id = model.id;
+            } 
+
             /**
-             * The ID of the compute node that you want to reset. Valid values of N: 1 to 100
-             * <p>
+             * <p>The ID of the compute node that you want to reset. Valid values of N: 1 to 100</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/87161.html">ListNodes</a> operation to query the IDs of the compute nodes.</p>
              * 
-             * You can call the [ListNodes](~~87161~~) operation to query the IDs of the compute nodes.
+             * <strong>example:</strong>
+             * <p>i-bp13p7vlcb1uihfv****</p>
              */
             public Builder id(String id) {
                 this.id = id;

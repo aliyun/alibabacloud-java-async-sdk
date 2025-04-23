@@ -1,77 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobsWithFiltersRequest} extends {@link RequestModel}
  *
  * <p>ListJobsWithFiltersRequest</p>
  */
 public class ListJobsWithFiltersRequest extends Request {
-    @Query
-    @NameInMap("Async")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Async")
     private Boolean async;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("CreateTimeEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTimeEnd")
     private String createTimeEnd;
 
-    @Query
-    @NameInMap("CreateTimeStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTimeStart")
     private String createTimeStart;
 
-    @Query
-    @NameInMap("ExecuteOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecuteOrder")
     private String executeOrder;
 
-    @Query
-    @NameInMap("JobName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobName")
     private String jobName;
 
-    @Query
-    @NameInMap("JobStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobStatus")
     private String jobStatus;
 
-    @Query
-    @NameInMap("Nodes")
-    private java.util.List < String > nodes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Nodes")
+    private java.util.List<String> nodes;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("PendOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PendOrder")
     private String pendOrder;
 
-    @Query
-    @NameInMap("Queues")
-    private java.util.List < String > queues;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Queues")
+    private java.util.List<String> queues;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("SubmitOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubmitOrder")
     private String submitOrder;
 
-    @Query
-    @NameInMap("Users")
-    private java.util.List < String > users;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Users")
+    private java.util.List<String> users;
 
     private ListJobsWithFiltersRequest(Builder builder) {
         super(builder);
@@ -100,7 +105,7 @@ public class ListJobsWithFiltersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -157,7 +162,7 @@ public class ListJobsWithFiltersRequest extends Request {
     /**
      * @return nodes
      */
-    public java.util.List < String > getNodes() {
+    public java.util.List<String> getNodes() {
         return this.nodes;
     }
 
@@ -185,7 +190,7 @@ public class ListJobsWithFiltersRequest extends Request {
     /**
      * @return queues
      */
-    public java.util.List < String > getQueues() {
+    public java.util.List<String> getQueues() {
         return this.queues;
     }
 
@@ -206,7 +211,7 @@ public class ListJobsWithFiltersRequest extends Request {
     /**
      * @return users
      */
-    public java.util.List < String > getUsers() {
+    public java.util.List<String> getUsers() {
         return this.users;
     }
 
@@ -218,14 +223,14 @@ public class ListJobsWithFiltersRequest extends Request {
         private String executeOrder; 
         private String jobName; 
         private String jobStatus; 
-        private java.util.List < String > nodes; 
+        private java.util.List<String> nodes; 
         private Long pageNumber; 
         private Long pageSize; 
         private String pendOrder; 
-        private java.util.List < String > queues; 
+        private java.util.List<String> queues; 
         private String regionId; 
         private String submitOrder; 
-        private java.util.List < String > users; 
+        private java.util.List<String> users; 
 
         private Builder() {
             super();
@@ -251,7 +256,10 @@ public class ListJobsWithFiltersRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable asynchronous query.
+         * <p>Specifies whether to enable asynchronous query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -260,10 +268,12 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The ID of the E-HPC cluster.
-         * <p>
+         * <p>The ID of the E-HPC cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -272,7 +282,10 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The latest time when a job is submitted. The value is a UNIX timestamp, which represents the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <p>The latest time when a job is submitted. The value is a UNIX timestamp, which represents the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1647428667</p>
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -281,7 +294,10 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The earliest time when a job is submitted. The value is a UNIX timestamp, which represents the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <p>The earliest time when a job is submitted. The value is a UNIX timestamp, which represents the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1647427667</p>
          */
         public Builder createTimeStart(String createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -290,11 +306,14 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The order in which jobs are sorted based on the execution time. Valid values:
-         * <p>
+         * <p>The order in which jobs are sorted based on the execution time. Valid values:</p>
+         * <ul>
+         * <li>asc: ascending order</li>
+         * <li>desc: descending order</li>
+         * </ul>
          * 
-         * *   asc: ascending order
-         * *   desc: descending order
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder executeOrder(String executeOrder) {
             this.putQueryParameter("ExecuteOrder", executeOrder);
@@ -303,7 +322,10 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The name of the job. Fuzzy search is supported.
+         * <p>The name of the job. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job1</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -312,14 +334,16 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The status of the job. Valid values:
-         * <p>
+         * <p>The status of the job. Valid values:</p>
+         * <ul>
+         * <li>all</li>
+         * <li>finished</li>
+         * <li>notfinish</li>
+         * </ul>
+         * <p>Default value: all.</p>
          * 
-         * *   all
-         * *   finished
-         * *   notfinish
-         * 
-         * Default value: all.
+         * <strong>example:</strong>
+         * <p>finished</p>
          */
         public Builder jobStatus(String jobStatus) {
             this.putQueryParameter("JobStatus", jobStatus);
@@ -328,21 +352,21 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The information about the computing nodes that are used to run the job.
+         * <p>The information about the computing nodes that are used to run the job.</p>
          */
-        public Builder nodes(java.util.List < String > nodes) {
+        public Builder nodes(java.util.List<String> nodes) {
             this.putQueryParameter("Nodes", nodes);
             this.nodes = nodes;
             return this;
         }
 
         /**
-         * The page number to return.
-         * <p>
+         * <p>The page number to return.</p>
+         * <p>Pages start from 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -351,10 +375,11 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 50.
-         * <p>
+         * <p>The number of entries per page. Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -363,11 +388,14 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The order in which jobs are sorted based on the time when they queue. Valid values:
-         * <p>
+         * <p>The order in which jobs are sorted based on the time when they queue. Valid values:</p>
+         * <ul>
+         * <li>asc: ascending order</li>
+         * <li>desc: descending order</li>
+         * </ul>
          * 
-         * *   asc: ascending order
-         * *   desc: descending order
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder pendOrder(String pendOrder) {
             this.putQueryParameter("PendOrder", pendOrder);
@@ -376,16 +404,19 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The information about the queues in which the job is run.
+         * <p>The information about the queues in which the job is run.</p>
          */
-        public Builder queues(java.util.List < String > queues) {
+        public Builder queues(java.util.List<String> queues) {
             this.putQueryParameter("Queues", queues);
             this.queues = queues;
             return this;
         }
 
         /**
-         * The ID of the region. You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is supported.
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/188593.html">ListRegions</a> operation to query the list of regions where E-HPC is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -394,11 +425,14 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The order in which jobs are sorted based on the time when they are submitted. Valid values:
-         * <p>
+         * <p>The order in which jobs are sorted based on the time when they are submitted. Valid values:</p>
+         * <ul>
+         * <li>asc: ascending order</li>
+         * <li>desc: descending order</li>
+         * </ul>
          * 
-         * *   asc: ascending order
-         * *   desc: descending order
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder submitOrder(String submitOrder) {
             this.putQueryParameter("SubmitOrder", submitOrder);
@@ -407,9 +441,9 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * The users that run the job.
+         * <p>The users that run the job.</p>
          */
-        public Builder users(java.util.List < String > users) {
+        public Builder users(java.util.List<String> users) {
             this.putQueryParameter("Users", users);
             this.users = users;
             return this;

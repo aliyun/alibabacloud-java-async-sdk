@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetQueueRequest} extends {@link RequestModel}
  *
  * <p>SetQueueRequest</p>
  */
 public class SetQueueRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Node")
-    @Validation(required = true)
-    private java.util.List < Node> node;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Node")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Node> node;
 
-    @Query
-    @NameInMap("QueueName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueueName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queueName;
 
     private SetQueueRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class SetQueueRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -57,7 +62,7 @@ public class SetQueueRequest extends Request {
     /**
      * @return node
      */
-    public java.util.List < Node> getNode() {
+    public java.util.List<Node> getNode() {
         return this.node;
     }
 
@@ -70,7 +75,7 @@ public class SetQueueRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetQueueRequest, Builder> {
         private String clusterId; 
-        private java.util.List < Node> node; 
+        private java.util.List<Node> node; 
         private String queueName; 
 
         private Builder() {
@@ -85,10 +90,12 @@ public class SetQueueRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -97,19 +104,21 @@ public class SetQueueRequest extends Request {
         }
 
         /**
-         * Node.
+         * <p>This parameter is required.</p>
          */
-        public Builder node(java.util.List < Node> node) {
+        public Builder node(java.util.List<Node> node) {
             this.putQueryParameter("Node", node);
             this.node = node;
             return this;
         }
 
         /**
-         * The name of the destination queue.
-         * <p>
+         * <p>The name of the destination queue.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/92176.html">ListQueues</a> operation to query the queue name.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListQueues](~~92176~~) operation to query the queue name.
+         * <strong>example:</strong>
+         * <p>work</p>
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
@@ -124,8 +133,14 @@ public class SetQueueRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetQueueRequest} extends {@link TeaModel}
+     *
+     * <p>SetQueueRequest</p>
+     */
     public static class Node extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Node(Builder builder) {
@@ -150,11 +165,19 @@ public class SetQueueRequest extends Request {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Node model) {
+                this.name = model.name;
+            } 
+
             /**
-             * The name of the compute node that you want to move. Valid values of N: 1 to 100.
-             * <p>
+             * <p>The name of the compute node that you want to move. Valid values of N: 1 to 100.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/87161.html">ListNodes</a> operation to query the names of the compute nodes.</p>
              * 
-             * You can call the [ListNodes](~~87161~~) operation to query the names of the compute nodes.
+             * <strong>example:</strong>
+             * <p>compute1</p>
              */
             public Builder name(String name) {
                 this.name = name;

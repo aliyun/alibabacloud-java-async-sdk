@@ -1,248 +1,253 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateClusterRequest</p>
  */
 public class CreateClusterRequest extends Request {
-    @Query
-    @NameInMap("EcsOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EcsOrder")
     private EcsOrder ecsOrder;
 
-    @Query
-    @NameInMap("AccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
     private String accountType;
 
-    @Query
-    @NameInMap("AddOns")
-    private java.util.List < AddOns> addOns;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddOns")
+    private java.util.List<AddOns> addOns;
 
-    @Query
-    @NameInMap("AdditionalVolumes")
-    private java.util.List < AdditionalVolumes> additionalVolumes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdditionalVolumes")
+    private java.util.List<AdditionalVolumes> additionalVolumes;
 
-    @Query
-    @NameInMap("Application")
-    private java.util.List < Application> application;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Application")
+    private java.util.List<Application> application;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private String autoRenew;
 
-    @Query
-    @NameInMap("AutoRenewPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
     private Integer autoRenewPeriod;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ClientVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientVersion")
     private String clientVersion;
 
-    @Query
-    @NameInMap("ClusterVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterVersion")
     private String clusterVersion;
 
-    @Query
-    @NameInMap("ComputeEnableHt")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputeEnableHt")
     private Boolean computeEnableHt;
 
-    @Query
-    @NameInMap("ComputeSpotPriceLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputeSpotPriceLimit")
     private String computeSpotPriceLimit;
 
-    @Query
-    @NameInMap("ComputeSpotStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputeSpotStrategy")
     private String computeSpotStrategy;
 
-    @Query
-    @NameInMap("DeployMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployMode")
     private String deployMode;
 
-    @Query
-    @NameInMap("DeploymentSetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
     private String deploymentSetId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @Query
-    @NameInMap("EcsChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EcsChargeType")
     private String ecsChargeType;
 
-    @Query
-    @NameInMap("EhpcVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EhpcVersion")
     private String ehpcVersion;
 
-    @Query
-    @NameInMap("HaEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaEnable")
     private Boolean haEnable;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("ImageOwnerAlias")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
     private String imageOwnerAlias;
 
-    @Query
-    @NameInMap("InputFileUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputFileUrl")
     private String inputFileUrl;
 
-    @Query
-    @NameInMap("IsComputeEss")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsComputeEss")
     private Boolean isComputeEss;
 
-    @Query
-    @NameInMap("JobQueue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobQueue")
     private String jobQueue;
 
-    @Query
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("NetworkInterfaceTrafficMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
     private String networkInterfaceTrafficMode;
 
-    @Query
-    @NameInMap("OsTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsTag")
     private String osTag;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("Plugin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Plugin")
     private String plugin;
 
-    @Query
-    @NameInMap("PostInstallScript")
-    private java.util.List < PostInstallScript> postInstallScript;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PostInstallScript")
+    private java.util.List<PostInstallScript> postInstallScript;
 
-    @Query
-    @NameInMap("RamNodeTypes")
-    private java.util.List < String > ramNodeTypes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamNodeTypes")
+    private java.util.List<String> ramNodeTypes;
 
-    @Query
-    @NameInMap("RamRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamRoleName")
     private String ramRoleName;
 
-    @Query
-    @NameInMap("RemoteDirectory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoteDirectory")
     private String remoteDirectory;
 
-    @Query
-    @NameInMap("RemoteVisEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoteVisEnable")
     private String remoteVisEnable;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SccClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SccClusterId")
     private String sccClusterId;
 
-    @Query
-    @NameInMap("SchedulerType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchedulerType")
     private String schedulerType;
 
-    @Query
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @Query
-    @NameInMap("SecurityGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupName")
     private String securityGroupName;
 
-    @Query
-    @NameInMap("SystemDiskLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDiskLevel")
     private String systemDiskLevel;
 
-    @Query
-    @NameInMap("SystemDiskSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
     private Integer systemDiskSize;
 
-    @Query
-    @NameInMap("SystemDiskType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDiskType")
     private String systemDiskType;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VolumeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VolumeId")
     private String volumeId;
 
-    @Query
-    @NameInMap("VolumeMountOption")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VolumeMountOption")
     private String volumeMountOption;
 
-    @Query
-    @NameInMap("VolumeMountpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VolumeMountpoint")
     private String volumeMountpoint;
 
-    @Query
-    @NameInMap("VolumeProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VolumeProtocol")
     private String volumeProtocol;
 
-    @Query
-    @NameInMap("VolumeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VolumeType")
     private String volumeType;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @Query
-    @NameInMap("WithoutAgent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithoutAgent")
     private Boolean withoutAgent;
 
-    @Query
-    @NameInMap("WithoutElasticIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithoutElasticIp")
     private Boolean withoutElasticIp;
 
-    @Query
-    @NameInMap("WithoutNas")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithoutNas")
     private Boolean withoutNas;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateClusterRequest(Builder builder) {
@@ -315,7 +320,7 @@ public class CreateClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -337,21 +342,21 @@ public class CreateClusterRequest extends Request {
     /**
      * @return addOns
      */
-    public java.util.List < AddOns> getAddOns() {
+    public java.util.List<AddOns> getAddOns() {
         return this.addOns;
     }
 
     /**
      * @return additionalVolumes
      */
-    public java.util.List < AdditionalVolumes> getAdditionalVolumes() {
+    public java.util.List<AdditionalVolumes> getAdditionalVolumes() {
         return this.additionalVolumes;
     }
 
     /**
      * @return application
      */
-    public java.util.List < Application> getApplication() {
+    public java.util.List<Application> getApplication() {
         return this.application;
     }
 
@@ -554,14 +559,14 @@ public class CreateClusterRequest extends Request {
     /**
      * @return postInstallScript
      */
-    public java.util.List < PostInstallScript> getPostInstallScript() {
+    public java.util.List<PostInstallScript> getPostInstallScript() {
         return this.postInstallScript;
     }
 
     /**
      * @return ramNodeTypes
      */
-    public java.util.List < String > getRamNodeTypes() {
+    public java.util.List<String> getRamNodeTypes() {
         return this.ramNodeTypes;
     }
 
@@ -645,7 +650,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -729,9 +734,9 @@ public class CreateClusterRequest extends Request {
     public static final class Builder extends Request.Builder<CreateClusterRequest, Builder> {
         private EcsOrder ecsOrder; 
         private String accountType; 
-        private java.util.List < AddOns> addOns; 
-        private java.util.List < AdditionalVolumes> additionalVolumes; 
-        private java.util.List < Application> application; 
+        private java.util.List<AddOns> addOns; 
+        private java.util.List<AdditionalVolumes> additionalVolumes; 
+        private java.util.List<Application> application; 
         private String autoRenew; 
         private Integer autoRenewPeriod; 
         private String clientToken; 
@@ -760,8 +765,8 @@ public class CreateClusterRequest extends Request {
         private Integer period; 
         private String periodUnit; 
         private String plugin; 
-        private java.util.List < PostInstallScript> postInstallScript; 
-        private java.util.List < String > ramNodeTypes; 
+        private java.util.List<PostInstallScript> postInstallScript; 
+        private java.util.List<String> ramNodeTypes; 
         private String ramRoleName; 
         private String remoteDirectory; 
         private String remoteVisEnable; 
@@ -773,7 +778,7 @@ public class CreateClusterRequest extends Request {
         private String systemDiskLevel; 
         private Integer systemDiskSize; 
         private String systemDiskType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
         private String volumeId; 
         private String volumeMountOption; 
@@ -862,13 +867,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of the domain account service. Valid values:
-         * <p>
+         * <p>The type of the domain account service. Valid values:</p>
+         * <ul>
+         * <li>nis</li>
+         * <li>ldap</li>
+         * </ul>
+         * <p>Default value: nis.</p>
          * 
-         * *   nis
-         * *   ldap
-         * 
-         * Default value: nis.
+         * <strong>example:</strong>
+         * <p>nis</p>
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -877,40 +884,42 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The custom component service.
+         * <p>The custom component service.</p>
          */
-        public Builder addOns(java.util.List < AddOns> addOns) {
+        public Builder addOns(java.util.List<AddOns> addOns) {
             this.putQueryParameter("AddOns", addOns);
             this.addOns = addOns;
             return this;
         }
 
         /**
-         * The information of the NAS file system.
+         * <p>The information of the NAS file system.</p>
          */
-        public Builder additionalVolumes(java.util.List < AdditionalVolumes> additionalVolumes) {
+        public Builder additionalVolumes(java.util.List<AdditionalVolumes> additionalVolumes) {
             this.putQueryParameter("AdditionalVolumes", additionalVolumes);
             this.additionalVolumes = additionalVolumes;
             return this;
         }
 
         /**
-         * The application information.
+         * <p>The application information.</p>
          */
-        public Builder application(java.util.List < Application> application) {
+        public Builder application(java.util.List<Application> application) {
             this.putQueryParameter("Application", application);
             this.application = application;
             return this;
         }
 
         /**
-         * Specifies whether to enable auto-renewal. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -919,7 +928,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The auto-renewal period of the subscription compute nodes. The parameter takes effect when AutoRenew is set to true.
+         * <p>The auto-renewal period of the subscription compute nodes. The parameter takes effect when AutoRenew is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -928,7 +940,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -937,10 +952,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The version of the E-HPC client. By default, the parameter is set to the latest version number.
-         * <p>
+         * <p>The version of the E-HPC client. By default, the parameter is set to the latest version number.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87223.html">ListCurrentClientVersion</a> operation to query the latest version of the E-HPC client.</p>
          * 
-         * You can call the [ListCurrentClientVersion](~~87223~~) operation to query the latest version of the E-HPC client.
+         * <strong>example:</strong>
+         * <p>1.0.64</p>
          */
         public Builder clientVersion(String clientVersion) {
             this.putQueryParameter("ClientVersion", clientVersion);
@@ -949,10 +965,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The version of the E-HPC cluster.
-         * <p>
+         * <p>The version of the E-HPC cluster.</p>
+         * <p>Default value: 1.0.</p>
          * 
-         * Default value: 1.0.
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder clusterVersion(String clusterVersion) {
             this.putQueryParameter("ClusterVersion", clusterVersion);
@@ -961,13 +978,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable hyper-threading for the compute node. Valid values:
-         * <p>
+         * <p>Specifies whether to enable hyper-threading for the compute node. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: true.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: true.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder computeEnableHt(Boolean computeEnableHt) {
             this.putQueryParameter("ComputeEnableHt", computeEnableHt);
@@ -976,7 +995,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The maximum hourly price of the compute nodes. A maximum of three decimal places can be used in the value of the parameter. The parameter is valid only when the ComputeSpotStrategy parameter is set to SpotWithPriceLimit.
+         * <p>The maximum hourly price of the compute nodes. A maximum of three decimal places can be used in the value of the parameter. The parameter is valid only when the ComputeSpotStrategy parameter is set to SpotWithPriceLimit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.034</p>
          */
         public Builder computeSpotPriceLimit(String computeSpotPriceLimit) {
             this.putQueryParameter("ComputeSpotPriceLimit", computeSpotPriceLimit);
@@ -985,14 +1007,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The bidding method of the compute nodes. Valid values:
-         * <p>
+         * <p>The bidding method of the compute nodes. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The compute nodes are pay-as-you-go instances.</li>
+         * <li>SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.</li>
+         * </ul>
+         * <p>Default value: NoSpot.</p>
          * 
-         * *   NoSpot: The compute nodes are pay-as-you-go instances.
-         * *   SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.
-         * 
-         * Default value: NoSpot.
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         public Builder computeSpotStrategy(String computeSpotStrategy) {
             this.putQueryParameter("ComputeSpotStrategy", computeSpotStrategy);
@@ -1001,14 +1025,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The mode in which the E-HPC cluster is deployed. Valid values:
-         * <p>
+         * <p>The mode in which the E-HPC cluster is deployed. Valid values:</p>
+         * <ul>
+         * <li>Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.</li>
+         * <li>Simple: A management node, which consists of an account node and a scheduling node, is deployed, while a logon node and multiple compute nodes are separately deployed.</li>
+         * <li>Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.</li>
+         * </ul>
+         * <p>Default value: Standard.</p>
          * 
-         * *   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.
-         * *   Simple: A management node, which consists of an account node and a scheduling node, is deployed, while a logon node and multiple compute nodes are separately deployed.
-         * *   Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.
-         * 
-         * Default value: Standard.
+         * <strong>example:</strong>
+         * <p>Simple</p>
          */
         public Builder deployMode(String deployMode) {
             this.putQueryParameter("DeployMode", deployMode);
@@ -1017,7 +1043,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the deployment set in which to deploy the instance. You can obtain the deployment set ID by calling the [DescribeDeploymentSets](~~91313~~) operation. Only the deployment sets that use low latency policy are supported.
+         * <p>The ID of the deployment set in which to deploy the instance. You can obtain the deployment set ID by calling the <a href="https://help.aliyun.com/document_detail/91313.html">DescribeDeploymentSets</a> operation. Only the deployment sets that use low latency policy are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-bp1frxuzdg87zh4pzq****</p>
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);
@@ -1026,7 +1055,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The description of the E-HPC cluster. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).
+         * <p>The description of the E-HPC cluster. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -1035,10 +1067,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The domain name of the on-premises E-HPC cluster.
-         * <p>
+         * <p>The domain name of the on-premises E-HPC cluster.</p>
+         * <p>This parameter takes effect only when the AccountType parameter is set to Idap.</p>
          * 
-         * This parameter takes effect only when the AccountType parameter is set to Idap.
+         * <strong>example:</strong>
+         * <p>ldap</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -1047,13 +1080,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The billing method of the nodes. Valid values:
-         * <p>
+         * <p>The billing method of the nodes. Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * <li>PrePaid: subscription.</li>
+         * </ul>
+         * <p>If you set the parameter to PrePaid, auto-renewal is enabled by default.</p>
          * 
-         * *   PostPaid: pay-as-you-go.
-         * *   PrePaid: subscription.
-         * 
-         * If you set the parameter to PrePaid, auto-renewal is enabled by default.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder ecsChargeType(String ecsChargeType) {
             this.putQueryParameter("EcsChargeType", ecsChargeType);
@@ -1062,7 +1097,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The version of E-HPC. By default, the parameter is set to the latest version number.
+         * <p>The version of E-HPC. By default, the parameter is set to the latest version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder ehpcVersion(String ehpcVersion) {
             this.putQueryParameter("EhpcVersion", ehpcVersion);
@@ -1071,15 +1109,18 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the high availability feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the high availability feature. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p>If high availability is enabled, a primary management node and a secondary management node are used.</p>
+         * </blockquote>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
-         * 
-         * > If high availability is enabled, a primary management node and a secondary management node are used.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder haEnable(Boolean haEnable) {
             this.putQueryParameter("HaEnable", haEnable);
@@ -1088,10 +1129,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The image IDs.
-         * <p>
+         * <p>The image IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87213.html">ListImages</a> and <a href="https://help.aliyun.com/document_detail/87215.html">ListCustomImages</a> operations to query the images that are supported by E-HPC.</p>
          * 
-         * You can call the [ListImages](~~87213~~) and [ListCustomImages](~~87215~~) operations to query the images that are supported by E-HPC.
+         * <strong>example:</strong>
+         * <p>centos_7_02_64_20G_alibase_20170818****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -1100,14 +1142,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of the image. Valid values:
-         * <p>
+         * <p>The type of the image. Valid values:</p>
+         * <ul>
+         * <li>system: public image</li>
+         * <li>self: custom image</li>
+         * <li>others: shared image</li>
+         * </ul>
+         * <p>Default value: system.</p>
          * 
-         * *   system: public image
-         * *   self: custom image
-         * *   others: shared image
-         * 
-         * Default value: system.
+         * <strong>example:</strong>
+         * <p>self</p>
          */
         public Builder imageOwnerAlias(String imageOwnerAlias) {
             this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
@@ -1116,7 +1160,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The URL of the job file that is uploaded to an Object Storage Service (OSS) bucket.
+         * <p>The URL of the job file that is uploaded to an Object Storage Service (OSS) bucket.</p>
          */
         public Builder inputFileUrl(String inputFileUrl) {
             this.putQueryParameter("InputFileUrl", inputFileUrl);
@@ -1125,13 +1169,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto scaling. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto scaling. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isComputeEss(Boolean isComputeEss) {
             this.putQueryParameter("IsComputeEss", isComputeEss);
@@ -1140,7 +1186,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The queue to which the compute nodes are added.
+         * <p>The queue to which the compute nodes are added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workq</p>
          */
         public Builder jobQueue(String jobQueue) {
             this.putQueryParameter("JobQueue", jobQueue);
@@ -1149,10 +1198,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The name of the key pair.
-         * <p>
+         * <p>The name of the key pair.</p>
+         * <blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/51793.html">Create an SSH key pair</a>.</p>
+         * </blockquote>
          * 
-         * > For more information, see [Create an SSH key pair](~~51793~~).
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -1161,7 +1213,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The name of the E-HPC cluster. The name must be 2 to 64 characters in length.
+         * <p>The name of the E-HPC cluster. The name must be 2 to 64 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -1170,11 +1226,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The communication model of the ENI. Valid values:
-         * <p>
+         * <p>The communication model of the ENI. Valid values:</p>
+         * <ul>
+         * <li>Standard: The TCP communication mode is used.</li>
+         * <li>HighPerformance: uses the remote direct memory access (RDMA) communication mode with the Elastic RDMA Interface (ERI) enabled.</li>
+         * </ul>
          * 
-         * *   Standard: The TCP communication mode is used.
-         * *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with the Elastic RDMA Interface (ERI) enabled.
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
             this.putQueryParameter("NetworkInterfaceTrafficMode", networkInterfaceTrafficMode);
@@ -1183,7 +1242,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The operating system tag of the image.
+         * <p>The operating system tag of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         public Builder osTag(String osTag) {
             this.putQueryParameter("OsTag", osTag);
@@ -1192,14 +1254,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The root password of the logon node. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
-         * <p>
+         * <p>The root password of the logon node. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
+         * <p><code>( ) ~ ! @ # $ % ^ &amp; * - + = | { } [ ] : ; ‘ &lt; &gt; , . ? /</code></p>
+         * <p>You must specify either Password or KeyPairName. If both are specified, the Password parameter prevails.</p>
+         * <blockquote>
+         * <p>We recommend that you use HTTPS to call the API operation to prevent password leakage.</p>
+         * </blockquote>
          * 
-         * `( ) ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ‘ < > , . ? /`
-         * 
-         * You must specify either Password or KeyPairName. If both are specified, the Password parameter prevails.
-         * 
-         * > We recommend that you use HTTPS to call the API operation to prevent password leakage.
+         * <strong>example:</strong>
+         * <p>123****</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -1208,14 +1271,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The duration of the subscription. The unit of the duration is specified by the `PeriodUnit` parameter.
-         * <p>
+         * <p>The duration of the subscription. The unit of the duration is specified by the <code>PeriodUnit</code> parameter.</p>
+         * <ul>
+         * <li>Valid values if PriceUnit is set to Year: 1, 2, and 3.</li>
+         * <li>Valid values if PriceUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+         * <li>Valid value if PriceUnit is set to Hour: 1.</li>
+         * </ul>
+         * <p>Default value: 1.</p>
          * 
-         * *   Valid values if PriceUnit is set to Year: 1, 2, and 3.
-         * *   Valid values if PriceUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, and 9.
-         * *   Valid value if PriceUnit is set to Hour: 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -1224,14 +1289,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration. Valid values:
-         * <p>
+         * <p>The unit of the subscription duration. Valid values:</p>
+         * <ul>
+         * <li>Year</li>
+         * <li>Month</li>
+         * <li>Hour</li>
+         * </ul>
+         * <p>Default value: Month.</p>
          * 
-         * *   Year
-         * *   Month
-         * *   Hour
-         * 
-         * Default value: Month.
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -1240,19 +1307,23 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The mode configurations of the plug-in. This parameter takes effect only when the SchedulerType parameter is set to custom.
-         * <p>
+         * <p>The mode configurations of the plug-in. This parameter takes effect only when the SchedulerType parameter is set to custom.</p>
+         * <p>The value must be a JSON string. The parameter contains the following parameters: pluginMod, pluginLocalPath, and pluginOssPath.</p>
+         * <ul>
+         * <li><p>pluginMod: the plug-in mode. The following modes are supported:</p>
+         * <ul>
+         * <li>oss: The plug-in is downloaded and decompressed from OSS to a local path that is specified by the pluginLocalPath parameter.</li>
+         * <li>image: By default, the plug-in is stored in a pre-defined local path that is specified by the pluginLocalPath parameter.</li>
+         * </ul>
+         * </li>
+         * <li><p>pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in oss mode and a non-shared directory in image mode.</p>
+         * </li>
+         * <li><p>pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only when the pluginMod parameter is set to oss.</p>
+         * </li>
+         * </ul>
          * 
-         * The value must be a JSON string. The parameter contains the following parameters: pluginMod, pluginLocalPath, and pluginOssPath.
-         * 
-         * *   pluginMod: the plug-in mode. The following modes are supported:
-         * 
-         *     *   oss: The plug-in is downloaded and decompressed from OSS to a local path that is specified by the pluginLocalPath parameter.
-         *     *   image: By default, the plug-in is stored in a pre-defined local path that is specified by the pluginLocalPath parameter.
-         * 
-         * *   pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in oss mode and a non-shared directory in image mode.
-         * 
-         * *   pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only when the pluginMod parameter is set to oss.
+         * <strong>example:</strong>
+         * <p>{&quot;pluginMod&quot;: &quot;oss&quot;,&quot;pluginLocalPath&quot;: &quot;/opt/plugin&quot;,&quot;pluginOssPath&quot;: &quot;<a href="https://bucket.oss-cn-hangzhou.aliyuncs.com/plugin/plugin.tgz%22%7D">https://bucket.oss-cn-hangzhou.aliyuncs.com/plugin/plugin.tgz&quot;}</a></p>
          */
         public Builder plugin(String plugin) {
             this.putQueryParameter("Plugin", plugin);
@@ -1261,28 +1332,32 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The information of the post-installation script.
+         * <p>The information of the post-installation script.</p>
          */
-        public Builder postInstallScript(java.util.List < PostInstallScript> postInstallScript) {
+        public Builder postInstallScript(java.util.List<PostInstallScript> postInstallScript) {
             this.putQueryParameter("PostInstallScript", postInstallScript);
             this.postInstallScript = postInstallScript;
             return this;
         }
 
         /**
-         * The node of the RAM role.
+         * <p>The node of the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
-        public Builder ramNodeTypes(java.util.List < String > ramNodeTypes) {
+        public Builder ramNodeTypes(java.util.List<String> ramNodeTypes) {
             this.putQueryParameter("RamNodeTypes", ramNodeTypes);
             this.ramNodeTypes = ramNodeTypes;
             return this;
         }
 
         /**
-         * The name of the Resource Access Management (RAM) role.
-         * <p>
+         * <p>The name of the Resource Access Management (RAM) role.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation provided by RAM to query the instance RAM roles that you created.</p>
          * 
-         * You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you created.
+         * <strong>example:</strong>
+         * <p>testRamRoleName</p>
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -1291,7 +1366,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The remote directory to which the NAS file system is mounted.
+         * <p>The remote directory to which the NAS file system is mounted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NasMountpoint:/RemoteDirectory</p>
          */
         public Builder remoteDirectory(String remoteDirectory) {
             this.putQueryParameter("RemoteDirectory", remoteDirectory);
@@ -1300,13 +1378,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Virtual Network Computing (VNC). Valid values:
-         * <p>
+         * <p>Specifies whether to enable Virtual Network Computing (VNC). Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder remoteVisEnable(String remoteVisEnable) {
             this.putQueryParameter("RemoteVisEnable", remoteVisEnable);
@@ -1315,10 +1395,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The resource group ID.
-         * <p>
+         * <p>The resource group ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the ID of the resource group.</p>
          * 
-         * You can call the [ListResourceGroups](~~158855~~) operation to obtain the ID of the resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -1327,10 +1408,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The Super Computing Cluster (SCC) instance ID.
-         * <p>
+         * <p>The Super Computing Cluster (SCC) instance ID.</p>
+         * <p>If you specify the parameter, the SCC instance is moved to a new SCC cluster.</p>
          * 
-         * If you specify the parameter, the SCC instance is moved to a new SCC cluster.
+         * <strong>example:</strong>
+         * <p>00b648b****</p>
          */
         public Builder sccClusterId(String sccClusterId) {
             this.putQueryParameter("SccClusterId", sccClusterId);
@@ -1339,15 +1421,17 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of the scheduler. Valid values:
-         * <p>
+         * <p>The type of the scheduler. Valid values:</p>
+         * <ul>
+         * <li>pbs</li>
+         * <li>slurm</li>
+         * <li>opengridscheduler</li>
+         * <li>deadline</li>
+         * </ul>
+         * <p>Default value: pbs.</p>
          * 
-         * *   pbs
-         * *   slurm
-         * *   opengridscheduler
-         * *   deadline
-         * 
-         * Default value: pbs.
+         * <strong>example:</strong>
+         * <p>pbs</p>
          */
         public Builder schedulerType(String schedulerType) {
             this.putQueryParameter("SchedulerType", schedulerType);
@@ -1356,10 +1440,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which the E-HPC cluster belongs.
-         * <p>
+         * <p>The ID of the security group to which the E-HPC cluster belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> operation to query available security groups in the current region.</p>
          * 
-         * You can call the [DescribeSecurityGroups](~~25556~~) operation to query available security groups in the current region.
+         * <strong>example:</strong>
+         * <p>sg-bp13n61xsydodfyg****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -1368,7 +1453,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * If you do not use an existing security group, set the parameter to the name of a new security group. A default policy is applied to the new security group.
+         * <p>If you do not use an existing security group, set the parameter to the name of a new security group. A default policy is applied to the new security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-SecurityGroup</p>
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);
@@ -1377,17 +1465,18 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The performance level of the ESSD to be used as the system disk. Default value: PL1. Valid values:
-         * <p>
+         * <p>The performance level of the ESSD to be used as the system disk. Default value: PL1. Valid values:</p>
+         * <ul>
+         * <li>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.</li>
+         * </ul>
+         * <p>Default value: PL1.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
          * 
-         * *   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.
-         * *   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.
-         * *   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.
-         * *   PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.
-         * 
-         * Default value: PL1.
-         * 
-         * For more information, see [ESSDs](~~122389~~).
+         * <strong>example:</strong>
+         * <p>PL0</p>
          */
         public Builder systemDiskLevel(String systemDiskLevel) {
             this.putQueryParameter("SystemDiskLevel", systemDiskLevel);
@@ -1396,12 +1485,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The system disk size. Unit: GB.
-         * <p>
+         * <p>The system disk size. Unit: GB.</p>
+         * <p>Valid values: 40 to 500.</p>
+         * <p>Default value: 40.</p>
          * 
-         * Valid values: 40 to 500.
-         * 
-         * Default value: 40.
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putQueryParameter("SystemDiskSize", systemDiskSize);
@@ -1410,15 +1499,17 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of the system disk. Valid values:
-         * <p>
+         * <p>The type of the system disk. Valid values:</p>
+         * <ul>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>cloud_essd: enhanced SSD (ESSD)</li>
+         * <li>cloud: basic disk. Disks of this type are retired.</li>
+         * </ul>
+         * <p>Default value: cloud_ssd.</p>
          * 
-         * *   cloud_efficiency: ultra disk
-         * *   cloud_ssd: standard SSD
-         * *   cloud_essd: enhanced SSD (ESSD)
-         * *   cloud: basic disk. Disks of this type are retired.
-         * 
-         * Default value: cloud_ssd.
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         public Builder systemDiskType(String systemDiskType) {
             this.putQueryParameter("SystemDiskType", systemDiskType);
@@ -1427,19 +1518,23 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The array of the tags.
+         * <p>The array of the tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The vSwitch ID. E-HPC supports only VPC networks.
-         * <p>
+         * <p>The vSwitch ID. E-HPC supports only VPC networks.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query available vSwitches.</p>
          * 
-         * You can call the [DescribeVSwitches](~~35748~~) operation to query available vSwitches.
+         * <strong>example:</strong>
+         * <p>vsw-bp1lfcjbfb099rrjn****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1448,10 +1543,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the NAS file system. If you leave the parameter empty, a Performance NAS file system is created by default.
-         * <p>
+         * <p>The ID of the NAS file system. If you leave the parameter empty, a Performance NAS file system is created by default.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204364.html">ListFileSystemWithMountTargets</a> operation to query available mount targets.</p>
          * 
-         * You can call the [ListFileSystemWithMountTargets](~~204364~~) operation to query available mount targets.
+         * <strong>example:</strong>
+         * <p>008b64****</p>
          */
         public Builder volumeId(String volumeId) {
             this.putQueryParameter("VolumeId", volumeId);
@@ -1460,10 +1556,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The mount options of the NFS file system that you want to mount by running the mount command.
-         * <p>
+         * <p>The mount options of the NFS file system that you want to mount by running the mount command.</p>
+         * <p>For more information, see <a href="https://www.alibabacloud.com/help/en/nas/latest/mount-an-nfs-file-system-on-a-linux-ecs-instance#section-jyi-hyd-hbr">Mount an NFS file system on a Linux ECS instance</a>.</p>
          * 
-         * For more information, see [Mount an NFS file system on a Linux ECS instance](https://www.alibabacloud.com/help/en/nas/latest/mount-an-nfs-file-system-on-a-linux-ecs-instance#section-jyi-hyd-hbr).
+         * <strong>example:</strong>
+         * <p>-t nfs -o vers=4</p>
          */
         public Builder volumeMountOption(String volumeMountOption) {
             this.putQueryParameter("VolumeMountOption", volumeMountOption);
@@ -1472,11 +1569,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The mount target of the NAS file system. The mount target is of the VPC type. Take note of the following information:
-         * <p>
+         * <p>The mount target of the NAS file system. The mount target is of the VPC type. Take note of the following information:</p>
+         * <ul>
+         * <li>If the VolumeId parameter is not specified, you can leave the VolumeMountpoint parameter empty. In this case, a mount target is created by default.</li>
+         * <li>When the VolumeId parameter is specified, the VolumeMountpoint parameter is required. You can call the <a href="https://help.aliyun.com/document_detail/204364.html">ListFileSystemWithMountTargets</a> operation to query available mount targets.</li>
+         * </ul>
          * 
-         * *   If the VolumeId parameter is not specified, you can leave the VolumeMountpoint parameter empty. In this case, a mount target is created by default.
-         * *   When the VolumeId parameter is specified, the VolumeMountpoint parameter is required. You can call the [ListFileSystemWithMountTargets](~~204364~~) operation to query available mount targets.
+         * <strong>example:</strong>
+         * <p>008b648bcb-s****.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder volumeMountpoint(String volumeMountpoint) {
             this.putQueryParameter("VolumeMountpoint", volumeMountpoint);
@@ -1485,13 +1585,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of the protocol that is used by the NAS file system. Valid values:
-         * <p>
+         * <p>The type of the protocol that is used by the NAS file system. Valid values:</p>
+         * <ul>
+         * <li>NFS</li>
+         * <li>SMB</li>
+         * </ul>
+         * <p>Default value: NFS.</p>
          * 
-         * *   NFS
-         * *   SMB
-         * 
-         * Default value: NFS.
+         * <strong>example:</strong>
+         * <p>NFS</p>
          */
         public Builder volumeProtocol(String volumeProtocol) {
             this.putQueryParameter("VolumeProtocol", volumeProtocol);
@@ -1500,7 +1602,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of the shared storage. Set the value to `nas`, which indicates NAS file system.
+         * <p>The type of the shared storage. Set the value to <code>nas</code>, which indicates NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nas</p>
          */
         public Builder volumeType(String volumeType) {
             this.putQueryParameter("VolumeType", volumeType);
@@ -1509,10 +1614,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the E-HPC cluster belongs.
-         * <p>
+         * <p>The ID of the virtual private cloud (VPC) to which the E-HPC cluster belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query available VPCs.</p>
          * 
-         * You can call the [DescribeVpcs](~~35739~~) operation to query available VPCs.
+         * <strong>example:</strong>
+         * <p>vpc-b3f3edefefeep0760yju****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -1521,13 +1627,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether not to install the agent.
-         * <p>
+         * <p>Specifies whether not to install the agent.</p>
+         * <ul>
+         * <li>true: does not install the agent.</li>
+         * <li>false: installs the agent.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: does not install the agent.
-         * *   false: installs the agent.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withoutAgent(Boolean withoutAgent) {
             this.putQueryParameter("WithoutAgent", withoutAgent);
@@ -1536,13 +1644,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether the logon node uses an elastic IP address (EIP). Default value: false.
-         * <p>
+         * <p>Specifies whether the logon node uses an elastic IP address (EIP). Default value: false.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withoutElasticIp(Boolean withoutElasticIp) {
             this.putQueryParameter("WithoutElasticIp", withoutElasticIp);
@@ -1551,13 +1661,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Indicates whether to use NAS as a shared storage. Valid values:
-         * <p>
+         * <p>Indicates whether to use NAS as a shared storage. Valid values:</p>
+         * <ul>
+         * <li>true: does not use NAS.</li>
+         * <li>false: use NAS.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: does not use NAS.
-         * *   false: use NAS.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withoutNas(Boolean withoutNas) {
             this.putQueryParameter("WithoutNas", withoutNas);
@@ -1566,10 +1678,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the zone in which the resource resides.
-         * <p>
+         * <p>The ID of the zone in which the resource resides.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/188593.html">ListRegions</a> and <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operations to query the IDs of the zones where E-HPC is supported.</p>
          * 
-         * You can call the [ListRegions](~~188593~~) and [DescribeZones](~~25610~~) operations to query the IDs of the zones where E-HPC is supported.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -1584,11 +1697,17 @@ public class CreateClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class Compute extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
         private Compute(Builder builder) {
@@ -1622,8 +1741,19 @@ public class CreateClusterRequest extends Request {
             private Integer count; 
             private String instanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Compute model) {
+                this.count = model.count;
+                this.instanceType = model.instanceType;
+            } 
+
             /**
-             * The number of compute nodes in the cluster. Valid values: 0 to 99.
+             * <p>The number of compute nodes in the cluster. Valid values: 0 to 99.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1631,10 +1761,11 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The instance type of the compute nodes.
-             * <p>
+             * <p>The instance type of the compute nodes.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/188592.html">ListPreferredEcsTypes</a> operation to query the recommended instance types.</p>
              * 
-             * You can call the [ListPreferredEcsTypes](~~188592~~) operation to query the recommended instance types.
+             * <strong>example:</strong>
+             * <p>ecs.n1.tiny</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1648,11 +1779,17 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class Login extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
         private Login(Builder builder) {
@@ -1686,8 +1823,19 @@ public class CreateClusterRequest extends Request {
             private Integer count; 
             private String instanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Login model) {
+                this.count = model.count;
+                this.instanceType = model.instanceType;
+            } 
+
             /**
-             * The number of the logon nodes. Valid value: 1.
+             * <p>The number of the logon nodes. Valid value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1695,10 +1843,11 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The instance type of the logon nodes.
-             * <p>
+             * <p>The instance type of the logon nodes.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/188592.html">ListPreferredEcsTypes</a> operation to query the recommended instance types.</p>
              * 
-             * You can call the [ListPreferredEcsTypes](~~188592~~) operation to query the recommended instance types.
+             * <strong>example:</strong>
+             * <p>ecs.n1.tiny</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1712,11 +1861,17 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class Manager extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
         private Manager(Builder builder) {
@@ -1750,8 +1905,19 @@ public class CreateClusterRequest extends Request {
             private Integer count; 
             private String instanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Manager model) {
+                this.count = model.count;
+                this.instanceType = model.instanceType;
+            } 
+
             /**
-             * The number of the management nodes. Valid values: 1 and 2.
+             * <p>The number of the management nodes. Valid values: 1 and 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1759,10 +1925,11 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The instance type of the management nodes.
-             * <p>
+             * <p>The instance type of the management nodes.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/188592.html">ListPreferredEcsTypes</a> operation to query the recommended instance types.</p>
              * 
-             * You can call the [ListPreferredEcsTypes](~~188592~~) operation to query the recommended instance types.
+             * <strong>example:</strong>
+             * <p>ecs.n1.tiny</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1776,17 +1943,23 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class EcsOrder extends TeaModel {
-        @NameInMap("Compute")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Compute")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Compute compute;
 
-        @NameInMap("Login")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Login")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Login login;
 
-        @NameInMap("Manager")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Manager")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Manager manager;
 
         private EcsOrder(Builder builder) {
@@ -1829,6 +2002,15 @@ public class CreateClusterRequest extends Request {
             private Login login; 
             private Manager manager; 
 
+            private Builder() {
+            } 
+
+            private Builder(EcsOrder model) {
+                this.compute = model.compute;
+                this.login = model.login;
+                this.manager = model.manager;
+            } 
+
             /**
              * Compute.
              */
@@ -1860,26 +2042,32 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class AddOns extends TeaModel {
-        @NameInMap("ConfigFile")
+        @com.aliyun.core.annotation.NameInMap("ConfigFile")
         private String configFile;
 
-        @NameInMap("DBType")
+        @com.aliyun.core.annotation.NameInMap("DBType")
         private String DBType;
 
-        @NameInMap("DefaultStart")
+        @com.aliyun.core.annotation.NameInMap("DefaultStart")
         private Boolean defaultStart;
 
-        @NameInMap("DeployMode")
+        @com.aliyun.core.annotation.NameInMap("DeployMode")
         private String deployMode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Float port;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private AddOns(Builder builder) {
@@ -1958,8 +2146,24 @@ public class CreateClusterRequest extends Request {
             private Float port; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddOns model) {
+                this.configFile = model.configFile;
+                this.DBType = model.DBType;
+                this.defaultStart = model.defaultStart;
+                this.deployMode = model.deployMode;
+                this.name = model.name;
+                this.port = model.port;
+                this.version = model.version;
+            } 
+
             /**
-             * The path to the configuration file.
+             * <p>The path to the configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/addon/cromwell/cromwell.conf</p>
              */
             public Builder configFile(String configFile) {
                 this.configFile = configFile;
@@ -1967,7 +2171,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The type of the database engine. Valid values: Mysql, and null.
+             * <p>The type of the database engine. Valid values: Mysql, and null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mysql</p>
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -1975,7 +2182,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Indicates whether to auto-start the custom component. Valid values: true and false.
+             * <p>Indicates whether to auto-start the custom component. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultStart(Boolean defaultStart) {
                 this.defaultStart = defaultStart;
@@ -1983,7 +2193,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The deployment mode. Valid values: local and ecs.
+             * <p>The deployment mode. Valid values: local and ecs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local</p>
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -1991,7 +2204,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The component name.
+             * <p>The component name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cromwell</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1999,7 +2215,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The access port of the custom component.
+             * <p>The access port of the custom component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder port(Float port) {
                 this.port = port;
@@ -2007,7 +2226,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The version number of the component.
+             * <p>The version number of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -2021,8 +2243,14 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class Roles extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Roles(Builder builder) {
@@ -2047,13 +2275,20 @@ public class CreateClusterRequest extends Request {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Roles model) {
+                this.name = model.name;
+            } 
+
             /**
-             * The type of the nodes to which the NAS file system is attached.
-             * <p>
+             * <p>The type of the nodes to which the NAS file system is attached.</p>
+             * <p>Valid values of N in AdditionalVolumes.N.Roles: 1 to 10</p>
+             * <p>Valid values of N in Roles.N.Name: 0 to 8.</p>
              * 
-             * Valid values of N in AdditionalVolumes.N.Roles: 1 to 10
-             * 
-             * Valid values of N in Roles.N.Name: 0 to 8.
+             * <strong>example:</strong>
+             * <p>[&quot;Compute&quot;]</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2067,35 +2302,41 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class AdditionalVolumes extends TeaModel {
-        @NameInMap("JobQueue")
+        @com.aliyun.core.annotation.NameInMap("JobQueue")
         private String jobQueue;
 
-        @NameInMap("LocalDirectory")
+        @com.aliyun.core.annotation.NameInMap("LocalDirectory")
         private String localDirectory;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("RemoteDirectory")
+        @com.aliyun.core.annotation.NameInMap("RemoteDirectory")
         private String remoteDirectory;
 
-        @NameInMap("Roles")
-        private java.util.List < Roles> roles;
+        @com.aliyun.core.annotation.NameInMap("Roles")
+        private java.util.List<Roles> roles;
 
-        @NameInMap("VolumeId")
+        @com.aliyun.core.annotation.NameInMap("VolumeId")
         private String volumeId;
 
-        @NameInMap("VolumeMountOption")
+        @com.aliyun.core.annotation.NameInMap("VolumeMountOption")
         private String volumeMountOption;
 
-        @NameInMap("VolumeMountpoint")
+        @com.aliyun.core.annotation.NameInMap("VolumeMountpoint")
         private String volumeMountpoint;
 
-        @NameInMap("VolumeProtocol")
+        @com.aliyun.core.annotation.NameInMap("VolumeProtocol")
         private String volumeProtocol;
 
-        @NameInMap("VolumeType")
+        @com.aliyun.core.annotation.NameInMap("VolumeType")
         private String volumeType;
 
         private AdditionalVolumes(Builder builder) {
@@ -2150,7 +2391,7 @@ public class CreateClusterRequest extends Request {
         /**
          * @return roles
          */
-        public java.util.List < Roles> getRoles() {
+        public java.util.List<Roles> getRoles() {
             return this.roles;
         }
 
@@ -2194,18 +2435,35 @@ public class CreateClusterRequest extends Request {
             private String localDirectory; 
             private String location; 
             private String remoteDirectory; 
-            private java.util.List < Roles> roles; 
+            private java.util.List<Roles> roles; 
             private String volumeId; 
             private String volumeMountOption; 
             private String volumeMountpoint; 
             private String volumeProtocol; 
             private String volumeType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdditionalVolumes model) {
+                this.jobQueue = model.jobQueue;
+                this.localDirectory = model.localDirectory;
+                this.location = model.location;
+                this.remoteDirectory = model.remoteDirectory;
+                this.roles = model.roles;
+                this.volumeId = model.volumeId;
+                this.volumeMountOption = model.volumeMountOption;
+                this.volumeMountpoint = model.volumeMountpoint;
+                this.volumeProtocol = model.volumeProtocol;
+                this.volumeType = model.volumeType;
+            } 
+
             /**
-             * The queue of the nodes to which the NAS file system is attached.
-             * <p>
+             * <p>The queue of the nodes to which the NAS file system is attached.</p>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder jobQueue(String jobQueue) {
                 this.jobQueue = jobQueue;
@@ -2213,10 +2471,11 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The local directory on which the NAS file system is mounted.
-             * <p>
+             * <p>The local directory on which the NAS file system is mounted.</p>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>/ff</p>
              */
             public Builder localDirectory(String localDirectory) {
                 this.localDirectory = localDirectory;
@@ -2224,10 +2483,11 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The type of the E-HPC cluster. Set the value to PublicCloud.
-             * <p>
+             * <p>The type of the E-HPC cluster. Set the value to PublicCloud.</p>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>PublicCloud</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -2235,10 +2495,11 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The remote directory to which the NAS file system is mounted.
-             * <p>
+             * <p>The remote directory to which the NAS file system is mounted.</p>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder remoteDirectory(String remoteDirectory) {
                 this.remoteDirectory = remoteDirectory;
@@ -2246,18 +2507,19 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The node information to which the NAS file system is attached.
+             * <p>The node information to which the NAS file system is attached.</p>
              */
-            public Builder roles(java.util.List < Roles> roles) {
+            public Builder roles(java.util.List<Roles> roles) {
                 this.roles = roles;
                 return this;
             }
 
             /**
-             * The ID of the NAS file system.
-             * <p>
+             * <p>The ID of the NAS file system.</p>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>extreme-00b88****</p>
              */
             public Builder volumeId(String volumeId) {
                 this.volumeId = volumeId;
@@ -2265,10 +2527,11 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The mount options of the NAS file system.
-             * <p>
+             * <p>The mount options of the NAS file system.</p>
+             * <p>You can specify 1 to 10 vCPUs.</p>
              * 
-             * You can specify 1 to 10 vCPUs.
+             * <strong>example:</strong>
+             * <p>-t nfs -o vers=4.0</p>
              */
             public Builder volumeMountOption(String volumeMountOption) {
                 this.volumeMountOption = volumeMountOption;
@@ -2276,10 +2539,11 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The mount target of the NAS file system.
-             * <p>
+             * <p>The mount target of the NAS file system.</p>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>0088****-sihc.cn-hangzhou.extreme.nas.aliyuncs.com</p>
              */
             public Builder volumeMountpoint(String volumeMountpoint) {
                 this.volumeMountpoint = volumeMountpoint;
@@ -2287,15 +2551,16 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The type of the protocol that is used by the NAS file system. Valid value:
-             * <p>
+             * <p>The type of the protocol that is used by the NAS file system. Valid value:</p>
+             * <ul>
+             * <li>NFS</li>
+             * <li>SMB</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 10.</p>
+             * <p>Default value: NFS.</p>
              * 
-             * *   NFS
-             * *   SMB
-             * 
-             * Valid values of N: 1 to 10.
-             * 
-             * Default value: NFS.
+             * <strong>example:</strong>
+             * <p>NFS</p>
              */
             public Builder volumeProtocol(String volumeProtocol) {
                 this.volumeProtocol = volumeProtocol;
@@ -2303,10 +2568,11 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The type of the additional shared storage. Only NAS file systems are supported.
-             * <p>
+             * <p>The type of the additional shared storage. Only NAS file systems are supported.</p>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>nas</p>
              */
             public Builder volumeType(String volumeType) {
                 this.volumeType = volumeType;
@@ -2320,8 +2586,14 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class Application extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private Application(Builder builder) {
@@ -2346,13 +2618,20 @@ public class CreateClusterRequest extends Request {
         public static final class Builder {
             private String tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Application model) {
+                this.tag = model.tag;
+            } 
+
             /**
-             * The tag of the software.
-             * <p>
+             * <p>The tag of the software.</p>
+             * <p>Valid values of N: 0 to 100.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/87216.html">ListSoftwares</a> operation to query the tag of the software.</p>
              * 
-             * Valid values of N: 0 to 100.
-             * 
-             * You can call the [ListSoftwares](~~87216~~) operation to query the tag of the software.
+             * <strong>example:</strong>
+             * <p>OpenMPI_11.1</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -2366,11 +2645,17 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class PostInstallScript extends TeaModel {
-        @NameInMap("Args")
+        @com.aliyun.core.annotation.NameInMap("Args")
         private String args;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private PostInstallScript(Builder builder) {
@@ -2404,11 +2689,20 @@ public class CreateClusterRequest extends Request {
             private String args; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(PostInstallScript model) {
+                this.args = model.args;
+                this.url = model.url;
+            } 
+
             /**
-             * The parameter that is used to run the script after the cluster is created.
-             * <p>
+             * <p>The parameter that is used to run the script after the cluster is created.</p>
+             * <p>Valid values of N: 0 to 16.</p>
              * 
-             * Valid values of N: 0 to 16.
+             * <strong>example:</strong>
+             * <p>bashfile.sh</p>
              */
             public Builder args(String args) {
                 this.args = args;
@@ -2416,10 +2710,11 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The URL that is used to download the script after the E-HPC cluster is created.
-             * <p>
+             * <p>The URL that is used to download the script after the E-HPC cluster is created.</p>
+             * <p>Valid values of N: 0 to 16</p>
              * 
-             * Valid values of N: 0 to 16
+             * <strong>example:</strong>
+             * <p>/opt/job.sh</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -2433,11 +2728,17 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -2471,8 +2772,19 @@ public class CreateClusterRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2480,7 +2792,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

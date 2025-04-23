@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobsWithFiltersResponseBody} extends {@link TeaModel}
  *
  * <p>ListJobsWithFiltersResponseBody</p>
  */
 public class ListJobsWithFiltersResponseBody extends TeaModel {
-    @NameInMap("Jobs")
-    private java.util.List < Jobs> jobs;
+    @com.aliyun.core.annotation.NameInMap("Jobs")
+    private java.util.List<Jobs> jobs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListJobsWithFiltersResponseBody(Builder builder) {
@@ -47,10 +52,14 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobs
      */
-    public java.util.List < Jobs> getJobs() {
+    public java.util.List<Jobs> getJobs() {
         return this.jobs;
     }
 
@@ -90,23 +99,38 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Jobs> jobs; 
+        private java.util.List<Jobs> jobs; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListJobsWithFiltersResponseBody model) {
+            this.jobs = model.jobs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The list of jobs.
+         * <p>The list of jobs.</p>
          */
-        public Builder jobs(java.util.List < Jobs> jobs) {
+        public Builder jobs(java.util.List<Jobs> jobs) {
             this.jobs = jobs;
             return this;
         }
 
         /**
-         * The page number returned.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +138,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +149,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +160,14 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +175,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -155,11 +191,17 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListJobsWithFiltersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsWithFiltersResponseBody</p>
+     */
     public static class Resources extends TeaModel {
-        @NameInMap("Cores")
+        @com.aliyun.core.annotation.NameInMap("Cores")
         private Long cores;
 
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private Long nodes;
 
         private Resources(Builder builder) {
@@ -193,8 +235,19 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             private Long cores; 
             private Long nodes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.cores = model.cores;
+                this.nodes = model.nodes;
+            } 
+
             /**
-             * The number of CPUs that were used to run the job.
+             * <p>The number of CPUs that were used to run the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cores(Long cores) {
                 this.cores = cores;
@@ -202,7 +255,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes that were used to run the job.
+             * <p>The number of nodes that were used to run the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nodes(Long nodes) {
                 this.nodes = nodes;
@@ -216,59 +272,65 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobsWithFiltersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsWithFiltersResponseBody</p>
+     */
     public static class Jobs extends TeaModel {
-        @NameInMap("ArrayRequest")
+        @com.aliyun.core.annotation.NameInMap("ArrayRequest")
         private String arrayRequest;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("LastModifyTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifyTime")
         private String lastModifyTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NodeList")
+        @com.aliyun.core.annotation.NameInMap("NodeList")
         private String nodeList;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("Queue")
+        @com.aliyun.core.annotation.NameInMap("Queue")
         private String queue;
 
-        @NameInMap("Rerunable")
+        @com.aliyun.core.annotation.NameInMap("Rerunable")
         private Boolean rerunable;
 
-        @NameInMap("Resources")
+        @com.aliyun.core.annotation.NameInMap("Resources")
         private Resources resources;
 
-        @NameInMap("ShellPath")
+        @com.aliyun.core.annotation.NameInMap("ShellPath")
         private String shellPath;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Stderr")
+        @com.aliyun.core.annotation.NameInMap("Stderr")
         private String stderr;
 
-        @NameInMap("Stdout")
+        @com.aliyun.core.annotation.NameInMap("Stdout")
         private String stdout;
 
-        @NameInMap("SubmitTime")
+        @com.aliyun.core.annotation.NameInMap("SubmitTime")
         private String submitTime;
 
-        @NameInMap("VariableList")
+        @com.aliyun.core.annotation.NameInMap("VariableList")
         private String variableList;
 
         private Jobs(Builder builder) {
@@ -446,11 +508,36 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             private String submitTime; 
             private String variableList; 
 
+            private Builder() {
+            } 
+
+            private Builder(Jobs model) {
+                this.arrayRequest = model.arrayRequest;
+                this.comment = model.comment;
+                this.id = model.id;
+                this.lastModifyTime = model.lastModifyTime;
+                this.name = model.name;
+                this.nodeList = model.nodeList;
+                this.owner = model.owner;
+                this.priority = model.priority;
+                this.queue = model.queue;
+                this.rerunable = model.rerunable;
+                this.resources = model.resources;
+                this.shellPath = model.shellPath;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.stderr = model.stderr;
+                this.stdout = model.stdout;
+                this.submitTime = model.submitTime;
+                this.variableList = model.variableList;
+            } 
+
             /**
-             * The job array. If the job is not in a queue, the output is empty.
-             * <p>
+             * <p>The job array. If the job is not in a queue, the output is empty.</p>
+             * <p>Format: X-Y:Z. X is the minimum index value. Y is the maximum index value. Z is the step size. For example, 2-7:2 indicates that three jobs need to be run and their index values are 2, 4, and 6.</p>
              * 
-             * Format: X-Y:Z. X is the minimum index value. Y is the maximum index value. Z is the step size. For example, 2-7:2 indicates that three jobs need to be run and their index values are 2, 4, and 6.
+             * <strong>example:</strong>
+             * <p>1-10:2</p>
              */
             public Builder arrayRequest(String arrayRequest) {
                 this.arrayRequest = arrayRequest;
@@ -458,7 +545,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the job.
+             * <p>The description of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jobDescription</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -466,7 +556,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The job ID.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.scheduler</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -474,7 +567,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was last modified.
+             * <p>The time when the job was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1647428667</p>
              */
             public Builder lastModifyTime(String lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -482,7 +578,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the job.
+             * <p>The name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -490,7 +589,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The list of compute nodes that were used to run the job.
+             * <p>The list of compute nodes that were used to run the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;compute2&quot;, &quot;compute3&quot;]</p>
              */
             public Builder nodeList(String nodeList) {
                 this.nodeList = nodeList;
@@ -498,7 +600,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user that ran the job.
+             * <p>The name of the user that ran the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test2@scheduler</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -506,7 +611,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.
+             * <p>The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -514,7 +622,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of queues that ran the job.
+             * <p>The number of queues that ran the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -522,11 +633,14 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the job can be run again. Valid values:
-             * <p>
+             * <p>Indicates whether the job can be run again. Valid values:</p>
+             * <ul>
+             * <li>true: yes</li>
+             * <li>false: no</li>
+             * </ul>
              * 
-             * *   true: yes
-             * *   false: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder rerunable(Boolean rerunable) {
                 this.rerunable = rerunable;
@@ -534,7 +648,7 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The resources that were used to run the job.
+             * <p>The resources that were used to run the job.</p>
              */
             public Builder resources(Resources resources) {
                 this.resources = resources;
@@ -542,7 +656,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The path that was used to run the job.
+             * <p>The path that was used to run the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>./Temp</p>
              */
             public Builder shellPath(String shellPath) {
                 this.shellPath = shellPath;
@@ -550,7 +667,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was created.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1647427667</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -558,12 +678,15 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job. Valid value:
-             * <p>
+             * <p>The status of the job. Valid value:</p>
+             * <ul>
+             * <li>FINISHED: The job is completed.</li>
+             * <li>RUNNING: The job is running.</li>
+             * <li>QUEUED: The job is pending in a queue.</li>
+             * </ul>
              * 
-             * *   FINISHED: The job is completed.
-             * *   RUNNING: The job is running.
-             * *   QUEUED: The job is pending in a queue.
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -571,7 +694,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The output file path of stderr.
+             * <p>The output file path of stderr.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>./Temp</p>
              */
             public Builder stderr(String stderr) {
                 this.stderr = stderr;
@@ -579,7 +705,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The output file path of stdout.
+             * <p>The output file path of stdout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>./Temp</p>
              */
             public Builder stdout(String stdout) {
                 this.stdout = stdout;
@@ -587,7 +716,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was submitted.
+             * <p>The time when the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1647423718</p>
              */
             public Builder submitTime(String submitTime) {
                 this.submitTime = submitTime;
@@ -595,7 +727,10 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The list of variables of the job.
+             * <p>The list of variables of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;PBS_O_SHELL&quot;:&quot;/bin/bash&quot;, 	&quot;PBS_O_HOST&quot;:&quot;manager&quot;, 	&quot;PBS_O_SYSTEM&quot;:&quot;Linux&quot;, 	&quot;PBS_O_LANG&quot;:&quot;en_US.UTF-8&quot;, 	&quot;PBS_O_QUEUE&quot;:&quot;workq&quot;}</p>
              */
             public Builder variableList(String variableList) {
                 this.variableList = variableList;

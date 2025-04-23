@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobLogRequest} extends {@link RequestModel}
  *
  * <p>GetJobLogRequest</p>
  */
 public class GetJobLogRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("ExecHost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecHost")
     private String execHost;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Query
-    @NameInMap("Offset")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Offset")
     private Long offset;
 
-    @Query
-    @NameInMap("Size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Size")
     private Integer size;
 
     private GetJobLogRequest(Builder builder) {
@@ -51,7 +56,7 @@ public class GetJobLogRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +117,11 @@ public class GetJobLogRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-jeJki6****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -121,11 +130,14 @@ public class GetJobLogRequest extends Request {
         }
 
         /**
-         * The node on which the job runs.
-         * <p>
+         * <p>The node on which the job runs.</p>
+         * <ul>
+         * <li>If the job is completed, you do not need to specify the parameter.</li>
+         * <li>If the job is running, you must specify the parameter.</li>
+         * </ul>
          * 
-         * *   If the job is completed, you do not need to specify the parameter.
-         * *   If the job is running, you must specify the parameter.
+         * <strong>example:</strong>
+         * <p>compute000</p>
          */
         public Builder execHost(String execHost) {
             this.putQueryParameter("ExecHost", execHost);
@@ -134,7 +146,11 @@ public class GetJobLogRequest extends Request {
         }
 
         /**
-         * The ID of the job.
+         * <p>The ID of the job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.scheduler****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -143,12 +159,12 @@ public class GetJobLogRequest extends Request {
         }
 
         /**
-         * The position where logs start to be read.
-         * <p>
+         * <p>The position where logs start to be read.</p>
+         * <p>Unit: bits</p>
+         * <p>Default value: 0</p>
          * 
-         * Unit: bits
-         * 
-         * Default value: 0
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder offset(Long offset) {
             this.putQueryParameter("Offset", offset);
@@ -157,12 +173,12 @@ public class GetJobLogRequest extends Request {
         }
 
         /**
-         * The maximum size of logs that you can read in a single request.
-         * <p>
+         * <p>The maximum size of logs that you can read in a single request.</p>
+         * <p>Unit: bits</p>
+         * <p>Default value: 1024</p>
          * 
-         * Unit: bits
-         * 
-         * Default value: 1024
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);

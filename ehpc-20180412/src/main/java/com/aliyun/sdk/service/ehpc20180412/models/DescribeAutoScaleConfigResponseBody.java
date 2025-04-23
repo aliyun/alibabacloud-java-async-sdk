@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoScaleConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoScaleConfigResponseBody</p>
  */
 public class DescribeAutoScaleConfigResponseBody extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("ClusterType")
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
     private String clusterType;
 
-    @NameInMap("EnableAutoGrow")
+    @com.aliyun.core.annotation.NameInMap("EnableAutoGrow")
     private Boolean enableAutoGrow;
 
-    @NameInMap("EnableAutoShrink")
+    @com.aliyun.core.annotation.NameInMap("EnableAutoShrink")
     private Boolean enableAutoShrink;
 
-    @NameInMap("ExcludeNodes")
+    @com.aliyun.core.annotation.NameInMap("ExcludeNodes")
     private String excludeNodes;
 
-    @NameInMap("ExtraNodesGrowRatio")
+    @com.aliyun.core.annotation.NameInMap("ExtraNodesGrowRatio")
     private Integer extraNodesGrowRatio;
 
-    @NameInMap("GrowIntervalInMinutes")
+    @com.aliyun.core.annotation.NameInMap("GrowIntervalInMinutes")
     private Integer growIntervalInMinutes;
 
-    @NameInMap("GrowRatio")
+    @com.aliyun.core.annotation.NameInMap("GrowRatio")
     private Integer growRatio;
 
-    @NameInMap("GrowTimeoutInMinutes")
+    @com.aliyun.core.annotation.NameInMap("GrowTimeoutInMinutes")
     private Integer growTimeoutInMinutes;
 
-    @NameInMap("MaxNodesInCluster")
+    @com.aliyun.core.annotation.NameInMap("MaxNodesInCluster")
     private Integer maxNodesInCluster;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ShrinkIdleTimes")
+    @com.aliyun.core.annotation.NameInMap("ShrinkIdleTimes")
     private Integer shrinkIdleTimes;
 
-    @NameInMap("ShrinkIntervalInMinutes")
+    @com.aliyun.core.annotation.NameInMap("ShrinkIntervalInMinutes")
     private Integer shrinkIntervalInMinutes;
 
-    @NameInMap("SpotPriceLimit")
+    @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
     private String spotPriceLimit;
 
-    @NameInMap("SpotStrategy")
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
 
-    @NameInMap("Uid")
+    @com.aliyun.core.annotation.NameInMap("Uid")
     private String uid;
 
     private DescribeAutoScaleConfigResponseBody(Builder builder) {
@@ -85,6 +90,10 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
 
     public static DescribeAutoScaleConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -217,8 +226,33 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         private String spotStrategy; 
         private String uid; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoScaleConfigResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.clusterType = model.clusterType;
+            this.enableAutoGrow = model.enableAutoGrow;
+            this.enableAutoShrink = model.enableAutoShrink;
+            this.excludeNodes = model.excludeNodes;
+            this.extraNodesGrowRatio = model.extraNodesGrowRatio;
+            this.growIntervalInMinutes = model.growIntervalInMinutes;
+            this.growRatio = model.growRatio;
+            this.growTimeoutInMinutes = model.growTimeoutInMinutes;
+            this.maxNodesInCluster = model.maxNodesInCluster;
+            this.requestId = model.requestId;
+            this.shrinkIdleTimes = model.shrinkIdleTimes;
+            this.shrinkIntervalInMinutes = model.shrinkIntervalInMinutes;
+            this.spotPriceLimit = model.spotPriceLimit;
+            this.spotStrategy = model.spotStrategy;
+            this.uid = model.uid;
+        } 
+
         /**
-         * The ID of the associated cluster.
+         * <p>The ID of the associated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -226,13 +260,16 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the scheduler. Valid values:
-         * <p>
+         * <p>The type of the scheduler. Valid values:</p>
+         * <ul>
+         * <li>pbs</li>
+         * <li>slurm</li>
+         * <li>opengridscheduler</li>
+         * <li>deadline</li>
+         * </ul>
          * 
-         * *   pbs
-         * *   slurm
-         * *   opengridscheduler
-         * *   deadline
+         * <strong>example:</strong>
+         * <p>slurm</p>
          */
         public Builder clusterType(String clusterType) {
             this.clusterType = clusterType;
@@ -240,7 +277,10 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether to enable auto scale-out.
+         * <p>Specifies whether to enable auto scale-out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAutoGrow(Boolean enableAutoGrow) {
             this.enableAutoGrow = enableAutoGrow;
@@ -248,7 +288,10 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether to enable auto scale-in.
+         * <p>Specifies whether to enable auto scale-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAutoShrink(Boolean enableAutoShrink) {
             this.enableAutoShrink = enableAutoShrink;
@@ -256,7 +299,10 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The list of nodes on which auto scaling is not enabled.
+         * <p>The list of nodes on which auto scaling is not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp19lgqwxb4206t5****,i-bp1g4hvzs9pywrhb****</p>
          */
         public Builder excludeNodes(String excludeNodes) {
             this.excludeNodes = excludeNodes;
@@ -264,7 +310,10 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The percentage of extra compute nodes. Valid values: 0 to 100.
+         * <p>The percentage of extra compute nodes. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder extraNodesGrowRatio(Integer extraNodesGrowRatio) {
             this.extraNodesGrowRatio = extraNodesGrowRatio;
@@ -272,7 +321,10 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The interval between two consecutive rounds of scale-in. Valid values: 2 to 10.
+         * <p>The interval between two consecutive rounds of scale-in. Valid values: 2 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder growIntervalInMinutes(Integer growIntervalInMinutes) {
             this.growIntervalInMinutes = growIntervalInMinutes;
@@ -280,7 +332,10 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The percentage of each round of scale-out. Valid values: 1 to 100.
+         * <p>The percentage of each round of scale-out. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder growRatio(Integer growRatio) {
             this.growRatio = growRatio;
@@ -288,7 +343,10 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The timeout period before the scale-out nodes were started. Valid values: 10 to 60.
+         * <p>The timeout period before the scale-out nodes were started. Valid values: 10 to 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder growTimeoutInMinutes(Integer growTimeoutInMinutes) {
             this.growTimeoutInMinutes = growTimeoutInMinutes;
@@ -296,7 +354,10 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of compute nodes in the cluster. This parameter indicates the largest number of nodes that can be added to the cluster.
+         * <p>The maximum number of compute nodes in the cluster. This parameter indicates the largest number of nodes that can be added to the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxNodesInCluster(Integer maxNodesInCluster) {
             this.maxNodesInCluster = maxNodesInCluster;
@@ -304,7 +365,10 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -312,7 +376,10 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The number of consecutive idle times of a node during the resource shrink check. Valid values: 2 to 5.
+         * <p>The number of consecutive idle times of a node during the resource shrink check. Valid values: 2 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder shrinkIdleTimes(Integer shrinkIdleTimes) {
             this.shrinkIdleTimes = shrinkIdleTimes;
@@ -320,7 +387,10 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The interval between two consecutive rounds of scale-out. Valid values: 2 to 10.
+         * <p>The interval between two consecutive rounds of scale-out. Valid values: 2 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder shrinkIntervalInMinutes(Integer shrinkIntervalInMinutes) {
             this.shrinkIntervalInMinutes = shrinkIntervalInMinutes;
@@ -328,7 +398,10 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum hourly price of the new ECS instance. The value is accurate to three decimal places. It takes effect only when SpotStrategy is set to SpotWithPriceLimit.
+         * <p>The maximum hourly price of the new ECS instance. The value is accurate to three decimal places. It takes effect only when SpotStrategy is set to SpotWithPriceLimit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.062</p>
          */
         public Builder spotPriceLimit(String spotPriceLimit) {
             this.spotPriceLimit = spotPriceLimit;
@@ -336,12 +409,15 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The bidding method of the compute nodes. Valid values:
-         * <p>
+         * <p>The bidding method of the compute nodes. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The instances of the compute node are pay-as-you-go instances.</li>
+         * <li>SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</li>
+         * </ul>
          * 
-         * *   NoSpot: The instances of the compute node are pay-as-you-go instances.
-         * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.spotStrategy = spotStrategy;
@@ -349,7 +425,10 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The user ID.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testu****</p>
          */
         public Builder uid(String uid) {
             this.uid = uid;

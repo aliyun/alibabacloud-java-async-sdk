@@ -1,122 +1,123 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitJobRequest</p>
  */
 public class SubmitJobRequest extends Request {
-    @Query
-    @NameInMap("JobRetry")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobRetry")
     private JobRetry jobRetry;
 
-    @Query
-    @NameInMap("ArrayRequest")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArrayRequest")
     private String arrayRequest;
 
-    @Query
-    @NameInMap("Async")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Async")
     private Boolean async;
 
-    @Query
-    @NameInMap("ClockTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClockTime")
     private String clockTime;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("CommandLine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandLine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commandLine;
 
-    @Query
-    @NameInMap("ContainerId")
-    private String containerId;
-
-    @Query
-    @NameInMap("Cpu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cpu")
     private Integer cpu;
 
-    @Query
-    @NameInMap("Gpu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Gpu")
     private Integer gpu;
 
-    @Query
-    @NameInMap("InputFileUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputFileUrl")
     private String inputFileUrl;
 
-    @Query
-    @NameInMap("JobQueue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobQueue")
     private String jobQueue;
 
-    @Query
-    @NameInMap("Mem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mem")
     private String mem;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Node")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Node")
     private Integer node;
 
-    @Query
-    @NameInMap("PackagePath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackagePath")
     private String packagePath;
 
-    @Query
-    @NameInMap("PostCmdLine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PostCmdLine")
     private String postCmdLine;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
-    @Query
-    @NameInMap("ReRunable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReRunable")
     private Boolean reRunable;
 
-    @Query
-    @NameInMap("RunasUser")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RunasUser")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String runasUser;
 
-    @Query
-    @NameInMap("RunasUserPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RunasUserPassword")
     private String runasUserPassword;
 
-    @Query
-    @NameInMap("StderrRedirectPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StderrRedirectPath")
     private String stderrRedirectPath;
 
-    @Query
-    @NameInMap("StdoutRedirectPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StdoutRedirectPath")
     private String stdoutRedirectPath;
 
-    @Query
-    @NameInMap("Task")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Task")
     private Integer task;
 
-    @Query
-    @NameInMap("Thread")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Thread")
     private Integer thread;
 
-    @Query
-    @NameInMap("UnzipCmd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnzipCmd")
     private String unzipCmd;
 
-    @Query
-    @NameInMap("Variables")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Variables")
     private String variables;
 
     private SubmitJobRequest(Builder builder) {
@@ -127,7 +128,6 @@ public class SubmitJobRequest extends Request {
         this.clockTime = builder.clockTime;
         this.clusterId = builder.clusterId;
         this.commandLine = builder.commandLine;
-        this.containerId = builder.containerId;
         this.cpu = builder.cpu;
         this.gpu = builder.gpu;
         this.inputFileUrl = builder.inputFileUrl;
@@ -157,7 +157,7 @@ public class SubmitJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -202,13 +202,6 @@ public class SubmitJobRequest extends Request {
      */
     public String getCommandLine() {
         return this.commandLine;
-    }
-
-    /**
-     * @return containerId
-     */
-    public String getContainerId() {
-        return this.containerId;
     }
 
     /**
@@ -351,7 +344,6 @@ public class SubmitJobRequest extends Request {
         private String clockTime; 
         private String clusterId; 
         private String commandLine; 
-        private String containerId; 
         private Integer cpu; 
         private Integer gpu; 
         private String inputFileUrl; 
@@ -384,7 +376,6 @@ public class SubmitJobRequest extends Request {
             this.clockTime = request.clockTime;
             this.clusterId = request.clusterId;
             this.commandLine = request.commandLine;
-            this.containerId = request.containerId;
             this.cpu = request.cpu;
             this.gpu = request.gpu;
             this.inputFileUrl = request.inputFileUrl;
@@ -416,10 +407,11 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The job array.
-         * <p>
+         * <p>The job array.</p>
+         * <p>Format: X-Y:Z. The minimum index value X is the first index. The maximum index value Y is the last index. Z is the step size. For example, 2-7:2 indicates that three jobs need to be run and their index values are 2, 4, and 6.</p>
          * 
-         * Format: X-Y:Z. The minimum index value X is the first index. The maximum index value Y is the last index. Z is the step size. For example, 2-7:2 indicates that three jobs need to be run and their index values are 2, 4, and 6.
+         * <strong>example:</strong>
+         * <p>1-10:2</p>
          */
         public Builder arrayRequest(String arrayRequest) {
             this.putQueryParameter("ArrayRequest", arrayRequest);
@@ -428,10 +420,11 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to use an asynchronous link to submit the job.
-         * <p>
+         * <p>Specifies whether to use an asynchronous link to submit the job.</p>
+         * <p>Default value: false.</p>
          * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -440,14 +433,16 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The maximum running time of the job. Valid formats:
-         * <p>
+         * <p>The maximum running time of the job. Valid formats:</p>
+         * <ul>
+         * <li>hh:mm:ss</li>
+         * <li>mm:ss</li>
+         * <li>ss</li>
+         * </ul>
+         * <p>We recommend that you use the hh:mm:ss format. If the maximum running time is 12 hours, set the value to 12:00:00.</p>
          * 
-         * *   hh:mm:ss
-         * *   mm:ss
-         * *   ss
-         * 
-         * We recommend that you use the hh:mm:ss format. If the maximum running time is 12 hours, set the value to 12:00:00.
+         * <strong>example:</strong>
+         * <p>12:00:00</p>
          */
         public Builder clockTime(String clockTime) {
             this.putQueryParameter("ClockTime", clockTime);
@@ -456,10 +451,11 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The command that is used to run the job.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -468,7 +464,12 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The command that is used to run the job.
+         * <p>The name of the user that runs the job.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/188572.html">ListUsers</a> operation to query the users of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>./LammpsTest/lammps.pbs</p>
          */
         public Builder commandLine(String commandLine) {
             this.putQueryParameter("CommandLine", commandLine);
@@ -477,19 +478,10 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The ID of the containerized application. If you want to use a container application, you must specify its ID.
-         * <p>
+         * <p>The number of CPU cores required by a single compute node.</p>
          * 
-         * You can call the [ListContainerApps](~~87333~~) operation to query the container application ID.
-         */
-        public Builder containerId(String containerId) {
-            this.putQueryParameter("ContainerId", containerId);
-            this.containerId = containerId;
-            return this;
-        }
-
-        /**
-         * The number of CPU cores required by a single compute node.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpu(Integer cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -498,10 +490,11 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The maximum GPU usage required by a single compute node.
-         * <p>
+         * <p>The maximum GPU usage required by a single compute node.</p>
+         * <p>The parameter takes effect only when the cluster uses PBS and a compute node is a GPU-accelerated instance.</p>
          * 
-         * The parameter takes effect only when the cluster uses PBS and a compute node is a GPU-accelerated instance.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder gpu(Integer gpu) {
             this.putQueryParameter("Gpu", gpu);
@@ -510,7 +503,7 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The URL of the job file that is uploaded to an Object Storage Service (OSS) bucket.
+         * <p>The URL of the job file that is uploaded to an Object Storage Service (OSS) bucket.</p>
          */
         public Builder inputFileUrl(String inputFileUrl) {
             this.putQueryParameter("InputFileUrl", inputFileUrl);
@@ -519,10 +512,11 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The name of the queue in which the job is run.
-         * <p>
+         * <p>The name of the queue in which the job is run.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/92176.html">ListQueues</a> operation to query the name of the queue.</p>
          * 
-         * You can call the [ListQueues](~~92176~~) operation to query the name of the queue.
+         * <strong>example:</strong>
+         * <p>workq</p>
          */
         public Builder jobQueue(String jobQueue) {
             this.putQueryParameter("JobQueue", jobQueue);
@@ -531,7 +525,10 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The maximum memory usage required by a single compute node. Unit: GB, MB, or KB. The unit is case-insensitive.
+         * <p>The maximum memory usage required by a single compute node. Unit: GB, MB, or KB. The unit is case-insensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1GB</p>
          */
         public Builder mem(String mem) {
             this.putQueryParameter("Mem", mem);
@@ -540,7 +537,10 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The name of the job. The name must be 6 to 30 characters in length and start with a letter. It can contain letters, digits, and periods (.).
+         * <p>job1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jobtest</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -549,10 +549,13 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The number of compute nodes required to run the job.
-         * <p>
+         * <p>The number of compute nodes required to run the job.</p>
+         * <blockquote>
+         * <p>If the parameter is not specified, the Cpu, Task, Thread, Mem, and Gpu parameters become invalid.</p>
+         * </blockquote>
          * 
-         * > If the parameter is not specified, the Cpu, Task, Thread, Mem, and Gpu parameters become invalid.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder node(Integer node) {
             this.putQueryParameter("Node", node);
@@ -561,7 +564,10 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The path that is used to run the job.
+         * <p>The path that is used to run the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>./Tem</p>
          */
         public Builder packagePath(String packagePath) {
             this.putQueryParameter("PackagePath", packagePath);
@@ -570,7 +576,10 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The command to perform on the job after the job is submitted.
+         * <p>The command to perform on the job after the job is submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.sh</p>
          */
         public Builder postCmdLine(String postCmdLine) {
             this.putQueryParameter("PostCmdLine", postCmdLine);
@@ -579,10 +588,11 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.
-         * <p>
+         * <p>The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.</p>
+         * <p>Default value: 0.</p>
          * 
-         * Default value: 0.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -591,11 +601,14 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * Specifies whether the job can be rerun. Valid values:
-         * <p>
+         * <p>Specifies whether the job can be rerun. Valid values:</p>
+         * <ul>
+         * <li>true: The job can be rerun.</li>
+         * <li>false: The job cannot be rerun.</li>
+         * </ul>
          * 
-         * *   true: The job can be rerun.
-         * *   false: The job cannot be rerun.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder reRunable(Boolean reRunable) {
             this.putQueryParameter("ReRunable", reRunable);
@@ -604,10 +617,11 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The name of the user that runs the job.
-         * <p>
+         * <p>The password that corresponds to the username.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.
+         * <strong>example:</strong>
+         * <p>testuser</p>
          */
         public Builder runasUser(String runasUser) {
             this.putQueryParameter("RunasUser", runasUser);
@@ -616,7 +630,10 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The password that corresponds to the username.
+         * <p>The name of the job. The name must be 6 to 30 characters in length and start with a letter. It can contain letters, digits, and periods (.).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder runasUserPassword(String runasUserPassword) {
             this.putQueryParameter("RunasUserPassword", runasUserPassword);
@@ -625,7 +642,10 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The output file path of stderr.
+         * <p>The output file path of stderr.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>./LammpsTest</p>
          */
         public Builder stderrRedirectPath(String stderrRedirectPath) {
             this.putQueryParameter("StderrRedirectPath", stderrRedirectPath);
@@ -634,7 +654,10 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The output file path of stdout.
+         * <p>The output file path of stdout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>./LammpsTest</p>
          */
         public Builder stdoutRedirectPath(String stdoutRedirectPath) {
             this.putQueryParameter("StdoutRedirectPath", stdoutRedirectPath);
@@ -643,10 +666,11 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The number of processes created for a single compute node.
-         * <p>
+         * <p>The number of processes created for a single compute node.</p>
+         * <p>The parameter is applicable to Message Passing Interface (MPI) jobs.</p>
          * 
-         * The parameter is applicable to Message Passing Interface (MPI) jobs.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder task(Integer task) {
             this.putQueryParameter("Task", task);
@@ -655,10 +679,11 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The number of threads created for a single compute node.
-         * <p>
+         * <p>The number of threads created for a single compute node.</p>
+         * <p>The parameter is applicable to OpenMP jobs.</p>
          * 
-         * The parameter is applicable to OpenMP jobs.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder thread(Integer thread) {
             this.putQueryParameter("Thread", thread);
@@ -667,12 +692,15 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The command for file decompression. The command that is used to decompress the job files downloaded from an OSS bucket. Valid values:
-         * <p>
+         * <p>The command for file decompression. The command that is used to decompress the job files downloaded from an OSS bucket. Valid values:</p>
+         * <ul>
+         * <li>tar xzf: Decompresses GZIP files.</li>
+         * <li>tar xf: Decompresses TAR files.</li>
+         * <li>unzip: Decompresses ZIP files.</li>
+         * </ul>
          * 
-         * *   tar xzf: Decompresses GZIP files.
-         * *   tar xf: Decompresses TAR files.
-         * *   unzip: Decompresses ZIP files.
+         * <strong>example:</strong>
+         * <p>tar xzf</p>
          */
         public Builder unzipCmd(String unzipCmd) {
             this.putQueryParameter("UnzipCmd", unzipCmd);
@@ -681,7 +709,10 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The runtime variables passed to the job. They can be accessed by using environment variables in the executable file.
+         * <p>The runtime variables passed to the job. They can be accessed by using environment variables in the executable file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{Name:test1,Value:value1},{Name:test2,Value:value2}]</p>
          */
         public Builder variables(String variables) {
             this.putQueryParameter("Variables", variables);
@@ -696,14 +727,20 @@ public class SubmitJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitJobRequest</p>
+     */
     public static class JobRetry extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("OnExitCode")
+        @com.aliyun.core.annotation.NameInMap("OnExitCode")
         private Integer onExitCode;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
         private JobRetry(Builder builder) {
@@ -746,11 +783,23 @@ public class SubmitJobRequest extends Request {
             private Integer onExitCode; 
             private Integer priority; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobRetry model) {
+                this.count = model.count;
+                this.onExitCode = model.onExitCode;
+                this.priority = model.priority;
+            } 
+
             /**
-             * The number of retries for the job. Valid values: 1 to 10. You can only retry jobs that are run on the PBS clusters.
-             * <p>
+             * <p>The number of retries for the job. Valid values: 1 to 10. You can only retry jobs that are run on the PBS clusters.</p>
+             * <blockquote>
+             * <p> If this parameter is left empty, the JobRetry.Priority and JobRetry.OnExitCode parameters do not take effect.</p>
+             * </blockquote>
              * 
-             * >  If this parameter is left empty, the JobRetry.Priority and JobRetry.OnExitCode parameters do not take effect.
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -758,10 +807,13 @@ public class SubmitJobRequest extends Request {
             }
 
             /**
-             * The retry condition of the job. If the exit code is the value of the parameter, the job retry is triggered.
-             * <p>
+             * <p>The retry condition of the job. If the exit code is the value of the parameter, the job retry is triggered.</p>
+             * <blockquote>
+             * <p> If this parameter is left empty, the job retry is triggered when the exit code is not 0.</p>
+             * </blockquote>
              * 
-             * >  If this parameter is left empty, the job retry is triggered when the exit code is not 0.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder onExitCode(Integer onExitCode) {
                 this.onExitCode = onExitCode;
@@ -769,10 +821,13 @@ public class SubmitJobRequest extends Request {
             }
 
             /**
-             * The priority of the job retry. Valid values: 0 to 9. A larger value indicates a higher priority.
-             * <p>
+             * <p>The priority of the job retry. Valid values: 0 to 9. A larger value indicates a higher priority.</p>
+             * <blockquote>
+             * <p> If this parameter is left empty, the priority of the job retry is min {Priority of the original job +1, 9}.</p>
+             * </blockquote>
              * 
-             * >  If this parameter is left empty, the priority of the job retry is min {Priority of the original job +1, 9}.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;

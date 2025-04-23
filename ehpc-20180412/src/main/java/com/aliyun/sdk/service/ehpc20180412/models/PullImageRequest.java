@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PullImageRequest} extends {@link RequestModel}
  *
  * <p>PullImageRequest</p>
  */
 public class PullImageRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("ContainerType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerType")
     private String containerType;
 
-    @Query
-    @NameInMap("ImageTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageTag")
     private String imageTag;
 
-    @Query
-    @NameInMap("Repository")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Repository")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String repository;
 
     private PullImageRequest(Builder builder) {
@@ -46,7 +51,7 @@ public class PullImageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +103,11 @@ public class PullImageRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-nkKsP3****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -107,7 +116,10 @@ public class PullImageRequest extends Request {
         }
 
         /**
-         * The type of the image. Default value: shifter.
+         * <p>The type of the image. Default value: shifter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>shifter</p>
          */
         public Builder containerType(String containerType) {
             this.putQueryParameter("ContainerType", containerType);
@@ -116,7 +128,10 @@ public class PullImageRequest extends Request {
         }
 
         /**
-         * The tag of the image. Default value: latest.
+         * <p>The tag of the image. Default value: latest.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latest</p>
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);
@@ -125,7 +140,11 @@ public class PullImageRequest extends Request {
         }
 
         /**
-         * The name of the repository.
+         * <p>The name of the repository.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos</p>
          */
         public Builder repository(String repository) {
             this.putQueryParameter("Repository", repository);

@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCloudMetricLogsRequest} extends {@link RequestModel}
  *
  * <p>GetCloudMetricLogsRequest</p>
  */
 public class GetCloudMetricLogsRequest extends Request {
-    @Query
-    @NameInMap("AggregationInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggregationInterval")
     private Integer aggregationInterval;
 
-    @Query
-    @NameInMap("AggregationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggregationType")
     private String aggregationType;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("From")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer from;
 
-    @Query
-    @NameInMap("MetricCategories")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricCategories")
     private String metricCategories;
 
-    @Query
-    @NameInMap("MetricScope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricScope")
     private String metricScope;
 
-    @Query
-    @NameInMap("Reverse")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reverse")
     private Boolean reverse;
 
-    @Query
-    @NameInMap("To")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("To")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer to;
 
     private GetCloudMetricLogsRequest(Builder builder) {
@@ -72,7 +77,7 @@ public class GetCloudMetricLogsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -169,12 +174,12 @@ public class GetCloudMetricLogsRequest extends Request {
         } 
 
         /**
-         * The data aggregation interval. Unit: seconds.
-         * <p>
+         * <p>The data aggregation interval. Unit: seconds.</p>
+         * <p>Valid values: 1, 10, 60, 600, and 3600.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Valid values: 1, 10, 60, 600, and 3600.
-         * 
-         * Default value: 1
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder aggregationInterval(Integer aggregationInterval) {
             this.putQueryParameter("AggregationInterval", aggregationInterval);
@@ -183,15 +188,17 @@ public class GetCloudMetricLogsRequest extends Request {
         }
 
         /**
-         * The data aggregation type. Valid values:
-         * <p>
+         * <p>The data aggregation type. Valid values:</p>
+         * <ul>
+         * <li>sum: the sum of the data</li>
+         * <li>avg: the average value</li>
+         * <li>max: the maximum value</li>
+         * <li>min: the minimum value</li>
+         * </ul>
+         * <p>Aggregation is disabled by default.</p>
          * 
-         * *   sum: the sum of the data
-         * *   avg: the average value
-         * *   max: the maximum value
-         * *   min: the minimum value
-         * 
-         * Aggregation is disabled by default.
+         * <strong>example:</strong>
+         * <p>avg</p>
          */
         public Builder aggregationType(String aggregationType) {
             this.putQueryParameter("AggregationType", aggregationType);
@@ -200,7 +207,11 @@ public class GetCloudMetricLogsRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-jeJki6****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -209,13 +220,16 @@ public class GetCloudMetricLogsRequest extends Request {
         }
 
         /**
-         * The filter conditions. A JSON string consisting of one or more key:value pairs. Value range of key:
-         * <p>
+         * <p>The filter conditions. A JSON-formatted string that contains several key-value pairs. Valid values of the key:</p>
+         * <ul>
+         * <li>InstanceId: the ID of the node</li>
+         * <li>Hostname: the hostname of the node</li>
+         * <li>NetworkInterface: the name of the network interface</li>
+         * <li>DiskDevice: the name of the disk</li>
+         * </ul>
          * 
-         * *   InstanceId: the ID of the node
-         * *   Hostname: the hostname of the node
-         * *   NetworkInterface: the name of the network interface
-         * *   DiskDevice: the name of the disk
+         * <strong>example:</strong>
+         * <p>{&quot;Hostname&quot;:&quot;compute000&quot;}</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -224,7 +238,11 @@ public class GetCloudMetricLogsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <p>The beginning of the time range to query. The time is a timestamp. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1583907780</p>
          */
         public Builder from(Integer from) {
             this.putQueryParameter("From", from);
@@ -233,11 +251,14 @@ public class GetCloudMetricLogsRequest extends Request {
         }
 
         /**
-         * The category of the output performance metrics. Separate multiple metrics with commas (,). Valid values:
-         * <p>
+         * <p>The category of the output performance metrics. Separate multiple metrics with commas (,). Valid values:</p>
+         * <ul>
+         * <li>cpu</li>
+         * <li>memory</li>
+         * </ul>
          * 
-         * *   cpu
-         * *   memory
+         * <strong>example:</strong>
+         * <p>cpu</p>
          */
         public Builder metricCategories(String metricCategories) {
             this.putQueryParameter("MetricCategories", metricCategories);
@@ -246,13 +267,16 @@ public class GetCloudMetricLogsRequest extends Request {
         }
 
         /**
-         * The dimensions of the performance metric. Valid values:
-         * <p>
+         * <p>The dimensions of the performance metric. Valid values:</p>
+         * <ul>
+         * <li>machine</li>
+         * <li>process</li>
+         * <li>network</li>
+         * <li>disk</li>
+         * </ul>
          * 
-         * *   machine
-         * *   process
-         * *   network
-         * *   disk
+         * <strong>example:</strong>
+         * <p>network</p>
          */
         public Builder metricScope(String metricScope) {
             this.putQueryParameter("MetricScope", metricScope);
@@ -261,10 +285,10 @@ public class GetCloudMetricLogsRequest extends Request {
         }
 
         /**
-         * Logs are returned in reverse order of timestamps.
-         * <p>
+         * <p>Specifies whether to return logs in reverse order of timestamps. Default value: false.</p>
          * 
-         * Default value: false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -273,7 +297,11 @@ public class GetCloudMetricLogsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <p>The end of the time range to query. The time is a timestamp. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1583907790</p>
          */
         public Builder to(Integer to) {
             this.putQueryParameter("To", to);

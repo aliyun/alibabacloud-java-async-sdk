@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServerlessJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListServerlessJobsResponseBody</p>
  */
 public class ListServerlessJobsResponseBody extends TeaModel {
-    @NameInMap("Jobs")
-    private java.util.List < Jobs> jobs;
+    @com.aliyun.core.annotation.NameInMap("Jobs")
+    private java.util.List<Jobs> jobs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListServerlessJobsResponseBody(Builder builder) {
@@ -43,10 +48,14 @@ public class ListServerlessJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobs
      */
-    public java.util.List < Jobs> getJobs() {
+    public java.util.List<Jobs> getJobs() {
         return this.jobs;
     }
 
@@ -79,22 +88,36 @@ public class ListServerlessJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Jobs> jobs; 
+        private java.util.List<Jobs> jobs; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListServerlessJobsResponseBody model) {
+            this.jobs = model.jobs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The list of serverless jobs.
+         * <p>The list of serverless jobs.</p>
          */
-        public Builder jobs(java.util.List < Jobs> jobs) {
+        public Builder jobs(java.util.List<Jobs> jobs) {
             this.jobs = jobs;
             return this;
         }
 
         /**
-         * The page number returned.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +125,10 @@ public class ListServerlessJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +136,10 @@ public class ListServerlessJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class ListServerlessJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,35 +163,41 @@ public class ListServerlessJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServerlessJobsResponseBody</p>
+     */
     public static class Jobs extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("IsArrayJob")
+        @com.aliyun.core.annotation.NameInMap("IsArrayJob")
         private Boolean isArrayJob;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("Queue")
+        @com.aliyun.core.annotation.NameInMap("Queue")
         private String queue;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("SubmitTime")
+        @com.aliyun.core.annotation.NameInMap("SubmitTime")
         private String submitTime;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Jobs(Builder builder) {
@@ -265,8 +303,27 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             private String submitTime; 
             private String user; 
 
+            private Builder() {
+            } 
+
+            private Builder(Jobs model) {
+                this.endTime = model.endTime;
+                this.isArrayJob = model.isArrayJob;
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.priority = model.priority;
+                this.queue = model.queue;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.submitTime = model.submitTime;
+                this.user = model.user;
+            } 
+
             /**
-             * The time at which the serverless job ended.
+             * <p>The time at which the serverless job ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1682128871</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -274,11 +331,14 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the job is an array job. Valid values:
-             * <p>
+             * <p>Indicates whether the job is an array job. Valid values:</p>
+             * <ul>
+             * <li>True: yes</li>
+             * <li>False: no</li>
+             * </ul>
              * 
-             * *   True: yes
-             * *   False: no
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isArrayJob(Boolean isArrayJob) {
                 this.isArrayJob = isArrayJob;
@@ -286,7 +346,10 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the serverless job or the subtask (array job).
+             * <p>The ID of the serverless job or the subtask (array job).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -294,7 +357,10 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the serverless job.
+             * <p>The name of the serverless job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testjob</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -302,7 +368,10 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling priority of the serverless job. Valid values are 0 to 999. A greater value indicates a higher priority.
+             * <p>The scheduling priority of the serverless job. Valid values are 0 to 999. A greater value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -310,7 +379,10 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queue in which the serverless job is run.
+             * <p>The name of the queue in which the serverless job is run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comp</p>
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -318,7 +390,10 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the serverless job started.
+             * <p>The time at which the serverless job started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1647427667</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -326,15 +401,18 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the serverless job. Valid values:
-             * <p>
+             * <p>The status of the serverless job. Valid values:</p>
+             * <ul>
+             * <li>Pending</li>
+             * <li>Initing</li>
+             * <li>Running</li>
+             * <li>Succeeded</li>
+             * <li>Canceled</li>
+             * <li>Failed</li>
+             * </ul>
              * 
-             * *   Pending
-             * *   Initing
-             * *   Running
-             * *   Succeeded
-             * *   Canceled
-             * *   Failed
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -342,7 +420,10 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the serverless job is submitted.
+             * <p>The time at which the serverless job is submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1647423718</p>
              */
             public Builder submitTime(String submitTime) {
                 this.submitTime = submitTime;
@@ -350,7 +431,10 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The username that is used to run the serverless job.
+             * <p>The username that is used to run the serverless job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuser</p>
              */
             public Builder user(String user) {
                 this.user = user;

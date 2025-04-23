@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddLocalNodesRequest} extends {@link RequestModel}
  *
  * <p>AddLocalNodesRequest</p>
  */
 public class AddLocalNodesRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Nodes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Nodes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodes;
 
-    @Query
-    @NameInMap("Queue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Queue")
     private String queue;
 
     private AddLocalNodesRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class AddLocalNodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,11 @@ public class AddLocalNodesRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,7 +102,11 @@ public class AddLocalNodesRequest extends Request {
         }
 
         /**
-         * The information of the local node. A JSON string that contains the HostName, IpAddress, CpuCores, and Memory (Unit: MB) of the local node.
+         * <p>The information of the local node. A JSON string that contains the HostName, IpAddress, CpuCores, and Memory (Unit: MB) of the local node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;HostName&quot;:&quot;test-HostName&quot;,&quot;IpAddress&quot;:&quot;<code>192.168.**.**</code>&quot;},{&quot;CpuCores&quot;:2,&quot;Memory&quot;:1024}]</p>
          */
         public Builder nodes(String nodes) {
             this.putQueryParameter("Nodes", nodes);
@@ -102,7 +115,10 @@ public class AddLocalNodesRequest extends Request {
         }
 
         /**
-         * The queue to which to add the local node.
+         * <p>The queue to which to add the local node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.q</p>
          */
         public Builder queue(String queue) {
             this.putQueryParameter("Queue", queue);

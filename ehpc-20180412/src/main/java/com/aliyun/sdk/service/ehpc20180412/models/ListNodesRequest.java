@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodesRequest} extends {@link RequestModel}
  *
  * <p>ListNodesRequest</p>
  */
 public class ListNodesRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("HostName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
-    @Query
-    @NameInMap("HostNamePrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostNamePrefix")
     private String hostNamePrefix;
 
-    @Query
-    @NameInMap("HostNameSuffix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostNameSuffix")
     private String hostNameSuffix;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
-    @Query
-    @NameInMap("Sequence")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sequence")
     private String sequence;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
     private ListNodesRequest(Builder builder) {
@@ -81,7 +86,7 @@ public class ListNodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -196,10 +201,12 @@ public class ListNodesRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -208,18 +215,20 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The filter options of the node list.
-         * <p>
+         * <p>The filter options of the node list.</p>
+         * <p>Format: {&quot;status&quot;:&quot;node_status&quot;}. Replace node_status with the node status. Valid values of node_status:</p>
+         * <ul>
+         * <li>uninit: The node is being installed.</li>
+         * <li>exception: An exception occurred on the node.</li>
+         * <li>running: The node is running.</li>
+         * <li>initing: The node is being initialized.</li>
+         * <li>releasing: The node is being released.</li>
+         * <li>untracking: The node is not added to the cluster.</li>
+         * <li>stopped: The node is stopped.</li>
+         * </ul>
          * 
-         * Format: {"status":"node_status"}. Replace node_status with the node status. Valid values of node_status:
-         * 
-         * *   uninit: The node is being installed.
-         * *   exception: An exception occurred on the node.
-         * *   running: The node is running.
-         * *   initing: The node is being initialized.
-         * *   releasing: The node is being released.
-         * *   untracking: The node is not added to the cluster.
-         * *   stopped: The node is stopped.
+         * <strong>example:</strong>
+         * <p>{&quot;status&quot;:&quot;running&quot;}</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -228,7 +237,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The name of the node. You can perform a fuzzy search. MySQL regular expressions are supported.
+         * <p>The name of the node. You can perform a fuzzy search. MySQL regular expressions are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-HostName</p>
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -237,7 +249,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The prefix of the hostname. You can query nodes that have a specified prefix.
+         * <p>The prefix of the hostname. You can query nodes that have a specified prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>compute</p>
          */
         public Builder hostNamePrefix(String hostNamePrefix) {
             this.putQueryParameter("HostNamePrefix", hostNamePrefix);
@@ -246,7 +261,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The suffix of the hostname. You can query nodes that have a specified suffix.
+         * <p>The suffix of the hostname. You can query nodes that have a specified suffix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01</p>
          */
         public Builder hostNameSuffix(String hostNameSuffix) {
             this.putQueryParameter("HostNameSuffix", hostNameSuffix);
@@ -255,7 +273,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
+         * <p>The number of the page to return. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -264,10 +285,11 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 100.
-         * <p>
+         * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -276,7 +298,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The private IP address of the node.
+         * <p>The private IP address of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>172.16.**.**</code></p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -285,12 +310,15 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The type of the node. Valid values:
-         * <p>
+         * <p>The type of the node. Valid values:</p>
+         * <ul>
+         * <li>Manager: management node</li>
+         * <li>Login: logon node</li>
+         * <li>Compute: compute node</li>
+         * </ul>
          * 
-         * *   Manager: management node
-         * *   Login: logon node
-         * *   Compute: compute node
+         * <strong>example:</strong>
+         * <p>Manager</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -299,15 +327,18 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The sorting method of the node list. Valid values:
-         * <p>
+         * <p>The sorting method of the node list. Valid values:</p>
+         * <ul>
+         * <li>Forward: sorts the nodes in chronological order.</li>
+         * <li>Backward: sorts the nodes in reverse chronological order.</li>
+         * </ul>
+         * <p>Default value: Forward.</p>
+         * <blockquote>
+         * <p> This parameter is used together with the SortBy parameter. If you set SortBy to AddedTime and set Sequence to Forward, nodes are queried in ascending order of time that they are added.</p>
+         * </blockquote>
          * 
-         * *   Forward: sorts the nodes in chronological order.
-         * *   Backward: sorts the nodes in reverse chronological order.
-         * 
-         * Default value: Forward.
-         * 
-         * >  This parameter is used together with the SortBy parameter. If you set SortBy to AddedTime and set Sequence to Forward, nodes are queried in ascending order of time that they are added.
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         public Builder sequence(String sequence) {
             this.putQueryParameter("Sequence", sequence);
@@ -316,11 +347,14 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The sorting method of the node list. Valid values:
-         * <p>
+         * <p>The sorting method of the node list. Valid values:</p>
+         * <ul>
+         * <li>AddedTime: sorts the nodes by the time that they are added.</li>
+         * <li>HostName: sorts the nodes by their host names.</li>
+         * </ul>
          * 
-         * *   AddedTime: sorts the nodes by the time that they are added.
-         * *   HostName: sorts the nodes by their host names.
+         * <strong>example:</strong>
+         * <p>AddedTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

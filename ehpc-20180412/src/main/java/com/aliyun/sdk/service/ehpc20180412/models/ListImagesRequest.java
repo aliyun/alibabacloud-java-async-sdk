@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListImagesRequest} extends {@link RequestModel}
  *
  * <p>ListImagesRequest</p>
  */
 public class ListImagesRequest extends Request {
-    @Query
-    @NameInMap("BaseOsTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BaseOsTag")
     private String baseOsTag;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
     private ListImagesRequest(Builder builder) {
@@ -34,7 +39,7 @@ public class ListImagesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +73,10 @@ public class ListImagesRequest extends Request {
         } 
 
         /**
-         * The image tag of the operating system. The tag is used only for management nodes.
+         * <p>The image tag of the operating system. The tag is used only for management nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         public Builder baseOsTag(String baseOsTag) {
             this.putQueryParameter("BaseOsTag", baseOsTag);
@@ -77,11 +85,14 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * The instance type.
-         * <p>
+         * <p>The instance type.</p>
+         * <ul>
+         * <li>If a value is passed to the parameter, the list of images that are supported by the specified instance type is queried.</li>
+         * <li>If no value is passed to the parameter, the list of images that are supported by all instance types is queried.</li>
+         * </ul>
          * 
-         * *   If a value is passed to the parameter, the list of images that are supported by the specified instance type is queried.
-         * *   If no value is passed to the parameter, the list of images that are supported by all instance types is queried.
+         * <strong>example:</strong>
+         * <p>ecs.n1.medium</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

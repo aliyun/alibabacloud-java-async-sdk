@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServerlessJobsResponseBody</p>
  */
 public class DescribeServerlessJobsResponseBody extends TeaModel {
-    @NameInMap("JobInfos")
-    private java.util.List < JobInfos> jobInfos;
+    @com.aliyun.core.annotation.NameInMap("JobInfos")
+    private java.util.List<JobInfos> jobInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeServerlessJobsResponseBody(Builder builder) {
@@ -35,10 +40,14 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobInfos
      */
-    public java.util.List < JobInfos> getJobInfos() {
+    public java.util.List<JobInfos> getJobInfos() {
         return this.jobInfos;
     }
 
@@ -57,20 +66,32 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < JobInfos> jobInfos; 
+        private java.util.List<JobInfos> jobInfos; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeServerlessJobsResponseBody model) {
+            this.jobInfos = model.jobInfos;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The list of detailed information about the serverless job.
+         * <p>The list of detailed information about the serverless job.</p>
          */
-        public Builder jobInfos(java.util.List < JobInfos> jobInfos) {
+        public Builder jobInfos(java.util.List<JobInfos> jobInfos) {
             this.jobInfos = jobInfos;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +99,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,14 +115,20 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class ArrayProperties extends TeaModel {
-        @NameInMap("IndexEnd")
+        @com.aliyun.core.annotation.NameInMap("IndexEnd")
         private Long indexEnd;
 
-        @NameInMap("IndexStart")
+        @com.aliyun.core.annotation.NameInMap("IndexStart")
         private Long indexStart;
 
-        @NameInMap("IndexStep")
+        @com.aliyun.core.annotation.NameInMap("IndexStep")
         private Long indexStep;
 
         private ArrayProperties(Builder builder) {
@@ -141,8 +171,20 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Long indexStart; 
             private Long indexStep; 
 
+            private Builder() {
+            } 
+
+            private Builder(ArrayProperties model) {
+                this.indexEnd = model.indexEnd;
+                this.indexStart = model.indexStart;
+                this.indexStep = model.indexStep;
+            } 
+
             /**
-             * The end value of the array job index.
+             * <p>The end value of the array job index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder indexEnd(Long indexEnd) {
                 this.indexEnd = indexEnd;
@@ -150,7 +192,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The starting value of the array job index.
+             * <p>The starting value of the array job index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder indexStart(Long indexStart) {
                 this.indexStart = indexStart;
@@ -158,7 +203,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The interval of the array job index.
+             * <p>The interval of the array job index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder indexStep(Long indexStep) {
                 this.indexStep = indexStep;
@@ -172,29 +220,35 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class CurrentState extends TeaModel {
-        @NameInMap("DetailStatus")
+        @com.aliyun.core.annotation.NameInMap("DetailStatus")
         private String detailStatus;
 
-        @NameInMap("ExitCode")
+        @com.aliyun.core.annotation.NameInMap("ExitCode")
         private Long exitCode;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Signal")
+        @com.aliyun.core.annotation.NameInMap("Signal")
         private Long signal;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private CurrentState(Builder builder) {
@@ -282,8 +336,25 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String startTime; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(CurrentState model) {
+                this.detailStatus = model.detailStatus;
+                this.exitCode = model.exitCode;
+                this.finishTime = model.finishTime;
+                this.message = model.message;
+                this.reason = model.reason;
+                this.signal = model.signal;
+                this.startTime = model.startTime;
+                this.state = model.state;
+            } 
+
             /**
-             * The details of the container status.
+             * <p>The details of the container status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>working</p>
              */
             public Builder detailStatus(String detailStatus) {
                 this.detailStatus = detailStatus;
@@ -291,7 +362,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The exit code of the container.
+             * <p>The exit code of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exitCode(Long exitCode) {
                 this.exitCode = exitCode;
@@ -299,7 +373,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the container stopped running.
+             * <p>The time when the container stopped running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-02T15:00:00Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -307,7 +384,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the container status.
+             * <p>The information about the container status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Back-off 5m0s restarting failed container=test pod=test_eci-xxx(xxx)</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -315,7 +395,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the container is in this state.
+             * <p>The reason why the container is in this state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Started</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -323,7 +406,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the container status.
+             * <p>The code of the container status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder signal(Long signal) {
                 this.signal = signal;
@@ -331,7 +417,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the container started to run.
+             * <p>The time when the container started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-19T12:05:02Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -339,12 +428,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job. Valid values:
-             * <p>
+             * <p>The status of the job. Valid values:</p>
+             * <ul>
+             * <li>Waiting</li>
+             * <li>Running</li>
+             * <li>Terminated</li>
+             * </ul>
              * 
-             * *   Waiting
-             * *   Running
-             * *   Terminated
+             * <strong>example:</strong>
+             * <p>Terminated</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -358,8 +450,14 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class FieldRef extends TeaModel {
-        @NameInMap("FieldPath")
+        @com.aliyun.core.annotation.NameInMap("FieldPath")
         private String fieldPath;
 
         private FieldRef(Builder builder) {
@@ -384,8 +482,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String fieldPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(FieldRef model) {
+                this.fieldPath = model.fieldPath;
+            } 
+
             /**
-             * The path of the field.
+             * <p>The path of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>status.podIP</p>
              */
             public Builder fieldPath(String fieldPath) {
                 this.fieldPath = fieldPath;
@@ -399,8 +507,14 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class ValueFrom extends TeaModel {
-        @NameInMap("FieldRef")
+        @com.aliyun.core.annotation.NameInMap("FieldRef")
         private FieldRef fieldRef;
 
         private ValueFrom(Builder builder) {
@@ -425,8 +539,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public static final class Builder {
             private FieldRef fieldRef; 
 
+            private Builder() {
+            } 
+
+            private Builder(ValueFrom model) {
+                this.fieldRef = model.fieldRef;
+            } 
+
             /**
-             * The specified field.
+             * <p>The specified field.</p>
              */
             public Builder fieldRef(FieldRef fieldRef) {
                 this.fieldRef = fieldRef;
@@ -440,14 +561,20 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class EnvironmentVars extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ValueFrom")
+        @com.aliyun.core.annotation.NameInMap("ValueFrom")
         private ValueFrom valueFrom;
 
         private EnvironmentVars(Builder builder) {
@@ -490,8 +617,20 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String value; 
             private ValueFrom valueFrom; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnvironmentVars model) {
+                this.key = model.key;
+                this.value = model.value;
+                this.valueFrom = model.valueFrom;
+            } 
+
             /**
-             * The name of the environment variable.
+             * <p>The name of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PATH</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -499,7 +638,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the environment variable.
+             * <p>The value of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/bin/</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -507,7 +649,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the environment variable value. This parameter can be used only when the variable value is not specified.
+             * <p>The source of the environment variable value. This parameter can be used only when the variable value is not specified.</p>
              */
             public Builder valueFrom(ValueFrom valueFrom) {
                 this.valueFrom = valueFrom;
@@ -521,14 +663,20 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class HttpGet extends TeaModel {
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("Scheme")
+        @com.aliyun.core.annotation.NameInMap("Scheme")
         private String scheme;
 
         private HttpGet(Builder builder) {
@@ -571,8 +719,20 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Long port; 
             private String scheme; 
 
+            private Builder() {
+            } 
+
+            private Builder(HttpGet model) {
+                this.path = model.path;
+                this.port = model.port;
+                this.scheme = model.scheme;
+            } 
+
             /**
-             * The path to which HTTP GET requests are sent.
+             * <p>The path to which HTTP GET requests are sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/nginx/</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -580,7 +740,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The port to which HTTP GET requests are sent.
+             * <p>The port to which HTTP GET requests are sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -588,7 +751,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type of the HTTP GET requests.
+             * <p>The protocol type of the HTTP GET requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
@@ -602,11 +768,17 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class TcpSocket extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
         private TcpSocket(Builder builder) {
@@ -640,8 +812,19 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String host; 
             private Long port; 
 
+            private Builder() {
+            } 
+
+            private Builder(TcpSocket model) {
+                this.host = model.host;
+                this.port = model.port;
+            } 
+
             /**
-             * The name of the host.
+             * <p>The name of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.3.4</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -649,7 +832,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The port number.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -663,29 +849,35 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class LivenessProbe extends TeaModel {
-        @NameInMap("Execs")
-        private java.util.List < String > execs;
+        @com.aliyun.core.annotation.NameInMap("Execs")
+        private java.util.List<String> execs;
 
-        @NameInMap("FailureThreshold")
+        @com.aliyun.core.annotation.NameInMap("FailureThreshold")
         private Long failureThreshold;
 
-        @NameInMap("HttpGet")
+        @com.aliyun.core.annotation.NameInMap("HttpGet")
         private HttpGet httpGet;
 
-        @NameInMap("InitialDelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("InitialDelaySeconds")
         private Long initialDelaySeconds;
 
-        @NameInMap("PeriodSeconds")
+        @com.aliyun.core.annotation.NameInMap("PeriodSeconds")
         private Long periodSeconds;
 
-        @NameInMap("SuccessThreshold")
+        @com.aliyun.core.annotation.NameInMap("SuccessThreshold")
         private Long successThreshold;
 
-        @NameInMap("TcpSocket")
+        @com.aliyun.core.annotation.NameInMap("TcpSocket")
         private TcpSocket tcpSocket;
 
-        @NameInMap("TimeoutSeconds")
+        @com.aliyun.core.annotation.NameInMap("TimeoutSeconds")
         private Long timeoutSeconds;
 
         private LivenessProbe(Builder builder) {
@@ -710,7 +902,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return execs
          */
-        public java.util.List < String > getExecs() {
+        public java.util.List<String> getExecs() {
             return this.execs;
         }
 
@@ -764,7 +956,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > execs; 
+            private java.util.List<String> execs; 
             private Long failureThreshold; 
             private HttpGet httpGet; 
             private Long initialDelaySeconds; 
@@ -773,16 +965,33 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private TcpSocket tcpSocket; 
             private Long timeoutSeconds; 
 
+            private Builder() {
+            } 
+
+            private Builder(LivenessProbe model) {
+                this.execs = model.execs;
+                this.failureThreshold = model.failureThreshold;
+                this.httpGet = model.httpGet;
+                this.initialDelaySeconds = model.initialDelaySeconds;
+                this.periodSeconds = model.periodSeconds;
+                this.successThreshold = model.successThreshold;
+                this.tcpSocket = model.tcpSocket;
+                this.timeoutSeconds = model.timeoutSeconds;
+            } 
+
             /**
-             * The commands that are run.
+             * <p>The commands that are run.</p>
              */
-            public Builder execs(java.util.List < String > execs) {
+            public Builder execs(java.util.List<String> execs) {
                 this.execs = execs;
                 return this;
             }
 
             /**
-             * The minimum number of consecutive failures that must occur for the probe to be considered as failed. Default value: 3.
+             * <p>The minimum number of consecutive failures that must occur for the probe to be considered as failed. Default value: 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder failureThreshold(Long failureThreshold) {
                 this.failureThreshold = failureThreshold;
@@ -790,7 +999,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP GET method that is used to check the container.
+             * <p>The HTTP GET method that is used to check the container.</p>
              */
             public Builder httpGet(HttpGet httpGet) {
                 this.httpGet = httpGet;
@@ -798,7 +1007,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of seconds after the container is started and before a liveness probe is initiated.
+             * <p>The number of seconds after the container is started and before a liveness probe is initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder initialDelaySeconds(Long initialDelaySeconds) {
                 this.initialDelaySeconds = initialDelaySeconds;
@@ -806,7 +1018,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the probe is run. Unit: seconds. Default value: 10. Minimum value: 1.
+             * <p>The interval at which the probe is run. Unit: seconds. Default value: 10. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder periodSeconds(Long periodSeconds) {
                 this.periodSeconds = periodSeconds;
@@ -814,7 +1029,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.
+             * <p>The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successThreshold(Long successThreshold) {
                 this.successThreshold = successThreshold;
@@ -822,7 +1040,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The TCP socket method that is used to check the container.
+             * <p>The TCP socket method that is used to check the container.</p>
              */
             public Builder tcpSocket(TcpSocket tcpSocket) {
                 this.tcpSocket = tcpSocket;
@@ -830,7 +1048,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of the check. Default value: 1. Minimum value: 1.
+             * <p>The timeout period of the check. Default value: 1. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder timeoutSeconds(Long timeoutSeconds) {
                 this.timeoutSeconds = timeoutSeconds;
@@ -844,11 +1065,17 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class Ports extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private Ports(Builder builder) {
@@ -882,8 +1109,19 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Long port; 
             private String protocol; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ports model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
+
             /**
-             * The port number. Valid values: 1 to 65535.
+             * <p>The port number. Valid values: 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -891,7 +1129,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol.
+             * <p>The protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -905,29 +1146,35 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class PreviousState extends TeaModel {
-        @NameInMap("DetailStatus")
+        @com.aliyun.core.annotation.NameInMap("DetailStatus")
         private String detailStatus;
 
-        @NameInMap("ExitCode")
+        @com.aliyun.core.annotation.NameInMap("ExitCode")
         private Long exitCode;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Signal")
+        @com.aliyun.core.annotation.NameInMap("Signal")
         private Long signal;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private PreviousState(Builder builder) {
@@ -1015,8 +1262,25 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String startTime; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(PreviousState model) {
+                this.detailStatus = model.detailStatus;
+                this.exitCode = model.exitCode;
+                this.finishTime = model.finishTime;
+                this.message = model.message;
+                this.reason = model.reason;
+                this.signal = model.signal;
+                this.startTime = model.startTime;
+                this.state = model.state;
+            } 
+
             /**
-             * The details of the container status.
+             * <p>The details of the container status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>working</p>
              */
             public Builder detailStatus(String detailStatus) {
                 this.detailStatus = detailStatus;
@@ -1024,7 +1288,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The exit code of the container.
+             * <p>The exit code of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exitCode(Long exitCode) {
                 this.exitCode = exitCode;
@@ -1032,7 +1299,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the container stopped running.
+             * <p>The time when the container stopped running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-02T15:00:00Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -1040,7 +1310,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The message about the container status.
+             * <p>The message about the container status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Back-off 5m0s restarting failed container=test pod=test_eci-xxx(xxx)</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1048,7 +1321,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the container is in this state.
+             * <p>The reason why the container is in this state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Completed</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -1056,7 +1332,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the container status.
+             * <p>The code of the container status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder signal(Long signal) {
                 this.signal = signal;
@@ -1064,7 +1343,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the container started to run.
+             * <p>The time when the container started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-02T15:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1072,12 +1354,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the container. Valid values:
-             * <p>
+             * <p>The status of the container. Valid values:</p>
+             * <ul>
+             * <li>Waiting: The container is being started.</li>
+             * <li>Running: The container is running.</li>
+             * <li>Terminated: The container terminates running.</li>
+             * </ul>
              * 
-             * *   Waiting: The container is being started.
-             * *   Running: The container is running.
-             * *   Terminated: The container terminates running.
+             * <strong>example:</strong>
+             * <p>Terminated</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1091,14 +1376,20 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class ReadinessProbeHttpGet extends TeaModel {
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("Scheme")
+        @com.aliyun.core.annotation.NameInMap("Scheme")
         private String scheme;
 
         private ReadinessProbeHttpGet(Builder builder) {
@@ -1141,8 +1432,20 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Long port; 
             private String scheme; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadinessProbeHttpGet model) {
+                this.path = model.path;
+                this.port = model.port;
+                this.scheme = model.scheme;
+            } 
+
             /**
-             * The path to which HTTP GET requests are sent.
+             * <p>The path to which HTTP GET requests are sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1150,7 +1453,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The port to which the system sends an HTTP GET request for a health check.
+             * <p>The port to which the system sends an HTTP GET request for a health check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -1158,7 +1464,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type of the HTTP GET requests.
+             * <p>The protocol type of the HTTP GET requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
@@ -1172,11 +1481,17 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class ReadinessProbeTcpSocket extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
         private ReadinessProbeTcpSocket(Builder builder) {
@@ -1210,8 +1525,19 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String host; 
             private Long port; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadinessProbeTcpSocket model) {
+                this.host = model.host;
+                this.port = model.port;
+            } 
+
             /**
-             * The IP address of the host.
+             * <p>The IP address of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.3.4</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1219,7 +1545,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The port number.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8888</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -1233,29 +1562,35 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class ReadinessProbe extends TeaModel {
-        @NameInMap("Execs")
-        private java.util.List < String > execs;
+        @com.aliyun.core.annotation.NameInMap("Execs")
+        private java.util.List<String> execs;
 
-        @NameInMap("FailureThreshold")
+        @com.aliyun.core.annotation.NameInMap("FailureThreshold")
         private Long failureThreshold;
 
-        @NameInMap("HttpGet")
+        @com.aliyun.core.annotation.NameInMap("HttpGet")
         private ReadinessProbeHttpGet httpGet;
 
-        @NameInMap("InitialDelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("InitialDelaySeconds")
         private Long initialDelaySeconds;
 
-        @NameInMap("PeriodSeconds")
+        @com.aliyun.core.annotation.NameInMap("PeriodSeconds")
         private Long periodSeconds;
 
-        @NameInMap("SuccessThreshold")
+        @com.aliyun.core.annotation.NameInMap("SuccessThreshold")
         private Long successThreshold;
 
-        @NameInMap("TcpSocket")
+        @com.aliyun.core.annotation.NameInMap("TcpSocket")
         private ReadinessProbeTcpSocket tcpSocket;
 
-        @NameInMap("TimeoutSeconds")
+        @com.aliyun.core.annotation.NameInMap("TimeoutSeconds")
         private Long timeoutSeconds;
 
         private ReadinessProbe(Builder builder) {
@@ -1280,7 +1615,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return execs
          */
-        public java.util.List < String > getExecs() {
+        public java.util.List<String> getExecs() {
             return this.execs;
         }
 
@@ -1334,7 +1669,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > execs; 
+            private java.util.List<String> execs; 
             private Long failureThreshold; 
             private ReadinessProbeHttpGet httpGet; 
             private Long initialDelaySeconds; 
@@ -1343,16 +1678,33 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private ReadinessProbeTcpSocket tcpSocket; 
             private Long timeoutSeconds; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadinessProbe model) {
+                this.execs = model.execs;
+                this.failureThreshold = model.failureThreshold;
+                this.httpGet = model.httpGet;
+                this.initialDelaySeconds = model.initialDelaySeconds;
+                this.periodSeconds = model.periodSeconds;
+                this.successThreshold = model.successThreshold;
+                this.tcpSocket = model.tcpSocket;
+                this.timeoutSeconds = model.timeoutSeconds;
+            } 
+
             /**
-             * The commands that are run in the container when you use the command line interface (CLI) to perform health checks.
+             * <p>The commands that are run in the container when you use the command line interface (CLI) to perform health checks.</p>
              */
-            public Builder execs(java.util.List < String > execs) {
+            public Builder execs(java.util.List<String> execs) {
                 this.execs = execs;
                 return this;
             }
 
             /**
-             * The minimum number of consecutive failures that must occur for the check to be considered as failed. Default value: 3.
+             * <p>The minimum number of consecutive failures that must occur for the check to be considered as failed. Default value: 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder failureThreshold(Long failureThreshold) {
                 this.failureThreshold = failureThreshold;
@@ -1360,7 +1712,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP GET method that is used to check the container.
+             * <p>The HTTP GET method that is used to check the container.</p>
              */
             public Builder httpGet(ReadinessProbeHttpGet httpGet) {
                 this.httpGet = httpGet;
@@ -1368,7 +1720,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of seconds after the container is started and before a liveness probe is initiated.
+             * <p>The number of seconds after the container is started and before a liveness probe is initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder initialDelaySeconds(Long initialDelaySeconds) {
                 this.initialDelaySeconds = initialDelaySeconds;
@@ -1376,7 +1731,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the container is checked. Unit: seconds. Default value: 10. Minimum value: 1.
+             * <p>The interval at which the container is checked. Unit: seconds. Default value: 10. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder periodSeconds(Long periodSeconds) {
                 this.periodSeconds = periodSeconds;
@@ -1384,7 +1742,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of consecutive successes for a failed liveness probe to be considered successful. Default value: 1. Set the value to 1.
+             * <p>The minimum number of consecutive successes for a failed liveness probe to be considered successful. Default value: 1. Set the value to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successThreshold(Long successThreshold) {
                 this.successThreshold = successThreshold;
@@ -1392,7 +1753,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The TCP socket method that is used to check the container.
+             * <p>The TCP socket method that is used to check the container.</p>
              */
             public Builder tcpSocket(ReadinessProbeTcpSocket tcpSocket) {
                 this.tcpSocket = tcpSocket;
@@ -1400,7 +1761,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of the check. Default value: 1. Minimum value: 1.
+             * <p>The timeout period of the check. Default value: 1. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder timeoutSeconds(Long timeoutSeconds) {
                 this.timeoutSeconds = timeoutSeconds;
@@ -1414,9 +1778,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class Capability extends TeaModel {
-        @NameInMap("Adds")
-        private java.util.List < String > adds;
+        @com.aliyun.core.annotation.NameInMap("Adds")
+        private java.util.List<String> adds;
 
         private Capability(Builder builder) {
             this.adds = builder.adds;
@@ -1433,17 +1803,24 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return adds
          */
-        public java.util.List < String > getAdds() {
+        public java.util.List<String> getAdds() {
             return this.adds;
         }
 
         public static final class Builder {
-            private java.util.List < String > adds; 
+            private java.util.List<String> adds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Capability model) {
+                this.adds = model.adds;
+            } 
 
             /**
-             * The permissions specific to the processes in the container.
+             * <p>The permissions specific to the processes in the container.</p>
              */
-            public Builder adds(java.util.List < String > adds) {
+            public Builder adds(java.util.List<String> adds) {
                 this.adds = adds;
                 return this;
             }
@@ -1455,14 +1832,20 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class SecurityContext extends TeaModel {
-        @NameInMap("Capability")
+        @com.aliyun.core.annotation.NameInMap("Capability")
         private Capability capability;
 
-        @NameInMap("ReadOnlyRootFilesystem")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyRootFilesystem")
         private Boolean readOnlyRootFilesystem;
 
-        @NameInMap("RunAsUser")
+        @com.aliyun.core.annotation.NameInMap("RunAsUser")
         private Long runAsUser;
 
         private SecurityContext(Builder builder) {
@@ -1505,8 +1888,17 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Boolean readOnlyRootFilesystem; 
             private Long runAsUser; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityContext model) {
+                this.capability = model.capability;
+                this.readOnlyRootFilesystem = model.readOnlyRootFilesystem;
+                this.runAsUser = model.runAsUser;
+            } 
+
             /**
-             * The permissions specific to the processes in the container.
+             * <p>The permissions specific to the processes in the container.</p>
              */
             public Builder capability(Capability capability) {
                 this.capability = capability;
@@ -1514,7 +1906,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the root file system is set to the read-only mode. The only valid value is true.
+             * <p>Indicates whether the root file system is set to the read-only mode. The only valid value is true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder readOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
                 this.readOnlyRootFilesystem = readOnlyRootFilesystem;
@@ -1522,7 +1917,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID (UID) that is used to run the entry point of the container process.
+             * <p>The user ID (UID) that is used to run the entry point of the container process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1558</p>
              */
             public Builder runAsUser(Long runAsUser) {
                 this.runAsUser = runAsUser;
@@ -1536,20 +1934,26 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class VolumeMounts extends TeaModel {
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("MountPropagation")
+        @com.aliyun.core.annotation.NameInMap("MountPropagation")
         private String mountPropagation;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ReadOnly")
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
         private Boolean readOnly;
 
-        @NameInMap("SubPath")
+        @com.aliyun.core.annotation.NameInMap("SubPath")
         private String subPath;
 
         private VolumeMounts(Builder builder) {
@@ -1610,8 +2014,22 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Boolean readOnly; 
             private String subPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(VolumeMounts model) {
+                this.mountPath = model.mountPath;
+                this.mountPropagation = model.mountPropagation;
+                this.name = model.name;
+                this.readOnly = model.readOnly;
+                this.subPath = model.subPath;
+            } 
+
             /**
-             * The directory to which the volume is mounted. Data under this directory is overwritten by the data on the volume.
+             * <p>The directory to which the volume is mounted. Data under this directory is overwritten by the data on the volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/share/</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1619,12 +2037,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The mount propagation settings of the volume. Mount propagation allows you to share volumes that are mounted on a container with other containers in the same pod or other pods on the same node. Valid values:
-             * <p>
+             * <p>The mount propagation settings of the volume. Mount propagation allows you to share volumes that are mounted on a container with other containers in the same pod or other pods on the same node. Valid values:</p>
+             * <ul>
+             * <li>None: The volume mount does not receive subsequent mounts that are mounted to the volume or the subdirectories of the volume.</li>
+             * <li>HostToCotainer: The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume.</li>
+             * <li>Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume. All volume mounts that are mounted by the container are propagated back to the instance and all containers of all pods that use the same volume.</li>
+             * </ul>
              * 
-             * *   None: The volume mount does not receive subsequent mounts that are mounted to the volume or the subdirectories of the volume.
-             * *   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume.
-             * *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume. All volume mounts that are mounted by the container are propagated back to the instance and all containers of all pods that use the same volume.
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder mountPropagation(String mountPropagation) {
                 this.mountPropagation = mountPropagation;
@@ -1632,7 +2053,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the volume.
+             * <p>The name of the volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-empty</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1640,7 +2064,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the volumes are read-only.
+             * <p>Indicates whether the volumes are read-only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -1648,7 +2075,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The subdirectory of the volume. This parameter specifies different subdirectories of the same volume that the instance can mount to different subdirectories of containers.
+             * <p>The subdirectory of the volume. This parameter specifies different subdirectories of the same volume that the instance can mount to different subdirectories of containers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/sub</p>
              */
             public Builder subPath(String subPath) {
                 this.subPath = subPath;
@@ -1662,71 +2092,77 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class Containers extends TeaModel {
-        @NameInMap("Args")
-        private java.util.List < String > args;
+        @com.aliyun.core.annotation.NameInMap("Args")
+        private java.util.List<String> args;
 
-        @NameInMap("Commands")
-        private java.util.List < String > commands;
+        @com.aliyun.core.annotation.NameInMap("Commands")
+        private java.util.List<String> commands;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("CurrentState")
+        @com.aliyun.core.annotation.NameInMap("CurrentState")
         private CurrentState currentState;
 
-        @NameInMap("EnvironmentVars")
-        private java.util.List < EnvironmentVars> environmentVars;
+        @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
+        private java.util.List<EnvironmentVars> environmentVars;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("ImagePullPolicy")
+        @com.aliyun.core.annotation.NameInMap("ImagePullPolicy")
         private String imagePullPolicy;
 
-        @NameInMap("LivenessProbe")
+        @com.aliyun.core.annotation.NameInMap("LivenessProbe")
         private LivenessProbe livenessProbe;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Ports")
-        private java.util.List < Ports> ports;
+        @com.aliyun.core.annotation.NameInMap("Ports")
+        private java.util.List<Ports> ports;
 
-        @NameInMap("PreviousState")
+        @com.aliyun.core.annotation.NameInMap("PreviousState")
         private PreviousState previousState;
 
-        @NameInMap("ReadinessProbe")
+        @com.aliyun.core.annotation.NameInMap("ReadinessProbe")
         private ReadinessProbe readinessProbe;
 
-        @NameInMap("Ready")
+        @com.aliyun.core.annotation.NameInMap("Ready")
         private Boolean ready;
 
-        @NameInMap("RestartCount")
+        @com.aliyun.core.annotation.NameInMap("RestartCount")
         private Integer restartCount;
 
-        @NameInMap("SecurityContext")
+        @com.aliyun.core.annotation.NameInMap("SecurityContext")
         private SecurityContext securityContext;
 
-        @NameInMap("Stdin")
+        @com.aliyun.core.annotation.NameInMap("Stdin")
         private Boolean stdin;
 
-        @NameInMap("StdinOnce")
+        @com.aliyun.core.annotation.NameInMap("StdinOnce")
         private Boolean stdinOnce;
 
-        @NameInMap("Tty")
+        @com.aliyun.core.annotation.NameInMap("Tty")
         private Boolean tty;
 
-        @NameInMap("VolumeMounts")
-        private java.util.List < VolumeMounts> volumeMounts;
+        @com.aliyun.core.annotation.NameInMap("VolumeMounts")
+        private java.util.List<VolumeMounts> volumeMounts;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private Containers(Builder builder) {
@@ -1765,14 +2201,14 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return args
          */
-        public java.util.List < String > getArgs() {
+        public java.util.List<String> getArgs() {
             return this.args;
         }
 
         /**
          * @return commands
          */
-        public java.util.List < String > getCommands() {
+        public java.util.List<String> getCommands() {
             return this.commands;
         }
 
@@ -1793,7 +2229,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return environmentVars
          */
-        public java.util.List < EnvironmentVars> getEnvironmentVars() {
+        public java.util.List<EnvironmentVars> getEnvironmentVars() {
             return this.environmentVars;
         }
 
@@ -1842,7 +2278,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return ports
          */
-        public java.util.List < Ports> getPorts() {
+        public java.util.List<Ports> getPorts() {
             return this.ports;
         }
 
@@ -1905,7 +2341,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return volumeMounts
          */
-        public java.util.List < VolumeMounts> getVolumeMounts() {
+        public java.util.List<VolumeMounts> getVolumeMounts() {
             return this.volumeMounts;
         }
 
@@ -1917,18 +2353,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > args; 
-            private java.util.List < String > commands; 
+            private java.util.List<String> args; 
+            private java.util.List<String> commands; 
             private Float cpu; 
             private CurrentState currentState; 
-            private java.util.List < EnvironmentVars> environmentVars; 
+            private java.util.List<EnvironmentVars> environmentVars; 
             private Integer gpu; 
             private String image; 
             private String imagePullPolicy; 
             private LivenessProbe livenessProbe; 
             private Float memory; 
             private String name; 
-            private java.util.List < Ports> ports; 
+            private java.util.List<Ports> ports; 
             private PreviousState previousState; 
             private ReadinessProbe readinessProbe; 
             private Boolean ready; 
@@ -1937,27 +2373,58 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Boolean stdin; 
             private Boolean stdinOnce; 
             private Boolean tty; 
-            private java.util.List < VolumeMounts> volumeMounts; 
+            private java.util.List<VolumeMounts> volumeMounts; 
             private String workingDir; 
 
+            private Builder() {
+            } 
+
+            private Builder(Containers model) {
+                this.args = model.args;
+                this.commands = model.commands;
+                this.cpu = model.cpu;
+                this.currentState = model.currentState;
+                this.environmentVars = model.environmentVars;
+                this.gpu = model.gpu;
+                this.image = model.image;
+                this.imagePullPolicy = model.imagePullPolicy;
+                this.livenessProbe = model.livenessProbe;
+                this.memory = model.memory;
+                this.name = model.name;
+                this.ports = model.ports;
+                this.previousState = model.previousState;
+                this.readinessProbe = model.readinessProbe;
+                this.ready = model.ready;
+                this.restartCount = model.restartCount;
+                this.securityContext = model.securityContext;
+                this.stdin = model.stdin;
+                this.stdinOnce = model.stdinOnce;
+                this.tty = model.tty;
+                this.volumeMounts = model.volumeMounts;
+                this.workingDir = model.workingDir;
+            } 
+
             /**
-             * The startup parameter of the container.
+             * <p>The startup parameter of the container.</p>
              */
-            public Builder args(java.util.List < String > args) {
+            public Builder args(java.util.List<String> args) {
                 this.args = args;
                 return this;
             }
 
             /**
-             * The startup command of the container.
+             * <p>The startup command of the container.</p>
              */
-            public Builder commands(java.util.List < String > commands) {
+            public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
                 return this;
             }
 
             /**
-             * The number of vCPUs.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -1965,7 +2432,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The current status of the container.
+             * <p>The current status of the container.</p>
              */
             public Builder currentState(CurrentState currentState) {
                 this.currentState = currentState;
@@ -1973,15 +2440,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The environment variables.
+             * <p>The environment variables.</p>
              */
-            public Builder environmentVars(java.util.List < EnvironmentVars> environmentVars) {
+            public Builder environmentVars(java.util.List<EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
                 return this;
             }
 
             /**
-             * The number of GPUs.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -1989,7 +2459,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The image of the container.
+             * <p>The image of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HPL</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -1997,12 +2470,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The policy to pull images. Valid values:
-             * <p>
+             * <p>The policy to pull images. Valid values:</p>
+             * <ul>
+             * <li>Always: Each time instances are created, image pulling is performed.</li>
+             * <li>IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</li>
+             * <li>Never: On-premises images are always used. Image pulling is not performed.</li>
+             * </ul>
              * 
-             * *   Always: Each time instances are created, image pulling is performed.
-             * *   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
-             * *   Never: On-premises images are always used. Image pulling is not performed.
+             * <strong>example:</strong>
+             * <p>Always</p>
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -2010,7 +2486,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The liveness probe of the container.
+             * <p>The liveness probe of the container.</p>
              */
             public Builder livenessProbe(LivenessProbe livenessProbe) {
                 this.livenessProbe = livenessProbe;
@@ -2018,7 +2494,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the instance. Unit: GiB.
+             * <p>The memory size of the instance. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.0</p>
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -2026,7 +2505,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The container name.
+             * <p>The container name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HPL</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2034,15 +2516,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The exposed ports and protocols of the container.
+             * <p>The exposed ports and protocols of the container.</p>
              */
-            public Builder ports(java.util.List < Ports> ports) {
+            public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
                 return this;
             }
 
             /**
-             * The previous status of the container.
+             * <p>The previous status of the container.</p>
              */
             public Builder previousState(PreviousState previousState) {
                 this.previousState = previousState;
@@ -2050,7 +2532,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The readiness probe that is used to check whether the container is ready to serve a request.
+             * <p>The readiness probe that is used to check whether the container is ready to serve a request.</p>
              */
             public Builder readinessProbe(ReadinessProbe readinessProbe) {
                 this.readinessProbe = readinessProbe;
@@ -2058,7 +2540,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the container passed the readiness probe.
+             * <p>Indicates whether the container passed the readiness probe.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ready(Boolean ready) {
                 this.ready = ready;
@@ -2066,7 +2551,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the instance worker restarted.
+             * <p>The number of times that the instance worker restarted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder restartCount(Integer restartCount) {
                 this.restartCount = restartCount;
@@ -2074,7 +2562,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The security context of the container.
+             * <p>The security context of the container.</p>
              */
             public Builder securityContext(SecurityContext securityContext) {
                 this.securityContext = securityContext;
@@ -2082,7 +2570,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the container allocates buffer resources to standard input streams when the container runs. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.
+             * <p>Indicates whether the container allocates buffer resources to standard input streams when the container runs. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder stdin(Boolean stdin) {
                 this.stdin = stdin;
@@ -2090,7 +2581,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the container runtime closes the stdin channel after the stdin channel has been opened by a single attach session. If stdin is true, the stdin stream remains open across multiple attach sessions. If StdinOnce is set to true, stdin is opened on container start, but remains empty until the first client attaches to stdin, and then remains open and receives data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.
+             * <p>Indicates whether the container runtime closes the stdin channel after the stdin channel has been opened by a single attach session. If stdin is true, the stdin stream remains open across multiple attach sessions. If StdinOnce is set to true, stdin is opened on container start, but remains empty until the first client attaches to stdin, and then remains open and receives data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder stdinOnce(Boolean stdinOnce) {
                 this.stdinOnce = stdinOnce;
@@ -2098,7 +2592,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether interaction is enabled. Default value: false. If the value of the Command parameter is /bin/bash, the value of this parameter must be set to true.
+             * <p>Indicates whether interaction is enabled. Default value: false. If the value of the Command parameter is /bin/bash, the value of this parameter must be set to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder tty(Boolean tty) {
                 this.tty = tty;
@@ -2106,15 +2603,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Information about the mounted volumes.
+             * <p>Information about the mounted volumes.</p>
              */
-            public Builder volumeMounts(java.util.List < VolumeMounts> volumeMounts) {
+            public Builder volumeMounts(java.util.List<VolumeMounts> volumeMounts) {
                 this.volumeMounts = volumeMounts;
                 return this;
             }
 
             /**
-             * The working directory.
+             * <p>The working directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/nginx</p>
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -2128,11 +2628,17 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class Options extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Options(Builder builder) {
@@ -2166,8 +2672,19 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Options model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * The variable name of the option.
+             * <p>The variable name of the option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2175,7 +2692,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The variable value of the option.
+             * <p>The variable value of the option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2189,15 +2709,21 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class DnsConfig extends TeaModel {
-        @NameInMap("NameServers")
-        private java.util.List < String > nameServers;
+        @com.aliyun.core.annotation.NameInMap("NameServers")
+        private java.util.List<String> nameServers;
 
-        @NameInMap("Options")
-        private java.util.List < Options> options;
+        @com.aliyun.core.annotation.NameInMap("Options")
+        private java.util.List<Options> options;
 
-        @NameInMap("Searches")
-        private java.util.List < String > searches;
+        @com.aliyun.core.annotation.NameInMap("Searches")
+        private java.util.List<String> searches;
 
         private DnsConfig(Builder builder) {
             this.nameServers = builder.nameServers;
@@ -2216,49 +2742,58 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return nameServers
          */
-        public java.util.List < String > getNameServers() {
+        public java.util.List<String> getNameServers() {
             return this.nameServers;
         }
 
         /**
          * @return options
          */
-        public java.util.List < Options> getOptions() {
+        public java.util.List<Options> getOptions() {
             return this.options;
         }
 
         /**
          * @return searches
          */
-        public java.util.List < String > getSearches() {
+        public java.util.List<String> getSearches() {
             return this.searches;
         }
 
         public static final class Builder {
-            private java.util.List < String > nameServers; 
-            private java.util.List < Options> options; 
-            private java.util.List < String > searches; 
+            private java.util.List<String> nameServers; 
+            private java.util.List<Options> options; 
+            private java.util.List<String> searches; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnsConfig model) {
+                this.nameServers = model.nameServers;
+                this.options = model.options;
+                this.searches = model.searches;
+            } 
 
             /**
-             * The IP addresses of DNS servers.
+             * <p>The IP addresses of DNS servers.</p>
              */
-            public Builder nameServers(java.util.List < String > nameServers) {
+            public Builder nameServers(java.util.List<String> nameServers) {
                 this.nameServers = nameServers;
                 return this;
             }
 
             /**
-             * The options. Each option is a name-value pair. The value in the name-value pair is optional.
+             * <p>The options. Each option is a name-value pair. The value in the name-value pair is optional.</p>
              */
-            public Builder options(java.util.List < Options> options) {
+            public Builder options(java.util.List<Options> options) {
                 this.options = options;
                 return this;
             }
 
             /**
-             * The search domains of the DNS server.
+             * <p>The search domains of the DNS server.</p>
              */
-            public Builder searches(java.util.List < String > searches) {
+            public Builder searches(java.util.List<String> searches) {
                 this.searches = searches;
                 return this;
             }
@@ -2270,11 +2805,17 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class Sysctls extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Sysctls(Builder builder) {
@@ -2308,8 +2849,19 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Sysctls model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * The name of the Sysctl parameter.
+             * <p>The name of the Sysctl parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kernel.msgmax</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2317,7 +2869,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the Sysctl parameter.
+             * <p>The value of the Sysctl parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65536</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2331,9 +2886,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class EciSecurityContext extends TeaModel {
-        @NameInMap("Sysctls")
-        private java.util.List < Sysctls> sysctls;
+        @com.aliyun.core.annotation.NameInMap("Sysctls")
+        private java.util.List<Sysctls> sysctls;
 
         private EciSecurityContext(Builder builder) {
             this.sysctls = builder.sysctls;
@@ -2350,17 +2911,24 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return sysctls
          */
-        public java.util.List < Sysctls> getSysctls() {
+        public java.util.List<Sysctls> getSysctls() {
             return this.sysctls;
         }
 
         public static final class Builder {
-            private java.util.List < Sysctls> sysctls; 
+            private java.util.List<Sysctls> sysctls; 
+
+            private Builder() {
+            } 
+
+            private Builder(EciSecurityContext model) {
+                this.sysctls = model.sysctls;
+            } 
 
             /**
-             * The Sysctl parameters.
+             * <p>The Sysctl parameters.</p>
              */
-            public Builder sysctls(java.util.List < Sysctls> sysctls) {
+            public Builder sysctls(java.util.List<Sysctls> sysctls) {
                 this.sysctls = sysctls;
                 return this;
             }
@@ -2372,26 +2940,32 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class Events extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("FirstTimestamp")
+        @com.aliyun.core.annotation.NameInMap("FirstTimestamp")
         private String firstTimestamp;
 
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private String lastTimestamp;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Events(Builder builder) {
@@ -2470,8 +3044,24 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String reason; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.count = model.count;
+                this.firstTimestamp = model.firstTimestamp;
+                this.lastTimestamp = model.lastTimestamp;
+                this.message = model.message;
+                this.name = model.name;
+                this.reason = model.reason;
+                this.type = model.type;
+            } 
+
             /**
-             * The number of the events.
+             * <p>The number of the events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -2479,7 +3069,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event started.
+             * <p>The time when the event started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-02T15:00:00Z</p>
              */
             public Builder firstTimestamp(String firstTimestamp) {
                 this.firstTimestamp = firstTimestamp;
@@ -2487,7 +3080,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event ended.
+             * <p>The time when the event ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-02T15:00:00Z</p>
              */
             public Builder lastTimestamp(String lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -2495,7 +3091,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The message about the event.
+             * <p>The message about the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Started container</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -2503,7 +3102,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the category to which the event belongs.
+             * <p>The name of the category to which the event belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-xxx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2511,7 +3113,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event.
+             * <p>The name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -2519,11 +3124,14 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event. Valid values:
-             * <p>
+             * <p>The type of the event. Valid values:</p>
+             * <ul>
+             * <li>Normal</li>
+             * <li>Warning</li>
+             * </ul>
              * 
-             * *   Normal
-             * *   Warning
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2537,11 +3145,17 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class HostAliases extends TeaModel {
-        @NameInMap("Hostnames")
-        private java.util.List < String > hostnames;
+        @com.aliyun.core.annotation.NameInMap("Hostnames")
+        private java.util.List<String> hostnames;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
         private HostAliases(Builder builder) {
@@ -2560,7 +3174,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return hostnames
          */
-        public java.util.List < String > getHostnames() {
+        public java.util.List<String> getHostnames() {
             return this.hostnames;
         }
 
@@ -2572,19 +3186,30 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > hostnames; 
+            private java.util.List<String> hostnames; 
             private String ip; 
 
+            private Builder() {
+            } 
+
+            private Builder(HostAliases model) {
+                this.hostnames = model.hostnames;
+                this.ip = model.ip;
+            } 
+
             /**
-             * The information about the host.
+             * <p>The information about the host.</p>
              */
-            public Builder hostnames(java.util.List < String > hostnames) {
+            public Builder hostnames(java.util.List<String> hostnames) {
                 this.hostnames = hostnames;
                 return this;
             }
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -2598,29 +3223,35 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class InitContainersCurrentState extends TeaModel {
-        @NameInMap("DetailStatus")
+        @com.aliyun.core.annotation.NameInMap("DetailStatus")
         private String detailStatus;
 
-        @NameInMap("ExitCode")
+        @com.aliyun.core.annotation.NameInMap("ExitCode")
         private Long exitCode;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Signal")
+        @com.aliyun.core.annotation.NameInMap("Signal")
         private Long signal;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private InitContainersCurrentState(Builder builder) {
@@ -2708,8 +3339,25 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String startTime; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitContainersCurrentState model) {
+                this.detailStatus = model.detailStatus;
+                this.exitCode = model.exitCode;
+                this.finishTime = model.finishTime;
+                this.message = model.message;
+                this.reason = model.reason;
+                this.signal = model.signal;
+                this.startTime = model.startTime;
+                this.state = model.state;
+            } 
+
             /**
-             * The details of the container status.
+             * <p>The details of the container status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>working</p>
              */
             public Builder detailStatus(String detailStatus) {
                 this.detailStatus = detailStatus;
@@ -2717,7 +3365,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The exit code of the container.
+             * <p>The exit code of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exitCode(Long exitCode) {
                 this.exitCode = exitCode;
@@ -2725,7 +3376,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the container stopped running.
+             * <p>The time when the container stopped running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-02T15:00:00Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -2733,7 +3387,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The message about the event.
+             * <p>The message about the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Created container</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -2741,7 +3398,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the container is in this state.
+             * <p>The reason why the container is in this state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Started</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -2749,7 +3409,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the container status.
+             * <p>The code of the container status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder signal(Long signal) {
                 this.signal = signal;
@@ -2757,7 +3420,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the container started to run.
+             * <p>The time when the container started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-02T15:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -2765,12 +3431,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the container. Valid values:
-             * <p>
+             * <p>The status of the container. Valid values:</p>
+             * <ul>
+             * <li>Waiting</li>
+             * <li>Running</li>
+             * <li>Terminated</li>
+             * </ul>
              * 
-             * *   Waiting
-             * *   Running
-             * *   Terminated
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -2784,8 +3453,14 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class ValueFromFieldRef extends TeaModel {
-        @NameInMap("FieldPath")
+        @com.aliyun.core.annotation.NameInMap("FieldPath")
         private String fieldPath;
 
         private ValueFromFieldRef(Builder builder) {
@@ -2810,8 +3485,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String fieldPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(ValueFromFieldRef model) {
+                this.fieldPath = model.fieldPath;
+            } 
+
             /**
-             * The path of the field in the specified version. Set the value to `status.podIP`.
+             * <p>The path of the field in the specified version. Set the value to <code>status.podIP</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>status.podIP</p>
              */
             public Builder fieldPath(String fieldPath) {
                 this.fieldPath = fieldPath;
@@ -2825,8 +3510,14 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class EnvironmentVarsValueFrom extends TeaModel {
-        @NameInMap("FieldRef")
+        @com.aliyun.core.annotation.NameInMap("FieldRef")
         private ValueFromFieldRef fieldRef;
 
         private EnvironmentVarsValueFrom(Builder builder) {
@@ -2851,8 +3542,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public static final class Builder {
             private ValueFromFieldRef fieldRef; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnvironmentVarsValueFrom model) {
+                this.fieldRef = model.fieldRef;
+            } 
+
             /**
-             * The specified field.
+             * <p>The specified field.</p>
              */
             public Builder fieldRef(ValueFromFieldRef fieldRef) {
                 this.fieldRef = fieldRef;
@@ -2866,14 +3564,20 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class InitContainersEnvironmentVars extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ValueFrom")
+        @com.aliyun.core.annotation.NameInMap("ValueFrom")
         private EnvironmentVarsValueFrom valueFrom;
 
         private InitContainersEnvironmentVars(Builder builder) {
@@ -2916,8 +3620,20 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String value; 
             private EnvironmentVarsValueFrom valueFrom; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitContainersEnvironmentVars model) {
+                this.key = model.key;
+                this.value = model.value;
+                this.valueFrom = model.valueFrom;
+            } 
+
             /**
-             * The name of the environment variable.
+             * <p>The name of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PATH</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2925,7 +3641,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the environment variable.
+             * <p>The value of the environment variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/bin</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2933,7 +3652,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the environment variable value. This parameter can be used only when the variable value is not specified.
+             * <p>The source of the environment variable value. This parameter can be used only when the variable value is not specified.</p>
              */
             public Builder valueFrom(EnvironmentVarsValueFrom valueFrom) {
                 this.valueFrom = valueFrom;
@@ -2947,11 +3666,17 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class InitContainersPorts extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private InitContainersPorts(Builder builder) {
@@ -2985,8 +3710,19 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Long port; 
             private String protocol; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitContainersPorts model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
+
             /**
-             * The port number. Valid values: 1 to 65535.
+             * <p>The port number. Valid values: 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8888</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -2994,7 +3730,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol.
+             * <p>The protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -3008,29 +3747,35 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class InitContainersPreviousState extends TeaModel {
-        @NameInMap("DetailStatus")
+        @com.aliyun.core.annotation.NameInMap("DetailStatus")
         private String detailStatus;
 
-        @NameInMap("ExitCode")
+        @com.aliyun.core.annotation.NameInMap("ExitCode")
         private Long exitCode;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Signal")
+        @com.aliyun.core.annotation.NameInMap("Signal")
         private Long signal;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private InitContainersPreviousState(Builder builder) {
@@ -3118,8 +3863,25 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String startTime; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitContainersPreviousState model) {
+                this.detailStatus = model.detailStatus;
+                this.exitCode = model.exitCode;
+                this.finishTime = model.finishTime;
+                this.message = model.message;
+                this.reason = model.reason;
+                this.signal = model.signal;
+                this.startTime = model.startTime;
+                this.state = model.state;
+            } 
+
             /**
-             * The details of the container status.
+             * <p>The details of the container status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>working</p>
              */
             public Builder detailStatus(String detailStatus) {
                 this.detailStatus = detailStatus;
@@ -3127,7 +3889,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The exit code of the container.
+             * <p>The exit code of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exitCode(Long exitCode) {
                 this.exitCode = exitCode;
@@ -3135,7 +3900,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the container stopped running.
+             * <p>The time when the container stopped running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-24T05:35:44Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -3143,7 +3911,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The message about the container status.
+             * <p>The message about the container status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Started container</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -3151,7 +3922,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the container is in this state.
+             * <p>The reason why the container is in this state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>completed</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -3159,7 +3933,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the container status.
+             * <p>The code of the container status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder signal(Long signal) {
                 this.signal = signal;
@@ -3167,7 +3944,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the container started to run.
+             * <p>The time when the container started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-24T05:35:44Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -3175,7 +3955,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the container. Valid values: Waiting, Running, and Terminated.
+             * <p>The status of the container. Valid values: Waiting, Running, and Terminated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Terminated</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -3189,9 +3972,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class SecurityContextCapability extends TeaModel {
-        @NameInMap("Adds")
-        private java.util.List < String > adds;
+        @com.aliyun.core.annotation.NameInMap("Adds")
+        private java.util.List<String> adds;
 
         private SecurityContextCapability(Builder builder) {
             this.adds = builder.adds;
@@ -3208,17 +3997,24 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return adds
          */
-        public java.util.List < String > getAdds() {
+        public java.util.List<String> getAdds() {
             return this.adds;
         }
 
         public static final class Builder {
-            private java.util.List < String > adds; 
+            private java.util.List<String> adds; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityContextCapability model) {
+                this.adds = model.adds;
+            } 
 
             /**
-             * The permissions specific to the processes in the container.
+             * <p>The permissions specific to the processes in the container.</p>
              */
-            public Builder adds(java.util.List < String > adds) {
+            public Builder adds(java.util.List<String> adds) {
                 this.adds = adds;
                 return this;
             }
@@ -3230,14 +4026,20 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class InitContainersSecurityContext extends TeaModel {
-        @NameInMap("Capability")
+        @com.aliyun.core.annotation.NameInMap("Capability")
         private SecurityContextCapability capability;
 
-        @NameInMap("ReadOnlyRootFilesystem")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyRootFilesystem")
         private Boolean readOnlyRootFilesystem;
 
-        @NameInMap("RunAsUser")
+        @com.aliyun.core.annotation.NameInMap("RunAsUser")
         private Long runAsUser;
 
         private InitContainersSecurityContext(Builder builder) {
@@ -3280,8 +4082,17 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Boolean readOnlyRootFilesystem; 
             private Long runAsUser; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitContainersSecurityContext model) {
+                this.capability = model.capability;
+                this.readOnlyRootFilesystem = model.readOnlyRootFilesystem;
+                this.runAsUser = model.runAsUser;
+            } 
+
             /**
-             * The permissions specific to the processes in the container.
+             * <p>The permissions specific to the processes in the container.</p>
              */
             public Builder capability(SecurityContextCapability capability) {
                 this.capability = capability;
@@ -3289,7 +4100,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the root file system is set to the read-only mode. The only valid value is true.
+             * <p>Indicates whether the root file system is set to the read-only mode. The only valid value is true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder readOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
                 this.readOnlyRootFilesystem = readOnlyRootFilesystem;
@@ -3297,7 +4111,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The UID that is used to run the entry point of the container process.
+             * <p>The UID that is used to run the entry point of the container process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1557</p>
              */
             public Builder runAsUser(Long runAsUser) {
                 this.runAsUser = runAsUser;
@@ -3311,17 +4128,23 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class InitContainersVolumeMounts extends TeaModel {
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("MountPropagation")
+        @com.aliyun.core.annotation.NameInMap("MountPropagation")
         private String mountPropagation;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ReadOnly")
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
         private Boolean readOnly;
 
         private InitContainersVolumeMounts(Builder builder) {
@@ -3373,8 +4196,21 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String name; 
             private Boolean readOnly; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitContainersVolumeMounts model) {
+                this.mountPath = model.mountPath;
+                this.mountPropagation = model.mountPropagation;
+                this.name = model.name;
+                this.readOnly = model.readOnly;
+            } 
+
             /**
-             * The directory to which the volume is mounted. Data under this directory is overwritten by the data on the volume.
+             * <p>The directory to which the volume is mounted. Data under this directory is overwritten by the data on the volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/share/</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -3382,14 +4218,16 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The mount propagation settings of the volume. Mount propagation allows you to share volumes that are mounted on a container with other containers in the same pod or other pods on the same node. Valid values:
-             * <p>
+             * <p>The mount propagation settings of the volume. Mount propagation allows you to share volumes that are mounted on a container with other containers in the same pod or other pods on the same node. Valid values:</p>
+             * <ul>
+             * <li>None: The volume mount does not receive subsequent mounts that are mounted to the volume or the subdirectories of the volume.</li>
+             * <li>HostToCotainer: The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume.</li>
+             * <li>Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume. All volume mounts that are mounted by the container are propagated back to the instance and all containers of all pods that use the same volume.</li>
+             * </ul>
+             * <p>Default value: None.</p>
              * 
-             * *   None: The volume mount does not receive subsequent mounts that are mounted to the volume or the subdirectories of the volume.
-             * *   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume.
-             * *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume. All volume mounts that are mounted by the container are propagated back to the instance and all containers of all pods that use the same volume.
-             * 
-             * Default value: None.
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder mountPropagation(String mountPropagation) {
                 this.mountPropagation = mountPropagation;
@@ -3397,7 +4235,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the volume. The name is the same as the volume you selected when you purchased the container.
+             * <p>The name of the volume. The name is the same as the volume you selected when you purchased the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-empty</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3405,7 +4246,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Default value: False.
+             * <p>Default value: False.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -3419,56 +4263,62 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class InitContainers extends TeaModel {
-        @NameInMap("Args")
-        private java.util.List < String > args;
+        @com.aliyun.core.annotation.NameInMap("Args")
+        private java.util.List<String> args;
 
-        @NameInMap("Command")
-        private java.util.List < String > command;
+        @com.aliyun.core.annotation.NameInMap("Command")
+        private java.util.List<String> command;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Long cpu;
 
-        @NameInMap("CurrentState")
+        @com.aliyun.core.annotation.NameInMap("CurrentState")
         private InitContainersCurrentState currentState;
 
-        @NameInMap("EnvironmentVars")
-        private java.util.List < InitContainersEnvironmentVars> environmentVars;
+        @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
+        private java.util.List<InitContainersEnvironmentVars> environmentVars;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private Long gpu;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("ImagePullPolicy")
+        @com.aliyun.core.annotation.NameInMap("ImagePullPolicy")
         private String imagePullPolicy;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Ports")
-        private java.util.List < InitContainersPorts> ports;
+        @com.aliyun.core.annotation.NameInMap("Ports")
+        private java.util.List<InitContainersPorts> ports;
 
-        @NameInMap("PreviousState")
+        @com.aliyun.core.annotation.NameInMap("PreviousState")
         private InitContainersPreviousState previousState;
 
-        @NameInMap("Ready")
+        @com.aliyun.core.annotation.NameInMap("Ready")
         private Boolean ready;
 
-        @NameInMap("RestartCount")
+        @com.aliyun.core.annotation.NameInMap("RestartCount")
         private Long restartCount;
 
-        @NameInMap("SecurityContext")
+        @com.aliyun.core.annotation.NameInMap("SecurityContext")
         private InitContainersSecurityContext securityContext;
 
-        @NameInMap("VolumeMounts")
-        private java.util.List < InitContainersVolumeMounts> volumeMounts;
+        @com.aliyun.core.annotation.NameInMap("VolumeMounts")
+        private java.util.List<InitContainersVolumeMounts> volumeMounts;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private InitContainers(Builder builder) {
@@ -3502,14 +4352,14 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return args
          */
-        public java.util.List < String > getArgs() {
+        public java.util.List<String> getArgs() {
             return this.args;
         }
 
         /**
          * @return command
          */
-        public java.util.List < String > getCommand() {
+        public java.util.List<String> getCommand() {
             return this.command;
         }
 
@@ -3530,7 +4380,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return environmentVars
          */
-        public java.util.List < InitContainersEnvironmentVars> getEnvironmentVars() {
+        public java.util.List<InitContainersEnvironmentVars> getEnvironmentVars() {
             return this.environmentVars;
         }
 
@@ -3572,7 +4422,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return ports
          */
-        public java.util.List < InitContainersPorts> getPorts() {
+        public java.util.List<InitContainersPorts> getPorts() {
             return this.ports;
         }
 
@@ -3607,7 +4457,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return volumeMounts
          */
-        public java.util.List < InitContainersVolumeMounts> getVolumeMounts() {
+        public java.util.List<InitContainersVolumeMounts> getVolumeMounts() {
             return this.volumeMounts;
         }
 
@@ -3619,42 +4469,68 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > args; 
-            private java.util.List < String > command; 
+            private java.util.List<String> args; 
+            private java.util.List<String> command; 
             private Long cpu; 
             private InitContainersCurrentState currentState; 
-            private java.util.List < InitContainersEnvironmentVars> environmentVars; 
+            private java.util.List<InitContainersEnvironmentVars> environmentVars; 
             private Long gpu; 
             private String image; 
             private String imagePullPolicy; 
             private Long memory; 
             private String name; 
-            private java.util.List < InitContainersPorts> ports; 
+            private java.util.List<InitContainersPorts> ports; 
             private InitContainersPreviousState previousState; 
             private Boolean ready; 
             private Long restartCount; 
             private InitContainersSecurityContext securityContext; 
-            private java.util.List < InitContainersVolumeMounts> volumeMounts; 
+            private java.util.List<InitContainersVolumeMounts> volumeMounts; 
             private String workingDir; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitContainers model) {
+                this.args = model.args;
+                this.command = model.command;
+                this.cpu = model.cpu;
+                this.currentState = model.currentState;
+                this.environmentVars = model.environmentVars;
+                this.gpu = model.gpu;
+                this.image = model.image;
+                this.imagePullPolicy = model.imagePullPolicy;
+                this.memory = model.memory;
+                this.name = model.name;
+                this.ports = model.ports;
+                this.previousState = model.previousState;
+                this.ready = model.ready;
+                this.restartCount = model.restartCount;
+                this.securityContext = model.securityContext;
+                this.volumeMounts = model.volumeMounts;
+                this.workingDir = model.workingDir;
+            } 
+
             /**
-             * The startup parameters.
+             * <p>The startup parameters.</p>
              */
-            public Builder args(java.util.List < String > args) {
+            public Builder args(java.util.List<String> args) {
                 this.args = args;
                 return this;
             }
 
             /**
-             * The startup command.
+             * <p>The startup command.</p>
              */
-            public Builder command(java.util.List < String > command) {
+            public Builder command(java.util.List<String> command) {
                 this.command = command;
                 return this;
             }
 
             /**
-             * The number of vCPUs.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder cpu(Long cpu) {
                 this.cpu = cpu;
@@ -3662,7 +4538,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The current status of the container.
+             * <p>The current status of the container.</p>
              */
             public Builder currentState(InitContainersCurrentState currentState) {
                 this.currentState = currentState;
@@ -3670,15 +4546,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The environment variables.
+             * <p>The environment variables.</p>
              */
-            public Builder environmentVars(java.util.List < InitContainersEnvironmentVars> environmentVars) {
+            public Builder environmentVars(java.util.List<InitContainersEnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
                 return this;
             }
 
             /**
-             * The number of GPUs.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gpu(Long gpu) {
                 this.gpu = gpu;
@@ -3686,7 +4565,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The image.
+             * <p>The image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -3694,7 +4576,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The policy to pull images.
+             * <p>The policy to pull images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Always</p>
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -3702,7 +4587,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of memory that is allocated to the init container. Unit: GiB.
+             * <p>The size of memory that is allocated to the init container. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -3710,7 +4598,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The container name.
+             * <p>The container name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Init-xxx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3718,15 +4609,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The exposed ports and protocols of the container.
+             * <p>The exposed ports and protocols of the container.</p>
              */
-            public Builder ports(java.util.List < InitContainersPorts> ports) {
+            public Builder ports(java.util.List<InitContainersPorts> ports) {
                 this.ports = ports;
                 return this;
             }
 
             /**
-             * The previous status of the container.
+             * <p>The previous status of the container.</p>
              */
             public Builder previousState(InitContainersPreviousState previousState) {
                 this.previousState = previousState;
@@ -3734,7 +4625,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the container passed the readiness probe.
+             * <p>Indicates whether the container passed the readiness probe.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ready(Boolean ready) {
                 this.ready = ready;
@@ -3742,7 +4636,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the instance worker restarted.
+             * <p>The number of times that the instance worker restarted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder restartCount(Long restartCount) {
                 this.restartCount = restartCount;
@@ -3750,7 +4647,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The security context of the container.
+             * <p>The security context of the container.</p>
              */
             public Builder securityContext(InitContainersSecurityContext securityContext) {
                 this.securityContext = securityContext;
@@ -3758,15 +4655,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the volumes that are mounted to the init container.
+             * <p>The information about the volumes that are mounted to the init container.</p>
              */
-            public Builder volumeMounts(java.util.List < InitContainersVolumeMounts> volumeMounts) {
+            public Builder volumeMounts(java.util.List<InitContainersVolumeMounts> volumeMounts) {
                 this.volumeMounts = volumeMounts;
                 return this;
             }
 
             /**
-             * The working directory.
+             * <p>The working directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/test</p>
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -3780,11 +4680,17 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -3818,8 +4724,19 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3827,7 +4744,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-xh</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3841,11 +4761,17 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class ConfigFileVolumeConfigFileToPaths extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private ConfigFileVolumeConfigFileToPaths(Builder builder) {
@@ -3879,8 +4805,19 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String content; 
             private String path; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigFileVolumeConfigFileToPaths model) {
+                this.content = model.content;
+                this.path = model.path;
+            } 
+
             /**
-             * The content of the configuration file. Maximum size: 32 KB.
+             * <p>The content of the configuration file. Maximum size: 32 KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello world</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -3888,7 +4825,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The relative path to the configuration file.
+             * <p>The relative path to the configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/bin/</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -3902,44 +4842,50 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class Volumes extends TeaModel {
-        @NameInMap("ConfigFileVolumeConfigFileToPaths")
-        private java.util.List < ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths;
+        @com.aliyun.core.annotation.NameInMap("ConfigFileVolumeConfigFileToPaths")
+        private java.util.List<ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths;
 
-        @NameInMap("DiskVolumeDiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskVolumeDiskId")
         private String diskVolumeDiskId;
 
-        @NameInMap("DiskVolumeFsType")
+        @com.aliyun.core.annotation.NameInMap("DiskVolumeFsType")
         private String diskVolumeFsType;
 
-        @NameInMap("EmptyDirVolumeMedium")
+        @com.aliyun.core.annotation.NameInMap("EmptyDirVolumeMedium")
         private String emptyDirVolumeMedium;
 
-        @NameInMap("EmptyDirVolumeSizeLimit")
+        @com.aliyun.core.annotation.NameInMap("EmptyDirVolumeSizeLimit")
         private String emptyDirVolumeSizeLimit;
 
-        @NameInMap("FlexVolumeDriver")
+        @com.aliyun.core.annotation.NameInMap("FlexVolumeDriver")
         private String flexVolumeDriver;
 
-        @NameInMap("FlexVolumeFsType")
+        @com.aliyun.core.annotation.NameInMap("FlexVolumeFsType")
         private String flexVolumeFsType;
 
-        @NameInMap("FlexVolumeOptions")
+        @com.aliyun.core.annotation.NameInMap("FlexVolumeOptions")
         private String flexVolumeOptions;
 
-        @NameInMap("NFSVolumePath")
+        @com.aliyun.core.annotation.NameInMap("NFSVolumePath")
         private String NFSVolumePath;
 
-        @NameInMap("NFSVolumeReadOnly")
+        @com.aliyun.core.annotation.NameInMap("NFSVolumeReadOnly")
         private Boolean NFSVolumeReadOnly;
 
-        @NameInMap("NFSVolumeServer")
+        @com.aliyun.core.annotation.NameInMap("NFSVolumeServer")
         private String NFSVolumeServer;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Volumes(Builder builder) {
@@ -3969,7 +4915,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return configFileVolumeConfigFileToPaths
          */
-        public java.util.List < ConfigFileVolumeConfigFileToPaths> getConfigFileVolumeConfigFileToPaths() {
+        public java.util.List<ConfigFileVolumeConfigFileToPaths> getConfigFileVolumeConfigFileToPaths() {
             return this.configFileVolumeConfigFileToPaths;
         }
 
@@ -4058,7 +5004,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths; 
+            private java.util.List<ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths; 
             private String diskVolumeDiskId; 
             private String diskVolumeFsType; 
             private String emptyDirVolumeMedium; 
@@ -4072,16 +5018,38 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Volumes model) {
+                this.configFileVolumeConfigFileToPaths = model.configFileVolumeConfigFileToPaths;
+                this.diskVolumeDiskId = model.diskVolumeDiskId;
+                this.diskVolumeFsType = model.diskVolumeFsType;
+                this.emptyDirVolumeMedium = model.emptyDirVolumeMedium;
+                this.emptyDirVolumeSizeLimit = model.emptyDirVolumeSizeLimit;
+                this.flexVolumeDriver = model.flexVolumeDriver;
+                this.flexVolumeFsType = model.flexVolumeFsType;
+                this.flexVolumeOptions = model.flexVolumeOptions;
+                this.NFSVolumePath = model.NFSVolumePath;
+                this.NFSVolumeReadOnly = model.NFSVolumeReadOnly;
+                this.NFSVolumeServer = model.NFSVolumeServer;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
-             * The paths to configuration files.
+             * <p>The paths to configuration files.</p>
              */
-            public Builder configFileVolumeConfigFileToPaths(java.util.List < ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths) {
+            public Builder configFileVolumeConfigFileToPaths(java.util.List<ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths) {
                 this.configFileVolumeConfigFileToPaths = configFileVolumeConfigFileToPaths;
                 return this;
             }
 
             /**
-             * The ID of the disk volume if you set Type to DiskVolume.
+             * <p>The ID of the disk volume if you set Type to DiskVolume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-xxxx</p>
              */
             public Builder diskVolumeDiskId(String diskVolumeDiskId) {
                 this.diskVolumeDiskId = diskVolumeDiskId;
@@ -4089,7 +5057,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the volume.
+             * <p>The type of the volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xfs</p>
              */
             public Builder diskVolumeFsType(String diskVolumeFsType) {
                 this.diskVolumeFsType = diskVolumeFsType;
@@ -4097,11 +5068,14 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The storage media for the emptyDir volume. This parameter is empty by default, which indicates that the node file system is used as the storage media. Valid values:
-             * <p>
+             * <p>The storage media for the emptyDir volume. This parameter is empty by default, which indicates that the node file system is used as the storage media. Valid values:</p>
+             * <ul>
+             * <li>Memory: uses memory as the storage media.</li>
+             * <li>LocalRaid0: forms local disks into RAID 0. This value is valid only if an elastic container instance that has local disks mounted is created. For more information, see <a href="https://help.aliyun.com/document_detail/114664.html">Create an elastic container instance that has local disks mounted</a>.</li>
+             * </ul>
              * 
-             * *   Memory: uses memory as the storage media.
-             * *   LocalRaid0: forms local disks into RAID 0. This value is valid only if an elastic container instance that has local disks mounted is created. For more information, see [Create an elastic container instance that has local disks mounted](~~114664~~).
+             * <strong>example:</strong>
+             * <p>Memory</p>
              */
             public Builder emptyDirVolumeMedium(String emptyDirVolumeMedium) {
                 this.emptyDirVolumeMedium = emptyDirVolumeMedium;
@@ -4109,7 +5083,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The storage size of the emptyDir volume. If you specify this parameter, include the unit in the value. We recommend that you use Gi or Mi.
+             * <p>The storage size of the emptyDir volume. If you specify this parameter, include the unit in the value. We recommend that you use Gi or Mi.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>256Mi</p>
              */
             public Builder emptyDirVolumeSizeLimit(String emptyDirVolumeSizeLimit) {
                 this.emptyDirVolumeSizeLimit = emptyDirVolumeSizeLimit;
@@ -4117,7 +5094,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the driver when you set the Type parameter to FlexVolume.
+             * <p>The name of the driver when you set the Type parameter to FlexVolume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flexvolume</p>
              */
             public Builder flexVolumeDriver(String flexVolumeDriver) {
                 this.flexVolumeDriver = flexVolumeDriver;
@@ -4125,7 +5105,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The file system type when you set the Type parameter to FlexVolume. The default value is determined by the script of the FlexVolume plug-in.
+             * <p>The file system type when you set the Type parameter to FlexVolume. The default value is determined by the script of the FlexVolume plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ntfs</p>
              */
             public Builder flexVolumeFsType(String flexVolumeFsType) {
                 this.flexVolumeFsType = flexVolumeFsType;
@@ -4133,7 +5116,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The FlexVolume options.
+             * <p>The FlexVolume options.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[nolock,tcp,noresvport]</p>
              */
             public Builder flexVolumeOptions(String flexVolumeOptions) {
                 this.flexVolumeOptions = flexVolumeOptions;
@@ -4141,7 +5127,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the Network File System (NFS) volume.
+             * <p>The path of the Network File System (NFS) volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/eci</p>
              */
             public Builder NFSVolumePath(String NFSVolumePath) {
                 this.NFSVolumePath = NFSVolumePath;
@@ -4149,7 +5138,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the NFS volume is read-only.
+             * <p>Indicates whether the NFS volume is read-only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder NFSVolumeReadOnly(Boolean NFSVolumeReadOnly) {
                 this.NFSVolumeReadOnly = NFSVolumeReadOnly;
@@ -4157,7 +5149,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the server if you set Type to NFSVolume.
+             * <p>The endpoint of the server if you set Type to NFSVolume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0eafxxxxx-xxxxx.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder NFSVolumeServer(String NFSVolumeServer) {
                 this.NFSVolumeServer = NFSVolumeServer;
@@ -4165,7 +5160,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the volume.
+             * <p>The name of the volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-empty</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4173,13 +5171,16 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the volume. Valid values:
-             * <p>
+             * <p>The type of the volume. Valid values:</p>
+             * <ul>
+             * <li>EmptyDirVolume</li>
+             * <li>NFSVolume</li>
+             * <li>ConfigFileVolume</li>
+             * <li>FlexVolume</li>
+             * </ul>
              * 
-             * *   EmptyDirVolume
-             * *   NFSVolume
-             * *   ConfigFileVolume
-             * *   FlexVolume
+             * <strong>example:</strong>
+             * <p>EmptyDirVolume</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -4193,119 +5194,125 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class ContainerGroups extends TeaModel {
-        @NameInMap("ContainerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
         private String containerGroupId;
 
-        @NameInMap("ContainerGroupName")
+        @com.aliyun.core.annotation.NameInMap("ContainerGroupName")
         private String containerGroupName;
 
-        @NameInMap("Containers")
-        private java.util.List < Containers> containers;
+        @com.aliyun.core.annotation.NameInMap("Containers")
+        private java.util.List<Containers> containers;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Discount")
+        @com.aliyun.core.annotation.NameInMap("Discount")
         private Long discount;
 
-        @NameInMap("DnsConfig")
+        @com.aliyun.core.annotation.NameInMap("DnsConfig")
         private DnsConfig dnsConfig;
 
-        @NameInMap("EciSecurityContext")
+        @com.aliyun.core.annotation.NameInMap("EciSecurityContext")
         private EciSecurityContext eciSecurityContext;
 
-        @NameInMap("EniInstanceId")
+        @com.aliyun.core.annotation.NameInMap("EniInstanceId")
         private String eniInstanceId;
 
-        @NameInMap("EphemeralStorage")
+        @com.aliyun.core.annotation.NameInMap("EphemeralStorage")
         private Long ephemeralStorage;
 
-        @NameInMap("Events")
-        private java.util.List < Events> events;
+        @com.aliyun.core.annotation.NameInMap("Events")
+        private java.util.List<Events> events;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("FailedTime")
+        @com.aliyun.core.annotation.NameInMap("FailedTime")
         private String failedTime;
 
-        @NameInMap("HostAliases")
-        private java.util.List < HostAliases> hostAliases;
+        @com.aliyun.core.annotation.NameInMap("HostAliases")
+        private java.util.List<HostAliases> hostAliases;
 
-        @NameInMap("InitContainers")
-        private java.util.List < InitContainers> initContainers;
+        @com.aliyun.core.annotation.NameInMap("InitContainers")
+        private java.util.List<InitContainers> initContainers;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Ipv6Address")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private String ipv6Address;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
-        @NameInMap("RamRoleName")
+        @com.aliyun.core.annotation.NameInMap("RamRoleName")
         private String ramRoleName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RestartPolicy")
+        @com.aliyun.core.annotation.NameInMap("RestartPolicy")
         private String restartPolicy;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SpotPriceLimit")
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
         private Float spotPriceLimit;
 
-        @NameInMap("SpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SucceededTime")
+        @com.aliyun.core.annotation.NameInMap("SucceededTime")
         private String succeededTime;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("TenantEniInstanceId")
+        @com.aliyun.core.annotation.NameInMap("TenantEniInstanceId")
         private String tenantEniInstanceId;
 
-        @NameInMap("TenantEniIp")
+        @com.aliyun.core.annotation.NameInMap("TenantEniIp")
         private String tenantEniIp;
 
-        @NameInMap("TenantSecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("TenantSecurityGroupId")
         private String tenantSecurityGroupId;
 
-        @NameInMap("TenantVSwitchId")
+        @com.aliyun.core.annotation.NameInMap("TenantVSwitchId")
         private String tenantVSwitchId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("Volumes")
-        private java.util.List < Volumes> volumes;
+        @com.aliyun.core.annotation.NameInMap("Volumes")
+        private java.util.List<Volumes> volumes;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private ContainerGroups(Builder builder) {
@@ -4374,7 +5381,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return containers
          */
-        public java.util.List < Containers> getContainers() {
+        public java.util.List<Containers> getContainers() {
             return this.containers;
         }
 
@@ -4430,7 +5437,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return events
          */
-        public java.util.List < Events> getEvents() {
+        public java.util.List<Events> getEvents() {
             return this.events;
         }
 
@@ -4451,14 +5458,14 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return hostAliases
          */
-        public java.util.List < HostAliases> getHostAliases() {
+        public java.util.List<HostAliases> getHostAliases() {
             return this.hostAliases;
         }
 
         /**
          * @return initContainers
          */
-        public java.util.List < InitContainers> getInitContainers() {
+        public java.util.List<InitContainers> getInitContainers() {
             return this.initContainers;
         }
 
@@ -4563,7 +5570,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -4605,7 +5612,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return volumes
          */
-        public java.util.List < Volumes> getVolumes() {
+        public java.util.List<Volumes> getVolumes() {
             return this.volumes;
         }
 
@@ -4626,7 +5633,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String containerGroupId; 
             private String containerGroupName; 
-            private java.util.List < Containers> containers; 
+            private java.util.List<Containers> containers; 
             private Float cpu; 
             private String creationTime; 
             private Long discount; 
@@ -4634,11 +5641,11 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private EciSecurityContext eciSecurityContext; 
             private String eniInstanceId; 
             private Long ephemeralStorage; 
-            private java.util.List < Events> events; 
+            private java.util.List<Events> events; 
             private String expiredTime; 
             private String failedTime; 
-            private java.util.List < HostAliases> hostAliases; 
-            private java.util.List < InitContainers> initContainers; 
+            private java.util.List<HostAliases> hostAliases; 
+            private java.util.List<InitContainers> initContainers; 
             private String instanceType; 
             private String internetIp; 
             private String intranetIp; 
@@ -4653,18 +5660,65 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private String spotStrategy; 
             private String status; 
             private String succeededTime; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String tenantEniInstanceId; 
             private String tenantEniIp; 
             private String tenantSecurityGroupId; 
             private String tenantVSwitchId; 
             private String vSwitchId; 
-            private java.util.List < Volumes> volumes; 
+            private java.util.List<Volumes> volumes; 
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContainerGroups model) {
+                this.containerGroupId = model.containerGroupId;
+                this.containerGroupName = model.containerGroupName;
+                this.containers = model.containers;
+                this.cpu = model.cpu;
+                this.creationTime = model.creationTime;
+                this.discount = model.discount;
+                this.dnsConfig = model.dnsConfig;
+                this.eciSecurityContext = model.eciSecurityContext;
+                this.eniInstanceId = model.eniInstanceId;
+                this.ephemeralStorage = model.ephemeralStorage;
+                this.events = model.events;
+                this.expiredTime = model.expiredTime;
+                this.failedTime = model.failedTime;
+                this.hostAliases = model.hostAliases;
+                this.initContainers = model.initContainers;
+                this.instanceType = model.instanceType;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.ipv6Address = model.ipv6Address;
+                this.memory = model.memory;
+                this.ramRoleName = model.ramRoleName;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.restartPolicy = model.restartPolicy;
+                this.securityGroupId = model.securityGroupId;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.spotStrategy = model.spotStrategy;
+                this.status = model.status;
+                this.succeededTime = model.succeededTime;
+                this.tags = model.tags;
+                this.tenantEniInstanceId = model.tenantEniInstanceId;
+                this.tenantEniIp = model.tenantEniIp;
+                this.tenantSecurityGroupId = model.tenantSecurityGroupId;
+                this.tenantVSwitchId = model.tenantVSwitchId;
+                this.vSwitchId = model.vSwitchId;
+                this.volumes = model.volumes;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * The ID of the container group.
+             * <p>The ID of the container group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eci-bp1jrgfqqy54kg5hc****</p>
              */
             public Builder containerGroupId(String containerGroupId) {
                 this.containerGroupId = containerGroupId;
@@ -4672,7 +5726,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container group.
+             * <p>The name of the container group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder containerGroupName(String containerGroupName) {
                 this.containerGroupName = containerGroupName;
@@ -4680,15 +5737,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of containers in the container group.
+             * <p>The list of containers in the container group.</p>
              */
-            public Builder containers(java.util.List < Containers> containers) {
+            public Builder containers(java.util.List<Containers> containers) {
                 this.containers = containers;
                 return this;
             }
 
             /**
-             * The number of vCPUs that are allocated to the container.
+             * <p>The number of vCPUs that are allocated to the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -4696,7 +5756,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance is created. The time follows the RFC 3339 standard and must be in UTC.
+             * <p>The time when the instance is created. The time follows the RFC 3339 standard and must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-02T15:00:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -4704,7 +5767,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The discount.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder discount(Long discount) {
                 this.discount = discount;
@@ -4712,7 +5778,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The Domain Name System (DNS) settings.
+             * <p>The Domain Name System (DNS) settings.</p>
              */
             public Builder dnsConfig(DnsConfig dnsConfig) {
                 this.dnsConfig = dnsConfig;
@@ -4720,7 +5786,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The security context of the container group.
+             * <p>The security context of the container group.</p>
              */
             public Builder eciSecurityContext(EciSecurityContext eciSecurityContext) {
                 this.eciSecurityContext = eciSecurityContext;
@@ -4728,7 +5794,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the elastic network interface (ENI).
+             * <p>The ID of the elastic network interface (ENI).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-bp14rzqi6fd8satm****</p>
              */
             public Builder eniInstanceId(String eniInstanceId) {
                 this.eniInstanceId = eniInstanceId;
@@ -4736,7 +5805,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the temporary storage space. Unit: GiB.
+             * <p>The size of the temporary storage space. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder ephemeralStorage(Long ephemeralStorage) {
                 this.ephemeralStorage = ephemeralStorage;
@@ -4744,15 +5816,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The event information. Up to 50 events can be returned.
+             * <p>The event information. Up to 50 events can be returned.</p>
              */
-            public Builder events(java.util.List < Events> events) {
+            public Builder events(java.util.List<Events> events) {
                 this.events = events;
                 return this;
             }
 
             /**
-             * The time when the instance failed to run due to overdue payments. The time follows the RFC 3339 standard and must be in UTC.
+             * <p>The time when the instance failed to run due to overdue payments. The time follows the RFC 3339 standard and must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-02T15:00:00Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -4760,7 +5835,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance failed to run. The time follows the RFC 3339 standard and must be in UTC.
+             * <p>The time when the instance failed to run. The time follows the RFC 3339 standard and must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-02T15:00:00Z</p>
              */
             public Builder failedTime(String failedTime) {
                 this.failedTime = failedTime;
@@ -4768,23 +5846,26 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname mapping of a container in the elastic container instance.
+             * <p>The hostname mapping of a container in the elastic container instance.</p>
              */
-            public Builder hostAliases(java.util.List < HostAliases> hostAliases) {
+            public Builder hostAliases(java.util.List<HostAliases> hostAliases) {
                 this.hostAliases = hostAliases;
                 return this;
             }
 
             /**
-             * The init containers.
+             * <p>The init containers.</p>
              */
-            public Builder initContainers(java.util.List < InitContainers> initContainers) {
+            public Builder initContainers(java.util.List<InitContainers> initContainers) {
                 this.initContainers = initContainers;
                 return this;
             }
 
             /**
-             * The instance type of the Elastic Compute Service (ECS) instance.
+             * <p>The instance type of the Elastic Compute Service (ECS) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g5.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -4792,7 +5873,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -4800,7 +5884,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -4808,7 +5895,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 address.
+             * <p>The IPv6 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2001:XXXX:4:4:4:4:4:4</p>
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -4816,7 +5906,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the elastic container instance. Unit: GiB.
+             * <p>The memory size of the elastic container instance. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.0</p>
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -4824,7 +5917,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance RAM role. You can use an instance RAM role to access both elastic container instances and ECS instances. For more information, see [Use the instance RAM role by calling APIs](~~61178~~).
+             * <p>The name of the instance RAM role. You can use an instance RAM role to access both elastic container instances and ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/61178.html">Use the instance RAM role by calling APIs</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ram:PassRole</p>
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -4832,7 +5928,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides.
+             * <p>The ID of the region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -4840,7 +5939,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the cluster belongs. If you do not specify a resource group when you create an elastic container instance, the system automatically adds the instance to the default resource group in your account.
+             * <p>The ID of the resource group to which the cluster belongs. If you do not specify a resource group when you create an elastic container instance, the system automatically adds the instance to the default resource group in your account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzh43v*****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -4848,12 +5950,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance restart policy. Valid values:
-             * <p>
+             * <p>The instance restart policy. Valid values:</p>
+             * <ul>
+             * <li>Always: Always restarts the instance if a container in the instance exits upon termination.</li>
+             * <li>Never: Never restarts the instance if a container in the instance exits upon termination.</li>
+             * <li>OnFailure: Restarts the instance when the last start failed.</li>
+             * </ul>
              * 
-             * *   Always: Always restarts the instance if a container in the instance exits upon termination.
-             * *   Never: Never restarts the instance if a container in the instance exits upon termination.
-             * *   OnFailure: Restarts the instance when the last start failed.
+             * <strong>example:</strong>
+             * <p>Never</p>
              */
             public Builder restartPolicy(String restartPolicy) {
                 this.restartPolicy = restartPolicy;
@@ -4861,7 +5966,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp12ujq5zpxuyjfo3o8r</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -4869,10 +5977,11 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum hourly price for the preemptible instance.
-             * <p>
+             * <p>The maximum hourly price for the preemptible instance.</p>
+             * <p>This parameter is returned only if you set the SpotStrategy parameter to SpotWithPriceLimit.</p>
              * 
-             * This parameter is returned only if you set the SpotStrategy parameter to SpotWithPriceLimit.
+             * <strong>example:</strong>
+             * <p>0.025</p>
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -4880,12 +5989,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The bidding policy of the instance. Valid values:
-             * <p>
+             * <p>The bidding policy of the instance. Valid values:</p>
+             * <ul>
+             * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
+             * <li>SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.</li>
+             * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</li>
+             * </ul>
              * 
-             * *   NoSpot: The instance is a regular pay-as-you-go instance.
-             * *   SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.
-             * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
+             * <strong>example:</strong>
+             * <p>NoSpot</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -4893,19 +6005,22 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values:
-             * <p>
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li>Pending: The instance is being started.</li>
+             * <li>Running: The instance is running.</li>
+             * <li>Succeeded: The instance runs successfully.</li>
+             * <li>Failed: The instance fails to run.</li>
+             * <li>Scheduling: The instance is being created.</li>
+             * <li>ScheduleFailed: The instance fails to be created.</li>
+             * <li>Restarting: The instance is being restarted.</li>
+             * <li>Updating: The instance is being updated.</li>
+             * <li>Terminating: The instance is being terminated.</li>
+             * <li>Expired: The instance expires.</li>
+             * </ul>
              * 
-             * *   Pending: The instance is being started.
-             * *   Running: The instance is running.
-             * *   Succeeded: The instance runs successfully.
-             * *   Failed: The instance fails to run.
-             * *   Scheduling: The instance is being created.
-             * *   ScheduleFailed: The instance fails to be created.
-             * *   Restarting: The instance is being restarted.
-             * *   Updating: The instance is being updated.
-             * *   Terminating: The instance is being terminated.
-             * *   Expired: The instance expires.
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -4913,7 +6028,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when all containers exited on success. The time follows the RFC 3339 standard and must be in UTC.
+             * <p>The time when all containers exited on success. The time follows the RFC 3339 standard and must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-11T04:33:42Z</p>
              */
             public Builder succeededTime(String succeededTime) {
                 this.succeededTime = succeededTime;
@@ -4921,15 +6039,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the instances.
+             * <p>The tags of the instances.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * This parameter is unavailable.
+             * <p>This parameter is unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-xxx</p>
              */
             public Builder tenantEniInstanceId(String tenantEniInstanceId) {
                 this.tenantEniInstanceId = tenantEniInstanceId;
@@ -4937,7 +6058,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is unavailable.
+             * <p>This parameter is unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.10.XX.XX</p>
              */
             public Builder tenantEniIp(String tenantEniIp) {
                 this.tenantEniIp = tenantEniIp;
@@ -4945,7 +6069,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is unavailable.
+             * <p>This parameter is unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxx</p>
              */
             public Builder tenantSecurityGroupId(String tenantSecurityGroupId) {
                 this.tenantSecurityGroupId = tenantSecurityGroupId;
@@ -4953,7 +6080,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is unavailable.
+             * <p>This parameter is unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxx</p>
              */
             public Builder tenantVSwitchId(String tenantVSwitchId) {
                 this.tenantVSwitchId = tenantVSwitchId;
@@ -4961,7 +6091,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1vzjjflab6wvjox****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -4969,15 +6102,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about volumes.
+             * <p>The information about volumes.</p>
              */
-            public Builder volumes(java.util.List < Volumes> volumes) {
+            public Builder volumes(java.util.List<Volumes> volumes) {
                 this.volumes = volumes;
                 return this;
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) to which the elastic container instance belongs.
+             * <p>The ID of the virtual private cloud (VPC) to which the elastic container instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-1vzjjflab6wvjox****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -4985,7 +6121,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone in which the elastic container instance is deployed.
+             * <p>The ID of the zone in which the elastic container instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -4999,44 +6138,50 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServerlessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServerlessJobsResponseBody</p>
+     */
     public static class JobInfos extends TeaModel {
-        @NameInMap("ArrayProperties")
+        @com.aliyun.core.annotation.NameInMap("ArrayProperties")
         private ArrayProperties arrayProperties;
 
-        @NameInMap("ContainerGroups")
-        private java.util.List < ContainerGroups> containerGroups;
+        @com.aliyun.core.annotation.NameInMap("ContainerGroups")
+        private java.util.List<ContainerGroups> containerGroups;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("IsArrayJob")
+        @com.aliyun.core.annotation.NameInMap("IsArrayJob")
         private Boolean isArrayJob;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("LastModifyTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifyTime")
         private Long lastModifyTime;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Long priority;
 
-        @NameInMap("Queue")
+        @com.aliyun.core.annotation.NameInMap("Queue")
         private String queue;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("SubmitTime")
+        @com.aliyun.core.annotation.NameInMap("SubmitTime")
         private Long submitTime;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private JobInfos(Builder builder) {
@@ -5073,7 +6218,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * @return containerGroups
          */
-        public java.util.List < ContainerGroups> getContainerGroups() {
+        public java.util.List<ContainerGroups> getContainerGroups() {
             return this.containerGroups;
         }
 
@@ -5156,7 +6301,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         public static final class Builder {
             private ArrayProperties arrayProperties; 
-            private java.util.List < ContainerGroups> containerGroups; 
+            private java.util.List<ContainerGroups> containerGroups; 
             private Long endTime; 
             private Boolean isArrayJob; 
             private String jobId; 
@@ -5169,8 +6314,27 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private Long submitTime; 
             private String user; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobInfos model) {
+                this.arrayProperties = model.arrayProperties;
+                this.containerGroups = model.containerGroups;
+                this.endTime = model.endTime;
+                this.isArrayJob = model.isArrayJob;
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.lastModifyTime = model.lastModifyTime;
+                this.priority = model.priority;
+                this.queue = model.queue;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.submitTime = model.submitTime;
+                this.user = model.user;
+            } 
+
             /**
-             * The properties of the array job.
+             * <p>The properties of the array job.</p>
              */
             public Builder arrayProperties(ArrayProperties arrayProperties) {
                 this.arrayProperties = arrayProperties;
@@ -5178,15 +6342,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the container groups that are used to run the serverless job.
+             * <p>The information of the container groups that are used to run the serverless job.</p>
              */
-            public Builder containerGroups(java.util.List < ContainerGroups> containerGroups) {
+            public Builder containerGroups(java.util.List<ContainerGroups> containerGroups) {
                 this.containerGroups = containerGroups;
                 return this;
             }
 
             /**
-             * The time when the serverless job ended.
+             * <p>The time when the serverless job ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1662016121</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -5194,7 +6361,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the job is an array job.
+             * <p>Indicates whether the job is an array job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isArrayJob(Boolean isArrayJob) {
                 this.isArrayJob = isArrayJob;
@@ -5202,7 +6372,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the serverless job or the subtask (array job).
+             * <p>The ID of the serverless job or the subtask (array job).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -5210,7 +6383,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the serverless job.
+             * <p>The name of the serverless job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testjob</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -5218,7 +6394,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the serverless job is last modified.
+             * <p>The time when the serverless job is last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1663831441000</p>
              */
             public Builder lastModifyTime(Long lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -5226,7 +6405,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling priority of the serverless job.
+             * <p>The scheduling priority of the serverless job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
@@ -5234,7 +6416,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queue in which the serverless job is run.
+             * <p>The name of the queue in which the serverless job is run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comp</p>
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -5242,7 +6427,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the serverless job started.
+             * <p>The time when the serverless job started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1647427667</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -5250,15 +6438,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the serverless job. Valid values:
-             * <p>
+             * <p>The status of the serverless job. Valid values:</p>
+             * <ul>
+             * <li>Pending</li>
+             * <li>Initing</li>
+             * <li>Running</li>
+             * <li>Succeeded</li>
+             * <li>Canceled</li>
+             * <li>Failed</li>
+             * </ul>
              * 
-             * *   Pending
-             * *   Initing
-             * *   Running
-             * *   Succeeded
-             * *   Canceled
-             * *   Failed
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -5266,7 +6457,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the serverless job is submitted.
+             * <p>The time when the serverless job is submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1647423718</p>
              */
             public Builder submitTime(Long submitTime) {
                 this.submitTime = submitTime;
@@ -5274,7 +6468,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The username that is used to run the serverless job.
+             * <p>The username that is used to run the serverless job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuser</p>
              */
             public Builder user(String user) {
                 this.user = user;

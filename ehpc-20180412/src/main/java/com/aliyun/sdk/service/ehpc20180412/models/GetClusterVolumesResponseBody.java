@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterVolumesResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterVolumesResponseBody</p>
  */
 public class GetClusterVolumesResponseBody extends TeaModel {
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Volumes")
+    @com.aliyun.core.annotation.NameInMap("Volumes")
     private Volumes volumes;
 
     private GetClusterVolumesResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class GetClusterVolumesResponseBody extends TeaModel {
 
     public static GetClusterVolumesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -61,8 +70,20 @@ public class GetClusterVolumesResponseBody extends TeaModel {
         private String requestId; 
         private Volumes volumes; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetClusterVolumesResponseBody model) {
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.volumes = model.volumes;
+        } 
+
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -70,7 +91,10 @@ public class GetClusterVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8BCFD52E-0336-4490-AE7D-F560F106****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +102,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * The array of the file system mounted to the E-HPC cluster.
+         * <p>The array of the file system mounted to the E-HPC cluster.</p>
          */
         public Builder volumes(Volumes volumes) {
             this.volumes = volumes;
@@ -91,8 +115,14 @@ public class GetClusterVolumesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClusterVolumesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterVolumesResponseBody</p>
+     */
     public static class RoleInfo extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private RoleInfo(Builder builder) {
@@ -117,13 +147,23 @@ public class GetClusterVolumesResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoleInfo model) {
+                this.name = model.name;
+            } 
+
             /**
-             * The type of the node on which the file system is mounted. Valid values:
-             * <p>
+             * <p>The type of the node on which the file system is mounted. Valid values:</p>
+             * <ul>
+             * <li>Compute: compute node</li>
+             * <li>Manager: management node</li>
+             * <li>Login: logon node</li>
+             * </ul>
              * 
-             * *   Compute: compute node
-             * *   Manager: management node
-             * *   Login: logon node
+             * <strong>example:</strong>
+             * <p>Compute</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -137,9 +177,15 @@ public class GetClusterVolumesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterVolumesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterVolumesResponseBody</p>
+     */
     public static class Roles extends TeaModel {
-        @NameInMap("RoleInfo")
-        private java.util.List < RoleInfo> roleInfo;
+        @com.aliyun.core.annotation.NameInMap("RoleInfo")
+        private java.util.List<RoleInfo> roleInfo;
 
         private Roles(Builder builder) {
             this.roleInfo = builder.roleInfo;
@@ -156,17 +202,24 @@ public class GetClusterVolumesResponseBody extends TeaModel {
         /**
          * @return roleInfo
          */
-        public java.util.List < RoleInfo> getRoleInfo() {
+        public java.util.List<RoleInfo> getRoleInfo() {
             return this.roleInfo;
         }
 
         public static final class Builder {
-            private java.util.List < RoleInfo> roleInfo; 
+            private java.util.List<RoleInfo> roleInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Roles model) {
+                this.roleInfo = model.roleInfo;
+            } 
 
             /**
              * RoleInfo.
              */
-            public Builder roleInfo(java.util.List < RoleInfo> roleInfo) {
+            public Builder roleInfo(java.util.List<RoleInfo> roleInfo) {
                 this.roleInfo = roleInfo;
                 return this;
             }
@@ -178,35 +231,41 @@ public class GetClusterVolumesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterVolumesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterVolumesResponseBody</p>
+     */
     public static class VolumeInfo extends TeaModel {
-        @NameInMap("JobQueue")
+        @com.aliyun.core.annotation.NameInMap("JobQueue")
         private String jobQueue;
 
-        @NameInMap("LocalDirectory")
+        @com.aliyun.core.annotation.NameInMap("LocalDirectory")
         private String localDirectory;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("MustKeep")
+        @com.aliyun.core.annotation.NameInMap("MustKeep")
         private Boolean mustKeep;
 
-        @NameInMap("RemoteDirectory")
+        @com.aliyun.core.annotation.NameInMap("RemoteDirectory")
         private String remoteDirectory;
 
-        @NameInMap("Roles")
+        @com.aliyun.core.annotation.NameInMap("Roles")
         private Roles roles;
 
-        @NameInMap("VolumeId")
+        @com.aliyun.core.annotation.NameInMap("VolumeId")
         private String volumeId;
 
-        @NameInMap("VolumeMountpoint")
+        @com.aliyun.core.annotation.NameInMap("VolumeMountpoint")
         private String volumeMountpoint;
 
-        @NameInMap("VolumeProtocol")
+        @com.aliyun.core.annotation.NameInMap("VolumeProtocol")
         private String volumeProtocol;
 
-        @NameInMap("VolumeType")
+        @com.aliyun.core.annotation.NameInMap("VolumeType")
         private String volumeType;
 
         private VolumeInfo(Builder builder) {
@@ -312,8 +371,27 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             private String volumeProtocol; 
             private String volumeType; 
 
+            private Builder() {
+            } 
+
+            private Builder(VolumeInfo model) {
+                this.jobQueue = model.jobQueue;
+                this.localDirectory = model.localDirectory;
+                this.location = model.location;
+                this.mustKeep = model.mustKeep;
+                this.remoteDirectory = model.remoteDirectory;
+                this.roles = model.roles;
+                this.volumeId = model.volumeId;
+                this.volumeMountpoint = model.volumeMountpoint;
+                this.volumeProtocol = model.volumeProtocol;
+                this.volumeType = model.volumeType;
+            } 
+
             /**
-             * The queue of the job.
+             * <p>The queue of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workq</p>
              */
             public Builder jobQueue(String jobQueue) {
                 this.jobQueue = jobQueue;
@@ -321,7 +399,10 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The local mount directory.
+             * <p>The local mount directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/ehpcdata</p>
              */
             public Builder localDirectory(String localDirectory) {
                 this.localDirectory = localDirectory;
@@ -329,11 +410,14 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of cluster. Valid values:
-             * <p>
+             * <p>The type of cluster. Valid values:</p>
+             * <ul>
+             * <li>OnPremise: The cluster is deployed on a hybrid cloud.</li>
+             * <li>PublicCloud: The cluster is deployed on a public cloud.</li>
+             * </ul>
              * 
-             * *   OnPremise: The cluster is deployed on a hybrid cloud.
-             * *   PublicCloud: The cluster is deployed on a public cloud.
+             * <strong>example:</strong>
+             * <p>PublicCloud</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -341,7 +425,10 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource can be unmounted.
+             * <p>Indicates whether the resource can be unmounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mustKeep(Boolean mustKeep) {
                 this.mustKeep = mustKeep;
@@ -349,7 +436,10 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The remote mount directory.
+             * <p>The remote mount directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder remoteDirectory(String remoteDirectory) {
                 this.remoteDirectory = remoteDirectory;
@@ -357,7 +447,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The array of the node on which the file system is mounted.
+             * <p>The array of the node on which the file system is mounted.</p>
              */
             public Builder roles(Roles roles) {
                 this.roles = roles;
@@ -365,7 +455,10 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the file system.
+             * <p>The ID of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0e754****</p>
              */
             public Builder volumeId(String volumeId) {
                 this.volumeId = volumeId;
@@ -373,7 +466,10 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the mount target.
+             * <p>The address of the mount target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0e754****-kal90.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder volumeMountpoint(String volumeMountpoint) {
                 this.volumeMountpoint = volumeMountpoint;
@@ -381,11 +477,14 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The storage protocol type of the file system. Valid values:
-             * <p>
+             * <p>The storage protocol type of the file system. Valid values:</p>
+             * <ul>
+             * <li>NFS</li>
+             * <li>SMB</li>
+             * </ul>
              * 
-             * *   NFS
-             * *   SMB
+             * <strong>example:</strong>
+             * <p>NFS</p>
              */
             public Builder volumeProtocol(String volumeProtocol) {
                 this.volumeProtocol = volumeProtocol;
@@ -393,10 +492,13 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the file system. Valid values:
-             * <p>
+             * <p>The type of the file system. Valid values:</p>
+             * <ul>
+             * <li>NAS</li>
+             * </ul>
              * 
-             * *   NAS
+             * <strong>example:</strong>
+             * <p>NAS</p>
              */
             public Builder volumeType(String volumeType) {
                 this.volumeType = volumeType;
@@ -410,9 +512,15 @@ public class GetClusterVolumesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterVolumesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterVolumesResponseBody</p>
+     */
     public static class Volumes extends TeaModel {
-        @NameInMap("VolumeInfo")
-        private java.util.List < VolumeInfo> volumeInfo;
+        @com.aliyun.core.annotation.NameInMap("VolumeInfo")
+        private java.util.List<VolumeInfo> volumeInfo;
 
         private Volumes(Builder builder) {
             this.volumeInfo = builder.volumeInfo;
@@ -429,17 +537,24 @@ public class GetClusterVolumesResponseBody extends TeaModel {
         /**
          * @return volumeInfo
          */
-        public java.util.List < VolumeInfo> getVolumeInfo() {
+        public java.util.List<VolumeInfo> getVolumeInfo() {
             return this.volumeInfo;
         }
 
         public static final class Builder {
-            private java.util.List < VolumeInfo> volumeInfo; 
+            private java.util.List<VolumeInfo> volumeInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Volumes model) {
+                this.volumeInfo = model.volumeInfo;
+            } 
 
             /**
              * VolumeInfo.
              */
-            public Builder volumeInfo(java.util.List < VolumeInfo> volumeInfo) {
+            public Builder volumeInfo(java.util.List<VolumeInfo> volumeInfo) {
                 this.volumeInfo = volumeInfo;
                 return this;
             }

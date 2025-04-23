@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUpgradeClientsResponseBody} extends {@link TeaModel}
  *
  * <p>ListUpgradeClientsResponseBody</p>
  */
 public class ListUpgradeClientsResponseBody extends TeaModel {
-    @NameInMap("ClientRecords")
-    private java.util.List < ClientRecords> clientRecords;
+    @com.aliyun.core.annotation.NameInMap("ClientRecords")
+    private java.util.List<ClientRecords> clientRecords;
 
-    @NameInMap("CurrentVersion")
+    @com.aliyun.core.annotation.NameInMap("CurrentVersion")
     private String currentVersion;
 
-    @NameInMap("LatestVersion")
+    @com.aliyun.core.annotation.NameInMap("LatestVersion")
     private String latestVersion;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListUpgradeClientsResponseBody(Builder builder) {
@@ -39,10 +44,14 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clientRecords
      */
-    public java.util.List < ClientRecords> getClientRecords() {
+    public java.util.List<ClientRecords> getClientRecords() {
         return this.clientRecords;
     }
 
@@ -68,21 +77,34 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ClientRecords> clientRecords; 
+        private java.util.List<ClientRecords> clientRecords; 
         private String currentVersion; 
         private String latestVersion; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListUpgradeClientsResponseBody model) {
+            this.clientRecords = model.clientRecords;
+            this.currentVersion = model.currentVersion;
+            this.latestVersion = model.latestVersion;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The upgrade records of the cluster client.
+         * <p>The update records of ehpcutil in the cluster.</p>
          */
-        public Builder clientRecords(java.util.List < ClientRecords> clientRecords) {
+        public Builder clientRecords(java.util.List<ClientRecords> clientRecords) {
             this.clientRecords = clientRecords;
             return this;
         }
 
         /**
-         * The current version of the E-HPC client.
+         * <p>The current version of ehpcutil in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.21</p>
          */
         public Builder currentVersion(String currentVersion) {
             this.currentVersion = currentVersion;
@@ -90,7 +112,10 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The latest version of the E-HPC client.
+         * <p>The latest version of ehpcutil that is released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.22</p>
          */
         public Builder latestVersion(String latestVersion) {
             this.latestVersion = latestVersion;
@@ -98,7 +123,10 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89A1AC0F-4A6C-4F3D-98F9-BEF9A823****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,17 +139,23 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUpgradeClientsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUpgradeClientsResponseBody</p>
+     */
     public static class ClientRecords extends TeaModel {
-        @NameInMap("NewVersion")
+        @com.aliyun.core.annotation.NameInMap("NewVersion")
         private String newVersion;
 
-        @NameInMap("OldVersion")
+        @com.aliyun.core.annotation.NameInMap("OldVersion")
         private String oldVersion;
 
-        @NameInMap("SubUid")
+        @com.aliyun.core.annotation.NameInMap("SubUid")
         private String subUid;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private ClientRecords(Builder builder) {
@@ -173,8 +207,21 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
             private String subUid; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClientRecords model) {
+                this.newVersion = model.newVersion;
+                this.oldVersion = model.oldVersion;
+                this.subUid = model.subUid;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * The version of the E-HPC client after the upgrade.
+             * <p>The version of ehpcutil after the update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.21</p>
              */
             public Builder newVersion(String newVersion) {
                 this.newVersion = newVersion;
@@ -182,7 +229,10 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the E-HPC client before the upgrade.
+             * <p>The version of ehpcutil before the update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.16</p>
              */
             public Builder oldVersion(String oldVersion) {
                 this.oldVersion = oldVersion;
@@ -190,7 +240,10 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user that upgraded the E-HPC client.
+             * <p>The user ID (UID) whose ehpcutil is updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>129******84</p>
              */
             public Builder subUid(String subUid) {
                 this.subUid = subUid;
@@ -198,7 +251,10 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was performed.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-26T06:26:57.000Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

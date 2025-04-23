@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImagePriceRequest} extends {@link RequestModel}
  *
  * <p>DescribeImagePriceRequest</p>
  */
 public class DescribeImagePriceRequest extends Request {
-    @Query
-    @NameInMap("Amount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer amount;
 
-    @Query
-    @NameInMap("ImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("Period")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer period;
 
-    @Query
-    @NameInMap("PriceUnit")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PriceUnit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String priceUnit;
 
-    @Query
-    @NameInMap("SkuCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkuCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String skuCode;
 
     private DescribeImagePriceRequest(Builder builder) {
@@ -59,7 +64,7 @@ public class DescribeImagePriceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,10 +134,12 @@ public class DescribeImagePriceRequest extends Request {
         } 
 
         /**
-         * The number of images that you want to purchase. Valid values: 1 to 1000.
-         * <p>
+         * <p>The number of images that you want to purchase. Valid values: 1 to 1000.</p>
+         * <p>Default value: 1.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -141,7 +148,11 @@ public class DescribeImagePriceRequest extends Request {
         }
 
         /**
-         * The ID of an image.
+         * <p>The ID of an image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp198jigq7l1ga11****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -150,7 +161,10 @@ public class DescribeImagePriceRequest extends Request {
         }
 
         /**
-         * The type of the order. The order can be set only as a purchase order. Valid value: INSTANCE-BUY.
+         * <p>The type of the order. The order can be set only as a purchase order. Valid value: INSTANCE-BUY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE-BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -159,14 +173,17 @@ public class DescribeImagePriceRequest extends Request {
         }
 
         /**
-         * The subscription duration of the read-only instance. Valid values:
-         * <p>
+         * <p>The subscription duration of the read-only instance. Valid values:</p>
+         * <ul>
+         * <li>If PriceUnit is set to Day, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, and 30.</li>
+         * <li>If PriceUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+         * <li>If PriceUnit is set to Year, the valid values of the Period parameter are 1, 2, and 3.</li>
+         * </ul>
+         * <p>Default value: 1.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   If PriceUnit is set to Day, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, and 30.
-         * *   If PriceUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
-         * *   If PriceUnit is set to Year, the valid values of the Period parameter are 1, 2, and 3.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -175,14 +192,17 @@ public class DescribeImagePriceRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration. Valid values:
-         * <p>
+         * <p>The unit of the subscription duration. Valid values:</p>
+         * <ul>
+         * <li>Day</li>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
+         * <p>Default value: Day.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   Day
-         * *   Month
-         * *   Year
-         * 
-         * Default value: Day.
+         * <strong>example:</strong>
+         * <p>Day</p>
          */
         public Builder priceUnit(String priceUnit) {
             this.putQueryParameter("PriceUnit", priceUnit);
@@ -191,7 +211,11 @@ public class DescribeImagePriceRequest extends Request {
         }
 
         /**
-         * The stock keeping unit (SKU) of the image. Valid value: package.
+         * <p>The stock keeping unit (SKU) of the image. Valid value: package.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>package</p>
          */
         public Builder skuCode(String skuCode) {
             this.putQueryParameter("SkuCode", skuCode);

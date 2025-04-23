@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInvocationResultsRequest} extends {@link RequestModel}
  *
  * <p>ListInvocationResultsRequest</p>
  */
 public class ListInvocationResultsRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("CommandId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commandId;
 
-    @Query
-    @NameInMap("Instance")
-    private java.util.List < Instance> instance;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Instance")
+    private java.util.List<Instance> instance;
 
-    @Query
-    @NameInMap("InvokeRecordStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvokeRecordStatus")
     private String invokeRecordStatus;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50)
     private Integer pageSize;
 
     private ListInvocationResultsRequest(Builder builder) {
@@ -57,7 +62,7 @@ public class ListInvocationResultsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -79,7 +84,7 @@ public class ListInvocationResultsRequest extends Request {
     /**
      * @return instance
      */
-    public java.util.List < Instance> getInstance() {
+    public java.util.List<Instance> getInstance() {
         return this.instance;
     }
 
@@ -107,7 +112,7 @@ public class ListInvocationResultsRequest extends Request {
     public static final class Builder extends Request.Builder<ListInvocationResultsRequest, Builder> {
         private String clusterId; 
         private String commandId; 
-        private java.util.List < Instance> instance; 
+        private java.util.List<Instance> instance; 
         private String invokeRecordStatus; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -127,10 +132,12 @@ public class ListInvocationResultsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -139,10 +146,12 @@ public class ListInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the command.
-         * <p>
+         * <p>The ID of the command.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87388.html">ListCommands</a> operation to query the command ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListCommands](~~87388~~) operation to query the command ID.
+         * <strong>example:</strong>
+         * <p>c-hz01v8x80o3****</p>
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -151,22 +160,25 @@ public class ListInvocationResultsRequest extends Request {
         }
 
         /**
-         * The information of nodes on which the command is run.
+         * <p>The information of nodes on which the command is run.</p>
          */
-        public Builder instance(java.util.List < Instance> instance) {
+        public Builder instance(java.util.List<Instance> instance) {
             this.putQueryParameter("Instance", instance);
             this.instance = instance;
             return this;
         }
 
         /**
-         * The status of the command that you want to query. Valid values:
-         * <p>
+         * <p>The status of the command that you want to query. Valid values:</p>
+         * <ul>
+         * <li>Finished</li>
+         * <li>Running</li>
+         * <li>Failed</li>
+         * <li>Stopped</li>
+         * </ul>
          * 
-         * *   Finished
-         * *   Running
-         * *   Failed
-         * *   Stopped
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder invokeRecordStatus(String invokeRecordStatus) {
             this.putQueryParameter("InvokeRecordStatus", invokeRecordStatus);
@@ -175,12 +187,12 @@ public class ListInvocationResultsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Page numbers start from 1.</p>
+         * <p>Default value: 1</p>
          * 
-         * Page numbers start from 1.
-         * 
-         * Default value: 1
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -189,10 +201,11 @@ public class ListInvocationResultsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 50.
-         * <p>
+         * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
+         * <p>Default value: 10</p>
          * 
-         * Default value: 10
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -207,8 +220,14 @@ public class ListInvocationResultsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListInvocationResultsRequest} extends {@link TeaModel}
+     *
+     * <p>ListInvocationResultsRequest</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         private Instance(Builder builder) {
@@ -233,11 +252,21 @@ public class ListInvocationResultsRequest extends Request {
         public static final class Builder {
             private String id; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.id = model.id;
+            } 
+
             /**
-             * The ID of the node on which the command is run.
-             * <p>
+             * <p>The ID of the node on which the command is run.</p>
+             * <blockquote>
+             * <p> The Instance.N.Id parameter specifies the node on which the command is run. If it is not specified, the command is run on all nodes of the cluster.</p>
+             * </blockquote>
              * 
-             * >  The Instance.N.Id parameter specifies the node on which the command is run. If it is not specified, the command is run on all nodes of the cluster.
+             * <strong>example:</strong>
+             * <p>i-uf65bh2113hlqvyr****</p>
              */
             public Builder id(String id) {
                 this.id = id;

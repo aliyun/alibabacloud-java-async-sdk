@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInvocationResultsResponseBody} extends {@link TeaModel}
  *
  * <p>ListInvocationResultsResponseBody</p>
  */
 public class ListInvocationResultsResponseBody extends TeaModel {
-    @NameInMap("InvocationResults")
+    @com.aliyun.core.annotation.NameInMap("InvocationResults")
     private InvocationResults invocationResults;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListInvocationResultsResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListInvocationResultsResponseBody extends TeaModel {
 
     public static ListInvocationResultsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,19 @@ public class ListInvocationResultsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListInvocationResultsResponseBody model) {
+            this.invocationResults = model.invocationResults;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The result of the command.
+         * <p>The result of the command.</p>
          */
         public Builder invocationResults(InvocationResults invocationResults) {
             this.invocationResults = invocationResults;
@@ -94,7 +114,10 @@ public class ListInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +125,10 @@ public class ListInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +136,10 @@ public class ListInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class ListInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,26 +163,32 @@ public class ListInvocationResultsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInvocationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInvocationResultsResponseBody</p>
+     */
     public static class InvocationResult extends TeaModel {
-        @NameInMap("CommandId")
+        @com.aliyun.core.annotation.NameInMap("CommandId")
         private String commandId;
 
-        @NameInMap("ExitCode")
+        @com.aliyun.core.annotation.NameInMap("ExitCode")
         private Integer exitCode;
 
-        @NameInMap("FinishedTime")
+        @com.aliyun.core.annotation.NameInMap("FinishedTime")
         private String finishedTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InvokeRecordStatus")
+        @com.aliyun.core.annotation.NameInMap("InvokeRecordStatus")
         private String invokeRecordStatus;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private InvocationResult(Builder builder) {
@@ -229,8 +267,24 @@ public class ListInvocationResultsResponseBody extends TeaModel {
             private String message; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(InvocationResult model) {
+                this.commandId = model.commandId;
+                this.exitCode = model.exitCode;
+                this.finishedTime = model.finishedTime;
+                this.instanceId = model.instanceId;
+                this.invokeRecordStatus = model.invokeRecordStatus;
+                this.message = model.message;
+                this.success = model.success;
+            } 
+
             /**
-             * The ID of the command.
+             * <p>The ID of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-hz01v8x80o3****</p>
              */
             public Builder commandId(String commandId) {
                 this.commandId = commandId;
@@ -238,7 +292,10 @@ public class ListInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The exit code.
+             * <p>The exit code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exitCode(Integer exitCode) {
                 this.exitCode = exitCode;
@@ -246,7 +303,10 @@ public class ListInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the command entered the Finished state.
+             * <p>The time at which the command entered the Finished state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-06T09:14:56Z</p>
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
@@ -254,7 +314,10 @@ public class ListInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node on which the command was run.
+             * <p>The ID of the node on which the command was run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-uf65bh2113hlqvyr****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -262,13 +325,16 @@ public class ListInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the command. Valid values:
-             * <p>
+             * <p>The status of the command. Valid values:</p>
+             * <ul>
+             * <li>Finished</li>
+             * <li>Running</li>
+             * <li>Failed</li>
+             * <li>Stopped</li>
+             * </ul>
              * 
-             * *   Finished
-             * *   Running
-             * *   Failed
-             * *   Stopped
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder invokeRecordStatus(String invokeRecordStatus) {
                 this.invokeRecordStatus = invokeRecordStatus;
@@ -276,7 +342,10 @@ public class ListInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The output result.
+             * <p>The output result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello world</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -284,7 +353,10 @@ public class ListInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the command was run and its result was obtained.
+             * <p>Indicates whether the command was run and its result was obtained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -298,9 +370,15 @@ public class ListInvocationResultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInvocationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInvocationResultsResponseBody</p>
+     */
     public static class InvocationResults extends TeaModel {
-        @NameInMap("InvocationResult")
-        private java.util.List < InvocationResult> invocationResult;
+        @com.aliyun.core.annotation.NameInMap("InvocationResult")
+        private java.util.List<InvocationResult> invocationResult;
 
         private InvocationResults(Builder builder) {
             this.invocationResult = builder.invocationResult;
@@ -317,17 +395,24 @@ public class ListInvocationResultsResponseBody extends TeaModel {
         /**
          * @return invocationResult
          */
-        public java.util.List < InvocationResult> getInvocationResult() {
+        public java.util.List<InvocationResult> getInvocationResult() {
             return this.invocationResult;
         }
 
         public static final class Builder {
-            private java.util.List < InvocationResult> invocationResult; 
+            private java.util.List<InvocationResult> invocationResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvocationResults model) {
+                this.invocationResult = model.invocationResult;
+            } 
 
             /**
              * InvocationResult.
              */
-            public Builder invocationResult(java.util.List < InvocationResult> invocationResult) {
+            public Builder invocationResult(java.util.List<InvocationResult> invocationResult) {
                 this.invocationResult = invocationResult;
                 return this;
             }

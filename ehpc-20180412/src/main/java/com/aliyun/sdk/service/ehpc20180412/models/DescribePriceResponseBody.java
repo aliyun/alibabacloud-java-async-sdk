@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePriceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePriceResponseBody</p>
  */
 public class DescribePriceResponseBody extends TeaModel {
-    @NameInMap("Prices")
+    @com.aliyun.core.annotation.NameInMap("Prices")
     private Prices prices;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalTradePrice")
+    @com.aliyun.core.annotation.NameInMap("TotalTradePrice")
     private Float totalTradePrice;
 
     private DescribePriceResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static DescribePriceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -61,8 +70,17 @@ public class DescribePriceResponseBody extends TeaModel {
         private String requestId; 
         private Float totalTradePrice; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribePriceResponseBody model) {
+            this.prices = model.prices;
+            this.requestId = model.requestId;
+            this.totalTradePrice = model.totalTradePrice;
+        } 
+
         /**
-         * The array of cluster prices. If you query the prices of multiple nodes in the cluster, the sequence of the prices in the returned value of PriceInfo is the same as that of the nodes in the request parameters. For example, the first price in the value of PriceInfo is the price of the first node specified in the request parameters.
+         * <p>The array of cluster prices. If you query the prices of multiple nodes in the cluster, the sequence of the prices in the returned value of PriceInfo is the same as the sequence of the nodes in the request parameters. For example, the first price in the value of PriceInfo is the price of the first node specified in the request parameters.</p>
          */
         public Builder prices(Prices prices) {
             this.prices = prices;
@@ -70,7 +88,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54FF9025-2C2F-42EB-870D-0DF5B0ACF24E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,10 +99,11 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The total price.
-         * <p>
+         * <p>The total price.</p>
+         * <p>Unit: USD.</p>
          * 
-         * Unit: USD.
+         * <strong>example:</strong>
+         * <p>1258</p>
          */
         public Builder totalTradePrice(Float totalTradePrice) {
             this.totalTradePrice = totalTradePrice;
@@ -94,17 +116,23 @@ public class DescribePriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class PriceInfo extends TeaModel {
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Float originalPrice;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Float tradePrice;
 
         private PriceInfo(Builder builder) {
@@ -156,11 +184,22 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float originalPrice; 
             private Float tradePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(PriceInfo model) {
+                this.currency = model.currency;
+                this.nodeType = model.nodeType;
+                this.originalPrice = model.originalPrice;
+                this.tradePrice = model.tradePrice;
+            } 
+
             /**
-             * The currency that is used to measure the price. Valid values:
-             * <p>
+             * <p>The currency that is used to measure the price. Valid values:</p>
+             * <p>USD</p>
              * 
-             * USD
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -168,12 +207,15 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. Valid values:
-             * <p>
+             * <p>The node type. Valid values:</p>
+             * <ul>
+             * <li>Manager: management node</li>
+             * <li>Login: logon node</li>
+             * <li>Compute: compute node</li>
+             * </ul>
              * 
-             * *   Manager: management node
-             * *   Login: logon node
-             * *   Compute: compute node
+             * <strong>example:</strong>
+             * <p>Compute</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -181,10 +223,11 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price of the image.
-             * <p>
+             * <p>The original price.</p>
+             * <p>Unit: USD.</p>
              * 
-             * Unit: USD.
+             * <strong>example:</strong>
+             * <p>1258</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -192,10 +235,11 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The final price.
-             * <p>
+             * <p>The final price.</p>
+             * <p>Unit: USD.</p>
              * 
-             * Unit: USD.
+             * <strong>example:</strong>
+             * <p>1258</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -209,9 +253,15 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class Prices extends TeaModel {
-        @NameInMap("PriceInfo")
-        private java.util.List < PriceInfo> priceInfo;
+        @com.aliyun.core.annotation.NameInMap("PriceInfo")
+        private java.util.List<PriceInfo> priceInfo;
 
         private Prices(Builder builder) {
             this.priceInfo = builder.priceInfo;
@@ -228,17 +278,24 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return priceInfo
          */
-        public java.util.List < PriceInfo> getPriceInfo() {
+        public java.util.List<PriceInfo> getPriceInfo() {
             return this.priceInfo;
         }
 
         public static final class Builder {
-            private java.util.List < PriceInfo> priceInfo; 
+            private java.util.List<PriceInfo> priceInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Prices model) {
+                this.priceInfo = model.priceInfo;
+            } 
 
             /**
              * PriceInfo.
              */
-            public Builder priceInfo(java.util.List < PriceInfo> priceInfo) {
+            public Builder priceInfo(java.util.List<PriceInfo> priceInfo) {
                 this.priceInfo = priceInfo;
                 return this;
             }

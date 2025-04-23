@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVisualServicePasswdResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyVisualServicePasswdResponseBody</p>
  */
 public class ModifyVisualServicePasswdResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyVisualServicePasswdResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class ModifyVisualServicePasswdResponseBody extends TeaModel {
 
     public static ModifyVisualServicePasswdResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,12 +58,19 @@ public class ModifyVisualServicePasswdResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyVisualServicePasswdResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The status of the VNC Remote visualization service. Valid values:
-         * <p>
+         * <p>The returned message.</p>
          * 
-         * *   Service started.: started
-         * *   Service stopped.: stopped
+         * <strong>example:</strong>
+         * <p>Service started.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -62,7 +78,10 @@ public class ModifyVisualServicePasswdResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>896D338C-E4F4-41EC-A154-D605E5DE6880</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

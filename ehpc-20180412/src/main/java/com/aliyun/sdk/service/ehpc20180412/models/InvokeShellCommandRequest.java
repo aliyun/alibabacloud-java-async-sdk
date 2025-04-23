@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InvokeShellCommandRequest} extends {@link RequestModel}
  *
  * <p>InvokeShellCommandRequest</p>
  */
 public class InvokeShellCommandRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Command")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Command")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String command;
 
-    @Query
-    @NameInMap("Instance")
-    private java.util.List < Instance> instance;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Instance")
+    private java.util.List<Instance> instance;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Integer timeout;
 
-    @Query
-    @NameInMap("WorkingDir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkingDir")
     private String workingDir;
 
     private InvokeShellCommandRequest(Builder builder) {
@@ -51,7 +56,7 @@ public class InvokeShellCommandRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +78,7 @@ public class InvokeShellCommandRequest extends Request {
     /**
      * @return instance
      */
-    public java.util.List < Instance> getInstance() {
+    public java.util.List<Instance> getInstance() {
         return this.instance;
     }
 
@@ -94,7 +99,7 @@ public class InvokeShellCommandRequest extends Request {
     public static final class Builder extends Request.Builder<InvokeShellCommandRequest, Builder> {
         private String clusterId; 
         private String command; 
-        private java.util.List < Instance> instance; 
+        private java.util.List<Instance> instance; 
         private Integer timeout; 
         private String workingDir; 
 
@@ -112,10 +117,12 @@ public class InvokeShellCommandRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -124,7 +131,11 @@ public class InvokeShellCommandRequest extends Request {
         }
 
         /**
-         * The content of the command. The content must be 2 to 2,048 characters in length.
+         * <p>The content of the command. The content must be 2 to 2,048 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo &quot;hello world&quot;</p>
          */
         public Builder command(String command) {
             this.putQueryParameter("Command", command);
@@ -133,19 +144,20 @@ public class InvokeShellCommandRequest extends Request {
         }
 
         /**
-         * The information of nodes on which the command is run.
+         * <p>The information of nodes on which the command is run.</p>
          */
-        public Builder instance(java.util.List < Instance> instance) {
+        public Builder instance(java.util.List<Instance> instance) {
             this.putQueryParameter("Instance", instance);
             this.instance = instance;
             return this;
         }
 
         /**
-         * The timeout period. If a command times out, the command process will be terminated. Unit: seconds.
-         * <p>
+         * <p>The timeout period. If a command times out, the command process will be terminated. Unit: seconds.</p>
+         * <p>Default value: 60.</p>
          * 
-         * Default value: 60.
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -154,7 +166,10 @@ public class InvokeShellCommandRequest extends Request {
         }
 
         /**
-         * The working directory of the command. Default value: `/root`.
+         * <p>The working directory of the command. Default value: <code>/root</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home</p>
          */
         public Builder workingDir(String workingDir) {
             this.putQueryParameter("WorkingDir", workingDir);
@@ -169,8 +184,14 @@ public class InvokeShellCommandRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InvokeShellCommandRequest} extends {@link TeaModel}
+     *
+     * <p>InvokeShellCommandRequest</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         private Instance(Builder builder) {
@@ -195,11 +216,21 @@ public class InvokeShellCommandRequest extends Request {
         public static final class Builder {
             private String id; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.id = model.id;
+            } 
+
             /**
-             * The ID of the Nth node instance on which the command is run.
-             * <p>
+             * <p>The ID of the Nth node instance on which the command is run.</p>
+             * <blockquote>
+             * <p>This parameter specifies the node on which the command is run. If it is not specified, the command will be run on all nodes of the cluster.</p>
+             * </blockquote>
              * 
-             * > This parameter specifies the node on which the command is run. If it is not specified, the command will be run on all nodes of the cluster.
+             * <strong>example:</strong>
+             * <p>i-bp1in9hmw3ur52x0****</p>
              */
             public Builder id(String id) {
                 this.id = id;

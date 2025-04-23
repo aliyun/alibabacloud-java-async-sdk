@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryServicePackAndPriceResponseBody} extends {@link TeaModel}
  *
  * <p>QueryServicePackAndPriceResponseBody</p>
  */
 public class QueryServicePackAndPriceResponseBody extends TeaModel {
-    @NameInMap("ChargeAmount")
+    @com.aliyun.core.annotation.NameInMap("ChargeAmount")
     private Integer chargeAmount;
 
-    @NameInMap("Currency")
+    @com.aliyun.core.annotation.NameInMap("Currency")
     private String currency;
 
-    @NameInMap("DiscountPrice")
+    @com.aliyun.core.annotation.NameInMap("DiscountPrice")
     private Float discountPrice;
 
-    @NameInMap("OriginalAmount")
+    @com.aliyun.core.annotation.NameInMap("OriginalAmount")
     private Integer originalAmount;
 
-    @NameInMap("OriginalPrice")
+    @com.aliyun.core.annotation.NameInMap("OriginalPrice")
     private Float originalPrice;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServicePack")
+    @com.aliyun.core.annotation.NameInMap("ServicePack")
     private ServicePack servicePack;
 
-    @NameInMap("TradePrice")
+    @com.aliyun.core.annotation.NameInMap("TradePrice")
     private Float tradePrice;
 
     private QueryServicePackAndPriceResponseBody(Builder builder) {
@@ -57,6 +62,10 @@ public class QueryServicePackAndPriceResponseBody extends TeaModel {
 
     public static QueryServicePackAndPriceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -132,6 +141,21 @@ public class QueryServicePackAndPriceResponseBody extends TeaModel {
         private String requestId; 
         private ServicePack servicePack; 
         private Float tradePrice; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryServicePackAndPriceResponseBody model) {
+            this.chargeAmount = model.chargeAmount;
+            this.currency = model.currency;
+            this.discountPrice = model.discountPrice;
+            this.originalAmount = model.originalAmount;
+            this.originalPrice = model.originalPrice;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.servicePack = model.servicePack;
+            this.tradePrice = model.tradePrice;
+        } 
 
         /**
          * ChargeAmount.
@@ -211,17 +235,23 @@ public class QueryServicePackAndPriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryServicePackAndPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryServicePackAndPriceResponseBody</p>
+     */
     public static class ServicePackInfo extends TeaModel {
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private Integer capacity;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Integer endTime;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Integer startTime;
 
         private ServicePackInfo(Builder builder) {
@@ -273,6 +303,16 @@ public class QueryServicePackAndPriceResponseBody extends TeaModel {
             private String instanceName; 
             private Integer startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServicePackInfo model) {
+                this.capacity = model.capacity;
+                this.endTime = model.endTime;
+                this.instanceName = model.instanceName;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * Capacity.
              */
@@ -312,9 +352,15 @@ public class QueryServicePackAndPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryServicePackAndPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryServicePackAndPriceResponseBody</p>
+     */
     public static class ServicePack extends TeaModel {
-        @NameInMap("ServicePackInfo")
-        private java.util.List < ServicePackInfo> servicePackInfo;
+        @com.aliyun.core.annotation.NameInMap("ServicePackInfo")
+        private java.util.List<ServicePackInfo> servicePackInfo;
 
         private ServicePack(Builder builder) {
             this.servicePackInfo = builder.servicePackInfo;
@@ -331,17 +377,24 @@ public class QueryServicePackAndPriceResponseBody extends TeaModel {
         /**
          * @return servicePackInfo
          */
-        public java.util.List < ServicePackInfo> getServicePackInfo() {
+        public java.util.List<ServicePackInfo> getServicePackInfo() {
             return this.servicePackInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ServicePackInfo> servicePackInfo; 
+            private java.util.List<ServicePackInfo> servicePackInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServicePack model) {
+                this.servicePackInfo = model.servicePackInfo;
+            } 
 
             /**
              * ServicePackInfo.
              */
-            public Builder servicePackInfo(java.util.List < ServicePackInfo> servicePackInfo) {
+            public Builder servicePackInfo(java.util.List<ServicePackInfo> servicePackInfo) {
                 this.servicePackInfo = servicePackInfo;
                 return this;
             }

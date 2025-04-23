@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersAsyncResponseBody} extends {@link TeaModel}
  *
  * <p>ListUsersAsyncResponseBody</p>
  */
 public class ListUsersAsyncResponseBody extends TeaModel {
-    @NameInMap("AsyncId")
+    @com.aliyun.core.annotation.NameInMap("AsyncId")
     private String asyncId;
 
-    @NameInMap("AsyncStatus")
+    @com.aliyun.core.annotation.NameInMap("AsyncStatus")
     private String asyncStatus;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.NameInMap("Users")
     private Users users;
 
     private ListUsersAsyncResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class ListUsersAsyncResponseBody extends TeaModel {
 
     public static ListUsersAsyncResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,24 @@ public class ListUsersAsyncResponseBody extends TeaModel {
         private Integer totalCount; 
         private Users users; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListUsersAsyncResponseBody model) {
+            this.asyncId = model.asyncId;
+            this.asyncStatus = model.asyncStatus;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.users = model.users;
+        } 
+
         /**
-         * The ID of the asynchronous task.
+         * <p>The ID of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-sh03egi3mls****</p>
          */
         public Builder asyncId(String asyncId) {
             this.asyncId = asyncId;
@@ -118,7 +143,10 @@ public class ListUsersAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the asynchronous task.
+         * <p>The status of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder asyncStatus(String asyncStatus) {
             this.asyncStatus = asyncStatus;
@@ -126,7 +154,10 @@ public class ListUsersAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the page returned. Pages start from page 1.
+         * <p>The number of the page returned. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -134,7 +165,10 @@ public class ListUsersAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +176,10 @@ public class ListUsersAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A05F620-ED46-4A57-95F1-C67D6D3C5DD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +187,10 @@ public class ListUsersAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of users.
+         * <p>The total number of users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -158,7 +198,7 @@ public class ListUsersAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * The list of users.
+         * <p>The list of users.</p>
          */
         public Builder users(Users users) {
             this.users = users;
@@ -171,20 +211,26 @@ public class ListUsersAsyncResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUsersAsyncResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersAsyncResponseBody</p>
+     */
     public static class UserInfo extends TeaModel {
-        @NameInMap("AddTime")
+        @com.aliyun.core.annotation.NameInMap("AddTime")
         private String addTime;
 
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private UserInfo(Builder builder) {
@@ -245,8 +291,22 @@ public class ListUsersAsyncResponseBody extends TeaModel {
             private String name; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.addTime = model.addTime;
+                this.group = model.group;
+                this.groupId = model.groupId;
+                this.name = model.name;
+                this.userId = model.userId;
+            } 
+
             /**
-             * The time when the user was created.
+             * <p>The time when the user was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-28T09:05:26.000Z</p>
              */
             public Builder addTime(String addTime) {
                 this.addTime = addTime;
@@ -254,7 +314,10 @@ public class ListUsersAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The user groups.
+             * <p>The user groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wheel</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -262,7 +325,10 @@ public class ListUsersAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The user group ID.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -270,7 +336,10 @@ public class ListUsersAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * <p>The username of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuser</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -278,7 +347,10 @@ public class ListUsersAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -292,9 +364,15 @@ public class ListUsersAsyncResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUsersAsyncResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersAsyncResponseBody</p>
+     */
     public static class Users extends TeaModel {
-        @NameInMap("UserInfo")
-        private java.util.List < UserInfo> userInfo;
+        @com.aliyun.core.annotation.NameInMap("UserInfo")
+        private java.util.List<UserInfo> userInfo;
 
         private Users(Builder builder) {
             this.userInfo = builder.userInfo;
@@ -311,17 +389,24 @@ public class ListUsersAsyncResponseBody extends TeaModel {
         /**
          * @return userInfo
          */
-        public java.util.List < UserInfo> getUserInfo() {
+        public java.util.List<UserInfo> getUserInfo() {
             return this.userInfo;
         }
 
         public static final class Builder {
-            private java.util.List < UserInfo> userInfo; 
+            private java.util.List<UserInfo> userInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.userInfo = model.userInfo;
+            } 
 
             /**
              * UserInfo.
              */
-            public Builder userInfo(java.util.List < UserInfo> userInfo) {
+            public Builder userInfo(java.util.List<UserInfo> userInfo) {
                 this.userInfo = userInfo;
                 return this;
             }

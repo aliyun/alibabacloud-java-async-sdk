@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyNodesResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyNodesResponseBody</p>
  */
 public class ApplyNodesResponseBody extends TeaModel {
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private String detail;
 
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private InstanceIds instanceIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SatisfiedAmount")
+    @com.aliyun.core.annotation.NameInMap("SatisfiedAmount")
     private Integer satisfiedAmount;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private ApplyNodesResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ApplyNodesResponseBody extends TeaModel {
 
     public static ApplyNodesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class ApplyNodesResponseBody extends TeaModel {
         private Integer satisfiedAmount; 
         private String taskId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ApplyNodesResponseBody model) {
+            this.detail = model.detail;
+            this.instanceIds = model.instanceIds;
+            this.requestId = model.requestId;
+            this.satisfiedAmount = model.satisfiedAmount;
+            this.taskId = model.taskId;
+        } 
+
         /**
-         * The detailed result of the request.
+         * <p>The detailed result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resources Application is satisfied. Creating...</p>
          */
         public Builder detail(String detail) {
             this.detail = detail;
@@ -94,7 +117,10 @@ public class ApplyNodesResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceIds.
+         * <p>The instance IDs.</p>
+         * <blockquote>
+         * <p> AddNodes is an asynchronous API operation. If a request succeeds, a response is immediately generated before ECS instances are created. Therefore, the value of this parameter is null. You can call the <a href="https://help.aliyun.com/document_detail/87161.html">ListNodes</a> operation to query the IDs of the ECS instances.</p>
+         * </blockquote>
          */
         public Builder instanceIds(InstanceIds instanceIds) {
             this.instanceIds = instanceIds;
@@ -102,7 +128,10 @@ public class ApplyNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B745C159-3155-4B94-95D0-4B73D4D2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +139,10 @@ public class ApplyNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the compute nodes that are created.
+         * <p>The number of the compute nodes that are created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder satisfiedAmount(Integer satisfiedAmount) {
             this.satisfiedAmount = satisfiedAmount;
@@ -118,7 +150,10 @@ public class ApplyNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B745C159-3155-4B94-95D0-4B73D4D2****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -131,9 +166,15 @@ public class ApplyNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyNodesResponseBody</p>
+     */
     public static class InstanceIds extends TeaModel {
-        @NameInMap("InstanceId")
-        private java.util.List < String > instanceId;
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private java.util.List<String> instanceId;
 
         private InstanceIds(Builder builder) {
             this.instanceId = builder.instanceId;
@@ -150,17 +191,24 @@ public class ApplyNodesResponseBody extends TeaModel {
         /**
          * @return instanceId
          */
-        public java.util.List < String > getInstanceId() {
+        public java.util.List<String> getInstanceId() {
             return this.instanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > instanceId; 
+            private java.util.List<String> instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceIds model) {
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * InstanceId.
              */
-            public Builder instanceId(java.util.List < String > instanceId) {
+            public Builder instanceId(java.util.List<String> instanceId) {
                 this.instanceId = instanceId;
                 return this;
             }

@@ -1,101 +1,106 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJobTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateJobTemplateRequest</p>
  */
 public class CreateJobTemplateRequest extends Request {
-    @Query
-    @NameInMap("ArrayRequest")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArrayRequest")
     private String arrayRequest;
 
-    @Query
-    @NameInMap("ClockTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClockTime")
     private String clockTime;
 
-    @Query
-    @NameInMap("CommandLine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandLine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commandLine;
 
-    @Query
-    @NameInMap("Gpu")
-    @Validation(maximum = 20000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Gpu")
+    @com.aliyun.core.annotation.Validation(maximum = 20000, minimum = 1)
     private Integer gpu;
 
-    @Query
-    @NameInMap("InputFileUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputFileUrl")
     private String inputFileUrl;
 
-    @Query
-    @NameInMap("Mem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mem")
     private String mem;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Node")
-    @Validation(maximum = 5000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Node")
+    @com.aliyun.core.annotation.Validation(maximum = 5000, minimum = 1)
     private Integer node;
 
-    @Query
-    @NameInMap("PackagePath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackagePath")
     private String packagePath;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
-    @Query
-    @NameInMap("Queue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Queue")
     private String queue;
 
-    @Query
-    @NameInMap("ReRunable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReRunable")
     private Boolean reRunable;
 
-    @Query
-    @NameInMap("RunasUser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RunasUser")
     private String runasUser;
 
-    @Query
-    @NameInMap("StderrRedirectPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StderrRedirectPath")
     private String stderrRedirectPath;
 
-    @Query
-    @NameInMap("StdoutRedirectPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StdoutRedirectPath")
     private String stdoutRedirectPath;
 
-    @Query
-    @NameInMap("Task")
-    @Validation(maximum = 20000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Task")
+    @com.aliyun.core.annotation.Validation(maximum = 20000, minimum = 1)
     private Integer task;
 
-    @Query
-    @NameInMap("Thread")
-    @Validation(maximum = 20000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Thread")
+    @com.aliyun.core.annotation.Validation(maximum = 20000, minimum = 1)
     private Integer thread;
 
-    @Query
-    @NameInMap("UnzipCmd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnzipCmd")
     private String unzipCmd;
 
-    @Query
-    @NameInMap("Variables")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Variables")
     private String variables;
 
-    @Query
-    @NameInMap("WithUnzipCmd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithUnzipCmd")
     private Boolean withUnzipCmd;
 
     private CreateJobTemplateRequest(Builder builder) {
@@ -130,7 +135,7 @@ public class CreateJobTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -326,10 +331,11 @@ public class CreateJobTemplateRequest extends Request {
         } 
 
         /**
-         * The job array.
-         * <p>
+         * <p>The job array.</p>
+         * <p>Format: X-Y:Z. X is the minimum index value. Y is the maximum index value. Z is the step size. For example, 2-7:2 indicates that three jobs need to be run and their index values are 2, 4, and 6.</p>
          * 
-         * Format: X-Y:Z. X is the minimum index value. Y is the maximum index value. Z is the step size. For example, 2-7:2 indicates that three jobs need to be run and their index values are 2, 4, and 6.
+         * <strong>example:</strong>
+         * <p>1-10:2</p>
          */
         public Builder arrayRequest(String arrayRequest) {
             this.putQueryParameter("ArrayRequest", arrayRequest);
@@ -338,14 +344,16 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The maximum running time of the job. Valid formats:
-         * <p>
+         * <p>The maximum running time of the job. Valid formats:</p>
+         * <ul>
+         * <li>hh:mm:ss</li>
+         * <li>mm:ss</li>
+         * <li>ss</li>
+         * </ul>
+         * <p>We recommend that you use the hh:mm:ss format. If the maximum running time is 12 hours, set the value to 12:00:00.</p>
          * 
-         * *   hh:mm:ss
-         * *   mm:ss
-         * *   ss
-         * 
-         * We recommend that you use the hh:mm:ss format. If the maximum running time is 12 hours, set the value to 12:00:00.
+         * <strong>example:</strong>
+         * <p>12:00:00</p>
          */
         public Builder clockTime(String clockTime) {
             this.putQueryParameter("ClockTime", clockTime);
@@ -354,7 +362,11 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The command that is used to run the job.
+         * <p>The command that is used to run the job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>./LammpsTest/lammps.pbs</p>
          */
         public Builder commandLine(String commandLine) {
             this.putQueryParameter("CommandLine", commandLine);
@@ -363,10 +375,11 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The maximum GPU usage required by a single compute node. Valid values: 1 to 8.
-         * <p>
+         * <p>The maximum GPU usage required by a single compute node. Valid values: 1 to 8.</p>
+         * <p>The parameter takes effect only when the cluster uses PBS and a compute node is a GPU-accelerated instance.</p>
          * 
-         * The parameter takes effect only when the cluster uses PBS and a compute node is a GPU-accelerated instance.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder gpu(Integer gpu) {
             this.putQueryParameter("Gpu", gpu);
@@ -375,7 +388,10 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The URL of the job files that are uploaded to an Object Storage Service (OSS) bucket.
+         * <p>The URL of the job files that are uploaded to an Object Storage Service (OSS) bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test.oss-cn-beijing.aliyuncs.com/test.py">https://test.oss-cn-beijing.aliyuncs.com/test.py</a></p>
          */
         public Builder inputFileUrl(String inputFileUrl) {
             this.putQueryParameter("InputFileUrl", inputFileUrl);
@@ -384,7 +400,10 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The maximum memory usage required by a single compute node. Unit: GB, MB, or KB. The unit is case-insensitive.
+         * <p>The maximum memory usage required by a single compute node. Unit: GB, MB, or KB. The unit is case-insensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1GB</p>
          */
         public Builder mem(String mem) {
             this.putQueryParameter("Mem", mem);
@@ -393,7 +412,11 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The name of the job template. The name must be 2 to 64 characters in length. It must start with a letter and can contain letters, digits, hyphens (-), and underscores (\_).
+         * <p>The name of the job template. The name must be 2 to 64 characters in length. It must start with a letter and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jobtemplate1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -402,10 +425,13 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The number of compute nodes. Valid values: 1 to 500.
-         * <p>
+         * <p>The number of compute nodes. Valid values: 1 to 500.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the Task, Thread, Mem, or GPU parameters do not take effect.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, the Task, Thread, Mem, or GPU parameters do not take effect.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder node(Integer node) {
             this.putQueryParameter("Node", node);
@@ -414,7 +440,10 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The path that is used to run the job.
+         * <p>The path that is used to run the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>./jobfolder</p>
          */
         public Builder packagePath(String packagePath) {
             this.putQueryParameter("PackagePath", packagePath);
@@ -423,10 +452,11 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.
-         * <p>
+         * <p>The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.</p>
+         * <p>Default value: 0.</p>
          * 
-         * Default value: 0.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -435,10 +465,11 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The name of the queue in which the job is run.
-         * <p>
+         * <p>The name of the queue in which the job is run.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/92176.html">ListQueues</a> operation to query the name of the queue.</p>
          * 
-         * You can call the [ListQueues](~~92176~~) operation to query the name of the queue.
+         * <strong>example:</strong>
+         * <p>workq</p>
          */
         public Builder queue(String queue) {
             this.putQueryParameter("Queue", queue);
@@ -447,11 +478,14 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically rerun the job after the job fails. Valid value:
-         * <p>
+         * <p>Specifies whether to automatically rerun the job after the job fails. Valid value:</p>
+         * <ul>
+         * <li>true: reruns the job.</li>
+         * <li>false: does not rerun the job.</li>
+         * </ul>
          * 
-         * *   true: reruns the job.
-         * *   false: does not rerun the job.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder reRunable(Boolean reRunable) {
             this.putQueryParameter("ReRunable", reRunable);
@@ -460,10 +494,11 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The name of the user that runs the job.
-         * <p>
+         * <p>The name of the user that runs the job.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/188572.html">ListUsers</a> operation to query the users of the cluster.</p>
          * 
-         * You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder runasUser(String runasUser) {
             this.putQueryParameter("RunasUser", runasUser);
@@ -472,7 +507,10 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The output file path of stderr.
+         * <p>The output file path of stderr.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>./LammpsTest</p>
          */
         public Builder stderrRedirectPath(String stderrRedirectPath) {
             this.putQueryParameter("StderrRedirectPath", stderrRedirectPath);
@@ -481,7 +519,10 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The output file path of stdout.
+         * <p>The output file path of stdout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>./LammpsTest</p>
          */
         public Builder stdoutRedirectPath(String stdoutRedirectPath) {
             this.putQueryParameter("StdoutRedirectPath", stdoutRedirectPath);
@@ -490,7 +531,10 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The number of tasks required by a single compute node. Valid values: 1 to 1000.
+         * <p>The number of tasks required by a single compute node. Valid values: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder task(Integer task) {
             this.putQueryParameter("Task", task);
@@ -499,7 +543,10 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The number of threads required by a single compute node. Valid values: 1 to 1000.
+         * <p>The number of threads required by a single compute node. Valid values: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder thread(Integer thread) {
             this.putQueryParameter("Thread", thread);
@@ -508,12 +555,15 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The command that is used to decompress the job files downloaded from an OSS bucket. The parameter takes effect only when WithUnzipCmd is set to true. Valid values:
-         * <p>
+         * <p>The command that is used to decompress the job files downloaded from an OSS bucket. The parameter takes effect only when WithUnzipCmd is set to true. Valid values:</p>
+         * <ul>
+         * <li>tar xzf: decompresses GZIP files.</li>
+         * <li>tar xf: decompresses TAR files.</li>
+         * <li>unzip: decompresses ZIP files.</li>
+         * </ul>
          * 
-         * *   tar xzf: decompresses GZIP files.
-         * *   tar xf: decompresses TAR files.
-         * *   unzip: decompresses ZIP files.
+         * <strong>example:</strong>
+         * <p>tar xzf</p>
          */
         public Builder unzipCmd(String unzipCmd) {
             this.putQueryParameter("UnzipCmd", unzipCmd);
@@ -522,7 +572,10 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * The runtime variables passed to the job. They can be accessed by using environment variables in the executable file.
+         * <p>The runtime variables passed to the job. They can be accessed by using environment variables in the executable file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{Name:,Value:},{Name:,Value:}]</p>
          */
         public Builder variables(String variables) {
             this.putQueryParameter("Variables", variables);
@@ -531,11 +584,14 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * Specifies whether to decompress the job files downloaded from an OSS bucket. Valid values:
-         * <p>
+         * <p>Specifies whether to decompress the job files downloaded from an OSS bucket. Valid values:</p>
+         * <ul>
+         * <li>true: decompresses the job file.</li>
+         * <li>false: does not decompress the job file.</li>
+         * </ul>
          * 
-         * *   true: decompresses the job file.
-         * *   false: does not decompress the job file.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withUnzipCmd(Boolean withUnzipCmd) {
             this.putQueryParameter("WithUnzipCmd", withUnzipCmd);

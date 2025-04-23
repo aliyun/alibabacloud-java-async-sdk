@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSoftwaresResponseBody} extends {@link TeaModel}
  *
  * <p>ListSoftwaresResponseBody</p>
  */
 public class ListSoftwaresResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Softwares")
+    @com.aliyun.core.annotation.NameInMap("Softwares")
     private Softwares softwares;
 
     private ListSoftwaresResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class ListSoftwaresResponseBody extends TeaModel {
 
     public static ListSoftwaresResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class ListSoftwaresResponseBody extends TeaModel {
         private String requestId; 
         private Softwares softwares; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListSoftwaresResponseBody model) {
+            this.requestId = model.requestId;
+            this.softwares = model.softwares;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
         }
 
         /**
-         * The list of the information about the software installed in the cluster.
+         * <p>The list of the information about the software installed in the cluster.</p>
          */
         public Builder softwares(Softwares softwares) {
             this.softwares = softwares;
@@ -71,17 +91,23 @@ public class ListSoftwaresResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSoftwaresResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSoftwaresResponseBody</p>
+     */
     public static class ApplicationInfo extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private ApplicationInfo(Builder builder) {
@@ -133,8 +159,21 @@ public class ListSoftwaresResponseBody extends TeaModel {
             private String tag; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApplicationInfo model) {
+                this.name = model.name;
+                this.required = model.required;
+                this.tag = model.tag;
+                this.version = model.version;
+            } 
+
             /**
-             * The name of the software.
+             * <p>The name of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cudnnt</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -142,11 +181,14 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the software is required. Valid values:
-             * <p>
+             * <p>Indicates whether the software is required. Valid values:</p>
+             * <ul>
+             * <li>false: optional</li>
+             * <li>true: required</li>
+             * </ul>
              * 
-             * *   false: optional
-             * *   true: required
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -154,7 +196,10 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the software.
+             * <p>The tag of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CUDNN_9.0</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -162,7 +207,10 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the software.
+             * <p>The version of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -176,9 +224,15 @@ public class ListSoftwaresResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSoftwaresResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSoftwaresResponseBody</p>
+     */
     public static class Applications extends TeaModel {
-        @NameInMap("ApplicationInfo")
-        private java.util.List < ApplicationInfo> applicationInfo;
+        @com.aliyun.core.annotation.NameInMap("ApplicationInfo")
+        private java.util.List<ApplicationInfo> applicationInfo;
 
         private Applications(Builder builder) {
             this.applicationInfo = builder.applicationInfo;
@@ -195,17 +249,24 @@ public class ListSoftwaresResponseBody extends TeaModel {
         /**
          * @return applicationInfo
          */
-        public java.util.List < ApplicationInfo> getApplicationInfo() {
+        public java.util.List<ApplicationInfo> getApplicationInfo() {
             return this.applicationInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ApplicationInfo> applicationInfo; 
+            private java.util.List<ApplicationInfo> applicationInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.applicationInfo = model.applicationInfo;
+            } 
 
             /**
              * ApplicationInfo.
              */
-            public Builder applicationInfo(java.util.List < ApplicationInfo> applicationInfo) {
+            public Builder applicationInfo(java.util.List<ApplicationInfo> applicationInfo) {
                 this.applicationInfo = applicationInfo;
                 return this;
             }
@@ -217,26 +278,32 @@ public class ListSoftwaresResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSoftwaresResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSoftwaresResponseBody</p>
+     */
     public static class SoftwareInfo extends TeaModel {
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
-        @NameInMap("AccountVersion")
+        @com.aliyun.core.annotation.NameInMap("AccountVersion")
         private String accountVersion;
 
-        @NameInMap("Applications")
+        @com.aliyun.core.annotation.NameInMap("Applications")
         private Applications applications;
 
-        @NameInMap("EhpcVersion")
+        @com.aliyun.core.annotation.NameInMap("EhpcVersion")
         private String ehpcVersion;
 
-        @NameInMap("OsTag")
+        @com.aliyun.core.annotation.NameInMap("OsTag")
         private String osTag;
 
-        @NameInMap("SchedulerType")
+        @com.aliyun.core.annotation.NameInMap("SchedulerType")
         private String schedulerType;
 
-        @NameInMap("SchedulerVersion")
+        @com.aliyun.core.annotation.NameInMap("SchedulerVersion")
         private String schedulerVersion;
 
         private SoftwareInfo(Builder builder) {
@@ -315,12 +382,28 @@ public class ListSoftwaresResponseBody extends TeaModel {
             private String schedulerType; 
             private String schedulerVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(SoftwareInfo model) {
+                this.accountType = model.accountType;
+                this.accountVersion = model.accountVersion;
+                this.applications = model.applications;
+                this.ehpcVersion = model.ehpcVersion;
+                this.osTag = model.osTag;
+                this.schedulerType = model.schedulerType;
+                this.schedulerVersion = model.schedulerVersion;
+            } 
+
             /**
-             * The service type of the domain account. Valid values:
-             * <p>
+             * <p>The service type of the domain account. Valid values:</p>
+             * <ul>
+             * <li>nis</li>
+             * <li>ldap</li>
+             * </ul>
              * 
-             * *   nis
-             * *   ldap
+             * <strong>example:</strong>
+             * <p>nis</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -328,7 +411,10 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the domain account service.
+             * <p>The version of the domain account service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.31</p>
              */
             public Builder accountVersion(String accountVersion) {
                 this.accountVersion = accountVersion;
@@ -336,7 +422,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The list of the software in the cluster.
+             * <p>The list of the software in the cluster.</p>
              */
             public Builder applications(Applications applications) {
                 this.applications = applications;
@@ -344,7 +430,10 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the E-HPC client.
+             * <p>The version of the E-HPC client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder ehpcVersion(String ehpcVersion) {
                 this.ehpcVersion = ehpcVersion;
@@ -352,7 +441,10 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The image tag of the cluster.
+             * <p>The image tag of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS_7.2_64</p>
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -360,19 +452,22 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scheduler. Valid values:
-             * <p>
+             * <p>The type of the scheduler. Valid values:</p>
+             * <ul>
+             * <li>pbs</li>
+             * <li>pbs19</li>
+             * <li>slurm</li>
+             * <li>slurm19</li>
+             * <li>slurm20</li>
+             * <li>opengridscheduler</li>
+             * <li>deadline</li>
+             * <li>gridengine</li>
+             * <li>cube</li>
+             * <li>custom</li>
+             * </ul>
              * 
-             * *   pbs
-             * *   pbs19
-             * *   slurm
-             * *   slurm19
-             * *   slurm20
-             * *   opengridscheduler
-             * *   deadline
-             * *   gridengine
-             * *   cube
-             * *   custom
+             * <strong>example:</strong>
+             * <p>pbs</p>
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -380,7 +475,10 @@ public class ListSoftwaresResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the scheduler.
+             * <p>The version of the scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18.1.1</p>
              */
             public Builder schedulerVersion(String schedulerVersion) {
                 this.schedulerVersion = schedulerVersion;
@@ -394,9 +492,15 @@ public class ListSoftwaresResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSoftwaresResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSoftwaresResponseBody</p>
+     */
     public static class Softwares extends TeaModel {
-        @NameInMap("SoftwareInfo")
-        private java.util.List < SoftwareInfo> softwareInfo;
+        @com.aliyun.core.annotation.NameInMap("SoftwareInfo")
+        private java.util.List<SoftwareInfo> softwareInfo;
 
         private Softwares(Builder builder) {
             this.softwareInfo = builder.softwareInfo;
@@ -413,17 +517,24 @@ public class ListSoftwaresResponseBody extends TeaModel {
         /**
          * @return softwareInfo
          */
-        public java.util.List < SoftwareInfo> getSoftwareInfo() {
+        public java.util.List<SoftwareInfo> getSoftwareInfo() {
             return this.softwareInfo;
         }
 
         public static final class Builder {
-            private java.util.List < SoftwareInfo> softwareInfo; 
+            private java.util.List<SoftwareInfo> softwareInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Softwares model) {
+                this.softwareInfo = model.softwareInfo;
+            } 
 
             /**
              * SoftwareInfo.
              */
-            public Builder softwareInfo(java.util.List < SoftwareInfo> softwareInfo) {
+            public Builder softwareInfo(java.util.List<SoftwareInfo> softwareInfo) {
                 this.softwareInfo = softwareInfo;
                 return this;
             }

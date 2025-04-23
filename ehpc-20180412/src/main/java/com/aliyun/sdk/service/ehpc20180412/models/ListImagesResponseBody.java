@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListImagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListImagesResponseBody</p>
  */
 public class ListImagesResponseBody extends TeaModel {
-    @NameInMap("OsTags")
+    @com.aliyun.core.annotation.NameInMap("OsTags")
     private OsTags osTags;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListImagesResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class ListImagesResponseBody extends TeaModel {
 
     public static ListImagesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class ListImagesResponseBody extends TeaModel {
         private OsTags osTags; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListImagesResponseBody model) {
+            this.osTags = model.osTags;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The list of images that are supported by E-HPC.
+         * <p>The list of images that are supported by E-HPC.</p>
          */
         public Builder osTags(OsTags osTags) {
             this.osTags = osTags;
@@ -58,7 +75,10 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,29 +91,35 @@ public class ListImagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImagesResponseBody</p>
+     */
     public static class OsInfo extends TeaModel {
-        @NameInMap("Architecture")
+        @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
 
-        @NameInMap("BaseOsTag")
+        @com.aliyun.core.annotation.NameInMap("BaseOsTag")
         private String baseOsTag;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("OSName")
+        @com.aliyun.core.annotation.NameInMap("OSName")
         private String OSName;
 
-        @NameInMap("OSNameEn")
+        @com.aliyun.core.annotation.NameInMap("OSNameEn")
         private String OSNameEn;
 
-        @NameInMap("OsTag")
+        @com.aliyun.core.annotation.NameInMap("OsTag")
         private String osTag;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private OsInfo(Builder builder) {
@@ -181,12 +207,29 @@ public class ListImagesResponseBody extends TeaModel {
             private String platform; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(OsInfo model) {
+                this.architecture = model.architecture;
+                this.baseOsTag = model.baseOsTag;
+                this.imageId = model.imageId;
+                this.OSName = model.OSName;
+                this.OSNameEn = model.OSNameEn;
+                this.osTag = model.osTag;
+                this.platform = model.platform;
+                this.version = model.version;
+            } 
+
             /**
-             * The architecture of the operating system. Valid values:
-             * <p>
+             * <p>The architecture of the operating system. Valid values:</p>
+             * <ul>
+             * <li>i386</li>
+             * <li>x86_64</li>
+             * </ul>
              * 
-             * *   i386
-             * *   x86\_64
+             * <strong>example:</strong>
+             * <p>i386</p>
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -194,7 +237,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The image tag of the operating system. The tag is used only for management nodes.
+             * <p>The image tag of the operating system. The tag is used only for management nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS_7.2_64</p>
              */
             public Builder baseOsTag(String baseOsTag) {
                 this.baseOsTag = baseOsTag;
@@ -202,7 +248,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-bp1h8aoe73p71iow****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -210,7 +259,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS_7.2_64</p>
              */
             public Builder OSName(String OSName) {
                 this.OSName = OSName;
@@ -218,7 +270,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image in English.
+             * <p>The name of the image in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS_7.2_64</p>
              */
             public Builder OSNameEn(String OSNameEn) {
                 this.OSNameEn = OSNameEn;
@@ -226,7 +281,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is added to the image.
+             * <p>The tag that is added to the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS_7.2_64</p>
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -234,11 +292,14 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system. Valid values:
-             * <p>
+             * <p>The operating system. Valid values:</p>
+             * <ul>
+             * <li>CentOS</li>
+             * <li>windows</li>
+             * </ul>
              * 
-             * *   CentOS
-             * *   windows
+             * <strong>example:</strong>
+             * <p>CentOS</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -246,7 +307,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the operating system.
+             * <p>The version of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.2</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -260,9 +324,15 @@ public class ListImagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImagesResponseBody</p>
+     */
     public static class OsTags extends TeaModel {
-        @NameInMap("OsInfo")
-        private java.util.List < OsInfo> osInfo;
+        @com.aliyun.core.annotation.NameInMap("OsInfo")
+        private java.util.List<OsInfo> osInfo;
 
         private OsTags(Builder builder) {
             this.osInfo = builder.osInfo;
@@ -279,17 +349,24 @@ public class ListImagesResponseBody extends TeaModel {
         /**
          * @return osInfo
          */
-        public java.util.List < OsInfo> getOsInfo() {
+        public java.util.List<OsInfo> getOsInfo() {
             return this.osInfo;
         }
 
         public static final class Builder {
-            private java.util.List < OsInfo> osInfo; 
+            private java.util.List<OsInfo> osInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(OsTags model) {
+                this.osInfo = model.osInfo;
+            } 
 
             /**
              * OsInfo.
              */
-            public Builder osInfo(java.util.List < OsInfo> osInfo) {
+            public Builder osInfo(java.util.List<OsInfo> osInfo) {
                 this.osInfo = osInfo;
                 return this;
             }

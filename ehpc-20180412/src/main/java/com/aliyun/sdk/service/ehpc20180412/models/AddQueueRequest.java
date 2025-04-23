@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddQueueRequest} extends {@link RequestModel}
  *
  * <p>AddQueueRequest</p>
  */
 public class AddQueueRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("DeploymentSetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
     private String deploymentSetId;
 
-    @Query
-    @NameInMap("NetworkInterfaceTrafficMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
     private String networkInterfaceTrafficMode;
 
-    @Query
-    @NameInMap("QueueName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueueName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queueName;
 
-    @Query
-    @NameInMap("UseESS")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseESS")
     private Boolean useESS;
 
     private AddQueueRequest(Builder builder) {
@@ -51,7 +56,7 @@ public class AddQueueRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,10 +117,12 @@ public class AddQueueRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -124,7 +131,10 @@ public class AddQueueRequest extends Request {
         }
 
         /**
-         * DeploymentSetId.
+         * <p>The deployment set ID. You can obtain the deployment set ID by calling the <a href="https://help.aliyun.com/document_detail/91313.html">DescribeDeploymentSets</a> operation. Only the deployment sets that use low latency policy are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-bp1frxuzdg87zh4pzq****</p>
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);
@@ -133,7 +143,14 @@ public class AddQueueRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceTrafficMode.
+         * <p>The communication mode of the elastic network interface (ENI). Valid values:</p>
+         * <ul>
+         * <li>Standard: uses the TCP communication mode.</li>
+         * <li>HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
             this.putQueryParameter("NetworkInterfaceTrafficMode", networkInterfaceTrafficMode);
@@ -142,7 +159,11 @@ public class AddQueueRequest extends Request {
         }
 
         /**
-         * The name of the queue. The name must be 1 to 63 characters in length and start with a letter. It can contain letters, digits, and underscores (\_).
+         * <p>The name of the queue. The name must be 1 to 63 characters in length and start with a letter. It can contain letters, digits, and underscores (_).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
@@ -151,7 +172,10 @@ public class AddQueueRequest extends Request {
         }
 
         /**
-         * UseESS.
+         * <p>Specifies whether to use scaling groups of Auto Scaling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useESS(Boolean useESS) {
             this.putQueryParameter("UseESS", useESS);

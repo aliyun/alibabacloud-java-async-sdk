@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopNodesResponseBody} extends {@link TeaModel}
  *
  * <p>StopNodesResponseBody</p>
  */
 public class StopNodesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private StopNodesResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class StopNodesResponseBody extends TeaModel {
 
     public static StopNodesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class StopNodesResponseBody extends TeaModel {
         private String requestId; 
         private String taskId; 
 
+        private Builder() {
+        } 
+
+        private Builder(StopNodesResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,10 @@ public class StopNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

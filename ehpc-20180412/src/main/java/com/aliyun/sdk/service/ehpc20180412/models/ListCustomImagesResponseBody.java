@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomImagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCustomImagesResponseBody</p>
  */
 public class ListCustomImagesResponseBody extends TeaModel {
-    @NameInMap("Images")
+    @com.aliyun.core.annotation.NameInMap("Images")
     private Images images;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCustomImagesResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
 
     public static ListCustomImagesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class ListCustomImagesResponseBody extends TeaModel {
         private Images images; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListCustomImagesResponseBody model) {
+            this.images = model.images;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The list of custom images and shared images that are supported by the E-HPC.
+         * <p>The list of community images, including custom images and shared images.</p>
          */
         public Builder images(Images images) {
             this.images = images;
@@ -58,7 +75,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +91,23 @@ public class ListCustomImagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomImagesResponseBody</p>
+     */
     public static class BaseOsTag extends TeaModel {
-        @NameInMap("Architecture")
+        @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
 
-        @NameInMap("OsTag")
+        @com.aliyun.core.annotation.NameInMap("OsTag")
         private String osTag;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private BaseOsTag(Builder builder) {
@@ -133,12 +159,25 @@ public class ListCustomImagesResponseBody extends TeaModel {
             private String platform; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(BaseOsTag model) {
+                this.architecture = model.architecture;
+                this.osTag = model.osTag;
+                this.platform = model.platform;
+                this.version = model.version;
+            } 
+
             /**
-             * The architecture of the operating system. Valid values:
-             * <p>
+             * <p>The architecture of the operating system. Valid values:</p>
+             * <ul>
+             * <li>i386</li>
+             * <li>x86_64</li>
+             * </ul>
              * 
-             * *   i386
-             * *   x86\_64
+             * <strong>example:</strong>
+             * <p>i386</p>
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -146,7 +185,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The image tag of the operating system.
+             * <p>The tags of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS_7.2_64</p>
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -154,21 +196,14 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The release version of the operating system. Valid values:
-             * <p>
+             * <p>The OS. Valid values:</p>
+             * <ul>
+             * <li>CentOS</li>
+             * <li>windows</li>
+             * </ul>
              * 
-             * *   CentOS
-             * *   Ubuntu
-             * *   SUSE
-             * *   OpenSUSE
-             * *   Debian
-             * *   CoreOS
-             * *   Aliyun
-             * *   Windows Server 2003
-             * *   Windows Server 2008
-             * *   Windows Server 2012
-             * *   Others Linux
-             * *   Customized Linux
+             * <strong>example:</strong>
+             * <p>CentOS</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -176,7 +211,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the operating system.
+             * <p>The version of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.2</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -190,20 +228,26 @@ public class ListCustomImagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomImagesResponseBody</p>
+     */
     public static class OsTag extends TeaModel {
-        @NameInMap("Architecture")
+        @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
 
-        @NameInMap("BaseOsTag")
+        @com.aliyun.core.annotation.NameInMap("BaseOsTag")
         private String baseOsTag;
 
-        @NameInMap("OsTag")
+        @com.aliyun.core.annotation.NameInMap("OsTag")
         private String osTag;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private OsTag(Builder builder) {
@@ -264,12 +308,26 @@ public class ListCustomImagesResponseBody extends TeaModel {
             private String platform; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(OsTag model) {
+                this.architecture = model.architecture;
+                this.baseOsTag = model.baseOsTag;
+                this.osTag = model.osTag;
+                this.platform = model.platform;
+                this.version = model.version;
+            } 
+
             /**
-             * The architecture of the operating system. Valid values:
-             * <p>
+             * <p>The architecture of the operating system. Valid values:</p>
+             * <ul>
+             * <li>i386</li>
+             * <li>x86_64</li>
+             * </ul>
              * 
-             * *   i386
-             * *   x86\_64
+             * <strong>example:</strong>
+             * <p>x86_64</p>
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -277,7 +335,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The image tag of the base operating system.
+             * <p>The image tag of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS_7.2_64</p>
              */
             public Builder baseOsTag(String baseOsTag) {
                 this.baseOsTag = baseOsTag;
@@ -285,7 +346,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The image tag of the operating system.
+             * <p>The tag of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS_7.2_64</p>
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -293,7 +357,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The platform of the operating system.
+             * <p>The OS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -301,7 +368,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the operating system.
+             * <p>The version of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.2</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -315,44 +385,50 @@ public class ListCustomImagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomImagesResponseBody</p>
+     */
     public static class ImageInfo extends TeaModel {
-        @NameInMap("BaseOsTag")
+        @com.aliyun.core.annotation.NameInMap("BaseOsTag")
         private BaseOsTag baseOsTag;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImageOwnerAlias")
+        @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
         private String imageOwnerAlias;
 
-        @NameInMap("OsTag")
+        @com.aliyun.core.annotation.NameInMap("OsTag")
         private OsTag osTag;
 
-        @NameInMap("PostInstallScript")
+        @com.aliyun.core.annotation.NameInMap("PostInstallScript")
         private String postInstallScript;
 
-        @NameInMap("PricingCycle")
+        @com.aliyun.core.annotation.NameInMap("PricingCycle")
         private String pricingCycle;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("SkuCode")
+        @com.aliyun.core.annotation.NameInMap("SkuCode")
         private String skuCode;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         private ImageInfo(Builder builder) {
@@ -485,8 +561,27 @@ public class ListCustomImagesResponseBody extends TeaModel {
             private String status; 
             private String uid; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageInfo model) {
+                this.baseOsTag = model.baseOsTag;
+                this.description = model.description;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageOwnerAlias = model.imageOwnerAlias;
+                this.osTag = model.osTag;
+                this.postInstallScript = model.postInstallScript;
+                this.pricingCycle = model.pricingCycle;
+                this.productCode = model.productCode;
+                this.size = model.size;
+                this.skuCode = model.skuCode;
+                this.status = model.status;
+                this.uid = model.uid;
+            } 
+
             /**
-             * The image tag of the base operating system.
+             * <p>The image tag of the operating system.</p>
              */
             public Builder baseOsTag(BaseOsTag baseOsTag) {
                 this.baseOsTag = baseOsTag;
@@ -494,7 +589,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the image.
+             * <p>The description of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExampleDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -502,7 +600,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-bp181x855551ww5yq****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -510,7 +611,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHESS5V5.0.27</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -518,11 +622,14 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of image. Valid values:
-             * <p>
+             * <p>The type of the image. Valid values:</p>
+             * <ul>
+             * <li>self: custom image</li>
+             * <li>others: shared image</li>
+             * </ul>
              * 
-             * *   self: custom image
-             * *   others: shared image
+             * <strong>example:</strong>
+             * <p>self</p>
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -530,7 +637,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * An array of system images that are supported by E-HPC.
+             * <p>An array of system images that are supported by E-HPC.</p>
              */
             public Builder osTag(OsTag osTag) {
                 this.osTag = osTag;
@@ -538,7 +645,12 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The script that is run after the image is installed.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>example.sh</p>
              */
             public Builder postInstallScript(String postInstallScript) {
                 this.postInstallScript = postInstallScript;
@@ -546,12 +658,12 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing unit of the image. Valid values:
-             * <p>
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
              * 
-             * *   Hour
-             * *   Month
-             * *   Year
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder pricingCycle(String pricingCycle) {
                 this.pricingCycle = pricingCycle;
@@ -559,7 +671,12 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The product code on Alibaba Cloud Marketplace.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cmjj028279</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -567,7 +684,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the image. Unit: GiB
+             * <p>The size of the image. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -575,12 +695,12 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The stock keeping unit (SKU) of the image. Valid values:
-             * <p>
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
              * 
-             * \-ECS: pay-as-you-go
-             * 
-             * \-package: subscription
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder skuCode(String skuCode) {
                 this.skuCode = skuCode;
@@ -588,13 +708,12 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the image. Valid values:
-             * <p>
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
              * 
-             * *   UnAvailable: The image is unavailable.
-             * *   Available: The image is available.
-             * *   Creating: The image is being created.
-             * *   CreateFailed: The image has failed to be created.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -602,7 +721,12 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The owner of the image.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>127****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -616,9 +740,15 @@ public class ListCustomImagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomImagesResponseBody</p>
+     */
     public static class Images extends TeaModel {
-        @NameInMap("ImageInfo")
-        private java.util.List < ImageInfo> imageInfo;
+        @com.aliyun.core.annotation.NameInMap("ImageInfo")
+        private java.util.List<ImageInfo> imageInfo;
 
         private Images(Builder builder) {
             this.imageInfo = builder.imageInfo;
@@ -635,17 +765,24 @@ public class ListCustomImagesResponseBody extends TeaModel {
         /**
          * @return imageInfo
          */
-        public java.util.List < ImageInfo> getImageInfo() {
+        public java.util.List<ImageInfo> getImageInfo() {
             return this.imageInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ImageInfo> imageInfo; 
+            private java.util.List<ImageInfo> imageInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.imageInfo = model.imageInfo;
+            } 
 
             /**
              * ImageInfo.
              */
-            public Builder imageInfo(java.util.List < ImageInfo> imageInfo) {
+            public Builder imageInfo(java.util.List<ImageInfo> imageInfo) {
                 this.imageInfo = imageInfo;
                 return this;
             }

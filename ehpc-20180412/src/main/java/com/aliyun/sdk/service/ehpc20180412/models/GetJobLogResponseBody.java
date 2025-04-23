@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobLogResponseBody} extends {@link TeaModel}
  *
  * <p>GetJobLogResponseBody</p>
  */
 public class GetJobLogResponseBody extends TeaModel {
-    @NameInMap("ErrorLog")
+    @com.aliyun.core.annotation.NameInMap("ErrorLog")
     private String errorLog;
 
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("OutputLog")
+    @com.aliyun.core.annotation.NameInMap("OutputLog")
     private String outputLog;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetJobLogResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class GetJobLogResponseBody extends TeaModel {
 
     public static GetJobLogResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class GetJobLogResponseBody extends TeaModel {
         private String outputLog; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetJobLogResponseBody model) {
+            this.errorLog = model.errorLog;
+            this.jobId = model.jobId;
+            this.outputLog = model.outputLog;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The content of the error logs. The content is encoded in Base64.
+         * <p>The content of the error logs. The content is encoded in Base64.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2xlZXAgMzA=</p>
          */
         public Builder errorLog(String errorLog) {
             this.errorLog = errorLog;
@@ -82,7 +104,10 @@ public class GetJobLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the job.
+         * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.scheduler****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -90,7 +115,10 @@ public class GetJobLogResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the output logs. The content is encoded in Base64.
+         * <p>The content of the output logs. The content is encoded in Base64.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2xlZXAgMzA=</p>
          */
         public Builder outputLog(String outputLog) {
             this.outputLog = outputLog;
@@ -98,7 +126,10 @@ public class GetJobLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B745C159-3155-4B94-95D0-4B73D4D2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

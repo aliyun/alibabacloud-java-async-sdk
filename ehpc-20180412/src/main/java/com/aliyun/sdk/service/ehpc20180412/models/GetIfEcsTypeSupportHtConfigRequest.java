@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIfEcsTypeSupportHtConfigRequest} extends {@link RequestModel}
  *
  * <p>GetIfEcsTypeSupportHtConfigRequest</p>
  */
 public class GetIfEcsTypeSupportHtConfigRequest extends Request {
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
     private GetIfEcsTypeSupportHtConfigRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class GetIfEcsTypeSupportHtConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class GetIfEcsTypeSupportHtConfigRequest extends Request {
         } 
 
         /**
-         * The instance type of the ECS instance.
+         * <p>The Elastic Compute Service (ECS) instance type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

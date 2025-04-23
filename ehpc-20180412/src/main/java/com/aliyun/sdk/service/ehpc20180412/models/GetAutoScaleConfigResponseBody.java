@@ -1,75 +1,80 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAutoScaleConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetAutoScaleConfigResponseBody</p>
  */
 public class GetAutoScaleConfigResponseBody extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("ClusterType")
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
     private String clusterType;
 
-    @NameInMap("ComputeEnableHt")
+    @com.aliyun.core.annotation.NameInMap("ComputeEnableHt")
     private Boolean computeEnableHt;
 
-    @NameInMap("DnsConfig")
+    @com.aliyun.core.annotation.NameInMap("DnsConfig")
     private String dnsConfig;
 
-    @NameInMap("EnableAutoGrow")
+    @com.aliyun.core.annotation.NameInMap("EnableAutoGrow")
     private Boolean enableAutoGrow;
 
-    @NameInMap("EnableAutoShrink")
+    @com.aliyun.core.annotation.NameInMap("EnableAutoShrink")
     private Boolean enableAutoShrink;
 
-    @NameInMap("ExcludeNodes")
+    @com.aliyun.core.annotation.NameInMap("ExcludeNodes")
     private String excludeNodes;
 
-    @NameInMap("ExtraNodesGrowRatio")
+    @com.aliyun.core.annotation.NameInMap("ExtraNodesGrowRatio")
     private Integer extraNodesGrowRatio;
 
-    @NameInMap("GrowIntervalInMinutes")
+    @com.aliyun.core.annotation.NameInMap("GrowIntervalInMinutes")
     private Integer growIntervalInMinutes;
 
-    @NameInMap("GrowRatio")
+    @com.aliyun.core.annotation.NameInMap("GrowRatio")
     private Integer growRatio;
 
-    @NameInMap("GrowTimeoutInMinutes")
+    @com.aliyun.core.annotation.NameInMap("GrowTimeoutInMinutes")
     private Integer growTimeoutInMinutes;
 
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @NameInMap("MaxNodesInCluster")
+    @com.aliyun.core.annotation.NameInMap("MaxNodesInCluster")
     private Integer maxNodesInCluster;
 
-    @NameInMap("Queues")
+    @com.aliyun.core.annotation.NameInMap("Queues")
     private Queues queues;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ShrinkIdleTimes")
+    @com.aliyun.core.annotation.NameInMap("ShrinkIdleTimes")
     private Integer shrinkIdleTimes;
 
-    @NameInMap("ShrinkIntervalInMinutes")
+    @com.aliyun.core.annotation.NameInMap("ShrinkIntervalInMinutes")
     private Integer shrinkIntervalInMinutes;
 
-    @NameInMap("SpotPriceLimit")
+    @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
     private Float spotPriceLimit;
 
-    @NameInMap("SpotStrategy")
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
 
-    @NameInMap("Uid")
+    @com.aliyun.core.annotation.NameInMap("Uid")
     private String uid;
 
     private GetAutoScaleConfigResponseBody(Builder builder) {
@@ -101,6 +106,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
 
     public static GetAutoScaleConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -265,8 +274,37 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         private String spotStrategy; 
         private String uid; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetAutoScaleConfigResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.clusterType = model.clusterType;
+            this.computeEnableHt = model.computeEnableHt;
+            this.dnsConfig = model.dnsConfig;
+            this.enableAutoGrow = model.enableAutoGrow;
+            this.enableAutoShrink = model.enableAutoShrink;
+            this.excludeNodes = model.excludeNodes;
+            this.extraNodesGrowRatio = model.extraNodesGrowRatio;
+            this.growIntervalInMinutes = model.growIntervalInMinutes;
+            this.growRatio = model.growRatio;
+            this.growTimeoutInMinutes = model.growTimeoutInMinutes;
+            this.imageId = model.imageId;
+            this.maxNodesInCluster = model.maxNodesInCluster;
+            this.queues = model.queues;
+            this.requestId = model.requestId;
+            this.shrinkIdleTimes = model.shrinkIdleTimes;
+            this.shrinkIntervalInMinutes = model.shrinkIntervalInMinutes;
+            this.spotPriceLimit = model.spotPriceLimit;
+            this.spotStrategy = model.spotStrategy;
+            this.uid = model.uid;
+        } 
+
         /**
-         * The prefix of the queue name. You can query queues that have a specified prefix.
+         * <p>The prefix of the queue name. You can query queues that have a specified prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -274,7 +312,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pbs</p>
          */
         public Builder clusterType(String clusterType) {
             this.clusterType = clusterType;
@@ -282,10 +323,13 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether to enable hyper-threading for the ECS instance that is used as the compute node.
-         * <p>
+         * <p>Specifies whether to enable hyper-threading for the ECS instance that is used as the compute node.</p>
+         * <blockquote>
+         * <p> You can only disable hyper-threading for some instance types. The hyper-threading is enabled for ECS instances by default. For more information, see <a href="https://help.aliyun.com/document_detail/145895.html">Specify and view CPU options</a>.</p>
+         * </blockquote>
          * 
-         * >  You can only disable hyper-threading for some instance types. The hyper-threading is enabled for ECS instances by default. For more information, see [Specify and view CPU options](~~145895~~).
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder computeEnableHt(Boolean computeEnableHt) {
             this.computeEnableHt = computeEnableHt;
@@ -293,7 +337,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The Domain Name System (DNS) settings.
+         * <p>The configurations of DNS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{&quot;DnsType&quot;:&quot;PrivateZone&quot;,&quot;DnsName&quot;:&quot;xxxxx&quot;}&quot;</p>
          */
         public Builder dnsConfig(String dnsConfig) {
             this.dnsConfig = dnsConfig;
@@ -301,10 +348,11 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The percentage of each round of scale-out. Valid values: 1 to 100.
-         * <p>
+         * <p>The percentage of each round of scale-out. Valid values: 1 to 100.</p>
+         * <p>If you set GrowRatio to 50, the scale-out has two rounds. Each round completes half of the scale-out.</p>
          * 
-         * If you set GrowRatio to 50, the scale-out has two rounds. Each round completes half of the scale-out.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAutoGrow(Boolean enableAutoGrow) {
             this.enableAutoGrow = enableAutoGrow;
@@ -312,10 +360,11 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The number of consecutive times that a compute node is idle during the resource scale-in check. Valid values: 2 to 5.
-         * <p>
+         * <p>The number of consecutive times that a compute node is idle during the resource scale-in check. Valid values: 2 to 5.</p>
+         * <p>If the parameter is set to 3, a compute node is idle for more than three consecutive times. In this case, the node is released.</p>
          * 
-         * If the parameter is set to 3, a compute node is idle for more than three consecutive times. In this case, the node is released.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAutoShrink(Boolean enableAutoShrink) {
             this.enableAutoShrink = enableAutoShrink;
@@ -323,7 +372,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp19lgqwxb4206t5****,i-bp1g4hvzs9pywrhb****</p>
          */
         public Builder excludeNodes(String excludeNodes) {
             this.excludeNodes = excludeNodes;
@@ -331,7 +383,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The instance type of the compute nodes that were automatically added in the queue.
+         * <p>The instance type of the compute nodes that were automatically added in the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder extraNodesGrowRatio(Integer extraNodesGrowRatio) {
             this.extraNodesGrowRatio = extraNodesGrowRatio;
@@ -339,7 +394,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The image ID of the compute nodes in the queue.
+         * <p>The image ID of the compute nodes in the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder growIntervalInMinutes(Integer growIntervalInMinutes) {
             this.growIntervalInMinutes = growIntervalInMinutes;
@@ -347,7 +405,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The minimum number of compute nodes that can be retained in a queue. Valid values: 0 to 50.
+         * <p>The minimum number of compute nodes that can be retained in a queue. Valid values: 0 to 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder growRatio(Integer growRatio) {
             this.growRatio = growRatio;
@@ -355,7 +416,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum hourly price of the compute nodes. The value can be accurate to three decimal places. The parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.
+         * <p>The maximum hourly price of the compute nodes. The value can be accurate to three decimal places. The parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder growTimeoutInMinutes(Integer growTimeoutInMinutes) {
             this.growTimeoutInMinutes = growTimeoutInMinutes;
@@ -363,12 +427,15 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The preemption policy of the compute nodes. Valid values:
-         * <p>
+         * <p>The preemption policy of the compute nodes. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The compute nodes are pay-as-you-go instances.</li>
+         * <li>SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.</li>
+         * </ul>
          * 
-         * *   NoSpot: The compute nodes are pay-as-you-go instances.
-         * *   SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.
+         * <strong>example:</strong>
+         * <p>m-bp10txryr4mhrrt1****</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -376,10 +443,13 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The interval between two consecutive rounds of scale-in. Unit: minutes. Valid values: 2 to 10.
-         * <p>
+         * <p>The interval between two consecutive rounds of scale-in. Unit: minutes. Valid values: 2 to 10.</p>
+         * <blockquote>
+         * <p> An interval may exist during multiple rounds of a scale-out task or between two consecutive scale-out tasks.</p>
+         * </blockquote>
          * 
-         * >  An interval may exist during multiple rounds of a scale-out task or between two consecutive scale-out tasks.
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder maxNodesInCluster(Integer maxNodesInCluster) {
             this.maxNodesInCluster = maxNodesInCluster;
@@ -387,7 +457,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of compute nodes that can be added in a queue. Valid values: 0 to 500.
+         * <p>The auto scaling configuration of the queue.</p>
+         * <blockquote>
+         * <p> If auto scaling is enabled for the cluster and queue at the same time, the queue settings prevail.</p>
+         * </blockquote>
          */
         public Builder queues(Queues queues) {
             this.queues = queues;
@@ -395,7 +468,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The image ID of the compute nodes in the queue.
+         * <p>The image ID of the compute nodes in the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -403,7 +479,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The suffix of the queue name. You can query queues that have a specified suffix.
+         * <p>The suffix of the queue name. You can query queues that have a specified suffix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder shrinkIdleTimes(Integer shrinkIdleTimes) {
             this.shrinkIdleTimes = shrinkIdleTimes;
@@ -411,10 +490,13 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The auto scaling configuration of the queue.
-         * <p>
+         * <p>The auto scaling configuration of the queue.</p>
+         * <blockquote>
+         * <p> If auto scaling is enabled for the cluster and queue at the same time, the queue settings prevail.</p>
+         * </blockquote>
          * 
-         * >  If auto scaling is enabled for the cluster and queue at the same time, the queue settings prevail.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder shrinkIntervalInMinutes(Integer shrinkIntervalInMinutes) {
             this.shrinkIntervalInMinutes = shrinkIntervalInMinutes;
@@ -422,13 +504,16 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the system disk. Valid values:
-         * <p>
+         * <p>The type of the system disk. Valid values:</p>
+         * <ul>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_ssd: SSD</li>
+         * <li>cloud_essd: ESSD</li>
+         * <li>cloud: basic disk</li>
+         * </ul>
          * 
-         * *   cloud_efficiency: ultra disk
-         * *   cloud_ssd: SSD
-         * *   cloud_essd: ESSD
-         * *   cloud: basic disk
+         * <strong>example:</strong>
+         * <p>0.062</p>
          */
         public Builder spotPriceLimit(Float spotPriceLimit) {
             this.spotPriceLimit = spotPriceLimit;
@@ -436,10 +521,11 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The percentage of extra compute nodes. Valid values: 0 to 100.
-         * <p>
+         * <p>The percentage of extra compute nodes. Valid values: 0 to 100.</p>
+         * <p>If you need to add 100 compute nodes and the value of the ExtraNodesGrowRatio parameter is 2, 102 compute nodes are added.</p>
          * 
-         * If you need to add 100 compute nodes and the value of the ExtraNodesGrowRatio parameter is 2, 102 compute nodes are added.
+         * <strong>example:</strong>
+         * <p>SpotWithPriceLimit</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.spotStrategy = spotStrategy;
@@ -447,7 +533,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The size of the system disk. Unit: GB. Valid values: 40 to 500.
+         * <p>The size of the system disk. Unit: GB. Valid values: 40 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>129845258050****</p>
          */
         public Builder uid(String uid) {
             this.uid = uid;
@@ -460,23 +549,29 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAutoScaleConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoScaleConfigResponseBody</p>
+     */
     public static class DataDisksInfo extends TeaModel {
-        @NameInMap("DataDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("DataDiskCategory")
         private String dataDiskCategory;
 
-        @NameInMap("DataDiskDeleteWithInstance")
+        @com.aliyun.core.annotation.NameInMap("DataDiskDeleteWithInstance")
         private Boolean dataDiskDeleteWithInstance;
 
-        @NameInMap("DataDiskEncrypted")
+        @com.aliyun.core.annotation.NameInMap("DataDiskEncrypted")
         private Boolean dataDiskEncrypted;
 
-        @NameInMap("DataDiskKMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("DataDiskKMSKeyId")
         private String dataDiskKMSKeyId;
 
-        @NameInMap("DataDiskPerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("DataDiskPerformanceLevel")
         private String dataDiskPerformanceLevel;
 
-        @NameInMap("DataDiskSize")
+        @com.aliyun.core.annotation.NameInMap("DataDiskSize")
         private Integer dataDiskSize;
 
         private DataDisksInfo(Builder builder) {
@@ -546,8 +641,29 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             private String dataDiskPerformanceLevel; 
             private Integer dataDiskSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisksInfo model) {
+                this.dataDiskCategory = model.dataDiskCategory;
+                this.dataDiskDeleteWithInstance = model.dataDiskDeleteWithInstance;
+                this.dataDiskEncrypted = model.dataDiskEncrypted;
+                this.dataDiskKMSKeyId = model.dataDiskKMSKeyId;
+                this.dataDiskPerformanceLevel = model.dataDiskPerformanceLevel;
+                this.dataDiskSize = model.dataDiskSize;
+            } 
+
             /**
-             * DataDiskCategory.
+             * <p>The type of the data disk. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>cloud_essd: ESSD.</li>
+             * <li>cloud: basic disk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -555,7 +671,14 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskDeleteWithInstance.
+             * <p>Indicates whether the data disk is released when the node is released. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataDiskDeleteWithInstance(Boolean dataDiskDeleteWithInstance) {
                 this.dataDiskDeleteWithInstance = dataDiskDeleteWithInstance;
@@ -563,7 +686,14 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskEncrypted.
+             * <p>Indicates whether the data disk is encrypted. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dataDiskEncrypted(Boolean dataDiskEncrypted) {
                 this.dataDiskEncrypted = dataDiskEncrypted;
@@ -571,7 +701,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskKMSKeyId.
+             * <p>The ID of the KMS key that is used by the data disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>
              */
             public Builder dataDiskKMSKeyId(String dataDiskKMSKeyId) {
                 this.dataDiskKMSKeyId = dataDiskKMSKeyId;
@@ -579,7 +712,16 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskPerformanceLevel.
+             * <p>The performance level of the ESSD used as the data disk. The parameter is returned only when the DataDisks.N.DataDiskCategory parameter is set to cloud_essd. Valid values:</p>
+             * <ul>
+             * <li>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: An ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder dataDiskPerformanceLevel(String dataDiskPerformanceLevel) {
                 this.dataDiskPerformanceLevel = dataDiskPerformanceLevel;
@@ -587,7 +729,11 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskSize.
+             * <p>The capacity of the data disk. Unit: GB.</p>
+             * <p>Valid values: 40 to 500.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder dataDiskSize(Integer dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -601,9 +747,15 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAutoScaleConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoScaleConfigResponseBody</p>
+     */
     public static class DataDisks extends TeaModel {
-        @NameInMap("DataDisksInfo")
-        private java.util.List < DataDisksInfo> dataDisksInfo;
+        @com.aliyun.core.annotation.NameInMap("DataDisksInfo")
+        private java.util.List<DataDisksInfo> dataDisksInfo;
 
         private DataDisks(Builder builder) {
             this.dataDisksInfo = builder.dataDisksInfo;
@@ -620,17 +772,24 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         /**
          * @return dataDisksInfo
          */
-        public java.util.List < DataDisksInfo> getDataDisksInfo() {
+        public java.util.List<DataDisksInfo> getDataDisksInfo() {
             return this.dataDisksInfo;
         }
 
         public static final class Builder {
-            private java.util.List < DataDisksInfo> dataDisksInfo; 
+            private java.util.List<DataDisksInfo> dataDisksInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDisks model) {
+                this.dataDisksInfo = model.dataDisksInfo;
+            } 
 
             /**
              * DataDisksInfo.
              */
-            public Builder dataDisksInfo(java.util.List < DataDisksInfo> dataDisksInfo) {
+            public Builder dataDisksInfo(java.util.List<DataDisksInfo> dataDisksInfo) {
                 this.dataDisksInfo = dataDisksInfo;
                 return this;
             }
@@ -642,29 +801,35 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAutoScaleConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoScaleConfigResponseBody</p>
+     */
     public static class InstanceTypeInfo extends TeaModel {
-        @NameInMap("HostNamePrefix")
+        @com.aliyun.core.annotation.NameInMap("HostNamePrefix")
         private String hostNamePrefix;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("SpotDuration")
+        @com.aliyun.core.annotation.NameInMap("SpotDuration")
         private Integer spotDuration;
 
-        @NameInMap("SpotInterruptionBehavior")
+        @com.aliyun.core.annotation.NameInMap("SpotInterruptionBehavior")
         private String spotInterruptionBehavior;
 
-        @NameInMap("SpotPriceLimit")
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
         private Float spotPriceLimit;
 
-        @NameInMap("SpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private InstanceTypeInfo(Builder builder) {
@@ -752,14 +917,25 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             private String vSwitchId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypeInfo model) {
+                this.hostNamePrefix = model.hostNamePrefix;
+                this.instanceType = model.instanceType;
+                this.spotDuration = model.spotDuration;
+                this.spotInterruptionBehavior = model.spotInterruptionBehavior;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.spotStrategy = model.spotStrategy;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * The type of the data disk. Valid values:
-             * <p>
+             * <p>The prefix of the hostname. You can query compute nodes that have a specified prefix.</p>
              * 
-             * - cloud_efficiency: ultra disk
-             * - cloud_ssd: SSD
-             * - cloud_essd: ESSD
-             * - cloud: basic disk
+             * <strong>example:</strong>
+             * <p>compute</p>
              */
             public Builder hostNamePrefix(String hostNamePrefix) {
                 this.hostNamePrefix = hostNamePrefix;
@@ -767,11 +943,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data disk is encrypted. Valid values:
-             * <p>
+             * <p>The instance type of the compute nodes.</p>
              * 
-             * - true
-             * - false
+             * <strong>example:</strong>
+             * <p>ecs.sn1ne.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -779,7 +954,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The list of data disks.
+             * <p>The protection period of the preemptible instance. Unit: hours. Valid values: 0 to 1. Default value: 1. A value of 0 means no protection period is specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder spotDuration(Integer spotDuration) {
                 this.spotDuration = spotDuration;
@@ -787,14 +965,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of compute nodes that can be added in each round of an auto scale-out task. Valid values: 1 to 99.
-             * <p>
+             * <p>The interruption event of the preemptible instance. The value can only be Terminate, which specifies that the instance is released.</p>
              * 
-             * Default value: 1.
-             * 
-             * If the number of compute nodes that you want to add in a round is less than the value of this property, the system automatically changes the value of this property to the number of compute nodes that you want to add in a round. This helps ensure that compute nodes can be added as expected.
-             * 
-             * > The configuration takes effect only for the minimum compute nodes that can be added in the current round.
+             * <strong>example:</strong>
+             * <p>Terminate</p>
              */
             public Builder spotInterruptionBehavior(String spotInterruptionBehavior) {
                 this.spotInterruptionBehavior = spotInterruptionBehavior;
@@ -802,13 +976,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The performance level of the ESSD used as the data disk. The parameter takes effect only when the DataDisks.N.DataDiskCategory parameter is set to cloud_essd. Valid values:
-             * <p>
+             * <p>The maximum hourly price of the compute nodes. The value can be accurate to three decimal places. This parameter is valid only when the SpotStrategy parameter is set to SpotWithPriceLimit.</p>
              * 
-             * - PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * - PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-             * - PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * - PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+             * <strong>example:</strong>
+             * <p>0.062</p>
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -816,7 +987,15 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The KMS key ID of the data disk.
+             * <p>The bidding method of the compute nodes. Valid values:</p>
+             * <ul>
+             * <li>NoSpot: The compute nodes are pay-as-you-go instances.</li>
+             * <li>SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.</li>
+             * <li>SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NoSpot</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -824,10 +1003,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of the data disk. Unit: GB.
-             * <p>
+             * <p>The ID of the vSwitch.</p>
              * 
-             * Valid values: 40 to 500.
+             * <strong>example:</strong>
+             * <p>vsw-bp1lfcjbfb099rrjn****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -835,11 +1014,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data disk is released when the node is released. Valid values:
-             * <p>
+             * <p>The ID of the zone.</p>
              * 
-             * - true
-             * - false
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -853,9 +1031,15 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAutoScaleConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoScaleConfigResponseBody</p>
+     */
     public static class InstanceTypes extends TeaModel {
-        @NameInMap("InstanceTypeInfo")
-        private java.util.List < InstanceTypeInfo> instanceTypeInfo;
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeInfo")
+        private java.util.List<InstanceTypeInfo> instanceTypeInfo;
 
         private InstanceTypes(Builder builder) {
             this.instanceTypeInfo = builder.instanceTypeInfo;
@@ -872,17 +1056,24 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         /**
          * @return instanceTypeInfo
          */
-        public java.util.List < InstanceTypeInfo> getInstanceTypeInfo() {
+        public java.util.List<InstanceTypeInfo> getInstanceTypeInfo() {
             return this.instanceTypeInfo;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceTypeInfo> instanceTypeInfo; 
+            private java.util.List<InstanceTypeInfo> instanceTypeInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypes model) {
+                this.instanceTypeInfo = model.instanceTypeInfo;
+            } 
 
             /**
              * InstanceTypeInfo.
              */
-            public Builder instanceTypeInfo(java.util.List < InstanceTypeInfo> instanceTypeInfo) {
+            public Builder instanceTypeInfo(java.util.List<InstanceTypeInfo> instanceTypeInfo) {
                 this.instanceTypeInfo = instanceTypeInfo;
                 return this;
             }
@@ -894,68 +1085,74 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAutoScaleConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoScaleConfigResponseBody</p>
+     */
     public static class QueueInfo extends TeaModel {
-        @NameInMap("AutoMinNodesPerCycle")
+        @com.aliyun.core.annotation.NameInMap("AutoMinNodesPerCycle")
         private Boolean autoMinNodesPerCycle;
 
-        @NameInMap("DataDisks")
+        @com.aliyun.core.annotation.NameInMap("DataDisks")
         private DataDisks dataDisks;
 
-        @NameInMap("EnableAutoGrow")
+        @com.aliyun.core.annotation.NameInMap("EnableAutoGrow")
         private Boolean enableAutoGrow;
 
-        @NameInMap("EnableAutoShrink")
+        @com.aliyun.core.annotation.NameInMap("EnableAutoShrink")
         private Boolean enableAutoShrink;
 
-        @NameInMap("HostNamePrefix")
+        @com.aliyun.core.annotation.NameInMap("HostNamePrefix")
         private String hostNamePrefix;
 
-        @NameInMap("HostNameSuffix")
+        @com.aliyun.core.annotation.NameInMap("HostNameSuffix")
         private String hostNameSuffix;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypes")
         private InstanceTypes instanceTypes;
 
-        @NameInMap("MaxNodesInQueue")
+        @com.aliyun.core.annotation.NameInMap("MaxNodesInQueue")
         private Integer maxNodesInQueue;
 
-        @NameInMap("MaxNodesPerCycle")
+        @com.aliyun.core.annotation.NameInMap("MaxNodesPerCycle")
         private Long maxNodesPerCycle;
 
-        @NameInMap("MinNodesInQueue")
+        @com.aliyun.core.annotation.NameInMap("MinNodesInQueue")
         private Integer minNodesInQueue;
 
-        @NameInMap("MinNodesPerCycle")
+        @com.aliyun.core.annotation.NameInMap("MinNodesPerCycle")
         private Long minNodesPerCycle;
 
-        @NameInMap("QueueImageId")
+        @com.aliyun.core.annotation.NameInMap("QueueImageId")
         private String queueImageId;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SortedByInventory")
+        @com.aliyun.core.annotation.NameInMap("SortedByInventory")
         private Boolean sortedByInventory;
 
-        @NameInMap("SpotPriceLimit")
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
         private Float spotPriceLimit;
 
-        @NameInMap("SpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("SystemDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
 
-        @NameInMap("SystemDiskLevel")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskLevel")
         private String systemDiskLevel;
 
-        @NameInMap("SystemDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
         private QueueInfo(Builder builder) {
@@ -1160,8 +1357,38 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             private String systemDiskLevel; 
             private Integer systemDiskSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueueInfo model) {
+                this.autoMinNodesPerCycle = model.autoMinNodesPerCycle;
+                this.dataDisks = model.dataDisks;
+                this.enableAutoGrow = model.enableAutoGrow;
+                this.enableAutoShrink = model.enableAutoShrink;
+                this.hostNamePrefix = model.hostNamePrefix;
+                this.hostNameSuffix = model.hostNameSuffix;
+                this.instanceType = model.instanceType;
+                this.instanceTypes = model.instanceTypes;
+                this.maxNodesInQueue = model.maxNodesInQueue;
+                this.maxNodesPerCycle = model.maxNodesPerCycle;
+                this.minNodesInQueue = model.minNodesInQueue;
+                this.minNodesPerCycle = model.minNodesPerCycle;
+                this.queueImageId = model.queueImageId;
+                this.queueName = model.queueName;
+                this.resourceGroupId = model.resourceGroupId;
+                this.sortedByInventory = model.sortedByInventory;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.spotStrategy = model.spotStrategy;
+                this.systemDiskCategory = model.systemDiskCategory;
+                this.systemDiskLevel = model.systemDiskLevel;
+                this.systemDiskSize = model.systemDiskSize;
+            } 
+
             /**
-             * AutoMinNodesPerCycle.
+             * <p>Indicates whether the minimum node number for each scale-out is automatically set. If this parameter is set to true, the minimum number of nodes for each scale-out is equal to the number of nodes required by the job. The maximum number is 99.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoMinNodesPerCycle(Boolean autoMinNodesPerCycle) {
                 this.autoMinNodesPerCycle = autoMinNodesPerCycle;
@@ -1169,7 +1396,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataDisks.
+             * <p>The list of data disks.</p>
              */
             public Builder dataDisks(DataDisks dataDisks) {
                 this.dataDisks = dataDisks;
@@ -1177,7 +1404,14 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the node.
+             * <p>Indicates whether the queue enabled the auto scale-out. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableAutoGrow(Boolean enableAutoGrow) {
                 this.enableAutoGrow = enableAutoGrow;
@@ -1185,7 +1419,14 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * <p>Indicates whether the queue enabled the auto scale-in. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableAutoShrink(Boolean enableAutoShrink) {
                 this.enableAutoShrink = enableAutoShrink;
@@ -1193,7 +1434,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The specification information of the compute nodes.
+             * <p>The prefix of the queue name. You can query queues that have a specified prefix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>compute</p>
              */
             public Builder hostNamePrefix(String hostNamePrefix) {
                 this.hostNamePrefix = hostNamePrefix;
@@ -1201,13 +1445,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The performance level of the system disk. Valid values:
-             * <p>
+             * <p>The suffix of the queue name. You can query queues that have a specified suffix.</p>
              * 
-             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+             * <strong>example:</strong>
+             * <p>000</p>
              */
             public Builder hostNameSuffix(String hostNameSuffix) {
                 this.hostNameSuffix = hostNameSuffix;
@@ -1215,11 +1456,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the queue enabled auto scale-out. Valid values:
-             * <p>
+             * <p>The instance type of the compute nodes that are automatically added to the queue.</p>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>ecs.sn1ne.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1227,7 +1467,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The list of data disks.
+             * <p>The specification information of the compute nodes.</p>
              */
             public Builder instanceTypes(InstanceTypes instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -1235,7 +1475,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The maximum number of compute nodes that can be added to a queue. Valid values: 0 to 500.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxNodesInQueue(Integer maxNodesInQueue) {
                 this.maxNodesInQueue = maxNodesInQueue;
@@ -1243,7 +1486,11 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MaxNodesPerCycle.
+             * <p>The maximum number of compute nodes that can be added in each round of scale-out. Valid values: 0 to 99.</p>
+             * <p>Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxNodesPerCycle(Long maxNodesPerCycle) {
                 this.maxNodesPerCycle = maxNodesPerCycle;
@@ -1251,7 +1498,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum hourly price of the compute nodes. The value can be accurate to three decimal places. The parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.
+             * <p>The minimum number of compute nodes that can be retained in a queue. Valid values: 0 to 50.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder minNodesInQueue(Integer minNodesInQueue) {
                 this.minNodesInQueue = minNodesInQueue;
@@ -1259,7 +1509,15 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MinNodesPerCycle.
+             * <p>The minimum number of compute nodes that can be added in each round of scale-out. Valid values: 1 to 99</p>
+             * <p>Default value: 1.</p>
+             * <p>If the compute nodes that you want to add in a round is less than the minimum compute nodes that can be added, the value of this parameter is automatically changed to the number of compute nodes that you want to add. This ensures that compute nodes can be added as expected.</p>
+             * <blockquote>
+             * <p> The configuration takes effect only for the minimum compute nodes that can be added in the current round.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder minNodesPerCycle(Long minNodesPerCycle) {
                 this.minNodesPerCycle = minNodesPerCycle;
@@ -1267,11 +1525,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the queue enabled auto scale-in. Valid values:
-             * <p>
+             * <p>The image ID of the compute node in the queue.</p>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>centos_7_06_64_20G_alibase_2019071****</p>
              */
             public Builder queueImageId(String queueImageId) {
                 this.queueImageId = queueImageId;
@@ -1279,7 +1536,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum hourly price of the compute nodes. The value can be accurate to three decimal places. The parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.
+             * <p>The name of the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workq</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -1287,7 +1547,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The protection period of the preemptible instance. Unit: hours. Valid values: 0 to 1. Default value: 1. A value of 0 means no protection period is specified.
+             * <p>The ID of the resource group to which the compute nodes belong.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxp7uc24****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1295,7 +1558,17 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SortedByInventory.
+             * <p>Indicates whether the instances are unordered. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <blockquote>
+             * <p> If this parameter is set to true, the system selects instance types in descending order based on the number of instances in stock during auto scaling.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder sortedByInventory(Boolean sortedByInventory) {
                 this.sortedByInventory = sortedByInventory;
@@ -1303,7 +1576,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The interruption mode of the preemptible instance. Default value: Terminate. Set the value to Terminate, which indicates that the instance is released.
+             * <p>The maximum hourly price of the compute nodes. The value can be accurate to three decimal places. This parameter is valid only when the SpotStrategy parameter is set to SpotWithPriceLimit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.062</p>
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -1311,7 +1587,15 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the compute nodes belong.
+             * <p>The preemption policy of the compute nodes. Valid values:</p>
+             * <ul>
+             * <li>NoSpot: The compute nodes are pay-as-you-go instances.</li>
+             * <li>SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.</li>
+             * <li>SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NoSpot</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -1319,7 +1603,16 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queue.
+             * <p>The category of the system disk. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>cloud_essd: enhanced SSD (ESSD).</li>
+             * <li>cloud: basic disk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -1327,12 +1620,16 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The bidding method of the compute nodes. Valid values:
-             * <p>
+             * <p>The performance level of the system disk. Valid values:</p>
+             * <ul>
+             * <li>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: An ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
              * 
-             * *   NoSpot: The compute nodes are pay-as-you-go instances.
-             * *   SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.
-             * *   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder systemDiskLevel(String systemDiskLevel) {
                 this.systemDiskLevel = systemDiskLevel;
@@ -1340,7 +1637,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The prefix of the hostname. You can query compute nodes that have a specified prefix.
+             * <p>The system disk size. Unit: GB. Valid values: 40 to 500.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -1354,9 +1654,15 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAutoScaleConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoScaleConfigResponseBody</p>
+     */
     public static class Queues extends TeaModel {
-        @NameInMap("QueueInfo")
-        private java.util.List < QueueInfo> queueInfo;
+        @com.aliyun.core.annotation.NameInMap("QueueInfo")
+        private java.util.List<QueueInfo> queueInfo;
 
         private Queues(Builder builder) {
             this.queueInfo = builder.queueInfo;
@@ -1373,17 +1679,24 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         /**
          * @return queueInfo
          */
-        public java.util.List < QueueInfo> getQueueInfo() {
+        public java.util.List<QueueInfo> getQueueInfo() {
             return this.queueInfo;
         }
 
         public static final class Builder {
-            private java.util.List < QueueInfo> queueInfo; 
+            private java.util.List<QueueInfo> queueInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Queues model) {
+                this.queueInfo = model.queueInfo;
+            } 
 
             /**
              * QueueInfo.
              */
-            public Builder queueInfo(java.util.List < QueueInfo> queueInfo) {
+            public Builder queueInfo(java.util.List<QueueInfo> queueInfo) {
                 this.queueInfo = queueInfo;
                 return this;
             }

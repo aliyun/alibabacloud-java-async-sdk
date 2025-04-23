@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQueuesResponseBody} extends {@link TeaModel}
  *
  * <p>ListQueuesResponseBody</p>
  */
 public class ListQueuesResponseBody extends TeaModel {
-    @NameInMap("Queues")
+    @com.aliyun.core.annotation.NameInMap("Queues")
     private Queues queues;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListQueuesResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class ListQueuesResponseBody extends TeaModel {
 
     public static ListQueuesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class ListQueuesResponseBody extends TeaModel {
         private Queues queues; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListQueuesResponseBody model) {
+            this.queues = model.queues;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The details of the queue.
+         * <p>The queried cluster queues.</p>
          */
         public Builder queues(Queues queues) {
             this.queues = queues;
@@ -58,7 +75,10 @@ public class ListQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C6E5005C-00B0-4F27-98BB-95AB88016C22</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +91,15 @@ public class ListQueuesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListQueuesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQueuesResponseBody</p>
+     */
     public static class ComputeInstanceType extends TeaModel {
-        @NameInMap("InstanceType")
-        private java.util.List < String > instanceType;
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private java.util.List<String> instanceType;
 
         private ComputeInstanceType(Builder builder) {
             this.instanceType = builder.instanceType;
@@ -90,17 +116,24 @@ public class ListQueuesResponseBody extends TeaModel {
         /**
          * @return instanceType
          */
-        public java.util.List < String > getInstanceType() {
+        public java.util.List<String> getInstanceType() {
             return this.instanceType;
         }
 
         public static final class Builder {
-            private java.util.List < String > instanceType; 
+            private java.util.List<String> instanceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ComputeInstanceType model) {
+                this.instanceType = model.instanceType;
+            } 
 
             /**
              * InstanceType.
              */
-            public Builder instanceType(java.util.List < String > instanceType) {
+            public Builder instanceType(java.util.List<String> instanceType) {
                 this.instanceType = instanceType;
                 return this;
             }
@@ -112,11 +145,17 @@ public class ListQueuesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQueuesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQueuesResponseBody</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("SpotPriceLimit")
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
         private Float spotPriceLimit;
 
         private Instance(Builder builder) {
@@ -150,8 +189,19 @@ public class ListQueuesResponseBody extends TeaModel {
             private String instanceType; 
             private Float spotPriceLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.instanceType = model.instanceType;
+                this.spotPriceLimit = model.spotPriceLimit;
+            } 
+
             /**
-             * The instance type of the preemptible instance.
+             * <p>The instance type of the preemptible instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.n1.tiny</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -159,7 +209,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum hourly price of the preemptible instance. The value can be accurate to three decimal places. The parameter only takes effect when SpotStrategy is set to SpotWithPriceLimit.
+             * <p>The maximum hourly price of the instance. The price can be accurate to three decimal places. This parameter is valid only when the SpotStrategy parameter is set to SpotWithPriceLimit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.062</p>
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -173,9 +226,15 @@ public class ListQueuesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQueuesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQueuesResponseBody</p>
+     */
     public static class SpotInstanceTypes extends TeaModel {
-        @NameInMap("Instance")
-        private java.util.List < Instance> instance;
+        @com.aliyun.core.annotation.NameInMap("Instance")
+        private java.util.List<Instance> instance;
 
         private SpotInstanceTypes(Builder builder) {
             this.instance = builder.instance;
@@ -192,17 +251,24 @@ public class ListQueuesResponseBody extends TeaModel {
         /**
          * @return instance
          */
-        public java.util.List < Instance> getInstance() {
+        public java.util.List<Instance> getInstance() {
             return this.instance;
         }
 
         public static final class Builder {
-            private java.util.List < Instance> instance; 
+            private java.util.List<Instance> instance; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpotInstanceTypes model) {
+                this.instance = model.instance;
+            } 
 
             /**
              * Instance.
              */
-            public Builder instance(java.util.List < Instance> instance) {
+            public Builder instance(java.util.List<Instance> instance) {
                 this.instance = instance;
                 return this;
             }
@@ -214,44 +280,50 @@ public class ListQueuesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQueuesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQueuesResponseBody</p>
+     */
     public static class QueueInfo extends TeaModel {
-        @NameInMap("ComputeInstanceType")
+        @com.aliyun.core.annotation.NameInMap("ComputeInstanceType")
         private ComputeInstanceType computeInstanceType;
 
-        @NameInMap("DeploymentSetId")
+        @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
         private String deploymentSetId;
 
-        @NameInMap("EnableAutoGrow")
+        @com.aliyun.core.annotation.NameInMap("EnableAutoGrow")
         private Boolean enableAutoGrow;
 
-        @NameInMap("HostNamePrefix")
+        @com.aliyun.core.annotation.NameInMap("HostNamePrefix")
         private String hostNamePrefix;
 
-        @NameInMap("HostNameSuffix")
+        @com.aliyun.core.annotation.NameInMap("HostNameSuffix")
         private String hostNameSuffix;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("NetworkInterfaceTrafficMode")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
         private String networkInterfaceTrafficMode;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SpotInstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("SpotInstanceTypes")
         private SpotInstanceTypes spotInstanceTypes;
 
-        @NameInMap("SpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UseESS")
+        @com.aliyun.core.annotation.NameInMap("UseESS")
         private Boolean useESS;
 
         private QueueInfo(Builder builder) {
@@ -384,8 +456,27 @@ public class ListQueuesResponseBody extends TeaModel {
             private String type; 
             private Boolean useESS; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueueInfo model) {
+                this.computeInstanceType = model.computeInstanceType;
+                this.deploymentSetId = model.deploymentSetId;
+                this.enableAutoGrow = model.enableAutoGrow;
+                this.hostNamePrefix = model.hostNamePrefix;
+                this.hostNameSuffix = model.hostNameSuffix;
+                this.imageId = model.imageId;
+                this.networkInterfaceTrafficMode = model.networkInterfaceTrafficMode;
+                this.queueName = model.queueName;
+                this.resourceGroupId = model.resourceGroupId;
+                this.spotInstanceTypes = model.spotInstanceTypes;
+                this.spotStrategy = model.spotStrategy;
+                this.type = model.type;
+                this.useESS = model.useESS;
+            } 
+
             /**
-             * The instance type of compute node.
+             * <p>The instance type of the compute nodes.</p>
              */
             public Builder computeInstanceType(ComputeInstanceType computeInstanceType) {
                 this.computeInstanceType = computeInstanceType;
@@ -393,7 +484,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * DeploymentSetId.
+             * <p>The ID of the deployment set to which to deploy the instance. You can call the <a href="https://help.aliyun.com/document_detail/91313.html">DescribeDeploymentSets</a> operation to query the deployment set ID. Only the deployment sets that use low latency policies are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-bp1frxuzdg87zh4pzq****</p>
              */
             public Builder deploymentSetId(String deploymentSetId) {
                 this.deploymentSetId = deploymentSetId;
@@ -401,11 +495,14 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the queue enabled the auto scale-out. Valid values:
-             * <p>
+             * <p>Indicates whether auto scale-out is enabled for the queue. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true: The queue enabled auto scale-out.
-             * *   false: The queue disabled auto scale-out.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableAutoGrow(Boolean enableAutoGrow) {
                 this.enableAutoGrow = enableAutoGrow;
@@ -413,7 +510,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The prefix of the hostname.
+             * <p>The prefix of the hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>compute</p>
              */
             public Builder hostNamePrefix(String hostNamePrefix) {
                 this.hostNamePrefix = hostNamePrefix;
@@ -421,7 +521,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The suffix of the host name.
+             * <p>The suffix of the hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01</p>
              */
             public Builder hostNameSuffix(String hostNameSuffix) {
                 this.hostNameSuffix = hostNameSuffix;
@@ -429,7 +532,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the custom image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos_7_06_64_20G_alibase_20****.vhd</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -437,7 +543,14 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceTrafficMode.
+             * <p>The communication mode of the elastic network interface (ENI). Valid values:</p>
+             * <ul>
+             * <li>Standard: The TCP communication mode is used.</li>
+             * <li>HighPerformance: The Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
                 this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
@@ -445,7 +558,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queue.
+             * <p>The name of the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workq</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -453,7 +569,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the queue belongs.
+             * <p>The ID of the resource group to which the queue belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxp7uc24****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -461,7 +580,7 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the preemptible instance.
+             * <p>The information about the preemptible instance.</p>
              */
             public Builder spotInstanceTypes(SpotInstanceTypes spotInstanceTypes) {
                 this.spotInstanceTypes = spotInstanceTypes;
@@ -469,12 +588,15 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The preemption policy of the compute nodes. Valid values:
-             * <p>
+             * <p>The preemption policy of the compute nodes. Valid values:</p>
+             * <ul>
+             * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
+             * <li>SpotWithPriceLimit: The instance is a preemptible instance for which you specify the maximum hourly price.</li>
+             * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</li>
+             * </ul>
              * 
-             * *   NoSpot: The instances of the compute node are pay-as-you-go instances.
-             * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-             * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
+             * <strong>example:</strong>
+             * <p>NoSpot</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -482,11 +604,14 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of queue. Valid values:
-             * <p>
+             * <p>The type of queue. Valid values:</p>
+             * <ul>
+             * <li>Execution: Queues in which jobs can be executed.</li>
+             * <li>Router: Queues in which jobs cannot be executed. The received jobs in the queues must be forwarded to the bound Execution queues for execution.</li>
+             * </ul>
              * 
-             * *   Execution: Queues in which jobs can be executed.
-             * *   Router: Queues in which jobs cannot be executed but are forwarded to the bounded Execution queue for processing.
+             * <strong>example:</strong>
+             * <p>Execution</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -494,7 +619,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * UseESS.
+             * <p>Specifies whether to use scaling groups of Auto Scaling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder useESS(Boolean useESS) {
                 this.useESS = useESS;
@@ -508,9 +636,15 @@ public class ListQueuesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQueuesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQueuesResponseBody</p>
+     */
     public static class Queues extends TeaModel {
-        @NameInMap("QueueInfo")
-        private java.util.List < QueueInfo> queueInfo;
+        @com.aliyun.core.annotation.NameInMap("QueueInfo")
+        private java.util.List<QueueInfo> queueInfo;
 
         private Queues(Builder builder) {
             this.queueInfo = builder.queueInfo;
@@ -527,17 +661,24 @@ public class ListQueuesResponseBody extends TeaModel {
         /**
          * @return queueInfo
          */
-        public java.util.List < QueueInfo> getQueueInfo() {
+        public java.util.List<QueueInfo> getQueueInfo() {
             return this.queueInfo;
         }
 
         public static final class Builder {
-            private java.util.List < QueueInfo> queueInfo; 
+            private java.util.List<QueueInfo> queueInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Queues model) {
+                this.queueInfo = model.queueInfo;
+            } 
 
             /**
              * QueueInfo.
              */
-            public Builder queueInfo(java.util.List < QueueInfo> queueInfo) {
+            public Builder queueInfo(java.util.List<QueueInfo> queueInfo) {
                 this.queueInfo = queueInfo;
                 return this;
             }

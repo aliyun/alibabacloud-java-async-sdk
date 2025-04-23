@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartVisualServiceRequest} extends {@link RequestModel}
  *
  * <p>StartVisualServiceRequest</p>
  */
 public class StartVisualServiceRequest extends Request {
-    @Query
-    @NameInMap("CidrIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CidrIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cidrIp;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Port")
-    @Validation(required = true, maximum = 65535)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 65535)
     private Integer port;
 
     private StartVisualServiceRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class StartVisualServiceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,11 @@ public class StartVisualServiceRequest extends Request {
         } 
 
         /**
-         * A public IP address of logon nodes in the cluster.
+         * <p>A public IP address of logon nodes in the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>190.100.**.**</code></p>
          */
         public Builder cidrIp(String cidrIp) {
             this.putQueryParameter("CidrIp", cidrIp);
@@ -94,7 +103,11 @@ public class StartVisualServiceRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-jeJki6****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -103,7 +116,11 @@ public class StartVisualServiceRequest extends Request {
         }
 
         /**
-         * The fixed port. Set the value to 12016
+         * <p>The fixed port. Set the value to 12016</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12016</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);

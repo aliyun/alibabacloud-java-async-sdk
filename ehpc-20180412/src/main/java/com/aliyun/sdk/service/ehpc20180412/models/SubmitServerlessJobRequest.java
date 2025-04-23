@@ -1,83 +1,88 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitServerlessJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitServerlessJobRequest</p>
  */
 public class SubmitServerlessJobRequest extends Request {
-    @Query
-    @NameInMap("ArrayProperties")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArrayProperties")
     private ArrayProperties arrayProperties;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Container")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Container")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Container container;
 
-    @Query
-    @NameInMap("Cpu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cpu")
     private Float cpu;
 
-    @Query
-    @NameInMap("DependsOn")
-    private java.util.List < DependsOn> dependsOn;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DependsOn")
+    private java.util.List<DependsOn> dependsOn;
 
-    @Query
-    @NameInMap("EphemeralStorage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EphemeralStorage")
     private Integer ephemeralStorage;
 
-    @Query
-    @NameInMap("InstanceType")
-    private java.util.List < String > instanceType;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    private java.util.List<String> instanceType;
 
-    @Query
-    @NameInMap("JobName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobName;
 
-    @Query
-    @NameInMap("JobPriority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobPriority")
     private Long jobPriority;
 
-    @Query
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private Float memory;
 
-    @Query
-    @NameInMap("RamRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamRoleName")
     private String ramRoleName;
 
-    @Query
-    @NameInMap("RetryStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetryStrategy")
     private RetryStrategy retryStrategy;
 
-    @Query
-    @NameInMap("SpotPriceLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
     private Float spotPriceLimit;
 
-    @Query
-    @NameInMap("SpotStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Long timeout;
 
-    @Query
-    @NameInMap("VSwitchId")
-    private java.util.List < String > vSwitchId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    private java.util.List<String> vSwitchId;
 
     private SubmitServerlessJobRequest(Builder builder) {
         super(builder);
@@ -107,7 +112,7 @@ public class SubmitServerlessJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,7 +148,7 @@ public class SubmitServerlessJobRequest extends Request {
     /**
      * @return dependsOn
      */
-    public java.util.List < DependsOn> getDependsOn() {
+    public java.util.List<DependsOn> getDependsOn() {
         return this.dependsOn;
     }
 
@@ -157,7 +162,7 @@ public class SubmitServerlessJobRequest extends Request {
     /**
      * @return instanceType
      */
-    public java.util.List < String > getInstanceType() {
+    public java.util.List<String> getInstanceType() {
         return this.instanceType;
     }
 
@@ -220,7 +225,7 @@ public class SubmitServerlessJobRequest extends Request {
     /**
      * @return vSwitchId
      */
-    public java.util.List < String > getVSwitchId() {
+    public java.util.List<String> getVSwitchId() {
         return this.vSwitchId;
     }
 
@@ -229,9 +234,9 @@ public class SubmitServerlessJobRequest extends Request {
         private String clusterId; 
         private Container container; 
         private Float cpu; 
-        private java.util.List < DependsOn> dependsOn; 
+        private java.util.List<DependsOn> dependsOn; 
         private Integer ephemeralStorage; 
-        private java.util.List < String > instanceType; 
+        private java.util.List<String> instanceType; 
         private String jobName; 
         private Long jobPriority; 
         private Float memory; 
@@ -240,7 +245,7 @@ public class SubmitServerlessJobRequest extends Request {
         private Float spotPriceLimit; 
         private String spotStrategy; 
         private Long timeout; 
-        private java.util.List < String > vSwitchId; 
+        private java.util.List<String> vSwitchId; 
 
         private Builder() {
             super();
@@ -267,10 +272,10 @@ public class SubmitServerlessJobRequest extends Request {
         } 
 
         /**
-         * The configuration of the array job.
-         * <p>
-         * 
-         * >  The value of an array job index is passed to a serverless job container through the environment variable `EHPC_ARRAY_TASK_ID`. Users can access the container from business programs.
+         * <p>The configuration of the array job.</p>
+         * <blockquote>
+         * <p> The value of an array job index is passed to a serverless job container through the environment variable <code>EHPC_ARRAY_TASK_ID</code>. Users can access the container from business programs.</p>
+         * </blockquote>
          */
         public Builder arrayProperties(ArrayProperties arrayProperties) {
             String arrayPropertiesShrink = shrink(arrayProperties, "ArrayProperties", "json");
@@ -280,10 +285,12 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * The ID of the E-HPC cluster.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -292,7 +299,8 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * The properties of the serverless job container.
+         * <p>The properties of the Serverless job container.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder container(Container container) {
             String containerShrink = shrink(container, "Container", "json");
@@ -302,7 +310,10 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * The vCPU size of the serverless job container. Unit: cores.
+         * <p>The vCPU size of the serverless job container. Unit: cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpu(Float cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -311,9 +322,9 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * The serverless job dependencies.
+         * <p>The dependencies of the serverless job.</p>
          */
-        public Builder dependsOn(java.util.List < DependsOn> dependsOn) {
+        public Builder dependsOn(java.util.List<DependsOn> dependsOn) {
             String dependsOnShrink = shrink(dependsOn, "DependsOn", "json");
             this.putQueryParameter("DependsOn", dependsOnShrink);
             this.dependsOn = dependsOn;
@@ -321,10 +332,13 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * The size of the temporary storage that is added to the serverless job container. Unit: GiB.
-         * <p>
+         * <p>The size of the temporary storage space added to the serverless job container. Unit: GiB.</p>
+         * <blockquote>
+         * <p> By default, a space of 30 GiB is provided free of charge. If you require a larger space, you can pass this parameter to specify your required space size.</p>
+         * </blockquote>
          * 
-         * >  By default, the serverless job container provides 30 GiB of free storage quota. If you require storage of more than 30 GiB, you can use this parameter to specify the temporary storage to add to the job container.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder ephemeralStorage(Integer ephemeralStorage) {
             this.putQueryParameter("EphemeralStorage", ephemeralStorage);
@@ -333,9 +347,9 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * The ECS instance types used by the serverless job container.
+         * <p>The Elastic Compute Service (ECS) instance types used by the serverless job container.</p>
          */
-        public Builder instanceType(java.util.List < String > instanceType) {
+        public Builder instanceType(java.util.List<String> instanceType) {
             String instanceTypeShrink = shrink(instanceType, "InstanceType", "json");
             this.putQueryParameter("InstanceType", instanceTypeShrink);
             this.instanceType = instanceType;
@@ -343,7 +357,14 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * The name of the serverless job.
+         * <p>The name of the serverless job.</p>
+         * <blockquote>
+         * <p> The name can contain lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testjob</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -352,7 +373,10 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * The scheduling priority of the serverless job. Valid values: 0 to 999. A greater value indicates a higher priority.
+         * <p>The scheduling priority of the serverless job. Valid values: 0 to 999. A greater value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder jobPriority(Long jobPriority) {
             this.putQueryParameter("JobPriority", jobPriority);
@@ -361,7 +385,10 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * The memory size of the serverless job container. Unit: GiB.
+         * <p>The memory size of the serverless job container. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder memory(Float memory) {
             this.putQueryParameter("Memory", memory);
@@ -370,7 +397,10 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * The name of the RAM role that is associated with the serverless job container.
+         * <p>The Resource Access Manamement (RAM) role that is associated with the Serverless job container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRamRoleName</p>
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -379,7 +409,7 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * RetryStrategy.
+         * <p>The retry policy of the serverless job.</p>
          */
         public Builder retryStrategy(RetryStrategy retryStrategy) {
             String retryStrategyShrink = shrink(retryStrategy, "RetryStrategy", "json");
@@ -389,10 +419,11 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * The maximum hourly price of the preemptible instance. The value can contain up to three decimal places.
-         * <p>
+         * <p>The maximum hourly price of the preemptible elastic container instance. The value can be accurate to three decimal places.</p>
+         * <p>If you set SpotStrategy to SpotWithPriceLimit, you must specify the SpotPriceLimit parameter.</p>
          * 
-         * If you set SpotStrategy to SpotWithPriceLimit, you must specify the SpotPriceLimit parameter.
+         * <strong>example:</strong>
+         * <p>0.062</p>
          */
         public Builder spotPriceLimit(Float spotPriceLimit) {
             this.putQueryParameter("SpotPriceLimit", spotPriceLimit);
@@ -401,14 +432,16 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * The bidding policy for the instance. Valid values:
-         * <p>
+         * <p>The bidding policy of the ECS instances. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The instance is created as a pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: The instance is created as a preemptible instance for which you specify the maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</li>
+         * </ul>
+         * <p>Default value: NoSpot.</p>
          * 
-         * *   NoSpot: The instance is created as a pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is used as the bid price.
-         * 
-         * Default value: NoSpot.
+         * <strong>example:</strong>
+         * <p>SpotWithPriceLimit</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -417,7 +450,10 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * The validity period of the serverless job. After the validity period expires, the job is forcibly terminated. Unit: seconds.
+         * <p>The validity period of the serverless job. After the validity period expires, the job is forcibly terminated. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -426,9 +462,9 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         /**
-         * The IDs of the vSwitches to which the serverless job container belongs.
+         * <p>The IDs of the vSwitches to which the serverless job container belongs.</p>
          */
-        public Builder vSwitchId(java.util.List < String > vSwitchId) {
+        public Builder vSwitchId(java.util.List<String> vSwitchId) {
             String vSwitchIdShrink = shrink(vSwitchId, "VSwitchId", "json");
             this.putQueryParameter("VSwitchId", vSwitchIdShrink);
             this.vSwitchId = vSwitchId;
@@ -442,14 +478,20 @@ public class SubmitServerlessJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitServerlessJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitServerlessJobRequest</p>
+     */
     public static class ArrayProperties extends TeaModel {
-        @NameInMap("IndexEnd")
+        @com.aliyun.core.annotation.NameInMap("IndexEnd")
         private Long indexEnd;
 
-        @NameInMap("IndexStart")
+        @com.aliyun.core.annotation.NameInMap("IndexStart")
         private Long indexStart;
 
-        @NameInMap("IndexStep")
+        @com.aliyun.core.annotation.NameInMap("IndexStep")
         private Long indexStep;
 
         private ArrayProperties(Builder builder) {
@@ -492,8 +534,20 @@ public class SubmitServerlessJobRequest extends Request {
             private Long indexStart; 
             private Long indexStep; 
 
+            private Builder() {
+            } 
+
+            private Builder(ArrayProperties model) {
+                this.indexEnd = model.indexEnd;
+                this.indexStart = model.indexStart;
+                this.indexStep = model.indexStep;
+            } 
+
             /**
-             * The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to the value of IndexStart.
+             * <p>The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to the value of IndexStart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder indexEnd(Long indexEnd) {
                 this.indexEnd = indexEnd;
@@ -501,7 +555,10 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * The start value of the array job index. Valid values: 0 to 4999.
+             * <p>The starting value of the array job index. Valid values: 0 to 4999.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder indexStart(Long indexStart) {
                 this.indexStart = indexStart;
@@ -509,10 +566,13 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * The interval of the array job index.
-             * <p>
+             * <p>The interval of the array job index.</p>
+             * <blockquote>
+             * <p> If the array job property is IndexStart=1,IndexEnd=5, and IndexStep=2, the array job contains three subtasks. The values of the subtask indexes are 1,3, and 5.</p>
+             * </blockquote>
              * 
-             * >  If the array job property is IndexStart=1,IndexEnd=5, and IndexStep=2, the array job contains three subtasks. The values of the subtask indexes are 1,3, and 5.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder indexStep(Long indexStep) {
                 this.indexStep = indexStep;
@@ -526,11 +586,17 @@ public class SubmitServerlessJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitServerlessJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitServerlessJobRequest</p>
+     */
     public static class EnvironmentVar extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private EnvironmentVar(Builder builder) {
@@ -564,8 +630,19 @@ public class SubmitServerlessJobRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnvironmentVar model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The name of the environment variable for the container. The name can be 1 to 128 characters in length and can contain letters, digits, and underscores (_). The name cannot start with a digit. Specify the name in the [0-9a-zA-Z] format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PATH</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -573,7 +650,10 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * The value of the environment variable for the container. The value must be 0 to 256 characters in length.
+             * <p>The value of the environment variable for the container. The value must be 0 to 256 bits in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/bin</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -587,14 +667,20 @@ public class SubmitServerlessJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitServerlessJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitServerlessJobRequest</p>
+     */
     public static class VolumeMount extends TeaModel {
-        @NameInMap("FlexVolumeDriver")
+        @com.aliyun.core.annotation.NameInMap("FlexVolumeDriver")
         private String flexVolumeDriver;
 
-        @NameInMap("FlexVolumeOptions")
+        @com.aliyun.core.annotation.NameInMap("FlexVolumeOptions")
         private String flexVolumeOptions;
 
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
         private VolumeMount(Builder builder) {
@@ -637,8 +723,24 @@ public class SubmitServerlessJobRequest extends Request {
             private String flexVolumeOptions; 
             private String mountPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(VolumeMount model) {
+                this.flexVolumeDriver = model.flexVolumeDriver;
+                this.flexVolumeOptions = model.flexVolumeOptions;
+                this.mountPath = model.mountPath;
+            } 
+
             /**
-             * FlexVolumeDriver.
+             * <p>The driver type when you use the FlexVolume plug-in to mount a volume. Valid values:</p>
+             * <ul>
+             * <li>alicloud/nas: a NAS driver.</li>
+             * <li>alicloud/oss: an OSS driver.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>alicloud/oss</p>
              */
             public Builder flexVolumeDriver(String flexVolumeDriver) {
                 this.flexVolumeDriver = flexVolumeDriver;
@@ -646,7 +748,11 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * FlexVolumeOptions.
+             * <p>The options of the FlexVolume object. Each option is a key-value pair in a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;bucket&quot;:&quot;hpctest&quot;,&quot;url&quot;: &quot;oss-cn-hangzhou-internal.aliyuncs.com
+             * &quot;,&quot;path&quot;:&quot;/data&quot;,&quot;ramRole&quot;:&quot;AliyunECSInstanceForEHPCRole&quot;}</p>
              */
             public Builder flexVolumeOptions(String flexVolumeOptions) {
                 this.flexVolumeOptions = flexVolumeOptions;
@@ -654,10 +760,13 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * The directory to which the volume is mounted.
-             * <p>
+             * <p>The directory to which the volume is mounted.</p>
+             * <blockquote>
+             * <p> The data stored in this directory is overwritten by the data on the volume. Exercise caution when you specify this parameter.</p>
+             * </blockquote>
              * 
-             * > The data stored in this directory is overwritten by the data on the volume. Specify this parameter with caution.
+             * <strong>example:</strong>
+             * <p>/data</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -671,27 +780,33 @@ public class SubmitServerlessJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitServerlessJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitServerlessJobRequest</p>
+     */
     public static class Container extends TeaModel {
-        @NameInMap("Arg")
-        private java.util.List < String > arg;
+        @com.aliyun.core.annotation.NameInMap("Arg")
+        private java.util.List<String> arg;
 
-        @NameInMap("Command")
-        private java.util.List < String > command;
+        @com.aliyun.core.annotation.NameInMap("Command")
+        private java.util.List<String> command;
 
-        @NameInMap("EnvironmentVar")
-        private java.util.List < EnvironmentVar> environmentVar;
+        @com.aliyun.core.annotation.NameInMap("EnvironmentVar")
+        private java.util.List<EnvironmentVar> environmentVar;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
 
-        @NameInMap("Image")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Image")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String image;
 
-        @NameInMap("VolumeMount")
-        private java.util.List < VolumeMount> volumeMount;
+        @com.aliyun.core.annotation.NameInMap("VolumeMount")
+        private java.util.List<VolumeMount> volumeMount;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private Container(Builder builder) {
@@ -715,21 +830,21 @@ public class SubmitServerlessJobRequest extends Request {
         /**
          * @return arg
          */
-        public java.util.List < String > getArg() {
+        public java.util.List<String> getArg() {
             return this.arg;
         }
 
         /**
          * @return command
          */
-        public java.util.List < String > getCommand() {
+        public java.util.List<String> getCommand() {
             return this.command;
         }
 
         /**
          * @return environmentVar
          */
-        public java.util.List < EnvironmentVar> getEnvironmentVar() {
+        public java.util.List<EnvironmentVar> getEnvironmentVar() {
             return this.environmentVar;
         }
 
@@ -750,7 +865,7 @@ public class SubmitServerlessJobRequest extends Request {
         /**
          * @return volumeMount
          */
-        public java.util.List < VolumeMount> getVolumeMount() {
+        public java.util.List<VolumeMount> getVolumeMount() {
             return this.volumeMount;
         }
 
@@ -762,40 +877,56 @@ public class SubmitServerlessJobRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > arg; 
-            private java.util.List < String > command; 
-            private java.util.List < EnvironmentVar> environmentVar; 
+            private java.util.List<String> arg; 
+            private java.util.List<String> command; 
+            private java.util.List<EnvironmentVar> environmentVar; 
             private Integer gpu; 
             private String image; 
-            private java.util.List < VolumeMount> volumeMount; 
+            private java.util.List<VolumeMount> volumeMount; 
             private String workingDir; 
 
+            private Builder() {
+            } 
+
+            private Builder(Container model) {
+                this.arg = model.arg;
+                this.command = model.command;
+                this.environmentVar = model.environmentVar;
+                this.gpu = model.gpu;
+                this.image = model.image;
+                this.volumeMount = model.volumeMount;
+                this.workingDir = model.workingDir;
+            } 
+
             /**
-             * The arguments of the container startup command. You can specify up to 10 arguments.
+             * <p>The arguments of the container startup command. You can specify up to 10 arguments.</p>
              */
-            public Builder arg(java.util.List < String > arg) {
+            public Builder arg(java.util.List<String> arg) {
                 this.arg = arg;
                 return this;
             }
 
             /**
-             * The container startup commands.
+             * <p>The container startup commands.</p>
              */
-            public Builder command(java.util.List < String > command) {
+            public Builder command(java.util.List<String> command) {
                 this.command = command;
                 return this;
             }
 
             /**
-             * The environment variable of the container.
+             * <p>The value of the environment variable for the container.</p>
              */
-            public Builder environmentVar(java.util.List < EnvironmentVar> environmentVar) {
+            public Builder environmentVar(java.util.List<EnvironmentVar> environmentVar) {
                 this.environmentVar = environmentVar;
                 return this;
             }
 
             /**
-             * The number of GPUs of the container.
+             * <p>The number of GPUs used by the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -803,7 +934,11 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * The image of the container.
+             * <p>The container image.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc/hpl:latest</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -811,15 +946,18 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * The data volumes mounted to the container.
+             * <p>The data volumes that are mounted to the container.</p>
              */
-            public Builder volumeMount(java.util.List < VolumeMount> volumeMount) {
+            public Builder volumeMount(java.util.List<VolumeMount> volumeMount) {
                 this.volumeMount = volumeMount;
                 return this;
             }
 
             /**
-             * The working directory of the container.
+             * <p>The working directory of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/</p>
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -833,11 +971,17 @@ public class SubmitServerlessJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitServerlessJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitServerlessJobRequest</p>
+     */
     public static class DependsOn extends TeaModel {
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DependsOn(Builder builder) {
@@ -871,8 +1015,19 @@ public class SubmitServerlessJobRequest extends Request {
             private String jobId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DependsOn model) {
+                this.jobId = model.jobId;
+                this.type = model.type;
+            } 
+
             /**
-             * The ID of the dependent job.
+             * <p>The ID of the dependent job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -880,15 +1035,17 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * The type of the dependency. Valid values:
-             * <p>
+             * <p>The dependency type. Valid values:</p>
+             * <ul>
+             * <li>AfterSucceeded: <strong>All subtasks</strong> of the dependent job or array job succeed. The exit code is 0.</li>
+             * <li>AfterFailed: <strong>All subtasks</strong> of the dependent job or array job fail. The exit code is not 0.</li>
+             * <li>AfterAny: The dependent job completes (succeeds or fails).</li>
+             * <li>AfterCorresponding: The subtask corresponding to the dependent array job succeeds. The exit code is 0.</li>
+             * </ul>
+             * <p>Default value: AfterSucceeded.</p>
              * 
-             * *   AfterSucceeded: **All subtasks** of the array job or the dependent job are successfully run. The exit code is 0.
-             * *   AfterFailed: **Any subtask** of the array job or the dependent job fails. The exit code is not 0.
-             * *   AfterAny: The dependent job completes.
-             * *   AfterCorresponding: The subtasks of the array job is successfully run. The exit code is 0.
-             * 
-             * Default value: AfterSucceeded.
+             * <strong>example:</strong>
+             * <p>AfterAny</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -902,11 +1059,17 @@ public class SubmitServerlessJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitServerlessJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitServerlessJobRequest</p>
+     */
     public static class EvaluateOnExit extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("OnExitCode")
+        @com.aliyun.core.annotation.NameInMap("OnExitCode")
         private String onExitCode;
 
         private EvaluateOnExit(Builder builder) {
@@ -940,8 +1103,23 @@ public class SubmitServerlessJobRequest extends Request {
             private String action; 
             private String onExitCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(EvaluateOnExit model) {
+                this.action = model.action;
+                this.onExitCode = model.onExitCode;
+            } 
+
             /**
-             * Action.
+             * <p>The job action. Valid values:</p>
+             * <ul>
+             * <li>Retry: The job starts a retry when a specific exit code is hit.</li>
+             * <li>Exit: The job exits when a specific exit code is hit.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Retry</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -949,7 +1127,10 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * OnExitCode.
+             * <p>The job exit code, which is used together with Action to form a job retry rule. Valid values: 0 to 255.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder onExitCode(String onExitCode) {
                 this.onExitCode = onExitCode;
@@ -963,13 +1144,19 @@ public class SubmitServerlessJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitServerlessJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitServerlessJobRequest</p>
+     */
     public static class RetryStrategy extends TeaModel {
-        @NameInMap("Attempts")
-        @Validation(maximum = 10, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("Attempts")
+        @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
         private Integer attempts;
 
-        @NameInMap("EvaluateOnExit")
-        private java.util.List < EvaluateOnExit> evaluateOnExit;
+        @com.aliyun.core.annotation.NameInMap("EvaluateOnExit")
+        private java.util.List<EvaluateOnExit> evaluateOnExit;
 
         private RetryStrategy(Builder builder) {
             this.attempts = builder.attempts;
@@ -994,16 +1181,27 @@ public class SubmitServerlessJobRequest extends Request {
         /**
          * @return evaluateOnExit
          */
-        public java.util.List < EvaluateOnExit> getEvaluateOnExit() {
+        public java.util.List<EvaluateOnExit> getEvaluateOnExit() {
             return this.evaluateOnExit;
         }
 
         public static final class Builder {
             private Integer attempts; 
-            private java.util.List < EvaluateOnExit> evaluateOnExit; 
+            private java.util.List<EvaluateOnExit> evaluateOnExit; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetryStrategy model) {
+                this.attempts = model.attempts;
+                this.evaluateOnExit = model.evaluateOnExit;
+            } 
 
             /**
-             * Attempts.
+             * <p>The number of retries for the serverless job. Valid values: 1 to 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder attempts(Integer attempts) {
                 this.attempts = attempts;
@@ -1011,9 +1209,9 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * EvaluateOnExit.
+             * <p>The retry rules for the serverless job. You can specify up to 10 rules.</p>
              */
-            public Builder evaluateOnExit(java.util.List < EvaluateOnExit> evaluateOnExit) {
+            public Builder evaluateOnExit(java.util.List<EvaluateOnExit> evaluateOnExit) {
                 this.evaluateOnExit = evaluateOnExit;
                 return this;
             }

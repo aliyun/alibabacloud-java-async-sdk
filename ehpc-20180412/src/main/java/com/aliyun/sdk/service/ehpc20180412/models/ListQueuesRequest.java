@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQueuesRequest} extends {@link RequestModel}
  *
  * <p>ListQueuesRequest</p>
  */
 public class ListQueuesRequest extends Request {
-    @Query
-    @NameInMap("Async")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Async")
     private Boolean async;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
     private ListQueuesRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class ListQueuesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,10 @@ public class ListQueuesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable asynchronous query.
+         * <p>Specifies whether to enable asynchronous query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -78,7 +86,11 @@ public class ListQueuesRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

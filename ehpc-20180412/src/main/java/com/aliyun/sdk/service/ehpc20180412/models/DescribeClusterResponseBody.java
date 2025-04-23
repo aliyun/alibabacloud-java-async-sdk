@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterResponseBody</p>
  */
 public class DescribeClusterResponseBody extends TeaModel {
-    @NameInMap("ClusterInfo")
+    @com.aliyun.core.annotation.NameInMap("ClusterInfo")
     private ClusterInfo clusterInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClusterResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeClusterResponseBody extends TeaModel {
 
     public static DescribeClusterResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeClusterResponseBody extends TeaModel {
         private ClusterInfo clusterInfo; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterResponseBody model) {
+            this.clusterInfo = model.clusterInfo;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The cluster information.
+         * <p>The information about the cluster.</p>
          */
         public Builder clusterInfo(ClusterInfo clusterInfo) {
             this.clusterInfo = clusterInfo;
@@ -58,7 +75,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +91,26 @@ public class DescribeClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class AddOnsInfo extends TeaModel {
-        @NameInMap("DeployMode")
+        @com.aliyun.core.annotation.NameInMap("DeployMode")
         private String deployMode;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("SoftwareId")
+        @com.aliyun.core.annotation.NameInMap("SoftwareId")
         private String softwareId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("URL")
+        @com.aliyun.core.annotation.NameInMap("URL")
         private String URL;
 
         private AddOnsInfo(Builder builder) {
@@ -145,12 +171,26 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String status; 
             private String URL; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddOnsInfo model) {
+                this.deployMode = model.deployMode;
+                this.port = model.port;
+                this.softwareId = model.softwareId;
+                this.status = model.status;
+                this.URL = model.URL;
+            } 
+
             /**
-             * The deployment mode of the custom component. Valid values:
-             * <p>
+             * <p>The deployment mode of the custom component. Valid values:</p>
+             * <ul>
+             * <li>local</li>
+             * <li>ecs</li>
+             * </ul>
              * 
-             * *   local
-             * *   ecs
+             * <strong>example:</strong>
+             * <p>local</p>
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -158,7 +198,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The TCP port number of the custom component.
+             * <p>The TCP port number of the custom component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -166,7 +209,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The software ID of the component.
+             * <p>The software ID of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CROMWELL_85</p>
              */
             public Builder softwareId(String softwareId) {
                 this.softwareId = softwareId;
@@ -174,12 +220,15 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The running status of the custom component. Valid values:
-             * <p>
+             * <p>The running status of the custom component. Valid values:</p>
+             * <ul>
+             * <li>running</li>
+             * <li>stopped</li>
+             * <li>exception</li>
+             * </ul>
              * 
-             * *   running
-             * *   stopped
-             * *   exception
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -187,7 +236,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the custom component service.
+             * <p>The URL of the custom component service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://172.16.10.12:10000/">http://172.16.10.12:10000/</a></p>
              */
             public Builder URL(String URL) {
                 this.URL = URL;
@@ -201,9 +253,15 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class ClusterInfoAddOnsInfo extends TeaModel {
-        @NameInMap("AddOnsInfo")
-        private java.util.List < AddOnsInfo> addOnsInfo;
+        @com.aliyun.core.annotation.NameInMap("AddOnsInfo")
+        private java.util.List<AddOnsInfo> addOnsInfo;
 
         private ClusterInfoAddOnsInfo(Builder builder) {
             this.addOnsInfo = builder.addOnsInfo;
@@ -220,17 +278,24 @@ public class DescribeClusterResponseBody extends TeaModel {
         /**
          * @return addOnsInfo
          */
-        public java.util.List < AddOnsInfo> getAddOnsInfo() {
+        public java.util.List<AddOnsInfo> getAddOnsInfo() {
             return this.addOnsInfo;
         }
 
         public static final class Builder {
-            private java.util.List < AddOnsInfo> addOnsInfo; 
+            private java.util.List<AddOnsInfo> addOnsInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterInfoAddOnsInfo model) {
+                this.addOnsInfo = model.addOnsInfo;
+            } 
 
             /**
              * AddOnsInfo.
              */
-            public Builder addOnsInfo(java.util.List < AddOnsInfo> addOnsInfo) {
+            public Builder addOnsInfo(java.util.List<AddOnsInfo> addOnsInfo) {
                 this.addOnsInfo = addOnsInfo;
                 return this;
             }
@@ -242,14 +307,20 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class ApplicationInfo extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private ApplicationInfo(Builder builder) {
@@ -292,8 +363,20 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String tag; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApplicationInfo model) {
+                this.name = model.name;
+                this.tag = model.tag;
+                this.version = model.version;
+            } 
+
             /**
-             * The name of the software.
+             * <p>The name of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openmpi</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -301,7 +384,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the software.
+             * <p>The tag of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenMPI_1.8.7</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -309,7 +395,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the software.
+             * <p>The version of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.10</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -323,9 +412,15 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class Applications extends TeaModel {
-        @NameInMap("ApplicationInfo")
-        private java.util.List < ApplicationInfo> applicationInfo;
+        @com.aliyun.core.annotation.NameInMap("ApplicationInfo")
+        private java.util.List<ApplicationInfo> applicationInfo;
 
         private Applications(Builder builder) {
             this.applicationInfo = builder.applicationInfo;
@@ -342,17 +437,24 @@ public class DescribeClusterResponseBody extends TeaModel {
         /**
          * @return applicationInfo
          */
-        public java.util.List < ApplicationInfo> getApplicationInfo() {
+        public java.util.List<ApplicationInfo> getApplicationInfo() {
             return this.applicationInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ApplicationInfo> applicationInfo; 
+            private java.util.List<ApplicationInfo> applicationInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.applicationInfo = model.applicationInfo;
+            } 
 
             /**
              * ApplicationInfo.
              */
-            public Builder applicationInfo(java.util.List < ApplicationInfo> applicationInfo) {
+            public Builder applicationInfo(java.util.List<ApplicationInfo> applicationInfo) {
                 this.applicationInfo = applicationInfo;
                 return this;
             }
@@ -364,11 +466,17 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class Compute extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
         private Compute(Builder builder) {
@@ -402,8 +510,19 @@ public class DescribeClusterResponseBody extends TeaModel {
             private Integer count; 
             private String instanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Compute model) {
+                this.count = model.count;
+                this.instanceType = model.instanceType;
+            } 
+
             /**
-             * The number of compute nodes in the cluster.
+             * <p>The number of compute nodes in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -411,7 +530,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the compute nodes.
+             * <p>The instance type of the compute nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.n1.tiny</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -425,11 +547,17 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class Login extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
         private Login(Builder builder) {
@@ -463,8 +591,19 @@ public class DescribeClusterResponseBody extends TeaModel {
             private Integer count; 
             private String instanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Login model) {
+                this.count = model.count;
+                this.instanceType = model.instanceType;
+            } 
+
             /**
-             * The number of logon nodes in the cluster.
+             * <p>The number of logon nodes in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -472,7 +611,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the logon nodes.
+             * <p>The instance type of the logon nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.n1.tiny</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -486,11 +628,17 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class Manager extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
         private Manager(Builder builder) {
@@ -524,8 +672,19 @@ public class DescribeClusterResponseBody extends TeaModel {
             private Integer count; 
             private String instanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Manager model) {
+                this.count = model.count;
+                this.instanceType = model.instanceType;
+            } 
+
             /**
-             * The number of management nodes.
+             * <p>The number of management nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -533,7 +692,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the management nodes.
+             * <p>The instance type of the management nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.n1.tiny</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -547,11 +709,17 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class ProxyMgr extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
         private ProxyMgr(Builder builder) {
@@ -585,8 +753,19 @@ public class DescribeClusterResponseBody extends TeaModel {
             private Integer count; 
             private String instanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProxyMgr model) {
+                this.count = model.count;
+                this.instanceType = model.instanceType;
+            } 
+
             /**
-             * The number of proxy nodes.
+             * <p>The number of proxy nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -594,7 +773,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the proxy node.
+             * <p>The instance type of the proxy node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.n1.tiny</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -608,17 +790,23 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class EcsInfo extends TeaModel {
-        @NameInMap("Compute")
+        @com.aliyun.core.annotation.NameInMap("Compute")
         private Compute compute;
 
-        @NameInMap("Login")
+        @com.aliyun.core.annotation.NameInMap("Login")
         private Login login;
 
-        @NameInMap("Manager")
+        @com.aliyun.core.annotation.NameInMap("Manager")
         private Manager manager;
 
-        @NameInMap("ProxyMgr")
+        @com.aliyun.core.annotation.NameInMap("ProxyMgr")
         private ProxyMgr proxyMgr;
 
         private EcsInfo(Builder builder) {
@@ -670,8 +858,18 @@ public class DescribeClusterResponseBody extends TeaModel {
             private Manager manager; 
             private ProxyMgr proxyMgr; 
 
+            private Builder() {
+            } 
+
+            private Builder(EcsInfo model) {
+                this.compute = model.compute;
+                this.login = model.login;
+                this.manager = model.manager;
+                this.proxyMgr = model.proxyMgr;
+            } 
+
             /**
-             * The list of compute nodes.
+             * <p>The list of compute nodes.</p>
              */
             public Builder compute(Compute compute) {
                 this.compute = compute;
@@ -679,7 +877,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The list of logon nodes.
+             * <p>The list of logon nodes.</p>
              */
             public Builder login(Login login) {
                 this.login = login;
@@ -687,7 +885,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The information of management nodes.
+             * <p>The information of management nodes.</p>
              */
             public Builder manager(Manager manager) {
                 this.manager = manager;
@@ -695,10 +893,8 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The list of proxy nodes on the cloud.
-             * <p>
-             * 
-             * This parameter is returned only when the cluster is deployed across hybrid environments and the hybrid-cloud proxy mode is enabled for the cluster.
+             * <p>The list of proxy nodes on the cloud.</p>
+             * <p>This parameter is returned only when the cluster is deployed across hybrid environments and the hybrid-cloud proxy mode is enabled for the cluster.</p>
              */
             public Builder proxyMgr(ProxyMgr proxyMgr) {
                 this.proxyMgr = proxyMgr;
@@ -712,14 +908,20 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class InitialImage extends TeaModel {
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageOwnerAlias")
+        @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
         private String imageOwnerAlias;
 
-        @NameInMap("OsTag")
+        @com.aliyun.core.annotation.NameInMap("OsTag")
         private String osTag;
 
         private InitialImage(Builder builder) {
@@ -762,8 +964,20 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String imageOwnerAlias; 
             private String osTag; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitialImage model) {
+                this.imageId = model.imageId;
+                this.imageOwnerAlias = model.imageOwnerAlias;
+                this.osTag = model.osTag;
+            } 
+
             /**
-             * The image ID.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos_7_6_x64_20G_alibase_20211130.vhd</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -771,13 +985,16 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image. Valid values:
-             * <p>
+             * <p>The type of the image. Valid values:</p>
+             * <ul>
+             * <li>system: public image</li>
+             * <li>self: custom image</li>
+             * <li>others: shared image</li>
+             * <li>marketplace: Alibaba Cloud Marketplace image</li>
+             * </ul>
              * 
-             * *   system: public image
-             * *   self: custom image
-             * *   others: shared image
-             * *   marketplace: Alibaba Cloud Marketplace image
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -785,7 +1002,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * An array of OS images that are supported by E-HPC.
+             * <p>An array of OS images that are supported by E-HPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS_7.6_64</p>
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -799,23 +1019,29 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class NodesInfo extends TeaModel {
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
-        @NameInMap("Dir")
+        @com.aliyun.core.annotation.NameInMap("Dir")
         private String dir;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("SchedulerType")
+        @com.aliyun.core.annotation.NameInMap("SchedulerType")
         private String schedulerType;
 
         private NodesInfo(Builder builder) {
@@ -885,14 +1111,28 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String role; 
             private String schedulerType; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodesInfo model) {
+                this.accountType = model.accountType;
+                this.dir = model.dir;
+                this.hostName = model.hostName;
+                this.ipAddress = model.ipAddress;
+                this.role = model.role;
+                this.schedulerType = model.schedulerType;
+            } 
+
             /**
-             * The service type of the domain account to which the on-premises node in the cluster belongs. Valid values:
-             * <p>
+             * <p>The service type of the domain account to which the node in the on-premises cluster belongs. Valid values:</p>
+             * <ul>
+             * <li>nis</li>
+             * <li>ldap</li>
+             * </ul>
+             * <p>Default value: nis.</p>
              * 
-             * *   nis
-             * *   ldap
-             * 
-             * Default value: nis.
+             * <strong>example:</strong>
+             * <p>nis</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -900,7 +1140,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The directory of the on-premises node in the cluster.
+             * <p>The directory of the node in the on-premises cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/opt/sge/default/</p>
              */
             public Builder dir(String dir) {
                 this.dir = dir;
@@ -908,7 +1151,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname of the on-premises node in the cluster.
+             * <p>The hostname of the node in the on-premises cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>compute000</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -916,7 +1162,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the on-premises node in the cluster.
+             * <p>The IP address of the node in the on-premises cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -924,12 +1173,15 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the on-premises node in the cluster. Valid values:
-             * <p>
+             * <p>The role of the node in the on-premises cluster. Valid values:</p>
+             * <ul>
+             * <li>Manager: management node</li>
+             * <li>Login: logon node</li>
+             * <li>Compute: compute node</li>
+             * </ul>
              * 
-             * *   Manager: management node
-             * *   Login: logon node
-             * *   Compute: compute node
+             * <strong>example:</strong>
+             * <p>Compute</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -937,15 +1189,17 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduler type of the on-premises node in the cluster. Valid values:
-             * <p>
+             * <p>The scheduler type of the node in the on-premises cluster. Valid values:</p>
+             * <ul>
+             * <li>pbs</li>
+             * <li>slurm</li>
+             * <li>opengridscheduler</li>
+             * <li>deadline</li>
+             * </ul>
+             * <p>Default value: pbs.</p>
              * 
-             * *   pbs
-             * *   slurm
-             * *   opengridscheduler
-             * *   deadline
-             * 
-             * Default value: pbs.
+             * <strong>example:</strong>
+             * <p>pbs</p>
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -959,9 +1213,15 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("NodesInfo")
-        private java.util.List < NodesInfo> nodesInfo;
+        @com.aliyun.core.annotation.NameInMap("NodesInfo")
+        private java.util.List<NodesInfo> nodesInfo;
 
         private Nodes(Builder builder) {
             this.nodesInfo = builder.nodesInfo;
@@ -978,17 +1238,24 @@ public class DescribeClusterResponseBody extends TeaModel {
         /**
          * @return nodesInfo
          */
-        public java.util.List < NodesInfo> getNodesInfo() {
+        public java.util.List<NodesInfo> getNodesInfo() {
             return this.nodesInfo;
         }
 
         public static final class Builder {
-            private java.util.List < NodesInfo> nodesInfo; 
+            private java.util.List<NodesInfo> nodesInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.nodesInfo = model.nodesInfo;
+            } 
 
             /**
              * NodesInfo.
              */
-            public Builder nodesInfo(java.util.List < NodesInfo> nodesInfo) {
+            public Builder nodesInfo(java.util.List<NodesInfo> nodesInfo) {
                 this.nodesInfo = nodesInfo;
                 return this;
             }
@@ -1000,14 +1267,20 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class OnPremiseInfo extends TeaModel {
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private OnPremiseInfo(Builder builder) {
@@ -1050,8 +1323,20 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String ip; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(OnPremiseInfo model) {
+                this.hostName = model.hostName;
+                this.ip = model.ip;
+                this.type = model.type;
+            } 
+
             /**
-             * The hostname of the on-premises management nodes.
+             * <p>The hostname of the management node in the on-premises cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testecs</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -1059,7 +1344,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the on-premises management nodes.
+             * <p>The IP address of the management node in the on-premises cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.<em>.</em></p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1067,12 +1355,15 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of on-premises management nodes. Valid values:
-             * <p>
+             * <p>The type of the management node in the on-premises cluster. Valid values:</p>
+             * <ul>
+             * <li>scheduler</li>
+             * <li>account</li>
+             * <li>account, scheduler</li>
+             * </ul>
              * 
-             * *   scheduler
-             * *   account
-             * *   account, scheduler
+             * <strong>example:</strong>
+             * <p>scheduler</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1086,9 +1377,15 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class ClusterInfoOnPremiseInfo extends TeaModel {
-        @NameInMap("OnPremiseInfo")
-        private java.util.List < OnPremiseInfo> onPremiseInfo;
+        @com.aliyun.core.annotation.NameInMap("OnPremiseInfo")
+        private java.util.List<OnPremiseInfo> onPremiseInfo;
 
         private ClusterInfoOnPremiseInfo(Builder builder) {
             this.onPremiseInfo = builder.onPremiseInfo;
@@ -1105,17 +1402,24 @@ public class DescribeClusterResponseBody extends TeaModel {
         /**
          * @return onPremiseInfo
          */
-        public java.util.List < OnPremiseInfo> getOnPremiseInfo() {
+        public java.util.List<OnPremiseInfo> getOnPremiseInfo() {
             return this.onPremiseInfo;
         }
 
         public static final class Builder {
-            private java.util.List < OnPremiseInfo> onPremiseInfo; 
+            private java.util.List<OnPremiseInfo> onPremiseInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterInfoOnPremiseInfo model) {
+                this.onPremiseInfo = model.onPremiseInfo;
+            } 
 
             /**
              * OnPremiseInfo.
              */
-            public Builder onPremiseInfo(java.util.List < OnPremiseInfo> onPremiseInfo) {
+            public Builder onPremiseInfo(java.util.List<OnPremiseInfo> onPremiseInfo) {
                 this.onPremiseInfo = onPremiseInfo;
                 return this;
             }
@@ -1127,11 +1431,17 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class PostInstallScriptInfo extends TeaModel {
-        @NameInMap("Args")
+        @com.aliyun.core.annotation.NameInMap("Args")
         private String args;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private PostInstallScriptInfo(Builder builder) {
@@ -1165,8 +1475,19 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String args; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(PostInstallScriptInfo model) {
+                this.args = model.args;
+                this.url = model.url;
+            } 
+
             /**
-             * The runtime parameter of the script.
+             * <p>The parameter used to run the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bash file.sh</p>
              */
             public Builder args(String args) {
                 this.args = args;
@@ -1174,7 +1495,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The URL used to download the script.
+             * <p>The URL used to download the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1188,9 +1512,15 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class PostInstallScripts extends TeaModel {
-        @NameInMap("PostInstallScriptInfo")
-        private java.util.List < PostInstallScriptInfo> postInstallScriptInfo;
+        @com.aliyun.core.annotation.NameInMap("PostInstallScriptInfo")
+        private java.util.List<PostInstallScriptInfo> postInstallScriptInfo;
 
         private PostInstallScripts(Builder builder) {
             this.postInstallScriptInfo = builder.postInstallScriptInfo;
@@ -1207,17 +1537,24 @@ public class DescribeClusterResponseBody extends TeaModel {
         /**
          * @return postInstallScriptInfo
          */
-        public java.util.List < PostInstallScriptInfo> getPostInstallScriptInfo() {
+        public java.util.List<PostInstallScriptInfo> getPostInstallScriptInfo() {
             return this.postInstallScriptInfo;
         }
 
         public static final class Builder {
-            private java.util.List < PostInstallScriptInfo> postInstallScriptInfo; 
+            private java.util.List<PostInstallScriptInfo> postInstallScriptInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(PostInstallScripts model) {
+                this.postInstallScriptInfo = model.postInstallScriptInfo;
+            } 
 
             /**
              * PostInstallScriptInfo.
              */
-            public Builder postInstallScriptInfo(java.util.List < PostInstallScriptInfo> postInstallScriptInfo) {
+            public Builder postInstallScriptInfo(java.util.List<PostInstallScriptInfo> postInstallScriptInfo) {
                 this.postInstallScriptInfo = postInstallScriptInfo;
                 return this;
             }
@@ -1229,164 +1566,170 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResponseBody</p>
+     */
     public static class ClusterInfo extends TeaModel {
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
-        @NameInMap("AddOnsInfo")
+        @com.aliyun.core.annotation.NameInMap("AddOnsInfo")
         private ClusterInfoAddOnsInfo addOnsInfo;
 
-        @NameInMap("Applications")
+        @com.aliyun.core.annotation.NameInMap("Applications")
         private Applications applications;
 
-        @NameInMap("AutoRenew")
+        @com.aliyun.core.annotation.NameInMap("AutoRenew")
         private String autoRenew;
 
-        @NameInMap("AutoRenewPeriod")
+        @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
         private String autoRenewPeriod;
 
-        @NameInMap("BaseOsTag")
+        @com.aliyun.core.annotation.NameInMap("BaseOsTag")
         private String baseOsTag;
 
-        @NameInMap("ClientVersion")
+        @com.aliyun.core.annotation.NameInMap("ClientVersion")
         private String clientVersion;
 
-        @NameInMap("ClusterVersion")
+        @com.aliyun.core.annotation.NameInMap("ClusterVersion")
         private String clusterVersion;
 
-        @NameInMap("ComputeSpotPriceLimit")
+        @com.aliyun.core.annotation.NameInMap("ComputeSpotPriceLimit")
         private String computeSpotPriceLimit;
 
-        @NameInMap("ComputeSpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("ComputeSpotStrategy")
         private String computeSpotStrategy;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DeployMode")
+        @com.aliyun.core.annotation.NameInMap("DeployMode")
         private String deployMode;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("EcsChargeType")
+        @com.aliyun.core.annotation.NameInMap("EcsChargeType")
         private String ecsChargeType;
 
-        @NameInMap("EcsInfo")
+        @com.aliyun.core.annotation.NameInMap("EcsInfo")
         private EcsInfo ecsInfo;
 
-        @NameInMap("HaEnable")
+        @com.aliyun.core.annotation.NameInMap("HaEnable")
         private Boolean haEnable;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImageOwnerAlias")
+        @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
         private String imageOwnerAlias;
 
-        @NameInMap("InitialImage")
+        @com.aliyun.core.annotation.NameInMap("InitialImage")
         private InitialImage initialImage;
 
-        @NameInMap("KeyPairName")
+        @com.aliyun.core.annotation.NameInMap("KeyPairName")
         private String keyPairName;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private Nodes nodes;
 
-        @NameInMap("OnPremiseInfo")
+        @com.aliyun.core.annotation.NameInMap("OnPremiseInfo")
         private ClusterInfoOnPremiseInfo onPremiseInfo;
 
-        @NameInMap("OpenldapPar")
+        @com.aliyun.core.annotation.NameInMap("OpenldapPar")
         private String openldapPar;
 
-        @NameInMap("OsTag")
+        @com.aliyun.core.annotation.NameInMap("OsTag")
         private String osTag;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private String period;
 
-        @NameInMap("PeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
         private String periodUnit;
 
-        @NameInMap("Plugin")
+        @com.aliyun.core.annotation.NameInMap("Plugin")
         private String plugin;
 
-        @NameInMap("PostInstallScripts")
+        @com.aliyun.core.annotation.NameInMap("PostInstallScripts")
         private PostInstallScripts postInstallScripts;
 
-        @NameInMap("RamNodeTypes")
+        @com.aliyun.core.annotation.NameInMap("RamNodeTypes")
         private String ramNodeTypes;
 
-        @NameInMap("RamRoleName")
+        @com.aliyun.core.annotation.NameInMap("RamRoleName")
         private String ramRoleName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RemoteDirectory")
+        @com.aliyun.core.annotation.NameInMap("RemoteDirectory")
         private String remoteDirectory;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SccClusterId")
+        @com.aliyun.core.annotation.NameInMap("SccClusterId")
         private String sccClusterId;
 
-        @NameInMap("SchedulerPreInstall")
+        @com.aliyun.core.annotation.NameInMap("SchedulerPreInstall")
         private Integer schedulerPreInstall;
 
-        @NameInMap("SchedulerType")
+        @com.aliyun.core.annotation.NameInMap("SchedulerType")
         private String schedulerType;
 
-        @NameInMap("SchedulerVersion")
+        @com.aliyun.core.annotation.NameInMap("SchedulerVersion")
         private String schedulerVersion;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VolumeId")
+        @com.aliyun.core.annotation.NameInMap("VolumeId")
         private String volumeId;
 
-        @NameInMap("VolumeMountpoint")
+        @com.aliyun.core.annotation.NameInMap("VolumeMountpoint")
         private String volumeMountpoint;
 
-        @NameInMap("VolumeProtocol")
+        @com.aliyun.core.annotation.NameInMap("VolumeProtocol")
         private String volumeProtocol;
 
-        @NameInMap("VolumeType")
+        @com.aliyun.core.annotation.NameInMap("VolumeType")
         private String volumeType;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("WinAdPar")
+        @com.aliyun.core.annotation.NameInMap("WinAdPar")
         private String winAdPar;
 
-        @NameInMap("WithoutAgent")
+        @com.aliyun.core.annotation.NameInMap("WithoutAgent")
         private Integer withoutAgent;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private ClusterInfo(Builder builder) {
@@ -1879,12 +2222,74 @@ public class DescribeClusterResponseBody extends TeaModel {
             private Integer withoutAgent; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterInfo model) {
+                this.accountType = model.accountType;
+                this.addOnsInfo = model.addOnsInfo;
+                this.applications = model.applications;
+                this.autoRenew = model.autoRenew;
+                this.autoRenewPeriod = model.autoRenewPeriod;
+                this.baseOsTag = model.baseOsTag;
+                this.clientVersion = model.clientVersion;
+                this.clusterVersion = model.clusterVersion;
+                this.computeSpotPriceLimit = model.computeSpotPriceLimit;
+                this.computeSpotStrategy = model.computeSpotStrategy;
+                this.createTime = model.createTime;
+                this.deployMode = model.deployMode;
+                this.description = model.description;
+                this.domain = model.domain;
+                this.ecsChargeType = model.ecsChargeType;
+                this.ecsInfo = model.ecsInfo;
+                this.haEnable = model.haEnable;
+                this.id = model.id;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageOwnerAlias = model.imageOwnerAlias;
+                this.initialImage = model.initialImage;
+                this.keyPairName = model.keyPairName;
+                this.location = model.location;
+                this.name = model.name;
+                this.nodes = model.nodes;
+                this.onPremiseInfo = model.onPremiseInfo;
+                this.openldapPar = model.openldapPar;
+                this.osTag = model.osTag;
+                this.period = model.period;
+                this.periodUnit = model.periodUnit;
+                this.plugin = model.plugin;
+                this.postInstallScripts = model.postInstallScripts;
+                this.ramNodeTypes = model.ramNodeTypes;
+                this.ramRoleName = model.ramRoleName;
+                this.regionId = model.regionId;
+                this.remoteDirectory = model.remoteDirectory;
+                this.resourceGroupId = model.resourceGroupId;
+                this.sccClusterId = model.sccClusterId;
+                this.schedulerPreInstall = model.schedulerPreInstall;
+                this.schedulerType = model.schedulerType;
+                this.schedulerVersion = model.schedulerVersion;
+                this.securityGroupId = model.securityGroupId;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+                this.volumeId = model.volumeId;
+                this.volumeMountpoint = model.volumeMountpoint;
+                this.volumeProtocol = model.volumeProtocol;
+                this.volumeType = model.volumeType;
+                this.vpcId = model.vpcId;
+                this.winAdPar = model.winAdPar;
+                this.withoutAgent = model.withoutAgent;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * The server type of the account. Valid values:
-             * <p>
+             * <p>The server type of the account. Valid values:</p>
+             * <ul>
+             * <li>nis</li>
+             * <li>ldap</li>
+             * </ul>
              * 
-             * *   nis
-             * *   ldap
+             * <strong>example:</strong>
+             * <p>nis</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -1892,7 +2297,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the custom component service.
+             * <p>The information about the custom component service.</p>
              */
             public Builder addOnsInfo(ClusterInfoAddOnsInfo addOnsInfo) {
                 this.addOnsInfo = addOnsInfo;
@@ -1900,7 +2305,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The array of the software in the cluster. The array contains the name and version of the software.
+             * <p>The array of the software in the cluster. The array contains the name and version of the software.</p>
              */
             public Builder applications(Applications applications) {
                 this.applications = applications;
@@ -1908,13 +2313,15 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable auto-renewal. The parameter takes effect only when EcsChargeType is set to PrePaid. Valid values:
-             * <p>
+             * <p>Specifies whether to enable auto-renewal. The parameter takes effect only when EcsChargeType is set to PrePaid. Valid values:</p>
+             * <ul>
+             * <li>true: enables auto-renewal.</li>
+             * <li>false: disables auto-renewal.</li>
+             * </ul>
+             * <p>Default value: true.</p>
              * 
-             * *   true: enables auto-renewal.
-             * *   false: disables auto-renewal.
-             * 
-             * Default value: true.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoRenew(String autoRenew) {
                 this.autoRenew = autoRenew;
@@ -1922,13 +2329,15 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The auto-renewal period of the subscription compute nodes. The parameter takes effect when AutoRenew is set to true.
-             * <p>
+             * <p>The auto-renewal period of the subscription compute nodes. The parameter takes effect when AutoRenew is set to true.</p>
+             * <ul>
+             * <li>If PeriodUnit is set to Week, the valid values of the AutoRenewPeriod parameter are 1, 2, and 3.</li>
+             * <li>If PeriodUnit is set to Month, the valid values of the AutoRenewPeriod parameter are 1, 2, 3, 6, and 12.</li>
+             * </ul>
+             * <p>Default value: 1.</p>
              * 
-             * *   If PeriodUnit is set to Week, the valid values of the AutoRenewPeriod parameter are 1, 2, and 3.
-             * *   If PeriodUnit is set to Month, the valid values of the AutoRenewPeriod parameter are 1, 2, 3, 6, and 12.
-             * 
-             * Default value: 1.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoRenewPeriod(String autoRenewPeriod) {
                 this.autoRenewPeriod = autoRenewPeriod;
@@ -1936,7 +2345,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The image of the cluster.
+             * <p>The image of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS_7.2_64</p>
              */
             public Builder baseOsTag(String baseOsTag) {
                 this.baseOsTag = baseOsTag;
@@ -1944,7 +2356,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the E-HPC client.
+             * <p>The version of the E-HPC client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.1</p>
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -1952,7 +2367,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the E-HPC cluster.
+             * <p>The version of the E-HPC cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder clusterVersion(String clusterVersion) {
                 this.clusterVersion = clusterVersion;
@@ -1960,7 +2378,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum hourly price of the compute nodes. A maximum of three decimal places can be used in the value of the parameter. The parameter is valid only when the ComputeSpotStrategy parameter is set to SpotWithPriceLimit.
+             * <p>The maximum hourly price of the compute nodes. A maximum of three decimal places can be used in the value of the parameter. The parameter is valid only when the ComputeSpotStrategy parameter is set to SpotWithPriceLimit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.56</p>
              */
             public Builder computeSpotPriceLimit(String computeSpotPriceLimit) {
                 this.computeSpotPriceLimit = computeSpotPriceLimit;
@@ -1968,12 +2389,15 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The bidding method of the compute node. Valid values:
-             * <p>
+             * <p>The bidding method of the compute node. Valid values:</p>
+             * <ul>
+             * <li>NoSpot: The instance is created as a pay-as-you-go instance.</li>
+             * <li>SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</li>
+             * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</li>
+             * </ul>
              * 
-             * *   NoSpot: The instance is created as a pay-as-you-go instance.
-             * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-             * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
+             * <strong>example:</strong>
+             * <p>NoSpot</p>
              */
             public Builder computeSpotStrategy(String computeSpotStrategy) {
                 this.computeSpotStrategy = computeSpotStrategy;
@@ -1981,7 +2405,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the instance is created.
+             * <p>The time at which the instance is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-24T03:18:23.000Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1989,13 +2416,16 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The mode in which the cluster is deployed. Valid values:
-             * <p>
+             * <p>The mode in which the cluster is deployed. Valid values:</p>
+             * <ul>
+             * <li>Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.</li>
+             * <li>Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.</li>
+             * <li>Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.</li>
+             * <li>Tiny: The account node, scheduling node, and logon node are deployed on one node. The compute node is separately deployed.</li>
+             * </ul>
              * 
-             * *   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.
-             * *   Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.
-             * *   Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.
-             * *   Tiny: The account node, scheduling node, and logon node are deployed on one node. The compute node is separately deployed.
+             * <strong>example:</strong>
+             * <p>Simple</p>
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -2003,7 +2433,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the cluster.
+             * <p>The description of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2011,10 +2444,11 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the on-premises E-HPC cluster.
-             * <p>
+             * <p>The domain name of the on-premises E-HPC cluster.</p>
+             * <p>This parameter takes effect only when the AccoutType parameter is set to Idap.</p>
              * 
-             * This parameter takes effect only when the AccoutType parameter is set to Idap.
+             * <strong>example:</strong>
+             * <p>ldap</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -2022,11 +2456,14 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the nodes in the cluster. Valid values:
-             * <p>
+             * <p>The billing method of the nodes in the cluster. Valid values:</p>
+             * <ul>
+             * <li>PostPaid: pay-as-you-go</li>
+             * <li>PrePaid: subscription</li>
+             * </ul>
              * 
-             * *   PostPaid: pay-as-you-go
-             * *   PrePaid: subscription
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder ecsChargeType(String ecsChargeType) {
                 this.ecsChargeType = ecsChargeType;
@@ -2034,7 +2471,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The list of ECS instance specifications and quantity.
+             * <p>The list of ECS instance specifications and quantity.</p>
              */
             public Builder ecsInfo(EcsInfo ecsInfo) {
                 this.ecsInfo = ecsInfo;
@@ -2042,10 +2479,13 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable the high availability feature.
-             * <p>
+             * <p>Specifies whether to enable the high availability feature.</p>
+             * <blockquote>
+             * <p> If high availability is enabled, each management role in the cluster uses both primary and secondary instances.</p>
+             * </blockquote>
              * 
-             * >  If high availability is enabled, each management role in the cluster uses both primary and secondary instances.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder haEnable(Boolean haEnable) {
                 this.haEnable = haEnable;
@@ -2053,7 +2493,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp15de54eet1c43f****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -2061,7 +2504,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The image ID.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos_7_02_64_20G_alibase_20170818****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -2069,7 +2515,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The image name.
+             * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_for_Image</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -2077,13 +2526,16 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The image type. Valid values:
-             * <p>
+             * <p>The image type. Valid values:</p>
+             * <ul>
+             * <li>system: public image</li>
+             * <li>self: custom image</li>
+             * <li>others: shared image</li>
+             * <li>marketplace: Alibaba Cloud Marketplace image</li>
+             * </ul>
              * 
-             * *   system: public image
-             * *   self: custom image
-             * *   others: shared image
-             * *   marketplace: Alibaba Cloud Marketplace image
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -2091,7 +2543,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The image information of the operating systems.
+             * <p>The image information of the operating systems.</p>
              */
             public Builder initialImage(InitialImage initialImage) {
                 this.initialImage = initialImage;
@@ -2099,7 +2551,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the AccessKey pair.
+             * <p>The name of the AccessKey pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -2107,11 +2562,14 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The location where the cluster is deployed. Valid values:
-             * <p>
+             * <p>The location where the cluster is deployed. Valid values:</p>
+             * <ul>
+             * <li>OnPremise: The node is deployed on a hybrid cloud.</li>
+             * <li>PublicCloud: The cluster is deployed on a public cloud.</li>
+             * </ul>
              * 
-             * *   OnPremise: The node is deployed on a hybrid cloud.
-             * *   PublicCloud: The cluster is deployed on a public cloud.
+             * <strong>example:</strong>
+             * <p>PublicCloud</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -2119,7 +2577,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2127,7 +2588,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the on-premises node in the cluster.
+             * <p>The information of the on-premises node in the cluster.</p>
              */
             public Builder nodes(Nodes nodes) {
                 this.nodes = nodes;
@@ -2135,10 +2596,8 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The list of on-premises management nodes.
-             * <p>
-             * 
-             * This parameter is returned only when the cluster is deployed across hybrid environments and the hybrid-cloud proxy mode is enabled for the cluster.
+             * <p>The list of on-premises management nodes.</p>
+             * <p>This parameter is returned only when the cluster is deployed across hybrid environments and the hybrid-cloud proxy mode is enabled for the cluster.</p>
              */
             public Builder onPremiseInfo(ClusterInfoOnPremiseInfo onPremiseInfo) {
                 this.onPremiseInfo = onPremiseInfo;
@@ -2146,7 +2605,14 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter that is used to connect to the OpenLDAP server.
+             * <p>The parameter that is used to connect to the OpenLDAP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;LdapServerIp&quot;: &quot;192.168.XX.XX&quot;,
+             *     &quot;BaseDn&quot;: &quot;ehpctest&quot;,
+             *     &quot;FallbackHomeDir&quot;: &quot;/home&quot;
+             * }</p>
              */
             public Builder openldapPar(String openldapPar) {
                 this.openldapPar = openldapPar;
@@ -2154,7 +2620,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system tag of the image.
+             * <p>The operating system tag of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS_7.2_64</p>
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -2162,14 +2631,16 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the subscription. The unit of the duration is specified by the `PeriodUnit` parameter.
-             * <p>
+             * <p>The duration of the subscription. The unit of the duration is specified by the <code>PeriodUnit</code> parameter.</p>
+             * <ul>
+             * <li>If you set PriceUnit to Year, the valid values of the Period parameter are 1, 2, and 3.</li>
+             * <li>If you set PriceUnit to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+             * <li>If you set PriceUnit to Hour, the valid value of the Period parameter is 1.</li>
+             * </ul>
+             * <p>Default value: 1.</p>
              * 
-             * *   If you set PriceUnit to Year, the valid values of the Period parameter are 1, 2, and 3.
-             * *   If you set PriceUnit to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
-             * *   If you set PriceUnit to Hour, the valid value of the Period parameter is 1.
-             * 
-             * Default value: 1.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder period(String period) {
                 this.period = period;
@@ -2177,14 +2648,16 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the subscription duration. Valid value:
-             * <p>
+             * <p>The unit of the subscription duration. Valid value:</p>
+             * <ul>
+             * <li>Year</li>
+             * <li>Month</li>
+             * <li>Hour</li>
+             * </ul>
+             * <p>Default value: Month.</p>
              * 
-             * *   Year
-             * *   Month
-             * *   Hour
-             * 
-             * Default value: Month.
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -2192,19 +2665,23 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The mode configurations of the plug-in. This parameter takes effect only when the SchedulerType parameter is set to custom.
-             * <p>
+             * <p>The mode configurations of the plug-in. This parameter takes effect only when the SchedulerType parameter is set to custom.</p>
+             * <p>The value must be a JSON string. The parameter contains the following parameters: pluginMod, pluginLocalPath, and pluginOssPath.</p>
+             * <ul>
+             * <li><p>pluginMod: the mode of the plug-in. The following modes are supported:</p>
+             * <ul>
+             * <li>oss: The plug-in is downloaded and decompressed from OSS to a local path that is specified by the pluginLocalPath parameter.</li>
+             * <li>image: By default, the plug-in is stored in a pre-defined local path that is specified by the pluginLocalPath parameter.</li>
+             * </ul>
+             * </li>
+             * <li><p>pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in the oss mode and a non-shared directory in the image mode.</p>
+             * </li>
+             * <li><p>pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only if you set the pluginMod parameter to oss.</p>
+             * </li>
+             * </ul>
              * 
-             * The value must be a JSON string. The parameter contains the following parameters: pluginMod, pluginLocalPath, and pluginOssPath.
-             * 
-             * *   pluginMod: the mode of the plug-in. The following modes are supported:
-             * 
-             *     *   oss: The plug-in is downloaded and decompressed from OSS to a local path that is specified by the pluginLocalPath parameter.
-             *     *   image: By default, the plug-in is stored in a pre-defined local path that is specified by the pluginLocalPath parameter.
-             * 
-             * *   pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in the oss mode and a non-shared directory in the image mode.
-             * 
-             * *   pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only if you set the pluginMod parameter to oss.
+             * <strong>example:</strong>
+             * <p>{&quot;pluginMod&quot;:&quot;image&quot;,&quot;pluginLocalPath&quot;:&quot;/opt/plugin&quot;}</p>
              */
             public Builder plugin(String plugin) {
                 this.plugin = plugin;
@@ -2212,7 +2689,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The list of post-installation scripts
+             * <p>The list of post-installation scripts</p>
              */
             public Builder postInstallScripts(PostInstallScripts postInstallScripts) {
                 this.postInstallScripts = postInstallScripts;
@@ -2220,7 +2697,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The node type details of the instance RAM role.
+             * <p>The node type details of the instance RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;manager&quot;, &quot;compute&quot;]</p>
              */
             public Builder ramNodeTypes(String ramNodeTypes) {
                 this.ramNodeTypes = ramNodeTypes;
@@ -2228,7 +2708,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance Resource Access Management (RAM) role.
+             * <p>The name of the instance Resource Access Management (RAM) role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunEHPCFullAccess</p>
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -2236,7 +2719,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -2244,7 +2730,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The remote directory on which the file system is mounted.
+             * <p>The remote directory on which the file system is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NasMountpoint:/RemoteDirectory</p>
              */
             public Builder remoteDirectory(String remoteDirectory) {
                 this.remoteDirectory = remoteDirectory;
@@ -2252,7 +2741,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek23szz5i2****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -2260,7 +2752,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Super Computing Cluster (SCC) instance. If the cluster is not an SCC instance, a null string is returned.
+             * <p>The ID of the Super Computing Cluster (SCC) instance. If the cluster is not an SCC instance, a null string is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00b648b****</p>
              */
             public Builder sccClusterId(String sccClusterId) {
                 this.sccClusterId = sccClusterId;
@@ -2268,11 +2763,14 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether the scheduler is preinstalled for the image. Valid values:
-             * <p>
+             * <p>Specifies whether the scheduler is preinstalled for the image. Valid values:</p>
+             * <ul>
+             * <li>true: The scheduler is preinstalled. When you create a node or scale out a cluster, you do not need to install the scheduler.</li>
+             * <li>false: The scheduler is not preinstalled. When you create or add a cluster, you must install the scheduler.</li>
+             * </ul>
              * 
-             * *   true: The scheduler is preinstalled. When you create a node or scale out a cluster, you do not need to install the scheduler.
-             * *   false: The scheduler is not preinstalled. When you create or add a cluster, you must install the scheduler.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder schedulerPreInstall(Integer schedulerPreInstall) {
                 this.schedulerPreInstall = schedulerPreInstall;
@@ -2280,13 +2778,16 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scheduler. Valid values:
-             * <p>
+             * <p>The type of the scheduler. Valid values:</p>
+             * <ul>
+             * <li>pbs</li>
+             * <li>slurm</li>
+             * <li>opengridscheduler</li>
+             * <li>deadline</li>
+             * </ul>
              * 
-             * *   pbs
-             * *   slurm
-             * *   opengridscheduler
-             * *   deadline
+             * <strong>example:</strong>
+             * <p>pbs</p>
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -2294,7 +2795,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the scheduler.
+             * <p>The version of the scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18.1.1</p>
              */
             public Builder schedulerVersion(String schedulerVersion) {
                 this.schedulerVersion = schedulerVersion;
@@ -2302,7 +2806,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1asugr34gzn****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -2310,15 +2817,18 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster. Valid values:
-             * <p>
+             * <p>The status of the cluster. Valid values:</p>
+             * <ul>
+             * <li>uninit: The cluster is not initialized.</li>
+             * <li>creating: The cluster is being created.</li>
+             * <li>init: The cluster is being initialized.</li>
+             * <li>running: The cluster is running.</li>
+             * <li>exception: The cluster encounters an exception.</li>
+             * <li>releasing: The cluster is being released.</li>
+             * </ul>
              * 
-             * *   uninit: The cluster is not initialized.
-             * *   creating: The cluster is being created.
-             * *   init: The cluster is being initialized.
-             * *   running: The cluster is running.
-             * *   exception: The cluster encounters an exception.
-             * *   releasing: The cluster is being released.
+             * <strong>example:</strong>
+             * <p>creating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2326,7 +2836,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID. E-HPC can be deployed only in VPCs.
+             * <p>The vSwitch ID. E-HPC can be deployed only in VPCs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1e47optm9g58zcu****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -2334,7 +2847,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Apsara File Storage NAS file system. NAS file systems cannot be automatically created.
+             * <p>The ID of the File Storage NAS file system. NAS file systems cannot be automatically created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>008b64****</p>
              */
             public Builder volumeId(String volumeId) {
                 this.volumeId = volumeId;
@@ -2342,7 +2858,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The mount target of the NAS file system. The mount target is of the VPC type. Mount targets cannot be automatically created for NAS file systems.
+             * <p>The mount target of the NAS file system. The mount target is of the VPC type. Mount targets cannot be automatically created for NAS file systems.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>008b648bcb-s****.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder volumeMountpoint(String volumeMountpoint) {
                 this.volumeMountpoint = volumeMountpoint;
@@ -2350,11 +2869,14 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol that is used by the file system. Valid values:
-             * <p>
+             * <p>The type of the protocol that is used by the file system. Valid values:</p>
+             * <ul>
+             * <li>nfs</li>
+             * <li>smb</li>
+             * </ul>
              * 
-             * *   nfs
-             * *   smb
+             * <strong>example:</strong>
+             * <p>nfs</p>
              */
             public Builder volumeProtocol(String volumeProtocol) {
                 this.volumeProtocol = volumeProtocol;
@@ -2362,7 +2884,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network shared storage. Valid value: NAS.
+             * <p>The type of the network shared storage. Valid value: NAS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NAS</p>
              */
             public Builder volumeType(String volumeType) {
                 this.volumeType = volumeType;
@@ -2370,7 +2895,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID of the node.
+             * <p>The VPC ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1pxkcvmmz53ki89****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -2378,7 +2906,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter that is used to connect to the Windows AD server.
+             * <p>The parameter that is used to connect to the Windows AD server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{	&quot;AdUser&quot;: &quot;Administrator&quot;,	&quot;AdUserPasswd&quot;: &quot;xxxxxx&quot;,	&quot;AdDc&quot;: &quot;ad-hybrid001.ehpcad.com&quot;,	&quot;AdIp&quot;: &quot;192.168.XX.XX&quot;}</p>
              */
             public Builder winAdPar(String winAdPar) {
                 this.winAdPar = winAdPar;
@@ -2386,7 +2917,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to not install the agent.
+             * <p>Specifies whether to not install the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder withoutAgent(Integer withoutAgent) {
                 this.withoutAgent = withoutAgent;
@@ -2394,7 +2928,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-k</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

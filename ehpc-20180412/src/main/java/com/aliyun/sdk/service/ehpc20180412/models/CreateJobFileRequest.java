@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJobFileRequest} extends {@link RequestModel}
  *
  * <p>CreateJobFileRequest</p>
  */
 public class CreateJobFileRequest extends Request {
-    @Query
-    @NameInMap("Async")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Async")
     private Boolean async;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Query
-    @NameInMap("RunasUser")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RunasUser")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String runasUser;
 
-    @Query
-    @NameInMap("RunasUserPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RunasUserPassword")
     private String runasUserPassword;
 
-    @Query
-    @NameInMap("TargetFile")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetFile")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetFile;
 
     private CreateJobFileRequest(Builder builder) {
@@ -58,7 +63,7 @@ public class CreateJobFileRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -128,10 +133,11 @@ public class CreateJobFileRequest extends Request {
         } 
 
         /**
-         * Indicates whether to use an asynchronous link to submit job files.
-         * <p>
+         * <p>Indicates whether to use an asynchronous link to submit job files.</p>
+         * <p>Default value: false.</p>
          * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -140,10 +146,12 @@ public class CreateJobFileRequest extends Request {
         }
 
         /**
-         * The ID of the E-HPC cluster.
-         * <p>
+         * <p>The ID of the E-HPC cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-jeJki6****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -152,7 +160,11 @@ public class CreateJobFileRequest extends Request {
         }
 
         /**
-         * The content of the job file. The content is encoded in Base64.
+         * <p>The content of the job file. The content is encoded in Base64.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2xlZXAgMzA=</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -161,10 +173,12 @@ public class CreateJobFileRequest extends Request {
         }
 
         /**
-         * The user to which the job file belongs.
-         * <p>
+         * <p>The user to which the job file belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/188572.html">ListUsers</a> operation to query the users of the cluster.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.
+         * <strong>example:</strong>
+         * <p>testuser1</p>
          */
         public Builder runasUser(String runasUser) {
             this.putQueryParameter("RunasUser", runasUser);
@@ -173,7 +187,10 @@ public class CreateJobFileRequest extends Request {
         }
 
         /**
-         * The user password.
+         * <p>The user password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>!QAZ****</p>
          */
         public Builder runasUserPassword(String runasUserPassword) {
             this.putQueryParameter("RunasUserPassword", runasUserPassword);
@@ -182,7 +199,11 @@ public class CreateJobFileRequest extends Request {
         }
 
         /**
-         * The name of the job file.
+         * <p>The name of the job file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lammps.pbs</p>
          */
         public Builder targetFile(String targetFile) {
             this.putQueryParameter("TargetFile", targetFile);

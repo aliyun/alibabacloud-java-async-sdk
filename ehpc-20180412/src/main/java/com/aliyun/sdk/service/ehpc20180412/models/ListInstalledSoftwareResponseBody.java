@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstalledSoftwareResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstalledSoftwareResponseBody</p>
  */
 public class ListInstalledSoftwareResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SoftwareList")
+    @com.aliyun.core.annotation.NameInMap("SoftwareList")
     private SoftwareList softwareList;
 
     private ListInstalledSoftwareResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
 
     public static ListInstalledSoftwareResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
         private String requestId; 
         private SoftwareList softwareList; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListInstalledSoftwareResponseBody model) {
+            this.requestId = model.requestId;
+            this.softwareList = model.softwareList;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DDCA0E7B-03E7-430D-810C-0D508539****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,7 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
         }
 
         /**
-         * The list of installed software.
+         * <p>The installed software.</p>
          */
         public Builder softwareList(SoftwareList softwareList) {
             this.softwareList = softwareList;
@@ -71,17 +91,23 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstalledSoftwareResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstalledSoftwareResponseBody</p>
+     */
     public static class SoftwareListSoftwareList extends TeaModel {
-        @NameInMap("SoftwareId")
+        @com.aliyun.core.annotation.NameInMap("SoftwareId")
         private String softwareId;
 
-        @NameInMap("SoftwareName")
+        @com.aliyun.core.annotation.NameInMap("SoftwareName")
         private String softwareName;
 
-        @NameInMap("SoftwareStatus")
+        @com.aliyun.core.annotation.NameInMap("SoftwareStatus")
         private String softwareStatus;
 
-        @NameInMap("SoftwareVersion")
+        @com.aliyun.core.annotation.NameInMap("SoftwareVersion")
         private String softwareVersion;
 
         private SoftwareListSoftwareList(Builder builder) {
@@ -133,8 +159,21 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
             private String softwareStatus; 
             private String softwareVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(SoftwareListSoftwareList model) {
+                this.softwareId = model.softwareId;
+                this.softwareName = model.softwareName;
+                this.softwareStatus = model.softwareStatus;
+                this.softwareVersion = model.softwareVersion;
+            } 
+
             /**
-             * The ID of the software.
+             * <p>The software ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MPICH_3.2</p>
              */
             public Builder softwareId(String softwareId) {
                 this.softwareId = softwareId;
@@ -142,7 +181,10 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the software.
+             * <p>The name of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mpich</p>
              */
             public Builder softwareName(String softwareName) {
                 this.softwareName = softwareName;
@@ -150,11 +192,14 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the software. Valid values:
-             * <p>
+             * <p>The status of the software. Valid values:</p>
+             * <ul>
+             * <li>Installing: The software is being installed.</li>
+             * <li>Installed: The software is installed.</li>
+             * </ul>
              * 
-             * *   Installing: The software is being installed.
-             * *   Installed: The software is installed.
+             * <strong>example:</strong>
+             * <p>Installing</p>
              */
             public Builder softwareStatus(String softwareStatus) {
                 this.softwareStatus = softwareStatus;
@@ -162,7 +207,10 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the software.
+             * <p>The version of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.2</p>
              */
             public Builder softwareVersion(String softwareVersion) {
                 this.softwareVersion = softwareVersion;
@@ -176,9 +224,15 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstalledSoftwareResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstalledSoftwareResponseBody</p>
+     */
     public static class SoftwareList extends TeaModel {
-        @NameInMap("SoftwareList")
-        private java.util.List < SoftwareListSoftwareList> softwareList;
+        @com.aliyun.core.annotation.NameInMap("SoftwareList")
+        private java.util.List<SoftwareListSoftwareList> softwareList;
 
         private SoftwareList(Builder builder) {
             this.softwareList = builder.softwareList;
@@ -195,17 +249,24 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
         /**
          * @return softwareList
          */
-        public java.util.List < SoftwareListSoftwareList> getSoftwareList() {
+        public java.util.List<SoftwareListSoftwareList> getSoftwareList() {
             return this.softwareList;
         }
 
         public static final class Builder {
-            private java.util.List < SoftwareListSoftwareList> softwareList; 
+            private java.util.List<SoftwareListSoftwareList> softwareList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SoftwareList model) {
+                this.softwareList = model.softwareList;
+            } 
 
             /**
-             * The list of installed software.
+             * <p>The installed software.</p>
              */
-            public Builder softwareList(java.util.List < SoftwareListSoftwareList> softwareList) {
+            public Builder softwareList(java.util.List<SoftwareListSoftwareList> softwareList) {
                 this.softwareList = softwareList;
                 return this;
             }

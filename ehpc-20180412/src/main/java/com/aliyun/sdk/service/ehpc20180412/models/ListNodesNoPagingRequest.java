@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodesNoPagingRequest} extends {@link RequestModel}
  *
  * <p>ListNodesNoPagingRequest</p>
  */
 public class ListNodesNoPagingRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("HostName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
-    @Query
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
-    @Query
-    @NameInMap("Sequence")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sequence")
     private String sequence;
 
     private ListNodesNoPagingRequest(Builder builder) {
@@ -45,7 +50,7 @@ public class ListNodesNoPagingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,10 +102,12 @@ public class ListNodesNoPagingRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -109,7 +116,10 @@ public class ListNodesNoPagingRequest extends Request {
         }
 
         /**
-         * The name of the node. You can perform a fuzzy search. MySQL regular expressions are supported.
+         * <p>The name of the node. You can perform a fuzzy search. MySQL regular expressions are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Compute0</p>
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -118,14 +128,16 @@ public class ListNodesNoPagingRequest extends Request {
         }
 
         /**
-         * The type of the node. Valid values:
-         * <p>
+         * <p>The type of the node. Valid values:</p>
+         * <ul>
+         * <li>Manager: management node</li>
+         * <li>Login: logon node</li>
+         * <li>Compute: compute node</li>
+         * </ul>
+         * <p>Default value: Compute.</p>
          * 
-         * *   Manager: management node
-         * *   Login: logon node
-         * *   Compute: compute node
-         * 
-         * Default value: Compute.
+         * <strong>example:</strong>
+         * <p>Compute</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -134,13 +146,15 @@ public class ListNodesNoPagingRequest extends Request {
         }
 
         /**
-         * The sorting method of the node list. Valid values:
-         * <p>
+         * <p>The sorting method of the node list. Valid values:</p>
+         * <ul>
+         * <li>Forward: sorts the nodes in chronological order.</li>
+         * <li>Backward: sorts the nodes in reverse chronological order.</li>
+         * </ul>
+         * <p>Default value: Forward.</p>
          * 
-         * *   Forward: sorts the nodes in chronological order.
-         * *   Backward: sorts the nodes in reverse chronological order.
-         * 
-         * Default value: Forward.
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         public Builder sequence(String sequence) {
             this.putQueryParameter("Sequence", sequence);

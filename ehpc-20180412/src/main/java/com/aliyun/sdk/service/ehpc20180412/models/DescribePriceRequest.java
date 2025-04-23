@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePriceRequest} extends {@link RequestModel}
  *
  * <p>DescribePriceRequest</p>
  */
 public class DescribePriceRequest extends Request {
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("Commodities")
-    @Validation(required = true)
-    private java.util.List < Commodities> commodities;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Commodities")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Commodities> commodities;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("PriceUnit")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PriceUnit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String priceUnit;
 
     private DescribePriceRequest(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribePriceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -61,7 +66,7 @@ public class DescribePriceRequest extends Request {
     /**
      * @return commodities
      */
-    public java.util.List < Commodities> getCommodities() {
+    public java.util.List<Commodities> getCommodities() {
         return this.commodities;
     }
 
@@ -81,7 +86,7 @@ public class DescribePriceRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribePriceRequest, Builder> {
         private String chargeType; 
-        private java.util.List < Commodities> commodities; 
+        private java.util.List<Commodities> commodities; 
         private String orderType; 
         private String priceUnit; 
 
@@ -98,13 +103,15 @@ public class DescribePriceRequest extends Request {
         } 
 
         /**
-         * The billing method of the ECS instances. Valid values:
-         * <p>
+         * <p>The billing method of the ECS instances. Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go</li>
+         * <li>PrePaid: subscription</li>
+         * </ul>
+         * <p>Default value: PostPaid.</p>
          * 
-         * *   PostPaid: pay-as-you-go
-         * *   PrePaid: subscription
-         * 
-         * Default value: PostPaid.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -113,16 +120,20 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The information about the service.
+         * <p>The information about the service.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder commodities(java.util.List < Commodities> commodities) {
+        public Builder commodities(java.util.List<Commodities> commodities) {
             this.putQueryParameter("Commodities", commodities);
             this.commodities = commodities;
             return this;
         }
 
         /**
-         * The type of the order. The order can be set only as a purchase order. Valid value: INSTANCE-BUY.
+         * <p>The type of the order. The order can be set only as a purchase order. Valid value: INSTANCE-BUY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE-BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -131,14 +142,17 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The billing cycle of the Elastic Compute Service (ECS) instances. This parameter takes effect only when the ChargeType parameter is set to PrePaid. Valid values:
-         * <p>
+         * <p>The billing cycle of the Elastic Compute Service (ECS) instances. This parameter takes effect only when the ChargeType parameter is set to PrePaid. Valid values:</p>
+         * <ul>
+         * <li>Month: pay-by-month</li>
+         * <li>Year: pay-by-year</li>
+         * <li>Hour: pay-by-hour</li>
+         * </ul>
+         * <p>Default value: Hour.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   Month: pay-by-month
-         * *   Year: pay-by-year
-         * *   Hour: pay-by-hour
-         * 
-         * Default value: Hour.
+         * <strong>example:</strong>
+         * <p>Hour</p>
          */
         public Builder priceUnit(String priceUnit) {
             this.putQueryParameter("PriceUnit", priceUnit);
@@ -153,20 +167,26 @@ public class DescribePriceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePriceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribePriceRequest</p>
+     */
     public static class DataDisks extends TeaModel {
-        @NameInMap("category")
+        @com.aliyun.core.annotation.NameInMap("category")
         private String category;
 
-        @NameInMap("deleteWithInstance")
+        @com.aliyun.core.annotation.NameInMap("deleteWithInstance")
         private Boolean deleteWithInstance;
 
-        @NameInMap("encrypted")
+        @com.aliyun.core.annotation.NameInMap("encrypted")
         private Boolean encrypted;
 
-        @NameInMap("performanceLevel")
+        @com.aliyun.core.annotation.NameInMap("performanceLevel")
         private String performanceLevel;
 
-        @NameInMap("size")
+        @com.aliyun.core.annotation.NameInMap("size")
         private Integer size;
 
         private DataDisks(Builder builder) {
@@ -227,18 +247,30 @@ public class DescribePriceRequest extends Request {
             private String performanceLevel; 
             private Integer size; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisks model) {
+                this.category = model.category;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.encrypted = model.encrypted;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+            } 
+
             /**
-             * The type of the data disk. Valid values:
-             * <p>
+             * <p>The type of the data disk. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk</li>
+             * <li>cloud_ssd: standard SSD</li>
+             * <li>cloud_essd: ESSD</li>
+             * <li>cloud: basic disk</li>
+             * </ul>
+             * <p>Default value: cloud_efficiency.</p>
+             * <p>Valid values of N: 0 to 4.</p>
              * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * *   cloud_essd: ESSD
-             * *   cloud: basic disk
-             * 
-             * Default value: cloud_efficiency.
-             * 
-             * Valid values of N: 0 to 4.
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -246,15 +278,16 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * Specifies whether the data disk is released when the node is released. Valid values:
-             * <p>
+             * <p>Specifies whether the data disk is released when the node is released. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: true.</p>
+             * <p>Valid values of N: 0 to 4.</p>
              * 
-             * *   true
-             * *   false
-             * 
-             * Default value: true.
-             * 
-             * Valid values of N: 0 to 4.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -262,15 +295,16 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt the data disk. Valid values:
-             * <p>
+             * <p>Specifies whether to encrypt the data disk. Valid values:</p>
+             * <ul>
+             * <li>true: encrypts the data disk.</li>
+             * <li>false: does not encrypt the data disk.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * <p>Valid values of N: 0 to 4.</p>
              * 
-             * *   true: encrypts the data disk.
-             * *   false: does not encrypt the data disk.
-             * 
-             * Default value: false.
-             * 
-             * Valid values of N: 0 to 4.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -278,17 +312,18 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD used as the data disk. This parameter takes effect only when the Commodities.N.DataDisks.N.category parameter is set to cloud_essd. Valid values:
-             * <p>
+             * <p>The performance level of the ESSD used as the data disk. This parameter takes effect only when the Commodities.N.DataDisks.N.category parameter is set to cloud_essd. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.</li>
+             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
+             * <p>Default value: PL1.</p>
+             * <p>Valid values of N: 0 to 4.</p>
              * 
-             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.
-             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
-             * 
-             * Default value: PL1.
-             * 
-             * Valid values of N: 0 to 4.
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -296,14 +331,13 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The size of the data disk. Unit: GB.
-             * <p>
+             * <p>The size of the data disk. Unit: GB.</p>
+             * <p>Valid values: 40 to 500.</p>
+             * <p>Default value: 40.</p>
+             * <p>Valid values of N: 0 to 4.</p>
              * 
-             * Valid values: 40 to 500.
-             * 
-             * Default value: 40.
-             * 
-             * Valid values of N: 0 to 4.
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -317,42 +351,48 @@ public class DescribePriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribePriceRequest</p>
+     */
     public static class Commodities extends TeaModel {
-        @NameInMap("Amount")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Amount")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer amount;
 
-        @NameInMap("DataDisks")
-        private java.util.List < DataDisks> dataDisks;
+        @com.aliyun.core.annotation.NameInMap("DataDisks")
+        private java.util.List<DataDisks> dataDisks;
 
-        @NameInMap("InstanceType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceType;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("InternetMaxBandWidthOut")
+        @com.aliyun.core.annotation.NameInMap("InternetMaxBandWidthOut")
         private Integer internetMaxBandWidthOut;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("NodeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NodeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String nodeType;
 
-        @NameInMap("Period")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Period")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer period;
 
-        @NameInMap("SystemDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
 
-        @NameInMap("SystemDiskPerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskPerformanceLevel")
         private String systemDiskPerformanceLevel;
 
-        @NameInMap("SystemDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
         private Commodities(Builder builder) {
@@ -387,7 +427,7 @@ public class DescribePriceRequest extends Request {
         /**
          * @return dataDisks
          */
-        public java.util.List < DataDisks> getDataDisks() {
+        public java.util.List<DataDisks> getDataDisks() {
             return this.dataDisks;
         }
 
@@ -456,7 +496,7 @@ public class DescribePriceRequest extends Request {
 
         public static final class Builder {
             private Integer amount; 
-            private java.util.List < DataDisks> dataDisks; 
+            private java.util.List<DataDisks> dataDisks; 
             private String instanceType; 
             private String internetChargeType; 
             private Integer internetMaxBandWidthOut; 
@@ -467,13 +507,31 @@ public class DescribePriceRequest extends Request {
             private String systemDiskPerformanceLevel; 
             private Integer systemDiskSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Commodities model) {
+                this.amount = model.amount;
+                this.dataDisks = model.dataDisks;
+                this.instanceType = model.instanceType;
+                this.internetChargeType = model.internetChargeType;
+                this.internetMaxBandWidthOut = model.internetMaxBandWidthOut;
+                this.networkType = model.networkType;
+                this.nodeType = model.nodeType;
+                this.period = model.period;
+                this.systemDiskCategory = model.systemDiskCategory;
+                this.systemDiskPerformanceLevel = model.systemDiskPerformanceLevel;
+                this.systemDiskSize = model.systemDiskSize;
+            } 
+
             /**
-             * The node quantity of the type. Valid values: 1 to 1000.
-             * <p>
+             * <p>The node quantity of the type. Valid values: 1 to 1000.</p>
+             * <p>Default value: 1.</p>
+             * <p>Valid values of N: 1 to 10</p>
+             * <p>This parameter is required.</p>
              * 
-             * Default value: 1.
-             * 
-             * Valid values of N: 1 to 10
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -481,18 +539,20 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The list of data disks.
+             * <p>The list of data disks.</p>
              */
-            public Builder dataDisks(java.util.List < DataDisks> dataDisks) {
+            public Builder dataDisks(java.util.List<DataDisks> dataDisks) {
                 this.dataDisks = dataDisks;
                 return this;
             }
 
             /**
-             * The instance type of the node.
-             * <p>
+             * <p>The instance type of the node.</p>
+             * <p>Valid values of N: 1 to 10.</p>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>ecs.n1.tiny</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -500,13 +560,15 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The EIP billing method of the node. Valid values:
-             * <p>
+             * <p>The EIP billing method of the node. Valid values:</p>
+             * <ul>
+             * <li>PayByBandwidth: pay-by-bandwidth</li>
+             * <li>PayByTraffic: pay-by-traffic</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * *   PayByBandwidth: pay-by-bandwidth
-             * *   PayByTraffic: pay-by-traffic
-             * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>PayByBandwidth</p>
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -514,14 +576,13 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The maximum outbound public bandwidth of the node. Unit: Mbit/s.
-             * <p>
+             * <p>The maximum outbound public bandwidth of the node. Unit: Mbit/s.</p>
+             * <p>Valid values: 0 to 100.</p>
+             * <p>Default value: 0.</p>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * Valid values: 0 to 100.
-             * 
-             * Default value: 0.
-             * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder internetMaxBandWidthOut(Integer internetMaxBandWidthOut) {
                 this.internetMaxBandWidthOut = internetMaxBandWidthOut;
@@ -529,10 +590,11 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The network type of the node. Valid value: VPC.
-             * <p>
+             * <p>The network type of the node. Valid value: VPC.</p>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -540,14 +602,17 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The type of the node. Valid values:
-             * <p>
+             * <p>The type of the node. Valid values:</p>
+             * <ul>
+             * <li>Compute: compute node</li>
+             * <li>Manager: management node</li>
+             * <li>Login: logon node</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 10.</p>
+             * <p>This parameter is required.</p>
              * 
-             * *   Compute: compute node
-             * *   Manager: management node
-             * *   Login: logon node
-             * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>Compute</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -555,16 +620,18 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The subscription duration of the node. Valid values:
-             * <p>
+             * <p>The subscription duration of the node. Valid values:</p>
+             * <ul>
+             * <li>If PriceUnit is set to Year, the valid values of the Period parameter are 1, 2, and 3.</li>
+             * <li>If PriceUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+             * <li>If PriceUnit is set to Hour, the valid value of the Period parameter is 1.</li>
+             * </ul>
+             * <p>Default value: 1.</p>
+             * <p>Valid values of N: 1 to 10.</p>
+             * <p>This parameter is required.</p>
              * 
-             * *   If PriceUnit is set to Year, the valid values of the Period parameter are 1, 2, and 3.
-             * *   If PriceUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
-             * *   If PriceUnit is set to Hour, the valid value of the Period parameter is 1.
-             * 
-             * Default value: 1.
-             * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -572,17 +639,18 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The system disk type of the node. Valid values:
-             * <p>
+             * <p>The system disk type of the node. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk</li>
+             * <li>cloud_ssd: standard SSD</li>
+             * <li>cloud_essd: ESSD</li>
+             * <li>cloud: basic disk</li>
+             * </ul>
+             * <p>Default value: cloud_efficiency</p>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * *   cloud_essd: ESSD
-             * *   cloud: basic disk
-             * 
-             * Default value: cloud_efficiency
-             * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -590,17 +658,18 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD used as the system disk. This parameter takes effect only when the Commodities.N.SystemDiskCategory parameter is set to cloud_essd. Valid values:
-             * <p>
+             * <p>The performance level of the ESSD used as the system disk. This parameter takes effect only when the Commodities.N.SystemDiskCategory parameter is set to cloud_essd. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.</li>
+             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
+             * <p>Default value: PL1.</p>
+             * <p>Valid values of N: 1 to 10</p>
              * 
-             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.
-             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
-             * 
-             * Default value: PL1.
-             * 
-             * Valid values of N: 1 to 10
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
                 this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
@@ -608,14 +677,13 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The system disk size of the node. Unit: GB.
-             * <p>
+             * <p>The system disk size of the node. Unit: GB.</p>
+             * <p>Valid values: 40 to 500.</p>
+             * <p>Default value: 40.</p>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * Valid values: 40 to 500.
-             * 
-             * Default value: 40.
-             * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;

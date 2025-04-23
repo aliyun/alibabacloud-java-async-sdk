@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCpfsFileSystemsRequest} extends {@link RequestModel}
  *
  * <p>ListCpfsFileSystemsRequest</p>
  */
 public class ListCpfsFileSystemsRequest extends Request {
-    @Query
-    @NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
     private String fileSystemId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50)
     private Integer pageSize;
 
     private ListCpfsFileSystemsRequest(Builder builder) {
@@ -40,7 +45,7 @@ public class ListCpfsFileSystemsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,10 +88,11 @@ public class ListCpfsFileSystemsRequest extends Request {
         } 
 
         /**
-         * The ID of the file system.
-         * <p>
+         * <p>The ID of the file system.</p>
+         * <p>By default, the information about all CPFSs and their mount targets within your account are queried.</p>
          * 
-         * By default, the information about all CPFSs and their mount targets within your account are queried.
+         * <strong>example:</strong>
+         * <p>096751****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -95,12 +101,12 @@ public class ListCpfsFileSystemsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
-         * <p>
+         * <p>The page number of the page to return.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -109,10 +115,11 @@ public class ListCpfsFileSystemsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 50.
-         * <p>
+         * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

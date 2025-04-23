@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetSchedulerInfoRequest} extends {@link RequestModel}
  *
  * <p>SetSchedulerInfoRequest</p>
  */
 public class SetSchedulerInfoRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("PbsInfo")
-    private java.util.List < PbsInfo> pbsInfo;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PbsInfo")
+    private java.util.List<PbsInfo> pbsInfo;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Scheduler")
-    @Validation(required = true)
-    private java.util.List < Scheduler> scheduler;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scheduler")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Scheduler> scheduler;
 
-    @Query
-    @NameInMap("SlurmInfo")
-    private java.util.List < SlurmInfo> slurmInfo;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlurmInfo")
+    private java.util.List<SlurmInfo> slurmInfo;
 
     private SetSchedulerInfoRequest(Builder builder) {
         super(builder);
@@ -52,7 +57,7 @@ public class SetSchedulerInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -67,7 +72,7 @@ public class SetSchedulerInfoRequest extends Request {
     /**
      * @return pbsInfo
      */
-    public java.util.List < PbsInfo> getPbsInfo() {
+    public java.util.List<PbsInfo> getPbsInfo() {
         return this.pbsInfo;
     }
 
@@ -81,23 +86,23 @@ public class SetSchedulerInfoRequest extends Request {
     /**
      * @return scheduler
      */
-    public java.util.List < Scheduler> getScheduler() {
+    public java.util.List<Scheduler> getScheduler() {
         return this.scheduler;
     }
 
     /**
      * @return slurmInfo
      */
-    public java.util.List < SlurmInfo> getSlurmInfo() {
+    public java.util.List<SlurmInfo> getSlurmInfo() {
         return this.slurmInfo;
     }
 
     public static final class Builder extends Request.Builder<SetSchedulerInfoRequest, Builder> {
         private String clusterId; 
-        private java.util.List < PbsInfo> pbsInfo; 
+        private java.util.List<PbsInfo> pbsInfo; 
         private String regionId; 
-        private java.util.List < Scheduler> scheduler; 
-        private java.util.List < SlurmInfo> slurmInfo; 
+        private java.util.List<Scheduler> scheduler; 
+        private java.util.List<SlurmInfo> slurmInfo; 
 
         private Builder() {
             super();
@@ -113,10 +118,12 @@ public class SetSchedulerInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the E-HPC cluster.
-         * <p>
+         * <p>The ID of the E-HPC cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -125,19 +132,21 @@ public class SetSchedulerInfoRequest extends Request {
         }
 
         /**
-         * The information about PBS schedulers.
+         * <p>The information about PBS schedulers.</p>
          */
-        public Builder pbsInfo(java.util.List < PbsInfo> pbsInfo) {
+        public Builder pbsInfo(java.util.List<PbsInfo> pbsInfo) {
             this.putQueryParameter("PbsInfo", pbsInfo);
             this.pbsInfo = pbsInfo;
             return this;
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/188593.html">ListRegions</a> operation to obtain the IDs of regions supported by Elastic High Performance Computing (E-HPC).</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListRegions](~~188593~~) operation to obtain the IDs of regions supported by Elastic High Performance Computing (E-HPC).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -146,18 +155,19 @@ public class SetSchedulerInfoRequest extends Request {
         }
 
         /**
-         * The scheduler information.
+         * <p>The scheduler information.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder scheduler(java.util.List < Scheduler> scheduler) {
+        public Builder scheduler(java.util.List<Scheduler> scheduler) {
             this.putQueryParameter("Scheduler", scheduler);
             this.scheduler = scheduler;
             return this;
         }
 
         /**
-         * The information about Slurm schedulers.
+         * <p>The information about Slurm schedulers.</p>
          */
-        public Builder slurmInfo(java.util.List < SlurmInfo> slurmInfo) {
+        public Builder slurmInfo(java.util.List<SlurmInfo> slurmInfo) {
             this.putQueryParameter("SlurmInfo", slurmInfo);
             this.slurmInfo = slurmInfo;
             return this;
@@ -170,11 +180,17 @@ public class SetSchedulerInfoRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetSchedulerInfoRequest} extends {@link TeaModel}
+     *
+     * <p>SetSchedulerInfoRequest</p>
+     */
     public static class AclLimit extends TeaModel {
-        @NameInMap("AclUsers")
+        @com.aliyun.core.annotation.NameInMap("AclUsers")
         private String aclUsers;
 
-        @NameInMap("Queue")
+        @com.aliyun.core.annotation.NameInMap("Queue")
         private String queue;
 
         private AclLimit(Builder builder) {
@@ -208,11 +224,20 @@ public class SetSchedulerInfoRequest extends Request {
             private String aclUsers; 
             private String queue; 
 
+            private Builder() {
+            } 
+
+            private Builder(AclLimit model) {
+                this.aclUsers = model.aclUsers;
+                this.queue = model.queue;
+            } 
+
             /**
-             * The user that can use the queue. Separate multiple users with commas (`,`).
-             * <p>
+             * <p>The user that can use the queue. Separate multiple users with commas (<code>,</code>).</p>
+             * <p>If you specify users, you must specify the PbsInfo.N.AclLimit.N.Queue parameter.</p>
              * 
-             * If you specify users, you must specify the PbsInfo.N.AclLimit.N.Queue parameter.
+             * <strong>example:</strong>
+             * <p>user1,user2</p>
              */
             public Builder aclUsers(String aclUsers) {
                 this.aclUsers = aclUsers;
@@ -220,10 +245,11 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * AclLimit specifies the queue that has limits when it is used. Valid values of N: 0 to 100.
-             * <p>
+             * <p>AclLimit specifies the queue that has limits when it is used. Valid values of N: 0 to 100.</p>
+             * <p>If you set <code>PbsInfo.N.AclLimit.N.Queue</code> to <code>workq</code> and <code>PbsInfo.N.AclLimit.N.AclUsers</code> to <code>user1,user2</code>, workq can be used only by user1 and user2.</p>
              * 
-             * If you set `PbsInfo.N.AclLimit.N.Queue` to `workq` and `PbsInfo.N.AclLimit.N.AclUsers` to `user1,user2`, workq can be used only by user1 and user2.
+             * <strong>example:</strong>
+             * <p>workq</p>
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -237,23 +263,29 @@ public class SetSchedulerInfoRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetSchedulerInfoRequest} extends {@link TeaModel}
+     *
+     * <p>SetSchedulerInfoRequest</p>
+     */
     public static class ResourceLimit extends TeaModel {
-        @NameInMap("Cpus")
+        @com.aliyun.core.annotation.NameInMap("Cpus")
         private Integer cpus;
 
-        @NameInMap("MaxJobs")
+        @com.aliyun.core.annotation.NameInMap("MaxJobs")
         private Integer maxJobs;
 
-        @NameInMap("Mem")
+        @com.aliyun.core.annotation.NameInMap("Mem")
         private String mem;
 
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private Integer nodes;
 
-        @NameInMap("Queue")
+        @com.aliyun.core.annotation.NameInMap("Queue")
         private String queue;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private ResourceLimit(Builder builder) {
@@ -323,8 +355,23 @@ public class SetSchedulerInfoRequest extends Request {
             private String queue; 
             private String user; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceLimit model) {
+                this.cpus = model.cpus;
+                this.maxJobs = model.maxJobs;
+                this.mem = model.mem;
+                this.nodes = model.nodes;
+                this.queue = model.queue;
+                this.user = model.user;
+            } 
+
             /**
-             * The maximum number of vCPUs that can be used for nodes in a queue.
+             * <p>The maximum number of vCPUs that can be used for nodes in a queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpus(Integer cpus) {
                 this.cpus = cpus;
@@ -332,7 +379,10 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * The maximum number of jobs that can be submitted to the cluster. If the total number of running jobs and queuing jobs exceeds the value, no more jobs can be submitted.
+             * <p>The maximum number of jobs that can be submitted to the cluster. If the total number of running jobs and queuing jobs exceeds the value, no more jobs can be submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxJobs(Integer maxJobs) {
                 this.maxJobs = maxJobs;
@@ -340,12 +390,15 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * The maximum memory resources that can be used in a queue. Units:
-             * <p>
+             * <p>The maximum memory resources that can be used in a queue. Units:</p>
+             * <ul>
+             * <li>gb</li>
+             * <li>mb</li>
+             * <li>kb</li>
+             * </ul>
              * 
-             * *   gb
-             * *   mb
-             * *   kb
+             * <strong>example:</strong>
+             * <p>2gb</p>
              */
             public Builder mem(String mem) {
                 this.mem = mem;
@@ -353,7 +406,10 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * The maximum number of nodes that can be used in a queue.
+             * <p>The maximum number of nodes that can be used in a queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodes(Integer nodes) {
                 this.nodes = nodes;
@@ -361,14 +417,13 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * PbsInfo specifies the number of PBS schedulers that can be configured in the cluster. Valid values of N: 0 to 100.
-             * <p>
+             * <p>PbsInfo specifies the number of PBS schedulers that can be configured in the cluster. Valid values of N: 0 to 100.</p>
+             * <p>ResourceLimit specifies the maximum number of queue resources that can be used. Valid values of N: 0 to 100.</p>
+             * <p>Queue specifies the name of the queue that is used to run jobs.</p>
+             * <p>If one of the User, Cpus, Nodes, and Mem parameters is set in ResourceLimit, you must specify the Queue parameter.</p>
              * 
-             * ResourceLimit specifies the maximum number of queue resources that can be used. Valid values of N: 0 to 100.
-             * 
-             * Queue specifies the name of the queue that is used to run jobs.
-             * 
-             * If one of the User, Cpus, Nodes, and Mem parameters is set in ResourceLimit, you must specify the Queue parameter.
+             * <strong>example:</strong>
+             * <p>workq</p>
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -376,7 +431,10 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * The name of the user that runs jobs.
+             * <p>The name of the user that runs jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -390,23 +448,29 @@ public class SetSchedulerInfoRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetSchedulerInfoRequest} extends {@link TeaModel}
+     *
+     * <p>SetSchedulerInfoRequest</p>
+     */
     public static class PbsInfo extends TeaModel {
-        @NameInMap("AclLimit")
-        private java.util.List < AclLimit> aclLimit;
+        @com.aliyun.core.annotation.NameInMap("AclLimit")
+        private java.util.List<AclLimit> aclLimit;
 
-        @NameInMap("JobHistoryDuration")
+        @com.aliyun.core.annotation.NameInMap("JobHistoryDuration")
         private Integer jobHistoryDuration;
 
-        @NameInMap("ResourceLimit")
-        private java.util.List < ResourceLimit> resourceLimit;
+        @com.aliyun.core.annotation.NameInMap("ResourceLimit")
+        private java.util.List<ResourceLimit> resourceLimit;
 
-        @NameInMap("SchedInterval")
+        @com.aliyun.core.annotation.NameInMap("SchedInterval")
         private Integer schedInterval;
 
-        @NameInMap("SchedMaxJobs")
+        @com.aliyun.core.annotation.NameInMap("SchedMaxJobs")
         private Integer schedMaxJobs;
 
-        @NameInMap("SchedMaxQueuedJobs")
+        @com.aliyun.core.annotation.NameInMap("SchedMaxQueuedJobs")
         private Integer schedMaxQueuedJobs;
 
         private PbsInfo(Builder builder) {
@@ -429,7 +493,7 @@ public class SetSchedulerInfoRequest extends Request {
         /**
          * @return aclLimit
          */
-        public java.util.List < AclLimit> getAclLimit() {
+        public java.util.List<AclLimit> getAclLimit() {
             return this.aclLimit;
         }
 
@@ -443,7 +507,7 @@ public class SetSchedulerInfoRequest extends Request {
         /**
          * @return resourceLimit
          */
-        public java.util.List < ResourceLimit> getResourceLimit() {
+        public java.util.List<ResourceLimit> getResourceLimit() {
             return this.resourceLimit;
         }
 
@@ -469,26 +533,38 @@ public class SetSchedulerInfoRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < AclLimit> aclLimit; 
+            private java.util.List<AclLimit> aclLimit; 
             private Integer jobHistoryDuration; 
-            private java.util.List < ResourceLimit> resourceLimit; 
+            private java.util.List<ResourceLimit> resourceLimit; 
             private Integer schedInterval; 
             private Integer schedMaxJobs; 
             private Integer schedMaxQueuedJobs; 
 
+            private Builder() {
+            } 
+
+            private Builder(PbsInfo model) {
+                this.aclLimit = model.aclLimit;
+                this.jobHistoryDuration = model.jobHistoryDuration;
+                this.resourceLimit = model.resourceLimit;
+                this.schedInterval = model.schedInterval;
+                this.schedMaxJobs = model.schedMaxJobs;
+                this.schedMaxQueuedJobs = model.schedMaxQueuedJobs;
+            } 
+
             /**
-             * The information about limits on the queue.
+             * <p>The information about limits on the queue.</p>
              */
-            public Builder aclLimit(java.util.List < AclLimit> aclLimit) {
+            public Builder aclLimit(java.util.List<AclLimit> aclLimit) {
                 this.aclLimit = aclLimit;
                 return this;
             }
 
             /**
-             * The retention period of jobs. After the retention period is exceeded, job data is deleted. Unit: days.\
-             * <p>
-             * Valid values: 1 to 30.\
-             * Default value: 14.
+             * <p>The retention period of jobs. After the retention period is exceeded, job data is deleted. Unit: days.<br>Valid values: 1 to 30.<br>Default value: 14.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder jobHistoryDuration(Integer jobHistoryDuration) {
                 this.jobHistoryDuration = jobHistoryDuration;
@@ -496,22 +572,21 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * The information about the nodes that are used by cluster users.
+             * <p>The information about the nodes that are used by cluster users.</p>
              */
-            public Builder resourceLimit(java.util.List < ResourceLimit> resourceLimit) {
+            public Builder resourceLimit(java.util.List<ResourceLimit> resourceLimit) {
                 this.resourceLimit = resourceLimit;
                 return this;
             }
 
             /**
-             * PbsInfo specifies the number of PBS schedulers that can be configured in the cluster. Valid values of N: 0 to 100.
-             * <p>
+             * <p>PbsInfo specifies the number of PBS schedulers that can be configured in the cluster. Valid values of N: 0 to 100.</p>
+             * <p>SchedInterval specifies the scheduling period. Unit: seconds.</p>
+             * <p>A scheduling period is the interval between two consecutive running jobs. If you set SchedInterval to 60, another job can be run 60 seconds after a job starts running.</p>
+             * <p>Default value: 60.</p>
              * 
-             * SchedInterval specifies the scheduling period. Unit: seconds.
-             * 
-             * A scheduling period is the interval between two consecutive running jobs. If you set SchedInterval to 60, another job can be run 60 seconds after a job starts running.
-             * 
-             * Default value: 60.
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder schedInterval(Integer schedInterval) {
                 this.schedInterval = schedInterval;
@@ -519,7 +594,10 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * The maximum number of jobs that can be scheduled in the cluster. If the total number of running jobs and queuing jobs exceeds the value, no more jobs can be submitted. Default value: 20000.
+             * <p>The maximum number of jobs that can be scheduled in the cluster. If the total number of running jobs and queuing jobs exceeds the value, no more jobs can be submitted. Default value: 20000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000</p>
              */
             public Builder schedMaxJobs(Integer schedMaxJobs) {
                 this.schedMaxJobs = schedMaxJobs;
@@ -527,7 +605,10 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * The maximum number of queuing jobs that can be scheduled in the cluster. If the number of queuing jobs exceeds the value, no more jobs can be submitted. Default value: 10000.
+             * <p>The maximum number of queuing jobs that can be scheduled in the cluster. If the number of queuing jobs exceeds the value, no more jobs can be submitted. Default value: 10000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder schedMaxQueuedJobs(Integer schedMaxQueuedJobs) {
                 this.schedMaxQueuedJobs = schedMaxQueuedJobs;
@@ -541,9 +622,15 @@ public class SetSchedulerInfoRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetSchedulerInfoRequest} extends {@link TeaModel}
+     *
+     * <p>SetSchedulerInfoRequest</p>
+     */
     public static class Scheduler extends TeaModel {
-        @NameInMap("SchedName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SchedName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String schedName;
 
         private Scheduler(Builder builder) {
@@ -568,17 +655,29 @@ public class SetSchedulerInfoRequest extends Request {
         public static final class Builder {
             private String schedName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Scheduler model) {
+                this.schedName = model.schedName;
+            } 
+
             /**
-             * The name of the scheduler. Valid values:
-             * <p>
+             * <p>The name of the scheduler. Valid values:</p>
+             * <ul>
+             * <li>pbs</li>
+             * <li>pbs19</li>
+             * <li>slurm</li>
+             * <li>slurm19</li>
+             * <li>slurm20</li>
+             * </ul>
+             * <blockquote>
+             * <p> If you set Scheduler.N.SchedName to pbs or pbs19, you must specify at least one of the PbsInfo.N.SchedInterval, PbsInfo.N.JobHistoryDuration, PbsInfo.N.ResourceLimit, and PbsInfo.N.AclLimit parameters. If you set Scheduler.N.SchedName to slurm, slurm19, or slurm20, you must specify at least one of the SlurmInfo.N.SchedInterval and SlurmInfo.N.BackfillInterval parameters.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * *   pbs
-             * *   pbs19
-             * *   slurm
-             * *   slurm19
-             * *   slurm20
-             * 
-             * >  If you set Scheduler.N.SchedName to pbs or pbs19, you must specify at least one of the PbsInfo.N.SchedInterval, PbsInfo.N.JobHistoryDuration, PbsInfo.N.ResourceLimit, and PbsInfo.N.AclLimit parameters. If you set Scheduler.N.SchedName to slurm, slurm19, or slurm20, you must specify at least one of the SlurmInfo.N.SchedInterval and SlurmInfo.N.BackfillInterval parameters.
+             * <strong>example:</strong>
+             * <p>pbs</p>
              */
             public Builder schedName(String schedName) {
                 this.schedName = schedName;
@@ -592,11 +691,17 @@ public class SetSchedulerInfoRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetSchedulerInfoRequest} extends {@link TeaModel}
+     *
+     * <p>SetSchedulerInfoRequest</p>
+     */
     public static class SlurmInfo extends TeaModel {
-        @NameInMap("BackfillInterval")
+        @com.aliyun.core.annotation.NameInMap("BackfillInterval")
         private Integer backfillInterval;
 
-        @NameInMap("SchedInterval")
+        @com.aliyun.core.annotation.NameInMap("SchedInterval")
         private Integer schedInterval;
 
         private SlurmInfo(Builder builder) {
@@ -630,11 +735,20 @@ public class SetSchedulerInfoRequest extends Request {
             private Integer backfillInterval; 
             private Integer schedInterval; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlurmInfo model) {
+                this.backfillInterval = model.backfillInterval;
+                this.schedInterval = model.schedInterval;
+            } 
+
             /**
-             * The backfill scheduling period. Unit: seconds.
-             * <p>
+             * <p>The backfill scheduling period. Unit: seconds.</p>
+             * <p>Default value: 60.</p>
              * 
-             * Default value: 60.
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder backfillInterval(Integer backfillInterval) {
                 this.backfillInterval = backfillInterval;
@@ -642,12 +756,12 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * SlurmInfo specifies the number of Slurm schedulers that can be configured in the cluster. Valid values of N: 0 to 100.
-             * <p>
+             * <p>SlurmInfo specifies the number of Slurm schedulers that can be configured in the cluster. Valid values of N: 0 to 100.</p>
+             * <p>SchedInterval specifies the scheduling period. Unit: seconds.</p>
+             * <p>Default value: 60.</p>
              * 
-             * SchedInterval specifies the scheduling period. Unit: seconds.
-             * 
-             * Default value: 60.
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder schedInterval(Integer schedInterval) {
                 this.schedInterval = schedInterval;

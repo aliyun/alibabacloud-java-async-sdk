@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InitializeEHPCRequest} extends {@link RequestModel}
  *
  * <p>InitializeEHPCRequest</p>
  */
 public class InitializeEHPCRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
     private InitializeEHPCRequest(Builder builder) {
@@ -34,7 +39,7 @@ public class InitializeEHPCRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,10 +73,11 @@ public class InitializeEHPCRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service-linked role is created.
-         * <p>
+         * <p>The ID of the region where the service-linked role is created.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/188593.html">ListRegions</a> operation to obtain the IDs of regions supported by E-HPC.</p>
          * 
-         * You can call the [ListRegions](~~188593~~) operation to obtain the IDs of regions supported by E-HPC.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -80,7 +86,17 @@ public class InitializeEHPCRequest extends Request {
         }
 
         /**
-         * This parameter is unavailable for public use.
+         * <p>The name of the service for which you must create a service-linked role. Valid values:</p>
+         * <ul>
+         * <li>E-HPC: You must create the AliyunServiceRoleForEHPC service-linked role.</li>
+         * <li>E-HPC Instant: You must create the AliyunServiceRoleForEHPCManagedNetwork service-linked role.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>E-HPC</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

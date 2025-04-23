@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPostScriptsRequest} extends {@link RequestModel}
  *
  * <p>SetPostScriptsRequest</p>
  */
 public class SetPostScriptsRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("PostInstallScripts")
-    private java.util.List < PostInstallScripts> postInstallScripts;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PostInstallScripts")
+    private java.util.List<PostInstallScripts> postInstallScripts;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private SetPostScriptsRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class SetPostScriptsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -56,7 +61,7 @@ public class SetPostScriptsRequest extends Request {
     /**
      * @return postInstallScripts
      */
-    public java.util.List < PostInstallScripts> getPostInstallScripts() {
+    public java.util.List<PostInstallScripts> getPostInstallScripts() {
         return this.postInstallScripts;
     }
 
@@ -69,7 +74,7 @@ public class SetPostScriptsRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetPostScriptsRequest, Builder> {
         private String clusterId; 
-        private java.util.List < PostInstallScripts> postInstallScripts; 
+        private java.util.List<PostInstallScripts> postInstallScripts; 
         private String regionId; 
 
         private Builder() {
@@ -84,10 +89,12 @@ public class SetPostScriptsRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to obtain the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-sh-EnjshUxn</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -96,16 +103,20 @@ public class SetPostScriptsRequest extends Request {
         }
 
         /**
-         * The post-processing scripts.
+         * <p>The post-processing scripts.</p>
          */
-        public Builder postInstallScripts(java.util.List < PostInstallScripts> postInstallScripts) {
+        public Builder postInstallScripts(java.util.List<PostInstallScripts> postInstallScripts) {
             this.putQueryParameter("PostInstallScripts", postInstallScripts);
             this.postInstallScripts = postInstallScripts;
             return this;
         }
 
         /**
-         * The ID of the region where the cluster resides. You can call the [ListRegions](~~188593~~) operation to query the latest region list.
+         * <p>The ID of the region where the cluster resides. You can call the <a href="https://help.aliyun.com/document_detail/188593.html">ListRegions</a> operation to query the latest region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -120,11 +131,17 @@ public class SetPostScriptsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetPostScriptsRequest} extends {@link TeaModel}
+     *
+     * <p>SetPostScriptsRequest</p>
+     */
     public static class PostInstallScripts extends TeaModel {
-        @NameInMap("Args")
+        @com.aliyun.core.annotation.NameInMap("Args")
         private String args;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private PostInstallScripts(Builder builder) {
@@ -158,8 +175,19 @@ public class SetPostScriptsRequest extends Request {
             private String args; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(PostInstallScripts model) {
+                this.args = model.args;
+                this.url = model.url;
+            } 
+
             /**
-             * The parameter that is used to run the post-processing script.
+             * <p>The parameter that is used to run the post-processing script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-h</p>
              */
             public Builder args(String args) {
                 this.args = args;
@@ -167,7 +195,10 @@ public class SetPostScriptsRequest extends Request {
             }
 
             /**
-             * The URL that is used to download the post-processing script.
+             * <p>The URL that is used to download the post-processing script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://bucket.oss-cn-shanghai.aliyuncs.com/postscript_examples.sh">https://bucket.oss-cn-shanghai.aliyuncs.com/postscript_examples.sh</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterLogsResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterLogsResponseBody</p>
  */
 public class ListClusterLogsResponseBody extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("Logs")
+    @com.aliyun.core.annotation.NameInMap("Logs")
     private Logs logs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListClusterLogsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListClusterLogsResponseBody extends TeaModel {
 
     public static ListClusterLogsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class ListClusterLogsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListClusterLogsResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.logs = model.logs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The ID of the cluster.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -106,7 +130,7 @@ public class ListClusterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The details about operations logs.
+         * <p>The queried operations logs.</p>
          */
         public Builder logs(Logs logs) {
             this.logs = logs;
@@ -114,7 +138,10 @@ public class ListClusterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +149,10 @@ public class ListClusterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries that are returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +160,10 @@ public class ListClusterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBC2F93D-003A-49C4-850C-B826EECF6667</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +171,10 @@ public class ListClusterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -151,17 +187,23 @@ public class ListClusterLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterLogsResponseBody</p>
+     */
     public static class LogInfo extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Operation")
+        @com.aliyun.core.annotation.NameInMap("Operation")
         private String operation;
 
         private LogInfo(Builder builder) {
@@ -213,8 +255,21 @@ public class ListClusterLogsResponseBody extends TeaModel {
             private String message; 
             private String operation; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogInfo model) {
+                this.createTime = model.createTime;
+                this.level = model.level;
+                this.message = model.message;
+                this.operation = model.operation;
+            } 
+
             /**
-             * The time when the log was created.
+             * <p>The time when the log was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-18T13:24:13.000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -222,7 +277,15 @@ public class ListClusterLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the log entry.
+             * <p>The level of the log entry. Valid values:</p>
+             * <ul>
+             * <li>warn</li>
+             * <li>error</li>
+             * <li>info</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>info</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -230,7 +293,10 @@ public class ListClusterLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the log entry.
+             * <p>The content of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Begin to create cluster</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -238,7 +304,21 @@ public class ListClusterLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operation.
+             * <p>The type of the operation. Valid values:</p>
+             * <ul>
+             * <li>CreateCluster</li>
+             * <li>StartCluster</li>
+             * <li>StopCluster</li>
+             * <li>DeleteCluster</li>
+             * <li>AddNodes</li>
+             * <li>StartNodes</li>
+             * <li>ResetNodes</li>
+             * <li>StopNodes</li>
+             * <li>DeleteNodes</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CreateCluster</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -252,9 +332,15 @@ public class ListClusterLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClusterLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterLogsResponseBody</p>
+     */
     public static class Logs extends TeaModel {
-        @NameInMap("LogInfo")
-        private java.util.List < LogInfo> logInfo;
+        @com.aliyun.core.annotation.NameInMap("LogInfo")
+        private java.util.List<LogInfo> logInfo;
 
         private Logs(Builder builder) {
             this.logInfo = builder.logInfo;
@@ -271,17 +357,24 @@ public class ListClusterLogsResponseBody extends TeaModel {
         /**
          * @return logInfo
          */
-        public java.util.List < LogInfo> getLogInfo() {
+        public java.util.List<LogInfo> getLogInfo() {
             return this.logInfo;
         }
 
         public static final class Builder {
-            private java.util.List < LogInfo> logInfo; 
+            private java.util.List<LogInfo> logInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Logs model) {
+                this.logInfo = model.logInfo;
+            } 
 
             /**
              * LogInfo.
              */
-            public Builder logInfo(java.util.List < LogInfo> logInfo) {
+            public Builder logInfo(java.util.List<LogInfo> logInfo) {
                 this.logInfo = logInfo;
                 return this;
             }

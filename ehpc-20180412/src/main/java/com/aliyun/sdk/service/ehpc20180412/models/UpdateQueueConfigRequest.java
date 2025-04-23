@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateQueueConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdateQueueConfigRequest</p>
  */
 public class UpdateQueueConfigRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("ComputeInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputeInstanceType")
     private String computeInstanceType;
 
-    @Query
-    @NameInMap("DeploymentSetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
     private String deploymentSetId;
 
-    @Query
-    @NameInMap("NetworkInterfaceTrafficMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
     private String networkInterfaceTrafficMode;
 
-    @Query
-    @NameInMap("QueueName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueueName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queueName;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private UpdateQueueConfigRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class UpdateQueueConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -126,10 +131,12 @@ public class UpdateQueueConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the E-HPC cluster.
-         * <p>
+         * <p>The ID of the E-HPC cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -138,10 +145,11 @@ public class UpdateQueueConfigRequest extends Request {
         }
 
         /**
-         * The instance type of the node.
-         * <p>
+         * <p>The instance type of the node.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/188592.html">ListPreferredEcsTypes</a> operation to query the recommended instance types.</p>
          * 
-         * You can call the [ListPreferredEcsTypes](~~188592~~) operation to query the recommended instance types.
+         * <strong>example:</strong>
+         * <p>ecs.n1.tiny</p>
          */
         public Builder computeInstanceType(String computeInstanceType) {
             this.putQueryParameter("ComputeInstanceType", computeInstanceType);
@@ -150,7 +158,10 @@ public class UpdateQueueConfigRequest extends Request {
         }
 
         /**
-         * The ID of the deployment set. You can obtain the deployment set ID by calling the [DescribeDeploymentSets](~~91313~~) operation. Only the deployment sets that use low latency policy are supported.
+         * <p>The ID of the deployment set. You can obtain the deployment set ID by calling the <a href="https://help.aliyun.com/document_detail/91313.html">DescribeDeploymentSets</a> operation. Only the deployment sets that use low latency policy are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-bp1frxuzdg87zh4pzq****</p>
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);
@@ -159,11 +170,14 @@ public class UpdateQueueConfigRequest extends Request {
         }
 
         /**
-         * The communication model of the ENI. Valid values:
-         * <p>
+         * <p>The communication mode of the elastic network interface (ENI). Valid values:</p>
+         * <ul>
+         * <li>Standard: uses the TCP communication mode.</li>
+         * <li>HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</li>
+         * </ul>
          * 
-         * *   Standard: uses the TCP communication mode.
-         * *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with the Elastic RDMA Interface (ERI) enabled.
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
             this.putQueryParameter("NetworkInterfaceTrafficMode", networkInterfaceTrafficMode);
@@ -172,7 +186,11 @@ public class UpdateQueueConfigRequest extends Request {
         }
 
         /**
-         * The name of the queue.
+         * <p>The name of the queue.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workq</p>
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
@@ -181,10 +199,11 @@ public class UpdateQueueConfigRequest extends Request {
         }
 
         /**
-         * The resource group ID.
-         * <p>
+         * <p>The resource group ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the IDs of resource groups.</p>
          * 
-         * You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

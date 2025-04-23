@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCommunityImagesRequest} extends {@link RequestModel}
  *
  * <p>ListCommunityImagesRequest</p>
  */
 public class ListCommunityImagesRequest extends Request {
-    @Query
-    @NameInMap("BaseOsTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BaseOsTag")
     private String baseOsTag;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
     private ListCommunityImagesRequest(Builder builder) {
@@ -39,7 +44,7 @@ public class ListCommunityImagesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +87,10 @@ public class ListCommunityImagesRequest extends Request {
         } 
 
         /**
-         * The tag of the base operating system (BOS).
+         * <p>The tag of the base operating system (BOS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         public Builder baseOsTag(String baseOsTag) {
             this.putQueryParameter("BaseOsTag", baseOsTag);
@@ -91,10 +99,11 @@ public class ListCommunityImagesRequest extends Request {
         }
 
         /**
-         * The ID of the cluster. If the cluster supports multiple operating systems, all community images in the region where the cluster resides are queried.
-         * <p>
+         * <p>The ID of the cluster. If the cluster supports multiple operating systems, all community images in the region where the cluster resides are queried.</p>
+         * <p>If you do not specify the cluster ID, the community images that are supported by all clusters are queried.</p>
          * 
-         * If you do not specify the cluster ID, the community images that are supported by all clusters are queried.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -103,7 +112,10 @@ public class ListCommunityImagesRequest extends Request {
         }
 
         /**
-         * The type of the Elastic Compute Service (ECS) instance. If you do not specify the instance type, the community images that are supported by all instance types are queried.
+         * <p>The type of the Elastic Compute Service (ECS) instance. If you do not specify the instance type, the community images that are supported by all instance types are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n1.tiny</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

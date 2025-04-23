@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecoverClusterRequest} extends {@link RequestModel}
  *
  * <p>RecoverClusterRequest</p>
  */
 public class RecoverClusterRequest extends Request {
-    @Query
-    @NameInMap("AccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
     private String accountType;
 
-    @Query
-    @NameInMap("ClientVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientVersion")
     private String clientVersion;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("ImageOwnerAlias")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
     private String imageOwnerAlias;
 
-    @Query
-    @NameInMap("OsTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsTag")
     private String osTag;
 
-    @Query
-    @NameInMap("SchedulerType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchedulerType")
     private String schedulerType;
 
     private RecoverClusterRequest(Builder builder) {
@@ -60,7 +65,7 @@ public class RecoverClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,13 +144,15 @@ public class RecoverClusterRequest extends Request {
         } 
 
         /**
-         * The service type of the domain account. Valid values:
-         * <p>
+         * <p>The service type of the domain account. Valid values:</p>
+         * <ul>
+         * <li>nis</li>
+         * <li>ldap</li>
+         * </ul>
+         * <p>Default value: nis.</p>
          * 
-         * *   nis
-         * *   ldap
-         * 
-         * Default value: nis
+         * <strong>example:</strong>
+         * <p>nis</p>
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -154,10 +161,11 @@ public class RecoverClusterRequest extends Request {
         }
 
         /**
-         * The version of the E-HPC client. The default value is the latest version of the client.
-         * <p>
+         * <p>The version of the E-HPC client. The default value is the latest version of the client.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87223.html">ListCurrentClientVersion</a> operation to query the latest version of the E-HPC client.</p>
          * 
-         * You can call the [ListCurrentClientVersion](~~87223~~) operation to query the current version of the E-HPC client.
+         * <strong>example:</strong>
+         * <p>1.0.76</p>
          */
         public Builder clientVersion(String clientVersion) {
             this.putQueryParameter("ClientVersion", clientVersion);
@@ -166,10 +174,12 @@ public class RecoverClusterRequest extends Request {
         }
 
         /**
-         * The ID of the cluster. The cluster must be in the Exception state.
-         * <p>
+         * <p>The cluster ID. The cluster must be in the Exception state.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the ID and status of a cluster.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID and status.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -178,10 +188,11 @@ public class RecoverClusterRequest extends Request {
         }
 
         /**
-         * The ID of the image.
-         * <p>
+         * <p>The image ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87213.html">ListImages</a> and <a href="https://help.aliyun.com/document_detail/87215.html">ListCustomImages</a> operations to query the images that are supported by E-HPC.</p>
          * 
-         * You can call the [ListImages](~~87213~~) and [ListCustomImages](~~87215~~) operations to query the images that are supported by E-HPC.
+         * <strong>example:</strong>
+         * <p>m-bp18133n0335yq****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -190,14 +201,16 @@ public class RecoverClusterRequest extends Request {
         }
 
         /**
-         * The type of the image. Valid values:
-         * <p>
+         * <p>The type of the image. Valid values:</p>
+         * <ul>
+         * <li>system: public image</li>
+         * <li>self: custom image</li>
+         * <li>others: shared image</li>
+         * </ul>
+         * <p>Default value: system.</p>
          * 
-         * *   system: public image
-         * *   self: custom image
-         * *   others: shared image
-         * 
-         * Default value: system
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder imageOwnerAlias(String imageOwnerAlias) {
             this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
@@ -206,10 +219,11 @@ public class RecoverClusterRequest extends Request {
         }
 
         /**
-         * The image tag of the operating system.
-         * <p>
+         * <p>The tag of the system image.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87213.html">ListImages</a> and <a href="https://help.aliyun.com/document_detail/87215.html">ListCustomImages</a> operations to query the image tags supported by Elastic High Performance Computing (E-HPC).</p>
          * 
-         * You can call the [ListImages](~~87213~~) and [ListCustomImages](~~87215~~) operations to query the image tags supported by Elastic High Performance Computing (E-HPC).
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         public Builder osTag(String osTag) {
             this.putQueryParameter("OsTag", osTag);
@@ -218,15 +232,17 @@ public class RecoverClusterRequest extends Request {
         }
 
         /**
-         * The type of the scheduler. Valid values:
-         * <p>
+         * <p>The type of the scheduler. Valid values:</p>
+         * <ul>
+         * <li>pbs</li>
+         * <li>slurm</li>
+         * <li>opengridscheduler</li>
+         * <li>deadline</li>
+         * </ul>
+         * <p>Default value: pbs.</p>
          * 
-         * *   pbs
-         * *   slurm
-         * *   opengridscheduler
-         * *   deadline
-         * 
-         * Default value: pbs
+         * <strong>example:</strong>
+         * <p>pbs</p>
          */
         public Builder schedulerType(String schedulerType) {
             this.putQueryParameter("SchedulerType", schedulerType);

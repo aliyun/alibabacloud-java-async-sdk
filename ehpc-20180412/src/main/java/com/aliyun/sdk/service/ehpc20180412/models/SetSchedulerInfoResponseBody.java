@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetSchedulerInfoResponseBody} extends {@link TeaModel}
  *
  * <p>SetSchedulerInfoResponseBody</p>
  */
 public class SetSchedulerInfoResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SetSchedulerInfoResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class SetSchedulerInfoResponseBody extends TeaModel {
 
     public static SetSchedulerInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class SetSchedulerInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(SetSchedulerInfoResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pbs: scheduler setting successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -58,7 +78,10 @@ public class SetSchedulerInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBC2F93D-003A-49C4-850C-B826EECF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInvocationStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ListInvocationStatusResponseBody</p>
  */
 public class ListInvocationStatusResponseBody extends TeaModel {
-    @NameInMap("CommandId")
+    @com.aliyun.core.annotation.NameInMap("CommandId")
     private String commandId;
 
-    @NameInMap("InvokeInstances")
+    @com.aliyun.core.annotation.NameInMap("InvokeInstances")
     private InvokeInstances invokeInstances;
 
-    @NameInMap("InvokeStatus")
+    @com.aliyun.core.annotation.NameInMap("InvokeStatus")
     private String invokeStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListInvocationStatusResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class ListInvocationStatusResponseBody extends TeaModel {
 
     public static ListInvocationStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class ListInvocationStatusResponseBody extends TeaModel {
         private String invokeStatus; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListInvocationStatusResponseBody model) {
+            this.commandId = model.commandId;
+            this.invokeInstances = model.invokeInstances;
+            this.invokeStatus = model.invokeStatus;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the command.
+         * <p>The command ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-hz01v8x80o3****</p>
          */
         public Builder commandId(String commandId) {
             this.commandId = commandId;
@@ -82,7 +104,7 @@ public class ListInvocationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The list of statuses. A list is returned for each node.
+         * <p>An array of execution statuses. An entry is returned for each node.</p>
          */
         public Builder invokeInstances(InvokeInstances invokeInstances) {
             this.invokeInstances = invokeInstances;
@@ -90,13 +112,16 @@ public class ListInvocationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The overall status of all nodes in the cluster. Valid values:
-         * <p>
+         * <p>The status of the command. Valid values:</p>
+         * <ul>
+         * <li>Finished: The execution of the command finished.</li>
+         * <li>Running: The command is being executed.</li>
+         * <li>Failed: The command failed to be executed.</li>
+         * <li>Stopped: The execution of the command stopped.</li>
+         * </ul>
          * 
-         * - Finished
-         * - Running
-         * - Failed
-         * - Stopped
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder invokeStatus(String invokeStatus) {
             this.invokeStatus = invokeStatus;
@@ -104,7 +129,10 @@ public class ListInvocationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +145,17 @@ public class ListInvocationStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInvocationStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInvocationStatusResponseBody</p>
+     */
     public static class InvokeInstance extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceInvokeStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceInvokeStatus")
         private String instanceInvokeStatus;
 
         private InvokeInstance(Builder builder) {
@@ -155,8 +189,19 @@ public class ListInvocationStatusResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceInvokeStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(InvokeInstance model) {
+                this.instanceId = model.instanceId;
+                this.instanceInvokeStatus = model.instanceInvokeStatus;
+            } 
+
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-uf6abz34m2714bp4****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -164,13 +209,16 @@ public class ListInvocationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the node. Valid values:
-             * <p>
+             * <p>The status of the node. Valid values:</p>
+             * <ul>
+             * <li>Finished: The running of the node finished.</li>
+             * <li>Running: The node is running.</li>
+             * <li>Failed: The node failed to run.</li>
+             * <li>Stopped: The running of the node stopped.</li>
+             * </ul>
              * 
-             * *   Finished
-             * *   Running
-             * *   Failed
-             * *   Stopped
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder instanceInvokeStatus(String instanceInvokeStatus) {
                 this.instanceInvokeStatus = instanceInvokeStatus;
@@ -184,9 +232,15 @@ public class ListInvocationStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInvocationStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInvocationStatusResponseBody</p>
+     */
     public static class InvokeInstances extends TeaModel {
-        @NameInMap("InvokeInstance")
-        private java.util.List < InvokeInstance> invokeInstance;
+        @com.aliyun.core.annotation.NameInMap("InvokeInstance")
+        private java.util.List<InvokeInstance> invokeInstance;
 
         private InvokeInstances(Builder builder) {
             this.invokeInstance = builder.invokeInstance;
@@ -203,17 +257,24 @@ public class ListInvocationStatusResponseBody extends TeaModel {
         /**
          * @return invokeInstance
          */
-        public java.util.List < InvokeInstance> getInvokeInstance() {
+        public java.util.List<InvokeInstance> getInvokeInstance() {
             return this.invokeInstance;
         }
 
         public static final class Builder {
-            private java.util.List < InvokeInstance> invokeInstance; 
+            private java.util.List<InvokeInstance> invokeInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvokeInstances model) {
+                this.invokeInstance = model.invokeInstance;
+            } 
 
             /**
              * InvokeInstance.
              */
-            public Builder invokeInstance(java.util.List < InvokeInstance> invokeInstance) {
+            public Builder invokeInstance(java.util.List<InvokeInstance> invokeInstance) {
                 this.invokeInstance = invokeInstance;
                 return this;
             }

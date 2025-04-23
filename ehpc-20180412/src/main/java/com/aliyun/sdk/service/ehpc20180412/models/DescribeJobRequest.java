@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeJobRequest} extends {@link RequestModel}
  *
  * <p>DescribeJobRequest</p>
  */
 public class DescribeJobRequest extends Request {
-    @Query
-    @NameInMap("Async")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Async")
     private Boolean async;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
     private DescribeJobRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class DescribeJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,10 +89,11 @@ public class DescribeJobRequest extends Request {
         } 
 
         /**
-         * Specifies whether to use an asynchronous link to stop the job.
-         * <p>
+         * <p>Specifies whether to use an asynchronous link to stop the job.</p>
+         * <p>Default value: false.</p>
          * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -96,10 +102,12 @@ public class DescribeJobRequest extends Request {
         }
 
         /**
-         * The ID of the E-HPC cluster.
-         * <p>
+         * <p>The ID of the E-HPC cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to obtain the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-jeJki6****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -108,10 +116,12 @@ public class DescribeJobRequest extends Request {
         }
 
         /**
-         * The job ID.
-         * <p>
+         * <p>The job ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87251.html">ListJobs</a> operation to obtain the job ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListJobs](~~87251~~) operation to obtain the job ID.
+         * <strong>example:</strong>
+         * <p>1.scheduler****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

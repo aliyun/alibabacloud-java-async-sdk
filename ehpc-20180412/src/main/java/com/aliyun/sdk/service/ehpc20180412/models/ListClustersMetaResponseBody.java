@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClustersMetaResponseBody} extends {@link TeaModel}
  *
  * <p>ListClustersMetaResponseBody</p>
  */
 public class ListClustersMetaResponseBody extends TeaModel {
-    @NameInMap("Clusters")
+    @com.aliyun.core.annotation.NameInMap("Clusters")
     private Clusters clusters;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListClustersMetaResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListClustersMetaResponseBody extends TeaModel {
 
     public static ListClustersMetaResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,19 @@ public class ListClustersMetaResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListClustersMetaResponseBody model) {
+            this.clusters = model.clusters;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The list of clusters.
+         * <p>The list of clusters.</p>
          */
         public Builder clusters(Clusters clusters) {
             this.clusters = clusters;
@@ -94,7 +114,10 @@ public class ListClustersMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +125,10 @@ public class ListClustersMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Valid values: 1 to 50.
+         * <p>The number of entries returned per page. Valid values: 1 to 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +136,10 @@ public class ListClustersMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD517102-B314-4665-BDAC-A32DE7834D02</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class ListClustersMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,47 +163,53 @@ public class ListClustersMetaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClustersMetaResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClustersMetaResponseBody</p>
+     */
     public static class ClusterInfoSimple extends TeaModel {
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
-        @NameInMap("ClientVersion")
+        @com.aliyun.core.annotation.NameInMap("ClientVersion")
         private String clientVersion;
 
-        @NameInMap("DeployMode")
+        @com.aliyun.core.annotation.NameInMap("DeployMode")
         private String deployMode;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EhpcVersion")
+        @com.aliyun.core.annotation.NameInMap("EhpcVersion")
         private String ehpcVersion;
 
-        @NameInMap("HasPlugin")
+        @com.aliyun.core.annotation.NameInMap("HasPlugin")
         private Boolean hasPlugin;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IsComputeEss")
+        @com.aliyun.core.annotation.NameInMap("IsComputeEss")
         private Boolean isComputeEss;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OsTag")
+        @com.aliyun.core.annotation.NameInMap("OsTag")
         private String osTag;
 
-        @NameInMap("SchedulerType")
+        @com.aliyun.core.annotation.NameInMap("SchedulerType")
         private String schedulerType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private ClusterInfoSimple(Builder builder) {
@@ -313,12 +351,35 @@ public class ListClustersMetaResponseBody extends TeaModel {
             private String status; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterInfoSimple model) {
+                this.accountType = model.accountType;
+                this.clientVersion = model.clientVersion;
+                this.deployMode = model.deployMode;
+                this.description = model.description;
+                this.ehpcVersion = model.ehpcVersion;
+                this.hasPlugin = model.hasPlugin;
+                this.id = model.id;
+                this.isComputeEss = model.isComputeEss;
+                this.location = model.location;
+                this.name = model.name;
+                this.osTag = model.osTag;
+                this.schedulerType = model.schedulerType;
+                this.status = model.status;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * The server type of the account. Valid values:
-             * <p>
+             * <p>The server type of the account. Valid values:</p>
+             * <ul>
+             * <li>nis</li>
+             * <li>ldap</li>
+             * </ul>
              * 
-             * *   nis
-             * *   ldap
+             * <strong>example:</strong>
+             * <p>nis</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -326,7 +387,10 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the client.
+             * <p>The version of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.64</p>
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -334,13 +398,16 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The mode in which the cluster is deployed. Valid values:
-             * <p>
+             * <p>The mode in which the cluster is deployed. Valid values:</p>
+             * <ul>
+             * <li>Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.</li>
+             * <li>Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.</li>
+             * <li>Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.</li>
+             * <li>Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.</li>
+             * </ul>
              * 
-             * *   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.
-             * *   Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.
-             * *   Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.
-             * *   Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -348,7 +415,10 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the cluster.
+             * <p>The description of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>clusterdescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -356,7 +426,10 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The version of E-HPC.
+             * <p>The version of E-HPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder ehpcVersion(String ehpcVersion) {
                 this.ehpcVersion = ehpcVersion;
@@ -364,13 +437,15 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cluster uses a plug-in. Valid values:
-             * <p>
+             * <p>Indicates whether the cluster uses a plug-in. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: false</p>
              * 
-             * *   true
-             * *   false
-             * 
-             * Default value: false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasPlugin(Boolean hasPlugin) {
                 this.hasPlugin = hasPlugin;
@@ -378,7 +453,10 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ehpc-hz-jeJki6****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -386,11 +464,14 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a scaling group is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether a scaling group is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: A scaling group is enabled.</li>
+             * <li>false: No scaling group is enabled.</li>
+             * </ul>
              * 
-             * *   true: A scaling group is enabled.
-             * *   false: No scaling group is enabled.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isComputeEss(Boolean isComputeEss) {
                 this.isComputeEss = isComputeEss;
@@ -398,11 +479,14 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The location where the cluster is deployed. Valid values:
-             * <p>
+             * <p>The location where the cluster is deployed. Valid values:</p>
+             * <ul>
+             * <li>OnPremise: The cluster is deployed on a hybrid cloud.</li>
+             * <li>PublicCloud: The cluster is deployed on a public cloud.</li>
+             * </ul>
              * 
-             * *   OnPremise: The cluster is deployed on a hybrid cloud.
-             * *   PublicCloud: The cluster is deployed on a public cloud.
+             * <strong>example:</strong>
+             * <p>PublicCloud</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -410,7 +494,10 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -418,7 +505,10 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The image tag of the operating system.
+             * <p>The image tag of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS_7.2_64</p>
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -426,13 +516,16 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scheduler. Valid values:
-             * <p>
+             * <p>The type of the scheduler. Valid values:</p>
+             * <ul>
+             * <li>pbs</li>
+             * <li>slurm</li>
+             * <li>opengridscheduler</li>
+             * <li>deadline</li>
+             * </ul>
              * 
-             * *   pbs
-             * *   slurm
-             * *   opengridscheduler
-             * *   deadline
+             * <strong>example:</strong>
+             * <p>pbs</p>
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -440,15 +533,18 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster. Valid values:
-             * <p>
+             * <p>The status of the cluster. Valid values:</p>
+             * <ul>
+             * <li>uninit: The cluster is not initialized.</li>
+             * <li>creating: The cluster is being created.</li>
+             * <li>init: The cluster is being initialized.</li>
+             * <li>running: The cluster is running.</li>
+             * <li>exception: The cluster encounters an exception.</li>
+             * <li>releasing: The cluster is being released.</li>
+             * </ul>
              * 
-             * *   uninit: The cluster is not initialized.
-             * *   creating: The cluster is being created.
-             * *   init: The cluster is being initialized.
-             * *   running: The cluster is running.
-             * *   exception: The cluster encounters an exception.
-             * *   releasing: The cluster is being released.
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -456,7 +552,10 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-b3f3edefefeep0760yju****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -470,9 +569,15 @@ public class ListClustersMetaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClustersMetaResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClustersMetaResponseBody</p>
+     */
     public static class Clusters extends TeaModel {
-        @NameInMap("ClusterInfoSimple")
-        private java.util.List < ClusterInfoSimple> clusterInfoSimple;
+        @com.aliyun.core.annotation.NameInMap("ClusterInfoSimple")
+        private java.util.List<ClusterInfoSimple> clusterInfoSimple;
 
         private Clusters(Builder builder) {
             this.clusterInfoSimple = builder.clusterInfoSimple;
@@ -489,17 +594,24 @@ public class ListClustersMetaResponseBody extends TeaModel {
         /**
          * @return clusterInfoSimple
          */
-        public java.util.List < ClusterInfoSimple> getClusterInfoSimple() {
+        public java.util.List<ClusterInfoSimple> getClusterInfoSimple() {
             return this.clusterInfoSimple;
         }
 
         public static final class Builder {
-            private java.util.List < ClusterInfoSimple> clusterInfoSimple; 
+            private java.util.List<ClusterInfoSimple> clusterInfoSimple; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clusters model) {
+                this.clusterInfoSimple = model.clusterInfoSimple;
+            } 
 
             /**
              * ClusterInfoSimple.
              */
-            public Builder clusterInfoSimple(java.util.List < ClusterInfoSimple> clusterInfoSimple) {
+            public Builder clusterInfoSimple(java.util.List<ClusterInfoSimple> clusterInfoSimple) {
                 this.clusterInfoSimple = clusterInfoSimple;
                 return this;
             }

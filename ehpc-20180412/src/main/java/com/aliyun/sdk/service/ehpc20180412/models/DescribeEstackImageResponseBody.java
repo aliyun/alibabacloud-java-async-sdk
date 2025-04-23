@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEstackImageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEstackImageResponseBody</p>
  */
 public class DescribeEstackImageResponseBody extends TeaModel {
-    @NameInMap("ImageList")
+    @com.aliyun.core.annotation.NameInMap("ImageList")
     private ImageList imageList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeEstackImageResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class DescribeEstackImageResponseBody extends TeaModel {
 
     public static DescribeEstackImageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,19 @@ public class DescribeEstackImageResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeEstackImageResponseBody model) {
+            this.imageList = model.imageList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The array of base images.
+         * <p>The array of base images.</p>
          */
         public Builder imageList(ImageList imageList) {
             this.imageList = imageList;
@@ -94,7 +114,10 @@ public class DescribeEstackImageResponseBody extends TeaModel {
         }
 
         /**
-         * The page number returned.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +125,10 @@ public class DescribeEstackImageResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +136,10 @@ public class DescribeEstackImageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D69A58F-345C-4FDE-88E4-BF518948xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class DescribeEstackImageResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of images.
+         * <p>The total number of images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,20 +163,26 @@ public class DescribeEstackImageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEstackImageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEstackImageResponseBody</p>
+     */
     public static class ImageListInfo extends TeaModel {
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImageSize")
+        @com.aliyun.core.annotation.NameInMap("ImageSize")
         private Integer imageSize;
 
-        @NameInMap("ImageType")
+        @com.aliyun.core.annotation.NameInMap("ImageType")
         private String imageType;
 
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
-        @NameInMap("RecentUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("RecentUpdateTime")
         private String recentUpdateTime;
 
         private ImageListInfo(Builder builder) {
@@ -205,8 +243,22 @@ public class DescribeEstackImageResponseBody extends TeaModel {
             private String imageUrl; 
             private String recentUpdateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageListInfo model) {
+                this.imageName = model.imageName;
+                this.imageSize = model.imageSize;
+                this.imageType = model.imageType;
+                this.imageUrl = model.imageUrl;
+                this.recentUpdateTime = model.recentUpdateTime;
+            } 
+
             /**
-             * The image name.
+             * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tensorflow-21.09-tf1-py3.sif</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -214,7 +266,10 @@ public class DescribeEstackImageResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the image.
+             * <p>The size of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65535 GiB</p>
              */
             public Builder imageSize(Integer imageSize) {
                 this.imageSize = imageSize;
@@ -222,7 +277,10 @@ public class DescribeEstackImageResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image.
+             * <p>The type of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>singularity</p>
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -230,7 +288,10 @@ public class DescribeEstackImageResponseBody extends TeaModel {
             }
 
             /**
-             * The download URL of the image.
+             * <p>The download URL of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.oss-cn-hangzhou.aliyuncs.com/eStackPackage/singularity/tensorflow-21.09-tf1-py3.sif">http://xxxx.oss-cn-hangzhou.aliyuncs.com/eStackPackage/singularity/tensorflow-21.09-tf1-py3.sif</a></p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -238,7 +299,10 @@ public class DescribeEstackImageResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image was last modified.
+             * <p>The time when the image was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-05T07:10:55.000Z</p>
              */
             public Builder recentUpdateTime(String recentUpdateTime) {
                 this.recentUpdateTime = recentUpdateTime;
@@ -252,9 +316,15 @@ public class DescribeEstackImageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEstackImageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEstackImageResponseBody</p>
+     */
     public static class ImageList extends TeaModel {
-        @NameInMap("ImageListInfo")
-        private java.util.List < ImageListInfo> imageListInfo;
+        @com.aliyun.core.annotation.NameInMap("ImageListInfo")
+        private java.util.List<ImageListInfo> imageListInfo;
 
         private ImageList(Builder builder) {
             this.imageListInfo = builder.imageListInfo;
@@ -271,17 +341,24 @@ public class DescribeEstackImageResponseBody extends TeaModel {
         /**
          * @return imageListInfo
          */
-        public java.util.List < ImageListInfo> getImageListInfo() {
+        public java.util.List<ImageListInfo> getImageListInfo() {
             return this.imageListInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ImageListInfo> imageListInfo; 
+            private java.util.List<ImageListInfo> imageListInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageList model) {
+                this.imageListInfo = model.imageListInfo;
+            } 
 
             /**
              * ImageListInfo.
              */
-            public Builder imageListInfo(java.util.List < ImageListInfo> imageListInfo) {
+            public Builder imageListInfo(java.util.List<ImageListInfo> imageListInfo) {
                 this.imageListInfo = imageListInfo;
                 return this;
             }

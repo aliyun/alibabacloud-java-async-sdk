@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInvocationStatusRequest} extends {@link RequestModel}
  *
  * <p>ListInvocationStatusRequest</p>
  */
 public class ListInvocationStatusRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("CommandId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commandId;
 
     private ListInvocationStatusRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class ListInvocationStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,10 +75,12 @@ public class ListInvocationStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -82,10 +89,12 @@ public class ListInvocationStatusRequest extends Request {
         }
 
         /**
-         * The ID of the command.
-         * <p>
+         * <p>The command ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87388.html">ListCommands</a> operation to query the command ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListCommands](~~87388~~) operation to query the command ID.
+         * <strong>example:</strong>
+         * <p>c-hz01v8x80o3****</p>
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);

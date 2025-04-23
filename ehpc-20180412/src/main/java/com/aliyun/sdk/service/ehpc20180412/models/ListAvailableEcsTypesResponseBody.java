@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAvailableEcsTypesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAvailableEcsTypesResponseBody</p>
  */
 public class ListAvailableEcsTypesResponseBody extends TeaModel {
-    @NameInMap("InstanceTypeFamilies")
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilies")
     private InstanceTypeFamilies instanceTypeFamilies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SupportSpotInstance")
+    @com.aliyun.core.annotation.NameInMap("SupportSpotInstance")
     private Boolean supportSpotInstance;
 
     private ListAvailableEcsTypesResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
 
     public static ListAvailableEcsTypesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -61,8 +70,17 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean supportSpotInstance; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAvailableEcsTypesResponseBody model) {
+            this.instanceTypeFamilies = model.instanceTypeFamilies;
+            this.requestId = model.requestId;
+            this.supportSpotInstance = model.supportSpotInstance;
+        } 
+
         /**
-         * The instance family to which the instance type belongs.
+         * <p>The instance family to which the instance type belongs.</p>
          */
         public Builder instanceTypeFamilies(InstanceTypeFamilies instanceTypeFamilies) {
             this.instanceTypeFamilies = instanceTypeFamilies;
@@ -70,7 +88,10 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9DD3AF8-1F91-4075-8669-55D10E45****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,11 +99,14 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether preemptible instances are supported. Valid values:
-         * <p>
+         * <p>Specifies whether preemptible instances are supported. Valid values:</p>
+         * <ul>
+         * <li>false: not supported</li>
+         * <li>true: supported</li>
+         * </ul>
          * 
-         * *   false: not supported
-         * *   true: supported
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder supportSpotInstance(Boolean supportSpotInstance) {
             this.supportSpotInstance = supportSpotInstance;
@@ -95,9 +119,15 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAvailableEcsTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAvailableEcsTypesResponseBody</p>
+     */
     public static class ZoneIds extends TeaModel {
-        @NameInMap("ZoneId")
-        private java.util.List < String > zoneId;
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private java.util.List<String> zoneId;
 
         private ZoneIds(Builder builder) {
             this.zoneId = builder.zoneId;
@@ -114,17 +144,24 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         /**
          * @return zoneId
          */
-        public java.util.List < String > getZoneId() {
+        public java.util.List<String> getZoneId() {
             return this.zoneId;
         }
 
         public static final class Builder {
-            private java.util.List < String > zoneId; 
+            private java.util.List<String> zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneIds model) {
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * ZoneId.
              */
-            public Builder zoneId(java.util.List < String > zoneId) {
+            public Builder zoneId(java.util.List<String> zoneId) {
                 this.zoneId = zoneId;
                 return this;
             }
@@ -136,41 +173,47 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAvailableEcsTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAvailableEcsTypesResponseBody</p>
+     */
     public static class TypesInfo extends TeaModel {
-        @NameInMap("CpuCoreCount")
+        @com.aliyun.core.annotation.NameInMap("CpuCoreCount")
         private Integer cpuCoreCount;
 
-        @NameInMap("EniQuantity")
+        @com.aliyun.core.annotation.NameInMap("EniQuantity")
         private Integer eniQuantity;
 
-        @NameInMap("GPUAmount")
+        @com.aliyun.core.annotation.NameInMap("GPUAmount")
         private Integer GPUAmount;
 
-        @NameInMap("GPUSpec")
+        @com.aliyun.core.annotation.NameInMap("GPUSpec")
         private String GPUSpec;
 
-        @NameInMap("InstanceBandwidthRx")
+        @com.aliyun.core.annotation.NameInMap("InstanceBandwidthRx")
         private Integer instanceBandwidthRx;
 
-        @NameInMap("InstanceBandwidthTx")
+        @com.aliyun.core.annotation.NameInMap("InstanceBandwidthTx")
         private Integer instanceBandwidthTx;
 
-        @NameInMap("InstancePpsRx")
+        @com.aliyun.core.annotation.NameInMap("InstancePpsRx")
         private Integer instancePpsRx;
 
-        @NameInMap("InstancePpsTx")
+        @com.aliyun.core.annotation.NameInMap("InstancePpsTx")
         private Integer instancePpsTx;
 
-        @NameInMap("InstanceTypeId")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeId")
         private String instanceTypeId;
 
-        @NameInMap("MemorySize")
+        @com.aliyun.core.annotation.NameInMap("MemorySize")
         private Integer memorySize;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("ZoneIds")
+        @com.aliyun.core.annotation.NameInMap("ZoneIds")
         private ZoneIds zoneIds;
 
         private TypesInfo(Builder builder) {
@@ -294,8 +337,29 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             private String status; 
             private ZoneIds zoneIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(TypesInfo model) {
+                this.cpuCoreCount = model.cpuCoreCount;
+                this.eniQuantity = model.eniQuantity;
+                this.GPUAmount = model.GPUAmount;
+                this.GPUSpec = model.GPUSpec;
+                this.instanceBandwidthRx = model.instanceBandwidthRx;
+                this.instanceBandwidthTx = model.instanceBandwidthTx;
+                this.instancePpsRx = model.instancePpsRx;
+                this.instancePpsTx = model.instancePpsTx;
+                this.instanceTypeId = model.instanceTypeId;
+                this.memorySize = model.memorySize;
+                this.status = model.status;
+                this.zoneIds = model.zoneIds;
+            } 
+
             /**
-             * The number of vCPUs.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cpuCoreCount(Integer cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
@@ -303,7 +367,10 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of elastic network interfaces (ENIs) that can be bound to an ECS instance.
+             * <p>The maximum number of elastic network interfaces (ENIs) that can be bound to an ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder eniQuantity(Integer eniQuantity) {
                 this.eniQuantity = eniQuantity;
@@ -311,7 +378,10 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of GPUs of an ECS instance.
+             * <p>The number of GPUs of an ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder GPUAmount(Integer GPUAmount) {
                 this.GPUAmount = GPUAmount;
@@ -319,7 +389,10 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The GPU type of the ECS instance.
+             * <p>The GPU type of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NVIDIA V100</p>
              */
             public Builder GPUSpec(String GPUSpec) {
                 this.GPUSpec = GPUSpec;
@@ -327,7 +400,10 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum inbound internal bandwidth. Unit: Kbit/s.
+             * <p>The maximum inbound internal bandwidth. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10240000</p>
              */
             public Builder instanceBandwidthRx(Integer instanceBandwidthRx) {
                 this.instanceBandwidthRx = instanceBandwidthRx;
@@ -335,7 +411,10 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum outbound internal bandwidth. Unit: Kbit/s.
+             * <p>The maximum outbound internal bandwidth. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10240000</p>
              */
             public Builder instanceBandwidthTx(Integer instanceBandwidthTx) {
                 this.instanceBandwidthTx = instanceBandwidthTx;
@@ -343,7 +422,10 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound packet forwarding rate over the internal network. Unit: pps.
+             * <p>The inbound packet forwarding rate over the internal network. Unit: pps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9000000</p>
              */
             public Builder instancePpsRx(Integer instancePpsRx) {
                 this.instancePpsRx = instancePpsRx;
@@ -351,7 +433,10 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound packet forwarding rate over the internal network. Unit: pps.
+             * <p>The outbound packet forwarding rate over the internal network. Unit: pps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9000000</p>
              */
             public Builder instancePpsTx(Integer instancePpsTx) {
                 this.instancePpsTx = instancePpsTx;
@@ -359,7 +444,10 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance type.
+             * <p>The ID of the ECS instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.n4.xlarge</p>
              */
             public Builder instanceTypeId(String instanceTypeId) {
                 this.instanceTypeId = instanceTypeId;
@@ -367,7 +455,10 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the ECS instance. Unit: GiB.
+             * <p>The memory size of the ECS instance. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder memorySize(Integer memorySize) {
                 this.memorySize = memorySize;
@@ -375,11 +466,14 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ECS instance. Valid values:
-             * <p>
+             * <p>The status of the ECS instance. Valid values:</p>
+             * <ul>
+             * <li>SoldOut</li>
+             * <li>Available</li>
+             * </ul>
              * 
-             * *   SoldOut
-             * *   Available
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -387,7 +481,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of zone IDs.
+             * <p>The list of zone IDs.</p>
              */
             public Builder zoneIds(ZoneIds zoneIds) {
                 this.zoneIds = zoneIds;
@@ -401,9 +495,15 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAvailableEcsTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAvailableEcsTypesResponseBody</p>
+     */
     public static class Types extends TeaModel {
-        @NameInMap("TypesInfo")
-        private java.util.List < TypesInfo> typesInfo;
+        @com.aliyun.core.annotation.NameInMap("TypesInfo")
+        private java.util.List<TypesInfo> typesInfo;
 
         private Types(Builder builder) {
             this.typesInfo = builder.typesInfo;
@@ -420,17 +520,24 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         /**
          * @return typesInfo
          */
-        public java.util.List < TypesInfo> getTypesInfo() {
+        public java.util.List<TypesInfo> getTypesInfo() {
             return this.typesInfo;
         }
 
         public static final class Builder {
-            private java.util.List < TypesInfo> typesInfo; 
+            private java.util.List<TypesInfo> typesInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Types model) {
+                this.typesInfo = model.typesInfo;
+            } 
 
             /**
              * TypesInfo.
              */
-            public Builder typesInfo(java.util.List < TypesInfo> typesInfo) {
+            public Builder typesInfo(java.util.List<TypesInfo> typesInfo) {
                 this.typesInfo = typesInfo;
                 return this;
             }
@@ -442,14 +549,20 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAvailableEcsTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAvailableEcsTypesResponseBody</p>
+     */
     public static class InstanceTypeFamilyInfo extends TeaModel {
-        @NameInMap("Generation")
+        @com.aliyun.core.annotation.NameInMap("Generation")
         private String generation;
 
-        @NameInMap("InstanceTypeFamilyId")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilyId")
         private String instanceTypeFamilyId;
 
-        @NameInMap("Types")
+        @com.aliyun.core.annotation.NameInMap("Types")
         private Types types;
 
         private InstanceTypeFamilyInfo(Builder builder) {
@@ -492,8 +605,20 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             private String instanceTypeFamilyId; 
             private Types types; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypeFamilyInfo model) {
+                this.generation = model.generation;
+                this.instanceTypeFamilyId = model.instanceTypeFamilyId;
+                this.types = model.types;
+            } 
+
             /**
-             * The instance family.
+             * <p>The instance family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs-3</p>
              */
             public Builder generation(String generation) {
                 this.generation = generation;
@@ -501,7 +626,10 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance family. For more information, see [Instance families](~~25378~~).
+             * <p>The ID of the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.n4</p>
              */
             public Builder instanceTypeFamilyId(String instanceTypeFamilyId) {
                 this.instanceTypeFamilyId = instanceTypeFamilyId;
@@ -509,7 +637,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of instance types.
+             * <p>The list of instance types.</p>
              */
             public Builder types(Types types) {
                 this.types = types;
@@ -523,9 +651,15 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAvailableEcsTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAvailableEcsTypesResponseBody</p>
+     */
     public static class InstanceTypeFamilies extends TeaModel {
-        @NameInMap("InstanceTypeFamilyInfo")
-        private java.util.List < InstanceTypeFamilyInfo> instanceTypeFamilyInfo;
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilyInfo")
+        private java.util.List<InstanceTypeFamilyInfo> instanceTypeFamilyInfo;
 
         private InstanceTypeFamilies(Builder builder) {
             this.instanceTypeFamilyInfo = builder.instanceTypeFamilyInfo;
@@ -542,17 +676,24 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         /**
          * @return instanceTypeFamilyInfo
          */
-        public java.util.List < InstanceTypeFamilyInfo> getInstanceTypeFamilyInfo() {
+        public java.util.List<InstanceTypeFamilyInfo> getInstanceTypeFamilyInfo() {
             return this.instanceTypeFamilyInfo;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceTypeFamilyInfo> instanceTypeFamilyInfo; 
+            private java.util.List<InstanceTypeFamilyInfo> instanceTypeFamilyInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypeFamilies model) {
+                this.instanceTypeFamilyInfo = model.instanceTypeFamilyInfo;
+            } 
 
             /**
              * InstanceTypeFamilyInfo.
              */
-            public Builder instanceTypeFamilyInfo(java.util.List < InstanceTypeFamilyInfo> instanceTypeFamilyInfo) {
+            public Builder instanceTypeFamilyInfo(java.util.List<InstanceTypeFamilyInfo> instanceTypeFamilyInfo) {
                 this.instanceTypeFamilyInfo = instanceTypeFamilyInfo;
                 return this;
             }

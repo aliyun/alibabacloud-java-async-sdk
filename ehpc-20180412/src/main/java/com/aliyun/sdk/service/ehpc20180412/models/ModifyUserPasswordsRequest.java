@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyUserPasswordsRequest} extends {@link RequestModel}
  *
  * <p>ModifyUserPasswordsRequest</p>
  */
 public class ModifyUserPasswordsRequest extends Request {
-    @Query
-    @NameInMap("Async")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Async")
     private Boolean async;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("User")
-    @Validation(required = true)
-    private java.util.List < User> user;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("User")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<User> user;
 
     private ModifyUserPasswordsRequest(Builder builder) {
         super(builder);
@@ -41,7 +46,7 @@ public class ModifyUserPasswordsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -63,14 +68,14 @@ public class ModifyUserPasswordsRequest extends Request {
     /**
      * @return user
      */
-    public java.util.List < User> getUser() {
+    public java.util.List<User> getUser() {
         return this.user;
     }
 
     public static final class Builder extends Request.Builder<ModifyUserPasswordsRequest, Builder> {
         private Boolean async; 
         private String clusterId; 
-        private java.util.List < User> user; 
+        private java.util.List<User> user; 
 
         private Builder() {
             super();
@@ -84,10 +89,11 @@ public class ModifyUserPasswordsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the asynchronous mode for this request.
-         * <p>
+         * <p>Specifies whether to enable the asynchronous mode for this request.</p>
+         * <p>Default value: false.</p>
          * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -96,10 +102,12 @@ public class ModifyUserPasswordsRequest extends Request {
         }
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to obtain the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -108,9 +116,10 @@ public class ModifyUserPasswordsRequest extends Request {
         }
 
         /**
-         * The information about the user.
+         * <p>The users. You can specify 1 to 100 users.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder user(java.util.List < User> user) {
+        public Builder user(java.util.List<User> user) {
             this.putQueryParameter("User", user);
             this.user = user;
             return this;
@@ -123,11 +132,17 @@ public class ModifyUserPasswordsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyUserPasswordsRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyUserPasswordsRequest</p>
+     */
     public static class User extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
         private User(Builder builder) {
@@ -161,11 +176,20 @@ public class ModifyUserPasswordsRequest extends Request {
             private String name; 
             private String password; 
 
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.name = model.name;
+                this.password = model.password;
+            } 
+
             /**
-             * The name of the user N whose password you want to modify. Valid values of N: 1 to 100.
-             * <p>
+             * <p>The username of the user whose password you want to change.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/188572.html">ListUsers</a> operation to query the usernames in the cluster.</p>
              * 
-             * You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -173,17 +197,19 @@ public class ModifyUserPasswordsRequest extends Request {
             }
 
             /**
-             * The password of the Nth user. The password must be 8 to 30 characters in length and contain three of the following items:
-             * <p>
+             * <p>The new password for the user. The password must be 8 to 30 characters in length and contain at least three of the following character types:</p>
+             * <ul>
+             * <li>Uppercase letter</li>
+             * <li>Lowercase letter</li>
+             * <li>Digit</li>
+             * <li>Special character: <code>()~!@#$%^&amp;*-_+=|{}[]:;\&quot;/&lt;&gt;,.?/</code></li>
+             * </ul>
+             * <blockquote>
+             * <p> We recommend that you use HTTPS to call this operation to avoid password leaks.</p>
+             * </blockquote>
              * 
-             * *   Uppercase letter
-             * *   Lowercase letter
-             * *   Digit
-             * *   Special character: `()~!@#$%^&*-_+=|{}[]:;\"/<>,.?/`
-             * 
-             * Valid values of N: 1 to 100.
-             * 
-             * >  We recommend that you use HTTPS to call API operations to avoid password leaks.
+             * <strong>example:</strong>
+             * <p>1@a****</p>
              */
             public Builder password(String password) {
                 this.password = password;

@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSchedulerInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetSchedulerInfoResponseBody</p>
  */
 public class GetSchedulerInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SchedInfo")
-    private java.util.List < SchedInfo> schedInfo;
+    @com.aliyun.core.annotation.NameInMap("SchedInfo")
+    private java.util.List<SchedInfo> schedInfo;
 
     private GetSchedulerInfoResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class GetSchedulerInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,16 +50,27 @@ public class GetSchedulerInfoResponseBody extends TeaModel {
     /**
      * @return schedInfo
      */
-    public java.util.List < SchedInfo> getSchedInfo() {
+    public java.util.List<SchedInfo> getSchedInfo() {
         return this.schedInfo;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SchedInfo> schedInfo; 
+        private java.util.List<SchedInfo> schedInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSchedulerInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.schedInfo = model.schedInfo;
+        } 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBC2F93D-003A-49C4-850C-B826EECF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +78,9 @@ public class GetSchedulerInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The settings of the scheduler.
+         * <p>The settings of the scheduler.</p>
          */
-        public Builder schedInfo(java.util.List < SchedInfo> schedInfo) {
+        public Builder schedInfo(java.util.List<SchedInfo> schedInfo) {
             this.schedInfo = schedInfo;
             return this;
         }
@@ -71,11 +91,17 @@ public class GetSchedulerInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSchedulerInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSchedulerInfoResponseBody</p>
+     */
     public static class SchedInfo extends TeaModel {
-        @NameInMap("Configuration")
+        @com.aliyun.core.annotation.NameInMap("Configuration")
         private String configuration;
 
-        @NameInMap("SchedName")
+        @com.aliyun.core.annotation.NameInMap("SchedName")
         private String schedName;
 
         private SchedInfo(Builder builder) {
@@ -109,8 +135,19 @@ public class GetSchedulerInfoResponseBody extends TeaModel {
             private String configuration; 
             private String schedName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SchedInfo model) {
+                this.configuration = model.configuration;
+                this.schedName = model.schedName;
+            } 
+
             /**
-             * The detailed settings of the scheduler.
+             * <p>The detailed settings of the scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;AclInfo&quot;:[{&quot;AclEnable&quot;: false,&quot;UntrackUser&quot;: [],&quot;User&quot;: [],&quot;QueueName&quot;: &quot;workq&quot;}],&quot;JobHistory&quot;: &quot;&quot;,&quot;SchedIteration&quot;: &quot;60&quot;,&quot;QueueResource&quot;: [{&quot;UntrackUser&quot;: [],&quot;User&quot;: [],&quot;QueueName&quot;: &quot;workq&quot;}]}</p>
              */
             public Builder configuration(String configuration) {
                 this.configuration = configuration;
@@ -118,7 +155,10 @@ public class GetSchedulerInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scheduler.
+             * <p>The type of the scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pbs</p>
              */
             public Builder schedName(String schedName) {
                 this.schedName = schedName;

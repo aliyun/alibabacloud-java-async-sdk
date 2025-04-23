@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAvailableEcsTypesRequest} extends {@link RequestModel}
  *
  * <p>ListAvailableEcsTypesRequest</p>
  */
 public class ListAvailableEcsTypesRequest extends Request {
-    @Query
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("ShowSoldOut")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowSoldOut")
     private Boolean showSoldOut;
 
-    @Query
-    @NameInMap("SpotStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private ListAvailableEcsTypesRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class ListAvailableEcsTypesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -96,11 +101,14 @@ public class ListAvailableEcsTypesRequest extends Request {
         } 
 
         /**
-         * The billing method of the ECS instances. Valid values:
-         * <p>
+         * <p>The billing method of the ECS instances. Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go</li>
+         * <li>PrePaid: subscription</li>
+         * </ul>
          * 
-         * *   PostPaid: pay-as-you-go
-         * *   PrePaid: subscription
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -109,13 +117,15 @@ public class ListAvailableEcsTypesRequest extends Request {
         }
 
         /**
-         * Specifies whether the ECS instances are sold out. Valid values:
-         * <p>
+         * <p>Specifies whether the ECS instances are sold out. Valid values:</p>
+         * <ul>
+         * <li>false: available</li>
+         * <li>true: sold out</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   false: available
-         * *   true: sold out
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showSoldOut(Boolean showSoldOut) {
             this.putQueryParameter("ShowSoldOut", showSoldOut);
@@ -124,12 +134,15 @@ public class ListAvailableEcsTypesRequest extends Request {
         }
 
         /**
-         * The preemption policy of the ECS instances. Valid values:
-         * <p>
+         * <p>The preemption policy of the ECS instances. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The ECS instances are pay-as-you-go instances.</li>
+         * <li>SpotWithPriceLimit: The ECS instances are preemptible instances that have a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.</li>
+         * </ul>
          * 
-         * *   NoSpot: The ECS instances are pay-as-you-go instances.
-         * *   SpotWithPriceLimit: The ECS instances are preemptible instances that have a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -138,7 +151,10 @@ public class ListAvailableEcsTypesRequest extends Request {
         }
 
         /**
-         * The zone ID.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

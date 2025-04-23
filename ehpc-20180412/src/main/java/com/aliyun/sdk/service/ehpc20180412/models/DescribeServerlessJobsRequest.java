@@ -1,26 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServerlessJobsRequest} extends {@link RequestModel}
  *
  * <p>DescribeServerlessJobsRequest</p>
  */
 public class DescribeServerlessJobsRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("JobIds")
-    @Validation(required = true)
-    private java.util.List < String > jobIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> jobIds;
 
     private DescribeServerlessJobsRequest(Builder builder) {
         super(builder);
@@ -36,7 +41,7 @@ public class DescribeServerlessJobsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -51,13 +56,13 @@ public class DescribeServerlessJobsRequest extends Request {
     /**
      * @return jobIds
      */
-    public java.util.List < String > getJobIds() {
+    public java.util.List<String> getJobIds() {
         return this.jobIds;
     }
 
     public static final class Builder extends Request.Builder<DescribeServerlessJobsRequest, Builder> {
         private String clusterId; 
-        private java.util.List < String > jobIds; 
+        private java.util.List<String> jobIds; 
 
         private Builder() {
             super();
@@ -70,10 +75,12 @@ public class DescribeServerlessJobsRequest extends Request {
         } 
 
         /**
-         * The ID of the E-HPC cluster.
-         * <p>
+         * <p>The ID of the E-HPC cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -82,16 +89,18 @@ public class DescribeServerlessJobsRequest extends Request {
         }
 
         /**
-         * The list of serverless job IDs or the subtask IDs (array jobs).
-         * <p>
-         * 
-         * > 
-         * 
-         * *   If the serverless job is an array job, you can specify only the subtask ID. Specify the subtask ID in the format of \<array job ID>\_< subtask index>. For example, 10\_3 indicates the subtask whose index is 3 in the array job whose ID is 10.
-         * 
-         * *   You can specify only a single ID in one request.
+         * <p>The list of serverless job IDs or the subtask IDs (array jobs).</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If the serverless job is an array job, you can specify only the subtask ID. Specify the subtask ID in the format of &lt;array job ID&gt;_&lt; subtask index&gt;. For example, 10_3 indicates the subtask whose index is 3 in the array job whose ID is 10.</p>
+         * </li>
+         * <li><p>You can specify only a single ID in one request.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          */
-        public Builder jobIds(java.util.List < String > jobIds) {
+        public Builder jobIds(java.util.List<String> jobIds) {
             this.putQueryParameter("JobIds", jobIds);
             this.jobIds = jobIds;
             return this;

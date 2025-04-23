@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVisualServicePasswdRequest} extends {@link RequestModel}
  *
  * <p>ModifyVisualServicePasswdRequest</p>
  */
 public class ModifyVisualServicePasswdRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Passwd")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Passwd")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String passwd;
 
-    @Query
-    @NameInMap("RunasUser")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RunasUser")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String runasUser;
 
-    @Query
-    @NameInMap("RunasUserPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RunasUserPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String runasUserPassword;
 
     private ModifyVisualServicePasswdRequest(Builder builder) {
@@ -48,7 +53,7 @@ public class ModifyVisualServicePasswdRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,7 +105,12 @@ public class ModifyVisualServicePasswdRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-jeJki6****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -109,12 +119,14 @@ public class ModifyVisualServicePasswdRequest extends Request {
         }
 
         /**
-         * The connection password of the VNC remote visualization service. The password must be 8 to 30 characters in length and include at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
-         * <p>
+         * <p>The password that you can use to remotely connect to the visualization service over the VNC. The password must be 6 characters in length and must contain letters and digits.</p>
+         * <blockquote>
+         * <p> You must call the API operation over HTTPS to ensure that the password remains confidential.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * `()~! @#$%^&*-_+=|{}[]:;\"/<>,.? /`
-         * 
-         * >  You must use HTTPS to call the API to ensure that the password remains confidential.
+         * <strong>example:</strong>
+         * <p>1254****</p>
          */
         public Builder passwd(String passwd) {
             this.putQueryParameter("Passwd", passwd);
@@ -123,7 +135,11 @@ public class ModifyVisualServicePasswdRequest extends Request {
         }
 
         /**
-         * The username of the cluster. Default value: root user. You can call the [ListUsers](~~188572~~) operation to query all users in a cluster.
+         * <p>The username of the cluster. Set the value to root.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder runasUser(String runasUser) {
             this.putQueryParameter("RunasUser", runasUser);
@@ -132,7 +148,11 @@ public class ModifyVisualServicePasswdRequest extends Request {
         }
 
         /**
-         * The user password of the cluster.
+         * <p>The password that corresponds to the username specified by RunasUser.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2145****</p>
          */
         public Builder runasUserPassword(String runasUserPassword) {
             this.putQueryParameter("RunasUserPassword", runasUserPassword);

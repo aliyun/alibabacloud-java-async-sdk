@@ -1,86 +1,91 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetAutoScaleConfigRequest} extends {@link RequestModel}
  *
  * <p>SetAutoScaleConfigRequest</p>
  */
 public class SetAutoScaleConfigRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("ComputeEnableHt")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputeEnableHt")
     private Boolean computeEnableHt;
 
-    @Query
-    @NameInMap("DnsConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsConfig")
     private String dnsConfig;
 
-    @Query
-    @NameInMap("EnableAutoGrow")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAutoGrow")
     private Boolean enableAutoGrow;
 
-    @Query
-    @NameInMap("EnableAutoShrink")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAutoShrink")
     private Boolean enableAutoShrink;
 
-    @Query
-    @NameInMap("ExcludeNodes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeNodes")
     private String excludeNodes;
 
-    @Query
-    @NameInMap("ExtraNodesGrowRatio")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtraNodesGrowRatio")
     private Integer extraNodesGrowRatio;
 
-    @Query
-    @NameInMap("GrowIntervalInMinutes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GrowIntervalInMinutes")
     private Integer growIntervalInMinutes;
 
-    @Query
-    @NameInMap("GrowRatio")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GrowRatio")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer growRatio;
 
-    @Query
-    @NameInMap("GrowTimeoutInMinutes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GrowTimeoutInMinutes")
     private Integer growTimeoutInMinutes;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("MaxNodesInCluster")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxNodesInCluster")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer maxNodesInCluster;
 
-    @Query
-    @NameInMap("Queues")
-    private java.util.List < Queues> queues;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Queues")
+    private java.util.List<Queues> queues;
 
-    @Query
-    @NameInMap("ShrinkIdleTimes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShrinkIdleTimes")
     private Integer shrinkIdleTimes;
 
-    @Query
-    @NameInMap("ShrinkIntervalInMinutes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShrinkIntervalInMinutes")
     private Integer shrinkIntervalInMinutes;
 
-    @Query
-    @NameInMap("SpotPriceLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
     private Float spotPriceLimit;
 
-    @Query
-    @NameInMap("SpotStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
 
     private SetAutoScaleConfigRequest(Builder builder) {
@@ -112,7 +117,7 @@ public class SetAutoScaleConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -204,7 +209,7 @@ public class SetAutoScaleConfigRequest extends Request {
     /**
      * @return queues
      */
-    public java.util.List < Queues> getQueues() {
+    public java.util.List<Queues> getQueues() {
         return this.queues;
     }
 
@@ -249,7 +254,7 @@ public class SetAutoScaleConfigRequest extends Request {
         private Integer growTimeoutInMinutes; 
         private String imageId; 
         private Integer maxNodesInCluster; 
-        private java.util.List < Queues> queues; 
+        private java.util.List<Queues> queues; 
         private Integer shrinkIdleTimes; 
         private Integer shrinkIntervalInMinutes; 
         private Float spotPriceLimit; 
@@ -281,7 +286,11 @@ public class SetAutoScaleConfigRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -290,10 +299,13 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable hyper-threading for the ECS instance that is used as the compute node.
-         * <p>
+         * <p>Specifies whether to enable hyper-threading for the ECS instance that is used as the compute node.</p>
+         * <blockquote>
+         * <p> You can only disable hyper-threading for some instance types. The hyper-threading is enabled for ECS instances by default. For more information, see <a href="https://help.aliyun.com/document_detail/145895.html">Specify and view CPU options</a>.</p>
+         * </blockquote>
          * 
-         * >  You can only disable hyper-threading for some instance types. The hyper-threading is enabled for ECS instances by default. For more information, see [Specify and view CPU options](~~145895~~).
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder computeEnableHt(Boolean computeEnableHt) {
             this.putQueryParameter("ComputeEnableHt", computeEnableHt);
@@ -302,7 +314,10 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
-         * The Domain Name System (DNS) settings.
+         * <p>The configurations of DNS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{&quot;DnsType&quot;:&quot;PrivateZone&quot;,&quot;DnsName&quot;:&quot;xxxxx&quot;}&quot;</p>
          */
         public Builder dnsConfig(String dnsConfig) {
             this.putQueryParameter("DnsConfig", dnsConfig);
@@ -311,13 +326,15 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto scale-out. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto scale-out. Valid values:</p>
+         * <ul>
+         * <li>true: enables auto scale-out.</li>
+         * <li>false: disables auto scale-out.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: enables auto scale-out.
-         * *   false: disables auto scale-out.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableAutoGrow(Boolean enableAutoGrow) {
             this.putQueryParameter("EnableAutoGrow", enableAutoGrow);
@@ -326,13 +343,15 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto scale-in. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto scale-in. Valid values:</p>
+         * <ul>
+         * <li>true: enables auto scale-in.</li>
+         * <li>false: disables auto scale-in.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: enables auto scale-in.
-         * *   false: disables auto scale-in.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableAutoShrink(Boolean enableAutoShrink) {
             this.putQueryParameter("EnableAutoShrink", enableAutoShrink);
@@ -341,10 +360,11 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
-         * The compute nodes that are excluded from auto scaling tasks. Separate multiple compute nodes with commas (,).
-         * <p>
+         * <p>The compute nodes that are excluded from auto scaling tasks. Separate multiple compute nodes with commas (,).</p>
+         * <p>If you want to retain a compute node, you can specify the node as an additional node to retain the node when it is idle.</p>
          * 
-         * If you want to retain a compute node, you can specify the node as an additional node to retain the node when it is idle.
+         * <strong>example:</strong>
+         * <p>i-bp19lgqwxb4206t5****,i-bp1g4hvzs9pywrhb****</p>
          */
         public Builder excludeNodes(String excludeNodes) {
             this.putQueryParameter("ExcludeNodes", excludeNodes);
@@ -353,12 +373,12 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
-         * The percentage of extra compute nodes. Valid values: 0 to 100.
-         * <p>
+         * <p>The percentage of extra compute nodes. Valid values: 0 to 100.</p>
+         * <p>Default value: 0.</p>
+         * <p>If you need to add 100 compute nodes and the value of the ExtraNodesGrowRatio parameter is 2, 102 compute nodes are added.</p>
          * 
-         * Default value: 0.
-         * 
-         * If you need to add 100 compute nodes and the value of the ExtraNodesGrowRatio parameter is 2, 102 compute nodes are added.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder extraNodesGrowRatio(Integer extraNodesGrowRatio) {
             this.putQueryParameter("ExtraNodesGrowRatio", extraNodesGrowRatio);
@@ -367,14 +387,15 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
-         * The interval between two consecutive rounds of scale-out. Unit: minutes.
-         * <p>
+         * <p>The interval between two consecutive rounds of scale-out. Unit: minutes.</p>
+         * <p>Valid values: 2 to 10.</p>
+         * <p>Default value: 2.</p>
+         * <blockquote>
+         * <p>An interval may exist during multiple rounds of a scale-out task or between two consecutive scale-out tasks.</p>
+         * </blockquote>
          * 
-         * Valid values: 2 to 10.
-         * 
-         * Default value: 2.
-         * 
-         * > An interval may exist during multiple rounds of a scale-out task or between two consecutive scale-out tasks.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder growIntervalInMinutes(Integer growIntervalInMinutes) {
             this.putQueryParameter("GrowIntervalInMinutes", growIntervalInMinutes);
@@ -383,12 +404,12 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
-         * The percentage of each round of a scale-out task. Valid values: 1 to 100.
-         * <p>
+         * <p>The percentage of each round of a scale-out task. Valid values: 1 to 100.</p>
+         * <p>Default value: 100.</p>
+         * <p>If you set GrowRatio to 50, the scale-out has two rounds. Each round completes half of the scale-out.</p>
          * 
-         * Default value: 100.
-         * 
-         * If you set GrowRatio to 50, the scale-out has two rounds. Each round completes half of the scale-out.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder growRatio(Integer growRatio) {
             this.putQueryParameter("GrowRatio", growRatio);
@@ -397,14 +418,13 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
-         * The scale-out timeout period. Unit: minutes.
-         * <p>
+         * <p>The scale-out timeout period. Unit: minutes.</p>
+         * <p>Valid values: 10 to 60.</p>
+         * <p>Default value: 20.</p>
+         * <p>If the scale-out timeout period has been reached but the scale-out nodes still do not reach the Running state, the system releases them.</p>
          * 
-         * Valid values: 10 to 60.
-         * 
-         * Default value: 20.
-         * 
-         * If the scale-out timeout period has been reached but the scale-out nodes still do not reach the Running state, the system releases them.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder growTimeoutInMinutes(Integer growTimeoutInMinutes) {
             this.putQueryParameter("GrowTimeoutInMinutes", growTimeoutInMinutes);
@@ -413,15 +433,20 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
-         * The IDs of the images.
-         * <p>
+         * <p>The IDs of the images.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If both <code>Queues.N.QueueImageId</code> and <code>ImageId</code> are specified, <code>Queues.N.QueueImageId</code> prevails.</p>
+         * </li>
+         * <li><p>If you set <code>Queues.N.QueueImageId</code> or <code>ImageId</code>, the parameter that you set takes effect.</p>
+         * </li>
+         * <li><p>If you leave both <code>Queues.N.QueueImageId</code> and <code>ImageId</code> empty, the image that was specified when you created the cluster or the last time you scaled out the cluster is used by default.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If both `Queues.N.QueueImageId` and `ImageId` are specified, `Queues.N.QueueImageId` prevails.
-         * 
-         * *   If you set `Queues.N.QueueImageId` or `ImageId`, the parameter that you set takes effect.
-         * *   If you leave both `Queues.N.QueueImageId` and `ImageId` empty, the image that was specified when you created the cluster or the last time you scaled out the cluster is used by default.
+         * <strong>example:</strong>
+         * <p>centos_7_03_64_20G_alibase_201708****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -430,10 +455,12 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
-         * The maximum number of compute nodes that can be added to the cluster. Valid values: 0 to 500.
-         * <p>
+         * <p>The maximum number of compute nodes that can be added to the cluster. Valid values: 0 to 500.</p>
+         * <p>Default value: 100.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Default value: 100.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxNodesInCluster(Integer maxNodesInCluster) {
             this.putQueryParameter("MaxNodesInCluster", maxNodesInCluster);
@@ -442,23 +469,22 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
-         * The information about the queue.
+         * <p>The information about the queue.</p>
          */
-        public Builder queues(java.util.List < Queues> queues) {
+        public Builder queues(java.util.List<Queues> queues) {
             this.putQueryParameter("Queues", queues);
             this.queues = queues;
             return this;
         }
 
         /**
-         * The number of consecutive times that a compute node is idle during the resource scale-in check.
-         * <p>
+         * <p>The number of consecutive times that a compute node is idle during the resource scale-in check.</p>
+         * <p>Valid values: 2 to 5.</p>
+         * <p>Default value: 3.</p>
+         * <p>If the parameter is set to 3, a compute node is idle more than three consecutive times. In this case, the node is released. If a compute node is idle for longer than 6 minutes continuously, it is released by default. This is because the default value of the ShrinkIntervalInMinutes parameter is 2.</p>
          * 
-         * Valid values: 2 to 5.
-         * 
-         * Default value: 3.
-         * 
-         * If the parameter is set to 3, a compute node is idle more than three consecutive times. In this case, the node is released. If a compute node is idle for longer than 6 minutes continuously, it is released by default. This is because the default value of the ShrinkIntervalInMinutes parameter is 2.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder shrinkIdleTimes(Integer shrinkIdleTimes) {
             this.putQueryParameter("ShrinkIdleTimes", shrinkIdleTimes);
@@ -467,12 +493,12 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
-         * The interval between two consecutive rounds of scale-in. Unit: minutes.
-         * <p>
+         * <p>The interval between two consecutive rounds of scale-in. Unit: minutes.</p>
+         * <p>Valid values: 2 to 10.</p>
+         * <p>Default value: 2.</p>
          * 
-         * Valid values: 2 to 10.
-         * 
-         * Default value: 2.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder shrinkIntervalInMinutes(Integer shrinkIntervalInMinutes) {
             this.putQueryParameter("ShrinkIntervalInMinutes", shrinkIntervalInMinutes);
@@ -481,7 +507,10 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
-         * The maximum hourly price of the compute nodes. The value can be accurate to three decimal places. The parameter takes effect only when `SpotStrategy` is set to `SpotWithPriceLimit`.
+         * <p>The maximum hourly price of the compute nodes. The value can be accurate to three decimal places. The parameter takes effect only when <code>SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.062</p>
          */
         public Builder spotPriceLimit(Float spotPriceLimit) {
             this.putQueryParameter("SpotPriceLimit", spotPriceLimit);
@@ -490,14 +519,16 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
-         * The preemption policy of the compute nodes. Valid values:
-         * <p>
+         * <p>The preemption policy of the compute nodes. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The compute nodes are pay-as-you-go instances.</li>
+         * <li>SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.</li>
+         * </ul>
+         * <p>Default value: NoSpot.</p>
          * 
-         * *   NoSpot: The compute nodes are pay-as-you-go instances.
-         * *   SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.
-         * 
-         * Default value: NoSpot.
+         * <strong>example:</strong>
+         * <p>SpotWithPriceLimit</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -512,23 +543,29 @@ public class SetAutoScaleConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetAutoScaleConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetAutoScaleConfigRequest</p>
+     */
     public static class DataDisks extends TeaModel {
-        @NameInMap("DataDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("DataDiskCategory")
         private String dataDiskCategory;
 
-        @NameInMap("DataDiskDeleteWithInstance")
+        @com.aliyun.core.annotation.NameInMap("DataDiskDeleteWithInstance")
         private Boolean dataDiskDeleteWithInstance;
 
-        @NameInMap("DataDiskEncrypted")
+        @com.aliyun.core.annotation.NameInMap("DataDiskEncrypted")
         private Boolean dataDiskEncrypted;
 
-        @NameInMap("DataDiskKMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("DataDiskKMSKeyId")
         private String dataDiskKMSKeyId;
 
-        @NameInMap("DataDiskPerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("DataDiskPerformanceLevel")
         private String dataDiskPerformanceLevel;
 
-        @NameInMap("DataDiskSize")
+        @com.aliyun.core.annotation.NameInMap("DataDiskSize")
         private Integer dataDiskSize;
 
         private DataDisks(Builder builder) {
@@ -598,18 +635,31 @@ public class SetAutoScaleConfigRequest extends Request {
             private String dataDiskPerformanceLevel; 
             private Integer dataDiskSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisks model) {
+                this.dataDiskCategory = model.dataDiskCategory;
+                this.dataDiskDeleteWithInstance = model.dataDiskDeleteWithInstance;
+                this.dataDiskEncrypted = model.dataDiskEncrypted;
+                this.dataDiskKMSKeyId = model.dataDiskKMSKeyId;
+                this.dataDiskPerformanceLevel = model.dataDiskPerformanceLevel;
+                this.dataDiskSize = model.dataDiskSize;
+            } 
+
             /**
-             * The type of the data disk. Valid values:
-             * <p>
+             * <p>The category of the data disk. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>cloud_essd: ESSD.</li>
+             * <li>cloud: basic disk.</li>
+             * </ul>
+             * <p>Default value: cloud_efficiency.</p>
+             * <p>Valid values of N: 0 to 16.</p>
              * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * *   cloud_essd: ESSD
-             * *   cloud: basic disk
-             * 
-             * Default value: cloud_efficiency.
-             * 
-             * Valid values of N: 0 to 16.
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -617,15 +667,16 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether the data disk is released when the node is released. Valid value:
-             * <p>
+             * <p>Specifies whether the data disk is released when the node is released. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: true.</p>
+             * <p>Valid values of N: 0 to 16.</p>
              * 
-             * *   true: yes
-             * *   false: no
-             * 
-             * Default value: true.
-             * 
-             * Valid values of N: 0 to 16.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataDiskDeleteWithInstance(Boolean dataDiskDeleteWithInstance) {
                 this.dataDiskDeleteWithInstance = dataDiskDeleteWithInstance;
@@ -633,15 +684,16 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt the data disk. Valid values:
-             * <p>
+             * <p>Specifies whether to encrypt the data disk. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * <p>Valid values of N: 0 to 16.</p>
              * 
-             * *   true: encrypts the data disk.
-             * *   false: does not encrypt the data disk.
-             * 
-             * Default value: false.
-             * 
-             * Valid values of N: 0 to 16.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dataDiskEncrypted(Boolean dataDiskEncrypted) {
                 this.dataDiskEncrypted = dataDiskEncrypted;
@@ -649,10 +701,11 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The Key Management Service (KMS) key ID of the data disk.
-             * <p>
+             * <p>The Key Management Service (KMS) key ID of the data disk.</p>
+             * <p>Valid values of N: 0 to 16.</p>
              * 
-             * Valid values of N: 0 to 16.
+             * <strong>example:</strong>
+             * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>
              */
             public Builder dataDiskKMSKeyId(String dataDiskKMSKeyId) {
                 this.dataDiskKMSKeyId = dataDiskKMSKeyId;
@@ -660,17 +713,18 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD used as the data disk. The parameter takes effect only when the Queues.N.DataDisks.N.DataDiskCategory parameter is set to cloud_essd. Valid values:
-             * <p>
+             * <p>The performance level of the ESSD used as the data disk. The parameter takes effect only when the Queues.N.DataDisks.N.DataDiskCategory parameter is set to cloud_essd. Valid values:</p>
+             * <ul>
+             * <li>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: An ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
+             * <p>Default value: PL1.</p>
+             * <p>Valid values of N: 0 to 16.</p>
              * 
-             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.
-             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
-             * 
-             * Default value: PL1.
-             * 
-             * Valid values of N: 0 to 16.
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder dataDiskPerformanceLevel(String dataDiskPerformanceLevel) {
                 this.dataDiskPerformanceLevel = dataDiskPerformanceLevel;
@@ -678,14 +732,13 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The size of the data disk. Unit: GB.
-             * <p>
+             * <p>The size of the data disk. Unit: GB.</p>
+             * <p>Valid values: 40 to 500.</p>
+             * <p>Default value: 40.</p>
+             * <p>Valid values of N: 0 to 16.</p>
              * 
-             * Valid values: 40 to 500.
-             * 
-             * Default value: 40.
-             * 
-             * Valid values of N: 0 to 16.
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder dataDiskSize(Integer dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -699,26 +752,32 @@ public class SetAutoScaleConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetAutoScaleConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetAutoScaleConfigRequest</p>
+     */
     public static class InstanceTypes extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("SpotDuration")
+        @com.aliyun.core.annotation.NameInMap("SpotDuration")
         private Integer spotDuration;
 
-        @NameInMap("SpotInterruptionBehavior")
+        @com.aliyun.core.annotation.NameInMap("SpotInterruptionBehavior")
         private String spotInterruptionBehavior;
 
-        @NameInMap("SpotPriceLimit")
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
         private Float spotPriceLimit;
 
-        @NameInMap("SpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private InstanceTypes(Builder builder) {
@@ -797,13 +856,26 @@ public class SetAutoScaleConfigRequest extends Request {
             private String vSwitchId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypes model) {
+                this.instanceType = model.instanceType;
+                this.spotDuration = model.spotDuration;
+                this.spotInterruptionBehavior = model.spotInterruptionBehavior;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.spotStrategy = model.spotStrategy;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * The instance type of the compute nodes that are automatically added to the queue.
-             * <p>
+             * <p>The instance type of the compute nodes that are automatically added to the queue.</p>
+             * <p>You can specify the specification for 1 to 8 nodes.</p>
+             * <p>The instance types of N compute nodes in the queue can be set at the same time when auto scaling is performed in the queue. Valid values of N: 0 to 500.</p>
              * 
-             * The maximum hourly prices of the compute nodes that are automatically added to N queues can be set the same time. Valid values of N: 1 to 8.
-             * 
-             * The instance types of N compute nodes in the queue can be set at the same time when auto scaling is performed in the queue. Valid values of N: 0 to 500.
+             * <strong>example:</strong>
+             * <p>ecs.n1.tiny</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -811,7 +883,10 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The protection period of the preemptible instance. Unit: hours. Valid values: 0 to 1. A value of 0 means that no protection period is specified. Default value: 1.
+             * <p>The protection period of the preemptible instance. Unit: hours. Valid values: 0 to 1. A value of 0 means that no protection period is specified. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder spotDuration(Integer spotDuration) {
                 this.spotDuration = spotDuration;
@@ -819,7 +894,10 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The interruption mode of the preemptible instance. Default value: Terminate. Set the value to Terminate, which indicates that the instance is released.
+             * <p>The interruption mode of the preemptible instance. The value can only be Terminate, which indicates that the instance is released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Terminate</p>
              */
             public Builder spotInterruptionBehavior(String spotInterruptionBehavior) {
                 this.spotInterruptionBehavior = spotInterruptionBehavior;
@@ -827,12 +905,12 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The maximum hourly price of the compute nodes that are automatically added to the queue. The value can be accurate to three decimal places. The parameter takes effect only when `Queues.N.InstanceTypes.N.SpotStrategy` is set to `SpotWithPriceLimit`.
-             * <p>
+             * <p>The maximum hourly price of the compute nodes that are automatically added to the queue. The value can be accurate to three decimal places. The parameter takes effect only when <code>Queues.N.InstanceTypes.N.SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>.</p>
+             * <p>You can specify the maximum hourly price for 1 to 8 compute nodes.</p>
+             * <p>The maximum hourly prices of N compute nodes in the queue can be set at the same time when auto scaling is performed in the queue. Valid values of N: 0 to 500.</p>
              * 
-             * The maximum hourly prices of the compute nodes that are automatically added to N queues can be set the same time. Valid values of N: 1 to 8.
-             * 
-             * The maximum hourly prices of N compute nodes in the queue can be set at the same time when auto scaling is performed in the queue. Valid values of N: 0 to 500.
+             * <strong>example:</strong>
+             * <p>0.660</p>
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -840,18 +918,18 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The preemption policy for the compute node that is automatically added to the queues. Valid value:
-             * <p>
+             * <p>The preemption policy for the compute node that is automatically added to the queue. Valid values:</p>
+             * <ul>
+             * <li>NoSpot: The compute node is created as a pay-as-you-go instance.</li>
+             * <li>SpotWithPriceLimit: The compute node is created as a preemptible instance that has a user-defined maximum hourly price.</li>
+             * <li>SpotAsPriceGo: The compute node is created as a preemptible instance for which the market price at the time of purchase is used as the bid price.</li>
+             * </ul>
+             * <p>Default value: NoSpot.</p>
+             * <p>You can specify the preemption policy for 1 to 8 compute nodes.</p>
+             * <p>The preemption policies of N compute nodes in the queue can be set at the same time when auto scaling is performed in the queue. Valid values of N: 0 to 500.</p>
              * 
-             * *   NoSpot: The compute node is created as a pay-as-you-go instance.
-             * *   SpotWithPriceLimit: The compute node is created as a preemptible instance that has a user-defined maximum hourly price.
-             * *   SpotAsPriceGo: The compute node is created as a preemptible instance for which the market price at the time of purchase is used as the bid price.
-             * 
-             * Default value: NoSpot.
-             * 
-             * The maximum hourly prices of the compute nodes that are automatically added to N queues can be set at the same time. Valid values of N: 1 to 8.
-             * 
-             * The bidding methods of N compute nodes in the queue can be set at the same time when auto scaling is performed in the queue. Valid values of N: 0 to 500.
+             * <strong>example:</strong>
+             * <p>SpotWithPriceLimit</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -859,12 +937,12 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The vSwitch ID of the compute nodes that are automatically added to the queue.
-             * <p>
+             * <p>The vSwitch ID of the compute nodes that are automatically added to the queue.</p>
+             * <p>You can specify 1 to 8 IDs.</p>
+             * <p>The vSwitch IDs of N compute nodes in the queue can be set at the same time when auto scaling is performed in the queue. Valid values of N: 0 to 500.</p>
              * 
-             * The names of N queues can be set at the same time. Valid values of N: 1 to 8.
-             * 
-             * The vSwitch IDs of N compute nodes in the queue can be set at the same time when auto scaling is performed in the queue. Valid values of N: 0 to 500.
+             * <strong>example:</strong>
+             * <p>vsw-bp1lfcjbfb099rrjn****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -872,12 +950,12 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The zone ID of the compute nodes that are automatically added to the queue belongs.
-             * <p>
+             * <p>The ID of the zone that compute nodes automatically added to the queue belong.</p>
+             * <p>You can specify 1 to 8 IDs.</p>
+             * <p>The zone IDs of N compute nodes in the queue can be set at the same time when auto scaling is performed in the queue. Valid values of N: 0 to 500.</p>
              * 
-             * The maximum hourly prices of the compute nodes that are automatically added to N queues can be set the same time. Valid values of N: 1 to 8.
-             * 
-             * The zone IDs of N compute nodes in the queue can be set at the same time when auto scaling is performed in the queue. Valid values of N: 0 to 500.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -891,65 +969,71 @@ public class SetAutoScaleConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetAutoScaleConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SetAutoScaleConfigRequest</p>
+     */
     public static class Queues extends TeaModel {
-        @NameInMap("AutoMinNodesPerCycle")
+        @com.aliyun.core.annotation.NameInMap("AutoMinNodesPerCycle")
         private Boolean autoMinNodesPerCycle;
 
-        @NameInMap("DataDisks")
-        private java.util.List < DataDisks> dataDisks;
+        @com.aliyun.core.annotation.NameInMap("DataDisks")
+        private java.util.List<DataDisks> dataDisks;
 
-        @NameInMap("EnableAutoGrow")
+        @com.aliyun.core.annotation.NameInMap("EnableAutoGrow")
         private Boolean enableAutoGrow;
 
-        @NameInMap("EnableAutoShrink")
+        @com.aliyun.core.annotation.NameInMap("EnableAutoShrink")
         private Boolean enableAutoShrink;
 
-        @NameInMap("HostNamePrefix")
+        @com.aliyun.core.annotation.NameInMap("HostNamePrefix")
         private String hostNamePrefix;
 
-        @NameInMap("HostNameSuffix")
+        @com.aliyun.core.annotation.NameInMap("HostNameSuffix")
         private String hostNameSuffix;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InstanceTypes")
-        private java.util.List < InstanceTypes> instanceTypes;
+        @com.aliyun.core.annotation.NameInMap("InstanceTypes")
+        private java.util.List<InstanceTypes> instanceTypes;
 
-        @NameInMap("MaxNodesInQueue")
+        @com.aliyun.core.annotation.NameInMap("MaxNodesInQueue")
         private Integer maxNodesInQueue;
 
-        @NameInMap("MaxNodesPerCycle")
+        @com.aliyun.core.annotation.NameInMap("MaxNodesPerCycle")
         private Long maxNodesPerCycle;
 
-        @NameInMap("MinNodesInQueue")
+        @com.aliyun.core.annotation.NameInMap("MinNodesInQueue")
         private Integer minNodesInQueue;
 
-        @NameInMap("MinNodesPerCycle")
+        @com.aliyun.core.annotation.NameInMap("MinNodesPerCycle")
         private Long minNodesPerCycle;
 
-        @NameInMap("QueueImageId")
+        @com.aliyun.core.annotation.NameInMap("QueueImageId")
         private String queueImageId;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("SortedByInventory")
+        @com.aliyun.core.annotation.NameInMap("SortedByInventory")
         private Boolean sortedByInventory;
 
-        @NameInMap("SpotPriceLimit")
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
         private Float spotPriceLimit;
 
-        @NameInMap("SpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("SystemDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
 
-        @NameInMap("SystemDiskLevel")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskLevel")
         private String systemDiskLevel;
 
-        @NameInMap("SystemDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
         private Queues(Builder builder) {
@@ -993,7 +1077,7 @@ public class SetAutoScaleConfigRequest extends Request {
         /**
          * @return dataDisks
          */
-        public java.util.List < DataDisks> getDataDisks() {
+        public java.util.List<DataDisks> getDataDisks() {
             return this.dataDisks;
         }
 
@@ -1035,7 +1119,7 @@ public class SetAutoScaleConfigRequest extends Request {
         /**
          * @return instanceTypes
          */
-        public java.util.List < InstanceTypes> getInstanceTypes() {
+        public java.util.List<InstanceTypes> getInstanceTypes() {
             return this.instanceTypes;
         }
 
@@ -1125,13 +1209,13 @@ public class SetAutoScaleConfigRequest extends Request {
 
         public static final class Builder {
             private Boolean autoMinNodesPerCycle; 
-            private java.util.List < DataDisks> dataDisks; 
+            private java.util.List<DataDisks> dataDisks; 
             private Boolean enableAutoGrow; 
             private Boolean enableAutoShrink; 
             private String hostNamePrefix; 
             private String hostNameSuffix; 
             private String instanceType; 
-            private java.util.List < InstanceTypes> instanceTypes; 
+            private java.util.List<InstanceTypes> instanceTypes; 
             private Integer maxNodesInQueue; 
             private Long maxNodesPerCycle; 
             private Integer minNodesInQueue; 
@@ -1145,10 +1229,37 @@ public class SetAutoScaleConfigRequest extends Request {
             private String systemDiskLevel; 
             private Integer systemDiskSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Queues model) {
+                this.autoMinNodesPerCycle = model.autoMinNodesPerCycle;
+                this.dataDisks = model.dataDisks;
+                this.enableAutoGrow = model.enableAutoGrow;
+                this.enableAutoShrink = model.enableAutoShrink;
+                this.hostNamePrefix = model.hostNamePrefix;
+                this.hostNameSuffix = model.hostNameSuffix;
+                this.instanceType = model.instanceType;
+                this.instanceTypes = model.instanceTypes;
+                this.maxNodesInQueue = model.maxNodesInQueue;
+                this.maxNodesPerCycle = model.maxNodesPerCycle;
+                this.minNodesInQueue = model.minNodesInQueue;
+                this.minNodesPerCycle = model.minNodesPerCycle;
+                this.queueImageId = model.queueImageId;
+                this.queueName = model.queueName;
+                this.sortedByInventory = model.sortedByInventory;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.spotStrategy = model.spotStrategy;
+                this.systemDiskCategory = model.systemDiskCategory;
+                this.systemDiskLevel = model.systemDiskLevel;
+                this.systemDiskSize = model.systemDiskSize;
+            } 
+
             /**
-             * Automatic Configuration of the Minimum Node Number for Each Scale-out.
-             * <p>
-             * If you set this parameter to true, the minimum number of nodes for each scale-out is equal to the number of nodes required by the job. The maximum number is 99.
+             * <p>Specifies whether to automatically specify the minimum number of compute nodes that can be added in each round of scale-out. If you set this parameter to true, the minimum number of nodes for each scale-out is equal to the number of nodes required by the job. The maximum number is 99.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoMinNodesPerCycle(Boolean autoMinNodesPerCycle) {
                 this.autoMinNodesPerCycle = autoMinNodesPerCycle;
@@ -1156,23 +1267,24 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The list of data disks.
+             * <p>The list of data disks.</p>
              */
-            public Builder dataDisks(java.util.List < DataDisks> dataDisks) {
+            public Builder dataDisks(java.util.List<DataDisks> dataDisks) {
                 this.dataDisks = dataDisks;
                 return this;
             }
 
             /**
-             * Specifies whether the queue enables auto scale-out. Valid value:
-             * <p>
+             * <p>Specifies whether the queue enables auto scale-out. Valid values:</p>
+             * <ul>
+             * <li>true: enables auto scale-out.</li>
+             * <li>false: disables auto scale-out.</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 8.</p>
+             * <p>Default value: false.</p>
              * 
-             * *   true: enables auto scale-out.
-             * *   false: disables auto scale-out.
-             * 
-             * Valid values of N: 1 to 8.
-             * 
-             * Default value: false.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableAutoGrow(Boolean enableAutoGrow) {
                 this.enableAutoGrow = enableAutoGrow;
@@ -1180,15 +1292,16 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether the queue enables auto scale-in. Valid value:
-             * <p>
+             * <p>Specifies whether the queue enables auto scale-in. Valid values:</p>
+             * <ul>
+             * <li>true: enables auto scale-in.</li>
+             * <li>false: disables auto scale-in.</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 8.</p>
+             * <p>Default value: false.</p>
              * 
-             * *   true: enables auto scale-in.
-             * *   false: disables auto scale-in.
-             * 
-             * Valid values of N: 1 to 8.
-             * 
-             * Default value: false.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableAutoShrink(Boolean enableAutoShrink) {
                 this.enableAutoShrink = enableAutoShrink;
@@ -1196,10 +1309,11 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The hostname prefix of the host that is used to perform scale-out for the queue. You can manage compute nodes that have a specified hostname prefix.
-             * <p>
+             * <p>The hostname prefix of the host that is used to perform scale-out for the queue. You can manage compute nodes that have a specified hostname prefix.</p>
+             * <p>Valid values of N: 1 to 8.</p>
              * 
-             * Valid values of N: 1 to 8.
+             * <strong>example:</strong>
+             * <p>compute</p>
              */
             public Builder hostNamePrefix(String hostNamePrefix) {
                 this.hostNamePrefix = hostNamePrefix;
@@ -1207,10 +1321,11 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The hostname suffix of the host that is used to perform scale-out for the queue. You can manage nodes that have a specified hostname suffix.
-             * <p>
+             * <p>The hostname suffix of the host that is used to perform scale-out for the queue. You can manage nodes that have a specified hostname suffix.</p>
+             * <p>Valid values of N: 1 to 8.</p>
              * 
-             * Valid values of N: 1 to 8.
+             * <strong>example:</strong>
+             * <p>000</p>
              */
             public Builder hostNameSuffix(String hostNameSuffix) {
                 this.hostNameSuffix = hostNameSuffix;
@@ -1218,7 +1333,10 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The instance type of the compute nodes that are automatically added in the queues. Valid values of N: 1 to 8.
+             * <p>The instance type of the compute nodes that are automatically added to the queue. Valid values of N: 1 to 8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.n1.medium</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1226,20 +1344,20 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The instance types of the nodes in the queue.
+             * <p>The instance types of the nodes in the queue.</p>
              */
-            public Builder instanceTypes(java.util.List < InstanceTypes> instanceTypes) {
+            public Builder instanceTypes(java.util.List<InstanceTypes> instanceTypes) {
                 this.instanceTypes = instanceTypes;
                 return this;
             }
 
             /**
-             * The maximum number of compute nodes that can be added to the queue. Valid values: 0 to 500.
-             * <p>
+             * <p>The maximum number of compute nodes that can be added to the queue. Valid values: 0 to 500.</p>
+             * <p>Valid values of N: 1 to 8.</p>
+             * <p>Default value: 100.</p>
              * 
-             * Valid values of N: 1 to 8.
-             * 
-             * Default value: 100.
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder maxNodesInQueue(Integer maxNodesInQueue) {
                 this.maxNodesInQueue = maxNodesInQueue;
@@ -1247,10 +1365,11 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The maximum number of compute nodes that can be added in each round of scale-out. Valid values: 0 to 99.
-             * <p>
+             * <p>The maximum number of compute nodes that can be added in each round of scale-out. Valid values: 0 to 99.</p>
+             * <p>Default value: 0.</p>
              * 
-             * Default value: 0.
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxNodesPerCycle(Long maxNodesPerCycle) {
                 this.maxNodesPerCycle = maxNodesPerCycle;
@@ -1258,12 +1377,12 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The minimum number of compute nodes that can be removed in the queue. Valid values: 0 to 50.
-             * <p>
+             * <p>The minimum number of compute nodes that can be removed from the queue. Valid values: 0 to 50.</p>
+             * <p>Valid values of N: 1 to 8.</p>
+             * <p>Default value: 0.</p>
              * 
-             * Valid values of N: 1 to 8.
-             * 
-             * Default value: 0.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder minNodesInQueue(Integer minNodesInQueue) {
                 this.minNodesInQueue = minNodesInQueue;
@@ -1271,14 +1390,15 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The minimum number of compute nodes that can be added in each round of scale-out. Valid values: 1 to 99.
-             * <p>
+             * <p>The minimum number of compute nodes that can be added in each round of scale-out. Valid values: 1 to 99</p>
+             * <p>Default value: 1.</p>
+             * <p>If the number of compute nodes that you want to add in a round is less than the value of this property, the system automatically changes the value of this property to the number of compute nodes that you want to add in a round. This helps ensure that compute nodes can be added as expected.</p>
+             * <blockquote>
+             * <p> The configuration takes effect only for the minimum compute nodes that can be added in the current round.</p>
+             * </blockquote>
              * 
-             * Default value: 1.
-             * 
-             * If the number of compute nodes that you want to add in a round is less than the value of this property, the system automatically changes the value of this property to the number of compute nodes that you want to add in a round. This helps ensure that compute nodes can be added as expected.
-             * 
-             * > The configuration takes effect only for the minimum compute nodes that can be added in the current round.
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder minNodesPerCycle(Long minNodesPerCycle) {
                 this.minNodesPerCycle = minNodesPerCycle;
@@ -1286,15 +1406,20 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The image ID of the queue where the scale-out is performed. Valid values of N: 1 to 8.
-             * <p>
+             * <p>The image ID of the queue where the scale-out is performed. Valid values of N: 1 to 8.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>If you set both <code>Queues.N.QueueImageId</code> and <code>ImageId</code>, <code>Queues.N.QueueImageId</code> prevails.</p>
+             * </li>
+             * <li><p>If you set <code>Queues.N.QueueImageId</code> or <code>ImageId</code>, the parameter that you set takes effect.</p>
+             * </li>
+             * <li><p>If you leave both <code>Queues.N.QueueImageId</code> and <code>ImageId</code> empty, the image that was specified when you created the cluster or the last time when you scaled out the cluster is used by default.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   If you set both `Queues.N.QueueImageId` and `ImageId`, `Queues.N.QueueImageId` prevails.
-             * 
-             * *   If you set `Queues.N.QueueImageId` or `ImageId`, the parameter that you set takes effect.
-             * *   If you leave both `Queues.N.QueueImageId` and `ImageId` empty, the image that was specified when you created the cluster or the last time when you scaled out the cluster is used by default.
+             * <strong>example:</strong>
+             * <p>centos_7_03_64_20G_alibase_201708****</p>
              */
             public Builder queueImageId(String queueImageId) {
                 this.queueImageId = queueImageId;
@@ -1302,7 +1427,10 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The name of the queue. The names of N queues can be set at the same time. Valid values of N: 1 to 8.
+             * <p>The name of the queue. You can specify 1 to 8 names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster1</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -1310,13 +1438,17 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * Whether the instances are unordered. Valid values:
-             * <p>
+             * <p>Specifies whether the instances are unordered. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <blockquote>
+             * <p> If you set this parameter to true, the system selects instance types in descending order of the number of instances in stock during auto scaling.</p>
+             * </blockquote>
              * 
-             * *   true: yes
-             * *   false: no
-             * 
-             * >  If you set this parameter to true, the system selects instance types in descending order of the number of instances in stock during auto scaling.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder sortedByInventory(Boolean sortedByInventory) {
                 this.sortedByInventory = sortedByInventory;
@@ -1324,10 +1456,11 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The maximum hourly price of the compute nodes that are automatically added to the queue. The value can be accurate to three decimal places. The parameter takes effect only when `Queues.N.SpotStrategy` is set to `SpotWithPriceLimit`.
-             * <p>
+             * <p>The maximum hourly price of the compute nodes that are automatically added to the queue. The value can be accurate to three decimal places. The parameter takes effect only when <code>Queues.N.SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>.</p>
+             * <p>Valid values of N: 1 to 8.</p>
              * 
-             * Valid values of N: 1 to 8.
+             * <strong>example:</strong>
+             * <p>0.662</p>
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -1335,16 +1468,17 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The preemption policy of the compute node that is automatically added to the queue. Valid values of N: 1 to 8.
-             * <p>
+             * <p>The preemption policy of the compute node that is automatically added to the queue. Valid values of N: 1 to 8.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>NoSpot: The compute node is created as a pay-as-you-go instance.</li>
+             * <li>SpotWithPriceLimit: The compute node is created as a preemptible instance that has a user-defined maximum hourly price.</li>
+             * <li>SpotAsPriceGo: The compute node is created as a preemptible instance for which the market price at the time of purchase is used as the bid price.</li>
+             * </ul>
+             * <p>Default value: NoSpot.</p>
              * 
-             * Valid values:
-             * 
-             * *   NoSpot: The compute nodes is created as a pay-as-you-go instance.
-             * *   SpotWithPriceLimit: The compute node is created as a preemptible instance that has a user-defined maximum hourly price.
-             * *   SpotAsPriceGo: The compute node is created as a preemptible instance for which the market price at the time of purchase is used as the bid price.
-             * 
-             * Default value: NoSpot.
+             * <strong>example:</strong>
+             * <p>NoSpot</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -1352,17 +1486,18 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The type of the system disk specified for the compute nodes that are added in the queue. Valid values:
-             * <p>
+             * <p>The category of the system disk specified for the compute nodes that are added to the queue. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>cloud_essd: enhanced SSD (ESSD).</li>
+             * <li>cloud: basic disk. Disks of this type are retired.</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 8.</p>
+             * <p>Default value: cloud_efficiency.</p>
              * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * *   cloud_essd: enhanced SSD (ESSD)
-             * *   cloud: basic disk. Disks of this type are retired.
-             * 
-             * Valid values of N: 1 to 8.
-             * 
-             * Default value: cloud_efficiency.
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -1370,17 +1505,18 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The performance level of the system disk specified for the compute nodes that are added to the queue. Valid values:
-             * <p>
+             * <p>The performance level of the system disk specified for the compute nodes that are added to the queue. Valid values:</p>
+             * <ul>
+             * <li>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: An ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 8.</p>
+             * <p>Default value: PL1.</p>
              * 
-             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.
-             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
-             * 
-             * Valid values of N: 1 to 8.
-             * 
-             * Default value: PL1.
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder systemDiskLevel(String systemDiskLevel) {
                 this.systemDiskLevel = systemDiskLevel;
@@ -1388,14 +1524,13 @@ public class SetAutoScaleConfigRequest extends Request {
             }
 
             /**
-             * The size of the system disk specified for the compute nodes that are added in the queue. Unit: GB.
-             * <p>
+             * <p>The size of the system disk specified for the compute nodes that are added to the queue. Unit: GB.</p>
+             * <p>Valid values: 40 to 500.</p>
+             * <p>Valid values of N: 1 to 8.</p>
+             * <p>Default value: 40.</p>
              * 
-             * Valid values: 40 to 500.
-             * 
-             * Valid values of N: 1 to 8.
-             * 
-             * Default value: 40.
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;

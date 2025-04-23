@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClustersResponseBody} extends {@link TeaModel}
  *
  * <p>ListClustersResponseBody</p>
  */
 public class ListClustersResponseBody extends TeaModel {
-    @NameInMap("Clusters")
+    @com.aliyun.core.annotation.NameInMap("Clusters")
     private Clusters clusters;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListClustersResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static ListClustersResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,19 @@ public class ListClustersResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListClustersResponseBody model) {
+            this.clusters = model.clusters;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The list of clusters.
+         * <p>The list of clusters.</p>
          */
         public Builder clusters(Clusters clusters) {
             this.clusters = clusters;
@@ -94,7 +114,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +125,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +136,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,20 +163,26 @@ public class ListClustersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClustersResponseBody</p>
+     */
     public static class Computes extends TeaModel {
-        @NameInMap("ExceptionCount")
+        @com.aliyun.core.annotation.NameInMap("ExceptionCount")
         private Integer exceptionCount;
 
-        @NameInMap("NormalCount")
+        @com.aliyun.core.annotation.NameInMap("NormalCount")
         private Integer normalCount;
 
-        @NameInMap("OperatingCount")
+        @com.aliyun.core.annotation.NameInMap("OperatingCount")
         private Integer operatingCount;
 
-        @NameInMap("StoppedCount")
+        @com.aliyun.core.annotation.NameInMap("StoppedCount")
         private Integer stoppedCount;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Computes(Builder builder) {
@@ -205,8 +243,22 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer stoppedCount; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Computes model) {
+                this.exceptionCount = model.exceptionCount;
+                this.normalCount = model.normalCount;
+                this.operatingCount = model.operatingCount;
+                this.stoppedCount = model.stoppedCount;
+                this.total = model.total;
+            } 
+
             /**
-             * The number of abnormal nodes.
+             * <p>The number of abnormal nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exceptionCount(Integer exceptionCount) {
                 this.exceptionCount = exceptionCount;
@@ -214,7 +266,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of normal nodes.
+             * <p>The number of normal nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder normalCount(Integer normalCount) {
                 this.normalCount = normalCount;
@@ -222,7 +277,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes that are being used in the queue. This includes those that are being initialized, installed, or released.
+             * <p>The number of nodes that are being used in the queue. This includes those that are being initialized, installed, or released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder operatingCount(Integer operatingCount) {
                 this.operatingCount = operatingCount;
@@ -230,7 +288,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of stopped nodes.
+             * <p>The number of stopped nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder stoppedCount(Integer stoppedCount) {
                 this.stoppedCount = stoppedCount;
@@ -238,7 +299,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of nodes.
+             * <p>The total number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -252,20 +316,26 @@ public class ListClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClustersResponseBody</p>
+     */
     public static class Managers extends TeaModel {
-        @NameInMap("ExceptionCount")
+        @com.aliyun.core.annotation.NameInMap("ExceptionCount")
         private Integer exceptionCount;
 
-        @NameInMap("NormalCount")
+        @com.aliyun.core.annotation.NameInMap("NormalCount")
         private Integer normalCount;
 
-        @NameInMap("OperatingCount")
+        @com.aliyun.core.annotation.NameInMap("OperatingCount")
         private Integer operatingCount;
 
-        @NameInMap("StoppedCount")
+        @com.aliyun.core.annotation.NameInMap("StoppedCount")
         private Integer stoppedCount;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Managers(Builder builder) {
@@ -326,8 +396,22 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer stoppedCount; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Managers model) {
+                this.exceptionCount = model.exceptionCount;
+                this.normalCount = model.normalCount;
+                this.operatingCount = model.operatingCount;
+                this.stoppedCount = model.stoppedCount;
+                this.total = model.total;
+            } 
+
             /**
-             * The number of abnormal nodes.
+             * <p>The number of abnormal nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exceptionCount(Integer exceptionCount) {
                 this.exceptionCount = exceptionCount;
@@ -335,7 +419,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of normal nodes.
+             * <p>The number of normal nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder normalCount(Integer normalCount) {
                 this.normalCount = normalCount;
@@ -343,7 +430,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes that are being used in the queue. This includes those that are being initialized, installed, or released.
+             * <p>The number of nodes that are being used in the queue. This includes those that are being initialized, installed, or released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder operatingCount(Integer operatingCount) {
                 this.operatingCount = operatingCount;
@@ -351,7 +441,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of stopped nodes.
+             * <p>The number of stopped nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder stoppedCount(Integer stoppedCount) {
                 this.stoppedCount = stoppedCount;
@@ -359,7 +452,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of management nodes.
+             * <p>The total number of management nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -373,14 +469,20 @@ public class ListClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClustersResponseBody</p>
+     */
     public static class TotalResources extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
         private TotalResources(Builder builder) {
@@ -423,8 +525,20 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer gpu; 
             private Integer memory; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalResources model) {
+                this.cpu = model.cpu;
+                this.gpu = model.gpu;
+                this.memory = model.memory;
+            } 
+
             /**
-             * The number of CPU cores. Unit: cores.
+             * <p>The number of CPU cores. Unit: cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -432,7 +546,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of GPU cards. Unit: cards.
+             * <p>The number of GPU cards. Unit: cards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -440,7 +557,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: MiB.
+             * <p>The memory size. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -454,14 +574,20 @@ public class ListClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClustersResponseBody</p>
+     */
     public static class UsedResources extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
         private UsedResources(Builder builder) {
@@ -504,8 +630,20 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer gpu; 
             private Integer memory; 
 
+            private Builder() {
+            } 
+
+            private Builder(UsedResources model) {
+                this.cpu = model.cpu;
+                this.gpu = model.gpu;
+                this.memory = model.memory;
+            } 
+
             /**
-             * The number of CPU cores. Unit: cores.
+             * <p>The number of CPU cores. Unit: cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -513,7 +651,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of GPU cards. Unit: cards.
+             * <p>The number of GPU cards. Unit: cards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -521,7 +662,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: MiB.
+             * <p>The memory size. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -535,107 +679,113 @@ public class ListClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClustersResponseBody</p>
+     */
     public static class ClusterInfoSimple extends TeaModel {
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
-        @NameInMap("BaseOsTag")
+        @com.aliyun.core.annotation.NameInMap("BaseOsTag")
         private String baseOsTag;
 
-        @NameInMap("ClientVersion")
+        @com.aliyun.core.annotation.NameInMap("ClientVersion")
         private String clientVersion;
 
-        @NameInMap("ComputeSpotPriceLimit")
+        @com.aliyun.core.annotation.NameInMap("ComputeSpotPriceLimit")
         private Float computeSpotPriceLimit;
 
-        @NameInMap("ComputeSpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("ComputeSpotStrategy")
         private String computeSpotStrategy;
 
-        @NameInMap("Computes")
+        @com.aliyun.core.annotation.NameInMap("Computes")
         private Computes computes;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DeployMode")
+        @com.aliyun.core.annotation.NameInMap("DeployMode")
         private String deployMode;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EhpcVersion")
+        @com.aliyun.core.annotation.NameInMap("EhpcVersion")
         private String ehpcVersion;
 
-        @NameInMap("HasPlugin")
+        @com.aliyun.core.annotation.NameInMap("HasPlugin")
         private Boolean hasPlugin;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageOwnerAlias")
+        @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
         private String imageOwnerAlias;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("IsComputeEss")
+        @com.aliyun.core.annotation.NameInMap("IsComputeEss")
         private Boolean isComputeEss;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("LoginNodes")
+        @com.aliyun.core.annotation.NameInMap("LoginNodes")
         private String loginNodes;
 
-        @NameInMap("Managers")
+        @com.aliyun.core.annotation.NameInMap("Managers")
         private Managers managers;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NodePrefix")
+        @com.aliyun.core.annotation.NameInMap("NodePrefix")
         private String nodePrefix;
 
-        @NameInMap("NodeSuffix")
+        @com.aliyun.core.annotation.NameInMap("NodeSuffix")
         private String nodeSuffix;
 
-        @NameInMap("OsTag")
+        @com.aliyun.core.annotation.NameInMap("OsTag")
         private String osTag;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SchedulerType")
+        @com.aliyun.core.annotation.NameInMap("SchedulerType")
         private String schedulerType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalResources")
+        @com.aliyun.core.annotation.NameInMap("TotalResources")
         private TotalResources totalResources;
 
-        @NameInMap("UsedResources")
+        @com.aliyun.core.annotation.NameInMap("UsedResources")
         private UsedResources usedResources;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private ClusterInfoSimple(Builder builder) {
@@ -957,12 +1107,55 @@ public class ListClustersResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterInfoSimple model) {
+                this.accountType = model.accountType;
+                this.baseOsTag = model.baseOsTag;
+                this.clientVersion = model.clientVersion;
+                this.computeSpotPriceLimit = model.computeSpotPriceLimit;
+                this.computeSpotStrategy = model.computeSpotStrategy;
+                this.computes = model.computes;
+                this.count = model.count;
+                this.createTime = model.createTime;
+                this.deployMode = model.deployMode;
+                this.description = model.description;
+                this.ehpcVersion = model.ehpcVersion;
+                this.hasPlugin = model.hasPlugin;
+                this.id = model.id;
+                this.imageId = model.imageId;
+                this.imageOwnerAlias = model.imageOwnerAlias;
+                this.instanceChargeType = model.instanceChargeType;
+                this.instanceType = model.instanceType;
+                this.isComputeEss = model.isComputeEss;
+                this.location = model.location;
+                this.loginNodes = model.loginNodes;
+                this.managers = model.managers;
+                this.name = model.name;
+                this.nodePrefix = model.nodePrefix;
+                this.nodeSuffix = model.nodeSuffix;
+                this.osTag = model.osTag;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.schedulerType = model.schedulerType;
+                this.status = model.status;
+                this.totalResources = model.totalResources;
+                this.usedResources = model.usedResources;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * The server type of the account. Valid values:
-             * <p>
+             * <p>The server type of the account. Valid values:</p>
+             * <ul>
+             * <li>nis</li>
+             * <li>ldap</li>
+             * </ul>
              * 
-             * *   nis
-             * *   ldap
+             * <strong>example:</strong>
+             * <p>nis</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -970,7 +1163,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system tag of the base image. The tag was used only by the management node.
+             * <p>The operating system tag of the base image. The tag was used only by the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS_7.2_64</p>
              */
             public Builder baseOsTag(String baseOsTag) {
                 this.baseOsTag = baseOsTag;
@@ -978,7 +1174,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the client.
+             * <p>The version of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.64</p>
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -986,7 +1185,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum hourly price for the ECS instance under the compute node. The return value can be accurate to three decimal places.
+             * <p>The maximum hourly price for the ECS instance under the compute node. The return value can be accurate to three decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.034</p>
              */
             public Builder computeSpotPriceLimit(Float computeSpotPriceLimit) {
                 this.computeSpotPriceLimit = computeSpotPriceLimit;
@@ -994,12 +1196,15 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The bidding method of the compute nodes. Valid values:
-             * <p>
+             * <p>The bidding method of the compute nodes. Valid values:</p>
+             * <ul>
+             * <li>NoSpot: The instances of the compute node are pay-as-you-go instances.</li>
+             * <li>SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.</li>
+             * <li>SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.</li>
+             * </ul>
              * 
-             * *   NoSpot: The instances of the compute node are pay-as-you-go instances.
-             * *   SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.
-             * *   SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.
+             * <strong>example:</strong>
+             * <p>NoSpot</p>
              */
             public Builder computeSpotStrategy(String computeSpotStrategy) {
                 this.computeSpotStrategy = computeSpotStrategy;
@@ -1007,7 +1212,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The information about compute nodes.
+             * <p>The information about compute nodes.</p>
              */
             public Builder computes(Computes computes) {
                 this.computes = computes;
@@ -1015,7 +1220,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of compute nodes in the cluster.
+             * <p>The number of compute nodes in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1023,7 +1231,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-30T07:39:20.000Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1031,13 +1242,16 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The mode in which the cluster was deployed. Valid values:
-             * <p>
+             * <p>The mode in which the cluster was deployed. Valid values:</p>
+             * <ul>
+             * <li>Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.</li>
+             * <li>Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.</li>
+             * <li>Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.</li>
+             * <li>Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.</li>
+             * </ul>
              * 
-             * *   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.
-             * *   Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.
-             * *   Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.
-             * *   Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -1045,7 +1259,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the cluster.
+             * <p>The description of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>clusterdescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1053,7 +1270,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The version of E-HPC.
+             * <p>The version of E-HPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder ehpcVersion(String ehpcVersion) {
                 this.ehpcVersion = ehpcVersion;
@@ -1061,13 +1281,15 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether plug-ins were used in the cluster. Valid values:
-             * <p>
+             * <p>Indicates whether plug-ins were used in the cluster. Valid values:</p>
+             * <ul>
+             * <li>true: Plug-ins are used.</li>
+             * <li>false: Plug-ins are not used.</li>
+             * </ul>
+             * <p>Default value: false</p>
              * 
-             * *   true: Plug-ins are used.
-             * *   false: Plug-ins are not used.
-             * 
-             * Default value: false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasPlugin(Boolean hasPlugin) {
                 this.hasPlugin = hasPlugin;
@@ -1075,7 +1297,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ehpc-hz-jeJki6****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1083,7 +1308,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wi_1607_x64_dtc_zh_40G_alibase****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1091,13 +1319,16 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image. Valid values:
-             * <p>
+             * <p>The type of the image. Valid values:</p>
+             * <ul>
+             * <li>system: public image</li>
+             * <li>self: custom image</li>
+             * <li>others: shared image</li>
+             * <li>marketplace: Alibaba Cloud Marketplace image</li>
+             * </ul>
              * 
-             * *   system: public image
-             * *   self: custom image
-             * *   others: shared image
-             * *   marketplace: Alibaba Cloud Marketplace image
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -1105,11 +1336,14 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the nodes in the cluster. Valid values:
-             * <p>
+             * <p>The billing method of the nodes in the cluster. Valid values:</p>
+             * <ul>
+             * <li>PostPaid: pay-as-you-go</li>
+             * <li>PrePaid: subscription</li>
+             * </ul>
              * 
-             * *   PostPaid: pay-as-you-go
-             * *   PrePaid: subscription
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -1117,7 +1351,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the compute nodes.
+             * <p>The instance type of the compute nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.n1.tiny</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1125,11 +1362,14 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a scaling group was enabled. Valid values:
-             * <p>
+             * <p>Indicates whether a scaling group was enabled. Valid values:</p>
+             * <ul>
+             * <li>true: A scaling group is enabled.</li>
+             * <li>false: No scaling group is enabled.</li>
+             * </ul>
              * 
-             * *   true: A scaling group is enabled.
-             * *   false: No scaling group is enabled.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isComputeEss(Boolean isComputeEss) {
                 this.isComputeEss = isComputeEss;
@@ -1137,11 +1377,14 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The location where the cluster was deployed. Valid values:
-             * <p>
+             * <p>The location where the cluster was deployed. Valid values:</p>
+             * <ul>
+             * <li>OnPremise: The cluster is deployed on a hybrid cloud.</li>
+             * <li>PublicCloud: The cluster is deployed on a public cloud.</li>
+             * </ul>
              * 
-             * *   OnPremise: The cluster is deployed on a hybrid cloud.
-             * *   PublicCloud: The cluster is deployed on a public cloud.
+             * <strong>example:</strong>
+             * <p>PublicCloud</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1149,7 +1392,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The list of logon nodes.
+             * <p>The list of logon nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Id&quot;: &quot;i-bp13x4is8pvdhws7e****&quot;}</p>
              */
             public Builder loginNodes(String loginNodes) {
                 this.loginNodes = loginNodes;
@@ -1157,7 +1403,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The list of management nodes.
+             * <p>The list of management nodes.</p>
              */
             public Builder managers(Managers managers) {
                 this.managers = managers;
@@ -1165,7 +1411,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1173,7 +1422,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The prefix of the node.
+             * <p>The prefix of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nodePrefix(String nodePrefix) {
                 this.nodePrefix = nodePrefix;
@@ -1181,7 +1433,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The suffix of the node.
+             * <p>The suffix of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder nodeSuffix(String nodeSuffix) {
                 this.nodeSuffix = nodeSuffix;
@@ -1189,7 +1444,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system tag of the image.
+             * <p>The operating system tag of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS_7.2_64</p>
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -1197,7 +1455,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1205,7 +1466,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.You can call the ListResourceGroups operation to query the IDs of resource groups.
+             * <p>The resource group ID.You can call the ListResourceGroups operation to query the IDs of resource groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxazb4ph****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1213,13 +1477,16 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scheduler. Valid values:
-             * <p>
+             * <p>The type of the scheduler. Valid values:</p>
+             * <ul>
+             * <li>pbs</li>
+             * <li>slurm</li>
+             * <li>opengridscheduler</li>
+             * <li>deadline</li>
+             * </ul>
              * 
-             * *   pbs
-             * *   slurm
-             * *   opengridscheduler
-             * *   deadline
+             * <strong>example:</strong>
+             * <p>pbs</p>
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -1227,15 +1494,18 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster. Valid values:
-             * <p>
+             * <p>The status of the cluster. Valid values:</p>
+             * <ul>
+             * <li>uninit: The cluster is not initialized.</li>
+             * <li>creating: The cluster is being created.</li>
+             * <li>init: The cluster is being initialized.</li>
+             * <li>running: The cluster is running.</li>
+             * <li>exception: The cluster encounters an exception.</li>
+             * <li>releasing: The cluster is being released.</li>
+             * </ul>
              * 
-             * *   uninit: The cluster is not initialized.
-             * *   creating: The cluster is being created.
-             * *   init: The cluster is being initialized.
-             * *   running: The cluster is running.
-             * *   exception: The cluster encounters an exception.
-             * *   releasing: The cluster is being released.
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1243,7 +1513,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics of all resources in the cluster.
+             * <p>The statistics of all resources in the cluster.</p>
              */
             public Builder totalResources(TotalResources totalResources) {
                 this.totalResources = totalResources;
@@ -1251,7 +1521,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of consumed resources in the cluster.
+             * <p>The number of consumed resources in the cluster.</p>
              */
             public Builder usedResources(UsedResources usedResources) {
                 this.usedResources = usedResources;
@@ -1259,7 +1529,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1lfcjbfb099rrjn****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1267,7 +1540,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-b3f3edefefeep0760yju****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1275,7 +1551,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-c</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1289,9 +1568,15 @@ public class ListClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClustersResponseBody</p>
+     */
     public static class Clusters extends TeaModel {
-        @NameInMap("ClusterInfoSimple")
-        private java.util.List < ClusterInfoSimple> clusterInfoSimple;
+        @com.aliyun.core.annotation.NameInMap("ClusterInfoSimple")
+        private java.util.List<ClusterInfoSimple> clusterInfoSimple;
 
         private Clusters(Builder builder) {
             this.clusterInfoSimple = builder.clusterInfoSimple;
@@ -1308,17 +1593,24 @@ public class ListClustersResponseBody extends TeaModel {
         /**
          * @return clusterInfoSimple
          */
-        public java.util.List < ClusterInfoSimple> getClusterInfoSimple() {
+        public java.util.List<ClusterInfoSimple> getClusterInfoSimple() {
             return this.clusterInfoSimple;
         }
 
         public static final class Builder {
-            private java.util.List < ClusterInfoSimple> clusterInfoSimple; 
+            private java.util.List<ClusterInfoSimple> clusterInfoSimple; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clusters model) {
+                this.clusterInfoSimple = model.clusterInfoSimple;
+            } 
 
             /**
              * ClusterInfoSimple.
              */
-            public Builder clusterInfoSimple(java.util.List < ClusterInfoSimple> clusterInfoSimple) {
+            public Builder clusterInfoSimple(java.util.List<ClusterInfoSimple> clusterInfoSimple) {
                 this.clusterInfoSimple = clusterInfoSimple;
                 return this;
             }

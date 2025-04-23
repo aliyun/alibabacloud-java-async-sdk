@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudMetricProfilingsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCloudMetricProfilingsResponseBody</p>
  */
 public class ListCloudMetricProfilingsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("Profilings")
+    @com.aliyun.core.annotation.NameInMap("Profilings")
     private Profilings profilings;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListCloudMetricProfilingsResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
 
     public static ListCloudMetricProfilingsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListCloudMetricProfilingsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.profilings = model.profilings;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The page number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +117,10 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries that are returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +128,7 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
         }
 
         /**
-         * The profiling information of a specified cluster.
+         * <p>The profiling information of the cluster.</p>
          */
         public Builder profilings(Profilings profilings) {
             this.profilings = profilings;
@@ -110,7 +136,10 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A05F620-ED46-4A57-95F1-C67D6D3C5DD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,26 +163,32 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCloudMetricProfilingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudMetricProfilingsResponseBody</p>
+     */
     public static class ProfilingInfo extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("Freq")
+        @com.aliyun.core.annotation.NameInMap("Freq")
         private Integer freq;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private Integer pid;
 
-        @NameInMap("ProfilingId")
+        @com.aliyun.core.annotation.NameInMap("ProfilingId")
         private String profilingId;
 
-        @NameInMap("TriggerTime")
+        @com.aliyun.core.annotation.NameInMap("TriggerTime")
         private String triggerTime;
 
         private ProfilingInfo(Builder builder) {
@@ -229,11 +267,25 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             private String profilingId; 
             private String triggerTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProfilingInfo model) {
+                this.duration = model.duration;
+                this.freq = model.freq;
+                this.hostName = model.hostName;
+                this.instanceId = model.instanceId;
+                this.pid = model.pid;
+                this.profilingId = model.profilingId;
+                this.triggerTime = model.triggerTime;
+            } 
+
             /**
-             * The duration of the profiling process. Unit: seconds
-             * <p>
+             * <p>The duration of the profiling process. Unit: seconds.</p>
+             * <p>Valid values: 10 to 300.</p>
              * 
-             * Valid values: 10 to 300
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -241,10 +293,11 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             }
 
             /**
-             * The frequency of the profiling process. Unit: Hz
-             * <p>
+             * <p>The frequency of the profiling process. Unit: Hz.</p>
+             * <p>Valid values: 1 to 2000</p>
              * 
-             * Valid values: 1 to 2000
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder freq(Integer freq) {
                 this.freq = freq;
@@ -252,7 +305,10 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host.
+             * <p>The name of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>compute5</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -260,7 +316,10 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1j76z8dlukzqgl0****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -268,7 +327,10 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the profiling process.
+             * <p>The progress ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21687</p>
              */
             public Builder pid(Integer pid) {
                 this.pid = pid;
@@ -276,7 +338,10 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the profiling process.
+             * <p>The ID of the profiling process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ehpc-hz-i-bplukzqgl****_21687_2019-09-09-02-37-40</p>
              */
             public Builder profilingId(String profilingId) {
                 this.profilingId = profilingId;
@@ -284,7 +349,10 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the profiling process is triggered.
+             * <p>The time when the profiling was triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-09 02:37:40</p>
              */
             public Builder triggerTime(String triggerTime) {
                 this.triggerTime = triggerTime;
@@ -298,9 +366,15 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudMetricProfilingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudMetricProfilingsResponseBody</p>
+     */
     public static class Profilings extends TeaModel {
-        @NameInMap("ProfilingInfo")
-        private java.util.List < ProfilingInfo> profilingInfo;
+        @com.aliyun.core.annotation.NameInMap("ProfilingInfo")
+        private java.util.List<ProfilingInfo> profilingInfo;
 
         private Profilings(Builder builder) {
             this.profilingInfo = builder.profilingInfo;
@@ -317,17 +391,24 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
         /**
          * @return profilingInfo
          */
-        public java.util.List < ProfilingInfo> getProfilingInfo() {
+        public java.util.List<ProfilingInfo> getProfilingInfo() {
             return this.profilingInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ProfilingInfo> profilingInfo; 
+            private java.util.List<ProfilingInfo> profilingInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Profilings model) {
+                this.profilingInfo = model.profilingInfo;
+            } 
 
             /**
              * ProfilingInfo.
              */
-            public Builder profilingInfo(java.util.List < ProfilingInfo> profilingInfo) {
+            public Builder profilingInfo(java.util.List<ProfilingInfo> profilingInfo) {
                 this.profilingInfo = profilingInfo;
                 return this;
             }

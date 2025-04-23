@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountingReportResponseBody} extends {@link TeaModel}
  *
  * <p>GetAccountingReportResponseBody</p>
  */
 public class GetAccountingReportResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private String metrics;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCoreTime")
+    @com.aliyun.core.annotation.NameInMap("TotalCoreTime")
     private Integer totalCoreTime;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private GetAccountingReportResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class GetAccountingReportResponseBody extends TeaModel {
 
     public static GetAccountingReportResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,21 @@ public class GetAccountingReportResponseBody extends TeaModel {
         private Integer totalCoreTime; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetAccountingReportResponseBody model) {
+            this.data = model.data;
+            this.metrics = model.metrics;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCoreTime = model.totalCoreTime;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The list serialized in the JSON format. The list contains multiple records.
+         * <p>The list serialized in the JSON format. The list contains multiple records.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -118,7 +140,10 @@ public class GetAccountingReportResponseBody extends TeaModel {
         }
 
         /**
-         * The list serialized in the JSON format. The list contains the column names of each record in the Data.
+         * <p>The list serialized in the JSON format. The list contains the column names of each record in the Data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;user&quot;,&quot;coreTime&quot;,&quot;usedMem&quot;]</p>
          */
         public Builder metrics(String metrics) {
             this.metrics = metrics;
@@ -126,7 +151,10 @@ public class GetAccountingReportResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -134,7 +162,10 @@ public class GetAccountingReportResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +173,10 @@ public class GetAccountingReportResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B1DCB399-9333-4B38-A35A-0BDFABC71881</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +184,10 @@ public class GetAccountingReportResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of CPU cores in the queried cluster.
+         * <p>The total number of CPU cores in the queried cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>261300</p>
          */
         public Builder totalCoreTime(Integer totalCoreTime) {
             this.totalCoreTime = totalCoreTime;
@@ -158,7 +195,10 @@ public class GetAccountingReportResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -171,9 +211,15 @@ public class GetAccountingReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAccountingReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccountingReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Data")
-        private java.util.List < String > data;
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List<String> data;
 
         private Data(Builder builder) {
             this.data = builder.data;
@@ -190,17 +236,24 @@ public class GetAccountingReportResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < String > getData() {
+        public java.util.List<String> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < String > data; 
+            private java.util.List<String> data; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.data = model.data;
+            } 
 
             /**
-             * The list serialized in the JSON format. The list contains multiple records.
+             * <p>The list serialized in the JSON format. The list contains multiple records.</p>
              */
-            public Builder data(java.util.List < String > data) {
+            public Builder data(java.util.List<String> data) {
                 this.data = data;
                 return this;
             }

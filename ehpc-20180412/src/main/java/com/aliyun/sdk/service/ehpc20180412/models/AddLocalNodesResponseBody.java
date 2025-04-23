@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddLocalNodesResponseBody} extends {@link TeaModel}
  *
  * <p>AddLocalNodesResponseBody</p>
  */
 public class AddLocalNodesResponseBody extends TeaModel {
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private InstanceIds instanceIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddLocalNodesResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class AddLocalNodesResponseBody extends TeaModel {
 
     public static AddLocalNodesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class AddLocalNodesResponseBody extends TeaModel {
         private InstanceIds instanceIds; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(AddLocalNodesResponseBody model) {
+            this.instanceIds = model.instanceIds;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The local nodes in the cluster.
+         * <p>The local nodes in the cluster.</p>
          */
         public Builder instanceIds(InstanceIds instanceIds) {
             this.instanceIds = instanceIds;
@@ -58,7 +75,10 @@ public class AddLocalNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +91,15 @@ public class AddLocalNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddLocalNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddLocalNodesResponseBody</p>
+     */
     public static class InstanceIds extends TeaModel {
-        @NameInMap("InstanceId")
-        private java.util.List < String > instanceId;
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private java.util.List<String> instanceId;
 
         private InstanceIds(Builder builder) {
             this.instanceId = builder.instanceId;
@@ -90,17 +116,24 @@ public class AddLocalNodesResponseBody extends TeaModel {
         /**
          * @return instanceId
          */
-        public java.util.List < String > getInstanceId() {
+        public java.util.List<String> getInstanceId() {
             return this.instanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > instanceId; 
+            private java.util.List<String> instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceIds model) {
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * InstanceId.
              */
-            public Builder instanceId(java.util.List < String > instanceId) {
+            public Builder instanceId(java.util.List<String> instanceId) {
                 this.instanceId = instanceId;
                 return this;
             }

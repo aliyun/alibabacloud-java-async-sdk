@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddExistedNodesRequest} extends {@link RequestModel}
  *
  * <p>AddExistedNodesRequest</p>
  */
 public class AddExistedNodesRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("ImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
-    @Query
-    @NameInMap("ImageOwnerAlias")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageOwnerAlias;
 
-    @Query
-    @NameInMap("Instance")
-    @Validation(required = true)
-    private java.util.List < Instance> instance;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Instance")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Instance> instance;
 
-    @Query
-    @NameInMap("JobQueue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobQueue")
     private String jobQueue;
 
     private AddExistedNodesRequest(Builder builder) {
@@ -53,7 +58,7 @@ public class AddExistedNodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +87,7 @@ public class AddExistedNodesRequest extends Request {
     /**
      * @return instance
      */
-    public java.util.List < Instance> getInstance() {
+    public java.util.List<Instance> getInstance() {
         return this.instance;
     }
 
@@ -97,7 +102,7 @@ public class AddExistedNodesRequest extends Request {
         private String clusterId; 
         private String imageId; 
         private String imageOwnerAlias; 
-        private java.util.List < Instance> instance; 
+        private java.util.List<Instance> instance; 
         private String jobQueue; 
 
         private Builder() {
@@ -114,10 +119,12 @@ public class AddExistedNodesRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -126,16 +133,21 @@ public class AddExistedNodesRequest extends Request {
         }
 
         /**
-         * The ID of the image that is specified for the compute nodes. The image must meet the following requirements:
-         * <p>
+         * <p>The ID of the image that is specified for the compute nodes. The image must meet the following requirements:</p>
+         * <ul>
+         * <li>The operating system that is specified for the image must be the same as that of the existing cluster nodes. For example, if the operating system of the cluster nodes is CentOS, you can select only a CentOS image.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you add nodes to a hybrid cloud cluster that supports multiple operating systems, you can select a Windows Server image or a CentOS image when the operating system of the cluster nodes is Windows.</p>
+         * </blockquote>
+         * <ul>
+         * <li>The major version of the image specified for the compute nodes that you want to add must be the same as that of the image of the cluster. For example, if the version of the cluster image is CentOS 7.x, the version of the image specified for the compute nodes must be CentOS 7.x.</li>
+         * </ul>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87213.html">ListImages</a> and <a href="https://help.aliyun.com/document_detail/87215.html">ListCustomImages</a> operations to query the image ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   The operating system that is specified for the image must be the same as that of the existing cluster nodes. For example, if the operating system of the cluster nodes is CentOS, you can select only a CentOS image.
-         * 
-         * >  If you add nodes to a hybrid cloud cluster that supports multiple operating systems, you can select a Windows Server image or a CentOS image when the operating system of the cluster nodes is Windows.
-         * 
-         * *   The major version of the image specified for the compute nodes that you want to add must be the same as that of the image of the cluster. For example, if the version of the cluster image is CentOS 7.x, the version of the image specified for the compute nodes must be CentOS 7.x.
-         * 
-         * You can call the [ListImages](~~87213~~) and [ListCustomImages](~~87215~~) operations to query the image ID.
+         * <strong>example:</strong>
+         * <p>centos_7_06_64_20G_alibase_20190711.vhd</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -144,15 +156,18 @@ public class AddExistedNodesRequest extends Request {
         }
 
         /**
-         * The type of the images. Valid values:
-         * <p>
+         * <p>The type of the images. Valid values:</p>
+         * <ul>
+         * <li>system: public image.</li>
+         * <li>self: custom image</li>
+         * <li>others: shared image</li>
+         * <li>marketplace: Alibaba Cloud Marketplace image</li>
+         * </ul>
+         * <p>Default value: system.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   system: public image.
-         * *   self: custom image
-         * *   others: shared image
-         * *   marketplace: Alibaba Cloud Marketplace image
-         * 
-         * Default value: system.
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder imageOwnerAlias(String imageOwnerAlias) {
             this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
@@ -161,16 +176,20 @@ public class AddExistedNodesRequest extends Request {
         }
 
         /**
-         * The information about the node that you want to add.
+         * <p>The information about the node that you want to add.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder instance(java.util.List < Instance> instance) {
+        public Builder instance(java.util.List<Instance> instance) {
             this.putQueryParameter("Instance", instance);
             this.instance = instance;
             return this;
         }
 
         /**
-         * The queue in the cluster to which the node is to be added.
+         * <p>The queue in the cluster to which the node is to be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workq</p>
          */
         public Builder jobQueue(String jobQueue) {
             this.putQueryParameter("JobQueue", jobQueue);
@@ -185,9 +204,15 @@ public class AddExistedNodesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddExistedNodesRequest} extends {@link TeaModel}
+     *
+     * <p>AddExistedNodesRequest</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
         private Instance(Builder builder) {
@@ -212,8 +237,19 @@ public class AddExistedNodesRequest extends Request {
         public static final class Builder {
             private String id; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.id = model.id;
+            } 
+
             /**
-             * The Nth node ID. N starts from 1. Valid values: 1 to 100.
+             * <p>The Nth node ID. N starts from 1. Valid values: 1 to 100.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp16mxn6mt3t7ftk****</p>
              */
             public Builder id(String id) {
                 this.id = id;

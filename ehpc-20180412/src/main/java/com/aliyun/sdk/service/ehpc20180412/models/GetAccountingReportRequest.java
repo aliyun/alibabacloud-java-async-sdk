@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountingReportRequest} extends {@link RequestModel}
  *
  * <p>GetAccountingReportRequest</p>
  */
 public class GetAccountingReportRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Dim")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dim")
     private String dim;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Integer endTime;
 
-    @Query
-    @NameInMap("FilterValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterValue")
     private String filterValue;
 
-    @Query
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ReportType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String reportType;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Integer startTime;
 
     private GetAccountingReportRequest(Builder builder) {
@@ -71,7 +76,7 @@ public class GetAccountingReportRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -168,7 +173,11 @@ public class GetAccountingReportRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -177,12 +186,15 @@ public class GetAccountingReportRequest extends Request {
         }
 
         /**
-         * The layers at which you want to query the bandwidth and traffic data. Valid values:
-         * <p>
+         * <p>The layers at which you want to query the bandwidth and traffic data. Valid values:</p>
+         * <ul>
+         * <li>user: Query by user.</li>
+         * <li>queue: Query by queue.</li>
+         * <li>instance: Query by instance.</li>
+         * </ul>
          * 
-         * *   user: Query by user.
-         * *   queue: Query by queue.
-         * *   instance: Query by instance.
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder dim(String dim) {
             this.putQueryParameter("Dim", dim);
@@ -191,7 +203,10 @@ public class GetAccountingReportRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1577441873</p>
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -200,12 +215,15 @@ public class GetAccountingReportRequest extends Request {
         }
 
         /**
-         * The actual name of the dimension to be queried. Valid values:
-         * <p>
+         * <p>The actual name of the dimension to be queried. Valid values:</p>
+         * <ul>
+         * <li>If you set the value of the parameter Dim to user, the value of FilterValue is the name of the specified user.</li>
+         * <li>If you set the value of the parameter Dim to queue, the value of FilterValue is the name of the specified queue.</li>
+         * <li>If you set the value of the parameter Dim to instance, the value of FilterValue is the instance name.</li>
+         * </ul>
          * 
-         * *   If you set the value of the parameter Dim to user, the value of FilterValue is the name of the specified user.
-         * *   If you set the value of the parameter Dim to queue, the value of FilterValue is the name of the specified queue.
-         * *   If you set the value of the parameter Dim to instance, the value of FilterValue is the instance name.
+         * <strong>example:</strong>
+         * <p>userNo1</p>
          */
         public Builder filterValue(String filterValue) {
             this.putQueryParameter("FilterValue", filterValue);
@@ -214,7 +232,10 @@ public class GetAccountingReportRequest extends Request {
         }
 
         /**
-         * The ID of the job.
+         * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{Id: 1.scheduler}]</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -223,10 +244,11 @@ public class GetAccountingReportRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 50.
-         * <p>
+         * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -235,12 +257,12 @@ public class GetAccountingReportRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
-         * <p>
+         * <p>The page number of the returned page.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -249,12 +271,16 @@ public class GetAccountingReportRequest extends Request {
         }
 
         /**
-         * The query type. Valid values:
-         * <p>
+         * <p>The query type. Valid values:</p>
+         * <ul>
+         * <li>total_report: Queries the number of CPU cores in different dimensions.</li>
+         * <li>job_report: Collects the historical node data of a node.</li>
+         * <li>number_report: Queries job information in different dimensions.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   total_report: Queries the number of CPU cores in different dimensions.
-         * *   job_report: Collects the historical node data of a node.
-         * *   number_report: Queries job information in different dimensions.
+         * <strong>example:</strong>
+         * <p>job_report</p>
          */
         public Builder reportType(String reportType) {
             this.putQueryParameter("ReportType", reportType);
@@ -263,7 +289,10 @@ public class GetAccountingReportRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1576922873</p>
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);

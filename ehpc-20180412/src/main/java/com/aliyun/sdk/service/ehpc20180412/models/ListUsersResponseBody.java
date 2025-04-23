@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersResponseBody} extends {@link TeaModel}
  *
  * <p>ListUsersResponseBody</p>
  */
 public class ListUsersResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.NameInMap("Users")
     private Users users;
 
     private ListUsersResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListUsersResponseBody extends TeaModel {
 
     public static ListUsersResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class ListUsersResponseBody extends TeaModel {
         private Integer totalCount; 
         private Users users; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListUsersResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.users = model.users;
+        } 
+
         /**
-         * The page number returned.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +117,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +128,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +139,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +150,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The list of users.
+         * <p>The list of users.</p>
          */
         public Builder users(Users users) {
             this.users = users;
@@ -131,14 +163,20 @@ public class ListUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class UserInfo extends TeaModel {
-        @NameInMap("AddTime")
+        @com.aliyun.core.annotation.NameInMap("AddTime")
         private String addTime;
 
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private UserInfo(Builder builder) {
@@ -181,8 +219,20 @@ public class ListUsersResponseBody extends TeaModel {
             private String group; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.addTime = model.addTime;
+                this.group = model.group;
+                this.name = model.name;
+            } 
+
             /**
-             * The time when the user was created.
+             * <p>The time when the user was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-07-18T17:46:47</p>
              */
             public Builder addTime(String addTime) {
                 this.addTime = addTime;
@@ -190,11 +240,14 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the permission group. Valid values:
-             * <p>
+             * <p>The name of the permission group. Valid values:</p>
+             * <ul>
+             * <li>users: an ordinary permission group. It is applicable to ordinary users that need only to submit and debug jobs.</li>
+             * <li>wheel: a sudo permission group. It is applicable to the administrator who needs to manage the cluster. In addition to submitting and debugging jobs, users who have sudo permissions can run sudo commands to install software and restart nodes.</li>
+             * </ul>
              * 
-             * *   users: an ordinary permission group. It is applicable to ordinary users that need only to submit and debug jobs.
-             * *   wheel: a sudo permission group. It is applicable to the administrator who needs to manage the cluster. In addition to submitting and debugging jobs, users who have sudo permissions can run sudo commands to install software and restart nodes.
+             * <strong>example:</strong>
+             * <p>wheel</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -202,7 +255,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * <p>The username of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -216,9 +272,15 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class Users extends TeaModel {
-        @NameInMap("UserInfo")
-        private java.util.List < UserInfo> userInfo;
+        @com.aliyun.core.annotation.NameInMap("UserInfo")
+        private java.util.List<UserInfo> userInfo;
 
         private Users(Builder builder) {
             this.userInfo = builder.userInfo;
@@ -235,17 +297,24 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * @return userInfo
          */
-        public java.util.List < UserInfo> getUserInfo() {
+        public java.util.List<UserInfo> getUserInfo() {
             return this.userInfo;
         }
 
         public static final class Builder {
-            private java.util.List < UserInfo> userInfo; 
+            private java.util.List<UserInfo> userInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.userInfo = model.userInfo;
+            } 
 
             /**
              * UserInfo.
              */
-            public Builder userInfo(java.util.List < UserInfo> userInfo) {
+            public Builder userInfo(java.util.List<UserInfo> userInfo) {
                 this.userInfo = userInfo;
                 return this;
             }

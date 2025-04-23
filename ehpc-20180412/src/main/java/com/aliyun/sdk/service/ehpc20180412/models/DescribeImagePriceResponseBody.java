@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImagePriceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImagePriceResponseBody</p>
  */
 public class DescribeImagePriceResponseBody extends TeaModel {
-    @NameInMap("Amount")
+    @com.aliyun.core.annotation.NameInMap("Amount")
     private Integer amount;
 
-    @NameInMap("DiscountPrice")
+    @com.aliyun.core.annotation.NameInMap("DiscountPrice")
     private Float discountPrice;
 
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @NameInMap("OriginalPrice")
+    @com.aliyun.core.annotation.NameInMap("OriginalPrice")
     private Float originalPrice;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TradePrice")
+    @com.aliyun.core.annotation.NameInMap("TradePrice")
     private Float tradePrice;
 
     private DescribeImagePriceResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeImagePriceResponseBody extends TeaModel {
 
     public static DescribeImagePriceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         private String requestId; 
         private Float tradePrice; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeImagePriceResponseBody model) {
+            this.amount = model.amount;
+            this.discountPrice = model.discountPrice;
+            this.imageId = model.imageId;
+            this.originalPrice = model.originalPrice;
+            this.requestId = model.requestId;
+            this.tradePrice = model.tradePrice;
+        } 
+
         /**
-         * The number of instances that are purchased.
+         * <p>The number of instances that are purchased.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(Integer amount) {
             this.amount = amount;
@@ -106,7 +130,10 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The discount.
+         * <p>The discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder discountPrice(Float discountPrice) {
             this.discountPrice = discountPrice;
@@ -114,7 +141,10 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the custom image.
+         * <p>The ID of the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp198jigq7l1ga11****</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -122,7 +152,10 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The original price of the image.
+         * <p>The original price of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8</p>
          */
         public Builder originalPrice(Float originalPrice) {
             this.originalPrice = originalPrice;
@@ -130,7 +163,10 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47ca3ac4-2a03-48f1-8bf2-ba6de0f3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +174,10 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The final price of the image.
+         * <p>The final price of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8</p>
          */
         public Builder tradePrice(Float tradePrice) {
             this.tradePrice = tradePrice;

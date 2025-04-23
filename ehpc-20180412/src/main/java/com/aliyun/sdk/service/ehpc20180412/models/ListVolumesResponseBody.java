@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVolumesResponseBody} extends {@link TeaModel}
  *
  * <p>ListVolumesResponseBody</p>
  */
 public class ListVolumesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("Volumes")
+    @com.aliyun.core.annotation.NameInMap("Volumes")
     private Volumes volumes;
 
     private ListVolumesResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListVolumesResponseBody extends TeaModel {
 
     public static ListVolumesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class ListVolumesResponseBody extends TeaModel {
         private Integer totalCount; 
         private Volumes volumes; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListVolumesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.volumes = model.volumes;
+        } 
+
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +117,10 @@ public class ListVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +128,10 @@ public class ListVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +139,10 @@ public class ListVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +150,7 @@ public class ListVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * The information of file systems that are mounted on E-HPC clusters.
+         * <p>The information of file systems that are mounted on E-HPC clusters.</p>
          */
         public Builder volumes(Volumes volumes) {
             this.volumes = volumes;
@@ -131,32 +163,38 @@ public class ListVolumesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVolumesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVolumesResponseBody</p>
+     */
     public static class VolumeInfo extends TeaModel {
-        @NameInMap("JobQueue")
+        @com.aliyun.core.annotation.NameInMap("JobQueue")
         private String jobQueue;
 
-        @NameInMap("LocalDirectory")
+        @com.aliyun.core.annotation.NameInMap("LocalDirectory")
         private String localDirectory;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("RemoteDirectory")
+        @com.aliyun.core.annotation.NameInMap("RemoteDirectory")
         private String remoteDirectory;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("VolumeId")
+        @com.aliyun.core.annotation.NameInMap("VolumeId")
         private String volumeId;
 
-        @NameInMap("VolumeMountpoint")
+        @com.aliyun.core.annotation.NameInMap("VolumeMountpoint")
         private String volumeMountpoint;
 
-        @NameInMap("VolumeProtocol")
+        @com.aliyun.core.annotation.NameInMap("VolumeProtocol")
         private String volumeProtocol;
 
-        @NameInMap("VolumeType")
+        @com.aliyun.core.annotation.NameInMap("VolumeType")
         private String volumeType;
 
         private VolumeInfo(Builder builder) {
@@ -253,8 +291,26 @@ public class ListVolumesResponseBody extends TeaModel {
             private String volumeProtocol; 
             private String volumeType; 
 
+            private Builder() {
+            } 
+
+            private Builder(VolumeInfo model) {
+                this.jobQueue = model.jobQueue;
+                this.localDirectory = model.localDirectory;
+                this.location = model.location;
+                this.remoteDirectory = model.remoteDirectory;
+                this.role = model.role;
+                this.volumeId = model.volumeId;
+                this.volumeMountpoint = model.volumeMountpoint;
+                this.volumeProtocol = model.volumeProtocol;
+                this.volumeType = model.volumeType;
+            } 
+
             /**
-             * The queue to which the job belongs.
+             * <p>The queue to which the job belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all.q</p>
              */
             public Builder jobQueue(String jobQueue) {
                 this.jobQueue = jobQueue;
@@ -262,7 +318,10 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The local mount directory.
+             * <p>The local mount directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/testopt</p>
              */
             public Builder localDirectory(String localDirectory) {
                 this.localDirectory = localDirectory;
@@ -270,11 +329,14 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The location where the cluster is deployed. Valid values:
-             * <p>
+             * <p>The location where the cluster is deployed. Valid values:</p>
+             * <ul>
+             * <li>OnPremise: The node is deployed on a hybrid cloud.</li>
+             * <li>PublicCloud: The cluster is deployed on a public cloud.</li>
+             * </ul>
              * 
-             * *   OnPremise: The node is deployed on a hybrid cloud.
-             * *   PublicCloud: The cluster is deployed on a public cloud.
+             * <strong>example:</strong>
+             * <p>PublicCloud</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -282,7 +344,10 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The remote directory on which the file system is mounted.
+             * <p>The remote directory on which the file system is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder remoteDirectory(String remoteDirectory) {
                 this.remoteDirectory = remoteDirectory;
@@ -290,12 +355,15 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node on which the file system is mounted. Valid values:
-             * <p>
+             * <p>The type of the node on which the file system is mounted. Valid values:</p>
+             * <ul>
+             * <li>Manager: management node</li>
+             * <li>Login: logon node</li>
+             * <li>Compute: compute node</li>
+             * </ul>
              * 
-             * *   Manager: management node
-             * *   Login: logon node
-             * *   Compute: compute node
+             * <strong>example:</strong>
+             * <p>Compute</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -303,7 +371,10 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the file system.
+             * <p>The ID of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86y3****</p>
              */
             public Builder volumeId(String volumeId) {
                 this.volumeId = volumeId;
@@ -311,7 +382,10 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the mount target.
+             * <p>The domain name of the mount target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86y3****-rgd51.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder volumeMountpoint(String volumeMountpoint) {
                 this.volumeMountpoint = volumeMountpoint;
@@ -319,11 +393,14 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the storage protocol. Valid values:
-             * <p>
+             * <p>The type of the storage protocol. Valid values:</p>
+             * <ul>
+             * <li>NFS</li>
+             * <li>SMB</li>
+             * </ul>
              * 
-             * *   NFS
-             * *   SMB
+             * <strong>example:</strong>
+             * <p>NFS</p>
              */
             public Builder volumeProtocol(String volumeProtocol) {
                 this.volumeProtocol = volumeProtocol;
@@ -331,7 +408,10 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the additional file system. Only NAS is supported.
+             * <p>The type of the additional file system. Only NAS is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NAS</p>
              */
             public Builder volumeType(String volumeType) {
                 this.volumeType = volumeType;
@@ -345,9 +425,15 @@ public class ListVolumesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVolumesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVolumesResponseBody</p>
+     */
     public static class AdditionalVolumes extends TeaModel {
-        @NameInMap("VolumeInfo")
-        private java.util.List < VolumeInfo> volumeInfo;
+        @com.aliyun.core.annotation.NameInMap("VolumeInfo")
+        private java.util.List<VolumeInfo> volumeInfo;
 
         private AdditionalVolumes(Builder builder) {
             this.volumeInfo = builder.volumeInfo;
@@ -364,17 +450,24 @@ public class ListVolumesResponseBody extends TeaModel {
         /**
          * @return volumeInfo
          */
-        public java.util.List < VolumeInfo> getVolumeInfo() {
+        public java.util.List<VolumeInfo> getVolumeInfo() {
             return this.volumeInfo;
         }
 
         public static final class Builder {
-            private java.util.List < VolumeInfo> volumeInfo; 
+            private java.util.List<VolumeInfo> volumeInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdditionalVolumes model) {
+                this.volumeInfo = model.volumeInfo;
+            } 
 
             /**
              * VolumeInfo.
              */
-            public Builder volumeInfo(java.util.List < VolumeInfo> volumeInfo) {
+            public Builder volumeInfo(java.util.List<VolumeInfo> volumeInfo) {
                 this.volumeInfo = volumeInfo;
                 return this;
             }
@@ -386,32 +479,38 @@ public class ListVolumesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVolumesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVolumesResponseBody</p>
+     */
     public static class VolumesVolumeInfo extends TeaModel {
-        @NameInMap("AdditionalVolumes")
+        @com.aliyun.core.annotation.NameInMap("AdditionalVolumes")
         private AdditionalVolumes additionalVolumes;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RemoteDirectory")
+        @com.aliyun.core.annotation.NameInMap("RemoteDirectory")
         private String remoteDirectory;
 
-        @NameInMap("VolumeId")
+        @com.aliyun.core.annotation.NameInMap("VolumeId")
         private String volumeId;
 
-        @NameInMap("VolumeMountpoint")
+        @com.aliyun.core.annotation.NameInMap("VolumeMountpoint")
         private String volumeMountpoint;
 
-        @NameInMap("VolumeProtocol")
+        @com.aliyun.core.annotation.NameInMap("VolumeProtocol")
         private String volumeProtocol;
 
-        @NameInMap("VolumeType")
+        @com.aliyun.core.annotation.NameInMap("VolumeType")
         private String volumeType;
 
         private VolumesVolumeInfo(Builder builder) {
@@ -508,8 +607,23 @@ public class ListVolumesResponseBody extends TeaModel {
             private String volumeProtocol; 
             private String volumeType; 
 
+            private Builder() {
+            } 
+
+            private Builder(VolumesVolumeInfo model) {
+                this.additionalVolumes = model.additionalVolumes;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.regionId = model.regionId;
+                this.remoteDirectory = model.remoteDirectory;
+                this.volumeId = model.volumeId;
+                this.volumeMountpoint = model.volumeMountpoint;
+                this.volumeProtocol = model.volumeProtocol;
+                this.volumeType = model.volumeType;
+            } 
+
             /**
-             * The information of additional file systems mounted on E-HPC clusters.
+             * <p>The information of additional file systems mounted on E-HPC clusters.</p>
              */
             public Builder additionalVolumes(AdditionalVolumes additionalVolumes) {
                 this.additionalVolumes = additionalVolumes;
@@ -517,7 +631,10 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ehpc-hz-FYUr32****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -525,7 +642,10 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster1</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -533,7 +653,10 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -541,7 +664,10 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The remote directory on which the file system is mounted.
+             * <p>The remote directory on which the file system is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test1</p>
              */
             public Builder remoteDirectory(String remoteDirectory) {
                 this.remoteDirectory = remoteDirectory;
@@ -549,7 +675,10 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the file system.
+             * <p>The ID of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bc8a****</p>
              */
             public Builder volumeId(String volumeId) {
                 this.volumeId = volumeId;
@@ -557,7 +686,10 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the mount target.
+             * <p>The domain name of the mount target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bc8a****-rgd51.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder volumeMountpoint(String volumeMountpoint) {
                 this.volumeMountpoint = volumeMountpoint;
@@ -565,11 +697,14 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the storage protocol. Valid values:
-             * <p>
+             * <p>The type of the storage protocol. Valid values:</p>
+             * <ul>
+             * <li>NFS</li>
+             * <li>SMB</li>
+             * </ul>
              * 
-             * *   NFS
-             * *   SMB
+             * <strong>example:</strong>
+             * <p>NFS</p>
              */
             public Builder volumeProtocol(String volumeProtocol) {
                 this.volumeProtocol = volumeProtocol;
@@ -577,7 +712,10 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the file system that is mounted on the cluster. Only NAS is supported.
+             * <p>The type of the file system that is mounted on the cluster. Only NAS is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NAS</p>
              */
             public Builder volumeType(String volumeType) {
                 this.volumeType = volumeType;
@@ -591,9 +729,15 @@ public class ListVolumesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVolumesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVolumesResponseBody</p>
+     */
     public static class Volumes extends TeaModel {
-        @NameInMap("VolumeInfo")
-        private java.util.List < VolumesVolumeInfo> volumeInfo;
+        @com.aliyun.core.annotation.NameInMap("VolumeInfo")
+        private java.util.List<VolumesVolumeInfo> volumeInfo;
 
         private Volumes(Builder builder) {
             this.volumeInfo = builder.volumeInfo;
@@ -610,17 +754,24 @@ public class ListVolumesResponseBody extends TeaModel {
         /**
          * @return volumeInfo
          */
-        public java.util.List < VolumesVolumeInfo> getVolumeInfo() {
+        public java.util.List<VolumesVolumeInfo> getVolumeInfo() {
             return this.volumeInfo;
         }
 
         public static final class Builder {
-            private java.util.List < VolumesVolumeInfo> volumeInfo; 
+            private java.util.List<VolumesVolumeInfo> volumeInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Volumes model) {
+                this.volumeInfo = model.volumeInfo;
+            } 
 
             /**
              * VolumeInfo.
              */
-            public Builder volumeInfo(java.util.List < VolumesVolumeInfo> volumeInfo) {
+            public Builder volumeInfo(java.util.List<VolumesVolumeInfo> volumeInfo) {
                 this.volumeInfo = volumeInfo;
                 return this;
             }

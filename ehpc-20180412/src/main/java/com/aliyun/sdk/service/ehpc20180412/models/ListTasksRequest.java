@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTasksRequest} extends {@link RequestModel}
  *
  * <p>ListTasksRequest</p>
  */
 public class ListTasksRequest extends Request {
-    @Query
-    @NameInMap("Archived")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Archived")
     private Boolean archived;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 999, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 999, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private ListTasksRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class ListTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,15 +118,18 @@ public class ListTasksRequest extends Request {
         } 
 
         /**
-         * Specifies whether to display the response history of the asynchronous API operation. Valid values:
-         * <p>
+         * <p>Specifies whether to display the response history of the asynchronous API operation. Valid values:</p>
+         * <ul>
+         * <li>true: displays the current response and response history of the asynchronous API operation.</li>
+         * <li>false: displays only the current response of the asynchronous API operation. If no tasks are running, <code>[]</code> is returned.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p> If you specify the TaskId parameter, the Archived parameter is invalid.</p>
+         * </blockquote>
          * 
-         * *   true: displays the current response and response history of the asynchronous API operation.
-         * *   false: displays only the current response of the asynchronous API operation. If no tasks are running, `[]` is returned.
-         * 
-         * Default value: false
-         * 
-         * >  If you specify the TaskId parameter, the Archived parameter is invalid.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder archived(Boolean archived) {
             this.putQueryParameter("Archived", archived);
@@ -130,10 +138,12 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -142,7 +152,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Valid values: 1 to 999.
+         * <p>The page number. Pages start from page 1. Valid values: 1 to 999.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -151,10 +164,11 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 50.
-         * <p>
+         * <p>The number of entries per page. Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -163,18 +177,21 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * The ID of the task. You can call the following asynchronous API operations to obtain the task ID.
-         * <p>
+         * <p>The task ID. You can call the following asynchronous API operations to obtain the task ID.</p>
+         * <ul>
+         * <li><a href="https://help.aliyun.com/document_detail/87100.html">CreateCluster</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/200345.html">StartCluster</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/200346.html">StopCluster</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/87110.html">DeleteCluster</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/87147.html">AddNodes</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/87159.html">StartNodes</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/87158.html">ResetNodes</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/87160.html">StopNodes</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/87155.html">DeleteNodes</a></li>
+         * </ul>
          * 
-         * *   [CreateCluster](~~87100~~)
-         * *   [StartCluster](~~200345~~)
-         * *   [StopCluster](~~200346~~)
-         * *   [DeleteCluster](~~87110~~)
-         * *   [AddNodes](~~87147~~)
-         * *   [StartNodes](~~87159~~)
-         * *   [ResetNodes](~~87158~~)
-         * *   [StopNodes](~~87160~~)
-         * *   [DeleteNodes](~~87155~~)
+         * <strong>example:</strong>
+         * <p>B745C159-3155-4B94-95D0-4B73D4D2****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

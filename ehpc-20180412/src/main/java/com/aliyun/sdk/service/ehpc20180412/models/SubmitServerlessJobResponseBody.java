@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitServerlessJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitServerlessJobResponseBody</p>
  */
 public class SubmitServerlessJobResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SubmitServerlessJobResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class SubmitServerlessJobResponseBody extends TeaModel {
 
     public static SubmitServerlessJobResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class SubmitServerlessJobResponseBody extends TeaModel {
         private String jobId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(SubmitServerlessJobResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the serverless job.
+         * <p>The ID of the serverless job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +78,10 @@ public class SubmitServerlessJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterAttributesRequest} extends {@link RequestModel}
  *
  * <p>ModifyClusterAttributesRequest</p>
  */
 public class ModifyClusterAttributesRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("ImageOwnerAlias")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
     private String imageOwnerAlias;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("RamNodeTypes")
-    private java.util.List < String > ramNodeTypes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamNodeTypes")
+    private java.util.List<String> ramNodeTypes;
 
-    @Query
-    @NameInMap("RamRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamRoleName")
     private String ramRoleName;
 
-    @Query
-    @NameInMap("WinAdPar")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WinAdPar")
     private WinAdPar winAdPar;
 
     private ModifyClusterAttributesRequest(Builder builder) {
@@ -65,7 +70,7 @@ public class ModifyClusterAttributesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -108,7 +113,7 @@ public class ModifyClusterAttributesRequest extends Request {
     /**
      * @return ramNodeTypes
      */
-    public java.util.List < String > getRamNodeTypes() {
+    public java.util.List<String> getRamNodeTypes() {
         return this.ramNodeTypes;
     }
 
@@ -132,7 +137,7 @@ public class ModifyClusterAttributesRequest extends Request {
         private String imageId; 
         private String imageOwnerAlias; 
         private String name; 
-        private java.util.List < String > ramNodeTypes; 
+        private java.util.List<String> ramNodeTypes; 
         private String ramRoleName; 
         private WinAdPar winAdPar; 
 
@@ -153,7 +158,11 @@ public class ModifyClusterAttributesRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster that you want to modify.
+         * <p>The ID of the cluster that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -162,7 +171,10 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * The new cluster description.
+         * <p>The new cluster description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -171,7 +183,10 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * The IDs of the images.
+         * <p>The IDs of the images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_7_06_64_20G_alibase_2019071****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -180,13 +195,16 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * The new image type of the cluster. Valid values:
-         * <p>
+         * <p>The new image type of the cluster. Valid values:</p>
+         * <ul>
+         * <li>system: public image</li>
+         * <li>self: custom image</li>
+         * <li>others: shared image</li>
+         * <li>marketplace: Alibaba Cloud Marketplace image</li>
+         * </ul>
          * 
-         * *   system: public image
-         * *   self: custom image
-         * *   others: shared image
-         * *   marketplace: Alibaba Cloud Marketplace image
+         * <strong>example:</strong>
+         * <p>self</p>
          */
         public Builder imageOwnerAlias(String imageOwnerAlias) {
             this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
@@ -195,7 +213,10 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * The new cluster name.
+         * <p>The new cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -204,16 +225,19 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * The type of the node to which you want to bind the RAM role.
+         * <p>The type of the node to which you want to bind the RAM role.</p>
          */
-        public Builder ramNodeTypes(java.util.List < String > ramNodeTypes) {
+        public Builder ramNodeTypes(java.util.List<String> ramNodeTypes) {
             this.putQueryParameter("RamNodeTypes", ramNodeTypes);
             this.ramNodeTypes = ramNodeTypes;
             return this;
         }
 
         /**
-         * The name of the instance RAM role.
+         * <p>The name of the instance RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRamRoleName</p>
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -222,7 +246,7 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * The parameters that are used to connect to the Windows AD server.
+         * <p>The parameters that are used to connect to the Windows AD server.</p>
          */
         public Builder winAdPar(WinAdPar winAdPar) {
             this.putQueryParameter("WinAdPar", winAdPar);
@@ -237,20 +261,26 @@ public class ModifyClusterAttributesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyClusterAttributesRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyClusterAttributesRequest</p>
+     */
     public static class WinAdPar extends TeaModel {
-        @NameInMap("AdDc")
+        @com.aliyun.core.annotation.NameInMap("AdDc")
         private String adDc;
 
-        @NameInMap("AdIp")
+        @com.aliyun.core.annotation.NameInMap("AdIp")
         private String adIp;
 
-        @NameInMap("AdUser")
+        @com.aliyun.core.annotation.NameInMap("AdUser")
         private String adUser;
 
-        @NameInMap("AdUserPasswd")
+        @com.aliyun.core.annotation.NameInMap("AdUserPasswd")
         private String adUserPasswd;
 
-        @NameInMap("FallbackHomeDir")
+        @com.aliyun.core.annotation.NameInMap("FallbackHomeDir")
         private String fallbackHomeDir;
 
         private WinAdPar(Builder builder) {
@@ -311,8 +341,22 @@ public class ModifyClusterAttributesRequest extends Request {
             private String adUserPasswd; 
             private String fallbackHomeDir; 
 
+            private Builder() {
+            } 
+
+            private Builder(WinAdPar model) {
+                this.adDc = model.adDc;
+                this.adIp = model.adIp;
+                this.adUser = model.adUser;
+                this.adUserPasswd = model.adUserPasswd;
+                this.fallbackHomeDir = model.fallbackHomeDir;
+            } 
+
             /**
-             * The domain name of the Windows AD server.
+             * <p>The domain name of the Windows AD server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ehpcad.com</p>
              */
             public Builder adDc(String adDc) {
                 this.adDc = adDc;
@@ -320,7 +364,10 @@ public class ModifyClusterAttributesRequest extends Request {
             }
 
             /**
-             * The IP address of the Windows AD server.
+             * <p>The IP address of the Windows AD server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.2</p>
              */
             public Builder adIp(String adIp) {
                 this.adIp = adIp;
@@ -328,7 +375,10 @@ public class ModifyClusterAttributesRequest extends Request {
             }
 
             /**
-             * The Windows AD server administrator.
+             * <p>The Windows AD server administrator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>administrator</p>
              */
             public Builder adUser(String adUser) {
                 this.adUser = adUser;
@@ -336,7 +386,10 @@ public class ModifyClusterAttributesRequest extends Request {
             }
 
             /**
-             * The administrator password of the Windows AD server.
+             * <p>The administrator password of the Windows AD server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxx</p>
              */
             public Builder adUserPasswd(String adUserPasswd) {
                 this.adUserPasswd = adUserPasswd;
@@ -344,7 +397,10 @@ public class ModifyClusterAttributesRequest extends Request {
             }
 
             /**
-             * The home directory of the Linux server.
+             * <p>The home directory of the Linux server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home</p>
              */
             public Builder fallbackHomeDir(String fallbackHomeDir) {
                 this.fallbackHomeDir = fallbackHomeDir;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClusterResponseBody} extends {@link TeaModel}
  *
  * <p>CreateClusterResponseBody</p>
  */
 public class CreateClusterResponseBody extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private CreateClusterResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class CreateClusterResponseBody extends TeaModel {
 
     public static CreateClusterResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -61,8 +70,20 @@ public class CreateClusterResponseBody extends TeaModel {
         private String requestId; 
         private String taskId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateClusterResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
+
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -70,7 +91,10 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F6757FA4-8FED-4602-B7F5-3550C084****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,10 +102,13 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
-         * <p>
+         * <p>The task ID.</p>
+         * <blockquote>
+         * <p> CreateCluster is an asynchronous operation. A response is returned if the request succeeds. However, this does not mean that a cluster is created. You can call the <a href="https://help.aliyun.com/document_detail/268225.html">ListTasks</a> operation to query the result of the task.</p>
+         * </blockquote>
          * 
-         * >  CreateCluster is an asynchronous operation. A response is returned if the request succeeds. However, this does not mean that a cluster is created. You can call the [ListTasks](~~268225~~) operation to query the result of the task.
+         * <strong>example:</strong>
+         * <p>F6757FA4-8FED-4602-B7F5-3550C084****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

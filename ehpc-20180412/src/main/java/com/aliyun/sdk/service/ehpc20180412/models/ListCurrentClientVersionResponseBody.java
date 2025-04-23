@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCurrentClientVersionResponseBody} extends {@link TeaModel}
  *
  * <p>ListCurrentClientVersionResponseBody</p>
  */
 public class ListCurrentClientVersionResponseBody extends TeaModel {
-    @NameInMap("ClientVersion")
+    @com.aliyun.core.annotation.NameInMap("ClientVersion")
     private String clientVersion;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCurrentClientVersionResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class ListCurrentClientVersionResponseBody extends TeaModel {
 
     public static ListCurrentClientVersionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class ListCurrentClientVersionResponseBody extends TeaModel {
         private String clientVersion; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListCurrentClientVersionResponseBody model) {
+            this.clientVersion = model.clientVersion;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The latest version number of the E-HPC client.
+         * <p>The latest version number of ehpcutil.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1</p>
          */
         public Builder clientVersion(String clientVersion) {
             this.clientVersion = clientVersion;
@@ -58,7 +78,10 @@ public class ListCurrentClientVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

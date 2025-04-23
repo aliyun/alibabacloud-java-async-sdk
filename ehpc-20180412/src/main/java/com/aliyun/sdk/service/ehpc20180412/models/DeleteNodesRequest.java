@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNodesRequest} extends {@link RequestModel}
  *
  * <p>DeleteNodesRequest</p>
  */
 public class DeleteNodesRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Instance")
-    @Validation(required = true)
-    private java.util.List < Instance> instance;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Instance")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Instance> instance;
 
-    @Query
-    @NameInMap("ReleaseInstance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleaseInstance")
     private Boolean releaseInstance;
 
-    @Query
-    @NameInMap("Sync")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sync")
     private Boolean sync;
 
     private DeleteNodesRequest(Builder builder) {
@@ -46,7 +51,7 @@ public class DeleteNodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -61,7 +66,7 @@ public class DeleteNodesRequest extends Request {
     /**
      * @return instance
      */
-    public java.util.List < Instance> getInstance() {
+    public java.util.List<Instance> getInstance() {
         return this.instance;
     }
 
@@ -81,7 +86,7 @@ public class DeleteNodesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteNodesRequest, Builder> {
         private String clusterId; 
-        private java.util.List < Instance> instance; 
+        private java.util.List<Instance> instance; 
         private Boolean releaseInstance; 
         private Boolean sync; 
 
@@ -98,10 +103,12 @@ public class DeleteNodesRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -110,19 +117,20 @@ public class DeleteNodesRequest extends Request {
         }
 
         /**
-         * Instance.
+         * <p>This parameter is required.</p>
          */
-        public Builder instance(java.util.List < Instance> instance) {
+        public Builder instance(java.util.List<Instance> instance) {
             this.putQueryParameter("Instance", instance);
             this.instance = instance;
             return this;
         }
 
         /**
-         * Specifies whether to release the instances that are created by using E-HPC.
-         * <p>
+         * <p>Specifies whether to release the instances that are created by using E-HPC.</p>
+         * <p>Default value: true</p>
          * 
-         * Default value: true
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder releaseInstance(Boolean releaseInstance) {
             this.putQueryParameter("ReleaseInstance", releaseInstance);
@@ -131,11 +139,14 @@ public class DeleteNodesRequest extends Request {
         }
 
         /**
-         * Specifies whether to directly delete the node. Valid values:
-         * <p>
+         * <p>Specifies whether to directly delete the node. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder sync(Boolean sync) {
             this.putQueryParameter("Sync", sync);
@@ -150,8 +161,14 @@ public class DeleteNodesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteNodesRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteNodesRequest</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         private Instance(Builder builder) {
@@ -176,11 +193,19 @@ public class DeleteNodesRequest extends Request {
         public static final class Builder {
             private String id; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.id = model.id;
+            } 
+
             /**
-             * The ID of the compute node that you want to delete. Valid values of N: 1 to 100.
-             * <p>
+             * <p>The ID of the compute node that you want to delete. Valid values of N: 1 to 100.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/87126.html">DescribeCluster</a> operation to query the IDs of the nodes in the cluster.</p>
              * 
-             * You can call the [DescribeCluster](~~87126~~) operation to query the IDs of the nodes in the cluster.
+             * <strong>example:</strong>
+             * <p>i-bp13p7vlcb1uihfv****</p>
              */
             public Builder id(String id) {
                 this.id = id;

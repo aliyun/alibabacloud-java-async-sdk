@@ -1,179 +1,184 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHybridClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateHybridClusterRequest</p>
  */
 public class CreateHybridClusterRequest extends Request {
-    @Query
-    @NameInMap("EcsOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EcsOrder")
     private EcsOrder ecsOrder;
 
-    @Query
-    @NameInMap("Application")
-    private java.util.List < Application> application;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Application")
+    private java.util.List<Application> application;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ClientVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientVersion")
     private String clientVersion;
 
-    @Query
-    @NameInMap("ComputeSpotPriceLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputeSpotPriceLimit")
     private Float computeSpotPriceLimit;
 
-    @Query
-    @NameInMap("ComputeSpotStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputeSpotStrategy")
     private String computeSpotStrategy;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @Query
-    @NameInMap("EhpcVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EhpcVersion")
     private String ehpcVersion;
 
-    @Query
-    @NameInMap("HybridClusterOpMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HybridClusterOpMode")
     private String hybridClusterOpMode;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("ImageOwnerAlias")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
     private String imageOwnerAlias;
 
-    @Query
-    @NameInMap("JobQueue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobQueue")
     private String jobQueue;
 
-    @Query
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @Query
-    @NameInMap("Location")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Location")
     private String location;
 
-    @Query
-    @NameInMap("MultiOs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiOs")
     private Boolean multiOs;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Nodes")
-    private java.util.List < Nodes> nodes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Nodes")
+    private java.util.List<Nodes> nodes;
 
-    @Query
-    @NameInMap("OnPremiseVolumeLocalPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnPremiseVolumeLocalPath")
     private String onPremiseVolumeLocalPath;
 
-    @Query
-    @NameInMap("OnPremiseVolumeMountPoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnPremiseVolumeMountPoint")
     private String onPremiseVolumeMountPoint;
 
-    @Query
-    @NameInMap("OnPremiseVolumeProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnPremiseVolumeProtocol")
     private String onPremiseVolumeProtocol;
 
-    @Query
-    @NameInMap("OnPremiseVolumeRemotePath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnPremiseVolumeRemotePath")
     private String onPremiseVolumeRemotePath;
 
-    @Query
-    @NameInMap("OpenldapPar")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpenldapPar")
     private OpenldapPar openldapPar;
 
-    @Query
-    @NameInMap("OsTag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsTag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String osTag;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("Plugin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Plugin")
     private String plugin;
 
-    @Query
-    @NameInMap("PostInstallScript")
-    private java.util.List < PostInstallScript> postInstallScript;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PostInstallScript")
+    private java.util.List<PostInstallScript> postInstallScript;
 
-    @Query
-    @NameInMap("RemoteDirectory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoteDirectory")
     private String remoteDirectory;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SchedulerPreInstall")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchedulerPreInstall")
     private Boolean schedulerPreInstall;
 
-    @Query
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @Query
-    @NameInMap("SecurityGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupName")
     private String securityGroupName;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VolumeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VolumeId")
     private String volumeId;
 
-    @Query
-    @NameInMap("VolumeMountpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VolumeMountpoint")
     private String volumeMountpoint;
 
-    @Query
-    @NameInMap("VolumeProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VolumeProtocol")
     private String volumeProtocol;
 
-    @Query
-    @NameInMap("VolumeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VolumeType")
     private String volumeType;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("WinAdPar")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WinAdPar")
     private WinAdPar winAdPar;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateHybridClusterRequest(Builder builder) {
@@ -228,7 +233,7 @@ public class CreateHybridClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -243,7 +248,7 @@ public class CreateHybridClusterRequest extends Request {
     /**
      * @return application
      */
-    public java.util.List < Application> getApplication() {
+    public java.util.List<Application> getApplication() {
         return this.application;
     }
 
@@ -355,7 +360,7 @@ public class CreateHybridClusterRequest extends Request {
     /**
      * @return nodes
      */
-    public java.util.List < Nodes> getNodes() {
+    public java.util.List<Nodes> getNodes() {
         return this.nodes;
     }
 
@@ -418,7 +423,7 @@ public class CreateHybridClusterRequest extends Request {
     /**
      * @return postInstallScript
      */
-    public java.util.List < PostInstallScript> getPostInstallScript() {
+    public java.util.List<PostInstallScript> getPostInstallScript() {
         return this.postInstallScript;
     }
 
@@ -515,7 +520,7 @@ public class CreateHybridClusterRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateHybridClusterRequest, Builder> {
         private EcsOrder ecsOrder; 
-        private java.util.List < Application> application; 
+        private java.util.List<Application> application; 
         private String clientToken; 
         private String clientVersion; 
         private Float computeSpotPriceLimit; 
@@ -531,7 +536,7 @@ public class CreateHybridClusterRequest extends Request {
         private String location; 
         private Boolean multiOs; 
         private String name; 
-        private java.util.List < Nodes> nodes; 
+        private java.util.List<Nodes> nodes; 
         private String onPremiseVolumeLocalPath; 
         private String onPremiseVolumeMountPoint; 
         private String onPremiseVolumeProtocol; 
@@ -540,7 +545,7 @@ public class CreateHybridClusterRequest extends Request {
         private String osTag; 
         private String password; 
         private String plugin; 
-        private java.util.List < PostInstallScript> postInstallScript; 
+        private java.util.List<PostInstallScript> postInstallScript; 
         private String remoteDirectory; 
         private String resourceGroupId; 
         private Boolean schedulerPreInstall; 
@@ -613,16 +618,19 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * An array that consists of the information about the software.
+         * <p>An array that consists of the information about the software.</p>
          */
-        public Builder application(java.util.List < Application> application) {
+        public Builder application(java.util.List<Application> application) {
             this.putQueryParameter("Application", application);
             this.application = application;
             return this;
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence of a request?</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -631,7 +639,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The version of the client. By default, the latest version is used.
+         * <p>The version of the client. By default, the latest version is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.64</p>
          */
         public Builder clientVersion(String clientVersion) {
             this.putQueryParameter("ClientVersion", clientVersion);
@@ -640,7 +651,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The maximum hourly price for the ECS instance under the compute node. A maximum of three decimal places can be used in the value of the parameter. The parameter is valid only when the ComputeSpotStrategy parameter is set to SpotWithPriceLimit.
+         * <p>The maximum hourly price for the ECS instance under the compute node. A maximum of three decimal places can be used in the value of the parameter. The parameter is valid only when the ComputeSpotStrategy parameter is set to SpotWithPriceLimit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.034</p>
          */
         public Builder computeSpotPriceLimit(Float computeSpotPriceLimit) {
             this.putQueryParameter("ComputeSpotPriceLimit", computeSpotPriceLimit);
@@ -649,14 +663,16 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The preemption policy of the compute nodes. Valid values:
-         * <p>
+         * <p>The preemption policy of the compute nodes. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The compute nodes are pay-as-you-go instances.</li>
+         * <li>SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</li>
+         * </ul>
+         * <p>Default value: NoSpot.</p>
          * 
-         * *   NoSpot: The compute nodes are pay-as-you-go instances.
-         * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
-         * 
-         * Default value: NoSpot.
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         public Builder computeSpotStrategy(String computeSpotStrategy) {
             this.putQueryParameter("ComputeSpotStrategy", computeSpotStrategy);
@@ -665,10 +681,11 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The description of the E-HPC cluster. The description must be 2 to 256 characters in length and cannot start with `http://` or` https://`.
-         * <p>
+         * <p>The description of the E-HPC cluster. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or<code> https://</code>.</p>
+         * <p>This parameter is empty by default.</p>
          * 
-         * This parameter is empty by default.
+         * <strong>example:</strong>
+         * <p>TestDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -677,13 +694,15 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The type of the domain account service. Valid values:
-         * <p>
+         * <p>The type of the domain account service. Valid values:</p>
+         * <ul>
+         * <li>nis</li>
+         * <li>ldap</li>
+         * </ul>
+         * <p>Default value: nis.</p>
          * 
-         * *   nis
-         * *   ldap
-         * 
-         * Default value: nis.
+         * <strong>example:</strong>
+         * <p>nis</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -692,7 +711,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The version of E-HPC. By default, the latest version is used.
+         * <p>The version of E-HPC. By default, the latest version is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder ehpcVersion(String ehpcVersion) {
             this.putQueryParameter("EhpcVersion", ehpcVersion);
@@ -701,11 +723,14 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The mode in which the proxy node manages the offline nodes. Valid values:
-         * <p>
+         * <p>The mode in which the proxy node manages the offline nodes. Valid values:</p>
+         * <ul>
+         * <li>SSH: indicates management via SSH logon.</li>
+         * <li>CA: indicates management through Cloud Assistant.</li>
+         * </ul>
          * 
-         * *   SSH: indicates management via SSH logon.
-         * *   CA: indicates management through Cloud Assistant.
+         * <strong>example:</strong>
+         * <p>SSH</p>
          */
         public Builder hybridClusterOpMode(String hybridClusterOpMode) {
             this.putQueryParameter("HybridClusterOpMode", hybridClusterOpMode);
@@ -714,7 +739,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The IDs of the images.
+         * <p>The IDs of the images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wi_1607_x64_dtc_zh_40G_alibase****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -723,13 +751,16 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The type of the image. Valid values:
-         * <p>
+         * <p>The type of the image. Valid values:</p>
+         * <ul>
+         * <li>system: public image</li>
+         * <li>self: custom image</li>
+         * <li>others: shared image</li>
+         * <li>marketplace: Alibaba Cloud Marketplace image</li>
+         * </ul>
          * 
-         * *   system: public image
-         * *   self: custom image
-         * *   others: shared image
-         * *   marketplace: Alibaba Cloud Marketplace image
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder imageOwnerAlias(String imageOwnerAlias) {
             this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
@@ -738,7 +769,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The default queue of the scale-out nodes.
+         * <p>The default queue of the scale-out nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workq</p>
          */
         public Builder jobQueue(String jobQueue) {
             this.putQueryParameter("JobQueue", jobQueue);
@@ -747,10 +781,13 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The name of the key pair. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with http:// or https://.[](http://https://。、（:）、（\_）（-）。)
-         * <p>
+         * <p>The name of the key pair. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with http:// or https://.<a href="http://https://%E3%80%82%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82"></a></p>
+         * <blockquote>
+         * <p>To use an SSH key pair, see <a href="https://help.aliyun.com/document_detail/51793.html">Create an SSH key pair</a>.</p>
+         * </blockquote>
          * 
-         * > To use an SSH key pair, see [Create an SSH key pair](~~51793~~).
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -759,7 +796,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The location where the cluster resides. Set the value to OnPremise.
+         * <p>The location where the cluster resides. Set the value to OnPremise.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OnPremise</p>
          */
         public Builder location(String location) {
             this.putQueryParameter("Location", location);
@@ -768,13 +808,15 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether the cluster supports multiple operating systems. Valid values:
-         * <p>
+         * <p>Specifies whether the cluster supports multiple operating systems. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder multiOs(Boolean multiOs) {
             this.putQueryParameter("MultiOs", multiOs);
@@ -783,7 +825,11 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The name of the cluster. The name must be 2 to 64 characters in length, and can contain only letters, digits, hyphens (-), and underscores (\_). It must start with a letter.
+         * <p>The name of the cluster. The name must be 2 to 64 characters in length, and can contain only letters, digits, hyphens (-), and underscores (_). It must start with a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hybridcluster</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -792,16 +838,19 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The information about the nodes in the local cluster.
+         * <p>The information about the nodes in the local cluster.</p>
          */
-        public Builder nodes(java.util.List < Nodes> nodes) {
+        public Builder nodes(java.util.List<Nodes> nodes) {
             this.putQueryParameter("Nodes", nodes);
             this.nodes = nodes;
             return this;
         }
 
         /**
-         * The path in which the on-premises file system is mounted on the nodes on the cloud.
+         * <p>The path in which the on-premises file system is mounted on the nodes on the cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/OnCloudDirectory</p>
          */
         public Builder onPremiseVolumeLocalPath(String onPremiseVolumeLocalPath) {
             this.putQueryParameter("OnPremiseVolumeLocalPath", onPremiseVolumeLocalPath);
@@ -810,7 +859,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The mount target of the on-premises file system.
+         * <p>The mount target of the on-premises file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RemoteNasDomain.com</p>
          */
         public Builder onPremiseVolumeMountPoint(String onPremiseVolumeMountPoint) {
             this.putQueryParameter("OnPremiseVolumeMountPoint", onPremiseVolumeMountPoint);
@@ -819,7 +871,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The type of the protocol that is used by the on-premises file system. Only NFS is supported.
+         * <p>The type of the protocol that is used by the on-premises file system. Only NFS is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NFS</p>
          */
         public Builder onPremiseVolumeProtocol(String onPremiseVolumeProtocol) {
             this.putQueryParameter("OnPremiseVolumeProtocol", onPremiseVolumeProtocol);
@@ -828,7 +883,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The mount path of the on-premises file system.
+         * <p>The mount path of the on-premises file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/RemoteDirectory</p>
          */
         public Builder onPremiseVolumeRemotePath(String onPremiseVolumeRemotePath) {
             this.putQueryParameter("OnPremiseVolumeRemotePath", onPremiseVolumeRemotePath);
@@ -837,7 +895,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The parameter that is used to connect to the OpenLDAP server.
+         * <p>The parameter that is used to connect to the OpenLDAP server.</p>
          */
         public Builder openldapPar(OpenldapPar openldapPar) {
             this.putQueryParameter("OpenldapPar", openldapPar);
@@ -846,7 +904,11 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The image tag of the operating system. You can call the [ListImages](~~87213~~) operation to query the image tag.
+         * <p>The image tag of the operating system. You can call the <a href="https://help.aliyun.com/document_detail/87213.html">ListImages</a> operation to query the image tag.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         public Builder osTag(String osTag) {
             this.putQueryParameter("OsTag", osTag);
@@ -855,10 +917,13 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The root password of the logon node. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported: `() ~ ! @ # $ % ^ & * - = + | { } [ ] : ; ‘ < > , . ? /`
-         * <p>
+         * <p>The root password of the logon node. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported: <code>() ~ ! @ # $ % ^ &amp; * - = + | { } [ ] : ; ‘ &lt; &gt; , . ? /</code></p>
+         * <blockquote>
+         * <p>We recommend that you use HTTPS to call the API operation to prevent password leakage.</p>
+         * </blockquote>
          * 
-         * > We recommend that you use HTTPS to call the API operation to prevent password leakage.
+         * <strong>example:</strong>
+         * <p>123****</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -867,19 +932,23 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The mode configurations of the plug-in. This parameter takes effect only when the SchedulerType parameter is set to custom.
-         * <p>
+         * <p>The mode configurations of the plug-in. This parameter takes effect only when the SchedulerType parameter is set to custom.</p>
+         * <p>The value must be a JSON string. The parameter contains the following parameters: pluginMod, pluginLocalPath, and pluginOssPath.</p>
+         * <ul>
+         * <li><p>pluginMod: the mode of the plug-in. The following modes are supported:</p>
+         * <ul>
+         * <li>oss: The plug-in is downloaded and decompressed from OSS to a local path. The local path is specified by the pluginLocalPath parameter.</li>
+         * <li>image: By default, the plug-in is stored in a pre-defined local path. The local path is specified by the pluginLocalPath parameter.</li>
+         * </ul>
+         * </li>
+         * <li><p>pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in oss mode and a non-shared directory in image mode.</p>
+         * </li>
+         * <li><p>pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only when the pluginMod parameter is set to oss.</p>
+         * </li>
+         * </ul>
          * 
-         * The value must be a JSON string. The parameter contains the following parameters: pluginMod, pluginLocalPath, and pluginOssPath.
-         * 
-         * *   pluginMod: the mode of the plug-in. The following modes are supported:
-         * 
-         *     *   oss: The plug-in is downloaded and decompressed from OSS to a local path. The local path is specified by the pluginLocalPath parameter.
-         *     *   image: By default, the plug-in is stored in a pre-defined local path. The local path is specified by the pluginLocalPath parameter.
-         * 
-         * *   pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in oss mode and a non-shared directory in image mode.
-         * 
-         * *   pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only when the pluginMod parameter is set to oss.
+         * <strong>example:</strong>
+         * <p>{&quot;pluginMod&quot;: &quot;oss&quot;,&quot;pluginLocalPath&quot;: &quot;/opt/plugin&quot;,&quot;pluginOssPath&quot;: &quot;<a href="https://bucket.oss-cn-hangzhou.aliyuncs.com/plugin/plugin.tgz%22%7D">https://bucket.oss-cn-hangzhou.aliyuncs.com/plugin/plugin.tgz&quot;}</a></p>
          */
         public Builder plugin(String plugin) {
             this.putQueryParameter("Plugin", plugin);
@@ -888,16 +957,19 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The list of post-installation script information.
+         * <p>The list of post-installation script information.</p>
          */
-        public Builder postInstallScript(java.util.List < PostInstallScript> postInstallScript) {
+        public Builder postInstallScript(java.util.List<PostInstallScript> postInstallScript) {
             this.putQueryParameter("PostInstallScript", postInstallScript);
             this.postInstallScript = postInstallScript;
             return this;
         }
 
         /**
-         * The remote directory to which the file system is mounted.
+         * <p>The remote directory to which the file system is mounted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/RemoteDirectory</p>
          */
         public Builder remoteDirectory(String remoteDirectory) {
             this.putQueryParameter("RemoteDirectory", remoteDirectory);
@@ -906,7 +978,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -915,11 +990,14 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether the scheduler is preinstalled for the image. Valid values:
-         * <p>
+         * <p>Specifies whether the scheduler is preinstalled for the image. Valid values:</p>
+         * <ul>
+         * <li>true: The scheduler is preinstalled. When you create or add a node, you do not need to install the scheduler.</li>
+         * <li>false: The scheduler is not preinstalled. When you create or add a cluster, you must install the scheduler.</li>
+         * </ul>
          * 
-         * *   true: The scheduler is preinstalled. When you create or add a node, you do not need to install the scheduler.
-         * *   false: The scheduler is not preinstalled. When you create or add a cluster, you must install the scheduler.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder schedulerPreInstall(Boolean schedulerPreInstall) {
             this.putQueryParameter("SchedulerPreInstall", schedulerPreInstall);
@@ -928,10 +1006,13 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * You can select an existing security group by its ID.
-         * <p>
+         * <p>You can select an existing security group by its ID.</p>
+         * <blockquote>
+         * <p>If you specify this parameter, you cannot specify the <code>SecurityGroupName</code>  parameter.</p>
+         * </blockquote>
          * 
-         * > If you specify this parameter, you cannot specify the `SecurityGroupName`  parameter.
+         * <strong>example:</strong>
+         * <p>sg-bp13n61xsydodfyg****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -940,10 +1021,13 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * If you do not use an existing security group, set the parameter to the name of a new security group. A default policy is applied to the new security group.
-         * <p>
+         * <p>If you do not use an existing security group, set the parameter to the name of a new security group. A default policy is applied to the new security group.</p>
+         * <blockquote>
+         * <p>If you specify this parameter, you cannot specify the <code>SecurityGroupId</code> parameter.</p>
+         * </blockquote>
          * 
-         * > If you specify this parameter, you cannot specify the `SecurityGroupId` parameter.
+         * <strong>example:</strong>
+         * <p>ehpc-SecurityGroup</p>
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);
@@ -952,7 +1036,11 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which the instance connects to.
+         * <p>The ID of the vSwitch to which the instance connects to.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1lfcjbfb099rrjn****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -961,7 +1049,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The ID of the file system. NAS file systems cannot be automatically created.
+         * <p>The ID of the file system. NAS file systems cannot be automatically created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>008b64****</p>
          */
         public Builder volumeId(String volumeId) {
             this.putQueryParameter("VolumeId", volumeId);
@@ -970,7 +1061,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The mount target of the NAS file system. The mount target is of the VPC type. Mount targets cannot be automatically created for NAS file systems.
+         * <p>The mount target of the NAS file system. The mount target is of the VPC type. Mount targets cannot be automatically created for NAS file systems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>008b648bcb-s****.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder volumeMountpoint(String volumeMountpoint) {
             this.putQueryParameter("VolumeMountpoint", volumeMountpoint);
@@ -979,7 +1073,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The type of the protocol that is used by the NAS file system. Only NFS is supported.
+         * <p>The type of the protocol that is used by the NAS file system. Only NFS is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NFS</p>
          */
         public Builder volumeProtocol(String volumeProtocol) {
             this.putQueryParameter("VolumeProtocol", volumeProtocol);
@@ -988,7 +1085,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The type of the file system. Only NAS file systems are supported.
+         * <p>The type of the file system. Only NAS file systems are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NAS</p>
          */
         public Builder volumeType(String volumeType) {
             this.putQueryParameter("VolumeType", volumeType);
@@ -997,7 +1097,11 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the E-HPC cluster belongs.
+         * <p>The ID of the virtual private cloud (VPC) to which the E-HPC cluster belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-b3f3edefefeep0760yju****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -1006,7 +1110,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The parameter that is used to connect to the Windows AD server.
+         * <p>The parameter that is used to connect to the Windows AD server.</p>
          */
         public Builder winAdPar(WinAdPar winAdPar) {
             this.putQueryParameter("WinAdPar", winAdPar);
@@ -1015,7 +1119,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * The ID of the zone.
+         * <p>The ID of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -1030,9 +1137,15 @@ public class CreateHybridClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateHybridClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHybridClusterRequest</p>
+     */
     public static class Compute extends TeaModel {
-        @NameInMap("InstanceType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceType;
 
         private Compute(Builder builder) {
@@ -1057,8 +1170,19 @@ public class CreateHybridClusterRequest extends Request {
         public static final class Builder {
             private String instanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Compute model) {
+                this.instanceType = model.instanceType;
+            } 
+
             /**
-             * The instance type of the compute nodes.
+             * <p>The instance type of the compute nodes.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.n1.tiny</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1072,8 +1196,14 @@ public class CreateHybridClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHybridClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHybridClusterRequest</p>
+     */
     public static class Manager extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
         private Manager(Builder builder) {
@@ -1098,8 +1228,18 @@ public class CreateHybridClusterRequest extends Request {
         public static final class Builder {
             private String instanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Manager model) {
+                this.instanceType = model.instanceType;
+            } 
+
             /**
-             * The instance type of the management node. Only Proxy Mode is supported.
+             * <p>The instance type of the management node. Only Proxy Mode is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.n1.tiny</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1113,13 +1253,19 @@ public class CreateHybridClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHybridClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHybridClusterRequest</p>
+     */
     public static class EcsOrder extends TeaModel {
-        @NameInMap("Compute")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Compute")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Compute compute;
 
-        @NameInMap("Manager")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Manager")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Manager manager;
 
         private EcsOrder(Builder builder) {
@@ -1153,6 +1299,14 @@ public class CreateHybridClusterRequest extends Request {
             private Compute compute; 
             private Manager manager; 
 
+            private Builder() {
+            } 
+
+            private Builder(EcsOrder model) {
+                this.compute = model.compute;
+                this.manager = model.manager;
+            } 
+
             /**
              * Compute.
              */
@@ -1176,8 +1330,14 @@ public class CreateHybridClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHybridClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHybridClusterRequest</p>
+     */
     public static class Application extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private Application(Builder builder) {
@@ -1202,8 +1362,18 @@ public class CreateHybridClusterRequest extends Request {
         public static final class Builder {
             private String tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Application model) {
+                this.tag = model.tag;
+            } 
+
             /**
-             * The tag of the software.
+             * <p>The tag of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenMPI_11.1</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1217,23 +1387,29 @@ public class CreateHybridClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHybridClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHybridClusterRequest</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
-        @NameInMap("Dir")
+        @com.aliyun.core.annotation.NameInMap("Dir")
         private String dir;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("SchedulerType")
+        @com.aliyun.core.annotation.NameInMap("SchedulerType")
         private String schedulerType;
 
         private Nodes(Builder builder) {
@@ -1303,14 +1479,28 @@ public class CreateHybridClusterRequest extends Request {
             private String role; 
             private String schedulerType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.accountType = model.accountType;
+                this.dir = model.dir;
+                this.hostName = model.hostName;
+                this.ipAddress = model.ipAddress;
+                this.role = model.role;
+                this.schedulerType = model.schedulerType;
+            } 
+
             /**
-             * The service type of the domain account to which the on-premises node in the cluster belongs. Valid values:
-             * <p>
+             * <p>The service type of the domain account to which the on-premises node in the cluster belongs. Valid values:</p>
+             * <ul>
+             * <li>nis</li>
+             * <li>ldap</li>
+             * </ul>
+             * <p>Default value: nis.</p>
              * 
-             * *   nis
-             * *   ldap
-             * 
-             * Default value: nis.
+             * <strong>example:</strong>
+             * <p>nis</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -1318,7 +1508,10 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * The directory of the on-premises node in the cluster.
+             * <p>The directory of the on-premises node in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/opt/sge/default/</p>
              */
             public Builder dir(String dir) {
                 this.dir = dir;
@@ -1326,7 +1519,10 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * The hostname of the on-premises node in the cluster.
+             * <p>The hostname of the on-premises node in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -1334,7 +1530,10 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * The IP address of the on-premises node in the cluster.
+             * <p>The IP address of the on-premises node in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00b648b****</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -1342,12 +1541,15 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * The role of the on-premises node in the cluster. Valid values:
-             * <p>
+             * <p>The role of the on-premises node in the cluster. Valid values:</p>
+             * <ul>
+             * <li>Manager: management node</li>
+             * <li>Login: logon node</li>
+             * <li>Compute: compute node</li>
+             * </ul>
              * 
-             * *   Manager: management node
-             * *   Login: logon node
-             * *   Compute: compute node
+             * <strong>example:</strong>
+             * <p>Compute</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -1355,15 +1557,17 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * The scheduler type of the on-premises node in the cluster. Valid values:
-             * <p>
+             * <p>The scheduler type of the on-premises node in the cluster. Valid values:</p>
+             * <ul>
+             * <li>pbs</li>
+             * <li>slurm</li>
+             * <li>opengridscheduler</li>
+             * <li>deadline</li>
+             * </ul>
+             * <p>Default value: pbs.</p>
              * 
-             * *   pbs
-             * *   slurm
-             * *   opengridscheduler
-             * *   deadline
-             * 
-             * Default value: pbs.
+             * <strong>example:</strong>
+             * <p>pbs</p>
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -1377,14 +1581,20 @@ public class CreateHybridClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHybridClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHybridClusterRequest</p>
+     */
     public static class OpenldapPar extends TeaModel {
-        @NameInMap("BaseDn")
+        @com.aliyun.core.annotation.NameInMap("BaseDn")
         private String baseDn;
 
-        @NameInMap("FallbackHomeDir")
+        @com.aliyun.core.annotation.NameInMap("FallbackHomeDir")
         private String fallbackHomeDir;
 
-        @NameInMap("LdapServerIp")
+        @com.aliyun.core.annotation.NameInMap("LdapServerIp")
         private String ldapServerIp;
 
         private OpenldapPar(Builder builder) {
@@ -1427,8 +1637,20 @@ public class CreateHybridClusterRequest extends Request {
             private String fallbackHomeDir; 
             private String ldapServerIp; 
 
+            private Builder() {
+            } 
+
+            private Builder(OpenldapPar model) {
+                this.baseDn = model.baseDn;
+                this.fallbackHomeDir = model.fallbackHomeDir;
+                this.ldapServerIp = model.ldapServerIp;
+            } 
+
             /**
-             * The BaseDN of the LDAP server.
+             * <p>The BaseDN of the LDAP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ehpctest</p>
              */
             public Builder baseDn(String baseDn) {
                 this.baseDn = baseDn;
@@ -1436,7 +1658,10 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * The home directory of the Linux server.
+             * <p>The home directory of the Linux server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home</p>
              */
             public Builder fallbackHomeDir(String fallbackHomeDir) {
                 this.fallbackHomeDir = fallbackHomeDir;
@@ -1444,7 +1669,10 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * The IP address of the LDAP server.
+             * <p>The IP address of the LDAP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.2</p>
              */
             public Builder ldapServerIp(String ldapServerIp) {
                 this.ldapServerIp = ldapServerIp;
@@ -1458,11 +1686,17 @@ public class CreateHybridClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHybridClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHybridClusterRequest</p>
+     */
     public static class PostInstallScript extends TeaModel {
-        @NameInMap("Args")
+        @com.aliyun.core.annotation.NameInMap("Args")
         private String args;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private PostInstallScript(Builder builder) {
@@ -1496,8 +1730,19 @@ public class CreateHybridClusterRequest extends Request {
             private String args; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(PostInstallScript model) {
+                this.args = model.args;
+                this.url = model.url;
+            } 
+
             /**
-             * The parameter that is used to run the script after the cluster is created.
+             * <p>The parameter that is used to run the script after the cluster is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bash file.sh</p>
              */
             public Builder args(String args) {
                 this.args = args;
@@ -1505,7 +1750,10 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * The full path of the post-installation script.
+             * <p>The full path of the post-installation script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/opt/job.sh</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1519,17 +1767,23 @@ public class CreateHybridClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHybridClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHybridClusterRequest</p>
+     */
     public static class WinAdPar extends TeaModel {
-        @NameInMap("AdDc")
+        @com.aliyun.core.annotation.NameInMap("AdDc")
         private String adDc;
 
-        @NameInMap("AdIp")
+        @com.aliyun.core.annotation.NameInMap("AdIp")
         private String adIp;
 
-        @NameInMap("AdUser")
+        @com.aliyun.core.annotation.NameInMap("AdUser")
         private String adUser;
 
-        @NameInMap("AdUserPasswd")
+        @com.aliyun.core.annotation.NameInMap("AdUserPasswd")
         private String adUserPasswd;
 
         private WinAdPar(Builder builder) {
@@ -1581,8 +1835,21 @@ public class CreateHybridClusterRequest extends Request {
             private String adUser; 
             private String adUserPasswd; 
 
+            private Builder() {
+            } 
+
+            private Builder(WinAdPar model) {
+                this.adDc = model.adDc;
+                this.adIp = model.adIp;
+                this.adUser = model.adUser;
+                this.adUserPasswd = model.adUserPasswd;
+            } 
+
             /**
-             * The name of the AD domain.
+             * <p>The name of the AD domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ad-hybrid001.ehpcad.com</p>
              */
             public Builder adDc(String adDc) {
                 this.adDc = adDc;
@@ -1590,7 +1857,10 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * The IP address of the AD domain.
+             * <p>The IP address of the AD domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.2</p>
              */
             public Builder adIp(String adIp) {
                 this.adIp = adIp;
@@ -1598,7 +1868,10 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * The AD user.
+             * <p>The AD user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Administrator</p>
              */
             public Builder adUser(String adUser) {
                 this.adUser = adUser;
@@ -1606,7 +1879,10 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * The password of the AD user.
+             * <p>The password of the AD user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxx</p>
              */
             public Builder adUserPasswd(String adUserPasswd) {
                 this.adUserPasswd = adUserPasswd;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitJobResponseBody</p>
  */
 public class SubmitJobResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SubmitJobResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class SubmitJobResponseBody extends TeaModel {
 
     public static SubmitJobResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class SubmitJobResponseBody extends TeaModel {
         private String jobId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(SubmitJobResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the job.
+         * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.manager</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +78,10 @@ public class SubmitJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

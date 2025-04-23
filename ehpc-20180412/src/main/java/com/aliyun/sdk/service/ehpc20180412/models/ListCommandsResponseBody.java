@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCommandsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCommandsResponseBody</p>
  */
 public class ListCommandsResponseBody extends TeaModel {
-    @NameInMap("Commands")
+    @com.aliyun.core.annotation.NameInMap("Commands")
     private Commands commands;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListCommandsResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListCommandsResponseBody extends TeaModel {
 
     public static ListCommandsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,19 @@ public class ListCommandsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListCommandsResponseBody model) {
+            this.commands = model.commands;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The list of commands.
+         * <p>The list of commands.</p>
          */
         public Builder commands(Commands commands) {
             this.commands = commands;
@@ -94,7 +114,10 @@ public class ListCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +125,10 @@ public class ListCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +136,10 @@ public class ListCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class ListCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,17 +163,23 @@ public class ListCommandsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCommandsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCommandsResponseBody</p>
+     */
     public static class Command extends TeaModel {
-        @NameInMap("CommandContent")
+        @com.aliyun.core.annotation.NameInMap("CommandContent")
         private String commandContent;
 
-        @NameInMap("CommandId")
+        @com.aliyun.core.annotation.NameInMap("CommandId")
         private String commandId;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private String timeout;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private Command(Builder builder) {
@@ -193,8 +231,21 @@ public class ListCommandsResponseBody extends TeaModel {
             private String timeout; 
             private String workingDir; 
 
+            private Builder() {
+            } 
+
+            private Builder(Command model) {
+                this.commandContent = model.commandContent;
+                this.commandId = model.commandId;
+                this.timeout = model.timeout;
+                this.workingDir = model.workingDir;
+            } 
+
             /**
-             * The content of the command.
+             * <p>The content of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>echo &quot;hello world&quot;</p>
              */
             public Builder commandContent(String commandContent) {
                 this.commandContent = commandContent;
@@ -202,7 +253,10 @@ public class ListCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the command.
+             * <p>The ID of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-hz01v8vudql****</p>
              */
             public Builder commandId(String commandId) {
                 this.commandId = commandId;
@@ -210,7 +264,10 @@ public class ListCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period. Unit: seconds.
+             * <p>The timeout period. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder timeout(String timeout) {
                 this.timeout = timeout;
@@ -218,7 +275,10 @@ public class ListCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The working directory of the command.
+             * <p>The working directory of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home</p>
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -232,9 +292,15 @@ public class ListCommandsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCommandsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCommandsResponseBody</p>
+     */
     public static class Commands extends TeaModel {
-        @NameInMap("Command")
-        private java.util.List < Command> command;
+        @com.aliyun.core.annotation.NameInMap("Command")
+        private java.util.List<Command> command;
 
         private Commands(Builder builder) {
             this.command = builder.command;
@@ -251,17 +317,24 @@ public class ListCommandsResponseBody extends TeaModel {
         /**
          * @return command
          */
-        public java.util.List < Command> getCommand() {
+        public java.util.List<Command> getCommand() {
             return this.command;
         }
 
         public static final class Builder {
-            private java.util.List < Command> command; 
+            private java.util.List<Command> command; 
+
+            private Builder() {
+            } 
+
+            private Builder(Commands model) {
+                this.command = model.command;
+            } 
 
             /**
              * Command.
              */
-            public Builder command(java.util.List < Command> command) {
+            public Builder command(java.util.List<Command> command) {
                 this.command = command;
                 return this;
             }

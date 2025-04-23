@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJobTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateJobTemplateResponseBody</p>
  */
 public class CreateJobTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
     private CreateJobTemplateResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class CreateJobTemplateResponseBody extends TeaModel {
 
     public static CreateJobTemplateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class CreateJobTemplateResponseBody extends TeaModel {
         private String requestId; 
         private String templateId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateJobTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.templateId = model.templateId;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,10 @@ public class CreateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the job template.
+         * <p>The ID of the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-job-tmpl-6RxO5y****</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;

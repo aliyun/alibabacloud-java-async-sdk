@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartVisualServiceResponseBody} extends {@link TeaModel}
  *
  * <p>StartVisualServiceResponseBody</p>
  */
 public class StartVisualServiceResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private StartVisualServiceResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class StartVisualServiceResponseBody extends TeaModel {
 
     public static StartVisualServiceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,12 +58,23 @@ public class StartVisualServiceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(StartVisualServiceResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The status of the VNC Remote visualization service. Valid values:
-         * <p>
+         * <p>The status of the VNC Remote visualization service. Valid values:</p>
+         * <ul>
+         * <li>Service started</li>
+         * <li>Service stopped</li>
+         * </ul>
          * 
-         * *   Service started
-         * *   Service stopped
+         * <strong>example:</strong>
+         * <p>Service started</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -62,7 +82,10 @@ public class StartVisualServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>896D338C-E4F4-41EC-A154-D605E5DE6880</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

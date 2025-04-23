@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyUserGroupsRequest} extends {@link RequestModel}
  *
  * <p>ModifyUserGroupsRequest</p>
  */
 public class ModifyUserGroupsRequest extends Request {
-    @Query
-    @NameInMap("Async")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Async")
     private Boolean async;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("User")
-    @Validation(required = true)
-    private java.util.List < User> user;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("User")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<User> user;
 
     private ModifyUserGroupsRequest(Builder builder) {
         super(builder);
@@ -41,7 +46,7 @@ public class ModifyUserGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -63,14 +68,14 @@ public class ModifyUserGroupsRequest extends Request {
     /**
      * @return user
      */
-    public java.util.List < User> getUser() {
+    public java.util.List<User> getUser() {
         return this.user;
     }
 
     public static final class Builder extends Request.Builder<ModifyUserGroupsRequest, Builder> {
         private Boolean async; 
         private String clusterId; 
-        private java.util.List < User> user; 
+        private java.util.List<User> user; 
 
         private Builder() {
             super();
@@ -84,10 +89,11 @@ public class ModifyUserGroupsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the asynchronous mode for this request.
-         * <p>
+         * <p>Specifies whether to use asynchronous message links to change the user group.</p>
+         * <p>Default value: false.</p>
          * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -96,10 +102,12 @@ public class ModifyUserGroupsRequest extends Request {
         }
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to obtain the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -108,9 +116,10 @@ public class ModifyUserGroupsRequest extends Request {
         }
 
         /**
-         * The information about the user.
+         * <p>The users. You can specify 1 to 100 users.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder user(java.util.List < User> user) {
+        public Builder user(java.util.List<User> user) {
             this.putQueryParameter("User", user);
             this.user = user;
             return this;
@@ -123,11 +132,17 @@ public class ModifyUserGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyUserGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyUserGroupsRequest</p>
+     */
     public static class User extends TeaModel {
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private User(Builder builder) {
@@ -161,12 +176,23 @@ public class ModifyUserGroupsRequest extends Request {
             private String group; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.group = model.group;
+                this.name = model.name;
+            } 
+
             /**
-             * The new permission group of the user N. Valid values:
-             * <p>
+             * <p>The user group to be changed. Valid values:</p>
+             * <ul>
+             * <li>users: ordinary permissions, which are suitable for ordinary users that need only to submit and debug jobs.</li>
+             * <li>wheel: sudo permissions, which are suitable for administrators who need to manage clusters. In addition to submitting and debugging jobs, you can also run sudo commands to install software and restart nodes.</li>
+             * </ul>
              * 
-             * *   users: an ordinary permission group. It is applicable to ordinary users that need only to submit and debug jobs.
-             * *   wheel: a sudo permission group. It is applicable to the administrator who needs to manage the cluster. In addition to submitting and debugging jobs, users who have sudo permissions can run sudo commands to install software and restart nodes.
+             * <strong>example:</strong>
+             * <p>users</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -174,10 +200,11 @@ public class ModifyUserGroupsRequest extends Request {
             }
 
             /**
-             * The name of the user N whose permissions you want to modify. Valid values of N: 1 to 100.
-             * <p>
+             * <p>The username.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/188572.html">ListUsers</a> operation to query the usernames in the cluster.</p>
              * 
-             * You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.
+             * <strong>example:</strong>
+             * <p>user11</p>
              */
             public Builder name(String name) {
                 this.name = name;

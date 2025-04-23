@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20180412.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServerlessJobsRequest} extends {@link RequestModel}
  *
  * <p>ListServerlessJobsRequest</p>
  */
 public class ListServerlessJobsRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("JobIds")
-    private java.util.List < String > jobIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobIds")
+    private java.util.List<String> jobIds;
 
-    @Query
-    @NameInMap("JobNames")
-    private java.util.List < String > jobNames;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobNames")
+    private java.util.List<String> jobNames;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("StartOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartOrder")
     private String startOrder;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @Query
-    @NameInMap("SubmitOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubmitOrder")
     private String submitOrder;
 
-    @Query
-    @NameInMap("SubmitTimeEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubmitTimeEnd")
     private String submitTimeEnd;
 
-    @Query
-    @NameInMap("SubmitTimeStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubmitTimeStart")
     private String submitTimeStart;
 
     private ListServerlessJobsRequest(Builder builder) {
@@ -80,7 +85,7 @@ public class ListServerlessJobsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -95,14 +100,14 @@ public class ListServerlessJobsRequest extends Request {
     /**
      * @return jobIds
      */
-    public java.util.List < String > getJobIds() {
+    public java.util.List<String> getJobIds() {
         return this.jobIds;
     }
 
     /**
      * @return jobNames
      */
-    public java.util.List < String > getJobNames() {
+    public java.util.List<String> getJobNames() {
         return this.jobNames;
     }
 
@@ -164,8 +169,8 @@ public class ListServerlessJobsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListServerlessJobsRequest, Builder> {
         private String clusterId; 
-        private java.util.List < String > jobIds; 
-        private java.util.List < String > jobNames; 
+        private java.util.List<String> jobIds; 
+        private java.util.List<String> jobNames; 
         private Long pageNumber; 
         private Long pageSize; 
         private String regionId; 
@@ -195,10 +200,12 @@ public class ListServerlessJobsRequest extends Request {
         } 
 
         /**
-         * The ID of the E-HPC cluster.
-         * <p>
+         * <p>The ID of the E-HPC cluster.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * <strong>example:</strong>
+         * <p>ehpc-hz-FYUr32****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -207,25 +214,28 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * The list of serverless job IDs or subtask IDs (array jobs).
+         * <p>The list of serverless job IDs or subtask IDs (array jobs).</p>
          */
-        public Builder jobIds(java.util.List < String > jobIds) {
+        public Builder jobIds(java.util.List<String> jobIds) {
             this.putQueryParameter("JobIds", jobIds);
             this.jobIds = jobIds;
             return this;
         }
 
         /**
-         * The names of the serverless jobs.
+         * <p>The names of the serverless jobs.</p>
          */
-        public Builder jobNames(java.util.List < String > jobNames) {
+        public Builder jobNames(java.util.List<String> jobNames) {
             this.putQueryParameter("JobNames", jobNames);
             this.jobNames = jobNames;
             return this;
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -234,7 +244,10 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100. Default value: 20.
+         * <p>The number of entries per page. Maximum value: 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,7 +256,10 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is supported.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/188593.html">ListRegions</a> operation to query the list of regions where E-HPC is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -252,11 +268,14 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * Specifies whether to sort the serverless jobs by the job start time. Valid values:
-         * <p>
+         * <p>Specifies whether to sort the serverless jobs by the job start time. Valid values:</p>
+         * <ul>
+         * <li>Asc: ascending order.</li>
+         * <li>Desc: descending order.</li>
+         * </ul>
          * 
-         * *   Asc: ascending order.
-         * *   Desc: descending order.
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder startOrder(String startOrder) {
             this.putQueryParameter("StartOrder", startOrder);
@@ -265,17 +284,19 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * The status of the serverless job. Valid values:
-         * <p>
+         * <p>The status of the serverless job. Valid values:</p>
+         * <ul>
+         * <li>All</li>
+         * <li>Pending</li>
+         * <li>Running</li>
+         * <li>Succeeded</li>
+         * <li>Canceled</li>
+         * <li>Failed</li>
+         * </ul>
+         * <p>Default value: All.</p>
          * 
-         * *   All
-         * *   Pending
-         * *   Running
-         * *   Succeeded
-         * *   Canceled
-         * *   Failed
-         * 
-         * Default value: All.
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -284,11 +305,14 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * Specifies whether to sort the serverless jobs by the job submission time. Valid values:
-         * <p>
+         * <p>Specifies whether to sort the serverless jobs by the job submission time. Valid values:</p>
+         * <ul>
+         * <li>Asc: ascending order.</li>
+         * <li>Desc: descending order.</li>
+         * </ul>
          * 
-         * *   Asc: ascending order.
-         * *   Desc: descending order.
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder submitOrder(String submitOrder) {
             this.putQueryParameter("SubmitOrder", submitOrder);
@@ -297,10 +321,13 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * The latest time at which the job is submitted.
-         * <p>
+         * <p>The latest time at which the job is submitted.</p>
+         * <blockquote>
+         * <p> You can use this parameter to query the job list based on the job submission time.</p>
+         * </blockquote>
          * 
-         * >  You can use this parameter to query the job list based on the job submission time.
+         * <strong>example:</strong>
+         * <p>1659521430</p>
          */
         public Builder submitTimeEnd(String submitTimeEnd) {
             this.putQueryParameter("SubmitTimeEnd", submitTimeEnd);
@@ -309,10 +336,13 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * The earliest time at which the job is submitted.
-         * <p>
+         * <p>The earliest time at which the job is submitted.</p>
+         * <blockquote>
+         * <p> You can use this parameter to query the job list based on the job submission time.</p>
+         * </blockquote>
          * 
-         * >  You can use this parameter to query the job list based on the job submission time.
+         * <strong>example:</strong>
+         * <p>1647427667</p>
          */
         public Builder submitTimeStart(String submitTimeStart) {
             this.putQueryParameter("SubmitTimeStart", submitTimeStart);

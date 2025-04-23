@@ -40,28 +40,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you select an image for a new containerized application, the image is pulled from Docker Hub by default. However, the version of the image may not be up to date. You can call the [PullImage](~~159052~~) operation to pull the latest image.
-      *
-     */
-    @Override
-    public CompletableFuture<AddContainerAppResponse> addContainerApp(AddContainerAppRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddContainerApp").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddContainerAppResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<AddContainerAppResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-      * *   The compute nodes to be added are in the Stopped state.
-      * *   After the compute nodes are added to the cluster, the operating systems of the nodes are replaced with the operating system specified by the ImageId parameter.
-      * *   The hosts of the compute nodes must be different from those of the existing compute nodes in the cluster. Otherwise, the add operation fails.
-      *
+     * <b>description</b> :
+     * <p>  The compute nodes to be added are in the Stopped state.</p>
+     * <ul>
+     * <li>After the compute nodes are added to the cluster, the operating systems of the nodes are replaced with the operating system specified by the ImageId parameter.</li>
+     * <li>The hosts of the compute nodes must be different from those of the existing compute nodes in the cluster. Otherwise, the add operation fails.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddExistedNodes  AddExistedNodesRequest
+     * @return AddExistedNodesResponse
      */
     @Override
     public CompletableFuture<AddExistedNodesResponse> addExistedNodes(AddExistedNodesRequest request) {
@@ -77,6 +64,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddLocalNodes  AddLocalNodesRequest
+     * @return AddLocalNodesResponse
+     */
     @Override
     public CompletableFuture<AddLocalNodesResponse> addLocalNodes(AddLocalNodesRequest request) {
         try {
@@ -91,6 +82,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddNodes  AddNodesRequest
+     * @return AddNodesResponse
+     */
     @Override
     public CompletableFuture<AddNodesResponse> addNodes(AddNodesRequest request) {
         try {
@@ -105,6 +100,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddQueue  AddQueueRequest
+     * @return AddQueueResponse
+     */
     @Override
     public CompletableFuture<AddQueueResponse> addQueue(AddQueueRequest request) {
         try {
@@ -119,6 +118,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddSecurityGroup  AddSecurityGroupRequest
+     * @return AddSecurityGroupResponse
+     */
     @Override
     public CompletableFuture<AddSecurityGroupResponse> addSecurityGroup(AddSecurityGroupRequest request) {
         try {
@@ -133,6 +136,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddUsers  AddUsersRequest
+     * @return AddUsersResponse
+     */
     @Override
     public CompletableFuture<AddUsersResponse> addUsers(AddUsersRequest request) {
         try {
@@ -148,9 +155,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## [](#)Description
-      * You can call the ApplyNodes operation to specify the number of compute nodes, the number of vCPUs, and the memory size when you add nodes to a cluster.
-      *
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <p>You can call the ApplyNodes operation to specify the number of compute nodes, the number of vCPUs, and the memory size when you add nodes to a cluster.</p>
+     * 
+     * @param request the request parameters of ApplyNodes  ApplyNodesRequest
+     * @return ApplyNodesResponse
      */
     @Override
     public CompletableFuture<ApplyNodesResponse> applyNodes(ApplyNodesRequest request) {
@@ -167,8 +177,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you create an Elastic High Performance Computing (E-HPC) cluster, you are charged for the cluster resources that you use. We recommend that you learn about the billing methods of E-HPC in advance. For more information, see [Billing overview](~~57844~~).
-      *
+     * <b>description</b> :
+     * <p>After you create an Elastic High Performance Computing (E-HPC) cluster, you are charged for the cluster resources that you use. We recommend that you learn about the billing methods of E-HPC in advance. For more information, see <a href="https://help.aliyun.com/document_detail/57844.html">Billing overview</a>.</p>
+     * 
+     * @param request the request parameters of CreateCluster  CreateClusterRequest
+     * @return CreateClusterResponse
      */
     @Override
     public CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request) {
@@ -184,48 +197,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<CreateGWSClusterResponse> createGWSCluster(CreateGWSClusterRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateGWSCluster").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGWSClusterResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateGWSClusterResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<CreateGWSImageResponse> createGWSImage(CreateGWSImageRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateGWSImage").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGWSImageResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateGWSImageResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<CreateGWSInstanceResponse> createGWSInstance(CreateGWSInstanceRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateGWSInstance").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGWSInstanceResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateGWSInstanceResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of CreateHybridCluster  CreateHybridClusterRequest
+     * @return CreateHybridClusterResponse
+     */
     @Override
     public CompletableFuture<CreateHybridClusterResponse> createHybridCluster(CreateHybridClusterRequest request) {
         try {
@@ -240,6 +215,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateJobFile  CreateJobFileRequest
+     * @return CreateJobFileResponse
+     */
     @Override
     public CompletableFuture<CreateJobFileResponse> createJobFile(CreateJobFileRequest request) {
         try {
@@ -254,6 +233,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateJobTemplate  CreateJobTemplateRequest
+     * @return CreateJobTemplateResponse
+     */
     @Override
     public CompletableFuture<CreateJobTemplateResponse> createJobTemplate(CreateJobTemplateRequest request) {
         try {
@@ -269,8 +252,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After a cluster is released, the pay-as-you-go nodes and the subscription nodes that are expired are automatically released. The subscription nodes that are expired are retained. If you need to release subscription nodes that are not expired, change the billing method to pay-as-you-go. Before you release a cluster, make sure that you no longer use the cluster.
-      *
+     * <b>description</b> :
+     * <p>After a cluster is released, the pay-as-you-go nodes and the subscription nodes that are expired are automatically released. The subscription nodes that are expired are retained. If you need to release subscription nodes that are not expired, change the billing method to pay-as-you-go. Before you release a cluster, make sure that you no longer use the cluster.</p>
+     * 
+     * @param request the request parameters of DeleteCluster  DeleteClusterRequest
+     * @return DeleteClusterResponse
      */
     @Override
     public CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request) {
@@ -287,65 +273,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you delete container applications, you can call the [ListContainerApps](~~87333~~) operation to query the container applications.
-      *
+     * @param request the request parameters of DeleteJobTemplates  DeleteJobTemplatesRequest
+     * @return DeleteJobTemplatesResponse
      */
-    @Override
-    public CompletableFuture<DeleteContainerAppsResponse> deleteContainerApps(DeleteContainerAppsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteContainerApps").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteContainerAppsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteContainerAppsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DeleteGWSClusterResponse> deleteGWSCluster(DeleteGWSClusterRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteGWSCluster").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteGWSClusterResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteGWSClusterResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DeleteGWSInstanceResponse> deleteGWSInstance(DeleteGWSInstanceRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteGWSInstance").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteGWSInstanceResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteGWSInstanceResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DeleteImageResponse> deleteImage(DeleteImageRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteImage").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteImageResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteImageResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
     @Override
     public CompletableFuture<DeleteJobTemplatesResponse> deleteJobTemplates(DeleteJobTemplatesRequest request) {
         try {
@@ -360,6 +290,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteJobs  DeleteJobsRequest
+     * @return DeleteJobsResponse
+     */
     @Override
     public CompletableFuture<DeleteJobsResponse> deleteJobs(DeleteJobsRequest request) {
         try {
@@ -374,23 +308,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DeleteLocalImageResponse> deleteLocalImage(DeleteLocalImageRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteLocalImage").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteLocalImageResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteLocalImageResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
     /**
-      * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
-      *
+     * <b>description</b> :
+     * <p>Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.</p>
+     * 
+     * @param request the request parameters of DeleteNodes  DeleteNodesRequest
+     * @return DeleteNodesResponse
      */
     @Override
     public CompletableFuture<DeleteNodesResponse> deleteNodes(DeleteNodesRequest request) {
@@ -406,6 +329,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteQueue  DeleteQueueRequest
+     * @return DeleteQueueResponse
+     */
     @Override
     public CompletableFuture<DeleteQueueResponse> deleteQueue(DeleteQueueRequest request) {
         try {
@@ -420,6 +347,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSecurityGroup  DeleteSecurityGroupRequest
+     * @return DeleteSecurityGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteSecurityGroupResponse> deleteSecurityGroup(DeleteSecurityGroupRequest request) {
         try {
@@ -435,8 +366,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data retained for the deleted user is not reused.
-      *
+     * <b>description</b> :
+     * <p>If you delete a user, only its information is deleted. The files stored in the /home directory for the user are retained. For example, if you delete a user named user1, the files in the <code>/home/user1/</code> directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data retained for the deleted user is not reused.</p>
+     * 
+     * @param request the request parameters of DeleteUsers  DeleteUsersRequest
+     * @return DeleteUsersResponse
      */
     @Override
     public CompletableFuture<DeleteUsersResponse> deleteUsers(DeleteUsersRequest request) {
@@ -452,6 +386,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAutoScaleConfig  DescribeAutoScaleConfigRequest
+     * @return DescribeAutoScaleConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeAutoScaleConfigResponse> describeAutoScaleConfig(DescribeAutoScaleConfigRequest request) {
         try {
@@ -466,6 +404,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCluster  DescribeClusterRequest
+     * @return DescribeClusterResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterResponse> describeCluster(DescribeClusterRequest request) {
         try {
@@ -480,20 +422,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DescribeContainerAppResponse> describeContainerApp(DescribeContainerAppRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeContainerApp").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeContainerAppResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeContainerAppResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DescribeEstackImage  DescribeEstackImageRequest
+     * @return DescribeEstackImageResponse
+     */
     @Override
     public CompletableFuture<DescribeEstackImageResponse> describeEstackImage(DescribeEstackImageRequest request) {
         try {
@@ -508,90 +440,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DescribeGWSClusterPolicyResponse> describeGWSClusterPolicy(DescribeGWSClusterPolicyRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeGWSClusterPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeGWSClusterPolicyResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeGWSClusterPolicyResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DescribeGWSClustersResponse> describeGWSClusters(DescribeGWSClustersRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeGWSClusters").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeGWSClustersResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeGWSClustersResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DescribeGWSImagesResponse> describeGWSImages(DescribeGWSImagesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeGWSImages").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeGWSImagesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeGWSImagesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DescribeGWSInstancesResponse> describeGWSInstances(DescribeGWSInstancesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeGWSInstances").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeGWSInstancesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeGWSInstancesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DescribeImageResponse> describeImage(DescribeImageRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeImage").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeImageResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeImageResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DescribeImageGatewayConfigResponse> describeImageGatewayConfig(DescribeImageGatewayConfigRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeImageGatewayConfig").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeImageGatewayConfigResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeImageGatewayConfigResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DescribeImagePrice  DescribeImagePriceRequest
+     * @return DescribeImagePriceResponse
+     */
     @Override
     public CompletableFuture<DescribeImagePriceResponse> describeImagePrice(DescribeImagePriceRequest request) {
         try {
@@ -606,6 +458,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeJob  DescribeJobRequest
+     * @return DescribeJobResponse
+     */
     @Override
     public CompletableFuture<DescribeJobResponse> describeJob(DescribeJobRequest request) {
         try {
@@ -620,20 +476,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DescribeNFSClientStatusResponse> describeNFSClientStatus(DescribeNFSClientStatusRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeNFSClientStatus").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeNFSClientStatusResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeNFSClientStatusResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DescribePrice  DescribePriceRequest
+     * @return DescribePriceResponse
+     */
     @Override
     public CompletableFuture<DescribePriceResponse> describePrice(DescribePriceRequest request) {
         try {
@@ -648,6 +494,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeServerlessJobs  DescribeServerlessJobsRequest
+     * @return DescribeServerlessJobsResponse
+     */
     @Override
     public CompletableFuture<DescribeServerlessJobsResponse> describeServerlessJobs(DescribeServerlessJobsRequest request) {
         try {
@@ -662,6 +512,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EditJobTemplate  EditJobTemplateRequest
+     * @return EditJobTemplateResponse
+     */
     @Override
     public CompletableFuture<EditJobTemplateResponse> editJobTemplate(EditJobTemplateRequest request) {
         try {
@@ -676,6 +530,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAccountingReport  GetAccountingReportRequest
+     * @return GetAccountingReportResponse
+     */
     @Override
     public CompletableFuture<GetAccountingReportResponse> getAccountingReport(GetAccountingReportRequest request) {
         try {
@@ -690,6 +548,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAutoScaleConfig  GetAutoScaleConfigRequest
+     * @return GetAutoScaleConfigResponse
+     */
     @Override
     public CompletableFuture<GetAutoScaleConfigResponse> getAutoScaleConfig(GetAutoScaleConfigRequest request) {
         try {
@@ -704,6 +566,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCloudMetricLogs  GetCloudMetricLogsRequest
+     * @return GetCloudMetricLogsResponse
+     */
     @Override
     public CompletableFuture<GetCloudMetricLogsResponse> getCloudMetricLogs(GetCloudMetricLogsRequest request) {
         try {
@@ -718,6 +584,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCloudMetricProfiling  GetCloudMetricProfilingRequest
+     * @return GetCloudMetricProfilingResponse
+     */
     @Override
     public CompletableFuture<GetCloudMetricProfilingResponse> getCloudMetricProfiling(GetCloudMetricProfilingRequest request) {
         try {
@@ -732,6 +602,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetClusterVolumes  GetClusterVolumesRequest
+     * @return GetClusterVolumesResponse
+     */
     @Override
     public CompletableFuture<GetClusterVolumesResponse> getClusterVolumes(GetClusterVolumesRequest request) {
         try {
@@ -746,34 +620,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<GetCommonImageResponse> getCommonImage(GetCommonImageRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCommonImage").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCommonImageResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetCommonImageResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<GetGWSConnectTicketResponse> getGWSConnectTicket(GetGWSConnectTicketRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetGWSConnectTicket").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGWSConnectTicketResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetGWSConnectTicketResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of GetHybridClusterConfig  GetHybridClusterConfigRequest
+     * @return GetHybridClusterConfigResponse
+     */
     @Override
     public CompletableFuture<GetHybridClusterConfigResponse> getHybridClusterConfig(GetHybridClusterConfigRequest request) {
         try {
@@ -788,6 +638,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetIfEcsTypeSupportHtConfig  GetIfEcsTypeSupportHtConfigRequest
+     * @return GetIfEcsTypeSupportHtConfigResponse
+     */
     @Override
     public CompletableFuture<GetIfEcsTypeSupportHtConfigResponse> getIfEcsTypeSupportHtConfig(GetIfEcsTypeSupportHtConfigRequest request) {
         try {
@@ -802,6 +656,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJobLog  GetJobLogRequest
+     * @return GetJobLogResponse
+     */
     @Override
     public CompletableFuture<GetJobLogResponse> getJobLog(GetJobLogRequest request) {
         try {
@@ -816,6 +674,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPostScripts  GetPostScriptsRequest
+     * @return GetPostScriptsResponse
+     */
     @Override
     public CompletableFuture<GetPostScriptsResponse> getPostScripts(GetPostScriptsRequest request) {
         try {
@@ -830,6 +692,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSchedulerInfo  GetSchedulerInfoRequest
+     * @return GetSchedulerInfoResponse
+     */
     @Override
     public CompletableFuture<GetSchedulerInfoResponse> getSchedulerInfo(GetSchedulerInfoRequest request) {
         try {
@@ -844,20 +710,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<GetUserImageResponse> getUserImage(GetUserImageRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetUserImage").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetUserImageResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetUserImageResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of GetVisualServiceStatus  GetVisualServiceStatusRequest
+     * @return GetVisualServiceStatusResponse
+     */
     @Override
     public CompletableFuture<GetVisualServiceStatusResponse> getVisualServiceStatus(GetVisualServiceStatusRequest request) {
         try {
@@ -872,6 +728,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InitializeEHPC  InitializeEHPCRequest
+     * @return InitializeEHPCResponse
+     */
     @Override
     public CompletableFuture<InitializeEHPCResponse> initializeEHPC(InitializeEHPCRequest request) {
         try {
@@ -886,20 +746,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<InspectImageResponse> inspectImage(InspectImageRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("InspectImage").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InspectImageResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<InspectImageResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of InstallSoftware  InstallSoftwareRequest
+     * @return InstallSoftwareResponse
+     */
     @Override
     public CompletableFuture<InstallSoftwareResponse> installSoftware(InstallSoftwareRequest request) {
         try {
@@ -914,6 +764,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InvokeShellCommand  InvokeShellCommandRequest
+     * @return InvokeShellCommandResponse
+     */
     @Override
     public CompletableFuture<InvokeShellCommandResponse> invokeShellCommand(InvokeShellCommandRequest request) {
         try {
@@ -928,6 +782,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAvailableEcsTypes  ListAvailableEcsTypesRequest
+     * @return ListAvailableEcsTypesResponse
+     */
     @Override
     public CompletableFuture<ListAvailableEcsTypesResponse> listAvailableEcsTypes(ListAvailableEcsTypesRequest request) {
         try {
@@ -942,6 +800,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCloudMetricProfilings  ListCloudMetricProfilingsRequest
+     * @return ListCloudMetricProfilingsResponse
+     */
     @Override
     public CompletableFuture<ListCloudMetricProfilingsResponse> listCloudMetricProfilings(ListCloudMetricProfilingsRequest request) {
         try {
@@ -956,6 +818,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClusterLogs  ListClusterLogsRequest
+     * @return ListClusterLogsResponse
+     */
     @Override
     public CompletableFuture<ListClusterLogsResponse> listClusterLogs(ListClusterLogsRequest request) {
         try {
@@ -970,6 +836,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClusters  ListClustersRequest
+     * @return ListClustersResponse
+     */
     @Override
     public CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request) {
         try {
@@ -984,6 +854,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClustersMeta  ListClustersMetaRequest
+     * @return ListClustersMetaResponse
+     */
     @Override
     public CompletableFuture<ListClustersMetaResponse> listClustersMeta(ListClustersMetaRequest request) {
         try {
@@ -998,6 +872,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCommands  ListCommandsRequest
+     * @return ListCommandsResponse
+     */
     @Override
     public CompletableFuture<ListCommandsResponse> listCommands(ListCommandsRequest request) {
         try {
@@ -1012,6 +890,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCommunityImages  ListCommunityImagesRequest
+     * @return ListCommunityImagesResponse
+     */
     @Override
     public CompletableFuture<ListCommunityImagesResponse> listCommunityImages(ListCommunityImagesRequest request) {
         try {
@@ -1026,34 +908,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<ListContainerAppsResponse> listContainerApps(ListContainerAppsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListContainerApps").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListContainerAppsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListContainerAppsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<ListContainerImagesResponse> listContainerImages(ListContainerImagesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListContainerImages").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListContainerImagesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListContainerImagesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of ListCpfsFileSystems  ListCpfsFileSystemsRequest
+     * @return ListCpfsFileSystemsResponse
+     */
     @Override
     public CompletableFuture<ListCpfsFileSystemsResponse> listCpfsFileSystems(ListCpfsFileSystemsRequest request) {
         try {
@@ -1068,6 +926,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCurrentClientVersion  ListCurrentClientVersionRequest
+     * @return ListCurrentClientVersionResponse
+     */
     @Override
     public CompletableFuture<ListCurrentClientVersionResponse> listCurrentClientVersion(ListCurrentClientVersionRequest request) {
         try {
@@ -1082,6 +944,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCustomImages  ListCustomImagesRequest
+     * @return ListCustomImagesResponse
+     */
     @Override
     public CompletableFuture<ListCustomImagesResponse> listCustomImages(ListCustomImagesRequest request) {
         try {
@@ -1096,6 +962,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFileSystemWithMountTargets  ListFileSystemWithMountTargetsRequest
+     * @return ListFileSystemWithMountTargetsResponse
+     */
     @Override
     public CompletableFuture<ListFileSystemWithMountTargetsResponse> listFileSystemWithMountTargets(ListFileSystemWithMountTargetsRequest request) {
         try {
@@ -1110,6 +980,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListImages  ListImagesRequest
+     * @return ListImagesResponse
+     */
     @Override
     public CompletableFuture<ListImagesResponse> listImages(ListImagesRequest request) {
         try {
@@ -1124,6 +998,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstalledSoftware  ListInstalledSoftwareRequest
+     * @return ListInstalledSoftwareResponse
+     */
     @Override
     public CompletableFuture<ListInstalledSoftwareResponse> listInstalledSoftware(ListInstalledSoftwareRequest request) {
         try {
@@ -1138,6 +1016,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInvocationResults  ListInvocationResultsRequest
+     * @return ListInvocationResultsResponse
+     */
     @Override
     public CompletableFuture<ListInvocationResultsResponse> listInvocationResults(ListInvocationResultsRequest request) {
         try {
@@ -1152,6 +1034,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInvocationStatus  ListInvocationStatusRequest
+     * @return ListInvocationStatusResponse
+     */
     @Override
     public CompletableFuture<ListInvocationStatusResponse> listInvocationStatus(ListInvocationStatusRequest request) {
         try {
@@ -1166,6 +1052,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListJobTemplates  ListJobTemplatesRequest
+     * @return ListJobTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListJobTemplatesResponse> listJobTemplates(ListJobTemplatesRequest request) {
         try {
@@ -1180,6 +1070,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListJobs  ListJobsRequest
+     * @return ListJobsResponse
+     */
     @Override
     public CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request) {
         try {
@@ -1194,6 +1088,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListJobsWithFilters  ListJobsWithFiltersRequest
+     * @return ListJobsWithFiltersResponse
+     */
     @Override
     public CompletableFuture<ListJobsWithFiltersResponse> listJobsWithFilters(ListJobsWithFiltersRequest request) {
         try {
@@ -1208,6 +1106,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNodes  ListNodesRequest
+     * @return ListNodesResponse
+     */
     @Override
     public CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request) {
         try {
@@ -1222,6 +1124,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNodesByQueue  ListNodesByQueueRequest
+     * @return ListNodesByQueueResponse
+     */
     @Override
     public CompletableFuture<ListNodesByQueueResponse> listNodesByQueue(ListNodesByQueueRequest request) {
         try {
@@ -1236,6 +1142,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNodesNoPaging  ListNodesNoPagingRequest
+     * @return ListNodesNoPagingResponse
+     */
     @Override
     public CompletableFuture<ListNodesNoPagingResponse> listNodesNoPaging(ListNodesNoPagingRequest request) {
         try {
@@ -1250,6 +1160,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPreferredEcsTypes  ListPreferredEcsTypesRequest
+     * @return ListPreferredEcsTypesResponse
+     */
     @Override
     public CompletableFuture<ListPreferredEcsTypesResponse> listPreferredEcsTypes(ListPreferredEcsTypesRequest request) {
         try {
@@ -1264,6 +1178,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListQueues  ListQueuesRequest
+     * @return ListQueuesResponse
+     */
     @Override
     public CompletableFuture<ListQueuesResponse> listQueues(ListQueuesRequest request) {
         try {
@@ -1278,6 +1196,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRegions  ListRegionsRequest
+     * @return ListRegionsResponse
+     */
     @Override
     public CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request) {
         try {
@@ -1292,6 +1214,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSecurityGroups  ListSecurityGroupsRequest
+     * @return ListSecurityGroupsResponse
+     */
     @Override
     public CompletableFuture<ListSecurityGroupsResponse> listSecurityGroups(ListSecurityGroupsRequest request) {
         try {
@@ -1306,6 +1232,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListServerlessJobs  ListServerlessJobsRequest
+     * @return ListServerlessJobsResponse
+     */
     @Override
     public CompletableFuture<ListServerlessJobsResponse> listServerlessJobs(ListServerlessJobsRequest request) {
         try {
@@ -1320,6 +1250,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSoftwares  ListSoftwaresRequest
+     * @return ListSoftwaresResponse
+     */
     @Override
     public CompletableFuture<ListSoftwaresResponse> listSoftwares(ListSoftwaresRequest request) {
         try {
@@ -1334,6 +1268,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -1349,8 +1287,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you succeed in calling an asynchronous API operation, a response is generated before a resulting task is completed. Therefore, to query the result of the task, you can use the TaskId parameter returned by the API operation.
-      *
+     * <b>description</b> :
+     * <p>For some asynchronous API operations such as AddNodes, the system immediately returns a result without waiting for the node to be created if the request succeeds. In this case, you can use the TaskId returned by the asynchronous API operation to query the result of the task.</p>
+     * 
+     * @param request the request parameters of ListTasks  ListTasksRequest
+     * @return ListTasksResponse
      */
     @Override
     public CompletableFuture<ListTasksResponse> listTasks(ListTasksRequest request) {
@@ -1366,6 +1307,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUpgradeClients  ListUpgradeClientsRequest
+     * @return ListUpgradeClientsResponse
+     */
     @Override
     public CompletableFuture<ListUpgradeClientsResponse> listUpgradeClients(ListUpgradeClientsRequest request) {
         try {
@@ -1380,6 +1325,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUsers  ListUsersRequest
+     * @return ListUsersResponse
+     */
     @Override
     public CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request) {
         try {
@@ -1394,6 +1343,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUsersAsync  ListUsersAsyncRequest
+     * @return ListUsersAsyncResponse
+     */
     @Override
     public CompletableFuture<ListUsersAsyncResponse> listUsersAsync(ListUsersAsyncRequest request) {
         try {
@@ -1408,6 +1361,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVolumes  ListVolumesRequest
+     * @return ListVolumesResponse
+     */
     @Override
     public CompletableFuture<ListVolumesResponse> listVolumes(ListVolumesRequest request) {
         try {
@@ -1423,9 +1380,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * Before you call this operation, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
-      *
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/87126.html">DescribeCluster</a> operation to query details of the selected cluster.</p>
+     * 
+     * @param request the request parameters of ModifyClusterAttributes  ModifyClusterAttributesRequest
+     * @return ModifyClusterAttributesResponse
      */
     @Override
     public CompletableFuture<ModifyClusterAttributesResponse> modifyClusterAttributes(ModifyClusterAttributesRequest request) {
@@ -1441,34 +1401,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<ModifyContainerAppAttributesResponse> modifyContainerAppAttributes(ModifyContainerAppAttributesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyContainerAppAttributes").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyContainerAppAttributesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ModifyContainerAppAttributesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<ModifyImageGatewayConfigResponse> modifyImageGatewayConfig(ModifyImageGatewayConfigRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyImageGatewayConfig").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyImageGatewayConfigResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ModifyImageGatewayConfigResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of ModifyUserGroups  ModifyUserGroupsRequest
+     * @return ModifyUserGroupsResponse
+     */
     @Override
     public CompletableFuture<ModifyUserGroupsResponse> modifyUserGroups(ModifyUserGroupsRequest request) {
         try {
@@ -1483,6 +1419,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyUserPasswords  ModifyUserPasswordsRequest
+     * @return ModifyUserPasswordsResponse
+     */
     @Override
     public CompletableFuture<ModifyUserPasswordsResponse> modifyUserPasswords(ModifyUserPasswordsRequest request) {
         try {
@@ -1497,6 +1437,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyVisualServicePasswd  ModifyVisualServicePasswdRequest
+     * @return ModifyVisualServicePasswdResponse
+     */
     @Override
     public CompletableFuture<ModifyVisualServicePasswdResponse> modifyVisualServicePasswd(ModifyVisualServicePasswdRequest request) {
         try {
@@ -1511,20 +1455,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<MountNFSResponse> mountNFS(MountNFSRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("MountNFS").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MountNFSResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<MountNFSResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of PullImage  PullImageRequest
+     * @return PullImageResponse
+     */
     @Override
     public CompletableFuture<PullImageResponse> pullImage(PullImageRequest request) {
         try {
@@ -1539,6 +1473,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryServicePackAndPrice  QueryServicePackAndPriceRequest
+     * @return QueryServicePackAndPriceResponse
+     */
     @Override
     public CompletableFuture<QueryServicePackAndPriceResponse> queryServicePackAndPrice(QueryServicePackAndPriceRequest request) {
         try {
@@ -1554,12 +1492,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the operation to reset and restore a cluster only when the cluster is in the Exception state. You can call the [ListClusters](~~87116~~) operation to query the ID and status of a cluster.
-      * We recommend that you export all job data before you restore a cluster. When you reset and restore a cluster, take note of the following impacts:
-      * *   The system disks of all nodes are changed. By default, new system disks are configured based on the settings that you specified when the cluster was created.
-      * *   The data on the system disks and data disks of all cluster nodes is lost. The data includes user information, job information, scheduler queue information, and configuration data of auto-scaling queues. However, the data on Apsara File Storage NAS file systems is retained.
-      * *   The self-managed queues in the cluster are deleted. All nodes are retained and migrated to the default queue of the cluster.
-      *
+     * <b>description</b> :
+     * <p>You can call the operation to reset and restore a cluster only when the cluster is in the Exception state. You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the ID and status of a cluster. We recommend that you export all job data before you restore a cluster. When you reset and restore a cluster, take note of the following impacts:</p>
+     * <ul>
+     * <li>The system disks of all nodes are changed. By default, new system disks are configured based on the settings that you specified when the cluster was created.</li>
+     * <li>The data on the system disks and data disks of all cluster nodes is lost. The data includes user information, job information, scheduler queue information, and configuration data of auto-scaling queues. However, the data on File Storage NAS file systems is retained.</li>
+     * <li>The self-managed queues in the cluster are deleted. All nodes are retained and migrated to the default queue of the cluster.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RecoverCluster  RecoverClusterRequest
+     * @return RecoverClusterResponse
      */
     @Override
     public CompletableFuture<RecoverClusterResponse> recoverCluster(RecoverClusterRequest request) {
@@ -1575,6 +1517,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RerunJobs  RerunJobsRequest
+     * @return RerunJobsResponse
+     */
     @Override
     public CompletableFuture<RerunJobsResponse> rerunJobs(RerunJobsRequest request) {
         try {
@@ -1590,8 +1536,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After a node is reset, the operating system and software return to their initial states. To ensure that jobs run as expected, we recommend that you do not reset running nodes unless you need to perform crash recovery.
-      *
+     * <b>description</b> :
+     * <p>After a node is reset, the operating system and software return to their initial states. To ensure that jobs run as expected, we recommend that you do not reset running nodes unless you need to perform crash recovery.</p>
+     * 
+     * @param request the request parameters of ResetNodes  ResetNodesRequest
+     * @return ResetNodesResponse
      */
     @Override
     public CompletableFuture<ResetNodesResponse> resetNodes(ResetNodesRequest request) {
@@ -1607,6 +1556,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RunCloudMetricProfiling  RunCloudMetricProfilingRequest
+     * @return RunCloudMetricProfilingResponse
+     */
     @Override
     public CompletableFuture<RunCloudMetricProfilingResponse> runCloudMetricProfiling(RunCloudMetricProfilingRequest request) {
         try {
@@ -1622,9 +1575,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * If the settings in the Queue Configuration section are different from the settings in the Global Configurations section, the former prevails.
-      *
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>If the settings in the Queue Configuration section are different from the settings in the Global Configurations section, the former prevails.</p>
+     * 
+     * @param request the request parameters of SetAutoScaleConfig  SetAutoScaleConfigRequest
+     * @return SetAutoScaleConfigResponse
      */
     @Override
     public CompletableFuture<SetAutoScaleConfigResponse> setAutoScaleConfig(SetAutoScaleConfigRequest request) {
@@ -1640,48 +1596,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<SetGWSClusterPolicyResponse> setGWSClusterPolicy(SetGWSClusterPolicyRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetGWSClusterPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetGWSClusterPolicyResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SetGWSClusterPolicyResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<SetGWSInstanceNameResponse> setGWSInstanceName(SetGWSInstanceNameRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetGWSInstanceName").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetGWSInstanceNameResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SetGWSInstanceNameResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<SetGWSInstanceUserResponse> setGWSInstanceUser(SetGWSInstanceUserRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetGWSInstanceUser").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetGWSInstanceUserResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SetGWSInstanceUserResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of SetPostScripts  SetPostScriptsRequest
+     * @return SetPostScriptsResponse
+     */
     @Override
     public CompletableFuture<SetPostScriptsResponse> setPostScripts(SetPostScriptsRequest request) {
         try {
@@ -1696,6 +1614,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetQueue  SetQueueRequest
+     * @return SetQueueResponse
+     */
     @Override
     public CompletableFuture<SetQueueResponse> setQueue(SetQueueRequest request) {
         try {
@@ -1710,6 +1632,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetSchedulerInfo  SetSchedulerInfoRequest
+     * @return SetSchedulerInfoResponse
+     */
     @Override
     public CompletableFuture<SetSchedulerInfoResponse> setSchedulerInfo(SetSchedulerInfoRequest request) {
         try {
@@ -1724,6 +1650,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartCluster  StartClusterRequest
+     * @return StartClusterResponse
+     */
     @Override
     public CompletableFuture<StartClusterResponse> startCluster(StartClusterRequest request) {
         try {
@@ -1738,20 +1668,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<StartGWSInstanceResponse> startGWSInstance(StartGWSInstanceRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StartGWSInstance").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartGWSInstanceResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<StartGWSInstanceResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of StartNodes  StartNodesRequest
+     * @return StartNodesResponse
+     */
     @Override
     public CompletableFuture<StartNodesResponse> startNodes(StartNodesRequest request) {
         try {
@@ -1766,6 +1686,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartVisualService  StartVisualServiceRequest
+     * @return StartVisualServiceResponse
+     */
     @Override
     public CompletableFuture<StartVisualServiceResponse> startVisualService(StartVisualServiceRequest request) {
         try {
@@ -1781,8 +1705,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you stop a subscription compute node, its billing is not affected. If you stop a pay-as-you-go compute node for which you have enabled the *economical mode*, you are no longer charged for its computing resources. For more information, see [Economical mode](~~63353~~).
-      *
+     * <b>description</b> :
+     * <p>If you stop a subscription compute node, its billing is not affected. If you stop a pay-as-you-go compute node for which you have enabled the <em>economical mode</em>, you are no longer charged for its computing resources. For more information, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</p>
+     * 
+     * @param request the request parameters of StopCluster  StopClusterRequest
+     * @return StopClusterResponse
      */
     @Override
     public CompletableFuture<StopClusterResponse> stopCluster(StopClusterRequest request) {
@@ -1798,20 +1725,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<StopGWSInstanceResponse> stopGWSInstance(StopGWSInstanceRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StopGWSInstance").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopGWSInstanceResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<StopGWSInstanceResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of StopJobs  StopJobsRequest
+     * @return StopJobsResponse
+     */
     @Override
     public CompletableFuture<StopJobsResponse> stopJobs(StopJobsRequest request) {
         try {
@@ -1826,6 +1743,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopNodes  StopNodesRequest
+     * @return StopNodesResponse
+     */
     @Override
     public CompletableFuture<StopNodesResponse> stopNodes(StopNodesRequest request) {
         try {
@@ -1840,6 +1761,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopServerlessJobs  StopServerlessJobsRequest
+     * @return StopServerlessJobsResponse
+     */
     @Override
     public CompletableFuture<StopServerlessJobsResponse> stopServerlessJobs(StopServerlessJobsRequest request) {
         try {
@@ -1854,6 +1779,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopVisualService  StopVisualServiceRequest
+     * @return StopVisualServiceResponse
+     */
     @Override
     public CompletableFuture<StopVisualServiceResponse> stopVisualService(StopVisualServiceRequest request) {
         try {
@@ -1869,9 +1798,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Description
-      * Before you submit a job in a cluster, you must upload a job file to the cluster, for example, job.sh. For more information, see [CreateJobFile](~~159049~~).
-      *
+     * <b>description</b> :
+     * <p>The ID of the request.</p>
+     * 
+     * @param request the request parameters of SubmitJob  SubmitJobRequest
+     * @return SubmitJobResponse
      */
     @Override
     public CompletableFuture<SubmitJobResponse> submitJob(SubmitJobRequest request) {
@@ -1887,6 +1818,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitServerlessJob  SubmitServerlessJobRequest
+     * @return SubmitServerlessJobResponse
+     */
     @Override
     public CompletableFuture<SubmitServerlessJobResponse> submitServerlessJob(SubmitServerlessJobRequest request) {
         try {
@@ -1901,34 +1836,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<SummaryImagesResponse> summaryImages(SummaryImagesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SummaryImages").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SummaryImagesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SummaryImagesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<SummaryImagesInfoResponse> summaryImagesInfo(SummaryImagesInfoRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SummaryImagesInfo").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SummaryImagesInfoResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SummaryImagesInfoResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of SyncUsers  SyncUsersRequest
+     * @return SyncUsersResponse
+     */
     @Override
     public CompletableFuture<SyncUsersResponse> syncUsers(SyncUsersRequest request) {
         try {
@@ -1943,6 +1854,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -1957,6 +1872,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnTagResources  UnTagResourcesRequest
+     * @return UnTagResourcesResponse
+     */
     @Override
     public CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request) {
         try {
@@ -1971,6 +1890,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UninstallSoftware  UninstallSoftwareRequest
+     * @return UninstallSoftwareResponse
+     */
     @Override
     public CompletableFuture<UninstallSoftwareResponse> uninstallSoftware(UninstallSoftwareRequest request) {
         try {
@@ -1985,6 +1908,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateClusterVolumes  UpdateClusterVolumesRequest
+     * @return UpdateClusterVolumesResponse
+     */
     @Override
     public CompletableFuture<UpdateClusterVolumesResponse> updateClusterVolumes(UpdateClusterVolumesRequest request) {
         try {
@@ -2000,8 +1927,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you update the resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
-      *
+     * <b>description</b> :
+     * <p>After you update the resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.</p>
+     * 
+     * @param request the request parameters of UpdateQueueConfig  UpdateQueueConfigRequest
+     * @return UpdateQueueConfigResponse
      */
     @Override
     public CompletableFuture<UpdateQueueConfigResponse> updateQueueConfig(UpdateQueueConfigRequest request) {
@@ -2017,6 +1947,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeClient  UpgradeClientRequest
+     * @return UpgradeClientResponse
+     */
     @Override
     public CompletableFuture<UpgradeClientResponse> upgradeClient(UpgradeClientRequest request) {
         try {
