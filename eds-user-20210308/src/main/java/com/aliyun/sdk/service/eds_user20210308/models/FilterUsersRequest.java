@@ -105,7 +105,7 @@ public class FilterUsersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -384,7 +384,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The parameters that are used to sort query results.</p>
+         * <p>The parameter that might affect the sorting logic.</p>
          */
         public Builder orderParam(OrderParam orderParam) {
             String orderParamShrink = shrink(orderParam, "OrderParam", "json");
@@ -406,7 +406,12 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * <p>The type of the account ownership.</p>
+         * <p>The activation type of the convenience account.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CreateFromManager: administrator-activated.</li>
+         * <li>Normal: user-activated.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -495,13 +500,21 @@ public class FilterUsersRequest extends Request {
             private String orderField; 
             private String orderType; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrderParam model) {
+                this.orderField = model.orderField;
+                this.orderType = model.orderType;
+            } 
+
             /**
-             * <p>The parameter based on which to sort query results.</p>
+             * <p>The field that you want to sort by.</p>
              * <p>Valid values:</p>
              * <ul>
              * <li>EndUserId: the username.</li>
-             * <li>id: the ID of the user primary key.</li>
-             * <li>gmt_created: the time when the convenience user was created.</li>
+             * <li>id: the ID of the primary key.</li>
+             * <li>gmt_created: the creation time.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -513,22 +526,11 @@ public class FilterUsersRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to sort query results in ascending or descending order.</p>
+             * <p>The direction of the sort.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>ASC: ascending</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>DESC (default): descending</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
+             * <li>ASC: the ascending order.</li>
+             * <li>DESC (default): the descending order.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -589,6 +591,14 @@ public class FilterUsersRequest extends Request {
         public static final class Builder {
             private Long propertyId; 
             private String propertyValueIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(PropertyFilterParam model) {
+                this.propertyId = model.propertyId;
+                this.propertyValueIds = model.propertyValueIds;
+            } 
 
             /**
              * <p>The ID of the property.</p>
@@ -662,6 +672,14 @@ public class FilterUsersRequest extends Request {
         public static final class Builder {
             private String propertyKey; 
             private String propertyValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(PropertyKeyValueFilterParam model) {
+                this.propertyKey = model.propertyKey;
+                this.propertyValues = model.propertyValues;
+            } 
 
             /**
              * <p>The property name.</p>

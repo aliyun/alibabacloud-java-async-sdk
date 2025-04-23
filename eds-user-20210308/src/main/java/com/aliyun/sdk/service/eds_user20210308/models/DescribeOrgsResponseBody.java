@@ -40,6 +40,10 @@ public class DescribeOrgsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class DescribeOrgsResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<Orgs> orgs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOrgsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.orgs = model.orgs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the DescribeOrgs operation was called.</p>
@@ -157,6 +170,15 @@ public class DescribeOrgsResponseBody extends TeaModel {
             private String orgId; 
             private String orgName; 
             private String parentOrgId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Orgs model) {
+                this.orgId = model.orgId;
+                this.orgName = model.orgName;
+                this.parentOrgId = model.parentOrgId;
+            } 
 
             /**
              * <p>The organization ID.</p>

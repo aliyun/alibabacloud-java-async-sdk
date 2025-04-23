@@ -40,6 +40,10 @@ public class FilterUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -66,6 +70,15 @@ public class FilterUsersResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Users> users; 
 
+        private Builder() {
+        } 
+
+        private Builder(FilterUsersResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.users = model.users;
+        } 
+
         /**
          * <p>The pagination token that is used in the next request to retrieve a new page of results. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.</p>
          * 
@@ -89,7 +102,7 @@ public class FilterUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the convenience user.</p>
+         * <p>The convenience accounts.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -145,6 +158,14 @@ public class FilterUsersResponseBody extends TeaModel {
         public static final class Builder {
             private String externalName; 
             private String jobNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExternalInfo model) {
+                this.externalName = model.externalName;
+                this.jobNumber = model.jobNumber;
+            } 
 
             /**
              * <p>The account that is associated with the convenience user.</p>
@@ -219,6 +240,14 @@ public class FilterUsersResponseBody extends TeaModel {
             private String orgId; 
             private String orgName; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrgList model) {
+                this.orgId = model.orgId;
+                this.orgName = model.orgName;
+            } 
+
             /**
              * OrgId.
              */
@@ -286,6 +315,14 @@ public class FilterUsersResponseBody extends TeaModel {
             private String idpId; 
             private String idpName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportLoginIdps model) {
+                this.idpId = model.idpId;
+                this.idpName = model.idpName;
+            } 
+
             /**
              * IdpId.
              */
@@ -352,6 +389,14 @@ public class FilterUsersResponseBody extends TeaModel {
         public static final class Builder {
             private String propertyValue; 
             private Long propertyValueId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PropertyValues model) {
+                this.propertyValue = model.propertyValue;
+                this.propertyValueId = model.propertyValueId;
+            } 
 
             /**
              * <p>The property value.</p>
@@ -473,6 +518,18 @@ public class FilterUsersResponseBody extends TeaModel {
             private java.util.List<PropertyValues> propertyValues; 
             private Long userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserSetPropertiesModels model) {
+                this.propertyId = model.propertyId;
+                this.propertyKey = model.propertyKey;
+                this.propertyType = model.propertyType;
+                this.propertyValues = model.propertyValues;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The property ID.</p>
@@ -792,8 +849,36 @@ public class FilterUsersResponseBody extends TeaModel {
             private java.util.List<SupportLoginIdps> supportLoginIdps; 
             private java.util.List<UserSetPropertiesModels> userSetPropertiesModels; 
 
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.autoLockTime = model.autoLockTime;
+                this.desktopCount = model.desktopCount;
+                this.desktopGroupCount = model.desktopGroupCount;
+                this.email = model.email;
+                this.enableAdminAccess = model.enableAdminAccess;
+                this.endUserId = model.endUserId;
+                this.externalInfo = model.externalInfo;
+                this.id = model.id;
+                this.isTenantManager = model.isTenantManager;
+                this.orgList = model.orgList;
+                this.ownerType = model.ownerType;
+                this.passwordExpireDays = model.passwordExpireDays;
+                this.passwordExpireRestDays = model.passwordExpireRestDays;
+                this.phone = model.phone;
+                this.realNickName = model.realNickName;
+                this.remark = model.remark;
+                this.status = model.status;
+                this.supportLoginIdps = model.supportLoginIdps;
+                this.userSetPropertiesModels = model.userSetPropertiesModels;
+            } 
+
             /**
-             * AutoLockTime.
+             * <p>The date when a convenience account is automatically locked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-03</p>
              */
             public Builder autoLockTime(String autoLockTime) {
                 this.autoLockTime = autoLockTime;
@@ -942,7 +1027,13 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordExpireDays.
+             * <p>By default, user account passwords do not expire. However, you can set a validity period between 30 and 365 days. Once the period expires, end users must change their password before they can log on to terminals.</p>
+             * <blockquote>
+             * <p> The feature is in invitational preview. If you want to use this feature, submit a ticket.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder passwordExpireDays(Integer passwordExpireDays) {
                 this.passwordExpireDays = passwordExpireDays;
@@ -950,7 +1041,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordExpireRestDays.
+             * <p>The number of days remaining until the account password expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder passwordExpireRestDays(Integer passwordExpireRestDays) {
                 this.passwordExpireRestDays = passwordExpireRestDays;
@@ -991,22 +1085,11 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the convenience user.</p>
+             * <p>The remarks on the convenience account.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>0: The convenience user is normal.</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>9: The convenience user is locked.</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
+             * <li>0: The convenience account is normal.</li>
+             * <li>9: The convenience account is locked.</li>
              * </ul>
              * 
              * <strong>example:</strong>

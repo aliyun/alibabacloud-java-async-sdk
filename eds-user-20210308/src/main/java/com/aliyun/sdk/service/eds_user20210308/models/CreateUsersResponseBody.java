@@ -36,6 +36,10 @@ public class CreateUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createResult
      */
@@ -53,6 +57,14 @@ public class CreateUsersResponseBody extends TeaModel {
     public static final class Builder {
         private CreateResult createResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateUsersResponseBody model) {
+            this.createResult = model.createResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The result of user creation.</p>
@@ -158,6 +170,17 @@ public class CreateUsersResponseBody extends TeaModel {
             private String phone; 
             private String realNickName; 
             private String remark; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreatedUsers model) {
+                this.email = model.email;
+                this.endUserId = model.endUserId;
+                this.phone = model.phone;
+                this.realNickName = model.realNickName;
+                this.remark = model.remark;
+            } 
 
             /**
              * <p>The email address of the end user.</p>
@@ -301,6 +324,17 @@ public class CreateUsersResponseBody extends TeaModel {
             private String errorMessage; 
             private String phone; 
 
+            private Builder() {
+            } 
+
+            private Builder(FailedUsers model) {
+                this.email = model.email;
+                this.endUserId = model.endUserId;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.phone = model.phone;
+            } 
+
             /**
              * <p>The email address of the end user.</p>
              * 
@@ -406,6 +440,14 @@ public class CreateUsersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CreatedUsers> createdUsers; 
             private java.util.List<FailedUsers> failedUsers; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateResult model) {
+                this.createdUsers = model.createdUsers;
+                this.failedUsers = model.failedUsers;
+            } 
 
             /**
              * <p>Details of the created convenience users.</p>

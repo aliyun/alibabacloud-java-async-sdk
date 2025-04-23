@@ -40,6 +40,10 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mfaDevices
      */
@@ -65,6 +69,15 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         private java.util.List<MfaDevices> mfaDevices; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMfaDevicesResponseBody model) {
+            this.mfaDevices = model.mfaDevices;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the virtual MFA devices.</p>
@@ -229,6 +242,21 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             private Long id; 
             private String serialNumber; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(MfaDevices model) {
+                this.consecutiveFails = model.consecutiveFails;
+                this.deviceType = model.deviceType;
+                this.email = model.email;
+                this.endUserId = model.endUserId;
+                this.gmtEnabled = model.gmtEnabled;
+                this.gmtUnlock = model.gmtUnlock;
+                this.id = model.id;
+                this.serialNumber = model.serialNumber;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The number of consecutive failures to bind the virtual MFA device, or the number of authentication failures based on the virtual MFA device.</p>

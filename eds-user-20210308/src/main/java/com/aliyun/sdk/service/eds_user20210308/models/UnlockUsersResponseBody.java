@@ -36,6 +36,10 @@ public class UnlockUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class UnlockUsersResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UnlockUsersResult unlockUsersResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(UnlockUsersResponseBody model) {
+            this.requestId = model.requestId;
+            this.unlockUsersResult = model.unlockUsersResult;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -134,6 +146,15 @@ public class UnlockUsersResponseBody extends TeaModel {
             private String endUserId; 
             private String errorCode; 
             private String errorMessage; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedUsers model) {
+                this.endUserId = model.endUserId;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+            } 
 
             /**
              * <p>The ID of the convenience user that failed to be unlocked.</p>
@@ -218,6 +239,14 @@ public class UnlockUsersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<FailedUsers> failedUsers; 
             private java.util.List<String> unlockedUsers; 
+
+            private Builder() {
+            } 
+
+            private Builder(UnlockUsersResult model) {
+                this.failedUsers = model.failedUsers;
+                this.unlockedUsers = model.unlockedUsers;
+            } 
 
             /**
              * <p>The convenience users that failed to be unlocked.</p>

@@ -40,6 +40,10 @@ public class DescribeUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -66,6 +70,15 @@ public class DescribeUsersResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Users> users; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeUsersResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.users = model.users;
+        } 
+
         /**
          * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
          * 
@@ -89,7 +102,7 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the convenience users.</p>
+         * <p>The convenience accounts.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -133,6 +146,13 @@ public class DescribeUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.Map<String, ?> assignedResourceCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Extras model) {
+                this.assignedResourceCount = model.assignedResourceCount;
+            } 
 
             /**
              * AssignedResourceCount.
@@ -192,6 +212,14 @@ public class DescribeUsersResponseBody extends TeaModel {
         public static final class Builder {
             private String groupId; 
             private String groupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+            } 
 
             /**
              * <p>The ID of the user group.</p>
@@ -266,6 +294,14 @@ public class DescribeUsersResponseBody extends TeaModel {
             private String orgId; 
             private String orgName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Orgs model) {
+                this.orgId = model.orgId;
+                this.orgName = model.orgName;
+            } 
+
             /**
              * <p>The organization ID.</p>
              * 
@@ -338,6 +374,14 @@ public class DescribeUsersResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -621,6 +665,32 @@ public class DescribeUsersResponseBody extends TeaModel {
             private String remark; 
             private Long status; 
             private String wyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.address = model.address;
+                this.avatar = model.avatar;
+                this.email = model.email;
+                this.endUserId = model.endUserId;
+                this.externalName = model.externalName;
+                this.extras = model.extras;
+                this.groups = model.groups;
+                this.id = model.id;
+                this.isTenantManager = model.isTenantManager;
+                this.jobNumber = model.jobNumber;
+                this.nickName = model.nickName;
+                this.orgId = model.orgId;
+                this.orgs = model.orgs;
+                this.ownerType = model.ownerType;
+                this.phone = model.phone;
+                this.properties = model.properties;
+                this.realNickName = model.realNickName;
+                this.remark = model.remark;
+                this.status = model.status;
+                this.wyId = model.wyId;
+            } 
 
             /**
              * <p>The work address of the convenience user.</p>

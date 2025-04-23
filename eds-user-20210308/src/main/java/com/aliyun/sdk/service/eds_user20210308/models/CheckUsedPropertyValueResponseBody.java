@@ -36,6 +36,10 @@ public class CheckUsedPropertyValueResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class CheckUsedPropertyValueResponseBody extends TeaModel {
         private String requestId; 
         private Long useCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(CheckUsedPropertyValueResponseBody model) {
+            this.requestId = model.requestId;
+            this.useCount = model.useCount;
+        } 
+
         /**
          * <p>The ID of the request.</p>
          * 
@@ -66,7 +78,7 @@ public class CheckUsedPropertyValueResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of convenience users that are associated with the property value.</p>
+         * <p>The number of convenience accounts that are associated with the specified custom property value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

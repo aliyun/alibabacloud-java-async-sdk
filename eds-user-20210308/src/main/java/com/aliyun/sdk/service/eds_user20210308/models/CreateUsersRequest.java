@@ -56,7 +56,7 @@ public class CreateUsersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -294,6 +294,20 @@ public class CreateUsersRequest extends Request {
             private String phone; 
             private String realNickName; 
             private String remark; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.email = model.email;
+                this.endUserId = model.endUserId;
+                this.orgId = model.orgId;
+                this.ownerType = model.ownerType;
+                this.password = model.password;
+                this.phone = model.phone;
+                this.realNickName = model.realNickName;
+                this.remark = model.remark;
+            } 
 
             /**
              * <p>The email address of the convenience user. The email address is used to receive notifications about events such as desktop assignment. You must specify an email address or a mobile number to receive notifications.</p>

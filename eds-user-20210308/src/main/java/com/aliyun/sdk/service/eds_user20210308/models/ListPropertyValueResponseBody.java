@@ -36,6 +36,10 @@ public class ListPropertyValueResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return propertyValueInfos
      */
@@ -53,6 +57,14 @@ public class ListPropertyValueResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<PropertyValueInfos> propertyValueInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPropertyValueResponseBody model) {
+            this.propertyValueInfos = model.propertyValueInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about property values.</p>
@@ -122,6 +134,14 @@ public class ListPropertyValueResponseBody extends TeaModel {
         public static final class Builder {
             private String propertyValue; 
             private Long propertyValueId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PropertyValueInfos model) {
+                this.propertyValue = model.propertyValue;
+                this.propertyValueId = model.propertyValueId;
+            } 
 
             /**
              * <p>The value of the property.</p>

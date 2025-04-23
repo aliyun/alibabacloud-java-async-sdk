@@ -40,6 +40,10 @@ public class ListPropertyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListPropertyResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<Properties> properties; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPropertyResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.properties = model.properties;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The token that is used for the next query. If this parameter is empty, all results have been returned.</p>
@@ -145,6 +158,14 @@ public class ListPropertyResponseBody extends TeaModel {
         public static final class Builder {
             private String propertyValue; 
             private Long propertyValueId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PropertyValues model) {
+                this.propertyValue = model.propertyValue;
+                this.propertyValueId = model.propertyValueId;
+            } 
 
             /**
              * <p>The value of the property.</p>
@@ -230,6 +251,15 @@ public class ListPropertyResponseBody extends TeaModel {
             private Long propertyId; 
             private String propertyKey; 
             private java.util.List<PropertyValues> propertyValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.propertyId = model.propertyId;
+                this.propertyKey = model.propertyKey;
+                this.propertyValues = model.propertyValues;
+            } 
 
             /**
              * <p>The ID of the property.</p>

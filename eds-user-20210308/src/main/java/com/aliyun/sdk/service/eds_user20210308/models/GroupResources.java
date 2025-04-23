@@ -40,6 +40,10 @@ public class GroupResources extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return region
      */
@@ -65,6 +69,15 @@ public class GroupResources extends TeaModel {
         private String region; 
         private String resourceId; 
         private String resourceType; 
+
+        private Builder() {
+        } 
+
+        private Builder(GroupResources model) {
+            this.region = model.region;
+            this.resourceId = model.resourceId;
+            this.resourceType = model.resourceType;
+        } 
 
         /**
          * Region.

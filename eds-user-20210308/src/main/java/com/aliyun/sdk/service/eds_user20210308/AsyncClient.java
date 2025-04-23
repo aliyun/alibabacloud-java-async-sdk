@@ -47,6 +47,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckUsedPropertyValueResponse> checkUsedPropertyValue(CheckUsedPropertyValueRequest request);
 
     /**
+     * @param request the request parameters of CreateOrg  CreateOrgRequest
+     * @return CreateOrgResponse
+     */
+    CompletableFuture<CreateOrgResponse> createOrg(CreateOrgRequest request);
+
+    /**
      * @param request the request parameters of CreateProperty  CreatePropertyRequest
      * @return CreatePropertyResponse
      */
@@ -77,6 +83,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMfaDevicesResponse> describeMfaDevices(DescribeMfaDevicesRequest request);
 
     /**
+     * @param request the request parameters of DescribeOrgByLayer  DescribeOrgByLayerRequest
+     * @return DescribeOrgByLayerResponse
+     */
+    CompletableFuture<DescribeOrgByLayerResponse> describeOrgByLayer(DescribeOrgByLayerRequest request);
+
+    /**
      * <b>description</b> :
      * <p>An organization is in a tree structure. The root organization ID is in the following format: org-aliyun-wy-org-id.</p>
      * 
@@ -102,6 +114,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetManagerInfoByAuthCodeResponse
      */
     CompletableFuture<GetManagerInfoByAuthCodeResponse> getManagerInfoByAuthCode(GetManagerInfoByAuthCodeRequest request);
+
+    /**
+     * @param request the request parameters of InitTenantAlias  InitTenantAliasRequest
+     * @return InitTenantAliasResponse
+     */
+    CompletableFuture<InitTenantAliasResponse> initTenantAlias(InitTenantAliasRequest request);
 
     /**
      * @param request the request parameters of ListProperty  ListPropertyRequest
@@ -131,10 +149,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<LockUsersResponse> lockUsers(LockUsersRequest request);
 
     /**
+     * @param request the request parameters of ModifyOrg  ModifyOrgRequest
+     * @return ModifyOrgResponse
+     */
+    CompletableFuture<ModifyOrgResponse> modifyOrg(ModifyOrgRequest request);
+
+    /**
      * @param request the request parameters of ModifyUser  ModifyUserRequest
      * @return ModifyUserResponse
      */
     CompletableFuture<ModifyUserResponse> modifyUser(ModifyUserRequest request);
+
+    /**
+     * @param request the request parameters of MoveOrg  MoveOrgRequest
+     * @return MoveOrgResponse
+     */
+    CompletableFuture<MoveOrgResponse> moveOrg(MoveOrgRequest request);
 
     /**
      * @param request the request parameters of QuerySyncStatusByAliUid  QuerySyncStatusByAliUidRequest
@@ -150,6 +180,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RemoveMfaDeviceResponse
      */
     CompletableFuture<RemoveMfaDeviceResponse> removeMfaDevice(RemoveMfaDeviceRequest request);
+
+    /**
+     * @param request the request parameters of RemoveOrg  RemoveOrgRequest
+     * @return RemoveOrgResponse
+     */
+    CompletableFuture<RemoveOrgResponse> removeOrg(RemoveOrgRequest request);
 
     /**
      * @param request the request parameters of RemoveProperty  RemovePropertyRequest

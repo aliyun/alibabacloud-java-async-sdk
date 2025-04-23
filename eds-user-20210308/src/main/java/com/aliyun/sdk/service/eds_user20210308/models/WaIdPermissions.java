@@ -48,6 +48,10 @@ public class WaIdPermissions extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class WaIdPermissions extends TeaModel {
         private String name; 
         private java.util.List<WaIdPermissions> subPermissions; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(WaIdPermissions model) {
+            this.code = model.code;
+            this.isBasicChild = model.isBasicChild;
+            this.name = model.name;
+            this.subPermissions = model.subPermissions;
+            this.type = model.type;
+        } 
 
         /**
          * Code.

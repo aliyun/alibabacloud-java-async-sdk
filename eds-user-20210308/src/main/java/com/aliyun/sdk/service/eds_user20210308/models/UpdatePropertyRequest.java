@@ -46,7 +46,7 @@ public class UpdatePropertyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -173,6 +173,14 @@ public class UpdatePropertyRequest extends Request {
         public static final class Builder {
             private String propertyValue; 
             private Long propertyValueId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PropertyValues model) {
+                this.propertyValue = model.propertyValue;
+                this.propertyValueId = model.propertyValueId;
+            } 
 
             /**
              * <p>The new property value.</p>

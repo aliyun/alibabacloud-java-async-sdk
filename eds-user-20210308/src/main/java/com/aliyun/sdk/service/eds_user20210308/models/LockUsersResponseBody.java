@@ -36,6 +36,10 @@ public class LockUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return lockUsersResult
      */
@@ -53,6 +57,14 @@ public class LockUsersResponseBody extends TeaModel {
     public static final class Builder {
         private LockUsersResult lockUsersResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(LockUsersResponseBody model) {
+            this.lockUsersResult = model.lockUsersResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The result of the locking the convenience user.</p>
@@ -134,6 +146,15 @@ public class LockUsersResponseBody extends TeaModel {
             private String endUserId; 
             private String errorCode; 
             private String errorMessage; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedUsers model) {
+                this.endUserId = model.endUserId;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+            } 
 
             /**
              * <p>The ID of the convenience user that failed to be locked.</p>
@@ -218,6 +239,14 @@ public class LockUsersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<FailedUsers> failedUsers; 
             private java.util.List<String> lockedUsers; 
+
+            private Builder() {
+            } 
+
+            private Builder(LockUsersResult model) {
+                this.failedUsers = model.failedUsers;
+                this.lockedUsers = model.lockedUsers;
+            } 
 
             /**
              * <p>The convenience users that failed to be locked.</p>

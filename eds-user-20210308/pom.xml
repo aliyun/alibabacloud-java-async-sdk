@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-eds_user20210308</artifactId>
-  <version>1.0.17</version>
+  <version>1.0.18</version>
   <packaging>jar</packaging>
   <name>alibabacloud-eds_user20210308</name>
   <description>Alibaba Cloud eds-user (20210308) Async SDK for Java
@@ -76,7 +76,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-gpg-plugin</artifactId>
-        <version>1.6</version>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>sign-artifacts</id>

@@ -36,6 +36,10 @@ public class RemoveUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return removeUsersResult
      */
@@ -53,6 +57,14 @@ public class RemoveUsersResponseBody extends TeaModel {
     public static final class Builder {
         private RemoveUsersResult removeUsersResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RemoveUsersResponseBody model) {
+            this.removeUsersResult = model.removeUsersResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The result of removing the convenience user.</p>
@@ -134,6 +146,15 @@ public class RemoveUsersResponseBody extends TeaModel {
             private String endUserId; 
             private String errorCode; 
             private String errorMessage; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedUsers model) {
+                this.endUserId = model.endUserId;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+            } 
 
             /**
              * <p>The ID of the convenience user that failed to be removed.</p>
@@ -218,6 +239,14 @@ public class RemoveUsersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<FailedUsers> failedUsers; 
             private java.util.List<String> removedUsers; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemoveUsersResult model) {
+                this.failedUsers = model.failedUsers;
+                this.removedUsers = model.removedUsers;
+            } 
 
             /**
              * <p>The convenience users that failed to be removed.</p>

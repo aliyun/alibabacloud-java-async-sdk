@@ -52,6 +52,10 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySyncStatusByAliUidResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -283,6 +299,21 @@ public class QuerySyncStatusByAliUidResponseBody extends TeaModel {
             private String latestEndTime; 
             private String latestSuccessTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aliUid = model.aliUid;
+                this.corpId = model.corpId;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.latestBeginTime = model.latestBeginTime;
+                this.latestEndTime = model.latestEndTime;
+                this.latestSuccessTime = model.latestSuccessTime;
+                this.status = model.status;
+            } 
 
             /**
              * AliUid.

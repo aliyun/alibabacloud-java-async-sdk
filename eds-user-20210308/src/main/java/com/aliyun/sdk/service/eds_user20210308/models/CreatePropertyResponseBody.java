@@ -36,6 +36,10 @@ public class CreatePropertyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createResult
      */
@@ -53,6 +57,14 @@ public class CreatePropertyResponseBody extends TeaModel {
     public static final class Builder {
         private CreateResult createResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePropertyResponseBody model) {
+            this.createResult = model.createResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The result of creating the property.</p>
@@ -146,6 +158,16 @@ public class CreatePropertyResponseBody extends TeaModel {
             private String errorMessage; 
             private Long propertyId; 
             private String propertyValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedPropertyValues model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.propertyId = model.propertyId;
+                this.propertyValue = model.propertyValue;
+            } 
 
             /**
              * <p>The error code.</p>
@@ -242,6 +264,14 @@ public class CreatePropertyResponseBody extends TeaModel {
             private String propertyValue; 
             private Long propertyValueId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SavePropertyValues model) {
+                this.propertyValue = model.propertyValue;
+                this.propertyValueId = model.propertyValueId;
+            } 
+
             /**
              * <p>The value of the property.</p>
              * 
@@ -314,6 +344,14 @@ public class CreatePropertyResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<FailedPropertyValues> failedPropertyValues; 
             private java.util.List<SavePropertyValues> savePropertyValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(SavePropertyValueModel model) {
+                this.failedPropertyValues = model.failedPropertyValues;
+                this.savePropertyValues = model.savePropertyValues;
+            } 
 
             /**
              * <p>The property values that failed to be created.</p>
@@ -393,6 +431,15 @@ public class CreatePropertyResponseBody extends TeaModel {
             private Long propertyId; 
             private String propertyKey; 
             private SavePropertyValueModel savePropertyValueModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateResult model) {
+                this.propertyId = model.propertyId;
+                this.propertyKey = model.propertyKey;
+                this.savePropertyValueModel = model.savePropertyValueModel;
+            } 
 
             /**
              * <p>The ID of the property.</p>

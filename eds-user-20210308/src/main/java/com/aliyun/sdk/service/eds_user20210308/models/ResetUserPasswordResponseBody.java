@@ -36,6 +36,10 @@ public class ResetUserPasswordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ResetUserPasswordResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResetUsersResult resetUsersResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResetUserPasswordResponseBody model) {
+            this.requestId = model.requestId;
+            this.resetUsersResult = model.resetUsersResult;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -134,6 +146,15 @@ public class ResetUserPasswordResponseBody extends TeaModel {
             private String endUserId; 
             private String errorCode; 
             private String errorMessage; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedUsers model) {
+                this.endUserId = model.endUserId;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+            } 
 
             /**
              * <p>The ID of the convenience user whose password failed to be reset.</p>
@@ -218,6 +239,14 @@ public class ResetUserPasswordResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<FailedUsers> failedUsers; 
             private java.util.List<String> resetUsers; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResetUsersResult model) {
+                this.failedUsers = model.failedUsers;
+                this.resetUsers = model.resetUsers;
+            } 
 
             /**
              * <p>The information about the convenience users whose passwords failed to be reset.</p>

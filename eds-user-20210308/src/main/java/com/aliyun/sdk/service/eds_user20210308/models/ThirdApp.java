@@ -44,6 +44,10 @@ public class ThirdApp extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appKey
      */
@@ -77,6 +81,16 @@ public class ThirdApp extends TeaModel {
         private String name; 
         private OidcSsoConfig oidcSsoConfig; 
         private java.util.List<Secrets> secrets; 
+
+        private Builder() {
+        } 
+
+        private Builder(ThirdApp model) {
+            this.appKey = model.appKey;
+            this.name = model.name;
+            this.oidcSsoConfig = model.oidcSsoConfig;
+            this.secrets = model.secrets;
+        } 
 
         /**
          * AppKey.
@@ -243,6 +257,21 @@ public class ThirdApp extends TeaModel {
             private String revokeEndpoint; 
             private String tokenEndpoint; 
             private String userinfoEndpoint; 
+
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.authorizationEndpoint = model.authorizationEndpoint;
+                this.discoveryEndpoint = model.discoveryEndpoint;
+                this.guestAuthorizationEndpoint = model.guestAuthorizationEndpoint;
+                this.issuer = model.issuer;
+                this.jwksEndpoint = model.jwksEndpoint;
+                this.logoutEndpoint = model.logoutEndpoint;
+                this.revokeEndpoint = model.revokeEndpoint;
+                this.tokenEndpoint = model.tokenEndpoint;
+                this.userinfoEndpoint = model.userinfoEndpoint;
+            } 
 
             /**
              * AuthorizationEndpoint.
@@ -463,6 +492,22 @@ public class ThirdApp extends TeaModel {
             private java.util.List<String> redirectUris; 
             private Integer refreshTokenEffective; 
 
+            private Builder() {
+            } 
+
+            private Builder(OidcSsoConfig model) {
+                this.accessTokenEffectiveTime = model.accessTokenEffectiveTime;
+                this.codeEffectiveTime = model.codeEffectiveTime;
+                this.enableAuthLogin = model.enableAuthLogin;
+                this.endpoints = model.endpoints;
+                this.grantScopes = model.grantScopes;
+                this.grantTypes = model.grantTypes;
+                this.idTokenAlgorithmType = model.idTokenAlgorithmType;
+                this.idTokenEffectiveTime = model.idTokenEffectiveTime;
+                this.redirectUris = model.redirectUris;
+                this.refreshTokenEffective = model.refreshTokenEffective;
+            } 
+
             /**
              * AccessTokenEffectiveTime.
              */
@@ -593,6 +638,14 @@ public class ThirdApp extends TeaModel {
         public static final class Builder {
             private Boolean enable; 
             private String secret; 
+
+            private Builder() {
+            } 
+
+            private Builder(Secrets model) {
+                this.enable = model.enable;
+                this.secret = model.secret;
+            } 
 
             /**
              * Enable.

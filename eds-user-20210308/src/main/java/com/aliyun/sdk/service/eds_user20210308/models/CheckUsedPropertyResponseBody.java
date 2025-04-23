@@ -36,6 +36,10 @@ public class CheckUsedPropertyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CheckUsedPropertyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Long useCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckUsedPropertyResponseBody model) {
+            this.requestId = model.requestId;
+            this.useCount = model.useCount;
+        } 
 
         /**
          * <p>The ID of the request.</p>

@@ -52,6 +52,10 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orgId
      */
@@ -101,6 +105,18 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         private String teamName; 
         private String userName; 
         private Long waId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetManagerInfoByAuthCodeResponseBody model) {
+            this.orgId = model.orgId;
+            this.phone = model.phone;
+            this.requestId = model.requestId;
+            this.teamName = model.teamName;
+            this.userName = model.userName;
+            this.waId = model.waId;
+        } 
 
         /**
          * <p>The organization ID.</p>

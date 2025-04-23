@@ -95,7 +95,7 @@ public class DescribeUsersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -237,7 +237,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * <p>The list of usernames that must be exactly matched.</p>
+         * <p>The usernames that must be exactly matched.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putBodyParameter("EndUserIds", endUserIds);
@@ -246,7 +246,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * <p>The list of usernames to be exactly excluded.</p>
+         * <p>The usernames that must be exactly excluded.</p>
          */
         public Builder excludeEndUserIds(java.util.List<String> excludeEndUserIds) {
             this.putBodyParameter("ExcludeEndUserIds", excludeEndUserIds);
@@ -308,10 +308,10 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page.</p>
          * <ul>
-         * <li>Valid values: 1 to 500</li>
-         * <li>Default value: 500</li>
+         * <li>Valid values: 1 to 500.</li>
+         * <li>Default value: 500.</li>
          * </ul>
          * 
          * <strong>example:</strong>
