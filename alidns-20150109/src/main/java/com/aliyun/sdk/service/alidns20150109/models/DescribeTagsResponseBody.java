@@ -48,6 +48,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeTagsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Tags> tags; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTagsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tags = model.tags;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
@@ -191,6 +206,14 @@ public class DescribeTagsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The key of tag N added to the resource.</p>

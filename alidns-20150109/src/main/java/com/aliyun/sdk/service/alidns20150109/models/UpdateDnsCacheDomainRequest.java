@@ -72,7 +72,7 @@ public class UpdateDnsCacheDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -184,7 +184,7 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * <p>The domain name.</p>
+         * <p>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtian the domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the cache-accelerated domain name.</p>
+         * <p>The instance ID of the cache-accelerated domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-listcloudgtminstances?spm=a2c63.p38356.help-menu-search-29697.d_0">ListCloudGtmInstances</a> operation to obtain the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dns-sg-l9u2ux1fw01</p>
@@ -209,7 +209,11 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * <p>The language.</p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English Default: <strong>zh</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>en</p>
@@ -303,6 +307,14 @@ public class UpdateDnsCacheDomainRequest extends Request {
         public static final class Builder {
             private String host; 
             private String port; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceDnsServer model) {
+                this.host = model.host;
+                this.port = model.port;
+            } 
 
             /**
              * <p>The domain name or IP address of the origin DNS server.</p>

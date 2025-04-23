@@ -56,6 +56,10 @@ public class AddDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dnsServers
      */
@@ -113,6 +117,19 @@ public class AddDomainResponseBody extends TeaModel {
         private String groupName; 
         private String punyCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddDomainResponseBody model) {
+            this.dnsServers = model.dnsServers;
+            this.domainId = model.domainId;
+            this.domainName = model.domainName;
+            this.groupId = model.groupId;
+            this.groupName = model.groupName;
+            this.punyCode = model.punyCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The Domain Name System (DNS) servers configured for the domain name.</p>
@@ -225,6 +242,13 @@ public class AddDomainResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> dnsServer; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnsServers model) {
+                this.dnsServer = model.dnsServer;
+            } 
 
             /**
              * DnsServer.

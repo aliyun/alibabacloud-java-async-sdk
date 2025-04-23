@@ -48,6 +48,10 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainTransfers
      */
@@ -89,6 +93,17 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTransferDomainsResponseBody model) {
+            this.domainTransfers = model.domainTransfers;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The domain names that were transferred between accounts.</p>
@@ -240,6 +255,18 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
             private Long id; 
             private Long targetUserId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainTransfer model) {
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.domainName = model.domainName;
+                this.fromUserId = model.fromUserId;
+                this.id = model.id;
+                this.targetUserId = model.targetUserId;
+            } 
+
             /**
              * <p>The time when the domain name was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
              * 
@@ -344,6 +371,13 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DomainTransfer> domainTransfer; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainTransfers model) {
+                this.domainTransfer = model.domainTransfer;
+            } 
 
             /**
              * DomainTransfer.

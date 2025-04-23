@@ -62,7 +62,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -261,6 +261,15 @@ public class UpdateGtmAddressPoolRequest extends Request {
             private Integer lbaWeight; 
             private String mode; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Addr model) {
+                this.lbaWeight = model.lbaWeight;
+                this.mode = model.mode;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The weight of the address pool that you want to modify.</p>

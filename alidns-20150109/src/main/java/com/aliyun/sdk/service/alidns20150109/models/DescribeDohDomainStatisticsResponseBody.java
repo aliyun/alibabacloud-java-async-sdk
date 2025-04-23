@@ -36,6 +36,10 @@ public class DescribeDohDomainStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeDohDomainStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Statistics> statistics; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDohDomainStatisticsResponseBody model) {
+            this.requestId = model.requestId;
+            this.statistics = model.statistics;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -170,6 +182,18 @@ public class DescribeDohDomainStatisticsResponseBody extends TeaModel {
             private Long v4HttpsCount; 
             private Long v6HttpCount; 
             private Long v6HttpsCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Statistics model) {
+                this.timestamp = model.timestamp;
+                this.totalCount = model.totalCount;
+                this.v4HttpCount = model.v4HttpCount;
+                this.v4HttpsCount = model.v4HttpsCount;
+                this.v6HttpCount = model.v6HttpCount;
+                this.v6HttpsCount = model.v6HttpsCount;
+            } 
 
             /**
              * <p>The timestamp.</p>

@@ -52,6 +52,10 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -101,6 +105,18 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
         private java.util.List<Statistics> statistics; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDohSubDomainStatisticsSummaryResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.statistics = model.statistics;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -298,6 +314,21 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
             private Long v4HttpsCount; 
             private Long v6HttpCount; 
             private Long v6HttpsCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Statistics model) {
+                this.httpCount = model.httpCount;
+                this.httpsCount = model.httpsCount;
+                this.ipCount = model.ipCount;
+                this.subDomain = model.subDomain;
+                this.totalCount = model.totalCount;
+                this.v4HttpCount = model.v4HttpCount;
+                this.v4HttpsCount = model.v4HttpsCount;
+                this.v6HttpCount = model.v6HttpCount;
+                this.v6HttpsCount = model.v6HttpsCount;
+            } 
 
             /**
              * <p>The number of HTTP requests.</p>

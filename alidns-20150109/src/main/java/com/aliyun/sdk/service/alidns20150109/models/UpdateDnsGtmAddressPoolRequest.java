@@ -57,7 +57,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -269,6 +269,17 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
             private Integer lbaWeight; 
             private String mode; 
             private String remark; 
+
+            private Builder() {
+            } 
+
+            private Builder(Addr model) {
+                this.addr = model.addr;
+                this.attributeInfo = model.attributeInfo;
+                this.lbaWeight = model.lbaWeight;
+                this.mode = model.mode;
+                this.remark = model.remark;
+            } 
 
             /**
              * <p>The address in the address pool.</p>

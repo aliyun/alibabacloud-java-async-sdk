@@ -36,6 +36,10 @@ public class DeleteDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainName
      */
@@ -53,6 +57,14 @@ public class DeleteDomainResponseBody extends TeaModel {
     public static final class Builder {
         private String domainName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteDomainResponseBody model) {
+            this.domainName = model.domainName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The domain name.</p>

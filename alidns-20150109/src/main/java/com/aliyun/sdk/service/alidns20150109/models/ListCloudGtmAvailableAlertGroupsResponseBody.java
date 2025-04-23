@@ -36,6 +36,10 @@ public class ListCloudGtmAvailableAlertGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alertGroups
      */
@@ -53,6 +57,14 @@ public class ListCloudGtmAvailableAlertGroupsResponseBody extends TeaModel {
     public static final class Builder {
         private AlertGroups alertGroups; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCloudGtmAvailableAlertGroupsResponseBody model) {
+            this.alertGroups = model.alertGroups;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The alert contact groups.</p>
@@ -111,6 +123,13 @@ public class ListCloudGtmAvailableAlertGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String groupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertGroup model) {
+                this.groupName = model.groupName;
+            } 
+
             /**
              * <p>The name of the alert contact group.</p>
              * 
@@ -160,6 +179,13 @@ public class ListCloudGtmAvailableAlertGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AlertGroup> alertGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertGroups model) {
+                this.alertGroup = model.alertGroup;
+            } 
 
             /**
              * AlertGroup.

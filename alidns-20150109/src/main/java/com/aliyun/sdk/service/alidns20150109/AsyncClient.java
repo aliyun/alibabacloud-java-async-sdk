@@ -272,7 +272,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If the DNS records to be deleted contain locked DNS records, locked DNS records will not be deleted.</p>
+     * <p>If the DNS records to be deleted contain locked DNS records, the locked DNS records will not be deleted.</p>
      * 
      * @param request the request parameters of DeleteSubDomainRecords  DeleteSubDomainRecordsRequest
      * @return DeleteSubDomainRecordsResponse

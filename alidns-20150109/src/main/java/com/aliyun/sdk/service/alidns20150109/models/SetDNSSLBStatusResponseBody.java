@@ -40,6 +40,10 @@ public class SetDNSSLBStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return open
      */
@@ -65,6 +69,15 @@ public class SetDNSSLBStatusResponseBody extends TeaModel {
         private Boolean open; 
         private Long recordCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetDNSSLBStatusResponseBody model) {
+            this.open = model.open;
+            this.recordCount = model.recordCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether weighted round-robin is enabled for the subdomain name.</p>

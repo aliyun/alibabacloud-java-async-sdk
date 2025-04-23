@@ -36,6 +36,10 @@ public class DescribePdnsAccountSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribePdnsAccountSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePdnsAccountSummaryResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -179,6 +191,19 @@ public class DescribePdnsAccountSummaryResponseBody extends TeaModel {
             private Long threatCount; 
             private Long totalCount; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.domainCount = model.domainCount;
+                this.httpCount = model.httpCount;
+                this.httpsCount = model.httpsCount;
+                this.subDomainCount = model.subDomainCount;
+                this.threatCount = model.threatCount;
+                this.totalCount = model.totalCount;
+                this.userId = model.userId;
+            } 
 
             /**
              * DomainCount.

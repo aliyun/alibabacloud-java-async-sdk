@@ -96,6 +96,10 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessStrategyNum
      */
@@ -233,6 +237,29 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         private Integer ttl; 
         private String userDomainName; 
         private String versionCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGtmInstanceResponseBody model) {
+            this.accessStrategyNum = model.accessStrategyNum;
+            this.addressPoolNum = model.addressPoolNum;
+            this.alertGroup = model.alertGroup;
+            this.cname = model.cname;
+            this.cnameMode = model.cnameMode;
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.expireTime = model.expireTime;
+            this.expireTimestamp = model.expireTimestamp;
+            this.instanceId = model.instanceId;
+            this.instanceName = model.instanceName;
+            this.lbaStrategy = model.lbaStrategy;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.ttl = model.ttl;
+            this.userDomainName = model.userDomainName;
+            this.versionCode = model.versionCode;
+        } 
 
         /**
          * <p>The number of access policies of the GTM instance.</p>

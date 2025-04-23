@@ -80,6 +80,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -185,6 +189,25 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         private Integer taskQuota; 
         private UsedQuota usedQuota; 
         private String versionCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDnsGtmInstanceResponseBody model) {
+            this.config = model.config;
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.expireTime = model.expireTime;
+            this.expireTimestamp = model.expireTimestamp;
+            this.instanceId = model.instanceId;
+            this.paymentType = model.paymentType;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.smsQuota = model.smsQuota;
+            this.taskQuota = model.taskQuota;
+            this.usedQuota = model.usedQuota;
+            this.versionCode = model.versionCode;
+        } 
 
         /**
          * <p>The configurations of the instance.</p>
@@ -400,6 +423,16 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             private String noticeType; 
             private Boolean smsNotice; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertConfig model) {
+                this.dingtalkNotice = model.dingtalkNotice;
+                this.emailNotice = model.emailNotice;
+                this.noticeType = model.noticeType;
+                this.smsNotice = model.smsNotice;
+            } 
+
             /**
              * DingtalkNotice.
              */
@@ -495,6 +528,13 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AlertConfig> alertConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigAlertConfig model) {
+                this.alertConfig = model.alertConfig;
+            } 
 
             /**
              * AlertConfig.
@@ -650,6 +690,22 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             private String publicUserDomainName; 
             private String strategyMode; 
             private Integer ttl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.alertConfig = model.alertConfig;
+                this.alertGroup = model.alertGroup;
+                this.cnameType = model.cnameType;
+                this.instanceName = model.instanceName;
+                this.pubicZoneName = model.pubicZoneName;
+                this.publicCnameMode = model.publicCnameMode;
+                this.publicRr = model.publicRr;
+                this.publicUserDomainName = model.publicUserDomainName;
+                this.strategyMode = model.strategyMode;
+                this.ttl = model.ttl;
+            } 
 
             /**
              * <p>The alert notification method.</p>
@@ -843,6 +899,16 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             private Integer emailUsedCount; 
             private Integer smsUsedCount; 
             private Integer taskUsedCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsedQuota model) {
+                this.dingtalkUsedCount = model.dingtalkUsedCount;
+                this.emailUsedCount = model.emailUsedCount;
+                this.smsUsedCount = model.smsUsedCount;
+                this.taskUsedCount = model.taskUsedCount;
+            } 
 
             /**
              * DingtalkUsedCount.

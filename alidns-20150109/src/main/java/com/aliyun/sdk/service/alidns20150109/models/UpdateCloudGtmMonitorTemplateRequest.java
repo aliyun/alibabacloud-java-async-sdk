@@ -80,7 +80,7 @@ public class UpdateCloudGtmMonitorTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -298,7 +298,7 @@ public class UpdateCloudGtmMonitorTemplateRequest extends Request {
         }
 
         /**
-         * <p>The health check nodes. You can call the <a href="~~ListCloudGtmMonitorNodes~~">ListCloudGtmMonitorNodes</a> operation to obtain the health check nodes.</p>
+         * <p>The health check nodes. You can call the <a href="https://help.aliyun.com/document_detail/2797327.html">ListCloudGtmMonitorNodes</a> operation to obtain the health check nodes.</p>
          */
         public Builder ispCityNodes(java.util.List<IspCityNodes> ispCityNodes) {
             String ispCityNodesShrink = shrink(ispCityNodes, "IspCityNodes", "json");
@@ -400,6 +400,14 @@ public class UpdateCloudGtmMonitorTemplateRequest extends Request {
         public static final class Builder {
             private String cityCode; 
             private String ispCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(IspCityNodes model) {
+                this.cityCode = model.cityCode;
+                this.ispCode = model.ispCode;
+            } 
 
             /**
              * <p>The city code of the health check node.</p>

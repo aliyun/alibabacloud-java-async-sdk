@@ -48,6 +48,10 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainGroups
      */
@@ -89,6 +93,17 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainGroupsResponseBody model) {
+            this.domainGroups = model.domainGroups;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The domain name groups.</p>
@@ -204,6 +219,15 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
             private String groupId; 
             private String groupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainGroup model) {
+                this.domainCount = model.domainCount;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+            } 
+
             /**
              * <p>The number of domain name groups.</p>
              * 
@@ -279,6 +303,13 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DomainGroup> domainGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainGroups model) {
+                this.domainGroup = model.domainGroup;
+            } 
 
             /**
              * DomainGroup.

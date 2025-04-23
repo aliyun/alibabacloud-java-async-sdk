@@ -36,6 +36,10 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Statistics statistics; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRecordStatisticsResponseBody model) {
+            this.requestId = model.requestId;
+            this.statistics = model.statistics;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -123,6 +135,14 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
             private Long count; 
             private Long timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(Statistic model) {
+                this.count = model.count;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
              * <p>The number of DNS requests.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Statistic> statistic; 
+
+            private Builder() {
+            } 
+
+            private Builder(Statistics model) {
+                this.statistic = model.statistic;
+            } 
 
             /**
              * Statistic.

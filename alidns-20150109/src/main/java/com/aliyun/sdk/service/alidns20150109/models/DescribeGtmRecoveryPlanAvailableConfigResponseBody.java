@@ -36,6 +36,10 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -53,6 +57,14 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
     public static final class Builder {
         private Instances instances; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGtmRecoveryPlanAvailableConfigResponseBody model) {
+            this.instances = model.instances;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instances.</p>
@@ -123,6 +135,14 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             private String addrPoolId; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddrPool model) {
+                this.addrPoolId = model.addrPoolId;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The address pool ID.</p>
              */
@@ -180,6 +200,13 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
 
         public static final class Builder {
             private java.util.List<AddrPool> addrPool; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddrPools model) {
+                this.addrPool = model.addrPool;
+            } 
 
             /**
              * AddrPool.
@@ -252,6 +279,15 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             private String instanceId; 
             private String instanceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.addrPools = model.addrPools;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+            } 
+
             /**
              * <p>The address pools.</p>
              */
@@ -320,6 +356,13 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
 
         public static final class Builder {
             private java.util.List<Instance> instance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instance = model.instance;
+            } 
 
             /**
              * Instance.

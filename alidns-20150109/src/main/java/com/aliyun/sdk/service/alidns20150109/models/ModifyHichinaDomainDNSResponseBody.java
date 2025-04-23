@@ -40,6 +40,10 @@ public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return newDnsServers
      */
@@ -65,6 +69,15 @@ public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
         private NewDnsServers newDnsServers; 
         private OriginalDnsServers originalDnsServers; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyHichinaDomainDNSResponseBody model) {
+            this.newDnsServers = model.newDnsServers;
+            this.originalDnsServers = model.originalDnsServers;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The DNS server names after modification.</p>
@@ -131,6 +144,13 @@ public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> dnsServer; 
 
+            private Builder() {
+            } 
+
+            private Builder(NewDnsServers model) {
+                this.dnsServer = model.dnsServer;
+            } 
+
             /**
              * DnsServer.
              */
@@ -177,6 +197,13 @@ public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> dnsServer; 
+
+            private Builder() {
+            } 
+
+            private Builder(OriginalDnsServers model) {
+                this.dnsServer = model.dnsServer;
+            } 
 
             /**
              * DnsServer.

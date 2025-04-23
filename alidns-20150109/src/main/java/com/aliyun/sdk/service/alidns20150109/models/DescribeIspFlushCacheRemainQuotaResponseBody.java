@@ -36,6 +36,10 @@ public class DescribeIspFlushCacheRemainQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeIspFlushCacheRemainQuotaResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Integer telecomRemainQuota; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIspFlushCacheRemainQuotaResponseBody model) {
+            this.requestId = model.requestId;
+            this.telecomRemainQuota = model.telecomRemainQuota;
+        } 
 
         /**
          * RequestId.

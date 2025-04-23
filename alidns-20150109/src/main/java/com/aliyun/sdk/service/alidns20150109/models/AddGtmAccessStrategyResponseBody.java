@@ -36,6 +36,10 @@ public class AddGtmAccessStrategyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class AddGtmAccessStrategyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String strategyId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddGtmAccessStrategyResponseBody model) {
+            this.requestId = model.requestId;
+            this.strategyId = model.strategyId;
+        } 
 
         /**
          * <p>The ID of the request.</p>

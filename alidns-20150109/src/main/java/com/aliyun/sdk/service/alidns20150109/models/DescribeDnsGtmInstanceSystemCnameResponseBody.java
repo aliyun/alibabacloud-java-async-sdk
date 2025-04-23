@@ -36,6 +36,10 @@ public class DescribeDnsGtmInstanceSystemCnameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeDnsGtmInstanceSystemCnameResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String systemCname; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDnsGtmInstanceSystemCnameResponseBody model) {
+            this.requestId = model.requestId;
+            this.systemCname = model.systemCname;
+        } 
 
         /**
          * <p>The ID of the request.</p>

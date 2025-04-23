@@ -48,6 +48,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return batchResultDetails
      */
@@ -89,6 +93,17 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBatchResultDetailResponseBody model) {
+            this.batchResultDetails = model.batchResultDetails;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The detailed results of the batch operation.</p>
@@ -360,6 +375,28 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(BatchResultDetail model) {
+                this.batchType = model.batchType;
+                this.domain = model.domain;
+                this.line = model.line;
+                this.newRr = model.newRr;
+                this.newValue = model.newValue;
+                this.operateDateStr = model.operateDateStr;
+                this.priority = model.priority;
+                this.reason = model.reason;
+                this.recordId = model.recordId;
+                this.remark = model.remark;
+                this.rr = model.rr;
+                this.rrStatus = model.rrStatus;
+                this.status = model.status;
+                this.ttl = model.ttl;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The type of the batch operation.</p>
              * 
@@ -526,7 +563,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The record value.</p>
+             * <p>The value of the DNS record.</p>
              * 
              * <strong>example:</strong>
              * <p>192.0.2.0</p>
@@ -574,6 +611,13 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BatchResultDetail> batchResultDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(BatchResultDetails model) {
+                this.batchResultDetail = model.batchResultDetail;
+            } 
 
             /**
              * BatchResultDetail.

@@ -52,6 +52,10 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gtmInstances
      */
@@ -101,6 +105,18 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDnsGtmInstancesResponseBody model) {
+            this.gtmInstances = model.gtmInstances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The Global Traffic Manager (GTM) instances.</p>
@@ -238,6 +254,16 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             private String emailNotice; 
             private String noticeType; 
             private String smsNotice; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertConfig model) {
+                this.dingtalkNotice = model.dingtalkNotice;
+                this.emailNotice = model.emailNotice;
+                this.noticeType = model.noticeType;
+                this.smsNotice = model.smsNotice;
+            } 
 
             /**
              * <p>Indicates whether DingTalk alert notifications are configured. Valid values:</p>
@@ -449,6 +475,22 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             private String strategyMode; 
             private Integer ttl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.alertConfig = model.alertConfig;
+                this.alertGroup = model.alertGroup;
+                this.cnameType = model.cnameType;
+                this.instanceName = model.instanceName;
+                this.publicCnameMode = model.publicCnameMode;
+                this.publicRr = model.publicRr;
+                this.publicUserDomainName = model.publicUserDomainName;
+                this.publicZoneName = model.publicZoneName;
+                this.strategyMode = model.strategyMode;
+                this.ttl = model.ttl;
+            } 
+
             /**
              * <p>The alert notification method.</p>
              */
@@ -641,6 +683,16 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             private Integer emailUsedCount; 
             private Integer smsUsedCount; 
             private Integer taskUsedCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsedQuota model) {
+                this.dingtalkUsedCount = model.dingtalkUsedCount;
+                this.emailUsedCount = model.emailUsedCount;
+                this.smsUsedCount = model.smsUsedCount;
+                this.taskUsedCount = model.taskUsedCount;
+            } 
 
             /**
              * <p>The total number of sent DingTalk notifications.</p>
@@ -856,6 +908,24 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             private Integer taskQuota; 
             private UsedQuota usedQuota; 
             private String versionCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(GtmInstances model) {
+                this.config = model.config;
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.expireTime = model.expireTime;
+                this.expireTimestamp = model.expireTimestamp;
+                this.instanceId = model.instanceId;
+                this.paymentType = model.paymentType;
+                this.resourceGroupId = model.resourceGroupId;
+                this.smsQuota = model.smsQuota;
+                this.taskQuota = model.taskQuota;
+                this.usedQuota = model.usedQuota;
+                this.versionCode = model.versionCode;
+            } 
 
             /**
              * <p>The configurations of the instance.</p>

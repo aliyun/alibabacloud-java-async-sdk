@@ -52,6 +52,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -101,6 +105,18 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCloudGtmInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The instances.</p>
@@ -383,6 +399,28 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             private Long updateTimestamp; 
             private String versionCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.commodityCode = model.commodityCode;
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.expireTime = model.expireTime;
+                this.expireTimestamp = model.expireTimestamp;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.monitorTaskQuota = model.monitorTaskQuota;
+                this.monthlyEmailUsed = model.monthlyEmailUsed;
+                this.monthlySmsQuota = model.monthlySmsQuota;
+                this.monthlySmsUsed = model.monthlySmsUsed;
+                this.monthlyWebhookUsed = model.monthlyWebhookUsed;
+                this.scheduleDomainName = model.scheduleDomainName;
+                this.updateTime = model.updateTime;
+                this.updateTimestamp = model.updateTimestamp;
+                this.versionCode = model.versionCode;
+            } 
+
             /**
              * <p>The commodity code. Valid values:</p>
              * <ul>
@@ -605,6 +643,13 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Instance> instance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instance = model.instance;
+            } 
 
             /**
              * Instance.

@@ -92,6 +92,10 @@ public class DescribeCloudGtmMonitorTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -221,6 +225,28 @@ public class DescribeCloudGtmMonitorTemplateResponseBody extends TeaModel {
         private Integer timeout; 
         private String updateTime; 
         private Long updateTimestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudGtmMonitorTemplateResponseBody model) {
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.evaluationCount = model.evaluationCount;
+            this.extendInfo = model.extendInfo;
+            this.failureRate = model.failureRate;
+            this.interval = model.interval;
+            this.ipVersion = model.ipVersion;
+            this.ispCityNodes = model.ispCityNodes;
+            this.name = model.name;
+            this.protocol = model.protocol;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.templateId = model.templateId;
+            this.timeout = model.timeout;
+            this.updateTime = model.updateTime;
+            this.updateTimestamp = model.updateTimestamp;
+        } 
 
         /**
          * <p>Health check template creation time.</p>
@@ -569,6 +595,20 @@ public class DescribeCloudGtmMonitorTemplateResponseBody extends TeaModel {
             private String ispCode; 
             private String ispName; 
 
+            private Builder() {
+            } 
+
+            private Builder(IspCityNode model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.countryCode = model.countryCode;
+                this.countryName = model.countryName;
+                this.groupName = model.groupName;
+                this.groupType = model.groupType;
+                this.ispCode = model.ispCode;
+                this.ispName = model.ispName;
+            } 
+
             /**
              * <p>City code</p>
              * 
@@ -700,6 +740,13 @@ public class DescribeCloudGtmMonitorTemplateResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<IspCityNode> ispCityNode; 
+
+            private Builder() {
+            } 
+
+            private Builder(IspCityNodes model) {
+                this.ispCityNode = model.ispCityNode;
+            } 
 
             /**
              * IspCityNode.

@@ -100,6 +100,10 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return address
      */
@@ -245,6 +249,30 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         private String type; 
         private String updateTime; 
         private Long updateTimestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudGtmAddressResponseBody model) {
+            this.address = model.address;
+            this.addressId = model.addressId;
+            this.attributeInfo = model.attributeInfo;
+            this.availableMode = model.availableMode;
+            this.availableStatus = model.availableStatus;
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.enableStatus = model.enableStatus;
+            this.healthJudgement = model.healthJudgement;
+            this.healthStatus = model.healthStatus;
+            this.healthTasks = model.healthTasks;
+            this.manualAvailableStatus = model.manualAvailableStatus;
+            this.name = model.name;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.type = model.type;
+            this.updateTime = model.updateTime;
+            this.updateTimestamp = model.updateTimestamp;
+        } 
 
         /**
          * <p>IP address or domain name.</p>
@@ -547,6 +575,16 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
             private String templateId; 
             private String templateName; 
 
+            private Builder() {
+            } 
+
+            private Builder(HealthTask model) {
+                this.monitorStatus = model.monitorStatus;
+                this.port = model.port;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+            } 
+
             /**
              * <p>The state of the health check task. Valid values:</p>
              * <ul>
@@ -634,6 +672,13 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HealthTask> healthTask; 
+
+            private Builder() {
+            } 
+
+            private Builder(HealthTasks model) {
+                this.healthTask = model.healthTask;
+            } 
 
             /**
              * HealthTask.

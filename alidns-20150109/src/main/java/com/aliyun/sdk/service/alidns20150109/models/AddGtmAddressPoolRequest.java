@@ -99,7 +99,7 @@ public class AddGtmAddressPoolRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -482,6 +482,15 @@ public class AddGtmAddressPoolRequest extends Request {
             private String mode; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Addr model) {
+                this.lbaWeight = model.lbaWeight;
+                this.mode = model.mode;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The weight of the address pool.</p>
              * 
@@ -570,6 +579,14 @@ public class AddGtmAddressPoolRequest extends Request {
         public static final class Builder {
             private String cityCode; 
             private String ispCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(IspCityNode model) {
+                this.cityCode = model.cityCode;
+                this.ispCode = model.ispCode;
+            } 
 
             /**
              * <p>The code of the city where the monitored node is deployed. For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.</p>

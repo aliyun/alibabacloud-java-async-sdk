@@ -36,6 +36,10 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attributeInfos
      */
@@ -53,6 +57,14 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
     public static final class Builder {
         private AttributeInfos attributeInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDnsGtmAddressPoolAvailableConfigResponseBody model) {
+            this.attributeInfos = model.attributeInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The supported source regions.</p>
@@ -159,6 +171,17 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
             private String lineCode; 
             private String lineName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AttributeInfo model) {
+                this.fatherCode = model.fatherCode;
+                this.groupCode = model.groupCode;
+                this.groupName = model.groupName;
+                this.lineCode = model.lineCode;
+                this.lineName = model.lineName;
+            } 
+
             /**
              * <p>The parent line code of the source region.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
 
         public static final class Builder {
             private java.util.List<AttributeInfo> attributeInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttributeInfos model) {
+                this.attributeInfo = model.attributeInfo;
+            } 
 
             /**
              * AttributeInfo.

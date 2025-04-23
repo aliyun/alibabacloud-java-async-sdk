@@ -40,6 +40,10 @@ public class CreateCloudGtmAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addressId
      */
@@ -65,6 +69,15 @@ public class CreateCloudGtmAddressResponseBody extends TeaModel {
         private String addressId; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCloudGtmAddressResponseBody model) {
+            this.addressId = model.addressId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The address ID. This ID uniquely identifies the address.</p>

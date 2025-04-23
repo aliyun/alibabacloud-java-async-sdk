@@ -48,6 +48,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainRecords
      */
@@ -89,6 +93,17 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainRecordsResponseBody model) {
+            this.domainRecords = model.domainRecords;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned Domain Name System (DNS) records.</p>
@@ -336,6 +351,26 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             private String value; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(Record model) {
+                this.createTimestamp = model.createTimestamp;
+                this.domainName = model.domainName;
+                this.line = model.line;
+                this.locked = model.locked;
+                this.priority = model.priority;
+                this.rr = model.rr;
+                this.recordId = model.recordId;
+                this.remark = model.remark;
+                this.status = model.status;
+                this.TTL = model.TTL;
+                this.type = model.type;
+                this.updateTimestamp = model.updateTimestamp;
+                this.value = model.value;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The time when the DNS record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
              * 
@@ -528,6 +563,13 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Record> record; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainRecords model) {
+                this.record = model.record;
+            } 
 
             /**
              * Record.

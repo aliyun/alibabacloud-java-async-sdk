@@ -55,7 +55,7 @@ public class DescribeDomainStatisticsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,7 +116,7 @@ public class DescribeDomainStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>The domain name.</p>
+         * <p>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -157,7 +157,11 @@ public class DescribeDomainStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The language.</p>
+         * <p>The language of the content within the request and response.</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>en</p>

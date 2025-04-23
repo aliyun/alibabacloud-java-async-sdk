@@ -172,6 +172,10 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoRenewal
      */
@@ -461,6 +465,48 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
         private Long URLForwardCount; 
         private String versionCode; 
         private String versionName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDnsProductInstanceResponseBody model) {
+            this.autoRenewal = model.autoRenewal;
+            this.bindCount = model.bindCount;
+            this.bindDomainCount = model.bindDomainCount;
+            this.bindDomainUsedCount = model.bindDomainUsedCount;
+            this.bindUsedCount = model.bindUsedCount;
+            this.dDosDefendFlow = model.dDosDefendFlow;
+            this.dDosDefendQuery = model.dDosDefendQuery;
+            this.dnsSLBCount = model.dnsSLBCount;
+            this.dnsSecurity = model.dnsSecurity;
+            this.dnsServers = model.dnsServers;
+            this.domain = model.domain;
+            this.domainType = model.domainType;
+            this.endTime = model.endTime;
+            this.endTimestamp = model.endTimestamp;
+            this.gslb = model.gslb;
+            this.ISPLines = model.ISPLines;
+            this.ISPRegionLines = model.ISPRegionLines;
+            this.inBlackHole = model.inBlackHole;
+            this.inClean = model.inClean;
+            this.instanceId = model.instanceId;
+            this.monitorFrequency = model.monitorFrequency;
+            this.monitorNodeCount = model.monitorNodeCount;
+            this.monitorTaskCount = model.monitorTaskCount;
+            this.overseaDDosDefendFlow = model.overseaDDosDefendFlow;
+            this.overseaLine = model.overseaLine;
+            this.paymentType = model.paymentType;
+            this.regionLines = model.regionLines;
+            this.requestId = model.requestId;
+            this.searchEngineLines = model.searchEngineLines;
+            this.startTime = model.startTime;
+            this.startTimestamp = model.startTimestamp;
+            this.subDomainLevel = model.subDomainLevel;
+            this.TTLMinValue = model.TTLMinValue;
+            this.URLForwardCount = model.URLForwardCount;
+            this.versionCode = model.versionCode;
+            this.versionName = model.versionName;
+        } 
 
         /**
          * <p>Indicates whether auto-renewal was enabled. Valid values:</p>
@@ -927,6 +973,13 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> dnsServer; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnsServers model) {
+                this.dnsServer = model.dnsServer;
+            } 
 
             /**
              * DnsServer.

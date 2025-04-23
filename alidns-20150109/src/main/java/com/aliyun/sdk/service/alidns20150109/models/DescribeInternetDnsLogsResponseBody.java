@@ -56,6 +56,10 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return complete
      */
@@ -114,8 +118,24 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         private Integer totalPage; 
         private Integer totalSize; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeInternetDnsLogsResponseBody model) {
+            this.complete = model.complete;
+            this.curPage = model.curPage;
+            this.logs = model.logs;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalPage = model.totalPage;
+            this.totalSize = model.totalSize;
+        } 
+
         /**
-         * Complete.
+         * <p>Indicates whether the log query is precise.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder complete(Boolean complete) {
             this.complete = complete;
@@ -123,7 +143,10 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         }
 
         /**
-         * CurPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder curPage(Integer curPage) {
             this.curPage = curPage;
@@ -131,7 +154,7 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The logs.</p>
+         * <p>The queried logs.</p>
          */
         public Builder logs(Logs logs) {
             this.logs = logs;
@@ -139,7 +162,10 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size for query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -147,7 +173,10 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -155,7 +184,10 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -163,7 +195,10 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalSize.
+         * <p>Total quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48</p>
          */
         public Builder totalSize(Integer totalSize) {
             this.totalSize = totalSize;
@@ -207,6 +242,13 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Value model) {
+                this.value = model.value;
+            } 
 
             /**
              * Value.
@@ -387,8 +429,29 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             private Value value; 
             private String zoneName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Log model) {
+                this.dnsMsgId = model.dnsMsgId;
+                this.logTime = model.logTime;
+                this.protocol = model.protocol;
+                this.queryName = model.queryName;
+                this.queryType = model.queryType;
+                this.rt = model.rt;
+                this.serverIp = model.serverIp;
+                this.sourceIp = model.sourceIp;
+                this.status = model.status;
+                this.subnetIp = model.subnetIp;
+                this.value = model.value;
+                this.zoneName = model.zoneName;
+            } 
+
             /**
-             * DnsMsgId.
+             * <p>Parse log ID (can be duplicated).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3583</p>
              */
             public Builder dnsMsgId(String dnsMsgId) {
                 this.dnsMsgId = dnsMsgId;
@@ -396,7 +459,10 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             }
 
             /**
-             * LogTime.
+             * <p>Parse timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1709196249000</p>
              */
             public Builder logTime(Long logTime) {
                 this.logTime = logTime;
@@ -404,7 +470,17 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol type of the domain name resolution query request:</p>
+             * <ul>
+             * <li>UDP</li>
+             * <li>TCP</li>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
+             * <li>DOH</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UDP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -423,7 +499,10 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryType.
+             * <p>Record type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder queryType(String queryType) {
                 this.queryType = queryType;
@@ -431,7 +510,10 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Rt.
+             * <p>Parse response time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rt(Integer rt) {
                 this.rt = rt;
@@ -439,7 +521,10 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ServerIp.
+             * <p>Parse server IP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>140.205.XX.XX</p>
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -447,7 +532,10 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceIp.
+             * <p>Source IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>59.82.XX.XX</p>
              */
             public Builder sourceIp(String sourceIp) {
                 this.sourceIp = sourceIp;
@@ -455,7 +543,10 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Response status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NOERROR</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -463,7 +554,10 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SubnetIp.
+             * <p>The value set for the edns-client-subnet option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170.33.XX.XX</p>
              */
             public Builder subnetIp(String subnetIp) {
                 this.subnetIp = subnetIp;
@@ -471,7 +565,7 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Array of parsing results.</p>
              */
             public Builder value(Value value) {
                 this.value = value;
@@ -527,6 +621,13 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Log> log; 
+
+            private Builder() {
+            } 
+
+            private Builder(Logs model) {
+                this.log = model.log;
+            } 
 
             /**
              * Log.

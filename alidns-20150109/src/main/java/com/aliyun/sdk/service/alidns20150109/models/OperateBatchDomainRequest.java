@@ -46,7 +46,7 @@ public class OperateBatchDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -89,7 +89,7 @@ public class OperateBatchDomainRequest extends Request {
         } 
 
         /**
-         * <p>The Domain Name System (DNS) records. You can submit up to 1,000 DNS records.</p>
+         * <p>The DNS records. You can submit up to 1,000 DNS records.</p>
          * <p>This parameter is required.</p>
          */
         public Builder domainRecordInfo(java.util.List<DomainRecordInfo> domainRecordInfo) {
@@ -99,7 +99,12 @@ public class OperateBatchDomainRequest extends Request {
         }
 
         /**
-         * <p>The language.</p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: zh</p>
          * 
          * <strong>example:</strong>
          * <p>en</p>
@@ -277,6 +282,22 @@ public class OperateBatchDomainRequest extends Request {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainRecordInfo model) {
+                this.domain = model.domain;
+                this.line = model.line;
+                this.newRr = model.newRr;
+                this.newType = model.newType;
+                this.newValue = model.newValue;
+                this.priority = model.priority;
+                this.rr = model.rr;
+                this.ttl = model.ttl;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The domain name.</p>
              * <blockquote>
@@ -304,7 +325,10 @@ public class OperateBatchDomainRequest extends Request {
             }
 
             /**
-             * NewRr.
+             * <p>The new hostname (used only for modification operations, not for external users).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mail</p>
              */
             public Builder newRr(String newRr) {
                 this.newRr = newRr;
@@ -312,7 +336,10 @@ public class OperateBatchDomainRequest extends Request {
             }
 
             /**
-             * NewType.
+             * <p>The new type of the DNS record (used only for modification operations, not for external users).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAAA</p>
              */
             public Builder newType(String newType) {
                 this.newType = newType;
@@ -320,7 +347,10 @@ public class OperateBatchDomainRequest extends Request {
             }
 
             /**
-             * NewValue.
+             * <p>The new value of the DNS record (used only for modification operations, not for external users).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114.92.XX.XX</p>
              */
             public Builder newValue(String newValue) {
                 this.newValue = newValue;
@@ -379,7 +409,7 @@ public class OperateBatchDomainRequest extends Request {
             }
 
             /**
-             * <p>The record value.</p>
+             * <p>The value of the DNS record.</p>
              * <blockquote>
              * <p> This parameter is required if you set Type to <strong>RR_ADD</strong> or <strong>RR_DEL</strong>.</p>
              * </blockquote>

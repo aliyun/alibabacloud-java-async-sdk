@@ -36,6 +36,10 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePdnsRequestStatisticResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The statistics on the DNS requests.</p>
@@ -254,6 +266,25 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
             private Long v6Count; 
             private Long v6HttpCount; 
             private Long v6HttpsCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dohTotalCount = model.dohTotalCount;
+                this.httpCount = model.httpCount;
+                this.httpsCount = model.httpsCount;
+                this.ipCount = model.ipCount;
+                this.timestamp = model.timestamp;
+                this.totalCount = model.totalCount;
+                this.udpTotalCount = model.udpTotalCount;
+                this.v4Count = model.v4Count;
+                this.v4HttpCount = model.v4HttpCount;
+                this.v4HttpsCount = model.v4HttpsCount;
+                this.v6Count = model.v6Count;
+                this.v6HttpCount = model.v6HttpCount;
+                this.v6HttpsCount = model.v6HttpsCount;
+            } 
 
             /**
              * <p>The total number of DoH requests, including HTTP and HTTPS requests.</p>

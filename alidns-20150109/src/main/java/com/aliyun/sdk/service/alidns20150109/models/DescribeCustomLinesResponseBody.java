@@ -52,6 +52,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return customLines
      */
@@ -101,6 +105,18 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomLinesResponseBody model) {
+            this.customLines = model.customLines;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The custom lines.</p>
@@ -155,7 +171,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned pages.</p>
+         * <p>The total number of pages returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -177,6 +193,81 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
      *
      * <p>DescribeCustomLinesResponseBody</p>
      */
+    public static class IpSegmentList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndIp")
+        private String endIp;
+
+        @com.aliyun.core.annotation.NameInMap("StartIp")
+        private String startIp;
+
+        private IpSegmentList(Builder builder) {
+            this.endIp = builder.endIp;
+            this.startIp = builder.startIp;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IpSegmentList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endIp
+         */
+        public String getEndIp() {
+            return this.endIp;
+        }
+
+        /**
+         * @return startIp
+         */
+        public String getStartIp() {
+            return this.startIp;
+        }
+
+        public static final class Builder {
+            private String endIp; 
+            private String startIp; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpSegmentList model) {
+                this.endIp = model.endIp;
+                this.startIp = model.startIp;
+            } 
+
+            /**
+             * EndIp.
+             */
+            public Builder endIp(String endIp) {
+                this.endIp = endIp;
+                return this;
+            }
+
+            /**
+             * StartIp.
+             */
+            public Builder startIp(String startIp) {
+                this.startIp = startIp;
+                return this;
+            }
+
+            public IpSegmentList build() {
+                return new IpSegmentList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCustomLinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomLinesResponseBody</p>
+     */
     public static class CustomLines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -184,12 +275,16 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("IpSegmentList")
+        private java.util.List<IpSegmentList> ipSegmentList;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private CustomLines(Builder builder) {
             this.code = builder.code;
             this.id = builder.id;
+            this.ipSegmentList = builder.ipSegmentList;
             this.name = builder.name;
         }
 
@@ -216,6 +311,13 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ipSegmentList
+         */
+        public java.util.List<IpSegmentList> getIpSegmentList() {
+            return this.ipSegmentList;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -225,7 +327,18 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         public static final class Builder {
             private String code; 
             private Long id; 
+            private java.util.List<IpSegmentList> ipSegmentList; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomLines model) {
+                this.code = model.code;
+                this.id = model.id;
+                this.ipSegmentList = model.ipSegmentList;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The code of the custom line.</p>
@@ -246,6 +359,14 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * IpSegmentList.
+             */
+            public Builder ipSegmentList(java.util.List<IpSegmentList> ipSegmentList) {
+                this.ipSegmentList = ipSegmentList;
                 return this;
             }
 

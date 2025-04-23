@@ -36,6 +36,10 @@ public class UpdateCloudGtmAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class UpdateCloudGtmAddressResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateCloudGtmAddressResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Unique request identification code.</p>

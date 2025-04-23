@@ -68,6 +68,10 @@ public class DescribeIspFlushCacheTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -149,6 +153,22 @@ public class DescribeIspFlushCacheTaskResponseBody extends TeaModel {
         private String requestId; 
         private String taskId; 
         private String taskStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIspFlushCacheTaskResponseBody model) {
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.domainName = model.domainName;
+            this.flushCacheResults = model.flushCacheResults;
+            this.instanceId = model.instanceId;
+            this.instanceName = model.instanceName;
+            this.isp = model.isp;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+            this.taskStatus = model.taskStatus;
+        } 
 
         /**
          * CreateTime.
@@ -304,6 +324,16 @@ public class DescribeIspFlushCacheTaskResponseBody extends TeaModel {
             private Long ttl; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Answers model) {
+                this.name = model.name;
+                this.record = model.record;
+                this.ttl = model.ttl;
+                this.type = model.type;
+            } 
+
             /**
              * Name.
              */
@@ -411,6 +441,16 @@ public class DescribeIspFlushCacheTaskResponseBody extends TeaModel {
             private String spName; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(DnsNodes model) {
+                this.answers = model.answers;
+                this.nodeIp = model.nodeIp;
+                this.spName = model.spName;
+                this.status = model.status;
+            } 
+
             /**
              * Answers.
              */
@@ -493,6 +533,14 @@ public class DescribeIspFlushCacheTaskResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DnsNodes> dnsNodes; 
             private String province; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlushCacheResults model) {
+                this.dnsNodes = model.dnsNodes;
+                this.province = model.province;
+            } 
 
             /**
              * DnsNodes.

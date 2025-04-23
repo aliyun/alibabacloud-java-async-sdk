@@ -52,6 +52,10 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -101,6 +105,18 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(PreviewGtmRecoveryPlanResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.previews = model.previews;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -215,6 +231,14 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
             private String content; 
             private String strategyName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SwitchInfo model) {
+                this.content = model.content;
+                this.strategyName = model.strategyName;
+            } 
+
             /**
              * <p>The formatted message content.</p>
              */
@@ -272,6 +296,13 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SwitchInfo> switchInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(SwitchInfos model) {
+                this.switchInfo = model.switchInfo;
+            } 
 
             /**
              * SwitchInfo.
@@ -356,6 +387,16 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
             private SwitchInfos switchInfos; 
             private String userDomainName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Preview model) {
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.switchInfos = model.switchInfos;
+                this.userDomainName = model.userDomainName;
+            } 
+
             /**
              * <p>The ID of the GTM instance to which the previewed disaster recovery plan belongs.</p>
              * 
@@ -435,6 +476,13 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Preview> preview; 
+
+            private Builder() {
+            } 
+
+            private Builder(Previews model) {
+                this.preview = model.preview;
+            } 
 
             /**
              * Preview.

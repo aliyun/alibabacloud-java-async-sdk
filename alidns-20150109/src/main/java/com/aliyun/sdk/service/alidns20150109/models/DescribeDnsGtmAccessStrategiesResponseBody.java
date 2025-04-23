@@ -52,6 +52,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -101,6 +105,18 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         private Strategies strategies; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDnsGtmAccessStrategiesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.strategies = model.strategies;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -239,6 +255,16 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             private Integer lbaWeight; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(EffectiveAddrPool model) {
+                this.addrCount = model.addrCount;
+                this.id = model.id;
+                this.lbaWeight = model.lbaWeight;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The number of addresses in the address pool.</p>
              * 
@@ -321,6 +347,13 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EffectiveAddrPool> effectiveAddrPool; 
+
+            private Builder() {
+            } 
+
+            private Builder(EffectiveAddrPools model) {
+                this.effectiveAddrPool = model.effectiveAddrPool;
+            } 
 
             /**
              * EffectiveAddrPool.
@@ -405,6 +438,16 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             private String lineCode; 
             private String lineName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Line model) {
+                this.groupCode = model.groupCode;
+                this.groupName = model.groupName;
+                this.lineCode = model.lineCode;
+                this.lineName = model.lineName;
+            } 
+
             /**
              * <p>The code of the source region group.</p>
              * 
@@ -487,6 +530,13 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Line> line; 
+
+            private Builder() {
+            } 
+
+            private Builder(Lines model) {
+                this.line = model.line;
+            } 
 
             /**
              * Line.
@@ -630,6 +680,21 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             private Lines lines; 
             private String strategyId; 
             private String strategyName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Strategy model) {
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.effectiveAddrPoolGroupType = model.effectiveAddrPoolGroupType;
+                this.effectiveAddrPoolType = model.effectiveAddrPoolType;
+                this.effectiveAddrPools = model.effectiveAddrPools;
+                this.effectiveLbaStrategy = model.effectiveLbaStrategy;
+                this.lines = model.lines;
+                this.strategyId = model.strategyId;
+                this.strategyName = model.strategyName;
+            } 
 
             /**
              * <p>The time when the access policy was created.</p>
@@ -775,6 +840,13 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Strategy> strategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(Strategies model) {
+                this.strategy = model.strategy;
+            } 
 
             /**
              * Strategy.

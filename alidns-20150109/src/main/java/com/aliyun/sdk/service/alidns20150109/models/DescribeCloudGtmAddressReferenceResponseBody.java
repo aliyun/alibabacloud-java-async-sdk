@@ -48,6 +48,10 @@ public class DescribeCloudGtmAddressReferenceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return address
      */
@@ -89,6 +93,17 @@ public class DescribeCloudGtmAddressReferenceResponseBody extends TeaModel {
         private AddressPools addressPools; 
         private String name; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudGtmAddressReferenceResponseBody model) {
+            this.address = model.address;
+            this.addressId = model.addressId;
+            this.addressPools = model.addressPools;
+            this.name = model.name;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>IP address or domain name.</p>
@@ -348,6 +363,27 @@ public class DescribeCloudGtmAddressReferenceResponseBody extends TeaModel {
             private Integer ttl; 
             private String versionCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceConfig model) {
+                this.addressPoolLbStrategy = model.addressPoolLbStrategy;
+                this.availableStatus = model.availableStatus;
+                this.configId = model.configId;
+                this.enableStatus = model.enableStatus;
+                this.healthStatus = model.healthStatus;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.remark = model.remark;
+                this.scheduleDomainName = model.scheduleDomainName;
+                this.scheduleHostname = model.scheduleHostname;
+                this.scheduleRrType = model.scheduleRrType;
+                this.scheduleZoneName = model.scheduleZoneName;
+                this.sequenceLbStrategyMode = model.sequenceLbStrategyMode;
+                this.ttl = model.ttl;
+                this.versionCode = model.versionCode;
+            } 
+
             /**
              * <p>The policy for load balancing between address pools. Valid values:</p>
              * <ul>
@@ -584,6 +620,13 @@ public class DescribeCloudGtmAddressReferenceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<InstanceConfig> instanceConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceConfigs model) {
+                this.instanceConfig = model.instanceConfig;
+            } 
+
             /**
              * InstanceConfig.
              */
@@ -750,6 +793,23 @@ public class DescribeCloudGtmAddressReferenceResponseBody extends TeaModel {
             private InstanceConfigs instanceConfigs; 
             private String remark; 
             private String sequenceLbStrategyMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddressPool model) {
+                this.addressLbStrategy = model.addressLbStrategy;
+                this.addressPoolId = model.addressPoolId;
+                this.addressPoolName = model.addressPoolName;
+                this.addressPoolType = model.addressPoolType;
+                this.availableStatus = model.availableStatus;
+                this.enableStatus = model.enableStatus;
+                this.healthJudgement = model.healthJudgement;
+                this.healthStatus = model.healthStatus;
+                this.instanceConfigs = model.instanceConfigs;
+                this.remark = model.remark;
+                this.sequenceLbStrategyMode = model.sequenceLbStrategyMode;
+            } 
 
             /**
              * <p>Load balancing policy among addresses in the address pool:</p>
@@ -942,6 +1002,13 @@ public class DescribeCloudGtmAddressReferenceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AddressPool> addressPool; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddressPools model) {
+                this.addressPool = model.addressPool;
+            } 
 
             /**
              * AddressPool.

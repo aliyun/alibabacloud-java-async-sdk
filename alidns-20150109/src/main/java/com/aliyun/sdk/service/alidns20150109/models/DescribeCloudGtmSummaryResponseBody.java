@@ -44,6 +44,10 @@ public class DescribeCloudGtmSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceTotalCount
      */
@@ -77,6 +81,16 @@ public class DescribeCloudGtmSummaryResponseBody extends TeaModel {
         private Integer monitorTaskTotalCount; 
         private Integer monitorTaskTotalQuota; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudGtmSummaryResponseBody model) {
+            this.instanceTotalCount = model.instanceTotalCount;
+            this.monitorTaskTotalCount = model.monitorTaskTotalCount;
+            this.monitorTaskTotalQuota = model.monitorTaskTotalQuota;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The total number of instances within the current account.</p>

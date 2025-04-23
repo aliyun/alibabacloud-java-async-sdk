@@ -52,6 +52,10 @@ public class SearchCloudGtmAddressesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addresses
      */
@@ -101,6 +105,18 @@ public class SearchCloudGtmAddressesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchCloudGtmAddressesResponseBody model) {
+            this.addresses = model.addresses;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The addresses.</p>
@@ -239,6 +255,16 @@ public class SearchCloudGtmAddressesResponseBody extends TeaModel {
             private String templateId; 
             private String templateName; 
 
+            private Builder() {
+            } 
+
+            private Builder(HealthTask model) {
+                this.monitorStatus = model.monitorStatus;
+                this.port = model.port;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+            } 
+
             /**
              * <p>The state of the health check task. Valid values:</p>
              * <ul>
@@ -326,6 +352,13 @@ public class SearchCloudGtmAddressesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HealthTask> healthTask; 
+
+            private Builder() {
+            } 
+
+            private Builder(HealthTasks model) {
+                this.healthTask = model.healthTask;
+            } 
 
             /**
              * HealthTask.
@@ -565,6 +598,29 @@ public class SearchCloudGtmAddressesResponseBody extends TeaModel {
             private String type; 
             private String updateTime; 
             private Long updateTimestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Address model) {
+                this.address = model.address;
+                this.addressId = model.addressId;
+                this.attributeInfo = model.attributeInfo;
+                this.availableMode = model.availableMode;
+                this.availableStatus = model.availableStatus;
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.enableStatus = model.enableStatus;
+                this.healthJudgement = model.healthJudgement;
+                this.healthStatus = model.healthStatus;
+                this.healthTasks = model.healthTasks;
+                this.manualAvailableStatus = model.manualAvailableStatus;
+                this.name = model.name;
+                this.remark = model.remark;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.updateTimestamp = model.updateTimestamp;
+            } 
 
             /**
              * <p>IP address or domain name.</p>
@@ -820,6 +876,13 @@ public class SearchCloudGtmAddressesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Address> address; 
+
+            private Builder() {
+            } 
+
+            private Builder(Addresses model) {
+                this.address = model.address;
+            } 
 
             /**
              * <p>IP address or domain name.</p>

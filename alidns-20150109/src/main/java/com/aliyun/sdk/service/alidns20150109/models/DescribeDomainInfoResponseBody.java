@@ -128,6 +128,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliDomain
      */
@@ -329,6 +333,37 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         private Boolean subDomain; 
         private String versionCode; 
         private String versionName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainInfoResponseBody model) {
+            this.aliDomain = model.aliDomain;
+            this.availableTtls = model.availableTtls;
+            this.createTime = model.createTime;
+            this.dnsServers = model.dnsServers;
+            this.domainId = model.domainId;
+            this.domainLoggingSwitchStatus = model.domainLoggingSwitchStatus;
+            this.domainName = model.domainName;
+            this.groupId = model.groupId;
+            this.groupName = model.groupName;
+            this.inBlackHole = model.inBlackHole;
+            this.inClean = model.inClean;
+            this.instanceId = model.instanceId;
+            this.lineType = model.lineType;
+            this.minTtl = model.minTtl;
+            this.punyCode = model.punyCode;
+            this.recordLineTreeJson = model.recordLineTreeJson;
+            this.recordLines = model.recordLines;
+            this.regionLines = model.regionLines;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.slaveDns = model.slaveDns;
+            this.subDomain = model.subDomain;
+            this.versionCode = model.versionCode;
+            this.versionName = model.versionName;
+        } 
 
         /**
          * <p>Indicates whether the domain name was registered in Alibaba Cloud.</p>
@@ -632,6 +667,13 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> availableTtl; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableTtls model) {
+                this.availableTtl = model.availableTtl;
+            } 
+
             /**
              * AvailableTtl.
              */
@@ -678,6 +720,13 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> dnsServer; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnsServers model) {
+                this.dnsServer = model.dnsServer;
+            } 
 
             /**
              * DnsServer.
@@ -762,6 +811,16 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
             private String lineDisplayName; 
             private String lineName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecordLine model) {
+                this.fatherCode = model.fatherCode;
+                this.lineCode = model.lineCode;
+                this.lineDisplayName = model.lineDisplayName;
+                this.lineName = model.lineName;
+            } 
+
             /**
              * <p>The code of the parent line. This parameter is not returned if the line has no parent line.</p>
              * 
@@ -838,6 +897,13 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RecordLine> recordLine; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordLines model) {
+                this.recordLine = model.recordLine;
+            } 
 
             /**
              * RecordLine.

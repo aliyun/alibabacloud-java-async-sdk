@@ -48,6 +48,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domains
      */
@@ -89,6 +93,17 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDnsCacheDomainsResponseBody model) {
+            this.domains = model.domains;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The domain names.</p>
@@ -191,6 +206,14 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         public static final class Builder {
             private String host; 
             private String port; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceDnsServers model) {
+                this.host = model.host;
+                this.port = model.port;
+            } 
 
             /**
              * <p>The domain name or IP address of the origin DNS server.</p>
@@ -432,6 +455,28 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             private String updateTime; 
             private Long updateTimestamp; 
             private String versionCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.cacheTtlMax = model.cacheTtlMax;
+                this.cacheTtlMin = model.cacheTtlMin;
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.domainId = model.domainId;
+                this.domainName = model.domainName;
+                this.expireTime = model.expireTime;
+                this.expireTimestamp = model.expireTimestamp;
+                this.instanceId = model.instanceId;
+                this.remark = model.remark;
+                this.sourceDnsServers = model.sourceDnsServers;
+                this.sourceEdns = model.sourceEdns;
+                this.sourceProtocol = model.sourceProtocol;
+                this.updateTime = model.updateTime;
+                this.updateTimestamp = model.updateTimestamp;
+                this.versionCode = model.versionCode;
+            } 
 
             /**
              * <p>The maximum time-to-live (TTL) period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.</p>

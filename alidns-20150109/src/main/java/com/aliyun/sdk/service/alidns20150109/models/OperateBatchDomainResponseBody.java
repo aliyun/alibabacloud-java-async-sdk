@@ -36,6 +36,10 @@ public class OperateBatchDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class OperateBatchDomainResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Long taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OperateBatchDomainResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The request ID.</p>

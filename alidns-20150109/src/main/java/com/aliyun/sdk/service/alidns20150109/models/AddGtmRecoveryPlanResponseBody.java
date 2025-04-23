@@ -36,6 +36,10 @@ public class AddGtmRecoveryPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return recoveryPlanId
      */
@@ -53,6 +57,14 @@ public class AddGtmRecoveryPlanResponseBody extends TeaModel {
     public static final class Builder {
         private String recoveryPlanId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddGtmRecoveryPlanResponseBody model) {
+            this.recoveryPlanId = model.recoveryPlanId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the disaster recovery plan.</p>

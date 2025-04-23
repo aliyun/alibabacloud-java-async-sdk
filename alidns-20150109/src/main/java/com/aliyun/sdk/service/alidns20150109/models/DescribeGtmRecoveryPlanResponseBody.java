@@ -88,6 +88,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -209,6 +213,27 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         private String status; 
         private String updateTime; 
         private Long updateTimestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGtmRecoveryPlanResponseBody model) {
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.faultAddrPoolNum = model.faultAddrPoolNum;
+            this.faultAddrPools = model.faultAddrPools;
+            this.lastExecuteTime = model.lastExecuteTime;
+            this.lastExecuteTimestamp = model.lastExecuteTimestamp;
+            this.lastRollbackTime = model.lastRollbackTime;
+            this.lastRollbackTimestamp = model.lastRollbackTimestamp;
+            this.name = model.name;
+            this.recoveryPlanId = model.recoveryPlanId;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.updateTime = model.updateTime;
+            this.updateTimestamp = model.updateTimestamp;
+        } 
 
         /**
          * <p>The time when the disaster recovery plan was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
@@ -434,6 +459,15 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             private String mode; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Addr model) {
+                this.id = model.id;
+                this.mode = model.mode;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The address ID.</p>
              * 
@@ -505,6 +539,13 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Addr> addr; 
+
+            private Builder() {
+            } 
+
+            private Builder(Addrs model) {
+                this.addr = model.addr;
+            } 
 
             /**
              * Addr.
@@ -589,6 +630,16 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             private Addrs addrs; 
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(FaultAddrPool model) {
+                this.addrPoolId = model.addrPoolId;
+                this.addrPoolName = model.addrPoolName;
+                this.addrs = model.addrs;
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * <p>The address pool ID.</p>
              * 
@@ -665,6 +716,13 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FaultAddrPool> faultAddrPool; 
+
+            private Builder() {
+            } 
+
+            private Builder(FaultAddrPools model) {
+                this.faultAddrPool = model.faultAddrPool;
+            } 
 
             /**
              * FaultAddrPool.

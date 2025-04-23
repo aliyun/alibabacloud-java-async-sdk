@@ -64,7 +64,7 @@ public class UpdateCloudGtmInstanceConfigBasicRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -172,7 +172,7 @@ public class UpdateCloudGtmInstanceConfigBasicRequest extends Request {
 
         /**
          * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</p>
-         * <p>You can call the <a href="~~ListCloudGtmInstanceConfigs~~">ListCloudGtmInstanceConfigs</a> operation to query the value of ConfigId for the access domain name.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2797349.html">ListCloudGtmInstanceConfigs</a> operation to query the value of ConfigId for the access domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>Config-000**11</p>

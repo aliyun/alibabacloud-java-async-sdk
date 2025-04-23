@@ -128,6 +128,10 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addressPoolLbStrategy
      */
@@ -329,6 +333,37 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
         private String updateTime; 
         private Long updateTimestamp; 
         private String versionCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudGtmInstanceConfigFullInfoResponseBody model) {
+            this.addressPoolLbStrategy = model.addressPoolLbStrategy;
+            this.addressPools = model.addressPools;
+            this.alertConfig = model.alertConfig;
+            this.alertGroup = model.alertGroup;
+            this.availableStatus = model.availableStatus;
+            this.commodityCode = model.commodityCode;
+            this.configId = model.configId;
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.enableStatus = model.enableStatus;
+            this.healthStatus = model.healthStatus;
+            this.instanceId = model.instanceId;
+            this.instanceName = model.instanceName;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.scheduleDomainName = model.scheduleDomainName;
+            this.scheduleHostname = model.scheduleHostname;
+            this.scheduleRrType = model.scheduleRrType;
+            this.scheduleZoneMode = model.scheduleZoneMode;
+            this.scheduleZoneName = model.scheduleZoneName;
+            this.sequenceLbStrategyMode = model.sequenceLbStrategyMode;
+            this.ttl = model.ttl;
+            this.updateTime = model.updateTime;
+            this.updateTimestamp = model.updateTimestamp;
+            this.versionCode = model.versionCode;
+        } 
 
         /**
          * <p>The policy for load balancing between address pools. Valid values:</p>
@@ -680,6 +715,13 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
         public static final class Builder {
             private java.util.List<String> requestSource; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestSource model) {
+                this.requestSource = model.requestSource;
+            } 
+
             /**
              * RequestSource.
              */
@@ -954,6 +996,32 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
             private String updateTime; 
             private Long updateTimestamp; 
             private Integer weightValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Address model) {
+                this.address = model.address;
+                this.addressId = model.addressId;
+                this.attributeInfo = model.attributeInfo;
+                this.availableMode = model.availableMode;
+                this.availableStatus = model.availableStatus;
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.enableStatus = model.enableStatus;
+                this.healthJudgement = model.healthJudgement;
+                this.healthStatus = model.healthStatus;
+                this.manualAvailableStatus = model.manualAvailableStatus;
+                this.name = model.name;
+                this.remark = model.remark;
+                this.requestSource = model.requestSource;
+                this.seqNonPreemptiveSchedule = model.seqNonPreemptiveSchedule;
+                this.serialNumber = model.serialNumber;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.updateTimestamp = model.updateTimestamp;
+                this.weightValue = model.weightValue;
+            } 
 
             /**
              * <p>IP address or domain name.</p>
@@ -1249,6 +1317,13 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
         public static final class Builder {
             private java.util.List<Address> address; 
 
+            private Builder() {
+            } 
+
+            private Builder(Addresses model) {
+                this.address = model.address;
+            } 
+
             /**
              * <p>IP address or domain name.</p>
              * 
@@ -1298,6 +1373,13 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
 
         public static final class Builder {
             private java.util.List<String> requestSource; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddressPoolRequestSource model) {
+                this.requestSource = model.requestSource;
+            } 
 
             /**
              * <p>Request source list.</p>
@@ -1549,6 +1631,30 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
             private String updateTime; 
             private Long updateTimestamp; 
             private Integer weightValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddressPool model) {
+                this.addressLbStrategy = model.addressLbStrategy;
+                this.addressPoolId = model.addressPoolId;
+                this.addressPoolName = model.addressPoolName;
+                this.addressPoolType = model.addressPoolType;
+                this.addresses = model.addresses;
+                this.availableStatus = model.availableStatus;
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.enableStatus = model.enableStatus;
+                this.healthJudgement = model.healthJudgement;
+                this.healthStatus = model.healthStatus;
+                this.requestSource = model.requestSource;
+                this.seqNonPreemptiveSchedule = model.seqNonPreemptiveSchedule;
+                this.sequenceLbStrategyMode = model.sequenceLbStrategyMode;
+                this.serialNumber = model.serialNumber;
+                this.updateTime = model.updateTime;
+                this.updateTimestamp = model.updateTimestamp;
+                this.weightValue = model.weightValue;
+            } 
 
             /**
              * <p>Load balancing policy among addresses in the address pool:</p>
@@ -1819,6 +1925,13 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
 
         public static final class Builder {
             private java.util.List<AddressPool> addressPool; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddressPools model) {
+                this.addressPool = model.addressPool;
+            } 
 
             /**
              * AddressPool.

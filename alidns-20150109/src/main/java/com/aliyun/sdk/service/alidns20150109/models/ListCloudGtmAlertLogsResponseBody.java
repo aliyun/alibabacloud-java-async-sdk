@@ -52,6 +52,10 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logs
      */
@@ -101,6 +105,18 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCloudGtmAlertLogsResponseBody model) {
+            this.logs = model.logs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The alert logs.</p>
@@ -239,6 +255,16 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
             private String entityType; 
             private Long timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(Log model) {
+                this.actionType = model.actionType;
+                this.content = model.content;
+                this.entityType = model.entityType;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
              * <p>Alert type:</p>
              * <ul>
@@ -331,6 +357,13 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Log> log; 
+
+            private Builder() {
+            } 
+
+            private Builder(Logs model) {
+                this.log = model.log;
+            } 
 
             /**
              * Log.

@@ -36,6 +36,10 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UserInfo userInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePdnsUserInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.userInfo = model.userInfo;
+        } 
 
         /**
          * RequestId.
@@ -191,6 +203,20 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
             private String state; 
             private String statisticSwitchStatus; 
             private String stoppedService; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.availableAccessSecurityType = model.availableAccessSecurityType;
+                this.availableService = model.availableService;
+                this.pdnsId = model.pdnsId;
+                this.secretKey = model.secretKey;
+                this.serviceType = model.serviceType;
+                this.state = model.state;
+                this.statisticSwitchStatus = model.statisticSwitchStatus;
+                this.stoppedService = model.stoppedService;
+            } 
 
             /**
              * AvailableAccessSecurityType.

@@ -106,7 +106,7 @@ public class DescribeDomainRecordsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -269,7 +269,7 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * <p>The domain name.</p>
+         * <p>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,6 +290,7 @@ public class DescribeDomainRecordsRequest extends Request {
          * <li>If you set GroupId to -2, all domain names are queried.</li>
          * <li>You can also specify GroupId based on the actual group ID.</li>
          * </ul>
+         * <p>You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaingroups?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainGroups </a>operation to obtain the ID of the domain name group.</p>
          * 
          * <strong>example:</strong>
          * <p>2223</p>

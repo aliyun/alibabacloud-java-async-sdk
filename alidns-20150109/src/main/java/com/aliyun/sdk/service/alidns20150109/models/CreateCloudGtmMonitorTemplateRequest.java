@@ -92,7 +92,7 @@ public class CreateCloudGtmMonitorTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -422,6 +422,14 @@ public class CreateCloudGtmMonitorTemplateRequest extends Request {
         public static final class Builder {
             private String cityCode; 
             private String ispCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(IspCityNodes model) {
+                this.cityCode = model.cityCode;
+                this.ispCode = model.ispCode;
+            } 
 
             /**
              * <p>The city code of the health check node.</p>

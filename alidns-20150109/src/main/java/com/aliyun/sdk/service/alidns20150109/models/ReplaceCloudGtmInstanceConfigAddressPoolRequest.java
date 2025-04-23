@@ -54,7 +54,7 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -251,6 +251,16 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolRequest extends Request {
             private java.util.List<String> requestSource; 
             private Integer serialNumber; 
             private Integer weightValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddressPools model) {
+                this.addressPoolId = model.addressPoolId;
+                this.requestSource = model.requestSource;
+                this.serialNumber = model.serialNumber;
+                this.weightValue = model.weightValue;
+            } 
 
             /**
              * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>

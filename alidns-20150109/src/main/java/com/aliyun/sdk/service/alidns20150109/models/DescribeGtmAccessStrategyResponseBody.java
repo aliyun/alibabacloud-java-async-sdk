@@ -92,6 +92,10 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessMode
      */
@@ -221,6 +225,28 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         private String strategyId; 
         private String strategyMode; 
         private String strategyName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGtmAccessStrategyResponseBody model) {
+            this.accessMode = model.accessMode;
+            this.accessStatus = model.accessStatus;
+            this.defaultAddrPoolMonitorStatus = model.defaultAddrPoolMonitorStatus;
+            this.defaultAddrPoolName = model.defaultAddrPoolName;
+            this.defaultAddrPoolStatus = model.defaultAddrPoolStatus;
+            this.defultAddrPoolId = model.defultAddrPoolId;
+            this.failoverAddrPoolId = model.failoverAddrPoolId;
+            this.failoverAddrPoolMonitorStatus = model.failoverAddrPoolMonitorStatus;
+            this.failoverAddrPoolName = model.failoverAddrPoolName;
+            this.failoverAddrPoolStatus = model.failoverAddrPoolStatus;
+            this.instanceId = model.instanceId;
+            this.lines = model.lines;
+            this.requestId = model.requestId;
+            this.strategyId = model.strategyId;
+            this.strategyMode = model.strategyMode;
+            this.strategyName = model.strategyName;
+        } 
 
         /**
          * <p>The access policy.</p>
@@ -464,6 +490,16 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
             private String lineCode; 
             private String lineName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Line model) {
+                this.groupCode = model.groupCode;
+                this.groupName = model.groupName;
+                this.lineCode = model.lineCode;
+                this.lineName = model.lineName;
+            } 
+
             /**
              * <p>The code of the access region group.</p>
              * 
@@ -546,6 +582,13 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Line> line; 
+
+            private Builder() {
+            } 
+
+            private Builder(Lines model) {
+                this.line = model.line;
+            } 
 
             /**
              * Line.

@@ -44,6 +44,10 @@ public class GetMainDomainNameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainLevel
      */
@@ -77,6 +81,16 @@ public class GetMainDomainNameResponseBody extends TeaModel {
         private String domainName; 
         private String rr; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMainDomainNameResponseBody model) {
+            this.domainLevel = model.domainLevel;
+            this.domainName = model.domainName;
+            this.rr = model.rr;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The level of the entered domain name.</p>

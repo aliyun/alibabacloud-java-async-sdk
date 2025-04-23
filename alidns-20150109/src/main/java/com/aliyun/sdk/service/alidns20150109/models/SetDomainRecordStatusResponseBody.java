@@ -40,6 +40,10 @@ public class SetDomainRecordStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return recordId
      */
@@ -65,6 +69,15 @@ public class SetDomainRecordStatusResponseBody extends TeaModel {
         private String recordId; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetDomainRecordStatusResponseBody model) {
+            this.recordId = model.recordId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The ID of the DNS record.</p>

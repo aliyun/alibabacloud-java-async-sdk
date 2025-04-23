@@ -70,7 +70,7 @@ public class UpdateCloudGtmAddressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -313,6 +313,14 @@ public class UpdateCloudGtmAddressRequest extends Request {
         public static final class Builder {
             private Integer port; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(HealthTasks model) {
+                this.port = model.port;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The service port of the address on which health check tasks are performed. If the ping protocol is used for health checks, the configuration of the service port is not supported.</p>

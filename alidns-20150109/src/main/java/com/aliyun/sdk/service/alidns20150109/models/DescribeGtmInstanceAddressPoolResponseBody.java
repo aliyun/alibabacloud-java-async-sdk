@@ -84,6 +84,10 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addrCount
      */
@@ -197,6 +201,26 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
         private String type; 
         private String updateTime; 
         private Long updateTimestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGtmInstanceAddressPoolResponseBody model) {
+            this.addrCount = model.addrCount;
+            this.addrPoolId = model.addrPoolId;
+            this.addrs = model.addrs;
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.minAvailableAddrNum = model.minAvailableAddrNum;
+            this.monitorConfigId = model.monitorConfigId;
+            this.monitorStatus = model.monitorStatus;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.type = model.type;
+            this.updateTime = model.updateTime;
+            this.updateTimestamp = model.updateTimestamp;
+        } 
 
         /**
          * <p>The number of addresses in the address pool queried.</p>
@@ -490,6 +514,21 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
             private Long updateTimestamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Addr model) {
+                this.addrId = model.addrId;
+                this.alertStatus = model.alertStatus;
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.lbaWeight = model.lbaWeight;
+                this.mode = model.mode;
+                this.updateTime = model.updateTime;
+                this.updateTimestamp = model.updateTimestamp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The ID of the address.</p>
              * 
@@ -633,6 +672,13 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Addr> addr; 
+
+            private Builder() {
+            } 
+
+            private Builder(Addrs model) {
+                this.addr = model.addr;
+            } 
 
             /**
              * Addr.

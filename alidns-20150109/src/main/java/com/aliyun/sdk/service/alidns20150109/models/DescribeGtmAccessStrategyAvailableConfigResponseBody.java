@@ -44,6 +44,10 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addrPools
      */
@@ -77,6 +81,16 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         private Lines lines; 
         private String requestId; 
         private Boolean suggestSetDefaultLine; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGtmAccessStrategyAvailableConfigResponseBody model) {
+            this.addrPools = model.addrPools;
+            this.lines = model.lines;
+            this.requestId = model.requestId;
+            this.suggestSetDefaultLine = model.suggestSetDefaultLine;
+        } 
 
         /**
          * <p>The address pools.</p>
@@ -166,6 +180,14 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             private String addrPoolId; 
             private String addrPoolName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddrPool model) {
+                this.addrPoolId = model.addrPoolId;
+                this.addrPoolName = model.addrPoolName;
+            } 
+
             /**
              * <p>The ID of the address pool.</p>
              * 
@@ -226,6 +248,13 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
 
         public static final class Builder {
             private java.util.List<AddrPool> addrPool; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddrPools model) {
+                this.addrPool = model.addrPool;
+            } 
 
             /**
              * AddrPool.
@@ -333,6 +362,18 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             private String lineCode; 
             private String lineName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Line model) {
+                this.fatherCode = model.fatherCode;
+                this.groupCode = model.groupCode;
+                this.groupName = model.groupName;
+                this.lineCode = model.lineCode;
+                this.lineName = model.lineName;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The code of the parent line. No value is returned if no parent line exists.</p>
@@ -442,6 +483,13 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
 
         public static final class Builder {
             private java.util.List<Line> line; 
+
+            private Builder() {
+            } 
+
+            private Builder(Lines model) {
+                this.line = model.line;
+            } 
 
             /**
              * Line.

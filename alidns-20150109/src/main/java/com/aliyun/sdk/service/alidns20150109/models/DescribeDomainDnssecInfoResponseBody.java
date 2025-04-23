@@ -68,6 +68,10 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return algorithm
      */
@@ -149,6 +153,22 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         private String publicKey; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainDnssecInfoResponseBody model) {
+            this.algorithm = model.algorithm;
+            this.digest = model.digest;
+            this.digestType = model.digestType;
+            this.domainName = model.domainName;
+            this.dsRecord = model.dsRecord;
+            this.flags = model.flags;
+            this.keyTag = model.keyTag;
+            this.publicKey = model.publicKey;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The algorithm type. This parameter is returned if DNSSEC is enabled.</p>

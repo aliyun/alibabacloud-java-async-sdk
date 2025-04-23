@@ -52,6 +52,10 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addrPools
      */
@@ -101,6 +105,18 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGtmInstanceAddressPoolsResponseBody model) {
+            this.addrPools = model.addrPools;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The returned list of address pools of the GTM instance.</p>
@@ -335,6 +351,24 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
             private String updateTime; 
             private Long updateTimestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddrPool model) {
+                this.addrCount = model.addrCount;
+                this.addrPoolId = model.addrPoolId;
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.minAvailableAddrNum = model.minAvailableAddrNum;
+                this.monitorConfigId = model.monitorConfigId;
+                this.monitorStatus = model.monitorStatus;
+                this.name = model.name;
+                this.status = model.status;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.updateTimestamp = model.updateTimestamp;
+            } 
+
             /**
              * <p>The number of addresses in the address pool.</p>
              * 
@@ -512,6 +546,13 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AddrPool> addrPool; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddrPools model) {
+                this.addrPool = model.addrPool;
+            } 
 
             /**
              * AddrPool.

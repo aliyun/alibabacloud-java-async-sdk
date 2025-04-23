@@ -122,7 +122,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -575,6 +575,14 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
             private String id; 
             private Integer lbaWeight; 
 
+            private Builder() {
+            } 
+
+            private Builder(DefaultAddrPool model) {
+                this.id = model.id;
+                this.lbaWeight = model.lbaWeight;
+            } 
+
             /**
              * <p>The ID of the address pool in the primary address pool set.</p>
              * 
@@ -647,6 +655,14 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
         public static final class Builder {
             private String id; 
             private Integer lbaWeight; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailoverAddrPool model) {
+                this.id = model.id;
+                this.lbaWeight = model.lbaWeight;
+            } 
 
             /**
              * <p>The ID of the address pool in the secondary address pool set.</p>

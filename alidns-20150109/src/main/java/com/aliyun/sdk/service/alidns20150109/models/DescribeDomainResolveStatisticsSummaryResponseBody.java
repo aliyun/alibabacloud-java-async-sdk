@@ -52,6 +52,10 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -101,6 +105,18 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
         private java.util.List<Statistics> statistics; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainResolveStatisticsSummaryResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.statistics = model.statistics;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
@@ -226,6 +242,15 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
             private String count; 
             private String domainName; 
             private String domainType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Statistics model) {
+                this.count = model.count;
+                this.domainName = model.domainName;
+                this.domainType = model.domainType;
+            } 
 
             /**
              * <p>The number of DNS requests.</p>

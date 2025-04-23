@@ -56,7 +56,7 @@ public class UntagResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,7 +129,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The language.</p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>en</p>
@@ -141,7 +145,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource ID.</p>
+         * <p>The ID of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +158,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource type.</p>
+         * <p>The type of the resource. Valid value: Valid values:</p>
+         * <ul>
+         * <li><strong>DOMAIN</strong>: domain name</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

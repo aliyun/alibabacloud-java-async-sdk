@@ -48,6 +48,10 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         private String requestId; 
         private SlbSubDomains slbSubDomains; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDNSSLBSubDomainsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.slbSubDomains = model.slbSubDomains;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
@@ -192,6 +207,14 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             private String line; 
             private Boolean open; 
 
+            private Builder() {
+            } 
+
+            private Builder(LineAlgorithm model) {
+                this.line = model.line;
+                this.open = model.open;
+            } 
+
             /**
              * <p>The DNS resolution line. The line can be China Telecom, China Mobile, and China Unicom.</p>
              * 
@@ -256,6 +279,13 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LineAlgorithm> lineAlgorithm; 
+
+            private Builder() {
+            } 
+
+            private Builder(LineAlgorithms model) {
+                this.lineAlgorithm = model.lineAlgorithm;
+            } 
 
             /**
              * LineAlgorithm.
@@ -352,6 +382,17 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             private String subDomain; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlbSubDomain model) {
+                this.lineAlgorithms = model.lineAlgorithms;
+                this.open = model.open;
+                this.recordCount = model.recordCount;
+                this.subDomain = model.subDomain;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The lines for which weighted round-robin is enabled.</p>
              */
@@ -383,7 +424,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subdomain name.</p>
+             * <p>The name of the subdomain.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -442,6 +483,13 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SlbSubDomain> slbSubDomain; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlbSubDomains model) {
+                this.slbSubDomain = model.slbSubDomain;
+            } 
 
             /**
              * SlbSubDomain.

@@ -44,6 +44,10 @@ public class DescribeCloudGtmAddressPoolReferenceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addressPoolId
      */
@@ -77,6 +81,16 @@ public class DescribeCloudGtmAddressPoolReferenceResponseBody extends TeaModel {
         private String addressPoolName; 
         private InstanceConfigs instanceConfigs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudGtmAddressPoolReferenceResponseBody model) {
+            this.addressPoolId = model.addressPoolId;
+            this.addressPoolName = model.addressPoolName;
+            this.instanceConfigs = model.instanceConfigs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>
@@ -325,6 +339,27 @@ public class DescribeCloudGtmAddressPoolReferenceResponseBody extends TeaModel {
             private Integer ttl; 
             private String versionCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceConfig model) {
+                this.addressPoolLbStrategy = model.addressPoolLbStrategy;
+                this.availableStatus = model.availableStatus;
+                this.configId = model.configId;
+                this.enableStatus = model.enableStatus;
+                this.healthStatus = model.healthStatus;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.remark = model.remark;
+                this.scheduleDomainName = model.scheduleDomainName;
+                this.scheduleHostname = model.scheduleHostname;
+                this.scheduleRrType = model.scheduleRrType;
+                this.scheduleZoneName = model.scheduleZoneName;
+                this.sequenceLbStrategyMode = model.sequenceLbStrategyMode;
+                this.ttl = model.ttl;
+                this.versionCode = model.versionCode;
+            } 
+
             /**
              * <p>The policy for load balancing between address pools. Valid values:</p>
              * <ul>
@@ -560,6 +595,13 @@ public class DescribeCloudGtmAddressPoolReferenceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InstanceConfig> instanceConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceConfigs model) {
+                this.instanceConfig = model.instanceConfig;
+            } 
 
             /**
              * InstanceConfig.

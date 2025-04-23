@@ -36,6 +36,10 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appKeys
      */
@@ -53,6 +57,14 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AppKeys> appKeys; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePdnsAppKeysResponseBody model) {
+            this.appKeys = model.appKeys;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AppKeys.
@@ -155,6 +167,17 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
             private Long createTimestamp; 
             private String remark; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppKeys model) {
+                this.appKeyId = model.appKeyId;
+                this.createDate = model.createDate;
+                this.createTimestamp = model.createTimestamp;
+                this.remark = model.remark;
+                this.state = model.state;
+            } 
 
             /**
              * AppKeyId.

@@ -76,7 +76,7 @@ public class AddGtmMonitorRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -338,6 +338,14 @@ public class AddGtmMonitorRequest extends Request {
         public static final class Builder {
             private String cityCode; 
             private String ispCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(IspCityNode model) {
+                this.cityCode = model.cityCode;
+                this.ispCode = model.ispCode;
+            } 
 
             /**
              * <p>The city code.</p>

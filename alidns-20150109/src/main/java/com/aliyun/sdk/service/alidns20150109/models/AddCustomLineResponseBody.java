@@ -40,6 +40,10 @@ public class AddCustomLineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return lineCode
      */
@@ -65,6 +69,15 @@ public class AddCustomLineResponseBody extends TeaModel {
         private String lineCode; 
         private Long lineId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddCustomLineResponseBody model) {
+            this.lineCode = model.lineCode;
+            this.lineId = model.lineId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The code of the custom line.</p>

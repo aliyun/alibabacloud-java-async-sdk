@@ -52,6 +52,10 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         private String name; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomLineResponseBody model) {
+            this.code = model.code;
+            this.domainName = model.domainName;
+            this.id = model.id;
+            this.ipSegmentList = model.ipSegmentList;
+            this.name = model.name;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The code of the custom line.</p>
          * 
@@ -125,7 +141,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the custom line.</p>
+         * <p>The ID/Name of the custom line.</p>
          * 
          * <strong>example:</strong>
          * <p>597</p>
@@ -211,6 +227,14 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         public static final class Builder {
             private String endIp; 
             private String startIp; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpSegmentList model) {
+                this.endIp = model.endIp;
+                this.startIp = model.startIp;
+            } 
 
             /**
              * <p>The end IP address of the CIDR block.</p>

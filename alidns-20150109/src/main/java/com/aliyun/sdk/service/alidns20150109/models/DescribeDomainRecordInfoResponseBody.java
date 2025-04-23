@@ -92,6 +92,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainId
      */
@@ -221,6 +225,28 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         private Long TTL; 
         private String type; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainRecordInfoResponseBody model) {
+            this.domainId = model.domainId;
+            this.domainName = model.domainName;
+            this.groupId = model.groupId;
+            this.groupName = model.groupName;
+            this.line = model.line;
+            this.locked = model.locked;
+            this.priority = model.priority;
+            this.punyCode = model.punyCode;
+            this.rr = model.rr;
+            this.recordId = model.recordId;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.TTL = model.TTL;
+            this.type = model.type;
+            this.value = model.value;
+        } 
 
         /**
          * <p>The ID of the domain name.</p>
@@ -355,7 +381,9 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The state of the DNS records. Valid values: <strong>Enable and Disable</strong>.</p>
+         * <p>The status of the DNS record. Valid values:</p>
+         * <p>Enable: enabled</p>
+         * <p>Disable: disabled</p>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -366,7 +394,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time-to-live (TTL) of the DNS record.</p>
+         * <p>The time for which the DNS record is cached in a local DNS system.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>

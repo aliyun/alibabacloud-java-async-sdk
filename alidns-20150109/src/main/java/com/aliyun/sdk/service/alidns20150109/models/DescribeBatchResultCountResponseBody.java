@@ -60,6 +60,10 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return batchType
      */
@@ -125,6 +129,20 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         private Integer successCount; 
         private Long taskId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBatchResultCountResponseBody model) {
+            this.batchType = model.batchType;
+            this.failedCount = model.failedCount;
+            this.reason = model.reason;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.successCount = model.successCount;
+            this.taskId = model.taskId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The type of the batch operation.</p>

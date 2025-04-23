@@ -92,6 +92,10 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addressLbStrategy
      */
@@ -221,6 +225,28 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
         private String sequenceLbStrategyMode; 
         private String updateTime; 
         private Long updateTimestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudGtmAddressPoolResponseBody model) {
+            this.addressLbStrategy = model.addressLbStrategy;
+            this.addressPoolId = model.addressPoolId;
+            this.addressPoolName = model.addressPoolName;
+            this.addressPoolType = model.addressPoolType;
+            this.addresses = model.addresses;
+            this.availableStatus = model.availableStatus;
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.enableStatus = model.enableStatus;
+            this.healthJudgement = model.healthJudgement;
+            this.healthStatus = model.healthStatus;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.sequenceLbStrategyMode = model.sequenceLbStrategyMode;
+            this.updateTime = model.updateTime;
+            this.updateTimestamp = model.updateTimestamp;
+        } 
 
         /**
          * <p>Load balancing policy among addresses in the address pool:</p>
@@ -492,6 +518,15 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
             private String templateId; 
             private String templateName; 
 
+            private Builder() {
+            } 
+
+            private Builder(HealthTask model) {
+                this.port = model.port;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+            } 
+
             /**
              * <p>The target service port for health check probes. When the health check protocol is set to Ping, configuration of the service port is not supported.</p>
              * 
@@ -564,6 +599,13 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<HealthTask> healthTask; 
 
+            private Builder() {
+            } 
+
+            private Builder(HealthTasks model) {
+                this.healthTask = model.healthTask;
+            } 
+
             /**
              * HealthTask.
              */
@@ -610,6 +652,13 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> requestSource; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestSource model) {
+                this.requestSource = model.requestSource;
+            } 
 
             /**
              * RequestSource.
@@ -897,6 +946,33 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
             private String updateTime; 
             private Long updateTimestamp; 
             private Integer weightValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Address model) {
+                this.address = model.address;
+                this.addressId = model.addressId;
+                this.attributeInfo = model.attributeInfo;
+                this.availableMode = model.availableMode;
+                this.availableStatus = model.availableStatus;
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.enableStatus = model.enableStatus;
+                this.healthJudgement = model.healthJudgement;
+                this.healthStatus = model.healthStatus;
+                this.healthTasks = model.healthTasks;
+                this.manualAvailableStatus = model.manualAvailableStatus;
+                this.name = model.name;
+                this.remark = model.remark;
+                this.requestSource = model.requestSource;
+                this.seqNonPreemptiveSchedule = model.seqNonPreemptiveSchedule;
+                this.serialNumber = model.serialNumber;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.updateTimestamp = model.updateTimestamp;
+                this.weightValue = model.weightValue;
+            } 
 
             /**
              * <p>IP address or domain name.</p>
@@ -1195,6 +1271,13 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Address> address; 
+
+            private Builder() {
+            } 
+
+            private Builder(Addresses model) {
+                this.address = model.address;
+            } 
 
             /**
              * <p>IP address or domain name.</p>

@@ -36,6 +36,10 @@ public class DeleteDomainGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupName
      */
@@ -53,6 +57,14 @@ public class DeleteDomainGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String groupName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteDomainGroupResponseBody model) {
+            this.groupName = model.groupName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The name of the domain name group.</p>

@@ -52,6 +52,10 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceDomains
      */
@@ -102,8 +106,20 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         private Integer totalItems; 
         private Integer totalPages; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceDomainsResponseBody model) {
+            this.instanceDomains = model.instanceDomains;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
+
         /**
-         * <p>The domain names that are bound to the Alibaba Cloud DNS instance.</p>
+         * <p>The domain names that are bound to the DNS instance.</p>
          */
         public Builder instanceDomains(java.util.List<InstanceDomains> instanceDomains) {
             this.instanceDomains = instanceDomains;
@@ -226,6 +242,15 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
             private String createTime; 
             private Long createTimestamp; 
             private String domainName; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceDomains model) {
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.domainName = model.domainName;
+            } 
 
             /**
              * <p>The time when the instance was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>

@@ -91,7 +91,7 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -444,6 +444,16 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
             private Boolean emailNotice; 
             private String noticeType; 
             private Boolean smsNotice; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertConfig model) {
+                this.dingtalkNotice = model.dingtalkNotice;
+                this.emailNotice = model.emailNotice;
+                this.noticeType = model.noticeType;
+                this.smsNotice = model.smsNotice;
+            } 
 
             /**
              * DingtalkNotice.

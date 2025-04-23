@@ -48,6 +48,10 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainName
      */
@@ -89,6 +93,17 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
         private String rr; 
         private String requestId; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTxtRecordForVerifyResponseBody model) {
+            this.domainName = model.domainName;
+            this.parentDomainName = model.parentDomainName;
+            this.rr = model.rr;
+            this.requestId = model.requestId;
+            this.value = model.value;
+        } 
 
         /**
          * <p>The domain name.</p>

@@ -80,6 +80,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addrCount
      */
@@ -185,6 +189,25 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         private String type; 
         private String updateTime; 
         private Long updateTimestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDnsGtmInstanceAddressPoolResponseBody model) {
+            this.addrCount = model.addrCount;
+            this.addrPoolId = model.addrPoolId;
+            this.addrs = model.addrs;
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.lbaStrategy = model.lbaStrategy;
+            this.monitorConfigId = model.monitorConfigId;
+            this.monitorStatus = model.monitorStatus;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.type = model.type;
+            this.updateTime = model.updateTime;
+            this.updateTimestamp = model.updateTimestamp;
+        } 
 
         /**
          * <p>The number of addresses in the address pool.</p>
@@ -486,6 +509,22 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             private String updateTime; 
             private Long updateTimestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(Addr model) {
+                this.addr = model.addr;
+                this.alertStatus = model.alertStatus;
+                this.attributeInfo = model.attributeInfo;
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.lbaWeight = model.lbaWeight;
+                this.mode = model.mode;
+                this.remark = model.remark;
+                this.updateTime = model.updateTime;
+                this.updateTimestamp = model.updateTimestamp;
+            } 
+
             /**
              * <p>The address.</p>
              * 
@@ -648,6 +687,13 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Addr> addr; 
+
+            private Builder() {
+            } 
+
+            private Builder(Addrs model) {
+                this.addr = model.addr;
+            } 
 
             /**
              * <p>The address.</p>

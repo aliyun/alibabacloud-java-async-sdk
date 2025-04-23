@@ -49,7 +49,7 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -224,6 +224,16 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
             private java.util.List<String> requestSource; 
             private Integer serialNumber; 
             private Integer weightValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Addresses model) {
+                this.addressId = model.addressId;
+                this.requestSource = model.requestSource;
+                this.serialNumber = model.serialNumber;
+                this.weightValue = model.weightValue;
+            } 
 
             /**
              * <p>The ID of the new address. This ID uniquely identifies the address.</p>

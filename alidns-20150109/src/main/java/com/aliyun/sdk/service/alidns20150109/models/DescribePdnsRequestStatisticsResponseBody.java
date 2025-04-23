@@ -48,6 +48,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePdnsRequestStatisticsResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The statistics on the DNS requests.</p>
@@ -191,6 +206,14 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         public static final class Builder {
             private String threatLevel; 
             private String threatType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ThreatInfo model) {
+                this.threatLevel = model.threatLevel;
+                this.threatType = model.threatType;
+            } 
 
             /**
              * <p>The current version does not support this parameter.</p>
@@ -448,6 +471,29 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             private Long v6Count; 
             private Long v6HttpCount; 
             private Long v6HttpsCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dohTotalCount = model.dohTotalCount;
+                this.domainName = model.domainName;
+                this.httpCount = model.httpCount;
+                this.httpsCount = model.httpsCount;
+                this.ipCount = model.ipCount;
+                this.maxThreatLevel = model.maxThreatLevel;
+                this.subDomain = model.subDomain;
+                this.threatCount = model.threatCount;
+                this.threatInfo = model.threatInfo;
+                this.totalCount = model.totalCount;
+                this.udpTotalCount = model.udpTotalCount;
+                this.v4Count = model.v4Count;
+                this.v4HttpCount = model.v4HttpCount;
+                this.v4HttpsCount = model.v4HttpsCount;
+                this.v6Count = model.v6Count;
+                this.v6HttpCount = model.v6HttpCount;
+                this.v6HttpsCount = model.v6HttpsCount;
+            } 
 
             /**
              * <p>The total number of DoH requests, including the HTTP and HTTPS requests.</p>

@@ -52,6 +52,10 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alertConfig
      */
@@ -101,6 +105,18 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
         private String configId; 
         private String instanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudGtmInstanceConfigAlertResponseBody model) {
+            this.alertConfig = model.alertConfig;
+            this.alertGroup = model.alertGroup;
+            this.alertMode = model.alertMode;
+            this.configId = model.configId;
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The alert configurations.</p>
@@ -240,6 +256,16 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
             private String noticeType; 
             private Boolean smsNotice; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertConfigAlertConfig model) {
+                this.dingtalkNotice = model.dingtalkNotice;
+                this.emailNotice = model.emailNotice;
+                this.noticeType = model.noticeType;
+                this.smsNotice = model.smsNotice;
+            } 
+
             /**
              * <p>Indicates whether DingTalk notifications are configured. Valid values:</p>
              * <ul>
@@ -342,6 +368,13 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AlertConfigAlertConfig> alertConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertConfig model) {
+                this.alertConfig = model.alertConfig;
+            } 
+
             /**
              * <p>The alert configurations.</p>
              */
@@ -388,6 +421,13 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> alertGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertGroup model) {
+                this.alertGroup = model.alertGroup;
+            } 
 
             /**
              * <p>The alert contact groups.</p>

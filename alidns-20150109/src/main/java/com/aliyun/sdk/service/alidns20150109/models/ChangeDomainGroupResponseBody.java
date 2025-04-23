@@ -40,6 +40,10 @@ public class ChangeDomainGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupId
      */
@@ -65,6 +69,15 @@ public class ChangeDomainGroupResponseBody extends TeaModel {
         private String groupId; 
         private String groupName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChangeDomainGroupResponseBody model) {
+            this.groupId = model.groupId;
+            this.groupName = model.groupName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the target domain name group.</p>

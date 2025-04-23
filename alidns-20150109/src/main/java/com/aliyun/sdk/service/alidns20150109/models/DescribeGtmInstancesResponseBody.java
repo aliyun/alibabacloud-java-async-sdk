@@ -52,6 +52,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gtmInstances
      */
@@ -101,6 +105,18 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGtmInstancesResponseBody model) {
+            this.gtmInstances = model.gtmInstances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The list of queried instances.</p>
@@ -383,6 +399,28 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             private String userDomainName; 
             private String versionCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(GtmInstance model) {
+                this.accessStrategyNum = model.accessStrategyNum;
+                this.addressPoolNum = model.addressPoolNum;
+                this.alertGroup = model.alertGroup;
+                this.cname = model.cname;
+                this.cnameMode = model.cnameMode;
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.expireTime = model.expireTime;
+                this.expireTimestamp = model.expireTimestamp;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.lbaStrategy = model.lbaStrategy;
+                this.resourceGroupId = model.resourceGroupId;
+                this.ttl = model.ttl;
+                this.userDomainName = model.userDomainName;
+                this.versionCode = model.versionCode;
+            } 
+
             /**
              * <p>The number of access policies.</p>
              * 
@@ -605,6 +643,13 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<GtmInstance> gtmInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(GtmInstances model) {
+                this.gtmInstance = model.gtmInstance;
+            } 
 
             /**
              * GtmInstance.

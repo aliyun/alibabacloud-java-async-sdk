@@ -80,7 +80,7 @@ public class UpdateDomainRecordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -177,7 +177,11 @@ public class UpdateDomainRecordRequest extends Request {
         } 
 
         /**
-         * <p>The language.</p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>en</p>
@@ -230,7 +234,8 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DNS record.</p>
+         * <p>The ID of the Domain Name System (DNS) record.</p>
+         * <p>You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomainrecords?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainRecords</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +288,7 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * <p>The record value.</p>
+         * <p>The value of the DNS record.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

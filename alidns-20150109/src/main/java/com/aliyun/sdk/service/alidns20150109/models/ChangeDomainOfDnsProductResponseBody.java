@@ -36,6 +36,10 @@ public class ChangeDomainOfDnsProductResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return originalDomain
      */
@@ -53,6 +57,14 @@ public class ChangeDomainOfDnsProductResponseBody extends TeaModel {
     public static final class Builder {
         private String originalDomain; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChangeDomainOfDnsProductResponseBody model) {
+            this.originalDomain = model.originalDomain;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The domain name that is originally bound to the instance. If no value is returned for this parameter, the instance is bound to a domain name for the first time.</p>

@@ -74,7 +74,7 @@ public class DescribeInternetDnsLogsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -195,7 +195,10 @@ public class DescribeInternetDnsLogsRequest extends Request {
         }
 
         /**
-         * EndTimestamp.
+         * <p>The end time of the query (timestamp, unit: milliseconds). &gt;Warning: If the query time span is too large and the amount of resolution logs for the queried domain is excessive, it may lead to a query timeout or inaccurate query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1709196299999</p>
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -204,7 +207,15 @@ public class DescribeInternetDnsLogsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Return value language, options: </p>
+         * <ul>
+         * <li>zh: Chinese </li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default: en</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -213,7 +224,14 @@ public class DescribeInternetDnsLogsRequest extends Request {
         }
 
         /**
-         * Module.
+         * <p>Module type </p>
+         * <ul>
+         * <li>AUTHORITY (default): Public Authoritative DNS </li>
+         * <li>RECURSION: Public Recursive DNS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTHORITY</p>
          */
         public Builder module(String module) {
             this.putQueryParameter("Module", module);
@@ -222,7 +240,10 @@ public class DescribeInternetDnsLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number, default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -231,7 +252,10 @@ public class DescribeInternetDnsLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size for query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -240,7 +264,18 @@ public class DescribeInternetDnsLogsRequest extends Request {
         }
 
         /**
-         * QueryCondition.
+         * <p>Query parameters </p>
+         * <ul>
+         * <li>sourceIp: Source IP address </li>
+         * <li>queryNameFuzzy: Domain name (fuzzy value) </li>
+         * <li>queryType: Record type </li>
+         * <li>value: Resolution result </li>
+         * <li>status: Status </li>
+         * <li>serverIp: Resolution server IP</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sourceIp&quot;:&quot;59.82.XX.XX&quot;,&quot;queryType&quot;:&quot;A&quot;}</p>
          */
         public Builder queryCondition(String queryCondition) {
             this.putQueryParameter("QueryCondition", queryCondition);
@@ -249,7 +284,10 @@ public class DescribeInternetDnsLogsRequest extends Request {
         }
 
         /**
-         * StartTimestamp.
+         * <p>The start time of the query (timestamp, unit: milliseconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1709192640000</p>
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

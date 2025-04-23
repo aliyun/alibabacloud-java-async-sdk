@@ -40,6 +40,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipv4IspCityNodes
      */
@@ -65,6 +69,15 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
         private Ipv4IspCityNodes ipv4IspCityNodes; 
         private Ipv6IspCityNodes ipv6IspCityNodes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCloudGtmMonitorNodesResponseBody model) {
+            this.ipv4IspCityNodes = model.ipv4IspCityNodes;
+            this.ipv6IspCityNodes = model.ipv6IspCityNodes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Public IPv4 monitoring node list.</p>
@@ -130,6 +143,13 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ip; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ips model) {
+                this.ip = model.ip;
+            } 
 
             /**
              * Ip.
@@ -298,6 +318,23 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             private String ispName; 
             private String nodeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv4IspCityNode model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.countryCode = model.countryCode;
+                this.countryName = model.countryName;
+                this.defaultSelected = model.defaultSelected;
+                this.groupName = model.groupName;
+                this.groupType = model.groupType;
+                this.ips = model.ips;
+                this.ispCode = model.ispCode;
+                this.ispName = model.ispName;
+                this.nodeId = model.nodeId;
+            } 
+
             /**
              * <p>City code.</p>
              * 
@@ -464,6 +501,13 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Ipv4IspCityNode> ipv4IspCityNode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv4IspCityNodes model) {
+                this.ipv4IspCityNode = model.ipv4IspCityNode;
+            } 
+
             /**
              * Ipv4IspCityNode.
              */
@@ -510,6 +554,13 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ip; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6IspCityNodeIps model) {
+                this.ip = model.ip;
+            } 
 
             /**
              * Ip.
@@ -678,6 +729,23 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             private String ispName; 
             private String nodeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6IspCityNode model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.countryCode = model.countryCode;
+                this.countryName = model.countryName;
+                this.defaultSelected = model.defaultSelected;
+                this.groupName = model.groupName;
+                this.groupType = model.groupType;
+                this.ips = model.ips;
+                this.ispCode = model.ispCode;
+                this.ispName = model.ispName;
+                this.nodeId = model.nodeId;
+            } 
+
             /**
              * <p>City code.</p>
              * 
@@ -843,6 +911,13 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Ipv6IspCityNode> ipv6IspCityNode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6IspCityNodes model) {
+                this.ipv6IspCityNode = model.ipv6IspCityNode;
+            } 
 
             /**
              * Ipv6IspCityNode.

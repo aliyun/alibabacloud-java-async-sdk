@@ -132,6 +132,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessMode
      */
@@ -341,6 +345,38 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         private String strategyId; 
         private String strategyMode; 
         private String strategyName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDnsGtmAccessStrategyResponseBody model) {
+            this.accessMode = model.accessMode;
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.defaultAddrPoolGroupStatus = model.defaultAddrPoolGroupStatus;
+            this.defaultAddrPoolType = model.defaultAddrPoolType;
+            this.defaultAddrPools = model.defaultAddrPools;
+            this.defaultAvailableAddrNum = model.defaultAvailableAddrNum;
+            this.defaultLatencyOptimization = model.defaultLatencyOptimization;
+            this.defaultLbaStrategy = model.defaultLbaStrategy;
+            this.defaultMaxReturnAddrNum = model.defaultMaxReturnAddrNum;
+            this.defaultMinAvailableAddrNum = model.defaultMinAvailableAddrNum;
+            this.effectiveAddrPoolGroupType = model.effectiveAddrPoolGroupType;
+            this.failoverAddrPoolGroupStatus = model.failoverAddrPoolGroupStatus;
+            this.failoverAddrPoolType = model.failoverAddrPoolType;
+            this.failoverAddrPools = model.failoverAddrPools;
+            this.failoverAvailableAddrNum = model.failoverAvailableAddrNum;
+            this.failoverLatencyOptimization = model.failoverLatencyOptimization;
+            this.failoverLbaStrategy = model.failoverLbaStrategy;
+            this.failoverMaxReturnAddrNum = model.failoverMaxReturnAddrNum;
+            this.failoverMinAvailableAddrNum = model.failoverMinAvailableAddrNum;
+            this.instanceId = model.instanceId;
+            this.lines = model.lines;
+            this.requestId = model.requestId;
+            this.strategyId = model.strategyId;
+            this.strategyMode = model.strategyMode;
+            this.strategyName = model.strategyName;
+        } 
 
         /**
          * <p>The primary/secondary switchover policy for address pool groups. Valid values:</p>
@@ -740,6 +776,16 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             private Integer lbaWeight; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(DefaultAddrPool model) {
+                this.addrCount = model.addrCount;
+                this.id = model.id;
+                this.lbaWeight = model.lbaWeight;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The number of addresses in the address pool.</p>
              * 
@@ -822,6 +868,13 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DefaultAddrPool> defaultAddrPool; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefaultAddrPools model) {
+                this.defaultAddrPool = model.defaultAddrPool;
+            } 
 
             /**
              * DefaultAddrPool.
@@ -906,6 +959,16 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             private Integer lbaWeight; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(FailoverAddrPool model) {
+                this.addrCount = model.addrCount;
+                this.id = model.id;
+                this.lbaWeight = model.lbaWeight;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The number of addresses in the address pool.</p>
              * 
@@ -988,6 +1051,13 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FailoverAddrPool> failoverAddrPool; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailoverAddrPools model) {
+                this.failoverAddrPool = model.failoverAddrPool;
+            } 
 
             /**
              * FailoverAddrPool.
@@ -1072,6 +1142,16 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             private String lineCode; 
             private String lineName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Line model) {
+                this.groupCode = model.groupCode;
+                this.groupName = model.groupName;
+                this.lineCode = model.lineCode;
+                this.lineName = model.lineName;
+            } 
+
             /**
              * <p>The code of the source region group.</p>
              * 
@@ -1154,6 +1234,13 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Line> line; 
+
+            private Builder() {
+            } 
+
+            private Builder(Lines model) {
+                this.line = model.line;
+            } 
 
             /**
              * Line.

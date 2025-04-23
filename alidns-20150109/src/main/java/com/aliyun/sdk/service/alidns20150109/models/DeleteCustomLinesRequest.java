@@ -40,7 +40,7 @@ public class DeleteCustomLinesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +74,11 @@ public class DeleteCustomLinesRequest extends Request {
         } 
 
         /**
-         * <p>The language.</p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>en</p>
@@ -86,7 +90,7 @@ public class DeleteCustomLinesRequest extends Request {
         }
 
         /**
-         * <p>The unique IDs of the custom lines that you want to delete. Separate the unique IDs with commas (,).</p>
+         * <p>The unique IDs of the custom lines that you want to delete. Separate the unique IDs with commas (,). You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describecustomlines?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeCustomLines</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

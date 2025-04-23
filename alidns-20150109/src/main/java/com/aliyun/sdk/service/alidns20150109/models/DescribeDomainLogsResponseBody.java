@@ -48,6 +48,10 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainLogs
      */
@@ -89,6 +93,17 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainLogsResponseBody model) {
+            this.domainLogs = model.domainLogs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The operation logs.</p>
@@ -252,6 +267,19 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             private String message; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainLog model) {
+                this.action = model.action;
+                this.actionTime = model.actionTime;
+                this.actionTimestamp = model.actionTimestamp;
+                this.clientIp = model.clientIp;
+                this.domainName = model.domainName;
+                this.message = model.message;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The operation.</p>
              * 
@@ -367,6 +395,13 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DomainLog> domainLog; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainLogs model) {
+                this.domainLog = model.domainLog;
+            } 
 
             /**
              * DomainLog.

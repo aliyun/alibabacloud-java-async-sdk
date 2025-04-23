@@ -36,6 +36,10 @@ public class AddGtmMonitorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return monitorConfigId
      */
@@ -53,6 +57,14 @@ public class AddGtmMonitorResponseBody extends TeaModel {
     public static final class Builder {
         private String monitorConfigId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddGtmMonitorResponseBody model) {
+            this.monitorConfigId = model.monitorConfigId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the health check configuration.</p>

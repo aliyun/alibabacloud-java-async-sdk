@@ -40,6 +40,10 @@ public class AddDnsGtmAddressPoolResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addrPoolId
      */
@@ -65,6 +69,15 @@ public class AddDnsGtmAddressPoolResponseBody extends TeaModel {
         private String addrPoolId; 
         private String monitorConfigId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddDnsGtmAddressPoolResponseBody model) {
+            this.addrPoolId = model.addrPoolId;
+            this.monitorConfigId = model.monitorConfigId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the address pool.</p>

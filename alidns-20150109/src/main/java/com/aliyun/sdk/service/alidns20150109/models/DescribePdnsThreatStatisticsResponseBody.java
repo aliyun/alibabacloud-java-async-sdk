@@ -48,6 +48,10 @@ public class DescribePdnsThreatStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class DescribePdnsThreatStatisticsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePdnsThreatStatisticsResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Data.
@@ -287,6 +302,23 @@ public class DescribePdnsThreatStatisticsResponseBody extends TeaModel {
             private String threatType; 
             private Long totalCount; 
             private Long udpTotalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dohTotalCount = model.dohTotalCount;
+                this.domainCount = model.domainCount;
+                this.domainName = model.domainName;
+                this.latestThreatTime = model.latestThreatTime;
+                this.maxThreatLevel = model.maxThreatLevel;
+                this.sourceIp = model.sourceIp;
+                this.subDomain = model.subDomain;
+                this.threatLevel = model.threatLevel;
+                this.threatType = model.threatType;
+                this.totalCount = model.totalCount;
+                this.udpTotalCount = model.udpTotalCount;
+            } 
 
             /**
              * DohTotalCount.

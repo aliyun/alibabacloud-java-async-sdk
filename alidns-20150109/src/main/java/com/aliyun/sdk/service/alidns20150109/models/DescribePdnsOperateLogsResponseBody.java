@@ -48,6 +48,10 @@ public class DescribePdnsOperateLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logs
      */
@@ -89,6 +93,17 @@ public class DescribePdnsOperateLogsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePdnsOperateLogsResponseBody model) {
+            this.logs = model.logs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Logs.
@@ -203,6 +218,16 @@ public class DescribePdnsOperateLogsResponseBody extends TeaModel {
             private String operateTime; 
             private String type; 
             private String content; 
+
+            private Builder() {
+            } 
+
+            private Builder(Logs model) {
+                this.action = model.action;
+                this.operateTime = model.operateTime;
+                this.type = model.type;
+                this.content = model.content;
+            } 
 
             /**
              * Action.

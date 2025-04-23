@@ -36,6 +36,10 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return recordLines
      */
@@ -53,6 +57,14 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
     public static final class Builder {
         private RecordLines recordLines; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSupportLinesResponseBody model) {
+            this.recordLines = model.recordLines;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The Alibaba Cloud DNS lines.</p>
@@ -144,6 +156,16 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             private String lineDisplayName; 
             private String lineName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecordLine model) {
+                this.fatherCode = model.fatherCode;
+                this.lineCode = model.lineCode;
+                this.lineDisplayName = model.lineDisplayName;
+                this.lineName = model.lineName;
+            } 
+
             /**
              * <p>The code of the parent line. Currently, no data is returned.</p>
              * 
@@ -226,6 +248,13 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RecordLine> recordLine; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordLines model) {
+                this.recordLine = model.recordLine;
+            } 
 
             /**
              * RecordLine.

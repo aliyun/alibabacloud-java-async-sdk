@@ -64,6 +64,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainAddrPools
      */
@@ -137,6 +141,21 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         private SelectedIpv4Lines selectedIpv4Lines; 
         private SelectedIpv6Lines selectedIpv6Lines; 
         private Boolean suggestSetDefaultLine; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDnsGtmAccessStrategyAvailableConfigResponseBody model) {
+            this.domainAddrPools = model.domainAddrPools;
+            this.ipv4AddrPools = model.ipv4AddrPools;
+            this.ipv6AddrPools = model.ipv6AddrPools;
+            this.lines = model.lines;
+            this.requestId = model.requestId;
+            this.selectedDomainLines = model.selectedDomainLines;
+            this.selectedIpv4Lines = model.selectedIpv4Lines;
+            this.selectedIpv6Lines = model.selectedIpv6Lines;
+            this.suggestSetDefaultLine = model.suggestSetDefaultLine;
+        } 
 
         /**
          * <p>The available address pools of the domain name type.</p>
@@ -278,6 +297,15 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             private String id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainAddrPool model) {
+                this.addrCount = model.addrCount;
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The number of addresses in the address pool.</p>
              * 
@@ -350,6 +378,13 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         public static final class Builder {
             private java.util.List<DomainAddrPool> domainAddrPool; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainAddrPools model) {
+                this.domainAddrPool = model.domainAddrPool;
+            } 
+
             /**
              * DomainAddrPool.
              */
@@ -420,6 +455,15 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             private Integer addrCount; 
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv4AddrPool model) {
+                this.addrCount = model.addrCount;
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The number of addresses in the address pool.</p>
@@ -493,6 +537,13 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         public static final class Builder {
             private java.util.List<Ipv4AddrPool> ipv4AddrPool; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv4AddrPools model) {
+                this.ipv4AddrPool = model.ipv4AddrPool;
+            } 
+
             /**
              * Ipv4AddrPool.
              */
@@ -563,6 +614,15 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             private Integer addrCount; 
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6AddrPool model) {
+                this.addrCount = model.addrCount;
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The number of addresses in the address pool.</p>
@@ -635,6 +695,13 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
         public static final class Builder {
             private java.util.List<Ipv6AddrPool> ipv6AddrPool; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6AddrPools model) {
+                this.ipv6AddrPool = model.ipv6AddrPool;
+            } 
 
             /**
              * Ipv6AddrPool.
@@ -731,6 +798,17 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             private String lineCode; 
             private String lineName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Line model) {
+                this.fatherCode = model.fatherCode;
+                this.groupCode = model.groupCode;
+                this.groupName = model.groupName;
+                this.lineCode = model.lineCode;
+                this.lineName = model.lineName;
+            } 
+
             /**
              * <p>The parent line code of the source region. Leave it blank if no parent line exists.</p>
              * 
@@ -825,6 +903,13 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         public static final class Builder {
             private java.util.List<Line> line; 
 
+            private Builder() {
+            } 
+
+            private Builder(Lines model) {
+                this.line = model.line;
+            } 
+
             /**
              * Line.
              */
@@ -871,6 +956,13 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
         public static final class Builder {
             private java.util.List<String> selectedDomainLine; 
+
+            private Builder() {
+            } 
+
+            private Builder(SelectedDomainLines model) {
+                this.selectedDomainLine = model.selectedDomainLine;
+            } 
 
             /**
              * SelectedDomainLine.
@@ -919,6 +1011,13 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         public static final class Builder {
             private java.util.List<String> selectedIpv4Line; 
 
+            private Builder() {
+            } 
+
+            private Builder(SelectedIpv4Lines model) {
+                this.selectedIpv4Line = model.selectedIpv4Line;
+            } 
+
             /**
              * SelectedIpv4Line.
              */
@@ -965,6 +1064,13 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
         public static final class Builder {
             private java.util.List<String> selectedIpv6Line; 
+
+            private Builder() {
+            } 
+
+            private Builder(SelectedIpv6Lines model) {
+                this.selectedIpv6Line = model.selectedIpv6Line;
+            } 
 
             /**
              * SelectedIpv6Line.

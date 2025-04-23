@@ -76,6 +76,10 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -173,6 +177,24 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
         private Integer timeout; 
         private String updateTime; 
         private Long updateTimestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGtmMonitorConfigResponseBody model) {
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.evaluationCount = model.evaluationCount;
+            this.interval = model.interval;
+            this.ispCityNodes = model.ispCityNodes;
+            this.monitorConfigId = model.monitorConfigId;
+            this.monitorExtendInfo = model.monitorExtendInfo;
+            this.protocolType = model.protocolType;
+            this.requestId = model.requestId;
+            this.timeout = model.timeout;
+            this.updateTime = model.updateTime;
+            this.updateTimestamp = model.updateTimestamp;
+        } 
 
         /**
          * <p>The time when the health check configuration was created.</p>
@@ -420,6 +442,18 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
             private String ispCode; 
             private String ispName; 
 
+            private Builder() {
+            } 
+
+            private Builder(IspCityNode model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.countryCode = model.countryCode;
+                this.countryName = model.countryName;
+                this.ispCode = model.ispCode;
+                this.ispName = model.ispName;
+            } 
+
             /**
              * <p>The code of the city where the monitored node is deployed.</p>
              * 
@@ -524,6 +558,13 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<IspCityNode> ispCityNode; 
+
+            private Builder() {
+            } 
+
+            private Builder(IspCityNodes model) {
+                this.ispCityNode = model.ispCityNode;
+            } 
 
             /**
              * IspCityNode.

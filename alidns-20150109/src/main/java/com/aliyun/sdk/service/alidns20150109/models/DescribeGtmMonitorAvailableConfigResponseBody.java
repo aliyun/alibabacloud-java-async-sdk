@@ -36,6 +36,10 @@ public class DescribeGtmMonitorAvailableConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ispCityNodes
      */
@@ -53,6 +57,14 @@ public class DescribeGtmMonitorAvailableConfigResponseBody extends TeaModel {
     public static final class Builder {
         private IspCityNodes ispCityNodes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGtmMonitorAvailableConfigResponseBody model) {
+            this.ispCityNodes = model.ispCityNodes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The monitored nodes.</p>
@@ -195,6 +207,20 @@ public class DescribeGtmMonitorAvailableConfigResponseBody extends TeaModel {
             private String ispName; 
             private Boolean mainland; 
 
+            private Builder() {
+            } 
+
+            private Builder(IspCityNode model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.defaultSelected = model.defaultSelected;
+                this.groupName = model.groupName;
+                this.groupType = model.groupType;
+                this.ispCode = model.ispCode;
+                this.ispName = model.ispName;
+                this.mainland = model.mainland;
+            } 
+
             /**
              * <p>The code of the city where the monitored node is deployed.</p>
              * 
@@ -327,6 +353,13 @@ public class DescribeGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<IspCityNode> ispCityNode; 
+
+            private Builder() {
+            } 
+
+            private Builder(IspCityNodes model) {
+                this.ispCityNode = model.ispCityNode;
+            } 
 
             /**
              * IspCityNode.

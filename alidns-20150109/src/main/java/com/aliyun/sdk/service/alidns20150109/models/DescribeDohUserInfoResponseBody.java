@@ -44,6 +44,10 @@ public class DescribeDohUserInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainCount
      */
@@ -77,6 +81,16 @@ public class DescribeDohUserInfoResponseBody extends TeaModel {
         private Long pdnsId; 
         private String requestId; 
         private Integer subDomainCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDohUserInfoResponseBody model) {
+            this.domainCount = model.domainCount;
+            this.pdnsId = model.pdnsId;
+            this.requestId = model.requestId;
+            this.subDomainCount = model.subDomainCount;
+        } 
 
         /**
          * <p>The number of accessed domains.</p>

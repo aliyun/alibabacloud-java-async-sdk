@@ -50,7 +50,7 @@ public class UpdateCustomLineRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,7 +111,11 @@ public class UpdateCustomLineRequest extends Request {
         }
 
         /**
-         * <p>The language.</p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>en</p>
@@ -123,7 +127,7 @@ public class UpdateCustomLineRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the custom line.</p>
+         * <p>The unique ID of the custom line. You can call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describecustomlines?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeCustomLines</a> operation to obtain the unique ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +198,14 @@ public class UpdateCustomLineRequest extends Request {
         public static final class Builder {
             private String endIp; 
             private String startIp; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpSegment model) {
+                this.endIp = model.endIp;
+                this.startIp = model.startIp;
+            } 
 
             /**
              * <p>The end IP address of the CIDR block.</p>

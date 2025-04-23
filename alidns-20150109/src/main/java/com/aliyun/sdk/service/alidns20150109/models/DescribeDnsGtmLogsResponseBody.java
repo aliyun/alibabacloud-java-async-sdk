@@ -52,6 +52,10 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logs
      */
@@ -101,6 +105,18 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDnsGtmLogsResponseBody model) {
+            this.logs = model.logs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The returned logs.</p>
@@ -287,6 +303,20 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             private String operTime; 
             private Long operTimestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(Log model) {
+                this.content = model.content;
+                this.entityId = model.entityId;
+                this.entityName = model.entityName;
+                this.entityType = model.entityType;
+                this.id = model.id;
+                this.operAction = model.operAction;
+                this.operTime = model.operTime;
+                this.operTimestamp = model.operTimestamp;
+            } 
+
             /**
              * <p>The formatted message content.</p>
              * 
@@ -407,6 +437,13 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Log> log; 
+
+            private Builder() {
+            } 
+
+            private Builder(Logs model) {
+                this.log = model.log;
+            } 
 
             /**
              * Log.

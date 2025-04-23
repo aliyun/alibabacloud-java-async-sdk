@@ -52,6 +52,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -101,6 +105,18 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGtmRecoveryPlansResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.recoveryPlans = model.recoveryPlans;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -347,6 +363,25 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             private String updateTime; 
             private Long updateTimestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecoveryPlan model) {
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.faultAddrPoolNum = model.faultAddrPoolNum;
+                this.lastExecuteTime = model.lastExecuteTime;
+                this.lastExecuteTimestamp = model.lastExecuteTimestamp;
+                this.lastRollbackTime = model.lastRollbackTime;
+                this.lastRollbackTimestamp = model.lastRollbackTimestamp;
+                this.name = model.name;
+                this.recoveryPlanId = model.recoveryPlanId;
+                this.remark = model.remark;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+                this.updateTimestamp = model.updateTimestamp;
+            } 
+
             /**
              * <p>The time when the disaster recovery plan was created.</p>
              * 
@@ -533,6 +568,13 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RecoveryPlan> recoveryPlan; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecoveryPlans model) {
+                this.recoveryPlan = model.recoveryPlan;
+            } 
 
             /**
              * RecoveryPlan.

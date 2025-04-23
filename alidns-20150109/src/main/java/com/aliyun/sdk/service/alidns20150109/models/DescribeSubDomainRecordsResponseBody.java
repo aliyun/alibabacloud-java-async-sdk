@@ -48,6 +48,10 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainRecords
      */
@@ -90,8 +94,19 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSubDomainRecordsResponseBody model) {
+            this.domainRecords = model.domainRecords;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>The returned DNS records.</p>
+         * <p>The returned Domain Name System (DNS) records.</p>
          */
         public Builder domainRecords(DomainRecords domainRecords) {
             this.domainRecords = domainRecords;
@@ -312,6 +327,24 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
             private String value; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(Record model) {
+                this.domainName = model.domainName;
+                this.line = model.line;
+                this.locked = model.locked;
+                this.priority = model.priority;
+                this.rr = model.rr;
+                this.recordId = model.recordId;
+                this.remark = model.remark;
+                this.status = model.status;
+                this.TTL = model.TTL;
+                this.type = model.type;
+                this.value = model.value;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The domain name.</p>
              * 
@@ -482,6 +515,13 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Record> record; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainRecords model) {
+                this.record = model.record;
+            } 
 
             /**
              * Record.

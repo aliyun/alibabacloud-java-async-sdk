@@ -39,7 +39,7 @@ public class DescribeCustomLineRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +73,11 @@ public class DescribeCustomLineRequest extends Request {
         } 
 
         /**
-         * <p>The language.</p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>en</p>
@@ -85,7 +89,7 @@ public class DescribeCustomLineRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the custom line.</p>
+         * <p>The unique ID of the custom line. You can call <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describecustomlines?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeCustomLines</a> operation to obtain the ID</p>
          * 
          * <strong>example:</strong>
          * <p>597</p>

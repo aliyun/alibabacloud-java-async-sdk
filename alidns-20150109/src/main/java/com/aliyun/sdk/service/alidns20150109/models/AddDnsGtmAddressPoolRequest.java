@@ -102,7 +102,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -556,6 +556,17 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             private String mode; 
             private String remark; 
 
+            private Builder() {
+            } 
+
+            private Builder(Addr model) {
+                this.addr = model.addr;
+                this.attributeInfo = model.attributeInfo;
+                this.lbaWeight = model.lbaWeight;
+                this.mode = model.mode;
+                this.remark = model.remark;
+            } 
+
             /**
              * <p>The address in the address pool.</p>
              * <p>This parameter is required.</p>
@@ -680,6 +691,14 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         public static final class Builder {
             private String cityCode; 
             private String ispCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(IspCityNode model) {
+                this.cityCode = model.cityCode;
+                this.ispCode = model.ispCode;
+            } 
 
             /**
              * <p>The city code.</p>

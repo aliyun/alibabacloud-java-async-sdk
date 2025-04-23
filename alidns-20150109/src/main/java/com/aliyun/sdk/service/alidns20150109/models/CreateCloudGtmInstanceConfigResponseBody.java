@@ -40,6 +40,10 @@ public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configId
      */
@@ -65,6 +69,15 @@ public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
         private Boolean configId; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCloudGtmInstanceConfigResponseBody model) {
+            this.configId = model.configId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</p>

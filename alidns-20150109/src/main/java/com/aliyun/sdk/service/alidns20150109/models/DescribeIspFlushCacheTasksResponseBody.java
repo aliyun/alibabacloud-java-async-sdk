@@ -52,6 +52,10 @@ public class DescribeIspFlushCacheTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ispFlushCacheTasks
      */
@@ -101,6 +105,18 @@ public class DescribeIspFlushCacheTasksResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIspFlushCacheTasksResponseBody model) {
+            this.ispFlushCacheTasks = model.ispFlushCacheTasks;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * IspFlushCacheTasks.
@@ -271,6 +287,20 @@ public class DescribeIspFlushCacheTasksResponseBody extends TeaModel {
             private String isp; 
             private String taskId; 
             private String taskStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(IspFlushCacheTasks model) {
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.domainName = model.domainName;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.isp = model.isp;
+                this.taskId = model.taskId;
+                this.taskStatus = model.taskStatus;
+            } 
 
             /**
              * CreateTime.

@@ -36,6 +36,10 @@ public class CreatePdnsUdpIpSegmentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreatePdnsUdpIpSegmentResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String validMessage; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreatePdnsUdpIpSegmentResponseBody model) {
+            this.requestId = model.requestId;
+            this.validMessage = model.validMessage;
+        } 
 
         /**
          * RequestId.

@@ -36,6 +36,10 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addr
      */
@@ -53,6 +57,14 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
     public static final class Builder {
         private Addr addr; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDnsGtmAddrAttributeInfoResponseBody model) {
+            this.addr = model.addr;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The address in the address pool.</p>
@@ -158,6 +170,17 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             private String groupName; 
             private String lineCode; 
             private String lineName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttributeInfo model) {
+                this.fatherCode = model.fatherCode;
+                this.groupCode = model.groupCode;
+                this.groupName = model.groupName;
+                this.lineCode = model.lineCode;
+                this.lineName = model.lineName;
+            } 
 
             /**
              * <p>The parent line code of the source region.</p>
@@ -265,6 +288,14 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             private String addr; 
             private AttributeInfo attributeInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddrAddr model) {
+                this.addr = model.addr;
+                this.attributeInfo = model.attributeInfo;
+            } 
+
             /**
              * <p>The address in the address pool.</p>
              * 
@@ -322,6 +353,13 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AddrAddr> addr; 
+
+            private Builder() {
+            } 
+
+            private Builder(Addr model) {
+                this.addr = model.addr;
+            } 
 
             /**
              * <p>The address in the address pool.</p>

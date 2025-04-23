@@ -52,6 +52,10 @@ public class DescribeIspFlushCacheInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ispFlushCacheInstances
      */
@@ -101,6 +105,18 @@ public class DescribeIspFlushCacheInstancesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIspFlushCacheInstancesResponseBody model) {
+            this.ispFlushCacheInstances = model.ispFlushCacheInstances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * IspFlushCacheInstances.
@@ -199,6 +215,14 @@ public class DescribeIspFlushCacheInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer instanceQuota; 
             private Integer instanceQuotaUsed; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuotaInfo model) {
+                this.instanceQuota = model.instanceQuota;
+                this.instanceQuotaUsed = model.instanceQuotaUsed;
+            } 
 
             /**
              * InstanceQuota.
@@ -338,6 +362,20 @@ public class DescribeIspFlushCacheInstancesResponseBody extends TeaModel {
             private QuotaInfo quotaInfo; 
             private String status; 
             private String versionCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(IspFlushCacheInstances model) {
+                this.expireTime = model.expireTime;
+                this.expireTimestamp = model.expireTimestamp;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.isp = model.isp;
+                this.quotaInfo = model.quotaInfo;
+                this.status = model.status;
+                this.versionCode = model.versionCode;
+            } 
 
             /**
              * ExpireTime.

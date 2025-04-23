@@ -40,6 +40,10 @@ public class AddDomainBackupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainName
      */
@@ -65,6 +69,15 @@ public class AddDomainBackupResponseBody extends TeaModel {
         private String domainName; 
         private String periodType; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddDomainBackupResponseBody model) {
+            this.domainName = model.domainName;
+            this.periodType = model.periodType;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The domain name.</p>

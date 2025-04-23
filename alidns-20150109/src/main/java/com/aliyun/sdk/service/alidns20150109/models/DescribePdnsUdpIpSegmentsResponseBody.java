@@ -52,6 +52,10 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipSegments
      */
@@ -101,6 +105,18 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private String totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePdnsUdpIpSegmentsResponseBody model) {
+            this.ipSegments = model.ipSegments;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * IpSegments.
@@ -283,6 +299,21 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
             private String secretKey; 
             private String state; 
             private String updateDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpSegments model) {
+                this.createDate = model.createDate;
+                this.createTimestamp = model.createTimestamp;
+                this.id = model.id;
+                this.ip = model.ip;
+                this.mask = model.mask;
+                this.name = model.name;
+                this.secretKey = model.secretKey;
+                this.state = model.state;
+                this.updateDate = model.updateDate;
+            } 
 
             /**
              * CreateDate.

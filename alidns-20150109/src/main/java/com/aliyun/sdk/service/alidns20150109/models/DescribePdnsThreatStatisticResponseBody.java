@@ -36,6 +36,10 @@ public class DescribePdnsThreatStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribePdnsThreatStatisticResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePdnsThreatStatisticResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -167,6 +179,18 @@ public class DescribePdnsThreatStatisticResponseBody extends TeaModel {
             private Long timestamp; 
             private Long totalCount; 
             private Long udpTotalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dohTotalCount = model.dohTotalCount;
+                this.threatLevel = model.threatLevel;
+                this.threatType = model.threatType;
+                this.timestamp = model.timestamp;
+                this.totalCount = model.totalCount;
+                this.udpTotalCount = model.udpTotalCount;
+            } 
 
             /**
              * DohTotalCount.

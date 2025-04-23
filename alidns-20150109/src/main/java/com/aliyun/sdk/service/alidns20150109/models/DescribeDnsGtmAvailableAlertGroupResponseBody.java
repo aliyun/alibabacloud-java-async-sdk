@@ -36,6 +36,10 @@ public class DescribeDnsGtmAvailableAlertGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableAlertGroup
      */
@@ -53,6 +57,14 @@ public class DescribeDnsGtmAvailableAlertGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String availableAlertGroup; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDnsGtmAvailableAlertGroupResponseBody model) {
+            this.availableAlertGroup = model.availableAlertGroup;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned available alert groups.</p>

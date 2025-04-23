@@ -52,6 +52,10 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -101,6 +105,18 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
         private Strategies strategies; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGtmAccessStrategiesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.strategies = model.strategies;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The number of the page returned.</p>
@@ -239,6 +255,16 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             private String lineCode; 
             private String lineName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Line model) {
+                this.groupCode = model.groupCode;
+                this.groupName = model.groupName;
+                this.lineCode = model.lineCode;
+                this.lineName = model.lineName;
+            } 
+
             /**
              * <p>The code of the access region group.</p>
              * 
@@ -315,6 +341,13 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Line> line; 
+
+            private Builder() {
+            } 
+
+            private Builder(Lines model) {
+                this.line = model.line;
+            } 
 
             /**
              * Line.
@@ -555,6 +588,29 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             private String strategyMode; 
             private String strategyName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Strategy model) {
+                this.accessMode = model.accessMode;
+                this.accessStatus = model.accessStatus;
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.defaultAddrPoolId = model.defaultAddrPoolId;
+                this.defaultAddrPoolMonitorStatus = model.defaultAddrPoolMonitorStatus;
+                this.defaultAddrPoolName = model.defaultAddrPoolName;
+                this.defaultAddrPoolStatus = model.defaultAddrPoolStatus;
+                this.failoverAddrPoolId = model.failoverAddrPoolId;
+                this.failoverAddrPoolMonitorStatus = model.failoverAddrPoolMonitorStatus;
+                this.failoverAddrPoolName = model.failoverAddrPoolName;
+                this.failoverAddrPoolStatus = model.failoverAddrPoolStatus;
+                this.instanceId = model.instanceId;
+                this.lines = model.lines;
+                this.strategyId = model.strategyId;
+                this.strategyMode = model.strategyMode;
+                this.strategyName = model.strategyName;
+            } 
+
             /**
              * <p>The access policy. Valid values:</p>
              * <ul>
@@ -783,6 +839,13 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Strategy> strategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(Strategies model) {
+                this.strategy = model.strategy;
+            } 
 
             /**
              * Strategy.

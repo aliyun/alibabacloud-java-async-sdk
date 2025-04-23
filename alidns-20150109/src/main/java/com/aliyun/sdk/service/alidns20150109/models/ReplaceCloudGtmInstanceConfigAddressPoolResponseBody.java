@@ -36,6 +36,10 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolResponseBody extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolResponseBody extends TeaMod
     public static final class Builder {
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ReplaceCloudGtmInstanceConfigAddressPoolResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Unique request identification code.</p>

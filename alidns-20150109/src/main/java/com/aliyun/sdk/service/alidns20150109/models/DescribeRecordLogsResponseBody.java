@@ -48,6 +48,10 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         private RecordLogs recordLogs; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRecordLogsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.recordLogs = model.recordLogs;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -228,6 +243,17 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             private String clientIp; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecordLog model) {
+                this.action = model.action;
+                this.actionTime = model.actionTime;
+                this.actionTimestamp = model.actionTimestamp;
+                this.clientIp = model.clientIp;
+                this.message = model.message;
+            } 
+
             /**
              * <p>The operation that you performed.</p>
              */
@@ -315,6 +341,13 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RecordLog> recordLog; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordLogs model) {
+                this.recordLog = model.recordLog;
+            } 
 
             /**
              * RecordLog.

@@ -48,6 +48,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainIpv4IspCityNodes
      */
@@ -89,6 +93,17 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         private Ipv4IspCityNodes ipv4IspCityNodes; 
         private Ipv6IspCityNodes ipv6IspCityNodes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDnsGtmMonitorAvailableConfigResponseBody model) {
+            this.domainIpv4IspCityNodes = model.domainIpv4IspCityNodes;
+            this.domainIpv6IspCityNodes = model.domainIpv6IspCityNodes;
+            this.ipv4IspCityNodes = model.ipv4IspCityNodes;
+            this.ipv6IspCityNodes = model.ipv6IspCityNodes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The nodes that perform health checks on domain names that use public IPv4 addresses.</p>
@@ -170,6 +185,13 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ip; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ips model) {
+                this.ip = model.ip;
+            } 
 
             /**
              * Ip.
@@ -302,6 +324,20 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             private String ispCode; 
             private String ispName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainIpv4IspCityNode model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.defaultSelected = model.defaultSelected;
+                this.groupName = model.groupName;
+                this.groupType = model.groupType;
+                this.ips = model.ips;
+                this.ispCode = model.ispCode;
+                this.ispName = model.ispName;
+            } 
+
             /**
              * <p>The city code.</p>
              * 
@@ -431,6 +467,13 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DomainIpv4IspCityNode> domainIpv4IspCityNode; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainIpv4IspCityNodes model) {
+                this.domainIpv4IspCityNode = model.domainIpv4IspCityNode;
+            } 
+
             /**
              * DomainIpv4IspCityNode.
              */
@@ -477,6 +520,13 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ip; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainIpv6IspCityNodeIps model) {
+                this.ip = model.ip;
+            } 
 
             /**
              * ip.
@@ -609,6 +659,20 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             private String ispCode; 
             private String ispName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainIpv6IspCityNode model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.defaultSelected = model.defaultSelected;
+                this.groupName = model.groupName;
+                this.groupType = model.groupType;
+                this.ips = model.ips;
+                this.ispCode = model.ispCode;
+                this.ispName = model.ispName;
+            } 
+
             /**
              * <p>The city code.</p>
              * 
@@ -738,6 +802,13 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DomainIpv6IspCityNode> domainIpv6IspCityNode; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainIpv6IspCityNodes model) {
+                this.domainIpv6IspCityNode = model.domainIpv6IspCityNode;
+            } 
+
             /**
              * DomainIpv6IspCityNode.
              */
@@ -784,6 +855,13 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ip; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv4IspCityNodeIps model) {
+                this.ip = model.ip;
+            } 
 
             /**
              * Ip.
@@ -916,6 +994,20 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             private String ispCode; 
             private String ispName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv4IspCityNode model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.defaultSelected = model.defaultSelected;
+                this.groupName = model.groupName;
+                this.groupType = model.groupType;
+                this.ips = model.ips;
+                this.ispCode = model.ispCode;
+                this.ispName = model.ispName;
+            } 
+
             /**
              * <p>The city code.</p>
              * 
@@ -1045,6 +1137,13 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Ipv4IspCityNode> ipv4IspCityNode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv4IspCityNodes model) {
+                this.ipv4IspCityNode = model.ipv4IspCityNode;
+            } 
+
             /**
              * Ipv4IspCityNode.
              */
@@ -1091,6 +1190,13 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ip; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6IspCityNodeIps model) {
+                this.ip = model.ip;
+            } 
 
             /**
              * Ip.
@@ -1223,6 +1329,20 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             private String ispCode; 
             private String ispName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipv6IspCityNode model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.defaultSelected = model.defaultSelected;
+                this.groupName = model.groupName;
+                this.groupType = model.groupType;
+                this.ips = model.ips;
+                this.ispCode = model.ispCode;
+                this.ispName = model.ispName;
+            } 
+
             /**
              * <p>The city code.</p>
              * 
@@ -1351,6 +1471,13 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Ipv6IspCityNode> ipv6IspCityNode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6IspCityNodes model) {
+                this.ipv6IspCityNode = model.ipv6IspCityNode;
+            } 
 
             /**
              * Ipv6IspCityNode.

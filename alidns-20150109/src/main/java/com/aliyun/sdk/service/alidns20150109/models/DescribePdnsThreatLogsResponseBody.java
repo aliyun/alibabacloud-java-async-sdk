@@ -48,6 +48,10 @@ public class DescribePdnsThreatLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logs
      */
@@ -89,6 +93,17 @@ public class DescribePdnsThreatLogsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePdnsThreatLogsResponseBody model) {
+            this.logs = model.logs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Logs.
@@ -215,6 +230,17 @@ public class DescribePdnsThreatLogsResponseBody extends TeaModel {
             private String threatLevel; 
             private String threatTime; 
             private String threatType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Logs model) {
+                this.sourceIp = model.sourceIp;
+                this.subDomain = model.subDomain;
+                this.threatLevel = model.threatLevel;
+                this.threatTime = model.threatTime;
+                this.threatType = model.threatType;
+            } 
 
             /**
              * SourceIp.

@@ -52,6 +52,10 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allAliDns
      */
@@ -101,6 +105,18 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         private ExpectDnsServers expectDnsServers; 
         private Boolean includeAliDns; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainNsResponseBody model) {
+            this.allAliDns = model.allAliDns;
+            this.detectFailedReasonCode = model.detectFailedReasonCode;
+            this.dnsServers = model.dnsServers;
+            this.expectDnsServers = model.expectDnsServers;
+            this.includeAliDns = model.includeAliDns;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether all the name servers are Alibaba Cloud DNS servers.</p>
@@ -200,6 +216,13 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> dnsServer; 
 
+            private Builder() {
+            } 
+
+            private Builder(DnsServers model) {
+                this.dnsServer = model.dnsServer;
+            } 
+
             /**
              * DnsServer.
              */
@@ -246,6 +269,13 @@ public class DescribeDomainNsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> expectDnsServer; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExpectDnsServers model) {
+                this.expectDnsServer = model.expectDnsServer;
+            } 
 
             /**
              * ExpectDnsServer.

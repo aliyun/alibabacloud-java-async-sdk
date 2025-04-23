@@ -40,6 +40,10 @@ public class CreateCloudGtmMonitorTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class CreateCloudGtmMonitorTemplateResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String templateId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCloudGtmMonitorTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.templateId = model.templateId;
+        } 
 
         /**
          * RequestId.

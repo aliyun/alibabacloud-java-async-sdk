@@ -52,6 +52,10 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addrAvailableNum
      */
@@ -101,6 +105,18 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
         private String requestId; 
         private Integer strategyNotAvailableNum; 
         private Integer switchToFailoverStrategyNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDnsGtmInstanceStatusResponseBody model) {
+            this.addrAvailableNum = model.addrAvailableNum;
+            this.addrNotAvailableNum = model.addrNotAvailableNum;
+            this.addrPoolGroupNotAvailableNum = model.addrPoolGroupNotAvailableNum;
+            this.requestId = model.requestId;
+            this.strategyNotAvailableNum = model.strategyNotAvailableNum;
+            this.switchToFailoverStrategyNum = model.switchToFailoverStrategyNum;
+        } 
 
         /**
          * <p>The number of available addresses.</p>

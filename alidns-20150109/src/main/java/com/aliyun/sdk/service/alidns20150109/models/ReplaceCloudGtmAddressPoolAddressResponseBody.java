@@ -40,6 +40,10 @@ public class ReplaceCloudGtmAddressPoolAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addressPoolId
      */
@@ -65,6 +69,15 @@ public class ReplaceCloudGtmAddressPoolAddressResponseBody extends TeaModel {
         private String addressPoolId; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ReplaceCloudGtmAddressPoolAddressResponseBody model) {
+            this.addressPoolId = model.addressPoolId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>

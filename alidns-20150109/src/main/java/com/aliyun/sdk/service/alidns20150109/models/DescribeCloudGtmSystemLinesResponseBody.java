@@ -40,6 +40,10 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
         private String requestId; 
         private SystemLines systemLines; 
         private String systemLinesTree; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudGtmSystemLinesResponseBody model) {
+            this.requestId = model.requestId;
+            this.systemLines = model.systemLines;
+            this.systemLinesTree = model.systemLinesTree;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -182,6 +195,17 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
             private String name; 
             private String parentCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemLine model) {
+                this.code = model.code;
+                this.displayName = model.displayName;
+                this.isAvailable = model.isAvailable;
+                this.name = model.name;
+                this.parentCode = model.parentCode;
+            } 
+
             /**
              * <p>The line code.</p>
              * 
@@ -279,6 +303,13 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SystemLine> systemLine; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemLines model) {
+                this.systemLine = model.systemLine;
+            } 
 
             /**
              * SystemLine.

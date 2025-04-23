@@ -48,6 +48,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domains
      */
@@ -89,6 +93,17 @@ public class DescribeDomainsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainsResponseBody model) {
+            this.domains = model.domains;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The domain names.</p>
@@ -180,6 +195,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> dnsServer; 
 
+            private Builder() {
+            } 
+
+            private Builder(DnsServers model) {
+                this.dnsServer = model.dnsServer;
+            } 
+
             /**
              * DnsServer.
              */
@@ -239,6 +261,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of tag N added to the resource.</p>
              */
@@ -293,6 +323,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -581,6 +618,33 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private String versionCode; 
             private String versionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Domain model) {
+                this.aliDomain = model.aliDomain;
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.dnsServers = model.dnsServers;
+                this.domainId = model.domainId;
+                this.domainLoggingSwitchStatus = model.domainLoggingSwitchStatus;
+                this.domainName = model.domainName;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.instanceEndTime = model.instanceEndTime;
+                this.instanceExpired = model.instanceExpired;
+                this.instanceId = model.instanceId;
+                this.punyCode = model.punyCode;
+                this.recordCount = model.recordCount;
+                this.registrantEmail = model.registrantEmail;
+                this.remark = model.remark;
+                this.resourceGroupId = model.resourceGroupId;
+                this.starmark = model.starmark;
+                this.tags = model.tags;
+                this.versionCode = model.versionCode;
+                this.versionName = model.versionName;
+            } 
+
             /**
              * <p>Indicates whether the domain name was registered with Alibaba Cloud.</p>
              * 
@@ -845,6 +909,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Domain> domain; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.domain = model.domain;
+            } 
 
             /**
              * Domain.
