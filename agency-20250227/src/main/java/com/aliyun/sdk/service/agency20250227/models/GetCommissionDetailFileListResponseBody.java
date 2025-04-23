@@ -164,8 +164,14 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
      * <p>GetCommissionDetailFileListResponseBody</p>
      */
     public static class FileList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BucketSyncStatus")
+        private String bucketSyncStatus;
+
         @com.aliyun.core.annotation.NameInMap("CommissionPolicyName")
         private String commissionPolicyName;
+
+        @com.aliyun.core.annotation.NameInMap("FileName")
+        private String fileName;
 
         @com.aliyun.core.annotation.NameInMap("FileType")
         private String fileType;
@@ -174,7 +180,9 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
         private String fileUrl;
 
         private FileList(Builder builder) {
+            this.bucketSyncStatus = builder.bucketSyncStatus;
             this.commissionPolicyName = builder.commissionPolicyName;
+            this.fileName = builder.fileName;
             this.fileType = builder.fileType;
             this.fileUrl = builder.fileUrl;
         }
@@ -188,10 +196,24 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
         }
 
         /**
+         * @return bucketSyncStatus
+         */
+        public String getBucketSyncStatus() {
+            return this.bucketSyncStatus;
+        }
+
+        /**
          * @return commissionPolicyName
          */
         public String getCommissionPolicyName() {
             return this.commissionPolicyName;
+        }
+
+        /**
+         * @return fileName
+         */
+        public String getFileName() {
+            return this.fileName;
         }
 
         /**
@@ -209,7 +231,9 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bucketSyncStatus; 
             private String commissionPolicyName; 
+            private String fileName; 
             private String fileType; 
             private String fileUrl; 
 
@@ -217,16 +241,34 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
             } 
 
             private Builder(FileList model) {
+                this.bucketSyncStatus = model.bucketSyncStatus;
                 this.commissionPolicyName = model.commissionPolicyName;
+                this.fileName = model.fileName;
                 this.fileType = model.fileType;
                 this.fileUrl = model.fileUrl;
             } 
+
+            /**
+             * BucketSyncStatus.
+             */
+            public Builder bucketSyncStatus(String bucketSyncStatus) {
+                this.bucketSyncStatus = bucketSyncStatus;
+                return this;
+            }
 
             /**
              * CommissionPolicyName.
              */
             public Builder commissionPolicyName(String commissionPolicyName) {
                 this.commissionPolicyName = commissionPolicyName;
+                return this;
+            }
+
+            /**
+             * FileName.
+             */
+            public Builder fileName(String fileName) {
+                this.fileName = fileName;
                 return this;
             }
 
