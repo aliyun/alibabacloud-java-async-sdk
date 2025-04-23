@@ -23,13 +23,31 @@ public class GetQuotaRequest extends Request {
     private String nickname;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AkProven")
+    @Deprecated
+    private String akProven;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("mock")
     private Boolean mock;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region")
+    @Deprecated
+    private String region;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tenantId")
+    @Deprecated
+    private String tenantId;
 
     private GetQuotaRequest(Builder builder) {
         super(builder);
         this.nickname = builder.nickname;
+        this.akProven = builder.akProven;
         this.mock = builder.mock;
+        this.region = builder.region;
+        this.tenantId = builder.tenantId;
     }
 
     public static Builder builder() {
@@ -53,15 +71,39 @@ public class GetQuotaRequest extends Request {
     }
 
     /**
+     * @return akProven
+     */
+    public String getAkProven() {
+        return this.akProven;
+    }
+
+    /**
      * @return mock
      */
     public Boolean getMock() {
         return this.mock;
     }
 
+    /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
     public static final class Builder extends Request.Builder<GetQuotaRequest, Builder> {
         private String nickname; 
+        private String akProven; 
         private Boolean mock; 
+        private String region; 
+        private String tenantId; 
 
         private Builder() {
             super();
@@ -70,7 +112,10 @@ public class GetQuotaRequest extends Request {
         private Builder(GetQuotaRequest request) {
             super(request);
             this.nickname = request.nickname;
+            this.akProven = request.akProven;
             this.mock = request.mock;
+            this.region = request.region;
+            this.tenantId = request.tenantId;
         } 
 
         /**
@@ -87,6 +132,18 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
+         * <p>The trusted AccessKey pairs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
+        public Builder akProven(String akProven) {
+            this.putQueryParameter("AkProven", akProven);
+            this.akProven = akProven;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to include submodules. Valid values: -true: The request includes submodules. -false: The request does not include submodules. This is the default value.</p>
          * 
          * <strong>example:</strong>
@@ -95,6 +152,30 @@ public class GetQuotaRequest extends Request {
         public Builder mock(Boolean mock) {
             this.putQueryParameter("mock", mock);
             this.mock = mock;
+            return this;
+        }
+
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("region", region);
+            this.region = region;
+            return this;
+        }
+
+        /**
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>520539530998273</p>
+         */
+        public Builder tenantId(String tenantId) {
+            this.putQueryParameter("tenantId", tenantId);
+            this.tenantId = tenantId;
             return this;
         }
 
