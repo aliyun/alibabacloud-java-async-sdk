@@ -1,3 +1,6 @@
+2025-04-23 Version: 4.0.1
+- Generated java-async 2017-05-25 for Dysmsapi.
+
 2025-04-22 Version: 4.0.0
 - Generated java-async 2017-05-25 for Dysmsapi.
 

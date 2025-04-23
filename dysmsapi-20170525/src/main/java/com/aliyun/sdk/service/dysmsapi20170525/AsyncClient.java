@@ -173,6 +173,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteShortUrlResponse> deleteShortUrl(DeleteShortUrlRequest request);
 
     /**
+     * @param request the request parameters of DeleteSmsQualification  DeleteSmsQualificationRequest
+     * @return DeleteSmsQualificationResponse
+     */
+    CompletableFuture<DeleteSmsQualificationResponse> deleteSmsQualification(DeleteSmsQualificationRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  You cannot delete a signature that has not been approved.</p>
      * <ul>
@@ -391,10 +397,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryShortUrlResponse> queryShortUrl(QueryShortUrlRequest request);
 
     /**
+     * @param request the request parameters of QuerySingleSmsQualification  QuerySingleSmsQualificationRequest
+     * @return QuerySingleSmsQualificationResponse
+     */
+    CompletableFuture<QuerySingleSmsQualificationResponse> querySingleSmsQualification(QuerySingleSmsQualificationRequest request);
+
+    /**
      * @param request the request parameters of QuerySmsAuthorizationLetter  QuerySmsAuthorizationLetterRequest
      * @return QuerySmsAuthorizationLetterResponse
      */
     CompletableFuture<QuerySmsAuthorizationLetterResponse> querySmsAuthorizationLetter(QuerySmsAuthorizationLetterRequest request);
+
+    /**
+     * @param request the request parameters of QuerySmsQualificationRecord  QuerySmsQualificationRecordRequest
+     * @return QuerySmsQualificationRecordResponse
+     */
+    CompletableFuture<QuerySmsQualificationRecordResponse> querySmsQualificationRecord(QuerySmsQualificationRecordRequest request);
 
     /**
      * <b>description</b> :
@@ -439,6 +457,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QuerySmsTemplateListResponse
      */
     CompletableFuture<QuerySmsTemplateListResponse> querySmsTemplateList(QuerySmsTemplateListRequest request);
+
+    /**
+     * @param request the request parameters of RequiredPhoneCode  RequiredPhoneCodeRequest
+     * @return RequiredPhoneCodeResponse
+     */
+    CompletableFuture<RequiredPhoneCodeResponse> requiredPhoneCode(RequiredPhoneCodeRequest request);
 
     /**
      * <b>description</b> :
@@ -506,6 +530,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SmsConversionIntlResponse> smsConversionIntl(SmsConversionIntlRequest request);
 
     /**
+     * @param request the request parameters of SubmitSmsQualification  SubmitSmsQualificationRequest
+     * @return SubmitSmsQualificationResponse
+     */
+    CompletableFuture<SubmitSmsQualificationResponse> submitSmsQualification(SubmitSmsQualificationRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
      * <p>You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
@@ -530,6 +560,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateExtCodeSignResponse
      */
     CompletableFuture<UpdateExtCodeSignResponse> updateExtCodeSign(UpdateExtCodeSignRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSmsQualification  UpdateSmsQualificationRequest
+     * @return UpdateSmsQualificationResponse
+     */
+    CompletableFuture<UpdateSmsQualificationResponse> updateSmsQualification(UpdateSmsQualificationRequest request);
 
     /**
      * <b>description</b> :
@@ -558,5 +594,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateSmsTemplateResponse
      */
     CompletableFuture<UpdateSmsTemplateResponse> updateSmsTemplate(UpdateSmsTemplateRequest request);
+
+    /**
+     * @param request the request parameters of ValidPhoneCode  ValidPhoneCodeRequest
+     * @return ValidPhoneCodeResponse
+     */
+    CompletableFuture<ValidPhoneCodeResponse> validPhoneCode(ValidPhoneCodeRequest request);
 
 }
