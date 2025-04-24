@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CheckServiceLinkedRoleForProduct  CheckServiceLinkedRoleForProductRequest
+     * @return CheckServiceLinkedRoleForProductResponse
+     */
+    CompletableFuture<CheckServiceLinkedRoleForProductResponse> checkServiceLinkedRoleForProduct(CheckServiceLinkedRoleForProductRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to create an API destination.</p>
      * 

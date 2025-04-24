@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CheckServiceLinkedRoleForProduct  CheckServiceLinkedRoleForProductRequest
+     * @return CheckServiceLinkedRoleForProductResponse
+     */
+    @Override
+    public CompletableFuture<CheckServiceLinkedRoleForProductResponse> checkServiceLinkedRoleForProduct(CheckServiceLinkedRoleForProductRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CheckServiceLinkedRoleForProduct").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckServiceLinkedRoleForProductResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckServiceLinkedRoleForProductResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to create an API destination.</p>
      * 
