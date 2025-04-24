@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUsersResponseBody</p>
  */
 public class CreateUsersResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AllSucceed")
+    private Boolean allSucceed;
+
     @com.aliyun.core.annotation.NameInMap("CreateResult")
     private CreateResult createResult;
 
@@ -24,6 +27,7 @@ public class CreateUsersResponseBody extends TeaModel {
     private String requestId;
 
     private CreateUsersResponseBody(Builder builder) {
+        this.allSucceed = builder.allSucceed;
         this.createResult = builder.createResult;
         this.requestId = builder.requestId;
     }
@@ -41,6 +45,13 @@ public class CreateUsersResponseBody extends TeaModel {
     }
 
     /**
+     * @return allSucceed
+     */
+    public Boolean getAllSucceed() {
+        return this.allSucceed;
+    }
+
+    /**
      * @return createResult
      */
     public CreateResult getCreateResult() {
@@ -55,6 +66,7 @@ public class CreateUsersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean allSucceed; 
         private CreateResult createResult; 
         private String requestId; 
 
@@ -62,9 +74,18 @@ public class CreateUsersResponseBody extends TeaModel {
         } 
 
         private Builder(CreateUsersResponseBody model) {
+            this.allSucceed = model.allSucceed;
             this.createResult = model.createResult;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * AllSucceed.
+         */
+        public Builder allSucceed(Boolean allSucceed) {
+            this.allSucceed = allSucceed;
+            return this;
+        }
 
         /**
          * <p>The result of user creation.</p>
