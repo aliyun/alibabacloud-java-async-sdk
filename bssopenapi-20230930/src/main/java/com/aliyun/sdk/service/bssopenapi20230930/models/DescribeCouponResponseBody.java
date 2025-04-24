@@ -236,6 +236,9 @@ public class DescribeCouponResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private String amount;
 
+        @com.aliyun.core.annotation.NameInMap("CertainAmount")
+        private String certainAmount;
+
         @com.aliyun.core.annotation.NameInMap("CouponId")
         private Long couponId;
 
@@ -304,6 +307,7 @@ public class DescribeCouponResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.amount = builder.amount;
+            this.certainAmount = builder.certainAmount;
             this.couponId = builder.couponId;
             this.couponNo = builder.couponNo;
             this.couponType = builder.couponType;
@@ -341,6 +345,13 @@ public class DescribeCouponResponseBody extends TeaModel {
          */
         public String getAmount() {
             return this.amount;
+        }
+
+        /**
+         * @return certainAmount
+         */
+        public String getCertainAmount() {
+            return this.certainAmount;
         }
 
         /**
@@ -499,6 +510,7 @@ public class DescribeCouponResponseBody extends TeaModel {
 
         public static final class Builder {
             private String amount; 
+            private String certainAmount; 
             private Long couponId; 
             private String couponNo; 
             private String couponType; 
@@ -527,6 +539,7 @@ public class DescribeCouponResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.amount = model.amount;
+                this.certainAmount = model.certainAmount;
                 this.couponId = model.couponId;
                 this.couponNo = model.couponNo;
                 this.couponType = model.couponType;
@@ -556,6 +569,14 @@ public class DescribeCouponResponseBody extends TeaModel {
              */
             public Builder amount(String amount) {
                 this.amount = amount;
+                return this;
+            }
+
+            /**
+             * CertainAmount.
+             */
+            public Builder certainAmount(String certainAmount) {
+                this.certainAmount = certainAmount;
                 return this;
             }
 

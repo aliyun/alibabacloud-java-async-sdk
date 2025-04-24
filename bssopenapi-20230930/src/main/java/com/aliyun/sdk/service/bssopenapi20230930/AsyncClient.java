@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCouponItemListResponse> describeCouponItemList(DescribeCouponItemListRequest request);
 
     /**
+     * @param request the request parameters of DescribeUserSpnSummaryInfo  DescribeUserSpnSummaryInfoRequest
+     * @return DescribeUserSpnSummaryInfoResponse
+     */
+    CompletableFuture<DescribeUserSpnSummaryInfoResponse> describeUserSpnSummaryInfo(DescribeUserSpnSummaryInfoRequest request);
+
+    /**
      * @param request the request parameters of GetFundAccountAvailableAmount  GetFundAccountAvailableAmountRequest
      * @return GetFundAccountAvailableAmountResponse
      */
@@ -96,6 +102,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetFundAccountTransactionDetailsResponse
      */
     CompletableFuture<GetFundAccountTransactionDetailsResponse> getFundAccountTransactionDetails(GetFundAccountTransactionDetailsRequest request);
+
+    /**
+     * @param request the request parameters of GetSavingPlanDeductableCommodity  GetSavingPlanDeductableCommodityRequest
+     * @return GetSavingPlanDeductableCommodityResponse
+     */
+    CompletableFuture<GetSavingPlanDeductableCommodityResponse> getSavingPlanDeductableCommodity(GetSavingPlanDeductableCommodityRequest request);
+
+    /**
+     * @param request the request parameters of GetSavingPlanShareAccounts  GetSavingPlanShareAccountsRequest
+     * @return GetSavingPlanShareAccountsResponse
+     */
+    CompletableFuture<GetSavingPlanShareAccountsResponse> getSavingPlanShareAccounts(GetSavingPlanShareAccountsRequest request);
+
+    /**
+     * @param request the request parameters of GetSavingPlanUserDeductRule  GetSavingPlanUserDeductRuleRequest
+     * @return GetSavingPlanUserDeductRuleResponse
+     */
+    CompletableFuture<GetSavingPlanUserDeductRuleResponse> getSavingPlanUserDeductRule(GetSavingPlanUserDeductRuleRequest request);
 
     /**
      * @param request the request parameters of ListCouponDeductTag  ListCouponDeductTagRequest
