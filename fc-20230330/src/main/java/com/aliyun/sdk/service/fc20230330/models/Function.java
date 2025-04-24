@@ -47,6 +47,9 @@ public class Function extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("diskSize")
     private Integer diskSize;
 
+    @com.aliyun.core.annotation.NameInMap("enableLongLiving")
+    private Boolean enableLongLiving;
+
     @com.aliyun.core.annotation.NameInMap("environmentVariables")
     private java.util.Map<String, String> environmentVariables;
 
@@ -145,6 +148,7 @@ public class Function extends TeaModel {
         this.description = builder.description;
         this.disableOndemand = builder.disableOndemand;
         this.diskSize = builder.diskSize;
+        this.enableLongLiving = builder.enableLongLiving;
         this.environmentVariables = builder.environmentVariables;
         this.functionArn = builder.functionArn;
         this.functionId = builder.functionId;
@@ -256,6 +260,13 @@ public class Function extends TeaModel {
      */
     public Integer getDiskSize() {
         return this.diskSize;
+    }
+
+    /**
+     * @return enableLongLiving
+     */
+    public Boolean getEnableLongLiving() {
+        return this.enableLongLiving;
     }
 
     /**
@@ -472,6 +483,7 @@ public class Function extends TeaModel {
         private String description; 
         private Boolean disableOndemand; 
         private Integer diskSize; 
+        private Boolean enableLongLiving; 
         private java.util.Map<String, String> environmentVariables; 
         private String functionArn; 
         private String functionId; 
@@ -516,6 +528,7 @@ public class Function extends TeaModel {
             this.description = model.description;
             this.disableOndemand = model.disableOndemand;
             this.diskSize = model.diskSize;
+            this.enableLongLiving = model.enableLongLiving;
             this.environmentVariables = model.environmentVariables;
             this.functionArn = model.functionArn;
             this.functionId = model.functionId;
@@ -624,6 +637,14 @@ public class Function extends TeaModel {
          */
         public Builder diskSize(Integer diskSize) {
             this.diskSize = diskSize;
+            return this;
+        }
+
+        /**
+         * enableLongLiving.
+         */
+        public Builder enableLongLiving(Boolean enableLongLiving) {
+            this.enableLongLiving = enableLongLiving;
             return this;
         }
 
