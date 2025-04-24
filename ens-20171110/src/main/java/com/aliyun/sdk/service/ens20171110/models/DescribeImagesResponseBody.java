@@ -130,7 +130,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about images.</p>
+         * <p>The information about the images.</p>
          */
         public Builder images(Images images) {
             this.images = images;
@@ -627,7 +627,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Edge Node Service (ENS) node.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-qingdao</p>

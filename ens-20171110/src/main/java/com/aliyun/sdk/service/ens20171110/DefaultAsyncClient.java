@@ -83,9 +83,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h1><a href="#"></a>Usage notes</h1>
+     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 100 times per second.</li>
      * <li>You can call this operation up to 5 times per second per user.</li>
      * <li>Internal networks and IPv4 addresses are not supported.</li>
      * </ul>
@@ -2591,6 +2590,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</p>
+     * 
      * @param request the request parameters of DescribeInstanceBootConfiguration  DescribeInstanceBootConfigurationRequest
      * @return DescribeInstanceBootConfigurationResponse
      */
@@ -3855,6 +3857,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For the Internal Connection mode and the Intelligent Acceleration and Internal Connection mode, instances of the vSwitch take effect automatically. You do not need to manually add instances. For public connections such as intelligent acceleration, you need to call an operation to manually add the instances to Internet-facing instances.</p>
+     * 
      * @param request the request parameters of JoinVSwitchesToEpnInstance  JoinVSwitchesToEpnInstanceRequest
      * @return JoinVSwitchesToEpnInstanceResponse
      */

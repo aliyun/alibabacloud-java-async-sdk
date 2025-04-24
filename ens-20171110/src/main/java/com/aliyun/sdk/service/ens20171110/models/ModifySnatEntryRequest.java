@@ -117,7 +117,17 @@ public class ModifySnatEntryRequest extends Request {
         } 
 
         /**
-         * EipAffinity.
+         * <p>Specifies whether to enable IP affinity. Default value: true. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> Description After you enable IP affinity, if multiple EIPs are associated with an SNAT entry, one client uses the same EIP to for communication. If IP affinity is disabled, the client uses a random EIP for communication.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder eipAffinity(Boolean eipAffinity) {
             this.putQueryParameter("EipAffinity", eipAffinity);
@@ -156,7 +166,10 @@ public class ModifySnatEntryRequest extends Request {
         }
 
         /**
-         * SnatIp.
+         * <p>Separate multiple EIPs in the SNAT entry with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.XXX.XXX.71</p>
          */
         public Builder snatIp(String snatIp) {
             this.putQueryParameter("SnatIp", snatIp);

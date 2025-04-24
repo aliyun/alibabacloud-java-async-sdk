@@ -430,11 +430,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to encrypt the new system disk. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong> (default): no</li>
-             * </ul>
+             * <p>Specifies whether to encrypt the disk.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

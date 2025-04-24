@@ -119,7 +119,11 @@ public class CreateHaVipRequest extends Request {
         } 
 
         /**
-         * Amount.
+         * <p>The number of HAVIPs that you want to create. Valid values: 1 to 10. The value can be only 1 if you specify an IP address.</p>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);

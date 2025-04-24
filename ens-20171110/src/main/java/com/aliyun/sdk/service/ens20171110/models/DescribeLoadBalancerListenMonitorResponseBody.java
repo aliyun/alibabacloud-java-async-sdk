@@ -600,7 +600,7 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VIP of the instance.</p>
+             * <p>The virtual IP address (VIP) of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>10.8.<em>.</em></p>

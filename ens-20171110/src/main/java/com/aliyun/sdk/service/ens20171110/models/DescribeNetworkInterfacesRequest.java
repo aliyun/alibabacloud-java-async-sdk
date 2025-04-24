@@ -269,7 +269,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The node information.</p>
+         * <p>The IDs of edge nodes. N indicates the number of edge node IDs that you can specify at the same time. Valid values of N: 1 to 100.</p>
          */
         public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);
@@ -323,7 +323,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>A list of multicast source IDs.</p>
+         * <p>The IDs of the elastic network interfaces (ENIs). N indicates the number of ENI IDs that you can specify at the same time. Valid values of N: 1 to 100.</p>
          */
         public Builder networkInterfaceIds(java.util.List<String> networkInterfaceIds) {
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);

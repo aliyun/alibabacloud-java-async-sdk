@@ -210,10 +210,10 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * <p>The type of the instance with which you want to associate the EIP. Valid values:</p>
+         * <p>The type of the instance that is associated with the EIP. Valid values:</p>
          * <ul>
          * <li><strong>EnsInstance</strong>: ENS instance in a VPC</li>
-         * <li><strong>SlbInstance</strong>: Edge Load Balancer (ELB) instance</li>
+         * <li><strong>SlbInstance</strong>: SLB instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,7 +262,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * EnsRegionIds.
+         * <p>ENS节点ID数组。数组长度：1~100。</p>
          */
         public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);

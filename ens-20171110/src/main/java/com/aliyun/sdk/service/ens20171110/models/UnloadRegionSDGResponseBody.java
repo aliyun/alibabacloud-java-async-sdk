@@ -249,7 +249,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about failed tasks.</p>
+             * <p>Details about the failed tasks.</p>
              */
             public Builder failedItems(java.util.List<FailedItems> failedItems) {
                 this.failedItems = failedItems;

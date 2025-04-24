@@ -170,7 +170,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * <p>The node information.</p>
+         * <p>The IDs of edge nodes. You can specify 1 to 100 IDs.</p>
          */
         public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);
@@ -227,7 +227,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * <p>The list of vSwitches in the network.</p>
+         * <p>The IDs of vSwitches. You can specify 1 to 100 IDs.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);

@@ -219,10 +219,7 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. This parameter is optional if you want to return the push status of all data files.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);

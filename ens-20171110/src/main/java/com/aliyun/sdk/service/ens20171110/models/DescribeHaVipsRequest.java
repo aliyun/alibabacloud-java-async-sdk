@@ -197,7 +197,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * EnsRegionIds.
+         * <p>The IDs of edge nodes. You can specify 1 to 100 IDs.</p>
          */
         public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);

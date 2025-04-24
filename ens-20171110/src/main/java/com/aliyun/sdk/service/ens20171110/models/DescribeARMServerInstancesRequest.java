@@ -338,7 +338,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. The maximum value is <strong>100</strong>.</p>
+         * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>.</p>
          * <p>Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>

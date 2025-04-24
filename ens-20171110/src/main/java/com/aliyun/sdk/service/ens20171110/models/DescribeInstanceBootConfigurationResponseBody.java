@@ -170,7 +170,10 @@ public class DescribeInstanceBootConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * BootSet.
+             * <p>The startup method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>legacy</p>
              */
             public Builder bootSet(String bootSet) {
                 this.bootSet = bootSet;
@@ -178,7 +181,10 @@ public class DescribeInstanceBootConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * BootType.
+             * <p>The startup type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disk</p>
              */
             public Builder bootType(String bootType) {
                 this.bootType = bootType;
@@ -186,7 +192,10 @@ public class DescribeInstanceBootConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSet.
+             * <p>Specifies whether the startup depends on the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder diskSet(String diskSet) {
                 this.diskSet = diskSet;
@@ -194,7 +203,10 @@ public class DescribeInstanceBootConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

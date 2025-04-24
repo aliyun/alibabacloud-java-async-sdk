@@ -142,7 +142,7 @@ public class DescribeImageSharePermissionRequest extends Request {
 
         /**
          * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>.</p>
-         * <p>Default value: <strong>10</strong></p>
+         * <p>Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

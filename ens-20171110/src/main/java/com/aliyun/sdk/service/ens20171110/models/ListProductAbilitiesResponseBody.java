@@ -67,7 +67,7 @@ public class ListProductAbilitiesResponseBody extends TeaModel {
         } 
 
         /**
-         * ProductAbilities.
+         * <p>Products supported by the edge node.</p>
          */
         public Builder productAbilities(java.util.List<String> productAbilities) {
             this.productAbilities = productAbilities;
@@ -75,7 +75,10 @@ public class ListProductAbilitiesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx-75ED-422E-A022-7121FA18C968</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

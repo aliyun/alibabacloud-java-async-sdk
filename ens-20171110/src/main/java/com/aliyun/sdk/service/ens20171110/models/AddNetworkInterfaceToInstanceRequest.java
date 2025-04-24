@@ -89,7 +89,7 @@ public class AddNetworkInterfaceToInstanceRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to specify the instance.</p>
+         * <p>Specifies whether to automatically restart the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

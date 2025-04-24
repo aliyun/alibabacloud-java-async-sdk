@@ -100,7 +100,7 @@ public class UnloadRegionSDGRequest extends Request {
         }
 
         /**
-         * <p>The namespaces.</p>
+         * <p>An array that consists of queried namespaces.</p>
          */
         public Builder namespaces(java.util.List<String> namespaces) {
             String namespacesShrink = shrink(namespaces, "Namespaces", "json");

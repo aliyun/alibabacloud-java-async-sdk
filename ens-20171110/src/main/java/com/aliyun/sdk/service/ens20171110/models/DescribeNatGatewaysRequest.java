@@ -183,7 +183,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The node information.</p>
+         * <p>The IDs of edge nodes. You can specify 1 to 100 IDs.</p>
          */
         public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);
@@ -216,7 +216,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The IDs of NAT Gateways.</p>
+         * <p>The IDs of the NAT gateways. You can specify 1 to 100 IDs.</p>
          */
         public Builder natGatewayIds(java.util.List<String> natGatewayIds) {
             this.putQueryParameter("NatGatewayIds", natGatewayIds);

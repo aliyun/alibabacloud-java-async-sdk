@@ -129,7 +129,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ENS node. You can query the node ID by calling the <a href="~~DescribeEnsRegions~~">DescribeEnsRegions</a> operation.</p>
+         * <p>The ID of the edge node.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -101,7 +101,7 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * <p>Schema of Response</p>
+         * <p>An array of security group rules. You can specify up to 200 IDs of security group rules.</p>
          */
         public Builder permissions(java.util.List<Permissions> permissions) {
             String permissionsShrink = shrink(permissions, "Permissions", "json");
@@ -279,10 +279,7 @@ public class CreateSecurityGroupRequest extends Request {
             } 
 
             /**
-             * <p>The description of the SDG.</p>
-             * <blockquote>
-             * <p> We recommend that you specify this parameter in details for subsequent queries.</p>
-             * </blockquote>
+             * <p>The description. It must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>testDescription</p>
@@ -294,7 +291,6 @@ public class CreateSecurityGroupRequest extends Request {
 
             /**
              * <p>The destination IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
-             * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.0.0/0</p>
@@ -306,6 +302,10 @@ public class CreateSecurityGroupRequest extends Request {
 
             /**
              * <p>The direction in which the security group rule is applied.</p>
+             * <ul>
+             * <li>egress</li>
+             * <li>ingress</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -317,13 +317,11 @@ public class CreateSecurityGroupRequest extends Request {
             }
 
             /**
-             * <p>The protocol. The values of this parameter are case-insensitive. Valid values:</p>
+             * <p>The protocol type. Valid values:</p>
              * <ul>
-             * <li>TCP.</li>
-             * <li>UDP.</li>
-             * <li>ICMP.</li>
-             * <li>ICMPv6.</li>
-             * <li>GRE.</li>
+             * <li>TCP</li>
+             * <li>UDP</li>
+             * <li>ICMP</li>
              * <li>ALL: All protocols are supported.</li>
              * </ul>
              * <p>This parameter is required.</p>
@@ -339,10 +337,9 @@ public class CreateSecurityGroupRequest extends Request {
             /**
              * <p>The action of the security group rule. Valid values:</p>
              * <ul>
-             * <li>accept: allows inbound access.</li>
-             * <li>drop: denies inbound access and returns no responses. In this case, the request times out or the connection cannot be established.</li>
+             * <li>Accept</li>
+             * <li>Drop</li>
              * </ul>
-             * <p>Default value: accept.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -358,8 +355,7 @@ public class CreateSecurityGroupRequest extends Request {
              * <ul>
              * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
              * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
-             * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
-             * <li>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</li>
+             * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -373,7 +369,6 @@ public class CreateSecurityGroupRequest extends Request {
 
             /**
              * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
-             * <p>Default value: 1.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -386,7 +381,6 @@ public class CreateSecurityGroupRequest extends Request {
 
             /**
              * <p>The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
-             * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.0.0/0</p>
@@ -399,12 +393,10 @@ public class CreateSecurityGroupRequest extends Request {
             /**
              * <p>The range of source port numbers for the protocols specified in the security group rule. Valid values:</p>
              * <ul>
-             * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
+             * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
              * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
-             * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
              * <li>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</li>
              * </ul>
-             * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>22/22</p>

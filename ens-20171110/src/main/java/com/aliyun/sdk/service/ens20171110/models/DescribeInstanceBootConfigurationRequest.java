@@ -102,7 +102,10 @@ public class DescribeInstanceBootConfigurationRequest extends Request {
         } 
 
         /**
-         * BootSet.
+         * <p>The startup method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>legacy</p>
          */
         public Builder bootSet(String bootSet) {
             this.putQueryParameter("BootSet", bootSet);
@@ -111,7 +114,10 @@ public class DescribeInstanceBootConfigurationRequest extends Request {
         }
 
         /**
-         * BootType.
+         * <p>The startup type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxe</p>
          */
         public Builder bootType(String bootType) {
             this.putQueryParameter("BootType", bootType);
@@ -120,7 +126,10 @@ public class DescribeInstanceBootConfigurationRequest extends Request {
         }
 
         /**
-         * DiskSet.
+         * <p>Specifies whether the startup depends on the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder diskSet(String diskSet) {
             this.putQueryParameter("DiskSet", diskSet);
@@ -129,6 +138,7 @@ public class DescribeInstanceBootConfigurationRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

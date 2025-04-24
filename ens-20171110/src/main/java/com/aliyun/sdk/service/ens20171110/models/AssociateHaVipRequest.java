@@ -117,8 +117,8 @@ public class AssociateHaVipRequest extends Request {
         /**
          * <p>The type of the instance to be associated with the HAVIP. Valid values:</p>
          * <ul>
-         * <li>EnsInstance (default): ENS instance.</li>
-         * <li>NetworkInterface: ENI. If you want to associate the HAVIP with an ENI, this parameter is required.</li>
+         * <li>EnsInstance (default): ENS instance</li>
+         * <li>NetworkInterface: elastic network interface (ENI)</li>
          * </ul>
          * 
          * <strong>example:</strong>

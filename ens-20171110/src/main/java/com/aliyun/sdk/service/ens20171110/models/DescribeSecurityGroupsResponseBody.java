@@ -422,7 +422,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of instance IDs.</p>
+             * <p>The IDs of the instances that are associated with the security group.</p>
              */
             public Builder instanceIds(InstanceIds instanceIds) {
                 this.instanceIds = instanceIds;
@@ -430,7 +430,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of ENIs.</p>
+             * <p>The IDs of the ENIs that are associated with the security group.</p>
              */
             public Builder networkInterfaceIds(NetworkInterfaceIds networkInterfaceIds) {
                 this.networkInterfaceIds = networkInterfaceIds;

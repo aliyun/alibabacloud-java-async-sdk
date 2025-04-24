@@ -340,7 +340,7 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         } 
 
         /**
-         * <p>The port used by the backend ELB server of the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>The port used by the backend server of the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -462,13 +462,13 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         }
 
         /**
-         * <p>The health check method used in HTTP health checks. Valid values:</p>
+         * <p>The HTTP request method for health checks. Valid values:</p>
          * <ul>
          * <li><strong>head</strong> (default)</li>
          * <li><strong>get</strong></li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+         * <p> This parameter takes effect only if the HealthCheck parameter is set to on.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -556,7 +556,7 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable HTTP-to-HTTPS redirection. Valid values:</p>
+         * <p>Specifies whether to enable redirection from HTTP to HTTPS. Valid values:</p>
          * <ul>
          * <li><strong>on</strong></li>
          * <li><strong>off</strong> (default)</li>
@@ -616,14 +616,14 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         }
 
         /**
-         * <p>The routing algorithm. Valid values:</p>
+         * <p>The scheduling algorithm. Valid values:</p>
          * <ul>
-         * <li><strong>wrr</strong>: Backend servers with higher weights receive more requests than backend servers with lower weights. This is the default value.</li>
-         * <li><strong>wlc</strong>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</li>
+         * <li><strong>wrr</strong> (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</li>
+         * <li><strong>wlc</strong>: Requests are distributed based on the weights and number of connections to backend servers. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</li>
          * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
-         * <li><strong>sch</strong>: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
-         * <li><strong>qch</strong>: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</li>
-         * <li><strong>iqch</strong>: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.</li>
+         * <li><strong>sch</strong>: consistent hashing based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
+         * <li><strong>qch</strong>: consistent hashing based on QUIC connection IDs (CIDs). Requests that contain the same QUIC CID are distributed to the same backend server.</li>
+         * <li><strong>iqch</strong>: consistent hashing based on three specific bytes of iQUIC CIDs. Requests with the same second, third, and fourth bytes are distributed to the same backend server.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -26,6 +26,10 @@ public class ModifyInstanceChargeTypeRequest extends Request {
     private Boolean autoRenew;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillingCycle")
+    private String billingCycle;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IncludeDataDisks")
     private Boolean includeDataDisks;
 
@@ -51,6 +55,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         super(builder);
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
+        this.billingCycle = builder.billingCycle;
         this.includeDataDisks = builder.includeDataDisks;
         this.instanceChargeType = builder.instanceChargeType;
         this.instanceIds = builder.instanceIds;
@@ -83,6 +88,13 @@ public class ModifyInstanceChargeTypeRequest extends Request {
      */
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    /**
+     * @return billingCycle
+     */
+    public String getBillingCycle() {
+        return this.billingCycle;
     }
 
     /**
@@ -123,6 +135,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyInstanceChargeTypeRequest, Builder> {
         private Boolean autoPay; 
         private Boolean autoRenew; 
+        private String billingCycle; 
         private Boolean includeDataDisks; 
         private String instanceChargeType; 
         private java.util.List<String> instanceIds; 
@@ -137,6 +150,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
             super(request);
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
+            this.billingCycle = request.billingCycle;
             this.includeDataDisks = request.includeDataDisks;
             this.instanceChargeType = request.instanceChargeType;
             this.instanceIds = request.instanceIds;
@@ -169,6 +183,15 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * BillingCycle.
+         */
+        public Builder billingCycle(String billingCycle) {
+            this.putQueryParameter("BillingCycle", billingCycle);
+            this.billingCycle = billingCycle;
             return this;
         }
 

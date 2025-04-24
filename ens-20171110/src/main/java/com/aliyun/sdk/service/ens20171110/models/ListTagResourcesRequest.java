@@ -123,7 +123,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Set the value to instance.</p>
+         * <p>The resource type. Set the value to instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
