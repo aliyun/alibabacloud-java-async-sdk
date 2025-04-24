@@ -80,6 +80,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSessionResponse> createSession(CreateSessionRequest request);
 
     /**
+     * @param request the request parameters of CreateVsc  CreateVscRequest
+     * @return CreateVscResponse
+     */
+    CompletableFuture<CreateVscResponse> createVsc(CreateVscRequest request);
+
+    /**
      * @param request the request parameters of DeleteCluster  DeleteClusterRequest
      * @return DeleteClusterResponse
      */
@@ -93,6 +99,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteNodeGroupResponse
      */
     CompletableFuture<DeleteNodeGroupResponse> deleteNodeGroup(DeleteNodeGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteVsc  DeleteVscRequest
+     * @return DeleteVscResponse
+     */
+    CompletableFuture<DeleteVscResponse> deleteVsc(DeleteVscRequest request);
 
     /**
      * @param request the request parameters of DescribeCluster  DescribeClusterRequest
@@ -147,6 +159,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeTaskResponse
      */
     CompletableFuture<DescribeTaskResponse> describeTask(DescribeTaskRequest request);
+
+    /**
+     * @param request the request parameters of DescribeVsc  DescribeVscRequest
+     * @return DescribeVscResponse
+     */
+    CompletableFuture<DescribeVscResponse> describeVsc(DescribeVscRequest request);
 
     /**
      * @param request the request parameters of DescribeZones  DescribeZonesRequest
@@ -237,6 +255,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListUserClusterTypesResponse
      */
     CompletableFuture<ListUserClusterTypesResponse> listUserClusterTypes(ListUserClusterTypesRequest request);
+
+    /**
+     * @param request the request parameters of ListVscs  ListVscsRequest
+     * @return ListVscsResponse
+     */
+    CompletableFuture<ListVscsResponse> listVscs(ListVscsRequest request);
 
     /**
      * @param request the request parameters of RebootNodes  RebootNodesRequest

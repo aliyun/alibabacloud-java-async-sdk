@@ -134,6 +134,9 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("FileSystemMountEnabled")
+        private Boolean fileSystemMountEnabled;
+
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
@@ -163,6 +166,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
             this.clusterName = builder.clusterName;
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.fileSystemMountEnabled = builder.fileSystemMountEnabled;
             this.groupId = builder.groupId;
             this.groupName = builder.groupName;
             this.imageId = builder.imageId;
@@ -207,6 +211,13 @@ public class ListNodeGroupsResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return fileSystemMountEnabled
+         */
+        public Boolean getFileSystemMountEnabled() {
+            return this.fileSystemMountEnabled;
         }
 
         /**
@@ -270,6 +281,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
             private String clusterName; 
             private String createTime; 
             private String description; 
+            private Boolean fileSystemMountEnabled; 
             private String groupId; 
             private String groupName; 
             private String imageId; 
@@ -287,6 +299,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
                 this.clusterName = model.clusterName;
                 this.createTime = model.createTime;
                 this.description = model.description;
+                this.fileSystemMountEnabled = model.fileSystemMountEnabled;
                 this.groupId = model.groupId;
                 this.groupName = model.groupName;
                 this.imageId = model.imageId;
@@ -338,6 +351,14 @@ public class ListNodeGroupsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * FileSystemMountEnabled.
+             */
+            public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
+                this.fileSystemMountEnabled = fileSystemMountEnabled;
                 return this;
             }
 

@@ -341,6 +341,9 @@ public class ListClusterNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
+        @com.aliyun.core.annotation.NameInMap("FileSystemMountEnabled")
+        private Boolean fileSystemMountEnabled;
+
         @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
@@ -393,6 +396,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             this.commodityCode = builder.commodityCode;
             this.createTime = builder.createTime;
             this.expiredTime = builder.expiredTime;
+            this.fileSystemMountEnabled = builder.fileSystemMountEnabled;
             this.hostname = builder.hostname;
             this.hpnZone = builder.hpnZone;
             this.imageId = builder.imageId;
@@ -438,6 +442,13 @@ public class ListClusterNodesResponseBody extends TeaModel {
          */
         public String getExpiredTime() {
             return this.expiredTime;
+        }
+
+        /**
+         * @return fileSystemMountEnabled
+         */
+        public Boolean getFileSystemMountEnabled() {
+            return this.fileSystemMountEnabled;
         }
 
         /**
@@ -556,6 +567,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
             private String commodityCode; 
             private String createTime; 
             private String expiredTime; 
+            private Boolean fileSystemMountEnabled; 
             private String hostname; 
             private String hpnZone; 
             private String imageId; 
@@ -580,6 +592,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
                 this.commodityCode = model.commodityCode;
                 this.createTime = model.createTime;
                 this.expiredTime = model.expiredTime;
+                this.fileSystemMountEnabled = model.fileSystemMountEnabled;
                 this.hostname = model.hostname;
                 this.hpnZone = model.hpnZone;
                 this.imageId = model.imageId;
@@ -628,6 +641,14 @@ public class ListClusterNodesResponseBody extends TeaModel {
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
+                return this;
+            }
+
+            /**
+             * <p>whether or not support file system mount</p>
+             */
+            public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
+                this.fileSystemMountEnabled = fileSystemMountEnabled;
                 return this;
             }
 

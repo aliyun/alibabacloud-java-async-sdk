@@ -218,7 +218,10 @@ public class CreateNodeGroupRequest extends Request {
             } 
 
             /**
-             * Category.
+             * <p>Disk performance level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -226,7 +229,16 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * PerformanceLevel.
+             * <p>The performance level of the disk if the disk is an ESSD. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * </ul>
+             * <p>Default value: PL1.</p>
+             * <p>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL!</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -234,7 +246,10 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>System disk size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>250</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -259,9 +274,15 @@ public class CreateNodeGroupRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String az;
 
+        @com.aliyun.core.annotation.NameInMap("FileSystemMountEnabled")
+        private Boolean fileSystemMountEnabled;
+
         @com.aliyun.core.annotation.NameInMap("ImageId")
         @com.aliyun.core.annotation.Validation(required = true)
         private String imageId;
+
+        @com.aliyun.core.annotation.NameInMap("KeyPairName")
+        private String keyPairName;
 
         @com.aliyun.core.annotation.NameInMap("MachineType")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -282,7 +303,9 @@ public class CreateNodeGroupRequest extends Request {
 
         private NodeGroup(Builder builder) {
             this.az = builder.az;
+            this.fileSystemMountEnabled = builder.fileSystemMountEnabled;
             this.imageId = builder.imageId;
+            this.keyPairName = builder.keyPairName;
             this.machineType = builder.machineType;
             this.nodeGroupDescription = builder.nodeGroupDescription;
             this.nodeGroupName = builder.nodeGroupName;
@@ -306,10 +329,24 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
+         * @return fileSystemMountEnabled
+         */
+        public Boolean getFileSystemMountEnabled() {
+            return this.fileSystemMountEnabled;
+        }
+
+        /**
          * @return imageId
          */
         public String getImageId() {
             return this.imageId;
+        }
+
+        /**
+         * @return keyPairName
+         */
+        public String getKeyPairName() {
+            return this.keyPairName;
         }
 
         /**
@@ -349,7 +386,9 @@ public class CreateNodeGroupRequest extends Request {
 
         public static final class Builder {
             private String az; 
+            private Boolean fileSystemMountEnabled; 
             private String imageId; 
+            private String keyPairName; 
             private String machineType; 
             private String nodeGroupDescription; 
             private String nodeGroupName; 
@@ -361,7 +400,9 @@ public class CreateNodeGroupRequest extends Request {
 
             private Builder(NodeGroup model) {
                 this.az = model.az;
+                this.fileSystemMountEnabled = model.fileSystemMountEnabled;
                 this.imageId = model.imageId;
+                this.keyPairName = model.keyPairName;
                 this.machineType = model.machineType;
                 this.nodeGroupDescription = model.nodeGroupDescription;
                 this.nodeGroupName = model.nodeGroupName;
@@ -382,6 +423,14 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
+             * FileSystemMountEnabled.
+             */
+            public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
+                this.fileSystemMountEnabled = fileSystemMountEnabled;
+                return this;
+            }
+
+            /**
              * <p>Image ID.</p>
              * <p>This parameter is required.</p>
              * 
@@ -390,6 +439,17 @@ public class CreateNodeGroupRequest extends Request {
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * <p>The name of the key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-keypair</p>
+             */
+            public Builder keyPairName(String keyPairName) {
+                this.keyPairName = keyPairName;
                 return this;
             }
 
@@ -429,7 +489,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * SystemDisk.
+             * <p>SystemDisk</p>
              */
             public Builder systemDisk(SystemDisk systemDisk) {
                 this.systemDisk = systemDisk;

@@ -32,6 +32,9 @@ public class DescribeNodeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
 
+    @com.aliyun.core.annotation.NameInMap("FileSystemMountEnabled")
+    private Boolean fileSystemMountEnabled;
+
     @com.aliyun.core.annotation.NameInMap("Hostname")
     private String hostname;
 
@@ -83,6 +86,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         this.createTime = builder.createTime;
         this.disks = builder.disks;
         this.expiredTime = builder.expiredTime;
+        this.fileSystemMountEnabled = builder.fileSystemMountEnabled;
         this.hostname = builder.hostname;
         this.hpnZone = builder.hpnZone;
         this.imageId = builder.imageId;
@@ -145,6 +149,13 @@ public class DescribeNodeResponseBody extends TeaModel {
      */
     public String getExpiredTime() {
         return this.expiredTime;
+    }
+
+    /**
+     * @return fileSystemMountEnabled
+     */
+    public Boolean getFileSystemMountEnabled() {
+        return this.fileSystemMountEnabled;
     }
 
     /**
@@ -258,6 +269,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         private String createTime; 
         private java.util.List<Disks> disks; 
         private String expiredTime; 
+        private Boolean fileSystemMountEnabled; 
         private String hostname; 
         private String hpnZone; 
         private String imageId; 
@@ -283,6 +295,7 @@ public class DescribeNodeResponseBody extends TeaModel {
             this.createTime = model.createTime;
             this.disks = model.disks;
             this.expiredTime = model.expiredTime;
+            this.fileSystemMountEnabled = model.fileSystemMountEnabled;
             this.hostname = model.hostname;
             this.hpnZone = model.hpnZone;
             this.imageId = model.imageId;
@@ -334,7 +347,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Disks.
+         * <p>Disk infos</p>
          */
         public Builder disks(java.util.List<Disks> disks) {
             this.disks = disks;
@@ -349,6 +362,14 @@ public class DescribeNodeResponseBody extends TeaModel {
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
+            return this;
+        }
+
+        /**
+         * <p>是否支持文件存储挂载</p>
+         */
+        public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
+            this.fileSystemMountEnabled = fileSystemMountEnabled;
             return this;
         }
 
@@ -614,7 +635,13 @@ public class DescribeNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The category of the disk.</p>
+             * <ul>
+             * <li>cloud_ssd: all-flash disk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -622,7 +649,10 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * DiskId.
+             * <p>The ID of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp1fi88ryk4yah8a6yos</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -630,7 +660,14 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * PerformanceLevel.
+             * <p>The performance level of the ESSD. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -638,7 +675,10 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -646,7 +686,13 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the disk. Valid values:</p>
+             * <ul>
+             * <li>system: system disk</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder type(String type) {
                 this.type = type;

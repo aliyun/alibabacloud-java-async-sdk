@@ -22,6 +22,14 @@ public class UpdateNodeGroupRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileSystemMountEnabled")
+    private Boolean fileSystemMountEnabled;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
+    private String keyPairName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NewNodeGroupName")
     private String newNodeGroupName;
 
@@ -36,6 +44,8 @@ public class UpdateNodeGroupRequest extends Request {
     private UpdateNodeGroupRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.fileSystemMountEnabled = builder.fileSystemMountEnabled;
+        this.keyPairName = builder.keyPairName;
         this.newNodeGroupName = builder.newNodeGroupName;
         this.nodeGroupId = builder.nodeGroupId;
         this.userData = builder.userData;
@@ -62,6 +72,20 @@ public class UpdateNodeGroupRequest extends Request {
     }
 
     /**
+     * @return fileSystemMountEnabled
+     */
+    public Boolean getFileSystemMountEnabled() {
+        return this.fileSystemMountEnabled;
+    }
+
+    /**
+     * @return keyPairName
+     */
+    public String getKeyPairName() {
+        return this.keyPairName;
+    }
+
+    /**
      * @return newNodeGroupName
      */
     public String getNewNodeGroupName() {
@@ -84,6 +108,8 @@ public class UpdateNodeGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateNodeGroupRequest, Builder> {
         private String regionId; 
+        private Boolean fileSystemMountEnabled; 
+        private String keyPairName; 
         private String newNodeGroupName; 
         private String nodeGroupId; 
         private String userData; 
@@ -95,6 +121,8 @@ public class UpdateNodeGroupRequest extends Request {
         private Builder(UpdateNodeGroupRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.fileSystemMountEnabled = request.fileSystemMountEnabled;
+            this.keyPairName = request.keyPairName;
             this.newNodeGroupName = request.newNodeGroupName;
             this.nodeGroupId = request.nodeGroupId;
             this.userData = request.userData;
@@ -106,6 +134,27 @@ public class UpdateNodeGroupRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * FileSystemMountEnabled.
+         */
+        public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
+            this.putBodyParameter("FileSystemMountEnabled", fileSystemMountEnabled);
+            this.fileSystemMountEnabled = fileSystemMountEnabled;
+            return this;
+        }
+
+        /**
+         * <p>The name of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sc-key</p>
+         */
+        public Builder keyPairName(String keyPairName) {
+            this.putBodyParameter("KeyPairName", keyPairName);
+            this.keyPairName = keyPairName;
             return this;
         }
 

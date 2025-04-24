@@ -12,27 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateNodeGroupResponseBody} extends {@link TeaModel}
+ * {@link CreateVscResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateNodeGroupResponseBody</p>
+ * <p>CreateVscResponseBody</p>
  */
-public class UpdateNodeGroupResponseBody extends TeaModel {
+public class CreateVscResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("TaskId")
-    private String taskId;
+    @com.aliyun.core.annotation.NameInMap("VscId")
+    private String vscId;
 
-    private UpdateNodeGroupResponseBody(Builder builder) {
+    private CreateVscResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.taskId = builder.taskId;
+        this.vscId = builder.vscId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpdateNodeGroupResponseBody create() {
+    public static CreateVscResponseBody create() {
         return builder().build();
     }
 
@@ -48,29 +48,29 @@ public class UpdateNodeGroupResponseBody extends TeaModel {
     }
 
     /**
-     * @return taskId
+     * @return vscId
      */
-    public String getTaskId() {
-        return this.taskId;
+    public String getVscId() {
+        return this.vscId;
     }
 
     public static final class Builder {
         private String requestId; 
-        private String taskId; 
+        private String vscId; 
 
         private Builder() {
         } 
 
-        private Builder(UpdateNodeGroupResponseBody model) {
+        private Builder(CreateVscResponseBody model) {
             this.requestId = model.requestId;
-            this.taskId = model.taskId;
+            this.vscId = model.vscId;
         } 
 
         /**
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>8F065DDD-6996-5973-9691-9EC57BD0072E</p>
+         * <p>887FA855-89F4-5DB3-B305-C5879EC480E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,18 +78,15 @@ public class UpdateNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Task ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i15374011238111706</p>
+         * VscId.
          */
-        public Builder taskId(String taskId) {
-            this.taskId = taskId;
+        public Builder vscId(String vscId) {
+            this.vscId = vscId;
             return this;
         }
 
-        public UpdateNodeGroupResponseBody build() {
-            return new UpdateNodeGroupResponseBody(this);
+        public CreateVscResponseBody build() {
+            return new CreateVscResponseBody(this);
         } 
 
     } 

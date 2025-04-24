@@ -12,27 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateNodeGroupResponseBody} extends {@link TeaModel}
+ * {@link DeleteVscResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateNodeGroupResponseBody</p>
+ * <p>DeleteVscResponseBody</p>
  */
-public class UpdateNodeGroupResponseBody extends TeaModel {
+public class DeleteVscResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("TaskId")
-    private String taskId;
-
-    private UpdateNodeGroupResponseBody(Builder builder) {
+    private DeleteVscResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpdateNodeGroupResponseBody create() {
+    public static DeleteVscResponseBody create() {
         return builder().build();
     }
 
@@ -47,49 +43,29 @@ public class UpdateNodeGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return taskId
-     */
-    public String getTaskId() {
-        return this.taskId;
-    }
-
     public static final class Builder {
         private String requestId; 
-        private String taskId; 
 
         private Builder() {
         } 
 
-        private Builder(UpdateNodeGroupResponseBody model) {
+        private Builder(DeleteVscResponseBody model) {
             this.requestId = model.requestId;
-            this.taskId = model.taskId;
         } 
 
         /**
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>8F065DDD-6996-5973-9691-9EC57BD0072E</p>
+         * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        /**
-         * <p>Task ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i15374011238111706</p>
-         */
-        public Builder taskId(String taskId) {
-            this.taskId = taskId;
-            return this;
-        }
-
-        public UpdateNodeGroupResponseBody build() {
-            return new UpdateNodeGroupResponseBody(this);
+        public DeleteVscResponseBody build() {
+            return new DeleteVscResponseBody(this);
         } 
 
     } 
