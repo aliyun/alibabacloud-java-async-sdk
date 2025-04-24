@@ -178,7 +178,148 @@ public class GetMcpResourceResponseBody extends TeaModel {
      *
      * <p>GetMcpResourceResponseBody</p>
      */
+    public static class DesktopInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppId")
+        private String appId;
+
+        @com.aliyun.core.annotation.NameInMap("AuthCode")
+        private String authCode;
+
+        @com.aliyun.core.annotation.NameInMap("ConnectionProperties")
+        private String connectionProperties;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        private String resourceId;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        private String resourceType;
+
+        private DesktopInfo(Builder builder) {
+            this.appId = builder.appId;
+            this.authCode = builder.authCode;
+            this.connectionProperties = builder.connectionProperties;
+            this.resourceId = builder.resourceId;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DesktopInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
+        }
+
+        /**
+         * @return authCode
+         */
+        public String getAuthCode() {
+            return this.authCode;
+        }
+
+        /**
+         * @return connectionProperties
+         */
+        public String getConnectionProperties() {
+            return this.connectionProperties;
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private String appId; 
+            private String authCode; 
+            private String connectionProperties; 
+            private String resourceId; 
+            private String resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DesktopInfo model) {
+                this.appId = model.appId;
+                this.authCode = model.authCode;
+                this.connectionProperties = model.connectionProperties;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+            } 
+
+            /**
+             * AppId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
+
+            /**
+             * AuthCode.
+             */
+            public Builder authCode(String authCode) {
+                this.authCode = authCode;
+                return this;
+            }
+
+            /**
+             * ConnectionProperties.
+             */
+            public Builder connectionProperties(String connectionProperties) {
+                this.connectionProperties = connectionProperties;
+                return this;
+            }
+
+            /**
+             * ResourceId.
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public DesktopInfo build() {
+                return new DesktopInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpResourceResponseBody</p>
+     */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DesktopInfo")
+        private DesktopInfo desktopInfo;
+
         @com.aliyun.core.annotation.NameInMap("ResourceUrl")
         private String resourceUrl;
 
@@ -186,6 +327,7 @@ public class GetMcpResourceResponseBody extends TeaModel {
         private String sessionId;
 
         private Data(Builder builder) {
+            this.desktopInfo = builder.desktopInfo;
             this.resourceUrl = builder.resourceUrl;
             this.sessionId = builder.sessionId;
         }
@@ -196,6 +338,13 @@ public class GetMcpResourceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return desktopInfo
+         */
+        public DesktopInfo getDesktopInfo() {
+            return this.desktopInfo;
         }
 
         /**
@@ -213,6 +362,7 @@ public class GetMcpResourceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private DesktopInfo desktopInfo; 
             private String resourceUrl; 
             private String sessionId; 
 
@@ -220,9 +370,18 @@ public class GetMcpResourceResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.desktopInfo = model.desktopInfo;
                 this.resourceUrl = model.resourceUrl;
                 this.sessionId = model.sessionId;
             } 
+
+            /**
+             * DesktopInfo.
+             */
+            public Builder desktopInfo(DesktopInfo desktopInfo) {
+                this.desktopInfo = desktopInfo;
+                return this;
+            }
 
             /**
              * ResourceUrl.
