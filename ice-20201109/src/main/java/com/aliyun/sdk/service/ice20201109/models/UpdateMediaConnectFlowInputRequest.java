@@ -31,6 +31,10 @@ public class UpdateMediaConnectFlowInputRequest extends Request {
     private String inputFromUrl;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputName")
+    private String inputName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxBitrate")
     private Integer maxBitrate;
 
@@ -51,6 +55,7 @@ public class UpdateMediaConnectFlowInputRequest extends Request {
         this.cidrs = builder.cidrs;
         this.flowId = builder.flowId;
         this.inputFromUrl = builder.inputFromUrl;
+        this.inputName = builder.inputName;
         this.maxBitrate = builder.maxBitrate;
         this.srtLatency = builder.srtLatency;
         this.srtPassphrase = builder.srtPassphrase;
@@ -92,6 +97,13 @@ public class UpdateMediaConnectFlowInputRequest extends Request {
     }
 
     /**
+     * @return inputName
+     */
+    public String getInputName() {
+        return this.inputName;
+    }
+
+    /**
      * @return maxBitrate
      */
     public Integer getMaxBitrate() {
@@ -123,6 +135,7 @@ public class UpdateMediaConnectFlowInputRequest extends Request {
         private String cidrs; 
         private String flowId; 
         private String inputFromUrl; 
+        private String inputName; 
         private Integer maxBitrate; 
         private Integer srtLatency; 
         private String srtPassphrase; 
@@ -137,6 +150,7 @@ public class UpdateMediaConnectFlowInputRequest extends Request {
             this.cidrs = request.cidrs;
             this.flowId = request.flowId;
             this.inputFromUrl = request.inputFromUrl;
+            this.inputName = request.inputName;
             this.maxBitrate = request.maxBitrate;
             this.srtLatency = request.srtLatency;
             this.srtPassphrase = request.srtPassphrase;
@@ -177,6 +191,15 @@ public class UpdateMediaConnectFlowInputRequest extends Request {
         public Builder inputFromUrl(String inputFromUrl) {
             this.putQueryParameter("InputFromUrl", inputFromUrl);
             this.inputFromUrl = inputFromUrl;
+            return this;
+        }
+
+        /**
+         * InputName.
+         */
+        public Builder inputName(String inputName) {
+            this.putQueryParameter("InputName", inputName);
+            this.inputName = inputName;
             return this;
         }
 

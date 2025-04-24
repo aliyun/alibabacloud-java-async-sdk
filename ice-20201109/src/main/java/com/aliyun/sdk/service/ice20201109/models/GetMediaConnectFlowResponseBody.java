@@ -149,6 +149,9 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("FlowFailover")
+        private String flowFailover;
+
         @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
 
@@ -163,6 +166,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
 
         private Content(Builder builder) {
             this.createTime = builder.createTime;
+            this.flowFailover = builder.flowFailover;
             this.flowId = builder.flowId;
             this.flowName = builder.flowName;
             this.flowStatus = builder.flowStatus;
@@ -182,6 +186,13 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return flowFailover
+         */
+        public String getFlowFailover() {
+            return this.flowFailover;
         }
 
         /**
@@ -214,6 +225,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private String flowFailover; 
             private String flowId; 
             private String flowName; 
             private String flowStatus; 
@@ -224,6 +236,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
 
             private Builder(Content model) {
                 this.createTime = model.createTime;
+                this.flowFailover = model.flowFailover;
                 this.flowId = model.flowId;
                 this.flowName = model.flowName;
                 this.flowStatus = model.flowStatus;
@@ -238,6 +251,14 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * FlowFailover.
+             */
+            public Builder flowFailover(String flowFailover) {
+                this.flowFailover = flowFailover;
                 return this;
             }
 

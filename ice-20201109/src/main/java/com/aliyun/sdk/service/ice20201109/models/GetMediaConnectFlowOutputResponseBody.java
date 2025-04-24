@@ -152,6 +152,9 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("Forbid")
+        private String forbid;
+
         @com.aliyun.core.annotation.NameInMap("OutputName")
         private String outputName;
 
@@ -182,6 +185,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         private Content(Builder builder) {
             this.cidrs = builder.cidrs;
             this.createTime = builder.createTime;
+            this.forbid = builder.forbid;
             this.outputName = builder.outputName;
             this.outputProtocol = builder.outputProtocol;
             this.outputUrl = builder.outputUrl;
@@ -213,6 +217,13 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return forbid
+         */
+        public String getForbid() {
+            return this.forbid;
         }
 
         /**
@@ -281,6 +292,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         public static final class Builder {
             private String cidrs; 
             private String createTime; 
+            private String forbid; 
             private String outputName; 
             private String outputProtocol; 
             private String outputUrl; 
@@ -297,6 +309,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
             private Builder(Content model) {
                 this.cidrs = model.cidrs;
                 this.createTime = model.createTime;
+                this.forbid = model.forbid;
                 this.outputName = model.outputName;
                 this.outputProtocol = model.outputProtocol;
                 this.outputUrl = model.outputUrl;
@@ -327,6 +340,14 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * Forbid.
+             */
+            public Builder forbid(String forbid) {
+                this.forbid = forbid;
                 return this;
             }
 

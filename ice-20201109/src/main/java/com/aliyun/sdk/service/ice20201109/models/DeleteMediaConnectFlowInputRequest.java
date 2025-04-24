@@ -22,9 +22,14 @@ public class DeleteMediaConnectFlowInputRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String flowId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputName")
+    private String inputName;
+
     private DeleteMediaConnectFlowInputRequest(Builder builder) {
         super(builder);
         this.flowId = builder.flowId;
+        this.inputName = builder.inputName;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class DeleteMediaConnectFlowInputRequest extends Request {
         return this.flowId;
     }
 
+    /**
+     * @return inputName
+     */
+    public String getInputName() {
+        return this.inputName;
+    }
+
     public static final class Builder extends Request.Builder<DeleteMediaConnectFlowInputRequest, Builder> {
         private String flowId; 
+        private String inputName; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class DeleteMediaConnectFlowInputRequest extends Request {
         private Builder(DeleteMediaConnectFlowInputRequest request) {
             super(request);
             this.flowId = request.flowId;
+            this.inputName = request.inputName;
         } 
 
         /**
@@ -69,6 +83,15 @@ public class DeleteMediaConnectFlowInputRequest extends Request {
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);
             this.flowId = flowId;
+            return this;
+        }
+
+        /**
+         * InputName.
+         */
+        public Builder inputName(String inputName) {
+            this.putQueryParameter("InputName", inputName);
+            this.inputName = inputName;
             return this;
         }
 
