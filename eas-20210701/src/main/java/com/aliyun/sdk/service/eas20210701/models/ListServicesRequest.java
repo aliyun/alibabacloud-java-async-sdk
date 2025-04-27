@@ -58,7 +58,16 @@ public class ListServicesRequest extends Request {
     private String quotaId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceAliasName")
+    private String resourceAliasName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    private String resourceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceName")
+    @Deprecated
     private String resourceName;
 
     @com.aliyun.core.annotation.Query
@@ -105,6 +114,8 @@ public class ListServicesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.parentServiceUid = builder.parentServiceUid;
         this.quotaId = builder.quotaId;
+        this.resourceAliasName = builder.resourceAliasName;
+        this.resourceId = builder.resourceId;
         this.resourceName = builder.resourceName;
         this.resourceType = builder.resourceType;
         this.role = builder.role;
@@ -200,6 +211,20 @@ public class ListServicesRequest extends Request {
     }
 
     /**
+     * @return resourceAliasName
+     */
+    public String getResourceAliasName() {
+        return this.resourceAliasName;
+    }
+
+    /**
+     * @return resourceId
+     */
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    /**
      * @return resourceName
      */
     public String getResourceName() {
@@ -273,6 +298,8 @@ public class ListServicesRequest extends Request {
         private Integer pageSize; 
         private String parentServiceUid; 
         private String quotaId; 
+        private String resourceAliasName; 
+        private String resourceId; 
         private String resourceName; 
         private String resourceType; 
         private String role; 
@@ -299,6 +326,8 @@ public class ListServicesRequest extends Request {
             this.pageSize = request.pageSize;
             this.parentServiceUid = request.parentServiceUid;
             this.quotaId = request.quotaId;
+            this.resourceAliasName = request.resourceAliasName;
+            this.resourceId = request.resourceId;
             this.resourceName = request.resourceName;
             this.resourceType = request.resourceType;
             this.role = request.role;
@@ -426,6 +455,24 @@ public class ListServicesRequest extends Request {
         public Builder quotaId(String quotaId) {
             this.putQueryParameter("QuotaId", quotaId);
             this.quotaId = quotaId;
+            return this;
+        }
+
+        /**
+         * ResourceAliasName.
+         */
+        public Builder resourceAliasName(String resourceAliasName) {
+            this.putQueryParameter("ResourceAliasName", resourceAliasName);
+            this.resourceAliasName = resourceAliasName;
+            return this;
+        }
+
+        /**
+         * ResourceId.
+         */
+        public Builder resourceId(String resourceId) {
+            this.putQueryParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
             return this;
         }
 
