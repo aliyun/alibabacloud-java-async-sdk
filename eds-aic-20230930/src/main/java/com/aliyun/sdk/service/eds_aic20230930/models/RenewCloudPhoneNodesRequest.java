@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RenewCloudPhoneNodesRequest</p>
  */
 public class RenewCloudPhoneNodesRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
+    private Boolean autoPay;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
@@ -35,6 +39,7 @@ public class RenewCloudPhoneNodesRequest extends Request {
 
     private RenewCloudPhoneNodesRequest(Builder builder) {
         super(builder);
+        this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.nodeIds = builder.nodeIds;
         this.period = builder.period;
@@ -52,6 +57,13 @@ public class RenewCloudPhoneNodesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
@@ -83,6 +95,7 @@ public class RenewCloudPhoneNodesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RenewCloudPhoneNodesRequest, Builder> {
+        private Boolean autoPay; 
         private Boolean autoRenew; 
         private java.util.List<String> nodeIds; 
         private Integer period; 
@@ -94,11 +107,21 @@ public class RenewCloudPhoneNodesRequest extends Request {
 
         private Builder(RenewCloudPhoneNodesRequest request) {
             super(request);
+            this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.nodeIds = request.nodeIds;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
         } 
+
+        /**
+         * AutoPay.
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
 
         /**
          * <p>Specifies whether to enable the auto-renewal feature.</p>

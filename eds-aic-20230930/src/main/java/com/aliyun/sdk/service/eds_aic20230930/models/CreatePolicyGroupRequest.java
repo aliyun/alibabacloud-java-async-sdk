@@ -57,6 +57,10 @@ public class CreatePolicyGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResolutionWidth")
     private Integer resolutionWidth;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Watermark")
+    private Watermark watermark;
+
     private CreatePolicyGroupRequest(Builder builder) {
         super(builder);
         this.cameraRedirect = builder.cameraRedirect;
@@ -69,6 +73,7 @@ public class CreatePolicyGroupRequest extends Request {
         this.policyType = builder.policyType;
         this.resolutionHeight = builder.resolutionHeight;
         this.resolutionWidth = builder.resolutionWidth;
+        this.watermark = builder.watermark;
     }
 
     public static Builder builder() {
@@ -154,6 +159,13 @@ public class CreatePolicyGroupRequest extends Request {
         return this.resolutionWidth;
     }
 
+    /**
+     * @return watermark
+     */
+    public Watermark getWatermark() {
+        return this.watermark;
+    }
+
     public static final class Builder extends Request.Builder<CreatePolicyGroupRequest, Builder> {
         private String cameraRedirect; 
         private String clipboard; 
@@ -165,6 +177,7 @@ public class CreatePolicyGroupRequest extends Request {
         private String policyType; 
         private Integer resolutionHeight; 
         private Integer resolutionWidth; 
+        private Watermark watermark; 
 
         private Builder() {
             super();
@@ -182,6 +195,7 @@ public class CreatePolicyGroupRequest extends Request {
             this.policyType = request.policyType;
             this.resolutionHeight = request.resolutionHeight;
             this.resolutionWidth = request.resolutionWidth;
+            this.watermark = request.watermark;
         } 
 
         /**
@@ -325,6 +339,16 @@ public class CreatePolicyGroupRequest extends Request {
         public Builder resolutionWidth(Integer resolutionWidth) {
             this.putBodyParameter("ResolutionWidth", resolutionWidth);
             this.resolutionWidth = resolutionWidth;
+            return this;
+        }
+
+        /**
+         * Watermark.
+         */
+        public Builder watermark(Watermark watermark) {
+            String watermarkShrink = shrink(watermark, "Watermark", "json");
+            this.putBodyParameter("Watermark", watermarkShrink);
+            this.watermark = watermark;
             return this;
         }
 
@@ -652,6 +676,165 @@ public class CreatePolicyGroupRequest extends Request {
 
             public NetRedirectPolicy build() {
                 return new NetRedirectPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreatePolicyGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePolicyGroupRequest</p>
+     */
+    public static class Watermark extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("WatermarkColor")
+        private Integer watermarkColor;
+
+        @com.aliyun.core.annotation.NameInMap("WatermarkCustomText")
+        private String watermarkCustomText;
+
+        @com.aliyun.core.annotation.NameInMap("WatermarkFontSize")
+        private Integer watermarkFontSize;
+
+        @com.aliyun.core.annotation.NameInMap("WatermarkSwitch")
+        private String watermarkSwitch;
+
+        @com.aliyun.core.annotation.NameInMap("WatermarkTransparencyValue")
+        private Integer watermarkTransparencyValue;
+
+        @com.aliyun.core.annotation.NameInMap("WatermarkTypes")
+        private java.util.List<String> watermarkTypes;
+
+        private Watermark(Builder builder) {
+            this.watermarkColor = builder.watermarkColor;
+            this.watermarkCustomText = builder.watermarkCustomText;
+            this.watermarkFontSize = builder.watermarkFontSize;
+            this.watermarkSwitch = builder.watermarkSwitch;
+            this.watermarkTransparencyValue = builder.watermarkTransparencyValue;
+            this.watermarkTypes = builder.watermarkTypes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Watermark create() {
+            return builder().build();
+        }
+
+        /**
+         * @return watermarkColor
+         */
+        public Integer getWatermarkColor() {
+            return this.watermarkColor;
+        }
+
+        /**
+         * @return watermarkCustomText
+         */
+        public String getWatermarkCustomText() {
+            return this.watermarkCustomText;
+        }
+
+        /**
+         * @return watermarkFontSize
+         */
+        public Integer getWatermarkFontSize() {
+            return this.watermarkFontSize;
+        }
+
+        /**
+         * @return watermarkSwitch
+         */
+        public String getWatermarkSwitch() {
+            return this.watermarkSwitch;
+        }
+
+        /**
+         * @return watermarkTransparencyValue
+         */
+        public Integer getWatermarkTransparencyValue() {
+            return this.watermarkTransparencyValue;
+        }
+
+        /**
+         * @return watermarkTypes
+         */
+        public java.util.List<String> getWatermarkTypes() {
+            return this.watermarkTypes;
+        }
+
+        public static final class Builder {
+            private Integer watermarkColor; 
+            private String watermarkCustomText; 
+            private Integer watermarkFontSize; 
+            private String watermarkSwitch; 
+            private Integer watermarkTransparencyValue; 
+            private java.util.List<String> watermarkTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Watermark model) {
+                this.watermarkColor = model.watermarkColor;
+                this.watermarkCustomText = model.watermarkCustomText;
+                this.watermarkFontSize = model.watermarkFontSize;
+                this.watermarkSwitch = model.watermarkSwitch;
+                this.watermarkTransparencyValue = model.watermarkTransparencyValue;
+                this.watermarkTypes = model.watermarkTypes;
+            } 
+
+            /**
+             * WatermarkColor.
+             */
+            public Builder watermarkColor(Integer watermarkColor) {
+                this.watermarkColor = watermarkColor;
+                return this;
+            }
+
+            /**
+             * WatermarkCustomText.
+             */
+            public Builder watermarkCustomText(String watermarkCustomText) {
+                this.watermarkCustomText = watermarkCustomText;
+                return this;
+            }
+
+            /**
+             * WatermarkFontSize.
+             */
+            public Builder watermarkFontSize(Integer watermarkFontSize) {
+                this.watermarkFontSize = watermarkFontSize;
+                return this;
+            }
+
+            /**
+             * WatermarkSwitch.
+             */
+            public Builder watermarkSwitch(String watermarkSwitch) {
+                this.watermarkSwitch = watermarkSwitch;
+                return this;
+            }
+
+            /**
+             * WatermarkTransparencyValue.
+             */
+            public Builder watermarkTransparencyValue(Integer watermarkTransparencyValue) {
+                this.watermarkTransparencyValue = watermarkTransparencyValue;
+                return this;
+            }
+
+            /**
+             * WatermarkTypes.
+             */
+            public Builder watermarkTypes(java.util.List<String> watermarkTypes) {
+                this.watermarkTypes = watermarkTypes;
+                return this;
+            }
+
+            public Watermark build() {
+                return new Watermark(this);
             } 
 
         } 

@@ -542,6 +542,165 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
      *
      * <p>ListPolicyGroupsResponseBody</p>
      */
+    public static class Watermark extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("WatermarkColor")
+        private Integer watermarkColor;
+
+        @com.aliyun.core.annotation.NameInMap("WatermarkCustomText")
+        private String watermarkCustomText;
+
+        @com.aliyun.core.annotation.NameInMap("WatermarkFontSize")
+        private Integer watermarkFontSize;
+
+        @com.aliyun.core.annotation.NameInMap("WatermarkSwitch")
+        private String watermarkSwitch;
+
+        @com.aliyun.core.annotation.NameInMap("WatermarkTransparencyValue")
+        private Integer watermarkTransparencyValue;
+
+        @com.aliyun.core.annotation.NameInMap("WatermarkTypes")
+        private java.util.List<String> watermarkTypes;
+
+        private Watermark(Builder builder) {
+            this.watermarkColor = builder.watermarkColor;
+            this.watermarkCustomText = builder.watermarkCustomText;
+            this.watermarkFontSize = builder.watermarkFontSize;
+            this.watermarkSwitch = builder.watermarkSwitch;
+            this.watermarkTransparencyValue = builder.watermarkTransparencyValue;
+            this.watermarkTypes = builder.watermarkTypes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Watermark create() {
+            return builder().build();
+        }
+
+        /**
+         * @return watermarkColor
+         */
+        public Integer getWatermarkColor() {
+            return this.watermarkColor;
+        }
+
+        /**
+         * @return watermarkCustomText
+         */
+        public String getWatermarkCustomText() {
+            return this.watermarkCustomText;
+        }
+
+        /**
+         * @return watermarkFontSize
+         */
+        public Integer getWatermarkFontSize() {
+            return this.watermarkFontSize;
+        }
+
+        /**
+         * @return watermarkSwitch
+         */
+        public String getWatermarkSwitch() {
+            return this.watermarkSwitch;
+        }
+
+        /**
+         * @return watermarkTransparencyValue
+         */
+        public Integer getWatermarkTransparencyValue() {
+            return this.watermarkTransparencyValue;
+        }
+
+        /**
+         * @return watermarkTypes
+         */
+        public java.util.List<String> getWatermarkTypes() {
+            return this.watermarkTypes;
+        }
+
+        public static final class Builder {
+            private Integer watermarkColor; 
+            private String watermarkCustomText; 
+            private Integer watermarkFontSize; 
+            private String watermarkSwitch; 
+            private Integer watermarkTransparencyValue; 
+            private java.util.List<String> watermarkTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Watermark model) {
+                this.watermarkColor = model.watermarkColor;
+                this.watermarkCustomText = model.watermarkCustomText;
+                this.watermarkFontSize = model.watermarkFontSize;
+                this.watermarkSwitch = model.watermarkSwitch;
+                this.watermarkTransparencyValue = model.watermarkTransparencyValue;
+                this.watermarkTypes = model.watermarkTypes;
+            } 
+
+            /**
+             * WatermarkColor.
+             */
+            public Builder watermarkColor(Integer watermarkColor) {
+                this.watermarkColor = watermarkColor;
+                return this;
+            }
+
+            /**
+             * WatermarkCustomText.
+             */
+            public Builder watermarkCustomText(String watermarkCustomText) {
+                this.watermarkCustomText = watermarkCustomText;
+                return this;
+            }
+
+            /**
+             * WatermarkFontSize.
+             */
+            public Builder watermarkFontSize(Integer watermarkFontSize) {
+                this.watermarkFontSize = watermarkFontSize;
+                return this;
+            }
+
+            /**
+             * WatermarkSwitch.
+             */
+            public Builder watermarkSwitch(String watermarkSwitch) {
+                this.watermarkSwitch = watermarkSwitch;
+                return this;
+            }
+
+            /**
+             * WatermarkTransparencyValue.
+             */
+            public Builder watermarkTransparencyValue(Integer watermarkTransparencyValue) {
+                this.watermarkTransparencyValue = watermarkTransparencyValue;
+                return this;
+            }
+
+            /**
+             * WatermarkTypes.
+             */
+            public Builder watermarkTypes(java.util.List<String> watermarkTypes) {
+                this.watermarkTypes = watermarkTypes;
+                return this;
+            }
+
+            public Watermark build() {
+                return new Watermark(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListPolicyGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicyGroupsResponseBody</p>
+     */
     public static class PolicyGroupModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CameraRedirect")
         private String cameraRedirect;
@@ -579,6 +738,9 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SessionResolutionWidth")
         private Integer sessionResolutionWidth;
 
+        @com.aliyun.core.annotation.NameInMap("Watermark")
+        private Watermark watermark;
+
         private PolicyGroupModel(Builder builder) {
             this.cameraRedirect = builder.cameraRedirect;
             this.clipboard = builder.clipboard;
@@ -592,6 +754,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             this.policyRelatedResources = builder.policyRelatedResources;
             this.sessionResolutionHeight = builder.sessionResolutionHeight;
             this.sessionResolutionWidth = builder.sessionResolutionWidth;
+            this.watermark = builder.watermark;
         }
 
         public static Builder builder() {
@@ -686,6 +849,13 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             return this.sessionResolutionWidth;
         }
 
+        /**
+         * @return watermark
+         */
+        public Watermark getWatermark() {
+            return this.watermark;
+        }
+
         public static final class Builder {
             private String cameraRedirect; 
             private String clipboard; 
@@ -699,6 +869,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             private PolicyRelatedResources policyRelatedResources; 
             private Integer sessionResolutionHeight; 
             private Integer sessionResolutionWidth; 
+            private Watermark watermark; 
 
             private Builder() {
             } 
@@ -716,6 +887,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
                 this.policyRelatedResources = model.policyRelatedResources;
                 this.sessionResolutionHeight = model.sessionResolutionHeight;
                 this.sessionResolutionWidth = model.sessionResolutionWidth;
+                this.watermark = model.watermark;
             } 
 
             /**
@@ -870,6 +1042,14 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
              */
             public Builder sessionResolutionWidth(Integer sessionResolutionWidth) {
                 this.sessionResolutionWidth = sessionResolutionWidth;
+                return this;
+            }
+
+            /**
+             * Watermark.
+             */
+            public Builder watermark(Watermark watermark) {
+                this.watermark = watermark;
                 return this;
             }
 
