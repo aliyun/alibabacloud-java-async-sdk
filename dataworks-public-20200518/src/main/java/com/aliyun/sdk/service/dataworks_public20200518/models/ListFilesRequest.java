@@ -340,7 +340,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * LastEditUser.
+         * <p>The ID of the Alibaba Cloud account that is used to last modify the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38748246285727</p>
          */
         public Builder lastEditUser(String lastEditUser) {
             this.putBodyParameter("LastEditUser", lastEditUser);

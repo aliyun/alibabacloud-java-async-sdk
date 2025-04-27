@@ -75,6 +75,7 @@ public class CreateFileRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FileDescription")
+    @com.aliyun.core.annotation.Validation(maxLength = 200)
     private String fileDescription;
 
     @com.aliyun.core.annotation.Body
