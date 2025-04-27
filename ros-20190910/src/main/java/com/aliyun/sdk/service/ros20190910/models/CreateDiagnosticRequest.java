@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateDiagnosticRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiagnosticKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String diagnosticKey;
 
     @com.aliyun.core.annotation.Query
@@ -103,6 +104,7 @@ public class CreateDiagnosticRequest extends Request {
         /**
          * <p>The keyword in the diagnosis.</p>
          * <p>You can specify the ID of the stack that you want to diagnose.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>37A5679B-8488-5A5D-8D5C-90E66A577A5D</p>
