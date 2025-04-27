@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RecognizeGeneralStructureRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Keys")
-    private java.util.List < String > keys;
+    private java.util.List<String> keys;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Url")
@@ -40,7 +45,7 @@ public class RecognizeGeneralStructureRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -48,7 +53,7 @@ public class RecognizeGeneralStructureRequest extends Request {
     /**
      * @return keys
      */
-    public java.util.List < String > getKeys() {
+    public java.util.List<String> getKeys() {
         return this.keys;
     }
 
@@ -67,7 +72,7 @@ public class RecognizeGeneralStructureRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RecognizeGeneralStructureRequest, Builder> {
-        private java.util.List < String > keys; 
+        private java.util.List<String> keys; 
         private String url; 
         private java.io.InputStream body; 
 
@@ -85,7 +90,7 @@ public class RecognizeGeneralStructureRequest extends Request {
         /**
          * Keys.
          */
-        public Builder keys(java.util.List < String > keys) {
+        public Builder keys(java.util.List<String> keys) {
             String keysShrink = shrink(keys, "Keys", "simple");
             this.putQueryParameter("Keys", keysShrink);
             this.keys = keys;

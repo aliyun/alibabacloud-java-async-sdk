@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DataSubImagesKvInfoKvDetailsValue extends TeaModel {
     private Integer valueConfidence;
 
     @com.aliyun.core.annotation.NameInMap("ValuePoints")
-    private java.util.List < ValuePoints> valuePoints;
+    private java.util.List<ValuePoints> valuePoints;
 
     @com.aliyun.core.annotation.NameInMap("ValueRect")
     private ValueRect valueRect;
@@ -49,6 +54,10 @@ public class DataSubImagesKvInfoKvDetailsValue extends TeaModel {
 
     public static DataSubImagesKvInfoKvDetailsValue create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -82,7 +91,7 @@ public class DataSubImagesKvInfoKvDetailsValue extends TeaModel {
     /**
      * @return valuePoints
      */
-    public java.util.List < ValuePoints> getValuePoints() {
+    public java.util.List<ValuePoints> getValuePoints() {
         return this.valuePoints;
     }
 
@@ -105,9 +114,22 @@ public class DataSubImagesKvInfoKvDetailsValue extends TeaModel {
         private Integer keyConfidence; 
         private String value; 
         private Integer valueConfidence; 
-        private java.util.List < ValuePoints> valuePoints; 
+        private java.util.List<ValuePoints> valuePoints; 
         private ValueRect valueRect; 
         private Integer valueAngle; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataSubImagesKvInfoKvDetailsValue model) {
+            this.keyName = model.keyName;
+            this.keyConfidence = model.keyConfidence;
+            this.value = model.value;
+            this.valueConfidence = model.valueConfidence;
+            this.valuePoints = model.valuePoints;
+            this.valueRect = model.valueRect;
+            this.valueAngle = model.valueAngle;
+        } 
 
         /**
          * KeyName.
@@ -144,7 +166,7 @@ public class DataSubImagesKvInfoKvDetailsValue extends TeaModel {
         /**
          * ValuePoints.
          */
-        public Builder valuePoints(java.util.List < ValuePoints> valuePoints) {
+        public Builder valuePoints(java.util.List<ValuePoints> valuePoints) {
             this.valuePoints = valuePoints;
             return this;
         }
@@ -214,6 +236,14 @@ public class DataSubImagesKvInfoKvDetailsValue extends TeaModel {
         public static final class Builder {
             private Integer x; 
             private Integer y; 
+
+            private Builder() {
+            } 
+
+            private Builder(ValuePoints model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * X.
@@ -305,6 +335,16 @@ public class DataSubImagesKvInfoKvDetailsValue extends TeaModel {
             private Integer centerY; 
             private Integer width; 
             private Integer height; 
+
+            private Builder() {
+            } 
+
+            private Builder(ValueRect model) {
+                this.centerX = model.centerX;
+                this.centerY = model.centerY;
+                this.width = model.width;
+                this.height = model.height;
+            } 
 
             /**
              * CenterX.

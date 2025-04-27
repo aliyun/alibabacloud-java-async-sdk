@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class RecognizeMultiLanguageRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Languages")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > languages;
+    private java.util.List<String> languages;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NeedRotate")
@@ -60,7 +65,7 @@ public class RecognizeMultiLanguageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +73,7 @@ public class RecognizeMultiLanguageRequest extends Request {
     /**
      * @return languages
      */
-    public java.util.List < String > getLanguages() {
+    public java.util.List<String> getLanguages() {
         return this.languages;
     }
 
@@ -115,7 +120,7 @@ public class RecognizeMultiLanguageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RecognizeMultiLanguageRequest, Builder> {
-        private java.util.List < String > languages; 
+        private java.util.List<String> languages; 
         private Boolean needRotate; 
         private Boolean needSortPage; 
         private Boolean outputCharInfo; 
@@ -141,7 +146,7 @@ public class RecognizeMultiLanguageRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder languages(java.util.List < String > languages) {
+        public Builder languages(java.util.List<String> languages) {
             String languagesShrink = shrink(languages, "Languages", "simple");
             this.putQueryParameter("Languages", languagesShrink);
             this.languages = languages;

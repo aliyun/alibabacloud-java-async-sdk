@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class RecognizeGeneralStructureResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -72,6 +81,16 @@ public class RecognizeGeneralStructureResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RecognizeGeneralStructureResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -155,6 +174,14 @@ public class RecognizeGeneralStructureResponseBody extends TeaModel {
             private Object data; 
             private Integer kvCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(KvInfo model) {
+                this.data = model.data;
+                this.kvCount = model.kvCount;
+            } 
+
             /**
              * Data.
              */
@@ -234,6 +261,15 @@ public class RecognizeGeneralStructureResponseBody extends TeaModel {
             private KvInfo kvInfo; 
             private Integer subImageId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubImages model) {
+                this.angle = model.angle;
+                this.kvInfo = model.kvInfo;
+                this.subImageId = model.subImageId;
+            } 
+
             /**
              * Angle.
              */
@@ -279,7 +315,7 @@ public class RecognizeGeneralStructureResponseBody extends TeaModel {
         private Integer subImageCount;
 
         @com.aliyun.core.annotation.NameInMap("SubImages")
-        private java.util.List < SubImages> subImages;
+        private java.util.List<SubImages> subImages;
 
         @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
@@ -316,7 +352,7 @@ public class RecognizeGeneralStructureResponseBody extends TeaModel {
         /**
          * @return subImages
          */
-        public java.util.List < SubImages> getSubImages() {
+        public java.util.List<SubImages> getSubImages() {
             return this.subImages;
         }
 
@@ -330,8 +366,18 @@ public class RecognizeGeneralStructureResponseBody extends TeaModel {
         public static final class Builder {
             private Integer height; 
             private Integer subImageCount; 
-            private java.util.List < SubImages> subImages; 
+            private java.util.List<SubImages> subImages; 
             private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.height = model.height;
+                this.subImageCount = model.subImageCount;
+                this.subImages = model.subImages;
+                this.width = model.width;
+            } 
 
             /**
              * Height.
@@ -352,7 +398,7 @@ public class RecognizeGeneralStructureResponseBody extends TeaModel {
             /**
              * SubImages.
              */
-            public Builder subImages(java.util.List < SubImages> subImages) {
+            public Builder subImages(java.util.List<SubImages> subImages) {
                 this.subImages = subImages;
                 return this;
             }

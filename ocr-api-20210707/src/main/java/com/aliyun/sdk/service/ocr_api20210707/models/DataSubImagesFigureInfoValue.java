@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
     private Integer figureCount;
 
     @com.aliyun.core.annotation.NameInMap("FigureDetails")
-    private java.util.List < FigureDetails> figureDetails;
+    private java.util.List<FigureDetails> figureDetails;
 
     private DataSubImagesFigureInfoValue(Builder builder) {
         this.figureCount = builder.figureCount;
@@ -31,6 +36,10 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return figureCount
      */
@@ -41,13 +50,21 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
     /**
      * @return figureDetails
      */
-    public java.util.List < FigureDetails> getFigureDetails() {
+    public java.util.List<FigureDetails> getFigureDetails() {
         return this.figureDetails;
     }
 
     public static final class Builder {
         private Integer figureCount; 
-        private java.util.List < FigureDetails> figureDetails; 
+        private java.util.List<FigureDetails> figureDetails; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataSubImagesFigureInfoValue model) {
+            this.figureCount = model.figureCount;
+            this.figureDetails = model.figureDetails;
+        } 
 
         /**
          * FigureCount.
@@ -60,7 +77,7 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
         /**
          * FigureDetails.
          */
-        public Builder figureDetails(java.util.List < FigureDetails> figureDetails) {
+        public Builder figureDetails(java.util.List<FigureDetails> figureDetails) {
             this.figureDetails = figureDetails;
             return this;
         }
@@ -114,6 +131,14 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
         public static final class Builder {
             private Integer x; 
             private Integer y; 
+
+            private Builder() {
+            } 
+
+            private Builder(FigurePoints model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * X.
@@ -206,6 +231,16 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
             private Integer width; 
             private Integer height; 
 
+            private Builder() {
+            } 
+
+            private Builder(FigureRect model) {
+                this.centerX = model.centerX;
+                this.centerY = model.centerY;
+                this.width = model.width;
+                this.height = model.height;
+            } 
+
             /**
              * CenterX.
              */
@@ -259,7 +294,7 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
         private Object data;
 
         @com.aliyun.core.annotation.NameInMap("FigurePoints")
-        private java.util.List < FigurePoints> figurePoints;
+        private java.util.List<FigurePoints> figurePoints;
 
         @com.aliyun.core.annotation.NameInMap("FigureRect")
         private FigureRect figureRect;
@@ -300,7 +335,7 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
         /**
          * @return figurePoints
          */
-        public java.util.List < FigurePoints> getFigurePoints() {
+        public java.util.List<FigurePoints> getFigurePoints() {
             return this.figurePoints;
         }
 
@@ -321,9 +356,20 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
         public static final class Builder {
             private String type; 
             private Object data; 
-            private java.util.List < FigurePoints> figurePoints; 
+            private java.util.List<FigurePoints> figurePoints; 
             private FigureRect figureRect; 
             private Integer figureAngle; 
+
+            private Builder() {
+            } 
+
+            private Builder(FigureDetails model) {
+                this.type = model.type;
+                this.data = model.data;
+                this.figurePoints = model.figurePoints;
+                this.figureRect = model.figureRect;
+                this.figureAngle = model.figureAngle;
+            } 
 
             /**
              * Type.
@@ -344,7 +390,7 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
             /**
              * FigurePoints.
              */
-            public Builder figurePoints(java.util.List < FigurePoints> figurePoints) {
+            public Builder figurePoints(java.util.List<FigurePoints> figurePoints) {
                 this.figurePoints = figurePoints;
                 return this;
             }

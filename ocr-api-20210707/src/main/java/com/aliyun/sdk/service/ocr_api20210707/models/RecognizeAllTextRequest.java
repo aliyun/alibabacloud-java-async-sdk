@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -111,7 +116,7 @@ public class RecognizeAllTextRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -564,6 +569,20 @@ public class RecognizeAllTextRequest extends Request {
             private Boolean outputTableExcel; 
             private Boolean outputTableHtml; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdvancedConfig model) {
+                this.isHandWritingTable = model.isHandWritingTable;
+                this.isLineLessTable = model.isLineLessTable;
+                this.outputCharInfo = model.outputCharInfo;
+                this.outputParagraph = model.outputParagraph;
+                this.outputRow = model.outputRow;
+                this.outputTable = model.outputTable;
+                this.outputTableExcel = model.outputTableExcel;
+                this.outputTableHtml = model.outputTableHtml;
+            } 
+
             /**
              * IsHandWritingTable.
              */
@@ -642,10 +661,14 @@ public class RecognizeAllTextRequest extends Request {
      * <p>RecognizeAllTextRequest</p>
      */
     public static class IdCardConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Llm_rec")
+        private Boolean llmRec;
+
         @com.aliyun.core.annotation.NameInMap("OutputIdCardQuality")
         private Boolean outputIdCardQuality;
 
         private IdCardConfig(Builder builder) {
+            this.llmRec = builder.llmRec;
             this.outputIdCardQuality = builder.outputIdCardQuality;
         }
 
@@ -658,6 +681,13 @@ public class RecognizeAllTextRequest extends Request {
         }
 
         /**
+         * @return llmRec
+         */
+        public Boolean getLlmRec() {
+            return this.llmRec;
+        }
+
+        /**
          * @return outputIdCardQuality
          */
         public Boolean getOutputIdCardQuality() {
@@ -665,7 +695,24 @@ public class RecognizeAllTextRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean llmRec; 
             private Boolean outputIdCardQuality; 
+
+            private Builder() {
+            } 
+
+            private Builder(IdCardConfig model) {
+                this.llmRec = model.llmRec;
+                this.outputIdCardQuality = model.outputIdCardQuality;
+            } 
+
+            /**
+             * Llm_rec.
+             */
+            public Builder llmRec(Boolean llmRec) {
+                this.llmRec = llmRec;
+                return this;
+            }
 
             /**
              * OutputIdCardQuality.
@@ -714,6 +761,13 @@ public class RecognizeAllTextRequest extends Request {
         public static final class Builder {
             private String country; 
 
+            private Builder() {
+            } 
+
+            private Builder(InternationalBusinessLicenseConfig model) {
+                this.country = model.country;
+            } 
+
             /**
              * Country.
              */
@@ -761,6 +815,13 @@ public class RecognizeAllTextRequest extends Request {
         public static final class Builder {
             private String country; 
 
+            private Builder() {
+            } 
+
+            private Builder(InternationalIdCardConfig model) {
+                this.country = model.country;
+            } 
+
             /**
              * Country.
              */
@@ -807,6 +868,13 @@ public class RecognizeAllTextRequest extends Request {
 
         public static final class Builder {
             private String languages; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultiLanConfig model) {
+                this.languages = model.languages;
+            } 
 
             /**
              * Languages.
@@ -890,6 +958,16 @@ public class RecognizeAllTextRequest extends Request {
             private Boolean isLineLessTable; 
             private Boolean outputTableExcel; 
             private Boolean outputTableHtml; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableConfig model) {
+                this.isHandWritingTable = model.isHandWritingTable;
+                this.isLineLessTable = model.isLineLessTable;
+                this.outputTableExcel = model.outputTableExcel;
+                this.outputTableHtml = model.outputTableHtml;
+            } 
 
             /**
              * IsHandWritingTable.

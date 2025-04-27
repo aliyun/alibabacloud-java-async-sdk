@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RecognizeIdcardRequest</p>
  */
 public class RecognizeIdcardRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Llm_rec")
+    private Boolean llmRec;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OutputFigure")
     private Boolean outputFigure;
@@ -31,6 +40,7 @@ public class RecognizeIdcardRequest extends Request {
 
     private RecognizeIdcardRequest(Builder builder) {
         super(builder);
+        this.llmRec = builder.llmRec;
         this.outputFigure = builder.outputFigure;
         this.outputQualityInfo = builder.outputQualityInfo;
         this.url = builder.url;
@@ -45,9 +55,16 @@ public class RecognizeIdcardRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return llmRec
+     */
+    public Boolean getLlmRec() {
+        return this.llmRec;
     }
 
     /**
@@ -79,6 +96,7 @@ public class RecognizeIdcardRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RecognizeIdcardRequest, Builder> {
+        private Boolean llmRec; 
         private Boolean outputFigure; 
         private Boolean outputQualityInfo; 
         private String url; 
@@ -90,11 +108,21 @@ public class RecognizeIdcardRequest extends Request {
 
         private Builder(RecognizeIdcardRequest request) {
             super(request);
+            this.llmRec = request.llmRec;
             this.outputFigure = request.outputFigure;
             this.outputQualityInfo = request.outputQualityInfo;
             this.url = request.url;
             this.body = request.body;
         } 
+
+        /**
+         * Llm_rec.
+         */
+        public Builder llmRec(Boolean llmRec) {
+            this.putQueryParameter("Llm_rec", llmRec);
+            this.llmRec = llmRec;
+            return this;
+        }
 
         /**
          * OutputFigure.

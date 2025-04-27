@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -72,6 +81,16 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RecognizeAllTextResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -154,6 +173,14 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         public static final class Builder {
             private Integer x; 
             private Integer y; 
+
+            private Builder() {
+            } 
+
+            private Builder(BarCodePoints model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * X.
@@ -246,6 +273,16 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             private Integer height; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(BarCodeRect model) {
+                this.centerX = model.centerX;
+                this.centerY = model.centerY;
+                this.height = model.height;
+                this.width = model.width;
+            } 
+
             /**
              * CenterX.
              */
@@ -296,7 +333,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer barCodeAngle;
 
         @com.aliyun.core.annotation.NameInMap("BarCodePoints")
-        private java.util.List < BarCodePoints> barCodePoints;
+        private java.util.List<BarCodePoints> barCodePoints;
 
         @com.aliyun.core.annotation.NameInMap("BarCodeRect")
         private BarCodeRect barCodeRect;
@@ -333,7 +370,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return barCodePoints
          */
-        public java.util.List < BarCodePoints> getBarCodePoints() {
+        public java.util.List<BarCodePoints> getBarCodePoints() {
             return this.barCodePoints;
         }
 
@@ -360,10 +397,21 @@ public class RecognizeAllTextResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer barCodeAngle; 
-            private java.util.List < BarCodePoints> barCodePoints; 
+            private java.util.List<BarCodePoints> barCodePoints; 
             private BarCodeRect barCodeRect; 
             private Object data; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(BarCodeDetails model) {
+                this.barCodeAngle = model.barCodeAngle;
+                this.barCodePoints = model.barCodePoints;
+                this.barCodeRect = model.barCodeRect;
+                this.data = model.data;
+                this.type = model.type;
+            } 
 
             /**
              * BarCodeAngle.
@@ -376,7 +424,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * BarCodePoints.
              */
-            public Builder barCodePoints(java.util.List < BarCodePoints> barCodePoints) {
+            public Builder barCodePoints(java.util.List<BarCodePoints> barCodePoints) {
                 this.barCodePoints = barCodePoints;
                 return this;
             }
@@ -423,7 +471,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer barCodeCount;
 
         @com.aliyun.core.annotation.NameInMap("BarCodeDetails")
-        private java.util.List < BarCodeDetails> barCodeDetails;
+        private java.util.List<BarCodeDetails> barCodeDetails;
 
         private BarCodeInfo(Builder builder) {
             this.barCodeCount = builder.barCodeCount;
@@ -448,13 +496,21 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return barCodeDetails
          */
-        public java.util.List < BarCodeDetails> getBarCodeDetails() {
+        public java.util.List<BarCodeDetails> getBarCodeDetails() {
             return this.barCodeDetails;
         }
 
         public static final class Builder {
             private Integer barCodeCount; 
-            private java.util.List < BarCodeDetails> barCodeDetails; 
+            private java.util.List<BarCodeDetails> barCodeDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(BarCodeInfo model) {
+                this.barCodeCount = model.barCodeCount;
+                this.barCodeDetails = model.barCodeDetails;
+            } 
 
             /**
              * BarCodeCount.
@@ -467,7 +523,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * BarCodeDetails.
              */
-            public Builder barCodeDetails(java.util.List < BarCodeDetails> barCodeDetails) {
+            public Builder barCodeDetails(java.util.List<BarCodeDetails> barCodeDetails) {
                 this.barCodeDetails = barCodeDetails;
                 return this;
             }
@@ -522,6 +578,14 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         public static final class Builder {
             private Integer x; 
             private Integer y; 
+
+            private Builder() {
+            } 
+
+            private Builder(BlockPoints model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * X.
@@ -614,6 +678,16 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             private Integer height; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(BlockRect model) {
+                this.centerX = model.centerX;
+                this.centerY = model.centerY;
+                this.height = model.height;
+                this.width = model.width;
+            } 
+
             /**
              * CenterX.
              */
@@ -696,6 +770,14 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         public static final class Builder {
             private Integer x; 
             private Integer y; 
+
+            private Builder() {
+            } 
+
+            private Builder(CharPoints model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * X.
@@ -788,6 +870,16 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             private Integer height; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(CharRect model) {
+                this.centerX = model.centerX;
+                this.centerY = model.centerY;
+                this.height = model.height;
+                this.width = model.width;
+            } 
+
             /**
              * CenterX.
              */
@@ -844,7 +936,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer charId;
 
         @com.aliyun.core.annotation.NameInMap("CharPoints")
-        private java.util.List < CharPoints> charPoints;
+        private java.util.List<CharPoints> charPoints;
 
         @com.aliyun.core.annotation.NameInMap("CharRect")
         private CharRect charRect;
@@ -889,7 +981,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return charPoints
          */
-        public java.util.List < CharPoints> getCharPoints() {
+        public java.util.List<CharPoints> getCharPoints() {
             return this.charPoints;
         }
 
@@ -904,8 +996,19 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             private Integer charConfidence; 
             private String charContent; 
             private Integer charId; 
-            private java.util.List < CharPoints> charPoints; 
+            private java.util.List<CharPoints> charPoints; 
             private CharRect charRect; 
+
+            private Builder() {
+            } 
+
+            private Builder(CharInfos model) {
+                this.charConfidence = model.charConfidence;
+                this.charContent = model.charContent;
+                this.charId = model.charId;
+                this.charPoints = model.charPoints;
+                this.charRect = model.charRect;
+            } 
 
             /**
              * CharConfidence.
@@ -934,7 +1037,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * CharPoints.
              */
-            public Builder charPoints(java.util.List < CharPoints> charPoints) {
+            public Builder charPoints(java.util.List<CharPoints> charPoints) {
                 this.charPoints = charPoints;
                 return this;
             }
@@ -974,13 +1077,13 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer blockId;
 
         @com.aliyun.core.annotation.NameInMap("BlockPoints")
-        private java.util.List < BlockPoints> blockPoints;
+        private java.util.List<BlockPoints> blockPoints;
 
         @com.aliyun.core.annotation.NameInMap("BlockRect")
         private BlockRect blockRect;
 
         @com.aliyun.core.annotation.NameInMap("CharInfos")
-        private java.util.List < CharInfos> charInfos;
+        private java.util.List<CharInfos> charInfos;
 
         private BlockDetails(Builder builder) {
             this.blockAngle = builder.blockAngle;
@@ -1031,7 +1134,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return blockPoints
          */
-        public java.util.List < BlockPoints> getBlockPoints() {
+        public java.util.List<BlockPoints> getBlockPoints() {
             return this.blockPoints;
         }
 
@@ -1045,7 +1148,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return charInfos
          */
-        public java.util.List < CharInfos> getCharInfos() {
+        public java.util.List<CharInfos> getCharInfos() {
             return this.charInfos;
         }
 
@@ -1054,9 +1157,22 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             private Integer blockConfidence; 
             private String blockContent; 
             private Integer blockId; 
-            private java.util.List < BlockPoints> blockPoints; 
+            private java.util.List<BlockPoints> blockPoints; 
             private BlockRect blockRect; 
-            private java.util.List < CharInfos> charInfos; 
+            private java.util.List<CharInfos> charInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(BlockDetails model) {
+                this.blockAngle = model.blockAngle;
+                this.blockConfidence = model.blockConfidence;
+                this.blockContent = model.blockContent;
+                this.blockId = model.blockId;
+                this.blockPoints = model.blockPoints;
+                this.blockRect = model.blockRect;
+                this.charInfos = model.charInfos;
+            } 
 
             /**
              * BlockAngle.
@@ -1093,7 +1209,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * BlockPoints.
              */
-            public Builder blockPoints(java.util.List < BlockPoints> blockPoints) {
+            public Builder blockPoints(java.util.List<BlockPoints> blockPoints) {
                 this.blockPoints = blockPoints;
                 return this;
             }
@@ -1109,7 +1225,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * CharInfos.
              */
-            public Builder charInfos(java.util.List < CharInfos> charInfos) {
+            public Builder charInfos(java.util.List<CharInfos> charInfos) {
                 this.charInfos = charInfos;
                 return this;
             }
@@ -1132,7 +1248,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer blockCount;
 
         @com.aliyun.core.annotation.NameInMap("BlockDetails")
-        private java.util.List < BlockDetails> blockDetails;
+        private java.util.List<BlockDetails> blockDetails;
 
         private BlockInfo(Builder builder) {
             this.blockCount = builder.blockCount;
@@ -1157,13 +1273,21 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return blockDetails
          */
-        public java.util.List < BlockDetails> getBlockDetails() {
+        public java.util.List<BlockDetails> getBlockDetails() {
             return this.blockDetails;
         }
 
         public static final class Builder {
             private Integer blockCount; 
-            private java.util.List < BlockDetails> blockDetails; 
+            private java.util.List<BlockDetails> blockDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(BlockInfo model) {
+                this.blockCount = model.blockCount;
+                this.blockDetails = model.blockDetails;
+            } 
 
             /**
              * BlockCount.
@@ -1176,7 +1300,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * BlockDetails.
              */
-            public Builder blockDetails(java.util.List < BlockDetails> blockDetails) {
+            public Builder blockDetails(java.util.List<BlockDetails> blockDetails) {
                 this.blockDetails = blockDetails;
                 return this;
             }
@@ -1202,7 +1326,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer kvCount;
 
         @com.aliyun.core.annotation.NameInMap("KvDetails")
-        private java.util.Map < String, DataSubImagesKvInfoKvDetailsValue > kvDetails;
+        private java.util.Map<String, DataSubImagesKvInfoKvDetailsValue> kvDetails;
 
         private KvInfo(Builder builder) {
             this.data = builder.data;
@@ -1235,14 +1359,23 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return kvDetails
          */
-        public java.util.Map < String, DataSubImagesKvInfoKvDetailsValue > getKvDetails() {
+        public java.util.Map<String, DataSubImagesKvInfoKvDetailsValue> getKvDetails() {
             return this.kvDetails;
         }
 
         public static final class Builder {
             private Object data; 
             private Integer kvCount; 
-            private java.util.Map < String, DataSubImagesKvInfoKvDetailsValue > kvDetails; 
+            private java.util.Map<String, DataSubImagesKvInfoKvDetailsValue> kvDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(KvInfo model) {
+                this.data = model.data;
+                this.kvCount = model.kvCount;
+                this.kvDetails = model.kvDetails;
+            } 
 
             /**
              * Data.
@@ -1263,7 +1396,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * KvDetails.
              */
-            public Builder kvDetails(java.util.Map < String, DataSubImagesKvInfoKvDetailsValue > kvDetails) {
+            public Builder kvDetails(java.util.Map<String, DataSubImagesKvInfoKvDetailsValue> kvDetails) {
                 this.kvDetails = kvDetails;
                 return this;
             }
@@ -1283,7 +1416,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
      */
     public static class ParagraphDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockList")
-        private java.util.List < Integer > blockList;
+        private java.util.List<Integer> blockList;
 
         @com.aliyun.core.annotation.NameInMap("ParagraphContent")
         private String paragraphContent;
@@ -1308,7 +1441,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return blockList
          */
-        public java.util.List < Integer > getBlockList() {
+        public java.util.List<Integer> getBlockList() {
             return this.blockList;
         }
 
@@ -1327,14 +1460,23 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Integer > blockList; 
+            private java.util.List<Integer> blockList; 
             private String paragraphContent; 
             private Integer paragraphId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParagraphDetails model) {
+                this.blockList = model.blockList;
+                this.paragraphContent = model.paragraphContent;
+                this.paragraphId = model.paragraphId;
+            } 
 
             /**
              * BlockList.
              */
-            public Builder blockList(java.util.List < Integer > blockList) {
+            public Builder blockList(java.util.List<Integer> blockList) {
                 this.blockList = blockList;
                 return this;
             }
@@ -1373,7 +1515,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer paragraphCount;
 
         @com.aliyun.core.annotation.NameInMap("ParagraphDetails")
-        private java.util.List < ParagraphDetails> paragraphDetails;
+        private java.util.List<ParagraphDetails> paragraphDetails;
 
         private ParagraphInfo(Builder builder) {
             this.paragraphCount = builder.paragraphCount;
@@ -1398,13 +1540,21 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return paragraphDetails
          */
-        public java.util.List < ParagraphDetails> getParagraphDetails() {
+        public java.util.List<ParagraphDetails> getParagraphDetails() {
             return this.paragraphDetails;
         }
 
         public static final class Builder {
             private Integer paragraphCount; 
-            private java.util.List < ParagraphDetails> paragraphDetails; 
+            private java.util.List<ParagraphDetails> paragraphDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParagraphInfo model) {
+                this.paragraphCount = model.paragraphCount;
+                this.paragraphDetails = model.paragraphDetails;
+            } 
 
             /**
              * ParagraphCount.
@@ -1417,7 +1567,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * ParagraphDetails.
              */
-            public Builder paragraphDetails(java.util.List < ParagraphDetails> paragraphDetails) {
+            public Builder paragraphDetails(java.util.List<ParagraphDetails> paragraphDetails) {
                 this.paragraphDetails = paragraphDetails;
                 return this;
             }
@@ -1472,6 +1622,14 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         public static final class Builder {
             private Integer x; 
             private Integer y; 
+
+            private Builder() {
+            } 
+
+            private Builder(QrCodePoints model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * X.
@@ -1564,6 +1722,16 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             private Integer height; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(QrCodeRect model) {
+                this.centerX = model.centerX;
+                this.centerY = model.centerY;
+                this.height = model.height;
+                this.width = model.width;
+            } 
+
             /**
              * CenterX.
              */
@@ -1617,7 +1785,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer qrCodeAngle;
 
         @com.aliyun.core.annotation.NameInMap("QrCodePoints")
-        private java.util.List < QrCodePoints> qrCodePoints;
+        private java.util.List<QrCodePoints> qrCodePoints;
 
         @com.aliyun.core.annotation.NameInMap("QrCodeRect")
         private QrCodeRect qrCodeRect;
@@ -1654,7 +1822,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return qrCodePoints
          */
-        public java.util.List < QrCodePoints> getQrCodePoints() {
+        public java.util.List<QrCodePoints> getQrCodePoints() {
             return this.qrCodePoints;
         }
 
@@ -1668,8 +1836,18 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         public static final class Builder {
             private Object data; 
             private Integer qrCodeAngle; 
-            private java.util.List < QrCodePoints> qrCodePoints; 
+            private java.util.List<QrCodePoints> qrCodePoints; 
             private QrCodeRect qrCodeRect; 
+
+            private Builder() {
+            } 
+
+            private Builder(QrCodeDetails model) {
+                this.data = model.data;
+                this.qrCodeAngle = model.qrCodeAngle;
+                this.qrCodePoints = model.qrCodePoints;
+                this.qrCodeRect = model.qrCodeRect;
+            } 
 
             /**
              * Data.
@@ -1690,7 +1868,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * QrCodePoints.
              */
-            public Builder qrCodePoints(java.util.List < QrCodePoints> qrCodePoints) {
+            public Builder qrCodePoints(java.util.List<QrCodePoints> qrCodePoints) {
                 this.qrCodePoints = qrCodePoints;
                 return this;
             }
@@ -1721,7 +1899,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer qrCodeCount;
 
         @com.aliyun.core.annotation.NameInMap("QrCodeDetails")
-        private java.util.List < QrCodeDetails> qrCodeDetails;
+        private java.util.List<QrCodeDetails> qrCodeDetails;
 
         private QrCodeInfo(Builder builder) {
             this.qrCodeCount = builder.qrCodeCount;
@@ -1746,13 +1924,21 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return qrCodeDetails
          */
-        public java.util.List < QrCodeDetails> getQrCodeDetails() {
+        public java.util.List<QrCodeDetails> getQrCodeDetails() {
             return this.qrCodeDetails;
         }
 
         public static final class Builder {
             private Integer qrCodeCount; 
-            private java.util.List < QrCodeDetails> qrCodeDetails; 
+            private java.util.List<QrCodeDetails> qrCodeDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(QrCodeInfo model) {
+                this.qrCodeCount = model.qrCodeCount;
+                this.qrCodeDetails = model.qrCodeDetails;
+            } 
 
             /**
              * QrCodeCount.
@@ -1765,7 +1951,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * QrCodeDetails.
              */
-            public Builder qrCodeDetails(java.util.List < QrCodeDetails> qrCodeDetails) {
+            public Builder qrCodeDetails(java.util.List<QrCodeDetails> qrCodeDetails) {
                 this.qrCodeDetails = qrCodeDetails;
                 return this;
             }
@@ -1857,6 +2043,17 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             private Float qualityScore; 
             private Float tamperScore; 
 
+            private Builder() {
+            } 
+
+            private Builder(QualityInfo model) {
+                this.completenessScore = model.completenessScore;
+                this.isCopy = model.isCopy;
+                this.isReshoot = model.isReshoot;
+                this.qualityScore = model.qualityScore;
+                this.tamperScore = model.tamperScore;
+            } 
+
             /**
              * CompletenessScore.
              */
@@ -1912,7 +2109,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
      */
     public static class RowDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockList")
-        private java.util.List < Integer > blockList;
+        private java.util.List<Integer> blockList;
 
         @com.aliyun.core.annotation.NameInMap("RowContent")
         private String rowContent;
@@ -1937,7 +2134,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return blockList
          */
-        public java.util.List < Integer > getBlockList() {
+        public java.util.List<Integer> getBlockList() {
             return this.blockList;
         }
 
@@ -1956,14 +2153,23 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Integer > blockList; 
+            private java.util.List<Integer> blockList; 
             private String rowContent; 
             private Integer rowId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RowDetails model) {
+                this.blockList = model.blockList;
+                this.rowContent = model.rowContent;
+                this.rowId = model.rowId;
+            } 
 
             /**
              * BlockList.
              */
-            public Builder blockList(java.util.List < Integer > blockList) {
+            public Builder blockList(java.util.List<Integer> blockList) {
                 this.blockList = blockList;
                 return this;
             }
@@ -2002,7 +2208,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer rowCount;
 
         @com.aliyun.core.annotation.NameInMap("RowDetails")
-        private java.util.List < RowDetails> rowDetails;
+        private java.util.List<RowDetails> rowDetails;
 
         private RowInfo(Builder builder) {
             this.rowCount = builder.rowCount;
@@ -2027,13 +2233,21 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return rowDetails
          */
-        public java.util.List < RowDetails> getRowDetails() {
+        public java.util.List<RowDetails> getRowDetails() {
             return this.rowDetails;
         }
 
         public static final class Builder {
             private Integer rowCount; 
-            private java.util.List < RowDetails> rowDetails; 
+            private java.util.List<RowDetails> rowDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(RowInfo model) {
+                this.rowCount = model.rowCount;
+                this.rowDetails = model.rowDetails;
+            } 
 
             /**
              * RowCount.
@@ -2046,7 +2260,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * RowDetails.
              */
-            public Builder rowDetails(java.util.List < RowDetails> rowDetails) {
+            public Builder rowDetails(java.util.List<RowDetails> rowDetails) {
                 this.rowDetails = rowDetails;
                 return this;
             }
@@ -2162,6 +2376,19 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             private String taxpayerId; 
             private String topText; 
 
+            private Builder() {
+            } 
+
+            private Builder(StampDetailsData model) {
+                this.antiFakeCode = model.antiFakeCode;
+                this.companyId = model.companyId;
+                this.organizationName = model.organizationName;
+                this.organizationNameEng = model.organizationNameEng;
+                this.otherText = model.otherText;
+                this.taxpayerId = model.taxpayerId;
+                this.topText = model.topText;
+            } 
+
             /**
              * AntiFakeCode.
              */
@@ -2269,6 +2496,14 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             private Integer x; 
             private Integer y; 
 
+            private Builder() {
+            } 
+
+            private Builder(StampPoints model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * X.
              */
@@ -2360,6 +2595,16 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             private Integer height; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(StampRect model) {
+                this.centerX = model.centerX;
+                this.centerY = model.centerY;
+                this.height = model.height;
+                this.width = model.width;
+            } 
+
             /**
              * CenterX.
              */
@@ -2413,7 +2658,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer stampAngle;
 
         @com.aliyun.core.annotation.NameInMap("StampPoints")
-        private java.util.List < StampPoints> stampPoints;
+        private java.util.List<StampPoints> stampPoints;
 
         @com.aliyun.core.annotation.NameInMap("StampRect")
         private StampRect stampRect;
@@ -2450,7 +2695,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return stampPoints
          */
-        public java.util.List < StampPoints> getStampPoints() {
+        public java.util.List<StampPoints> getStampPoints() {
             return this.stampPoints;
         }
 
@@ -2464,8 +2709,18 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         public static final class Builder {
             private StampDetailsData data; 
             private Integer stampAngle; 
-            private java.util.List < StampPoints> stampPoints; 
+            private java.util.List<StampPoints> stampPoints; 
             private StampRect stampRect; 
+
+            private Builder() {
+            } 
+
+            private Builder(StampDetails model) {
+                this.data = model.data;
+                this.stampAngle = model.stampAngle;
+                this.stampPoints = model.stampPoints;
+                this.stampRect = model.stampRect;
+            } 
 
             /**
              * Data.
@@ -2486,7 +2741,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * StampPoints.
              */
-            public Builder stampPoints(java.util.List < StampPoints> stampPoints) {
+            public Builder stampPoints(java.util.List<StampPoints> stampPoints) {
                 this.stampPoints = stampPoints;
                 return this;
             }
@@ -2517,7 +2772,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer stampCount;
 
         @com.aliyun.core.annotation.NameInMap("StampDetails")
-        private java.util.List < StampDetails> stampDetails;
+        private java.util.List<StampDetails> stampDetails;
 
         private StampInfo(Builder builder) {
             this.stampCount = builder.stampCount;
@@ -2542,13 +2797,21 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return stampDetails
          */
-        public java.util.List < StampDetails> getStampDetails() {
+        public java.util.List<StampDetails> getStampDetails() {
             return this.stampDetails;
         }
 
         public static final class Builder {
             private Integer stampCount; 
-            private java.util.List < StampDetails> stampDetails; 
+            private java.util.List<StampDetails> stampDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(StampInfo model) {
+                this.stampCount = model.stampCount;
+                this.stampDetails = model.stampDetails;
+            } 
 
             /**
              * StampCount.
@@ -2561,7 +2824,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * StampDetails.
              */
-            public Builder stampDetails(java.util.List < StampDetails> stampDetails) {
+            public Builder stampDetails(java.util.List<StampDetails> stampDetails) {
                 this.stampDetails = stampDetails;
                 return this;
             }
@@ -2616,6 +2879,14 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         public static final class Builder {
             private Integer x; 
             private Integer y; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubImagePoints model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * X.
@@ -2708,6 +2979,16 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             private Integer height; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubImageRect model) {
+                this.centerX = model.centerX;
+                this.centerY = model.centerY;
+                this.height = model.height;
+                this.width = model.width;
+            } 
+
             /**
              * CenterX.
              */
@@ -2790,6 +3071,14 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         public static final class Builder {
             private Integer x; 
             private Integer y; 
+
+            private Builder() {
+            } 
+
+            private Builder(CellPoints model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * X.
@@ -2882,6 +3171,16 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             private Integer height; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(CellRect model) {
+                this.centerX = model.centerX;
+                this.centerY = model.centerY;
+                this.height = model.height;
+                this.width = model.width;
+            } 
+
             /**
              * CenterX.
              */
@@ -2929,7 +3228,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
      */
     public static class CellDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockList")
-        private java.util.List < Integer > blockList;
+        private java.util.List<Integer> blockList;
 
         @com.aliyun.core.annotation.NameInMap("CellAngle")
         private Integer cellAngle;
@@ -2941,7 +3240,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer cellId;
 
         @com.aliyun.core.annotation.NameInMap("CellPoints")
-        private java.util.List < CellPoints> cellPoints;
+        private java.util.List<CellPoints> cellPoints;
 
         @com.aliyun.core.annotation.NameInMap("CellRect")
         private CellRect cellRect;
@@ -2982,7 +3281,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return blockList
          */
-        public java.util.List < Integer > getBlockList() {
+        public java.util.List<Integer> getBlockList() {
             return this.blockList;
         }
 
@@ -3010,7 +3309,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return cellPoints
          */
-        public java.util.List < CellPoints> getCellPoints() {
+        public java.util.List<CellPoints> getCellPoints() {
             return this.cellPoints;
         }
 
@@ -3050,21 +3349,37 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Integer > blockList; 
+            private java.util.List<Integer> blockList; 
             private Integer cellAngle; 
             private String cellContent; 
             private Integer cellId; 
-            private java.util.List < CellPoints> cellPoints; 
+            private java.util.List<CellPoints> cellPoints; 
             private CellRect cellRect; 
             private Integer columnEnd; 
             private Integer columnStart; 
             private Integer rowEnd; 
             private Integer rowStart; 
 
+            private Builder() {
+            } 
+
+            private Builder(CellDetails model) {
+                this.blockList = model.blockList;
+                this.cellAngle = model.cellAngle;
+                this.cellContent = model.cellContent;
+                this.cellId = model.cellId;
+                this.cellPoints = model.cellPoints;
+                this.cellRect = model.cellRect;
+                this.columnEnd = model.columnEnd;
+                this.columnStart = model.columnStart;
+                this.rowEnd = model.rowEnd;
+                this.rowStart = model.rowStart;
+            } 
+
             /**
              * BlockList.
              */
-            public Builder blockList(java.util.List < Integer > blockList) {
+            public Builder blockList(java.util.List<Integer> blockList) {
                 this.blockList = blockList;
                 return this;
             }
@@ -3096,7 +3411,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * CellPoints.
              */
-            public Builder cellPoints(java.util.List < CellPoints> cellPoints) {
+            public Builder cellPoints(java.util.List<CellPoints> cellPoints) {
                 this.cellPoints = cellPoints;
                 return this;
             }
@@ -3159,7 +3474,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer blockId;
 
         @com.aliyun.core.annotation.NameInMap("Contents")
-        private java.util.List < String > contents;
+        private java.util.List<String> contents;
 
         private Footer(Builder builder) {
             this.blockId = builder.blockId;
@@ -3184,13 +3499,21 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return contents
          */
-        public java.util.List < String > getContents() {
+        public java.util.List<String> getContents() {
             return this.contents;
         }
 
         public static final class Builder {
             private Integer blockId; 
-            private java.util.List < String > contents; 
+            private java.util.List<String> contents; 
+
+            private Builder() {
+            } 
+
+            private Builder(Footer model) {
+                this.blockId = model.blockId;
+                this.contents = model.contents;
+            } 
 
             /**
              * BlockId.
@@ -3203,7 +3526,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * Contents.
              */
-            public Builder contents(java.util.List < String > contents) {
+            public Builder contents(java.util.List<String> contents) {
                 this.contents = contents;
                 return this;
             }
@@ -3226,7 +3549,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer blockId;
 
         @com.aliyun.core.annotation.NameInMap("Contents")
-        private java.util.List < String > contents;
+        private java.util.List<String> contents;
 
         private TableDetailsHeader(Builder builder) {
             this.blockId = builder.blockId;
@@ -3251,13 +3574,21 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return contents
          */
-        public java.util.List < String > getContents() {
+        public java.util.List<String> getContents() {
             return this.contents;
         }
 
         public static final class Builder {
             private Integer blockId; 
-            private java.util.List < String > contents; 
+            private java.util.List<String> contents; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableDetailsHeader model) {
+                this.blockId = model.blockId;
+                this.contents = model.contents;
+            } 
 
             /**
              * BlockId.
@@ -3270,7 +3601,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * Contents.
              */
-            public Builder contents(java.util.List < String > contents) {
+            public Builder contents(java.util.List<String> contents) {
                 this.contents = contents;
                 return this;
             }
@@ -3325,6 +3656,14 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         public static final class Builder {
             private Integer x; 
             private Integer y; 
+
+            private Builder() {
+            } 
+
+            private Builder(TablePoints model) {
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * X.
@@ -3417,6 +3756,16 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             private Integer height; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableRect model) {
+                this.centerX = model.centerX;
+                this.centerY = model.centerY;
+                this.height = model.height;
+                this.width = model.width;
+            } 
+
             /**
              * CenterX.
              */
@@ -3467,7 +3816,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer cellCount;
 
         @com.aliyun.core.annotation.NameInMap("CellDetails")
-        private java.util.List < CellDetails> cellDetails;
+        private java.util.List<CellDetails> cellDetails;
 
         @com.aliyun.core.annotation.NameInMap("ColumnCount")
         private Integer columnCount;
@@ -3485,7 +3834,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer tableId;
 
         @com.aliyun.core.annotation.NameInMap("TablePoints")
-        private java.util.List < TablePoints> tablePoints;
+        private java.util.List<TablePoints> tablePoints;
 
         @com.aliyun.core.annotation.NameInMap("TableRect")
         private TableRect tableRect;
@@ -3520,7 +3869,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return cellDetails
          */
-        public java.util.List < CellDetails> getCellDetails() {
+        public java.util.List<CellDetails> getCellDetails() {
             return this.cellDetails;
         }
 
@@ -3562,7 +3911,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return tablePoints
          */
-        public java.util.List < TablePoints> getTablePoints() {
+        public java.util.List<TablePoints> getTablePoints() {
             return this.tablePoints;
         }
 
@@ -3575,14 +3924,29 @@ public class RecognizeAllTextResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer cellCount; 
-            private java.util.List < CellDetails> cellDetails; 
+            private java.util.List<CellDetails> cellDetails; 
             private Integer columnCount; 
             private Footer footer; 
             private TableDetailsHeader header; 
             private Integer rowCount; 
             private Integer tableId; 
-            private java.util.List < TablePoints> tablePoints; 
+            private java.util.List<TablePoints> tablePoints; 
             private TableRect tableRect; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableDetails model) {
+                this.cellCount = model.cellCount;
+                this.cellDetails = model.cellDetails;
+                this.columnCount = model.columnCount;
+                this.footer = model.footer;
+                this.header = model.header;
+                this.rowCount = model.rowCount;
+                this.tableId = model.tableId;
+                this.tablePoints = model.tablePoints;
+                this.tableRect = model.tableRect;
+            } 
 
             /**
              * CellCount.
@@ -3595,7 +3959,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * CellDetails.
              */
-            public Builder cellDetails(java.util.List < CellDetails> cellDetails) {
+            public Builder cellDetails(java.util.List<CellDetails> cellDetails) {
                 this.cellDetails = cellDetails;
                 return this;
             }
@@ -3643,7 +4007,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * TablePoints.
              */
-            public Builder tablePoints(java.util.List < TablePoints> tablePoints) {
+            public Builder tablePoints(java.util.List<TablePoints> tablePoints) {
                 this.tablePoints = tablePoints;
                 return this;
             }
@@ -3674,7 +4038,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer tableCount;
 
         @com.aliyun.core.annotation.NameInMap("TableDetails")
-        private java.util.List < TableDetails> tableDetails;
+        private java.util.List<TableDetails> tableDetails;
 
         @com.aliyun.core.annotation.NameInMap("TableExcel")
         private String tableExcel;
@@ -3707,7 +4071,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return tableDetails
          */
-        public java.util.List < TableDetails> getTableDetails() {
+        public java.util.List<TableDetails> getTableDetails() {
             return this.tableDetails;
         }
 
@@ -3727,9 +4091,19 @@ public class RecognizeAllTextResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer tableCount; 
-            private java.util.List < TableDetails> tableDetails; 
+            private java.util.List<TableDetails> tableDetails; 
             private String tableExcel; 
             private String tableHtml; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableInfo model) {
+                this.tableCount = model.tableCount;
+                this.tableDetails = model.tableDetails;
+                this.tableExcel = model.tableExcel;
+                this.tableHtml = model.tableHtml;
+            } 
 
             /**
              * TableCount.
@@ -3742,7 +4116,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * TableDetails.
              */
-            public Builder tableDetails(java.util.List < TableDetails> tableDetails) {
+            public Builder tableDetails(java.util.List<TableDetails> tableDetails) {
                 this.tableDetails = tableDetails;
                 return this;
             }
@@ -3787,7 +4161,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private BlockInfo blockInfo;
 
         @com.aliyun.core.annotation.NameInMap("FigureInfo")
-        private java.util.Map < String, DataSubImagesFigureInfoValue > figureInfo;
+        private java.util.Map<String, DataSubImagesFigureInfoValue> figureInfo;
 
         @com.aliyun.core.annotation.NameInMap("KvInfo")
         private KvInfo kvInfo;
@@ -3811,7 +4185,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer subImageId;
 
         @com.aliyun.core.annotation.NameInMap("SubImagePoints")
-        private java.util.List < SubImagePoints> subImagePoints;
+        private java.util.List<SubImagePoints> subImagePoints;
 
         @com.aliyun.core.annotation.NameInMap("SubImageRect")
         private SubImageRect subImageRect;
@@ -3872,7 +4246,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return figureInfo
          */
-        public java.util.Map < String, DataSubImagesFigureInfoValue > getFigureInfo() {
+        public java.util.Map<String, DataSubImagesFigureInfoValue> getFigureInfo() {
             return this.figureInfo;
         }
 
@@ -3928,7 +4302,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return subImagePoints
          */
-        public java.util.List < SubImagePoints> getSubImagePoints() {
+        public java.util.List<SubImagePoints> getSubImagePoints() {
             return this.subImagePoints;
         }
 
@@ -3957,7 +4331,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             private Integer angle; 
             private BarCodeInfo barCodeInfo; 
             private BlockInfo blockInfo; 
-            private java.util.Map < String, DataSubImagesFigureInfoValue > figureInfo; 
+            private java.util.Map<String, DataSubImagesFigureInfoValue> figureInfo; 
             private KvInfo kvInfo; 
             private ParagraphInfo paragraphInfo; 
             private QrCodeInfo qrCodeInfo; 
@@ -3965,10 +4339,31 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             private RowInfo rowInfo; 
             private StampInfo stampInfo; 
             private Integer subImageId; 
-            private java.util.List < SubImagePoints> subImagePoints; 
+            private java.util.List<SubImagePoints> subImagePoints; 
             private SubImageRect subImageRect; 
             private TableInfo tableInfo; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubImages model) {
+                this.angle = model.angle;
+                this.barCodeInfo = model.barCodeInfo;
+                this.blockInfo = model.blockInfo;
+                this.figureInfo = model.figureInfo;
+                this.kvInfo = model.kvInfo;
+                this.paragraphInfo = model.paragraphInfo;
+                this.qrCodeInfo = model.qrCodeInfo;
+                this.qualityInfo = model.qualityInfo;
+                this.rowInfo = model.rowInfo;
+                this.stampInfo = model.stampInfo;
+                this.subImageId = model.subImageId;
+                this.subImagePoints = model.subImagePoints;
+                this.subImageRect = model.subImageRect;
+                this.tableInfo = model.tableInfo;
+                this.type = model.type;
+            } 
 
             /**
              * Angle.
@@ -3997,7 +4392,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * FigureInfo.
              */
-            public Builder figureInfo(java.util.Map < String, DataSubImagesFigureInfoValue > figureInfo) {
+            public Builder figureInfo(java.util.Map<String, DataSubImagesFigureInfoValue> figureInfo) {
                 this.figureInfo = figureInfo;
                 return this;
             }
@@ -4061,7 +4456,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * SubImagePoints.
              */
-            public Builder subImagePoints(java.util.List < SubImagePoints> subImagePoints) {
+            public Builder subImagePoints(java.util.List<SubImagePoints> subImagePoints) {
                 this.subImagePoints = subImagePoints;
                 return this;
             }
@@ -4105,7 +4500,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlgoServer")
-        private java.util.List < String > algoServer;
+        private java.util.List<String> algoServer;
 
         @com.aliyun.core.annotation.NameInMap("AlgoVersion")
         private String algoVersion;
@@ -4132,7 +4527,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         private Integer subImageCount;
 
         @com.aliyun.core.annotation.NameInMap("SubImages")
-        private java.util.List < SubImages> subImages;
+        private java.util.List<SubImages> subImages;
 
         @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
@@ -4166,7 +4561,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return algoServer
          */
-        public java.util.List < String > getAlgoServer() {
+        public java.util.List<String> getAlgoServer() {
             return this.algoServer;
         }
 
@@ -4229,7 +4624,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         /**
          * @return subImages
          */
-        public java.util.List < SubImages> getSubImages() {
+        public java.util.List<SubImages> getSubImages() {
             return this.subImages;
         }
 
@@ -4248,7 +4643,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > algoServer; 
+            private java.util.List<String> algoServer; 
             private String algoVersion; 
             private String content; 
             private Object debugInfo; 
@@ -4257,14 +4652,32 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             private String kvExcelUrl; 
             private Integer pageNo; 
             private Integer subImageCount; 
-            private java.util.List < SubImages> subImages; 
+            private java.util.List<SubImages> subImages; 
             private Integer width; 
             private String xmlResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.algoServer = model.algoServer;
+                this.algoVersion = model.algoVersion;
+                this.content = model.content;
+                this.debugInfo = model.debugInfo;
+                this.height = model.height;
+                this.isMixedMode = model.isMixedMode;
+                this.kvExcelUrl = model.kvExcelUrl;
+                this.pageNo = model.pageNo;
+                this.subImageCount = model.subImageCount;
+                this.subImages = model.subImages;
+                this.width = model.width;
+                this.xmlResult = model.xmlResult;
+            } 
 
             /**
              * AlgoServer.
              */
-            public Builder algoServer(java.util.List < String > algoServer) {
+            public Builder algoServer(java.util.List<String> algoServer) {
                 this.algoServer = algoServer;
                 return this;
             }
@@ -4336,7 +4749,7 @@ public class RecognizeAllTextResponseBody extends TeaModel {
             /**
              * SubImages.
              */
-            public Builder subImages(java.util.List < SubImages> subImages) {
+            public Builder subImages(java.util.List<SubImages> subImages) {
                 this.subImages = subImages;
                 return this;
             }
