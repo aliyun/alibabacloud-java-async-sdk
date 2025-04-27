@@ -53,6 +53,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NextStage")
     private String nextStage;
 
+    @com.aliyun.core.annotation.NameInMap("NickName")
+    private String nickName;
+
     @com.aliyun.core.annotation.NameInMap("OfficeSites")
     private java.util.List<String> officeSites;
 
@@ -114,6 +117,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         this.loginToken = builder.loginToken;
         this.mfaTypeList = builder.mfaTypeList;
         this.nextStage = builder.nextStage;
+        this.nickName = builder.nickName;
         this.officeSites = builder.officeSites;
         this.passwordStrategy = builder.passwordStrategy;
         this.phone = builder.phone;
@@ -138,6 +142,10 @@ public class GetLoginTokenResponseBody extends TeaModel {
 
     public static GetLoginTokenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -222,6 +230,13 @@ public class GetLoginTokenResponseBody extends TeaModel {
      */
     public String getNextStage() {
         return this.nextStage;
+    }
+
+    /**
+     * @return nickName
+     */
+    public String getNickName() {
+        return this.nickName;
     }
 
     /**
@@ -349,6 +364,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         private String loginToken; 
         private java.util.List<MfaTypeList> mfaTypeList; 
         private String nextStage; 
+        private String nickName; 
         private java.util.List<String> officeSites; 
         private PasswordStrategy passwordStrategy; 
         private String phone; 
@@ -365,6 +381,41 @@ public class GetLoginTokenResponseBody extends TeaModel {
         private String vpcRegionId; 
         private String windowDisplayMode; 
         private String wyId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLoginTokenResponseBody model) {
+            this.accessType = model.accessType;
+            this.accountType = model.accountType;
+            this.adDomain = model.adDomain;
+            this.email = model.email;
+            this.endUserId = model.endUserId;
+            this.idpId = model.idpId;
+            this.industry = model.industry;
+            this.keepAliveToken = model.keepAliveToken;
+            this.label = model.label;
+            this.loginToken = model.loginToken;
+            this.mfaTypeList = model.mfaTypeList;
+            this.nextStage = model.nextStage;
+            this.nickName = model.nickName;
+            this.officeSites = model.officeSites;
+            this.passwordStrategy = model.passwordStrategy;
+            this.phone = model.phone;
+            this.props = model.props;
+            this.qrCodePng = model.qrCodePng;
+            this.reason = model.reason;
+            this.requestId = model.requestId;
+            this.riskVerifyInfo = model.riskVerifyInfo;
+            this.secret = model.secret;
+            this.sessionId = model.sessionId;
+            this.tenantAlias = model.tenantAlias;
+            this.tenantId = model.tenantId;
+            this.tenantInfos = model.tenantInfos;
+            this.vpcRegionId = model.vpcRegionId;
+            this.windowDisplayMode = model.windowDisplayMode;
+            this.wyId = model.wyId;
+        } 
 
         /**
          * AccessType.
@@ -459,6 +510,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
          */
         public Builder nextStage(String nextStage) {
             this.nextStage = nextStage;
+            return this;
+        }
+
+        /**
+         * NickName.
+         */
+        public Builder nickName(String nickName) {
+            this.nickName = nickName;
             return this;
         }
 
@@ -640,6 +699,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
             private String name; 
             private String stage; 
 
+            private Builder() {
+            } 
+
+            private Builder(MfaTypeList model) {
+                this.name = model.name;
+                this.stage = model.stage;
+            } 
+
             /**
              * Name.
              */
@@ -706,6 +773,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> tenantAlternativeChars; 
             private Integer tenantPasswordLength; 
+
+            private Builder() {
+            } 
+
+            private Builder(PasswordStrategy model) {
+                this.tenantAlternativeChars = model.tenantAlternativeChars;
+                this.tenantPasswordLength = model.tenantPasswordLength;
+            } 
 
             /**
              * TenantAlternativeChars.
@@ -798,6 +873,16 @@ public class GetLoginTokenResponseBody extends TeaModel {
             private Boolean locked; 
             private String phone; 
 
+            private Builder() {
+            } 
+
+            private Builder(RiskVerifyInfo model) {
+                this.email = model.email;
+                this.lastLockDuration = model.lastLockDuration;
+                this.locked = model.locked;
+                this.phone = model.phone;
+            } 
+
             /**
              * Email.
              */
@@ -880,6 +965,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
         public static final class Builder {
             private String accessType; 
             private String tenantAlias; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantInfos model) {
+                this.accessType = model.accessType;
+                this.tenantAlias = model.tenantAlias;
+            } 
 
             /**
              * AccessType.

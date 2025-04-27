@@ -52,6 +52,10 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return idpInfos
      */
@@ -101,6 +105,18 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         private String profileRegion; 
         private String requestId; 
         private TenantAliasInfo tenantAliasInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(FindIdpListByLoginIdentifierResponseBody model) {
+            this.idpInfos = model.idpInfos;
+            this.officeSiteInfo = model.officeSiteInfo;
+            this.popRegionConfig = model.popRegionConfig;
+            this.profileRegion = model.profileRegion;
+            this.requestId = model.requestId;
+            this.tenantAliasInfo = model.tenantAliasInfo;
+        } 
 
         /**
          * IdpInfos.
@@ -284,6 +300,21 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
             private String ssoProtocol; 
             private String ssoServiceUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(IdpInfos model) {
+                this.accountType = model.accountType;
+                this.cookies = model.cookies;
+                this.idpId = model.idpId;
+                this.idpName = model.idpName;
+                this.idpNameEN = model.idpNameEN;
+                this.idpProvider = model.idpProvider;
+                this.jumpSwitch = model.jumpSwitch;
+                this.ssoProtocol = model.ssoProtocol;
+                this.ssoServiceUrl = model.ssoServiceUrl;
+            } 
+
             /**
              * AccountType.
              */
@@ -443,6 +474,17 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
             private String regionId; 
             private String ssoServiceUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(OfficeSiteInfo model) {
+                this.accessType = model.accessType;
+                this.officeSiteId = model.officeSiteId;
+                this.providerId = model.providerId;
+                this.regionId = model.regionId;
+                this.ssoServiceUrl = model.ssoServiceUrl;
+            } 
+
             /**
              * AccessType.
              */
@@ -533,6 +575,14 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         public static final class Builder {
             private String accessType; 
             private String tenantAlias; 
+
+            private Builder() {
+            } 
+
+            private Builder(TenantAliasInfo model) {
+                this.accessType = model.accessType;
+                this.tenantAlias = model.tenantAlias;
+            } 
 
             /**
              * AccessType.

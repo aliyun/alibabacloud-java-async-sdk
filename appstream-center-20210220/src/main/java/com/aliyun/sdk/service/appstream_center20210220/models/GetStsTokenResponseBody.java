@@ -36,6 +36,10 @@ public class GetStsTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetStsTokenResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private StsTokenModel stsTokenModel; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStsTokenResponseBody model) {
+            this.requestId = model.requestId;
+            this.stsTokenModel = model.stsTokenModel;
+        } 
 
         /**
          * RequestId.
@@ -131,6 +143,15 @@ public class GetStsTokenResponseBody extends TeaModel {
             private String sessionId; 
             private String stsToken; 
             private Long tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(StsTokenModel model) {
+                this.sessionId = model.sessionId;
+                this.stsToken = model.stsToken;
+                this.tenantId = model.tenantId;
+            } 
 
             /**
              * SessionId.
