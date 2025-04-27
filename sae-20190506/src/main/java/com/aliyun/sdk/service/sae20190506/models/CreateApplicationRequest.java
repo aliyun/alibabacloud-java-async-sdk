@@ -118,6 +118,10 @@ public class CreateApplicationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InitContainersConfig")
+    private java.util.List<InitContainerConfig> initContainersConfig;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JarStartArgs")
     private String jarStartArgs;
@@ -340,6 +344,7 @@ public class CreateApplicationRequest extends Request {
         this.envs = builder.envs;
         this.imagePullSecrets = builder.imagePullSecrets;
         this.imageUrl = builder.imageUrl;
+        this.initContainersConfig = builder.initContainersConfig;
         this.jarStartArgs = builder.jarStartArgs;
         this.jarStartOptions = builder.jarStartOptions;
         this.jdk = builder.jdk;
@@ -576,6 +581,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getImageUrl() {
         return this.imageUrl;
+    }
+
+    /**
+     * @return initContainersConfig
+     */
+    public java.util.List<InitContainerConfig> getInitContainersConfig() {
+        return this.initContainersConfig;
     }
 
     /**
@@ -940,6 +952,7 @@ public class CreateApplicationRequest extends Request {
         private String envs; 
         private String imagePullSecrets; 
         private String imageUrl; 
+        private java.util.List<InitContainerConfig> initContainersConfig; 
         private String jarStartArgs; 
         private String jarStartOptions; 
         private String jdk; 
@@ -1020,6 +1033,7 @@ public class CreateApplicationRequest extends Request {
             this.envs = request.envs;
             this.imagePullSecrets = request.imagePullSecrets;
             this.imageUrl = request.imageUrl;
+            this.initContainersConfig = request.initContainersConfig;
             this.jarStartArgs = request.jarStartArgs;
             this.jarStartOptions = request.jarStartOptions;
             this.jdk = request.jdk;
@@ -1338,6 +1352,16 @@ public class CreateApplicationRequest extends Request {
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
             this.imageUrl = imageUrl;
+            return this;
+        }
+
+        /**
+         * InitContainersConfig.
+         */
+        public Builder initContainersConfig(java.util.List<InitContainerConfig> initContainersConfig) {
+            String initContainersConfigShrink = shrink(initContainersConfig, "InitContainersConfig", "json");
+            this.putBodyParameter("InitContainersConfig", initContainersConfigShrink);
+            this.initContainersConfig = initContainersConfig;
             return this;
         }
 

@@ -357,6 +357,294 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
      *
      * <p>DescribeApplicationConfigResponseBody</p>
      */
+    public static class InitContainersConfigConfigMapMountDesc extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConfigMapId")
+        private Long configMapId;
+
+        @com.aliyun.core.annotation.NameInMap("ConfigMapName")
+        private String configMapName;
+
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("MountPath")
+        private String mountPath;
+
+        private InitContainersConfigConfigMapMountDesc(Builder builder) {
+            this.configMapId = builder.configMapId;
+            this.configMapName = builder.configMapName;
+            this.key = builder.key;
+            this.mountPath = builder.mountPath;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InitContainersConfigConfigMapMountDesc create() {
+            return builder().build();
+        }
+
+        /**
+         * @return configMapId
+         */
+        public Long getConfigMapId() {
+            return this.configMapId;
+        }
+
+        /**
+         * @return configMapName
+         */
+        public String getConfigMapName() {
+            return this.configMapName;
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public static final class Builder {
+            private Long configMapId; 
+            private String configMapName; 
+            private String key; 
+            private String mountPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitContainersConfigConfigMapMountDesc model) {
+                this.configMapId = model.configMapId;
+                this.configMapName = model.configMapName;
+                this.key = model.key;
+                this.mountPath = model.mountPath;
+            } 
+
+            /**
+             * <p>The ID of the ConfigMap.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder configMapId(Long configMapId) {
+                this.configMapId = configMapId;
+                return this;
+            }
+
+            /**
+             * <p>The name of the ConfigMap.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder configMapName(String configMapName) {
+                this.configMapName = configMapName;
+                return this;
+            }
+
+            /**
+             * <p>The key-value pair that is stored in the ConfigMap.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The path on which the ConfigMap is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp</p>
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            public InitContainersConfigConfigMapMountDesc build() {
+                return new InitContainersConfigConfigMapMountDesc(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationConfigResponseBody</p>
+     */
+    public static class InitContainersConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Command")
+        private String command;
+
+        @com.aliyun.core.annotation.NameInMap("CommandArgs")
+        private String commandArgs;
+
+        @com.aliyun.core.annotation.NameInMap("ConfigMapMountDesc")
+        private java.util.List<InitContainersConfigConfigMapMountDesc> configMapMountDesc;
+
+        @com.aliyun.core.annotation.NameInMap("Envs")
+        private String envs;
+
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
+        private String imageUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private InitContainersConfig(Builder builder) {
+            this.command = builder.command;
+            this.commandArgs = builder.commandArgs;
+            this.configMapMountDesc = builder.configMapMountDesc;
+            this.envs = builder.envs;
+            this.imageUrl = builder.imageUrl;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InitContainersConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return command
+         */
+        public String getCommand() {
+            return this.command;
+        }
+
+        /**
+         * @return commandArgs
+         */
+        public String getCommandArgs() {
+            return this.commandArgs;
+        }
+
+        /**
+         * @return configMapMountDesc
+         */
+        public java.util.List<InitContainersConfigConfigMapMountDesc> getConfigMapMountDesc() {
+            return this.configMapMountDesc;
+        }
+
+        /**
+         * @return envs
+         */
+        public String getEnvs() {
+            return this.envs;
+        }
+
+        /**
+         * @return imageUrl
+         */
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String command; 
+            private String commandArgs; 
+            private java.util.List<InitContainersConfigConfigMapMountDesc> configMapMountDesc; 
+            private String envs; 
+            private String imageUrl; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitContainersConfig model) {
+                this.command = model.command;
+                this.commandArgs = model.commandArgs;
+                this.configMapMountDesc = model.configMapMountDesc;
+                this.envs = model.envs;
+                this.imageUrl = model.imageUrl;
+                this.name = model.name;
+            } 
+
+            /**
+             * Command.
+             */
+            public Builder command(String command) {
+                this.command = command;
+                return this;
+            }
+
+            /**
+             * CommandArgs.
+             */
+            public Builder commandArgs(String commandArgs) {
+                this.commandArgs = commandArgs;
+                return this;
+            }
+
+            /**
+             * ConfigMapMountDesc.
+             */
+            public Builder configMapMountDesc(java.util.List<InitContainersConfigConfigMapMountDesc> configMapMountDesc) {
+                this.configMapMountDesc = configMapMountDesc;
+                return this;
+            }
+
+            /**
+             * Envs.
+             */
+            public Builder envs(String envs) {
+                this.envs = envs;
+                return this;
+            }
+
+            /**
+             * ImageUrl.
+             */
+            public Builder imageUrl(String imageUrl) {
+                this.imageUrl = imageUrl;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public InitContainersConfig build() {
+                return new InitContainersConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationConfigResponseBody</p>
+     */
     public static class MountDesc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
@@ -1307,6 +1595,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
+        @com.aliyun.core.annotation.NameInMap("InitContainersConfig")
+        private java.util.List<InitContainersConfig> initContainersConfig;
+
         @com.aliyun.core.annotation.NameInMap("JarStartArgs")
         private String jarStartArgs;
 
@@ -1500,6 +1791,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.envs = builder.envs;
             this.imagePullSecrets = builder.imagePullSecrets;
             this.imageUrl = builder.imageUrl;
+            this.initContainersConfig = builder.initContainersConfig;
             this.jarStartArgs = builder.jarStartArgs;
             this.jarStartOptions = builder.jarStartOptions;
             this.jdk = builder.jdk;
@@ -1752,6 +2044,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getImageUrl() {
             return this.imageUrl;
+        }
+
+        /**
+         * @return initContainersConfig
+         */
+        public java.util.List<InitContainersConfig> getInitContainersConfig() {
+            return this.initContainersConfig;
         }
 
         /**
@@ -2167,6 +2466,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String envs; 
             private String imagePullSecrets; 
             private String imageUrl; 
+            private java.util.List<InitContainersConfig> initContainersConfig; 
             private String jarStartArgs; 
             private String jarStartOptions; 
             private String jdk; 
@@ -2254,6 +2554,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
                 this.envs = model.envs;
                 this.imagePullSecrets = model.imagePullSecrets;
                 this.imageUrl = model.imageUrl;
+                this.initContainersConfig = model.initContainersConfig;
                 this.jarStartArgs = model.jarStartArgs;
                 this.jarStartOptions = model.jarStartOptions;
                 this.jdk = model.jdk;
@@ -2616,6 +2917,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
+                return this;
+            }
+
+            /**
+             * InitContainersConfig.
+             */
+            public Builder initContainersConfig(java.util.List<InitContainersConfig> initContainersConfig) {
+                this.initContainersConfig = initContainersConfig;
                 return this;
             }
 
