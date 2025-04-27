@@ -27,6 +27,14 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
     private java.util.List<String> categoryIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChunkMode")
+    private String chunkMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChunkSize")
+    private Integer chunkSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DocumentIds")
     private java.util.List<String> documentIds;
 
@@ -34,6 +42,14 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("IndexId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String indexId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OverlapSize")
+    private Integer overlapSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Separator")
+    private String separator;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceType")
@@ -44,8 +60,12 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.categoryIds = builder.categoryIds;
+        this.chunkMode = builder.chunkMode;
+        this.chunkSize = builder.chunkSize;
         this.documentIds = builder.documentIds;
         this.indexId = builder.indexId;
+        this.overlapSize = builder.overlapSize;
+        this.separator = builder.separator;
         this.sourceType = builder.sourceType;
     }
 
@@ -77,6 +97,20 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
     }
 
     /**
+     * @return chunkMode
+     */
+    public String getChunkMode() {
+        return this.chunkMode;
+    }
+
+    /**
+     * @return chunkSize
+     */
+    public Integer getChunkSize() {
+        return this.chunkSize;
+    }
+
+    /**
      * @return documentIds
      */
     public java.util.List<String> getDocumentIds() {
@@ -91,6 +125,20 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
     }
 
     /**
+     * @return overlapSize
+     */
+    public Integer getOverlapSize() {
+        return this.overlapSize;
+    }
+
+    /**
+     * @return separator
+     */
+    public String getSeparator() {
+        return this.separator;
+    }
+
+    /**
      * @return sourceType
      */
     public String getSourceType() {
@@ -100,8 +148,12 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitIndexAddDocumentsJobRequest, Builder> {
         private String workspaceId; 
         private java.util.List<String> categoryIds; 
+        private String chunkMode; 
+        private Integer chunkSize; 
         private java.util.List<String> documentIds; 
         private String indexId; 
+        private Integer overlapSize; 
+        private String separator; 
         private String sourceType; 
 
         private Builder() {
@@ -112,8 +164,12 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
             super(request);
             this.workspaceId = request.workspaceId;
             this.categoryIds = request.categoryIds;
+            this.chunkMode = request.chunkMode;
+            this.chunkSize = request.chunkSize;
             this.documentIds = request.documentIds;
             this.indexId = request.indexId;
+            this.overlapSize = request.overlapSize;
+            this.separator = request.separator;
             this.sourceType = request.sourceType;
         } 
 
@@ -141,6 +197,24 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
         }
 
         /**
+         * ChunkMode.
+         */
+        public Builder chunkMode(String chunkMode) {
+            this.putQueryParameter("ChunkMode", chunkMode);
+            this.chunkMode = chunkMode;
+            return this;
+        }
+
+        /**
+         * ChunkSize.
+         */
+        public Builder chunkSize(Integer chunkSize) {
+            this.putQueryParameter("ChunkSize", chunkSize);
+            this.chunkSize = chunkSize;
+            return this;
+        }
+
+        /**
          * <p>The list of the primary key IDs of the documents.</p>
          */
         public Builder documentIds(java.util.List<String> documentIds) {
@@ -160,6 +234,24 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
         public Builder indexId(String indexId) {
             this.putQueryParameter("IndexId", indexId);
             this.indexId = indexId;
+            return this;
+        }
+
+        /**
+         * OverlapSize.
+         */
+        public Builder overlapSize(Integer overlapSize) {
+            this.putQueryParameter("OverlapSize", overlapSize);
+            this.overlapSize = overlapSize;
+            return this;
+        }
+
+        /**
+         * Separator.
+         */
+        public Builder separator(String separator) {
+            this.putQueryParameter("Separator", separator);
+            this.separator = separator;
             return this;
         }
 
