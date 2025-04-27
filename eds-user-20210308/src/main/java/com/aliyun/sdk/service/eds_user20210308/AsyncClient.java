@@ -59,6 +59,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePropertyResponse> createProperty(CreatePropertyRequest request);
 
     /**
+     * @param request the request parameters of CreateResourceGroup  CreateResourceGroupRequest
+     * @return CreateResourceGroupResponse
+     */
+    CompletableFuture<CreateResourceGroupResponse> createResourceGroup(CreateResourceGroupRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.</p>
      * 
@@ -66,6 +72,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateUsersResponse
      */
     CompletableFuture<CreateUsersResponse> createUsers(CreateUsersRequest request);
+
+    /**
+     * @param request the request parameters of DeleteResourceGroup  DeleteResourceGroupRequest
+     * @return DeleteResourceGroupResponse
+     */
+    CompletableFuture<DeleteResourceGroupResponse> deleteResourceGroup(DeleteResourceGroupRequest request);
 
     /**
      * <b>description</b> :
@@ -96,6 +108,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeOrgsResponse
      */
     CompletableFuture<DescribeOrgsResponse> describeOrgs(DescribeOrgsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeResourceGroups  DescribeResourceGroupsRequest
+     * @return DescribeResourceGroupsResponse
+     */
+    CompletableFuture<DescribeResourceGroupsResponse> describeResourceGroups(DescribeResourceGroupsRequest request);
 
     /**
      * @param request the request parameters of DescribeUsers  DescribeUsersRequest
