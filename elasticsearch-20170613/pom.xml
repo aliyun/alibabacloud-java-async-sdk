@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-elasticsearch20170613</artifactId>
-  <version>2.0.8</version>
+  <version>3.0.0</version>
   <packaging>jar</packaging>
   <name>alibabacloud-elasticsearch20170613</name>
   <description>Alibaba Cloud elasticsearch (20170613) Async SDK for Java
@@ -76,7 +76,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-gpg-plugin</artifactId>
-        <version>1.6</version>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>sign-artifacts</id>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateWhiteIpsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The updated whitelist.</p>
@@ -85,7 +102,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
         private String groupName;
 
         @com.aliyun.core.annotation.NameInMap("ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         @com.aliyun.core.annotation.NameInMap("whiteIpType")
         private String whiteIpType;
@@ -114,7 +131,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
@@ -127,8 +144,17 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String groupName; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
             private String whiteIpType; 
+
+            private Builder() {
+            } 
+
+            private Builder(WhiteIpGroupList model) {
+                this.groupName = model.groupName;
+                this.ips = model.ips;
+                this.whiteIpType = model.whiteIpType;
+            } 
 
             /**
              * <p>The type of the whitelist. The value of this parameter is fixed as PRIVATE_ES, which indicates a private IP address whitelist.</p>
@@ -144,7 +170,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
             /**
              * ips.
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }
@@ -172,7 +198,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
      */
     public static class NetworkConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("whiteIpGroupList")
-        private java.util.List < WhiteIpGroupList> whiteIpGroupList;
+        private java.util.List<WhiteIpGroupList> whiteIpGroupList;
 
         private NetworkConfig(Builder builder) {
             this.whiteIpGroupList = builder.whiteIpGroupList;
@@ -189,17 +215,24 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
         /**
          * @return whiteIpGroupList
          */
-        public java.util.List < WhiteIpGroupList> getWhiteIpGroupList() {
+        public java.util.List<WhiteIpGroupList> getWhiteIpGroupList() {
             return this.whiteIpGroupList;
         }
 
         public static final class Builder {
-            private java.util.List < WhiteIpGroupList> whiteIpGroupList; 
+            private java.util.List<WhiteIpGroupList> whiteIpGroupList; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkConfig model) {
+                this.whiteIpGroupList = model.whiteIpGroupList;
+            } 
 
             /**
              * <p>The IP addresses in the whitelist.</p>
              */
-            public Builder whiteIpGroupList(java.util.List < WhiteIpGroupList> whiteIpGroupList) {
+            public Builder whiteIpGroupList(java.util.List<WhiteIpGroupList> whiteIpGroupList) {
                 this.whiteIpGroupList = whiteIpGroupList;
                 return this;
             }
@@ -219,7 +252,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("esIPWhitelist")
-        private java.util.List < String > esIPWhitelist;
+        private java.util.List<String> esIPWhitelist;
 
         @com.aliyun.core.annotation.NameInMap("networkConfig")
         private NetworkConfig networkConfig;
@@ -240,7 +273,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
         /**
          * @return esIPWhitelist
          */
-        public java.util.List < String > getEsIPWhitelist() {
+        public java.util.List<String> getEsIPWhitelist() {
             return this.esIPWhitelist;
         }
 
@@ -252,13 +285,21 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > esIPWhitelist; 
+            private java.util.List<String> esIPWhitelist; 
             private NetworkConfig networkConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.esIPWhitelist = model.esIPWhitelist;
+                this.networkConfig = model.networkConfig;
+            } 
 
             /**
              * <p>The list of whitelists.</p>
              */
-            public Builder esIPWhitelist(java.util.List < String > esIPWhitelist) {
+            public Builder esIPWhitelist(java.util.List<String> esIPWhitelist) {
                 this.esIPWhitelist = esIPWhitelist;
                 return this;
             }

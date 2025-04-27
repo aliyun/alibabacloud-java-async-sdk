@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListDiagnoseReportResponseBody(Builder builder) {
         this.headers = builder.headers;
@@ -33,6 +38,10 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
 
     public static ListDiagnoseReportResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private Headers headers; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDiagnoseReportResponseBody model) {
+            this.headers = model.headers;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The total number of entries returned.</p>
@@ -88,7 +106,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
          * <li>USER: manually triggered by the user</li>
          * </ul>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -130,6 +148,13 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer xTotalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.xTotalCount = model.xTotalCount;
+            } 
 
             /**
              * <p>The returned results.</p>
@@ -228,6 +253,17 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             private String result; 
             private String suggest; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.desc = model.desc;
+                this.name = model.name;
+                this.result = model.result;
+                this.suggest = model.suggest;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The diagnosis.</p>
@@ -344,6 +380,15 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             private String health; 
             private String item; 
 
+            private Builder() {
+            } 
+
+            private Builder(DiagnoseItems model) {
+                this.detail = model.detail;
+                this.health = model.health;
+                this.item = model.item;
+            } 
+
             /**
              * <p>The type of the diagnostic result. Valid values:</p>
              * <ul>
@@ -397,7 +442,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         private Long createTime;
 
         @com.aliyun.core.annotation.NameInMap("diagnoseItems")
-        private java.util.List < DiagnoseItems> diagnoseItems;
+        private java.util.List<DiagnoseItems> diagnoseItems;
 
         @com.aliyun.core.annotation.NameInMap("health")
         private String health;
@@ -442,7 +487,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         /**
          * @return diagnoseItems
          */
-        public java.util.List < DiagnoseItems> getDiagnoseItems() {
+        public java.util.List<DiagnoseItems> getDiagnoseItems() {
             return this.diagnoseItems;
         }
 
@@ -483,12 +528,25 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTime; 
-            private java.util.List < DiagnoseItems> diagnoseItems; 
+            private java.util.List<DiagnoseItems> diagnoseItems; 
             private String health; 
             private String instanceId; 
             private String reportId; 
             private String state; 
             private String trigger; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createTime = model.createTime;
+                this.diagnoseItems = model.diagnoseItems;
+                this.health = model.health;
+                this.instanceId = model.instanceId;
+                this.reportId = model.reportId;
+                this.state = model.state;
+                this.trigger = model.trigger;
+            } 
 
             /**
              * <p>The ID of the report.</p>
@@ -504,7 +562,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             /**
              * <p>The name of the item.</p>
              */
-            public Builder diagnoseItems(java.util.List < DiagnoseItems> diagnoseItems) {
+            public Builder diagnoseItems(java.util.List<DiagnoseItems> diagnoseItems) {
                 this.diagnoseItems = diagnoseItems;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListVpcEndpointsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVpcEndpointsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +80,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         /**
          * <p>The details of the endpoints.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -201,6 +218,21 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             private String endpointStatus; 
             private String serviceId; 
             private String serviceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.connectionStatus = model.connectionStatus;
+                this.createTime = model.createTime;
+                this.endpointBusinessStatus = model.endpointBusinessStatus;
+                this.endpointDomain = model.endpointDomain;
+                this.endpointId = model.endpointId;
+                this.endpointName = model.endpointName;
+                this.endpointStatus = model.endpointStatus;
+                this.serviceId = model.serviceId;
+                this.serviceName = model.serviceName;
+            } 
 
             /**
              * <p>The status of the endpoint connection. Valid values:</p>

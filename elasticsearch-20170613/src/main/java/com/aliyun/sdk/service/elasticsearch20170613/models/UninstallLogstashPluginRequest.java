@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class UninstallLogstashPluginRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < String > body;
+    private java.util.List<String> body;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("clientToken")
@@ -40,7 +45,7 @@ public class UninstallLogstashPluginRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class UninstallLogstashPluginRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < String > getBody() {
+    public java.util.List<String> getBody() {
         return this.body;
     }
 
@@ -68,7 +73,7 @@ public class UninstallLogstashPluginRequest extends Request {
 
     public static final class Builder extends Request.Builder<UninstallLogstashPluginRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > body; 
+        private java.util.List<String> body; 
         private String clientToken; 
 
         private Builder() {
@@ -98,7 +103,7 @@ public class UninstallLogstashPluginRequest extends Request {
         /**
          * body.
          */
-        public Builder body(java.util.List < String > body) {
+        public Builder body(java.util.List<String> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

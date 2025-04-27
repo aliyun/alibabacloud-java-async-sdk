@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,11 +33,11 @@ public class RestartLogstashRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("nodeTypes")
-    private java.util.List < String > nodeTypes;
+    private java.util.List<String> nodeTypes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("nodes")
-    private java.util.List < String > nodes;
+    private java.util.List<String> nodes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("restartType")
@@ -66,7 +71,7 @@ public class RestartLogstashRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -95,14 +100,14 @@ public class RestartLogstashRequest extends Request {
     /**
      * @return nodeTypes
      */
-    public java.util.List < String > getNodeTypes() {
+    public java.util.List<String> getNodeTypes() {
         return this.nodeTypes;
     }
 
     /**
      * @return nodes
      */
-    public java.util.List < String > getNodes() {
+    public java.util.List<String> getNodes() {
         return this.nodes;
     }
 
@@ -131,8 +136,8 @@ public class RestartLogstashRequest extends Request {
         private String instanceId; 
         private Double batchCount; 
         private Boolean blueGreenDep; 
-        private java.util.List < String > nodeTypes; 
-        private java.util.List < String > nodes; 
+        private java.util.List<String> nodeTypes; 
+        private java.util.List<String> nodes; 
         private String restartType; 
         private String clientToken; 
         private Boolean force; 
@@ -186,7 +191,7 @@ public class RestartLogstashRequest extends Request {
         /**
          * nodeTypes.
          */
-        public Builder nodeTypes(java.util.List < String > nodeTypes) {
+        public Builder nodeTypes(java.util.List<String> nodeTypes) {
             this.putBodyParameter("nodeTypes", nodeTypes);
             this.nodeTypes = nodeTypes;
             return this;
@@ -195,7 +200,7 @@ public class RestartLogstashRequest extends Request {
         /**
          * nodes.
          */
-        public Builder nodes(java.util.List < String > nodes) {
+        public Builder nodes(java.util.List<String> nodes) {
             this.putBodyParameter("nodes", nodes);
             this.nodes = nodes;
             return this;

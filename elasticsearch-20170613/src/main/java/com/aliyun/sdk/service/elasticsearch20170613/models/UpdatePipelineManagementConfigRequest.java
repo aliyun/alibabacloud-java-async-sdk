@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("endpoints")
-    private java.util.List < String > endpoints;
+    private java.util.List<String> endpoints;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("esInstanceId")
@@ -31,7 +36,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("pipelineIds")
-    private java.util.List < String > pipelineIds;
+    private java.util.List<String> pipelineIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("pipelineManagementType")
@@ -65,7 +70,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -80,7 +85,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
     /**
      * @return endpoints
      */
-    public java.util.List < String > getEndpoints() {
+    public java.util.List<String> getEndpoints() {
         return this.endpoints;
     }
 
@@ -101,7 +106,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
     /**
      * @return pipelineIds
      */
-    public java.util.List < String > getPipelineIds() {
+    public java.util.List<String> getPipelineIds() {
         return this.pipelineIds;
     }
 
@@ -128,10 +133,10 @@ public class UpdatePipelineManagementConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdatePipelineManagementConfigRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > endpoints; 
+        private java.util.List<String> endpoints; 
         private String esInstanceId; 
         private String password; 
-        private java.util.List < String > pipelineIds; 
+        private java.util.List<String> pipelineIds; 
         private String pipelineManagementType; 
         private String userName; 
         private String clientToken; 
@@ -167,7 +172,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         /**
          * endpoints.
          */
-        public Builder endpoints(java.util.List < String > endpoints) {
+        public Builder endpoints(java.util.List<String> endpoints) {
             this.putBodyParameter("endpoints", endpoints);
             this.endpoints = endpoints;
             return this;
@@ -194,7 +199,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         /**
          * pipelineIds.
          */
-        public Builder pipelineIds(java.util.List < String > pipelineIds) {
+        public Builder pipelineIds(java.util.List<String> pipelineIds) {
             this.putBodyParameter("pipelineIds", pipelineIds);
             this.pipelineIds = pipelineIds;
             return this;

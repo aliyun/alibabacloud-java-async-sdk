@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListIndexTemplatesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIndexTemplatesResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * RequestId.
@@ -60,7 +77,7 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -127,6 +144,15 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
             private String mappings; 
             private String settings; 
 
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.aliases = model.aliases;
+                this.mappings = model.mappings;
+                this.settings = model.settings;
+            } 
+
             /**
              * aliases.
              */
@@ -172,7 +198,7 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
         private String ilmPolicy;
 
         @com.aliyun.core.annotation.NameInMap("indexPatterns")
-        private java.util.List < String > indexPatterns;
+        private java.util.List<String> indexPatterns;
 
         @com.aliyun.core.annotation.NameInMap("indexTemplate")
         private String indexTemplate;
@@ -217,7 +243,7 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
         /**
          * @return indexPatterns
          */
-        public java.util.List < String > getIndexPatterns() {
+        public java.util.List<String> getIndexPatterns() {
             return this.indexPatterns;
         }
 
@@ -245,10 +271,22 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean dataStream; 
             private String ilmPolicy; 
-            private java.util.List < String > indexPatterns; 
+            private java.util.List<String> indexPatterns; 
             private String indexTemplate; 
             private Integer priority; 
             private Template template; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.dataStream = model.dataStream;
+                this.ilmPolicy = model.ilmPolicy;
+                this.indexPatterns = model.indexPatterns;
+                this.indexTemplate = model.indexTemplate;
+                this.priority = model.priority;
+                this.template = model.template;
+            } 
 
             /**
              * dataStream.
@@ -269,7 +307,7 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
             /**
              * indexPatterns.
              */
-            public Builder indexPatterns(java.util.List < String > indexPatterns) {
+            public Builder indexPatterns(java.util.List<String> indexPatterns) {
                 this.indexPatterns = indexPatterns;
                 return this;
             }

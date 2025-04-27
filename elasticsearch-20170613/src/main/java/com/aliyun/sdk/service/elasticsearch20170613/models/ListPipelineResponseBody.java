@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListPipelineResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListPipelineResponseBody(Builder builder) {
         this.headers = builder.headers;
@@ -33,6 +38,10 @@ public class ListPipelineResponseBody extends TeaModel {
 
     public static ListPipelineResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListPipelineResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private Headers headers; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPipelineResponseBody model) {
+            this.headers = model.headers;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.</p>
@@ -83,7 +101,7 @@ public class ListPipelineResponseBody extends TeaModel {
         /**
          * <p>The time when the pipeline was created.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -125,6 +143,13 @@ public class ListPipelineResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer xTotalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.xTotalCount = model.xTotalCount;
+            } 
 
             /**
              * <p>The time when the pipeline was updated.</p>
@@ -211,6 +236,16 @@ public class ListPipelineResponseBody extends TeaModel {
             private String gmtUpdateTime; 
             private String pipelineId; 
             private String pipelineStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.gmtCreatedTime = model.gmtCreatedTime;
+                this.gmtUpdateTime = model.gmtUpdateTime;
+                this.pipelineId = model.pipelineId;
+                this.pipelineStatus = model.pipelineStatus;
+            } 
 
             /**
              * gmtCreatedTime.

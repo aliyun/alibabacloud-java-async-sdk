@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -73,7 +78,7 @@ public class CreateLogstashRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -334,6 +339,16 @@ public class CreateLogstashRequest extends Request {
             private String vsArea; 
             private String vswitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkConfig model) {
+                this.type = model.type;
+                this.vpcId = model.vpcId;
+                this.vsArea = model.vsArea;
+                this.vswitchId = model.vswitchId;
+            } 
+
             /**
              * type.
              */
@@ -439,6 +454,15 @@ public class CreateLogstashRequest extends Request {
             private String diskType; 
             private String spec; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeSpec model) {
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+            } 
+
             /**
              * disk.
              */
@@ -540,6 +564,16 @@ public class CreateLogstashRequest extends Request {
             private Long duration; 
             private Boolean isAutoRenew; 
             private String pricingCycle; 
+
+            private Builder() {
+            } 
+
+            private Builder(PaymentInfo model) {
+                this.autoRenewDuration = model.autoRenewDuration;
+                this.duration = model.duration;
+                this.isAutoRenew = model.isAutoRenew;
+                this.pricingCycle = model.pricingCycle;
+            } 
 
             /**
              * autoRenewDuration.

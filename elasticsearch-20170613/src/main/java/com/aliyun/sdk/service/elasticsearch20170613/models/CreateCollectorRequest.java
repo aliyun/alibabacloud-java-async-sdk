@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,12 +19,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateCollectorRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("collectorPaths")
-    private java.util.List < String > collectorPaths;
+    private java.util.List<String> collectorPaths;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("configs")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Configs> configs;
+    private java.util.List<Configs> configs;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dryRun")
@@ -29,7 +34,7 @@ public class CreateCollectorRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("extendConfigs")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < java.util.Map<String, ?>> extendConfigs;
+    private java.util.List<java.util.Map<String, ?>> extendConfigs;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("name")
@@ -76,7 +81,7 @@ public class CreateCollectorRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,14 +89,14 @@ public class CreateCollectorRequest extends Request {
     /**
      * @return collectorPaths
      */
-    public java.util.List < String > getCollectorPaths() {
+    public java.util.List<String> getCollectorPaths() {
         return this.collectorPaths;
     }
 
     /**
      * @return configs
      */
-    public java.util.List < Configs> getConfigs() {
+    public java.util.List<Configs> getConfigs() {
         return this.configs;
     }
 
@@ -105,7 +110,7 @@ public class CreateCollectorRequest extends Request {
     /**
      * @return extendConfigs
      */
-    public java.util.List < java.util.Map<String, ?>> getExtendConfigs() {
+    public java.util.List<java.util.Map<String, ?>> getExtendConfigs() {
         return this.extendConfigs;
     }
 
@@ -145,10 +150,10 @@ public class CreateCollectorRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCollectorRequest, Builder> {
-        private java.util.List < String > collectorPaths; 
-        private java.util.List < Configs> configs; 
+        private java.util.List<String> collectorPaths; 
+        private java.util.List<Configs> configs; 
         private Boolean dryRun; 
-        private java.util.List < java.util.Map<String, ?>> extendConfigs; 
+        private java.util.List<java.util.Map<String, ?>> extendConfigs; 
         private String name; 
         private String resType; 
         private String resVersion; 
@@ -175,7 +180,7 @@ public class CreateCollectorRequest extends Request {
         /**
          * collectorPaths.
          */
-        public Builder collectorPaths(java.util.List < String > collectorPaths) {
+        public Builder collectorPaths(java.util.List<String> collectorPaths) {
             this.putBodyParameter("collectorPaths", collectorPaths);
             this.collectorPaths = collectorPaths;
             return this;
@@ -184,7 +189,7 @@ public class CreateCollectorRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder configs(java.util.List < Configs> configs) {
+        public Builder configs(java.util.List<Configs> configs) {
             this.putBodyParameter("configs", configs);
             this.configs = configs;
             return this;
@@ -205,7 +210,7 @@ public class CreateCollectorRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder extendConfigs(java.util.List < java.util.Map<String, ?>> extendConfigs) {
+        public Builder extendConfigs(java.util.List<java.util.Map<String, ?>> extendConfigs) {
             this.putBodyParameter("extendConfigs", extendConfigs);
             this.extendConfigs = extendConfigs;
             return this;
@@ -323,6 +328,14 @@ public class CreateCollectorRequest extends Request {
         public static final class Builder {
             private String content; 
             private String fileName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configs model) {
+                this.content = model.content;
+                this.fileName = model.fileName;
+            } 
 
             /**
              * <p>This parameter is required.</p>

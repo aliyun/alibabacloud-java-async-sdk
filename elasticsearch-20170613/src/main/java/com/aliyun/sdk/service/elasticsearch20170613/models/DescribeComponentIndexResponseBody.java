@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeComponentIndexResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * RequestId.
@@ -79,13 +96,13 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
      */
     public static class Template extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliases")
-        private java.util.Map < String, ? > aliases;
+        private java.util.Map<String, ?> aliases;
 
         @com.aliyun.core.annotation.NameInMap("mappings")
-        private java.util.Map < String, ? > mappings;
+        private java.util.Map<String, ?> mappings;
 
         @com.aliyun.core.annotation.NameInMap("settings")
-        private java.util.Map < String, ? > settings;
+        private java.util.Map<String, ?> settings;
 
         private Template(Builder builder) {
             this.aliases = builder.aliases;
@@ -104,33 +121,42 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
         /**
          * @return aliases
          */
-        public java.util.Map < String, ? > getAliases() {
+        public java.util.Map<String, ?> getAliases() {
             return this.aliases;
         }
 
         /**
          * @return mappings
          */
-        public java.util.Map < String, ? > getMappings() {
+        public java.util.Map<String, ?> getMappings() {
             return this.mappings;
         }
 
         /**
          * @return settings
          */
-        public java.util.Map < String, ? > getSettings() {
+        public java.util.Map<String, ?> getSettings() {
             return this.settings;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > aliases; 
-            private java.util.Map < String, ? > mappings; 
-            private java.util.Map < String, ? > settings; 
+            private java.util.Map<String, ?> aliases; 
+            private java.util.Map<String, ?> mappings; 
+            private java.util.Map<String, ?> settings; 
+
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.aliases = model.aliases;
+                this.mappings = model.mappings;
+                this.settings = model.settings;
+            } 
 
             /**
              * aliases.
              */
-            public Builder aliases(java.util.Map < String, ? > aliases) {
+            public Builder aliases(java.util.Map<String, ?> aliases) {
                 this.aliases = aliases;
                 return this;
             }
@@ -138,7 +164,7 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
             /**
              * mappings.
              */
-            public Builder mappings(java.util.Map < String, ? > mappings) {
+            public Builder mappings(java.util.Map<String, ?> mappings) {
                 this.mappings = mappings;
                 return this;
             }
@@ -146,7 +172,7 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
             /**
              * settings.
              */
-            public Builder settings(java.util.Map < String, ? > settings) {
+            public Builder settings(java.util.Map<String, ?> settings) {
                 this.settings = settings;
                 return this;
             }
@@ -166,7 +192,7 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("_meta")
-        private java.util.Map < String, ? > meta;
+        private java.util.Map<String, ?> meta;
 
         @com.aliyun.core.annotation.NameInMap("template")
         private Template template;
@@ -187,7 +213,7 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
         /**
          * @return meta
          */
-        public java.util.Map < String, ? > getMeta() {
+        public java.util.Map<String, ?> getMeta() {
             return this.meta;
         }
 
@@ -199,13 +225,21 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > meta; 
+            private java.util.Map<String, ?> meta; 
             private Template template; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.meta = model.meta;
+                this.template = model.template;
+            } 
 
             /**
              * _meta.
              */
-            public Builder meta(java.util.Map < String, ? > meta) {
+            public Builder meta(java.util.Map<String, ?> meta) {
                 this.meta = meta;
                 return this;
             }

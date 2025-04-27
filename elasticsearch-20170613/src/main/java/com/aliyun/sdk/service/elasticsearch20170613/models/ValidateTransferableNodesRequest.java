@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ValidateTransferableNodesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < ValidateTransferableNodesRequestBody> body;
+    private java.util.List<ValidateTransferableNodesRequestBody> body;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("nodeType")
@@ -41,7 +46,7 @@ public class ValidateTransferableNodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -56,7 +61,7 @@ public class ValidateTransferableNodesRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < ValidateTransferableNodesRequestBody> getBody() {
+    public java.util.List<ValidateTransferableNodesRequestBody> getBody() {
         return this.body;
     }
 
@@ -69,7 +74,7 @@ public class ValidateTransferableNodesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ValidateTransferableNodesRequest, Builder> {
         private String instanceId; 
-        private java.util.List < ValidateTransferableNodesRequestBody> body; 
+        private java.util.List<ValidateTransferableNodesRequestBody> body; 
         private String nodeType; 
 
         private Builder() {
@@ -98,7 +103,7 @@ public class ValidateTransferableNodesRequest extends Request {
         /**
          * body.
          */
-        public Builder body(java.util.List < ValidateTransferableNodesRequestBody> body) {
+        public Builder body(java.util.List<ValidateTransferableNodesRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
@@ -178,6 +183,15 @@ public class ValidateTransferableNodesRequest extends Request {
             private String host; 
             private Integer port; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ValidateTransferableNodesRequestBody model) {
+                this.host = model.host;
+                this.port = model.port;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * host.

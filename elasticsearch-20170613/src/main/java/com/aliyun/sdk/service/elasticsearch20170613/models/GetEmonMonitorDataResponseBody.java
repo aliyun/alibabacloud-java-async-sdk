@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -41,6 +46,10 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
 
     public static GetEmonMonitorDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -82,8 +91,19 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEmonMonitorDataResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -112,7 +132,7 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -139,7 +159,7 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dps")
-        private java.util.Map < String, ? > dps;
+        private java.util.Map<String, ?> dps;
 
         @com.aliyun.core.annotation.NameInMap("integrity")
         private Float integrity;
@@ -154,7 +174,7 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         private Float summary;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.Map < String, ? > tags;
+        private java.util.Map<String, ?> tags;
 
         private Result(Builder builder) {
             this.dps = builder.dps;
@@ -176,7 +196,7 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         /**
          * @return dps
          */
-        public java.util.Map < String, ? > getDps() {
+        public java.util.Map<String, ?> getDps() {
             return this.dps;
         }
 
@@ -211,22 +231,34 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > dps; 
+            private java.util.Map<String, ?> dps; 
             private Float integrity; 
             private Long messageWatermark; 
             private String metric; 
             private Float summary; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.dps = model.dps;
+                this.integrity = model.integrity;
+                this.messageWatermark = model.messageWatermark;
+                this.metric = model.metric;
+                this.summary = model.summary;
+                this.tags = model.tags;
+            } 
 
             /**
              * dps.
              */
-            public Builder dps(java.util.Map < String, ? > dps) {
+            public Builder dps(java.util.Map<String, ?> dps) {
                 this.dps = dps;
                 return this;
             }
@@ -266,7 +298,7 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
             /**
              * tags.
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }

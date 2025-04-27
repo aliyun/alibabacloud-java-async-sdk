@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListInstanceHistoryEventsResponseBody(Builder builder) {
         this.headers = builder.headers;
@@ -33,6 +38,10 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
 
     public static ListInstanceHistoryEventsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private Headers headers; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceHistoryEventsResponseBody model) {
+            this.headers = model.headers;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Headers.
@@ -80,7 +98,7 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -146,6 +164,15 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
             private Long xTotalCount; 
             private Long xTotalFailed; 
             private Long xTotalSuccess; 
+
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.xTotalCount = model.xTotalCount;
+                this.xTotalFailed = model.xTotalFailed;
+                this.xTotalSuccess = model.xTotalSuccess;
+            } 
 
             /**
              * X-Total-Count.
@@ -317,6 +344,22 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
             private String instanceId; 
             private String nodeIP; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.ecsId = model.ecsId;
+                this.eventCreateTime = model.eventCreateTime;
+                this.eventCycleStatus = model.eventCycleStatus;
+                this.eventExecuteTime = model.eventExecuteTime;
+                this.eventFinashTime = model.eventFinashTime;
+                this.eventLevel = model.eventLevel;
+                this.eventType = model.eventType;
+                this.instanceId = model.instanceId;
+                this.nodeIP = model.nodeIP;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * ecsId.

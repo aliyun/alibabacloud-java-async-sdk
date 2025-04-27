@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("kibanaIPWhitelist")
-    private java.util.List < String > kibanaIPWhitelist;
+    private java.util.List<String> kibanaIPWhitelist;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("whiteIpGroup")
@@ -50,7 +55,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -65,7 +70,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
     /**
      * @return kibanaIPWhitelist
      */
-    public java.util.List < String > getKibanaIPWhitelist() {
+    public java.util.List<String> getKibanaIPWhitelist() {
         return this.kibanaIPWhitelist;
     }
 
@@ -92,7 +97,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateKibanaWhiteIpsRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > kibanaIPWhitelist; 
+        private java.util.List<String> kibanaIPWhitelist; 
         private WhiteIpGroup whiteIpGroup; 
         private String clientToken; 
         private String modifyMode; 
@@ -127,7 +132,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
          * <p>The IP address whitelists. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.</p>
          * <p>You cannot configure both the kibanaIPWhitelist and whiteIpGroup parameters.</p>
          */
-        public Builder kibanaIPWhitelist(java.util.List < String > kibanaIPWhitelist) {
+        public Builder kibanaIPWhitelist(java.util.List<String> kibanaIPWhitelist) {
             this.putBodyParameter("kibanaIPWhitelist", kibanaIPWhitelist);
             this.kibanaIPWhitelist = kibanaIPWhitelist;
             return this;
@@ -189,7 +194,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
         private String groupName;
 
         @com.aliyun.core.annotation.NameInMap("ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         @com.aliyun.core.annotation.NameInMap("whiteIpType")
         private String whiteIpType;
@@ -218,7 +223,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
@@ -231,8 +236,17 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
 
         public static final class Builder {
             private String groupName; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
             private String whiteIpType; 
+
+            private Builder() {
+            } 
+
+            private Builder(WhiteIpGroup model) {
+                this.groupName = model.groupName;
+                this.ips = model.ips;
+                this.whiteIpType = model.whiteIpType;
+            } 
 
             /**
              * <p>The type of the whitelist. Set the value to PUBLIC_KIBANA. This value indicates a public IP address whitelist.</p>
@@ -248,7 +262,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
             /**
              * <p>The IP addresses in the whitelist. This parameter is required if you configure the whiteIpGroup parameter.</p>
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }

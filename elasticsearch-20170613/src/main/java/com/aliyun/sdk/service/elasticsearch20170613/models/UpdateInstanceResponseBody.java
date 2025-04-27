@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -72,6 +81,16 @@ public class UpdateInstanceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateInstanceResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Code.
@@ -187,6 +206,16 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private Integer disk; 
             private String diskType; 
             private String spec; 
+
+            private Builder() {
+            } 
+
+            private Builder(KibanaConfiguration model) {
+                this.amount = model.amount;
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+            } 
 
             /**
              * <p>The configuration of dedicated master nodes.</p>
@@ -307,6 +336,16 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private String diskType; 
             private String spec; 
 
+            private Builder() {
+            } 
+
+            private Builder(MasterConfiguration model) {
+                this.amount = model.amount;
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+            } 
+
             /**
              * <p>The configuration of dedicated master nodes.</p>
              * 
@@ -413,6 +452,15 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private Integer disk; 
             private String diskType; 
             private String spec; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeSpec model) {
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+            } 
 
             /**
              * <p>The node specifications.</p>
@@ -605,6 +653,23 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private NodeSpec nodeSpec; 
             private String paymentType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createdAt = model.createdAt;
+                this.description = model.description;
+                this.domain = model.domain;
+                this.esVersion = model.esVersion;
+                this.instanceId = model.instanceId;
+                this.kibanaConfiguration = model.kibanaConfiguration;
+                this.masterConfiguration = model.masterConfiguration;
+                this.nodeAmount = model.nodeAmount;
+                this.nodeSpec = model.nodeSpec;
+                this.paymentType = model.paymentType;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The private domain name of the instance.</p>

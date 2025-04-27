@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListDataStreamsResponseBody(Builder builder) {
         this.headers = builder.headers;
@@ -33,6 +38,10 @@ public class ListDataStreamsResponseBody extends TeaModel {
 
     public static ListDataStreamsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListDataStreamsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private Headers headers; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataStreamsResponseBody model) {
+            this.headers = model.headers;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Headers.
@@ -80,7 +98,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -134,6 +152,14 @@ public class ListDataStreamsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer xManagedCount; 
             private Long xManagedStorageSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.xManagedCount = model.xManagedCount;
+                this.xManagedStorageSize = model.xManagedStorageSize;
+            } 
 
             /**
              * X-Managed-Count.
@@ -250,6 +276,18 @@ public class ListDataStreamsResponseBody extends TeaModel {
             private String name; 
             private Long size; 
 
+            private Builder() {
+            } 
+
+            private Builder(Indices model) {
+                this.createTime = model.createTime;
+                this.health = model.health;
+                this.isManaged = model.isManaged;
+                this.managedStatus = model.managedStatus;
+                this.name = model.name;
+                this.size = model.size;
+            } 
+
             /**
              * createTime.
              */
@@ -322,7 +360,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
         private String indexTemplateName;
 
         @com.aliyun.core.annotation.NameInMap("indices")
-        private java.util.List < Indices> indices;
+        private java.util.List<Indices> indices;
 
         @com.aliyun.core.annotation.NameInMap("managedStorageSize")
         private Long managedStorageSize;
@@ -375,7 +413,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
         /**
          * @return indices
          */
-        public java.util.List < Indices> getIndices() {
+        public java.util.List<Indices> getIndices() {
             return this.indices;
         }
 
@@ -404,10 +442,23 @@ public class ListDataStreamsResponseBody extends TeaModel {
             private String health; 
             private String ilmPolicyName; 
             private String indexTemplateName; 
-            private java.util.List < Indices> indices; 
+            private java.util.List<Indices> indices; 
             private Long managedStorageSize; 
             private String name; 
             private Long totalStorageSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.health = model.health;
+                this.ilmPolicyName = model.ilmPolicyName;
+                this.indexTemplateName = model.indexTemplateName;
+                this.indices = model.indices;
+                this.managedStorageSize = model.managedStorageSize;
+                this.name = model.name;
+                this.totalStorageSize = model.totalStorageSize;
+            } 
 
             /**
              * health.
@@ -436,7 +487,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
             /**
              * indices.
              */
-            public Builder indices(java.util.List < Indices> indices) {
+            public Builder indices(java.util.List<Indices> indices) {
                 this.indices = indices;
                 return this;
             }

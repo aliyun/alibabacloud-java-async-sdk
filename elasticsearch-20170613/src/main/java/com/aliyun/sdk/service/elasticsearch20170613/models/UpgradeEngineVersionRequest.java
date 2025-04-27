@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class UpgradeEngineVersionRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("plugins")
-    private java.util.List < Plugins> plugins;
+    private java.util.List<Plugins> plugins;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("type")
@@ -37,6 +42,10 @@ public class UpgradeEngineVersionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("updateStrategy")
+    private String updateStrategy;
+
     private UpgradeEngineVersionRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
@@ -45,6 +54,7 @@ public class UpgradeEngineVersionRequest extends Request {
         this.version = builder.version;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
+        this.updateStrategy = builder.updateStrategy;
     }
 
     public static Builder builder() {
@@ -55,7 +65,7 @@ public class UpgradeEngineVersionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +80,7 @@ public class UpgradeEngineVersionRequest extends Request {
     /**
      * @return plugins
      */
-    public java.util.List < Plugins> getPlugins() {
+    public java.util.List<Plugins> getPlugins() {
         return this.plugins;
     }
 
@@ -102,13 +112,21 @@ public class UpgradeEngineVersionRequest extends Request {
         return this.dryRun;
     }
 
+    /**
+     * @return updateStrategy
+     */
+    public String getUpdateStrategy() {
+        return this.updateStrategy;
+    }
+
     public static final class Builder extends Request.Builder<UpgradeEngineVersionRequest, Builder> {
         private String instanceId; 
-        private java.util.List < Plugins> plugins; 
+        private java.util.List<Plugins> plugins; 
         private String type; 
         private String version; 
         private String clientToken; 
         private Boolean dryRun; 
+        private String updateStrategy; 
 
         private Builder() {
             super();
@@ -122,6 +140,7 @@ public class UpgradeEngineVersionRequest extends Request {
             this.version = request.version;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
+            this.updateStrategy = request.updateStrategy;
         } 
 
         /**
@@ -140,7 +159,7 @@ public class UpgradeEngineVersionRequest extends Request {
         /**
          * plugins.
          */
-        public Builder plugins(java.util.List < Plugins> plugins) {
+        public Builder plugins(java.util.List<Plugins> plugins) {
             this.putBodyParameter("plugins", plugins);
             this.plugins = plugins;
             return this;
@@ -191,6 +210,15 @@ public class UpgradeEngineVersionRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * updateStrategy.
+         */
+        public Builder updateStrategy(String updateStrategy) {
+            this.putQueryParameter("updateStrategy", updateStrategy);
+            this.updateStrategy = updateStrategy;
             return this;
         }
 
@@ -268,6 +296,16 @@ public class UpgradeEngineVersionRequest extends Request {
             private String fileVersion; 
             private String name; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Plugins model) {
+                this.enable = model.enable;
+                this.fileVersion = model.fileVersion;
+                this.name = model.name;
+                this.version = model.version;
+            } 
 
             /**
              * enable.

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class MigrationJob extends TeaModel {
     private Long startTime;
 
     @com.aliyun.core.annotation.NameInMap("statusResult")
-    private java.util.List < StatusResult> statusResult;
+    private java.util.List<StatusResult> statusResult;
 
     @com.aliyun.core.annotation.NameInMap("targetCluster")
     private TargetCluster targetCluster;
@@ -65,6 +70,10 @@ public class MigrationJob extends TeaModel {
 
     public static MigrationJob create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -126,7 +135,7 @@ public class MigrationJob extends TeaModel {
     /**
      * @return statusResult
      */
-    public java.util.List < StatusResult> getStatusResult() {
+    public java.util.List<StatusResult> getStatusResult() {
         return this.statusResult;
     }
 
@@ -153,9 +162,26 @@ public class MigrationJob extends TeaModel {
         private String phase; 
         private SourceCluster sourceCluster; 
         private Long startTime; 
-        private java.util.List < StatusResult> statusResult; 
+        private java.util.List<StatusResult> statusResult; 
         private TargetCluster targetCluster; 
         private Long updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(MigrationJob model) {
+            this.currentState = model.currentState;
+            this.disableSourceClusterAuth = model.disableSourceClusterAuth;
+            this.disableTargetClusterAuth = model.disableTargetClusterAuth;
+            this.endTime = model.endTime;
+            this.migrationJobId = model.migrationJobId;
+            this.phase = model.phase;
+            this.sourceCluster = model.sourceCluster;
+            this.startTime = model.startTime;
+            this.statusResult = model.statusResult;
+            this.targetCluster = model.targetCluster;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * currentState.
@@ -224,7 +250,7 @@ public class MigrationJob extends TeaModel {
         /**
          * statusResult.
          */
-        public Builder statusResult(java.util.List < StatusResult> statusResult) {
+        public Builder statusResult(java.util.List<StatusResult> statusResult) {
             this.statusResult = statusResult;
             return this;
         }
@@ -295,6 +321,14 @@ public class MigrationJob extends TeaModel {
             private String instanceId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceCluster model) {
+                this.instanceId = model.instanceId;
+                this.type = model.type;
+            } 
+
             /**
              * instanceId.
              */
@@ -362,6 +396,14 @@ public class MigrationJob extends TeaModel {
             private String code; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(StatusResult model) {
+                this.code = model.code;
+                this.success = model.success;
+            } 
+
             /**
              * code.
              */
@@ -428,6 +470,14 @@ public class MigrationJob extends TeaModel {
         public static final class Builder {
             private String instanceId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetCluster model) {
+                this.instanceId = model.instanceId;
+                this.type = model.type;
+            } 
 
             /**
              * instanceId.

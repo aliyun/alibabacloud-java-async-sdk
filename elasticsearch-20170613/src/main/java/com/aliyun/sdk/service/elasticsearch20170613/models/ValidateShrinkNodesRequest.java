@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ValidateShrinkNodesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < ValidateShrinkNodesRequestBody> body;
+    private java.util.List<ValidateShrinkNodesRequestBody> body;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("count")
@@ -51,7 +56,7 @@ public class ValidateShrinkNodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -66,7 +71,7 @@ public class ValidateShrinkNodesRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < ValidateShrinkNodesRequestBody> getBody() {
+    public java.util.List<ValidateShrinkNodesRequestBody> getBody() {
         return this.body;
     }
 
@@ -93,7 +98,7 @@ public class ValidateShrinkNodesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ValidateShrinkNodesRequest, Builder> {
         private String instanceId; 
-        private java.util.List < ValidateShrinkNodesRequestBody> body; 
+        private java.util.List<ValidateShrinkNodesRequestBody> body; 
         private Integer count; 
         private Boolean ignoreStatus; 
         private String nodeType; 
@@ -127,7 +132,7 @@ public class ValidateShrinkNodesRequest extends Request {
         /**
          * body.
          */
-        public Builder body(java.util.List < ValidateShrinkNodesRequestBody> body) {
+        public Builder body(java.util.List<ValidateShrinkNodesRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
@@ -257,6 +262,17 @@ public class ValidateShrinkNodesRequest extends Request {
             private String nodeType; 
             private Integer port; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ValidateShrinkNodesRequestBody model) {
+                this.host = model.host;
+                this.hostName = model.hostName;
+                this.nodeType = model.nodeType;
+                this.port = model.port;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * host.

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class Tag extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return tagKey
      */
@@ -48,6 +57,14 @@ public class Tag extends TeaModel {
     public static final class Builder {
         private String tagKey; 
         private String tagValue; 
+
+        private Builder() {
+        } 
+
+        private Builder(Tag model) {
+            this.tagKey = model.tagKey;
+            this.tagValue = model.tagValue;
+        } 
 
         /**
          * tagKey.

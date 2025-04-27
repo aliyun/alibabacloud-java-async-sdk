@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class UpdateXpackMonitorConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("endpoints")
-    private java.util.List < String > endpoints;
+    private java.util.List<String> endpoints;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("password")
@@ -55,7 +60,7 @@ public class UpdateXpackMonitorConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,7 @@ public class UpdateXpackMonitorConfigRequest extends Request {
     /**
      * @return endpoints
      */
-    public java.util.List < String > getEndpoints() {
+    public java.util.List<String> getEndpoints() {
         return this.endpoints;
     }
 
@@ -106,7 +111,7 @@ public class UpdateXpackMonitorConfigRequest extends Request {
         private String instanceId; 
         private String clientToken; 
         private Boolean enable; 
-        private java.util.List < String > endpoints; 
+        private java.util.List<String> endpoints; 
         private String password; 
         private String userName; 
 
@@ -157,7 +162,7 @@ public class UpdateXpackMonitorConfigRequest extends Request {
         /**
          * endpoints.
          */
-        public Builder endpoints(java.util.List < String > endpoints) {
+        public Builder endpoints(java.util.List<String> endpoints) {
             this.putBodyParameter("endpoints", endpoints);
             this.endpoints = endpoints;
             return this;

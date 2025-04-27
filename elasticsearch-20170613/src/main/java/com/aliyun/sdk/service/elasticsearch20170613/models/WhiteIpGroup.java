@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class WhiteIpGroup extends TeaModel {
     private String groupName;
 
     @com.aliyun.core.annotation.NameInMap("ips")
-    private java.util.List < String > ips;
+    private java.util.List<String> ips;
 
     private WhiteIpGroup(Builder builder) {
         this.whiteIpType = builder.whiteIpType;
@@ -33,6 +38,10 @@ public class WhiteIpGroup extends TeaModel {
 
     public static WhiteIpGroup create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class WhiteIpGroup extends TeaModel {
     /**
      * @return ips
      */
-    public java.util.List < String > getIps() {
+    public java.util.List<String> getIps() {
         return this.ips;
     }
 
     public static final class Builder {
         private String whiteIpType; 
         private String groupName; 
-        private java.util.List < String > ips; 
+        private java.util.List<String> ips; 
+
+        private Builder() {
+        } 
+
+        private Builder(WhiteIpGroup model) {
+            this.whiteIpType = model.whiteIpType;
+            this.groupName = model.groupName;
+            this.ips = model.ips;
+        } 
 
         /**
          * WhiteIpType.
@@ -80,7 +98,7 @@ public class WhiteIpGroup extends TeaModel {
         /**
          * ips.
          */
-        public Builder ips(java.util.List < String > ips) {
+        public Builder ips(java.util.List<String> ips) {
             this.ips = ips;
             return this;
         }

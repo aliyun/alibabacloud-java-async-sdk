@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class UpdatePublicWhiteIpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class UpdatePublicWhiteIpsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdatePublicWhiteIpsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * RequestId.
@@ -79,7 +96,7 @@ public class UpdatePublicWhiteIpsResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("publicIpWhitelist")
-        private java.util.List < String > publicIpWhitelist;
+        private java.util.List<String> publicIpWhitelist;
 
         private Result(Builder builder) {
             this.publicIpWhitelist = builder.publicIpWhitelist;
@@ -96,17 +113,24 @@ public class UpdatePublicWhiteIpsResponseBody extends TeaModel {
         /**
          * @return publicIpWhitelist
          */
-        public java.util.List < String > getPublicIpWhitelist() {
+        public java.util.List<String> getPublicIpWhitelist() {
             return this.publicIpWhitelist;
         }
 
         public static final class Builder {
-            private java.util.List < String > publicIpWhitelist; 
+            private java.util.List<String> publicIpWhitelist; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.publicIpWhitelist = model.publicIpWhitelist;
+            } 
 
             /**
              * publicIpWhitelist.
              */
-            public Builder publicIpWhitelist(java.util.List < String > publicIpWhitelist) {
+            public Builder publicIpWhitelist(java.util.List<String> publicIpWhitelist) {
                 this.publicIpWhitelist = publicIpWhitelist;
                 return this;
             }

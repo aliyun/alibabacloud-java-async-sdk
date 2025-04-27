@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeApmResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class DescribeApmResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApmResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>Request ID.</p>
@@ -321,6 +338,31 @@ public class DescribeApmResponseBody extends TeaModel {
             private String vpcId; 
             private String vsArea; 
             private String vswitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.apmServerDomain = model.apmServerDomain;
+                this.createdAt = model.createdAt;
+                this.deployedReplica = model.deployedReplica;
+                this.description = model.description;
+                this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
+                this.nodeAmount = model.nodeAmount;
+                this.outputES = model.outputES;
+                this.outputESUserName = model.outputESUserName;
+                this.ownerId = model.ownerId;
+                this.paymentType = model.paymentType;
+                this.region = model.region;
+                this.replica = model.replica;
+                this.resourceSpec = model.resourceSpec;
+                this.status = model.status;
+                this.version = model.version;
+                this.vpcId = model.vpcId;
+                this.vsArea = model.vsArea;
+                this.vswitchId = model.vswitchId;
+            } 
 
             /**
              * <p>Instance domain.</p>

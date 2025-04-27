@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class NetworkConfig extends TeaModel {
     private String vswitchId;
 
     @com.aliyun.core.annotation.NameInMap("whiteIpGroupList")
-    private java.util.List < WhiteIpGroup > whiteIpGroupList;
+    private java.util.List<WhiteIpGroup> whiteIpGroupList;
 
     private NetworkConfig(Builder builder) {
         this.type = builder.type;
@@ -41,6 +46,10 @@ public class NetworkConfig extends TeaModel {
 
     public static NetworkConfig create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -74,7 +83,7 @@ public class NetworkConfig extends TeaModel {
     /**
      * @return whiteIpGroupList
      */
-    public java.util.List < WhiteIpGroup > getWhiteIpGroupList() {
+    public java.util.List<WhiteIpGroup> getWhiteIpGroupList() {
         return this.whiteIpGroupList;
     }
 
@@ -83,7 +92,18 @@ public class NetworkConfig extends TeaModel {
         private String vpcId; 
         private String vsArea; 
         private String vswitchId; 
-        private java.util.List < WhiteIpGroup > whiteIpGroupList; 
+        private java.util.List<WhiteIpGroup> whiteIpGroupList; 
+
+        private Builder() {
+        } 
+
+        private Builder(NetworkConfig model) {
+            this.type = model.type;
+            this.vpcId = model.vpcId;
+            this.vsArea = model.vsArea;
+            this.vswitchId = model.vswitchId;
+            this.whiteIpGroupList = model.whiteIpGroupList;
+        } 
 
         /**
          * type.
@@ -120,7 +140,7 @@ public class NetworkConfig extends TeaModel {
         /**
          * whiteIpGroupList.
          */
-        public Builder whiteIpGroupList(java.util.List < WhiteIpGroup > whiteIpGroupList) {
+        public Builder whiteIpGroupList(java.util.List<WhiteIpGroup> whiteIpGroupList) {
             this.whiteIpGroupList = whiteIpGroupList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,11 +30,16 @@ public class UpdateInstanceSettingsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("updateStrategy")
+    private String updateStrategy;
+
     private UpdateInstanceSettingsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.body = builder.body;
         this.clientToken = builder.clientToken;
+        this.updateStrategy = builder.updateStrategy;
     }
 
     public static Builder builder() {
@@ -40,7 +50,7 @@ public class UpdateInstanceSettingsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -66,10 +76,18 @@ public class UpdateInstanceSettingsRequest extends Request {
         return this.clientToken;
     }
 
+    /**
+     * @return updateStrategy
+     */
+    public String getUpdateStrategy() {
+        return this.updateStrategy;
+    }
+
     public static final class Builder extends Request.Builder<UpdateInstanceSettingsRequest, Builder> {
         private String instanceId; 
         private String body; 
         private String clientToken; 
+        private String updateStrategy; 
 
         private Builder() {
             super();
@@ -80,6 +98,7 @@ public class UpdateInstanceSettingsRequest extends Request {
             this.instanceId = request.instanceId;
             this.body = request.body;
             this.clientToken = request.clientToken;
+            this.updateStrategy = request.updateStrategy;
         } 
 
         /**
@@ -113,6 +132,15 @@ public class UpdateInstanceSettingsRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * updateStrategy.
+         */
+        public Builder updateStrategy(String updateStrategy) {
+            this.putQueryParameter("updateStrategy", updateStrategy);
+            this.updateStrategy = updateStrategy;
             return this;
         }
 

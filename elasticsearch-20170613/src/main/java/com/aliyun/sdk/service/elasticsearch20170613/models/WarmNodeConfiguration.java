@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -48,6 +53,10 @@ public class WarmNodeConfiguration extends TeaModel {
 
     public static WarmNodeConfiguration create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -99,6 +108,18 @@ public class WarmNodeConfiguration extends TeaModel {
         private String diskType; 
         private String performanceLevel; 
         private String spec; 
+
+        private Builder() {
+        } 
+
+        private Builder(WarmNodeConfiguration model) {
+            this.amount = model.amount;
+            this.disk = model.disk;
+            this.diskEncryption = model.diskEncryption;
+            this.diskType = model.diskType;
+            this.performanceLevel = model.performanceLevel;
+            this.spec = model.spec;
+        } 
 
         /**
          * amount.

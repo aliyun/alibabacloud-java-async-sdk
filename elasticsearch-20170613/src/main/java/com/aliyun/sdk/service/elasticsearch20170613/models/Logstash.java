@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class Logstash extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("config")
-    private java.util.Map < String, String > config;
+    private java.util.Map<String, String> config;
 
     @com.aliyun.core.annotation.NameInMap("createdAt")
     private String createdAt;
@@ -28,7 +33,7 @@ public class Logstash extends TeaModel {
     private Long endTime;
 
     @com.aliyun.core.annotation.NameInMap("endpointList")
-    private java.util.List < EndpointList> endpointList;
+    private java.util.List<EndpointList> endpointList;
 
     @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
@@ -55,7 +60,7 @@ public class Logstash extends TeaModel {
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private String updatedAt;
@@ -67,7 +72,7 @@ public class Logstash extends TeaModel {
     private Long zoneCount;
 
     @com.aliyun.core.annotation.NameInMap("zoneInfos")
-    private java.util.List < ZoneInfos> zoneInfos;
+    private java.util.List<ZoneInfos> zoneInfos;
 
     private Logstash(Builder builder) {
         this.config = builder.config;
@@ -99,10 +104,14 @@ public class Logstash extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
-    public java.util.Map < String, String > getConfig() {
+    public java.util.Map<String, String> getConfig() {
         return this.config;
     }
 
@@ -137,7 +146,7 @@ public class Logstash extends TeaModel {
     /**
      * @return endpointList
      */
-    public java.util.List < EndpointList> getEndpointList() {
+    public java.util.List<EndpointList> getEndpointList() {
         return this.endpointList;
     }
 
@@ -200,7 +209,7 @@ public class Logstash extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -228,17 +237,17 @@ public class Logstash extends TeaModel {
     /**
      * @return zoneInfos
      */
-    public java.util.List < ZoneInfos> getZoneInfos() {
+    public java.util.List<ZoneInfos> getZoneInfos() {
         return this.zoneInfos;
     }
 
     public static final class Builder {
-        private java.util.Map < String, String > config; 
+        private java.util.Map<String, String> config; 
         private String createdAt; 
         private Boolean dataNode; 
         private String description; 
         private Long endTime; 
-        private java.util.List < EndpointList> endpointList; 
+        private java.util.List<EndpointList> endpointList; 
         private String instanceId; 
         private NetworkConfig networkConfig; 
         private Long nodeAmount; 
@@ -247,16 +256,41 @@ public class Logstash extends TeaModel {
         private String protocol; 
         private String resourceGroupId; 
         private String status; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String updatedAt; 
         private String version; 
         private Long zoneCount; 
-        private java.util.List < ZoneInfos> zoneInfos; 
+        private java.util.List<ZoneInfos> zoneInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(Logstash model) {
+            this.config = model.config;
+            this.createdAt = model.createdAt;
+            this.dataNode = model.dataNode;
+            this.description = model.description;
+            this.endTime = model.endTime;
+            this.endpointList = model.endpointList;
+            this.instanceId = model.instanceId;
+            this.networkConfig = model.networkConfig;
+            this.nodeAmount = model.nodeAmount;
+            this.nodeSpec = model.nodeSpec;
+            this.paymentType = model.paymentType;
+            this.protocol = model.protocol;
+            this.resourceGroupId = model.resourceGroupId;
+            this.status = model.status;
+            this.tags = model.tags;
+            this.updatedAt = model.updatedAt;
+            this.version = model.version;
+            this.zoneCount = model.zoneCount;
+            this.zoneInfos = model.zoneInfos;
+        } 
 
         /**
          * config.
          */
-        public Builder config(java.util.Map < String, String > config) {
+        public Builder config(java.util.Map<String, String> config) {
             this.config = config;
             return this;
         }
@@ -296,7 +330,7 @@ public class Logstash extends TeaModel {
         /**
          * endpointList.
          */
-        public Builder endpointList(java.util.List < EndpointList> endpointList) {
+        public Builder endpointList(java.util.List<EndpointList> endpointList) {
             this.endpointList = endpointList;
             return this;
         }
@@ -368,7 +402,7 @@ public class Logstash extends TeaModel {
         /**
          * tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -400,7 +434,7 @@ public class Logstash extends TeaModel {
         /**
          * zoneInfos.
          */
-        public Builder zoneInfos(java.util.List < ZoneInfos> zoneInfos) {
+        public Builder zoneInfos(java.util.List<ZoneInfos> zoneInfos) {
             this.zoneInfos = zoneInfos;
             return this;
         }
@@ -466,6 +500,15 @@ public class Logstash extends TeaModel {
             private String host; 
             private Long port; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndpointList model) {
+                this.host = model.host;
+                this.port = model.port;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * host.
@@ -566,6 +609,16 @@ public class Logstash extends TeaModel {
             private String vsArea; 
             private String vswitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkConfig model) {
+                this.type = model.type;
+                this.vpcId = model.vpcId;
+                this.vsArea = model.vsArea;
+                this.vswitchId = model.vswitchId;
+            } 
+
             /**
              * type.
              */
@@ -661,6 +714,15 @@ public class Logstash extends TeaModel {
             private String diskType; 
             private String spec; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeSpec model) {
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+            } 
+
             /**
              * disk.
              */
@@ -736,6 +798,14 @@ public class Logstash extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * tagKey.
              */
@@ -802,6 +872,14 @@ public class Logstash extends TeaModel {
         public static final class Builder {
             private String status; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneInfos model) {
+                this.status = model.status;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * status.

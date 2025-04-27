@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class DescribeLogstashResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLogstashResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>Detailed information about the instance.</p>
@@ -117,6 +134,14 @@ public class DescribeLogstashResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The value of the tag.</p>
@@ -190,6 +215,14 @@ public class DescribeLogstashResponseBody extends TeaModel {
         public static final class Builder {
             private String status; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneInfos model) {
+                this.status = model.status;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The zone ID of the new instance.</p>
@@ -275,6 +308,15 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private String host; 
             private String port; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndpointList model) {
+                this.host = model.host;
+                this.port = model.port;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The tags added to the ALB instance.</p>
@@ -383,6 +425,16 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private String vpcId; 
             private String vsArea; 
             private String vswitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkConfig model) {
+                this.type = model.type;
+                this.vpcId = model.vpcId;
+                this.vsArea = model.vsArea;
+                this.vswitchId = model.vswitchId;
+            } 
 
             /**
              * <p>The ID of the vSwitch to which the instance is connected.</p>
@@ -500,6 +552,16 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private String diskType; 
             private String spec; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeSpec model) {
+                this.disk = model.disk;
+                this.diskEncryption = model.diskEncryption;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+            } 
+
             /**
              * <p>Whether to use disk encryption:</p>
              * <ul>
@@ -563,19 +625,19 @@ public class DescribeLogstashResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExtendConfigs")
-        private java.util.List < java.util.Map<String, ?>> extendConfigs;
+        private java.util.List<java.util.Map<String, ?>> extendConfigs;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("ZoneInfos")
-        private java.util.List < ZoneInfos> zoneInfos;
+        private java.util.List<ZoneInfos> zoneInfos;
 
         @com.aliyun.core.annotation.NameInMap("config")
-        private java.util.Map < String, ? > config;
+        private java.util.Map<String, ?> config;
 
         @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
@@ -584,7 +646,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("endpointList")
-        private java.util.List < EndpointList> endpointList;
+        private java.util.List<EndpointList> endpointList;
 
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
@@ -644,7 +706,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         /**
          * @return extendConfigs
          */
-        public java.util.List < java.util.Map<String, ?>> getExtendConfigs() {
+        public java.util.List<java.util.Map<String, ?>> getExtendConfigs() {
             return this.extendConfigs;
         }
 
@@ -658,21 +720,21 @@ public class DescribeLogstashResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         /**
          * @return zoneInfos
          */
-        public java.util.List < ZoneInfos> getZoneInfos() {
+        public java.util.List<ZoneInfos> getZoneInfos() {
             return this.zoneInfos;
         }
 
         /**
          * @return config
          */
-        public java.util.Map < String, ? > getConfig() {
+        public java.util.Map<String, ?> getConfig() {
             return this.config;
         }
 
@@ -693,7 +755,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         /**
          * @return endpointList
          */
-        public java.util.List < EndpointList> getEndpointList() {
+        public java.util.List<EndpointList> getEndpointList() {
             return this.endpointList;
         }
 
@@ -761,14 +823,14 @@ public class DescribeLogstashResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> extendConfigs; 
+            private java.util.List<java.util.Map<String, ?>> extendConfigs; 
             private String resourceGroupId; 
-            private java.util.List < Tags> tags; 
-            private java.util.List < ZoneInfos> zoneInfos; 
-            private java.util.Map < String, ? > config; 
+            private java.util.List<Tags> tags; 
+            private java.util.List<ZoneInfos> zoneInfos; 
+            private java.util.Map<String, ?> config; 
             private String createdAt; 
             private String description; 
-            private java.util.List < EndpointList> endpointList; 
+            private java.util.List<EndpointList> endpointList; 
             private String instanceId; 
             private NetworkConfig networkConfig; 
             private Integer nodeAmount; 
@@ -779,10 +841,33 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private String version; 
             private String vpcInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.extendConfigs = model.extendConfigs;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+                this.zoneInfos = model.zoneInfos;
+                this.config = model.config;
+                this.createdAt = model.createdAt;
+                this.description = model.description;
+                this.endpointList = model.endpointList;
+                this.instanceId = model.instanceId;
+                this.networkConfig = model.networkConfig;
+                this.nodeAmount = model.nodeAmount;
+                this.nodeSpec = model.nodeSpec;
+                this.paymentType = model.paymentType;
+                this.status = model.status;
+                this.updatedAt = model.updatedAt;
+                this.version = model.version;
+                this.vpcInstanceId = model.vpcInstanceId;
+            } 
+
             /**
              * <p>The configuration information of the node.</p>
              */
-            public Builder extendConfigs(java.util.List < java.util.Map<String, ?>> extendConfigs) {
+            public Builder extendConfigs(java.util.List<java.util.Map<String, ?>> extendConfigs) {
                 this.extendConfigs = extendConfigs;
                 return this;
             }
@@ -801,7 +886,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             /**
              * <p>The key of the tag.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -813,7 +898,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
              * <li>NORMAL</li>
              * </ul>
              */
-            public Builder zoneInfos(java.util.List < ZoneInfos> zoneInfos) {
+            public Builder zoneInfos(java.util.List<ZoneInfos> zoneInfos) {
                 this.zoneInfos = zoneInfos;
                 return this;
             }
@@ -828,7 +913,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;slowlog.threshold.warn&quot;: &quot;2s&quot;,&quot;slowlog.threshold.info&quot;: &quot;1s&quot;,&quot;slowlog.threshold.debug&quot;: &quot;500ms&quot;,&quot;slowlog.threshold.trace&quot;: &quot;100ms&quot; }</p>
              */
-            public Builder config(java.util.Map < String, ? > config) {
+            public Builder config(java.util.Map<String, ?> config) {
                 this.config = config;
                 return this;
             }
@@ -864,7 +949,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             /**
              * <p>The ID of the zone where the node resides.</p>
              */
-            public Builder endpointList(java.util.List < EndpointList> endpointList) {
+            public Builder endpointList(java.util.List<EndpointList> endpointList) {
                 this.endpointList = endpointList;
                 return this;
             }

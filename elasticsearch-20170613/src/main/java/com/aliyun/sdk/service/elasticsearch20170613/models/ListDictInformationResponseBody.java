@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class ListDictInformationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class ListDictInformationResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDictInformationResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * RequestId.
@@ -126,6 +143,15 @@ public class ListDictInformationResponseBody extends TeaModel {
             private String bucketName; 
             private String etag; 
             private String key; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssObject model) {
+                this.bucketName = model.bucketName;
+                this.etag = model.etag;
+                this.key = model.key;
+            } 
 
             /**
              * bucketName.
@@ -213,6 +239,15 @@ public class ListDictInformationResponseBody extends TeaModel {
             private Long fileSize; 
             private OssObject ossObject; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.fileSize = model.fileSize;
+                this.ossObject = model.ossObject;
+                this.type = model.type;
+            } 
 
             /**
              * fileSize.

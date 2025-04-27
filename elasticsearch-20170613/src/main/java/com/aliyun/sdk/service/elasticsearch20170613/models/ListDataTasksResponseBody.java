@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListDataTasksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListDataTasksResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class ListDataTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class ListDataTasksResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataTasksResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +80,7 @@ public class ListDataTasksResponseBody extends TeaModel {
         /**
          * <p>The return results.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -177,6 +194,19 @@ public class ListDataTasksResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcInstanceId; 
             private String vpcInstancePort; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkCluster model) {
+                this.dataSourceType = model.dataSourceType;
+                this.endpoint = model.endpoint;
+                this.index = model.index;
+                this.type = model.type;
+                this.vpcId = model.vpcId;
+                this.vpcInstanceId = model.vpcInstanceId;
+                this.vpcInstancePort = model.vpcInstancePort;
+            } 
 
             /**
              * <p>The type of the target cluster. Default value: elasticsearch.</p>
@@ -354,6 +384,18 @@ public class ListDataTasksResponseBody extends TeaModel {
             private String settings; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceCluster model) {
+                this.dataSourceType = model.dataSourceType;
+                this.index = model.index;
+                this.mapping = model.mapping;
+                this.routing = model.routing;
+                this.settings = model.settings;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The type of the source cluster. Default value: elasticsearch.</p>
              * 
@@ -506,6 +548,17 @@ public class ListDataTasksResponseBody extends TeaModel {
             private SourceCluster sourceCluster; 
             private String status; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createTime = model.createTime;
+                this.sinkCluster = model.sinkCluster;
+                this.sourceCluster = model.sourceCluster;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The time when the site monitoring task was created.</p>

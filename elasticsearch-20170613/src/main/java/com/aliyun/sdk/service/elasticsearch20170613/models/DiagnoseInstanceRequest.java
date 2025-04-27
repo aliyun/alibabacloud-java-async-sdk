@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,11 +28,11 @@ public class DiagnoseInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("diagnoseItems")
-    private java.util.List < String > diagnoseItems;
+    private java.util.List<String> diagnoseItems;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("indices")
-    private java.util.List < String > indices;
+    private java.util.List<String> indices;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("type")
@@ -55,7 +60,7 @@ public class DiagnoseInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -77,14 +82,14 @@ public class DiagnoseInstanceRequest extends Request {
     /**
      * @return diagnoseItems
      */
-    public java.util.List < String > getDiagnoseItems() {
+    public java.util.List<String> getDiagnoseItems() {
         return this.diagnoseItems;
     }
 
     /**
      * @return indices
      */
-    public java.util.List < String > getIndices() {
+    public java.util.List<String> getIndices() {
         return this.indices;
     }
 
@@ -105,8 +110,8 @@ public class DiagnoseInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<DiagnoseInstanceRequest, Builder> {
         private String instanceId; 
         private String clientToken; 
-        private java.util.List < String > diagnoseItems; 
-        private java.util.List < String > indices; 
+        private java.util.List<String> diagnoseItems; 
+        private java.util.List<String> indices; 
         private String type; 
         private String lang; 
 
@@ -152,7 +157,7 @@ public class DiagnoseInstanceRequest extends Request {
         /**
          * diagnoseItems.
          */
-        public Builder diagnoseItems(java.util.List < String > diagnoseItems) {
+        public Builder diagnoseItems(java.util.List<String> diagnoseItems) {
             this.putBodyParameter("diagnoseItems", diagnoseItems);
             this.diagnoseItems = diagnoseItems;
             return this;
@@ -161,7 +166,7 @@ public class DiagnoseInstanceRequest extends Request {
         /**
          * indices.
          */
-        public Builder indices(java.util.List < String > indices) {
+        public Builder indices(java.util.List<String> indices) {
             this.putBodyParameter("indices", indices);
             this.indices = indices;
             return this;

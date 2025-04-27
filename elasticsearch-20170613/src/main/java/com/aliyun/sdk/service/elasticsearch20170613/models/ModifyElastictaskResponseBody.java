@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class ModifyElastictaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class ModifyElastictaskResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyElastictaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * RequestId.
@@ -88,7 +105,7 @@ public class ModifyElastictaskResponseBody extends TeaModel {
         private Integer replicaCount;
 
         @com.aliyun.core.annotation.NameInMap("targetIndices")
-        private java.util.List < String > targetIndices;
+        private java.util.List<String> targetIndices;
 
         @com.aliyun.core.annotation.NameInMap("triggerType")
         private String triggerType;
@@ -133,7 +150,7 @@ public class ModifyElastictaskResponseBody extends TeaModel {
         /**
          * @return targetIndices
          */
-        public java.util.List < String > getTargetIndices() {
+        public java.util.List<String> getTargetIndices() {
             return this.targetIndices;
         }
 
@@ -148,8 +165,19 @@ public class ModifyElastictaskResponseBody extends TeaModel {
             private String cronExpression; 
             private Integer elasticNodeCount; 
             private Integer replicaCount; 
-            private java.util.List < String > targetIndices; 
+            private java.util.List<String> targetIndices; 
             private String triggerType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElasticExpansionTask model) {
+                this.cronExpression = model.cronExpression;
+                this.elasticNodeCount = model.elasticNodeCount;
+                this.replicaCount = model.replicaCount;
+                this.targetIndices = model.targetIndices;
+                this.triggerType = model.triggerType;
+            } 
 
             /**
              * cronExpression.
@@ -178,7 +206,7 @@ public class ModifyElastictaskResponseBody extends TeaModel {
             /**
              * targetIndices.
              */
-            public Builder targetIndices(java.util.List < String > targetIndices) {
+            public Builder targetIndices(java.util.List<String> targetIndices) {
                 this.targetIndices = targetIndices;
                 return this;
             }
@@ -215,7 +243,7 @@ public class ModifyElastictaskResponseBody extends TeaModel {
         private Integer replicaCount;
 
         @com.aliyun.core.annotation.NameInMap("targetIndices")
-        private java.util.List < String > targetIndices;
+        private java.util.List<String> targetIndices;
 
         @com.aliyun.core.annotation.NameInMap("triggerType")
         private String triggerType;
@@ -260,7 +288,7 @@ public class ModifyElastictaskResponseBody extends TeaModel {
         /**
          * @return targetIndices
          */
-        public java.util.List < String > getTargetIndices() {
+        public java.util.List<String> getTargetIndices() {
             return this.targetIndices;
         }
 
@@ -275,8 +303,19 @@ public class ModifyElastictaskResponseBody extends TeaModel {
             private String cronExpression; 
             private Integer elasticNodeCount; 
             private Integer replicaCount; 
-            private java.util.List < String > targetIndices; 
+            private java.util.List<String> targetIndices; 
             private String triggerType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElasticShrinkTask model) {
+                this.cronExpression = model.cronExpression;
+                this.elasticNodeCount = model.elasticNodeCount;
+                this.replicaCount = model.replicaCount;
+                this.targetIndices = model.targetIndices;
+                this.triggerType = model.triggerType;
+            } 
 
             /**
              * cronExpression.
@@ -305,7 +344,7 @@ public class ModifyElastictaskResponseBody extends TeaModel {
             /**
              * targetIndices.
              */
-            public Builder targetIndices(java.util.List < String > targetIndices) {
+            public Builder targetIndices(java.util.List<String> targetIndices) {
                 this.targetIndices = targetIndices;
                 return this;
             }
@@ -368,6 +407,14 @@ public class ModifyElastictaskResponseBody extends TeaModel {
         public static final class Builder {
             private ElasticExpansionTask elasticExpansionTask; 
             private ElasticShrinkTask elasticShrinkTask; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.elasticExpansionTask = model.elasticExpansionTask;
+                this.elasticShrinkTask = model.elasticShrinkTask;
+            } 
 
             /**
              * elasticExpansionTask.

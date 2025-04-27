@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRegionConfigurationResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * RequestId.
@@ -114,6 +131,14 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public static final class Builder {
             private Integer maxAmount; 
             private Integer minAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClientNodeAmountRange model) {
+                this.maxAmount = model.maxAmount;
+                this.minAmount = model.minAmount;
+            } 
 
             /**
              * maxAmount.
@@ -206,6 +231,16 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             private Integer minSize; 
             private Integer scaleLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClientNodeDiskList model) {
+                this.diskType = model.diskType;
+                this.maxSize = model.maxSize;
+                this.minSize = model.minSize;
+                this.scaleLimit = model.scaleLimit;
+            } 
+
             /**
              * diskType.
              */
@@ -265,7 +300,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         private Integer scaleLimit;
 
         @com.aliyun.core.annotation.NameInMap("valueLimitSet")
-        private java.util.List < String > valueLimitSet;
+        private java.util.List<String> valueLimitSet;
 
         private DataDiskList(Builder builder) {
             this.diskType = builder.diskType;
@@ -314,7 +349,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         /**
          * @return valueLimitSet
          */
-        public java.util.List < String > getValueLimitSet() {
+        public java.util.List<String> getValueLimitSet() {
             return this.valueLimitSet;
         }
 
@@ -323,7 +358,18 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             private Integer maxSize; 
             private Integer minSize; 
             private Integer scaleLimit; 
-            private java.util.List < String > valueLimitSet; 
+            private java.util.List<String> valueLimitSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDiskList model) {
+                this.diskType = model.diskType;
+                this.maxSize = model.maxSize;
+                this.minSize = model.minSize;
+                this.scaleLimit = model.scaleLimit;
+                this.valueLimitSet = model.valueLimitSet;
+            } 
 
             /**
              * diskType.
@@ -360,7 +406,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * valueLimitSet.
              */
-            public Builder valueLimitSet(java.util.List < String > valueLimitSet) {
+            public Builder valueLimitSet(java.util.List<String> valueLimitSet) {
                 this.valueLimitSet = valueLimitSet;
                 return this;
             }
@@ -416,6 +462,14 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             private Integer maxAmount; 
             private Integer minAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(AmountRange model) {
+                this.maxAmount = model.maxAmount;
+                this.minAmount = model.minAmount;
+            } 
+
             /**
              * maxAmount.
              */
@@ -462,7 +516,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         private Integer scaleLimit;
 
         @com.aliyun.core.annotation.NameInMap("valueLimitSet")
-        private java.util.List < String > valueLimitSet;
+        private java.util.List<String> valueLimitSet;
 
         private DiskList(Builder builder) {
             this.diskEncryption = builder.diskEncryption;
@@ -519,7 +573,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         /**
          * @return valueLimitSet
          */
-        public java.util.List < String > getValueLimitSet() {
+        public java.util.List<String> getValueLimitSet() {
             return this.valueLimitSet;
         }
 
@@ -529,7 +583,19 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             private Integer maxSize; 
             private Integer minSize; 
             private Integer scaleLimit; 
-            private java.util.List < String > valueLimitSet; 
+            private java.util.List<String> valueLimitSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiskList model) {
+                this.diskEncryption = model.diskEncryption;
+                this.diskType = model.diskType;
+                this.maxSize = model.maxSize;
+                this.minSize = model.minSize;
+                this.scaleLimit = model.scaleLimit;
+                this.valueLimitSet = model.valueLimitSet;
+            } 
 
             /**
              * diskEncryption.
@@ -574,7 +640,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * valueLimitSet.
              */
-            public Builder valueLimitSet(java.util.List < String > valueLimitSet) {
+            public Builder valueLimitSet(java.util.List<String> valueLimitSet) {
                 this.valueLimitSet = valueLimitSet;
                 return this;
             }
@@ -597,10 +663,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         private AmountRange amountRange;
 
         @com.aliyun.core.annotation.NameInMap("diskList")
-        private java.util.List < DiskList> diskList;
+        private java.util.List<DiskList> diskList;
 
         @com.aliyun.core.annotation.NameInMap("spec")
-        private java.util.List < String > spec;
+        private java.util.List<String> spec;
 
         private ElasticNodeProperties(Builder builder) {
             this.amountRange = builder.amountRange;
@@ -626,21 +692,30 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         /**
          * @return diskList
          */
-        public java.util.List < DiskList> getDiskList() {
+        public java.util.List<DiskList> getDiskList() {
             return this.diskList;
         }
 
         /**
          * @return spec
          */
-        public java.util.List < String > getSpec() {
+        public java.util.List<String> getSpec() {
             return this.spec;
         }
 
         public static final class Builder {
             private AmountRange amountRange; 
-            private java.util.List < DiskList> diskList; 
-            private java.util.List < String > spec; 
+            private java.util.List<DiskList> diskList; 
+            private java.util.List<String> spec; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElasticNodeProperties model) {
+                this.amountRange = model.amountRange;
+                this.diskList = model.diskList;
+                this.spec = model.spec;
+            } 
 
             /**
              * amountRange.
@@ -653,7 +728,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * diskList.
              */
-            public Builder diskList(java.util.List < DiskList> diskList) {
+            public Builder diskList(java.util.List<DiskList> diskList) {
                 this.diskList = diskList;
                 return this;
             }
@@ -661,7 +736,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * spec.
              */
-            public Builder spec(java.util.List < String > spec) {
+            public Builder spec(java.util.List<String> spec) {
                 this.spec = spec;
                 return this;
             }
@@ -717,6 +792,14 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(EsVersionsLatestList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * key.
              */
@@ -751,10 +834,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         private Integer memory;
 
         @com.aliyun.core.annotation.NameInMap("supportEsVersions")
-        private java.util.List < String > supportEsVersions;
+        private java.util.List<String> supportEsVersions;
 
         @com.aliyun.core.annotation.NameInMap("supportGcs")
-        private java.util.List < String > supportGcs;
+        private java.util.List<String> supportGcs;
 
         private JvmConfine(Builder builder) {
             this.memory = builder.memory;
@@ -780,21 +863,30 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         /**
          * @return supportEsVersions
          */
-        public java.util.List < String > getSupportEsVersions() {
+        public java.util.List<String> getSupportEsVersions() {
             return this.supportEsVersions;
         }
 
         /**
          * @return supportGcs
          */
-        public java.util.List < String > getSupportGcs() {
+        public java.util.List<String> getSupportGcs() {
             return this.supportGcs;
         }
 
         public static final class Builder {
             private Integer memory; 
-            private java.util.List < String > supportEsVersions; 
-            private java.util.List < String > supportGcs; 
+            private java.util.List<String> supportEsVersions; 
+            private java.util.List<String> supportGcs; 
+
+            private Builder() {
+            } 
+
+            private Builder(JvmConfine model) {
+                this.memory = model.memory;
+                this.supportEsVersions = model.supportEsVersions;
+                this.supportGcs = model.supportGcs;
+            } 
 
             /**
              * memory.
@@ -807,7 +899,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * supportEsVersions.
              */
-            public Builder supportEsVersions(java.util.List < String > supportEsVersions) {
+            public Builder supportEsVersions(java.util.List<String> supportEsVersions) {
                 this.supportEsVersions = supportEsVersions;
                 return this;
             }
@@ -815,7 +907,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * supportGcs.
              */
-            public Builder supportGcs(java.util.List < String > supportGcs) {
+            public Builder supportGcs(java.util.List<String> supportGcs) {
                 this.supportGcs = supportGcs;
                 return this;
             }
@@ -871,6 +963,14 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             private Integer maxAmount; 
             private Integer minAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(KibanaNodePropertiesAmountRange model) {
+                this.maxAmount = model.maxAmount;
+                this.minAmount = model.minAmount;
+            } 
+
             /**
              * maxAmount.
              */
@@ -905,7 +1005,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         private KibanaNodePropertiesAmountRange amountRange;
 
         @com.aliyun.core.annotation.NameInMap("spec")
-        private java.util.List < String > spec;
+        private java.util.List<String> spec;
 
         private KibanaNodeProperties(Builder builder) {
             this.amountRange = builder.amountRange;
@@ -930,13 +1030,21 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         /**
          * @return spec
          */
-        public java.util.List < String > getSpec() {
+        public java.util.List<String> getSpec() {
             return this.spec;
         }
 
         public static final class Builder {
             private KibanaNodePropertiesAmountRange amountRange; 
-            private java.util.List < String > spec; 
+            private java.util.List<String> spec; 
+
+            private Builder() {
+            } 
+
+            private Builder(KibanaNodeProperties model) {
+                this.amountRange = model.amountRange;
+                this.spec = model.spec;
+            } 
 
             /**
              * amountRange.
@@ -949,7 +1057,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * spec.
              */
-            public Builder spec(java.util.List < String > spec) {
+            public Builder spec(java.util.List<String> spec) {
                 this.spec = spec;
                 return this;
             }
@@ -1028,6 +1136,16 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             private Integer maxSize; 
             private Integer minSize; 
             private Integer scaleLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(MasterDiskList model) {
+                this.diskType = model.diskType;
+                this.maxSize = model.maxSize;
+                this.minSize = model.minSize;
+                this.scaleLimit = model.scaleLimit;
+            } 
 
             /**
              * diskType.
@@ -1111,6 +1229,14 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public static final class Builder {
             private Integer maxAmount; 
             private Integer minAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Node model) {
+                this.maxAmount = model.maxAmount;
+                this.minAmount = model.minAmount;
+            } 
 
             /**
              * maxAmount.
@@ -1239,6 +1365,19 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             private String spec; 
             private String specGroupType; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeSpecList model) {
+                this.cpuCount = model.cpuCount;
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.enable = model.enable;
+                this.memorySize = model.memorySize;
+                this.spec = model.spec;
+                this.specGroupType = model.specGroupType;
+            } 
+
             /**
              * cpuCount.
              */
@@ -1346,6 +1485,14 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportVersionList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * key.
              */
@@ -1380,7 +1527,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         private String instanceCategory;
 
         @com.aliyun.core.annotation.NameInMap("supportVersionList")
-        private java.util.List < SupportVersionList> supportVersionList;
+        private java.util.List<SupportVersionList> supportVersionList;
 
         private SupportVersions(Builder builder) {
             this.instanceCategory = builder.instanceCategory;
@@ -1405,13 +1552,21 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         /**
          * @return supportVersionList
          */
-        public java.util.List < SupportVersionList> getSupportVersionList() {
+        public java.util.List<SupportVersionList> getSupportVersionList() {
             return this.supportVersionList;
         }
 
         public static final class Builder {
             private String instanceCategory; 
-            private java.util.List < SupportVersionList> supportVersionList; 
+            private java.util.List<SupportVersionList> supportVersionList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportVersions model) {
+                this.instanceCategory = model.instanceCategory;
+                this.supportVersionList = model.supportVersionList;
+            } 
 
             /**
              * instanceCategory.
@@ -1424,7 +1579,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * supportVersionList.
              */
-            public Builder supportVersionList(java.util.List < SupportVersionList> supportVersionList) {
+            public Builder supportVersionList(java.util.List<SupportVersionList> supportVersionList) {
                 this.supportVersionList = supportVersionList;
                 return this;
             }
@@ -1480,6 +1635,14 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             private Integer maxAmount; 
             private Integer minAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(WarmNodePropertiesAmountRange model) {
+                this.maxAmount = model.maxAmount;
+                this.minAmount = model.minAmount;
+            } 
+
             /**
              * maxAmount.
              */
@@ -1526,7 +1689,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         private Integer scaleLimit;
 
         @com.aliyun.core.annotation.NameInMap("valueLimitSet")
-        private java.util.List < String > valueLimitSet;
+        private java.util.List<String> valueLimitSet;
 
         private WarmNodePropertiesDiskList(Builder builder) {
             this.diskEncryption = builder.diskEncryption;
@@ -1583,7 +1746,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         /**
          * @return valueLimitSet
          */
-        public java.util.List < String > getValueLimitSet() {
+        public java.util.List<String> getValueLimitSet() {
             return this.valueLimitSet;
         }
 
@@ -1593,7 +1756,19 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             private Integer maxSize; 
             private Integer minSize; 
             private Integer scaleLimit; 
-            private java.util.List < String > valueLimitSet; 
+            private java.util.List<String> valueLimitSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(WarmNodePropertiesDiskList model) {
+                this.diskEncryption = model.diskEncryption;
+                this.diskType = model.diskType;
+                this.maxSize = model.maxSize;
+                this.minSize = model.minSize;
+                this.scaleLimit = model.scaleLimit;
+                this.valueLimitSet = model.valueLimitSet;
+            } 
 
             /**
              * diskEncryption.
@@ -1638,7 +1813,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * valueLimitSet.
              */
-            public Builder valueLimitSet(java.util.List < String > valueLimitSet) {
+            public Builder valueLimitSet(java.util.List<String> valueLimitSet) {
                 this.valueLimitSet = valueLimitSet;
                 return this;
             }
@@ -1661,10 +1836,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         private WarmNodePropertiesAmountRange amountRange;
 
         @com.aliyun.core.annotation.NameInMap("diskList")
-        private java.util.List < WarmNodePropertiesDiskList> diskList;
+        private java.util.List<WarmNodePropertiesDiskList> diskList;
 
         @com.aliyun.core.annotation.NameInMap("spec")
-        private java.util.List < String > spec;
+        private java.util.List<String> spec;
 
         private WarmNodeProperties(Builder builder) {
             this.amountRange = builder.amountRange;
@@ -1690,21 +1865,30 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         /**
          * @return diskList
          */
-        public java.util.List < WarmNodePropertiesDiskList> getDiskList() {
+        public java.util.List<WarmNodePropertiesDiskList> getDiskList() {
             return this.diskList;
         }
 
         /**
          * @return spec
          */
-        public java.util.List < String > getSpec() {
+        public java.util.List<String> getSpec() {
             return this.spec;
         }
 
         public static final class Builder {
             private WarmNodePropertiesAmountRange amountRange; 
-            private java.util.List < WarmNodePropertiesDiskList> diskList; 
-            private java.util.List < String > spec; 
+            private java.util.List<WarmNodePropertiesDiskList> diskList; 
+            private java.util.List<String> spec; 
+
+            private Builder() {
+            } 
+
+            private Builder(WarmNodeProperties model) {
+                this.amountRange = model.amountRange;
+                this.diskList = model.diskList;
+                this.spec = model.spec;
+            } 
 
             /**
              * amountRange.
@@ -1717,7 +1901,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * diskList.
              */
-            public Builder diskList(java.util.List < WarmNodePropertiesDiskList> diskList) {
+            public Builder diskList(java.util.List<WarmNodePropertiesDiskList> diskList) {
                 this.diskList = diskList;
                 return this;
             }
@@ -1725,7 +1909,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * spec.
              */
-            public Builder spec(java.util.List < String > spec) {
+            public Builder spec(java.util.List<String> spec) {
                 this.spec = spec;
                 return this;
             }
@@ -1748,16 +1932,16 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         private ClientNodeAmountRange clientNodeAmountRange;
 
         @com.aliyun.core.annotation.NameInMap("clientNodeDiskList")
-        private java.util.List < ClientNodeDiskList> clientNodeDiskList;
+        private java.util.List<ClientNodeDiskList> clientNodeDiskList;
 
         @com.aliyun.core.annotation.NameInMap("clientNodeSpec")
-        private java.util.List < String > clientNodeSpec;
+        private java.util.List<String> clientNodeSpec;
 
         @com.aliyun.core.annotation.NameInMap("createUrl")
         private String createUrl;
 
         @com.aliyun.core.annotation.NameInMap("dataDiskList")
-        private java.util.List < DataDiskList> dataDiskList;
+        private java.util.List<DataDiskList> dataDiskList;
 
         @com.aliyun.core.annotation.NameInMap("elasticNodeProperties")
         private ElasticNodeProperties elasticNodeProperties;
@@ -1766,13 +1950,13 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         private String env;
 
         @com.aliyun.core.annotation.NameInMap("esVersions")
-        private java.util.List < String > esVersions;
+        private java.util.List<String> esVersions;
 
         @com.aliyun.core.annotation.NameInMap("esVersionsLatestList")
-        private java.util.List < EsVersionsLatestList> esVersionsLatestList;
+        private java.util.List<EsVersionsLatestList> esVersionsLatestList;
 
         @com.aliyun.core.annotation.NameInMap("instanceSupportNodes")
-        private java.util.List < String > instanceSupportNodes;
+        private java.util.List<String> instanceSupportNodes;
 
         @com.aliyun.core.annotation.NameInMap("jvmConfine")
         private JvmConfine jvmConfine;
@@ -1781,31 +1965,31 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         private KibanaNodeProperties kibanaNodeProperties;
 
         @com.aliyun.core.annotation.NameInMap("logstashZones")
-        private java.util.List < String > logstashZones;
+        private java.util.List<String> logstashZones;
 
         @com.aliyun.core.annotation.NameInMap("masterDiskList")
-        private java.util.List < MasterDiskList> masterDiskList;
+        private java.util.List<MasterDiskList> masterDiskList;
 
         @com.aliyun.core.annotation.NameInMap("masterSpec")
-        private java.util.List < String > masterSpec;
+        private java.util.List<String> masterSpec;
 
         @com.aliyun.core.annotation.NameInMap("node")
         private Node node;
 
         @com.aliyun.core.annotation.NameInMap("nodeSpecList")
-        private java.util.List < NodeSpecList> nodeSpecList;
+        private java.util.List<NodeSpecList> nodeSpecList;
 
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("supportVersions")
-        private java.util.List < SupportVersions> supportVersions;
+        private java.util.List<SupportVersions> supportVersions;
 
         @com.aliyun.core.annotation.NameInMap("warmNodeProperties")
         private WarmNodeProperties warmNodeProperties;
 
         @com.aliyun.core.annotation.NameInMap("zones")
-        private java.util.List < String > zones;
+        private java.util.List<String> zones;
 
         private Result(Builder builder) {
             this.clientNodeAmountRange = builder.clientNodeAmountRange;
@@ -1849,14 +2033,14 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         /**
          * @return clientNodeDiskList
          */
-        public java.util.List < ClientNodeDiskList> getClientNodeDiskList() {
+        public java.util.List<ClientNodeDiskList> getClientNodeDiskList() {
             return this.clientNodeDiskList;
         }
 
         /**
          * @return clientNodeSpec
          */
-        public java.util.List < String > getClientNodeSpec() {
+        public java.util.List<String> getClientNodeSpec() {
             return this.clientNodeSpec;
         }
 
@@ -1870,7 +2054,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         /**
          * @return dataDiskList
          */
-        public java.util.List < DataDiskList> getDataDiskList() {
+        public java.util.List<DataDiskList> getDataDiskList() {
             return this.dataDiskList;
         }
 
@@ -1891,21 +2075,21 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         /**
          * @return esVersions
          */
-        public java.util.List < String > getEsVersions() {
+        public java.util.List<String> getEsVersions() {
             return this.esVersions;
         }
 
         /**
          * @return esVersionsLatestList
          */
-        public java.util.List < EsVersionsLatestList> getEsVersionsLatestList() {
+        public java.util.List<EsVersionsLatestList> getEsVersionsLatestList() {
             return this.esVersionsLatestList;
         }
 
         /**
          * @return instanceSupportNodes
          */
-        public java.util.List < String > getInstanceSupportNodes() {
+        public java.util.List<String> getInstanceSupportNodes() {
             return this.instanceSupportNodes;
         }
 
@@ -1926,21 +2110,21 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         /**
          * @return logstashZones
          */
-        public java.util.List < String > getLogstashZones() {
+        public java.util.List<String> getLogstashZones() {
             return this.logstashZones;
         }
 
         /**
          * @return masterDiskList
          */
-        public java.util.List < MasterDiskList> getMasterDiskList() {
+        public java.util.List<MasterDiskList> getMasterDiskList() {
             return this.masterDiskList;
         }
 
         /**
          * @return masterSpec
          */
-        public java.util.List < String > getMasterSpec() {
+        public java.util.List<String> getMasterSpec() {
             return this.masterSpec;
         }
 
@@ -1954,7 +2138,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         /**
          * @return nodeSpecList
          */
-        public java.util.List < NodeSpecList> getNodeSpecList() {
+        public java.util.List<NodeSpecList> getNodeSpecList() {
             return this.nodeSpecList;
         }
 
@@ -1968,7 +2152,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         /**
          * @return supportVersions
          */
-        public java.util.List < SupportVersions> getSupportVersions() {
+        public java.util.List<SupportVersions> getSupportVersions() {
             return this.supportVersions;
         }
 
@@ -1982,32 +2166,59 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         /**
          * @return zones
          */
-        public java.util.List < String > getZones() {
+        public java.util.List<String> getZones() {
             return this.zones;
         }
 
         public static final class Builder {
             private ClientNodeAmountRange clientNodeAmountRange; 
-            private java.util.List < ClientNodeDiskList> clientNodeDiskList; 
-            private java.util.List < String > clientNodeSpec; 
+            private java.util.List<ClientNodeDiskList> clientNodeDiskList; 
+            private java.util.List<String> clientNodeSpec; 
             private String createUrl; 
-            private java.util.List < DataDiskList> dataDiskList; 
+            private java.util.List<DataDiskList> dataDiskList; 
             private ElasticNodeProperties elasticNodeProperties; 
             private String env; 
-            private java.util.List < String > esVersions; 
-            private java.util.List < EsVersionsLatestList> esVersionsLatestList; 
-            private java.util.List < String > instanceSupportNodes; 
+            private java.util.List<String> esVersions; 
+            private java.util.List<EsVersionsLatestList> esVersionsLatestList; 
+            private java.util.List<String> instanceSupportNodes; 
             private JvmConfine jvmConfine; 
             private KibanaNodeProperties kibanaNodeProperties; 
-            private java.util.List < String > logstashZones; 
-            private java.util.List < MasterDiskList> masterDiskList; 
-            private java.util.List < String > masterSpec; 
+            private java.util.List<String> logstashZones; 
+            private java.util.List<MasterDiskList> masterDiskList; 
+            private java.util.List<String> masterSpec; 
             private Node node; 
-            private java.util.List < NodeSpecList> nodeSpecList; 
+            private java.util.List<NodeSpecList> nodeSpecList; 
             private String regionId; 
-            private java.util.List < SupportVersions> supportVersions; 
+            private java.util.List<SupportVersions> supportVersions; 
             private WarmNodeProperties warmNodeProperties; 
-            private java.util.List < String > zones; 
+            private java.util.List<String> zones; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.clientNodeAmountRange = model.clientNodeAmountRange;
+                this.clientNodeDiskList = model.clientNodeDiskList;
+                this.clientNodeSpec = model.clientNodeSpec;
+                this.createUrl = model.createUrl;
+                this.dataDiskList = model.dataDiskList;
+                this.elasticNodeProperties = model.elasticNodeProperties;
+                this.env = model.env;
+                this.esVersions = model.esVersions;
+                this.esVersionsLatestList = model.esVersionsLatestList;
+                this.instanceSupportNodes = model.instanceSupportNodes;
+                this.jvmConfine = model.jvmConfine;
+                this.kibanaNodeProperties = model.kibanaNodeProperties;
+                this.logstashZones = model.logstashZones;
+                this.masterDiskList = model.masterDiskList;
+                this.masterSpec = model.masterSpec;
+                this.node = model.node;
+                this.nodeSpecList = model.nodeSpecList;
+                this.regionId = model.regionId;
+                this.supportVersions = model.supportVersions;
+                this.warmNodeProperties = model.warmNodeProperties;
+                this.zones = model.zones;
+            } 
 
             /**
              * clientNodeAmountRange.
@@ -2020,7 +2231,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * clientNodeDiskList.
              */
-            public Builder clientNodeDiskList(java.util.List < ClientNodeDiskList> clientNodeDiskList) {
+            public Builder clientNodeDiskList(java.util.List<ClientNodeDiskList> clientNodeDiskList) {
                 this.clientNodeDiskList = clientNodeDiskList;
                 return this;
             }
@@ -2028,7 +2239,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * clientNodeSpec.
              */
-            public Builder clientNodeSpec(java.util.List < String > clientNodeSpec) {
+            public Builder clientNodeSpec(java.util.List<String> clientNodeSpec) {
                 this.clientNodeSpec = clientNodeSpec;
                 return this;
             }
@@ -2044,7 +2255,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * dataDiskList.
              */
-            public Builder dataDiskList(java.util.List < DataDiskList> dataDiskList) {
+            public Builder dataDiskList(java.util.List<DataDiskList> dataDiskList) {
                 this.dataDiskList = dataDiskList;
                 return this;
             }
@@ -2068,7 +2279,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * esVersions.
              */
-            public Builder esVersions(java.util.List < String > esVersions) {
+            public Builder esVersions(java.util.List<String> esVersions) {
                 this.esVersions = esVersions;
                 return this;
             }
@@ -2076,7 +2287,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * esVersionsLatestList.
              */
-            public Builder esVersionsLatestList(java.util.List < EsVersionsLatestList> esVersionsLatestList) {
+            public Builder esVersionsLatestList(java.util.List<EsVersionsLatestList> esVersionsLatestList) {
                 this.esVersionsLatestList = esVersionsLatestList;
                 return this;
             }
@@ -2084,7 +2295,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * instanceSupportNodes.
              */
-            public Builder instanceSupportNodes(java.util.List < String > instanceSupportNodes) {
+            public Builder instanceSupportNodes(java.util.List<String> instanceSupportNodes) {
                 this.instanceSupportNodes = instanceSupportNodes;
                 return this;
             }
@@ -2108,7 +2319,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * logstashZones.
              */
-            public Builder logstashZones(java.util.List < String > logstashZones) {
+            public Builder logstashZones(java.util.List<String> logstashZones) {
                 this.logstashZones = logstashZones;
                 return this;
             }
@@ -2116,7 +2327,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * masterDiskList.
              */
-            public Builder masterDiskList(java.util.List < MasterDiskList> masterDiskList) {
+            public Builder masterDiskList(java.util.List<MasterDiskList> masterDiskList) {
                 this.masterDiskList = masterDiskList;
                 return this;
             }
@@ -2124,7 +2335,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * masterSpec.
              */
-            public Builder masterSpec(java.util.List < String > masterSpec) {
+            public Builder masterSpec(java.util.List<String> masterSpec) {
                 this.masterSpec = masterSpec;
                 return this;
             }
@@ -2140,7 +2351,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * nodeSpecList.
              */
-            public Builder nodeSpecList(java.util.List < NodeSpecList> nodeSpecList) {
+            public Builder nodeSpecList(java.util.List<NodeSpecList> nodeSpecList) {
                 this.nodeSpecList = nodeSpecList;
                 return this;
             }
@@ -2156,7 +2367,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * supportVersions.
              */
-            public Builder supportVersions(java.util.List < SupportVersions> supportVersions) {
+            public Builder supportVersions(java.util.List<SupportVersions> supportVersions) {
                 this.supportVersions = supportVersions;
                 return this;
             }
@@ -2172,7 +2383,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             /**
              * zones.
              */
-            public Builder zones(java.util.List < String > zones) {
+            public Builder zones(java.util.List<String> zones) {
                 this.zones = zones;
                 return this;
             }

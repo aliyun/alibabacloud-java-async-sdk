@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -21,7 +26,7 @@ public class CollectorTargetInstance extends TeaModel {
     private Boolean enableMonitoring;
 
     @com.aliyun.core.annotation.NameInMap("hosts")
-    private java.util.List < String > hosts;
+    private java.util.List<String> hosts;
 
     @com.aliyun.core.annotation.NameInMap("instanceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -62,6 +67,10 @@ public class CollectorTargetInstance extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configType
      */
@@ -79,7 +88,7 @@ public class CollectorTargetInstance extends TeaModel {
     /**
      * @return hosts
      */
-    public java.util.List < String > getHosts() {
+    public java.util.List<String> getHosts() {
         return this.hosts;
     }
 
@@ -121,12 +130,26 @@ public class CollectorTargetInstance extends TeaModel {
     public static final class Builder {
         private String configType; 
         private Boolean enableMonitoring; 
-        private java.util.List < String > hosts; 
+        private java.util.List<String> hosts; 
         private String instanceId; 
         private String instanceType; 
         private String password; 
         private String protocol; 
         private String userName; 
+
+        private Builder() {
+        } 
+
+        private Builder(CollectorTargetInstance model) {
+            this.configType = model.configType;
+            this.enableMonitoring = model.enableMonitoring;
+            this.hosts = model.hosts;
+            this.instanceId = model.instanceId;
+            this.instanceType = model.instanceType;
+            this.password = model.password;
+            this.protocol = model.protocol;
+            this.userName = model.userName;
+        } 
 
         /**
          * <p>This parameter is required.</p>
@@ -153,7 +176,7 @@ public class CollectorTargetInstance extends TeaModel {
         /**
          * hosts.
          */
-        public Builder hosts(java.util.List < String > hosts) {
+        public Builder hosts(java.util.List<String> hosts) {
             this.hosts = hosts;
             return this;
         }

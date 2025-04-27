@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private UpgradeEngineVersionResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpgradeEngineVersionResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The verification information.</p>
@@ -70,7 +87,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
          * <li>clusterSnapshot: cluster snapshot</li>
          * </ul>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -137,6 +154,15 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
             private String errorMsg; 
             private String errorType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ValidateResult model) {
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+                this.errorType = model.errorType;
+            } 
+
             /**
              * errorCode.
              */
@@ -186,7 +212,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("validateResult")
-        private java.util.List < ValidateResult> validateResult;
+        private java.util.List<ValidateResult> validateResult;
 
         @com.aliyun.core.annotation.NameInMap("validateType")
         private String validateType;
@@ -215,7 +241,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         /**
          * @return validateResult
          */
-        public java.util.List < ValidateResult> getValidateResult() {
+        public java.util.List<ValidateResult> getValidateResult() {
             return this.validateResult;
         }
 
@@ -228,8 +254,17 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
 
         public static final class Builder {
             private String status; 
-            private java.util.List < ValidateResult> validateResult; 
+            private java.util.List<ValidateResult> validateResult; 
             private String validateType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.status = model.status;
+                this.validateResult = model.validateResult;
+                this.validateType = model.validateType;
+            } 
 
             /**
              * status.
@@ -242,7 +277,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
             /**
              * <p>The error message returned.</p>
              */
-            public Builder validateResult(java.util.List < ValidateResult> validateResult) {
+            public Builder validateResult(java.util.List<ValidateResult> validateResult) {
                 this.validateResult = validateResult;
                 return this;
             }

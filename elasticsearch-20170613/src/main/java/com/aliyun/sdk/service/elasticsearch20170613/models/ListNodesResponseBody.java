@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListNodesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListNodesResponseBody(Builder builder) {
         this.headers = builder.headers;
@@ -33,6 +38,10 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static ListNodesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListNodesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private Headers headers; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNodesResponseBody model) {
+            this.headers = model.headers;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The header of the response.</p>
@@ -83,7 +101,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * <p>The returned result.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -125,6 +143,13 @@ public class ListNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer xTotalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.xTotalCount = model.xTotalCount;
+            } 
 
             /**
              * <p>The number of entries returned.</p>
@@ -187,6 +212,14 @@ public class ListNodesResponseBody extends TeaModel {
         public static final class Builder {
             private String host; 
             private String ipType; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpAddress model) {
+                this.host = model.host;
+                this.ipType = model.ipType;
+            } 
 
             /**
              * <p>The IP address.</p>
@@ -265,6 +298,14 @@ public class ListNodesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -314,7 +355,7 @@ public class ListNodesResponseBody extends TeaModel {
         private String ecsInstanceName;
 
         @com.aliyun.core.annotation.NameInMap("ipAddress")
-        private java.util.List < IpAddress> ipAddress;
+        private java.util.List<IpAddress> ipAddress;
 
         @com.aliyun.core.annotation.NameInMap("osType")
         private String osType;
@@ -323,7 +364,7 @@ public class ListNodesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private Result(Builder builder) {
             this.agentStatus = builder.agentStatus;
@@ -375,7 +416,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * @return ipAddress
          */
-        public java.util.List < IpAddress> getIpAddress() {
+        public java.util.List<IpAddress> getIpAddress() {
             return this.ipAddress;
         }
 
@@ -396,7 +437,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -405,10 +446,24 @@ public class ListNodesResponseBody extends TeaModel {
             private String cloudAssistantStatus; 
             private String ecsInstanceId; 
             private String ecsInstanceName; 
-            private java.util.List < IpAddress> ipAddress; 
+            private java.util.List<IpAddress> ipAddress; 
             private String osType; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.agentStatus = model.agentStatus;
+                this.cloudAssistantStatus = model.cloudAssistantStatus;
+                this.ecsInstanceId = model.ecsInstanceId;
+                this.ecsInstanceName = model.ecsInstanceName;
+                this.ipAddress = model.ipAddress;
+                this.osType = model.osType;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The status of the shipper on the ECS instance. Valid values:</p>
@@ -467,7 +522,7 @@ public class ListNodesResponseBody extends TeaModel {
             /**
              * <p>The IP addresses of the ECS instance.</p>
              */
-            public Builder ipAddress(java.util.List < IpAddress> ipAddress) {
+            public Builder ipAddress(java.util.List<IpAddress> ipAddress) {
                 this.ipAddress = ipAddress;
                 return this;
             }
@@ -507,7 +562,7 @@ public class ListNodesResponseBody extends TeaModel {
             /**
              * <p>The tags of the ECS instance.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class CreateComponentIndexRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("_meta")
-    private java.util.Map < String, ? > meta;
+    private java.util.Map<String, ?> meta;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("template")
@@ -46,7 +51,7 @@ public class CreateComponentIndexRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +73,7 @@ public class CreateComponentIndexRequest extends Request {
     /**
      * @return meta
      */
-    public java.util.Map < String, ? > getMeta() {
+    public java.util.Map<String, ?> getMeta() {
         return this.meta;
     }
 
@@ -82,7 +87,7 @@ public class CreateComponentIndexRequest extends Request {
     public static final class Builder extends Request.Builder<CreateComponentIndexRequest, Builder> {
         private String instanceId; 
         private String name; 
-        private java.util.Map < String, ? > meta; 
+        private java.util.Map<String, ?> meta; 
         private Template template; 
 
         private Builder() {
@@ -124,7 +129,7 @@ public class CreateComponentIndexRequest extends Request {
         /**
          * _meta.
          */
-        public Builder meta(java.util.Map < String, ? > meta) {
+        public Builder meta(java.util.Map<String, ?> meta) {
             this.putBodyParameter("_meta", meta);
             this.meta = meta;
             return this;
@@ -154,13 +159,13 @@ public class CreateComponentIndexRequest extends Request {
      */
     public static class Template extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliases")
-        private java.util.Map < String, ? > aliases;
+        private java.util.Map<String, ?> aliases;
 
         @com.aliyun.core.annotation.NameInMap("mappings")
-        private java.util.Map < String, ? > mappings;
+        private java.util.Map<String, ?> mappings;
 
         @com.aliyun.core.annotation.NameInMap("settings")
-        private java.util.Map < String, ? > settings;
+        private java.util.Map<String, ?> settings;
 
         private Template(Builder builder) {
             this.aliases = builder.aliases;
@@ -179,33 +184,42 @@ public class CreateComponentIndexRequest extends Request {
         /**
          * @return aliases
          */
-        public java.util.Map < String, ? > getAliases() {
+        public java.util.Map<String, ?> getAliases() {
             return this.aliases;
         }
 
         /**
          * @return mappings
          */
-        public java.util.Map < String, ? > getMappings() {
+        public java.util.Map<String, ?> getMappings() {
             return this.mappings;
         }
 
         /**
          * @return settings
          */
-        public java.util.Map < String, ? > getSettings() {
+        public java.util.Map<String, ?> getSettings() {
             return this.settings;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > aliases; 
-            private java.util.Map < String, ? > mappings; 
-            private java.util.Map < String, ? > settings; 
+            private java.util.Map<String, ?> aliases; 
+            private java.util.Map<String, ?> mappings; 
+            private java.util.Map<String, ?> settings; 
+
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.aliases = model.aliases;
+                this.mappings = model.mappings;
+                this.settings = model.settings;
+            } 
 
             /**
              * aliases.
              */
-            public Builder aliases(java.util.Map < String, ? > aliases) {
+            public Builder aliases(java.util.Map<String, ?> aliases) {
                 this.aliases = aliases;
                 return this;
             }
@@ -213,7 +227,7 @@ public class CreateComponentIndexRequest extends Request {
             /**
              * mappings.
              */
-            public Builder mappings(java.util.Map < String, ? > mappings) {
+            public Builder mappings(java.util.Map<String, ?> mappings) {
                 this.mappings = mappings;
                 return this;
             }
@@ -221,7 +235,7 @@ public class CreateComponentIndexRequest extends Request {
             /**
              * settings.
              */
-            public Builder settings(java.util.Map < String, ? > settings) {
+            public Builder settings(java.util.Map<String, ?> settings) {
                 this.settings = settings;
                 return this;
             }

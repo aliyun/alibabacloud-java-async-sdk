@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CapacityPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class CapacityPlanResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(CapacityPlanResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>ID of the current request.</p>
@@ -129,6 +146,15 @@ public class CapacityPlanResponseBody extends TeaModel {
             private String configType; 
             private Long disk; 
             private String diskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtendConfigs model) {
+                this.configType = model.configType;
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+            } 
 
             /**
              * <p>Configuration type, with a single value: sharedDisk.</p>
@@ -268,6 +294,18 @@ public class CapacityPlanResponseBody extends TeaModel {
             private Long memory; 
             private String nodeType; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeConfigurations model) {
+                this.amount = model.amount;
+                this.cpu = model.cpu;
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.memory = model.memory;
+                this.nodeType = model.nodeType;
+            } 
+
             /**
              * <p>Number of nodes.</p>
              * 
@@ -375,13 +413,13 @@ public class CapacityPlanResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExtendConfigs")
-        private java.util.List < ExtendConfigs> extendConfigs;
+        private java.util.List<ExtendConfigs> extendConfigs;
 
         @com.aliyun.core.annotation.NameInMap("InstanceCategory")
         private String instanceCategory;
 
         @com.aliyun.core.annotation.NameInMap("NodeConfigurations")
-        private java.util.List < NodeConfigurations> nodeConfigurations;
+        private java.util.List<NodeConfigurations> nodeConfigurations;
 
         @com.aliyun.core.annotation.NameInMap("OversizedCluster")
         private Boolean oversizedCluster;
@@ -404,7 +442,7 @@ public class CapacityPlanResponseBody extends TeaModel {
         /**
          * @return extendConfigs
          */
-        public java.util.List < ExtendConfigs> getExtendConfigs() {
+        public java.util.List<ExtendConfigs> getExtendConfigs() {
             return this.extendConfigs;
         }
 
@@ -418,7 +456,7 @@ public class CapacityPlanResponseBody extends TeaModel {
         /**
          * @return nodeConfigurations
          */
-        public java.util.List < NodeConfigurations> getNodeConfigurations() {
+        public java.util.List<NodeConfigurations> getNodeConfigurations() {
             return this.nodeConfigurations;
         }
 
@@ -430,15 +468,25 @@ public class CapacityPlanResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ExtendConfigs> extendConfigs; 
+            private java.util.List<ExtendConfigs> extendConfigs; 
             private String instanceCategory; 
-            private java.util.List < NodeConfigurations> nodeConfigurations; 
+            private java.util.List<NodeConfigurations> nodeConfigurations; 
             private Boolean oversizedCluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.extendConfigs = model.extendConfigs;
+                this.instanceCategory = model.instanceCategory;
+                this.nodeConfigurations = model.nodeConfigurations;
+                this.oversizedCluster = model.oversizedCluster;
+            } 
 
             /**
              * <p>Extended configuration information.</p>
              */
-            public Builder extendConfigs(java.util.List < ExtendConfigs> extendConfigs) {
+            public Builder extendConfigs(java.util.List<ExtendConfigs> extendConfigs) {
                 this.extendConfigs = extendConfigs;
                 return this;
             }
@@ -465,7 +513,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             /**
              * <p>Node information.</p>
              */
-            public Builder nodeConfigurations(java.util.List < NodeConfigurations> nodeConfigurations) {
+            public Builder nodeConfigurations(java.util.List<NodeConfigurations> nodeConfigurations) {
                 this.nodeConfigurations = nodeConfigurations;
                 return this;
             }

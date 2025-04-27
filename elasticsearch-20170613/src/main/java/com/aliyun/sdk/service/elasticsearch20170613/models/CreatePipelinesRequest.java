@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class CreatePipelinesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < CreatePipelinesRequestBody> body;
+    private java.util.List<CreatePipelinesRequestBody> body;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("trigger")
@@ -45,7 +50,7 @@ public class CreatePipelinesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -67,7 +72,7 @@ public class CreatePipelinesRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < CreatePipelinesRequestBody> getBody() {
+    public java.util.List<CreatePipelinesRequestBody> getBody() {
         return this.body;
     }
 
@@ -81,7 +86,7 @@ public class CreatePipelinesRequest extends Request {
     public static final class Builder extends Request.Builder<CreatePipelinesRequest, Builder> {
         private String instanceId; 
         private String clientToken; 
-        private java.util.List < CreatePipelinesRequestBody> body; 
+        private java.util.List<CreatePipelinesRequestBody> body; 
         private Boolean trigger; 
 
         private Builder() {
@@ -120,7 +125,7 @@ public class CreatePipelinesRequest extends Request {
         /**
          * body.
          */
-        public Builder body(java.util.List < CreatePipelinesRequestBody> body) {
+        public Builder body(java.util.List<CreatePipelinesRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
@@ -271,6 +276,21 @@ public class CreatePipelinesRequest extends Request {
             private Integer queueMaxBytes; 
             private String queueType; 
             private Integer workers; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreatePipelinesRequestBody model) {
+                this.batchDelay = model.batchDelay;
+                this.batchSize = model.batchSize;
+                this.config = model.config;
+                this.description = model.description;
+                this.pipelineId = model.pipelineId;
+                this.queueCheckPointWrites = model.queueCheckPointWrites;
+                this.queueMaxBytes = model.queueMaxBytes;
+                this.queueType = model.queueType;
+                this.workers = model.workers;
+            } 
 
             /**
              * batchDelay.

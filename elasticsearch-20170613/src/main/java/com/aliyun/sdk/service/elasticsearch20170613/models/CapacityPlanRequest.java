@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,11 +23,11 @@ public class CapacityPlanRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dataInfo")
-    private java.util.List < DataInfo> dataInfo;
+    private java.util.List<DataInfo> dataInfo;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("metric")
-    private java.util.List < Metric> metric;
+    private java.util.List<Metric> metric;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("usageScenario")
@@ -44,7 +49,7 @@ public class CapacityPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,14 +64,14 @@ public class CapacityPlanRequest extends Request {
     /**
      * @return dataInfo
      */
-    public java.util.List < DataInfo> getDataInfo() {
+    public java.util.List<DataInfo> getDataInfo() {
         return this.dataInfo;
     }
 
     /**
      * @return metric
      */
-    public java.util.List < Metric> getMetric() {
+    public java.util.List<Metric> getMetric() {
         return this.metric;
     }
 
@@ -79,8 +84,8 @@ public class CapacityPlanRequest extends Request {
 
     public static final class Builder extends Request.Builder<CapacityPlanRequest, Builder> {
         private Boolean complexQueryAvailable; 
-        private java.util.List < DataInfo> dataInfo; 
-        private java.util.List < Metric> metric; 
+        private java.util.List<DataInfo> dataInfo; 
+        private java.util.List<Metric> metric; 
         private String usageScenario; 
 
         private Builder() {
@@ -114,7 +119,7 @@ public class CapacityPlanRequest extends Request {
         /**
          * <p>Disk usage status.</p>
          */
-        public Builder dataInfo(java.util.List < DataInfo> dataInfo) {
+        public Builder dataInfo(java.util.List<DataInfo> dataInfo) {
             this.putBodyParameter("dataInfo", dataInfo);
             this.dataInfo = dataInfo;
             return this;
@@ -123,7 +128,7 @@ public class CapacityPlanRequest extends Request {
         /**
          * <p>Metrics information including disk usage, search and write operations, aggregation requests, etc.</p>
          */
-        public Builder metric(java.util.List < Metric> metric) {
+        public Builder metric(java.util.List<Metric> metric) {
             this.putBodyParameter("metric", metric);
             this.metric = metric;
             return this;
@@ -234,6 +239,17 @@ public class CapacityPlanRequest extends Request {
             private Integer totalCount; 
             private String type; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataInfo model) {
+                this.code = model.code;
+                this.size = model.size;
+                this.totalCount = model.totalCount;
+                this.type = model.type;
+                this.unit = model.unit;
+            } 
 
             /**
              * <p>Disk data metric code. Options:</p>
@@ -416,6 +432,19 @@ public class CapacityPlanRequest extends Request {
             private Integer responseTime; 
             private Long throughput; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Metric model) {
+                this.averageQps = model.averageQps;
+                this.code = model.code;
+                this.concurrent = model.concurrent;
+                this.peakQps = model.peakQps;
+                this.responseTime = model.responseTime;
+                this.throughput = model.throughput;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Average QPS.</p>

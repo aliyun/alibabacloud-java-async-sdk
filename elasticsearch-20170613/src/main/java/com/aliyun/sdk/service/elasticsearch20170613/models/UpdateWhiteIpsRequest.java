@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class UpdateWhiteIpsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("esIPWhitelist")
-    private java.util.List < String > esIPWhitelist;
+    private java.util.List<String> esIPWhitelist;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("whiteIpGroup")
@@ -50,7 +55,7 @@ public class UpdateWhiteIpsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -65,7 +70,7 @@ public class UpdateWhiteIpsRequest extends Request {
     /**
      * @return esIPWhitelist
      */
-    public java.util.List < String > getEsIPWhitelist() {
+    public java.util.List<String> getEsIPWhitelist() {
         return this.esIPWhitelist;
     }
 
@@ -92,7 +97,7 @@ public class UpdateWhiteIpsRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateWhiteIpsRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > esIPWhitelist; 
+        private java.util.List<String> esIPWhitelist; 
         private WhiteIpGroup whiteIpGroup; 
         private String clientToken; 
         private String modifyMode; 
@@ -126,7 +131,7 @@ public class UpdateWhiteIpsRequest extends Request {
         /**
          * <p>The name of the whitelist. This parameter is required if you configure the whiteIpGroup parameter.</p>
          */
-        public Builder esIPWhitelist(java.util.List < String > esIPWhitelist) {
+        public Builder esIPWhitelist(java.util.List<String> esIPWhitelist) {
             this.putBodyParameter("esIPWhitelist", esIPWhitelist);
             this.esIPWhitelist = esIPWhitelist;
             return this;
@@ -186,7 +191,7 @@ public class UpdateWhiteIpsRequest extends Request {
         private String groupName;
 
         @com.aliyun.core.annotation.NameInMap("ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         @com.aliyun.core.annotation.NameInMap("whiteIpType")
         private String whiteIpType;
@@ -215,7 +220,7 @@ public class UpdateWhiteIpsRequest extends Request {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
@@ -228,8 +233,17 @@ public class UpdateWhiteIpsRequest extends Request {
 
         public static final class Builder {
             private String groupName; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
             private String whiteIpType; 
+
+            private Builder() {
+            } 
+
+            private Builder(WhiteIpGroup model) {
+                this.groupName = model.groupName;
+                this.ips = model.ips;
+                this.whiteIpType = model.whiteIpType;
+            } 
 
             /**
              * <p>The type of the whitelist. Set the value to <strong>PRIVATE_ES</strong>. This value indicates a private IP address whitelist.</p>
@@ -245,7 +259,7 @@ public class UpdateWhiteIpsRequest extends Request {
             /**
              * <p>The returned result.</p>
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }

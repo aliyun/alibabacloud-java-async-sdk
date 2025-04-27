@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ShrinkNodeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < ShrinkNodeRequestBody> body;
+    private java.util.List<ShrinkNodeRequestBody> body;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("clientToken")
@@ -56,7 +61,7 @@ public class ShrinkNodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -71,7 +76,7 @@ public class ShrinkNodeRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < ShrinkNodeRequestBody> getBody() {
+    public java.util.List<ShrinkNodeRequestBody> getBody() {
         return this.body;
     }
 
@@ -105,7 +110,7 @@ public class ShrinkNodeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ShrinkNodeRequest, Builder> {
         private String instanceId; 
-        private java.util.List < ShrinkNodeRequestBody> body; 
+        private java.util.List<ShrinkNodeRequestBody> body; 
         private String clientToken; 
         private Integer count; 
         private Boolean ignoreStatus; 
@@ -140,7 +145,7 @@ public class ShrinkNodeRequest extends Request {
         /**
          * body.
          */
-        public Builder body(java.util.List < ShrinkNodeRequestBody> body) {
+        public Builder body(java.util.List<ShrinkNodeRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
@@ -271,6 +276,17 @@ public class ShrinkNodeRequest extends Request {
             private String nodeType; 
             private Integer port; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ShrinkNodeRequestBody model) {
+                this.host = model.host;
+                this.hostName = model.hostName;
+                this.nodeType = model.nodeType;
+                this.port = model.port;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * host.

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class ListConnectedClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class ListConnectedClustersResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListConnectedClustersResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -118,6 +135,14 @@ public class ListConnectedClustersResponseBody extends TeaModel {
             private String instances; 
             private String networkType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultResult model) {
+                this.instances = model.instances;
+                this.networkType = model.networkType;
+            } 
+
             /**
              * <p>The ID of the remote instance that is connected to the network of the current instance.</p>
              * 
@@ -155,7 +180,7 @@ public class ListConnectedClustersResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < ResultResult> result;
+        private java.util.List<ResultResult> result;
 
         private Result(Builder builder) {
             this.result = builder.result;
@@ -172,17 +197,24 @@ public class ListConnectedClustersResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < ResultResult> getResult() {
+        public java.util.List<ResultResult> getResult() {
             return this.result;
         }
 
         public static final class Builder {
-            private java.util.List < ResultResult> result; 
+            private java.util.List<ResultResult> result; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.result = model.result;
+            } 
 
             /**
              * <p>The return results.</p>
              */
-            public Builder result(java.util.List < ResultResult> result) {
+            public Builder result(java.util.List<ResultResult> result) {
                 this.result = result;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class CollectorDeployMachine extends TeaModel {
     private String instanceId;
 
     @com.aliyun.core.annotation.NameInMap("machines")
-    private java.util.List < Machines> machines;
+    private java.util.List<Machines> machines;
 
     @com.aliyun.core.annotation.NameInMap("successPodsCount")
     private String successPodsCount;
@@ -53,6 +58,10 @@ public class CollectorDeployMachine extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configType
      */
@@ -77,7 +86,7 @@ public class CollectorDeployMachine extends TeaModel {
     /**
      * @return machines
      */
-    public java.util.List < Machines> getMachines() {
+    public java.util.List<Machines> getMachines() {
         return this.machines;
     }
 
@@ -106,10 +115,23 @@ public class CollectorDeployMachine extends TeaModel {
         private String configType; 
         private String groupId; 
         private String instanceId; 
-        private java.util.List < Machines> machines; 
+        private java.util.List<Machines> machines; 
         private String successPodsCount; 
         private String totalPodsCount; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(CollectorDeployMachine model) {
+            this.configType = model.configType;
+            this.groupId = model.groupId;
+            this.instanceId = model.instanceId;
+            this.machines = model.machines;
+            this.successPodsCount = model.successPodsCount;
+            this.totalPodsCount = model.totalPodsCount;
+            this.type = model.type;
+        } 
 
         /**
          * <p>This parameter is required.</p>
@@ -141,7 +163,7 @@ public class CollectorDeployMachine extends TeaModel {
         /**
          * machines.
          */
-        public Builder machines(java.util.List < Machines> machines) {
+        public Builder machines(java.util.List<Machines> machines) {
             this.machines = machines;
             return this;
         }
@@ -222,6 +244,14 @@ public class CollectorDeployMachine extends TeaModel {
         public static final class Builder {
             private String agentStatus; 
             private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Machines model) {
+                this.agentStatus = model.agentStatus;
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * agentStatus.

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -56,6 +61,10 @@ public class CollectorKibanaInstance extends TeaModel {
 
     public static CollectorKibanaInstance create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -115,6 +124,19 @@ public class CollectorKibanaInstance extends TeaModel {
         private String password; 
         private String protocol; 
         private String userName; 
+
+        private Builder() {
+        } 
+
+        private Builder(CollectorKibanaInstance model) {
+            this.configType = model.configType;
+            this.host = model.host;
+            this.instanceId = model.instanceId;
+            this.kibanaHost = model.kibanaHost;
+            this.password = model.password;
+            this.protocol = model.protocol;
+            this.userName = model.userName;
+        } 
 
         /**
          * <p>This parameter is required.</p>

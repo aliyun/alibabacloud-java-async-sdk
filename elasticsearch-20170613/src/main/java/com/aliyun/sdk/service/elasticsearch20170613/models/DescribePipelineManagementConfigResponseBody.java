@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePipelineManagementConfigResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -88,7 +105,7 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
         private String esInstanceId;
 
         @com.aliyun.core.annotation.NameInMap("pipelineIds")
-        private java.util.List < String > pipelineIds;
+        private java.util.List<String> pipelineIds;
 
         @com.aliyun.core.annotation.NameInMap("pipelineManagementType")
         private String pipelineManagementType;
@@ -129,7 +146,7 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
         /**
          * @return pipelineIds
          */
-        public java.util.List < String > getPipelineIds() {
+        public java.util.List<String> getPipelineIds() {
             return this.pipelineIds;
         }
 
@@ -150,9 +167,20 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String endpoints; 
             private String esInstanceId; 
-            private java.util.List < String > pipelineIds; 
+            private java.util.List<String> pipelineIds; 
             private String pipelineManagementType; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.endpoints = model.endpoints;
+                this.esInstanceId = model.esInstanceId;
+                this.pipelineIds = model.pipelineIds;
+                this.pipelineManagementType = model.pipelineManagementType;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The access addresses of the Elasticsearch cluster. Specify each address in the <code>http://Endpoint of the Elasticsearch cluster:Port number</code> format.</p>
@@ -179,7 +207,7 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
             /**
              * pipelineIds.
              */
-            public Builder pipelineIds(java.util.List < String > pipelineIds) {
+            public Builder pipelineIds(java.util.List<String> pipelineIds) {
                 this.pipelineIds = pipelineIds;
                 return this;
             }

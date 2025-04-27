@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class UpdateBlackIpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class UpdateBlackIpsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateBlackIpsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * RequestId.
@@ -79,7 +96,7 @@ public class UpdateBlackIpsResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("esIPBlacklist")
-        private java.util.List < String > esIPBlacklist;
+        private java.util.List<String> esIPBlacklist;
 
         private Result(Builder builder) {
             this.esIPBlacklist = builder.esIPBlacklist;
@@ -96,17 +113,24 @@ public class UpdateBlackIpsResponseBody extends TeaModel {
         /**
          * @return esIPBlacklist
          */
-        public java.util.List < String > getEsIPBlacklist() {
+        public java.util.List<String> getEsIPBlacklist() {
             return this.esIPBlacklist;
         }
 
         public static final class Builder {
-            private java.util.List < String > esIPBlacklist; 
+            private java.util.List<String> esIPBlacklist; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.esIPBlacklist = model.esIPBlacklist;
+            } 
 
             /**
              * esIPBlacklist.
              */
-            public Builder esIPBlacklist(java.util.List < String > esIPBlacklist) {
+            public Builder esIPBlacklist(java.util.List<String> esIPBlacklist) {
                 this.esIPBlacklist = esIPBlacklist;
                 return this;
             }

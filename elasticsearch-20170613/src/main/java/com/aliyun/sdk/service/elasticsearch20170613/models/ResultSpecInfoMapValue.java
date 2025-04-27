@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,6 +54,10 @@ public class ResultSpecInfoMapValue extends TeaModel {
 
     public static ResultSpecInfoMapValue create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,6 +117,19 @@ public class ResultSpecInfoMapValue extends TeaModel {
         private String specGroupType; 
         private String disk; 
         private String diskType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResultSpecInfoMapValue model) {
+            this.cpuCount = model.cpuCount;
+            this.memorySize = model.memorySize;
+            this.enable = model.enable;
+            this.spec = model.spec;
+            this.specGroupType = model.specGroupType;
+            this.disk = model.disk;
+            this.diskType = model.diskType;
+        } 
 
         /**
          * cpuCount.

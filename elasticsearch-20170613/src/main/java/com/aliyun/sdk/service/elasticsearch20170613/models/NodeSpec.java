@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,6 +24,9 @@ public class NodeSpec extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("diskEncryption")
     private Boolean diskEncryption;
 
+    @com.aliyun.core.annotation.NameInMap("diskPreference")
+    private String diskPreference;
+
     @com.aliyun.core.annotation.NameInMap("diskType")
     private String diskType;
 
@@ -32,6 +40,7 @@ public class NodeSpec extends TeaModel {
     private NodeSpec(Builder builder) {
         this.disk = builder.disk;
         this.diskEncryption = builder.diskEncryption;
+        this.diskPreference = builder.diskPreference;
         this.diskType = builder.diskType;
         this.performanceLevel = builder.performanceLevel;
         this.spec = builder.spec;
@@ -43,6 +52,10 @@ public class NodeSpec extends TeaModel {
 
     public static NodeSpec create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -57,6 +70,13 @@ public class NodeSpec extends TeaModel {
      */
     public Boolean getDiskEncryption() {
         return this.diskEncryption;
+    }
+
+    /**
+     * @return diskPreference
+     */
+    public String getDiskPreference() {
+        return this.diskPreference;
     }
 
     /**
@@ -83,9 +103,22 @@ public class NodeSpec extends TeaModel {
     public static final class Builder {
         private Integer disk; 
         private Boolean diskEncryption; 
+        private String diskPreference; 
         private String diskType; 
         private String performanceLevel; 
         private String spec; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeSpec model) {
+            this.disk = model.disk;
+            this.diskEncryption = model.diskEncryption;
+            this.diskPreference = model.diskPreference;
+            this.diskType = model.diskType;
+            this.performanceLevel = model.performanceLevel;
+            this.spec = model.spec;
+        } 
 
         /**
          * disk.
@@ -100,6 +133,14 @@ public class NodeSpec extends TeaModel {
          */
         public Builder diskEncryption(Boolean diskEncryption) {
             this.diskEncryption = diskEncryption;
+            return this;
+        }
+
+        /**
+         * diskPreference.
+         */
+        public Builder diskPreference(String diskPreference) {
+            this.diskPreference = diskPreference;
             return this;
         }
 

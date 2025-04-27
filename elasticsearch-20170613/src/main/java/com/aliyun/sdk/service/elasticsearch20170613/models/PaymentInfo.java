@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class PaymentInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoRenewDuration
      */
@@ -72,6 +81,16 @@ public class PaymentInfo extends TeaModel {
         private Long duration; 
         private Boolean isAutoRenew; 
         private String pricingCycle; 
+
+        private Builder() {
+        } 
+
+        private Builder(PaymentInfo model) {
+            this.autoRenewDuration = model.autoRenewDuration;
+            this.duration = model.duration;
+            this.isAutoRenew = model.isAutoRenew;
+            this.pricingCycle = model.pricingCycle;
+        } 
 
         /**
          * autoRenewDuration.

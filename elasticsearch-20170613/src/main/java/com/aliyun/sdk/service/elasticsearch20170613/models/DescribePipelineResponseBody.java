@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribePipelineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class DescribePipelineResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePipelineResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The time when the pipeline was updated.</p>
@@ -241,6 +258,24 @@ public class DescribePipelineResponseBody extends TeaModel {
             private Integer queueMaxBytes; 
             private String queueType; 
             private Integer workers; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.batchDelay = model.batchDelay;
+                this.batchSize = model.batchSize;
+                this.config = model.config;
+                this.description = model.description;
+                this.gmtCreatedTime = model.gmtCreatedTime;
+                this.gmtUpdateTime = model.gmtUpdateTime;
+                this.pipelineId = model.pipelineId;
+                this.pipelineStatus = model.pipelineStatus;
+                this.queueCheckPointWrites = model.queueCheckPointWrites;
+                this.queueMaxBytes = model.queueMaxBytes;
+                this.queueType = model.queueType;
+                this.workers = model.workers;
+            } 
 
             /**
              * <p>The time when the pipeline was created.</p>

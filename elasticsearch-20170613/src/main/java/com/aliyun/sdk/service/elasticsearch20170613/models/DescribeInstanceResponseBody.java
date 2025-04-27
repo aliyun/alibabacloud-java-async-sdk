@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * RequestId.
@@ -102,6 +119,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String gcName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvancedSetting model) {
+                this.gcName = model.gcName;
+            } 
 
             /**
              * gcName.
@@ -185,6 +209,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String name; 
             private String sourceType; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AliwsDicts model) {
+                this.fileSize = model.fileSize;
+                this.name = model.name;
+                this.sourceType = model.sourceType;
+                this.type = model.type;
+            } 
 
             /**
              * fileSize.
@@ -305,6 +339,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String spec; 
             private String specInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClientNodeConfiguration model) {
+                this.amount = model.amount;
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+                this.specInfo = model.specInfo;
+            } 
+
             /**
              * amount.
              */
@@ -419,6 +464,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String name; 
             private String sourceType; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DictList model) {
+                this.fileSize = model.fileSize;
+                this.name = model.name;
+                this.sourceType = model.sourceType;
+                this.type = model.type;
+            } 
 
             /**
              * fileSize.
@@ -551,6 +606,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String spec; 
             private String specInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(ElasticDataNodeConfiguration model) {
+                this.amount = model.amount;
+                this.disk = model.disk;
+                this.diskEncryption = model.diskEncryption;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+                this.specInfo = model.specInfo;
+            } 
+
             /**
              * amount.
              */
@@ -674,6 +741,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String sourceType; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(IkHotDicts model) {
+                this.fileSize = model.fileSize;
+                this.name = model.name;
+                this.sourceType = model.sourceType;
+                this.type = model.type;
+            } 
+
             /**
              * fileSize.
              */
@@ -780,6 +857,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Integer disk; 
             private String spec; 
             private String specInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(KibanaConfiguration model) {
+                this.amount = model.amount;
+                this.disk = model.disk;
+                this.spec = model.spec;
+                this.specInfo = model.specInfo;
+            } 
 
             /**
              * amount.
@@ -900,6 +987,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String spec; 
             private String specInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(MasterConfiguration model) {
+                this.amount = model.amount;
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+                this.specInfo = model.specInfo;
+            } 
+
             /**
              * amount.
              */
@@ -958,7 +1056,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String groupName;
 
         @com.aliyun.core.annotation.NameInMap("ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         @com.aliyun.core.annotation.NameInMap("whiteIpType")
         private String whiteIpType;
@@ -987,7 +1085,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
@@ -1000,8 +1098,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String groupName; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
             private String whiteIpType; 
+
+            private Builder() {
+            } 
+
+            private Builder(WhiteIpGroupList model) {
+                this.groupName = model.groupName;
+                this.ips = model.ips;
+                this.whiteIpType = model.whiteIpType;
+            } 
 
             /**
              * groupName.
@@ -1014,7 +1121,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * ips.
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }
@@ -1054,7 +1161,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String vswitchId;
 
         @com.aliyun.core.annotation.NameInMap("whiteIpGroupList")
-        private java.util.List < WhiteIpGroupList> whiteIpGroupList;
+        private java.util.List<WhiteIpGroupList> whiteIpGroupList;
 
         private NetworkConfig(Builder builder) {
             this.type = builder.type;
@@ -1103,7 +1210,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return whiteIpGroupList
          */
-        public java.util.List < WhiteIpGroupList> getWhiteIpGroupList() {
+        public java.util.List<WhiteIpGroupList> getWhiteIpGroupList() {
             return this.whiteIpGroupList;
         }
 
@@ -1112,7 +1219,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String vpcId; 
             private String vsArea; 
             private String vswitchId; 
-            private java.util.List < WhiteIpGroupList> whiteIpGroupList; 
+            private java.util.List<WhiteIpGroupList> whiteIpGroupList; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkConfig model) {
+                this.type = model.type;
+                this.vpcId = model.vpcId;
+                this.vsArea = model.vsArea;
+                this.vswitchId = model.vswitchId;
+                this.whiteIpGroupList = model.whiteIpGroupList;
+            } 
 
             /**
              * type.
@@ -1149,7 +1267,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * whiteIpGroupList.
              */
-            public Builder whiteIpGroupList(java.util.List < WhiteIpGroupList> whiteIpGroupList) {
+            public Builder whiteIpGroupList(java.util.List<WhiteIpGroupList> whiteIpGroupList) {
                 this.whiteIpGroupList = whiteIpGroupList;
                 return this;
             }
@@ -1252,6 +1370,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String performanceLevel; 
             private String spec; 
             private String specInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeSpec model) {
+                this.disk = model.disk;
+                this.diskEncryption = model.diskEncryption;
+                this.diskType = model.diskType;
+                this.performanceLevel = model.performanceLevel;
+                this.spec = model.spec;
+                this.specInfo = model.specInfo;
+            } 
 
             /**
              * disk.
@@ -1376,6 +1506,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String sourceType; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(SynonymsDicts model) {
+                this.fileSize = model.fileSize;
+                this.name = model.name;
+                this.sourceType = model.sourceType;
+                this.type = model.type;
+            } 
+
             /**
              * fileSize.
              */
@@ -1458,6 +1598,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * tagKey.
@@ -1574,6 +1722,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String spec; 
             private String specInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(WarmNodeConfiguration model) {
+                this.amount = model.amount;
+                this.disk = model.disk;
+                this.diskEncryption = model.diskEncryption;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+                this.specInfo = model.specInfo;
+            } 
+
             /**
              * amount.
              */
@@ -1673,6 +1833,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String status; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ZoneInfos model) {
+                this.status = model.status;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * status.
              */
@@ -1710,7 +1878,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private AdvancedSetting advancedSetting;
 
         @com.aliyun.core.annotation.NameInMap("aliwsDicts")
-        private java.util.List < AliwsDicts> aliwsDicts;
+        private java.util.List<AliwsDicts> aliwsDicts;
 
         @com.aliyun.core.annotation.NameInMap("archType")
         private String archType;
@@ -1728,7 +1896,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("dictList")
-        private java.util.List < DictList> dictList;
+        private java.util.List<DictList> dictList;
 
         @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
@@ -1749,19 +1917,19 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private Long endtime;
 
         @com.aliyun.core.annotation.NameInMap("esConfig")
-        private java.util.Map < String, ? > esConfig;
+        private java.util.Map<String, ?> esConfig;
 
         @com.aliyun.core.annotation.NameInMap("esIPBlacklist")
-        private java.util.List < String > esIPBlacklist;
+        private java.util.List<String> esIPBlacklist;
 
         @com.aliyun.core.annotation.NameInMap("esIPWhitelist")
-        private java.util.List < String > esIPWhitelist;
+        private java.util.List<String> esIPWhitelist;
 
         @com.aliyun.core.annotation.NameInMap("esVersion")
         private String esVersion;
 
         @com.aliyun.core.annotation.NameInMap("extendConfigs")
-        private java.util.List < java.util.Map<String, ?>> extendConfigs;
+        private java.util.List<java.util.Map<String, ?>> extendConfigs;
 
         @com.aliyun.core.annotation.NameInMap("haveClientNode")
         private Boolean haveClientNode;
@@ -1770,7 +1938,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private Boolean haveKibana;
 
         @com.aliyun.core.annotation.NameInMap("ikHotDicts")
-        private java.util.List < IkHotDicts> ikHotDicts;
+        private java.util.List<IkHotDicts> ikHotDicts;
 
         @com.aliyun.core.annotation.NameInMap("instanceCategory")
         private String instanceCategory;
@@ -1788,7 +1956,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String kibanaDomain;
 
         @com.aliyun.core.annotation.NameInMap("kibanaIPWhitelist")
-        private java.util.List < String > kibanaIPWhitelist;
+        private java.util.List<String> kibanaIPWhitelist;
 
         @com.aliyun.core.annotation.NameInMap("kibanaPort")
         private Integer kibanaPort;
@@ -1797,7 +1965,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String kibanaPrivateDomain;
 
         @com.aliyun.core.annotation.NameInMap("kibanaPrivateIPWhitelist")
-        private java.util.List < String > kibanaPrivateIPWhitelist;
+        private java.util.List<String> kibanaPrivateIPWhitelist;
 
         @com.aliyun.core.annotation.NameInMap("kibanaPrivatePort")
         private String kibanaPrivatePort;
@@ -1824,7 +1992,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String postpaidServiceStatus;
 
         @com.aliyun.core.annotation.NameInMap("privateNetworkIpWhiteList")
-        private java.util.List < String > privateNetworkIpWhiteList;
+        private java.util.List<String> privateNetworkIpWhiteList;
 
         @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
@@ -1833,7 +2001,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String publicDomain;
 
         @com.aliyun.core.annotation.NameInMap("publicIpWhitelist")
-        private java.util.List < String > publicIpWhitelist;
+        private java.util.List<String> publicIpWhitelist;
 
         @com.aliyun.core.annotation.NameInMap("publicPort")
         private Integer publicPort;
@@ -1848,10 +2016,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("synonymsDicts")
-        private java.util.List < SynonymsDicts> synonymsDicts;
+        private java.util.List<SynonymsDicts> synonymsDicts;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
@@ -1869,7 +2037,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private Integer zoneCount;
 
         @com.aliyun.core.annotation.NameInMap("zoneInfos")
-        private java.util.List < ZoneInfos> zoneInfos;
+        private java.util.List<ZoneInfos> zoneInfos;
 
         private Result(Builder builder) {
             this.advancedDedicateMaster = builder.advancedDedicateMaster;
@@ -1955,7 +2123,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return aliwsDicts
          */
-        public java.util.List < AliwsDicts> getAliwsDicts() {
+        public java.util.List<AliwsDicts> getAliwsDicts() {
             return this.aliwsDicts;
         }
 
@@ -1997,7 +2165,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return dictList
          */
-        public java.util.List < DictList> getDictList() {
+        public java.util.List<DictList> getDictList() {
             return this.dictList;
         }
 
@@ -2046,21 +2214,21 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return esConfig
          */
-        public java.util.Map < String, ? > getEsConfig() {
+        public java.util.Map<String, ?> getEsConfig() {
             return this.esConfig;
         }
 
         /**
          * @return esIPBlacklist
          */
-        public java.util.List < String > getEsIPBlacklist() {
+        public java.util.List<String> getEsIPBlacklist() {
             return this.esIPBlacklist;
         }
 
         /**
          * @return esIPWhitelist
          */
-        public java.util.List < String > getEsIPWhitelist() {
+        public java.util.List<String> getEsIPWhitelist() {
             return this.esIPWhitelist;
         }
 
@@ -2074,7 +2242,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return extendConfigs
          */
-        public java.util.List < java.util.Map<String, ?>> getExtendConfigs() {
+        public java.util.List<java.util.Map<String, ?>> getExtendConfigs() {
             return this.extendConfigs;
         }
 
@@ -2095,7 +2263,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return ikHotDicts
          */
-        public java.util.List < IkHotDicts> getIkHotDicts() {
+        public java.util.List<IkHotDicts> getIkHotDicts() {
             return this.ikHotDicts;
         }
 
@@ -2137,7 +2305,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return kibanaIPWhitelist
          */
-        public java.util.List < String > getKibanaIPWhitelist() {
+        public java.util.List<String> getKibanaIPWhitelist() {
             return this.kibanaIPWhitelist;
         }
 
@@ -2158,7 +2326,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return kibanaPrivateIPWhitelist
          */
-        public java.util.List < String > getKibanaPrivateIPWhitelist() {
+        public java.util.List<String> getKibanaPrivateIPWhitelist() {
             return this.kibanaPrivateIPWhitelist;
         }
 
@@ -2221,7 +2389,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return privateNetworkIpWhiteList
          */
-        public java.util.List < String > getPrivateNetworkIpWhiteList() {
+        public java.util.List<String> getPrivateNetworkIpWhiteList() {
             return this.privateNetworkIpWhiteList;
         }
 
@@ -2242,7 +2410,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return publicIpWhitelist
          */
-        public java.util.List < String > getPublicIpWhitelist() {
+        public java.util.List<String> getPublicIpWhitelist() {
             return this.publicIpWhitelist;
         }
 
@@ -2277,14 +2445,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return synonymsDicts
          */
-        public java.util.List < SynonymsDicts> getSynonymsDicts() {
+        public java.util.List<SynonymsDicts> getSynonymsDicts() {
             return this.synonymsDicts;
         }
 
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -2326,43 +2494,43 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return zoneInfos
          */
-        public java.util.List < ZoneInfos> getZoneInfos() {
+        public java.util.List<ZoneInfos> getZoneInfos() {
             return this.zoneInfos;
         }
 
         public static final class Builder {
             private Boolean advancedDedicateMaster; 
             private AdvancedSetting advancedSetting; 
-            private java.util.List < AliwsDicts> aliwsDicts; 
+            private java.util.List<AliwsDicts> aliwsDicts; 
             private String archType; 
             private ClientNodeConfiguration clientNodeConfiguration; 
             private String createdAt; 
             private Boolean dedicateMaster; 
             private String description; 
-            private java.util.List < DictList> dictList; 
+            private java.util.List<DictList> dictList; 
             private String domain; 
             private ElasticDataNodeConfiguration elasticDataNodeConfiguration; 
             private Boolean enableKibanaPrivateNetwork; 
             private Boolean enableKibanaPublicNetwork; 
             private Boolean enablePublic; 
             private Long endtime; 
-            private java.util.Map < String, ? > esConfig; 
-            private java.util.List < String > esIPBlacklist; 
-            private java.util.List < String > esIPWhitelist; 
+            private java.util.Map<String, ?> esConfig; 
+            private java.util.List<String> esIPBlacklist; 
+            private java.util.List<String> esIPWhitelist; 
             private String esVersion; 
-            private java.util.List < java.util.Map<String, ?>> extendConfigs; 
+            private java.util.List<java.util.Map<String, ?>> extendConfigs; 
             private Boolean haveClientNode; 
             private Boolean haveKibana; 
-            private java.util.List < IkHotDicts> ikHotDicts; 
+            private java.util.List<IkHotDicts> ikHotDicts; 
             private String instanceCategory; 
             private String instanceId; 
             private Boolean isNewDeployment; 
             private KibanaConfiguration kibanaConfiguration; 
             private String kibanaDomain; 
-            private java.util.List < String > kibanaIPWhitelist; 
+            private java.util.List<String> kibanaIPWhitelist; 
             private Integer kibanaPort; 
             private String kibanaPrivateDomain; 
-            private java.util.List < String > kibanaPrivateIPWhitelist; 
+            private java.util.List<String> kibanaPrivateIPWhitelist; 
             private String kibanaPrivatePort; 
             private MasterConfiguration masterConfiguration; 
             private NetworkConfig networkConfig; 
@@ -2371,22 +2539,84 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String paymentType; 
             private Integer port; 
             private String postpaidServiceStatus; 
-            private java.util.List < String > privateNetworkIpWhiteList; 
+            private java.util.List<String> privateNetworkIpWhiteList; 
             private String protocol; 
             private String publicDomain; 
-            private java.util.List < String > publicIpWhitelist; 
+            private java.util.List<String> publicIpWhitelist; 
             private Integer publicPort; 
             private String resourceGroupId; 
             private Boolean serviceVpc; 
             private String status; 
-            private java.util.List < SynonymsDicts> synonymsDicts; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<SynonymsDicts> synonymsDicts; 
+            private java.util.List<Tags> tags; 
             private String updatedAt; 
             private String vpcInstanceId; 
             private Boolean warmNode; 
             private WarmNodeConfiguration warmNodeConfiguration; 
             private Integer zoneCount; 
-            private java.util.List < ZoneInfos> zoneInfos; 
+            private java.util.List<ZoneInfos> zoneInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.advancedDedicateMaster = model.advancedDedicateMaster;
+                this.advancedSetting = model.advancedSetting;
+                this.aliwsDicts = model.aliwsDicts;
+                this.archType = model.archType;
+                this.clientNodeConfiguration = model.clientNodeConfiguration;
+                this.createdAt = model.createdAt;
+                this.dedicateMaster = model.dedicateMaster;
+                this.description = model.description;
+                this.dictList = model.dictList;
+                this.domain = model.domain;
+                this.elasticDataNodeConfiguration = model.elasticDataNodeConfiguration;
+                this.enableKibanaPrivateNetwork = model.enableKibanaPrivateNetwork;
+                this.enableKibanaPublicNetwork = model.enableKibanaPublicNetwork;
+                this.enablePublic = model.enablePublic;
+                this.endtime = model.endtime;
+                this.esConfig = model.esConfig;
+                this.esIPBlacklist = model.esIPBlacklist;
+                this.esIPWhitelist = model.esIPWhitelist;
+                this.esVersion = model.esVersion;
+                this.extendConfigs = model.extendConfigs;
+                this.haveClientNode = model.haveClientNode;
+                this.haveKibana = model.haveKibana;
+                this.ikHotDicts = model.ikHotDicts;
+                this.instanceCategory = model.instanceCategory;
+                this.instanceId = model.instanceId;
+                this.isNewDeployment = model.isNewDeployment;
+                this.kibanaConfiguration = model.kibanaConfiguration;
+                this.kibanaDomain = model.kibanaDomain;
+                this.kibanaIPWhitelist = model.kibanaIPWhitelist;
+                this.kibanaPort = model.kibanaPort;
+                this.kibanaPrivateDomain = model.kibanaPrivateDomain;
+                this.kibanaPrivateIPWhitelist = model.kibanaPrivateIPWhitelist;
+                this.kibanaPrivatePort = model.kibanaPrivatePort;
+                this.masterConfiguration = model.masterConfiguration;
+                this.networkConfig = model.networkConfig;
+                this.nodeAmount = model.nodeAmount;
+                this.nodeSpec = model.nodeSpec;
+                this.paymentType = model.paymentType;
+                this.port = model.port;
+                this.postpaidServiceStatus = model.postpaidServiceStatus;
+                this.privateNetworkIpWhiteList = model.privateNetworkIpWhiteList;
+                this.protocol = model.protocol;
+                this.publicDomain = model.publicDomain;
+                this.publicIpWhitelist = model.publicIpWhitelist;
+                this.publicPort = model.publicPort;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serviceVpc = model.serviceVpc;
+                this.status = model.status;
+                this.synonymsDicts = model.synonymsDicts;
+                this.tags = model.tags;
+                this.updatedAt = model.updatedAt;
+                this.vpcInstanceId = model.vpcInstanceId;
+                this.warmNode = model.warmNode;
+                this.warmNodeConfiguration = model.warmNodeConfiguration;
+                this.zoneCount = model.zoneCount;
+                this.zoneInfos = model.zoneInfos;
+            } 
 
             /**
              * advancedDedicateMaster.
@@ -2407,7 +2637,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * aliwsDicts.
              */
-            public Builder aliwsDicts(java.util.List < AliwsDicts> aliwsDicts) {
+            public Builder aliwsDicts(java.util.List<AliwsDicts> aliwsDicts) {
                 this.aliwsDicts = aliwsDicts;
                 return this;
             }
@@ -2455,7 +2685,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * dictList.
              */
-            public Builder dictList(java.util.List < DictList> dictList) {
+            public Builder dictList(java.util.List<DictList> dictList) {
                 this.dictList = dictList;
                 return this;
             }
@@ -2511,7 +2741,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * esConfig.
              */
-            public Builder esConfig(java.util.Map < String, ? > esConfig) {
+            public Builder esConfig(java.util.Map<String, ?> esConfig) {
                 this.esConfig = esConfig;
                 return this;
             }
@@ -2519,7 +2749,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * esIPBlacklist.
              */
-            public Builder esIPBlacklist(java.util.List < String > esIPBlacklist) {
+            public Builder esIPBlacklist(java.util.List<String> esIPBlacklist) {
                 this.esIPBlacklist = esIPBlacklist;
                 return this;
             }
@@ -2527,7 +2757,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * esIPWhitelist.
              */
-            public Builder esIPWhitelist(java.util.List < String > esIPWhitelist) {
+            public Builder esIPWhitelist(java.util.List<String> esIPWhitelist) {
                 this.esIPWhitelist = esIPWhitelist;
                 return this;
             }
@@ -2543,7 +2773,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * extendConfigs.
              */
-            public Builder extendConfigs(java.util.List < java.util.Map<String, ?>> extendConfigs) {
+            public Builder extendConfigs(java.util.List<java.util.Map<String, ?>> extendConfigs) {
                 this.extendConfigs = extendConfigs;
                 return this;
             }
@@ -2567,7 +2797,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * ikHotDicts.
              */
-            public Builder ikHotDicts(java.util.List < IkHotDicts> ikHotDicts) {
+            public Builder ikHotDicts(java.util.List<IkHotDicts> ikHotDicts) {
                 this.ikHotDicts = ikHotDicts;
                 return this;
             }
@@ -2615,7 +2845,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * kibanaIPWhitelist.
              */
-            public Builder kibanaIPWhitelist(java.util.List < String > kibanaIPWhitelist) {
+            public Builder kibanaIPWhitelist(java.util.List<String> kibanaIPWhitelist) {
                 this.kibanaIPWhitelist = kibanaIPWhitelist;
                 return this;
             }
@@ -2639,7 +2869,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * kibanaPrivateIPWhitelist.
              */
-            public Builder kibanaPrivateIPWhitelist(java.util.List < String > kibanaPrivateIPWhitelist) {
+            public Builder kibanaPrivateIPWhitelist(java.util.List<String> kibanaPrivateIPWhitelist) {
                 this.kibanaPrivateIPWhitelist = kibanaPrivateIPWhitelist;
                 return this;
             }
@@ -2711,7 +2941,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * privateNetworkIpWhiteList.
              */
-            public Builder privateNetworkIpWhiteList(java.util.List < String > privateNetworkIpWhiteList) {
+            public Builder privateNetworkIpWhiteList(java.util.List<String> privateNetworkIpWhiteList) {
                 this.privateNetworkIpWhiteList = privateNetworkIpWhiteList;
                 return this;
             }
@@ -2735,7 +2965,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * publicIpWhitelist.
              */
-            public Builder publicIpWhitelist(java.util.List < String > publicIpWhitelist) {
+            public Builder publicIpWhitelist(java.util.List<String> publicIpWhitelist) {
                 this.publicIpWhitelist = publicIpWhitelist;
                 return this;
             }
@@ -2775,7 +3005,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * synonymsDicts.
              */
-            public Builder synonymsDicts(java.util.List < SynonymsDicts> synonymsDicts) {
+            public Builder synonymsDicts(java.util.List<SynonymsDicts> synonymsDicts) {
                 this.synonymsDicts = synonymsDicts;
                 return this;
             }
@@ -2783,7 +3013,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -2831,7 +3061,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * zoneInfos.
              */
-            public Builder zoneInfos(java.util.List < ZoneInfos> zoneInfos) {
+            public Builder zoneInfos(java.util.List<ZoneInfos> zoneInfos) {
                 this.zoneInfos = zoneInfos;
                 return this;
             }

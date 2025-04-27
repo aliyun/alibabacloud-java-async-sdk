@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListDeprecatedTemplatesResponseBody(Builder builder) {
         this.headers = builder.headers;
@@ -33,6 +38,10 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
 
     public static ListDeprecatedTemplatesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private Headers headers; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDeprecatedTemplatesResponseBody model) {
+            this.headers = model.headers;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Headers.
@@ -80,7 +98,7 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -122,6 +140,13 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long xTotalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.xTotalCount = model.xTotalCount;
+            } 
 
             /**
              * X-Total-Count.
@@ -194,6 +219,15 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
             private String mappings; 
             private String settings; 
 
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.aliases = model.aliases;
+                this.mappings = model.mappings;
+                this.settings = model.settings;
+            } 
+
             /**
              * aliases.
              */
@@ -236,7 +270,7 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
         private Boolean dataStream;
 
         @com.aliyun.core.annotation.NameInMap("indexPatterns")
-        private java.util.List < String > indexPatterns;
+        private java.util.List<String> indexPatterns;
 
         @com.aliyun.core.annotation.NameInMap("indexTemplate")
         private String indexTemplate;
@@ -277,7 +311,7 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
         /**
          * @return indexPatterns
          */
-        public java.util.List < String > getIndexPatterns() {
+        public java.util.List<String> getIndexPatterns() {
             return this.indexPatterns;
         }
 
@@ -311,11 +345,23 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean dataStream; 
-            private java.util.List < String > indexPatterns; 
+            private java.util.List<String> indexPatterns; 
             private String indexTemplate; 
             private Long order; 
             private Template template; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.dataStream = model.dataStream;
+                this.indexPatterns = model.indexPatterns;
+                this.indexTemplate = model.indexTemplate;
+                this.order = model.order;
+                this.template = model.template;
+                this.version = model.version;
+            } 
 
             /**
              * dataStream.
@@ -328,7 +374,7 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
             /**
              * indexPatterns.
              */
-            public Builder indexPatterns(java.util.List < String > indexPatterns) {
+            public Builder indexPatterns(java.util.List<String> indexPatterns) {
                 this.indexPatterns = indexPatterns;
                 return this;
             }

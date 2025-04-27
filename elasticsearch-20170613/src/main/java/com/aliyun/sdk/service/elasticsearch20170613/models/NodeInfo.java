@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class NodeInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return host
      */
@@ -72,6 +81,16 @@ public class NodeInfo extends TeaModel {
         private String hostName; 
         private Long port; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeInfo model) {
+            this.host = model.host;
+            this.hostName = model.hostName;
+            this.port = model.port;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * host.

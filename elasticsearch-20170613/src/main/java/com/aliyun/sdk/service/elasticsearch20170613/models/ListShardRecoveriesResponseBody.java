@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListShardRecoveriesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListShardRecoveriesResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +80,7 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
         /**
          * <p>The returned result.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -237,6 +254,24 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
             private String targetNode; 
             private Long translogOps; 
             private String translogOpsPercent; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.bytesPercent = model.bytesPercent;
+                this.bytesTotal = model.bytesTotal;
+                this.filesPercent = model.filesPercent;
+                this.filesTotal = model.filesTotal;
+                this.index = model.index;
+                this.sourceHost = model.sourceHost;
+                this.sourceNode = model.sourceNode;
+                this.stage = model.stage;
+                this.targetHost = model.targetHost;
+                this.targetNode = model.targetNode;
+                this.translogOps = model.translogOps;
+                this.translogOpsPercent = model.translogOpsPercent;
+            } 
 
             /**
              * <p>The data restoration progress.</p>

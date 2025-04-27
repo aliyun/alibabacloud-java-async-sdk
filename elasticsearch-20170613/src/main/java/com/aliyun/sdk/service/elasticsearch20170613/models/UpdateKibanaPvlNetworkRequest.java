@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("securityGroups")
-    private java.util.List < String > securityGroups;
+    private java.util.List<String> securityGroups;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pvlId")
@@ -46,7 +51,7 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +73,7 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
     /**
      * @return securityGroups
      */
-    public java.util.List < String > getSecurityGroups() {
+    public java.util.List<String> getSecurityGroups() {
         return this.securityGroups;
     }
 
@@ -82,7 +87,7 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateKibanaPvlNetworkRequest, Builder> {
         private String instanceId; 
         private String endpointName; 
-        private java.util.List < String > securityGroups; 
+        private java.util.List<String> securityGroups; 
         private String pvlId; 
 
         private Builder() {
@@ -121,7 +126,7 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
         /**
          * securityGroups.
          */
-        public Builder securityGroups(java.util.List < String > securityGroups) {
+        public Builder securityGroups(java.util.List<String> securityGroups) {
             this.putBodyParameter("securityGroups", securityGroups);
             this.securityGroups = securityGroups;
             return this;

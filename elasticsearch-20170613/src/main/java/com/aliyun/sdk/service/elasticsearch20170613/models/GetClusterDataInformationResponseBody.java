@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetClusterDataInformationResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -82,10 +99,10 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
      */
     public static class MetaInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fields")
-        private java.util.List < String > fields;
+        private java.util.List<String> fields;
 
         @com.aliyun.core.annotation.NameInMap("indices")
-        private java.util.List < String > indices;
+        private java.util.List<String> indices;
 
         @com.aliyun.core.annotation.NameInMap("mapping")
         private String mapping;
@@ -94,7 +111,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         private String settings;
 
         @com.aliyun.core.annotation.NameInMap("typeName")
-        private java.util.List < String > typeName;
+        private java.util.List<String> typeName;
 
         private MetaInfo(Builder builder) {
             this.fields = builder.fields;
@@ -115,14 +132,14 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         /**
          * @return fields
          */
-        public java.util.List < String > getFields() {
+        public java.util.List<String> getFields() {
             return this.fields;
         }
 
         /**
          * @return indices
          */
-        public java.util.List < String > getIndices() {
+        public java.util.List<String> getIndices() {
             return this.indices;
         }
 
@@ -143,21 +160,32 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         /**
          * @return typeName
          */
-        public java.util.List < String > getTypeName() {
+        public java.util.List<String> getTypeName() {
             return this.typeName;
         }
 
         public static final class Builder {
-            private java.util.List < String > fields; 
-            private java.util.List < String > indices; 
+            private java.util.List<String> fields; 
+            private java.util.List<String> indices; 
             private String mapping; 
             private String settings; 
-            private java.util.List < String > typeName; 
+            private java.util.List<String> typeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetaInfo model) {
+                this.fields = model.fields;
+                this.indices = model.indices;
+                this.mapping = model.mapping;
+                this.settings = model.settings;
+                this.typeName = model.typeName;
+            } 
 
             /**
              * <p>The fields in the Mapping for the index.</p>
              */
-            public Builder fields(java.util.List < String > fields) {
+            public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
                 return this;
             }
@@ -165,7 +193,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             /**
              * <p>The index list of the cluster.</p>
              */
-            public Builder indices(java.util.List < String > indices) {
+            public Builder indices(java.util.List<String> indices) {
                 this.indices = indices;
                 return this;
             }
@@ -195,7 +223,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             /**
              * <p>Specifies the type of the index.</p>
              */
-            public Builder typeName(java.util.List < String > typeName) {
+            public Builder typeName(java.util.List<String> typeName) {
                 this.typeName = typeName;
                 return this;
             }
@@ -250,6 +278,14 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean connectable; 
             private MetaInfo metaInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.connectable = model.connectable;
+                this.metaInfo = model.metaInfo;
+            } 
 
             /**
              * <p>Whether it is connectable.</p>

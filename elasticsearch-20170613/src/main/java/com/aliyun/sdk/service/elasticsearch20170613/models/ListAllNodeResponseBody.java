@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListAllNodeResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListAllNodeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class ListAllNodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class ListAllNodeResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAllNodeResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The zone ID of the node.</p>
@@ -66,7 +83,7 @@ public class ListAllNodeResponseBody extends TeaModel {
          * <p> If the <strong>extended</strong> request parameter is set to <strong>true</strong> and the monitoring information of the nodes in the cluster is being synchronized, the value of the cpuPercent parameter is null. In this case, you need to send a request again after 10 seconds to obtain the value of the cpuPercent parameter.</p>
          * </blockquote>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -204,6 +221,21 @@ public class ListAllNodeResponseBody extends TeaModel {
             private String nodeType; 
             private Integer port; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.cpuPercent = model.cpuPercent;
+                this.diskUsedPercent = model.diskUsedPercent;
+                this.health = model.health;
+                this.heapPercent = model.heapPercent;
+                this.host = model.host;
+                this.loadOneM = model.loadOneM;
+                this.nodeType = model.nodeType;
+                this.port = model.port;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The disk usage.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,12 +30,12 @@ public class EnableKibanaPvlNetworkRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("securityGroups")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > securityGroups;
+    private java.util.List<String> securityGroups;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("vSwitchIdsZone")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < VSwitchIdsZone> vSwitchIdsZone;
+    private java.util.List<VSwitchIdsZone> vSwitchIdsZone;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("vpcId")
@@ -54,7 +59,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -76,14 +81,14 @@ public class EnableKibanaPvlNetworkRequest extends Request {
     /**
      * @return securityGroups
      */
-    public java.util.List < String > getSecurityGroups() {
+    public java.util.List<String> getSecurityGroups() {
         return this.securityGroups;
     }
 
     /**
      * @return vSwitchIdsZone
      */
-    public java.util.List < VSwitchIdsZone> getVSwitchIdsZone() {
+    public java.util.List<VSwitchIdsZone> getVSwitchIdsZone() {
         return this.vSwitchIdsZone;
     }
 
@@ -97,8 +102,8 @@ public class EnableKibanaPvlNetworkRequest extends Request {
     public static final class Builder extends Request.Builder<EnableKibanaPvlNetworkRequest, Builder> {
         private String instanceId; 
         private String endpointName; 
-        private java.util.List < String > securityGroups; 
-        private java.util.List < VSwitchIdsZone> vSwitchIdsZone; 
+        private java.util.List<String> securityGroups; 
+        private java.util.List<VSwitchIdsZone> vSwitchIdsZone; 
         private String vpcId; 
 
         private Builder() {
@@ -141,7 +146,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder securityGroups(java.util.List < String > securityGroups) {
+        public Builder securityGroups(java.util.List<String> securityGroups) {
             this.putBodyParameter("securityGroups", securityGroups);
             this.securityGroups = securityGroups;
             return this;
@@ -150,7 +155,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder vSwitchIdsZone(java.util.List < VSwitchIdsZone> vSwitchIdsZone) {
+        public Builder vSwitchIdsZone(java.util.List<VSwitchIdsZone> vSwitchIdsZone) {
             this.putBodyParameter("vSwitchIdsZone", vSwitchIdsZone);
             this.vSwitchIdsZone = vSwitchIdsZone;
             return this;
@@ -220,6 +225,14 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         public static final class Builder {
             private String vswitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitchIdsZone model) {
+                this.vswitchId = model.vswitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

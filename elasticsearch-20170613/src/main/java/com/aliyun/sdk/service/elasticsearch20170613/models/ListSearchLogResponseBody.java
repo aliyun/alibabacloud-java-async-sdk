@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListSearchLogResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListSearchLogResponseBody(Builder builder) {
         this.headers = builder.headers;
@@ -33,6 +38,10 @@ public class ListSearchLogResponseBody extends TeaModel {
 
     public static ListSearchLogResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListSearchLogResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private Headers headers; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSearchLogResponseBody model) {
+            this.headers = model.headers;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The level of the log. Valid values:</p>
@@ -91,7 +109,7 @@ public class ListSearchLogResponseBody extends TeaModel {
         /**
          * <p>The content of the log entry. Migrated to the contentCollection field.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -134,6 +152,13 @@ public class ListSearchLogResponseBody extends TeaModel {
         public static final class Builder {
             private Integer xTotalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.xTotalCount = model.xTotalCount;
+            } 
+
             /**
              * <p>The IP address of the node that generates the log.</p>
              * 
@@ -163,7 +188,7 @@ public class ListSearchLogResponseBody extends TeaModel {
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("contentCollection")
-        private java.util.Map < String, ? > contentCollection;
+        private java.util.Map<String, ?> contentCollection;
 
         @com.aliyun.core.annotation.NameInMap("host")
         private String host;
@@ -204,7 +229,7 @@ public class ListSearchLogResponseBody extends TeaModel {
         /**
          * @return contentCollection
          */
-        public java.util.Map < String, ? > getContentCollection() {
+        public java.util.Map<String, ?> getContentCollection() {
             return this.contentCollection;
         }
 
@@ -238,11 +263,23 @@ public class ListSearchLogResponseBody extends TeaModel {
 
         public static final class Builder {
             private String content; 
-            private java.util.Map < String, ? > contentCollection; 
+            private java.util.Map<String, ?> contentCollection; 
             private String host; 
             private String instanceId; 
             private String level; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.content = model.content;
+                this.contentCollection = model.contentCollection;
+                this.host = model.host;
+                this.instanceId = model.instanceId;
+                this.level = model.level;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The ID of the instance.</p>
@@ -258,7 +295,7 @@ public class ListSearchLogResponseBody extends TeaModel {
             /**
              * contentCollection.
              */
-            public Builder contentCollection(java.util.Map < String, ? > contentCollection) {
+            public Builder contentCollection(java.util.Map<String, ?> contentCollection) {
                 this.contentCollection = contentCollection;
                 return this;
             }

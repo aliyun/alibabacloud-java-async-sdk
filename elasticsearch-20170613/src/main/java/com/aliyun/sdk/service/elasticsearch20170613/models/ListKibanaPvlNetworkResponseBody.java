@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListKibanaPvlNetworkResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListKibanaPvlNetworkResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>request id</p>
@@ -63,7 +80,7 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -118,6 +135,14 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             private String vswitchId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VSwitchIdsZone model) {
+                this.vswitchId = model.vswitchId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * vswitchId.
              */
@@ -164,10 +189,10 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         private String pvlId;
 
         @com.aliyun.core.annotation.NameInMap("securityGroups")
-        private java.util.List < String > securityGroups;
+        private java.util.List<String> securityGroups;
 
         @com.aliyun.core.annotation.NameInMap("vSwitchIdsZone")
-        private java.util.List < VSwitchIdsZone> vSwitchIdsZone;
+        private java.util.List<VSwitchIdsZone> vSwitchIdsZone;
 
         @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
@@ -229,14 +254,14 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         /**
          * @return securityGroups
          */
-        public java.util.List < String > getSecurityGroups() {
+        public java.util.List<String> getSecurityGroups() {
             return this.securityGroups;
         }
 
         /**
          * @return vSwitchIdsZone
          */
-        public java.util.List < VSwitchIdsZone> getVSwitchIdsZone() {
+        public java.util.List<VSwitchIdsZone> getVSwitchIdsZone() {
             return this.vSwitchIdsZone;
         }
 
@@ -253,9 +278,23 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             private String endpointName; 
             private String endpointStatus; 
             private String pvlId; 
-            private java.util.List < String > securityGroups; 
-            private java.util.List < VSwitchIdsZone> vSwitchIdsZone; 
+            private java.util.List<String> securityGroups; 
+            private java.util.List<VSwitchIdsZone> vSwitchIdsZone; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createTime = model.createTime;
+                this.endpointId = model.endpointId;
+                this.endpointName = model.endpointName;
+                this.endpointStatus = model.endpointStatus;
+                this.pvlId = model.pvlId;
+                this.securityGroups = model.securityGroups;
+                this.vSwitchIdsZone = model.vSwitchIdsZone;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * createTime.
@@ -300,7 +339,7 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             /**
              * securityGroups.
              */
-            public Builder securityGroups(java.util.List < String > securityGroups) {
+            public Builder securityGroups(java.util.List<String> securityGroups) {
                 this.securityGroups = securityGroups;
                 return this;
             }
@@ -308,7 +347,7 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             /**
              * vSwitchIdsZone.
              */
-            public Builder vSwitchIdsZone(java.util.List < VSwitchIdsZone> vSwitchIdsZone) {
+            public Builder vSwitchIdsZone(java.util.List<VSwitchIdsZone> vSwitchIdsZone) {
                 this.vSwitchIdsZone = vSwitchIdsZone;
                 return this;
             }

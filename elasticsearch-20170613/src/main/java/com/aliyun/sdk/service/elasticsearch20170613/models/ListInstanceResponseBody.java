@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListInstanceResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListInstanceResponseBody(Builder builder) {
         this.headers = builder.headers;
@@ -33,6 +38,10 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static ListInstanceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListInstanceResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private Headers headers; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceResponseBody model) {
+            this.headers = model.headers;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The status of the instance. Valid values:</p>
@@ -89,7 +107,7 @@ public class ListInstanceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether it is a service VPC.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -131,6 +149,13 @@ public class ListInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer xTotalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.xTotalCount = model.xTotalCount;
+            } 
 
             /**
              * <p>Specifies whether to include dedicated master nodes (obsolete). Valid values:</p>
@@ -233,6 +258,17 @@ public class ListInstanceResponseBody extends TeaModel {
             private String diskType; 
             private String spec; 
             private String specInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClientNodeConfiguration model) {
+                this.amount = model.amount;
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+                this.specInfo = model.specInfo;
+            } 
 
             /**
              * <p>The size of the node storage space. Unit: GB.</p>
@@ -394,6 +430,18 @@ public class ListInstanceResponseBody extends TeaModel {
             private String spec; 
             private String specInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(ElasticDataNodeConfiguration model) {
+                this.amount = model.amount;
+                this.disk = model.disk;
+                this.diskEncryption = model.diskEncryption;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+                this.specInfo = model.specInfo;
+            } 
+
             /**
              * <p>The number of nodes.</p>
              * 
@@ -544,6 +592,17 @@ public class ListInstanceResponseBody extends TeaModel {
             private String spec; 
             private String specInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(KibanaConfiguration model) {
+                this.amount = model.amount;
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+                this.specInfo = model.specInfo;
+            } 
+
             /**
              * <p>The size of the node storage space. Unit: GB.</p>
              * 
@@ -683,6 +742,17 @@ public class ListInstanceResponseBody extends TeaModel {
             private String spec; 
             private String specInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(MasterConfiguration model) {
+                this.amount = model.amount;
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+                this.specInfo = model.specInfo;
+            } 
+
             /**
              * <p>The network type. Only Virtual Private Cloud (VPC) is supported.</p>
              * 
@@ -753,7 +823,7 @@ public class ListInstanceResponseBody extends TeaModel {
         private String groupName;
 
         @com.aliyun.core.annotation.NameInMap("ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         @com.aliyun.core.annotation.NameInMap("whiteIpType")
         private String whiteIpType;
@@ -782,7 +852,7 @@ public class ListInstanceResponseBody extends TeaModel {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
@@ -795,8 +865,17 @@ public class ListInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String groupName; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
             private String whiteIpType; 
+
+            private Builder() {
+            } 
+
+            private Builder(WhiteIpGroupList model) {
+                this.groupName = model.groupName;
+                this.ips = model.ips;
+                this.whiteIpType = model.whiteIpType;
+            } 
 
             /**
              * groupName.
@@ -809,7 +888,7 @@ public class ListInstanceResponseBody extends TeaModel {
             /**
              * ips.
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }
@@ -849,7 +928,7 @@ public class ListInstanceResponseBody extends TeaModel {
         private String vswitchId;
 
         @com.aliyun.core.annotation.NameInMap("whiteIpGroupList")
-        private java.util.List < WhiteIpGroupList> whiteIpGroupList;
+        private java.util.List<WhiteIpGroupList> whiteIpGroupList;
 
         private NetworkConfig(Builder builder) {
             this.type = builder.type;
@@ -898,7 +977,7 @@ public class ListInstanceResponseBody extends TeaModel {
         /**
          * @return whiteIpGroupList
          */
-        public java.util.List < WhiteIpGroupList> getWhiteIpGroupList() {
+        public java.util.List<WhiteIpGroupList> getWhiteIpGroupList() {
             return this.whiteIpGroupList;
         }
 
@@ -907,7 +986,18 @@ public class ListInstanceResponseBody extends TeaModel {
             private String vpcId; 
             private String vsArea; 
             private String vswitchId; 
-            private java.util.List < WhiteIpGroupList> whiteIpGroupList; 
+            private java.util.List<WhiteIpGroupList> whiteIpGroupList; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkConfig model) {
+                this.type = model.type;
+                this.vpcId = model.vpcId;
+                this.vsArea = model.vsArea;
+                this.vswitchId = model.vswitchId;
+                this.whiteIpGroupList = model.whiteIpGroupList;
+            } 
 
             /**
              * <p>The storage type of the node. Valid values:</p>
@@ -964,7 +1054,7 @@ public class ListInstanceResponseBody extends TeaModel {
             /**
              * whiteIpGroupList.
              */
-            public Builder whiteIpGroupList(java.util.List < WhiteIpGroupList> whiteIpGroupList) {
+            public Builder whiteIpGroupList(java.util.List<WhiteIpGroupList> whiteIpGroupList) {
                 this.whiteIpGroupList = whiteIpGroupList;
                 return this;
             }
@@ -1067,6 +1157,18 @@ public class ListInstanceResponseBody extends TeaModel {
             private String performanceLevel; 
             private String spec; 
             private String specInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeSpec model) {
+                this.disk = model.disk;
+                this.diskEncryption = model.diskEncryption;
+                this.diskType = model.diskType;
+                this.performanceLevel = model.performanceLevel;
+                this.spec = model.spec;
+                this.specInfo = model.specInfo;
+            } 
 
             /**
              * <p>The vSwitch ID of the cluster.</p>
@@ -1179,6 +1281,14 @@ public class ListInstanceResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The size of the node storage space. Unit: GB.</p>
              * 
@@ -1246,7 +1356,7 @@ public class ListInstanceResponseBody extends TeaModel {
         private String esVersion;
 
         @com.aliyun.core.annotation.NameInMap("extendConfigs")
-        private java.util.List < java.util.Map<String, ?>> extendConfigs;
+        private java.util.List<java.util.Map<String, ?>> extendConfigs;
 
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
@@ -1258,10 +1368,10 @@ public class ListInstanceResponseBody extends TeaModel {
         private KibanaConfiguration kibanaConfiguration;
 
         @com.aliyun.core.annotation.NameInMap("kibanaIPWhitelist")
-        private java.util.List < String > kibanaIPWhitelist;
+        private java.util.List<String> kibanaIPWhitelist;
 
         @com.aliyun.core.annotation.NameInMap("kibanaPrivateIPWhitelist")
-        private java.util.List < String > kibanaPrivateIPWhitelist;
+        private java.util.List<String> kibanaPrivateIPWhitelist;
 
         @com.aliyun.core.annotation.NameInMap("masterConfiguration")
         private MasterConfiguration masterConfiguration;
@@ -1278,14 +1388,20 @@ public class ListInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("paymentType")
         private String paymentType;
 
+        @com.aliyun.core.annotation.NameInMap("port")
+        private String port;
+
         @com.aliyun.core.annotation.NameInMap("postpaidServiceStatus")
         private String postpaidServiceStatus;
 
         @com.aliyun.core.annotation.NameInMap("privateNetworkIpWhiteList")
-        private java.util.List < String > privateNetworkIpWhiteList;
+        private java.util.List<String> privateNetworkIpWhiteList;
+
+        @com.aliyun.core.annotation.NameInMap("protocol")
+        private String protocol;
 
         @com.aliyun.core.annotation.NameInMap("publicIpWhitelist")
-        private java.util.List < String > publicIpWhitelist;
+        private java.util.List<String> publicIpWhitelist;
 
         @com.aliyun.core.annotation.NameInMap("resourceGroupId")
         private String resourceGroupId;
@@ -1297,7 +1413,7 @@ public class ListInstanceResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
@@ -1327,8 +1443,10 @@ public class ListInstanceResponseBody extends TeaModel {
             this.nodeAmount = builder.nodeAmount;
             this.nodeSpec = builder.nodeSpec;
             this.paymentType = builder.paymentType;
+            this.port = builder.port;
             this.postpaidServiceStatus = builder.postpaidServiceStatus;
             this.privateNetworkIpWhiteList = builder.privateNetworkIpWhiteList;
+            this.protocol = builder.protocol;
             this.publicIpWhitelist = builder.publicIpWhitelist;
             this.resourceGroupId = builder.resourceGroupId;
             this.serviceVpc = builder.serviceVpc;
@@ -1419,7 +1537,7 @@ public class ListInstanceResponseBody extends TeaModel {
         /**
          * @return extendConfigs
          */
-        public java.util.List < java.util.Map<String, ?>> getExtendConfigs() {
+        public java.util.List<java.util.Map<String, ?>> getExtendConfigs() {
             return this.extendConfigs;
         }
 
@@ -1447,14 +1565,14 @@ public class ListInstanceResponseBody extends TeaModel {
         /**
          * @return kibanaIPWhitelist
          */
-        public java.util.List < String > getKibanaIPWhitelist() {
+        public java.util.List<String> getKibanaIPWhitelist() {
             return this.kibanaIPWhitelist;
         }
 
         /**
          * @return kibanaPrivateIPWhitelist
          */
-        public java.util.List < String > getKibanaPrivateIPWhitelist() {
+        public java.util.List<String> getKibanaPrivateIPWhitelist() {
             return this.kibanaPrivateIPWhitelist;
         }
 
@@ -1494,6 +1612,13 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return port
+         */
+        public String getPort() {
+            return this.port;
+        }
+
+        /**
          * @return postpaidServiceStatus
          */
         public String getPostpaidServiceStatus() {
@@ -1503,14 +1628,21 @@ public class ListInstanceResponseBody extends TeaModel {
         /**
          * @return privateNetworkIpWhiteList
          */
-        public java.util.List < String > getPrivateNetworkIpWhiteList() {
+        public java.util.List<String> getPrivateNetworkIpWhiteList() {
             return this.privateNetworkIpWhiteList;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
         }
 
         /**
          * @return publicIpWhitelist
          */
-        public java.util.List < String > getPublicIpWhitelist() {
+        public java.util.List<String> getPublicIpWhitelist() {
             return this.publicIpWhitelist;
         }
 
@@ -1538,7 +1670,7 @@ public class ListInstanceResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1567,26 +1699,66 @@ public class ListInstanceResponseBody extends TeaModel {
             private ElasticDataNodeConfiguration elasticDataNodeConfiguration; 
             private Long endTime; 
             private String esVersion; 
-            private java.util.List < java.util.Map<String, ?>> extendConfigs; 
+            private java.util.List<java.util.Map<String, ?>> extendConfigs; 
             private String instanceId; 
             private String isNewDeployment; 
             private KibanaConfiguration kibanaConfiguration; 
-            private java.util.List < String > kibanaIPWhitelist; 
-            private java.util.List < String > kibanaPrivateIPWhitelist; 
+            private java.util.List<String> kibanaIPWhitelist; 
+            private java.util.List<String> kibanaPrivateIPWhitelist; 
             private MasterConfiguration masterConfiguration; 
             private NetworkConfig networkConfig; 
             private Integer nodeAmount; 
             private NodeSpec nodeSpec; 
             private String paymentType; 
+            private String port; 
             private String postpaidServiceStatus; 
-            private java.util.List < String > privateNetworkIpWhiteList; 
-            private java.util.List < String > publicIpWhitelist; 
+            private java.util.List<String> privateNetworkIpWhiteList; 
+            private String protocol; 
+            private java.util.List<String> publicIpWhitelist; 
             private String resourceGroupId; 
             private Boolean serviceVpc; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String updatedAt; 
             private String vpcInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.advancedDedicateMaster = model.advancedDedicateMaster;
+                this.archType = model.archType;
+                this.clientNodeConfiguration = model.clientNodeConfiguration;
+                this.createdAt = model.createdAt;
+                this.dedicateMaster = model.dedicateMaster;
+                this.description = model.description;
+                this.domain = model.domain;
+                this.elasticDataNodeConfiguration = model.elasticDataNodeConfiguration;
+                this.endTime = model.endTime;
+                this.esVersion = model.esVersion;
+                this.extendConfigs = model.extendConfigs;
+                this.instanceId = model.instanceId;
+                this.isNewDeployment = model.isNewDeployment;
+                this.kibanaConfiguration = model.kibanaConfiguration;
+                this.kibanaIPWhitelist = model.kibanaIPWhitelist;
+                this.kibanaPrivateIPWhitelist = model.kibanaPrivateIPWhitelist;
+                this.masterConfiguration = model.masterConfiguration;
+                this.networkConfig = model.networkConfig;
+                this.nodeAmount = model.nodeAmount;
+                this.nodeSpec = model.nodeSpec;
+                this.paymentType = model.paymentType;
+                this.port = model.port;
+                this.postpaidServiceStatus = model.postpaidServiceStatus;
+                this.privateNetworkIpWhiteList = model.privateNetworkIpWhiteList;
+                this.protocol = model.protocol;
+                this.publicIpWhitelist = model.publicIpWhitelist;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serviceVpc = model.serviceVpc;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.updatedAt = model.updatedAt;
+                this.vpcInstanceId = model.vpcInstanceId;
+            } 
 
             /**
              * <p>The billing method of the instance. Valid values:</p>
@@ -1695,7 +1867,7 @@ public class ListInstanceResponseBody extends TeaModel {
             /**
              * <p>The configurations of elastic data nodes.</p>
              */
-            public Builder extendConfigs(java.util.List < java.util.Map<String, ?>> extendConfigs) {
+            public Builder extendConfigs(java.util.List<java.util.Map<String, ?>> extendConfigs) {
                 this.extendConfigs = extendConfigs;
                 return this;
             }
@@ -1733,7 +1905,7 @@ public class ListInstanceResponseBody extends TeaModel {
             /**
              * kibanaIPWhitelist.
              */
-            public Builder kibanaIPWhitelist(java.util.List < String > kibanaIPWhitelist) {
+            public Builder kibanaIPWhitelist(java.util.List<String> kibanaIPWhitelist) {
                 this.kibanaIPWhitelist = kibanaIPWhitelist;
                 return this;
             }
@@ -1741,7 +1913,7 @@ public class ListInstanceResponseBody extends TeaModel {
             /**
              * kibanaPrivateIPWhitelist.
              */
-            public Builder kibanaPrivateIPWhitelist(java.util.List < String > kibanaPrivateIPWhitelist) {
+            public Builder kibanaPrivateIPWhitelist(java.util.List<String> kibanaPrivateIPWhitelist) {
                 this.kibanaPrivateIPWhitelist = kibanaPrivateIPWhitelist;
                 return this;
             }
@@ -1793,6 +1965,14 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * port.
+             */
+            public Builder port(String port) {
+                this.port = port;
+                return this;
+            }
+
+            /**
              * <p>The tags of the instance. Each tag is a key-value pair.</p>
              * 
              * <strong>example:</strong>
@@ -1806,15 +1986,23 @@ public class ListInstanceResponseBody extends TeaModel {
             /**
              * privateNetworkIpWhiteList.
              */
-            public Builder privateNetworkIpWhiteList(java.util.List < String > privateNetworkIpWhiteList) {
+            public Builder privateNetworkIpWhiteList(java.util.List<String> privateNetworkIpWhiteList) {
                 this.privateNetworkIpWhiteList = privateNetworkIpWhiteList;
+                return this;
+            }
+
+            /**
+             * protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
                 return this;
             }
 
             /**
              * publicIpWhitelist.
              */
-            public Builder publicIpWhitelist(java.util.List < String > publicIpWhitelist) {
+            public Builder publicIpWhitelist(java.util.List<String> publicIpWhitelist) {
                 this.publicIpWhitelist = publicIpWhitelist;
                 return this;
             }
@@ -1855,7 +2043,7 @@ public class ListInstanceResponseBody extends TeaModel {
             /**
              * <p>The number of nodes.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

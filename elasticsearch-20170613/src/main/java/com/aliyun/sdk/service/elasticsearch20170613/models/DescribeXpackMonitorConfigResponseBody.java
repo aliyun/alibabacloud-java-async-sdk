@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeXpackMonitorConfigResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -85,13 +102,13 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
         private Boolean enable;
 
         @com.aliyun.core.annotation.NameInMap("endpoints")
-        private java.util.List < String > endpoints;
+        private java.util.List<String> endpoints;
 
         @com.aliyun.core.annotation.NameInMap("esInstanceId")
         private String esInstanceId;
 
         @com.aliyun.core.annotation.NameInMap("pipelineIds")
-        private java.util.List < String > pipelineIds;
+        private java.util.List<String> pipelineIds;
 
         @com.aliyun.core.annotation.NameInMap("userName")
         private String userName;
@@ -122,7 +139,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
         /**
          * @return endpoints
          */
-        public java.util.List < String > getEndpoints() {
+        public java.util.List<String> getEndpoints() {
             return this.endpoints;
         }
 
@@ -136,7 +153,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
         /**
          * @return pipelineIds
          */
-        public java.util.List < String > getPipelineIds() {
+        public java.util.List<String> getPipelineIds() {
             return this.pipelineIds;
         }
 
@@ -149,10 +166,21 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean enable; 
-            private java.util.List < String > endpoints; 
+            private java.util.List<String> endpoints; 
             private String esInstanceId; 
-            private java.util.List < String > pipelineIds; 
+            private java.util.List<String> pipelineIds; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.enable = model.enable;
+                this.endpoints = model.endpoints;
+                this.esInstanceId = model.esInstanceId;
+                this.pipelineIds = model.pipelineIds;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>Indicates whether the X-Pack Monitoring feature is enabled. Valid values:</p>
@@ -172,7 +200,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
             /**
              * endpoints.
              */
-            public Builder endpoints(java.util.List < String > endpoints) {
+            public Builder endpoints(java.util.List<String> endpoints) {
                 this.endpoints = endpoints;
                 return this;
             }
@@ -191,7 +219,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
             /**
              * pipelineIds.
              */
-            public Builder pipelineIds(java.util.List < String > pipelineIds) {
+            public Builder pipelineIds(java.util.List<String> pipelineIds) {
                 this.pipelineIds = pipelineIds;
                 return this;
             }

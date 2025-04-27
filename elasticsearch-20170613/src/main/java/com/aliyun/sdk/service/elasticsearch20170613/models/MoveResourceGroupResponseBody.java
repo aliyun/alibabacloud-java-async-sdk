@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(MoveResourceGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -141,6 +158,16 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String name; 
             private String sourceType; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DictList model) {
+                this.fileSize = model.fileSize;
+                this.name = model.name;
+                this.sourceType = model.sourceType;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The size of the dictionary file. Unit: bytes.</p>
@@ -271,6 +298,16 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String diskType; 
             private String spec; 
 
+            private Builder() {
+            } 
+
+            private Builder(KibanaConfiguration model) {
+                this.amount = model.amount;
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+            } 
+
             /**
              * <p>The number of nodes.</p>
              * 
@@ -389,6 +426,16 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private Integer disk; 
             private String diskType; 
             private String spec; 
+
+            private Builder() {
+            } 
+
+            private Builder(MasterConfiguration model) {
+                this.amount = model.amount;
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+            } 
 
             /**
              * <p>The number of nodes.</p>
@@ -509,6 +556,16 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String vsArea; 
             private String vswitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkConfig model) {
+                this.type = model.type;
+                this.vpcId = model.vpcId;
+                this.vsArea = model.vsArea;
+                this.vswitchId = model.vswitchId;
+            } 
+
             /**
              * <p>The network type. Only the VPC is supported.</p>
              * 
@@ -615,6 +672,15 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private Integer disk; 
             private String diskType; 
             private String spec; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeSpec model) {
+                this.disk = model.disk;
+                this.diskType = model.diskType;
+                this.spec = model.spec;
+            } 
 
             /**
              * <p>The storage capacity. Unit: GB.</p>
@@ -724,6 +790,16 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String sourceType; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(SynonymsDicts model) {
+                this.fileSize = model.fileSize;
+                this.name = model.name;
+                this.sourceType = model.sourceType;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The size of the dictionary file. Unit: bytes.</p>
              * 
@@ -799,7 +875,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("dictList")
-        private java.util.List < DictList> dictList;
+        private java.util.List<DictList> dictList;
 
         @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
@@ -844,7 +920,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("synonymsDicts")
-        private java.util.List < SynonymsDicts> synonymsDicts;
+        private java.util.List<SynonymsDicts> synonymsDicts;
 
         @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
@@ -896,7 +972,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         /**
          * @return dictList
          */
-        public java.util.List < DictList> getDictList() {
+        public java.util.List<DictList> getDictList() {
             return this.dictList;
         }
 
@@ -1001,7 +1077,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         /**
          * @return synonymsDicts
          */
-        public java.util.List < SynonymsDicts> getSynonymsDicts() {
+        public java.util.List<SynonymsDicts> getSynonymsDicts() {
             return this.synonymsDicts;
         }
 
@@ -1015,7 +1091,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String createdAt; 
             private String description; 
-            private java.util.List < DictList> dictList; 
+            private java.util.List<DictList> dictList; 
             private String domain; 
             private String esVersion; 
             private String instanceId; 
@@ -1030,8 +1106,33 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String publicDomain; 
             private Integer publicPort; 
             private String status; 
-            private java.util.List < SynonymsDicts> synonymsDicts; 
+            private java.util.List<SynonymsDicts> synonymsDicts; 
             private String updatedAt; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createdAt = model.createdAt;
+                this.description = model.description;
+                this.dictList = model.dictList;
+                this.domain = model.domain;
+                this.esVersion = model.esVersion;
+                this.instanceId = model.instanceId;
+                this.kibanaConfiguration = model.kibanaConfiguration;
+                this.kibanaDomain = model.kibanaDomain;
+                this.kibanaPort = model.kibanaPort;
+                this.masterConfiguration = model.masterConfiguration;
+                this.networkConfig = model.networkConfig;
+                this.nodeAmount = model.nodeAmount;
+                this.nodeSpec = model.nodeSpec;
+                this.paymentType = model.paymentType;
+                this.publicDomain = model.publicDomain;
+                this.publicPort = model.publicPort;
+                this.status = model.status;
+                this.synonymsDicts = model.synonymsDicts;
+                this.updatedAt = model.updatedAt;
+            } 
 
             /**
              * <p>The time when the cluster was created.</p>
@@ -1058,7 +1159,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             /**
              * <p>The configurations of IK dictionaries.</p>
              */
-            public Builder dictList(java.util.List < DictList> dictList) {
+            public Builder dictList(java.util.List<DictList> dictList) {
                 this.dictList = dictList;
                 return this;
             }
@@ -1218,7 +1319,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             /**
              * <p>The configurations of synonym dictionaries.</p>
              */
-            public Builder synonymsDicts(java.util.List < SynonymsDicts> synonymsDicts) {
+            public Builder synonymsDicts(java.util.List<SynonymsDicts> synonymsDicts) {
                 this.synonymsDicts = synonymsDicts;
                 return this;
             }

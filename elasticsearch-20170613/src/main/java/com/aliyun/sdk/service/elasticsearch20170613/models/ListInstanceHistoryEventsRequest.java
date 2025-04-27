@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListInstanceHistoryEventsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < ListInstanceHistoryEventsRequestBody> body;
+    private java.util.List<ListInstanceHistoryEventsRequestBody> body;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("eventCreateEndTime")
@@ -26,7 +31,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("eventCycleStatus")
-    private java.util.List < String > eventCycleStatus;
+    private java.util.List<String> eventCycleStatus;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("eventExecuteEndTime")
@@ -46,11 +51,11 @@ public class ListInstanceHistoryEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("eventLevel")
-    private java.util.List < String > eventLevel;
+    private java.util.List<String> eventLevel;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("eventType")
-    private java.util.List < String > eventType;
+    private java.util.List<String> eventType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("instanceId")
@@ -94,7 +99,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -102,7 +107,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < ListInstanceHistoryEventsRequestBody> getBody() {
+    public java.util.List<ListInstanceHistoryEventsRequestBody> getBody() {
         return this.body;
     }
 
@@ -123,7 +128,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
     /**
      * @return eventCycleStatus
      */
-    public java.util.List < String > getEventCycleStatus() {
+    public java.util.List<String> getEventCycleStatus() {
         return this.eventCycleStatus;
     }
 
@@ -158,14 +163,14 @@ public class ListInstanceHistoryEventsRequest extends Request {
     /**
      * @return eventLevel
      */
-    public java.util.List < String > getEventLevel() {
+    public java.util.List<String> getEventLevel() {
         return this.eventLevel;
     }
 
     /**
      * @return eventType
      */
-    public java.util.List < String > getEventType() {
+    public java.util.List<String> getEventType() {
         return this.eventType;
     }
 
@@ -198,16 +203,16 @@ public class ListInstanceHistoryEventsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInstanceHistoryEventsRequest, Builder> {
-        private java.util.List < ListInstanceHistoryEventsRequestBody> body; 
+        private java.util.List<ListInstanceHistoryEventsRequestBody> body; 
         private String eventCreateEndTime; 
         private String eventCreateStartTime; 
-        private java.util.List < String > eventCycleStatus; 
+        private java.util.List<String> eventCycleStatus; 
         private String eventExecuteEndTime; 
         private String eventExecuteStartTime; 
         private String eventFinashEndTime; 
         private String eventFinashStartTime; 
-        private java.util.List < String > eventLevel; 
-        private java.util.List < String > eventType; 
+        private java.util.List<String> eventLevel; 
+        private java.util.List<String> eventType; 
         private String instanceId; 
         private String nodeIP; 
         private Integer page; 
@@ -238,7 +243,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
         /**
          * body.
          */
-        public Builder body(java.util.List < ListInstanceHistoryEventsRequestBody> body) {
+        public Builder body(java.util.List<ListInstanceHistoryEventsRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
@@ -265,7 +270,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
         /**
          * eventCycleStatus.
          */
-        public Builder eventCycleStatus(java.util.List < String > eventCycleStatus) {
+        public Builder eventCycleStatus(java.util.List<String> eventCycleStatus) {
             String eventCycleStatusShrink = shrink(eventCycleStatus, "eventCycleStatus", "simple");
             this.putQueryParameter("eventCycleStatus", eventCycleStatusShrink);
             this.eventCycleStatus = eventCycleStatus;
@@ -311,7 +316,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
         /**
          * eventLevel.
          */
-        public Builder eventLevel(java.util.List < String > eventLevel) {
+        public Builder eventLevel(java.util.List<String> eventLevel) {
             String eventLevelShrink = shrink(eventLevel, "eventLevel", "simple");
             this.putQueryParameter("eventLevel", eventLevelShrink);
             this.eventLevel = eventLevel;
@@ -321,7 +326,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
         /**
          * eventType.
          */
-        public Builder eventType(java.util.List < String > eventType) {
+        public Builder eventType(java.util.List<String> eventType) {
             String eventTypeShrink = shrink(eventType, "eventType", "simple");
             this.putQueryParameter("eventType", eventTypeShrink);
             this.eventType = eventType;
@@ -414,6 +419,14 @@ public class ListInstanceHistoryEventsRequest extends Request {
         public static final class Builder {
             private Boolean desc; 
             private String sortField; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListInstanceHistoryEventsRequestBody model) {
+                this.desc = model.desc;
+                this.sortField = model.sortField;
+            } 
 
             /**
              * desc.

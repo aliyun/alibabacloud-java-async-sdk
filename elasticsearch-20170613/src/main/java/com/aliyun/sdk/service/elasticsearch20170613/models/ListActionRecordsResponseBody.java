@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListActionRecordsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class ListActionRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class ListActionRecordsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListActionRecordsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * RequestId.
@@ -60,7 +77,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -199,6 +216,21 @@ public class ListActionRecordsResponseBody extends TeaModel {
             private String stateType; 
             private String subState; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubStatusInfo model) {
+                this.completeNodeCount = model.completeNodeCount;
+                this.endTime = model.endTime;
+                this.exception = model.exception;
+                this.latencyMills = model.latencyMills;
+                this.nodeCount = model.nodeCount;
+                this.process = model.process;
+                this.startTime = model.startTime;
+                this.stateType = model.stateType;
+                this.subState = model.subState;
+            } 
+
             /**
              * completeNodeCount.
              */
@@ -313,7 +345,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
         private String subState;
 
         @com.aliyun.core.annotation.NameInMap("subStatusInfo")
-        private java.util.List < SubStatusInfo> subStatusInfo;
+        private java.util.List<SubStatusInfo> subStatusInfo;
 
         private StatusInfo(Builder builder) {
             this.completeNodeCount = builder.completeNodeCount;
@@ -402,7 +434,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
         /**
          * @return subStatusInfo
          */
-        public java.util.List < SubStatusInfo> getSubStatusInfo() {
+        public java.util.List<SubStatusInfo> getSubStatusInfo() {
             return this.subStatusInfo;
         }
 
@@ -416,7 +448,23 @@ public class ListActionRecordsResponseBody extends TeaModel {
             private Long startTime; 
             private String stateType; 
             private String subState; 
-            private java.util.List < SubStatusInfo> subStatusInfo; 
+            private java.util.List<SubStatusInfo> subStatusInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatusInfo model) {
+                this.completeNodeCount = model.completeNodeCount;
+                this.endTime = model.endTime;
+                this.exception = model.exception;
+                this.latencyMills = model.latencyMills;
+                this.nodeCount = model.nodeCount;
+                this.process = model.process;
+                this.startTime = model.startTime;
+                this.stateType = model.stateType;
+                this.subState = model.subState;
+                this.subStatusInfo = model.subStatusInfo;
+            } 
 
             /**
              * completeNodeCount.
@@ -493,7 +541,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             /**
              * subStatusInfo.
              */
-            public Builder subStatusInfo(java.util.List < SubStatusInfo> subStatusInfo) {
+            public Builder subStatusInfo(java.util.List<SubStatusInfo> subStatusInfo) {
                 this.subStatusInfo = subStatusInfo;
                 return this;
             }
@@ -512,58 +560,58 @@ public class ListActionRecordsResponseBody extends TeaModel {
      * <p>ListActionRecordsResponseBody</p>
      */
     public static class Result extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ActionName")
+        @com.aliyun.core.annotation.NameInMap("actionName")
         private String actionName;
 
-        @com.aliyun.core.annotation.NameInMap("ActionParams")
-        private java.util.Map < String, ? > actionParams;
+        @com.aliyun.core.annotation.NameInMap("actionParams")
+        private java.util.Map<String, ?> actionParams;
 
-        @com.aliyun.core.annotation.NameInMap("ActionResultAccessList")
-        private java.util.List < String > actionResultAccessList;
+        @com.aliyun.core.annotation.NameInMap("actionResultAccessList")
+        private java.util.List<String> actionResultAccessList;
 
-        @com.aliyun.core.annotation.NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
 
-        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @com.aliyun.core.annotation.NameInMap("MetaNow")
+        @com.aliyun.core.annotation.NameInMap("metaNow")
         private String metaNow;
 
-        @com.aliyun.core.annotation.NameInMap("MetaOld")
+        @com.aliyun.core.annotation.NameInMap("metaOld")
         private String metaOld;
 
-        @com.aliyun.core.annotation.NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("ownerId")
         private String ownerId;
 
-        @com.aliyun.core.annotation.NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("process")
         private String process;
 
-        @com.aliyun.core.annotation.NameInMap("RecordDiff")
-        private java.util.Map < String, ? > recordDiff;
+        @com.aliyun.core.annotation.NameInMap("recordDiff")
+        private java.util.Map<String, ?> recordDiff;
 
-        @com.aliyun.core.annotation.NameInMap("RecordIds")
-        private java.util.List < String > recordIds;
+        @com.aliyun.core.annotation.NameInMap("recordIds")
+        private java.util.List<String> recordIds;
 
-        @com.aliyun.core.annotation.NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("requestId")
         private String requestId;
 
-        @com.aliyun.core.annotation.NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private Long startTime;
 
-        @com.aliyun.core.annotation.NameInMap("StateType")
+        @com.aliyun.core.annotation.NameInMap("stateType")
         private String stateType;
 
-        @com.aliyun.core.annotation.NameInMap("StatusInfo")
-        private java.util.List < StatusInfo> statusInfo;
+        @com.aliyun.core.annotation.NameInMap("statusInfo")
+        private java.util.List<StatusInfo> statusInfo;
 
-        @com.aliyun.core.annotation.NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
-        @com.aliyun.core.annotation.NameInMap("UserInfo")
+        @com.aliyun.core.annotation.NameInMap("userInfo")
         private String userInfo;
 
-        @com.aliyun.core.annotation.NameInMap("UserType")
+        @com.aliyun.core.annotation.NameInMap("userType")
         private String userType;
 
         private Result(Builder builder) {
@@ -605,14 +653,14 @@ public class ListActionRecordsResponseBody extends TeaModel {
         /**
          * @return actionParams
          */
-        public java.util.Map < String, ? > getActionParams() {
+        public java.util.Map<String, ?> getActionParams() {
             return this.actionParams;
         }
 
         /**
          * @return actionResultAccessList
          */
-        public java.util.List < String > getActionResultAccessList() {
+        public java.util.List<String> getActionResultAccessList() {
             return this.actionResultAccessList;
         }
 
@@ -661,14 +709,14 @@ public class ListActionRecordsResponseBody extends TeaModel {
         /**
          * @return recordDiff
          */
-        public java.util.Map < String, ? > getRecordDiff() {
+        public java.util.Map<String, ?> getRecordDiff() {
             return this.recordDiff;
         }
 
         /**
          * @return recordIds
          */
-        public java.util.List < String > getRecordIds() {
+        public java.util.List<String> getRecordIds() {
             return this.recordIds;
         }
 
@@ -696,7 +744,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
         /**
          * @return statusInfo
          */
-        public java.util.List < StatusInfo> getStatusInfo() {
+        public java.util.List<StatusInfo> getStatusInfo() {
             return this.statusInfo;
         }
 
@@ -723,26 +771,50 @@ public class ListActionRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String actionName; 
-            private java.util.Map < String, ? > actionParams; 
-            private java.util.List < String > actionResultAccessList; 
+            private java.util.Map<String, ?> actionParams; 
+            private java.util.List<String> actionResultAccessList; 
             private Long endTime; 
             private String instanceId; 
             private String metaNow; 
             private String metaOld; 
             private String ownerId; 
             private String process; 
-            private java.util.Map < String, ? > recordDiff; 
-            private java.util.List < String > recordIds; 
+            private java.util.Map<String, ?> recordDiff; 
+            private java.util.List<String> recordIds; 
             private String requestId; 
             private Long startTime; 
             private String stateType; 
-            private java.util.List < StatusInfo> statusInfo; 
+            private java.util.List<StatusInfo> statusInfo; 
             private String userId; 
             private String userInfo; 
             private String userType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.actionName = model.actionName;
+                this.actionParams = model.actionParams;
+                this.actionResultAccessList = model.actionResultAccessList;
+                this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
+                this.metaNow = model.metaNow;
+                this.metaOld = model.metaOld;
+                this.ownerId = model.ownerId;
+                this.process = model.process;
+                this.recordDiff = model.recordDiff;
+                this.recordIds = model.recordIds;
+                this.requestId = model.requestId;
+                this.startTime = model.startTime;
+                this.stateType = model.stateType;
+                this.statusInfo = model.statusInfo;
+                this.userId = model.userId;
+                this.userInfo = model.userInfo;
+                this.userType = model.userType;
+            } 
+
             /**
-             * ActionName.
+             * actionName.
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -750,23 +822,23 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ActionParams.
+             * actionParams.
              */
-            public Builder actionParams(java.util.Map < String, ? > actionParams) {
+            public Builder actionParams(java.util.Map<String, ?> actionParams) {
                 this.actionParams = actionParams;
                 return this;
             }
 
             /**
-             * ActionResultAccessList.
+             * actionResultAccessList.
              */
-            public Builder actionResultAccessList(java.util.List < String > actionResultAccessList) {
+            public Builder actionResultAccessList(java.util.List<String> actionResultAccessList) {
                 this.actionResultAccessList = actionResultAccessList;
                 return this;
             }
 
             /**
-             * EndTime.
+             * endTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -774,7 +846,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * instanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -782,7 +854,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * MetaNow.
+             * metaNow.
              */
             public Builder metaNow(String metaNow) {
                 this.metaNow = metaNow;
@@ -790,7 +862,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * MetaOld.
+             * metaOld.
              */
             public Builder metaOld(String metaOld) {
                 this.metaOld = metaOld;
@@ -798,7 +870,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * ownerId.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -806,7 +878,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * process.
              */
             public Builder process(String process) {
                 this.process = process;
@@ -814,23 +886,23 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordDiff.
+             * recordDiff.
              */
-            public Builder recordDiff(java.util.Map < String, ? > recordDiff) {
+            public Builder recordDiff(java.util.Map<String, ?> recordDiff) {
                 this.recordDiff = recordDiff;
                 return this;
             }
 
             /**
-             * RecordIds.
+             * recordIds.
              */
-            public Builder recordIds(java.util.List < String > recordIds) {
+            public Builder recordIds(java.util.List<String> recordIds) {
                 this.recordIds = recordIds;
                 return this;
             }
 
             /**
-             * RequestId.
+             * requestId.
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -838,7 +910,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * startTime.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -846,7 +918,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StateType.
+             * stateType.
              */
             public Builder stateType(String stateType) {
                 this.stateType = stateType;
@@ -854,15 +926,15 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusInfo.
+             * statusInfo.
              */
-            public Builder statusInfo(java.util.List < StatusInfo> statusInfo) {
+            public Builder statusInfo(java.util.List<StatusInfo> statusInfo) {
                 this.statusInfo = statusInfo;
                 return this;
             }
 
             /**
-             * UserId.
+             * userId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -870,7 +942,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * UserInfo.
+             * userInfo.
              */
             public Builder userInfo(String userInfo) {
                 this.userInfo = userInfo;
@@ -878,7 +950,7 @@ public class ListActionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * UserType.
+             * userType.
              */
             public Builder userType(String userType) {
                 this.userType = userType;

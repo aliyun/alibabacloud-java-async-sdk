@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListCollectorsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListCollectorsResponseBody(Builder builder) {
         this.headers = builder.headers;
@@ -33,6 +38,10 @@ public class ListCollectorsResponseBody extends TeaModel {
 
     public static ListCollectorsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListCollectorsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private Headers headers; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCollectorsResponseBody model) {
+            this.headers = model.headers;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The header of the response.</p>
@@ -83,7 +101,7 @@ public class ListCollectorsResponseBody extends TeaModel {
         /**
          * <p>The returned result.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -125,6 +143,13 @@ public class ListCollectorsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer xTotalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.xTotalCount = model.xTotalCount;
+            } 
 
             /**
              * <p>The total number of entries returned.</p>
@@ -187,6 +212,14 @@ public class ListCollectorsResponseBody extends TeaModel {
         public static final class Builder {
             private String content; 
             private String fileName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configs model) {
+                this.content = model.content;
+                this.fileName = model.fileName;
+            } 
 
             /**
              * <p>The content of the file.</p>
@@ -263,6 +296,14 @@ public class ListCollectorsResponseBody extends TeaModel {
             private String agentStatus; 
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Machines model) {
+                this.agentStatus = model.agentStatus;
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * <p>The status of the shipper on the ECS instance. Valid values:</p>
              * <ul>
@@ -318,7 +359,7 @@ public class ListCollectorsResponseBody extends TeaModel {
         private String host;
 
         @com.aliyun.core.annotation.NameInMap("hosts")
-        private java.util.List < String > hosts;
+        private java.util.List<String> hosts;
 
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
@@ -330,7 +371,7 @@ public class ListCollectorsResponseBody extends TeaModel {
         private String kibanaHost;
 
         @com.aliyun.core.annotation.NameInMap("machines")
-        private java.util.List < Machines> machines;
+        private java.util.List<Machines> machines;
 
         @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
@@ -403,7 +444,7 @@ public class ListCollectorsResponseBody extends TeaModel {
         /**
          * @return hosts
          */
-        public java.util.List < String > getHosts() {
+        public java.util.List<String> getHosts() {
             return this.hosts;
         }
 
@@ -431,7 +472,7 @@ public class ListCollectorsResponseBody extends TeaModel {
         /**
          * @return machines
          */
-        public java.util.List < Machines> getMachines() {
+        public java.util.List<Machines> getMachines() {
             return this.machines;
         }
 
@@ -475,16 +516,36 @@ public class ListCollectorsResponseBody extends TeaModel {
             private Boolean enableMonitoring; 
             private String groupId; 
             private String host; 
-            private java.util.List < String > hosts; 
+            private java.util.List<String> hosts; 
             private String instanceId; 
             private String instanceType; 
             private String kibanaHost; 
-            private java.util.List < Machines> machines; 
+            private java.util.List<Machines> machines; 
             private String protocol; 
             private String successPodsCount; 
             private String totalPodsCount; 
             private String type; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtendConfigs model) {
+                this.configType = model.configType;
+                this.enableMonitoring = model.enableMonitoring;
+                this.groupId = model.groupId;
+                this.host = model.host;
+                this.hosts = model.hosts;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.kibanaHost = model.kibanaHost;
+                this.machines = model.machines;
+                this.protocol = model.protocol;
+                this.successPodsCount = model.successPodsCount;
+                this.totalPodsCount = model.totalPodsCount;
+                this.type = model.type;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The configuration type. Valid values:</p>
@@ -542,7 +603,7 @@ public class ListCollectorsResponseBody extends TeaModel {
             /**
              * hosts.
              */
-            public Builder hosts(java.util.List < String > hosts) {
+            public Builder hosts(java.util.List<String> hosts) {
                 this.hosts = hosts;
                 return this;
             }
@@ -583,7 +644,7 @@ public class ListCollectorsResponseBody extends TeaModel {
             /**
              * <p>The information about the ECS instances on which the shipper is deployed. This parameter is returned if the value of <strong>configType</strong> is <strong>collectorDeployMachine</strong> and the value of <strong>type</strong> is <strong>ECSInstanceId</strong>.</p>
              */
-            public Builder machines(java.util.List < Machines> machines) {
+            public Builder machines(java.util.List<Machines> machines) {
                 this.machines = machines;
                 return this;
             }
@@ -662,16 +723,16 @@ public class ListCollectorsResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("collectorPaths")
-        private java.util.List < String > collectorPaths;
+        private java.util.List<String> collectorPaths;
 
         @com.aliyun.core.annotation.NameInMap("configs")
-        private java.util.List < Configs> configs;
+        private java.util.List<Configs> configs;
 
         @com.aliyun.core.annotation.NameInMap("dryRun")
         private Boolean dryRun;
 
         @com.aliyun.core.annotation.NameInMap("extendConfigs")
-        private java.util.List < ExtendConfigs> extendConfigs;
+        private java.util.List<ExtendConfigs> extendConfigs;
 
         @com.aliyun.core.annotation.NameInMap("gmtCreatedTime")
         private String gmtCreatedTime;
@@ -727,14 +788,14 @@ public class ListCollectorsResponseBody extends TeaModel {
         /**
          * @return collectorPaths
          */
-        public java.util.List < String > getCollectorPaths() {
+        public java.util.List<String> getCollectorPaths() {
             return this.collectorPaths;
         }
 
         /**
          * @return configs
          */
-        public java.util.List < Configs> getConfigs() {
+        public java.util.List<Configs> getConfigs() {
             return this.configs;
         }
 
@@ -748,7 +809,7 @@ public class ListCollectorsResponseBody extends TeaModel {
         /**
          * @return extendConfigs
          */
-        public java.util.List < ExtendConfigs> getExtendConfigs() {
+        public java.util.List<ExtendConfigs> getExtendConfigs() {
             return this.extendConfigs;
         }
 
@@ -816,10 +877,10 @@ public class ListCollectorsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > collectorPaths; 
-            private java.util.List < Configs> configs; 
+            private java.util.List<String> collectorPaths; 
+            private java.util.List<Configs> configs; 
             private Boolean dryRun; 
-            private java.util.List < ExtendConfigs> extendConfigs; 
+            private java.util.List<ExtendConfigs> extendConfigs; 
             private String gmtCreatedTime; 
             private String gmtUpdateTime; 
             private String name; 
@@ -830,10 +891,29 @@ public class ListCollectorsResponseBody extends TeaModel {
             private String status; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.collectorPaths = model.collectorPaths;
+                this.configs = model.configs;
+                this.dryRun = model.dryRun;
+                this.extendConfigs = model.extendConfigs;
+                this.gmtCreatedTime = model.gmtCreatedTime;
+                this.gmtUpdateTime = model.gmtUpdateTime;
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.resId = model.resId;
+                this.resType = model.resType;
+                this.resVersion = model.resVersion;
+                this.status = model.status;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * collectorPaths.
              */
-            public Builder collectorPaths(java.util.List < String > collectorPaths) {
+            public Builder collectorPaths(java.util.List<String> collectorPaths) {
                 this.collectorPaths = collectorPaths;
                 return this;
             }
@@ -841,7 +921,7 @@ public class ListCollectorsResponseBody extends TeaModel {
             /**
              * <p>The information about the configuration file of the shipper.</p>
              */
-            public Builder configs(java.util.List < Configs> configs) {
+            public Builder configs(java.util.List<Configs> configs) {
                 this.configs = configs;
                 return this;
             }
@@ -864,7 +944,7 @@ public class ListCollectorsResponseBody extends TeaModel {
             /**
              * <p>The extended configurations of the shipper.</p>
              */
-            public Builder extendConfigs(java.util.List < ExtendConfigs> extendConfigs) {
+            public Builder extendConfigs(java.util.List<ExtendConfigs> extendConfigs) {
                 this.extendConfigs = extendConfigs;
                 return this;
             }

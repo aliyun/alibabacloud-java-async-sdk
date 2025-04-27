@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class Elasticsearch extends TeaModel {
     private AdvancedSetting advancedSetting;
 
     @com.aliyun.core.annotation.NameInMap("aliwsDicts")
-    private java.util.List < DictInfo > aliwsDicts;
+    private java.util.List<DictInfo> aliwsDicts;
 
     @com.aliyun.core.annotation.NameInMap("clientNodeConfiguration")
     private ClientNodeConfiguration clientNodeConfiguration;
@@ -37,7 +42,7 @@ public class Elasticsearch extends TeaModel {
     private String description;
 
     @com.aliyun.core.annotation.NameInMap("dictList")
-    private java.util.List < DictInfo > dictList;
+    private java.util.List<DictInfo> dictList;
 
     @com.aliyun.core.annotation.NameInMap("domain")
     private String domain;
@@ -58,16 +63,16 @@ public class Elasticsearch extends TeaModel {
     private Long endTime;
 
     @com.aliyun.core.annotation.NameInMap("esConfig")
-    private java.util.Map < String, String > esConfig;
+    private java.util.Map<String, String> esConfig;
 
     @com.aliyun.core.annotation.NameInMap("esIPWhitelist")
-    private java.util.List < String > esIPWhitelist;
+    private java.util.List<String> esIPWhitelist;
 
     @com.aliyun.core.annotation.NameInMap("esVersion")
     private String esVersion;
 
     @com.aliyun.core.annotation.NameInMap("extendConfigs")
-    private java.util.List < java.util.Map<String, ?>> extendConfigs;
+    private java.util.List<java.util.Map<String, ?>> extendConfigs;
 
     @com.aliyun.core.annotation.NameInMap("haveClientNode")
     private Boolean haveClientNode;
@@ -79,7 +84,7 @@ public class Elasticsearch extends TeaModel {
     private Boolean haveKibana;
 
     @com.aliyun.core.annotation.NameInMap("ikHotDicts")
-    private java.util.List < DictInfo > ikHotDicts;
+    private java.util.List<DictInfo> ikHotDicts;
 
     @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
@@ -91,7 +96,7 @@ public class Elasticsearch extends TeaModel {
     private String kibanaDomain;
 
     @com.aliyun.core.annotation.NameInMap("kibanaIPWhitelist")
-    private java.util.List < String > kibanaIPWhitelist;
+    private java.util.List<String> kibanaIPWhitelist;
 
     @com.aliyun.core.annotation.NameInMap("kibanaPort")
     private Long kibanaPort;
@@ -100,7 +105,7 @@ public class Elasticsearch extends TeaModel {
     private String kibanaPrivateDomain;
 
     @com.aliyun.core.annotation.NameInMap("kibanaPrivateIPWhitelist")
-    private java.util.List < String > kibanaPrivateIPWhitelist;
+    private java.util.List<String> kibanaPrivateIPWhitelist;
 
     @com.aliyun.core.annotation.NameInMap("kibanaPrivatePort")
     private Long kibanaPrivatePort;
@@ -127,7 +132,7 @@ public class Elasticsearch extends TeaModel {
     private Long port;
 
     @com.aliyun.core.annotation.NameInMap("privateNetworkIpWhiteList")
-    private java.util.List < String > privateNetworkIpWhiteList;
+    private java.util.List<String> privateNetworkIpWhiteList;
 
     @com.aliyun.core.annotation.NameInMap("productType")
     private String productType;
@@ -139,7 +144,7 @@ public class Elasticsearch extends TeaModel {
     private String publicDomain;
 
     @com.aliyun.core.annotation.NameInMap("publicIpWhitelist")
-    private java.util.List < String > publicIpWhitelist;
+    private java.util.List<String> publicIpWhitelist;
 
     @com.aliyun.core.annotation.NameInMap("publicPort")
     private Long publicPort;
@@ -157,10 +162,10 @@ public class Elasticsearch extends TeaModel {
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("synonymsDicts")
-    private java.util.List < DictInfo > synonymsDicts;
+    private java.util.List<DictInfo> synonymsDicts;
 
     @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List < Tag > tags;
+    private java.util.List<Tag> tags;
 
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private String updatedAt;
@@ -175,7 +180,7 @@ public class Elasticsearch extends TeaModel {
     private Long zoneCount;
 
     @com.aliyun.core.annotation.NameInMap("zoneInfos")
-    private java.util.List < ZoneInfo > zoneInfos;
+    private java.util.List<ZoneInfo> zoneInfos;
 
     private Elasticsearch(Builder builder) {
         this.advancedDedicateMaster = builder.advancedDedicateMaster;
@@ -243,6 +248,10 @@ public class Elasticsearch extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return advancedDedicateMaster
      */
@@ -260,7 +269,7 @@ public class Elasticsearch extends TeaModel {
     /**
      * @return aliwsDicts
      */
-    public java.util.List < DictInfo > getAliwsDicts() {
+    public java.util.List<DictInfo> getAliwsDicts() {
         return this.aliwsDicts;
     }
 
@@ -302,7 +311,7 @@ public class Elasticsearch extends TeaModel {
     /**
      * @return dictList
      */
-    public java.util.List < DictInfo > getDictList() {
+    public java.util.List<DictInfo> getDictList() {
         return this.dictList;
     }
 
@@ -351,14 +360,14 @@ public class Elasticsearch extends TeaModel {
     /**
      * @return esConfig
      */
-    public java.util.Map < String, String > getEsConfig() {
+    public java.util.Map<String, String> getEsConfig() {
         return this.esConfig;
     }
 
     /**
      * @return esIPWhitelist
      */
-    public java.util.List < String > getEsIPWhitelist() {
+    public java.util.List<String> getEsIPWhitelist() {
         return this.esIPWhitelist;
     }
 
@@ -372,7 +381,7 @@ public class Elasticsearch extends TeaModel {
     /**
      * @return extendConfigs
      */
-    public java.util.List < java.util.Map<String, ?>> getExtendConfigs() {
+    public java.util.List<java.util.Map<String, ?>> getExtendConfigs() {
         return this.extendConfigs;
     }
 
@@ -400,7 +409,7 @@ public class Elasticsearch extends TeaModel {
     /**
      * @return ikHotDicts
      */
-    public java.util.List < DictInfo > getIkHotDicts() {
+    public java.util.List<DictInfo> getIkHotDicts() {
         return this.ikHotDicts;
     }
 
@@ -428,7 +437,7 @@ public class Elasticsearch extends TeaModel {
     /**
      * @return kibanaIPWhitelist
      */
-    public java.util.List < String > getKibanaIPWhitelist() {
+    public java.util.List<String> getKibanaIPWhitelist() {
         return this.kibanaIPWhitelist;
     }
 
@@ -449,7 +458,7 @@ public class Elasticsearch extends TeaModel {
     /**
      * @return kibanaPrivateIPWhitelist
      */
-    public java.util.List < String > getKibanaPrivateIPWhitelist() {
+    public java.util.List<String> getKibanaPrivateIPWhitelist() {
         return this.kibanaPrivateIPWhitelist;
     }
 
@@ -512,7 +521,7 @@ public class Elasticsearch extends TeaModel {
     /**
      * @return privateNetworkIpWhiteList
      */
-    public java.util.List < String > getPrivateNetworkIpWhiteList() {
+    public java.util.List<String> getPrivateNetworkIpWhiteList() {
         return this.privateNetworkIpWhiteList;
     }
 
@@ -540,7 +549,7 @@ public class Elasticsearch extends TeaModel {
     /**
      * @return publicIpWhitelist
      */
-    public java.util.List < String > getPublicIpWhitelist() {
+    public java.util.List<String> getPublicIpWhitelist() {
         return this.publicIpWhitelist;
     }
 
@@ -582,14 +591,14 @@ public class Elasticsearch extends TeaModel {
     /**
      * @return synonymsDicts
      */
-    public java.util.List < DictInfo > getSynonymsDicts() {
+    public java.util.List<DictInfo> getSynonymsDicts() {
         return this.synonymsDicts;
     }
 
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
@@ -624,41 +633,41 @@ public class Elasticsearch extends TeaModel {
     /**
      * @return zoneInfos
      */
-    public java.util.List < ZoneInfo > getZoneInfos() {
+    public java.util.List<ZoneInfo> getZoneInfos() {
         return this.zoneInfos;
     }
 
     public static final class Builder {
         private Boolean advancedDedicateMaster; 
         private AdvancedSetting advancedSetting; 
-        private java.util.List < DictInfo > aliwsDicts; 
+        private java.util.List<DictInfo> aliwsDicts; 
         private ClientNodeConfiguration clientNodeConfiguration; 
         private String createdAt; 
         private Boolean dataNode; 
         private Boolean dedicateMaster; 
         private String description; 
-        private java.util.List < DictInfo > dictList; 
+        private java.util.List<DictInfo> dictList; 
         private String domain; 
         private ElasticDataNodeConfiguration elasticDataNodeConfiguration; 
         private Boolean enableKibanaPrivateNetwork; 
         private Boolean enableKibanaPublicNetwork; 
         private Boolean enablePublic; 
         private Long endTime; 
-        private java.util.Map < String, String > esConfig; 
-        private java.util.List < String > esIPWhitelist; 
+        private java.util.Map<String, String> esConfig; 
+        private java.util.List<String> esIPWhitelist; 
         private String esVersion; 
-        private java.util.List < java.util.Map<String, ?>> extendConfigs; 
+        private java.util.List<java.util.Map<String, ?>> extendConfigs; 
         private Boolean haveClientNode; 
         private Boolean haveElasticDataNode; 
         private Boolean haveKibana; 
-        private java.util.List < DictInfo > ikHotDicts; 
+        private java.util.List<DictInfo> ikHotDicts; 
         private String instanceId; 
         private KibanaNodeConfiguration kibanaConfiguration; 
         private String kibanaDomain; 
-        private java.util.List < String > kibanaIPWhitelist; 
+        private java.util.List<String> kibanaIPWhitelist; 
         private Long kibanaPort; 
         private String kibanaPrivateDomain; 
-        private java.util.List < String > kibanaPrivateIPWhitelist; 
+        private java.util.List<String> kibanaPrivateIPWhitelist; 
         private Long kibanaPrivatePort; 
         private String kibanaProtocol; 
         private MasterNodeConfiguration masterConfiguration; 
@@ -667,23 +676,84 @@ public class Elasticsearch extends TeaModel {
         private NodeSpec nodeSpec; 
         private String paymentType; 
         private Long port; 
-        private java.util.List < String > privateNetworkIpWhiteList; 
+        private java.util.List<String> privateNetworkIpWhiteList; 
         private String productType; 
         private String protocol; 
         private String publicDomain; 
-        private java.util.List < String > publicIpWhitelist; 
+        private java.util.List<String> publicIpWhitelist; 
         private Long publicPort; 
         private ReadWritePolicy readWritePolicy; 
         private String resourceGroupId; 
         private Boolean serviceVpc; 
         private String status; 
-        private java.util.List < DictInfo > synonymsDicts; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<DictInfo> synonymsDicts; 
+        private java.util.List<Tag> tags; 
         private String updatedAt; 
         private Boolean warmNode; 
         private WarmNodeConfiguration warmNodeConfiguration; 
         private Long zoneCount; 
-        private java.util.List < ZoneInfo > zoneInfos; 
+        private java.util.List<ZoneInfo> zoneInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(Elasticsearch model) {
+            this.advancedDedicateMaster = model.advancedDedicateMaster;
+            this.advancedSetting = model.advancedSetting;
+            this.aliwsDicts = model.aliwsDicts;
+            this.clientNodeConfiguration = model.clientNodeConfiguration;
+            this.createdAt = model.createdAt;
+            this.dataNode = model.dataNode;
+            this.dedicateMaster = model.dedicateMaster;
+            this.description = model.description;
+            this.dictList = model.dictList;
+            this.domain = model.domain;
+            this.elasticDataNodeConfiguration = model.elasticDataNodeConfiguration;
+            this.enableKibanaPrivateNetwork = model.enableKibanaPrivateNetwork;
+            this.enableKibanaPublicNetwork = model.enableKibanaPublicNetwork;
+            this.enablePublic = model.enablePublic;
+            this.endTime = model.endTime;
+            this.esConfig = model.esConfig;
+            this.esIPWhitelist = model.esIPWhitelist;
+            this.esVersion = model.esVersion;
+            this.extendConfigs = model.extendConfigs;
+            this.haveClientNode = model.haveClientNode;
+            this.haveElasticDataNode = model.haveElasticDataNode;
+            this.haveKibana = model.haveKibana;
+            this.ikHotDicts = model.ikHotDicts;
+            this.instanceId = model.instanceId;
+            this.kibanaConfiguration = model.kibanaConfiguration;
+            this.kibanaDomain = model.kibanaDomain;
+            this.kibanaIPWhitelist = model.kibanaIPWhitelist;
+            this.kibanaPort = model.kibanaPort;
+            this.kibanaPrivateDomain = model.kibanaPrivateDomain;
+            this.kibanaPrivateIPWhitelist = model.kibanaPrivateIPWhitelist;
+            this.kibanaPrivatePort = model.kibanaPrivatePort;
+            this.kibanaProtocol = model.kibanaProtocol;
+            this.masterConfiguration = model.masterConfiguration;
+            this.networkConfig = model.networkConfig;
+            this.nodeAmount = model.nodeAmount;
+            this.nodeSpec = model.nodeSpec;
+            this.paymentType = model.paymentType;
+            this.port = model.port;
+            this.privateNetworkIpWhiteList = model.privateNetworkIpWhiteList;
+            this.productType = model.productType;
+            this.protocol = model.protocol;
+            this.publicDomain = model.publicDomain;
+            this.publicIpWhitelist = model.publicIpWhitelist;
+            this.publicPort = model.publicPort;
+            this.readWritePolicy = model.readWritePolicy;
+            this.resourceGroupId = model.resourceGroupId;
+            this.serviceVpc = model.serviceVpc;
+            this.status = model.status;
+            this.synonymsDicts = model.synonymsDicts;
+            this.tags = model.tags;
+            this.updatedAt = model.updatedAt;
+            this.warmNode = model.warmNode;
+            this.warmNodeConfiguration = model.warmNodeConfiguration;
+            this.zoneCount = model.zoneCount;
+            this.zoneInfos = model.zoneInfos;
+        } 
 
         /**
          * advancedDedicateMaster.
@@ -704,7 +774,7 @@ public class Elasticsearch extends TeaModel {
         /**
          * aliwsDicts.
          */
-        public Builder aliwsDicts(java.util.List < DictInfo > aliwsDicts) {
+        public Builder aliwsDicts(java.util.List<DictInfo> aliwsDicts) {
             this.aliwsDicts = aliwsDicts;
             return this;
         }
@@ -752,7 +822,7 @@ public class Elasticsearch extends TeaModel {
         /**
          * dictList.
          */
-        public Builder dictList(java.util.List < DictInfo > dictList) {
+        public Builder dictList(java.util.List<DictInfo> dictList) {
             this.dictList = dictList;
             return this;
         }
@@ -808,7 +878,7 @@ public class Elasticsearch extends TeaModel {
         /**
          * esConfig.
          */
-        public Builder esConfig(java.util.Map < String, String > esConfig) {
+        public Builder esConfig(java.util.Map<String, String> esConfig) {
             this.esConfig = esConfig;
             return this;
         }
@@ -816,7 +886,7 @@ public class Elasticsearch extends TeaModel {
         /**
          * esIPWhitelist.
          */
-        public Builder esIPWhitelist(java.util.List < String > esIPWhitelist) {
+        public Builder esIPWhitelist(java.util.List<String> esIPWhitelist) {
             this.esIPWhitelist = esIPWhitelist;
             return this;
         }
@@ -832,7 +902,7 @@ public class Elasticsearch extends TeaModel {
         /**
          * extendConfigs.
          */
-        public Builder extendConfigs(java.util.List < java.util.Map<String, ?>> extendConfigs) {
+        public Builder extendConfigs(java.util.List<java.util.Map<String, ?>> extendConfigs) {
             this.extendConfigs = extendConfigs;
             return this;
         }
@@ -864,7 +934,7 @@ public class Elasticsearch extends TeaModel {
         /**
          * ikHotDicts.
          */
-        public Builder ikHotDicts(java.util.List < DictInfo > ikHotDicts) {
+        public Builder ikHotDicts(java.util.List<DictInfo> ikHotDicts) {
             this.ikHotDicts = ikHotDicts;
             return this;
         }
@@ -896,7 +966,7 @@ public class Elasticsearch extends TeaModel {
         /**
          * kibanaIPWhitelist.
          */
-        public Builder kibanaIPWhitelist(java.util.List < String > kibanaIPWhitelist) {
+        public Builder kibanaIPWhitelist(java.util.List<String> kibanaIPWhitelist) {
             this.kibanaIPWhitelist = kibanaIPWhitelist;
             return this;
         }
@@ -920,7 +990,7 @@ public class Elasticsearch extends TeaModel {
         /**
          * kibanaPrivateIPWhitelist.
          */
-        public Builder kibanaPrivateIPWhitelist(java.util.List < String > kibanaPrivateIPWhitelist) {
+        public Builder kibanaPrivateIPWhitelist(java.util.List<String> kibanaPrivateIPWhitelist) {
             this.kibanaPrivateIPWhitelist = kibanaPrivateIPWhitelist;
             return this;
         }
@@ -992,7 +1062,7 @@ public class Elasticsearch extends TeaModel {
         /**
          * privateNetworkIpWhiteList.
          */
-        public Builder privateNetworkIpWhiteList(java.util.List < String > privateNetworkIpWhiteList) {
+        public Builder privateNetworkIpWhiteList(java.util.List<String> privateNetworkIpWhiteList) {
             this.privateNetworkIpWhiteList = privateNetworkIpWhiteList;
             return this;
         }
@@ -1024,7 +1094,7 @@ public class Elasticsearch extends TeaModel {
         /**
          * publicIpWhitelist.
          */
-        public Builder publicIpWhitelist(java.util.List < String > publicIpWhitelist) {
+        public Builder publicIpWhitelist(java.util.List<String> publicIpWhitelist) {
             this.publicIpWhitelist = publicIpWhitelist;
             return this;
         }
@@ -1072,7 +1142,7 @@ public class Elasticsearch extends TeaModel {
         /**
          * synonymsDicts.
          */
-        public Builder synonymsDicts(java.util.List < DictInfo > synonymsDicts) {
+        public Builder synonymsDicts(java.util.List<DictInfo> synonymsDicts) {
             this.synonymsDicts = synonymsDicts;
             return this;
         }
@@ -1080,7 +1150,7 @@ public class Elasticsearch extends TeaModel {
         /**
          * tags.
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.tags = tags;
             return this;
         }
@@ -1120,7 +1190,7 @@ public class Elasticsearch extends TeaModel {
         /**
          * zoneInfos.
          */
-        public Builder zoneInfos(java.util.List < ZoneInfo > zoneInfos) {
+        public Builder zoneInfos(java.util.List<ZoneInfo> zoneInfos) {
             this.zoneInfos = zoneInfos;
             return this;
         }
@@ -1162,6 +1232,13 @@ public class Elasticsearch extends TeaModel {
 
         public static final class Builder {
             private String gcName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvancedSetting model) {
+                this.gcName = model.gcName;
+            } 
 
             /**
              * gcName.

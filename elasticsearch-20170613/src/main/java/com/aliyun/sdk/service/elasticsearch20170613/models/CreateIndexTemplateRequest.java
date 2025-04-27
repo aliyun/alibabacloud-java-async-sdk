@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class CreateIndexTemplateRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("indexPatterns")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > indexPatterns;
+    private java.util.List<String> indexPatterns;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("indexTemplate")
@@ -69,7 +74,7 @@ public class CreateIndexTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -105,7 +110,7 @@ public class CreateIndexTemplateRequest extends Request {
     /**
      * @return indexPatterns
      */
-    public java.util.List < String > getIndexPatterns() {
+    public java.util.List<String> getIndexPatterns() {
         return this.indexPatterns;
     }
 
@@ -135,7 +140,7 @@ public class CreateIndexTemplateRequest extends Request {
         private String clientToken; 
         private Boolean dataStream; 
         private String ilmPolicy; 
-        private java.util.List < String > indexPatterns; 
+        private java.util.List<String> indexPatterns; 
         private String indexTemplate; 
         private Integer priority; 
         private Template template; 
@@ -198,7 +203,7 @@ public class CreateIndexTemplateRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder indexPatterns(java.util.List < String > indexPatterns) {
+        public Builder indexPatterns(java.util.List<String> indexPatterns) {
             this.putBodyParameter("indexPatterns", indexPatterns);
             this.indexPatterns = indexPatterns;
             return this;
@@ -296,6 +301,15 @@ public class CreateIndexTemplateRequest extends Request {
             private String aliases; 
             private String mappings; 
             private String settings; 
+
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.aliases = model.aliases;
+                this.mappings = model.mappings;
+                this.settings = model.settings;
+            } 
 
             /**
              * aliases.

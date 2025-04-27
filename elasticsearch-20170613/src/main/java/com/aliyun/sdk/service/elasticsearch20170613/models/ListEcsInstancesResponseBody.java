@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListEcsInstancesResponseBody(Builder builder) {
         this.headers = builder.headers;
@@ -33,6 +38,10 @@ public class ListEcsInstancesResponseBody extends TeaModel {
 
     public static ListEcsInstancesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListEcsInstancesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private Headers headers; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEcsInstancesResponseBody model) {
+            this.headers = model.headers;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The number of returned records.</p>
@@ -87,7 +105,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
          * <li>false: The Prometheus agent was not installed.</li>
          * </ul>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -129,6 +147,13 @@ public class ListEcsInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer xTotalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.xTotalCount = model.xTotalCount;
+            } 
 
             /**
              * <p>The returned data.</p>
@@ -191,6 +216,14 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String content; 
             private String fileName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configs model) {
+                this.content = model.content;
+                this.fileName = model.fileName;
+            } 
 
             /**
              * <p>The name of the file.</p>
@@ -267,6 +300,14 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             private String agentStatus; 
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Machines model) {
+                this.agentStatus = model.agentStatus;
+                this.instanceId = model.instanceId;
+            } 
+
             /**
              * <p>The IDs of ECS instances.</p>
              * 
@@ -313,7 +354,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         private String groupId;
 
         @com.aliyun.core.annotation.NameInMap("hosts")
-        private java.util.List < String > hosts;
+        private java.util.List<String> hosts;
 
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
@@ -322,7 +363,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         private String instanceType;
 
         @com.aliyun.core.annotation.NameInMap("machines")
-        private java.util.List < Machines> machines;
+        private java.util.List<Machines> machines;
 
         @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
@@ -378,7 +419,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         /**
          * @return hosts
          */
-        public java.util.List < String > getHosts() {
+        public java.util.List<String> getHosts() {
             return this.hosts;
         }
 
@@ -399,7 +440,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         /**
          * @return machines
          */
-        public java.util.List < Machines> getMachines() {
+        public java.util.List<Machines> getMachines() {
             return this.machines;
         }
 
@@ -428,13 +469,29 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             private String configType; 
             private Boolean enableMonitoring; 
             private String groupId; 
-            private java.util.List < String > hosts; 
+            private java.util.List<String> hosts; 
             private String instanceId; 
             private String instanceType; 
-            private java.util.List < Machines> machines; 
+            private java.util.List<Machines> machines; 
             private String protocol; 
             private String type; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtendConfigs model) {
+                this.configType = model.configType;
+                this.enableMonitoring = model.enableMonitoring;
+                this.groupId = model.groupId;
+                this.hosts = model.hosts;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.machines = model.machines;
+                this.protocol = model.protocol;
+                this.type = model.type;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The instance type specified by Collector Output. Supports Elasticsearch and Logstash. Displayed when the <strong>configType</strong> is <strong>collectorTargetInstance</strong>.</p>
@@ -477,7 +534,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             /**
              * <p>The path in which Filebeat is collected.</p>
              */
-            public Builder hosts(java.util.List < String > hosts) {
+            public Builder hosts(java.util.List<String> hosts) {
                 this.hosts = hosts;
                 return this;
             }
@@ -513,7 +570,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
              * <li>failed: The installation failed.</li>
              * </ul>
              */
-            public Builder machines(java.util.List < Machines> machines) {
+            public Builder machines(java.util.List<Machines> machines) {
                 this.machines = machines;
                 return this;
             }
@@ -570,16 +627,16 @@ public class ListEcsInstancesResponseBody extends TeaModel {
      */
     public static class Collectors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("collectorPaths")
-        private java.util.List < String > collectorPaths;
+        private java.util.List<String> collectorPaths;
 
         @com.aliyun.core.annotation.NameInMap("configs")
-        private java.util.List < Configs> configs;
+        private java.util.List<Configs> configs;
 
         @com.aliyun.core.annotation.NameInMap("dryRun")
         private Boolean dryRun;
 
         @com.aliyun.core.annotation.NameInMap("extendConfigs")
-        private java.util.List < ExtendConfigs> extendConfigs;
+        private java.util.List<ExtendConfigs> extendConfigs;
 
         @com.aliyun.core.annotation.NameInMap("gmtCreatedTime")
         private String gmtCreatedTime;
@@ -635,14 +692,14 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         /**
          * @return collectorPaths
          */
-        public java.util.List < String > getCollectorPaths() {
+        public java.util.List<String> getCollectorPaths() {
             return this.collectorPaths;
         }
 
         /**
          * @return configs
          */
-        public java.util.List < Configs> getConfigs() {
+        public java.util.List<Configs> getConfigs() {
             return this.configs;
         }
 
@@ -656,7 +713,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         /**
          * @return extendConfigs
          */
-        public java.util.List < ExtendConfigs> getExtendConfigs() {
+        public java.util.List<ExtendConfigs> getExtendConfigs() {
             return this.extendConfigs;
         }
 
@@ -724,10 +781,10 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > collectorPaths; 
-            private java.util.List < Configs> configs; 
+            private java.util.List<String> collectorPaths; 
+            private java.util.List<Configs> configs; 
             private Boolean dryRun; 
-            private java.util.List < ExtendConfigs> extendConfigs; 
+            private java.util.List<ExtendConfigs> extendConfigs; 
             private String gmtCreatedTime; 
             private String gmtUpdateTime; 
             private String name; 
@@ -738,10 +795,29 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             private String status; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Collectors model) {
+                this.collectorPaths = model.collectorPaths;
+                this.configs = model.configs;
+                this.dryRun = model.dryRun;
+                this.extendConfigs = model.extendConfigs;
+                this.gmtCreatedTime = model.gmtCreatedTime;
+                this.gmtUpdateTime = model.gmtUpdateTime;
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.resId = model.resId;
+                this.resType = model.resType;
+                this.resVersion = model.resVersion;
+                this.status = model.status;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * collectorPaths.
              */
-            public Builder collectorPaths(java.util.List < String > collectorPaths) {
+            public Builder collectorPaths(java.util.List<String> collectorPaths) {
                 this.collectorPaths = collectorPaths;
                 return this;
             }
@@ -749,7 +825,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             /**
              * <p>The content of the file.</p>
              */
-            public Builder configs(java.util.List < Configs> configs) {
+            public Builder configs(java.util.List<Configs> configs) {
                 this.configs = configs;
                 return this;
             }
@@ -772,7 +848,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
              * <li>false</li>
              * </ul>
              */
-            public Builder extendConfigs(java.util.List < ExtendConfigs> extendConfigs) {
+            public Builder extendConfigs(java.util.List<ExtendConfigs> extendConfigs) {
                 this.extendConfigs = extendConfigs;
                 return this;
             }
@@ -935,6 +1011,14 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             private String host; 
             private String ipType; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpAddress model) {
+                this.host = model.host;
+                this.ipType = model.ipType;
+            } 
+
             /**
              * <p>The information about the collectors on the ECS instance.</p>
              * 
@@ -975,7 +1059,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         private String cloudAssistantStatus;
 
         @com.aliyun.core.annotation.NameInMap("collectors")
-        private java.util.List < Collectors> collectors;
+        private java.util.List<Collectors> collectors;
 
         @com.aliyun.core.annotation.NameInMap("ecsInstanceId")
         private String ecsInstanceId;
@@ -984,7 +1068,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         private String ecsInstanceName;
 
         @com.aliyun.core.annotation.NameInMap("ipAddress")
-        private java.util.List < IpAddress> ipAddress;
+        private java.util.List<IpAddress> ipAddress;
 
         @com.aliyun.core.annotation.NameInMap("osType")
         private String osType;
@@ -1024,7 +1108,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         /**
          * @return collectors
          */
-        public java.util.List < Collectors> getCollectors() {
+        public java.util.List<Collectors> getCollectors() {
             return this.collectors;
         }
 
@@ -1045,7 +1129,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         /**
          * @return ipAddress
          */
-        public java.util.List < IpAddress> getIpAddress() {
+        public java.util.List<IpAddress> getIpAddress() {
             return this.ipAddress;
         }
 
@@ -1072,13 +1156,27 @@ public class ListEcsInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cloudAssistantStatus; 
-            private java.util.List < Collectors> collectors; 
+            private java.util.List<Collectors> collectors; 
             private String ecsInstanceId; 
             private String ecsInstanceName; 
-            private java.util.List < IpAddress> ipAddress; 
+            private java.util.List<IpAddress> ipAddress; 
             private String osType; 
             private String status; 
             private String tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.cloudAssistantStatus = model.cloudAssistantStatus;
+                this.collectors = model.collectors;
+                this.ecsInstanceId = model.ecsInstanceId;
+                this.ecsInstanceName = model.ecsInstanceName;
+                this.ipAddress = model.ipAddress;
+                this.osType = model.osType;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The name of the ECS instance.</p>
@@ -1094,7 +1192,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             /**
              * <p>The ID of the collector instance.</p>
              */
-            public Builder collectors(java.util.List < Collectors> collectors) {
+            public Builder collectors(java.util.List<Collectors> collectors) {
                 this.collectors = collectors;
                 return this;
             }
@@ -1128,7 +1226,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
              * <li>private: private network address</li>
              * </ul>
              */
-            public Builder ipAddress(java.util.List < IpAddress> ipAddress) {
+            public Builder ipAddress(java.util.List<IpAddress> ipAddress) {
                 this.ipAddress = ipAddress;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class ModifyWhiteIpsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("whiteIpList")
-    private java.util.List < String > whiteIpList;
+    private java.util.List<String> whiteIpList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("clientToken")
@@ -60,7 +65,7 @@ public class ModifyWhiteIpsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,7 +108,7 @@ public class ModifyWhiteIpsRequest extends Request {
     /**
      * @return whiteIpList
      */
-    public java.util.List < String > getWhiteIpList() {
+    public java.util.List<String> getWhiteIpList() {
         return this.whiteIpList;
     }
 
@@ -120,7 +125,7 @@ public class ModifyWhiteIpsRequest extends Request {
         private String networkType; 
         private String nodeType; 
         private WhiteIpGroup whiteIpGroup; 
-        private java.util.List < String > whiteIpList; 
+        private java.util.List<String> whiteIpList; 
         private String clientToken; 
 
         private Builder() {
@@ -209,7 +214,7 @@ public class ModifyWhiteIpsRequest extends Request {
         /**
          * <p>The name of the whitelist. This parameter is required if you configure the whiteIpGroup parameter.</p>
          */
-        public Builder whiteIpList(java.util.List < String > whiteIpList) {
+        public Builder whiteIpList(java.util.List<String> whiteIpList) {
             this.putBodyParameter("whiteIpList", whiteIpList);
             this.whiteIpList = whiteIpList;
             return this;
@@ -249,7 +254,7 @@ public class ModifyWhiteIpsRequest extends Request {
         private String groupName;
 
         @com.aliyun.core.annotation.NameInMap("ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         @com.aliyun.core.annotation.NameInMap("whiteIpType")
         private String whiteIpType;
@@ -278,7 +283,7 @@ public class ModifyWhiteIpsRequest extends Request {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
@@ -291,8 +296,17 @@ public class ModifyWhiteIpsRequest extends Request {
 
         public static final class Builder {
             private String groupName; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
             private String whiteIpType; 
+
+            private Builder() {
+            } 
+
+            private Builder(WhiteIpGroup model) {
+                this.groupName = model.groupName;
+                this.ips = model.ips;
+                this.whiteIpType = model.whiteIpType;
+            } 
 
             /**
              * <p>The type of the IP address whitelist. Valid values:</p>
@@ -314,7 +328,7 @@ public class ModifyWhiteIpsRequest extends Request {
             /**
              * <p>The returned result.</p>
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }

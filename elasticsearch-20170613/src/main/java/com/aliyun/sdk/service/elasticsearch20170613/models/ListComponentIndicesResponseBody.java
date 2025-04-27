@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListComponentIndicesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListComponentIndicesResponseBody(Builder builder) {
         this.headers = builder.headers;
@@ -33,6 +38,10 @@ public class ListComponentIndicesResponseBody extends TeaModel {
 
     public static ListComponentIndicesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class ListComponentIndicesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private Headers headers; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListComponentIndicesResponseBody model) {
+            this.headers = model.headers;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * Headers.
@@ -80,7 +98,7 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -122,6 +140,13 @@ public class ListComponentIndicesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long xTotalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Headers model) {
+                this.xTotalCount = model.xTotalCount;
+            } 
 
             /**
              * X-Total-Count.
@@ -169,6 +194,13 @@ public class ListComponentIndicesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Lifecycle model) {
+                this.name = model.name;
+            } 
 
             /**
              * name.
@@ -229,6 +261,14 @@ public class ListComponentIndicesResponseBody extends TeaModel {
             private String codec; 
             private Lifecycle lifecycle; 
 
+            private Builder() {
+            } 
+
+            private Builder(Index model) {
+                this.codec = model.codec;
+                this.lifecycle = model.lifecycle;
+            } 
+
             /**
              * codec.
              */
@@ -284,6 +324,13 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         public static final class Builder {
             private Index index; 
 
+            private Builder() {
+            } 
+
+            private Builder(Settings model) {
+                this.index = model.index;
+            } 
+
             /**
              * index.
              */
@@ -331,6 +378,13 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         public static final class Builder {
             private Settings settings; 
 
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.settings = model.settings;
+            } 
+
             /**
              * settings.
              */
@@ -354,7 +408,7 @@ public class ListComponentIndicesResponseBody extends TeaModel {
      */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("_meta")
-        private java.util.Map < String, ? > meta;
+        private java.util.Map<String, ?> meta;
 
         @com.aliyun.core.annotation.NameInMap("template")
         private Template template;
@@ -379,7 +433,7 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         /**
          * @return meta
          */
-        public java.util.Map < String, ? > getMeta() {
+        public java.util.Map<String, ?> getMeta() {
             return this.meta;
         }
 
@@ -398,14 +452,23 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > meta; 
+            private java.util.Map<String, ?> meta; 
             private Template template; 
             private Long version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.meta = model.meta;
+                this.template = model.template;
+                this.version = model.version;
+            } 
 
             /**
              * _meta.
              */
-            public Builder meta(java.util.Map < String, ? > meta) {
+            public Builder meta(java.util.Map<String, ?> meta) {
                 this.meta = meta;
                 return this;
             }
@@ -441,7 +504,7 @@ public class ListComponentIndicesResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("composed")
-        private java.util.List < String > composed;
+        private java.util.List<String> composed;
 
         @com.aliyun.core.annotation.NameInMap("content")
         private Content content;
@@ -466,7 +529,7 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         /**
          * @return composed
          */
-        public java.util.List < String > getComposed() {
+        public java.util.List<String> getComposed() {
             return this.composed;
         }
 
@@ -485,14 +548,23 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > composed; 
+            private java.util.List<String> composed; 
             private Content content; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.composed = model.composed;
+                this.content = model.content;
+                this.name = model.name;
+            } 
 
             /**
              * composed.
              */
-            public Builder composed(java.util.List < String > composed) {
+            public Builder composed(java.util.List<String> composed) {
                 this.composed = composed;
                 return this;
             }

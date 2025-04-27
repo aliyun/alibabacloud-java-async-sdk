@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateKibanaWhiteIpsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * <p>The details of the Elasticsearch cluster.</p>
@@ -85,7 +102,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         private String groupName;
 
         @com.aliyun.core.annotation.NameInMap("ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         @com.aliyun.core.annotation.NameInMap("whiteIpType")
         private String whiteIpType;
@@ -114,7 +131,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
@@ -127,8 +144,17 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String groupName; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
             private String whiteIpType; 
+
+            private Builder() {
+            } 
+
+            private Builder(WhiteIpGroupList model) {
+                this.groupName = model.groupName;
+                this.ips = model.ips;
+                this.whiteIpType = model.whiteIpType;
+            } 
 
             /**
              * <p>The IP addresses in the whitelist.</p>
@@ -144,7 +170,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
             /**
              * <p>The IP addresses in the whitelist.</p>
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }
@@ -184,7 +210,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         private String vswitchId;
 
         @com.aliyun.core.annotation.NameInMap("whiteIpGroupList")
-        private java.util.List < WhiteIpGroupList> whiteIpGroupList;
+        private java.util.List<WhiteIpGroupList> whiteIpGroupList;
 
         private NetworkConfig(Builder builder) {
             this.type = builder.type;
@@ -233,7 +259,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         /**
          * @return whiteIpGroupList
          */
-        public java.util.List < WhiteIpGroupList> getWhiteIpGroupList() {
+        public java.util.List<WhiteIpGroupList> getWhiteIpGroupList() {
             return this.whiteIpGroupList;
         }
 
@@ -242,7 +268,18 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
             private String vpcId; 
             private String vsArea; 
             private String vswitchId; 
-            private java.util.List < WhiteIpGroupList> whiteIpGroupList; 
+            private java.util.List<WhiteIpGroupList> whiteIpGroupList; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkConfig model) {
+                this.type = model.type;
+                this.vpcId = model.vpcId;
+                this.vsArea = model.vsArea;
+                this.vswitchId = model.vswitchId;
+                this.whiteIpGroupList = model.whiteIpGroupList;
+            } 
 
             /**
              * <p>The IP address whitelists.</p>
@@ -291,7 +328,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
             /**
              * <p>The IP address whitelists.</p>
              */
-            public Builder whiteIpGroupList(java.util.List < WhiteIpGroupList> whiteIpGroupList) {
+            public Builder whiteIpGroupList(java.util.List<WhiteIpGroupList> whiteIpGroupList) {
                 this.whiteIpGroupList = whiteIpGroupList;
                 return this;
             }
@@ -311,10 +348,10 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("kibanaIPWhitelist")
-        private java.util.List < String > kibanaIPWhitelist;
+        private java.util.List<String> kibanaIPWhitelist;
 
         @com.aliyun.core.annotation.NameInMap("kibanaPrivateIPWhitelist")
-        private java.util.List < String > kibanaPrivateIPWhitelist;
+        private java.util.List<String> kibanaPrivateIPWhitelist;
 
         @com.aliyun.core.annotation.NameInMap("networkConfig")
         private NetworkConfig networkConfig;
@@ -336,14 +373,14 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         /**
          * @return kibanaIPWhitelist
          */
-        public java.util.List < String > getKibanaIPWhitelist() {
+        public java.util.List<String> getKibanaIPWhitelist() {
             return this.kibanaIPWhitelist;
         }
 
         /**
          * @return kibanaPrivateIPWhitelist
          */
-        public java.util.List < String > getKibanaPrivateIPWhitelist() {
+        public java.util.List<String> getKibanaPrivateIPWhitelist() {
             return this.kibanaPrivateIPWhitelist;
         }
 
@@ -355,14 +392,23 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > kibanaIPWhitelist; 
-            private java.util.List < String > kibanaPrivateIPWhitelist; 
+            private java.util.List<String> kibanaIPWhitelist; 
+            private java.util.List<String> kibanaPrivateIPWhitelist; 
             private NetworkConfig networkConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.kibanaIPWhitelist = model.kibanaIPWhitelist;
+                this.kibanaPrivateIPWhitelist = model.kibanaPrivateIPWhitelist;
+                this.networkConfig = model.networkConfig;
+            } 
 
             /**
              * <p>The public IP address whitelists for access to the Kibana console of the cluster.</p>
              */
-            public Builder kibanaIPWhitelist(java.util.List < String > kibanaIPWhitelist) {
+            public Builder kibanaIPWhitelist(java.util.List<String> kibanaIPWhitelist) {
                 this.kibanaIPWhitelist = kibanaIPWhitelist;
                 return this;
             }
@@ -370,7 +416,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
             /**
              * <p>The private IP address whitelists for access to the Kibana console of the cluster.</p>
              */
-            public Builder kibanaPrivateIPWhitelist(java.util.List < String > kibanaPrivateIPWhitelist) {
+            public Builder kibanaPrivateIPWhitelist(java.util.List<String> kibanaPrivateIPWhitelist) {
                 this.kibanaPrivateIPWhitelist = kibanaPrivateIPWhitelist;
                 return this;
             }

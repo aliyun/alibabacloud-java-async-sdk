@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class TransferNodeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < TransferNodeRequestBody> body;
+    private java.util.List<TransferNodeRequestBody> body;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("clientToken")
@@ -46,7 +51,7 @@ public class TransferNodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -61,7 +66,7 @@ public class TransferNodeRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < TransferNodeRequestBody> getBody() {
+    public java.util.List<TransferNodeRequestBody> getBody() {
         return this.body;
     }
 
@@ -81,7 +86,7 @@ public class TransferNodeRequest extends Request {
 
     public static final class Builder extends Request.Builder<TransferNodeRequest, Builder> {
         private String instanceId; 
-        private java.util.List < TransferNodeRequestBody> body; 
+        private java.util.List<TransferNodeRequestBody> body; 
         private String clientToken; 
         private String nodeType; 
 
@@ -112,7 +117,7 @@ public class TransferNodeRequest extends Request {
         /**
          * body.
          */
-        public Builder body(java.util.List < TransferNodeRequestBody> body) {
+        public Builder body(java.util.List<TransferNodeRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
@@ -201,6 +206,15 @@ public class TransferNodeRequest extends Request {
             private String host; 
             private Integer port; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransferNodeRequestBody model) {
+                this.host = model.host;
+                this.port = model.port;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * host.
