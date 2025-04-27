@@ -490,6 +490,81 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
      *
      * <p>ListApprovalProcessesResponseBody</p>
      */
+    public static class EndpointHardeningPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PolicyIds")
+        private java.util.List<String> policyIds;
+
+        @com.aliyun.core.annotation.NameInMap("SchemaId")
+        private String schemaId;
+
+        private EndpointHardeningPolicies(Builder builder) {
+            this.policyIds = builder.policyIds;
+            this.schemaId = builder.schemaId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EndpointHardeningPolicies create() {
+            return builder().build();
+        }
+
+        /**
+         * @return policyIds
+         */
+        public java.util.List<String> getPolicyIds() {
+            return this.policyIds;
+        }
+
+        /**
+         * @return schemaId
+         */
+        public String getSchemaId() {
+            return this.schemaId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> policyIds; 
+            private String schemaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndpointHardeningPolicies model) {
+                this.policyIds = model.policyIds;
+                this.schemaId = model.schemaId;
+            } 
+
+            /**
+             * PolicyIds.
+             */
+            public Builder policyIds(java.util.List<String> policyIds) {
+                this.policyIds = policyIds;
+                return this;
+            }
+
+            /**
+             * SchemaId.
+             */
+            public Builder schemaId(String schemaId) {
+                this.schemaId = schemaId;
+                return this;
+            }
+
+            public EndpointHardeningPolicies build() {
+                return new EndpointHardeningPolicies(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListApprovalProcessesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApprovalProcessesResponseBody</p>
+     */
     public static class PeripheralBlockPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PolicyIds")
         private java.util.List<String> policyIds;
@@ -715,6 +790,81 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
      *
      * <p>ListApprovalProcessesResponseBody</p>
      */
+    public static class SoftwareHardeningPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PolicyIds")
+        private java.util.List<String> policyIds;
+
+        @com.aliyun.core.annotation.NameInMap("SchemaId")
+        private String schemaId;
+
+        private SoftwareHardeningPolicies(Builder builder) {
+            this.policyIds = builder.policyIds;
+            this.schemaId = builder.schemaId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SoftwareHardeningPolicies create() {
+            return builder().build();
+        }
+
+        /**
+         * @return policyIds
+         */
+        public java.util.List<String> getPolicyIds() {
+            return this.policyIds;
+        }
+
+        /**
+         * @return schemaId
+         */
+        public String getSchemaId() {
+            return this.schemaId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> policyIds; 
+            private String schemaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SoftwareHardeningPolicies model) {
+                this.policyIds = model.policyIds;
+                this.schemaId = model.schemaId;
+            } 
+
+            /**
+             * PolicyIds.
+             */
+            public Builder policyIds(java.util.List<String> policyIds) {
+                this.policyIds = policyIds;
+                return this;
+            }
+
+            /**
+             * SchemaId.
+             */
+            public Builder schemaId(String schemaId) {
+                this.schemaId = schemaId;
+                return this;
+            }
+
+            public SoftwareHardeningPolicies build() {
+                return new SoftwareHardeningPolicies(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListApprovalProcessesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApprovalProcessesResponseBody</p>
+     */
     public static class Processes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppUninstallPolicies")
         private AppUninstallPolicies appUninstallPolicies;
@@ -737,6 +887,9 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainWhitelistPolicies")
         private DomainWhitelistPolicies domainWhitelistPolicies;
 
+        @com.aliyun.core.annotation.NameInMap("EndpointHardeningPolicies")
+        private EndpointHardeningPolicies endpointHardeningPolicies;
+
         @com.aliyun.core.annotation.NameInMap("PeripheralBlockPolicies")
         private PeripheralBlockPolicies peripheralBlockPolicies;
 
@@ -752,6 +905,9 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SoftwareBlockPolicies")
         private SoftwareBlockPolicies softwareBlockPolicies;
 
+        @com.aliyun.core.annotation.NameInMap("SoftwareHardeningPolicies")
+        private SoftwareHardeningPolicies softwareHardeningPolicies;
+
         private Processes(Builder builder) {
             this.appUninstallPolicies = builder.appUninstallPolicies;
             this.createTime = builder.createTime;
@@ -760,11 +916,13 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             this.dlpSendPolicies = builder.dlpSendPolicies;
             this.domainBlacklistPolicies = builder.domainBlacklistPolicies;
             this.domainWhitelistPolicies = builder.domainWhitelistPolicies;
+            this.endpointHardeningPolicies = builder.endpointHardeningPolicies;
             this.peripheralBlockPolicies = builder.peripheralBlockPolicies;
             this.processId = builder.processId;
             this.processName = builder.processName;
             this.processNodes = builder.processNodes;
             this.softwareBlockPolicies = builder.softwareBlockPolicies;
+            this.softwareHardeningPolicies = builder.softwareHardeningPolicies;
         }
 
         public static Builder builder() {
@@ -825,6 +983,13 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
         }
 
         /**
+         * @return endpointHardeningPolicies
+         */
+        public EndpointHardeningPolicies getEndpointHardeningPolicies() {
+            return this.endpointHardeningPolicies;
+        }
+
+        /**
          * @return peripheralBlockPolicies
          */
         public PeripheralBlockPolicies getPeripheralBlockPolicies() {
@@ -859,6 +1024,13 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             return this.softwareBlockPolicies;
         }
 
+        /**
+         * @return softwareHardeningPolicies
+         */
+        public SoftwareHardeningPolicies getSoftwareHardeningPolicies() {
+            return this.softwareHardeningPolicies;
+        }
+
         public static final class Builder {
             private AppUninstallPolicies appUninstallPolicies; 
             private String createTime; 
@@ -867,11 +1039,13 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             private DlpSendPolicies dlpSendPolicies; 
             private DomainBlacklistPolicies domainBlacklistPolicies; 
             private DomainWhitelistPolicies domainWhitelistPolicies; 
+            private EndpointHardeningPolicies endpointHardeningPolicies; 
             private PeripheralBlockPolicies peripheralBlockPolicies; 
             private String processId; 
             private String processName; 
             private java.util.List<java.util.List<ProcessNodes>> processNodes; 
             private SoftwareBlockPolicies softwareBlockPolicies; 
+            private SoftwareHardeningPolicies softwareHardeningPolicies; 
 
             private Builder() {
             } 
@@ -884,11 +1058,13 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
                 this.dlpSendPolicies = model.dlpSendPolicies;
                 this.domainBlacklistPolicies = model.domainBlacklistPolicies;
                 this.domainWhitelistPolicies = model.domainWhitelistPolicies;
+                this.endpointHardeningPolicies = model.endpointHardeningPolicies;
                 this.peripheralBlockPolicies = model.peripheralBlockPolicies;
                 this.processId = model.processId;
                 this.processName = model.processName;
                 this.processNodes = model.processNodes;
                 this.softwareBlockPolicies = model.softwareBlockPolicies;
+                this.softwareHardeningPolicies = model.softwareHardeningPolicies;
             } 
 
             /**
@@ -948,6 +1124,14 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
+             * EndpointHardeningPolicies.
+             */
+            public Builder endpointHardeningPolicies(EndpointHardeningPolicies endpointHardeningPolicies) {
+                this.endpointHardeningPolicies = endpointHardeningPolicies;
+                return this;
+            }
+
+            /**
              * PeripheralBlockPolicies.
              */
             public Builder peripheralBlockPolicies(PeripheralBlockPolicies peripheralBlockPolicies) {
@@ -984,6 +1168,14 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
              */
             public Builder softwareBlockPolicies(SoftwareBlockPolicies softwareBlockPolicies) {
                 this.softwareBlockPolicies = softwareBlockPolicies;
+                return this;
+            }
+
+            /**
+             * SoftwareHardeningPolicies.
+             */
+            public Builder softwareHardeningPolicies(SoftwareHardeningPolicies softwareHardeningPolicies) {
+                this.softwareHardeningPolicies = softwareHardeningPolicies;
                 return this;
             }
 

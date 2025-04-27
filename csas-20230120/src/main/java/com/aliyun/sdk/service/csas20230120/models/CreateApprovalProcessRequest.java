@@ -171,11 +171,17 @@ public class CreateApprovalProcessRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DomainWhitelistSchemaId")
         private String domainWhitelistSchemaId;
 
+        @com.aliyun.core.annotation.NameInMap("EndpointHardeningSchemaId")
+        private String endpointHardeningSchemaId;
+
         @com.aliyun.core.annotation.NameInMap("PeripheralBlockSchemaId")
         private String peripheralBlockSchemaId;
 
         @com.aliyun.core.annotation.NameInMap("SoftwareBlockSchemaId")
         private String softwareBlockSchemaId;
+
+        @com.aliyun.core.annotation.NameInMap("SoftwareHardeningSchemaId")
+        private String softwareHardeningSchemaId;
 
         private MatchSchemas(Builder builder) {
             this.appUninstallSchemaId = builder.appUninstallSchemaId;
@@ -183,8 +189,10 @@ public class CreateApprovalProcessRequest extends Request {
             this.dlpSendSchemaId = builder.dlpSendSchemaId;
             this.domainBlacklistSchemaId = builder.domainBlacklistSchemaId;
             this.domainWhitelistSchemaId = builder.domainWhitelistSchemaId;
+            this.endpointHardeningSchemaId = builder.endpointHardeningSchemaId;
             this.peripheralBlockSchemaId = builder.peripheralBlockSchemaId;
             this.softwareBlockSchemaId = builder.softwareBlockSchemaId;
+            this.softwareHardeningSchemaId = builder.softwareHardeningSchemaId;
         }
 
         public static Builder builder() {
@@ -231,6 +239,13 @@ public class CreateApprovalProcessRequest extends Request {
         }
 
         /**
+         * @return endpointHardeningSchemaId
+         */
+        public String getEndpointHardeningSchemaId() {
+            return this.endpointHardeningSchemaId;
+        }
+
+        /**
          * @return peripheralBlockSchemaId
          */
         public String getPeripheralBlockSchemaId() {
@@ -244,14 +259,23 @@ public class CreateApprovalProcessRequest extends Request {
             return this.softwareBlockSchemaId;
         }
 
+        /**
+         * @return softwareHardeningSchemaId
+         */
+        public String getSoftwareHardeningSchemaId() {
+            return this.softwareHardeningSchemaId;
+        }
+
         public static final class Builder {
             private String appUninstallSchemaId; 
             private String deviceRegistrationSchemaId; 
             private String dlpSendSchemaId; 
             private String domainBlacklistSchemaId; 
             private String domainWhitelistSchemaId; 
+            private String endpointHardeningSchemaId; 
             private String peripheralBlockSchemaId; 
             private String softwareBlockSchemaId; 
+            private String softwareHardeningSchemaId; 
 
             private Builder() {
             } 
@@ -262,8 +286,10 @@ public class CreateApprovalProcessRequest extends Request {
                 this.dlpSendSchemaId = model.dlpSendSchemaId;
                 this.domainBlacklistSchemaId = model.domainBlacklistSchemaId;
                 this.domainWhitelistSchemaId = model.domainWhitelistSchemaId;
+                this.endpointHardeningSchemaId = model.endpointHardeningSchemaId;
                 this.peripheralBlockSchemaId = model.peripheralBlockSchemaId;
                 this.softwareBlockSchemaId = model.softwareBlockSchemaId;
+                this.softwareHardeningSchemaId = model.softwareHardeningSchemaId;
             } 
 
             /**
@@ -307,6 +333,14 @@ public class CreateApprovalProcessRequest extends Request {
             }
 
             /**
+             * EndpointHardeningSchemaId.
+             */
+            public Builder endpointHardeningSchemaId(String endpointHardeningSchemaId) {
+                this.endpointHardeningSchemaId = endpointHardeningSchemaId;
+                return this;
+            }
+
+            /**
              * PeripheralBlockSchemaId.
              */
             public Builder peripheralBlockSchemaId(String peripheralBlockSchemaId) {
@@ -319,6 +353,14 @@ public class CreateApprovalProcessRequest extends Request {
              */
             public Builder softwareBlockSchemaId(String softwareBlockSchemaId) {
                 this.softwareBlockSchemaId = softwareBlockSchemaId;
+                return this;
+            }
+
+            /**
+             * SoftwareHardeningSchemaId.
+             */
+            public Builder softwareHardeningSchemaId(String softwareHardeningSchemaId) {
+                this.softwareHardeningSchemaId = softwareHardeningSchemaId;
                 return this;
             }
 
