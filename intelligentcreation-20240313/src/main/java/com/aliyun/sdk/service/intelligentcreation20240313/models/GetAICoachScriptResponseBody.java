@@ -101,6 +101,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("sampleDialogueList")
     private java.util.List<SampleDialogueList> sampleDialogueList;
 
+    @com.aliyun.core.annotation.NameInMap("scoreConfig")
+    private ScoreConfig scoreConfig;
+
     @com.aliyun.core.annotation.NameInMap("scriptRecordId")
     private String scriptRecordId;
 
@@ -154,6 +157,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         this.points = builder.points;
         this.requestId = builder.requestId;
         this.sampleDialogueList = builder.sampleDialogueList;
+        this.scoreConfig = builder.scoreConfig;
         this.scriptRecordId = builder.scriptRecordId;
         this.sparringTipContent = builder.sparringTipContent;
         this.sparringTipTitle = builder.sparringTipTitle;
@@ -373,6 +377,13 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
 
     /**
+     * @return scoreConfig
+     */
+    public ScoreConfig getScoreConfig() {
+        return this.scoreConfig;
+    }
+
+    /**
      * @return scriptRecordId
      */
     public String getScriptRecordId() {
@@ -457,6 +468,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         private java.util.List<Points> points; 
         private String requestId; 
         private java.util.List<SampleDialogueList> sampleDialogueList; 
+        private ScoreConfig scoreConfig; 
         private String scriptRecordId; 
         private String sparringTipContent; 
         private String sparringTipTitle; 
@@ -498,6 +510,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             this.points = model.points;
             this.requestId = model.requestId;
             this.sampleDialogueList = model.sampleDialogueList;
+            this.scoreConfig = model.scoreConfig;
             this.scriptRecordId = model.scriptRecordId;
             this.sparringTipContent = model.sparringTipContent;
             this.sparringTipTitle = model.sparringTipTitle;
@@ -729,6 +742,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
          */
         public Builder sampleDialogueList(java.util.List<SampleDialogueList> sampleDialogueList) {
             this.sampleDialogueList = sampleDialogueList;
+            return this;
+        }
+
+        /**
+         * scoreConfig.
+         */
+        public Builder scoreConfig(ScoreConfig scoreConfig) {
+            this.scoreConfig = scoreConfig;
             return this;
         }
 
@@ -2126,6 +2147,81 @@ public class GetAICoachScriptResponseBody extends TeaModel {
 
             public SampleDialogueList build() {
                 return new SampleDialogueList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAICoachScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAICoachScriptResponseBody</p>
+     */
+    public static class ScoreConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("passScore")
+        private String passScore;
+
+        private ScoreConfig(Builder builder) {
+            this.enabled = builder.enabled;
+            this.passScore = builder.passScore;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScoreConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return passScore
+         */
+        public String getPassScore() {
+            return this.passScore;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private String passScore; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScoreConfig model) {
+                this.enabled = model.enabled;
+                this.passScore = model.passScore;
+            } 
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * passScore.
+             */
+            public Builder passScore(String passScore) {
+                this.passScore = passScore;
+                return this;
+            }
+
+            public ScoreConfig build() {
+                return new ScoreConfig(this);
             } 
 
         } 
