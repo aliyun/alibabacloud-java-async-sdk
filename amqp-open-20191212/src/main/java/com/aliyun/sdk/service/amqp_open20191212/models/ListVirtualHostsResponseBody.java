@@ -36,6 +36,10 @@ public class ListVirtualHostsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListVirtualHostsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVirtualHostsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -110,6 +122,13 @@ public class ListVirtualHostsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualHosts model) {
+                this.name = model.name;
+            } 
 
             /**
              * <p>The vhost name.</p>
@@ -184,6 +203,15 @@ public class ListVirtualHostsResponseBody extends TeaModel {
             private Integer maxResults; 
             private String nextToken; 
             private java.util.List<VirtualHosts> virtualHosts; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.virtualHosts = model.virtualHosts;
+            } 
 
             /**
              * <p>The maximum number of entries returned.</p>

@@ -50,7 +50,7 @@ public class ListInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -136,7 +136,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the instances belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzu74zjgdu4mq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

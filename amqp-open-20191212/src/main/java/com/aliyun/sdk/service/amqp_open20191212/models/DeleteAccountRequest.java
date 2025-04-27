@@ -23,7 +23,6 @@ public class DeleteAccountRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long createTimestamp;
 
     @com.aliyun.core.annotation.Query
@@ -46,7 +45,7 @@ public class DeleteAccountRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,7 +99,6 @@ public class DeleteAccountRequest extends Request {
         /**
          * <p>The timestamp that indicates when the pair of static username and password that you want to delete was created. Unit: milliseconds.</p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/472730.html">ListAccounts</a> operation to view the timestamp.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1671175303522</p>

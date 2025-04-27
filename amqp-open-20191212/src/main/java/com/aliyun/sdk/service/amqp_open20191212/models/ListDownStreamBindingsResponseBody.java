@@ -48,6 +48,10 @@ public class ListDownStreamBindingsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListDownStreamBindingsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDownStreamBindingsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request is successful.</p>
@@ -227,6 +242,17 @@ public class ListDownStreamBindingsResponseBody extends TeaModel {
             private String bindingType; 
             private String destinationName; 
             private String sourceExchange; 
+
+            private Builder() {
+            } 
+
+            private Builder(Bindings model) {
+                this.argument = model.argument;
+                this.bindingKey = model.bindingKey;
+                this.bindingType = model.bindingType;
+                this.destinationName = model.destinationName;
+                this.sourceExchange = model.sourceExchange;
+            } 
 
             /**
              * <p>The x-match attribute. Valid values:</p>
@@ -369,6 +395,15 @@ public class ListDownStreamBindingsResponseBody extends TeaModel {
             private java.util.List<Bindings> bindings; 
             private Integer maxResults; 
             private String nextToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bindings = model.bindings;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+            } 
 
             /**
              * <p>The bindings.</p>

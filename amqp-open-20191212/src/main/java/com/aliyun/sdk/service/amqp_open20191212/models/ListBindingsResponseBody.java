@@ -36,6 +36,10 @@ public class ListBindingsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListBindingsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBindingsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -158,6 +170,17 @@ public class ListBindingsResponseBody extends TeaModel {
             private String bindingType; 
             private String destinationName; 
             private String sourceExchange; 
+
+            private Builder() {
+            } 
+
+            private Builder(Bindings model) {
+                this.argument = model.argument;
+                this.bindingKey = model.bindingKey;
+                this.bindingType = model.bindingType;
+                this.destinationName = model.destinationName;
+                this.sourceExchange = model.sourceExchange;
+            } 
 
             /**
              * <p>The x-match attribute. Valid values:</p>
@@ -300,6 +323,15 @@ public class ListBindingsResponseBody extends TeaModel {
             private java.util.List<Bindings> bindings; 
             private Integer maxResults; 
             private String nextToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bindings = model.bindings;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+            } 
 
             /**
              * <p>The bindings.</p>

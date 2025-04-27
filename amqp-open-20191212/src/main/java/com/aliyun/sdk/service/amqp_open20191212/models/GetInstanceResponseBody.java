@@ -36,6 +36,10 @@ public class GetInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -119,6 +131,14 @@ public class GetInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -450,6 +470,36 @@ public class GetInstanceResponseBody extends TeaModel {
             private Boolean supportTracing; 
             private java.util.List<Tags> tags; 
             private Integer tracingStorageTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.autoRenewInstance = model.autoRenewInstance;
+                this.classicEndpoint = model.classicEndpoint;
+                this.encryptedInstance = model.encryptedInstance;
+                this.expireTime = model.expireTime;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceType = model.instanceType;
+                this.kmsKeyId = model.kmsKeyId;
+                this.maxConnections = model.maxConnections;
+                this.maxEipTps = model.maxEipTps;
+                this.maxQueue = model.maxQueue;
+                this.maxTps = model.maxTps;
+                this.maxVhost = model.maxVhost;
+                this.orderCreateTime = model.orderCreateTime;
+                this.orderType = model.orderType;
+                this.privateEndpoint = model.privateEndpoint;
+                this.publicEndpoint = model.publicEndpoint;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.storageSize = model.storageSize;
+                this.supportEIP = model.supportEIP;
+                this.supportTracing = model.supportTracing;
+                this.tags = model.tags;
+                this.tracingStorageTime = model.tracingStorageTime;
+            } 
 
             /**
              * AutoRenewInstance.

@@ -36,6 +36,10 @@ public class ListExchangesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListExchangesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExchangesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -170,6 +182,18 @@ public class ListExchangesResponseBody extends TeaModel {
             private String exchangeType; 
             private String name; 
             private String vHostName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Exchanges model) {
+                this.attributes = model.attributes;
+                this.autoDeleteState = model.autoDeleteState;
+                this.createTime = model.createTime;
+                this.exchangeType = model.exchangeType;
+                this.name = model.name;
+                this.vHostName = model.vHostName;
+            } 
 
             /**
              * <p>The attributes. This parameter is unavailable in the current version.</p>
@@ -299,6 +323,15 @@ public class ListExchangesResponseBody extends TeaModel {
             private java.util.List<Exchanges> exchanges; 
             private Integer maxResults; 
             private String nextToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.exchanges = model.exchanges;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+            } 
 
             /**
              * <p>The exchanges.</p>

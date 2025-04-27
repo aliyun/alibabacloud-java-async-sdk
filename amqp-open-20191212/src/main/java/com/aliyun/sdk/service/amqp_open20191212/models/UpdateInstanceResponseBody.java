@@ -52,6 +52,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,8 +106,23 @@ public class UpdateInstanceResponseBody extends TeaModel {
         private String statusCode; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateInstanceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.statusCode = model.statusCode;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -111,7 +130,15 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data, which includes orderId and instanceId. Sample returned data:</p>
+         * <pre><code class="language-json">&quot;Data&quot;: {
+         *     &quot;instanceId&quot;: &quot;amqp-cn-xxxxx&quot;,
+         *     &quot;orderId&quot;: 22222
+         *   }
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>{“instanceId”: “amqp-cn-jtexxxxx”, “orderId”: 2222222}</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -119,7 +146,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceNotExist</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -127,7 +157,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>628705FD-03EE-4ABE-BB21-E1672960***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +168,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * StatusCode.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder statusCode(String statusCode) {
             this.statusCode = statusCode;
@@ -143,7 +179,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

@@ -111,7 +111,7 @@ public class UpdateInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -280,7 +280,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2c5d1274axxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -289,7 +292,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * EncryptedInstance.
+         * <p>实例是否开通数据存储加密功能</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder encryptedInstance(Boolean encryptedInstance) {
             this.putQueryParameter("EncryptedInstance", encryptedInstance);
@@ -298,6 +304,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -310,7 +317,16 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The instance edition. Valid values for subscription instances:</p>
+         * <ul>
+         * <li>professional: Professional Edition</li>
+         * <li>enterprise: Enterprise Edition</li>
+         * <li>vip: Enterprise Platinum Edition.</li>
+         * </ul>
+         * <p>If your instance is a pay-as-you-go instance, you do not need to configure this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>professional</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -319,7 +335,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * KmsKeyId.
+         * <p>使用同地域下KMS密钥ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-bjj66c2a893vmhawtq5fd</p>
          */
         public Builder kmsKeyId(String kmsKeyId) {
             this.putQueryParameter("KmsKeyId", kmsKeyId);
@@ -328,7 +347,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * MaxConnections.
+         * <p>The maximum number of connections that can be created on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxConnections(Integer maxConnections) {
             this.putQueryParameter("MaxConnections", maxConnections);
@@ -337,7 +359,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * MaxEipTps.
+         * <p>The peak TPS for accessing the instance over the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         public Builder maxEipTps(Long maxEipTps) {
             this.putQueryParameter("MaxEipTps", maxEipTps);
@@ -346,7 +371,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * MaxPrivateTps.
+         * <p>The peak transactions per second (TPS) for accessing the instance in a virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxPrivateTps(Long maxPrivateTps) {
             this.putQueryParameter("MaxPrivateTps", maxPrivateTps);
@@ -355,6 +383,11 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The type of the configuration change. Valid values:</p>
+         * <ul>
+         * <li>UPGRADE</li>
+         * <li>DOWNGRADE</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -367,7 +400,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * QueueCapacity.
+         * <p>The maximum number of queues that can be created on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder queueCapacity(Integer queueCapacity) {
             this.putQueryParameter("QueueCapacity", queueCapacity);
@@ -376,7 +412,13 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * ServerlessChargeType.
+         * <p>The billing method of the serverless instance. Valid values:</p>
+         * <ul>
+         * <li>onDemand: You are charged based on your actual usage.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>onDemand</p>
          */
         public Builder serverlessChargeType(String serverlessChargeType) {
             this.putQueryParameter("ServerlessChargeType", serverlessChargeType);
@@ -385,7 +427,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * StorageSize.
+         * <p>The size of the storage space that can be used to store messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder storageSize(Integer storageSize) {
             this.putQueryParameter("StorageSize", storageSize);
@@ -394,7 +439,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * SupportEip.
+         * <p>Specifies whether elastic IP addresses (EIPs) are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder supportEip(Boolean supportEip) {
             this.putQueryParameter("SupportEip", supportEip);
@@ -403,7 +451,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * SupportTracing.
+         * <p>Specifies whether to enable the message trace feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder supportTracing(Boolean supportTracing) {
             this.putQueryParameter("SupportTracing", supportTracing);
@@ -412,7 +463,16 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * TracingStorageTime.
+         * <p>The retention period of message traces.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>3</li>
+         * <li>7</li>
+         * <li>15</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder tracingStorageTime(Integer tracingStorageTime) {
             this.putQueryParameter("TracingStorageTime", tracingStorageTime);

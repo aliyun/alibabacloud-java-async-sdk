@@ -36,6 +36,10 @@ public class ListQueueConsumersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListQueueConsumersResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListQueueConsumersResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -110,6 +122,13 @@ public class ListQueueConsumersResponseBody extends TeaModel {
 
         public static final class Builder {
             private String consumerTag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Consumers model) {
+                this.consumerTag = model.consumerTag;
+            } 
 
             /**
              * <p>The consumer tag.</p>
@@ -184,6 +203,15 @@ public class ListQueueConsumersResponseBody extends TeaModel {
             private java.util.List<Consumers> consumers; 
             private Integer maxResults; 
             private String nextToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.consumers = model.consumers;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+            } 
 
             /**
              * <p>The consumers.</p>

@@ -36,6 +36,10 @@ public class ListInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,8 +58,16 @@ public class ListInstancesResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The returned data.</p>
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -123,8 +135,16 @@ public class ListInstancesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * <p>标签键。</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>region</p>
@@ -135,7 +155,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>标签值。</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>hangzhou</p>
@@ -424,6 +444,33 @@ public class ListInstancesResponseBody extends TeaModel {
             private Boolean supportEIP; 
             private java.util.List<Tags> tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.autoRenewInstance = model.autoRenewInstance;
+                this.classicEndpoint = model.classicEndpoint;
+                this.encryptedInstance = model.encryptedInstance;
+                this.expireTime = model.expireTime;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceType = model.instanceType;
+                this.kmsKeyId = model.kmsKeyId;
+                this.maxEipTps = model.maxEipTps;
+                this.maxQueue = model.maxQueue;
+                this.maxTps = model.maxTps;
+                this.maxVhost = model.maxVhost;
+                this.orderCreateTime = model.orderCreateTime;
+                this.orderType = model.orderType;
+                this.privateEndpoint = model.privateEndpoint;
+                this.publicEndpoint = model.publicEndpoint;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.storageSize = model.storageSize;
+                this.supportEIP = model.supportEIP;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>Indicates whether the instance is automatically renewed.</p>
              * 
@@ -447,7 +494,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptedInstance.
+             * <p>Indicates whether the encryption at rest feature is enabled for the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder encryptedInstance(Boolean encryptedInstance) {
                 this.encryptedInstance = encryptedInstance;
@@ -504,7 +554,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * KmsKeyId.
+             * <p>The ID of the Key Management Service (KMS) key used for the data disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-bjj66c2a893vmhawtq5fd</p>
              */
             public Builder kmsKeyId(String kmsKeyId) {
                 this.kmsKeyId = kmsKeyId;
@@ -604,7 +657,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek3axfj2w4czrq</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -654,7 +710,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>标签列表。</p>
+             * <p>The tags that are added to the instance.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -723,6 +779,15 @@ public class ListInstancesResponseBody extends TeaModel {
             private java.util.List<Instances> instances; 
             private Integer maxResults; 
             private String nextToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instances = model.instances;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+            } 
 
             /**
              * <p>The instances.</p>

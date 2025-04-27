@@ -48,6 +48,10 @@ public class CreateAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateAccountResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAccountResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -240,11 +255,23 @@ public class CreateAccountResponseBody extends TeaModel {
             private String password; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessKey = model.accessKey;
+                this.createTimeStamp = model.createTimeStamp;
+                this.instanceId = model.instanceId;
+                this.masterUId = model.masterUId;
+                this.password = model.password;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The AccessKey ID that is used to create the password.</p>
              * 
              * <strong>example:</strong>
-             * <p>LTAI5***********eRZtEJ6vfo</p>
+             * <p>LTAI****************</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;

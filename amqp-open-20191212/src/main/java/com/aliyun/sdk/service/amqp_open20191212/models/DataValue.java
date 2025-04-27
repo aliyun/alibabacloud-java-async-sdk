@@ -56,6 +56,10 @@ public class DataValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return masterUid
      */
@@ -114,11 +118,24 @@ public class DataValue extends TeaModel {
         private Long deleted; 
         private Long createTimestamp; 
 
+        private Builder() {
+        } 
+
+        private Builder(DataValue model) {
+            this.masterUid = model.masterUid;
+            this.cInstanceId = model.cInstanceId;
+            this.accessKey = model.accessKey;
+            this.userName = model.userName;
+            this.password = model.password;
+            this.deleted = model.deleted;
+            this.createTimestamp = model.createTimestamp;
+        } 
+
         /**
          * <p>The Alibaba Cloud account ID or Resource Access Management (RAM) user to which the AccessKey pair that is used to create the static username and password belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>1565*******973901</p>
+         * <p>1565************1</p>
          */
         public Builder masterUid(Long masterUid) {
             this.masterUid = masterUid;
@@ -140,7 +157,7 @@ public class DataValue extends TeaModel {
          * <p>The AccessKey ID that is used to create the static username and password.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAI5***********eRZtEJ6vfo</p>
+         * <p>LTAI****************</p>
          */
         public Builder accessKey(String accessKey) {
             this.accessKey = accessKey;

@@ -36,6 +36,10 @@ public class ListQueuesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListQueuesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListQueuesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -194,6 +206,20 @@ public class ListQueuesResponseBody extends TeaModel {
             private String name; 
             private String ownerId; 
             private String vHostName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Queues model) {
+                this.attributes = model.attributes;
+                this.autoDeleteState = model.autoDeleteState;
+                this.createTime = model.createTime;
+                this.exclusiveState = model.exclusiveState;
+                this.lastConsumeTime = model.lastConsumeTime;
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.vHostName = model.vHostName;
+            } 
 
             /**
              * <p>The attributes.</p>
@@ -345,6 +371,15 @@ public class ListQueuesResponseBody extends TeaModel {
             private Integer maxResults; 
             private String nextToken; 
             private java.util.List<Queues> queues; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.queues = model.queues;
+            } 
 
             /**
              * <p>The maximum number of entries returned.</p>

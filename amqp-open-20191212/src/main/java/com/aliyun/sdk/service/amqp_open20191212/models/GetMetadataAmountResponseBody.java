@@ -36,6 +36,10 @@ public class GetMetadataAmountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetMetadataAmountResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetadataAmountResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -170,6 +182,18 @@ public class GetMetadataAmountResponseBody extends TeaModel {
             private Integer maxExchanges; 
             private Integer maxQueues; 
             private Integer maxVirtualHosts; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentExchanges = model.currentExchanges;
+                this.currentQueues = model.currentQueues;
+                this.currentVirtualHosts = model.currentVirtualHosts;
+                this.maxExchanges = model.maxExchanges;
+                this.maxQueues = model.maxQueues;
+                this.maxVirtualHosts = model.maxVirtualHosts;
+            } 
 
             /**
              * <p>The number of created exchanges on the ApsaraMQ for RabbitMQ instance.</p>
