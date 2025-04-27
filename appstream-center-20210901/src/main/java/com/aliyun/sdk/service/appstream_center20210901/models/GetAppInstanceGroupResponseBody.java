@@ -952,6 +952,102 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
      *
      * <p>GetAppInstanceGroupResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Scope")
+        private String scope;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.scope = builder.scope;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return scope
+         */
+        public String getScope() {
+            return this.scope;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String scope; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.scope = model.scope;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Scope.
+             */
+            public Builder scope(String scope) {
+                this.scope = scope;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAppInstanceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppInstanceGroupResponseBody</p>
+     */
     public static class AppInstanceGroupModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
@@ -1052,6 +1148,9 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         private AppInstanceGroupModels(Builder builder) {
             this.amount = builder.amount;
             this.appCenterImageId = builder.appCenterImageId;
@@ -1086,6 +1185,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             this.skipUserAuthCheck = builder.skipUserAuthCheck;
             this.specId = builder.specId;
             this.status = builder.status;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -1327,6 +1427,13 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private Integer amount; 
             private String appCenterImageId; 
@@ -1361,6 +1468,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             private Boolean skipUserAuthCheck; 
             private String specId; 
             private String status; 
+            private java.util.List<Tags> tags; 
 
             private Builder() {
             } 
@@ -1399,6 +1507,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
                 this.skipUserAuthCheck = model.skipUserAuthCheck;
                 this.specId = model.specId;
                 this.status = model.status;
+                this.tags = model.tags;
             } 
 
             /**
@@ -1662,6 +1771,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 
