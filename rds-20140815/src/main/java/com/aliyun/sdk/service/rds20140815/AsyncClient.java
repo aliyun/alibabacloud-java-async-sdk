@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AcceptRCInquiredSystemEvent  AcceptRCInquiredSystemEventRequest
+     * @return AcceptRCInquiredSystemEventResponse
+     */
+    CompletableFuture<AcceptRCInquiredSystemEventResponse> acceptRCInquiredSystemEvent(AcceptRCInquiredSystemEventRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -668,16 +674,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
-     * <li>MySQL
-     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>MySQL</li>
      * </ul>
-     * <h3><a href="#"></a>References</h3>
-     * <blockquote>
-     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * <a href="https://help.aliyun.com/document_detail/328592.html">Create and release an ApsaraDB RDS global active database cluster</a></p>
-     * </blockquote>
      * 
      * @param request the request parameters of CreateGADInstance  CreateGADInstanceRequest
      * @return CreateGADInstanceResponse
@@ -2732,6 +2732,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRCInstanceAttributeResponse
      */
     CompletableFuture<DescribeRCInstanceAttributeResponse> describeRCInstanceAttribute(DescribeRCInstanceAttributeRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRCInstanceDdosCount  DescribeRCInstanceDdosCountRequest
+     * @return DescribeRCInstanceDdosCountResponse
+     */
+    CompletableFuture<DescribeRCInstanceDdosCountResponse> describeRCInstanceDdosCount(DescribeRCInstanceDdosCountRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRCInstanceHistoryEvents  DescribeRCInstanceHistoryEventsRequest
+     * @return DescribeRCInstanceHistoryEventsResponse
+     */
+    CompletableFuture<DescribeRCInstanceHistoryEventsResponse> describeRCInstanceHistoryEvents(DescribeRCInstanceHistoryEventsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRCInstanceIpAddress  DescribeRCInstanceIpAddressRequest
+     * @return DescribeRCInstanceIpAddressResponse
+     */
+    CompletableFuture<DescribeRCInstanceIpAddressResponse> describeRCInstanceIpAddress(DescribeRCInstanceIpAddressRequest request);
 
     /**
      * @param request the request parameters of DescribeRCInstanceTypeFamilies  DescribeRCInstanceTypeFamiliesRequest
@@ -5145,6 +5163,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SwitchDBInstanceVpcResponse> switchDBInstanceVpc(SwitchDBInstanceVpcRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Supported database engine</p>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
      * @param request the request parameters of SwitchOverMajorVersionUpgrade  SwitchOverMajorVersionUpgradeRequest
      * @return SwitchOverMajorVersionUpgradeResponse
      */

@@ -12,22 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateRCDiskResponseBody} extends {@link TeaModel}
+ * {@link AcceptRCInquiredSystemEventResponseBody} extends {@link TeaModel}
  *
- * <p>CreateRCDiskResponseBody</p>
+ * <p>AcceptRCInquiredSystemEventResponseBody</p>
  */
-public class CreateRCDiskResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("DiskId")
-    private String diskId;
-
+public class AcceptRCInquiredSystemEventResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateRCDiskResponseBody(Builder builder) {
-        this.diskId = builder.diskId;
+    private AcceptRCInquiredSystemEventResponseBody(Builder builder) {
         this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
@@ -36,19 +32,12 @@ public class CreateRCDiskResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateRCDiskResponseBody create() {
+    public static AcceptRCInquiredSystemEventResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return diskId
-     */
-    public String getDiskId() {
-        return this.diskId;
     }
 
     /**
@@ -66,35 +55,19 @@ public class CreateRCDiskResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String diskId; 
         private String orderId; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(CreateRCDiskResponseBody model) {
-            this.diskId = model.diskId;
+        private Builder(AcceptRCInquiredSystemEventResponseBody model) {
             this.orderId = model.orderId;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The cloud disk ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rcd-2zegrjtnkp6dqbe1egca</p>
-         */
-        public Builder diskId(String diskId) {
-            this.diskId = diskId;
-            return this;
-        }
-
-        /**
-         * <p>The order ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100789370230206</p>
+         * OrderId.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -102,18 +75,15 @@ public class CreateRCDiskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>F2911788-25E8-42E5-A3A3-1B38D263F01E</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateRCDiskResponseBody build() {
-            return new CreateRCDiskResponseBody(this);
+        public AcceptRCInquiredSystemEventResponseBody build() {
+            return new AcceptRCInquiredSystemEventResponseBody(this);
         } 
 
     } 

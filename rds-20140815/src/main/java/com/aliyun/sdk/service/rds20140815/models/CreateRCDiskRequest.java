@@ -294,14 +294,10 @@ public class CreateRCDiskRequest extends Request {
         /**
          * <p>The category of the data disk. Valid values:</p>
          * <ul>
-         * <li><strong>cloud</strong> (default): basic disk</li>
          * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
          * <li><strong>cloud_ssd</strong>: standard SSD.</li>
-         * <li><strong>cloud_essd</strong>: Enterprise ESSD (ESSD).</li>
-         * <li><strong>cloud_auto</strong>: ESSD AutoPL disk</li>
-         * <li><strong>cloud_essd_entry</strong>: ESSD Entry disk</li>
-         * <li><strong>elastic_ephemeral_disk_standard</strong>: standard elastic ephemeral disk</li>
-         * <li><strong>elastic_ephemeral_disk_premium</strong>: premium elastic ephemeral disk</li>
+         * <li><strong>cloud_essd</strong>: ESSD.</li>
+         * <li><strong>cloud_auto</strong>: ESSD AutoPL disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -314,7 +310,7 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
-         * <p>The disk name. The name must be 2 to 128 characters in length and can contain letters and digits. The name can contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters and digits. The name can contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * <p>By default, this parameter is left empty.</p>
          * 
          * <strong>example:</strong>
@@ -358,7 +354,7 @@ public class CreateRCDiskRequest extends Request {
          * <li><strong>PL2</strong>: A single ESSD delivers up to 100,000 random read/write IOPS.</li>
          * <li><strong>PL3</strong>: A single ESSD delivers up to 1,000,000 random read/write IOPS.</li>
          * </ul>
-         * <p>For information about ESSD PLs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * <p>For information about ESSD PLs, see <a href="https://help.aliyun.com/document_detail/2859916.html">ESSDs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -407,11 +403,9 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
-         * <p>The disk size. Unit: GiB. This parameter is required.</p>
+         * <p>The disk size. Unit: GiB. This parameter is required. Valid values:</p>
          * <ul>
-         * <li><p>Valid values if you set DiskCategory to <strong>cloud</strong>: 5 to 2000.</p>
-         * </li>
-         * <li><p>Valid values if you set DiskCategory to <strong>cloud_efficiency</strong>: 20 to 32768.</p>
+         * <li><p>Valid values if you set DiskCategory to <strong>cloud_essd_entry</strong>: 10 to 32768.</p>
          * </li>
          * <li><p>Valid values if you set DiskCategory to <strong>cloud_ssd</strong>: 20 to 32768.</p>
          * </li>
@@ -424,12 +418,6 @@ public class CreateRCDiskRequest extends Request {
          * </ul>
          * </li>
          * <li><p>Valid values if you set DiskCategory to <strong>cloud_auto</strong>: 1 to 65536.</p>
-         * </li>
-         * <li><p>Valid values if you set DiskCategory to <strong>cloud_essd_entry</strong>: 10 to 32768.</p>
-         * </li>
-         * <li><p>Valid values if you set DiskCategory to <strong>elastic_ephemeral_disk_standard</strong>: 64 to 8192.</p>
-         * </li>
-         * <li><p>Valid values if you set DiskCategory to <strong>elastic_ephemeral_disk_premium</strong>: 64 to 8192.</p>
          * </li>
          * </ul>
          * <p>If <code>SnapshotId</code> is specified, the following limits apply to <code>SnapshotId</code> and <code>Size</code>:</p>
@@ -466,6 +454,7 @@ public class CreateRCDiskRequest extends Request {
 
         /**
          * <p>The zone ID.</p>
+         * <p>This parameter is required if you do not specify <strong>InstanceId</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
