@@ -48,6 +48,10 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -89,6 +93,17 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataShareInstancesResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The state of data sharing. Valid values:</p>
@@ -246,6 +261,18 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             private String regionId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstance model) {
+                this.DBInstanceId = model.DBInstanceId;
+                this.DBInstanceMode = model.DBInstanceMode;
+                this.dataShareStatus = model.dataShareStatus;
+                this.description = model.description;
+                this.regionId = model.regionId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The ID of the instance.</p>
              * 
@@ -361,6 +388,13 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBInstance> DBInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBInstance = model.DBInstance;
+            } 
 
             /**
              * DBInstance.

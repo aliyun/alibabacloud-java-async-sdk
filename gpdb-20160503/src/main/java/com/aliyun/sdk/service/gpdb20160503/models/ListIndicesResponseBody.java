@@ -44,6 +44,10 @@ public class ListIndicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return indices
      */
@@ -77,6 +81,16 @@ public class ListIndicesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIndicesResponseBody model) {
+            this.indices = model.indices;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * Indices.
@@ -187,6 +201,16 @@ public class ListIndicesResponseBody extends TeaModel {
             private String indexName; 
             private String namespace; 
 
+            private Builder() {
+            } 
+
+            private Builder(IndicesIndices model) {
+                this.collection = model.collection;
+                this.indexDef = model.indexDef;
+                this.indexName = model.indexName;
+                this.namespace = model.namespace;
+            } 
+
             /**
              * Collection.
              */
@@ -257,6 +281,13 @@ public class ListIndicesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<IndicesIndices> indices; 
+
+            private Builder() {
+            } 
+
+            private Builder(Indices model) {
+                this.indices = model.indices;
+            } 
 
             /**
              * Indices.

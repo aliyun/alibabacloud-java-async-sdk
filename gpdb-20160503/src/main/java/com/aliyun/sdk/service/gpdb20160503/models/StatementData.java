@@ -64,6 +64,10 @@ public class StatementData extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdAt
      */
@@ -137,6 +141,21 @@ public class StatementData extends TeaModel {
         private java.util.List<String> sqls; 
         private String status; 
         private String updatedAt; 
+
+        private Builder() {
+        } 
+
+        private Builder(StatementData model) {
+            this.createdAt = model.createdAt;
+            this.database = model.database;
+            this.id = model.id;
+            this.parameters = model.parameters;
+            this.secretArn = model.secretArn;
+            this.sql = model.sql;
+            this.sqls = model.sqls;
+            this.status = model.status;
+            this.updatedAt = model.updatedAt;
+        } 
 
         /**
          * CreatedAt.

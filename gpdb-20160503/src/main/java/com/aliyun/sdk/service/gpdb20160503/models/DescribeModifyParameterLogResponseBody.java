@@ -36,6 +36,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return changelogs
      */
@@ -53,6 +57,14 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Changelogs> changelogs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeModifyParameterLogResponseBody model) {
+            this.changelogs = model.changelogs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried parameter modification logs.</p>
@@ -158,6 +170,17 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             private String parameterValid; 
             private String parameterValueAfter; 
             private String parameterValueBefore; 
+
+            private Builder() {
+            } 
+
+            private Builder(Changelogs model) {
+                this.effectTime = model.effectTime;
+                this.parameterName = model.parameterName;
+                this.parameterValid = model.parameterValid;
+                this.parameterValueAfter = model.parameterValueAfter;
+                this.parameterValueBefore = model.parameterValueBefore;
+            } 
 
             /**
              * <p>The effective time.</p>

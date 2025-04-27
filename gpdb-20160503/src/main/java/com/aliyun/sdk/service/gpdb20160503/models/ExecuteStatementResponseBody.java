@@ -64,6 +64,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdAt
      */
@@ -137,6 +141,21 @@ public class ExecuteStatementResponseBody extends TeaModel {
         private String requestId; 
         private String secretArn; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExecuteStatementResponseBody model) {
+            this.createdAt = model.createdAt;
+            this.DBInstanceId = model.DBInstanceId;
+            this.data = model.data;
+            this.database = model.database;
+            this.id = model.id;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.secretArn = model.secretArn;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The time when the SQL statements were created.</p>
@@ -276,6 +295,13 @@ public class ExecuteStatementResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ColumnMetadata> columnMetadata; 
 
+            private Builder() {
+            } 
+
+            private Builder(ColumnMetadata model) {
+                this.columnMetadata = model.columnMetadata;
+            } 
+
             /**
              * ColumnMetadata.
              */
@@ -323,6 +349,13 @@ public class ExecuteStatementResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Field> record; 
 
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.record = model.record;
+            } 
+
             /**
              * Record.
              */
@@ -369,6 +402,13 @@ public class ExecuteStatementResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Records> records; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataRecords model) {
+                this.records = model.records;
+            } 
 
             /**
              * Records.
@@ -440,6 +480,15 @@ public class ExecuteStatementResponseBody extends TeaModel {
             private ColumnMetadata columnMetadata; 
             private DataRecords records; 
             private Long totalNumRows; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.columnMetadata = model.columnMetadata;
+                this.records = model.records;
+                this.totalNumRows = model.totalNumRows;
+            } 
 
             /**
              * <p>The metadata of the columns.</p>

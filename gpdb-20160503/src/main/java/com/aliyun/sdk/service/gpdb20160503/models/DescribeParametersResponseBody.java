@@ -36,6 +36,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parameters
      */
@@ -53,6 +57,14 @@ public class DescribeParametersResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Parameters> parameters; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParametersResponseBody model) {
+            this.parameters = model.parameters;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried configuration parameters.</p>
@@ -182,6 +194,19 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterDescription; 
             private String parameterName; 
             private String parameterValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.currentValue = model.currentValue;
+                this.forceRestartInstance = model.forceRestartInstance;
+                this.isChangeableConfig = model.isChangeableConfig;
+                this.optionalRange = model.optionalRange;
+                this.parameterDescription = model.parameterDescription;
+                this.parameterName = model.parameterName;
+                this.parameterValue = model.parameterValue;
+            } 
 
             /**
              * <p>The current value of the configuration parameter.</p>

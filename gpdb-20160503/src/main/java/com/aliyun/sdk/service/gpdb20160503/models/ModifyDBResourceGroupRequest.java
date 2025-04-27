@@ -46,7 +46,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -176,6 +176,14 @@ public class ModifyDBResourceGroupRequest extends Request {
         public static final class Builder {
             private String resourceGroupConfig; 
             private String resourceGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceGroupItems model) {
+                this.resourceGroupConfig = model.resourceGroupConfig;
+                this.resourceGroupName = model.resourceGroupName;
+            } 
 
             /**
              * <p>The configurations of the resource group to which you want to modify.</p>

@@ -52,6 +52,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -101,6 +105,18 @@ public class ListDocumentsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDocumentsResponseBody model) {
+            this.count = model.count;
+            this.items = model.items;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The total number of entries returned.</p>
@@ -219,6 +235,14 @@ public class ListDocumentsResponseBody extends TeaModel {
             private String fileName; 
             private String source; 
 
+            private Builder() {
+            } 
+
+            private Builder(DocumentList model) {
+                this.fileName = model.fileName;
+                this.source = model.source;
+            } 
+
             /**
              * <p>The name of the document.</p>
              * 
@@ -279,6 +303,13 @@ public class ListDocumentsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DocumentList> documentList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.documentList = model.documentList;
+            } 
 
             /**
              * DocumentList.

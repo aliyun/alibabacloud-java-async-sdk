@@ -40,6 +40,10 @@ public class DescribeHadoopConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configName
      */
@@ -65,6 +69,15 @@ public class DescribeHadoopConfigsResponseBody extends TeaModel {
         private String configName; 
         private String configValue; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHadoopConfigsResponseBody model) {
+            this.configName = model.configName;
+            this.configValue = model.configValue;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The name of the configuration file. Valid values:</p>

@@ -40,6 +40,10 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hasServiceLinkedRole
      */
@@ -65,6 +69,15 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         private String hasServiceLinkedRole; 
         private String regionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckServiceLinkedRoleResponseBody model) {
+            this.hasServiceLinkedRole = model.hasServiceLinkedRole;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether an SLR is created.</p>

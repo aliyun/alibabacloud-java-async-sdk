@@ -40,6 +40,10 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -65,6 +69,15 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
         private String DBClusterId; 
         private java.util.List<Nodes> nodes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterNodeResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.nodes = model.nodes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -133,6 +146,13 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.name = model.name;
+            } 
 
             /**
              * <p>The name of the node.</p>

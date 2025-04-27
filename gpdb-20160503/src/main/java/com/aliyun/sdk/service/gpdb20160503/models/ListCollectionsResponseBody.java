@@ -60,6 +60,10 @@ public class ListCollectionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return collections
      */
@@ -125,6 +129,20 @@ public class ListCollectionsResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCollectionsResponseBody model) {
+            this.collections = model.collections;
+            this.count = model.count;
+            this.DBInstanceId = model.DBInstanceId;
+            this.message = model.message;
+            this.namespace = model.namespace;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The queried vector collections.</p>
@@ -252,6 +270,13 @@ public class ListCollectionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> collection; 
+
+            private Builder() {
+            } 
+
+            private Builder(Collections model) {
+                this.collection = model.collection;
+            } 
 
             /**
              * Collection.

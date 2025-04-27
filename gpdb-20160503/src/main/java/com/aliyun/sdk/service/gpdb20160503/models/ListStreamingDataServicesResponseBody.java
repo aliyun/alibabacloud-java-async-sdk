@@ -40,6 +40,10 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ServiceItems> serviceItems; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListStreamingDataServicesResponseBody model) {
+            this.requestId = model.requestId;
+            this.serviceItems = model.serviceItems;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>Request ID.</p>
@@ -265,6 +278,24 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
             private String serviceSpec; 
             private String serviceType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceItems model) {
+                this.createTime = model.createTime;
+                this.modifyTime = model.modifyTime;
+                this.serviceDescription = model.serviceDescription;
+                this.serviceId = model.serviceId;
+                this.serviceIp = model.serviceIp;
+                this.serviceManaged = model.serviceManaged;
+                this.serviceName = model.serviceName;
+                this.serviceOwnerId = model.serviceOwnerId;
+                this.servicePort = model.servicePort;
+                this.serviceSpec = model.serviceSpec;
+                this.serviceType = model.serviceType;
+                this.status = model.status;
+            } 
 
             /**
              * <p>Creation time.</p>

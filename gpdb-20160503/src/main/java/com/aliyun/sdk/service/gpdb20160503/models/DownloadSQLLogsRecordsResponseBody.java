@@ -36,6 +36,10 @@ public class DownloadSQLLogsRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return downloadId
      */
@@ -53,6 +57,14 @@ public class DownloadSQLLogsRecordsResponseBody extends TeaModel {
     public static final class Builder {
         private Long downloadId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DownloadSQLLogsRecordsResponseBody model) {
+            this.downloadId = model.downloadId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the download task.</p>

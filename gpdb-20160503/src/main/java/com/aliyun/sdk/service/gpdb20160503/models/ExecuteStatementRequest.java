@@ -92,7 +92,7 @@ public class ExecuteStatementRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -410,6 +410,14 @@ public class ExecuteStatementRequest extends Request {
         public static final class Builder {
             private String collection; 
             private String namespace; 
+
+            private Builder() {
+            } 
+
+            private Builder(RagWorkspaceCollection model) {
+                this.collection = model.collection;
+                this.namespace = model.namespace;
+            } 
 
             /**
              * Collection.

@@ -40,6 +40,10 @@ public class CheckJDBCSourceNetConnectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return connectionMessage
      */
@@ -65,6 +69,15 @@ public class CheckJDBCSourceNetConnectionResponseBody extends TeaModel {
         private String connectionMessage; 
         private String connectionStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckJDBCSourceNetConnectionResponseBody model) {
+            this.connectionMessage = model.connectionMessage;
+            this.connectionStatus = model.connectionStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Return message: Error message returned when the connection fails, otherwise returns an empty string (&quot;&quot;).</p>

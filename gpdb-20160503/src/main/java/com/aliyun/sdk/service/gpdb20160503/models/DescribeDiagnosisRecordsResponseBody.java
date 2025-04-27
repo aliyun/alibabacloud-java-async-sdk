@@ -44,6 +44,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -77,6 +81,16 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiagnosisRecordsResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The threshold that determines whether the SQL statement must be truncated. The value is the number of characters.</p>
@@ -264,6 +278,22 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             private Long startTime; 
             private String status; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.database = model.database;
+                this.duration = model.duration;
+                this.queryID = model.queryID;
+                this.SQLStmt = model.SQLStmt;
+                this.SQLTruncated = model.SQLTruncated;
+                this.SQLTruncatedThreshold = model.SQLTruncatedThreshold;
+                this.sessionID = model.sessionID;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The name of the database.</p>

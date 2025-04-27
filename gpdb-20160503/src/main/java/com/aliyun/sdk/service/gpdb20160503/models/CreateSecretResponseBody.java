@@ -48,6 +48,10 @@ public class CreateSecretResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -89,6 +93,17 @@ public class CreateSecretResponseBody extends TeaModel {
         private String secretArn; 
         private String secretName; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSecretResponseBody model) {
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.secretArn = model.secretArn;
+            this.secretName = model.secretName;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The returned message.</p>

@@ -44,6 +44,10 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -77,6 +81,16 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Results> results; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(HandleActiveSQLRecordResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.requestId = model.requestId;
+            this.results = model.results;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -172,6 +186,14 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
         public static final class Builder {
             private String pid; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.pid = model.pid;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The process ID, which is a unique identifier of the query.</p>

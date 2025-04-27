@@ -60,6 +60,10 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -125,6 +129,20 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         private String serviceName; 
         private String serviceSpec; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExternalDataServiceResponseBody model) {
+            this.createTime = model.createTime;
+            this.modifyTime = model.modifyTime;
+            this.requestId = model.requestId;
+            this.serviceDescription = model.serviceDescription;
+            this.serviceId = model.serviceId;
+            this.serviceName = model.serviceName;
+            this.serviceSpec = model.serviceSpec;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The time when the service was created.</p>

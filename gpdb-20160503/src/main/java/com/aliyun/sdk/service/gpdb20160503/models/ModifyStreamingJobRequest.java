@@ -131,7 +131,7 @@ public class ModifyStreamingJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -339,7 +339,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>Delivery guarantee.</p>
+         * <p>The delivery guarantee setting.</p>
          * 
          * <strong>example:</strong>
          * <p>ATLEAST / EXACTLY</p>
@@ -422,9 +422,14 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>FallbackOffset rollback position, offset rollback</p>
+         * <p>The fallback offset for data consumption.</p>
          * <ul>
-         * <li>The FallbackOffset parameter defines the behavior when the consumer does not request a specific consumption point or the requested consumption point exceeds the current Kafka cluster&quot;s recorded points. You can choose to start consuming from the earliest (newest) or latest (oldest) point.</li>
+         * <li>This parameter specifies the starting offset from which data consumption resumes when a consumer does not request a consumption offset or requests a consumption offset that is beyond the range of the offset information recorded in the current Kafka cluster. You can choose to start data consumption from the earliest or latest offset.</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>EARLIEST</li>
+         * <li>LATEST</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -652,7 +657,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>Whether to test the real-time task, values:</p>
+         * <p>Specifies whether to test the real-time job. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -679,7 +684,13 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * <p>Write mode.</p>
+         * <p>The write mode.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>MERGE</li>
+         * <li>INSERT</li>
+         * <li>UPDATE</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>INSERT/UPDATE/MERGE</p>

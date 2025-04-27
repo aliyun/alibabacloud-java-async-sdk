@@ -30,7 +30,7 @@ public class QueryCollectionDataRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
@@ -133,7 +133,7 @@ public class QueryCollectionDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -375,18 +375,10 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * <p>Filter conditions for the data to be queried, in SQL WHERE format. It is an expression that returns a boolean value (true or false). Conditions can be simple comparison operators such as equal (=), not equal (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), less than or equal to (&lt;=), or more complex expressions combined with logical operators (AND, OR, NOT), as well as conditions using keywords like IN, BETWEEN, and LIKE.</p>
-         * <blockquote>
-         * <ul>
-         * <li>For detailed syntax, refer to: <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a></li>
-         * </ul>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>response &gt; 200</p>
+         * Filter.
          */
         public Builder filter(String filter) {
-            this.putQueryParameter("Filter", filter);
+            this.putBodyParameter("Filter", filter);
             this.filter = filter;
             return this;
         }
@@ -711,6 +703,16 @@ public class QueryCollectionDataRequest extends Request {
             private String tableField; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelationalTableFilter model) {
+                this.collectionMetadataField = model.collectionMetadataField;
+                this.condition = model.condition;
+                this.tableField = model.tableField;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The Metadata field of the vector collection, used to associate with the fields in the vector table.</p>
              * 
@@ -805,6 +807,14 @@ public class QueryCollectionDataRequest extends Request {
         public static final class Builder {
             private java.util.List<Long> indices; 
             private java.util.List<Double> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(SparseVector model) {
+                this.indices = model.indices;
+                this.values = model.values;
+            } 
 
             /**
              * Indices.

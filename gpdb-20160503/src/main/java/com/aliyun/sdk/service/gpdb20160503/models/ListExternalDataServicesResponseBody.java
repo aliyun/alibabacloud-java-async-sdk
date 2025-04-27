@@ -44,6 +44,10 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -77,6 +81,16 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ServiceItems> serviceItems; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExternalDataServicesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.requestId = model.requestId;
+            this.serviceItems = model.serviceItems;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -240,6 +254,20 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             private String serviceSpec; 
             private String serviceType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceItems model) {
+                this.createTime = model.createTime;
+                this.modifyTime = model.modifyTime;
+                this.serviceDescription = model.serviceDescription;
+                this.serviceId = model.serviceId;
+                this.serviceName = model.serviceName;
+                this.serviceSpec = model.serviceSpec;
+                this.serviceType = model.serviceType;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the service was created.</p>

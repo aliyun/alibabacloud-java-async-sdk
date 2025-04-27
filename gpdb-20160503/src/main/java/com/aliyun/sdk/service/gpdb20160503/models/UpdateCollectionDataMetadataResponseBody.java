@@ -44,6 +44,10 @@ public class UpdateCollectionDataMetadataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appliedRows
      */
@@ -77,6 +81,16 @@ public class UpdateCollectionDataMetadataResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateCollectionDataMetadataResponseBody model) {
+            this.appliedRows = model.appliedRows;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>Number of effective entries.</p>

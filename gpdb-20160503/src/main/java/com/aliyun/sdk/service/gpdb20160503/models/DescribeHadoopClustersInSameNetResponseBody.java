@@ -36,6 +36,10 @@ public class DescribeHadoopClustersInSameNetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusters
      */
@@ -53,6 +57,14 @@ public class DescribeHadoopClustersInSameNetResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> clusters; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHadoopClustersInSameNetResponseBody model) {
+            this.clusters = model.clusters;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Clusters.

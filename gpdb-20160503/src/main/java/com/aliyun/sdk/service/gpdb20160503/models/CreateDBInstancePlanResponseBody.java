@@ -48,6 +48,10 @@ public class CreateDBInstancePlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -89,6 +93,17 @@ public class CreateDBInstancePlanResponseBody extends TeaModel {
         private String planId; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDBInstancePlanResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.errorMessage = model.errorMessage;
+            this.planId = model.planId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The instance ID.</p>

@@ -40,6 +40,10 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBInstanceId
      */
@@ -65,6 +69,15 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
         private String DBInstanceId; 
         private java.util.List<ImvInfos> imvInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIMVInfosResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.imvInfos = model.imvInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the instance.</p>
@@ -160,6 +173,15 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
             private String base; 
             private String detailInfo; 
             private String mv; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImvInfos model) {
+                this.base = model.base;
+                this.detailInfo = model.detailInfo;
+                this.mv = model.mv;
+            } 
 
             /**
              * <p>The name of the table based on which the materialized view is created.</p>

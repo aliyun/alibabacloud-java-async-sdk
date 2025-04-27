@@ -52,6 +52,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certCommonName
      */
@@ -101,6 +105,18 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         private String requestId; 
         private Boolean SSLEnabled; 
         private String SSLExpiredTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceSSLResponseBody model) {
+            this.certCommonName = model.certCommonName;
+            this.DBInstanceId = model.DBInstanceId;
+            this.DBInstanceName = model.DBInstanceName;
+            this.requestId = model.requestId;
+            this.SSLEnabled = model.SSLEnabled;
+            this.SSLExpiredTime = model.SSLExpiredTime;
+        } 
 
         /**
          * <p>The name of the SSL certificate.</p>

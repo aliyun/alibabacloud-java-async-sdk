@@ -48,6 +48,10 @@ public class ListDatabasesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return databases
      */
@@ -89,6 +93,17 @@ public class ListDatabasesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDatabasesResponseBody model) {
+            this.databases = model.databases;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The queried databases.</p>
@@ -183,6 +198,13 @@ public class ListDatabasesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> databases; 
+
+            private Builder() {
+            } 
+
+            private Builder(Databases model) {
+                this.databases = model.databases;
+            } 
 
             /**
              * <p>The queried databases.</p>

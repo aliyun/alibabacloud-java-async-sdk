@@ -36,6 +36,10 @@ public class CreateStreamingDataServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateStreamingDataServiceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Integer serviceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateStreamingDataServiceResponseBody model) {
+            this.requestId = model.requestId;
+            this.serviceId = model.serviceId;
+        } 
 
         /**
          * <p>The request ID.</p>

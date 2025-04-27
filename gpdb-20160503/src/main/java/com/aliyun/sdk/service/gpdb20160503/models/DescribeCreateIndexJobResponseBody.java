@@ -44,6 +44,10 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return job
      */
@@ -77,6 +81,16 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCreateIndexJobResponseBody model) {
+            this.job = model.job;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * Job.
@@ -219,6 +233,19 @@ public class DescribeCreateIndexJobResponseBody extends TeaModel {
             private Integer progress; 
             private String status; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Job model) {
+                this.completed = model.completed;
+                this.createTime = model.createTime;
+                this.error = model.error;
+                this.id = model.id;
+                this.progress = model.progress;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * Completed.
