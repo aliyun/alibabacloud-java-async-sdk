@@ -26,6 +26,9 @@ public class GetRangeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("formulas")
     private java.util.List<java.util.List<String>> formulas;
 
+    @com.aliyun.core.annotation.NameInMap("hyperlinks")
+    private java.util.List<java.util.List<Hyperlinks>> hyperlinks;
+
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
@@ -36,6 +39,7 @@ public class GetRangeResponseBody extends TeaModel {
         this.backgroundColors = builder.backgroundColors;
         this.displayValues = builder.displayValues;
         this.formulas = builder.formulas;
+        this.hyperlinks = builder.hyperlinks;
         this.requestId = builder.requestId;
         this.values = builder.values;
     }
@@ -74,6 +78,13 @@ public class GetRangeResponseBody extends TeaModel {
     }
 
     /**
+     * @return hyperlinks
+     */
+    public java.util.List<java.util.List<Hyperlinks>> getHyperlinks() {
+        return this.hyperlinks;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -91,6 +102,7 @@ public class GetRangeResponseBody extends TeaModel {
         private java.util.List<java.util.List<BackgroundColors>> backgroundColors; 
         private java.util.List<java.util.List<String>> displayValues; 
         private java.util.List<java.util.List<String>> formulas; 
+        private java.util.List<java.util.List<Hyperlinks>> hyperlinks; 
         private String requestId; 
         private java.util.List<java.util.List<?>> values; 
 
@@ -101,6 +113,7 @@ public class GetRangeResponseBody extends TeaModel {
             this.backgroundColors = model.backgroundColors;
             this.displayValues = model.displayValues;
             this.formulas = model.formulas;
+            this.hyperlinks = model.hyperlinks;
             this.requestId = model.requestId;
             this.values = model.values;
         } 
@@ -126,6 +139,14 @@ public class GetRangeResponseBody extends TeaModel {
          */
         public Builder formulas(java.util.List<java.util.List<String>> formulas) {
             this.formulas = formulas;
+            return this;
+        }
+
+        /**
+         * hyperlinks.
+         */
+        public Builder hyperlinks(java.util.List<java.util.List<Hyperlinks>> hyperlinks) {
+            this.hyperlinks = hyperlinks;
             return this;
         }
 
@@ -278,6 +299,102 @@ public class GetRangeResponseBody extends TeaModel {
 
             public BackgroundColors build() {
                 return new BackgroundColors(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetRangeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRangeResponseBody</p>
+     */
+    public static class Hyperlinks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("link")
+        private String link;
+
+        @com.aliyun.core.annotation.NameInMap("text")
+        private String text;
+
+        private Hyperlinks(Builder builder) {
+            this.type = builder.type;
+            this.link = builder.link;
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Hyperlinks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return link
+         */
+        public String getLink() {
+            return this.link;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private String type; 
+            private String link; 
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(Hyperlinks model) {
+                this.type = model.type;
+                this.link = model.link;
+                this.text = model.text;
+            } 
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * link.
+             */
+            public Builder link(String link) {
+                this.link = link;
+                return this;
+            }
+
+            /**
+             * text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public Hyperlinks build() {
+                return new Hyperlinks(this);
             } 
 
         } 
