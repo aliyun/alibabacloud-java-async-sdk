@@ -118,6 +118,7 @@ public class GetDatasetFileMetasStatisticsRequest extends Request {
         } 
 
         /**
+         * <p>The dataset ID. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,18 @@ public class GetDatasetFileMetasStatisticsRequest extends Request {
         }
 
         /**
-         * AggregateBy.
+         * <p>Aggregates statistics based on the specified metadata field. The value is not case-sensitive. If not specified, the total number of dataset file metadata will be returned, instead of aggregation lists. Valid values:</p>
+         * <ul>
+         * <li>filedir: the directory path of the file</li>
+         * <li>file_type: the file type</li>
+         * <li>tags.user: user-defined tag</li>
+         * <li>tags.user-delete-ai-tags: algorithm tags deleted by the user</li>
+         * <li>tags.ai: algorithm tags (aggregated by all tagging tasks)</li>
+         * <li>tags.all: algorithm tags and user-defined tags (excluding alogorithm tags deleted by the user)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>filedir</p>
          */
         public Builder aggregateBy(String aggregateBy) {
             this.putQueryParameter("AggregateBy", aggregateBy);
@@ -139,6 +151,7 @@ public class GetDatasetFileMetasStatisticsRequest extends Request {
         }
 
         /**
+         * <p>The dataset version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +164,10 @@ public class GetDatasetFileMetasStatisticsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to be returned from a single query when the NextToken parameter is used in the query. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -160,6 +176,7 @@ public class GetDatasetFileMetasStatisticsRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

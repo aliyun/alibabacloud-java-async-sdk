@@ -231,7 +231,7 @@ public class CreateModelRequest extends Request {
          * <p>The visibility of the model in the workspace. Valid values:</p>
          * <ul>
          * <li>PRIVATE (default): Visible only to you and the administrator of the workspace.</li>
-         * <li>PUBLIC: Visible to all users in the workspace.</li>
+         * <li>PUBLIC: Vvisible to all users in the workspace.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * <p>The domain of the model. Describes the domain in which the model is for. Example: nlp (Natural Language Processing), cv (computer vision), and others.</p>
+         * <p>The domain of the model. Describes the domain in which the model is for. Example: nlp (natural language processing), cv (computer vision), and others.</p>
          * 
          * <strong>example:</strong>
          * <p>nlp</p>
@@ -276,7 +276,7 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags. This parameter will be deprecated and replaced by Tag.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);
@@ -285,7 +285,7 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * <p>The model description, which is used to distinguish different models.</p>
+         * <p>The model description, used to distinguish different models.</p>
          */
         public Builder modelDescription(String modelDescription) {
             this.putBodyParameter("ModelDescription", modelDescription);
@@ -352,7 +352,7 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Label> tag) {
             this.putBodyParameter("Tag", tag);
@@ -373,7 +373,7 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+         * <p>The workspace ID. Call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>796**</p>

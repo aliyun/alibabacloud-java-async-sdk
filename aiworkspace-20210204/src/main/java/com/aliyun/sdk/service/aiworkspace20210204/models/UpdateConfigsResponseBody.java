@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SetUserConfigsResponseBody} extends {@link TeaModel}
+ * {@link UpdateConfigsResponseBody} extends {@link TeaModel}
  *
- * <p>SetUserConfigsResponseBody</p>
+ * <p>UpdateConfigsResponseBody</p>
  */
-public class SetUserConfigsResponseBody extends TeaModel {
+public class UpdateConfigsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private SetUserConfigsResponseBody(Builder builder) {
+    private UpdateConfigsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class SetUserConfigsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SetUserConfigsResponseBody create() {
+    public static UpdateConfigsResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,20 @@ public class SetUserConfigsResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(SetUserConfigsResponseBody model) {
+        private Builder(UpdateConfigsResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dsjk****dfjksdf</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public SetUserConfigsResponseBody build() {
-            return new SetUserConfigsResponseBody(this);
+        public UpdateConfigsResponseBody build() {
+            return new UpdateConfigsResponseBody(this);
         } 
 
     } 

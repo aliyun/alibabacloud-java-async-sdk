@@ -412,7 +412,7 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The end time when the file is updated. This parameter is used when you want to query file metadata during a period of time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</p>
+         * <p>The update time range to query. The end time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -426,6 +426,9 @@ public class ListDatasetFileMetasRequest extends Request {
 
         /**
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-12T14:36:01.000Z</p>
          */
         public Builder endTagUpdateTime(String endTagUpdateTime) {
             this.putQueryParameter("EndTagUpdateTime", endTagUpdateTime);
@@ -606,7 +609,7 @@ public class ListDatasetFileMetasRequest extends Request {
         }
 
         /**
-         * <p>The start time when the file is updated. This parameter is used when you want to query file metadata during a period of time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</p>
+         * <p>The update time range to query. The start time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -620,6 +623,9 @@ public class ListDatasetFileMetasRequest extends Request {
 
         /**
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-12T14:36:01.000Z</p>
          */
         public Builder startTagUpdateTime(String startTagUpdateTime) {
             this.putQueryParameter("StartTagUpdateTime", startTagUpdateTime);

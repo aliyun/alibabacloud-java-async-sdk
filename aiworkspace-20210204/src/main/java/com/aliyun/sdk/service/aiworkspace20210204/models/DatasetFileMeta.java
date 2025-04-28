@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DatasetFileMeta</p>
  */
 public class DatasetFileMeta extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ContentType")
+    private String contentType;
+
     @com.aliyun.core.annotation.NameInMap("DataSize")
     private Long dataSize;
 
@@ -34,6 +37,9 @@ public class DatasetFileMeta extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("FileName")
     private String fileName;
+
+    @com.aliyun.core.annotation.NameInMap("FileType")
+    private String fileType;
 
     @com.aliyun.core.annotation.NameInMap("FileUpdateTime")
     private String fileUpdateTime;
@@ -60,12 +66,14 @@ public class DatasetFileMeta extends TeaModel {
     private String uri;
 
     private DatasetFileMeta(Builder builder) {
+        this.contentType = builder.contentType;
         this.dataSize = builder.dataSize;
         this.datasetFileMetaId = builder.datasetFileMetaId;
         this.downloadUrl = builder.downloadUrl;
         this.fileCreateTime = builder.fileCreateTime;
         this.fileFingerPrint = builder.fileFingerPrint;
         this.fileName = builder.fileName;
+        this.fileType = builder.fileType;
         this.fileUpdateTime = builder.fileUpdateTime;
         this.metaAttributes = builder.metaAttributes;
         this.score = builder.score;
@@ -86,6 +94,13 @@ public class DatasetFileMeta extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return contentType
+     */
+    public String getContentType() {
+        return this.contentType;
     }
 
     /**
@@ -128,6 +143,13 @@ public class DatasetFileMeta extends TeaModel {
      */
     public String getFileName() {
         return this.fileName;
+    }
+
+    /**
+     * @return fileType
+     */
+    public String getFileType() {
+        return this.fileType;
     }
 
     /**
@@ -187,12 +209,14 @@ public class DatasetFileMeta extends TeaModel {
     }
 
     public static final class Builder {
+        private String contentType; 
         private Long dataSize; 
         private String datasetFileMetaId; 
         private String downloadUrl; 
         private String fileCreateTime; 
         private String fileFingerPrint; 
         private String fileName; 
+        private String fileType; 
         private String fileUpdateTime; 
         private String metaAttributes; 
         private Float score; 
@@ -206,12 +230,14 @@ public class DatasetFileMeta extends TeaModel {
         } 
 
         private Builder(DatasetFileMeta model) {
+            this.contentType = model.contentType;
             this.dataSize = model.dataSize;
             this.datasetFileMetaId = model.datasetFileMetaId;
             this.downloadUrl = model.downloadUrl;
             this.fileCreateTime = model.fileCreateTime;
             this.fileFingerPrint = model.fileFingerPrint;
             this.fileName = model.fileName;
+            this.fileType = model.fileType;
             this.fileUpdateTime = model.fileUpdateTime;
             this.metaAttributes = model.metaAttributes;
             this.score = model.score;
@@ -221,6 +247,14 @@ public class DatasetFileMeta extends TeaModel {
             this.thumbnailUrl = model.thumbnailUrl;
             this.uri = model.uri;
         } 
+
+        /**
+         * ContentType.
+         */
+        public Builder contentType(String contentType) {
+            this.contentType = contentType;
+            return this;
+        }
 
         /**
          * DataSize.
@@ -270,6 +304,14 @@ public class DatasetFileMeta extends TeaModel {
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
+            return this;
+        }
+
+        /**
+         * FileType.
+         */
+        public Builder fileType(String fileType) {
+            this.fileType = fileType;
             return this;
         }
 

@@ -54,7 +54,7 @@ public class DeleteUserConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dsjk****dfjksdf</p>

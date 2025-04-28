@@ -174,6 +174,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCodeSourceResponse> deleteCodeSource(DeleteCodeSourceRequest request);
 
     /**
+     * @param request the request parameters of DeleteConfig  DeleteConfigRequest
+     * @return DeleteConfigResponse
+     */
+    CompletableFuture<DeleteConfigResponse> deleteConfig(DeleteConfigRequest request);
+
+    /**
      * @param request the request parameters of DeleteDataset  DeleteDatasetRequest
      * @return DeleteDatasetResponse
      */
@@ -294,6 +300,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCodeSourceResponse> getCodeSource(GetCodeSourceRequest request);
 
     /**
+     * @param request the request parameters of GetConfig  GetConfigRequest
+     * @return GetConfigResponse
+     */
+    CompletableFuture<GetConfigResponse> getConfig(GetConfigRequest request);
+
+    /**
      * @param request the request parameters of GetDataset  GetDatasetRequest
      * @return GetDatasetResponse
      */
@@ -388,6 +400,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCodeSourcesResponse
      */
     CompletableFuture<ListCodeSourcesResponse> listCodeSources(ListCodeSourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListConfigs  ListConfigsRequest
+     * @return ListConfigsResponse
+     */
+    CompletableFuture<ListConfigsResponse> listConfigs(ListConfigsRequest request);
 
     /**
      * @param request the request parameters of ListDatasetFileMetas  ListDatasetFileMetasRequest
@@ -577,6 +595,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCodeSourceResponse
      */
     CompletableFuture<UpdateCodeSourceResponse> updateCodeSource(UpdateCodeSourceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateConfig  UpdateConfigRequest
+     * @return UpdateConfigResponse
+     */
+    CompletableFuture<UpdateConfigResponse> updateConfig(UpdateConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateConfigs  UpdateConfigsRequest
+     * @return UpdateConfigsResponse
+     */
+    CompletableFuture<UpdateConfigsResponse> updateConfigs(UpdateConfigsRequest request);
 
     /**
      * @param request the request parameters of UpdateDataset  UpdateDatasetRequest

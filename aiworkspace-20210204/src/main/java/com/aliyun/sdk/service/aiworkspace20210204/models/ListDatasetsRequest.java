@@ -415,13 +415,6 @@ public class ListDatasetsRequest extends Request {
          * <li>ITAG: a dataset generated from a labeling job of iTAG.</li>
          * <li>USER: a dataset registered by a user.</li>
          * </ul>
-         * <!---->
-         * 
-         * <ul>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>USER,ITAG</p>

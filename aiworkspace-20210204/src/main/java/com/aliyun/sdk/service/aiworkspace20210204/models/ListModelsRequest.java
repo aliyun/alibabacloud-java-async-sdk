@@ -400,7 +400,7 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags of the model.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -493,7 +493,10 @@ public class ListModelsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -501,7 +504,10 @@ public class ListModelsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

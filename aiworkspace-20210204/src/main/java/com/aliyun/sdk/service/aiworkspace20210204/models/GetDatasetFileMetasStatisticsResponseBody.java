@@ -80,7 +80,7 @@ public class GetDatasetFileMetasStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * DatasetFileMetasStats.
+         * <p>The details of the returned aggregation list, including the number of each aggregate item. The list is by default sorted in descending order based on the count number.</p>
          */
         public Builder datasetFileMetasStats(java.util.List<DatasetFileMetasStat> datasetFileMetasStats) {
             this.datasetFileMetasStats = datasetFileMetasStats;
@@ -88,7 +88,10 @@ public class GetDatasetFileMetasStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The returned number. Example: the number of metadata records or the number of user-defined tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -96,7 +99,10 @@ public class GetDatasetFileMetasStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADF6D849-*****-7E7030F0CE53</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SetUserConfigsResponseBody} extends {@link TeaModel}
+ * {@link DeleteConfigResponseBody} extends {@link TeaModel}
  *
- * <p>SetUserConfigsResponseBody</p>
+ * <p>DeleteConfigResponseBody</p>
  */
-public class SetUserConfigsResponseBody extends TeaModel {
+public class DeleteConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private SetUserConfigsResponseBody(Builder builder) {
+    private DeleteConfigResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class SetUserConfigsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SetUserConfigsResponseBody create() {
+    public static DeleteConfigResponseBody create() {
         return builder().build();
     }
 
@@ -49,7 +49,7 @@ public class SetUserConfigsResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(SetUserConfigsResponseBody model) {
+        private Builder(DeleteConfigResponseBody model) {
             this.requestId = model.requestId;
         } 
 
@@ -57,15 +57,15 @@ public class SetUserConfigsResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>dsjk****dfjksdf</p>
+         * <p>473469C7-AA6F-4DC5-B3DB-A******C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public SetUserConfigsResponseBody build() {
-            return new SetUserConfigsResponseBody(this);
+        public DeleteConfigResponseBody build() {
+            return new DeleteConfigResponseBody(this);
         } 
 
     } 
