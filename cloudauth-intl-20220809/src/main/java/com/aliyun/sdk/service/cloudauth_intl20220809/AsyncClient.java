@@ -57,6 +57,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DocOcrResponse> docOcr(DocOcrRequest request);
 
     /**
+     * @param request the request parameters of DocOcrMax  DocOcrMaxRequest
+     * @return DocOcrMaxResponse
+     */
+    CompletableFuture<DocOcrMaxResponse> docOcrMax(DocOcrMaxRequest request);
+
+    /**
      * @param request the request parameters of EkycVerify  EkycVerifyRequest
      * @return EkycVerifyResponse
      */
