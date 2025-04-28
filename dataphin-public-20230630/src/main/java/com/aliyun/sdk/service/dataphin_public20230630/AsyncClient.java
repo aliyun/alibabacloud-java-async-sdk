@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDataDomainResponse> createDataDomain(CreateDataDomainRequest request);
 
     /**
+     * @param request the request parameters of CreateDataServiceApi  CreateDataServiceApiRequest
+     * @return CreateDataServiceApiResponse
+     */
+    CompletableFuture<CreateDataServiceApiResponse> createDataServiceApi(CreateDataServiceApiRequest request);
+
+    /**
      * @param request the request parameters of CreateDataSource  CreateDataSourceRequest
      * @return CreateDataSourceResponse
      */
@@ -108,6 +114,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreatePipelineNodeResponse
      */
     CompletableFuture<CreatePipelineNodeResponse> createPipelineNode(CreatePipelineNodeRequest request);
+
+    /**
+     * @param request the request parameters of CreateRowPermission  CreateRowPermissionRequest
+     * @return CreateRowPermissionResponse
+     */
+    CompletableFuture<CreateRowPermissionResponse> createRowPermission(CreateRowPermissionRequest request);
 
     /**
      * @param request the request parameters of CreateStreamBatchJobMapping  CreateStreamBatchJobMappingRequest
@@ -164,6 +176,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDirectoryResponse> deleteDirectory(DeleteDirectoryRequest request);
 
     /**
+     * @param request the request parameters of DeleteRowPermission  DeleteRowPermissionRequest
+     * @return DeleteRowPermissionResponse
+     */
+    CompletableFuture<DeleteRowPermissionResponse> deleteRowPermission(DeleteRowPermissionRequest request);
+
+    /**
      * @param request the request parameters of DeleteUserGroup  DeleteUserGroupRequest
      * @return DeleteUserGroupResponse
      */
@@ -186,6 +204,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return FixDataResponse
      */
     CompletableFuture<FixDataResponse> fixData(FixDataRequest request);
+
+    /**
+     * @param request the request parameters of GetAccountByRowPermissionId  GetAccountByRowPermissionIdRequest
+     * @return GetAccountByRowPermissionIdResponse
+     */
+    CompletableFuture<GetAccountByRowPermissionIdResponse> getAccountByRowPermissionId(GetAccountByRowPermissionIdRequest request);
 
     /**
      * @param request the request parameters of GetAdHocFile  GetAdHocFileRequest
@@ -386,6 +410,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSupplementDagrunInstanceResponse> getSupplementDagrunInstance(GetSupplementDagrunInstanceRequest request);
 
     /**
+     * @param request the request parameters of GetTableColumnLineageByTaskId  GetTableColumnLineageByTaskIdRequest
+     * @return GetTableColumnLineageByTaskIdResponse
+     */
+    CompletableFuture<GetTableColumnLineageByTaskIdResponse> getTableColumnLineageByTaskId(GetTableColumnLineageByTaskIdRequest request);
+
+    /**
+     * @param request the request parameters of GetTableLineageByTaskId  GetTableLineageByTaskIdRequest
+     * @return GetTableLineageByTaskIdResponse
+     */
+    CompletableFuture<GetTableLineageByTaskIdResponse> getTableLineageByTaskId(GetTableLineageByTaskIdRequest request);
+
+    /**
      * @param request the request parameters of GetUserBySourceId  GetUserBySourceIdRequest
      * @return GetUserBySourceIdResponse
      */
@@ -512,6 +548,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListResourcePermissionsResponse> listResourcePermissions(ListResourcePermissionsRequest request);
 
     /**
+     * @param request the request parameters of ListRowPermission  ListRowPermissionRequest
+     * @return ListRowPermissionResponse
+     */
+    CompletableFuture<ListRowPermissionResponse> listRowPermission(ListRowPermissionRequest request);
+
+    /**
+     * @param request the request parameters of ListRowPermissionByUserId  ListRowPermissionByUserIdRequest
+     * @return ListRowPermissionByUserIdResponse
+     */
+    CompletableFuture<ListRowPermissionByUserIdResponse> listRowPermissionByUserId(ListRowPermissionByUserIdRequest request);
+
+    /**
      * @param request the request parameters of ListSubmitRecords  ListSubmitRecordsRequest
      * @return ListSubmitRecordsResponse
      */
@@ -614,6 +662,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitBatchTaskResponse> submitBatchTask(SubmitBatchTaskRequest request);
 
     /**
+     * @param request the request parameters of SyncDepartment  SyncDepartmentRequest
+     * @return SyncDepartmentResponse
+     */
+    CompletableFuture<SyncDepartmentResponse> syncDepartment(SyncDepartmentRequest request);
+
+    /**
+     * @param request the request parameters of SyncDepartmentUser  SyncDepartmentUserRequest
+     * @return SyncDepartmentUserResponse
+     */
+    CompletableFuture<SyncDepartmentUserResponse> syncDepartmentUser(SyncDepartmentUserRequest request);
+
+    /**
      * @param request the request parameters of UpdateAdHocFile  UpdateAdHocFileRequest
      * @return UpdateAdHocFileResponse
      */
@@ -672,6 +732,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateFileNameResponse
      */
     CompletableFuture<UpdateFileNameResponse> updateFileName(UpdateFileNameRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRowPermission  UpdateRowPermissionRequest
+     * @return UpdateRowPermissionResponse
+     */
+    CompletableFuture<UpdateRowPermissionResponse> updateRowPermission(UpdateRowPermissionRequest request);
 
     /**
      * @param request the request parameters of UpdateTenantMember  UpdateTenantMemberRequest
