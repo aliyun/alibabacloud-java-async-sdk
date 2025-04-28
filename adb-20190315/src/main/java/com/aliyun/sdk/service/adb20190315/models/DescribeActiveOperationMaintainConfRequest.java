@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -64,7 +69,7 @@ public class DescribeActiveOperationMaintainConfRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -152,7 +157,10 @@ public class DescribeActiveOperationMaintainConfRequest extends Request {
         } 
 
         /**
-         * Ids.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-xxxxxxxx</p>
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -179,7 +187,10 @@ public class DescribeActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -188,7 +199,10 @@ public class DescribeActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzuemxkbvwqq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

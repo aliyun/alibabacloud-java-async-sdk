@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -71,7 +76,7 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -186,11 +191,11 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         /**
          * <p>The renewal duration. Default value: <strong>1</strong>.</p>
          * <ul>
-         * <li>Valid values when PeriodUnit is set to <strong>Month</strong>: 1 to 11. Data type: INTEGER.</li>
-         * <li>Valid values when PeriodUnit is set to <strong>Year</strong>: 1, 2, 3, and 5. Data type: INTEGER.</li>
+         * <li>Valid values when PeriodUnit is set to <strong>Month</strong>: 1 to 11.</li>
+         * <li>Valid values when PeriodUnit is set to <strong>Year</strong>: 1, 2, 3, and 5.</li>
          * </ul>
          * <blockquote>
-         * <p>Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</p>
+         * <p> Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -221,7 +226,7 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The unit of the renewal period. Default value: <strong>Month</strong>. Valid values:</p>
+         * <p>The unit of the renewal duration. Default value: <strong>Month</strong>. Valid values:</p>
          * <ul>
          * <li><strong>Year</strong></li>
          * <li><strong>Month</strong></li>

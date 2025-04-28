@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBResourceGroupRequest</p>
  */
 public class ModifyDBResourceGroupRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -41,7 +50,7 @@ public class ModifyDBResourceGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PoolUserList")
-    private java.util.List < String > poolUserList;
+    private java.util.List<String> poolUserList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -53,6 +62,7 @@ public class ModifyDBResourceGroupRequest extends Request {
 
     private ModifyDBResourceGroupRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.DBClusterId = builder.DBClusterId;
         this.groupName = builder.groupName;
         this.groupType = builder.groupType;
@@ -72,9 +82,16 @@ public class ModifyDBResourceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -122,7 +139,7 @@ public class ModifyDBResourceGroupRequest extends Request {
     /**
      * @return poolUserList
      */
-    public java.util.List < String > getPoolUserList() {
+    public java.util.List<String> getPoolUserList() {
         return this.poolUserList;
     }
 
@@ -141,13 +158,14 @@ public class ModifyDBResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBResourceGroupRequest, Builder> {
+        private String clientToken; 
         private String DBClusterId; 
         private String groupName; 
         private String groupType; 
         private Integer nodeNum; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < String > poolUserList; 
+        private java.util.List<String> poolUserList; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -157,6 +175,7 @@ public class ModifyDBResourceGroupRequest extends Request {
 
         private Builder(ModifyDBResourceGroupRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.DBClusterId = request.DBClusterId;
             this.groupName = request.groupName;
             this.groupType = request.groupType;
@@ -167,6 +186,18 @@ public class ModifyDBResourceGroupRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-t7241****</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
@@ -253,7 +284,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         /**
          * <p>The database accounts with which to associate the resource group. They can be standard accounts or privileged accounts.</p>
          */
-        public Builder poolUserList(java.util.List < String > poolUserList) {
+        public Builder poolUserList(java.util.List<String> poolUserList) {
             String poolUserListShrink = shrink(poolUserList, "PoolUserList", "json");
             this.putQueryParameter("PoolUserList", poolUserListShrink);
             this.poolUserList = poolUserList;

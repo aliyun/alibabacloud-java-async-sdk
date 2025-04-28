@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeSyncAvailableDBClusterListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SyncAvailableDBClusters")
-    private java.util.List < SyncAvailableDBClusters> syncAvailableDBClusters;
+    private java.util.List<SyncAvailableDBClusters> syncAvailableDBClusters;
 
     private DescribeSyncAvailableDBClusterListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class DescribeSyncAvailableDBClusterListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,16 +50,27 @@ public class DescribeSyncAvailableDBClusterListResponseBody extends TeaModel {
     /**
      * @return syncAvailableDBClusters
      */
-    public java.util.List < SyncAvailableDBClusters> getSyncAvailableDBClusters() {
+    public java.util.List<SyncAvailableDBClusters> getSyncAvailableDBClusters() {
         return this.syncAvailableDBClusters;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SyncAvailableDBClusters> syncAvailableDBClusters; 
+        private java.util.List<SyncAvailableDBClusters> syncAvailableDBClusters; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSyncAvailableDBClusterListResponseBody model) {
+            this.requestId = model.requestId;
+            this.syncAvailableDBClusters = model.syncAvailableDBClusters;
+        } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FBD1DD96-AD1D-516C-9D9A-60BA081F66EE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +78,9 @@ public class DescribeSyncAvailableDBClusterListResponseBody extends TeaModel {
         }
 
         /**
-         * SyncAvailableDBClusters.
+         * <p>The queried instances or clusters.</p>
          */
-        public Builder syncAvailableDBClusters(java.util.List < SyncAvailableDBClusters> syncAvailableDBClusters) {
+        public Builder syncAvailableDBClusters(java.util.List<SyncAvailableDBClusters> syncAvailableDBClusters) {
             this.syncAvailableDBClusters = syncAvailableDBClusters;
             return this;
         }
@@ -151,8 +171,22 @@ public class DescribeSyncAvailableDBClusterListResponseBody extends TeaModel {
             private Float storageSize; 
             private Integer tableNumber; 
 
+            private Builder() {
+            } 
+
+            private Builder(SyncAvailableDBClusters model) {
+                this.DBClusterDescription = model.DBClusterDescription;
+                this.DBClusterId = model.DBClusterId;
+                this.DBType = model.DBType;
+                this.storageSize = model.storageSize;
+                this.tableNumber = model.tableNumber;
+            } 
+
             /**
-             * DBClusterDescription.
+             * <p>The description of the instance or cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DB1</p>
              */
             public Builder DBClusterDescription(String DBClusterDescription) {
                 this.DBClusterDescription = DBClusterDescription;
@@ -160,7 +194,10 @@ public class DescribeSyncAvailableDBClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * <p>The instance or cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1l3yh04y7us147n</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -168,7 +205,10 @@ public class DescribeSyncAvailableDBClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * DBType.
+             * <p>The database type of the instance or cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -176,7 +216,10 @@ public class DescribeSyncAvailableDBClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSize.
+             * <p>The storage size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder storageSize(Float storageSize) {
                 this.storageSize = storageSize;
@@ -184,7 +227,10 @@ public class DescribeSyncAvailableDBClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * TableNumber.
+             * <p>The number of tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder tableNumber(Integer tableNumber) {
                 this.tableNumber = tableNumber;

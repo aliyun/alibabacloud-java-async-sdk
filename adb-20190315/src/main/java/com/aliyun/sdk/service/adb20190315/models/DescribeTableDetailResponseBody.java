@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return avgSize
      */
@@ -60,6 +69,15 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         private Long avgSize; 
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTableDetailResponseBody model) {
+            this.avgSize = model.avgSize;
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The average number of rows in partitions.</p>
@@ -141,6 +159,14 @@ public class DescribeTableDetailResponseBody extends TeaModel {
             private Integer id; 
             private Long size; 
 
+            private Builder() {
+            } 
+
+            private Builder(Shard model) {
+                this.id = model.id;
+                this.size = model.size;
+            } 
+
             /**
              * Id.
              */
@@ -172,7 +198,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Shard")
-        private java.util.List < Shard> shard;
+        private java.util.List<Shard> shard;
 
         private Items(Builder builder) {
             this.shard = builder.shard;
@@ -189,17 +215,24 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         /**
          * @return shard
          */
-        public java.util.List < Shard> getShard() {
+        public java.util.List<Shard> getShard() {
             return this.shard;
         }
 
         public static final class Builder {
-            private java.util.List < Shard> shard; 
+            private java.util.List<Shard> shard; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.shard = model.shard;
+            } 
 
             /**
              * Shard.
              */
-            public Builder shard(java.util.List < Shard> shard) {
+            public Builder shard(java.util.List<Shard> shard) {
                 this.shard = shard;
                 return this;
             }

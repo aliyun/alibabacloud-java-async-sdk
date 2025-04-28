@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -44,7 +49,7 @@ public class OperateLogHubRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogHubStores")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < LogHubStores> logHubStores;
+    private java.util.List<LogHubStores> logHubStores;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogStoreName")
@@ -128,7 +133,7 @@ public class OperateLogHubRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -178,7 +183,7 @@ public class OperateLogHubRequest extends Request {
     /**
      * @return logHubStores
      */
-    public java.util.List < LogHubStores> getLogHubStores() {
+    public java.util.List<LogHubStores> getLogHubStores() {
         return this.logHubStores;
     }
 
@@ -266,7 +271,7 @@ public class OperateLogHubRequest extends Request {
         private String deliverTime; 
         private String description; 
         private Boolean filterDirtyData; 
-        private java.util.List < LogHubStores> logHubStores; 
+        private java.util.List<LogHubStores> logHubStores; 
         private String logStoreName; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -306,6 +311,7 @@ public class OperateLogHubRequest extends Request {
         } 
 
         /**
+         * <p>Specifies whether to create the log shipping job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -318,6 +324,10 @@ public class OperateLogHubRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,6 +340,7 @@ public class OperateLogHubRequest extends Request {
         }
 
         /**
+         * <p>The name of the log shipping job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -342,6 +353,7 @@ public class OperateLogHubRequest extends Request {
         }
 
         /**
+         * <p>The shipping time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -354,6 +366,7 @@ public class OperateLogHubRequest extends Request {
         }
 
         /**
+         * <p>The description of the log shipping job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -366,7 +379,15 @@ public class OperateLogHubRequest extends Request {
         }
 
         /**
-         * FilterDirtyData.
+         * <p>Specifies whether to filter dirty data.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder filterDirtyData(Boolean filterDirtyData) {
             this.putQueryParameter("FilterDirtyData", filterDirtyData);
@@ -375,15 +396,17 @@ public class OperateLogHubRequest extends Request {
         }
 
         /**
+         * <p>The log keywords.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder logHubStores(java.util.List < LogHubStores> logHubStores) {
+        public Builder logHubStores(java.util.List<LogHubStores> logHubStores) {
             this.putQueryParameter("LogHubStores", logHubStores);
             this.logHubStores = logHubStores;
             return this;
         }
 
         /**
+         * <p>The name of the Logstore.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -414,6 +437,7 @@ public class OperateLogHubRequest extends Request {
         }
 
         /**
+         * <p>The password of the database account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -426,6 +450,7 @@ public class OperateLogHubRequest extends Request {
         }
 
         /**
+         * <p>The name of the Simple Log Service project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -438,7 +463,10 @@ public class OperateLogHubRequest extends Request {
         }
 
         /**
-         * Provider.
+         * <p>The channel of the log shipping job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS</p>
          */
         public Builder provider(String provider) {
             this.putQueryParameter("Provider", provider);
@@ -465,6 +493,7 @@ public class OperateLogHubRequest extends Request {
         }
 
         /**
+         * <p>The name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -477,6 +506,7 @@ public class OperateLogHubRequest extends Request {
         }
 
         /**
+         * <p>The name of the table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -489,6 +519,7 @@ public class OperateLogHubRequest extends Request {
         }
 
         /**
+         * <p>The name of the database account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -553,7 +584,16 @@ public class OperateLogHubRequest extends Request {
             private String fieldKey; 
             private String logKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogHubStores model) {
+                this.fieldKey = model.fieldKey;
+                this.logKey = model.logKey;
+            } 
+
             /**
+             * <p>The value of the log keyword.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -565,6 +605,7 @@ public class OperateLogHubRequest extends Request {
             }
 
             /**
+             * <p>The log keyword.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -135,7 +140,7 @@ public class CreateDBClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UsedTime")
@@ -199,7 +204,7 @@ public class CreateDBClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -410,7 +415,7 @@ public class CreateDBClusterRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -472,7 +477,7 @@ public class CreateDBClusterRequest extends Request {
         private String sourceDBInstanceName; 
         private String storageResource; 
         private String storageType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String usedTime; 
         private String VPCId; 
         private String vSwitchId; 
@@ -707,7 +712,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The number of elastic I/O units (EIUs). For more information, see <a href="https://help.aliyun.com/document_detail/189505.html">Use EIUs to scale up storage resources</a>.</p>
+         * <p>The number of elastic I/O units (EIUs). For more information, see <a href="https://help.aliyun.com/document_detail/189505.html">Elasticity of the storage layer</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -937,7 +942,7 @@ public class CreateDBClusterRequest extends Request {
         /**
          * <p>The tags to add to the cluster.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -946,8 +951,8 @@ public class CreateDBClusterRequest extends Request {
         /**
          * <p>The subscription period of the subscription cluster.</p>
          * <ul>
-         * <li>Valid values when Period is set to Year: 1, 2, 3, and 5 (integer)</li>
-         * <li>Valid values when Period is set to Month: 1 to 11 (integer)</li>
+         * <li>Valid values when Period is set to Year: 1, 2, and 3 (integer)</li>
+         * <li>Valid values when Period is set to Month: 1 to 9 (integer)</li>
          * </ul>
          * <blockquote>
          * <ul>
@@ -1054,6 +1059,14 @@ public class CreateDBClusterRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N to add to the cluster. You can use tags to filter clusters. Valid values of N: 1 to 20. The values that you specify for N must be unique and consecutive integers that start from 1. Each value of <code>Tag.N.Key</code> is paired with a value of <code>Tag.N.Value</code>.</p>

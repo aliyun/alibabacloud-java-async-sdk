@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeElasticDailyPlanResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ElasticDailyPlanList")
-    private java.util.List < ElasticDailyPlanList> elasticDailyPlanList;
+    private java.util.List<ElasticDailyPlanList> elasticDailyPlanList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return elasticDailyPlanList
      */
-    public java.util.List < ElasticDailyPlanList> getElasticDailyPlanList() {
+    public java.util.List<ElasticDailyPlanList> getElasticDailyPlanList() {
         return this.elasticDailyPlanList;
     }
 
@@ -46,13 +55,21 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ElasticDailyPlanList> elasticDailyPlanList; 
+        private java.util.List<ElasticDailyPlanList> elasticDailyPlanList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeElasticDailyPlanResponseBody model) {
+            this.elasticDailyPlanList = model.elasticDailyPlanList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details of the current-day scaling plans.</p>
          */
-        public Builder elasticDailyPlanList(java.util.List < ElasticDailyPlanList> elasticDailyPlanList) {
+        public Builder elasticDailyPlanList(java.util.List<ElasticDailyPlanList> elasticDailyPlanList) {
             this.elasticDailyPlanList = elasticDailyPlanList;
             return this;
         }
@@ -225,6 +242,23 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
             private String resourcePoolName; 
             private String startTs; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElasticDailyPlanList model) {
+                this.day = model.day;
+                this.elasticNodeNum = model.elasticNodeNum;
+                this.elasticPlanType = model.elasticPlanType;
+                this.elasticPlanWorkerSpec = model.elasticPlanWorkerSpec;
+                this.endTs = model.endTs;
+                this.planEndTs = model.planEndTs;
+                this.planName = model.planName;
+                this.planStartTs = model.planStartTs;
+                this.resourcePoolName = model.resourcePoolName;
+                this.startTs = model.startTs;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The start date of the current-day scaling plan. The date is in the yyyy-MM-dd format.</p>

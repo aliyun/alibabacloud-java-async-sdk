@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -116,7 +121,7 @@ public class ModifyDBClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -399,7 +404,7 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The enhanced SSD (ESSD) performance level of the cluster. Valid values:</p>
+         * <p>The Enterprise SSD (ESSD) performance level of the cluster. Valid values:</p>
          * <ul>
          * <li>PL0</li>
          * <li>PL1</li>

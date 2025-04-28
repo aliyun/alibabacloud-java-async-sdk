@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,6 +54,10 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
 
     public static DescribeRdsAnalysisResourceQuotasResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,21 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         private String requestId; 
         private StorageTypeList storageTypeList; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRdsAnalysisResourceQuotasResponseBody model) {
+            this.DBNodeCategoryList = model.DBNodeCategoryList;
+            this.DBNodeClassList = model.DBNodeClassList;
+            this.DBNodeStorageList = model.DBNodeStorageList;
+            this.engineVersionList = model.engineVersionList;
+            this.modeList = model.modeList;
+            this.requestId = model.requestId;
+            this.storageTypeList = model.storageTypeList;
+        } 
+
         /**
-         * DBNodeCategoryList.
+         * <p>The editions of the MySQL analytic instances.</p>
          */
         public Builder DBNodeCategoryList(DBNodeCategoryList DBNodeCategoryList) {
             this.DBNodeCategoryList = DBNodeCategoryList;
@@ -118,7 +140,7 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * DBNodeClassList.
+         * <p>The instance types of the MySQL analytic instances.</p>
          */
         public Builder DBNodeClassList(DBNodeClassList DBNodeClassList) {
             this.DBNodeClassList = DBNodeClassList;
@@ -126,7 +148,7 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * DBNodeStorageList.
+         * <p>The storage sizes of the MySQL analytic instances.</p>
          */
         public Builder DBNodeStorageList(DBNodeStorageList DBNodeStorageList) {
             this.DBNodeStorageList = DBNodeStorageList;
@@ -134,7 +156,7 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * EngineVersionList.
+         * <p>The versions of the MySQL analytic instances.</p>
          */
         public Builder engineVersionList(EngineVersionList engineVersionList) {
             this.engineVersionList = engineVersionList;
@@ -142,7 +164,7 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * ModeList.
+         * <p>The modes of the MySQL analytic instances.</p>
          */
         public Builder modeList(ModeList modeList) {
             this.modeList = modeList;
@@ -150,7 +172,10 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A31D7FA-1826-5843-8807-D2F715E70CB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +183,7 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * StorageTypeList.
+         * <p>The storage types of the MySQL analytic instances.</p>
          */
         public Builder storageTypeList(StorageTypeList storageTypeList) {
             this.storageTypeList = storageTypeList;
@@ -215,8 +240,19 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
             private String text; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBNodeCategory model) {
+                this.text = model.text;
+                this.value = model.value;
+            } 
+
             /**
-             * Text.
+             * <p>The display value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mixed_storage</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -224,7 +260,10 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The real value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mixed_storage</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -246,7 +285,7 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
      */
     public static class DBNodeCategoryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBNodeCategory")
-        private java.util.List < DBNodeCategory> DBNodeCategory;
+        private java.util.List<DBNodeCategory> DBNodeCategory;
 
         private DBNodeCategoryList(Builder builder) {
             this.DBNodeCategory = builder.DBNodeCategory;
@@ -263,17 +302,24 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         /**
          * @return DBNodeCategory
          */
-        public java.util.List < DBNodeCategory> getDBNodeCategory() {
+        public java.util.List<DBNodeCategory> getDBNodeCategory() {
             return this.DBNodeCategory;
         }
 
         public static final class Builder {
-            private java.util.List < DBNodeCategory> DBNodeCategory; 
+            private java.util.List<DBNodeCategory> DBNodeCategory; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBNodeCategoryList model) {
+                this.DBNodeCategory = model.DBNodeCategory;
+            } 
 
             /**
              * DBNodeCategory.
              */
-            public Builder DBNodeCategory(java.util.List < DBNodeCategory> DBNodeCategory) {
+            public Builder DBNodeCategory(java.util.List<DBNodeCategory> DBNodeCategory) {
                 this.DBNodeCategory = DBNodeCategory;
                 return this;
             }
@@ -329,8 +375,19 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
             private String text; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBNodeClass model) {
+                this.text = model.text;
+                this.value = model.value;
+            } 
+
             /**
-             * Text.
+             * <p>The display value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E32</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -338,7 +395,10 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The real value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E32</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -360,7 +420,7 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
      */
     public static class DBNodeClassList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBNodeClass")
-        private java.util.List < DBNodeClass> DBNodeClass;
+        private java.util.List<DBNodeClass> DBNodeClass;
 
         private DBNodeClassList(Builder builder) {
             this.DBNodeClass = builder.DBNodeClass;
@@ -377,17 +437,24 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         /**
          * @return DBNodeClass
          */
-        public java.util.List < DBNodeClass> getDBNodeClass() {
+        public java.util.List<DBNodeClass> getDBNodeClass() {
             return this.DBNodeClass;
         }
 
         public static final class Builder {
-            private java.util.List < DBNodeClass> DBNodeClass; 
+            private java.util.List<DBNodeClass> DBNodeClass; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBNodeClassList model) {
+                this.DBNodeClass = model.DBNodeClass;
+            } 
 
             /**
              * DBNodeClass.
              */
-            public Builder DBNodeClass(java.util.List < DBNodeClass> DBNodeClass) {
+            public Builder DBNodeClass(java.util.List<DBNodeClass> DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
                 return this;
             }
@@ -443,8 +510,19 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
             private String text; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBNodeStorage model) {
+                this.text = model.text;
+                this.value = model.value;
+            } 
+
             /**
-             * Text.
+             * <p>The display value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -452,7 +530,10 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The real value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -474,7 +555,7 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
      */
     public static class DBNodeStorageList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBNodeStorage")
-        private java.util.List < DBNodeStorage> DBNodeStorage;
+        private java.util.List<DBNodeStorage> DBNodeStorage;
 
         private DBNodeStorageList(Builder builder) {
             this.DBNodeStorage = builder.DBNodeStorage;
@@ -491,17 +572,24 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         /**
          * @return DBNodeStorage
          */
-        public java.util.List < DBNodeStorage> getDBNodeStorage() {
+        public java.util.List<DBNodeStorage> getDBNodeStorage() {
             return this.DBNodeStorage;
         }
 
         public static final class Builder {
-            private java.util.List < DBNodeStorage> DBNodeStorage; 
+            private java.util.List<DBNodeStorage> DBNodeStorage; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBNodeStorageList model) {
+                this.DBNodeStorage = model.DBNodeStorage;
+            } 
 
             /**
              * DBNodeStorage.
              */
-            public Builder DBNodeStorage(java.util.List < DBNodeStorage> DBNodeStorage) {
+            public Builder DBNodeStorage(java.util.List<DBNodeStorage> DBNodeStorage) {
                 this.DBNodeStorage = DBNodeStorage;
                 return this;
             }
@@ -557,8 +645,19 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
             private String text; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(EngineVersion model) {
+                this.text = model.text;
+                this.value = model.value;
+            } 
+
             /**
-             * Text.
+             * <p>The display value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.0</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -566,7 +665,10 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The real value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -588,7 +690,7 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
      */
     public static class EngineVersionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EngineVersion")
-        private java.util.List < EngineVersion> engineVersion;
+        private java.util.List<EngineVersion> engineVersion;
 
         private EngineVersionList(Builder builder) {
             this.engineVersion = builder.engineVersion;
@@ -605,17 +707,24 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         /**
          * @return engineVersion
          */
-        public java.util.List < EngineVersion> getEngineVersion() {
+        public java.util.List<EngineVersion> getEngineVersion() {
             return this.engineVersion;
         }
 
         public static final class Builder {
-            private java.util.List < EngineVersion> engineVersion; 
+            private java.util.List<EngineVersion> engineVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(EngineVersionList model) {
+                this.engineVersion = model.engineVersion;
+            } 
 
             /**
              * EngineVersion.
              */
-            public Builder engineVersion(java.util.List < EngineVersion> engineVersion) {
+            public Builder engineVersion(java.util.List<EngineVersion> engineVersion) {
                 this.engineVersion = engineVersion;
                 return this;
             }
@@ -671,8 +780,19 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
             private String text; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Mode model) {
+                this.text = model.text;
+                this.value = model.value;
+            } 
+
             /**
-             * Text.
+             * <p>The display value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flexible</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -680,7 +800,10 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The real value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flexible</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -702,7 +825,7 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
      */
     public static class ModeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mode")
-        private java.util.List < Mode> mode;
+        private java.util.List<Mode> mode;
 
         private ModeList(Builder builder) {
             this.mode = builder.mode;
@@ -719,17 +842,24 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         /**
          * @return mode
          */
-        public java.util.List < Mode> getMode() {
+        public java.util.List<Mode> getMode() {
             return this.mode;
         }
 
         public static final class Builder {
-            private java.util.List < Mode> mode; 
+            private java.util.List<Mode> mode; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModeList model) {
+                this.mode = model.mode;
+            } 
 
             /**
              * Mode.
              */
-            public Builder mode(java.util.List < Mode> mode) {
+            public Builder mode(java.util.List<Mode> mode) {
                 this.mode = mode;
                 return this;
             }
@@ -785,8 +915,19 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
             private String text; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(StorageType model) {
+                this.text = model.text;
+                this.value = model.value;
+            } 
+
             /**
-             * Text.
+             * <p>The display value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -794,7 +935,10 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The real value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -816,7 +960,7 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
      */
     public static class StorageTypeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StorageType")
-        private java.util.List < StorageType> storageType;
+        private java.util.List<StorageType> storageType;
 
         private StorageTypeList(Builder builder) {
             this.storageType = builder.storageType;
@@ -833,17 +977,24 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         /**
          * @return storageType
          */
-        public java.util.List < StorageType> getStorageType() {
+        public java.util.List<StorageType> getStorageType() {
             return this.storageType;
         }
 
         public static final class Builder {
-            private java.util.List < StorageType> storageType; 
+            private java.util.List<StorageType> storageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(StorageTypeList model) {
+                this.storageType = model.storageType;
+            } 
 
             /**
              * StorageType.
              */
-            public Builder storageType(java.util.List < StorageType> storageType) {
+            public Builder storageType(java.util.List<StorageType> storageType) {
                 this.storageType = storageType;
                 return this;
             }

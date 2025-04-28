@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return connectionString
      */
@@ -72,6 +81,16 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         private String expireTime; 
         private String requestId; 
         private Boolean SSLEnabled; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterSSLResponseBody model) {
+            this.connectionString = model.connectionString;
+            this.expireTime = model.expireTime;
+            this.requestId = model.requestId;
+            this.SSLEnabled = model.SSLEnabled;
+        } 
 
         /**
          * <p>The endpoint that is protected by SSL encryption.</p>

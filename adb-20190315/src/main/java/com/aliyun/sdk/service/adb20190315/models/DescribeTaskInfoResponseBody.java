@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TaskInfo taskInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTaskInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskInfo = model.taskInfo;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -153,6 +170,17 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private String progress; 
             private String status; 
             private Integer taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskInfo model) {
+                this.beginTime = model.beginTime;
+                this.finishTime = model.finishTime;
+                this.progress = model.progress;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The start time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>

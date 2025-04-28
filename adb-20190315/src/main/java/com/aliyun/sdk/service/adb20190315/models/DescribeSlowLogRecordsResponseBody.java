@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     public static DescribeSlowLogRecordsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlowLogRecordsResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
@@ -402,6 +423,30 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String userName; 
             private Long wallTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlowLogRecord model) {
+                this.DBName = model.DBName;
+                this.executionStartTime = model.executionStartTime;
+                this.hostAddress = model.hostAddress;
+                this.outputSize = model.outputSize;
+                this.parseRowCounts = model.parseRowCounts;
+                this.peakMemoryUsage = model.peakMemoryUsage;
+                this.planningTime = model.planningTime;
+                this.processID = model.processID;
+                this.queryTime = model.queryTime;
+                this.queueTime = model.queueTime;
+                this.returnRowCounts = model.returnRowCounts;
+                this.SQLText = model.SQLText;
+                this.scanRows = model.scanRows;
+                this.scanSize = model.scanSize;
+                this.scanTime = model.scanTime;
+                this.state = model.state;
+                this.userName = model.userName;
+                this.wallTime = model.wallTime;
+            } 
+
             /**
              * <p>The name of the database.</p>
              * 
@@ -615,7 +660,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SlowLogRecord")
-        private java.util.List < SlowLogRecord> slowLogRecord;
+        private java.util.List<SlowLogRecord> slowLogRecord;
 
         private Items(Builder builder) {
             this.slowLogRecord = builder.slowLogRecord;
@@ -632,17 +677,24 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         /**
          * @return slowLogRecord
          */
-        public java.util.List < SlowLogRecord> getSlowLogRecord() {
+        public java.util.List<SlowLogRecord> getSlowLogRecord() {
             return this.slowLogRecord;
         }
 
         public static final class Builder {
-            private java.util.List < SlowLogRecord> slowLogRecord; 
+            private java.util.List<SlowLogRecord> slowLogRecord; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.slowLogRecord = model.slowLogRecord;
+            } 
 
             /**
              * SlowLogRecord.
              */
-            public Builder slowLogRecord(java.util.List < SlowLogRecord> slowLogRecord) {
+            public Builder slowLogRecord(java.util.List<SlowLogRecord> slowLogRecord) {
                 this.slowLogRecord = slowLogRecord;
                 return this;
             }

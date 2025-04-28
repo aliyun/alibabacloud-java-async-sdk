@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.NameInMap("DetectionItems")
-    private java.util.List < DetectionItems> detectionItems;
+    private java.util.List<DetectionItems> detectionItems;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
@@ -33,7 +38,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Tables")
-    private java.util.List < Tables> tables;
+    private java.util.List<Tables> tables;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
@@ -57,6 +62,10 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -74,7 +83,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
     /**
      * @return detectionItems
      */
-    public java.util.List < DetectionItems> getDetectionItems() {
+    public java.util.List<DetectionItems> getDetectionItems() {
         return this.detectionItems;
     }
 
@@ -102,7 +111,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
     /**
      * @return tables
      */
-    public java.util.List < Tables> getTables() {
+    public java.util.List<Tables> getTables() {
         return this.tables;
     }
 
@@ -116,12 +125,26 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
     public static final class Builder {
         private String accessDeniedDetail; 
         private String DBClusterId; 
-        private java.util.List < DetectionItems> detectionItems; 
+        private java.util.List<DetectionItems> detectionItems; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Tables> tables; 
+        private java.util.List<Tables> tables; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExcessivePrimaryKeysResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.DBClusterId = model.DBClusterId;
+            this.detectionItems = model.detectionItems;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tables = model.tables;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -162,7 +185,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
         /**
          * <p>The queried detection items and detection results.</p>
          */
-        public Builder detectionItems(java.util.List < DetectionItems> detectionItems) {
+        public Builder detectionItems(java.util.List<DetectionItems> detectionItems) {
             this.detectionItems = detectionItems;
             return this;
         }
@@ -208,7 +231,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
         /**
          * <p>The queried tables.</p>
          */
-        public Builder tables(java.util.List < Tables> tables) {
+        public Builder tables(java.util.List<Tables> tables) {
             this.tables = tables;
             return this;
         }
@@ -285,6 +308,15 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
             private String message; 
             private String name; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetectionItems model) {
+                this.message = model.message;
+                this.name = model.name;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The detection result.</p>
@@ -443,6 +475,20 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
             private Double spaceRatio; 
             private String tableName; 
             private Long totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.columnCount = model.columnCount;
+                this.primaryKeyColumns = model.primaryKeyColumns;
+                this.primaryKeyCount = model.primaryKeyCount;
+                this.primaryKeyIndexSize = model.primaryKeyIndexSize;
+                this.schemaName = model.schemaName;
+                this.spaceRatio = model.spaceRatio;
+                this.tableName = model.tableName;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The total number of columns.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CancelActiveOperationTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ids
      */
@@ -49,8 +58,19 @@ public class CancelActiveOperationTasksResponseBody extends TeaModel {
         private String ids; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CancelActiveOperationTasksResponseBody model) {
+            this.ids = model.ids;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Ids.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-xxxxxxxx</p>
          */
         public Builder ids(String ids) {
             this.ids = ids;
@@ -58,7 +78,10 @@ public class CancelActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>642F3512-C628-5D0C-8815-F6670CEA00D4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

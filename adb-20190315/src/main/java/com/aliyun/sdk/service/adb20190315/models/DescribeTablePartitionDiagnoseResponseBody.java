@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,10 +21,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.NameInMap("DetectionItems")
-    private java.util.List < DetectionItems> detectionItems;
+    private java.util.List<DetectionItems> detectionItems;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -59,6 +64,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -69,14 +78,14 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
     /**
      * @return detectionItems
      */
-    public java.util.List < DetectionItems> getDetectionItems() {
+    public java.util.List<DetectionItems> getDetectionItems() {
         return this.detectionItems;
     }
 
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -124,14 +133,29 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBClusterId; 
-        private java.util.List < DetectionItems> detectionItems; 
-        private java.util.List < Items> items; 
+        private java.util.List<DetectionItems> detectionItems; 
+        private java.util.List<Items> items; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Long suggestMaxRecordsPerPartition; 
         private Long suggestMinRecordsPerPartition; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTablePartitionDiagnoseResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.detectionItems = model.detectionItems;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.suggestMaxRecordsPerPartition = model.suggestMaxRecordsPerPartition;
+            this.suggestMinRecordsPerPartition = model.suggestMinRecordsPerPartition;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the cluster.</p>
@@ -147,7 +171,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         /**
          * <p>The queried detection items and detection results.</p>
          */
-        public Builder detectionItems(java.util.List < DetectionItems> detectionItems) {
+        public Builder detectionItems(java.util.List<DetectionItems> detectionItems) {
             this.detectionItems = detectionItems;
             return this;
         }
@@ -155,7 +179,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         /**
          * <p>The table statistics.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -287,6 +311,15 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             private String message; 
             private String name; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetectionItems model) {
+                this.message = model.message;
+                this.name = model.name;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The detection result.</p>
@@ -424,6 +457,18 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             private Double spaceRatio; 
             private String tableName; 
             private Long totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.partitionDetail = model.partitionDetail;
+                this.partitionNumber = model.partitionNumber;
+                this.schemaName = model.schemaName;
+                this.spaceRatio = model.spaceRatio;
+                this.tableName = model.tableName;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The information about inappropriate partitions.</p>

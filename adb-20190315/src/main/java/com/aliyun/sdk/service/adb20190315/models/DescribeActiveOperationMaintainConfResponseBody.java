@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -61,8 +70,17 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         private Integer hasConfig; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeActiveOperationMaintainConfResponseBody model) {
+            this.config = model.config;
+            this.hasConfig = model.hasConfig;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Config.
+         * <p>The queried configuration information.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -70,7 +88,14 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         }
 
         /**
-         * HasConfig.
+         * <p>Indicates whether the O&amp;M task is configured. Valid values:</p>
+         * <ul>
+         * <li>1: yes.</li>
+         * <li>0: no.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hasConfig(Integer hasConfig) {
             this.hasConfig = hasConfig;
@@ -78,7 +103,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92B3D2F0-B5E3-5592-9A6F-D0A6C34ACBA9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -195,8 +223,24 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             private String modifiedTime; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.createdTime = model.createdTime;
+                this.cycleTime = model.cycleTime;
+                this.cycleType = model.cycleType;
+                this.maintainEndTime = model.maintainEndTime;
+                this.maintainStartTime = model.maintainStartTime;
+                this.modifiedTime = model.modifiedTime;
+                this.status = model.status;
+            } 
+
             /**
-             * CreatedTime.
+             * <p>The time when the O&amp;M task was created. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-08T02:23:13Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -204,7 +248,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * CycleTime.
+             * <p>The days on which the O&amp;M task is executed every week.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cycleTime(String cycleTime) {
                 this.cycleTime = cycleTime;
@@ -212,7 +259,14 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * CycleType.
+             * <p>The unit of the O&amp;M task cycle. Valid values:</p>
+             * <ul>
+             * <li>Month</li>
+             * <li>Week</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder cycleType(String cycleType) {
                 this.cycleType = cycleType;
@@ -220,7 +274,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainEndTime.
+             * <p>The end time of the maintenance window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20:00:00Z</p>
              */
             public Builder maintainEndTime(String maintainEndTime) {
                 this.maintainEndTime = maintainEndTime;
@@ -228,7 +285,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainStartTime.
+             * <p>The start time of the maintenance window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18:00:00Z</p>
              */
             public Builder maintainStartTime(String maintainStartTime) {
                 this.maintainStartTime = maintainStartTime;
@@ -236,7 +296,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the O&amp;M task was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-12T12:34:40Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -244,7 +307,14 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Indicates whether the configuration takes effect. Valid values:</p>
+             * <ul>
+             * <li>1: yes.</li>
+             * <li>2: no.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

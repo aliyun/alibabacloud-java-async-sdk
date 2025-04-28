@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAllAccountsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccountList")
-    private java.util.List < AccountList> accountList;
+    private java.util.List<AccountList> accountList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeAllAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountList
      */
-    public java.util.List < AccountList> getAccountList() {
+    public java.util.List<AccountList> getAccountList() {
         return this.accountList;
     }
 
@@ -46,13 +55,21 @@ public class DescribeAllAccountsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AccountList> accountList; 
+        private java.util.List<AccountList> accountList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAllAccountsResponseBody model) {
+            this.accountList = model.accountList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried database accounts.</p>
          */
-        public Builder accountList(java.util.List < AccountList> accountList) {
+        public Builder accountList(java.util.List<AccountList> accountList) {
             this.accountList = accountList;
             return this;
         }
@@ -105,6 +122,13 @@ public class DescribeAllAccountsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountList model) {
+                this.user = model.user;
+            } 
 
             /**
              * <p>The name of the database account.</p>

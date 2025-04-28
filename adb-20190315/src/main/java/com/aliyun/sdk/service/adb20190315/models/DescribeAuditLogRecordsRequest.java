@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -118,7 +123,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -431,7 +436,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
          * <li><strong>10</strong></li>
          * <li><strong>30</strong></li>
@@ -439,7 +444,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
          * <li><strong>100</strong></li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the value 10 is used.</p>
+         * <p> If you leave this parameter empty, the value 10 is used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

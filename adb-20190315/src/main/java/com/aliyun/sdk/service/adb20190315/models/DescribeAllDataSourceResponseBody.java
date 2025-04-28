@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columns
      */
@@ -72,6 +81,16 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         private String requestId; 
         private Schemas schemas; 
         private Tables tables; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAllDataSourceResponseBody model) {
+            this.columns = model.columns;
+            this.requestId = model.requestId;
+            this.schemas = model.schemas;
+            this.tables = model.tables;
+        } 
 
         /**
          * <p>The queried columns.</p>
@@ -218,6 +237,19 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             private String tableName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Column model) {
+                this.autoIncrementColumn = model.autoIncrementColumn;
+                this.columnName = model.columnName;
+                this.DBClusterId = model.DBClusterId;
+                this.primaryKey = model.primaryKey;
+                this.schemaName = model.schemaName;
+                this.tableName = model.tableName;
+                this.type = model.type;
+            } 
+
             /**
              * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
              * <ul>
@@ -245,7 +277,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+             * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>am-bp1xxxxxxxx47</p>
@@ -318,7 +350,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
      */
     public static class Columns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Column")
-        private java.util.List < Column> column;
+        private java.util.List<Column> column;
 
         private Columns(Builder builder) {
             this.column = builder.column;
@@ -335,17 +367,24 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         /**
          * @return column
          */
-        public java.util.List < Column> getColumn() {
+        public java.util.List<Column> getColumn() {
             return this.column;
         }
 
         public static final class Builder {
-            private java.util.List < Column> column; 
+            private java.util.List<Column> column; 
+
+            private Builder() {
+            } 
+
+            private Builder(Columns model) {
+                this.column = model.column;
+            } 
 
             /**
              * Column.
              */
-            public Builder column(java.util.List < Column> column) {
+            public Builder column(java.util.List<Column> column) {
                 this.column = column;
                 return this;
             }
@@ -401,8 +440,16 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             private String DBClusterId; 
             private String schemaName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Schema model) {
+                this.DBClusterId = model.DBClusterId;
+                this.schemaName = model.schemaName;
+            } 
+
             /**
-             * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+             * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>am-bp1xxxxxxxx47</p>
@@ -438,7 +485,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
      */
     public static class Schemas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Schema")
-        private java.util.List < Schema> schema;
+        private java.util.List<Schema> schema;
 
         private Schemas(Builder builder) {
             this.schema = builder.schema;
@@ -455,17 +502,24 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         /**
          * @return schema
          */
-        public java.util.List < Schema> getSchema() {
+        public java.util.List<Schema> getSchema() {
             return this.schema;
         }
 
         public static final class Builder {
-            private java.util.List < Schema> schema; 
+            private java.util.List<Schema> schema; 
+
+            private Builder() {
+            } 
+
+            private Builder(Schemas model) {
+                this.schema = model.schema;
+            } 
 
             /**
              * Schema.
              */
-            public Builder schema(java.util.List < Schema> schema) {
+            public Builder schema(java.util.List<Schema> schema) {
                 this.schema = schema;
                 return this;
             }
@@ -533,8 +587,17 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             private String schemaName; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Table model) {
+                this.DBClusterId = model.DBClusterId;
+                this.schemaName = model.schemaName;
+                this.tableName = model.tableName;
+            } 
+
             /**
-             * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+             * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>am-bp1xxxxxxxx47</p>
@@ -581,7 +644,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
      */
     public static class Tables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Table")
-        private java.util.List < Table> table;
+        private java.util.List<Table> table;
 
         private Tables(Builder builder) {
             this.table = builder.table;
@@ -598,17 +661,24 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         /**
          * @return table
          */
-        public java.util.List < Table> getTable() {
+        public java.util.List<Table> getTable() {
             return this.table;
         }
 
         public static final class Builder {
-            private java.util.List < Table> table; 
+            private java.util.List<Table> table; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.table = model.table;
+            } 
 
             /**
              * Table.
              */
-            public Builder table(java.util.List < Table> table) {
+            public Builder table(java.util.List<Table> table) {
                 this.table = table;
                 return this;
             }

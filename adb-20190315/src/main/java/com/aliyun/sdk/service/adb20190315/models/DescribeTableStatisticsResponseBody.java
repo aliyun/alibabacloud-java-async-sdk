@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,6 +32,9 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SchemaNames")
+    private String schemaNames;
+
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
@@ -36,6 +44,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
+        this.schemaNames = builder.schemaNames;
         this.totalCount = builder.totalCount;
     }
 
@@ -45,6 +54,10 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
 
     public static DescribeTableStatisticsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -83,6 +96,13 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
     }
 
     /**
+     * @return schemaNames
+     */
+    public String getSchemaNames() {
+        return this.schemaNames;
+    }
+
+    /**
      * @return totalCount
      */
     public String getTotalCount() {
@@ -95,7 +115,21 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         private String pageNumber; 
         private String pageSize; 
         private String requestId; 
+        private String schemaNames; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTableStatisticsResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.schemaNames = model.schemaNames;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The cluster ID.</p>
@@ -146,6 +180,14 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SchemaNames.
+         */
+        public Builder schemaNames(String schemaNames) {
+            this.schemaNames = schemaNames;
             return this;
         }
 
@@ -330,6 +372,24 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             private String tableName; 
             private Long totalSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableStatisticRecords model) {
+                this.coldDataSize = model.coldDataSize;
+                this.dataSize = model.dataSize;
+                this.hotDataSize = model.hotDataSize;
+                this.indexSize = model.indexSize;
+                this.otherSize = model.otherSize;
+                this.partitionCount = model.partitionCount;
+                this.primaryKeyIndexSize = model.primaryKeyIndexSize;
+                this.rowCount = model.rowCount;
+                this.schemaName = model.schemaName;
+                this.spaceRatio = model.spaceRatio;
+                this.tableName = model.tableName;
+                this.totalSize = model.totalSize;
+            } 
+
             /**
              * <p>The cold data size. Unit: bytes.</p>
              * <blockquote>
@@ -489,7 +549,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TableStatisticRecords")
-        private java.util.List < TableStatisticRecords> tableStatisticRecords;
+        private java.util.List<TableStatisticRecords> tableStatisticRecords;
 
         private Items(Builder builder) {
             this.tableStatisticRecords = builder.tableStatisticRecords;
@@ -506,17 +566,24 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         /**
          * @return tableStatisticRecords
          */
-        public java.util.List < TableStatisticRecords> getTableStatisticRecords() {
+        public java.util.List<TableStatisticRecords> getTableStatisticRecords() {
             return this.tableStatisticRecords;
         }
 
         public static final class Builder {
-            private java.util.List < TableStatisticRecords> tableStatisticRecords; 
+            private java.util.List<TableStatisticRecords> tableStatisticRecords; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.tableStatisticRecords = model.tableStatisticRecords;
+            } 
 
             /**
              * TableStatisticRecords.
              */
-            public Builder tableStatisticRecords(java.util.List < TableStatisticRecords> tableStatisticRecords) {
+            public Builder tableStatisticRecords(java.util.List<TableStatisticRecords> tableStatisticRecords) {
                 this.tableStatisticRecords = tableStatisticRecords;
                 return this;
             }

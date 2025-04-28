@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,6 +54,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     public static DescribeBackupsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,24 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private Long totalBackupSize; 
         private String totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupsResponseBody model) {
+            this.freeBackupSize = model.freeBackupSize;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalBackupSize = model.totalBackupSize;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * FreeBackupSize.
+         * <p>The free size of backup sets. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder freeBackupSize(Long freeBackupSize) {
             this.freeBackupSize = freeBackupSize;
@@ -159,7 +184,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalBackupSize.
+         * <p>The total size of backup sets. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64953700</p>
          */
         public Builder totalBackupSize(Long totalBackupSize) {
             this.totalBackupSize = totalBackupSize;
@@ -299,6 +327,20 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String backupType; 
             private String DBClusterId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Backup model) {
+                this.backupEndTime = model.backupEndTime;
+                this.backupExpiredTime = model.backupExpiredTime;
+                this.backupId = model.backupId;
+                this.backupMethod = model.backupMethod;
+                this.backupSize = model.backupSize;
+                this.backupStartTime = model.backupStartTime;
+                this.backupType = model.backupType;
+                this.DBClusterId = model.DBClusterId;
+            } 
+
             /**
              * <p>The end time of the backup.</p>
              * 
@@ -311,7 +353,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupExpiredTime.
+             * <p>The expiration time of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-02T16:00Z</p>
              */
             public Builder backupExpiredTime(String backupExpiredTime) {
                 this.backupExpiredTime = backupExpiredTime;
@@ -378,7 +423,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+             * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>am-bp18934i73vb5****</p>
@@ -403,7 +448,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Backup")
-        private java.util.List < Backup> backup;
+        private java.util.List<Backup> backup;
 
         private Items(Builder builder) {
             this.backup = builder.backup;
@@ -420,17 +465,24 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * @return backup
          */
-        public java.util.List < Backup> getBackup() {
+        public java.util.List<Backup> getBackup() {
             return this.backup;
         }
 
         public static final class Builder {
-            private java.util.List < Backup> backup; 
+            private java.util.List<Backup> backup; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.backup = model.backup;
+            } 
 
             /**
              * Backup.
              */
-            public Builder backup(java.util.List < Backup> backup) {
+            public Builder backup(java.util.List<Backup> backup) {
                 this.backup = backup;
                 return this;
             }

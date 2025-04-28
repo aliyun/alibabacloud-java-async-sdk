@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TaskList")
-    private java.util.List < TaskList> taskList;
+    private java.util.List<TaskList> taskList;
 
     private DescribeSQLPlanTaskResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,16 +50,24 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
     /**
      * @return taskList
      */
-    public java.util.List < TaskList> getTaskList() {
+    public java.util.List<TaskList> getTaskList() {
         return this.taskList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TaskList> taskList; 
+        private java.util.List<TaskList> taskList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSQLPlanTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskList = model.taskList;
+        } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -61,9 +78,9 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of tasks.</p>
+         * <p>The queried task.</p>
          */
-        public Builder taskList(java.util.List < TaskList> taskList) {
+        public Builder taskList(java.util.List<TaskList> taskList) {
             this.taskList = taskList;
             return this;
         }
@@ -238,6 +255,24 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             private String state; 
             private Integer taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskList model) {
+                this.elapsedTime = model.elapsedTime;
+                this.inputRows = model.inputRows;
+                this.inputSize = model.inputSize;
+                this.operatorCost = model.operatorCost;
+                this.outputRows = model.outputRows;
+                this.outputSize = model.outputSize;
+                this.peakMemory = model.peakMemory;
+                this.scanCost = model.scanCost;
+                this.scanRows = model.scanRows;
+                this.scanSize = model.scanSize;
+                this.state = model.state;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * <p>The time elapsed from when the task was created to when the task was complete. Unit: milliseconds.</p>
              * 
@@ -272,7 +307,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total amount of time consumed by operators in the task on a specific node. This parameter can be used to determine whether long tails occur in computing. Unit: milliseconds.</p>
+             * <p>The total amount of time consumed by all operators in the task on a specific node. This parameter can be used to determine whether long tails occur in computing. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -316,7 +351,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time consumed to scan data from a data source in the task. Unit: milliseconds.</p>
+             * <p>The amount of time consumed to scan data from a data source in the task. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -366,7 +401,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>198877623</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,6 +57,14 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterSpaceSummaryResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried storage overview information.</p>
@@ -153,6 +170,17 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             private Long otherSize; 
             private Long primaryKeyIndexSize; 
             private Long totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColdData model) {
+                this.dataSize = model.dataSize;
+                this.indexSize = model.indexSize;
+                this.otherSize = model.otherSize;
+                this.primaryKeyIndexSize = model.primaryKeyIndexSize;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The data size of table records. Unit: bytes.</p>
@@ -262,6 +290,14 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Long dayGrowth; 
             private Long weekGrowth; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataGrowth model) {
+                this.dayGrowth = model.dayGrowth;
+                this.weekGrowth = model.weekGrowth;
+            } 
 
             /**
              * <p>The data growth within the last day. Unit: bytes.</p>
@@ -377,6 +413,17 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             private Long otherSize; 
             private Long primaryKeyIndexSize; 
             private Long totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(HotData model) {
+                this.dataSize = model.dataSize;
+                this.indexSize = model.indexSize;
+                this.otherSize = model.otherSize;
+                this.primaryKeyIndexSize = model.primaryKeyIndexSize;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The data size of table records. Unit: bytes.</p>
@@ -510,6 +557,16 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             private DataGrowth dataGrowth; 
             private HotData hotData; 
             private String totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.coldData = model.coldData;
+                this.dataGrowth = model.dataGrowth;
+                this.hotData = model.hotData;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * <p>The cold data.</p>

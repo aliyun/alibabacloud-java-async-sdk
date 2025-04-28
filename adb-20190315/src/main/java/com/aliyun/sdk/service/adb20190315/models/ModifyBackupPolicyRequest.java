@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -77,7 +82,7 @@ public class ModifyBackupPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -185,7 +190,7 @@ public class ModifyBackupPolicyRequest extends Request {
         /**
          * <p>The number of days for which to retain full backup files. Valid values: 7 to 730.</p>
          * <blockquote>
-         * <p> If you leave this parameter empty, the default value 7 is used.</p>
+         * <p> If you do not specify this parameter, the default value 7 is used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -234,7 +239,7 @@ public class ModifyBackupPolicyRequest extends Request {
         /**
          * <p>The number of days for which to retain log backup files. Valid values: 7 to 730.</p>
          * <blockquote>
-         * <p> If you leave this parameter empty, the default value 7 is used.</p>
+         * <p> If you do not specify this parameter, the default value 7 is used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

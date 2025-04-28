@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
     private String endTime;
 
     @com.aliyun.core.annotation.NameInMap("Performances")
-    private java.util.List < Performances> performances;
+    private java.util.List<Performances> performances;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -43,6 +48,10 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -60,7 +69,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
     /**
      * @return performances
      */
-    public java.util.List < Performances> getPerformances() {
+    public java.util.List<Performances> getPerformances() {
         return this.performances;
     }
 
@@ -81,9 +90,20 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
     public static final class Builder {
         private String DBClusterId; 
         private String endTime; 
-        private java.util.List < Performances> performances; 
+        private java.util.List<Performances> performances; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterResourcePoolPerformanceResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.endTime = model.endTime;
+            this.performances = model.performances;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The cluster ID.</p>
@@ -110,7 +130,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         /**
          * <p>The queried monitoring information about the metrics.</p>
          */
-        public Builder performances(java.util.List < Performances> performances) {
+        public Builder performances(java.util.List<Performances> performances) {
             this.performances = performances;
             return this;
         }
@@ -154,7 +174,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private ResourcePoolSeries(Builder builder) {
             this.name = builder.name;
@@ -179,13 +199,21 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePoolSeries model) {
+                this.name = model.name;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The name of the metric.</p>
@@ -201,7 +229,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             /**
              * <p>The value of the metric.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -224,7 +252,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         private String resourcePoolName;
 
         @com.aliyun.core.annotation.NameInMap("ResourcePoolSeries")
-        private java.util.List < ResourcePoolSeries> resourcePoolSeries;
+        private java.util.List<ResourcePoolSeries> resourcePoolSeries;
 
         private ResourcePoolPerformances(Builder builder) {
             this.resourcePoolName = builder.resourcePoolName;
@@ -249,13 +277,21 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         /**
          * @return resourcePoolSeries
          */
-        public java.util.List < ResourcePoolSeries> getResourcePoolSeries() {
+        public java.util.List<ResourcePoolSeries> getResourcePoolSeries() {
             return this.resourcePoolSeries;
         }
 
         public static final class Builder {
             private String resourcePoolName; 
-            private java.util.List < ResourcePoolSeries> resourcePoolSeries; 
+            private java.util.List<ResourcePoolSeries> resourcePoolSeries; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePoolPerformances model) {
+                this.resourcePoolName = model.resourcePoolName;
+                this.resourcePoolSeries = model.resourcePoolSeries;
+            } 
 
             /**
              * <p>The name of the resource group.</p>
@@ -271,7 +307,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             /**
              * <p>The sequential monitoring information about the resource groups.</p>
              */
-            public Builder resourcePoolSeries(java.util.List < ResourcePoolSeries> resourcePoolSeries) {
+            public Builder resourcePoolSeries(java.util.List<ResourcePoolSeries> resourcePoolSeries) {
                 this.resourcePoolSeries = resourcePoolSeries;
                 return this;
             }
@@ -294,7 +330,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("ResourcePoolPerformances")
-        private java.util.List < ResourcePoolPerformances> resourcePoolPerformances;
+        private java.util.List<ResourcePoolPerformances> resourcePoolPerformances;
 
         @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
@@ -323,7 +359,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         /**
          * @return resourcePoolPerformances
          */
-        public java.util.List < ResourcePoolPerformances> getResourcePoolPerformances() {
+        public java.util.List<ResourcePoolPerformances> getResourcePoolPerformances() {
             return this.resourcePoolPerformances;
         }
 
@@ -336,8 +372,17 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
 
         public static final class Builder {
             private String key; 
-            private java.util.List < ResourcePoolPerformances> resourcePoolPerformances; 
+            private java.util.List<ResourcePoolPerformances> resourcePoolPerformances; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Performances model) {
+                this.key = model.key;
+                this.resourcePoolPerformances = model.resourcePoolPerformances;
+                this.unit = model.unit;
+            } 
 
             /**
              * <p>The metric of the resource group.</p>
@@ -353,7 +398,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             /**
              * <p>The queried monitoring information about the resource groups.</p>
              */
-            public Builder resourcePoolPerformances(java.util.List < ResourcePoolPerformances> resourcePoolPerformances) {
+            public Builder resourcePoolPerformances(java.util.List<ResourcePoolPerformances> resourcePoolPerformances) {
                 this.resourcePoolPerformances = resourcePoolPerformances;
                 return this;
             }

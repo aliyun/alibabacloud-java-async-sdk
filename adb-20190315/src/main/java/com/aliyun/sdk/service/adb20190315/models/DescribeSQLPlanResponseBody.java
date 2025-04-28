@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StageList")
-    private java.util.List < StageList> stageList;
+    private java.util.List<StageList> stageList;
 
     private DescribeSQLPlanResponseBody(Builder builder) {
         this.detail = builder.detail;
@@ -37,6 +42,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
 
     public static DescribeSQLPlanResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -63,7 +72,7 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
     /**
      * @return stageList
      */
-    public java.util.List < StageList> getStageList() {
+    public java.util.List<StageList> getStageList() {
         return this.stageList;
     }
 
@@ -71,7 +80,17 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
         private Detail detail; 
         private String originInfo; 
         private String requestId; 
-        private java.util.List < StageList> stageList; 
+        private java.util.List<StageList> stageList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSQLPlanResponseBody model) {
+            this.detail = model.detail;
+            this.originInfo = model.originInfo;
+            this.requestId = model.requestId;
+            this.stageList = model.stageList;
+        } 
 
         /**
          * <p>The execution information about the SQL statement.</p>
@@ -106,7 +125,7 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
         /**
          * <p>The queried plan in different stages.</p>
          */
-        public Builder stageList(java.util.List < StageList> stageList) {
+        public Builder stageList(java.util.List<StageList> stageList) {
             this.stageList = stageList;
             return this;
         }
@@ -316,6 +335,27 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             private Long totalTask; 
             private Long totalTime; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.CPUTime = model.CPUTime;
+                this.clientIP = model.clientIP;
+                this.database = model.database;
+                this.outputRows = model.outputRows;
+                this.outputSize = model.outputSize;
+                this.peakMemory = model.peakMemory;
+                this.planningTime = model.planningTime;
+                this.queuedTime = model.queuedTime;
+                this.SQL = model.SQL;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.totalStage = model.totalStage;
+                this.totalTask = model.totalTask;
+                this.totalTime = model.totalTime;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The total CPU time consumed by all operators on multithreaded servers when the SQL statement is executed. Unit: milliseconds.</p>
@@ -704,6 +744,28 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             private Long scanTimeMin; 
             private Integer stageId; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(StageList model) {
+                this.CPUTimeAvg = model.CPUTimeAvg;
+                this.CPUTimeMax = model.CPUTimeMax;
+                this.CPUTimeMin = model.CPUTimeMin;
+                this.inputSizeAvg = model.inputSizeAvg;
+                this.inputSizeMax = model.inputSizeMax;
+                this.inputSizeMin = model.inputSizeMin;
+                this.operatorCost = model.operatorCost;
+                this.peakMemory = model.peakMemory;
+                this.scanSizeAvg = model.scanSizeAvg;
+                this.scanSizeMax = model.scanSizeMax;
+                this.scanSizeMin = model.scanSizeMin;
+                this.scanTimeAvg = model.scanTimeAvg;
+                this.scanTimeMax = model.scanTimeMax;
+                this.scanTimeMin = model.scanTimeMin;
+                this.stageId = model.stageId;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The average <code>CPU Time</code> value on each compute node in the stage. Unit: milliseconds.</p>

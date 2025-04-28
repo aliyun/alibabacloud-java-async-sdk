@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountList
      */
@@ -48,6 +57,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public static final class Builder {
         private AccountList accountList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountsResponseBody model) {
+            this.accountList = model.accountList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried database accounts.</p>
@@ -80,6 +97,135 @@ public class DescribeAccountsResponseBody extends TeaModel {
      *
      * <p>DescribeAccountsResponseBody</p>
      */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List<Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List<Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class DBAccount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountDescription")
         private String accountDescription;
@@ -93,11 +239,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private Tags tags;
+
         private DBAccount(Builder builder) {
             this.accountDescription = builder.accountDescription;
             this.accountName = builder.accountName;
             this.accountStatus = builder.accountStatus;
             this.accountType = builder.accountType;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -136,11 +286,30 @@ public class DescribeAccountsResponseBody extends TeaModel {
             return this.accountType;
         }
 
+        /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String accountDescription; 
             private String accountName; 
             private String accountStatus; 
             private String accountType; 
+            private Tags tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBAccount model) {
+                this.accountDescription = model.accountDescription;
+                this.accountName = model.accountName;
+                this.accountStatus = model.accountStatus;
+                this.accountType = model.accountType;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The description of the database account.</p>
@@ -195,6 +364,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
+                return this;
+            }
+
             public DBAccount build() {
                 return new DBAccount(this);
             } 
@@ -210,7 +387,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
      */
     public static class AccountList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBAccount")
-        private java.util.List < DBAccount> DBAccount;
+        private java.util.List<DBAccount> DBAccount;
 
         private AccountList(Builder builder) {
             this.DBAccount = builder.DBAccount;
@@ -227,17 +404,24 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * @return DBAccount
          */
-        public java.util.List < DBAccount> getDBAccount() {
+        public java.util.List<DBAccount> getDBAccount() {
             return this.DBAccount;
         }
 
         public static final class Builder {
-            private java.util.List < DBAccount> DBAccount; 
+            private java.util.List<DBAccount> DBAccount; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountList model) {
+                this.DBAccount = model.DBAccount;
+            } 
 
             /**
              * DBAccount.
              */
-            public Builder DBAccount(java.util.List < DBAccount> DBAccount) {
+            public Builder DBAccount(java.util.List<DBAccount> DBAccount) {
                 this.DBAccount = DBAccount;
                 return this;
             }

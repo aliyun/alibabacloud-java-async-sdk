@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loghubInfo
      */
@@ -49,8 +58,16 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
         private LoghubInfo loghubInfo; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLogHubAttributeResponseBody model) {
+            this.loghubInfo = model.loghubInfo;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * LoghubInfo.
+         * <p>The log collection information.</p>
          */
         public Builder loghubInfo(LoghubInfo loghubInfo) {
             this.loghubInfo = loghubInfo;
@@ -58,7 +75,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8A564B7F-8C00-43C0-8EC5-919FBB70573</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,8 +135,19 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             private String fieldKey; 
             private String logKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogHubStore model) {
+                this.fieldKey = model.fieldKey;
+                this.logKey = model.logKey;
+            } 
+
             /**
-             * FieldKey.
+             * <p>The value of the log keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255311</p>
              */
             public Builder fieldKey(String fieldKey) {
                 this.fieldKey = fieldKey;
@@ -124,7 +155,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * LogKey.
+             * <p>The log keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>taskid</p>
              */
             public Builder logKey(String logKey) {
                 this.logKey = logKey;
@@ -146,7 +180,7 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
      */
     public static class LogHubStores extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogHubStore")
-        private java.util.List < LogHubStore> logHubStore;
+        private java.util.List<LogHubStore> logHubStore;
 
         private LogHubStores(Builder builder) {
             this.logHubStore = builder.logHubStore;
@@ -163,17 +197,24 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
         /**
          * @return logHubStore
          */
-        public java.util.List < LogHubStore> getLogHubStore() {
+        public java.util.List<LogHubStore> getLogHubStore() {
             return this.logHubStore;
         }
 
         public static final class Builder {
-            private java.util.List < LogHubStore> logHubStore; 
+            private java.util.List<LogHubStore> logHubStore; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogHubStores model) {
+                this.logHubStore = model.logHubStore;
+            } 
 
             /**
              * LogHubStore.
              */
-            public Builder logHubStore(java.util.List < LogHubStore> logHubStore) {
+            public Builder logHubStore(java.util.List<LogHubStore> logHubStore) {
                 this.logHubStore = logHubStore;
                 return this;
             }
@@ -409,8 +450,34 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             private String userName; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(LoghubInfo model) {
+                this.DBClusterId = model.DBClusterId;
+                this.DBType = model.DBType;
+                this.delay = model.delay;
+                this.deliverName = model.deliverName;
+                this.deliverTime = model.deliverTime;
+                this.description = model.description;
+                this.filterDirtyData = model.filterDirtyData;
+                this.logHubStores = model.logHubStores;
+                this.logStoreName = model.logStoreName;
+                this.message = model.message;
+                this.projectName = model.projectName;
+                this.regionId = model.regionId;
+                this.schemaName = model.schemaName;
+                this.syncStatus = model.syncStatus;
+                this.tableName = model.tableName;
+                this.userName = model.userName;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * DBClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>am-8vbs48m7553du1gz2</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -418,7 +485,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DBType.
+             * <p>The database type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -426,7 +496,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Delay.
+             * <p>The synchronization latency, which is the latency between the latest update time of the synchronization job and the current system time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>361</p>
              */
             public Builder delay(Long delay) {
                 this.delay = delay;
@@ -434,7 +507,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DeliverName.
+             * <p>The name of the log shipping job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>loghub-web-login-new</p>
              */
             public Builder deliverName(String deliverName) {
                 this.deliverName = deliverName;
@@ -442,7 +518,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DeliverTime.
+             * <p>The log shipping time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-06&quot;T&quot;10:15&quot;Z&quot;</p>
              */
             public Builder deliverTime(String deliverTime) {
                 this.deliverTime = deliverTime;
@@ -450,7 +529,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -458,7 +540,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * FilterDirtyData.
+             * <p>Indicates whether dirty data is filtered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder filterDirtyData(Boolean filterDirtyData) {
                 this.filterDirtyData = filterDirtyData;
@@ -466,7 +551,7 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * LogHubStores.
+             * <p>The names of the Logstores.</p>
              */
             public Builder logHubStores(LogHubStores logHubStores) {
                 this.logHubStores = logHubStores;
@@ -474,7 +559,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreName.
+             * <p>The name of the Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>device_login</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -482,7 +570,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -490,7 +581,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The name of the Simple Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-adb</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -498,7 +592,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -506,7 +603,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cbd_bi</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -514,7 +614,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SyncStatus.
+             * <p>The synchronization status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>processing</p>
              */
             public Builder syncStatus(String syncStatus) {
                 this.syncStatus = syncStatus;
@@ -522,7 +625,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test2</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -530,7 +636,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -538,7 +647,10 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-k</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

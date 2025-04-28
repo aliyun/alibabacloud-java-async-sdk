@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
 
     public static DescribeOperatorPermissionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,19 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         private String privileges; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeOperatorPermissionResponseBody model) {
+            this.createdTime = model.createdTime;
+            this.DBClusterId = model.DBClusterId;
+            this.expiredTime = model.expiredTime;
+            this.privileges = model.privileges;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The time when the authorization takes effect.</p>
+         * <p>The time when the permissions take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-05-20T05:41:19Z</p>
@@ -97,7 +117,7 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-uf6wjk5xxxxxxxxxx</p>
@@ -108,7 +128,7 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the authorization expires.</p>
+         * <p>The time when the permissions expire.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-05-20T07:41:19Z</p>
@@ -119,7 +139,7 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of authorization. Valid values: Control | Data.</p>
+         * <p>The types of the permissions. Valid values: Control and Data.</p>
          * 
          * <strong>example:</strong>
          * <p>Control,Data</p>
@@ -130,7 +150,7 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>

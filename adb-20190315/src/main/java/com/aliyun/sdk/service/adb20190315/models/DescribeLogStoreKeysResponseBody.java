@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeLogStoreKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logStoreKeys
      */
@@ -49,8 +58,16 @@ public class DescribeLogStoreKeysResponseBody extends TeaModel {
         private LogStoreKeys logStoreKeys; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLogStoreKeysResponseBody model) {
+            this.logStoreKeys = model.logStoreKeys;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * LogStoreKeys.
+         * <p>The queried log keywords.</p>
          */
         public Builder logStoreKeys(LogStoreKeys logStoreKeys) {
             this.logStoreKeys = logStoreKeys;
@@ -58,7 +75,10 @@ public class DescribeLogStoreKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3BB185E9-BB54-1727-B876-13243E4C0EB5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -79,7 +99,7 @@ public class DescribeLogStoreKeysResponseBody extends TeaModel {
      */
     public static class LogStoreKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogStoreKey")
-        private java.util.List < String > logStoreKey;
+        private java.util.List<String> logStoreKey;
 
         private LogStoreKeys(Builder builder) {
             this.logStoreKey = builder.logStoreKey;
@@ -96,17 +116,24 @@ public class DescribeLogStoreKeysResponseBody extends TeaModel {
         /**
          * @return logStoreKey
          */
-        public java.util.List < String > getLogStoreKey() {
+        public java.util.List<String> getLogStoreKey() {
             return this.logStoreKey;
         }
 
         public static final class Builder {
-            private java.util.List < String > logStoreKey; 
+            private java.util.List<String> logStoreKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogStoreKeys model) {
+                this.logStoreKey = model.logStoreKey;
+            } 
 
             /**
              * LogStoreKey.
              */
-            public Builder logStoreKey(java.util.List < String > logStoreKey) {
+            public Builder logStoreKey(java.util.List<String> logStoreKey) {
                 this.logStoreKey = logStoreKey;
                 return this;
             }

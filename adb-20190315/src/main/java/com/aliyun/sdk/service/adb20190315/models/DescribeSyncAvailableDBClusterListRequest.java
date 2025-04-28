@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -44,7 +49,7 @@ public class DescribeSyncAvailableDBClusterListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceDBCluster")
-    private java.util.List < SourceDBCluster> sourceDBCluster;
+    private java.util.List<SourceDBCluster> sourceDBCluster;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SyncPlatform")
@@ -71,7 +76,7 @@ public class DescribeSyncAvailableDBClusterListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -128,7 +133,7 @@ public class DescribeSyncAvailableDBClusterListRequest extends Request {
     /**
      * @return sourceDBCluster
      */
-    public java.util.List < SourceDBCluster> getSourceDBCluster() {
+    public java.util.List<SourceDBCluster> getSourceDBCluster() {
         return this.sourceDBCluster;
     }
 
@@ -147,7 +152,7 @@ public class DescribeSyncAvailableDBClusterListRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < SourceDBCluster> sourceDBCluster; 
+        private java.util.List<SourceDBCluster> sourceDBCluster; 
         private String syncPlatform; 
 
         private Builder() {
@@ -186,6 +191,12 @@ public class DescribeSyncAvailableDBClusterListRequest extends Request {
         }
 
         /**
+         * <p>The query type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Target</li>
+         * <li>Source</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,6 +209,7 @@ public class DescribeSyncAvailableDBClusterListRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +222,10 @@ public class DescribeSyncAvailableDBClusterListRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -237,16 +252,19 @@ public class DescribeSyncAvailableDBClusterListRequest extends Request {
         }
 
         /**
-         * SourceDBCluster.
+         * <p>The source instances or clusters.</p>
          */
-        public Builder sourceDBCluster(java.util.List < SourceDBCluster> sourceDBCluster) {
+        public Builder sourceDBCluster(java.util.List<SourceDBCluster> sourceDBCluster) {
             this.putQueryParameter("SourceDBCluster", sourceDBCluster);
             this.sourceDBCluster = sourceDBCluster;
             return this;
         }
 
         /**
-         * SyncPlatform.
+         * <p>The synchronization platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADB-CDC</p>
          */
         public Builder syncPlatform(String syncPlatform) {
             this.putQueryParameter("SyncPlatform", syncPlatform);
@@ -317,8 +335,20 @@ public class DescribeSyncAvailableDBClusterListRequest extends Request {
             private String regionId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceDBCluster model) {
+                this.clusterIds = model.clusterIds;
+                this.regionId = model.regionId;
+                this.type = model.type;
+            } 
+
             /**
-             * ClusterIds.
+             * <p>The ID of the source instance or cluster. Separate multiple IDs with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1l3yh04y7us147n</p>
              */
             public Builder clusterIds(String clusterIds) {
                 this.clusterIds = clusterIds;
@@ -326,7 +356,7 @@ public class DescribeSyncAvailableDBClusterListRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -337,7 +367,16 @@ public class DescribeSyncAvailableDBClusterListRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The database type of the source instance or cluster.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>rds: ApsaraDB RDS.</li>
+             * <li>sls: Simple Log Service.</li>
+             * <li>polardb: PolarDB.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder type(String type) {
                 this.type = type;

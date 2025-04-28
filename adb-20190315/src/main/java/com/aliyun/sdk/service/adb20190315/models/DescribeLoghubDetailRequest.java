@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -69,7 +74,7 @@ public class DescribeLoghubDetailRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -157,6 +162,7 @@ public class DescribeLoghubDetailRequest extends Request {
         } 
 
         /**
+         * <p>The name of the log shipping job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +193,7 @@ public class DescribeLoghubDetailRequest extends Request {
         }
 
         /**
+         * <p>The name of the Simple Log Service project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,6 +206,7 @@ public class DescribeLoghubDetailRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +219,10 @@ public class DescribeLoghubDetailRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TaskList")
-    private java.util.List < TaskList> taskList;
+    private java.util.List<TaskList> taskList;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -35,6 +40,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -45,7 +54,7 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
     /**
      * @return taskList
      */
-    public java.util.List < TaskList> getTaskList() {
+    public java.util.List<TaskList> getTaskList() {
         return this.taskList;
     }
 
@@ -58,8 +67,17 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TaskList> taskList; 
+        private java.util.List<TaskList> taskList; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiagnosisTasksResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskList = model.taskList;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -75,7 +93,7 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
         /**
          * <p>The queried tasks.</p>
          */
-        public Builder taskList(java.util.List < TaskList> taskList) {
+        public Builder taskList(java.util.List<TaskList> taskList) {
             this.taskList = taskList;
             return this;
         }
@@ -332,6 +350,30 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             private Long taskEndTime; 
             private String taskHost; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskList model) {
+                this.computeTimeRatio = model.computeTimeRatio;
+                this.drivers = model.drivers;
+                this.elapsedTime = model.elapsedTime;
+                this.inputDataSize = model.inputDataSize;
+                this.inputRows = model.inputRows;
+                this.operatorCost = model.operatorCost;
+                this.outputDataSize = model.outputDataSize;
+                this.outputRows = model.outputRows;
+                this.peakMemory = model.peakMemory;
+                this.queuedTime = model.queuedTime;
+                this.scanCost = model.scanCost;
+                this.scanDataSize = model.scanDataSize;
+                this.scanRows = model.scanRows;
+                this.state = model.state;
+                this.taskCreateTime = model.taskCreateTime;
+                this.taskEndTime = model.taskEndTime;
+                this.taskHost = model.taskHost;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The compute time ratio, which can be used to determine whether the task is really time-consuming. This parameter can be calculated by using the following formula: OperatorCost/Drivers/ElapsedTime. A greater value indicates that the task was executed for computing for most of the task time. A less value indicates that the task was waiting for scheduling or blocked due to other reasons for most of the task time.</p>

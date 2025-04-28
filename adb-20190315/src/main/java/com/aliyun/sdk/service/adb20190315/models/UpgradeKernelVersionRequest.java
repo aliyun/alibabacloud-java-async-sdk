@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -60,7 +65,7 @@ public class UpgradeKernelVersionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -212,7 +217,7 @@ public class UpgradeKernelVersionRequest extends Request {
          * <li><strong>1</strong>: performs the update during the maintenance window.</li>
          * </ul>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612236.html">ModifyDBClusterMaintainTime</a> operation to modify the maintenance window of an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612236.html">ModifyDBClusterMaintainTime</a> operation to modify the maintenance window of an AnalyticDB for MySQL cluster.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

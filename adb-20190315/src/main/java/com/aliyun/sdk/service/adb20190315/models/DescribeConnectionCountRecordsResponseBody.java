@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessIpRecords")
-    private java.util.List < AccessIpRecords> accessIpRecords;
+    private java.util.List<AccessIpRecords> accessIpRecords;
 
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
@@ -22,7 +27,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("UserRecords")
-    private java.util.List < UserRecords> userRecords;
+    private java.util.List<UserRecords> userRecords;
 
     private DescribeConnectionCountRecordsResponseBody(Builder builder) {
         this.accessIpRecords = builder.accessIpRecords;
@@ -39,10 +44,14 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessIpRecords
      */
-    public java.util.List < AccessIpRecords> getAccessIpRecords() {
+    public java.util.List<AccessIpRecords> getAccessIpRecords() {
         return this.accessIpRecords;
     }
 
@@ -63,20 +72,30 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
     /**
      * @return userRecords
      */
-    public java.util.List < UserRecords> getUserRecords() {
+    public java.util.List<UserRecords> getUserRecords() {
         return this.userRecords;
     }
 
     public static final class Builder {
-        private java.util.List < AccessIpRecords> accessIpRecords; 
+        private java.util.List<AccessIpRecords> accessIpRecords; 
         private String DBClusterId; 
         private String requestId; 
-        private java.util.List < UserRecords> userRecords; 
+        private java.util.List<UserRecords> userRecords; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeConnectionCountRecordsResponseBody model) {
+            this.accessIpRecords = model.accessIpRecords;
+            this.DBClusterId = model.DBClusterId;
+            this.requestId = model.requestId;
+            this.userRecords = model.userRecords;
+        } 
 
         /**
          * <p>The queried client IP addresses.</p>
          */
-        public Builder accessIpRecords(java.util.List < AccessIpRecords> accessIpRecords) {
+        public Builder accessIpRecords(java.util.List<AccessIpRecords> accessIpRecords) {
             this.accessIpRecords = accessIpRecords;
             return this;
         }
@@ -106,7 +125,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         /**
          * <p>The queried database accounts.</p>
          */
-        public Builder userRecords(java.util.List < UserRecords> userRecords) {
+        public Builder userRecords(java.util.List<UserRecords> userRecords) {
             this.userRecords = userRecords;
             return this;
         }
@@ -160,6 +179,14 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private String accessIp; 
             private Long count; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessIpRecords model) {
+                this.accessIp = model.accessIp;
+                this.count = model.count;
+            } 
 
             /**
              * <p>The IP address of the client.</p>
@@ -233,6 +260,14 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private Long count; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserRecords model) {
+                this.count = model.count;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The number of connections.</p>

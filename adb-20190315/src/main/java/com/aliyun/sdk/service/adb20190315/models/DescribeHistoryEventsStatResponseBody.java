@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeHistoryEventsStatResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -46,19 +55,30 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeHistoryEventsStatResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Items.
+         * <p>The queried events.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA0F6761-7A8C-59F8-9624-FB56788C0EDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,8 +135,25 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
             private String eventCategory; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.eventCategory = model.eventCategory;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * EventCategory.
+             * <p>The system event category. Valid values:</p>
+             * <ul>
+             * <li>Exception</li>
+             * <li>Optimize</li>
+             * <li>Notification</li>
+             * <li>Maintenance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Exception</p>
              */
             public Builder eventCategory(String eventCategory) {
                 this.eventCategory = eventCategory;
@@ -124,7 +161,10 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

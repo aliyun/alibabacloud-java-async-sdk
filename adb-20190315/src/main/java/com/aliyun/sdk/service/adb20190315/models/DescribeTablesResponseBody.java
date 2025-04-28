@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -48,6 +57,14 @@ public class DescribeTablesResponseBody extends TeaModel {
     public static final class Builder {
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTablesResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried tables.</p>
@@ -130,6 +147,15 @@ public class DescribeTablesResponseBody extends TeaModel {
             private String schemaName; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Table model) {
+                this.DBClusterId = model.DBClusterId;
+                this.schemaName = model.schemaName;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
              * 
@@ -178,7 +204,7 @@ public class DescribeTablesResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Table")
-        private java.util.List < Table> table;
+        private java.util.List<Table> table;
 
         private Items(Builder builder) {
             this.table = builder.table;
@@ -195,17 +221,24 @@ public class DescribeTablesResponseBody extends TeaModel {
         /**
          * @return table
          */
-        public java.util.List < Table> getTable() {
+        public java.util.List<Table> getTable() {
             return this.table;
         }
 
         public static final class Builder {
-            private java.util.List < Table> table; 
+            private java.util.List<Table> table; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.table = model.table;
+            } 
 
             /**
              * Table.
              */
-            public Builder table(java.util.List < Table> table) {
+            public Builder table(java.util.List<Table> table) {
                 this.table = table;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.NameInMap("GroupsInfo")
-    private java.util.List < GroupsInfo> groupsInfo;
+    private java.util.List<GroupsInfo> groupsInfo;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,6 +40,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -45,7 +54,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
     /**
      * @return groupsInfo
      */
-    public java.util.List < GroupsInfo> getGroupsInfo() {
+    public java.util.List<GroupsInfo> getGroupsInfo() {
         return this.groupsInfo;
     }
 
@@ -58,8 +67,17 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBClusterId; 
-        private java.util.List < GroupsInfo> groupsInfo; 
+        private java.util.List<GroupsInfo> groupsInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBResourceGroupResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.groupsInfo = model.groupsInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The cluster ID.</p>
@@ -75,7 +93,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The queried resource groups.</p>
          */
-        public Builder groupsInfo(java.util.List < GroupsInfo> groupsInfo) {
+        public Builder groupsInfo(java.util.List<GroupsInfo> groupsInfo) {
             this.groupsInfo = groupsInfo;
             return this;
         }
@@ -114,7 +132,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         private String groupType;
 
         @com.aliyun.core.annotation.NameInMap("GroupUserList")
-        private java.util.List < String > groupUserList;
+        private java.util.List<String> groupUserList;
 
         @com.aliyun.core.annotation.NameInMap("GroupUsers")
         private String groupUsers;
@@ -167,7 +185,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         /**
          * @return groupUserList
          */
-        public java.util.List < String > getGroupUserList() {
+        public java.util.List<String> getGroupUserList() {
             return this.groupUserList;
         }
 
@@ -196,10 +214,23 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private String createTime; 
             private String groupName; 
             private String groupType; 
-            private java.util.List < String > groupUserList; 
+            private java.util.List<String> groupUserList; 
             private String groupUsers; 
             private Integer nodeNum; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupsInfo model) {
+                this.createTime = model.createTime;
+                this.groupName = model.groupName;
+                this.groupType = model.groupType;
+                this.groupUserList = model.groupUserList;
+                this.groupUsers = model.groupUsers;
+                this.nodeNum = model.nodeNum;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the resource group was created.</p>
@@ -244,7 +275,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             /**
              * <p>The database accounts that are associated with the resource group.</p>
              */
-            public Builder groupUserList(java.util.List < String > groupUserList) {
+            public Builder groupUserList(java.util.List<String> groupUserList) {
                 this.groupUserList = groupUserList;
                 return this;
             }

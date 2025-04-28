@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -86,7 +91,7 @@ public class DescribeSyncJobListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -210,6 +215,10 @@ public class DescribeSyncJobListRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +231,10 @@ public class DescribeSyncJobListRequest extends Request {
         }
 
         /**
-         * GetSourceDetail.
+         * <p>Specifies whether to obtain details about the source instance or cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder getSourceDetail(Boolean getSourceDetail) {
             this.putQueryParameter("GetSourceDetail", getSourceDetail);
@@ -249,7 +261,10 @@ public class DescribeSyncJobListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -258,7 +273,10 @@ public class DescribeSyncJobListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -267,6 +285,10 @@ public class DescribeSyncJobListRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,7 +319,10 @@ public class DescribeSyncJobListRequest extends Request {
         }
 
         /**
-         * SourceDBClusterDescription.
+         * <p>The description of the source cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder sourceDBClusterDescription(String sourceDBClusterDescription) {
             this.putQueryParameter("SourceDBClusterDescription", sourceDBClusterDescription);
@@ -306,7 +331,13 @@ public class DescribeSyncJobListRequest extends Request {
         }
 
         /**
-         * SourceDBClusterId.
+         * <p>The ID of the source cluster. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query backup set IDs.</p>
+         * <blockquote>
+         * <p> If you want to restore the data of an ApsaraDB for ClickHouse cluster, this parameter is required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-t4n766v2llx852n81</p>
          */
         public Builder sourceDBClusterId(String sourceDBClusterId) {
             this.putQueryParameter("SourceDBClusterId", sourceDBClusterId);
@@ -315,7 +346,10 @@ public class DescribeSyncJobListRequest extends Request {
         }
 
         /**
-         * SourceDBType.
+         * <p>The source database type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sls</p>
          */
         public Builder sourceDBType(String sourceDBType) {
             this.putQueryParameter("SourceDBType", sourceDBType);

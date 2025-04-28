@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -76,7 +81,7 @@ public class DescribeLogHubAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -173,6 +178,7 @@ public class DescribeLogHubAttributeRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +191,7 @@ public class DescribeLogHubAttributeRequest extends Request {
         }
 
         /**
+         * <p>The name of the log shipping job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,6 +204,7 @@ public class DescribeLogHubAttributeRequest extends Request {
         }
 
         /**
+         * <p>The name of the Logstore.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,6 +235,7 @@ public class DescribeLogHubAttributeRequest extends Request {
         }
 
         /**
+         * <p>The name of the Simple Log Service project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,6 +248,7 @@ public class DescribeLogHubAttributeRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

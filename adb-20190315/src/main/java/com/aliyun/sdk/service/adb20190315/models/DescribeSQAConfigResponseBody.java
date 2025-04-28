@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class DescribeSQAConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -72,6 +81,16 @@ public class DescribeSQAConfigResponseBody extends TeaModel {
         private String groupName; 
         private String requestId; 
         private String SQAStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSQAConfigResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.groupName = model.groupName;
+            this.requestId = model.requestId;
+            this.SQAStatus = model.SQAStatus;
+        } 
 
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>

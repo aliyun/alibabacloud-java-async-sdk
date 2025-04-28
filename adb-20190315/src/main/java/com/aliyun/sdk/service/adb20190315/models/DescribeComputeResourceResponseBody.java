@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeComputeResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ComputeResource")
-    private java.util.List < ComputeResource> computeResource;
+    private java.util.List<ComputeResource> computeResource;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeComputeResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return computeResource
      */
-    public java.util.List < ComputeResource> getComputeResource() {
+    public java.util.List<ComputeResource> getComputeResource() {
         return this.computeResource;
     }
 
@@ -46,13 +55,21 @@ public class DescribeComputeResourceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ComputeResource> computeResource; 
+        private java.util.List<ComputeResource> computeResource; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeComputeResourceResponseBody model) {
+            this.computeResource = model.computeResource;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried specifications of computing resources.</p>
          */
-        public Builder computeResource(java.util.List < ComputeResource> computeResource) {
+        public Builder computeResource(java.util.List<ComputeResource> computeResource) {
             this.computeResource = computeResource;
             return this;
         }
@@ -118,11 +135,19 @@ public class DescribeComputeResourceResponseBody extends TeaModel {
             private String displayValue; 
             private String realValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ComputeResource model) {
+                this.displayValue = model.displayValue;
+                this.realValue = model.realValue;
+            } 
+
             /**
              * <p>The specifications of computing resources displayed in the console.</p>
              * 
              * <strong>example:</strong>
-             * <p>8 Core 32 GB（单机版）</p>
+             * <p>8 Core 32 GB</p>
              */
             public Builder displayValue(String displayValue) {
                 this.displayValue = displayValue;

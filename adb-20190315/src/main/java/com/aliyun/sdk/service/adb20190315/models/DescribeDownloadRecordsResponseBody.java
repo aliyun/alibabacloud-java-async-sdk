@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDownloadRecordsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Records")
-    private java.util.List < Records> records;
+    private java.util.List<Records> records;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return records
      */
-    public java.util.List < Records> getRecords() {
+    public java.util.List<Records> getRecords() {
         return this.records;
     }
 
@@ -46,19 +55,27 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Records> records; 
+        private java.util.List<Records> records; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDownloadRecordsResponseBody model) {
+            this.records = model.records;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>Details about the download tasks.</p>
+         * <p>The queried download tasks.</p>
          */
-        public Builder records(java.util.List < Records> records) {
+        public Builder records(java.util.List<Records> records) {
             this.records = records;
             return this;
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>987F51BE-C4CB-332A-B159-63CE87******</p>
@@ -154,8 +171,19 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             private String status; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.downloadId = model.downloadId;
+                this.exceptionMsg = model.exceptionMsg;
+                this.fileName = model.fileName;
+                this.status = model.status;
+                this.url = model.url;
+            } 
+
             /**
-             * <p>The ID of the download task.</p>
+             * <p>The download task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>69</p>
@@ -166,7 +194,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned when the download task has failed.</p>
+             * <p>The error message returned if the download task failed.</p>
              * 
              * <strong>example:</strong>
              * <p>The query result is empty.</p>
@@ -188,11 +216,11 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the download task.</p>
+             * <p>The status of the download task. Valid values:</p>
              * <ul>
-             * <li><strong>running</strong>: The download task is currently in progress.</li>
-             * <li><strong>finished</strong>: The download task is complete.</li>
-             * <li><strong>failed</strong>: The download task has failed.</li>
+             * <li><strong>running</strong></li>
+             * <li><strong>finished</strong></li>
+             * <li><strong>failed</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>

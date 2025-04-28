@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class ModifyResubmitConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Rules")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Rules> rules;
+    private java.util.List<Rules> rules;
 
     private ModifyResubmitConfigRequest(Builder builder) {
         super(builder);
@@ -61,7 +66,7 @@ public class ModifyResubmitConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,7 +116,7 @@ public class ModifyResubmitConfigRequest extends Request {
     /**
      * @return rules
      */
-    public java.util.List < Rules> getRules() {
+    public java.util.List<Rules> getRules() {
         return this.rules;
     }
 
@@ -122,7 +127,7 @@ public class ModifyResubmitConfigRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Rules> rules; 
+        private java.util.List<Rules> rules; 
 
         private Builder() {
             super();
@@ -207,7 +212,7 @@ public class ModifyResubmitConfigRequest extends Request {
          * <p>The job resubmission rules.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder rules(java.util.List < Rules> rules) {
+        public Builder rules(java.util.List<Rules> rules) {
             String rulesShrink = shrink(rules, "Rules", "json");
             this.putQueryParameter("Rules", rulesShrink);
             this.rules = rules;
@@ -300,6 +305,17 @@ public class ModifyResubmitConfigRequest extends Request {
             private String peakMemory; 
             private String queryTime; 
             private String targetGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.exceedMemoryException = model.exceedMemoryException;
+                this.groupName = model.groupName;
+                this.peakMemory = model.peakMemory;
+                this.queryTime = model.queryTime;
+                this.targetGroupName = model.targetGroupName;
+            } 
 
             /**
              * <p>Specifies whether to configure out-of-memory (OOM) check.</p>

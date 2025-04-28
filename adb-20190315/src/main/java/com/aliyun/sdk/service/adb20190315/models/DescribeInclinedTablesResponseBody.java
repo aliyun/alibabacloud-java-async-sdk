@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInclinedTablesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DetectionItems")
-    private java.util.List < DetectionItems> detectionItems;
+    private java.util.List<DetectionItems> detectionItems;
 
     @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
@@ -47,10 +52,14 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return detectionItems
      */
-    public java.util.List < DetectionItems> getDetectionItems() {
+    public java.util.List<DetectionItems> getDetectionItems() {
         return this.detectionItems;
     }
 
@@ -90,17 +99,29 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DetectionItems> detectionItems; 
+        private java.util.List<DetectionItems> detectionItems; 
         private Items items; 
         private String pageNumber; 
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeInclinedTablesResponseBody model) {
+            this.detectionItems = model.detectionItems;
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * DetectionItems.
          */
-        public Builder detectionItems(java.util.List < DetectionItems> detectionItems) {
+        public Builder detectionItems(java.util.List<DetectionItems> detectionItems) {
             this.detectionItems = detectionItems;
             return this;
         }
@@ -218,6 +239,15 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             private String message; 
             private String name; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetectionItems model) {
+                this.message = model.message;
+                this.name = model.name;
+                this.status = model.status;
+            } 
 
             /**
              * Message.
@@ -366,6 +396,20 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             private Long totalSize; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Table model) {
+                this.isIncline = model.isIncline;
+                this.name = model.name;
+                this.rowCount = model.rowCount;
+                this.schema = model.schema;
+                this.size = model.size;
+                this.spaceRatio = model.spaceRatio;
+                this.totalSize = model.totalSize;
+                this.type = model.type;
+            } 
+
             /**
              * IsIncline.
              */
@@ -445,7 +489,7 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Table")
-        private java.util.List < Table> table;
+        private java.util.List<Table> table;
 
         private Items(Builder builder) {
             this.table = builder.table;
@@ -462,17 +506,24 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         /**
          * @return table
          */
-        public java.util.List < Table> getTable() {
+        public java.util.List<Table> getTable() {
             return this.table;
         }
 
         public static final class Builder {
-            private java.util.List < Table> table; 
+            private java.util.List<Table> table; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.table = model.table;
+            } 
 
             /**
              * Table.
              */
-            public Builder table(java.util.List < Table> table) {
+            public Builder table(java.util.List<Table> table) {
                 this.table = table;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.NameInMap("LoadTasksRecords")
-    private java.util.List < LoadTasksRecords> loadTasksRecords;
+    private java.util.List<LoadTasksRecords> loadTasksRecords;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
@@ -47,6 +52,10 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -57,7 +66,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
     /**
      * @return loadTasksRecords
      */
-    public java.util.List < LoadTasksRecords> getLoadTasksRecords() {
+    public java.util.List<LoadTasksRecords> getLoadTasksRecords() {
         return this.loadTasksRecords;
     }
 
@@ -91,11 +100,23 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBClusterId; 
-        private java.util.List < LoadTasksRecords> loadTasksRecords; 
+        private java.util.List<LoadTasksRecords> loadTasksRecords; 
         private String pageNumber; 
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLoadTasksRecordsResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.loadTasksRecords = model.loadTasksRecords;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The cluster ID.</p>
@@ -111,7 +132,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
         /**
          * <p>The queried asynchronous import and export tasks.</p>
          */
-        public Builder loadTasksRecords(java.util.List < LoadTasksRecords> loadTasksRecords) {
+        public Builder loadTasksRecords(java.util.List<LoadTasksRecords> loadTasksRecords) {
             this.loadTasksRecords = loadTasksRecords;
             return this;
         }
@@ -281,6 +302,20 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             private String sql; 
             private String state; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadTasksRecords model) {
+                this.createTime = model.createTime;
+                this.DBName = model.DBName;
+                this.jobName = model.jobName;
+                this.processID = model.processID;
+                this.processRows = model.processRows;
+                this.sql = model.sql;
+                this.state = model.state;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The start time of the task. The time is accurate to milliseconds. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ss.SSSZ</em> format. The time is displayed in UTC.</p>

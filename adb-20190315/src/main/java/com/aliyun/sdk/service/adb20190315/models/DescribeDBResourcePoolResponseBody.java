@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.NameInMap("PoolsInfo")
-    private java.util.List < PoolsInfo> poolsInfo;
+    private java.util.List<PoolsInfo> poolsInfo;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,6 +40,10 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -45,7 +54,7 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
     /**
      * @return poolsInfo
      */
-    public java.util.List < PoolsInfo> getPoolsInfo() {
+    public java.util.List<PoolsInfo> getPoolsInfo() {
         return this.poolsInfo;
     }
 
@@ -58,8 +67,17 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBClusterId; 
-        private java.util.List < PoolsInfo> poolsInfo; 
+        private java.util.List<PoolsInfo> poolsInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBResourcePoolResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.poolsInfo = model.poolsInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
@@ -75,7 +93,7 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
         /**
          * <p>Details of the resource group.</p>
          */
-        public Builder poolsInfo(java.util.List < PoolsInfo> poolsInfo) {
+        public Builder poolsInfo(java.util.List<PoolsInfo> poolsInfo) {
             this.poolsInfo = poolsInfo;
             return this;
         }
@@ -188,6 +206,18 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
             private String poolUsers; 
             private String queryType; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(PoolsInfo model) {
+                this.createTime = model.createTime;
+                this.nodeNum = model.nodeNum;
+                this.poolName = model.poolName;
+                this.poolUsers = model.poolUsers;
+                this.queryType = model.queryType;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the resource group was created.</p>

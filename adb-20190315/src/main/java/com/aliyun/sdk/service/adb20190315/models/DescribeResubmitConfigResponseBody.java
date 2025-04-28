@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Rules")
-    private java.util.List < Rules> rules;
+    private java.util.List<Rules> rules;
 
     private DescribeResubmitConfigResponseBody(Builder builder) {
         this.DBClusterId = builder.DBClusterId;
@@ -33,6 +38,10 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
 
     public static DescribeResubmitConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
     /**
      * @return rules
      */
-    public java.util.List < Rules> getRules() {
+    public java.util.List<Rules> getRules() {
         return this.rules;
     }
 
     public static final class Builder {
         private String DBClusterId; 
         private String requestId; 
-        private java.util.List < Rules> rules; 
+        private java.util.List<Rules> rules; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResubmitConfigResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+        } 
 
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
@@ -89,7 +107,7 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
         /**
          * <p>The job resubmission rules.</p>
          */
-        public Builder rules(java.util.List < Rules> rules) {
+        public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
             return this;
         }
@@ -179,6 +197,17 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
             private String peakMemory; 
             private String queryTime; 
             private String targetGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.exceedMemoryException = model.exceedMemoryException;
+                this.groupName = model.groupName;
+                this.peakMemory = model.peakMemory;
+                this.queryTime = model.queryTime;
+                this.targetGroupName = model.targetGroupName;
+            } 
 
             /**
              * <p>Indicates whether out-of-memory (OOM) check is configured.</p>

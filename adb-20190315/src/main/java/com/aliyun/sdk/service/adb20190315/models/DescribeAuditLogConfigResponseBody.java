@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class DescribeAuditLogConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -72,6 +81,16 @@ public class DescribeAuditLogConfigResponseBody extends TeaModel {
         private String auditLogStatus; 
         private String DBClusterId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAuditLogConfigResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.auditLogStatus = model.auditLogStatus;
+            this.DBClusterId = model.DBClusterId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>

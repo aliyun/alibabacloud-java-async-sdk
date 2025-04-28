@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeTableAccessCountResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -79,16 +88,27 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeTableAccessCountResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>Details about the table usage.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -222,6 +242,17 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
             private String reportDate; 
             private String tableName; 
             private String tableSchema; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.accessCount = model.accessCount;
+                this.instanceName = model.instanceName;
+                this.reportDate = model.reportDate;
+                this.tableName = model.tableName;
+                this.tableSchema = model.tableSchema;
+            } 
 
             /**
              * <p>The number of accesses to the table.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ids
      */
@@ -49,8 +58,19 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
         private String ids; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyActiveOperationTasksResponseBody model) {
+            this.ids = model.ids;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Ids.
+         * <p>The O&amp;M event IDs that are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ids(String ids) {
             this.ids = ids;
@@ -58,7 +78,10 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8B709A33-5E8D-511F-A225-AFC0B6AAAD76</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -109,7 +114,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -278,7 +283,15 @@ public class DescribeActiveOperationTasksRequest extends Request {
         } 
 
         /**
-         * AllowCancel.
+         * <p>Specifies whether the O&amp;M task can be canceled. Valid values:</p>
+         * <ul>
+         * <li>-1: yes for all O&amp;M tasks.</li>
+         * <li>0: no.</li>
+         * <li>1: yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder allowCancel(Integer allowCancel) {
             this.putQueryParameter("AllowCancel", allowCancel);
@@ -287,7 +300,15 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * AllowChange.
+         * <p>Specifies whether the execution time of the O&amp;M task can be changed. Valid values:</p>
+         * <ul>
+         * <li>-1: yes for all O&amp;M tasks.</li>
+         * <li>0: no.</li>
+         * <li>1: yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder allowChange(Integer allowChange) {
             this.putQueryParameter("AllowChange", allowChange);
@@ -296,7 +317,15 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * ChangeLevel.
+         * <p>The trigger level of the O&amp;M task. Default value: all. Valid values:</p>
+         * <ul>
+         * <li>all: all task levels.</li>
+         * <li>S0: exception fixing.</li>
+         * <li>S1: system O&amp;M.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder changeLevel(String changeLevel) {
             this.putQueryParameter("ChangeLevel", changeLevel);
@@ -305,7 +334,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * DbType.
+         * <p>The database type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>analyticdb</p>
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -314,7 +346,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * InsName.
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-2ze307ym37t762hnl</p>
          */
         public Builder insName(String insName) {
             this.putQueryParameter("InsName", insName);
@@ -341,7 +376,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -350,7 +388,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 25.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -359,7 +400,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The product ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ads</p>
          */
         public Builder productId(String productId) {
             this.putQueryParameter("ProductId", productId);
@@ -368,7 +412,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -377,7 +424,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -413,7 +463,15 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the O&amp;M task. Valid values:</p>
+         * <ul>
+         * <li>-1: all statuses.</li>
+         * <li>3: pending.</li>
+         * <li>4: executing.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -422,7 +480,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the O&amp;M tasks that you want to query. Set the value to all to query all O&amp;M tasks configured by the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

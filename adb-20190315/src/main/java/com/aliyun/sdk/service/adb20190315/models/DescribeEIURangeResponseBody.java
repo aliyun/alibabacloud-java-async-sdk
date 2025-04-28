@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return EIUInfo
      */
@@ -48,6 +57,14 @@ public class DescribeEIURangeResponseBody extends TeaModel {
     public static final class Builder {
         private EIUInfo EIUInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEIURangeResponseBody model) {
+            this.EIUInfo = model.EIUInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried information about the number of EIUs.</p>
@@ -85,7 +102,7 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         private String defaultValue;
 
         @com.aliyun.core.annotation.NameInMap("EIURange")
-        private java.util.List < Long > EIURange;
+        private java.util.List<Long> EIURange;
 
         @com.aliyun.core.annotation.NameInMap("MaxValue")
         private String maxValue;
@@ -97,7 +114,7 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         private String step;
 
         @com.aliyun.core.annotation.NameInMap("StorageResourceRange")
-        private java.util.List < String > storageResourceRange;
+        private java.util.List<String> storageResourceRange;
 
         private EIUInfo(Builder builder) {
             this.defaultValue = builder.defaultValue;
@@ -126,7 +143,7 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         /**
          * @return EIURange
          */
-        public java.util.List < Long > getEIURange() {
+        public java.util.List<Long> getEIURange() {
             return this.EIURange;
         }
 
@@ -154,17 +171,29 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         /**
          * @return storageResourceRange
          */
-        public java.util.List < String > getStorageResourceRange() {
+        public java.util.List<String> getStorageResourceRange() {
             return this.storageResourceRange;
         }
 
         public static final class Builder {
             private String defaultValue; 
-            private java.util.List < Long > EIURange; 
+            private java.util.List<Long> EIURange; 
             private String maxValue; 
             private String minValue; 
             private String step; 
-            private java.util.List < String > storageResourceRange; 
+            private java.util.List<String> storageResourceRange; 
+
+            private Builder() {
+            } 
+
+            private Builder(EIUInfo model) {
+                this.defaultValue = model.defaultValue;
+                this.EIURange = model.EIURange;
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+                this.step = model.step;
+                this.storageResourceRange = model.storageResourceRange;
+            } 
 
             /**
              * <p>The suggested value for the number of EIUs.</p>
@@ -180,7 +209,7 @@ public class DescribeEIURangeResponseBody extends TeaModel {
             /**
              * <p>The queried range for the number of EIUs.</p>
              */
-            public Builder EIURange(java.util.List < Long > EIURange) {
+            public Builder EIURange(java.util.List<Long> EIURange) {
                 this.EIURange = EIURange;
                 return this;
             }
@@ -221,7 +250,7 @@ public class DescribeEIURangeResponseBody extends TeaModel {
             /**
              * <p>A reserved parameter.</p>
              */
-            public Builder storageResourceRange(java.util.List < String > storageResourceRange) {
+            public Builder storageResourceRange(java.util.List<String> storageResourceRange) {
                 this.storageResourceRange = storageResourceRange;
                 return this;
             }

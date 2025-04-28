@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     private Long failedCount;
 
     @com.aliyun.core.annotation.NameInMap("Performances")
-    private java.util.List < Performances> performances;
+    private java.util.List<Performances> performances;
 
     @com.aliyun.core.annotation.NameInMap("QueryCount")
     private Long queryCount;
@@ -63,6 +68,10 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessIp
      */
@@ -87,7 +96,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     /**
      * @return performances
      */
-    public java.util.List < Performances> getPerformances() {
+    public java.util.List<Performances> getPerformances() {
         return this.performances;
     }
 
@@ -137,7 +146,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         private String accessIp; 
         private String endTime; 
         private Long failedCount; 
-        private java.util.List < Performances> performances; 
+        private java.util.List<Performances> performances; 
         private Long queryCount; 
         private String requestId; 
         private String SQLPattern; 
@@ -145,8 +154,27 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         private String tables; 
         private String user; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribePatternPerformanceResponseBody model) {
+            this.accessIp = model.accessIp;
+            this.endTime = model.endTime;
+            this.failedCount = model.failedCount;
+            this.performances = model.performances;
+            this.queryCount = model.queryCount;
+            this.requestId = model.requestId;
+            this.SQLPattern = model.SQLPattern;
+            this.startTime = model.startTime;
+            this.tables = model.tables;
+            this.user = model.user;
+        } 
+
         /**
-         * AccessIp.
+         * <p>The IP address of the SQL client that submits the SQL pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.14.*</p>
          */
         public Builder accessIp(String accessIp) {
             this.accessIp = accessIp;
@@ -165,7 +193,10 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * FailedCount.
+         * <p>The number of failed SQL patterns within the time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failedCount(Long failedCount) {
             this.failedCount = failedCount;
@@ -175,13 +206,16 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         /**
          * <p>The queried performance metrics.</p>
          */
-        public Builder performances(java.util.List < Performances> performances) {
+        public Builder performances(java.util.List<Performances> performances) {
             this.performances = performances;
             return this;
         }
 
         /**
-         * QueryCount.
+         * <p>The number of queries executed in association with the SQL pattern within the time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35018</p>
          */
         public Builder queryCount(Long queryCount) {
             this.queryCount = queryCount;
@@ -200,7 +234,10 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * SQLPattern.
+         * <p>The SQL statement that represents the SQL pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT *nFROM HIVE.<code>ADB_EXTERNAL_TPCH_10GB</code>.<code>External_customer</code>nLIMIT ?</p>
          */
         public Builder SQLPattern(String SQLPattern) {
             this.SQLPattern = SQLPattern;
@@ -219,7 +256,10 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Tables.
+         * <p>The tables that are in association with the SQL pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tpch_1g.part;tpch_1g.supplier;tpch_1g.lineitem;tpch_1g.partsupp;tpch_1g.orders;tpch_1g.nation</p>
          */
         public Builder tables(String tables) {
             this.tables = tables;
@@ -227,7 +267,10 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * User.
+         * <p>The database account that is used to execute the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder user(String user) {
             this.user = user;
@@ -251,7 +294,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private Series(Builder builder) {
             this.name = builder.name;
@@ -276,13 +319,21 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Series model) {
+                this.name = model.name;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The name of the performance metric value. Valid values:</p>
@@ -326,7 +377,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
             /**
              * <p>The queried performance metrics.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -349,7 +400,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Series")
-        private java.util.List < Series> series;
+        private java.util.List<Series> series;
 
         @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
@@ -378,7 +429,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         /**
          * @return series
          */
-        public java.util.List < Series> getSeries() {
+        public java.util.List<Series> getSeries() {
             return this.series;
         }
 
@@ -391,8 +442,17 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String key; 
-            private java.util.List < Series> series; 
+            private java.util.List<Series> series; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Performances model) {
+                this.key = model.key;
+                this.series = model.series;
+                this.unit = model.unit;
+            } 
 
             /**
              * <p>The performance metric that was queried. Valid values:</p>
@@ -415,7 +475,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
             /**
              * <p>The queried performance metrics.</p>
              */
-            public Builder series(java.util.List < Series> series) {
+            public Builder series(java.util.List<Series> series) {
                 this.series = series;
                 return this;
             }

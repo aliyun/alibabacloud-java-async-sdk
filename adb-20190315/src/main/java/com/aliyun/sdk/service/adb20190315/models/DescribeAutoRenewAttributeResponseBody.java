@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
 
     public static DescribeAutoRenewAttributeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoRenewAttributeResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
 
         /**
          * <p>The renewal information of the cluster.</p>
@@ -235,6 +255,18 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             private String regionId; 
             private String renewalStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoRenewAttribute model) {
+                this.autoRenewEnabled = model.autoRenewEnabled;
+                this.DBClusterId = model.DBClusterId;
+                this.duration = model.duration;
+                this.periodUnit = model.periodUnit;
+                this.regionId = model.regionId;
+                this.renewalStatus = model.renewalStatus;
+            } 
+
             /**
              * <p>Indicates whether auto-renewal is enabled for the cluster. Valid values:</p>
              * <ul>
@@ -329,7 +361,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoRenewAttribute")
-        private java.util.List < AutoRenewAttribute> autoRenewAttribute;
+        private java.util.List<AutoRenewAttribute> autoRenewAttribute;
 
         private Items(Builder builder) {
             this.autoRenewAttribute = builder.autoRenewAttribute;
@@ -346,17 +378,24 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         /**
          * @return autoRenewAttribute
          */
-        public java.util.List < AutoRenewAttribute> getAutoRenewAttribute() {
+        public java.util.List<AutoRenewAttribute> getAutoRenewAttribute() {
             return this.autoRenewAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < AutoRenewAttribute> autoRenewAttribute; 
+            private java.util.List<AutoRenewAttribute> autoRenewAttribute; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.autoRenewAttribute = model.autoRenewAttribute;
+            } 
 
             /**
              * AutoRenewAttribute.
              */
-            public Builder autoRenewAttribute(java.util.List < AutoRenewAttribute> autoRenewAttribute) {
+            public Builder autoRenewAttribute(java.util.List<AutoRenewAttribute> autoRenewAttribute) {
                 this.autoRenewAttribute = autoRenewAttribute;
                 return this;
             }

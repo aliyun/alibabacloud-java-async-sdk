@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StageInfos")
-    private java.util.List < StageInfos> stageInfos;
+    private java.util.List<StageInfos> stageInfos;
 
     private DescribeDiagnosisSQLInfoResponseBody(Builder builder) {
         this.diagnosisSQLInfo = builder.diagnosisSQLInfo;
@@ -33,6 +38,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
 
     public static DescribeDiagnosisSQLInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
     /**
      * @return stageInfos
      */
-    public java.util.List < StageInfos> getStageInfos() {
+    public java.util.List<StageInfos> getStageInfos() {
         return this.stageInfos;
     }
 
     public static final class Builder {
         private String diagnosisSQLInfo; 
         private String requestId; 
-        private java.util.List < StageInfos> stageInfos; 
+        private java.util.List<StageInfos> stageInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiagnosisSQLInfoResponseBody model) {
+            this.diagnosisSQLInfo = model.diagnosisSQLInfo;
+            this.requestId = model.requestId;
+            this.stageInfos = model.stageInfos;
+        } 
 
         /**
          * <p>Execution details of the SQL statement, including the SQL statement text, statistics, execution plan, and operator information.</p>
@@ -83,7 +101,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         /**
          * <p>Execution details of the query by stage.</p>
          */
-        public Builder stageInfos(java.util.List < StageInfos> stageInfos) {
+        public Builder stageInfos(java.util.List<StageInfos> stageInfos) {
             this.stageInfos = stageInfos;
             return this;
         }
@@ -221,6 +239,21 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             private Double progress; 
             private String stageId; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(StageInfos model) {
+                this.inputDataSize = model.inputDataSize;
+                this.inputRows = model.inputRows;
+                this.operatorCost = model.operatorCost;
+                this.outputDataSize = model.outputDataSize;
+                this.outputRows = model.outputRows;
+                this.peakMemory = model.peakMemory;
+                this.progress = model.progress;
+                this.stageId = model.stageId;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The total amount of input data in the stage. Unit: bytes.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -55,6 +60,10 @@ public class DescribeTableStatisticsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchemaName")
+    private String schemaName;
+
     private DescribeTableStatisticsRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
@@ -67,6 +76,7 @@ public class DescribeTableStatisticsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.schemaName = builder.schemaName;
     }
 
     public static Builder builder() {
@@ -77,7 +87,7 @@ public class DescribeTableStatisticsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -152,6 +162,13 @@ public class DescribeTableStatisticsRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return schemaName
+     */
+    public String getSchemaName() {
+        return this.schemaName;
+    }
+
     public static final class Builder extends Request.Builder<DescribeTableStatisticsRequest, Builder> {
         private String DBClusterId; 
         private String keyword; 
@@ -163,6 +180,7 @@ public class DescribeTableStatisticsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String schemaName; 
 
         private Builder() {
             super();
@@ -180,6 +198,7 @@ public class DescribeTableStatisticsRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.schemaName = request.schemaName;
         } 
 
         /**
@@ -309,6 +328,15 @@ public class DescribeTableStatisticsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SchemaName.
+         */
+        public Builder schemaName(String schemaName) {
+            this.putQueryParameter("SchemaName", schemaName);
+            this.schemaName = schemaName;
             return this;
         }
 

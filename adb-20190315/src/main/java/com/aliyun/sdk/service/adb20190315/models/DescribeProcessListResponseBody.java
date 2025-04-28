@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
     public static DescribeProcessListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeProcessListResponseBody extends TeaModel {
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProcessListResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details of the queries.</p>
@@ -271,6 +291,21 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private Integer time; 
             private String user; 
 
+            private Builder() {
+            } 
+
+            private Builder(Process model) {
+                this.command = model.command;
+                this.db = model.db;
+                this.host = model.host;
+                this.id = model.id;
+                this.info = model.info;
+                this.processId = model.processId;
+                this.startTime = model.startTime;
+                this.time = model.time;
+                this.user = model.user;
+            } 
+
             /**
              * <p>The type of the statement. Only SELECT can be returned.</p>
              * 
@@ -385,7 +420,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Process")
-        private java.util.List < Process> process;
+        private java.util.List<Process> process;
 
         private Items(Builder builder) {
             this.process = builder.process;
@@ -402,17 +437,24 @@ public class DescribeProcessListResponseBody extends TeaModel {
         /**
          * @return process
          */
-        public java.util.List < Process> getProcess() {
+        public java.util.List<Process> getProcess() {
             return this.process;
         }
 
         public static final class Builder {
-            private java.util.List < Process> process; 
+            private java.util.List<Process> process; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.process = model.process;
+            } 
 
             /**
              * Process.
              */
-            public Builder process(java.util.List < Process> process) {
+            public Builder process(java.util.List<Process> process) {
                 this.process = process;
                 return this;
             }

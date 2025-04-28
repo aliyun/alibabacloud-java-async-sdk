@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAppliedAdvicesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -25,7 +30,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SchemaTableNames")
-    private java.util.List < String > schemaTableNames;
+    private java.util.List<String> schemaTableNames;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -47,10 +52,14 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -78,7 +87,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
     /**
      * @return schemaTableNames
      */
-    public java.util.List < String > getSchemaTableNames() {
+    public java.util.List<String> getSchemaTableNames() {
         return this.schemaTableNames;
     }
 
@@ -90,17 +99,29 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
-        private java.util.List < String > schemaTableNames; 
+        private java.util.List<String> schemaTableNames; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppliedAdvicesResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.schemaTableNames = model.schemaTableNames;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried suggestions.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -146,7 +167,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         /**
          * <p>The names of the tables in the DatabaseName.TableName format.</p>
          */
-        public Builder schemaTableNames(java.util.List < String > schemaTableNames) {
+        public Builder schemaTableNames(java.util.List<String> schemaTableNames) {
             this.schemaTableNames = schemaTableNames;
             return this;
         }
@@ -343,6 +364,25 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             private String submitTime; 
             private String tableName; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.adviceId = model.adviceId;
+                this.benefit = model.benefit;
+                this.buildSQL = model.buildSQL;
+                this.jobStatus = model.jobStatus;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.rollbackSQL = model.rollbackSQL;
+                this.SQL = model.SQL;
+                this.schemaName = model.schemaName;
+                this.submitStatus = model.submitStatus;
+                this.submitTime = model.submitTime;
+                this.tableName = model.tableName;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The suggestion ID.</p>

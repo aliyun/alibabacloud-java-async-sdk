@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeColumnsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -49,8 +58,16 @@ public class DescribeColumnsResponseBody extends TeaModel {
         private Items items; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeColumnsResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The list of columns.</p>
+         * <p>The queried columns.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +75,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -178,8 +195,21 @@ public class DescribeColumnsResponseBody extends TeaModel {
             private String tableName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Column model) {
+                this.autoIncrementColumn = model.autoIncrementColumn;
+                this.columnName = model.columnName;
+                this.DBClusterId = model.DBClusterId;
+                this.primaryKey = model.primaryKey;
+                this.schemaName = model.schemaName;
+                this.tableName = model.tableName;
+                this.type = model.type;
+            } 
+
             /**
-             * <p>Indicates whether the columns are auto-incremented.</p>
+             * <p>Indicates whether the column is auto-incremented.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -201,7 +231,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>am-bp1xxxxxxxx47</p>
@@ -212,7 +242,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the column is a primary key.</p>
+             * <p>Indicates whether the column is a primary key column.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -270,7 +300,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Column")
-        private java.util.List < Column> column;
+        private java.util.List<Column> column;
 
         private Items(Builder builder) {
             this.column = builder.column;
@@ -287,17 +317,24 @@ public class DescribeColumnsResponseBody extends TeaModel {
         /**
          * @return column
          */
-        public java.util.List < Column> getColumn() {
+        public java.util.List<Column> getColumn() {
             return this.column;
         }
 
         public static final class Builder {
-            private java.util.List < Column> column; 
+            private java.util.List<Column> column; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.column = model.column;
+            } 
 
             /**
              * Column.
              */
-            public Builder column(java.util.List < Column> column) {
+            public Builder column(java.util.List<Column> column) {
                 this.column = column;
                 return this;
             }

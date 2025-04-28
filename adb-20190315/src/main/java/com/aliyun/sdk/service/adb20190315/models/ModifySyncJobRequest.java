@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class ModifySyncJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceDBCluster")
-    private java.util.List < SourceDBCluster> sourceDBCluster;
+    private java.util.List<SourceDBCluster> sourceDBCluster;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SyncPlatform")
@@ -66,7 +71,7 @@ public class ModifySyncJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,7 +121,7 @@ public class ModifySyncJobRequest extends Request {
     /**
      * @return sourceDBCluster
      */
-    public java.util.List < SourceDBCluster> getSourceDBCluster() {
+    public java.util.List<SourceDBCluster> getSourceDBCluster() {
         return this.sourceDBCluster;
     }
 
@@ -134,7 +139,7 @@ public class ModifySyncJobRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < SourceDBCluster> sourceDBCluster; 
+        private java.util.List<SourceDBCluster> sourceDBCluster; 
         private String syncPlatform; 
 
         private Builder() {
@@ -221,7 +226,7 @@ public class ModifySyncJobRequest extends Request {
         /**
          * <p>The source instances or clusters.</p>
          */
-        public Builder sourceDBCluster(java.util.List < SourceDBCluster> sourceDBCluster) {
+        public Builder sourceDBCluster(java.util.List<SourceDBCluster> sourceDBCluster) {
             this.putQueryParameter("SourceDBCluster", sourceDBCluster);
             this.sourceDBCluster = sourceDBCluster;
             return this;
@@ -329,6 +334,17 @@ public class ModifySyncJobRequest extends Request {
             private String operateType; 
             private String regionId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceDBCluster model) {
+                this.clusterIds = model.clusterIds;
+                this.jobId = model.jobId;
+                this.operateType = model.operateType;
+                this.regionId = model.regionId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the source instance or cluster. Separate multiple IDs with commas (,).</p>

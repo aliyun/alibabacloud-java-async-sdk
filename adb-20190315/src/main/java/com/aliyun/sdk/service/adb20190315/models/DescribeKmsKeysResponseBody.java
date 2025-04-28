@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return kmsKeys
      */
@@ -49,8 +58,16 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         private KmsKeys kmsKeys; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeKmsKeysResponseBody model) {
+            this.kmsKeys = model.kmsKeys;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * KmsKeys.
+         * <p>The queried KMS keys.</p>
          */
         public Builder kmsKeys(KmsKeys kmsKeys) {
             this.kmsKeys = kmsKeys;
@@ -58,7 +75,10 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8F91F25F-8BCF-59E3-AF67-3806DB41FD09</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,8 +135,19 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
             private String keyAlias; 
             private String keyId; 
 
+            private Builder() {
+            } 
+
+            private Builder(KmsKey model) {
+                this.keyAlias = model.keyAlias;
+                this.keyId = model.keyId;
+            } 
+
             /**
-             * KeyAlias.
+             * <p>The alias of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mykey</p>
              */
             public Builder keyAlias(String keyAlias) {
                 this.keyAlias = keyAlias;
@@ -124,7 +155,10 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyId.
+             * <p>The ID of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2e81355b-f8e7-4090-8082-a8f8124a621c</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -146,7 +180,7 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
      */
     public static class KmsKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KmsKey")
-        private java.util.List < KmsKey> kmsKey;
+        private java.util.List<KmsKey> kmsKey;
 
         private KmsKeys(Builder builder) {
             this.kmsKey = builder.kmsKey;
@@ -163,17 +197,24 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         /**
          * @return kmsKey
          */
-        public java.util.List < KmsKey> getKmsKey() {
+        public java.util.List<KmsKey> getKmsKey() {
             return this.kmsKey;
         }
 
         public static final class Builder {
-            private java.util.List < KmsKey> kmsKey; 
+            private java.util.List<KmsKey> kmsKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(KmsKeys model) {
+                this.kmsKey = model.kmsKey;
+            } 
 
             /**
              * KmsKey.
              */
-            public Builder kmsKey(java.util.List < KmsKey> kmsKey) {
+            public Builder kmsKey(java.util.List<KmsKey> kmsKey) {
                 this.kmsKey = kmsKey;
                 return this;
             }

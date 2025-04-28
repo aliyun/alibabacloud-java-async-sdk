@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -72,7 +77,7 @@ public class ModifyDBClusterVipRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -169,7 +174,10 @@ public class ModifyDBClusterVipRequest extends Request {
         } 
 
         /**
-         * ConnectionString.
+         * <p>The internal or public endpoint for which the server certificate needs to be created or updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-2ze8mbuai974s4y2500000169.ads.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -178,6 +186,10 @@ public class ModifyDBClusterVipRequest extends Request {
         }
 
         /**
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a specific region.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +220,10 @@ public class ModifyDBClusterVipRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -235,6 +250,7 @@ public class ModifyDBClusterVipRequest extends Request {
         }
 
         /**
+         * <p>The virtual private cloud (VPC) ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,6 +263,7 @@ public class ModifyDBClusterVipRequest extends Request {
         }
 
         /**
+         * <p>The vSwitch ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

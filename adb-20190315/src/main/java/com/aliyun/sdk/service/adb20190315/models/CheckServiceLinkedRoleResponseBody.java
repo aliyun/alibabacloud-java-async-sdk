@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hasServiceLinkedRole
      */
@@ -49,8 +58,19 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         private Boolean hasServiceLinkedRole; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CheckServiceLinkedRoleResponseBody model) {
+            this.hasServiceLinkedRole = model.hasServiceLinkedRole;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * HasServiceLinkedRole.
+         * <p>Indicates whether an SLR is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasServiceLinkedRole(Boolean hasServiceLinkedRole) {
             this.hasServiceLinkedRole = hasServiceLinkedRole;
@@ -58,7 +78,10 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA0F6761-7A8C-59F8-9624-FB56788C0EDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

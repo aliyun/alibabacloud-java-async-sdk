@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAvailableResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AvailableZoneList")
-    private java.util.List < AvailableZoneList> availableZoneList;
+    private java.util.List<AvailableZoneList> availableZoneList;
 
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -35,10 +40,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableZoneList
      */
-    public java.util.List < AvailableZoneList> getAvailableZoneList() {
+    public java.util.List<AvailableZoneList> getAvailableZoneList() {
         return this.availableZoneList;
     }
 
@@ -57,20 +66,29 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AvailableZoneList> availableZoneList; 
+        private java.util.List<AvailableZoneList> availableZoneList; 
         private String regionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableResourceResponseBody model) {
+            this.availableZoneList = model.availableZoneList;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The supported zones.</p>
          */
-        public Builder availableZoneList(java.util.List < AvailableZoneList> availableZoneList) {
+        public Builder availableZoneList(java.util.List<AvailableZoneList> availableZoneList) {
             this.availableZoneList = availableZoneList;
             return this;
         }
 
         /**
-         * <p>The resources available in the supported editions.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -81,7 +99,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -153,6 +171,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String minCount; 
             private String step; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedElasticIOResource model) {
+                this.maxCount = model.maxCount;
+                this.minCount = model.minCount;
+                this.step = model.step;
+            } 
+
             /**
              * <p>The maximum amount of elastic I/O resources.</p>
              * 
@@ -204,13 +231,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private String storageType;
 
         @com.aliyun.core.annotation.NameInMap("SupportedComputeResource")
-        private java.util.List < String > supportedComputeResource;
+        private java.util.List<String> supportedComputeResource;
 
         @com.aliyun.core.annotation.NameInMap("SupportedElasticIOResource")
         private SupportedElasticIOResource supportedElasticIOResource;
 
         @com.aliyun.core.annotation.NameInMap("SupportedStorageResource")
-        private java.util.List < String > supportedStorageResource;
+        private java.util.List<String> supportedStorageResource;
 
         private SupportedFlexibleResource(Builder builder) {
             this.storageType = builder.storageType;
@@ -237,7 +264,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedComputeResource
          */
-        public java.util.List < String > getSupportedComputeResource() {
+        public java.util.List<String> getSupportedComputeResource() {
             return this.supportedComputeResource;
         }
 
@@ -251,15 +278,25 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedStorageResource
          */
-        public java.util.List < String > getSupportedStorageResource() {
+        public java.util.List<String> getSupportedStorageResource() {
             return this.supportedStorageResource;
         }
 
         public static final class Builder {
             private String storageType; 
-            private java.util.List < String > supportedComputeResource; 
+            private java.util.List<String> supportedComputeResource; 
             private SupportedElasticIOResource supportedElasticIOResource; 
-            private java.util.List < String > supportedStorageResource; 
+            private java.util.List<String> supportedStorageResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedFlexibleResource model) {
+                this.storageType = model.storageType;
+                this.supportedComputeResource = model.supportedComputeResource;
+                this.supportedElasticIOResource = model.supportedElasticIOResource;
+                this.supportedStorageResource = model.supportedStorageResource;
+            } 
 
             /**
              * <p>The disk storage type. Valid values:</p>
@@ -279,7 +316,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             /**
              * <p>The supported computing resources.</p>
              */
-            public Builder supportedComputeResource(java.util.List < String > supportedComputeResource) {
+            public Builder supportedComputeResource(java.util.List<String> supportedComputeResource) {
                 this.supportedComputeResource = supportedComputeResource;
                 return this;
             }
@@ -295,7 +332,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             /**
              * <p>The supported storage resources.</p>
              */
-            public Builder supportedStorageResource(java.util.List < String > supportedStorageResource) {
+            public Builder supportedStorageResource(java.util.List<String> supportedStorageResource) {
                 this.supportedStorageResource = supportedStorageResource;
                 return this;
             }
@@ -362,6 +399,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String maxCount; 
             private String minCount; 
             private String step; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeCount model) {
+                this.maxCount = model.maxCount;
+                this.minCount = model.minCount;
+                this.step = model.step;
+            } 
 
             /**
              * <p>A reserved parameter.</p>
@@ -435,6 +481,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public static final class Builder {
             private NodeCount nodeCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedExecutorList model) {
+                this.nodeCount = model.nodeCount;
+            } 
+
             /**
              * <p>The information about the supported compute nodes.</p>
              */
@@ -506,6 +559,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String minCount; 
             private String step; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedNodeCountListNodeCount model) {
+                this.maxCount = model.maxCount;
+                this.minCount = model.minCount;
+                this.step = model.step;
+            } 
+
             /**
              * <p>The maximum number of compute nodes.</p>
              * 
@@ -557,7 +619,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private SupportedNodeCountListNodeCount nodeCount;
 
         @com.aliyun.core.annotation.NameInMap("StorageSize")
-        private java.util.List < String > storageSize;
+        private java.util.List<String> storageSize;
 
         private SupportedNodeCountList(Builder builder) {
             this.nodeCount = builder.nodeCount;
@@ -582,13 +644,21 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return storageSize
          */
-        public java.util.List < String > getStorageSize() {
+        public java.util.List<String> getStorageSize() {
             return this.storageSize;
         }
 
         public static final class Builder {
             private SupportedNodeCountListNodeCount nodeCount; 
-            private java.util.List < String > storageSize; 
+            private java.util.List<String> storageSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedNodeCountList model) {
+                this.nodeCount = model.nodeCount;
+                this.storageSize = model.storageSize;
+            } 
 
             /**
              * <p>The number of the supported compute nodes.</p>
@@ -601,7 +671,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             /**
              * <p>The support storage capacity. Unit: GB.</p>
              */
-            public Builder storageSize(java.util.List < String > storageSize) {
+            public Builder storageSize(java.util.List<String> storageSize) {
                 this.storageSize = storageSize;
                 return this;
             }
@@ -624,10 +694,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private String instanceClass;
 
         @com.aliyun.core.annotation.NameInMap("SupportedExecutorList")
-        private java.util.List < SupportedExecutorList> supportedExecutorList;
+        private java.util.List<SupportedExecutorList> supportedExecutorList;
 
         @com.aliyun.core.annotation.NameInMap("SupportedNodeCountList")
-        private java.util.List < SupportedNodeCountList> supportedNodeCountList;
+        private java.util.List<SupportedNodeCountList> supportedNodeCountList;
 
         @com.aliyun.core.annotation.NameInMap("Tips")
         private String tips;
@@ -657,14 +727,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedExecutorList
          */
-        public java.util.List < SupportedExecutorList> getSupportedExecutorList() {
+        public java.util.List<SupportedExecutorList> getSupportedExecutorList() {
             return this.supportedExecutorList;
         }
 
         /**
          * @return supportedNodeCountList
          */
-        public java.util.List < SupportedNodeCountList> getSupportedNodeCountList() {
+        public java.util.List<SupportedNodeCountList> getSupportedNodeCountList() {
             return this.supportedNodeCountList;
         }
 
@@ -677,9 +747,19 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String instanceClass; 
-            private java.util.List < SupportedExecutorList> supportedExecutorList; 
-            private java.util.List < SupportedNodeCountList> supportedNodeCountList; 
+            private java.util.List<SupportedExecutorList> supportedExecutorList; 
+            private java.util.List<SupportedNodeCountList> supportedNodeCountList; 
             private String tips; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedInstanceClassList model) {
+                this.instanceClass = model.instanceClass;
+                this.supportedExecutorList = model.supportedExecutorList;
+                this.supportedNodeCountList = model.supportedNodeCountList;
+                this.tips = model.tips;
+            } 
 
             /**
              * <p>The supported instance type.</p>
@@ -695,7 +775,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             /**
              * <p>A reserved parameter.</p>
              */
-            public Builder supportedExecutorList(java.util.List < SupportedExecutorList> supportedExecutorList) {
+            public Builder supportedExecutorList(java.util.List<SupportedExecutorList> supportedExecutorList) {
                 this.supportedExecutorList = supportedExecutorList;
                 return this;
             }
@@ -703,7 +783,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             /**
              * <p>The supported compute nodes.</p>
              */
-            public Builder supportedNodeCountList(java.util.List < SupportedNodeCountList> supportedNodeCountList) {
+            public Builder supportedNodeCountList(java.util.List<SupportedNodeCountList> supportedNodeCountList) {
                 this.supportedNodeCountList = supportedNodeCountList;
                 return this;
             }
@@ -737,10 +817,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private String serial;
 
         @com.aliyun.core.annotation.NameInMap("SupportedFlexibleResource")
-        private java.util.List < SupportedFlexibleResource> supportedFlexibleResource;
+        private java.util.List<SupportedFlexibleResource> supportedFlexibleResource;
 
         @com.aliyun.core.annotation.NameInMap("SupportedInstanceClassList")
-        private java.util.List < SupportedInstanceClassList> supportedInstanceClassList;
+        private java.util.List<SupportedInstanceClassList> supportedInstanceClassList;
 
         private SupportedSerialList(Builder builder) {
             this.serial = builder.serial;
@@ -766,21 +846,30 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedFlexibleResource
          */
-        public java.util.List < SupportedFlexibleResource> getSupportedFlexibleResource() {
+        public java.util.List<SupportedFlexibleResource> getSupportedFlexibleResource() {
             return this.supportedFlexibleResource;
         }
 
         /**
          * @return supportedInstanceClassList
          */
-        public java.util.List < SupportedInstanceClassList> getSupportedInstanceClassList() {
+        public java.util.List<SupportedInstanceClassList> getSupportedInstanceClassList() {
             return this.supportedInstanceClassList;
         }
 
         public static final class Builder {
             private String serial; 
-            private java.util.List < SupportedFlexibleResource> supportedFlexibleResource; 
-            private java.util.List < SupportedInstanceClassList> supportedInstanceClassList; 
+            private java.util.List<SupportedFlexibleResource> supportedFlexibleResource; 
+            private java.util.List<SupportedInstanceClassList> supportedInstanceClassList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedSerialList model) {
+                this.serial = model.serial;
+                this.supportedFlexibleResource = model.supportedFlexibleResource;
+                this.supportedInstanceClassList = model.supportedInstanceClassList;
+            } 
 
             /**
              * <p>The supported edition. Valid values:</p>
@@ -801,7 +890,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             /**
              * <p>The supported resources in elastic mode.</p>
              */
-            public Builder supportedFlexibleResource(java.util.List < SupportedFlexibleResource> supportedFlexibleResource) {
+            public Builder supportedFlexibleResource(java.util.List<SupportedFlexibleResource> supportedFlexibleResource) {
                 this.supportedFlexibleResource = supportedFlexibleResource;
                 return this;
             }
@@ -809,7 +898,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             /**
              * <p>The supported resources in reserved mode.</p>
              */
-            public Builder supportedInstanceClassList(java.util.List < SupportedInstanceClassList> supportedInstanceClassList) {
+            public Builder supportedInstanceClassList(java.util.List<SupportedInstanceClassList> supportedInstanceClassList) {
                 this.supportedInstanceClassList = supportedInstanceClassList;
                 return this;
             }
@@ -832,7 +921,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private String mode;
 
         @com.aliyun.core.annotation.NameInMap("SupportedSerialList")
-        private java.util.List < SupportedSerialList> supportedSerialList;
+        private java.util.List<SupportedSerialList> supportedSerialList;
 
         private SupportedMode(Builder builder) {
             this.mode = builder.mode;
@@ -857,13 +946,21 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedSerialList
          */
-        public java.util.List < SupportedSerialList> getSupportedSerialList() {
+        public java.util.List<SupportedSerialList> getSupportedSerialList() {
             return this.supportedSerialList;
         }
 
         public static final class Builder {
             private String mode; 
-            private java.util.List < SupportedSerialList> supportedSerialList; 
+            private java.util.List<SupportedSerialList> supportedSerialList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedMode model) {
+                this.mode = model.mode;
+                this.supportedSerialList = model.supportedSerialList;
+            } 
 
             /**
              * <p>The supported mode. Valid values:</p>
@@ -883,7 +980,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             /**
              * <p>The supported editions.</p>
              */
-            public Builder supportedSerialList(java.util.List < SupportedSerialList> supportedSerialList) {
+            public Builder supportedSerialList(java.util.List<SupportedSerialList> supportedSerialList) {
                 this.supportedSerialList = supportedSerialList;
                 return this;
             }
@@ -903,22 +1000,26 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
      */
     public static class AvailableZoneList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedComputeResource")
-        private java.util.List < String > supportedComputeResource;
+        private java.util.List<String> supportedComputeResource;
 
         @com.aliyun.core.annotation.NameInMap("SupportedMode")
-        private java.util.List < SupportedMode> supportedMode;
+        private java.util.List<SupportedMode> supportedMode;
 
         @com.aliyun.core.annotation.NameInMap("SupportedStorageResource")
-        private java.util.List < String > supportedStorageResource;
+        private java.util.List<String> supportedStorageResource;
 
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneName")
+        private String zoneName;
 
         private AvailableZoneList(Builder builder) {
             this.supportedComputeResource = builder.supportedComputeResource;
             this.supportedMode = builder.supportedMode;
             this.supportedStorageResource = builder.supportedStorageResource;
             this.zoneId = builder.zoneId;
+            this.zoneName = builder.zoneName;
         }
 
         public static Builder builder() {
@@ -932,21 +1033,21 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedComputeResource
          */
-        public java.util.List < String > getSupportedComputeResource() {
+        public java.util.List<String> getSupportedComputeResource() {
             return this.supportedComputeResource;
         }
 
         /**
          * @return supportedMode
          */
-        public java.util.List < SupportedMode> getSupportedMode() {
+        public java.util.List<SupportedMode> getSupportedMode() {
             return this.supportedMode;
         }
 
         /**
          * @return supportedStorageResource
          */
-        public java.util.List < String > getSupportedStorageResource() {
+        public java.util.List<String> getSupportedStorageResource() {
             return this.supportedStorageResource;
         }
 
@@ -957,16 +1058,35 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             return this.zoneId;
         }
 
+        /**
+         * @return zoneName
+         */
+        public String getZoneName() {
+            return this.zoneName;
+        }
+
         public static final class Builder {
-            private java.util.List < String > supportedComputeResource; 
-            private java.util.List < SupportedMode> supportedMode; 
-            private java.util.List < String > supportedStorageResource; 
+            private java.util.List<String> supportedComputeResource; 
+            private java.util.List<SupportedMode> supportedMode; 
+            private java.util.List<String> supportedStorageResource; 
             private String zoneId; 
+            private String zoneName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableZoneList model) {
+                this.supportedComputeResource = model.supportedComputeResource;
+                this.supportedMode = model.supportedMode;
+                this.supportedStorageResource = model.supportedStorageResource;
+                this.zoneId = model.zoneId;
+                this.zoneName = model.zoneName;
+            } 
 
             /**
              * <p>A reserved parameter.</p>
              */
-            public Builder supportedComputeResource(java.util.List < String > supportedComputeResource) {
+            public Builder supportedComputeResource(java.util.List<String> supportedComputeResource) {
                 this.supportedComputeResource = supportedComputeResource;
                 return this;
             }
@@ -974,7 +1094,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             /**
              * <p>The supported modes.</p>
              */
-            public Builder supportedMode(java.util.List < SupportedMode> supportedMode) {
+            public Builder supportedMode(java.util.List<SupportedMode> supportedMode) {
                 this.supportedMode = supportedMode;
                 return this;
             }
@@ -982,7 +1102,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             /**
              * <p>A reserved parameter.</p>
              */
-            public Builder supportedStorageResource(java.util.List < String > supportedStorageResource) {
+            public Builder supportedStorageResource(java.util.List<String> supportedStorageResource) {
                 this.supportedStorageResource = supportedStorageResource;
                 return this;
             }
@@ -995,6 +1115,17 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
+                return this;
+            }
+
+            /**
+             * <p>The name of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-k</p>
+             */
+            public Builder zoneName(String zoneName) {
+                this.zoneName = zoneName;
                 return this;
             }
 

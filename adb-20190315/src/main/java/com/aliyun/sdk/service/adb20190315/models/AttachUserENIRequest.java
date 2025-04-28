@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachUserENIRequest</p>
  */
 public class AttachUserENIRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AccessKeyId-copy")
-    private String accessKeyIdCopy;
-
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -39,7 +40,6 @@ public class AttachUserENIRequest extends Request {
 
     private AttachUserENIRequest(Builder builder) {
         super(builder);
-        this.accessKeyIdCopy = builder.accessKeyIdCopy;
         this.DBClusterId = builder.DBClusterId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -55,16 +55,9 @@ public class AttachUserENIRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return accessKeyIdCopy
-     */
-    public String getAccessKeyIdCopy() {
-        return this.accessKeyIdCopy;
     }
 
     /**
@@ -103,7 +96,6 @@ public class AttachUserENIRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AttachUserENIRequest, Builder> {
-        private String accessKeyIdCopy; 
         private String DBClusterId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -116,22 +108,12 @@ public class AttachUserENIRequest extends Request {
 
         private Builder(AttachUserENIRequest request) {
             super(request);
-            this.accessKeyIdCopy = request.accessKeyIdCopy;
             this.DBClusterId = request.DBClusterId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
-
-        /**
-         * AccessKeyId-copy.
-         */
-        public Builder accessKeyIdCopy(String accessKeyIdCopy) {
-            this.putQueryParameter("AccessKeyId-copy", accessKeyIdCopy);
-            this.accessKeyIdCopy = accessKeyIdCopy;
-            return this;
-        }
 
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     public static DescribeBackupPolicyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String preferredBackupPeriod; 
         private String preferredBackupTime; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupPolicyResponseBody model) {
+            this.backupRetentionPeriod = model.backupRetentionPeriod;
+            this.enableBackupLog = model.enableBackupLog;
+            this.logBackupRetentionPeriod = model.logBackupRetentionPeriod;
+            this.preferredBackupPeriod = model.preferredBackupPeriod;
+            this.preferredBackupTime = model.preferredBackupTime;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of days for which data backup files are retained.</p>

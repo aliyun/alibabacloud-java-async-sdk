@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class ModifyDBClusterAccessWhiteListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -60,6 +69,15 @@ public class ModifyDBClusterAccessWhiteListResponseBody extends TeaModel {
         private String DBClusterId; 
         private String requestId; 
         private Integer taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyDBClusterAccessWhiteListResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The cluster ID.</p>

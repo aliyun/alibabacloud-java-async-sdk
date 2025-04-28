@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SyncJobs")
-    private java.util.List < SyncJobs> syncJobs;
+    private java.util.List<SyncJobs> syncJobs;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -45,6 +50,10 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
 
     public static DescribeSyncJobListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -78,7 +87,7 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
     /**
      * @return syncJobs
      */
-    public java.util.List < SyncJobs> getSyncJobs() {
+    public java.util.List<SyncJobs> getSyncJobs() {
         return this.syncJobs;
     }
 
@@ -94,11 +103,26 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < SyncJobs> syncJobs; 
+        private java.util.List<SyncJobs> syncJobs; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSyncJobListResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.syncJobs = model.syncJobs;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-j6c22lubl8d9l3989</p>
          */
         public Builder DBClusterId(Integer DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -106,7 +130,10 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +141,10 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +152,10 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>482B8BAE-6EC0-5C0E-B2AF-FD42A3FC5B67</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,15 +163,18 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
         }
 
         /**
-         * SyncJobs.
+         * <p>The queried synchronization jobs.</p>
          */
-        public Builder syncJobs(java.util.List < SyncJobs> syncJobs) {
+        public Builder syncJobs(java.util.List<SyncJobs> syncJobs) {
             this.syncJobs = syncJobs;
             return this;
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -267,8 +303,25 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
             private Integer sourceTableNumber; 
             private String syncPlatform; 
 
+            private Builder() {
+            } 
+
+            private Builder(SyncJobs model) {
+                this.jobId = model.jobId;
+                this.regionId = model.regionId;
+                this.sourceDBClusterDescription = model.sourceDBClusterDescription;
+                this.sourceDBClusterId = model.sourceDBClusterId;
+                this.sourceDBType = model.sourceDBType;
+                this.sourceStorageSize = model.sourceStorageSize;
+                this.sourceTableNumber = model.sourceTableNumber;
+                this.syncPlatform = model.syncPlatform;
+            } 
+
             /**
-             * JobId.
+             * <p>The ID of the Spark job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dts-xxxxx</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -276,7 +329,10 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -284,7 +340,10 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDBClusterDescription.
+             * <p>The description of the source instance or cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder sourceDBClusterDescription(String sourceDBClusterDescription) {
                 this.sourceDBClusterDescription = sourceDBClusterDescription;
@@ -292,7 +351,13 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDBClusterId.
+             * <p>The ID of the source cluster. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query backup set IDs.</p>
+             * <blockquote>
+             * <p> If you want to restore the data of an ApsaraDB for ClickHouse cluster, this parameter is required.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-t4n766v2llx852n81</p>
              */
             public Builder sourceDBClusterId(String sourceDBClusterId) {
                 this.sourceDBClusterId = sourceDBClusterId;
@@ -300,7 +365,10 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDBType.
+             * <p>The database type of the source instance or cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb</p>
              */
             public Builder sourceDBType(String sourceDBType) {
                 this.sourceDBType = sourceDBType;
@@ -308,7 +376,10 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceStorageSize.
+             * <p>The storage size of the source instance or cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder sourceStorageSize(Integer sourceStorageSize) {
                 this.sourceStorageSize = sourceStorageSize;
@@ -316,7 +387,10 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTableNumber.
+             * <p>The number of tables in the source instance or cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder sourceTableNumber(Integer sourceTableNumber) {
                 this.sourceTableNumber = sourceTableNumber;
@@ -324,7 +398,10 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SyncPlatform.
+             * <p>The synchronization platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADB-CDC</p>
              */
             public Builder syncPlatform(String syncPlatform) {
                 this.syncPlatform = syncPlatform;

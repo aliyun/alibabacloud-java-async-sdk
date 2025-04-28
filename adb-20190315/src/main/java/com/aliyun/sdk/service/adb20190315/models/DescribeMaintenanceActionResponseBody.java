@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeMaintenanceActionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -43,10 +48,14 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -79,16 +88,27 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalRecordCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeMaintenanceActionResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
+        } 
+
         /**
          * <p>The queried O&amp;M events.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -330,6 +350,26 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             private String status; 
             private String switchTime; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.createdTime = model.createdTime;
+                this.DBClusterId = model.DBClusterId;
+                this.DBType = model.DBType;
+                this.DBVersion = model.DBVersion;
+                this.deadline = model.deadline;
+                this.id = model.id;
+                this.modifiedTime = model.modifiedTime;
+                this.prepareInterval = model.prepareInterval;
+                this.region = model.region;
+                this.resultInfo = model.resultInfo;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.switchTime = model.switchTime;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The time when the O&amp;M event was created. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>

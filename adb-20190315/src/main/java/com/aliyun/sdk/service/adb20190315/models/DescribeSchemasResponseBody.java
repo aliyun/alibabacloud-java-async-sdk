@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeSchemasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -49,8 +58,16 @@ public class DescribeSchemasResponseBody extends TeaModel {
         private Items items; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSchemasResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The databases.</p>
+         * <p>The queried databases.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +75,7 @@ public class DescribeSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -118,8 +135,16 @@ public class DescribeSchemasResponseBody extends TeaModel {
             private String DBClusterId; 
             private String schemaName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Schema model) {
+                this.DBClusterId = model.DBClusterId;
+                this.schemaName = model.schemaName;
+            } 
+
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>am-bp1xxxxxxxx47</p>
@@ -155,7 +180,7 @@ public class DescribeSchemasResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Schema")
-        private java.util.List < Schema> schema;
+        private java.util.List<Schema> schema;
 
         private Items(Builder builder) {
             this.schema = builder.schema;
@@ -172,17 +197,24 @@ public class DescribeSchemasResponseBody extends TeaModel {
         /**
          * @return schema
          */
-        public java.util.List < Schema> getSchema() {
+        public java.util.List<Schema> getSchema() {
             return this.schema;
         }
 
         public static final class Builder {
-            private java.util.List < Schema> schema; 
+            private java.util.List<Schema> schema; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.schema = model.schema;
+            } 
 
             /**
              * Schema.
              */
-            public Builder schema(java.util.List < Schema> schema) {
+            public Builder schema(java.util.List<Schema> schema) {
                 this.schema = schema;
                 return this;
             }

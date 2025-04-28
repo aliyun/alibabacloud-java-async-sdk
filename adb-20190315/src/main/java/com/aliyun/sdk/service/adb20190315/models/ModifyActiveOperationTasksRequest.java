@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -69,7 +74,7 @@ public class ModifyActiveOperationTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -166,7 +171,10 @@ public class ModifyActiveOperationTasksRequest extends Request {
         } 
 
         /**
-         * Ids.
+         * <p>The ID of the O&amp;M event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1482487</p>
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -175,7 +183,14 @@ public class ModifyActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * ImmediateStart.
+         * <p>Specifies whether to immediately execute the O&amp;M event. Valid values:</p>
+         * <ul>
+         * <li>1: immediately executes the O&amp;M event.</li>
+         * <li>0: executes the O&amp;M event at a specific point in time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder immediateStart(Integer immediateStart) {
             this.putQueryParameter("ImmediateStart", immediateStart);
@@ -202,7 +217,10 @@ public class ModifyActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -238,7 +256,10 @@ public class ModifyActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * SwitchTime.
+         * <p>The time from which you want to execute the O&amp;M event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-15T12:00:00Z</p>
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -85,7 +90,7 @@ public class DescribeRdsAnalysisResourceQuotasRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -209,7 +214,10 @@ public class DescribeRdsAnalysisResourceQuotasRequest extends Request {
         } 
 
         /**
-         * ClusterCategory.
+         * <p>The edition of the MySQL analytic instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mixed_storage</p>
          */
         public Builder clusterCategory(String clusterCategory) {
             this.putQueryParameter("ClusterCategory", clusterCategory);
@@ -218,7 +226,10 @@ public class DescribeRdsAnalysisResourceQuotasRequest extends Request {
         }
 
         /**
-         * ClusterMode.
+         * <p>The mode of the MySQL analytic instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flexible</p>
          */
         public Builder clusterMode(String clusterMode) {
             this.putQueryParameter("ClusterMode", clusterMode);
@@ -227,7 +238,10 @@ public class DescribeRdsAnalysisResourceQuotasRequest extends Request {
         }
 
         /**
-         * NodeClass.
+         * <p>The instance type of the MySQL analytic instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E32</p>
          */
         public Builder nodeClass(String nodeClass) {
             this.putQueryParameter("NodeClass", nodeClass);
@@ -236,7 +250,10 @@ public class DescribeRdsAnalysisResourceQuotasRequest extends Request {
         }
 
         /**
-         * NodeCount.
+         * <p>The number of nodes in the MySQL analytic instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder nodeCount(Integer nodeCount) {
             this.putQueryParameter("NodeCount", nodeCount);
@@ -263,7 +280,10 @@ public class DescribeRdsAnalysisResourceQuotasRequest extends Request {
         }
 
         /**
-         * RdsInstanceId.
+         * <p>The ID of the ApsaraDB RDS instance from which data is synchronized to the MySQL analytic instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze09tofcv39h7165</p>
          */
         public Builder rdsInstanceId(String rdsInstanceId) {
             this.putQueryParameter("RdsInstanceId", rdsInstanceId);
@@ -272,6 +292,10 @@ public class DescribeRdsAnalysisResourceQuotasRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -284,7 +308,10 @@ public class DescribeRdsAnalysisResourceQuotasRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -311,7 +338,10 @@ public class DescribeRdsAnalysisResourceQuotasRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>The storage type of the MySQL analytic instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class DescribeEIURangeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductVersion")
+    private String productVersion;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -73,6 +82,7 @@ public class DescribeEIURangeRequest extends Request {
         this.operation = builder.operation;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.productVersion = builder.productVersion;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -90,7 +100,7 @@ public class DescribeEIURangeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -135,6 +145,13 @@ public class DescribeEIURangeRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return productVersion
+     */
+    public String getProductVersion() {
+        return this.productVersion;
     }
 
     /**
@@ -193,6 +210,7 @@ public class DescribeEIURangeRequest extends Request {
         private String operation; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String productVersion; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -213,6 +231,7 @@ public class DescribeEIURangeRequest extends Request {
             this.operation = request.operation;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.productVersion = request.productVersion;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -302,6 +321,15 @@ public class DescribeEIURangeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ProductVersion.
+         */
+        public Builder productVersion(String productVersion) {
+            this.putQueryParameter("ProductVersion", productVersion);
+            this.productVersion = productVersion;
             return this;
         }
 

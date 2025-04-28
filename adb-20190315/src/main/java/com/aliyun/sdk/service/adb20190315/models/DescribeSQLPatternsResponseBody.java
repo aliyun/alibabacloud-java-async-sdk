@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("PatternDetails")
-    private java.util.List < PatternDetails> patternDetails;
+    private java.util.List<PatternDetails> patternDetails;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -43,6 +48,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -60,7 +69,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
     /**
      * @return patternDetails
      */
-    public java.util.List < PatternDetails> getPatternDetails() {
+    public java.util.List<PatternDetails> getPatternDetails() {
         return this.patternDetails;
     }
 
@@ -81,9 +90,20 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < PatternDetails> patternDetails; 
+        private java.util.List<PatternDetails> patternDetails; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSQLPatternsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.patternDetails = model.patternDetails;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -110,7 +130,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         /**
          * <p>The queried SQL patterns.</p>
          */
-        public Builder patternDetails(java.util.List < PatternDetails> patternDetails) {
+        public Builder patternDetails(java.util.List<PatternDetails> patternDetails) {
             this.patternDetails = patternDetails;
             return this;
         }
@@ -535,6 +555,43 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             private String tables; 
             private String user; 
 
+            private Builder() {
+            } 
+
+            private Builder(PatternDetails model) {
+                this.accessIp = model.accessIp;
+                this.averageExecutionTime = model.averageExecutionTime;
+                this.averageOperatorCost = model.averageOperatorCost;
+                this.averagePeakMemory = model.averagePeakMemory;
+                this.averageQueryTime = model.averageQueryTime;
+                this.averageScanCost = model.averageScanCost;
+                this.averageScanSize = model.averageScanSize;
+                this.blockable = model.blockable;
+                this.failedCount = model.failedCount;
+                this.maxExecutionTime = model.maxExecutionTime;
+                this.maxOperatorCost = model.maxOperatorCost;
+                this.maxPeakMemory = model.maxPeakMemory;
+                this.maxQueryTime = model.maxQueryTime;
+                this.maxScanCost = model.maxScanCost;
+                this.maxScanSize = model.maxScanSize;
+                this.operatorCostPercentage = model.operatorCostPercentage;
+                this.operatorCostSum = model.operatorCostSum;
+                this.patternCreationTime = model.patternCreationTime;
+                this.patternId = model.patternId;
+                this.peakMemoryPercentage = model.peakMemoryPercentage;
+                this.peakMemorySum = model.peakMemorySum;
+                this.queryCount = model.queryCount;
+                this.queryTimePercentage = model.queryTimePercentage;
+                this.queryTimeSum = model.queryTimeSum;
+                this.SQLPattern = model.SQLPattern;
+                this.scanCostPercentage = model.scanCostPercentage;
+                this.scanCostSum = model.scanCostSum;
+                this.scanSizePercentage = model.scanSizePercentage;
+                this.scanSizeSum = model.scanSizeSum;
+                this.tables = model.tables;
+                this.user = model.user;
+            } 
+
             /**
              * <p>The IP address of the SQL client that commits the SQL pattern.</p>
              * 
@@ -558,7 +615,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of average operator cost.</p>
+             * <p>The average operation duration.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -591,7 +648,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of average scan cost.</p>
+             * <p>The average scan duration.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -653,7 +710,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of max operator cost.</p>
+             * <p>The maximum operation duration.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -686,7 +743,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of max scan cost.</p>
+             * <p>The maximum scan duration.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -708,7 +765,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of operator cost percentage.</p>
+             * <p>The operation duration percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>75</p>
@@ -719,7 +776,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of operator cost sum.</p>
+             * <p>The total operation duration.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -752,7 +809,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of peak memory percentage.</p>
+             * <p>The peak memory percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -763,7 +820,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of peak memory sum.</p>
+             * <p>The total peak memory.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -785,7 +842,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of query time percentage.</p>
+             * <p>The queue duration of the SQL statement. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -796,7 +853,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of query time sum.</p>
+             * <p>The total query duration.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -818,7 +875,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of scan cost percentage.</p>
+             * <p>The scan duration percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>75</p>
@@ -829,7 +886,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of scan cost sum.</p>
+             * <p>The total scan duration.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -840,7 +897,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of scan size percentage.</p>
+             * <p>The amount of time consumed to scan data from a data source in the task. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -851,7 +908,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of scan size sum.</p>
+             * <p>Total total scan size.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

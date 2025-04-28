@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -79,7 +84,7 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -194,7 +199,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         } 
 
         /**
-         * CycleTime.
+         * <p>The days on which you want to execute O&amp;M events. Valid values: 1 to 7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3,4,5,6,7</p>
          */
         public Builder cycleTime(String cycleTime) {
             this.putQueryParameter("CycleTime", cycleTime);
@@ -203,7 +211,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * CycleType.
+         * <p>The unit of the O&amp;M cycle. Set the value to Week.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Week</p>
          */
         public Builder cycleType(String cycleType) {
             this.putQueryParameter("CycleType", cycleType);
@@ -212,7 +223,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * MaintainEndTime.
+         * <p>The end time of the maintenance window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00:00Z</p>
          */
         public Builder maintainEndTime(String maintainEndTime) {
             this.putQueryParameter("MaintainEndTime", maintainEndTime);
@@ -221,7 +235,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * MaintainStartTime.
+         * <p>The start time of the maintenance window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00:00Z</p>
          */
         public Builder maintainStartTime(String maintainStartTime) {
             this.putQueryParameter("MaintainStartTime", maintainStartTime);
@@ -248,7 +265,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -284,7 +304,14 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Specifies whether to enable O&amp;M events.</p>
+         * <ul>
+         * <li>1: yes.</li>
+         * <li>0: no.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

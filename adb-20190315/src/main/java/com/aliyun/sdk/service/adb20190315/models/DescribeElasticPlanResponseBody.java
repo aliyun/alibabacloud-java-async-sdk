@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeElasticPlanResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ElasticPlanList")
-    private java.util.List < ElasticPlanList> elasticPlanList;
+    private java.util.List<ElasticPlanList> elasticPlanList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return elasticPlanList
      */
-    public java.util.List < ElasticPlanList> getElasticPlanList() {
+    public java.util.List<ElasticPlanList> getElasticPlanList() {
         return this.elasticPlanList;
     }
 
@@ -46,13 +55,21 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ElasticPlanList> elasticPlanList; 
+        private java.util.List<ElasticPlanList> elasticPlanList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeElasticPlanResponseBody model) {
+            this.elasticPlanList = model.elasticPlanList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queried scaling plans.</p>
          */
-        public Builder elasticPlanList(java.util.List < ElasticPlanList> elasticPlanList) {
+        public Builder elasticPlanList(java.util.List<ElasticPlanList> elasticPlanList) {
             this.elasticPlanList = elasticPlanList;
             return this;
         }
@@ -237,6 +254,24 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             private String startDay; 
             private String startTime; 
             private String weeklyRepeat; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElasticPlanList model) {
+                this.elasticNodeNum = model.elasticNodeNum;
+                this.elasticPlanType = model.elasticPlanType;
+                this.elasticPlanWorkerSpec = model.elasticPlanWorkerSpec;
+                this.enable = model.enable;
+                this.endDay = model.endDay;
+                this.endTime = model.endTime;
+                this.monthlyRepeat = model.monthlyRepeat;
+                this.planName = model.planName;
+                this.resourcePoolName = model.resourcePoolName;
+                this.startDay = model.startDay;
+                this.startTime = model.startTime;
+                this.weeklyRepeat = model.weeklyRepeat;
+            } 
 
             /**
              * <p>The number of nodes that are involved in the scaling plan.</p>

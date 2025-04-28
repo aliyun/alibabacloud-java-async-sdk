@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private VSwitches vSwitches; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVSwitchesResponseBody model) {
+            this.requestId = model.requestId;
+            this.vSwitches = model.vSwitches;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -226,6 +243,23 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vSwitchName; 
 
+            private Builder() {
+            } 
+
+            private Builder(VSwitch model) {
+                this.aliUid = model.aliUid;
+                this.bid = model.bid;
+                this.cidrBlock = model.cidrBlock;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.isDefault = model.isDefault;
+                this.izNo = model.izNo;
+                this.regionNo = model.regionNo;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitchName = model.vSwitchName;
+            } 
+
             /**
              * <p>The ID of the Resource Access Management (RAM) user.</p>
              * 
@@ -362,7 +396,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
      */
     public static class VSwitches extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitch")
-        private java.util.List < VSwitch> vSwitch;
+        private java.util.List<VSwitch> vSwitch;
 
         private VSwitches(Builder builder) {
             this.vSwitch = builder.vSwitch;
@@ -379,17 +413,24 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         /**
          * @return vSwitch
          */
-        public java.util.List < VSwitch> getVSwitch() {
+        public java.util.List<VSwitch> getVSwitch() {
             return this.vSwitch;
         }
 
         public static final class Builder {
-            private java.util.List < VSwitch> vSwitch; 
+            private java.util.List<VSwitch> vSwitch; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitches model) {
+                this.vSwitch = model.vSwitch;
+            } 
 
             /**
              * <p>The queried vSwitch.</p>
              */
-            public Builder vSwitch(java.util.List < VSwitch> vSwitch) {
+            public Builder vSwitch(java.util.List<VSwitch> vSwitch) {
                 this.vSwitch = vSwitch;
                 return this;
             }

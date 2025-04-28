@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindDBResourceGroupWithUserRequest</p>
  */
 public class BindDBResourceGroupWithUserRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -45,6 +54,7 @@ public class BindDBResourceGroupWithUserRequest extends Request {
 
     private BindDBResourceGroupWithUserRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.DBClusterId = builder.DBClusterId;
         this.groupName = builder.groupName;
         this.groupUser = builder.groupUser;
@@ -62,9 +72,16 @@ public class BindDBResourceGroupWithUserRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -117,6 +134,7 @@ public class BindDBResourceGroupWithUserRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BindDBResourceGroupWithUserRequest, Builder> {
+        private String clientToken; 
         private String DBClusterId; 
         private String groupName; 
         private String groupUser; 
@@ -131,6 +149,7 @@ public class BindDBResourceGroupWithUserRequest extends Request {
 
         private Builder(BindDBResourceGroupWithUserRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.DBClusterId = request.DBClusterId;
             this.groupName = request.groupName;
             this.groupUser = request.groupUser;
@@ -139,6 +158,15 @@ public class BindDBResourceGroupWithUserRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>

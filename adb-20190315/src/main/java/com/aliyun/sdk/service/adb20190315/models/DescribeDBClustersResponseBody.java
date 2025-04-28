@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
     public static DescribeDBClustersResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,19 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClustersResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>The queried clusters.</p>
+         * <p>The queried cluster information.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -187,6 +207,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * <blockquote>
@@ -227,7 +255,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -244,17 +272,24 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -358,6 +393,18 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String stepProgress; 
             private String stepStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(StepList model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.stepDesc = model.stepDesc;
+                this.stepName = model.stepName;
+                this.stepProgress = model.stepProgress;
+                this.stepStatus = model.stepStatus;
+            } 
+
             /**
              * <p>The end time of the job step. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
@@ -444,7 +491,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
      */
     public static class TaskInfoStepList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StepList")
-        private java.util.List < StepList> stepList;
+        private java.util.List<StepList> stepList;
 
         private TaskInfoStepList(Builder builder) {
             this.stepList = builder.stepList;
@@ -461,17 +508,24 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         /**
          * @return stepList
          */
-        public java.util.List < StepList> getStepList() {
+        public java.util.List<StepList> getStepList() {
             return this.stepList;
         }
 
         public static final class Builder {
-            private java.util.List < StepList> stepList; 
+            private java.util.List<StepList> stepList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskInfoStepList model) {
+                this.stepList = model.stepList;
+            } 
 
             /**
              * StepList.
              */
-            public Builder stepList(java.util.List < StepList> stepList) {
+            public Builder stepList(java.util.List<StepList> stepList) {
                 this.stepList = stepList;
                 return this;
             }
@@ -551,6 +605,16 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String status; 
             private TaskInfoStepList stepList; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskInfo model) {
+                this.name = model.name;
+                this.progress = model.progress;
+                this.status = model.status;
+                this.stepList = model.stepList;
+            } 
+
             /**
              * <p>The name of the job.</p>
              * 
@@ -590,7 +654,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job steps.</p>
+             * <p>The job step.</p>
              */
             public Builder stepList(TaskInfoStepList stepList) {
                 this.stepList = stepList;
@@ -1091,6 +1155,51 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String VPCId; 
             private String vSwitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBCluster model) {
+                this.category = model.category;
+                this.commodityCode = model.commodityCode;
+                this.computeResource = model.computeResource;
+                this.connectionString = model.connectionString;
+                this.createTime = model.createTime;
+                this.DBClusterDescription = model.DBClusterDescription;
+                this.DBClusterId = model.DBClusterId;
+                this.DBClusterNetworkType = model.DBClusterNetworkType;
+                this.DBClusterStatus = model.DBClusterStatus;
+                this.DBClusterType = model.DBClusterType;
+                this.DBNodeClass = model.DBNodeClass;
+                this.DBNodeCount = model.DBNodeCount;
+                this.DBNodeStorage = model.DBNodeStorage;
+                this.DBVersion = model.DBVersion;
+                this.diskType = model.diskType;
+                this.dtsJobId = model.dtsJobId;
+                this.elasticIOResource = model.elasticIOResource;
+                this.engine = model.engine;
+                this.executorCount = model.executorCount;
+                this.expireTime = model.expireTime;
+                this.expired = model.expired;
+                this.innerIp = model.innerIp;
+                this.innerPort = model.innerPort;
+                this.lockMode = model.lockMode;
+                this.lockReason = model.lockReason;
+                this.mode = model.mode;
+                this.payType = model.payType;
+                this.port = model.port;
+                this.productVersion = model.productVersion;
+                this.rdsInstanceId = model.rdsInstanceId;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.storageResource = model.storageResource;
+                this.tags = model.tags;
+                this.taskInfo = model.taskInfo;
+                this.VPCCloudInstanceId = model.VPCCloudInstanceId;
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The edition of the cluster. Valid values:</p>
@@ -1597,7 +1706,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBCluster")
-        private java.util.List < DBCluster> DBCluster;
+        private java.util.List<DBCluster> DBCluster;
 
         private Items(Builder builder) {
             this.DBCluster = builder.DBCluster;
@@ -1614,17 +1723,24 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         /**
          * @return DBCluster
          */
-        public java.util.List < DBCluster> getDBCluster() {
+        public java.util.List<DBCluster> getDBCluster() {
             return this.DBCluster;
         }
 
         public static final class Builder {
-            private java.util.List < DBCluster> DBCluster; 
+            private java.util.List<DBCluster> DBCluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBCluster = model.DBCluster;
+            } 
 
             /**
              * DBCluster.
              */
-            public Builder DBCluster(java.util.List < DBCluster> DBCluster) {
+            public Builder DBCluster(java.util.List<DBCluster> DBCluster) {
                 this.DBCluster = DBCluster;
                 return this;
             }

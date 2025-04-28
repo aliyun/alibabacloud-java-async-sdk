@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeRegionsMixedResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
@@ -49,8 +58,16 @@ public class DescribeRegionsMixedResponseBody extends TeaModel {
         private Regions regions; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsMixedResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Regions.
+         * <p>The queried regions.</p>
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -58,7 +75,10 @@ public class DescribeRegionsMixedResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2E9450FF-F8AD-54C6-B3C3-009FBD7C0700</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,8 +135,19 @@ public class DescribeRegionsMixedResponseBody extends TeaModel {
             private String regionId; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Region model) {
+                this.regionId = model.regionId;
+                this.version = model.version;
+            } 
+
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -124,7 +155,15 @@ public class DescribeRegionsMixedResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version of the cluster.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>2.0</li>
+             * <li>3.0</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -146,7 +185,7 @@ public class DescribeRegionsMixedResponseBody extends TeaModel {
      */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Region")
-        private java.util.List < Region> region;
+        private java.util.List<Region> region;
 
         private Regions(Builder builder) {
             this.region = builder.region;
@@ -163,17 +202,24 @@ public class DescribeRegionsMixedResponseBody extends TeaModel {
         /**
          * @return region
          */
-        public java.util.List < Region> getRegion() {
+        public java.util.List<Region> getRegion() {
             return this.region;
         }
 
         public static final class Builder {
-            private java.util.List < Region> region; 
+            private java.util.List<Region> region; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.region = model.region;
+            } 
 
             /**
              * Region.
              */
-            public Builder region(java.util.List < Region> region) {
+            public Builder region(java.util.List<Region> region) {
                 this.region = region;
                 return this;
             }

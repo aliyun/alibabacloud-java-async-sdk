@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class ModifyDBClusterVipResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -49,8 +58,19 @@ public class ModifyDBClusterVipResponseBody extends TeaModel {
         private String requestId; 
         private String taskId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyDBClusterVipResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-****-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,10 @@ public class ModifyDBClusterVipResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1564657730</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

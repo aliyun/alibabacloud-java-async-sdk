@@ -91,7 +91,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you create a cluster, you are billed for the cluster specifications that you select. For more information about the billable items and pricing for Data Warehouse Edition (V3.0) clusters, see <a href="https://help.aliyun.com/document_detail/303131.html">Billable items of Data Warehouse Edition (V3.0)</a> and <a href="https://help.aliyun.com/document_detail/135229.html">Pricing for Data Warehouse Edition (V3.0)</a>.</p>
+     * <p>After you create a cluster, you are billed for the cluster specifications that you select. For more information about the billable items and pricing for Data Warehouse Edition  clusters, see <a href="https://help.aliyun.com/document_detail/303131.html">Billable items of Data Warehouse Edition</a> and <a href="https://help.aliyun.com/document_detail/135229.html">Pricing for Data Warehouse Edition</a>.</p>
      * 
      * @param request the request parameters of CreateDBCluster  CreateDBClusterRequest
      * @return CreateDBClusterResponse
@@ -154,9 +154,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Subscription clusters cannot be deleted by using API operations. After expiration, subscription clusters are automatically released. If you no longer need a cluster, you can submit a request to unsubscribe from the cluster in the Billing Management console. For more information about cluster refunds, see <a href="https://help.aliyun.com/document_detail/471477.html">Refund policy</a>.</p>
+     * <p>  You cannot delete subscription clusters by calling API operations. After expiration, subscription clusters are automatically released. If you no longer need a cluster, you can unsubscribe from the cluster in the Expenses and Costs console. For information about cluster refunds, see <a href="https://help.aliyun.com/document_detail/471477.html">Refund policy</a>.</p>
      * <ul>
-     * <li>After you delete a cluster, resources of the cluster are immediately released, and data of the cluster is no longer retained and cannot be recovered. Proceed with caution.</li>
+     * <li>After you delete a cluster, resources of the cluster are immediately released, and data of the cluster is no longer retained and cannot be restored. Proceed with caution.</li>
+     * <li>The cluster that you want to delete must be in the Running state.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteDBCluster  DeleteDBClusterRequest
@@ -195,6 +196,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteElasticPlanResponse
      */
     CompletableFuture<DeleteElasticPlanResponse> deleteElasticPlan(DeleteElasticPlanRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAbnormalPatternDetection  DescribeAbnormalPatternDetectionRequest
+     * @return DescribeAbnormalPatternDetectionResponse
+     */
+    CompletableFuture<DescribeAbnormalPatternDetectionResponse> describeAbnormalPatternDetection(DescribeAbnormalPatternDetectionRequest request);
 
     /**
      * @param request the request parameters of DescribeAccounts  DescribeAccountsRequest
@@ -285,6 +292,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request);
 
     /**
+     * @param request the request parameters of DescribeBadSqlDetection  DescribeBadSqlDetectionRequest
+     * @return DescribeBadSqlDetectionResponse
+     */
+    CompletableFuture<DescribeBadSqlDetectionResponse> describeBadSqlDetection(DescribeBadSqlDetectionRequest request);
+
+    /**
      * @param request the request parameters of DescribeColumns  DescribeColumnsRequest
      * @return DescribeColumnsResponse
      */
@@ -301,6 +314,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeConnectionCountRecordsResponse
      */
     CompletableFuture<DescribeConnectionCountRecordsResponse> describeConnectionCountRecords(DescribeConnectionCountRecordsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeControllerDetection  DescribeControllerDetectionRequest
+     * @return DescribeControllerDetectionResponse
+     */
+    CompletableFuture<DescribeControllerDetectionResponse> describeControllerDetection(DescribeControllerDetectionRequest request);
 
     /**
      * @param request the request parameters of DescribeDBClusterAccessWhiteList  DescribeDBClusterAccessWhiteListRequest
@@ -463,10 +482,25 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeExcessivePrimaryKeysResponse> describeExcessivePrimaryKeys(DescribeExcessivePrimaryKeysRequest request);
 
     /**
+     * @param request the request parameters of DescribeExecutorDetection  DescribeExecutorDetectionRequest
+     * @return DescribeExecutorDetectionResponse
+     */
+    CompletableFuture<DescribeExecutorDetectionResponse> describeExecutorDetection(DescribeExecutorDetectionRequest request);
+
+    /**
      * @param request the request parameters of DescribeHistoryEventsStat  DescribeHistoryEventsStatRequest
      * @return DescribeHistoryEventsStatResponse
      */
     CompletableFuture<DescribeHistoryEventsStatResponse> describeHistoryEventsStat(DescribeHistoryEventsStatRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of DescribeInclinedNodes  DescribeInclinedNodesRequest
+     * @return DescribeInclinedNodesResponse
+     */
+    CompletableFuture<DescribeInclinedNodesResponse> describeInclinedNodes(DescribeInclinedNodesRequest request);
 
     /**
      * @param request the request parameters of DescribeInclinedTables  DescribeInclinedTablesRequest
@@ -524,6 +558,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeOperatorPermissionResponse
      */
     CompletableFuture<DescribeOperatorPermissionResponse> describeOperatorPermission(DescribeOperatorPermissionRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOversizeNonPartitionTableInfos  DescribeOversizeNonPartitionTableInfosRequest
+     * @return DescribeOversizeNonPartitionTableInfosResponse
+     */
+    CompletableFuture<DescribeOversizeNonPartitionTableInfosResponse> describeOversizeNonPartitionTableInfos(DescribeOversizeNonPartitionTableInfosRequest request);
 
     /**
      * @param request the request parameters of DescribePatternPerformance  DescribePatternPerformanceRequest
@@ -670,6 +710,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVpcsResponse> describeVpcs(DescribeVpcsRequest request);
 
     /**
+     * @param request the request parameters of DescribeWorkerDetection  DescribeWorkerDetectionRequest
+     * @return DescribeWorkerDetectionResponse
+     */
+    CompletableFuture<DescribeWorkerDetectionResponse> describeWorkerDetection(DescribeWorkerDetectionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition.</p>
      * 
@@ -695,6 +741,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableAdviceServiceResponse
      */
     CompletableFuture<EnableAdviceServiceResponse> enableAdviceService(EnableAdviceServiceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * @param request the request parameters of GetCreateTableSQL  GetCreateTableSQLRequest
+     * @return GetCreateTableSQLResponse
+     */
+    CompletableFuture<GetCreateTableSQLResponse> getCreateTableSQL(GetCreateTableSQLRequest request);
 
     /**
      * <b>description</b> :
@@ -810,6 +865,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyDBClusterSSLResponse
      */
     CompletableFuture<ModifyDBClusterSSLResponse> modifyDBClusterSSL(ModifyDBClusterSSLRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDBClusterShardNumber  ModifyDBClusterShardNumberRequest
+     * @return ModifyDBClusterShardNumberResponse
+     */
+    CompletableFuture<ModifyDBClusterShardNumberResponse> modifyDBClusterShardNumber(ModifyDBClusterShardNumberRequest request);
 
     /**
      * @param request the request parameters of ModifyDBClusterVip  ModifyDBClusterVipRequest
