@@ -711,6 +711,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
+        @com.aliyun.core.annotation.NameInMap("ProductForm")
+        private String productForm;
+
         @com.aliyun.core.annotation.NameInMap("ProductVersion")
         private String productVersion;
 
@@ -719,6 +722,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("ReservedNodeCount")
+        private Integer reservedNodeCount;
+
+        @com.aliyun.core.annotation.NameInMap("ReservedNodeSize")
+        private String reservedNodeSize;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -790,9 +799,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.mode = builder.mode;
             this.payType = builder.payType;
             this.port = builder.port;
+            this.productForm = builder.productForm;
             this.productVersion = builder.productVersion;
             this.rdsInstanceId = builder.rdsInstanceId;
             this.regionId = builder.regionId;
+            this.reservedNodeCount = builder.reservedNodeCount;
+            this.reservedNodeSize = builder.reservedNodeSize;
             this.resourceGroupId = builder.resourceGroupId;
             this.secondaryVSwitchId = builder.secondaryVSwitchId;
             this.secondaryZoneId = builder.secondaryZoneId;
@@ -1067,6 +1079,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return productForm
+         */
+        public String getProductForm() {
+            return this.productForm;
+        }
+
+        /**
          * @return productVersion
          */
         public String getProductVersion() {
@@ -1085,6 +1104,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return reservedNodeCount
+         */
+        public Integer getReservedNodeCount() {
+            return this.reservedNodeCount;
+        }
+
+        /**
+         * @return reservedNodeSize
+         */
+        public String getReservedNodeSize() {
+            return this.reservedNodeSize;
         }
 
         /**
@@ -1201,9 +1234,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String mode; 
             private String payType; 
             private Integer port; 
+            private String productForm; 
             private String productVersion; 
             private String rdsInstanceId; 
             private String regionId; 
+            private Integer reservedNodeCount; 
+            private String reservedNodeSize; 
             private String resourceGroupId; 
             private String secondaryVSwitchId; 
             private String secondaryZoneId; 
@@ -1256,9 +1292,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
                 this.mode = model.mode;
                 this.payType = model.payType;
                 this.port = model.port;
+                this.productForm = model.productForm;
                 this.productVersion = model.productVersion;
                 this.rdsInstanceId = model.rdsInstanceId;
                 this.regionId = model.regionId;
+                this.reservedNodeCount = model.reservedNodeCount;
+                this.reservedNodeSize = model.reservedNodeSize;
                 this.resourceGroupId = model.resourceGroupId;
                 this.secondaryVSwitchId = model.secondaryVSwitchId;
                 this.secondaryZoneId = model.secondaryZoneId;
@@ -1753,6 +1792,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * ProductForm.
+             */
+            public Builder productForm(String productForm) {
+                this.productForm = productForm;
+                return this;
+            }
+
+            /**
              * <p>The edition of the cluster. Valid values:</p>
              * <ul>
              * <li><strong>BasicVersion</strong>: Basic Edition.</li>
@@ -1786,6 +1833,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ReservedNodeCount.
+             */
+            public Builder reservedNodeCount(Integer reservedNodeCount) {
+                this.reservedNodeCount = reservedNodeCount;
+                return this;
+            }
+
+            /**
+             * ReservedNodeSize.
+             */
+            public Builder reservedNodeSize(String reservedNodeSize) {
+                this.reservedNodeSize = reservedNodeSize;
                 return this;
             }
 
