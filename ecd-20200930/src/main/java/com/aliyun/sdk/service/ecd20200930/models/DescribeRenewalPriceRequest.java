@@ -39,6 +39,10 @@ public class DescribeRenewalPriceRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResellerOwnerUid")
+    private Long resellerOwnerUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
@@ -49,6 +53,7 @@ public class DescribeRenewalPriceRequest extends Request {
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.regionId = builder.regionId;
+        this.resellerOwnerUid = builder.resellerOwnerUid;
         this.resourceType = builder.resourceType;
     }
 
@@ -101,6 +106,13 @@ public class DescribeRenewalPriceRequest extends Request {
     }
 
     /**
+     * @return resellerOwnerUid
+     */
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
+    }
+
+    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -113,6 +125,7 @@ public class DescribeRenewalPriceRequest extends Request {
         private Integer period; 
         private String periodUnit; 
         private String regionId; 
+        private Long resellerOwnerUid; 
         private String resourceType; 
 
         private Builder() {
@@ -126,11 +139,20 @@ public class DescribeRenewalPriceRequest extends Request {
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.regionId = request.regionId;
+            this.resellerOwnerUid = request.resellerOwnerUid;
             this.resourceType = request.resourceType;
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID. The value you specify depends on the resource type (ResourceType) you&quot;re querying the renewal price for.</p>
+         * <ul>
+         * <li>When <code>ResourceType</code> is set to <code>Desktop</code>, you must provide the cloud computer ID as the value of <code>InstanceId</code>.</li>
+         * <li>When <code>ResourceType</code> is set to <code>DesktopGroup</code>, you must provide the share ID as the value of <code>InstanceId</code>.</li>
+         * <li>When <code>ResourceType</code> is set to <code>Bandwidth</code>, you must provide the ID of the premium bandwidth plan as the value of <code>InstanceId</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-6ldllk9zxcpfhs****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -139,7 +161,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The instance IDs. The value you specify depends on the resource type (ResourceType) you&quot;re querying the renewal price for.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -148,7 +170,15 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The renewal duration. The valid values for this parameter depend on the value of <code>PeriodUnit</code>.</p>
+         * <ul>
+         * <li>If you set <code>PeriodUnit</code> to <code>Month</code>, set the value of this parameter to 1, 2, 3, or 6.</li>
+         * <li>If you set <code>PeriodUnit</code> to <code>Year</code>, set the value of this parameter to 1, 2, or 3.</li>
+         * </ul>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -157,7 +187,15 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the renewal duration specified by <code>Period</code>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Month (default)</li>
+         * <li>Year</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -166,6 +204,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +217,25 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * ResellerOwnerUid.
+         */
+        public Builder resellerOwnerUid(Long resellerOwnerUid) {
+            this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
+            this.resellerOwnerUid = resellerOwnerUid;
+            return this;
+        }
+
+        /**
+         * <p>The resource type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Desktop (default): cloud computers.</li>
+         * <li>Bandwidth: premium bandwidth plans.</li>
+         * <li>DesktopGroup: cloud computer shares.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Desktop</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

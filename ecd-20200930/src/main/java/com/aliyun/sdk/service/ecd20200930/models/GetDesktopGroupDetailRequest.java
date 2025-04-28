@@ -75,7 +75,7 @@ public class GetDesktopGroupDetailRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud computer pool.</p>
+         * <p>The ID of the cloud computer share.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

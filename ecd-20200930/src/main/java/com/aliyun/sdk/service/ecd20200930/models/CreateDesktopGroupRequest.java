@@ -199,6 +199,10 @@ public class CreateDesktopGroupRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResellerOwnerUid")
+    private Long resellerOwnerUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResetType")
     private Long resetType;
 
@@ -299,6 +303,7 @@ public class CreateDesktopGroupRequest extends Request {
         this.promotionId = builder.promotionId;
         this.ratioThreshold = builder.ratioThreshold;
         this.regionId = builder.regionId;
+        this.resellerOwnerUid = builder.resellerOwnerUid;
         this.resetType = builder.resetType;
         this.scaleStrategyId = builder.scaleStrategyId;
         this.sessionType = builder.sessionType;
@@ -630,6 +635,13 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return resellerOwnerUid
+     */
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
+    }
+
+    /**
      * @return resetType
      */
     public Long getResetType() {
@@ -771,6 +783,7 @@ public class CreateDesktopGroupRequest extends Request {
         private String promotionId; 
         private Float ratioThreshold; 
         private String regionId; 
+        private Long resellerOwnerUid; 
         private Long resetType; 
         private String scaleStrategyId; 
         private String sessionType; 
@@ -835,6 +848,7 @@ public class CreateDesktopGroupRequest extends Request {
             this.promotionId = request.promotionId;
             this.ratioThreshold = request.ratioThreshold;
             this.regionId = request.regionId;
+            this.resellerOwnerUid = request.resellerOwnerUid;
             this.resetType = request.resetType;
             this.scaleStrategyId = request.scaleStrategyId;
             this.sessionType = request.sessionType;
@@ -1496,6 +1510,15 @@ public class CreateDesktopGroupRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResellerOwnerUid.
+         */
+        public Builder resellerOwnerUid(Long resellerOwnerUid) {
+            this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
+            this.resellerOwnerUid = resellerOwnerUid;
             return this;
         }
 

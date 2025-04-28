@@ -275,6 +275,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCenterPolicyResponse> createCenterPolicy(CreateCenterPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and pricing of Enterprise Drive Service (formerly Cloud Drive Service). For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Overview</a>.</p>
+     * 
      * @param request the request parameters of CreateCloudDriveService  CreateCloudDriveServiceRequest
      * @return CreateCloudDriveServiceResponse
      */
@@ -1256,7 +1259,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.</p>
+     * <p>Once a cloud computer share is created, the system automatically provisions cloud computers according to the auto-scaling policy and user connections, all based on the same template and security policy. You can adjust the cloud computer share\&quot;s configurations, including the share name, template, and policy, for different business scenarios.</p>
      * 
      * @param request the request parameters of ModifyDesktopGroup  ModifyDesktopGroupRequest
      * @return ModifyDesktopGroupResponse
@@ -1492,13 +1495,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following limits when you change an image:</p>
+     * <p>Before you proceed, take note of the following limits:</p>
      * <ul>
-     * <li>You can select an image whose OS is different from the OS of the original image. The image change feature is not supported in the following regions: China (Hong Kong), Singapore, and Japan (Tokyo).</li>
-     * <li>GPU images and non-GPU images cannot be exchanged. Graphic-based cloud computers can only use GPU-accelerated images. The other cloud computers can only use non-GPU-accelerated images.
-     * After the image of a cloud computer is changed, the system uses the new image to initialize the system disk of the cloud computer. This has the following impacts:</li>
-     * <li>Data in the system disk of the original cloud computer is cleared. Snapshots that are created based on the system disk of the original cloud computer become unavailable. The system automatically deletes the snapshots.</li>
-     * <li>If the OS of the image is changed, the data in the data disk of the original cloud computer is cleared, and the snapshots that are created based on the data disk of the original cloud computer can no longer be used. The system automatically deletes the snapshots. If the OS of the image is not changed, the data in the data disk of the original cloud computer is retained, and the snapshots that are created based on the data disk of the original cloud computer can still be used.</li>
+     * <li>You cannot convert a cloud computer\&quot;s operating system image from one type to another (e.g., Windows to Linux or vice versa) in China (Hong Kong) or overseas regions.</li>
+     * <li>GPU and non-GPU images are not interchangeable, as graphic-based cloud computers can only use GPU-accelerated images, while other cloud computers are limited to non-GPU-accelerated images.
+     * When a cloud computer’s image is updated, the system initializes its system disk by using the new image, resulting in the following effects:</li>
+     * <li>All data on the original system disk is erased. Snapshots created from the original system disk become unavailable and are automatically deleted.</li>
+     * <li>If the OS changes, data on the original data disk is cleared, and snapshots created from the original data disk become unavailable and are automatically deleted. If the OS remains the same, data on the original data disk is retained, and snapshots from the original data disk remain available.</li>
      * </ul>
      * 
      * @param request the request parameters of RebuildDesktops  RebuildDesktopsRequest

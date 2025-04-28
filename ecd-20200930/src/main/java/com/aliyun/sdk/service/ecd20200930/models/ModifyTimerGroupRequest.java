@@ -116,7 +116,7 @@ public class ModifyTimerGroupRequest extends Request {
         } 
 
         /**
-         * <p>The configuration groups.</p>
+         * <p>The scheduled task groups.</p>
          */
         public Builder configTimers(java.util.List<ConfigTimers> configTimers) {
             this.putQueryParameter("ConfigTimers", configTimers);
@@ -193,6 +193,9 @@ public class ModifyTimerGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
+        @com.aliyun.core.annotation.NameInMap("NotificationTime")
+        private Integer notificationTime;
+
         @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
@@ -213,6 +216,7 @@ public class ModifyTimerGroupRequest extends Request {
             this.cronExpression = builder.cronExpression;
             this.enforce = builder.enforce;
             this.interval = builder.interval;
+            this.notificationTime = builder.notificationTime;
             this.operationType = builder.operationType;
             this.processWhitelist = builder.processWhitelist;
             this.resetType = builder.resetType;
@@ -257,6 +261,13 @@ public class ModifyTimerGroupRequest extends Request {
         }
 
         /**
+         * @return notificationTime
+         */
+        public Integer getNotificationTime() {
+            return this.notificationTime;
+        }
+
+        /**
          * @return operationType
          */
         public String getOperationType() {
@@ -296,6 +307,7 @@ public class ModifyTimerGroupRequest extends Request {
             private String cronExpression; 
             private Boolean enforce; 
             private Integer interval; 
+            private Integer notificationTime; 
             private String operationType; 
             private java.util.List<String> processWhitelist; 
             private String resetType; 
@@ -310,6 +322,7 @@ public class ModifyTimerGroupRequest extends Request {
                 this.cronExpression = model.cronExpression;
                 this.enforce = model.enforce;
                 this.interval = model.interval;
+                this.notificationTime = model.notificationTime;
                 this.operationType = model.operationType;
                 this.processWhitelist = model.processWhitelist;
                 this.resetType = model.resetType;
@@ -329,9 +342,9 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The CRON expression for the scheduled task.</p>
+             * <p>The cron expression specified in the scheduled task.</p>
              * <blockquote>
-             * <p> The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? * 1,2,3,4,5,6,7.</p>
+             * <p> The time must be in UTC. For example, if your local time is 24:00 (UTC+8), you must set the value to 0 0 16 ? * 1,2,3,4,5,6,7.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -365,6 +378,14 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
+             * NotificationTime.
+             */
+            public Builder notificationTime(Integer notificationTime) {
+                this.notificationTime = notificationTime;
+                return this;
+            }
+
+            /**
              * <p>The type of the scheduled operation. If you set TimerType to NoConnect, you can specify this parameter.</p>
              * <p>Valid values:</p>
              * <ul>
@@ -381,7 +402,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The process whitelist. If whitelisted processes are running, the scheduled task upon inactivity does not take effect.</p>
+             * <p>The process whitelist. If whitelisted processes are running, the scheduled task does not take effect upon inactivity.</p>
              */
             public Builder processWhitelist(java.util.List<String> processWhitelist) {
                 this.processWhitelist = processWhitelist;
@@ -389,7 +410,7 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The reset operation.</p>
+             * <p>The reset option.</p>
              * <p>Valid values:</p>
              * <ul>
              * <li>RESET_TYPE_SYSTEM: resets the system disk.</li>
@@ -406,8 +427,8 @@ public class ModifyTimerGroupRequest extends Request {
             }
 
             /**
-             * <p>The type of the scheduled task.</p>
-             * <p>Valid values:</p>
+             * <p>The scheduled task type.</p>
+             * <p>Valid value:</p>
              * <ul>
              * <li>NoOperationDisconnect: scheduled disconnection upon inactivity.</li>
              * <li>NoConnect: scheduled disconnection upon specified operation (OperationType).</li>

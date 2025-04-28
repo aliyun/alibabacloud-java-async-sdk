@@ -119,7 +119,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the cloud computers.</p>
+         * <p>The cloud computers.</p>
          */
         public Builder desktops(java.util.List<Desktops> desktops) {
             this.desktops = desktops;
@@ -1390,6 +1390,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
+        @com.aliyun.core.annotation.NameInMap("IsLdap")
+        private Boolean isLdap;
+
         @com.aliyun.core.annotation.NameInMap("ManagementFlag")
         private String managementFlag;
 
@@ -1518,6 +1521,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.hibernationOptionsConfigured = builder.hibernationOptionsConfigured;
             this.hostName = builder.hostName;
             this.imageId = builder.imageId;
+            this.isLdap = builder.isLdap;
             this.managementFlag = builder.managementFlag;
             this.managementFlags = builder.managementFlags;
             this.memory = builder.memory;
@@ -1778,6 +1782,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return isLdap
+         */
+        public Boolean getIsLdap() {
+            return this.isLdap;
+        }
+
+        /**
          * @return managementFlag
          */
         public String getManagementFlag() {
@@ -2033,6 +2044,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private Boolean hibernationOptionsConfigured; 
             private String hostName; 
             private String imageId; 
+            private Boolean isLdap; 
             private String managementFlag; 
             private java.util.List<String> managementFlags; 
             private Long memory; 
@@ -2101,6 +2113,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
                 this.hibernationOptionsConfigured = model.hibernationOptionsConfigured;
                 this.hostName = model.hostName;
                 this.imageId = model.imageId;
+                this.isLdap = model.isLdap;
                 this.managementFlag = model.managementFlag;
                 this.managementFlags = model.managementFlags;
                 this.memory = model.memory;
@@ -2499,6 +2512,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * IsLdap.
+             */
+            public Builder isLdap(Boolean isLdap) {
+                this.isLdap = isLdap;
                 return this;
             }
 

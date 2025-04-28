@@ -102,7 +102,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The usernames of AD users.<br>If the only Administrator and Guest users exist in the enterprise AD, an empty User array is returned.</p>
+         * <p>The usernames of the AD accounts.<br>If the only Administrator and Guest users exist in the enterprise AD directory, an empty User array is returned.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -128,6 +128,9 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayNameNew")
+        private String displayNameNew;
+
         @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
@@ -137,12 +140,17 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
+        @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
+        private String userPrincipalName;
+
         private Users(Builder builder) {
             this.assignedDesktopNumber = builder.assignedDesktopNumber;
             this.displayName = builder.displayName;
+            this.displayNameNew = builder.displayNameNew;
             this.email = builder.email;
             this.endUser = builder.endUser;
             this.phone = builder.phone;
+            this.userPrincipalName = builder.userPrincipalName;
         }
 
         public static Builder builder() {
@@ -168,6 +176,13 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayNameNew
+         */
+        public String getDisplayNameNew() {
+            return this.displayNameNew;
+        }
+
+        /**
          * @return email
          */
         public String getEmail() {
@@ -188,12 +203,21 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             return this.phone;
         }
 
+        /**
+         * @return userPrincipalName
+         */
+        public String getUserPrincipalName() {
+            return this.userPrincipalName;
+        }
+
         public static final class Builder {
             private Integer assignedDesktopNumber; 
             private String displayName; 
+            private String displayNameNew; 
             private String email; 
             private String endUser; 
             private String phone; 
+            private String userPrincipalName; 
 
             private Builder() {
             } 
@@ -201,9 +225,11 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             private Builder(Users model) {
                 this.assignedDesktopNumber = model.assignedDesktopNumber;
                 this.displayName = model.displayName;
+                this.displayNameNew = model.displayNameNew;
                 this.email = model.email;
                 this.endUser = model.endUser;
                 this.phone = model.phone;
+                this.userPrincipalName = model.userPrincipalName;
             } 
 
             /**
@@ -215,13 +241,21 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the user.</p>
+             * <p>The display name of the AD account.</p>
              * 
              * <strong>example:</strong>
              * <p>Alice</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * DisplayNameNew.
+             */
+            public Builder displayNameNew(String displayNameNew) {
+                this.displayNameNew = displayNameNew;
                 return this;
             }
 
@@ -234,7 +268,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the AD user.</p>
+             * <p>The username of the AD account.</p>
              * 
              * <strong>example:</strong>
              * <p>Alice</p>
@@ -249,6 +283,14 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
              */
             public Builder phone(String phone) {
                 this.phone = phone;
+                return this;
+            }
+
+            /**
+             * UserPrincipalName.
+             */
+            public Builder userPrincipalName(String userPrincipalName) {
+                this.userPrincipalName = userPrincipalName;
                 return this;
             }
 

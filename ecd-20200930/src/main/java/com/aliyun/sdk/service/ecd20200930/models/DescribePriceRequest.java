@@ -65,6 +65,10 @@ public class DescribePriceRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResellerOwnerUid")
+    private Long resellerOwnerUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
@@ -99,6 +103,7 @@ public class DescribePriceRequest extends Request {
         this.periodUnit = builder.periodUnit;
         this.promotionId = builder.promotionId;
         this.regionId = builder.regionId;
+        this.resellerOwnerUid = builder.resellerOwnerUid;
         this.resourceType = builder.resourceType;
         this.rootDiskCategory = builder.rootDiskCategory;
         this.rootDiskSizeGib = builder.rootDiskSizeGib;
@@ -197,6 +202,13 @@ public class DescribePriceRequest extends Request {
     }
 
     /**
+     * @return resellerOwnerUid
+     */
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
+    }
+
+    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -243,6 +255,7 @@ public class DescribePriceRequest extends Request {
         private String periodUnit; 
         private String promotionId; 
         private String regionId; 
+        private Long resellerOwnerUid; 
         private String resourceType; 
         private String rootDiskCategory; 
         private Integer rootDiskSizeGib; 
@@ -266,6 +279,7 @@ public class DescribePriceRequest extends Request {
             this.periodUnit = request.periodUnit;
             this.promotionId = request.promotionId;
             this.regionId = request.regionId;
+            this.resellerOwnerUid = request.resellerOwnerUid;
             this.resourceType = request.resourceType;
             this.rootDiskCategory = request.rootDiskCategory;
             this.rootDiskSizeGib = request.rootDiskSizeGib;
@@ -442,6 +456,15 @@ public class DescribePriceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResellerOwnerUid.
+         */
+        public Builder resellerOwnerUid(Long resellerOwnerUid) {
+            this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
+            this.resellerOwnerUid = resellerOwnerUid;
             return this;
         }
 

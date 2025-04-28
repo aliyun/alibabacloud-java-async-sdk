@@ -93,7 +93,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>The total number of resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder count(String count) {
             this.count = count;
@@ -101,7 +104,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +115,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48174475-5EB2-5F99-A9E9-6F892D645****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceModelList.
+         * <p>The resources.</p>
          */
         public Builder resourceModelList(java.util.List<ResourceModelList> resourceModelList) {
             this.resourceModelList = resourceModelList;
@@ -183,7 +192,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The application ID. This parameter is only applicable to cloud applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -191,7 +203,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alipic-powergem</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -466,7 +481,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             } 
 
             /**
-             * AppModelList.
+             * <p>The cloud applications.</p>
              */
             public Builder appModelList(java.util.List<AppModelList> appModelList) {
                 this.appModelList = appModelList;
@@ -474,7 +489,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -482,7 +500,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopType.
+             * <p>The cloud computer type. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the IDs of the cloud computer types supported by Alibaba Cloud Workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eds.enterprise_office.8c32g</p>
              */
             public Builder desktopType(String desktopType) {
                 this.desktopType = desktopType;
@@ -490,7 +511,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * GpuCount.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.125</p>
              */
             public Builder gpuCount(Double gpuCount) {
                 this.gpuCount = gpuCount;
@@ -498,7 +522,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * GpuSpec.
+             * <p>The GPU type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2GiB</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -506,7 +533,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10240</p>
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -514,7 +544,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * <p>The OS type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -522,7 +555,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>postPaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -530,7 +566,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * ProductType.
+             * <p>The service type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desktop</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -538,7 +577,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * <p>The protocol type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ASP</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -546,7 +588,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-d7pasxsd3b9nhq**</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -554,7 +599,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupName.
+             * <p>The resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -562,7 +610,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupRelCount.
+             * <p>The number of associated resource groups</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder resourceGroupRelCount(Integer resourceGroupRelCount) {
                 this.resourceGroupRelCount = resourceGroupRelCount;
@@ -570,7 +621,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-7o96aa08fr****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -578,7 +632,7 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>The resource name.</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -586,7 +640,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceRegionId.
+             * <p>The region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder resourceRegionId(String resourceRegionId) {
                 this.resourceRegionId = resourceRegionId;
@@ -594,7 +651,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desktop</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -602,7 +662,10 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The resource status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Stopped</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -67,7 +67,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the configuration group.</p>
+         * <p>The information about the scheduled task group.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -110,6 +110,9 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
+        @com.aliyun.core.annotation.NameInMap("NotificationTime")
+        private Integer notificationTime;
+
         @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
@@ -130,6 +133,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             this.cronExpression = builder.cronExpression;
             this.enforce = builder.enforce;
             this.interval = builder.interval;
+            this.notificationTime = builder.notificationTime;
             this.operationType = builder.operationType;
             this.processWhitelist = builder.processWhitelist;
             this.resetType = builder.resetType;
@@ -174,6 +178,13 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return notificationTime
+         */
+        public Integer getNotificationTime() {
+            return this.notificationTime;
+        }
+
+        /**
          * @return operationType
          */
         public String getOperationType() {
@@ -213,6 +224,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             private String cronExpression; 
             private Boolean enforce; 
             private Integer interval; 
+            private Integer notificationTime; 
             private String operationType; 
             private java.util.List<String> processWhitelist; 
             private String resetType; 
@@ -227,6 +239,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
                 this.cronExpression = model.cronExpression;
                 this.enforce = model.enforce;
                 this.interval = model.interval;
+                this.notificationTime = model.notificationTime;
                 this.operationType = model.operationType;
                 this.processWhitelist = model.processWhitelist;
                 this.resetType = model.resetType;
@@ -275,6 +288,14 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
+                return this;
+            }
+
+            /**
+             * NotificationTime.
+             */
+            public Builder notificationTime(Integer notificationTime) {
+                this.notificationTime = notificationTime;
                 return this;
             }
 
@@ -528,7 +549,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled task configuration groups.</p>
+             * <p>The scheduled task configurations.</p>
              */
             public Builder configTimers(java.util.List<ConfigTimers> configTimers) {
                 this.configTimers = configTimers;

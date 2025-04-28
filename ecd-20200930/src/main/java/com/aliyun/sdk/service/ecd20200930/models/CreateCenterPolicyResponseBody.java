@@ -67,7 +67,10 @@ public class CreateCenterPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * PolicyGroupId.
+         * <p>The cloud computer policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-gx2x1dhsmthe9****</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.policyGroupId = policyGroupId;
@@ -75,7 +78,10 @@ public class CreateCenterPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

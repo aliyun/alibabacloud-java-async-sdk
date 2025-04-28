@@ -22,6 +22,10 @@ public class CreateImageRequest extends Request {
     private Boolean autoCleanUserdata;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSnapshotIds")
+    private java.util.List<String> dataSnapshotIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -57,6 +61,7 @@ public class CreateImageRequest extends Request {
     private CreateImageRequest(Builder builder) {
         super(builder);
         this.autoCleanUserdata = builder.autoCleanUserdata;
+        this.dataSnapshotIds = builder.dataSnapshotIds;
         this.description = builder.description;
         this.desktopId = builder.desktopId;
         this.diskType = builder.diskType;
@@ -85,6 +90,13 @@ public class CreateImageRequest extends Request {
      */
     public Boolean getAutoCleanUserdata() {
         return this.autoCleanUserdata;
+    }
+
+    /**
+     * @return dataSnapshotIds
+     */
+    public java.util.List<String> getDataSnapshotIds() {
+        return this.dataSnapshotIds;
     }
 
     /**
@@ -145,6 +157,7 @@ public class CreateImageRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateImageRequest, Builder> {
         private Boolean autoCleanUserdata; 
+        private java.util.List<String> dataSnapshotIds; 
         private String description; 
         private String desktopId; 
         private String diskType; 
@@ -161,6 +174,7 @@ public class CreateImageRequest extends Request {
         private Builder(CreateImageRequest request) {
             super(request);
             this.autoCleanUserdata = request.autoCleanUserdata;
+            this.dataSnapshotIds = request.dataSnapshotIds;
             this.description = request.description;
             this.desktopId = request.desktopId;
             this.diskType = request.diskType;
@@ -180,6 +194,15 @@ public class CreateImageRequest extends Request {
         public Builder autoCleanUserdata(Boolean autoCleanUserdata) {
             this.putQueryParameter("AutoCleanUserdata", autoCleanUserdata);
             this.autoCleanUserdata = autoCleanUserdata;
+            return this;
+        }
+
+        /**
+         * DataSnapshotIds.
+         */
+        public Builder dataSnapshotIds(java.util.List<String> dataSnapshotIds) {
+            this.putQueryParameter("DataSnapshotIds", dataSnapshotIds);
+            this.dataSnapshotIds = dataSnapshotIds;
             return this;
         }
 

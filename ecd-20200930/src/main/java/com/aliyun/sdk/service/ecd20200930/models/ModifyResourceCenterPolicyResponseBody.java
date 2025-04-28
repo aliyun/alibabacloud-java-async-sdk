@@ -67,7 +67,7 @@ public class ModifyResourceCenterPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * ModifyResults.
+         * <p>The modification results.</p>
          */
         public Builder modifyResults(java.util.List<ModifyResults> modifyResults) {
             this.modifyResults = modifyResults;
@@ -75,7 +75,10 @@ public class ModifyResourceCenterPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51592A88-0F2C-55E6-AD2C-2AD9C10D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class ModifyResourceCenterPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * CheckResult.
+             * <p>The verification result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder checkResult(Boolean checkResult) {
                 this.checkResult = checkResult;
@@ -149,7 +155,10 @@ public class ModifyResourceCenterPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-e254cpyt9bb*****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;

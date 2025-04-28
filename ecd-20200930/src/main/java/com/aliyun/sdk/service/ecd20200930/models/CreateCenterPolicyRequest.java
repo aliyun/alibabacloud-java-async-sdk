@@ -139,6 +139,10 @@ public class CreateCenterPolicyRequest extends Request {
     private String internetCommunicationProtocol;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetPrinter")
+    private String internetPrinter;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LocalDrive")
     private String localDrive;
 
@@ -288,6 +292,10 @@ public class CreateCenterPolicyRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SafeMenu")
+    private String safeMenu;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Scope")
@@ -449,6 +457,7 @@ public class CreateCenterPolicyRequest extends Request {
         this.gpuAcceleration = builder.gpuAcceleration;
         this.html5FileTransfer = builder.html5FileTransfer;
         this.internetCommunicationProtocol = builder.internetCommunicationProtocol;
+        this.internetPrinter = builder.internetPrinter;
         this.localDrive = builder.localDrive;
         this.maxReconnectTime = builder.maxReconnectTime;
         this.memoryDownGradeDuration = builder.memoryDownGradeDuration;
@@ -486,6 +495,7 @@ public class CreateCenterPolicyRequest extends Request {
         this.resolutionModel = builder.resolutionModel;
         this.resolutionWidth = builder.resolutionWidth;
         this.resourceType = builder.resourceType;
+        this.safeMenu = builder.safeMenu;
         this.scope = builder.scope;
         this.scopeValue = builder.scopeValue;
         this.sessionMaxRateKbps = builder.sessionMaxRateKbps;
@@ -741,6 +751,13 @@ public class CreateCenterPolicyRequest extends Request {
      */
     public String getInternetCommunicationProtocol() {
         return this.internetCommunicationProtocol;
+    }
+
+    /**
+     * @return internetPrinter
+     */
+    public String getInternetPrinter() {
+        return this.internetPrinter;
     }
 
     /**
@@ -1003,6 +1020,13 @@ public class CreateCenterPolicyRequest extends Request {
     }
 
     /**
+     * @return safeMenu
+     */
+    public String getSafeMenu() {
+        return this.safeMenu;
+    }
+
+    /**
      * @return scope
      */
     public String getScope() {
@@ -1257,6 +1281,7 @@ public class CreateCenterPolicyRequest extends Request {
         private String gpuAcceleration; 
         private String html5FileTransfer; 
         private String internetCommunicationProtocol; 
+        private String internetPrinter; 
         private String localDrive; 
         private Integer maxReconnectTime; 
         private Integer memoryDownGradeDuration; 
@@ -1294,6 +1319,7 @@ public class CreateCenterPolicyRequest extends Request {
         private String resolutionModel; 
         private Integer resolutionWidth; 
         private String resourceType; 
+        private String safeMenu; 
         private String scope; 
         private java.util.List<String> scopeValue; 
         private Integer sessionMaxRateKbps; 
@@ -1363,6 +1389,7 @@ public class CreateCenterPolicyRequest extends Request {
             this.gpuAcceleration = request.gpuAcceleration;
             this.html5FileTransfer = request.html5FileTransfer;
             this.internetCommunicationProtocol = request.internetCommunicationProtocol;
+            this.internetPrinter = request.internetPrinter;
             this.localDrive = request.localDrive;
             this.maxReconnectTime = request.maxReconnectTime;
             this.memoryDownGradeDuration = request.memoryDownGradeDuration;
@@ -1400,6 +1427,7 @@ public class CreateCenterPolicyRequest extends Request {
             this.resolutionModel = request.resolutionModel;
             this.resolutionWidth = request.resolutionWidth;
             this.resourceType = request.resourceType;
+            this.safeMenu = request.safeMenu;
             this.scope = request.scope;
             this.scopeValue = request.scopeValue;
             this.sessionMaxRateKbps = request.sessionMaxRateKbps;
@@ -1435,7 +1463,19 @@ public class CreateCenterPolicyRequest extends Request {
         } 
 
         /**
-         * AdminAccess.
+         * <p>Specifies whether to grant the admin permissions to end users.</p>
+         * <blockquote>
+         * <p> This parameter is in private preview and only available to specific users.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>allow: forcibly grants admin permissions.</li>
+         * <li>deny: forcibly rejects granting admin permissions.</li>
+         * <li>inherited: inherits the admin permissions from the user dimension.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>deny</p>
          */
         public Builder adminAccess(String adminAccess) {
             this.putQueryParameter("AdminAccess", adminAccess);
@@ -1444,7 +1484,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * AppContentProtection.
+         * <p>The anti-screenshot policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off (default): disables anti-screenshot.</li>
+         * <li>on: enables anti-screenshot.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder appContentProtection(String appContentProtection) {
             this.putQueryParameter("AppContentProtection", appContentProtection);
@@ -1453,7 +1501,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * AuthorizeAccessPolicyRule.
+         * <p>The client IP address whitelists that you want to add. Once an IP address whitelist is configured, end users can only access cloud computers from the IP addresses listed in it.</p>
          */
         public Builder authorizeAccessPolicyRule(java.util.List<AuthorizeAccessPolicyRule> authorizeAccessPolicyRule) {
             this.putQueryParameter("AuthorizeAccessPolicyRule", authorizeAccessPolicyRule);
@@ -1462,7 +1510,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * AuthorizeSecurityPolicyRule.
+         * <p>The security group rule.</p>
          */
         public Builder authorizeSecurityPolicyRule(java.util.List<AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule) {
             this.putQueryParameter("AuthorizeSecurityPolicyRule", authorizeSecurityPolicyRule);
@@ -1471,6 +1519,12 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
+         * <p>The business type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>1: public cloud.</li>
+         * <li>8: commercial edition.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1483,7 +1537,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * CameraRedirect.
+         * <p>The on-premises camera redirection policy. This parameter only applies if DeviceRedirects does not include an on-premises camera redirection policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>deviceRedirect: enables device redirection.</li>
+         * <li>off: disables device redirection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder cameraRedirect(String cameraRedirect) {
             this.putQueryParameter("CameraRedirect", cameraRedirect);
@@ -1492,7 +1554,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * ClientType.
+         * <p>The types of Alibaba Cloud Workspace clients that end users can use to connect to cloud computers.</p>
          */
         public Builder clientType(java.util.List<ClientType> clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -1501,7 +1563,17 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * Clipboard.
+         * <p>The read/write permissions on the clipboard.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>read: specifies one-way transfer You can copy files only from on-premises devices to cloud computers.</li>
+         * <li>readwrite: specifies two-way transfer. You can copy files between on-premises devices and cloud computers.</li>
+         * <li>write: specifies one-way transfer. You can only copy files from cloud computers to on-premises devices.</li>
+         * <li>off (default): disables all transfers, both one-way and two-way. Files cannot be copied directly between on-premises devices and cloud computers.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder clipboard(String clipboard) {
             this.putQueryParameter("Clipboard", clipboard);
@@ -1510,7 +1582,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * ColorEnhancement.
+         * <p>Specifies whether to enable color enhancement for design and 3D applications.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: doesn&quot;t enable color enhancement for design and 3D applications.</li>
+         * <li>on: enables color enhancement for design and 3D applications.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder colorEnhancement(String colorEnhancement) {
             this.putQueryParameter("ColorEnhancement", colorEnhancement);
@@ -1519,7 +1599,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * CpuDownGradeDuration.
+         * <p>The CPU underclocking duration. Valid values: 30 to 120. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder cpuDownGradeDuration(Integer cpuDownGradeDuration) {
             this.putQueryParameter("CpuDownGradeDuration", cpuDownGradeDuration);
@@ -1528,7 +1611,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * CpuProcessors.
+         * <p>The CPU processors.</p>
          */
         public Builder cpuProcessors(java.util.List<String> cpuProcessors) {
             this.putQueryParameter("CpuProcessors", cpuProcessors);
@@ -1537,7 +1620,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * CpuProtectedMode.
+         * <p>The CPU spike protection policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: disables CPU spike protection.</li>
+         * <li>on: enables CPU spike protection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder cpuProtectedMode(String cpuProtectedMode) {
             this.putQueryParameter("CpuProtectedMode", cpuProtectedMode);
@@ -1546,7 +1637,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * CpuRateLimit.
+         * <p>The overall CPU usage. Valid values: 70 to 90. Unit: percentage (%).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         public Builder cpuRateLimit(Integer cpuRateLimit) {
             this.putQueryParameter("CpuRateLimit", cpuRateLimit);
@@ -1555,7 +1649,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * CpuSampleDuration.
+         * <p>The overall CPU sampling duration. Valid values: 10 to 60. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder cpuSampleDuration(Integer cpuSampleDuration) {
             this.putQueryParameter("CpuSampleDuration", cpuSampleDuration);
@@ -1564,7 +1661,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * CpuSingleRateLimit.
+         * <p>The single-CPU usage. Valid values: 70 to 100. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         public Builder cpuSingleRateLimit(Integer cpuSingleRateLimit) {
             this.putQueryParameter("CpuSingleRateLimit", cpuSingleRateLimit);
@@ -1573,7 +1673,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * DeviceConnectHint.
+         * <p>Specifies whether to display the peripheral connection prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder deviceConnectHint(String deviceConnectHint) {
             this.putQueryParameter("DeviceConnectHint", deviceConnectHint);
@@ -1582,7 +1685,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * DeviceRedirects.
+         * <p>The device redirection rules.</p>
          */
         public Builder deviceRedirects(java.util.List<DeviceRedirects> deviceRedirects) {
             this.putQueryParameter("DeviceRedirects", deviceRedirects);
@@ -1591,7 +1694,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * DeviceRules.
+         * <p>The custom peripheral rules.</p>
          */
         public Builder deviceRules(java.util.List<DeviceRules> deviceRules) {
             this.putQueryParameter("DeviceRules", deviceRules);
@@ -1600,7 +1703,18 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * DisconnectKeepSession.
+         * <p>Specifies whether to retain the session upon disconnection.</p>
+         * <blockquote>
+         * <p> This parameter applies only to cloud application policies.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>customTime: retains the session for a specified time period.</li>
+         * <li>persistent: retains the session permanently.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>customTime</p>
          */
         public Builder disconnectKeepSession(String disconnectKeepSession) {
             this.putQueryParameter("DisconnectKeepSession", disconnectKeepSession);
@@ -1609,7 +1723,13 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * DisconnectKeepSessionTime.
+         * <p>The retention period of the session after disconnection. Valid values: 30 to 7200. Unit: seconds.</p>
+         * <blockquote>
+         * <p> This parameter applies only to cloud application policies.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder disconnectKeepSessionTime(Integer disconnectKeepSessionTime) {
             this.putQueryParameter("DisconnectKeepSessionTime", disconnectKeepSessionTime);
@@ -1618,7 +1738,17 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * DisplayMode.
+         * <p>The display mode.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>clientCustom: suitable for user-defined scenarios.</li>
+         * <li>adminOffice: suitable for daily office scenarios.</li>
+         * <li>adminDesign: suitable for design and 3D application scenarios.</li>
+         * <li>adminCustom: suitable for admin-customized scenarios.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>clientCustom</p>
          */
         public Builder displayMode(String displayMode) {
             this.putQueryParameter("DisplayMode", displayMode);
@@ -1627,7 +1757,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * DomainResolveRule.
+         * <p>The domain resolution policies.</p>
          */
         public Builder domainResolveRule(java.util.List<DomainResolveRule> domainResolveRule) {
             this.putQueryParameter("DomainResolveRule", domainResolveRule);
@@ -1636,7 +1766,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * DomainResolveRuleType.
+         * <p>Specifies whether to enforce the domain resolution policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: disables the domain resolution policy.</li>
+         * <li>on: enables the domain resolution policy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder domainResolveRuleType(String domainResolveRuleType) {
             this.putQueryParameter("DomainResolveRuleType", domainResolveRuleType);
@@ -1645,7 +1783,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * EnableSessionRateLimiting.
+         * <p>Specifies whether to enforce session bandwidth limit.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: doesn&quot;t enforce session bandwidth limit.</li>
+         * <li>on: enforces session bandwidth limit.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder enableSessionRateLimiting(String enableSessionRateLimiting) {
             this.putQueryParameter("EnableSessionRateLimiting", enableSessionRateLimiting);
@@ -1654,7 +1800,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * EndUserApplyAdminCoordinate.
+         * <p>Specifies whether to enable end users to request administrator help.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: disables end users to request administrator help.</li>
+         * <li>on: enables end users to request administrator help.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder endUserApplyAdminCoordinate(String endUserApplyAdminCoordinate) {
             this.putQueryParameter("EndUserApplyAdminCoordinate", endUserApplyAdminCoordinate);
@@ -1663,7 +1817,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * EndUserGroupCoordinate.
+         * <p>Specifies whether end users in the same workspace can share cloud computers.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: End users in the same workspace cannot share cloud computers.</li>
+         * <li>on: End users in the same workspace can share cloud computers</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder endUserGroupCoordinate(String endUserGroupCoordinate) {
             this.putQueryParameter("EndUserGroupCoordinate", endUserGroupCoordinate);
@@ -1672,7 +1834,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * FileMigrate.
+         * <p>Specifies whether to enable file transfer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder fileMigrate(String fileMigrate) {
             this.putQueryParameter("FileMigrate", fileMigrate);
@@ -1681,7 +1846,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * GpuAcceleration.
+         * <p>Specifies whether to enable image quality control. This feature is highly recommended for professional design scenarios where computer performance and user experience are critical.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: doesn&quot;t enable image quality control.</li>
+         * <li>on: enables image quality control.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder gpuAcceleration(String gpuAcceleration) {
             this.putQueryParameter("GpuAcceleration", gpuAcceleration);
@@ -1690,7 +1863,17 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * Html5FileTransfer.
+         * <p>The file transfer policy on the web client.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>all: File upload and download are supported.</li>
+         * <li>download: Only file download is supported.</li>
+         * <li>upload: Only file upload is supported.</li>
+         * <li>off (default): File upload and download are not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder html5FileTransfer(String html5FileTransfer) {
             this.putQueryParameter("Html5FileTransfer", html5FileTransfer);
@@ -1699,7 +1882,17 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * InternetCommunicationProtocol.
+         * <p>The network communication protocol.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>tcp: TCP is used when UDP/AST is restricted.</li>
+         * <li>rtc: AST is used for high-frequency audio and video streaming.</li>
+         * <li>auto: UTO enables automatic switch between AST and UDP modes based on desktop content.</li>
+         * <li>both: UDP is ideal for office and HD graphic design use.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>both</p>
          */
         public Builder internetCommunicationProtocol(String internetCommunicationProtocol) {
             this.putQueryParameter("InternetCommunicationProtocol", internetCommunicationProtocol);
@@ -1708,7 +1901,25 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * LocalDrive.
+         * InternetPrinter.
+         */
+        public Builder internetPrinter(String internetPrinter) {
+            this.putQueryParameter("InternetPrinter", internetPrinter);
+            this.internetPrinter = internetPrinter;
+            return this;
+        }
+
+        /**
+         * <p>The read/write permissions on the on-premises drive.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>read: read-only. Cloud computers support on-premises disk mapping, but only for reading (copying) files—not modifying them.</li>
+         * <li>readwrite: read and write. Cloud computers support on-premises disk mapping, allowing you to read (copy) and write (modify) on-premises files.</li>
+         * <li>off (default): none. Cloud computers don&quot;t support on-premises disk mapping.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder localDrive(String localDrive) {
             this.putQueryParameter("LocalDrive", localDrive);
@@ -1717,7 +1928,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * MaxReconnectTime.
+         * <p>The maximum duration to retry reconnecting to cloud computers after an unexpected disconnection (non-human causes). Valid values: 30 to 7200. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder maxReconnectTime(Integer maxReconnectTime) {
             this.putQueryParameter("MaxReconnectTime", maxReconnectTime);
@@ -1726,7 +1940,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * MemoryDownGradeDuration.
+         * <p>The memory underclocking duration per process. Valid values: 30 to 120. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder memoryDownGradeDuration(Integer memoryDownGradeDuration) {
             this.putQueryParameter("MemoryDownGradeDuration", memoryDownGradeDuration);
@@ -1735,7 +1952,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * MemoryProcessors.
+         * <p>The memory processors.</p>
          */
         public Builder memoryProcessors(java.util.List<String> memoryProcessors) {
             this.putQueryParameter("MemoryProcessors", memoryProcessors);
@@ -1744,7 +1961,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * MemoryProtectedMode.
+         * <p>The memory spike protection policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: disables memory spike protection.</li>
+         * <li>on: enables memory spike protection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder memoryProtectedMode(String memoryProtectedMode) {
             this.putQueryParameter("MemoryProtectedMode", memoryProtectedMode);
@@ -1753,7 +1978,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * MemoryRateLimit.
+         * <p>The overall memory usage. Valid values: 70 to 90. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         public Builder memoryRateLimit(Integer memoryRateLimit) {
             this.putQueryParameter("MemoryRateLimit", memoryRateLimit);
@@ -1762,7 +1990,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * MemorySampleDuration.
+         * <p>The overall memory sampling duration. Valid values: 30 to 60. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder memorySampleDuration(Integer memorySampleDuration) {
             this.putQueryParameter("MemorySampleDuration", memorySampleDuration);
@@ -1771,7 +2002,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * MemorySingleRateLimit.
+         * <p>The memory usage per process. Valid values: 30 to 60. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder memorySingleRateLimit(Integer memorySingleRateLimit) {
             this.putQueryParameter("MemorySingleRateLimit", memorySingleRateLimit);
@@ -1780,7 +2014,18 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * MobileRestart.
+         * <p>Specifies whether to display the Restart button in the DesktopAssistant menu when end users connect to cloud computers from mobile clients (Android clients and iOS clients).</p>
+         * <blockquote>
+         * <p> This feature applies to only mobile clients of version 7.4.0 or later.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: doesn&quot;t display the Restart button in the DesktopAssistant menu.</li>
+         * <li>on: displays the Restart button in the DesktopAssistant menu.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder mobileRestart(String mobileRestart) {
             this.putQueryParameter("MobileRestart", mobileRestart);
@@ -1789,7 +2034,18 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * MobileShutdown.
+         * <p>Specifies whether to display the Stop button in the DesktopAssistant menu when end users connect to cloud computers from mobile clients (Android clients and iOS clients).</p>
+         * <blockquote>
+         * <p> This feature applies to only mobile clients of version 7.4.0 or later.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: doesn&quot;t display the Stop button in the DesktopAssistant menu.</li>
+         * <li>on: displays the Stop button in the DesktopAssistant menu.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder mobileShutdown(String mobileShutdown) {
             this.putQueryParameter("MobileShutdown", mobileShutdown);
@@ -1798,6 +2054,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
+         * <p>The policy name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1810,7 +2067,19 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * NetRedirect.
+         * <p>The network redirection policy.</p>
+         * <blockquote>
+         * <p> This parameter is in private preview and only available to specific users.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>all: enables network redirection globally.</li>
+         * <li>off (default): disables network redirection.</li>
+         * <li>on: enables the whitelist mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder netRedirect(String netRedirect) {
             this.putQueryParameter("NetRedirect", netRedirect);
@@ -1819,7 +2088,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * NetRedirectRule.
+         * <p>The network redirection policies.</p>
+         * <blockquote>
+         * <p> This parameter is in private preview and only available to specific users.</p>
+         * </blockquote>
          */
         public Builder netRedirectRule(java.util.List<NetRedirectRule> netRedirectRule) {
             this.putQueryParameter("NetRedirectRule", netRedirectRule);
@@ -1828,7 +2100,18 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * NoOperationDisconnect.
+         * <p>Specifies whether to enforce a disconnection upon inactivity.</p>
+         * <blockquote>
+         * <p> This parameter applies only to cloud application policies.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: doesn&quot;t enforce a disconnection upon inactivity.</li>
+         * <li>on: enforces a disconnection upon inactivity.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder noOperationDisconnect(String noOperationDisconnect) {
             this.putQueryParameter("NoOperationDisconnect", noOperationDisconnect);
@@ -1837,7 +2120,13 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * NoOperationDisconnectTime.
+         * <p>The duration of disconnection after inactivity. Valid values: 120 to 7200. Unit: seconds.</p>
+         * <blockquote>
+         * <p> This parameter applies only to cloud application policies.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder noOperationDisconnectTime(Integer noOperationDisconnectTime) {
             this.putQueryParameter("NoOperationDisconnectTime", noOperationDisconnectTime);
@@ -1846,7 +2135,16 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * PrinterRedirect.
+         * <p>The printer redirection policy. This parameter only applies if DeviceRedirects does not include a printer redirection policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>deviceRedirect (default):enables device redirection.</li>
+         * <li>usbRedirect: enables USB redirection.</li>
+         * <li>off: disables any type of redirection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder printerRedirect(String printerRedirect) {
             this.putQueryParameter("PrinterRedirect", printerRedirect);
@@ -1855,7 +2153,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * QualityEnhancement.
+         * <p>Specifies whether to enable image quality enhancement for design and 3D applications.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: doesn&quot;t enable image quality enhancement for design and 3D applications.</li>
+         * <li>on: enables image quality enhancement for design and 3D applications.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder qualityEnhancement(String qualityEnhancement) {
             this.putQueryParameter("QualityEnhancement", qualityEnhancement);
@@ -1864,7 +2170,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * RecordEventDuration.
+         * <p>The duration of screen recording after the specified event is detected. Unit: minutes. Valid values: 10 to 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder recordEventDuration(Integer recordEventDuration) {
             this.putQueryParameter("RecordEventDuration", recordEventDuration);
@@ -1873,7 +2182,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * RecordEventFilePaths.
+         * <p>The absolute paths to screen recording files.</p>
          */
         public Builder recordEventFilePaths(java.util.List<String> recordEventFilePaths) {
             this.putQueryParameter("RecordEventFilePaths", recordEventFilePaths);
@@ -1882,7 +2191,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * RecordEventRegisters.
+         * <p>The absolute paths to screen recording registries.</p>
          */
         public Builder recordEventRegisters(java.util.List<String> recordEventRegisters) {
             this.putQueryParameter("RecordEventRegisters", recordEventRegisters);
@@ -1891,7 +2200,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * RecordEvents.
+         * <p>The event that triggers screen recording.</p>
          */
         public Builder recordEvents(java.util.List<String> recordEvents) {
             this.putQueryParameter("RecordEvents", recordEvents);
@@ -1900,7 +2209,17 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * Recording.
+         * <p>The screen recording policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>period: Screen recording occurs at set intervals.</li>
+         * <li>session: Screen recording is limited to sessions only.</li>
+         * <li>off: Screen recording is disabled.</li>
+         * <li>alltime: Screen recording is always enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder recording(String recording) {
             this.putQueryParameter("Recording", recording);
@@ -1909,7 +2228,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * RecordingAudio.
+         * <p>Specifies whether to record audio files generated on cloud computers.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: doesn&quot;t record audio files generated on cloud computers.</li>
+         * <li>on: records audio files generated on cloud computers.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder recordingAudio(String recordingAudio) {
             this.putQueryParameter("RecordingAudio", recordingAudio);
@@ -1918,7 +2245,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * RecordingDuration.
+         * <p>The frame rate of screen recording. Screen recordings are split based on the specified duration and uploaded to Object Storage Service (OSS) buckets. If a file reaches 300 MB, the system prioritizes rolling updates for that file. Valid values: 10 to 60</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder recordingDuration(Integer recordingDuration) {
             this.putQueryParameter("RecordingDuration", recordingDuration);
@@ -1927,7 +2257,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * RecordingEndTime.
+         * <p>The screen recording&quot;s end time in HH:MM:SS format. The value is meaningful only if <code>Recording</code> is set to <code>PERIOD</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08:59:00</p>
          */
         public Builder recordingEndTime(String recordingEndTime) {
             this.putQueryParameter("RecordingEndTime", recordingEndTime);
@@ -1936,7 +2269,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * RecordingExpires.
+         * <p>The retention period of the screen recording file. Valid values: 1 to 180. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder recordingExpires(Integer recordingExpires) {
             this.putQueryParameter("RecordingExpires", recordingExpires);
@@ -1945,7 +2281,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * RecordingFps.
+         * <p>The frame rate of screen recording. Unit: fps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder recordingFps(String recordingFps) {
             this.putQueryParameter("RecordingFps", recordingFps);
@@ -1954,7 +2293,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * RecordingStartTime.
+         * <p>The screen recording&quot;s start time in HH:MM:SS format. The value is meaningful only if <code>Recording</code> is set to <code>PERIOD</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08:00:00</p>
          */
         public Builder recordingStartTime(String recordingStartTime) {
             this.putQueryParameter("RecordingStartTime", recordingStartTime);
@@ -1963,7 +2305,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * RecordingUserNotify.
+         * <p>Specifies whether to notify end users when screen recording is enabled.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: doesn&quot;t notify end users when screen recording is enabled.</li>
+         * <li>on: notifies end users when screen recording is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder recordingUserNotify(String recordingUserNotify) {
             this.putQueryParameter("RecordingUserNotify", recordingUserNotify);
@@ -1972,7 +2322,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * RecordingUserNotifyMessage.
+         * <p>The notification sent to end users when screen recording is enabled.</p>
          */
         public Builder recordingUserNotifyMessage(String recordingUserNotifyMessage) {
             this.putQueryParameter("RecordingUserNotifyMessage", recordingUserNotifyMessage);
@@ -1981,6 +2331,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
+         * <p>The region ID. Set the value to cn-shanghai.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1993,7 +2344,16 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * RemoteCoordinate.
+         * <p>The keyboard and mouse control permissions during remote assistance.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>optionalControl: By default, keyboard and mouse control is disabled during remote assistance. You can request permissions as needed.</li>
+         * <li>fullControl: Keyboard and mouse control is enabled during remote assistance.</li>
+         * <li>disableControl: Keyboard and mouse control is disabled during remote assistance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fullControl</p>
          */
         public Builder remoteCoordinate(String remoteCoordinate) {
             this.putQueryParameter("RemoteCoordinate", remoteCoordinate);
@@ -2002,7 +2362,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * ResetDesktop.
+         * <p>The computer reset setting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder resetDesktop(String resetDesktop) {
             this.putQueryParameter("ResetDesktop", resetDesktop);
@@ -2011,7 +2374,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * ResolutionHeight.
+         * <p>The height of the resolution. Unit: pixel. Valid values for cloud applications: 500 to 50000. Valid values for cloud computers: 480 to 4096.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1280</p>
          */
         public Builder resolutionHeight(Integer resolutionHeight) {
             this.putQueryParameter("ResolutionHeight", resolutionHeight);
@@ -2020,7 +2386,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * ResolutionModel.
+         * <p>The resolution type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>adaptive: adaptive resolution.</li>
+         * <li>customer: fixed resolution.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>adaptive</p>
          */
         public Builder resolutionModel(String resolutionModel) {
             this.putQueryParameter("ResolutionModel", resolutionModel);
@@ -2029,7 +2403,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * ResolutionWidth.
+         * <p>The width of the resolution. Unit: pixel. Valid values for cloud applications: 500 to 50000. Valid values for cloud computers: 480 to 4096.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720</p>
          */
         public Builder resolutionWidth(Integer resolutionWidth) {
             this.putQueryParameter("ResolutionWidth", resolutionWidth);
@@ -2038,6 +2415,12 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
+         * <p>The resource type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>app: cloud applications.</li>
+         * <li>Desktop: cloud computers.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -2050,7 +2433,24 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * Scope.
+         * SafeMenu.
+         */
+        public Builder safeMenu(String safeMenu) {
+            this.putQueryParameter("SafeMenu", safeMenu);
+            this.safeMenu = safeMenu;
+            return this;
+        }
+
+        /**
+         * <p>The effective scope of the policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>IP: The policy applies to specific IP addresses.</li>
+         * <li>GLOBAL: The policy applies globally.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GLOBAL</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -2059,7 +2459,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * ScopeValue.
+         * <p>The effective scopes. This parameter is required when <code>Scope</code> is set to <code>IP</code>. If <code>Scope</code> is set to <code>IP</code>, this parameter doesn&quot;t take effect.</p>
          */
         public Builder scopeValue(java.util.List<String> scopeValue) {
             this.putQueryParameter("ScopeValue", scopeValue);
@@ -2068,7 +2468,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * SessionMaxRateKbps.
+         * <p>The bandwidth peak of the session. Valid values: 2000 to 100000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder sessionMaxRateKbps(Integer sessionMaxRateKbps) {
             this.putQueryParameter("SessionMaxRateKbps", sessionMaxRateKbps);
@@ -2077,7 +2480,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * SmoothEnhancement.
+         * <p>Specifies whether to enable smoothness enhancement for daily office use.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: doesn&quot;t enable smoothness enhancement for daily office use.</li>
+         * <li>on: enables smoothness enhancement for daily office use.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder smoothEnhancement(String smoothEnhancement) {
             this.putQueryParameter("SmoothEnhancement", smoothEnhancement);
@@ -2086,7 +2497,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * StatusMonitor.
+         * <p>Specifies whether to display the metric status entry in the DesktopAssistant menu.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: doesn&quot;t display the metric status entry in the DesktopAssistant menu.</li>
+         * <li>on: displays the metric status entry in the DesktopAssistant menu.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder statusMonitor(String statusMonitor) {
             this.putQueryParameter("StatusMonitor", statusMonitor);
@@ -2095,7 +2514,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * StreamingMode.
+         * <p>The streaming mode.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>intelligent</li>
+         * <li>smooth</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>smooth</p>
          */
         public Builder streamingMode(String streamingMode) {
             this.putQueryParameter("StreamingMode", streamingMode);
@@ -2104,7 +2531,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * TargetFps.
+         * <p>The target frame rate. Valid values: 10 to 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder targetFps(Integer targetFps) {
             this.putQueryParameter("TargetFps", targetFps);
@@ -2113,7 +2543,18 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * Taskbar.
+         * <p>Specifies whether to display the application taskbar.</p>
+         * <blockquote>
+         * <p> This parameter applies only to cloud application policies.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: doesn&quot;t display the application taskbar.</li>
+         * <li>on: displays the application taskbar.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder taskbar(String taskbar) {
             this.putQueryParameter("Taskbar", taskbar);
@@ -2122,7 +2563,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * UsbRedirect.
+         * <p>Specifies whether to enable USB redirection.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off (default): doesn&quot;t enable USB redirection.</li>
+         * <li>on: enables USB redirection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder usbRedirect(String usbRedirect) {
             this.putQueryParameter("UsbRedirect", usbRedirect);
@@ -2131,7 +2580,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * UsbSupplyRedirectRule.
+         * <p>The USB redirection rules.</p>
          */
         public Builder usbSupplyRedirectRule(java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule) {
             this.putQueryParameter("UsbSupplyRedirectRule", usbSupplyRedirectRule);
@@ -2140,7 +2589,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * VideoEncAvgKbps.
+         * <p>The average bitrate for video encoding. Valid values: 1000 to 50000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder videoEncAvgKbps(Integer videoEncAvgKbps) {
             this.putQueryParameter("VideoEncAvgKbps", videoEncAvgKbps);
@@ -2149,7 +2601,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * VideoEncMaxQP.
+         * <p>The maximum QP for video files. Higher QP values result in lower video quality. Valid values: 0 to 51.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder videoEncMaxQP(Integer videoEncMaxQP) {
             this.putQueryParameter("VideoEncMaxQP", videoEncMaxQP);
@@ -2158,7 +2613,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * VideoEncMinQP.
+         * <p>The minimum quantizer parameter (QP) for video files. A lower QP means better video quality. Valid values: 0 to 51.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder videoEncMinQP(Integer videoEncMinQP) {
             this.putQueryParameter("VideoEncMinQP", videoEncMinQP);
@@ -2167,7 +2625,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * VideoEncPeakKbps.
+         * <p>The peak bitrate for video encoding. Valid values: 1000 to 50000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder videoEncPeakKbps(Integer videoEncPeakKbps) {
             this.putQueryParameter("VideoEncPeakKbps", videoEncPeakKbps);
@@ -2176,7 +2637,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * VideoEncPolicy.
+         * <p>The video encoding policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>qualityFirst: prioritizes image quality.</li>
+         * <li>bandwidthFirst: prioritizes bandwidth.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>qualityFirst</p>
          */
         public Builder videoEncPolicy(String videoEncPolicy) {
             this.putQueryParameter("VideoEncPolicy", videoEncPolicy);
@@ -2185,7 +2654,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * VideoRedirect.
+         * <p>The multimedia redirection policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: disables multimedia redirection.</li>
+         * <li>on: enables multimedia redirection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder videoRedirect(String videoRedirect) {
             this.putQueryParameter("VideoRedirect", videoRedirect);
@@ -2194,7 +2671,17 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * VisualQuality.
+         * <p>The image display quality.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>high: high-definition (HD).</li>
+         * <li>low: smoothness.</li>
+         * <li>lossless: no quality loss.</li>
+         * <li>medium (default): scenario-specific adaptation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         public Builder visualQuality(String visualQuality) {
             this.putQueryParameter("VisualQuality", visualQuality);
@@ -2203,7 +2690,16 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * Watermark.
+         * <p>The watermark policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>blind: displays invisible watermarks.</li>
+         * <li>off (default): displays no watermark.</li>
+         * <li>on: displays visible watermarks.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder watermark(String watermark) {
             this.putQueryParameter("Watermark", watermark);
@@ -2212,7 +2708,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * WatermarkAntiCam.
+         * <p>Specifies whether to enable anti-screen capture for invisible watermarks.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: disables anti-screen capture for invisible watermarks.</li>
+         * <li>on: enables anti-screen capture for invisible watermarks.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder watermarkAntiCam(String watermarkAntiCam) {
             this.putQueryParameter("WatermarkAntiCam", watermarkAntiCam);
@@ -2221,7 +2725,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * WatermarkColor.
+         * <p>The font color of the watermark. Valid values: 0 to 16777215.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder watermarkColor(Integer watermarkColor) {
             this.putQueryParameter("WatermarkColor", watermarkColor);
@@ -2230,7 +2737,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * WatermarkColumnAmount.
+         * <p>The number of watermark columns. Valid values: 3 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder watermarkColumnAmount(Integer watermarkColumnAmount) {
             this.putQueryParameter("WatermarkColumnAmount", watermarkColumnAmount);
@@ -2239,7 +2749,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * WatermarkCustomText.
+         * <p>If you set <code>WatermarkType</code> to <code>custom</code>, you must also specify <code>WatermarkCustomText</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder watermarkCustomText(String watermarkCustomText) {
             this.putQueryParameter("WatermarkCustomText", watermarkCustomText);
@@ -2248,7 +2761,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * WatermarkDegree.
+         * <p>The watermark rotation. Valid values: -10 to -30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-10</p>
          */
         public Builder watermarkDegree(Double watermarkDegree) {
             this.putQueryParameter("WatermarkDegree", watermarkDegree);
@@ -2257,7 +2773,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * WatermarkFontSize.
+         * <p>The font size of the watermark. Valid values: 10 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder watermarkFontSize(Integer watermarkFontSize) {
             this.putQueryParameter("WatermarkFontSize", watermarkFontSize);
@@ -2266,7 +2785,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * WatermarkFontStyle.
+         * <p>The font style of the watermark.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>plain</li>
+         * <li>bold</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>plain</p>
          */
         public Builder watermarkFontStyle(String watermarkFontStyle) {
             this.putQueryParameter("WatermarkFontStyle", watermarkFontStyle);
@@ -2275,7 +2802,16 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * WatermarkPower.
+         * <p>The enhancement level for invisible watermarks.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>high</li>
+         * <li>low</li>
+         * <li>medium</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>medium</p>
          */
         public Builder watermarkPower(String watermarkPower) {
             this.putQueryParameter("WatermarkPower", watermarkPower);
@@ -2284,7 +2820,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * WatermarkRowAmount.
+         * <p>The number of watermark rows. Valid values: 3 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder watermarkRowAmount(Integer watermarkRowAmount) {
             this.putQueryParameter("WatermarkRowAmount", watermarkRowAmount);
@@ -2293,7 +2832,15 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * WatermarkSecurity.
+         * <p>Specifies whether to enable security priority for invisible watermarks.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: disables security priority for invisible watermarks.</li>
+         * <li>on: enables security priority for invisible watermarks.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder watermarkSecurity(String watermarkSecurity) {
             this.putQueryParameter("WatermarkSecurity", watermarkSecurity);
@@ -2302,7 +2849,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * WatermarkTransparencyValue.
+         * <p>The watermark opacity. A higher value makes the watermark more opaque. Valid values: 10 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder watermarkTransparencyValue(Integer watermarkTransparencyValue) {
             this.putQueryParameter("WatermarkTransparencyValue", watermarkTransparencyValue);
@@ -2311,7 +2861,22 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * WatermarkType.
+         * <p>The watermark type. You can specify up to three types. Separate multiple values with commas (,).</p>
+         * <blockquote>
+         * <p> If you provide <code>custom</code> as the value for this parameter, you must configure <code>WatermarkCustomText</code> to specify custom text.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>EndUserId: the username.</li>
+         * <li>Custom: the custom text.</li>
+         * <li>DesktopIp: the IP address of the cloud computer.</li>
+         * <li>ClientIp: the IP address of the client.</li>
+         * <li>HostName: the rightmost 15 digits of the cloud computer ID.</li>
+         * <li>ClientTime: the current time displayed on the cloud computer.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EndUserId,HostName,ClientTime</p>
          */
         public Builder watermarkType(String watermarkType) {
             this.putQueryParameter("WatermarkType", watermarkType);
@@ -2320,7 +2885,10 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * WuyingKeeper.
+         * <p>Specifies whether to enable Cloud Computer Manager.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder wuyingKeeper(String wuyingKeeper) {
             this.putQueryParameter("WuyingKeeper", wuyingKeeper);
@@ -2329,7 +2897,18 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * WyAssistant.
+         * <p>Specifies whether to display the Xiaoying AI Assistant option in the DesktopAssistant menu when end users connect to cloud computers via desktop clients (Windows and macOS).</p>
+         * <blockquote>
+         * <p> This feature applies to only desktop clients of version 7.7.0 or later.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off: doesn&quot;t display the Xiaoying AI Assistant option in the DesktopAssistant menu.</li>
+         * <li>on: displays the Xiaoying AI Assistant option in the DesktopAssistant menu.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder wyAssistant(String wyAssistant) {
             this.putQueryParameter("WyAssistant", wyAssistant);
@@ -2397,7 +2976,10 @@ public class CreateCenterPolicyRequest extends Request {
             } 
 
             /**
-             * CidrIp.
+             * <p>The client CIDR block from which end users can connect to cloud computers. Specify an IPv4 CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.100.XX.XX/16</p>
              */
             public Builder cidrIp(String cidrIp) {
                 this.cidrIp = cidrIp;
@@ -2405,7 +2987,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the client IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2537,7 +3122,10 @@ public class CreateCenterPolicyRequest extends Request {
             } 
 
             /**
-             * CidrIp.
+             * <p>The object of the security group rule. Specify an IPv4 CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX/8</p>
              */
             public Builder cidrIp(String cidrIp) {
                 this.cidrIp = cidrIp;
@@ -2545,7 +3133,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the security group rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2553,7 +3144,18 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * IpProtocol.
+             * <p>The protocol type of the security group rule.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>TCP: the Transmission Control Protocol (TCP) protocol.</li>
+             * <li>UDP: the User Datagram Protocol (UDP) protocol.</li>
+             * <li>ALL: any type of protocol.</li>
+             * <li>GRE: the Generic Routing Encapsulation (GRE) protocol.</li>
+             * <li>ICMP: the Internet Control Message Protocol (ICMP) for (IPv4).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -2561,7 +3163,15 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * Policy.
+             * <p>The authorization policy of the security group rule.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>drop: denies all access requests. If no &quot;&quot;access denied&quot;&quot; messages are returned, the requests either timed out or failed.</li>
+             * <li>accept (default): accepts all requests.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>accept</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -2569,7 +3179,17 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * PortRange.
+             * <p>The port range of the security group rule. The value range of this parameter varies based on the value of IpProtocol.</p>
+             * <ul>
+             * <li>If IpProtocol is set to TCP or UDP, the port range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</li>
+             * <li>If IpProtocol is set to ICMP, set the value to -1/-1.</li>
+             * <li>If IpProtocol is set to GRE, set the value to -1/-1.</li>
+             * <li>If IpProtocol is set to ALL, set the value to -1/-1.</li>
+             * </ul>
+             * <p>For more information about the common ports, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22/22</p>
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -2577,7 +3197,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the security group rule. A smaller value specifies a higher priority.<br>Valid values: 1 to 60.<br>Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -2585,7 +3208,15 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The direction of the security group rule.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>outflow: outbound.</li>
+             * <li>inflow: inbound.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>inflow</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2652,7 +3283,18 @@ public class CreateCenterPolicyRequest extends Request {
             } 
 
             /**
-             * ClientType.
+             * <p>The type of the Alibaba Cloud Workspace client that end users can use to connect to cloud computers.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>html5: the web client.</li>
+             * <li>android: the Android client.</li>
+             * <li>ios: the iOS client.</li>
+             * <li>windows: the Windows client.</li>
+             * <li>macos: the macOS client.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder clientType(String clientType) {
                 this.clientType = clientType;
@@ -2660,7 +3302,18 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>Specifies whether end users can use the specified type of Alibaba Cloud Workspace client to connect to cloud computers.</p>
+             * <blockquote>
+             * <p> If you don&quot;t specify <code>ClientType</code>, any client can be used to connect to cloud computers.</p>
+             * </blockquote>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>off: End users cannot use the specified type of Alibaba Cloud Workspace client to connect to cloud computers.</li>
+             * <li>on: End users can use the specified type of Alibaba Cloud Workspace client to connect to cloud computers.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2727,7 +3380,18 @@ public class CreateCenterPolicyRequest extends Request {
             } 
 
             /**
-             * DeviceType.
+             * <p>The peripheral type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>printer</li>
+             * <li>scanner</li>
+             * <li>serialport</li>
+             * <li>camera</li>
+             * <li>adb</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>camera</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -2735,7 +3399,16 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * RedirectType.
+             * <p>The redirection type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>deviceRedirect: enables device redirection.</li>
+             * <li>usbRedirect: enables USB redirection.</li>
+             * <li>off: disables any type of redirection.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>usbRedirect</p>
              */
             public Builder redirectType(String redirectType) {
                 this.redirectType = redirectType;
@@ -2771,6 +3444,9 @@ public class CreateCenterPolicyRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("OptCommand")
         private String optCommand;
 
+        @com.aliyun.core.annotation.NameInMap("Platforms")
+        private String platforms;
+
         @com.aliyun.core.annotation.NameInMap("RedirectType")
         private String redirectType;
 
@@ -2780,6 +3456,7 @@ public class CreateCenterPolicyRequest extends Request {
             this.deviceType = builder.deviceType;
             this.deviceVid = builder.deviceVid;
             this.optCommand = builder.optCommand;
+            this.platforms = builder.platforms;
             this.redirectType = builder.redirectType;
         }
 
@@ -2827,6 +3504,13 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
+         * @return platforms
+         */
+        public String getPlatforms() {
+            return this.platforms;
+        }
+
+        /**
          * @return redirectType
          */
         public String getRedirectType() {
@@ -2839,6 +3523,7 @@ public class CreateCenterPolicyRequest extends Request {
             private String deviceType; 
             private String deviceVid; 
             private String optCommand; 
+            private String platforms; 
             private String redirectType; 
 
             private Builder() {
@@ -2850,11 +3535,15 @@ public class CreateCenterPolicyRequest extends Request {
                 this.deviceType = model.deviceType;
                 this.deviceVid = model.deviceVid;
                 this.optCommand = model.optCommand;
+                this.platforms = model.platforms;
                 this.redirectType = model.redirectType;
             } 
 
             /**
-             * DeviceName.
+             * <p>The device name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sandisk</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -2862,7 +3551,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * DevicePid.
+             * <p>The product ID (PID).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x55b1</p>
              */
             public Builder devicePid(String devicePid) {
                 this.devicePid = devicePid;
@@ -2870,7 +3562,22 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * DeviceType.
+             * <p>The peripheral type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>usbKey: U keys.</li>
+             * <li>other: other peripheral devices.</li>
+             * <li>graphicsTablet: graphics tablets.</li>
+             * <li>cardReader: card readers.</li>
+             * <li>printer: printers.</li>
+             * <li>scanner: scanners.</li>
+             * <li>storage: storage devices.</li>
+             * <li>camera: cameras.</li>
+             * <li>networkInterfaceCard: NIC devices.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>storage</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -2878,7 +3585,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * DeviceVid.
+             * <p>The vendor ID (VID). For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB VIDs</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x0781</p>
              */
             public Builder deviceVid(String deviceVid) {
                 this.deviceVid = deviceVid;
@@ -2886,7 +3596,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * OptCommand.
+             * <p>The link optimization command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2:0</p>
              */
             public Builder optCommand(String optCommand) {
                 this.optCommand = optCommand;
@@ -2894,7 +3607,24 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * RedirectType.
+             * Platforms.
+             */
+            public Builder platforms(String platforms) {
+                this.platforms = platforms;
+                return this;
+            }
+
+            /**
+             * <p>The redirection type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>deviceRedirect: enables device redirection.</li>
+             * <li>usbRedirect: enables USB redirection.</li>
+             * <li>off: disables any type of redirection.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>usbRedirect</p>
              */
             public Builder redirectType(String redirectType) {
                 this.redirectType = redirectType;
@@ -2974,7 +3704,7 @@ public class CreateCenterPolicyRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The policy description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2982,7 +3712,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*.example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -2990,7 +3723,15 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * Policy.
+             * <p>Specifies whether to allow the domain resolution policy to take effect.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>allow</li>
+             * <li>block</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>allow</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -3070,7 +3811,10 @@ public class CreateCenterPolicyRequest extends Request {
             } 
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*.taobao.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -3078,7 +3822,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * Policy.
+             * <p>The redirection policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>allow</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -3086,7 +3833,15 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * RuleType.
+             * <p>The rule type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>prc: process.</li>
+             * <li>domain: domain name.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>domain</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -3192,7 +3947,7 @@ public class CreateCenterPolicyRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The rule description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3200,7 +3955,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * ProductId.
+             * <p>The product ID (PID).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08**</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -3208,7 +3966,15 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * UsbRedirectType.
+             * <p>Specifies whether to allow USB redirection.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>1: allows USB redirection.</li>
+             * <li>2: forbids USB redirection.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder usbRedirectType(String usbRedirectType) {
                 this.usbRedirectType = usbRedirectType;
@@ -3216,7 +3982,14 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * UsbRuleType.
+             * <p>The type of the USB redirection rule.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>2: enables USB redirection based on products.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder usbRuleType(String usbRuleType) {
                 this.usbRuleType = usbRuleType;
@@ -3224,7 +3997,10 @@ public class CreateCenterPolicyRequest extends Request {
             }
 
             /**
-             * VendorId.
+             * <p>The vendor ID (VID). For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04**</p>
              */
             public Builder vendorId(String vendorId) {
                 this.vendorId = vendorId;

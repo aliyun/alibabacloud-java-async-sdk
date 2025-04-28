@@ -100,7 +100,6 @@ public class CreateDesktopsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String policyGroupId;
 
     @com.aliyun.core.annotation.Query
@@ -111,6 +110,10 @@ public class CreateDesktopsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResellerOwnerUid")
+    private Long resellerOwnerUid;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -181,6 +184,7 @@ public class CreateDesktopsRequest extends Request {
         this.policyGroupId = builder.policyGroupId;
         this.promotionId = builder.promotionId;
         this.regionId = builder.regionId;
+        this.resellerOwnerUid = builder.resellerOwnerUid;
         this.resourceGroupId = builder.resourceGroupId;
         this.savingPlanId = builder.savingPlanId;
         this.snapshotPolicyId = builder.snapshotPolicyId;
@@ -369,6 +373,13 @@ public class CreateDesktopsRequest extends Request {
     }
 
     /**
+     * @return resellerOwnerUid
+     */
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -469,6 +480,7 @@ public class CreateDesktopsRequest extends Request {
         private String policyGroupId; 
         private String promotionId; 
         private String regionId; 
+        private Long resellerOwnerUid; 
         private String resourceGroupId; 
         private String savingPlanId; 
         private String snapshotPolicyId; 
@@ -510,6 +522,7 @@ public class CreateDesktopsRequest extends Request {
             this.policyGroupId = request.policyGroupId;
             this.promotionId = request.promotionId;
             this.regionId = request.regionId;
+            this.resellerOwnerUid = request.resellerOwnerUid;
             this.resourceGroupId = request.resourceGroupId;
             this.savingPlanId = request.savingPlanId;
             this.snapshotPolicyId = request.snapshotPolicyId;
@@ -822,7 +835,6 @@ public class CreateDesktopsRequest extends Request {
 
         /**
          * <p>The ID of the policy.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>system-all-enabled-policy</p>
@@ -855,6 +867,15 @@ public class CreateDesktopsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResellerOwnerUid.
+         */
+        public Builder resellerOwnerUid(Long resellerOwnerUid) {
+            this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
+            this.resellerOwnerUid = resellerOwnerUid;
             return this;
         }
 

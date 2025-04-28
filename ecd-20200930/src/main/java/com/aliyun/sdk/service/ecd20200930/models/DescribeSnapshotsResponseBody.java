@@ -102,7 +102,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the queried snapshots.</p>
+         * <p>The snapshots.</p>
          */
         public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -142,6 +142,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DesktopStatus")
         private String desktopStatus;
+
+        @com.aliyun.core.annotation.NameInMap("DiskStatus")
+        private String diskStatus;
+
+        @com.aliyun.core.annotation.NameInMap("OsType")
+        private String osType;
 
         @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
@@ -190,6 +196,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             this.desktopId = builder.desktopId;
             this.desktopName = builder.desktopName;
             this.desktopStatus = builder.desktopStatus;
+            this.diskStatus = builder.diskStatus;
+            this.osType = builder.osType;
             this.progress = builder.progress;
             this.protocolType = builder.protocolType;
             this.remainTime = builder.remainTime;
@@ -260,6 +268,20 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
          */
         public String getDesktopStatus() {
             return this.desktopStatus;
+        }
+
+        /**
+         * @return diskStatus
+         */
+        public String getDiskStatus() {
+            return this.diskStatus;
+        }
+
+        /**
+         * @return osType
+         */
+        public String getOsType() {
+            return this.osType;
         }
 
         /**
@@ -361,6 +383,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String desktopId; 
             private String desktopName; 
             private String desktopStatus; 
+            private String diskStatus; 
+            private String osType; 
             private String progress; 
             private String protocolType; 
             private Integer remainTime; 
@@ -386,6 +410,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
                 this.desktopId = model.desktopId;
                 this.desktopName = model.desktopName;
                 this.desktopStatus = model.desktopStatus;
+                this.diskStatus = model.diskStatus;
+                this.osType = model.osType;
                 this.progress = model.progress;
                 this.protocolType = model.protocolType;
                 this.remainTime = model.remainTime;
@@ -486,6 +512,22 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
+                return this;
+            }
+
+            /**
+             * DiskStatus.
+             */
+            public Builder diskStatus(String diskStatus) {
+                this.diskStatus = diskStatus;
+                return this;
+            }
+
+            /**
+             * OsType.
+             */
+            public Builder osType(String osType) {
+                this.osType = osType;
                 return this;
             }
 

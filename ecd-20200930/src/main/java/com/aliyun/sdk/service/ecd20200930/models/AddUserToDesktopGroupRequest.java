@@ -163,7 +163,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * <p>The regular users to whom you want to assign the desktop group.</p>
+         * <p>The IDs of the users to whom you want to grant permissions.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);

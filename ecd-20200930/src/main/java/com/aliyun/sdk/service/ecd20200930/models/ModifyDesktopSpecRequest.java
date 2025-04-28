@@ -40,6 +40,10 @@ public class ModifyDesktopSpecRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResellerOwnerUid")
+    private Long resellerOwnerUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceSpecs")
     private java.util.List<ResourceSpecs> resourceSpecs;
 
@@ -68,6 +72,7 @@ public class ModifyDesktopSpecRequest extends Request {
         this.desktopType = builder.desktopType;
         this.promotionId = builder.promotionId;
         this.regionId = builder.regionId;
+        this.resellerOwnerUid = builder.resellerOwnerUid;
         this.resourceSpecs = builder.resourceSpecs;
         this.resourceType = builder.resourceType;
         this.rootDiskSizeGib = builder.rootDiskSizeGib;
@@ -124,6 +129,13 @@ public class ModifyDesktopSpecRequest extends Request {
     }
 
     /**
+     * @return resellerOwnerUid
+     */
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
+    }
+
+    /**
      * @return resourceSpecs
      */
     public java.util.List<ResourceSpecs> getResourceSpecs() {
@@ -164,6 +176,7 @@ public class ModifyDesktopSpecRequest extends Request {
         private String desktopType; 
         private String promotionId; 
         private String regionId; 
+        private Long resellerOwnerUid; 
         private java.util.List<ResourceSpecs> resourceSpecs; 
         private String resourceType; 
         private Integer rootDiskSizeGib; 
@@ -181,6 +194,7 @@ public class ModifyDesktopSpecRequest extends Request {
             this.desktopType = request.desktopType;
             this.promotionId = request.promotionId;
             this.regionId = request.regionId;
+            this.resellerOwnerUid = request.resellerOwnerUid;
             this.resourceSpecs = request.resourceSpecs;
             this.resourceType = request.resourceType;
             this.rootDiskSizeGib = request.rootDiskSizeGib;
@@ -265,6 +279,15 @@ public class ModifyDesktopSpecRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResellerOwnerUid.
+         */
+        public Builder resellerOwnerUid(Long resellerOwnerUid) {
+            this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
+            this.resellerOwnerUid = resellerOwnerUid;
             return this;
         }
 

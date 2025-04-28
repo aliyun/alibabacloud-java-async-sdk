@@ -76,6 +76,10 @@ public class CreateCloudDriveServiceRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResellerOwnerUid")
+    private Long resellerOwnerUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SolutionId")
     private String solutionId;
 
@@ -103,6 +107,7 @@ public class CreateCloudDriveServiceRequest extends Request {
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.regionId = builder.regionId;
+        this.resellerOwnerUid = builder.resellerOwnerUid;
         this.solutionId = builder.solutionId;
         this.userCount = builder.userCount;
         this.userMaxSize = builder.userMaxSize;
@@ -220,6 +225,13 @@ public class CreateCloudDriveServiceRequest extends Request {
     }
 
     /**
+     * @return resellerOwnerUid
+     */
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
+    }
+
+    /**
      * @return solutionId
      */
     public String getSolutionId() {
@@ -255,6 +267,7 @@ public class CreateCloudDriveServiceRequest extends Request {
         private Long period; 
         private String periodUnit; 
         private String regionId; 
+        private Long resellerOwnerUid; 
         private String solutionId; 
         private Long userCount; 
         private Long userMaxSize; 
@@ -279,13 +292,22 @@ public class CreateCloudDriveServiceRequest extends Request {
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.regionId = request.regionId;
+            this.resellerOwnerUid = request.resellerOwnerUid;
             this.solutionId = request.solutionId;
             this.userCount = request.userCount;
             this.userMaxSize = request.userMaxSize;
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable the auto-payment feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: enables the auto-payment feature. Ensure your Alibaba Cloud account has sufficient balance. Insufficient balance may result in abnormal orders.</li>
+         * <li>false (default): disables the auto-payment feature. The order is generated, but payment must be made manually. You can log on to the Alibaba Cloud Management Console and complete the payment based on the order ID on the Orders page.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -294,7 +316,15 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Optional. Specifies whether to enable the auto-renewal feature. This parameter takes effect only if you set CdsChargeType to <code>Prepaid</code>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -303,7 +333,9 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * <p>The business type.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -315,7 +347,15 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * CdsChargeType.
+         * <p>The billing method of the enterprise drive.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * <li>PrePaid: subscription.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder cdsChargeType(String cdsChargeType) {
             this.putQueryParameter("CdsChargeType", cdsChargeType);
@@ -324,7 +364,10 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * CenId.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance. This parameter takes effect only if you set <code>OfficeSiteType</code> to <code>AD_CONNECTOR</code>. If you have configured <code>OfficeSiteId</code>, you can leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-g4ba1mkji8nj6****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -333,7 +376,10 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name of the enterprise AD office network. This parameter takes effect only if you set <code>OfficeSiteType</code> to <code>AD_CONNECTOR</code>. If you have configured <code>OfficeSiteId</code>, you can leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.local</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -342,7 +388,7 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>The user IDs.</p>
          */
         public Builder endUserId(java.util.List<String> endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -351,6 +397,11 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
+         * <p>The maximum storage capacity of the enterprise drive.</p>
+         * <ul>
+         * <li>For a pay-as-you-go enterprise drive, the unit is bytes.</li>
+         * <li>For a subscription enterprise drive, the unit is GiB. For example, to create a 500 GiB subscription drive, set the value to 500 GiB. To create a 2 TiB subscription drive, set the value to 2048 GiB.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -363,7 +414,7 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * <p>The name of the cloud disk that you want to create in Cloud Drive Service.</p>
+         * <p>The name of the enterprise drive</p>
          * 
          * <strong>example:</strong>
          * <p>wuying-pds</p>
@@ -375,7 +426,10 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The ID of the office network. This parameter takes effect only if you set OfficeSiteType to <code>AD_CONNECTOR</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-400695****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -384,7 +438,15 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * OfficeSiteType.
+         * <p>The type of the office network.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SIMPLE: convenience office network.</li>
+         * <li>AD_CONNECTOR: enterprise Active Directory (AD) office network.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
          */
         public Builder officeSiteType(String officeSiteType) {
             this.putQueryParameter("OfficeSiteType", officeSiteType);
@@ -393,7 +455,16 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription duration. The unit is specified by <code>PeriodUnit</code>. This parameter takes effect only if you set <code>CdsChargeType</code> to <code>PrePaid</code>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>3</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);
@@ -402,7 +473,14 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>Required. The unit of the subscription duration. This parameter takes effect only if you set <code>CdsChargeType</code> to <code>PrePaid</code>.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>Year</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -411,7 +489,7 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Enterprise Drive Service is available.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -424,7 +502,18 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * <p>The solution ID.</p>
+         * ResellerOwnerUid.
+         */
+        public Builder resellerOwnerUid(Long resellerOwnerUid) {
+            this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
+            this.resellerOwnerUid = resellerOwnerUid;
+            return this;
+        }
+
+        /**
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>co-0esnf8kb8zpfbqmvt</p>
@@ -436,7 +525,16 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * UserCount.
+         * <p>Required. The maximum number of users allowed on the enterprise drive. This parameter takes effect only if you set <code>CdsChargeType</code> to <code>PrePaid</code>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>5 when the value of MaxSize is 500 GiB.</li>
+         * <li>20 when the value of MaxSize is 2048 GiB.</li>
+         * <li>50 when the value of MaxSize is 5120 GiB.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder userCount(Long userCount) {
             this.putQueryParameter("UserCount", userCount);
@@ -445,7 +543,10 @@ public class CreateCloudDriveServiceRequest extends Request {
         }
 
         /**
-         * UserMaxSize.
+         * <p>The maximum storage capacity of the user&quot;s personal disk when allocated. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024000</p>
          */
         public Builder userMaxSize(Long userMaxSize) {
             this.putQueryParameter("UserMaxSize", userMaxSize);

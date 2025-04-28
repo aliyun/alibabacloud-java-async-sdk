@@ -170,11 +170,10 @@ public class DescribeDirectoriesRequest extends Request {
 
         /**
          * <p>The directory type.</p>
-         * <p>Valid values:</p>
+         * <p>Valid value:</p>
          * <ul>
-         * <li>SIMPLE: a directory of the convenience account type</li>
-         * <li>AD_CONNECTOR: an AD directory</li>
-         * <li>RAM: a RAM directory</li>
+         * <li>SIMPLE: the convenience directory.</li>
+         * <li>AD_CONNECTOR: the Active Directory (AD) directory.</li>
          * </ul>
          * 
          * <strong>example:</strong>

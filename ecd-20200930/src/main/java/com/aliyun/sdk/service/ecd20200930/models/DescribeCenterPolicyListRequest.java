@@ -132,6 +132,12 @@ public class DescribeCenterPolicyListRequest extends Request {
         } 
 
         /**
+         * <p>The business type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>1: public cloud.</li>
+         * <li>8: commercial edition.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +150,10 @@ public class DescribeCenterPolicyListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.<br>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -153,7 +162,10 @@ public class DescribeCenterPolicyListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -162,7 +174,7 @@ public class DescribeCenterPolicyListRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * <p>The IDs of the cloud computer policies.</p>
          */
         public Builder policyGroupId(java.util.List<String> policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -171,6 +183,12 @@ public class DescribeCenterPolicyListRequest extends Request {
         }
 
         /**
+         * <p>The resource type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>app: cloud applications.</li>
+         * <li>desktop: cloud computers.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +201,15 @@ public class DescribeCenterPolicyListRequest extends Request {
         }
 
         /**
-         * Scope.
+         * <p>The effective scope of the cloud computer policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>IP: The policy applies to specific IP addresses.</li>
+         * <li>GLOBAL: The policy applies globally.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GLOBAL</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);

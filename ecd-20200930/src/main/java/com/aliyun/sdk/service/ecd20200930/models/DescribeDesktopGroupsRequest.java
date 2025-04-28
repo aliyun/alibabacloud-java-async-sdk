@@ -321,7 +321,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer pool.</p>
+         * <p>The ID of the cloud computer share.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-2i8qxpv6t1a03****</p>
@@ -333,7 +333,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud computer pool.</p>
+         * <p>The IDs of the cloud computer shares.</p>
          */
         public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
@@ -342,7 +342,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The name of the cloud computer pool to query. Fuzzy search is supported.</p>
+         * <p>The name of the cloud computer share that you want to query. Fuzzy search is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -354,7 +354,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The authorized user IDs of cloud computer pools.</p>
+         * <p>The IDs of the users who can access the cloud computer share.</p>
          */
         public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -393,11 +393,11 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the shared group is a multi-cloud computer type.</p>
+         * <p>Specifies whether the cloud computer share is a many-to-many share.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true: a multi-cloud computer type.</li>
-         * <li>false: a single-cloud computer type.</li>
+         * <li>true: The cloud computer share is a many-to-many share.</li>
+         * <li>false: The cloud computer share is a one-to-many share.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -422,7 +422,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the office network to which the cloud computer pool belongs.</p>
+         * <p>The ID of the office network in which the cloud computer share resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-467671****</p>
@@ -434,14 +434,14 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The type of the cloud computer pool.</p>
+         * <p>The type of the cloud computer share.</p>
          * <blockquote>
          * <p> This parameter is not publicly available.</p>
          * </blockquote>
          * <p>Valid values:</p>
          * <ul>
-         * <li>0: individual (single session)</li>
-         * <li>1: shared (multiple sessions)</li>
+         * <li>0: a single-session many-to-many share.</li>
+         * <li>1: a multi-session many-to-many share.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -454,9 +454,9 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the cloud computer pool. The unit is specified by the <code>PeriodUnit</code> parameter.</p>
+         * <p>The subscription duration of the cloud computer share. The unit is specified by <code>PeriodUnit</code>.</p>
          * <ul>
-         * <li><p>Valid values if the <code>PeriodUnit</code> parameter is set to <code>Month</code>:</p>
+         * <li><p>Valid values if you set <code>PeriodUnit</code> to <code>Month</code>:</p>
          * <ul>
          * <li>1</li>
          * <li>2</li>
@@ -464,7 +464,7 @@ public class DescribeDesktopGroupsRequest extends Request {
          * <li>6</li>
          * </ul>
          * </li>
-         * <li><p>Valid values if the <code>PeriodUnit</code> parameter is set to <code>Year</code>:</p>
+         * <li><p>Valid values if you set <code>PeriodUnit</code> to <code>Year</code>:</p>
          * <ul>
          * <li>1</li>
          * <li>2</li>
@@ -497,7 +497,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy that you want to associate with the cloud computer pool.</p>
+         * <p>The ID of the applied policy.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-53iyi2aar0nd6****</p>
@@ -550,12 +550,12 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The payment status of the cloud computer pool.</p>
+         * <p>The status of the cloud computer share.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>0: unpaid</li>
-         * <li>1: paid</li>
-         * <li>2: overdue or expired</li>
+         * <li>0: The cloud computer share is unpaid.</li>
+         * <li>1: The cloud computer share is normal.</li>
+         * <li>2: The cloud computer share expired, or your account has an overdue payment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -568,7 +568,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * <p>The tags attached to the cloud computer pool. You can specify 1 to 20 tags.</p>
+         * <p>The tags that you want to add to the cloud computer share. You can specify 1 to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -636,7 +636,7 @@ public class DescribeDesktopGroupsRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag. If you specify the <code>Tag</code> parameter, you must also specify the <code>Key</code> parameter. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>. You cannot specify an empty string as a tag key.</p>
+             * <p>The tag key. You cannot specify an empty string as a tag key. A tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -647,7 +647,7 @@ public class DescribeDesktopGroupsRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value. You can specify an empty string as a tag key. A tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

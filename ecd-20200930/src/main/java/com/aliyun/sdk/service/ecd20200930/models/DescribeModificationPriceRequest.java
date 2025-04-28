@@ -36,6 +36,10 @@ public class DescribeModificationPriceRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResellerOwnerUid")
+    private Long resellerOwnerUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
@@ -55,6 +59,7 @@ public class DescribeModificationPriceRequest extends Request {
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
         this.regionId = builder.regionId;
+        this.resellerOwnerUid = builder.resellerOwnerUid;
         this.resourceType = builder.resourceType;
         this.rootDiskSizeGib = builder.rootDiskSizeGib;
         this.userDiskSizeGib = builder.userDiskSizeGib;
@@ -102,6 +107,13 @@ public class DescribeModificationPriceRequest extends Request {
     }
 
     /**
+     * @return resellerOwnerUid
+     */
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
+    }
+
+    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -127,6 +139,7 @@ public class DescribeModificationPriceRequest extends Request {
         private String instanceId; 
         private String instanceType; 
         private String regionId; 
+        private Long resellerOwnerUid; 
         private String resourceType; 
         private Integer rootDiskSizeGib; 
         private Integer userDiskSizeGib; 
@@ -141,13 +154,20 @@ public class DescribeModificationPriceRequest extends Request {
             this.instanceId = request.instanceId;
             this.instanceType = request.instanceType;
             this.regionId = request.regionId;
+            this.resellerOwnerUid = request.resellerOwnerUid;
             this.resourceType = request.resourceType;
             this.rootDiskSizeGib = request.rootDiskSizeGib;
             this.userDiskSizeGib = request.userDiskSizeGib;
         } 
 
         /**
-         * Bandwidth.
+         * <p>The maximum public bandwidth. Unit: Mbit/s.</p>
+         * <blockquote>
+         * <p> Valid values when PayByTraffic is set to PayByBandwidth: 10 to 1000.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -156,7 +176,10 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of either the monthly subscription cloud computer with unlimited hours or the premium bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-0gfv2z3sf95zvt****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -165,7 +188,36 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The specifications.</p>
+         * <ul>
+         * <li><p>Valid values when you set <code>ResourceType</code> to <code>Desktop</code>:</p>
+         * <ul>
+         * <li>ecd.basic.small</li>
+         * <li>ecd.basic.large</li>
+         * <li>ecd.advanced.large</li>
+         * <li>ecd.advanced.xlarge</li>
+         * <li>ecd.performance.2xlarge</li>
+         * <li>ecd.graphics.xlarge</li>
+         * <li>ecd.graphics.2xlarge</li>
+         * <li>ecd.advanced.xlarge_s8d2</li>
+         * <li>ecd.advanced.xlarge_s8d7</li>
+         * <li>ecd.graphics.1g72c</li>
+         * <li>eds.general.2c2g</li>
+         * <li>eds.general.2c4g</li>
+         * <li>eds.general.2c8g</li>
+         * <li>eds.general.4c8g</li>
+         * <li>eds.general.4c16g</li>
+         * <li>eds.general.8c16g</li>
+         * <li>eds.general.8c32g</li>
+         * <li>eds.general.16c32g</li>
+         * </ul>
+         * </li>
+         * <li><p>You can skip this parameter if <code>ResourceType</code> is set to <code>NetworkPackage</code>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>eds.enterprise_office.8c16g</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -174,6 +226,7 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +239,28 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * ResellerOwnerUid.
+         */
+        public Builder resellerOwnerUid(Long resellerOwnerUid) {
+            this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
+            this.resellerOwnerUid = resellerOwnerUid;
+            return this;
+        }
+
+        /**
+         * <p>The resource type. The required parameters depend on the resource type.</p>
+         * <ul>
+         * <li>When <code>ResourceType</code> is set to <code>Desktop</code>, the required parameters are <code>InstanceType</code>, <code>RootDiskSizeGib</code>, and <code>UserDiskSizeGib</code>.</li>
+         * <li>When <code>ResourceType</code> is set to <code>NetworkPackage</code>, the required parameter is <code>Bandwidth</code>.</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Desktop (default): cloud computers.</li>
+         * <li>NetworkPackage: premium bandwidth plans.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Desktop</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -195,7 +269,10 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
-         * RootDiskSizeGib.
+         * <p>The size of the system disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder rootDiskSizeGib(Integer rootDiskSizeGib) {
             this.putQueryParameter("RootDiskSizeGib", rootDiskSizeGib);
@@ -204,7 +281,10 @@ public class DescribeModificationPriceRequest extends Request {
         }
 
         /**
-         * UserDiskSizeGib.
+         * <p>The size of the data disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder userDiskSizeGib(Integer userDiskSizeGib) {
             this.putQueryParameter("UserDiskSizeGib", userDiskSizeGib);

@@ -31,11 +31,16 @@ public class DescribeRefundPriceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResellerOwnerUid")
+    private Long resellerOwnerUid;
+
     private DescribeRefundPriceRequest(Builder builder) {
         super(builder);
         this.desktopId = builder.desktopId;
         this.refundType = builder.refundType;
         this.regionId = builder.regionId;
+        this.resellerOwnerUid = builder.resellerOwnerUid;
     }
 
     public static Builder builder() {
@@ -72,10 +77,18 @@ public class DescribeRefundPriceRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resellerOwnerUid
+     */
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
+    }
+
     public static final class Builder extends Request.Builder<DescribeRefundPriceRequest, Builder> {
         private java.util.List<String> desktopId; 
         private String refundType; 
         private String regionId; 
+        private Long resellerOwnerUid; 
 
         private Builder() {
             super();
@@ -86,6 +99,7 @@ public class DescribeRefundPriceRequest extends Request {
             this.desktopId = request.desktopId;
             this.refundType = request.refundType;
             this.regionId = request.regionId;
+            this.resellerOwnerUid = request.resellerOwnerUid;
         } 
 
         /**
@@ -125,6 +139,15 @@ public class DescribeRefundPriceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResellerOwnerUid.
+         */
+        public Builder resellerOwnerUid(Long resellerOwnerUid) {
+            this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
+            this.resellerOwnerUid = resellerOwnerUid;
             return this;
         }
 

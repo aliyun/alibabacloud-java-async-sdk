@@ -80,7 +80,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cloud computer pools.</p>
+         * <p>The cloud computer shares.</p>
          */
         public Builder desktopGroups(java.util.List<DesktopGroups> desktopGroups) {
             this.desktopGroups = desktopGroups;
@@ -307,7 +307,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>desktop_group_name</p>
@@ -318,7 +318,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>ds-dq2mybjr23yw*****</p>
@@ -404,6 +404,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
+
+        @com.aliyun.core.annotation.NameInMap("IsLdap")
+        private Boolean isLdap;
 
         @com.aliyun.core.annotation.NameInMap("KeepDuration")
         private Long keepDuration;
@@ -511,6 +514,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.gpuSpec = builder.gpuSpec;
             this.idleDisconnectDuration = builder.idleDisconnectDuration;
             this.imageId = builder.imageId;
+            this.isLdap = builder.isLdap;
             this.keepDuration = builder.keepDuration;
             this.loadPolicy = builder.loadPolicy;
             this.maxDesktopsCount = builder.maxDesktopsCount;
@@ -694,6 +698,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          */
         public String getImageId() {
             return this.imageId;
+        }
+
+        /**
+         * @return isLdap
+         */
+        public Boolean getIsLdap() {
+            return this.isLdap;
         }
 
         /**
@@ -914,6 +925,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private String gpuSpec; 
             private Long idleDisconnectDuration; 
             private String imageId; 
+            private Boolean isLdap; 
             private Long keepDuration; 
             private Long loadPolicy; 
             private Integer maxDesktopsCount; 
@@ -968,6 +980,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
                 this.gpuSpec = model.gpuSpec;
                 this.idleDisconnectDuration = model.idleDisconnectDuration;
                 this.imageId = model.imageId;
+                this.isLdap = model.isLdap;
                 this.keepDuration = model.keepDuration;
                 this.loadPolicy = model.loadPolicy;
                 this.maxDesktopsCount = model.maxDesktopsCount;
@@ -999,7 +1012,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of concurrent sessions that is allowed for each cloud computer pool in a multi-session cloud computer pool.</p>
+             * <p>The number of concurrent sessions allowed for each cloud computer within the multi-session many-to-many share.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1010,10 +1023,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li>This parameter has different meanings based on the billing method of the cloud computer pool. For a subscription pool, this parameter specifies the number of cloud computers to purchase in the pool. Valid values: 0 to 200.</li>
-             * <li>For a pay-as-you-go pool, this parameter specifies the minimum number of cloud computers to create in the pool. Valid values: 0 to <code>MaxDesktopsCount</code>. Default value: 1.</li>
-             * </ul>
+             * <p>This parameter is applicable only to subscription cloud computer shares. It defines the initial number of cloud computers that are purchased. Valid values: 0 to 200.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -1126,7 +1136,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cloud computer pool.</p>
+             * <p>The ID of the cloud computer share.</p>
              * 
              * <strong>example:</strong>
              * <p>dg-2i8qxpv6t1a03****</p>
@@ -1137,7 +1147,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cloud computer pool.</p>
+             * <p>The name of the cloud computer share.</p>
              * 
              * <strong>example:</strong>
              * <p>test1</p>
@@ -1159,7 +1169,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of users that are granted permissions to use the cloud computer pool.</p>
+             * <p>The number of users who can access the cloud computer share.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1170,7 +1180,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the subscription cloud computer pool expires.</p>
+             * <p>The expiration date of the subscription cloud computer share.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-03-17T16:00:00Z</p>
@@ -1236,6 +1246,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * IsLdap.
+             */
+            public Builder isLdap(Boolean isLdap) {
+                this.isLdap = isLdap;
+                return this;
+            }
+
+            /**
              * <p>The keep-alive duration of a session after the session is disconnected. Valid values: 180000 (3 minutes) to 345600000 (4 days). Unit: milliseconds. If you set this parameter to 0, the session is permanently retained after it is disconnected.</p>
              * <p>When a session is disconnected, take note of the following situations: If an end user does not resume the session within the specified duration, the session is closed and all unsaved data is cleared. If the end user resumes the session within the specified duration, the end user can continue to access data of the session.</p>
              * 
@@ -1248,7 +1266,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The load balancing policy of the multi-session cloud computer pool.</p>
+             * <p>The load balancing policy for the multi-session many-to-many share.</p>
              * <p>Valid values:</p>
              * <ul>
              * <li>0: depth-first</li>
@@ -1264,7 +1282,10 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of cloud computers that can be housed in the pay-as-you-go cloud computer pool.</p>
+             * <ul>
+             * <li>For pay-as-you-go cloud computer shares, this parameter defines the maximum number of cloud computers allowed.</li>
+             * <li>For subscription cloud computer shares, this parameter defines the total number of cloud computers, including both the initially purchased cloud computers (<code>BuyDesktopsCount</code>) and those that can be auto-created.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1286,7 +1307,10 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of cloud computers that can be automatically created in the subscription cloud computer pool.</p>
+             * <ul>
+             * <li>For pay-as-you-go cloud computer shares, this parameter defines the minimum number of cloud computers allowed.</li>
+             * <li>For subscription cloud computer shares, this parameter defines the number of cloud computers that are initially purchased (<code>BuyDesktopsCount</code>).</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1297,7 +1321,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the office network in which the cloud computer pool resides.</p>
+             * <p>The ID of the office network in which the cloud computer network resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+dir-467671****</p>
@@ -1308,7 +1332,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the office network to which the cloud computer pool belongs.</p>
+             * <p>The ID of the office network in which the cloud computer share resides.</p>
              * 
              * <strong>example:</strong>
              * <p>testName</p>
@@ -1386,11 +1410,11 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cloud computer pool.</p>
+             * <p>The type of the cloud computer share.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>0: individual (single session)</li>
-             * <li>1: shared (multiple sessions)</li>
+             * <li>0: a single-session many-to-many share.</li>
+             * <li>1: a multi-session many-to-many share.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1418,7 +1442,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the policy that is associated with the cloud computer pool.</p>
+             * <p>The ID of the applied policy.</p>
              * 
              * <strong>example:</strong>
              * <p>pg-53iyi2aar0nd6c8qj</p>
@@ -1429,7 +1453,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the policy that is associated with the cloud computer pool.</p>
+             * <p>The name of the applied policy.</p>
              * 
              * <strong>example:</strong>
              * <p>test-policy</p>
@@ -1467,8 +1491,8 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threshold for the ratio of connected sessions. This parameter indicates the condition that triggers auto scaling in a multi-session cloud computer pool. The ratio of connected sessions is calculated by using the following formula:</p>
-             * <p><code>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</code>.</p>
+             * <p>The threshold for the ratio of connected sessions, which triggers automatic scaling of cloud computers within the multi-session many-to-many share. To calculate the ratio of connected sessions, use the following formula:</p>
+             * <p><code>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</code></p>
              * <p>When the specified threshold is reached, new cloud computers are automatically created. When the specified threshold is not reached, idle cloud computers are released.</p>
              * 
              * <strong>example:</strong>
@@ -1480,13 +1504,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk reset type of the cloud computer pool.</p>
+             * <p>The reset option for the cloud computer share.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>0: does not reset disks</li>
-             * <li>1: resets only the system disks</li>
-             * <li>2: resets only the user disks</li>
-             * <li>3: resets the system disks and user disks</li>
+             * <li>0: does not reset any disk.</li>
+             * <li>1: resets only the system disk.</li>
+             * <li>2: resets only the data disk.</li>
+             * <li>3: resets the system disk and data disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1498,12 +1522,12 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The payment status of the cloud computer pool.</p>
+             * <p>The status of the cloud computer share.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>0: unpaid</li>
-             * <li>1: paid</li>
-             * <li>2: overdue or expired</li>
+             * <li>0: The cloud computer share is unpaid.</li>
+             * <li>1: The cloud computer share is normal.</li>
+             * <li>2: The cloud computer share expired, or your account has an overdue payment.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1565,7 +1589,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags attached to the cloud computer pool.</p>
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1573,7 +1597,10 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UserOuPath.
+             * <p>The user&quot;s organizational unit path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder userOuPath(String userOuPath) {
                 this.userOuPath = userOuPath;
@@ -1581,7 +1608,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the cloud computer pool.</p>
+             * <p>The version number of the cloud computer share.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

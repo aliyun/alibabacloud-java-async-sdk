@@ -158,6 +158,9 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NewImageName")
         private String newImageName;
 
+        @com.aliyun.core.annotation.NameInMap("Reason")
+        private String reason;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
@@ -169,6 +172,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             this.imageName = builder.imageName;
             this.newImageId = builder.newImageId;
             this.newImageName = builder.newImageName;
+            this.reason = builder.reason;
             this.status = builder.status;
             this.updateTime = builder.updateTime;
         }
@@ -210,6 +214,13 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -228,6 +239,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             private String imageName; 
             private String newImageId; 
             private String newImageName; 
+            private String reason; 
             private Integer status; 
             private String updateTime; 
 
@@ -239,6 +251,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
                 this.imageName = model.imageName;
                 this.newImageId = model.newImageId;
                 this.newImageName = model.newImageName;
+                this.reason = model.reason;
                 this.status = model.status;
                 this.updateTime = model.updateTime;
             } 
@@ -284,6 +297,14 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
              */
             public Builder newImageName(String newImageName) {
                 this.newImageName = newImageName;
+                return this;
+            }
+
+            /**
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
                 return this;
             }
 

@@ -171,7 +171,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the attached cloud disk.</p>
+         * <p>The ID of the enterprise drive.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+cds-7782057786</p>
@@ -193,7 +193,13 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * CenId.
+         * <p>The ID of the CEN instance.</p>
+         * <blockquote>
+         * <p> To allow end users to connect to cloud computers via virtual private clouds (VPCs), attach your office network to a CEN instance. The CEN instance connects to your on-premises network through VPN Gateway or Express Connect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-638u3wxds9snyc****</p>
          */
         public Builder cenId(String cenId) {
             this.cenId = cenId;
@@ -201,7 +207,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ConflictCdsAndOrder.
+         * <p>The existing enterprise drive or its order that conflicts with the enterprise drive being created.</p>
          */
         public Builder conflictCdsAndOrder(ConflictCdsAndOrder conflictCdsAndOrder) {
             this.conflictCdsAndOrder = conflictCdsAndOrder;
@@ -209,7 +215,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name of the enterprise AD office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1.local</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -217,7 +226,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExistConflictCds</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -225,7 +237,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum capacity of each instance in Cloud Drive Service. Unit: GiB</p>
+         * <p>The maximum storage capacity of the enterprise drive. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>213674622976</p>
@@ -236,7 +248,15 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * OfficeSiteType.
+         * <p>The type of the office network.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SIMPLE: convenience office network.</li>
+         * <li>AD_CONNECTOR: enterprise AD office network.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AD_CONNECTOR</p>
          */
         public Builder officeSiteType(String officeSiteType) {
             this.officeSiteType = officeSiteType;
@@ -244,7 +264,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The ID of the order. You can obtain an order ID on the Orders page in the Expenses and Costs console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>214552063030752</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -321,10 +344,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the attached cloud disk.</p>
+             * <p>The ID of the enterprise drive.</p>
              * 
              * <strong>example:</strong>
-             * <p>cn-hangzhou+cds-7782057786</p>
+             * <p>cn-hangzhou+cds-778205****</p>
              */
             public Builder cdsId(String cdsId) {
                 this.cdsId = cdsId;
@@ -332,7 +355,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -412,10 +438,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the attached cloud disk.</p>
+             * <p>The ID of the enterprise drive. The enterprise drive cannot be used if the order is unpaid.</p>
              * 
              * <strong>example:</strong>
-             * <p>cn-hangzhou+cds-7782057786</p>
+             * <p>cn-hangzhou+cds-778205****</p>
              */
             public Builder cdsId(String cdsId) {
                 this.cdsId = cdsId;
@@ -423,7 +449,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The ID of the order. You can obtain an order ID on the <strong>Orders</strong> page in the Expenses and Costs console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22442411898****</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -431,7 +460,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -498,7 +530,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * ConflictCds.
+             * <p>The conflicting enterprise drive.</p>
              */
             public Builder conflictCds(java.util.List<ConflictCds> conflictCds) {
                 this.conflictCds = conflictCds;
@@ -506,7 +538,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ConflictOrder.
+             * <p>The subscription orders of the conflicting enterprise drives that are unpaid.</p>
              */
             public Builder conflictOrder(java.util.List<ConflictOrder> conflictOrder) {
                 this.conflictOrder = conflictOrder;

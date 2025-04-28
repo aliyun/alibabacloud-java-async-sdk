@@ -80,7 +80,10 @@ public class DescribeRecordingsResponseBody extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nbCQ7ar+fECeh1IuWQXi39R5eoJ68zWp99mTAKRRNRhw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -88,7 +91,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
         }
 
         /**
-         * Recordings.
+         * <p>The screen recording files.</p>
          */
         public Builder recordings(java.util.List<Recordings> recordings) {
             this.recordings = recordings;
@@ -96,7 +99,10 @@ public class DescribeRecordingsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>327CFE78-1C0D-51AC-A9C6-BCEDF0DD44D6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -266,7 +272,10 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             } 
 
             /**
-             * DesktopId.
+             * <p>The cloud computer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-10v0vuvm616sk****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -274,7 +283,10 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * <p>The cloud computer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DemoComputer</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -282,7 +294,10 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the recording.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-10T07:26:06Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -290,7 +305,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserIds.
+             * <p>The end user IDs.</p>
              */
             public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
@@ -298,7 +313,10 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * FilePath.
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-4w5nk44zo5yl129dd/1mk78dugw344.mp4</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -306,7 +324,10 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyGroupId.
+             * <p>The policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-6dn811rzrwh9ws4z6</p>
              */
             public Builder policyGroupId(String policyGroupId) {
                 this.policyGroupId = policyGroupId;
@@ -314,7 +335,10 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingSize.
+             * <p>The size of the screen recording file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1742845</p>
              */
             public Builder recordingSize(Integer recordingSize) {
                 this.recordingSize = recordingSize;
@@ -322,7 +346,19 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordingType.
+             * <p>The type of event that triggers the recording.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>byaction_cmd_ft: triggered by copy-paste or file transfer events.</li>
+             * <li>period: triggered at scheduled intervals.</li>
+             * <li>session: triggered by session lifecycle monitoring.</li>
+             * <li>byaction_commands: triggered by copy-paste only.</li>
+             * <li>alltime: continuous recording.</li>
+             * <li>byaction_file_transfer: triggered by file transfer only.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>alltime</p>
              */
             public Builder recordingType(String recordingType) {
                 this.recordingType = recordingType;
@@ -330,7 +366,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * SignedUrl.
+             * <p>The download URL of the screen recording file.</p>
              */
             public Builder signedUrl(String signedUrl) {
                 this.signedUrl = signedUrl;
@@ -338,7 +374,10 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the recording.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-10T07:26:06Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

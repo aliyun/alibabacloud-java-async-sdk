@@ -2319,6 +2319,9 @@ public class ModifyPolicyGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("OptCommand")
         private String optCommand;
 
+        @com.aliyun.core.annotation.NameInMap("Platforms")
+        private String platforms;
+
         @com.aliyun.core.annotation.NameInMap("RedirectType")
         private String redirectType;
 
@@ -2328,6 +2331,7 @@ public class ModifyPolicyGroupRequest extends Request {
             this.deviceType = builder.deviceType;
             this.deviceVid = builder.deviceVid;
             this.optCommand = builder.optCommand;
+            this.platforms = builder.platforms;
             this.redirectType = builder.redirectType;
         }
 
@@ -2375,6 +2379,13 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
+         * @return platforms
+         */
+        public String getPlatforms() {
+            return this.platforms;
+        }
+
+        /**
          * @return redirectType
          */
         public String getRedirectType() {
@@ -2387,6 +2398,7 @@ public class ModifyPolicyGroupRequest extends Request {
             private String deviceType; 
             private String deviceVid; 
             private String optCommand; 
+            private String platforms; 
             private String redirectType; 
 
             private Builder() {
@@ -2398,6 +2410,7 @@ public class ModifyPolicyGroupRequest extends Request {
                 this.deviceType = model.deviceType;
                 this.deviceVid = model.deviceVid;
                 this.optCommand = model.optCommand;
+                this.platforms = model.platforms;
                 this.redirectType = model.redirectType;
             } 
 
@@ -2466,6 +2479,14 @@ public class ModifyPolicyGroupRequest extends Request {
              */
             public Builder optCommand(String optCommand) {
                 this.optCommand = optCommand;
+                return this;
+            }
+
+            /**
+             * Platforms.
+             */
+            public Builder platforms(String platforms) {
+                this.platforms = platforms;
                 return this;
             }
 

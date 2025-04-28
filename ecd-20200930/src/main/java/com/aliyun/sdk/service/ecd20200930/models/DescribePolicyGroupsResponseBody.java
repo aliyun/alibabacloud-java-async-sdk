@@ -687,6 +687,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OptCommand")
         private String optCommand;
 
+        @com.aliyun.core.annotation.NameInMap("Platforms")
+        private String platforms;
+
         @com.aliyun.core.annotation.NameInMap("RedirectType")
         private String redirectType;
 
@@ -696,6 +699,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.deviceType = builder.deviceType;
             this.deviceVid = builder.deviceVid;
             this.optCommand = builder.optCommand;
+            this.platforms = builder.platforms;
             this.redirectType = builder.redirectType;
         }
 
@@ -743,6 +747,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return platforms
+         */
+        public String getPlatforms() {
+            return this.platforms;
+        }
+
+        /**
          * @return redirectType
          */
         public String getRedirectType() {
@@ -755,6 +766,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String deviceType; 
             private String deviceVid; 
             private String optCommand; 
+            private String platforms; 
             private String redirectType; 
 
             private Builder() {
@@ -766,6 +778,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.deviceType = model.deviceType;
                 this.deviceVid = model.deviceVid;
                 this.optCommand = model.optCommand;
+                this.platforms = model.platforms;
                 this.redirectType = model.redirectType;
             } 
 
@@ -834,6 +847,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder optCommand(String optCommand) {
                 this.optCommand = optCommand;
+                return this;
+            }
+
+            /**
+             * Platforms.
+             */
+            public Builder platforms(String platforms) {
+                this.platforms = platforms;
                 return this;
             }
 
@@ -1400,6 +1421,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InternetCommunicationProtocol")
         private String internetCommunicationProtocol;
 
+        @com.aliyun.core.annotation.NameInMap("InternetPrinter")
+        private String internetPrinter;
+
         @com.aliyun.core.annotation.NameInMap("LocalDrive")
         private String localDrive;
 
@@ -1522,6 +1546,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ResourceRegionId")
         private String resourceRegionId;
+
+        @com.aliyun.core.annotation.NameInMap("SafeMenu")
+        private String safeMenu;
 
         @com.aliyun.core.annotation.NameInMap("Scope")
         private String scope;
@@ -1646,6 +1673,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.html5Access = builder.html5Access;
             this.html5FileTransfer = builder.html5FileTransfer;
             this.internetCommunicationProtocol = builder.internetCommunicationProtocol;
+            this.internetPrinter = builder.internetPrinter;
             this.localDrive = builder.localDrive;
             this.maxReconnectTime = builder.maxReconnectTime;
             this.memoryDownGradeDuration = builder.memoryDownGradeDuration;
@@ -1687,6 +1715,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.resolutionWidth = builder.resolutionWidth;
             this.resourceGroupCount = builder.resourceGroupCount;
             this.resourceRegionId = builder.resourceRegionId;
+            this.safeMenu = builder.safeMenu;
             this.scope = builder.scope;
             this.scopeValue = builder.scopeValue;
             this.smoothEnhancement = builder.smoothEnhancement;
@@ -1949,6 +1978,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getInternetCommunicationProtocol() {
             return this.internetCommunicationProtocol;
+        }
+
+        /**
+         * @return internetPrinter
+         */
+        public String getInternetPrinter() {
+            return this.internetPrinter;
         }
 
         /**
@@ -2239,6 +2275,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return safeMenu
+         */
+        public String getSafeMenu() {
+            return this.safeMenu;
+        }
+
+        /**
          * @return scope
          */
         public String getScope() {
@@ -2481,6 +2524,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String html5Access; 
             private String html5FileTransfer; 
             private String internetCommunicationProtocol; 
+            private String internetPrinter; 
             private String localDrive; 
             private Integer maxReconnectTime; 
             private Integer memoryDownGradeDuration; 
@@ -2522,6 +2566,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private Integer resolutionWidth; 
             private Integer resourceGroupCount; 
             private String resourceRegionId; 
+            private String safeMenu; 
             private String scope; 
             private java.util.List<String> scopeValue; 
             private String smoothEnhancement; 
@@ -2589,6 +2634,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.html5Access = model.html5Access;
                 this.html5FileTransfer = model.html5FileTransfer;
                 this.internetCommunicationProtocol = model.internetCommunicationProtocol;
+                this.internetPrinter = model.internetPrinter;
                 this.localDrive = model.localDrive;
                 this.maxReconnectTime = model.maxReconnectTime;
                 this.memoryDownGradeDuration = model.memoryDownGradeDuration;
@@ -2630,6 +2676,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.resolutionWidth = model.resolutionWidth;
                 this.resourceGroupCount = model.resourceGroupCount;
                 this.resourceRegionId = model.resourceRegionId;
+                this.safeMenu = model.safeMenu;
                 this.scope = model.scope;
                 this.scopeValue = model.scopeValue;
                 this.smoothEnhancement = model.smoothEnhancement;
@@ -3063,6 +3110,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder internetCommunicationProtocol(String internetCommunicationProtocol) {
                 this.internetCommunicationProtocol = internetCommunicationProtocol;
+                return this;
+            }
+
+            /**
+             * InternetPrinter.
+             */
+            public Builder internetPrinter(String internetPrinter) {
+                this.internetPrinter = internetPrinter;
                 return this;
             }
 
@@ -3602,6 +3657,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder resourceRegionId(String resourceRegionId) {
                 this.resourceRegionId = resourceRegionId;
+                return this;
+            }
+
+            /**
+             * SafeMenu.
+             */
+            public Builder safeMenu(String safeMenu) {
+                this.safeMenu = safeMenu;
                 return this;
             }
 

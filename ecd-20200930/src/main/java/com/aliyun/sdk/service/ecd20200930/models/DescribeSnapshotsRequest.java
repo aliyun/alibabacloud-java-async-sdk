@@ -43,6 +43,10 @@ public class DescribeSnapshotsRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsType")
+    private String osType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -75,6 +79,7 @@ public class DescribeSnapshotsRequest extends Request {
         this.endTime = builder.endTime;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.osType = builder.osType;
         this.regionId = builder.regionId;
         this.snapshotId = builder.snapshotId;
         this.snapshotName = builder.snapshotName;
@@ -139,6 +144,13 @@ public class DescribeSnapshotsRequest extends Request {
     }
 
     /**
+     * @return osType
+     */
+    public String getOsType() {
+        return this.osType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -187,6 +199,7 @@ public class DescribeSnapshotsRequest extends Request {
         private String endTime; 
         private Integer maxResults; 
         private String nextToken; 
+        private String osType; 
         private String regionId; 
         private String snapshotId; 
         private String snapshotName; 
@@ -206,6 +219,7 @@ public class DescribeSnapshotsRequest extends Request {
             this.endTime = request.endTime;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.osType = request.osType;
             this.regionId = request.regionId;
             this.snapshotId = request.snapshotId;
             this.snapshotName = request.snapshotName;
@@ -263,10 +277,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * <ul>
-         * <li>Valid values: 1 to 100</li>
-         * <li>Default value: 10</li>
+         * <li>Maximum value: 100.</li>
+         * <li>Default value: 10.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -291,7 +305,16 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * OsType.
+         */
+        public Builder osType(String osType) {
+            this.putQueryParameter("OsType", osType);
+            this.osType = osType;
+            return this;
+        }
+
+        /**
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -363,25 +386,14 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The type of the disk for which the snapshot is created.</p>
+         * <p>The disk for which you want to create a snapshot.</p>
          * <blockquote>
          * <p> The value of this parameter is not case-sensitive.</p>
          * </blockquote>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>Data: data disk</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>System: system disk</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>Data: the data disk.</li>
+         * <li>System: the system disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>

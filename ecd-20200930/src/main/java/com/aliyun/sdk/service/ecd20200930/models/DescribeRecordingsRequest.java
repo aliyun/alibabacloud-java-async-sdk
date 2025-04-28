@@ -200,7 +200,10 @@ public class DescribeRecordingsRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * <p>The cloud computer ID. If this parameter is not specified, the screen recording files on all cloud computers in the designated region will be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-hlh41mk78dugw****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -209,7 +212,10 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. Specify the time in the <code>YYYYMMDDhhmmss</code> format. The time must be in UTC+8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20230424004441</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -218,7 +224,12 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -227,7 +238,15 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * NeedSignedUrl.
+         * <p>Specifies whether to return a URL.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needSignedUrl(Boolean needSignedUrl) {
             this.putQueryParameter("NeedSignedUrl", needSignedUrl);
@@ -236,7 +255,10 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -245,7 +267,10 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-gx2x1dhsmthe9****</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -254,6 +279,7 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,7 +292,10 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * SignedUrlExpireMinutes.
+         * <p>The validity period of the returned URL. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder signedUrlExpireMinutes(Integer signedUrlExpireMinutes) {
             this.putQueryParameter("SignedUrlExpireMinutes", signedUrlExpireMinutes);
@@ -275,7 +304,10 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * StandardEndTime.
+         * <p>The end time of the query. Specify the time in the ISO 8601 standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time must be in UTC+0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-27T02:30:10Z</p>
          */
         public Builder standardEndTime(String standardEndTime) {
             this.putQueryParameter("StandardEndTime", standardEndTime);
@@ -284,7 +316,10 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * StandardStartTime.
+         * <p>The start time of the query. Specify the time in the ISO 8601 standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time must be in UTC+0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-27T02:20:10Z</p>
          */
         public Builder standardStartTime(String standardStartTime) {
             this.putQueryParameter("StandardStartTime", standardStartTime);
@@ -293,7 +328,10 @@ public class DescribeRecordingsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. Specify the time in the <code>YYYYMMDDhhmmss</code> format. The time must be in UTC+8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20230424000000</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

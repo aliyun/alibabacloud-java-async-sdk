@@ -48,6 +48,10 @@ public class RenewDesktopsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResellerOwnerUid")
+    private Long resellerOwnerUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
@@ -60,6 +64,7 @@ public class RenewDesktopsRequest extends Request {
         this.periodUnit = builder.periodUnit;
         this.promotionId = builder.promotionId;
         this.regionId = builder.regionId;
+        this.resellerOwnerUid = builder.resellerOwnerUid;
         this.resourceType = builder.resourceType;
     }
 
@@ -126,6 +131,13 @@ public class RenewDesktopsRequest extends Request {
     }
 
     /**
+     * @return resellerOwnerUid
+     */
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
+    }
+
+    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -140,6 +152,7 @@ public class RenewDesktopsRequest extends Request {
         private String periodUnit; 
         private String promotionId; 
         private String regionId; 
+        private Long resellerOwnerUid; 
         private String resourceType; 
 
         private Builder() {
@@ -155,6 +168,7 @@ public class RenewDesktopsRequest extends Request {
             this.periodUnit = request.periodUnit;
             this.promotionId = request.promotionId;
             this.regionId = request.regionId;
+            this.resellerOwnerUid = request.resellerOwnerUid;
             this.resourceType = request.resourceType;
         } 
 
@@ -267,6 +281,15 @@ public class RenewDesktopsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResellerOwnerUid.
+         */
+        public Builder resellerOwnerUid(Long resellerOwnerUid) {
+            this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
+            this.resellerOwnerUid = resellerOwnerUid;
             return this;
         }
 

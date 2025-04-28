@@ -116,7 +116,10 @@ public class DownloadCdsFileRequest extends Request {
         } 
 
         /**
-         * CdsId.
+         * <p>The enterprise drive ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-643267****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -125,7 +128,10 @@ public class DownloadCdsFileRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user****</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -134,7 +140,10 @@ public class DownloadCdsFileRequest extends Request {
         }
 
         /**
-         * FileId.
+         * <p>The file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63f3257b68b018170b194d87b875512d108f****</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -143,7 +152,10 @@ public class DownloadCdsFileRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The team ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cg-i1ruuudp92qpj****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -152,6 +164,7 @@ public class DownloadCdsFileRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

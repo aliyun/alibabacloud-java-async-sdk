@@ -120,6 +120,12 @@ public class CloneCenterPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The business type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>1: public cloud</li>
+         * <li>8: commercial edition.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +138,7 @@ public class CloneCenterPolicyRequest extends Request {
         }
 
         /**
+         * <p>The name of the cloud computer policy that you want to clone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +151,7 @@ public class CloneCenterPolicyRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cloud computer policy that you want to clone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +164,7 @@ public class CloneCenterPolicyRequest extends Request {
         }
 
         /**
+         * <p>The region ID. Set the value to cn-shanghai.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +177,12 @@ public class CloneCenterPolicyRequest extends Request {
         }
 
         /**
+         * <p>The resource type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>app: cloud applications.</li>
+         * <li>desktop: cloud computers.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -104,7 +104,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about office networks.</p>
+         * <p>The office networks.</p>
          */
         public Builder officeSites(java.util.List<OfficeSites> officeSites) {
             this.officeSites = officeSites;
@@ -517,7 +517,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The amount of resources.</p>
+             * <p>The number of resources.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -528,10 +528,11 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type. Valid values:</p>
+             * <p>The resource type.</p>
+             * <p>Valid values:</p>
              * <ul>
-             * <li>desktop: cloud computers</li>
-             * <li>desktopGroup: shared cloud computers</li>
+             * <li>desktop: the cloud computer.</li>
+             * <li>DesktopGroup: the cloud computer share.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -636,6 +637,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("FileSystemIds")
         private java.util.List<String> fileSystemIds;
+
+        @com.aliyun.core.annotation.NameInMap("IsLdap")
+        private Boolean isLdap;
+
+        @com.aliyun.core.annotation.NameInMap("LdapUrl")
+        private String ldapUrl;
 
         @com.aliyun.core.annotation.NameInMap("Logs")
         private java.util.List<Logs> logs;
@@ -752,6 +759,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             this.enableInternetAccess = builder.enableInternetAccess;
             this.enableServiceRoute = builder.enableServiceRoute;
             this.fileSystemIds = builder.fileSystemIds;
+            this.isLdap = builder.isLdap;
+            this.ldapUrl = builder.ldapUrl;
             this.logs = builder.logs;
             this.mfaEnabled = builder.mfaEnabled;
             this.name = builder.name;
@@ -978,6 +987,20 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         public java.util.List<String> getFileSystemIds() {
             return this.fileSystemIds;
+        }
+
+        /**
+         * @return isLdap
+         */
+        public Boolean getIsLdap() {
+            return this.isLdap;
+        }
+
+        /**
+         * @return ldapUrl
+         */
+        public String getLdapUrl() {
+            return this.ldapUrl;
         }
 
         /**
@@ -1211,6 +1234,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private Boolean enableInternetAccess; 
             private Boolean enableServiceRoute; 
             private java.util.List<String> fileSystemIds; 
+            private Boolean isLdap; 
+            private String ldapUrl; 
             private java.util.List<Logs> logs; 
             private Boolean mfaEnabled; 
             private String name; 
@@ -1272,6 +1297,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
                 this.enableInternetAccess = model.enableInternetAccess;
                 this.enableServiceRoute = model.enableServiceRoute;
                 this.fileSystemIds = model.fileSystemIds;
+                this.isLdap = model.isLdap;
+                this.ldapUrl = model.ldapUrl;
                 this.logs = model.logs;
                 this.mfaEnabled = model.mfaEnabled;
                 this.name = model.name;
@@ -1427,7 +1454,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom gateway.</p>
+             * <p>The custom endpoint of the access gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>gw-****.com</p>
@@ -1438,7 +1465,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array of custom DNS addresses.</p>
+             * <p>The custom DNS addresses.</p>
              */
             public Builder customDnsAddress(java.util.List<String> customDnsAddress) {
                 this.customDnsAddress = customDnsAddress;
@@ -1499,7 +1526,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array of DNS addresses in the AD domains.</p>
+             * <p>The DNS addresses for the AD domains.</p>
              */
             public Builder dnsAddress(java.util.List<String> dnsAddress) {
                 this.dnsAddress = dnsAddress;
@@ -1608,6 +1635,22 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
+             * IsLdap.
+             */
+            public Builder isLdap(Boolean isLdap) {
+                this.isLdap = isLdap;
+                return this;
+            }
+
+            /**
+             * LdapUrl.
+             */
+            public Builder ldapUrl(String ldapUrl) {
+                this.ldapUrl = ldapUrl;
+                return this;
+            }
+
+            /**
              * <p>Details about registration logs.</p>
              */
             public Builder logs(java.util.List<Logs> logs) {
@@ -1676,10 +1719,11 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network version. App Streaming is supported by the new version. Valid values:</p>
+             * <p>The network version. The new version supports App Streaming.</p>
+             * <p>Valid values:</p>
              * <ul>
-             * <li>DEFAULT: the legacy version</li>
-             * <li>NM: the new version</li>
+             * <li>DEFAULT: the old version.</li>
+             * <li>NM: the new version.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1778,7 +1822,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of resources.</p>
+             * <p>The number of resources.</p>
              */
             public Builder resourceAmounts(java.util.List<ResourceAmounts> resourceAmounts) {
                 this.resourceAmounts = resourceAmounts;
@@ -1851,7 +1895,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array of DNS addresses for AD subdomains.</p>
+             * <p>The DNS addresses for the AD subdomains.</p>
              */
             public Builder subDnsAddress(java.util.List<String> subDnsAddress) {
                 this.subDnsAddress = subDnsAddress;
@@ -1897,7 +1941,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of pooled cloud computers in the cloud computer pool.</p>
+             * <p>The number of cloud computers in the cloud computer share.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1908,7 +1952,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of network cards.</p>
+             * <p>The number of network interface controllers (NICs).</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

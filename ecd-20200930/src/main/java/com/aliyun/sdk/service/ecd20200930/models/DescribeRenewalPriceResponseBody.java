@@ -67,7 +67,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         } 
 
         /**
-         * PriceInfo.
+         * <p>The price details.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -75,7 +75,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72E47B1E-6B11-5A11-A27C-7A80F866****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * OptionCode.
+             * <p>The description of the promotion rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -188,7 +194,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionDesc.
+             * <p>The promotion description.</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -196,7 +202,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionId.
+             * <p>The promotion ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>promo_option</p>
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -204,7 +213,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The promotion name.</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -212,7 +221,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Selected.
+             * <p>Indicates whether an item is selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -331,7 +343,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Currency.
+             * <p>The unit of currency (USD).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -339,7 +354,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * <p>The discounted amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15.8</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -347,7 +365,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderLines.
+             * <p>The orders.</p>
              */
             public Builder orderLines(java.util.Map<String, String> orderLines) {
                 this.orderLines = orderLines;
@@ -355,7 +373,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79.0</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -363,7 +384,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Promotions.
+             * <p>The promotions.</p>
              */
             public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
@@ -371,7 +392,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The actual price. The actual price is the original price minus the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>63.2</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -438,7 +462,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The rule description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -446,7 +470,10 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29644</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -513,7 +540,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Price.
+             * <p>The price.</p>
              */
             public Builder price(Price price) {
                 this.price = price;
@@ -521,7 +548,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The promotion rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;

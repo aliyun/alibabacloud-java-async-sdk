@@ -105,6 +105,12 @@ public class DeleteCenterPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The business type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>1: public cloud.</li>
+         * <li>8: commercial edition.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +123,7 @@ public class DeleteCenterPolicyRequest extends Request {
         }
 
         /**
+         * <p>The policy IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder policyGroupIds(java.util.List<String> policyGroupIds) {
@@ -126,6 +133,7 @@ public class DeleteCenterPolicyRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +146,12 @@ public class DeleteCenterPolicyRequest extends Request {
         }
 
         /**
+         * <p>The resource type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>app: cloud applications.</li>
+         * <li>desktop: cloud computers.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

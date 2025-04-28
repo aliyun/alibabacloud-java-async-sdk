@@ -27,10 +27,15 @@ public class DeleteDesktopGroupRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResellerOwnerUid")
+    private Long resellerOwnerUid;
+
     private DeleteDesktopGroupRequest(Builder builder) {
         super(builder);
         this.desktopGroupId = builder.desktopGroupId;
         this.regionId = builder.regionId;
+        this.resellerOwnerUid = builder.resellerOwnerUid;
     }
 
     public static Builder builder() {
@@ -60,9 +65,17 @@ public class DeleteDesktopGroupRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resellerOwnerUid
+     */
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
+    }
+
     public static final class Builder extends Request.Builder<DeleteDesktopGroupRequest, Builder> {
         private String desktopGroupId; 
         private String regionId; 
+        private Long resellerOwnerUid; 
 
         private Builder() {
             super();
@@ -72,6 +85,7 @@ public class DeleteDesktopGroupRequest extends Request {
             super(request);
             this.desktopGroupId = request.desktopGroupId;
             this.regionId = request.regionId;
+            this.resellerOwnerUid = request.resellerOwnerUid;
         } 
 
         /**
@@ -97,6 +111,15 @@ public class DeleteDesktopGroupRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResellerOwnerUid.
+         */
+        public Builder resellerOwnerUid(Long resellerOwnerUid) {
+            this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
+            this.resellerOwnerUid = resellerOwnerUid;
             return this;
         }
 

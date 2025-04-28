@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RebuildDesktopsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AfterStatus")
+    private String afterStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> desktopId;
@@ -41,6 +45,7 @@ public class RebuildDesktopsRequest extends Request {
 
     private RebuildDesktopsRequest(Builder builder) {
         super(builder);
+        this.afterStatus = builder.afterStatus;
         this.desktopId = builder.desktopId;
         this.imageId = builder.imageId;
         this.language = builder.language;
@@ -59,6 +64,13 @@ public class RebuildDesktopsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return afterStatus
+     */
+    public String getAfterStatus() {
+        return this.afterStatus;
     }
 
     /**
@@ -97,6 +109,7 @@ public class RebuildDesktopsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RebuildDesktopsRequest, Builder> {
+        private String afterStatus; 
         private java.util.List<String> desktopId; 
         private String imageId; 
         private String language; 
@@ -109,12 +122,22 @@ public class RebuildDesktopsRequest extends Request {
 
         private Builder(RebuildDesktopsRequest request) {
             super(request);
+            this.afterStatus = request.afterStatus;
             this.desktopId = request.desktopId;
             this.imageId = request.imageId;
             this.language = request.language;
             this.operateType = request.operateType;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * AfterStatus.
+         */
+        public Builder afterStatus(String afterStatus) {
+            this.putQueryParameter("AfterStatus", afterStatus);
+            this.afterStatus = afterStatus;
+            return this;
+        }
 
         /**
          * <p>The cloud computer IDs. You can specify the IDs of 1 to 20 cloud computers.</p>

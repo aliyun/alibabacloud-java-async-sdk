@@ -293,19 +293,8 @@ public class DescribeUsersInGroupRequest extends Request {
          * <p>Specifies whether to query user details.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>true (default)</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>true (default)</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>

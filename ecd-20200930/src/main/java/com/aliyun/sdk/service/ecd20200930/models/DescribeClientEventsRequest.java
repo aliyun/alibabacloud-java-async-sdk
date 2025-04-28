@@ -50,6 +50,14 @@ public class DescribeClientEventsRequest extends Request {
     private java.util.List<String> eventTypes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FillHardwareInfo")
+    private Boolean fillHardwareInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    private String language;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -84,6 +92,8 @@ public class DescribeClientEventsRequest extends Request {
         this.endUserId = builder.endUserId;
         this.eventType = builder.eventType;
         this.eventTypes = builder.eventTypes;
+        this.fillHardwareInfo = builder.fillHardwareInfo;
+        this.language = builder.language;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.officeSiteId = builder.officeSiteId;
@@ -162,6 +172,20 @@ public class DescribeClientEventsRequest extends Request {
     }
 
     /**
+     * @return fillHardwareInfo
+     */
+    public Boolean getFillHardwareInfo() {
+        return this.fillHardwareInfo;
+    }
+
+    /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -212,6 +236,8 @@ public class DescribeClientEventsRequest extends Request {
         private String endUserId; 
         private String eventType; 
         private java.util.List<String> eventTypes; 
+        private Boolean fillHardwareInfo; 
+        private String language; 
         private Integer maxResults; 
         private String nextToken; 
         private String officeSiteId; 
@@ -233,6 +259,8 @@ public class DescribeClientEventsRequest extends Request {
             this.endUserId = request.endUserId;
             this.eventType = request.eventType;
             this.eventTypes = request.eventTypes;
+            this.fillHardwareInfo = request.fillHardwareInfo;
+            this.language = request.language;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.officeSiteId = request.officeSiteId;
@@ -389,6 +417,24 @@ public class DescribeClientEventsRequest extends Request {
         public Builder eventTypes(java.util.List<String> eventTypes) {
             this.putQueryParameter("EventTypes", eventTypes);
             this.eventTypes = eventTypes;
+            return this;
+        }
+
+        /**
+         * FillHardwareInfo.
+         */
+        public Builder fillHardwareInfo(Boolean fillHardwareInfo) {
+            this.putQueryParameter("FillHardwareInfo", fillHardwareInfo);
+            this.fillHardwareInfo = fillHardwareInfo;
+            return this;
+        }
+
+        /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
             return this;
         }
 

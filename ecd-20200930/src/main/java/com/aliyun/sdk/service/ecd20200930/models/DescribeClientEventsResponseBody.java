@@ -80,7 +80,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the events of an end user.</p>
+         * <p>The user events.</p>
          */
         public Builder events(java.util.List<Events> events) {
             this.events = events;
@@ -115,6 +115,102 @@ public class DescribeClientEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClientEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClientEventsResponseBody</p>
+     */
+    public static class TerminalInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Model")
+        private String model;
+
+        @com.aliyun.core.annotation.NameInMap("ProductName")
+        private String productName;
+
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
+        private String serialNumber;
+
+        private TerminalInfo(Builder builder) {
+            this.model = builder.model;
+            this.productName = builder.productName;
+            this.serialNumber = builder.serialNumber;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TerminalInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return model
+         */
+        public String getModel() {
+            return this.model;
+        }
+
+        /**
+         * @return productName
+         */
+        public String getProductName() {
+            return this.productName;
+        }
+
+        /**
+         * @return serialNumber
+         */
+        public String getSerialNumber() {
+            return this.serialNumber;
+        }
+
+        public static final class Builder {
+            private String model; 
+            private String productName; 
+            private String serialNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(TerminalInfo model) {
+                this.model = model.model;
+                this.productName = model.productName;
+                this.serialNumber = model.serialNumber;
+            } 
+
+            /**
+             * Model.
+             */
+            public Builder model(String model) {
+                this.model = model;
+                return this;
+            }
+
+            /**
+             * ProductName.
+             */
+            public Builder productName(String productName) {
+                this.productName = productName;
+                return this;
+            }
+
+            /**
+             * SerialNumber.
+             */
+            public Builder serialNumber(String serialNumber) {
+                this.serialNumber = serialNumber;
+                return this;
+            }
+
+            public TerminalInfo build() {
+                return new TerminalInfo(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeClientEventsResponseBody} extends {@link TeaModel}
@@ -191,6 +287,9 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("TerminalInfo")
+        private TerminalInfo terminalInfo;
+
         private Events(Builder builder) {
             this.aliUid = builder.aliUid;
             this.bytesReceived = builder.bytesReceived;
@@ -215,6 +314,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             this.officeSiteType = builder.officeSiteType;
             this.regionId = builder.regionId;
             this.status = builder.status;
+            this.terminalInfo = builder.terminalInfo;
         }
 
         public static Builder builder() {
@@ -386,6 +486,13 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return terminalInfo
+         */
+        public TerminalInfo getTerminalInfo() {
+            return this.terminalInfo;
+        }
+
         public static final class Builder {
             private String aliUid; 
             private String bytesReceived; 
@@ -410,6 +517,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             private String officeSiteType; 
             private String regionId; 
             private String status; 
+            private TerminalInfo terminalInfo; 
 
             private Builder() {
             } 
@@ -438,6 +546,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
                 this.officeSiteType = model.officeSiteType;
                 this.regionId = model.regionId;
                 this.status = model.status;
+                this.terminalInfo = model.terminalInfo;
             } 
 
             /**
@@ -710,6 +819,14 @@ public class DescribeClientEventsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TerminalInfo.
+             */
+            public Builder terminalInfo(TerminalInfo terminalInfo) {
+                this.terminalInfo = terminalInfo;
                 return this;
             }
 

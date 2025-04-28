@@ -119,7 +119,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of authorized users.</p>
+         * <p>The authorized users.</p>
          */
         public Builder endUsers(java.util.List<EndUsers> endUsers) {
             this.endUsers = endUsers;
@@ -544,6 +544,9 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayNameNew")
+        private String displayNameNew;
+
         @com.aliyun.core.annotation.NameInMap("EndUserEmail")
         private String endUserEmail;
 
@@ -568,6 +571,9 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserDesktopId")
         private String userDesktopId;
 
+        @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
+        private String userPrincipalName;
+
         @com.aliyun.core.annotation.NameInMap("UserSetPropertiesModels")
         private java.util.List<UserSetPropertiesModels> userSetPropertiesModels;
 
@@ -576,6 +582,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             this.desktopId = builder.desktopId;
             this.desktopName = builder.desktopName;
             this.displayName = builder.displayName;
+            this.displayNameNew = builder.displayNameNew;
             this.endUserEmail = builder.endUserEmail;
             this.endUserId = builder.endUserId;
             this.endUserName = builder.endUserName;
@@ -584,6 +591,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             this.endUserType = builder.endUserType;
             this.externalInfo = builder.externalInfo;
             this.userDesktopId = builder.userDesktopId;
+            this.userPrincipalName = builder.userPrincipalName;
             this.userSetPropertiesModels = builder.userSetPropertiesModels;
         }
 
@@ -621,6 +629,13 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
          */
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        /**
+         * @return displayNameNew
+         */
+        public String getDisplayNameNew() {
+            return this.displayNameNew;
         }
 
         /**
@@ -680,6 +695,13 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return userPrincipalName
+         */
+        public String getUserPrincipalName() {
+            return this.userPrincipalName;
+        }
+
+        /**
          * @return userSetPropertiesModels
          */
         public java.util.List<UserSetPropertiesModels> getUserSetPropertiesModels() {
@@ -691,6 +713,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private String desktopId; 
             private String desktopName; 
             private String displayName; 
+            private String displayNameNew; 
             private String endUserEmail; 
             private String endUserId; 
             private String endUserName; 
@@ -699,6 +722,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private String endUserType; 
             private ExternalInfo externalInfo; 
             private String userDesktopId; 
+            private String userPrincipalName; 
             private java.util.List<UserSetPropertiesModels> userSetPropertiesModels; 
 
             private Builder() {
@@ -709,6 +733,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
                 this.desktopId = model.desktopId;
                 this.desktopName = model.desktopName;
                 this.displayName = model.displayName;
+                this.displayNameNew = model.displayNameNew;
                 this.endUserEmail = model.endUserEmail;
                 this.endUserId = model.endUserId;
                 this.endUserName = model.endUserName;
@@ -717,6 +742,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
                 this.endUserType = model.endUserType;
                 this.externalInfo = model.externalInfo;
                 this.userDesktopId = model.userDesktopId;
+                this.userPrincipalName = model.userPrincipalName;
                 this.userSetPropertiesModels = model.userSetPropertiesModels;
             } 
 
@@ -766,6 +792,14 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * DisplayNameNew.
+             */
+            public Builder displayNameNew(String displayNameNew) {
+                this.displayNameNew = displayNameNew;
                 return this;
             }
 
@@ -856,6 +890,14 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
              */
             public Builder userDesktopId(String userDesktopId) {
                 this.userDesktopId = userDesktopId;
+                return this;
+            }
+
+            /**
+             * UserPrincipalName.
+             */
+            public Builder userPrincipalName(String userPrincipalName) {
+                this.userPrincipalName = userPrincipalName;
                 return this;
             }
 

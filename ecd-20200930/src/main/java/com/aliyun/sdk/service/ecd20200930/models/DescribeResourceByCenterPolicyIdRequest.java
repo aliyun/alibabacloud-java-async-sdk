@@ -116,7 +116,14 @@ public class DescribeResourceByCenterPolicyIdRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Maximum value: 100.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -125,7 +132,10 @@ public class DescribeResourceByCenterPolicyIdRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l69tQX7yFxx6/4dbooBAOc</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -134,6 +144,7 @@ public class DescribeResourceByCenterPolicyIdRequest extends Request {
         }
 
         /**
+         * <p>The policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +157,17 @@ public class DescribeResourceByCenterPolicyIdRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The service type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>app: cloud applications.</li>
+         * <li>resourceGroup: resource groups.</li>
+         * <li>desktop: cloud computers.</li>
+         * <li>desktopGroup: cloud computer shares.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desktop</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -155,7 +176,10 @@ public class DescribeResourceByCenterPolicyIdRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-ia2zw38bi6cm7****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

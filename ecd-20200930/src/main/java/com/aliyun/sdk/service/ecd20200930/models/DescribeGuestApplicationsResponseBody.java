@@ -67,7 +67,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the applications.</p>
+         * <p>The applications.</p>
          */
         public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
@@ -255,7 +255,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GPU utilization (%).</p>
+             * <p>The GPU usage (%).</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -266,7 +266,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The I/O read and write performance.</p>
+             * <p>The I/O read and write performance. Unit: byte/s.</p>
              * 
              * <strong>example:</strong>
              * <p>124906.0</p>
@@ -277,7 +277,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory utilization (%).</p>
+             * <p>The memory usage (%).</p>
              * 
              * <strong>example:</strong>
              * <p>34</p>
@@ -541,7 +541,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The I/O read and write performance.</p>
+             * <p>The I/O read and write performance. Unit: byte/s.</p>
              * 
              * <strong>example:</strong>
              * <p>124906.0</p>
@@ -574,7 +574,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The process information.</p>
+             * <p>The processes.</p>
              */
             public Builder processData(java.util.List<ProcessData> processData) {
                 this.processData = processData;
@@ -593,7 +593,12 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application status.</p>
+             * <p>The status of the application.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>Idle: The application is installed in the cloud computer but is not running.</li>
+             * <li>Running: The application has been installed in the cloud computer and is running.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Running</p>

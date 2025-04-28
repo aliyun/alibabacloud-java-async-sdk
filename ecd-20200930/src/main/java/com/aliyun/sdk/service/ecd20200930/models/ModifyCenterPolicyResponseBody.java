@@ -54,7 +54,10 @@ public class ModifyCenterPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CED7F18-43B1-5035-BBB6-2538B***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
