@@ -23,6 +23,10 @@ public class DeleteAIAgentDialogueRequest extends Request {
     private String dialogueId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
+    private String nodeId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SessionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
@@ -30,6 +34,7 @@ public class DeleteAIAgentDialogueRequest extends Request {
     private DeleteAIAgentDialogueRequest(Builder builder) {
         super(builder);
         this.dialogueId = builder.dialogueId;
+        this.nodeId = builder.nodeId;
         this.sessionId = builder.sessionId;
     }
 
@@ -54,6 +59,13 @@ public class DeleteAIAgentDialogueRequest extends Request {
     }
 
     /**
+     * @return nodeId
+     */
+    public String getNodeId() {
+        return this.nodeId;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
@@ -62,6 +74,7 @@ public class DeleteAIAgentDialogueRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteAIAgentDialogueRequest, Builder> {
         private String dialogueId; 
+        private String nodeId; 
         private String sessionId; 
 
         private Builder() {
@@ -71,6 +84,7 @@ public class DeleteAIAgentDialogueRequest extends Request {
         private Builder(DeleteAIAgentDialogueRequest request) {
             super(request);
             this.dialogueId = request.dialogueId;
+            this.nodeId = request.nodeId;
             this.sessionId = request.sessionId;
         } 
 
@@ -83,6 +97,15 @@ public class DeleteAIAgentDialogueRequest extends Request {
         public Builder dialogueId(String dialogueId) {
             this.putQueryParameter("DialogueId", dialogueId);
             this.dialogueId = dialogueId;
+            return this;
+        }
+
+        /**
+         * NodeId.
+         */
+        public Builder nodeId(String nodeId) {
+            this.putQueryParameter("NodeId", nodeId);
+            this.nodeId = nodeId;
             return this;
         }
 

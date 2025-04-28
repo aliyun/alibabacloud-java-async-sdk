@@ -239,6 +239,12 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DialogueId")
         private String dialogueId;
 
+        @com.aliyun.core.annotation.NameInMap("Extend")
+        private String extend;
+
+        @com.aliyun.core.annotation.NameInMap("NodeId")
+        private String nodeId;
+
         @com.aliyun.core.annotation.NameInMap("Producer")
         private String producer;
 
@@ -263,6 +269,8 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         private Dialogues(Builder builder) {
             this.attachedFileList = builder.attachedFileList;
             this.dialogueId = builder.dialogueId;
+            this.extend = builder.extend;
+            this.nodeId = builder.nodeId;
             this.producer = builder.producer;
             this.reasoningText = builder.reasoningText;
             this.roundId = builder.roundId;
@@ -292,6 +300,20 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
          */
         public String getDialogueId() {
             return this.dialogueId;
+        }
+
+        /**
+         * @return extend
+         */
+        public String getExtend() {
+            return this.extend;
+        }
+
+        /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
         }
 
         /**
@@ -346,6 +368,8 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AttachedFileList> attachedFileList; 
             private String dialogueId; 
+            private String extend; 
+            private String nodeId; 
             private String producer; 
             private String reasoningText; 
             private String roundId; 
@@ -360,6 +384,8 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
             private Builder(Dialogues model) {
                 this.attachedFileList = model.attachedFileList;
                 this.dialogueId = model.dialogueId;
+                this.extend = model.extend;
+                this.nodeId = model.nodeId;
                 this.producer = model.producer;
                 this.reasoningText = model.reasoningText;
                 this.roundId = model.roundId;
@@ -382,6 +408,22 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
              */
             public Builder dialogueId(String dialogueId) {
                 this.dialogueId = dialogueId;
+                return this;
+            }
+
+            /**
+             * Extend.
+             */
+            public Builder extend(String extend) {
+                this.extend = extend;
+                return this;
+            }
+
+            /**
+             * NodeId.
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
                 return this;
             }
 

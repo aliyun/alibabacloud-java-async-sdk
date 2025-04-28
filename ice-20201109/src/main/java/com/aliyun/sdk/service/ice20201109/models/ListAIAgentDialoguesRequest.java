@@ -35,6 +35,10 @@ public class ListAIAgentDialoguesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoundLimit")
+    private String roundLimit;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SessionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
@@ -50,6 +54,7 @@ public class ListAIAgentDialoguesRequest extends Request {
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.roundLimit = builder.roundLimit;
         this.sessionId = builder.sessionId;
         this.startTime = builder.startTime;
     }
@@ -96,6 +101,13 @@ public class ListAIAgentDialoguesRequest extends Request {
     }
 
     /**
+     * @return roundLimit
+     */
+    public String getRoundLimit() {
+        return this.roundLimit;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
@@ -114,6 +126,7 @@ public class ListAIAgentDialoguesRequest extends Request {
         private String order; 
         private Long pageNumber; 
         private Integer pageSize; 
+        private String roundLimit; 
         private String sessionId; 
         private Long startTime; 
 
@@ -127,6 +140,7 @@ public class ListAIAgentDialoguesRequest extends Request {
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.roundLimit = request.roundLimit;
             this.sessionId = request.sessionId;
             this.startTime = request.startTime;
         } 
@@ -167,6 +181,15 @@ public class ListAIAgentDialoguesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RoundLimit.
+         */
+        public Builder roundLimit(String roundLimit) {
+            this.putQueryParameter("RoundLimit", roundLimit);
+            this.roundLimit = roundLimit;
             return this;
         }
 
