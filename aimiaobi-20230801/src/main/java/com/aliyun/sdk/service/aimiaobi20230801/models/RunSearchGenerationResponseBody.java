@@ -2774,6 +2774,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GenerateLevel")
         private String generateLevel;
 
+        @com.aliyun.core.annotation.NameInMap("ReasonTextGenerate")
+        private String reasonTextGenerate;
+
         @com.aliyun.core.annotation.NameInMap("SearchResult")
         private java.util.List<ExcerptResultSearchResult> searchResult;
 
@@ -2783,6 +2786,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private ExcerptResult(Builder builder) {
             this.generateFinished = builder.generateFinished;
             this.generateLevel = builder.generateLevel;
+            this.reasonTextGenerate = builder.reasonTextGenerate;
             this.searchResult = builder.searchResult;
             this.textGenerate = builder.textGenerate;
         }
@@ -2810,6 +2814,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return reasonTextGenerate
+         */
+        public String getReasonTextGenerate() {
+            return this.reasonTextGenerate;
+        }
+
+        /**
          * @return searchResult
          */
         public java.util.List<ExcerptResultSearchResult> getSearchResult() {
@@ -2826,6 +2837,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean generateFinished; 
             private String generateLevel; 
+            private String reasonTextGenerate; 
             private java.util.List<ExcerptResultSearchResult> searchResult; 
             private String textGenerate; 
 
@@ -2835,6 +2847,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Builder(ExcerptResult model) {
                 this.generateFinished = model.generateFinished;
                 this.generateLevel = model.generateLevel;
+                this.reasonTextGenerate = model.reasonTextGenerate;
                 this.searchResult = model.searchResult;
                 this.textGenerate = model.textGenerate;
             } 
@@ -2852,6 +2865,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder generateLevel(String generateLevel) {
                 this.generateLevel = generateLevel;
+                return this;
+            }
+
+            /**
+             * ReasonTextGenerate.
+             */
+            public Builder reasonTextGenerate(String reasonTextGenerate) {
+                this.reasonTextGenerate = reasonTextGenerate;
                 return this;
             }
 
@@ -5573,6 +5594,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MultimodalSearchResultList")
         private java.util.List<MultimodalSearchResultList> multimodalSearchResultList;
 
+        @com.aliyun.core.annotation.NameInMap("ReasonTextGenerate")
+        private String reasonTextGenerate;
+
         @com.aliyun.core.annotation.NameInMap("ReferenceList")
         private java.util.List<ReferenceList> referenceList;
 
@@ -5587,6 +5611,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             this.generateLevel = builder.generateLevel;
             this.generateTraceability = builder.generateTraceability;
             this.multimodalSearchResultList = builder.multimodalSearchResultList;
+            this.reasonTextGenerate = builder.reasonTextGenerate;
             this.referenceList = builder.referenceList;
             this.textGenerate = builder.textGenerate;
             this.textGenerateMultimodalMediaList = builder.textGenerateMultimodalMediaList;
@@ -5629,6 +5654,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return reasonTextGenerate
+         */
+        public String getReasonTextGenerate() {
+            return this.reasonTextGenerate;
+        }
+
+        /**
          * @return referenceList
          */
         public java.util.List<ReferenceList> getReferenceList() {
@@ -5654,6 +5686,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String generateLevel; 
             private GenerateTraceability generateTraceability; 
             private java.util.List<MultimodalSearchResultList> multimodalSearchResultList; 
+            private String reasonTextGenerate; 
             private java.util.List<ReferenceList> referenceList; 
             private String textGenerate; 
             private java.util.List<TextGenerateResultTextGenerateMultimodalMediaList> textGenerateMultimodalMediaList; 
@@ -5666,6 +5699,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 this.generateLevel = model.generateLevel;
                 this.generateTraceability = model.generateTraceability;
                 this.multimodalSearchResultList = model.multimodalSearchResultList;
+                this.reasonTextGenerate = model.reasonTextGenerate;
                 this.referenceList = model.referenceList;
                 this.textGenerate = model.textGenerate;
                 this.textGenerateMultimodalMediaList = model.textGenerateMultimodalMediaList;
@@ -5700,6 +5734,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder multimodalSearchResultList(java.util.List<MultimodalSearchResultList> multimodalSearchResultList) {
                 this.multimodalSearchResultList = multimodalSearchResultList;
+                return this;
+            }
+
+            /**
+             * ReasonTextGenerate.
+             */
+            public Builder reasonTextGenerate(String reasonTextGenerate) {
+                this.reasonTextGenerate = reasonTextGenerate;
                 return this;
             }
 
@@ -7682,6 +7724,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MultimodalSearchResultList")
         private java.util.List<TimelineResultMultimodalSearchResultList> multimodalSearchResultList;
 
+        @com.aliyun.core.annotation.NameInMap("ReasonTextGenerate")
+        private String reasonTextGenerate;
+
         @com.aliyun.core.annotation.NameInMap("ReferenceList")
         private java.util.List<TimelineResultReferenceList> referenceList;
 
@@ -7695,6 +7740,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             this.generateFinished = builder.generateFinished;
             this.generateTraceability = builder.generateTraceability;
             this.multimodalSearchResultList = builder.multimodalSearchResultList;
+            this.reasonTextGenerate = builder.reasonTextGenerate;
             this.referenceList = builder.referenceList;
             this.textGenerate = builder.textGenerate;
             this.textGenerateMultimodalMediaList = builder.textGenerateMultimodalMediaList;
@@ -7730,6 +7776,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return reasonTextGenerate
+         */
+        public String getReasonTextGenerate() {
+            return this.reasonTextGenerate;
+        }
+
+        /**
          * @return referenceList
          */
         public java.util.List<TimelineResultReferenceList> getReferenceList() {
@@ -7754,6 +7807,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Boolean generateFinished; 
             private TimelineResultGenerateTraceability generateTraceability; 
             private java.util.List<TimelineResultMultimodalSearchResultList> multimodalSearchResultList; 
+            private String reasonTextGenerate; 
             private java.util.List<TimelineResultReferenceList> referenceList; 
             private String textGenerate; 
             private java.util.List<TimelineResultTextGenerateMultimodalMediaList> textGenerateMultimodalMediaList; 
@@ -7765,6 +7819,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 this.generateFinished = model.generateFinished;
                 this.generateTraceability = model.generateTraceability;
                 this.multimodalSearchResultList = model.multimodalSearchResultList;
+                this.reasonTextGenerate = model.reasonTextGenerate;
                 this.referenceList = model.referenceList;
                 this.textGenerate = model.textGenerate;
                 this.textGenerateMultimodalMediaList = model.textGenerateMultimodalMediaList;
@@ -7791,6 +7846,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder multimodalSearchResultList(java.util.List<TimelineResultMultimodalSearchResultList> multimodalSearchResultList) {
                 this.multimodalSearchResultList = multimodalSearchResultList;
+                return this;
+            }
+
+            /**
+             * ReasonTextGenerate.
+             */
+            public Builder reasonTextGenerate(String reasonTextGenerate) {
+                this.reasonTextGenerate = reasonTextGenerate;
                 return this;
             }
 
@@ -8500,12 +8563,153 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      *
      * <p>RunSearchGenerationResponseBody</p>
      */
+    public static class TokenCalculate extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FirstTokenTime")
+        private Float firstTokenTime;
+
+        @com.aliyun.core.annotation.NameInMap("OutputAvgTime")
+        private Float outputAvgTime;
+
+        @com.aliyun.core.annotation.NameInMap("SearchTime")
+        private Float searchTime;
+
+        @com.aliyun.core.annotation.NameInMap("Time")
+        private Float time;
+
+        @com.aliyun.core.annotation.NameInMap("TotalTokens")
+        private Long totalTokens;
+
+        private TokenCalculate(Builder builder) {
+            this.firstTokenTime = builder.firstTokenTime;
+            this.outputAvgTime = builder.outputAvgTime;
+            this.searchTime = builder.searchTime;
+            this.time = builder.time;
+            this.totalTokens = builder.totalTokens;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TokenCalculate create() {
+            return builder().build();
+        }
+
+        /**
+         * @return firstTokenTime
+         */
+        public Float getFirstTokenTime() {
+            return this.firstTokenTime;
+        }
+
+        /**
+         * @return outputAvgTime
+         */
+        public Float getOutputAvgTime() {
+            return this.outputAvgTime;
+        }
+
+        /**
+         * @return searchTime
+         */
+        public Float getSearchTime() {
+            return this.searchTime;
+        }
+
+        /**
+         * @return time
+         */
+        public Float getTime() {
+            return this.time;
+        }
+
+        /**
+         * @return totalTokens
+         */
+        public Long getTotalTokens() {
+            return this.totalTokens;
+        }
+
+        public static final class Builder {
+            private Float firstTokenTime; 
+            private Float outputAvgTime; 
+            private Float searchTime; 
+            private Float time; 
+            private Long totalTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(TokenCalculate model) {
+                this.firstTokenTime = model.firstTokenTime;
+                this.outputAvgTime = model.outputAvgTime;
+                this.searchTime = model.searchTime;
+                this.time = model.time;
+                this.totalTokens = model.totalTokens;
+            } 
+
+            /**
+             * FirstTokenTime.
+             */
+            public Builder firstTokenTime(Float firstTokenTime) {
+                this.firstTokenTime = firstTokenTime;
+                return this;
+            }
+
+            /**
+             * OutputAvgTime.
+             */
+            public Builder outputAvgTime(Float outputAvgTime) {
+                this.outputAvgTime = outputAvgTime;
+                return this;
+            }
+
+            /**
+             * SearchTime.
+             */
+            public Builder searchTime(Float searchTime) {
+                this.searchTime = searchTime;
+                return this;
+            }
+
+            /**
+             * Time.
+             */
+            public Builder time(Float time) {
+                this.time = time;
+                return this;
+            }
+
+            /**
+             * TotalTokens.
+             */
+            public Builder totalTokens(Long totalTokens) {
+                this.totalTokens = totalTokens;
+                return this;
+            }
+
+            public TokenCalculate build() {
+                return new TokenCalculate(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunSearchGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunSearchGenerationResponseBody</p>
+     */
     public static class BizContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentStep")
         private String currentStep;
 
         @com.aliyun.core.annotation.NameInMap("GeneratedContent")
         private GeneratedContent generatedContent;
+
+        @com.aliyun.core.annotation.NameInMap("ModelId")
+        private String modelId;
 
         @com.aliyun.core.annotation.NameInMap("NextStep")
         private String nextStep;
@@ -8525,15 +8729,20 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupplementEnable")
         private Boolean supplementEnable;
 
+        @com.aliyun.core.annotation.NameInMap("TokenCalculate")
+        private TokenCalculate tokenCalculate;
+
         private BizContext(Builder builder) {
             this.currentStep = builder.currentStep;
             this.generatedContent = builder.generatedContent;
+            this.modelId = builder.modelId;
             this.nextStep = builder.nextStep;
             this.recommendSearchQueryList = builder.recommendSearchQueryList;
             this.searchKeywords = builder.searchKeywords;
             this.searchQueryList = builder.searchQueryList;
             this.supplementDataType = builder.supplementDataType;
             this.supplementEnable = builder.supplementEnable;
+            this.tokenCalculate = builder.tokenCalculate;
         }
 
         public static Builder builder() {
@@ -8556,6 +8765,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         public GeneratedContent getGeneratedContent() {
             return this.generatedContent;
+        }
+
+        /**
+         * @return modelId
+         */
+        public String getModelId() {
+            return this.modelId;
         }
 
         /**
@@ -8600,15 +8816,24 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             return this.supplementEnable;
         }
 
+        /**
+         * @return tokenCalculate
+         */
+        public TokenCalculate getTokenCalculate() {
+            return this.tokenCalculate;
+        }
+
         public static final class Builder {
             private String currentStep; 
             private GeneratedContent generatedContent; 
+            private String modelId; 
             private String nextStep; 
             private java.util.List<String> recommendSearchQueryList; 
             private java.util.List<String> searchKeywords; 
             private java.util.List<String> searchQueryList; 
             private String supplementDataType; 
             private Boolean supplementEnable; 
+            private TokenCalculate tokenCalculate; 
 
             private Builder() {
             } 
@@ -8616,12 +8841,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Builder(BizContext model) {
                 this.currentStep = model.currentStep;
                 this.generatedContent = model.generatedContent;
+                this.modelId = model.modelId;
                 this.nextStep = model.nextStep;
                 this.recommendSearchQueryList = model.recommendSearchQueryList;
                 this.searchKeywords = model.searchKeywords;
                 this.searchQueryList = model.searchQueryList;
                 this.supplementDataType = model.supplementDataType;
                 this.supplementEnable = model.supplementEnable;
+                this.tokenCalculate = model.tokenCalculate;
             } 
 
             /**
@@ -8637,6 +8864,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder generatedContent(GeneratedContent generatedContent) {
                 this.generatedContent = generatedContent;
+                return this;
+            }
+
+            /**
+             * ModelId.
+             */
+            public Builder modelId(String modelId) {
+                this.modelId = modelId;
                 return this;
             }
 
@@ -8685,6 +8920,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder supplementEnable(Boolean supplementEnable) {
                 this.supplementEnable = supplementEnable;
+                return this;
+            }
+
+            /**
+             * TokenCalculate.
+             */
+            public Builder tokenCalculate(TokenCalculate tokenCalculate) {
+                this.tokenCalculate = tokenCalculate;
                 return this;
             }
 

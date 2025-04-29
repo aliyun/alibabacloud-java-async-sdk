@@ -30,6 +30,10 @@ public class RunSearchGenerationRequest extends Request {
     private ChatConfig chatConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelId")
+    private String modelId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("OriginalSessionId")
     private String originalSessionId;
 
@@ -51,6 +55,7 @@ public class RunSearchGenerationRequest extends Request {
         this.regionId = builder.regionId;
         this.agentContext = builder.agentContext;
         this.chatConfig = builder.chatConfig;
+        this.modelId = builder.modelId;
         this.originalSessionId = builder.originalSessionId;
         this.prompt = builder.prompt;
         this.taskId = builder.taskId;
@@ -92,6 +97,13 @@ public class RunSearchGenerationRequest extends Request {
     }
 
     /**
+     * @return modelId
+     */
+    public String getModelId() {
+        return this.modelId;
+    }
+
+    /**
      * @return originalSessionId
      */
     public String getOriginalSessionId() {
@@ -123,6 +135,7 @@ public class RunSearchGenerationRequest extends Request {
         private String regionId; 
         private AgentContext agentContext; 
         private ChatConfig chatConfig; 
+        private String modelId; 
         private String originalSessionId; 
         private String prompt; 
         private String taskId; 
@@ -137,6 +150,7 @@ public class RunSearchGenerationRequest extends Request {
             this.regionId = request.regionId;
             this.agentContext = request.agentContext;
             this.chatConfig = request.chatConfig;
+            this.modelId = request.modelId;
             this.originalSessionId = request.originalSessionId;
             this.prompt = request.prompt;
             this.taskId = request.taskId;
@@ -169,6 +183,15 @@ public class RunSearchGenerationRequest extends Request {
             String chatConfigShrink = shrink(chatConfig, "ChatConfig", "json");
             this.putBodyParameter("ChatConfig", chatConfigShrink);
             this.chatConfig = chatConfig;
+            return this;
+        }
+
+        /**
+         * ModelId.
+         */
+        public Builder modelId(String modelId) {
+            this.putBodyParameter("ModelId", modelId);
+            this.modelId = modelId;
             return this;
         }
 
