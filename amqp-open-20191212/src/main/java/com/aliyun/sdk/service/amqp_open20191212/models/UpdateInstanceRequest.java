@@ -26,6 +26,10 @@ public class UpdateInstanceRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EncryptedInstance")
     private Boolean encryptedInstance;
 
@@ -60,6 +64,10 @@ public class UpdateInstanceRequest extends Request {
     private String modifyType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProvisionedCapacity")
+    private Integer provisionedCapacity;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueueCapacity")
     private Integer queueCapacity;
 
@@ -87,6 +95,7 @@ public class UpdateInstanceRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.clientToken = builder.clientToken;
+        this.edition = builder.edition;
         this.encryptedInstance = builder.encryptedInstance;
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
@@ -95,6 +104,7 @@ public class UpdateInstanceRequest extends Request {
         this.maxEipTps = builder.maxEipTps;
         this.maxPrivateTps = builder.maxPrivateTps;
         this.modifyType = builder.modifyType;
+        this.provisionedCapacity = builder.provisionedCapacity;
         this.queueCapacity = builder.queueCapacity;
         this.serverlessChargeType = builder.serverlessChargeType;
         this.storageSize = builder.storageSize;
@@ -128,6 +138,13 @@ public class UpdateInstanceRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
     }
 
     /**
@@ -187,6 +204,13 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return provisionedCapacity
+     */
+    public Integer getProvisionedCapacity() {
+        return this.provisionedCapacity;
+    }
+
+    /**
      * @return queueCapacity
      */
     public Integer getQueueCapacity() {
@@ -231,6 +255,7 @@ public class UpdateInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateInstanceRequest, Builder> {
         private String regionId; 
         private String clientToken; 
+        private String edition; 
         private Boolean encryptedInstance; 
         private String instanceId; 
         private String instanceType; 
@@ -239,6 +264,7 @@ public class UpdateInstanceRequest extends Request {
         private Long maxEipTps; 
         private Long maxPrivateTps; 
         private String modifyType; 
+        private Integer provisionedCapacity; 
         private Integer queueCapacity; 
         private String serverlessChargeType; 
         private Integer storageSize; 
@@ -254,6 +280,7 @@ public class UpdateInstanceRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.clientToken = request.clientToken;
+            this.edition = request.edition;
             this.encryptedInstance = request.encryptedInstance;
             this.instanceId = request.instanceId;
             this.instanceType = request.instanceType;
@@ -262,6 +289,7 @@ public class UpdateInstanceRequest extends Request {
             this.maxEipTps = request.maxEipTps;
             this.maxPrivateTps = request.maxPrivateTps;
             this.modifyType = request.modifyType;
+            this.provisionedCapacity = request.provisionedCapacity;
             this.queueCapacity = request.queueCapacity;
             this.serverlessChargeType = request.serverlessChargeType;
             this.storageSize = request.storageSize;
@@ -288,6 +316,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.putQueryParameter("Edition", edition);
+            this.edition = edition;
             return this;
         }
 
@@ -396,6 +433,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder modifyType(String modifyType) {
             this.putQueryParameter("ModifyType", modifyType);
             this.modifyType = modifyType;
+            return this;
+        }
+
+        /**
+         * ProvisionedCapacity.
+         */
+        public Builder provisionedCapacity(Integer provisionedCapacity) {
+            this.putQueryParameter("ProvisionedCapacity", provisionedCapacity);
+            this.provisionedCapacity = provisionedCapacity;
             return this;
         }
 
