@@ -2754,6 +2754,9 @@ public class DescribeApiResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FcType")
         private String fcType;
 
+        @com.aliyun.core.annotation.NameInMap("FcVersion")
+        private String fcVersion;
+
         @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
@@ -2786,6 +2789,7 @@ public class DescribeApiResponseBody extends TeaModel {
             this.contentTypeValue = builder.contentTypeValue;
             this.fcBaseUrl = builder.fcBaseUrl;
             this.fcType = builder.fcType;
+            this.fcVersion = builder.fcVersion;
             this.functionName = builder.functionName;
             this.method = builder.method;
             this.onlyBusinessPath = builder.onlyBusinessPath;
@@ -2831,6 +2835,13 @@ public class DescribeApiResponseBody extends TeaModel {
          */
         public String getFcType() {
             return this.fcType;
+        }
+
+        /**
+         * @return fcVersion
+         */
+        public String getFcVersion() {
+            return this.fcVersion;
         }
 
         /**
@@ -2901,6 +2912,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String contentTypeValue; 
             private String fcBaseUrl; 
             private String fcType; 
+            private String fcVersion; 
             private String functionName; 
             private String method; 
             private Boolean onlyBusinessPath; 
@@ -2919,6 +2931,7 @@ public class DescribeApiResponseBody extends TeaModel {
                 this.contentTypeValue = model.contentTypeValue;
                 this.fcBaseUrl = model.fcBaseUrl;
                 this.fcType = model.fcType;
+                this.fcVersion = model.fcVersion;
                 this.functionName = model.functionName;
                 this.method = model.method;
                 this.onlyBusinessPath = model.onlyBusinessPath;
@@ -2976,6 +2989,14 @@ public class DescribeApiResponseBody extends TeaModel {
              */
             public Builder fcType(String fcType) {
                 this.fcType = fcType;
+                return this;
+            }
+
+            /**
+             * FcVersion.
+             */
+            public Builder fcVersion(String fcVersion) {
+                this.fcVersion = fcVersion;
                 return this;
             }
 
