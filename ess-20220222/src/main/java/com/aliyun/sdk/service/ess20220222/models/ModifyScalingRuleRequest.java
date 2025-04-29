@@ -30,6 +30,10 @@ public class ModifyScalingRuleRequest extends Request {
     private java.util.List<AlarmDimensions> alarmDimensions;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlarmOptions")
+    private AlarmOptions alarmOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Cooldown")
     private Integer cooldown;
 
@@ -127,6 +131,7 @@ public class ModifyScalingRuleRequest extends Request {
         this.adjustmentType = builder.adjustmentType;
         this.adjustmentValue = builder.adjustmentValue;
         this.alarmDimensions = builder.alarmDimensions;
+        this.alarmOptions = builder.alarmOptions;
         this.cooldown = builder.cooldown;
         this.disableScaleIn = builder.disableScaleIn;
         this.estimatedInstanceWarmup = builder.estimatedInstanceWarmup;
@@ -184,6 +189,13 @@ public class ModifyScalingRuleRequest extends Request {
      */
     public java.util.List<AlarmDimensions> getAlarmDimensions() {
         return this.alarmDimensions;
+    }
+
+    /**
+     * @return alarmOptions
+     */
+    public AlarmOptions getAlarmOptions() {
+        return this.alarmOptions;
     }
 
     /**
@@ -351,6 +363,7 @@ public class ModifyScalingRuleRequest extends Request {
         private String adjustmentType; 
         private Integer adjustmentValue; 
         private java.util.List<AlarmDimensions> alarmDimensions; 
+        private AlarmOptions alarmOptions; 
         private Integer cooldown; 
         private Boolean disableScaleIn; 
         private Integer estimatedInstanceWarmup; 
@@ -384,6 +397,7 @@ public class ModifyScalingRuleRequest extends Request {
             this.adjustmentType = request.adjustmentType;
             this.adjustmentValue = request.adjustmentValue;
             this.alarmDimensions = request.alarmDimensions;
+            this.alarmOptions = request.alarmOptions;
             this.cooldown = request.cooldown;
             this.disableScaleIn = request.disableScaleIn;
             this.estimatedInstanceWarmup = request.estimatedInstanceWarmup;
@@ -449,6 +463,15 @@ public class ModifyScalingRuleRequest extends Request {
         public Builder alarmDimensions(java.util.List<AlarmDimensions> alarmDimensions) {
             this.putQueryParameter("AlarmDimensions", alarmDimensions);
             this.alarmDimensions = alarmDimensions;
+            return this;
+        }
+
+        /**
+         * AlarmOptions.
+         */
+        public Builder alarmOptions(AlarmOptions alarmOptions) {
+            this.putQueryParameter("AlarmOptions", alarmOptions);
+            this.alarmOptions = alarmOptions;
             return this;
         }
 
@@ -833,6 +856,60 @@ public class ModifyScalingRuleRequest extends Request {
 
             public AlarmDimensions build() {
                 return new AlarmDimensions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyScalingRuleRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyScalingRuleRequest</p>
+     */
+    public static class AlarmOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Period")
+        private Integer period;
+
+        private AlarmOptions(Builder builder) {
+            this.period = builder.period;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AlarmOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return period
+         */
+        public Integer getPeriod() {
+            return this.period;
+        }
+
+        public static final class Builder {
+            private Integer period; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlarmOptions model) {
+                this.period = model.period;
+            } 
+
+            /**
+             * Period.
+             */
+            public Builder period(Integer period) {
+                this.period = period;
+                return this;
+            }
+
+            public AlarmOptions build() {
+                return new AlarmOptions(this);
             } 
 
         } 

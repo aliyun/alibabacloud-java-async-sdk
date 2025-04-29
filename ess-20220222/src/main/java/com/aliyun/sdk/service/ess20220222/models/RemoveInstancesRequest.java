@@ -285,7 +285,7 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * LifecycleHookContext.
+         * <p>The context of the lifecycle hook.</p>
          */
         public Builder lifecycleHookContext(LifecycleHookContext lifecycleHookContext) {
             String lifecycleHookContextShrink = shrink(lifecycleHookContext, "LifecycleHookContext", "json");
@@ -467,7 +467,14 @@ public class RemoveInstancesRequest extends Request {
             } 
 
             /**
-             * DisableLifecycleHook.
+             * <p>Specifies whether to disable the lifecycle hook. Valid Values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disableLifecycleHook(Boolean disableLifecycleHook) {
                 this.disableLifecycleHook = disableLifecycleHook;
@@ -475,7 +482,7 @@ public class RemoveInstancesRequest extends Request {
             }
 
             /**
-             * IgnoredLifecycleHookIds.
+             * <p>The IDs of the lifecycle hooks that you want to disable.</p>
              */
             public Builder ignoredLifecycleHookIds(java.util.List<String> ignoredLifecycleHookIds) {
                 this.ignoredLifecycleHookIds = ignoredLifecycleHookIds;

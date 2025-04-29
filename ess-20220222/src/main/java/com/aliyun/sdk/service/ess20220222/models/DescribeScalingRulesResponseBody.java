@@ -357,6 +357,9 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MetricType")
         private String metricType;
 
+        @com.aliyun.core.annotation.NameInMap("Period")
+        private Integer period;
+
         @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
@@ -371,6 +374,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             this.evaluationCount = builder.evaluationCount;
             this.metricName = builder.metricName;
             this.metricType = builder.metricType;
+            this.period = builder.period;
             this.statistics = builder.statistics;
             this.threshold = builder.threshold;
         }
@@ -433,6 +437,13 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return period
+         */
+        public Integer getPeriod() {
+            return this.period;
+        }
+
+        /**
          * @return statistics
          */
         public String getStatistics() {
@@ -454,6 +465,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             private Integer evaluationCount; 
             private String metricName; 
             private String metricType; 
+            private Integer period; 
             private String statistics; 
             private Float threshold; 
 
@@ -468,6 +480,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
                 this.evaluationCount = model.evaluationCount;
                 this.metricName = model.metricName;
                 this.metricType = model.metricType;
+                this.period = model.period;
                 this.statistics = model.statistics;
                 this.threshold = model.threshold;
             } 
@@ -555,6 +568,14 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
              */
             public Builder metricType(String metricType) {
                 this.metricType = metricType;
+                return this;
+            }
+
+            /**
+             * Period.
+             */
+            public Builder period(Integer period) {
+                this.period = period;
                 return this;
             }
 

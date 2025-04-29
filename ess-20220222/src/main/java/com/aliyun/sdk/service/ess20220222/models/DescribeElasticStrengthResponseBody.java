@@ -106,7 +106,15 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         } 
 
         /**
-         * ElasticStrength.
+         * <p>The scaling strength level of the scaling group. Valid values:</p>
+         * <ul>
+         * <li>Strong</li>
+         * <li>Medium</li>
+         * <li>Weak</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Strong</p>
          */
         public Builder elasticStrength(String elasticStrength) {
             this.elasticStrength = elasticStrength;
@@ -746,7 +754,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The score of the inventory health.</p>
+             * <p>The inventory health score.</p>
              * <ul>
              * <li>A score between 5 and 6 indicates a sufficient inventory.</li>
              * <li>A score between 1 and 4 indicates that there is no guarantee of a sufficient inventory. Select a reservation as necessary.</li>
@@ -767,7 +775,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
              * <p>Valid values: 0 to 3.</p>
              * 
              * <strong>example:</strong>
-             * <p>0</p>
+             * <p>3</p>
              */
             public Builder hotScore(Integer hotScore) {
                 this.hotScore = hotScore;
@@ -775,11 +783,11 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The score of the replenishment capability.</p>
+             * <p>The replenishment capability score.</p>
              * <p>Valid values: 0 to 3.</p>
              * 
              * <strong>example:</strong>
-             * <p>2</p>
+             * <p>3</p>
              */
             public Builder supplyScore(Integer supplyScore) {
                 this.supplyScore = supplyScore;
