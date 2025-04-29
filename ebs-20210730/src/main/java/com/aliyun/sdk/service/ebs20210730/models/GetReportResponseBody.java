@@ -36,6 +36,10 @@ public class GetReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return datas
      */
@@ -53,6 +57,14 @@ public class GetReportResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Datas> datas; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetReportResponseBody model) {
+            this.datas = model.datas;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Data Details.</p>
@@ -122,6 +134,14 @@ public class GetReportResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.Map<String, ?> dataPoints; 
             private java.util.Map<String, ?> labels; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataPoints = model.dataPoints;
+                this.labels = model.labels;
+            } 
 
             /**
              * <p>Data Points.</p>
@@ -206,6 +226,14 @@ public class GetReportResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Data> data; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Datas model) {
+                this.data = model.data;
+                this.title = model.title;
+            } 
 
             /**
              * <p>Data.</p>

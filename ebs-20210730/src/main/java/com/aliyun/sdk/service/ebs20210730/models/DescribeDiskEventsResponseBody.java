@@ -44,6 +44,10 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return diskEvents
      */
@@ -77,6 +81,16 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiskEventsResponseBody model) {
+            this.diskEvents = model.diskEvents;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The risk events of the disk.</p>
@@ -228,6 +242,19 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
             private String status; 
             private String timestamp; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiskEvents model) {
+                this.description = model.description;
+                this.diskId = model.diskId;
+                this.recommendAction = model.recommendAction;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.timestamp = model.timestamp;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The description of the event.</p>

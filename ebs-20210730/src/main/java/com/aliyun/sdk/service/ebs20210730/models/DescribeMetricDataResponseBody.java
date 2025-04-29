@@ -26,10 +26,14 @@ public class DescribeMetricDataResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
+    @com.aliyun.core.annotation.NameInMap("Warnings")
+    private java.util.List<String> warnings;
+
     private DescribeMetricDataResponseBody(Builder builder) {
         this.dataList = builder.dataList;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
+        this.warnings = builder.warnings;
     }
 
     public static Builder builder() {
@@ -38,6 +42,10 @@ public class DescribeMetricDataResponseBody extends TeaModel {
 
     public static DescribeMetricDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -61,10 +69,28 @@ public class DescribeMetricDataResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    /**
+     * @return warnings
+     */
+    public java.util.List<String> getWarnings() {
+        return this.warnings;
+    }
+
     public static final class Builder {
         private java.util.List<DataList> dataList; 
         private String requestId; 
         private Integer totalCount; 
+        private java.util.List<String> warnings; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMetricDataResponseBody model) {
+            this.dataList = model.dataList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.warnings = model.warnings;
+        } 
 
         /**
          * <p>The disk monitoring data.</p>
@@ -93,6 +119,14 @@ public class DescribeMetricDataResponseBody extends TeaModel {
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
+            return this;
+        }
+
+        /**
+         * Warnings.
+         */
+        public Builder warnings(java.util.List<String> warnings) {
+            this.warnings = warnings;
             return this;
         }
 
@@ -145,6 +179,14 @@ public class DescribeMetricDataResponseBody extends TeaModel {
         public static final class Builder {
             private Object datapoints; 
             private Object labels; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.datapoints = model.datapoints;
+                this.labels = model.labels;
+            } 
 
             /**
              * <p>The datapoints that consist of consecutive timestamps in seconds and metric values that were recorded at these time points.</p>

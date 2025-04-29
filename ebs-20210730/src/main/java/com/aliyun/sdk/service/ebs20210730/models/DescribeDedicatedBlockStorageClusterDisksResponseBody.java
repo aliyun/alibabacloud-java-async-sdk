@@ -40,6 +40,10 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return disks
      */
@@ -65,6 +69,15 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         private Disks disks; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDedicatedBlockStorageClusterDisksResponseBody model) {
+            this.disks = model.disks;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the cloud disks.</p>
@@ -145,6 +158,14 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key of the cloud disk.</p>
@@ -603,6 +624,46 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             private String type; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Disk model) {
+                this.attachedTime = model.attachedTime;
+                this.bdfId = model.bdfId;
+                this.burstingEnabled = model.burstingEnabled;
+                this.category = model.category;
+                this.deleteAutoSnapshot = model.deleteAutoSnapshot;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.description = model.description;
+                this.detachedTime = model.detachedTime;
+                this.device = model.device;
+                this.diskChargeType = model.diskChargeType;
+                this.diskId = model.diskId;
+                this.diskName = model.diskName;
+                this.enableAutoSnapshot = model.enableAutoSnapshot;
+                this.encrypted = model.encrypted;
+                this.IOPS = model.IOPS;
+                this.imageId = model.imageId;
+                this.instanceId = model.instanceId;
+                this.KMSKeyId = model.KMSKeyId;
+                this.mountInstanceNum = model.mountInstanceNum;
+                this.multiAttach = model.multiAttach;
+                this.performanceLevel = model.performanceLevel;
+                this.portable = model.portable;
+                this.provisionedIops = model.provisionedIops;
+                this.regionId = model.regionId;
+                this.size = model.size;
+                this.sourceSnapshotId = model.sourceSnapshotId;
+                this.status = model.status;
+                this.storageClusterId = model.storageClusterId;
+                this.storageSetId = model.storageSetId;
+                this.storageSetPartitionNumber = model.storageSetPartitionNumber;
+                this.tags = model.tags;
+                this.throughput = model.throughput;
+                this.type = model.type;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The time when the cloud disk was last attached. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
              * 
@@ -1058,6 +1119,13 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
 
         public static final class Builder {
             private java.util.List<Disk> disk; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.disk = model.disk;
+            } 
 
             /**
              * <p>Details about the cloud disks.</p>

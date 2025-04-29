@@ -52,6 +52,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dedicatedBlockStorageClusters
      */
@@ -101,6 +105,18 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDedicatedBlockStorageClustersResponseBody model) {
+            this.dedicatedBlockStorageClusters = model.dedicatedBlockStorageClusters;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the dedicated block storage clusters.</p>
@@ -335,6 +351,24 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             private Long usedDeviceCapacity; 
             private Double usedSpaceCapacity; 
 
+            private Builder() {
+            } 
+
+            private Builder(DedicatedBlockStorageClusterCapacity model) {
+                this.availableCapacity = model.availableCapacity;
+                this.availableDeviceCapacity = model.availableDeviceCapacity;
+                this.availableSpaceCapacity = model.availableSpaceCapacity;
+                this.clusterAvailableCapacity = model.clusterAvailableCapacity;
+                this.clusterDeliveryCapacity = model.clusterDeliveryCapacity;
+                this.deliveryCapacity = model.deliveryCapacity;
+                this.totalCapacity = model.totalCapacity;
+                this.totalDeviceCapacity = model.totalDeviceCapacity;
+                this.totalSpaceCapacity = model.totalSpaceCapacity;
+                this.usedCapacity = model.usedCapacity;
+                this.usedDeviceCapacity = model.usedDeviceCapacity;
+                this.usedSpaceCapacity = model.usedSpaceCapacity;
+            } 
+
             /**
              * <p>The available capacity of the dedicated block storage cluster. Unit: GiB.</p>
              * 
@@ -517,6 +551,14 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key of the dedicated block storage cluster.</p>
@@ -794,6 +836,31 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             private java.util.List<Tags> tags; 
             private String type; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DedicatedBlockStorageClusters model) {
+                this.aliUid = model.aliUid;
+                this.category = model.category;
+                this.createTime = model.createTime;
+                this.dedicatedBlockStorageClusterCapacity = model.dedicatedBlockStorageClusterCapacity;
+                this.dedicatedBlockStorageClusterId = model.dedicatedBlockStorageClusterId;
+                this.dedicatedBlockStorageClusterName = model.dedicatedBlockStorageClusterName;
+                this.description = model.description;
+                this.enableThinProvision = model.enableThinProvision;
+                this.expiredTime = model.expiredTime;
+                this.performanceLevel = model.performanceLevel;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.sizeOverSoldRatio = model.sizeOverSoldRatio;
+                this.status = model.status;
+                this.storageDomain = model.storageDomain;
+                this.supportedCategory = model.supportedCategory;
+                this.tags = model.tags;
+                this.type = model.type;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The user ID.</p>

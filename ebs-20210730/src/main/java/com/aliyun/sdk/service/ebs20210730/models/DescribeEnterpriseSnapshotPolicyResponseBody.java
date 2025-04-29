@@ -52,6 +52,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -101,6 +105,18 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         private java.util.List<Policies> policies; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnterpriseSnapshotPolicyResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.policies = model.policies;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
@@ -215,6 +231,14 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private String regionId; 
             private Integer retainDays; 
 
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.regionId = model.regionId;
+                this.retainDays = model.retainDays;
+            } 
+
             /**
              * <p>The ID of the destination region.</p>
              * 
@@ -287,6 +311,14 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enabled; 
             private java.util.List<Regions> regions; 
+
+            private Builder() {
+            } 
+
+            private Builder(CrossRegionCopyInfo model) {
+                this.enabled = model.enabled;
+                this.regions = model.regions;
+            } 
 
             /**
              * <p>Indicates whether the cross-region replication feature is enabled.</p>
@@ -370,6 +402,15 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private Integer timeInterval; 
             private String timeUnit; 
 
+            private Builder() {
+            } 
+
+            private Builder(RetainRule model) {
+                this.number = model.number;
+                this.timeInterval = model.timeInterval;
+                this.timeUnit = model.timeUnit;
+            } 
+
             /**
              * <p>The maximum number of snapshots that can be retained.</p>
              * 
@@ -442,6 +483,13 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String cronExpression; 
 
+            private Builder() {
+            } 
+
+            private Builder(Schedule model) {
+                this.cronExpression = model.cronExpression;
+            } 
+
             /**
              * <p>The cron expression of the enterprise-level snapshot policy.</p>
              */
@@ -512,6 +560,15 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private String specialPeriodUnit; 
             private Integer timeInterval; 
             private String timeUnit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.specialPeriodUnit = model.specialPeriodUnit;
+                this.timeInterval = model.timeInterval;
+                this.timeUnit = model.timeUnit;
+            } 
 
             /**
              * <p>The unit of the special retention period.</p>
@@ -597,6 +654,14 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private Boolean enabled; 
             private java.util.List<Rules> rules; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpecialRetainRules model) {
+                this.enabled = model.enabled;
+                this.rules = model.rules;
+            } 
+
             /**
              * <p>Indicates whether the special retention period is enabled.</p>
              * 
@@ -654,6 +719,13 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean enableImmediateAccess; 
+
+            private Builder() {
+            } 
+
+            private Builder(StorageRule model) {
+                this.enableImmediateAccess = model.enableImmediateAccess;
+            } 
 
             /**
              * <p>Indicates whether the instant access feature is enabled.</p>
@@ -716,6 +788,14 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The key of the tag of the enterprise-level snapshot policy.</p>
@@ -957,6 +1037,28 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private Integer targetCount; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.createTime = model.createTime;
+                this.crossRegionCopyInfo = model.crossRegionCopyInfo;
+                this.desc = model.desc;
+                this.diskIds = model.diskIds;
+                this.managedForEcs = model.managedForEcs;
+                this.name = model.name;
+                this.policyId = model.policyId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.retainRule = model.retainRule;
+                this.schedule = model.schedule;
+                this.specialRetainRules = model.specialRetainRules;
+                this.state = model.state;
+                this.storageRule = model.storageRule;
+                this.tags = model.tags;
+                this.targetCount = model.targetCount;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The time when the enterprise-level snapshot policy was created.</p>

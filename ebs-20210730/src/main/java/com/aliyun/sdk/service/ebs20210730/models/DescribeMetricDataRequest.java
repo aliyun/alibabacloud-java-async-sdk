@@ -22,6 +22,10 @@ public class DescribeMetricDataRequest extends Request {
     private String aggreOps;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggreOverLineOps")
+    private String aggreOverLineOps;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Dimensions")
     private String dimensions;
 
@@ -49,6 +53,7 @@ public class DescribeMetricDataRequest extends Request {
     private DescribeMetricDataRequest(Builder builder) {
         super(builder);
         this.aggreOps = builder.aggreOps;
+        this.aggreOverLineOps = builder.aggreOverLineOps;
         this.dimensions = builder.dimensions;
         this.endTime = builder.endTime;
         this.metricName = builder.metricName;
@@ -65,7 +70,7 @@ public class DescribeMetricDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,6 +80,13 @@ public class DescribeMetricDataRequest extends Request {
      */
     public String getAggreOps() {
         return this.aggreOps;
+    }
+
+    /**
+     * @return aggreOverLineOps
+     */
+    public String getAggreOverLineOps() {
+        return this.aggreOverLineOps;
     }
 
     /**
@@ -121,6 +133,7 @@ public class DescribeMetricDataRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeMetricDataRequest, Builder> {
         private String aggreOps; 
+        private String aggreOverLineOps; 
         private String dimensions; 
         private String endTime; 
         private String metricName; 
@@ -135,6 +148,7 @@ public class DescribeMetricDataRequest extends Request {
         private Builder(DescribeMetricDataRequest request) {
             super(request);
             this.aggreOps = request.aggreOps;
+            this.aggreOverLineOps = request.aggreOverLineOps;
             this.dimensions = request.dimensions;
             this.endTime = request.endTime;
             this.metricName = request.metricName;
@@ -159,6 +173,15 @@ public class DescribeMetricDataRequest extends Request {
         public Builder aggreOps(String aggreOps) {
             this.putQueryParameter("AggreOps", aggreOps);
             this.aggreOps = aggreOps;
+            return this;
+        }
+
+        /**
+         * AggreOverLineOps.
+         */
+        public Builder aggreOverLineOps(String aggreOverLineOps) {
+            this.putQueryParameter("AggreOverLineOps", aggreOverLineOps);
+            this.aggreOverLineOps = aggreOverLineOps;
             return this;
         }
 

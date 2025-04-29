@@ -40,6 +40,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return monitorData
      */
@@ -65,6 +69,15 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         private java.util.List<MonitorData> monitorData; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiskMonitorDataResponseBody model) {
+            this.monitorData = model.monitorData;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The near real-time monitoring data of the disk.</p>
@@ -277,6 +290,25 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             private Long writeBlockSize; 
             private Long writeIOPS; 
             private Long writeLatency; 
+
+            private Builder() {
+            } 
+
+            private Builder(MonitorData model) {
+                this.BPSPercent = model.BPSPercent;
+                this.burstIOCount = model.burstIOCount;
+                this.diskId = model.diskId;
+                this.IOPSPercent = model.IOPSPercent;
+                this.readBPS = model.readBPS;
+                this.readBlockSize = model.readBlockSize;
+                this.readIOPS = model.readIOPS;
+                this.readLatency = model.readLatency;
+                this.timestamp = model.timestamp;
+                this.writeBPS = model.writeBPS;
+                this.writeBlockSize = model.writeBlockSize;
+                this.writeIOPS = model.writeIOPS;
+                this.writeLatency = model.writeLatency;
+            } 
 
             /**
              * <p>The percentage of BPS.</p>

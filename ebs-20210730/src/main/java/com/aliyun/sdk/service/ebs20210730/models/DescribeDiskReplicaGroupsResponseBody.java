@@ -52,6 +52,10 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -101,6 +105,18 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         private java.util.List<ReplicaGroups> replicaGroups; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiskReplicaGroupsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.replicaGroups = model.replicaGroups;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>A pagination token.</p>
@@ -214,6 +230,14 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key of the replication pair-consistent group.</p>
@@ -503,6 +527,32 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             private String standbyZone; 
             private String status; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReplicaGroups model) {
+                this.bandwidth = model.bandwidth;
+                this.description = model.description;
+                this.destinationRegionId = model.destinationRegionId;
+                this.destinationZoneId = model.destinationZoneId;
+                this.groupName = model.groupName;
+                this.lastRecoverPoint = model.lastRecoverPoint;
+                this.pairIds = model.pairIds;
+                this.pairNumber = model.pairNumber;
+                this.primaryRegion = model.primaryRegion;
+                this.primaryZone = model.primaryZone;
+                this.RPO = model.RPO;
+                this.replicaGroupId = model.replicaGroupId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.site = model.site;
+                this.sourceRegionId = model.sourceRegionId;
+                this.sourceZoneId = model.sourceZoneId;
+                this.standbyRegion = model.standbyRegion;
+                this.standbyZone = model.standbyZone;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The bandwidth value. Unit: Kbit/s. This parameter is not publicly available and has a system-preset value.</p>

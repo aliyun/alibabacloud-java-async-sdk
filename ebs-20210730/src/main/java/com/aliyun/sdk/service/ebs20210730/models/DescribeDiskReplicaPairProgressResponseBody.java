@@ -40,6 +40,10 @@ public class DescribeDiskReplicaPairProgressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return progress
      */
@@ -65,6 +69,15 @@ public class DescribeDiskReplicaPairProgressResponseBody extends TeaModel {
         private Integer progress; 
         private Long recoverPoint; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiskReplicaPairProgressResponseBody model) {
+            this.progress = model.progress;
+            this.recoverPoint = model.recoverPoint;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The replication progress of the replication pair.</p>

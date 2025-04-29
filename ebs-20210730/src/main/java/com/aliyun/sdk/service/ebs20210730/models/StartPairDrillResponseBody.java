@@ -36,6 +36,10 @@ public class StartPairDrillResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return drillId
      */
@@ -53,6 +57,14 @@ public class StartPairDrillResponseBody extends TeaModel {
     public static final class Builder {
         private String drillId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartPairDrillResponseBody model) {
+            this.drillId = model.drillId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The drill ID.</p>

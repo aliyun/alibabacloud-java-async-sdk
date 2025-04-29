@@ -44,6 +44,10 @@ public class DescribeUserTagKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class DescribeUserTagKeysResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<String> tagKeys; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserTagKeysResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.tagKeys = model.tagKeys;
+        } 
 
         /**
          * <p>Number of items per page in paginated queries. The maximum value is 100.</p>

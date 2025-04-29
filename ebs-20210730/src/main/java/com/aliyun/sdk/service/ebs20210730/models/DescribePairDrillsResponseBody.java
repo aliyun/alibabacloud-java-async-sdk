@@ -52,6 +52,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return drills
      */
@@ -101,6 +105,18 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePairDrillsResponseBody model) {
+            this.drills = model.drills;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information of disaster recovery drills that were performed on the replication pair.</p>
@@ -274,6 +290,19 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             private Long startAt; 
             private String status; 
             private String statusMessage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Drills model) {
+                this.drillDiskId = model.drillDiskId;
+                this.drillDiskStatus = model.drillDiskStatus;
+                this.drillId = model.drillId;
+                this.recoverPoint = model.recoverPoint;
+                this.startAt = model.startAt;
+                this.status = model.status;
+                this.statusMessage = model.statusMessage;
+            } 
 
             /**
              * <p>The ID of the drill disk.</p>

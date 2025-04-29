@@ -52,6 +52,10 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -101,6 +105,18 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         private java.util.List<ReplicaPairs> replicaPairs; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiskReplicaPairsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.replicaPairs = model.replicaPairs;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
@@ -214,6 +230,14 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -575,6 +599,38 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             private String status; 
             private String statusMessage; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReplicaPairs model) {
+                this.bandwidth = model.bandwidth;
+                this.chargeType = model.chargeType;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.destinationDiskId = model.destinationDiskId;
+                this.destinationRegion = model.destinationRegion;
+                this.destinationZoneId = model.destinationZoneId;
+                this.expiredTime = model.expiredTime;
+                this.lastRecoverPoint = model.lastRecoverPoint;
+                this.pairName = model.pairName;
+                this.primaryRegion = model.primaryRegion;
+                this.primaryZone = model.primaryZone;
+                this.RPO = model.RPO;
+                this.replicaGroupId = model.replicaGroupId;
+                this.replicaGroupName = model.replicaGroupName;
+                this.replicaPairId = model.replicaPairId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.site = model.site;
+                this.sourceDiskId = model.sourceDiskId;
+                this.sourceRegion = model.sourceRegion;
+                this.sourceZoneId = model.sourceZoneId;
+                this.standbyRegion = model.standbyRegion;
+                this.standbyZone = model.standbyZone;
+                this.status = model.status;
+                this.statusMessage = model.statusMessage;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The bandwidth used to asynchronously replicate data from the primary disk to the secondary disk. Unit: Kbit/s.</p>

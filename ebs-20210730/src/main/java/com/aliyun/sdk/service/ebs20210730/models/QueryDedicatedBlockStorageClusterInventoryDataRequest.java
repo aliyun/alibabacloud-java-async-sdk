@@ -64,7 +64,7 @@ public class QueryDedicatedBlockStorageClusterInventoryDataRequest extends Reque
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

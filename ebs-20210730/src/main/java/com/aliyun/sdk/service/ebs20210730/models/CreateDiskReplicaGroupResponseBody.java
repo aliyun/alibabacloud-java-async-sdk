@@ -36,6 +36,10 @@ public class CreateDiskReplicaGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return replicaGroupId
      */
@@ -53,6 +57,14 @@ public class CreateDiskReplicaGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String replicaGroupId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDiskReplicaGroupResponseBody model) {
+            this.replicaGroupId = model.replicaGroupId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the replication pair-consistent group.</p>

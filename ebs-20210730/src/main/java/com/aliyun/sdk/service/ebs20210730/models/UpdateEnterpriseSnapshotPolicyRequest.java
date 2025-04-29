@@ -86,7 +86,7 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -379,6 +379,14 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
             private String regionId; 
             private Integer retainDays; 
 
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.regionId = model.regionId;
+                this.retainDays = model.retainDays;
+            } 
+
             /**
              * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which async replication is supported.</p>
              * 
@@ -451,6 +459,14 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
         public static final class Builder {
             private Boolean enabled; 
             private java.util.List<Regions> regions; 
+
+            private Builder() {
+            } 
+
+            private Builder(CrossRegionCopyInfo model) {
+                this.enabled = model.enabled;
+                this.regions = model.regions;
+            } 
 
             /**
              * <p>Whether cross-region replication is enabled. The range of values:</p>
@@ -540,6 +556,15 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
             private Integer timeInterval; 
             private String timeUnit; 
 
+            private Builder() {
+            } 
+
+            private Builder(RetainRule model) {
+                this.number = model.number;
+                this.timeInterval = model.timeInterval;
+                this.timeUnit = model.timeUnit;
+            } 
+
             /**
              * <p>Maximum number of retained snapshots.</p>
              * 
@@ -617,6 +642,13 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
         public static final class Builder {
             private String cronExpression; 
 
+            private Builder() {
+            } 
+
+            private Builder(Schedule model) {
+                this.cronExpression = model.cronExpression;
+            } 
+
             /**
              * <p>The time when the policy will to be scheduled. Valid values: Set the parameter in a cron expression.</p>
              * <p>For example, you can use <code>0 0 4 1/1 * ?</code> to specify 04:00:00 (UTC+8) on the first day of each month.</p>
@@ -689,6 +721,15 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
             private String specialPeriodUnit; 
             private Integer timeInterval; 
             private String timeUnit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.specialPeriodUnit = model.specialPeriodUnit;
+                this.timeInterval = model.timeInterval;
+                this.timeUnit = model.timeUnit;
+            } 
 
             /**
              * <p>The periodic unit for specially retained snapshots. If configured to WEEKS, it provides special retention for the first snapshot of each week. The retention period is determined by TimeUnit and TimeInterval. The range of values are:</p>
@@ -785,6 +826,14 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
             private Boolean enabled; 
             private java.util.List<Rules> rules; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpecialRetainRules model) {
+                this.enabled = model.enabled;
+                this.rules = model.rules;
+            } 
+
             /**
              * <p>Indicates whether the special retention is enabled.</p>
              * <ul>
@@ -846,6 +895,13 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
 
         public static final class Builder {
             private Boolean enableImmediateAccess; 
+
+            private Builder() {
+            } 
+
+            private Builder(StorageRule model) {
+                this.enableImmediateAccess = model.enableImmediateAccess;
+            } 
 
             /**
              * <p>Whether to enable the rapid availability of snapshots. The range of values:</p>

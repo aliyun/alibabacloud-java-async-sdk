@@ -44,6 +44,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -77,6 +81,16 @@ public class DescribeEventsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ResourceEvents> resourceEvents; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.resourceEvents = model.resourceEvents;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
@@ -288,6 +302,24 @@ public class DescribeEventsResponseBody extends TeaModel {
             private String resourceType; 
             private String startTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceEvents model) {
+                this.description = model.description;
+                this.endTime = model.endTime;
+                this.eventLevel = model.eventLevel;
+                this.eventName = model.eventName;
+                this.eventType = model.eventType;
+                this.extraAttributes = model.extraAttributes;
+                this.recommendAction = model.recommendAction;
+                this.recommendParams = model.recommendParams;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The description of the event.</p>

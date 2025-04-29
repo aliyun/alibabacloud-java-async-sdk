@@ -36,6 +36,10 @@ public class QueryDedicatedBlockStorageClusterDiskThroughputStatusResponseBody e
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class QueryDedicatedBlockStorageClusterDiskThroughputStatusResponseBody e
     public static final class Builder {
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDedicatedBlockStorageClusterDiskThroughputStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The ID of the request.</p>

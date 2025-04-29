@@ -44,6 +44,10 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return diskInfos
      */
@@ -77,6 +81,16 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLensMonitorDisksResponseBody model) {
+            this.diskInfos = model.diskInfos;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the disks.</p>
@@ -169,6 +183,14 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -241,6 +263,9 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("SharingEnabled")
+        private String sharingEnabled;
+
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
@@ -263,6 +288,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
             this.performanceLevel = builder.performanceLevel;
             this.provisionedIops = builder.provisionedIops;
             this.regionId = builder.regionId;
+            this.sharingEnabled = builder.sharingEnabled;
             this.size = builder.size;
             this.tags = builder.tags;
             this.zoneId = builder.zoneId;
@@ -361,6 +387,13 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         }
 
         /**
+         * @return sharingEnabled
+         */
+        public String getSharingEnabled() {
+            return this.sharingEnabled;
+        }
+
+        /**
          * @return size
          */
         public Integer getSize() {
@@ -394,9 +427,32 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
             private String performanceLevel; 
             private Integer provisionedIops; 
             private String regionId; 
+            private String sharingEnabled; 
             private Integer size; 
             private java.util.List<Tags> tags; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiskInfos model) {
+                this.bps = model.bps;
+                this.burstingEnabled = model.burstingEnabled;
+                this.diskCategory = model.diskCategory;
+                this.diskId = model.diskId;
+                this.diskName = model.diskName;
+                this.diskStatus = model.diskStatus;
+                this.diskType = model.diskType;
+                this.iops = model.iops;
+                this.lensTags = model.lensTags;
+                this.performanceLevel = model.performanceLevel;
+                this.provisionedIops = model.provisionedIops;
+                this.regionId = model.regionId;
+                this.sharingEnabled = model.sharingEnabled;
+                this.size = model.size;
+                this.tags = model.tags;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The BPS.</p>
@@ -553,6 +609,14 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * SharingEnabled.
+             */
+            public Builder sharingEnabled(String sharingEnabled) {
+                this.sharingEnabled = sharingEnabled;
                 return this;
             }
 

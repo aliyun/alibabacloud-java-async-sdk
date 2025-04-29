@@ -52,6 +52,10 @@ public class ListReportsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return historyReports
      */
@@ -101,6 +105,18 @@ public class ListReportsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListReportsResponseBody model) {
+            this.historyReports = model.historyReports;
+            this.nextToken = model.nextToken;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Historical reports.</p>
@@ -250,6 +266,17 @@ public class ListReportsResponseBody extends TeaModel {
             private String reportName; 
             private String reportTime; 
             private String subscribePeriod; 
+
+            private Builder() {
+            } 
+
+            private Builder(HistoryReports model) {
+                this.appName = model.appName;
+                this.reportId = model.reportId;
+                this.reportName = model.reportName;
+                this.reportTime = model.reportTime;
+                this.subscribePeriod = model.subscribePeriod;
+            } 
 
             /**
              * <p>Application name.</p>

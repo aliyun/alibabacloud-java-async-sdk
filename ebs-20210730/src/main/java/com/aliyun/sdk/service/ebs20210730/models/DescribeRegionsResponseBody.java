@@ -36,6 +36,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
@@ -53,6 +57,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Regions> regions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the regions.</p>
@@ -134,6 +146,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String localName; 
             private java.util.List<String> resourceTypes; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.localName = model.localName;
+                this.resourceTypes = model.resourceTypes;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The name of the zone.</p>
@@ -239,6 +260,16 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionEndpoint; 
             private String regionId; 
             private java.util.List<Zones> zones; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.localName = model.localName;
+                this.regionEndpoint = model.regionEndpoint;
+                this.regionId = model.regionId;
+                this.zones = model.zones;
+            } 
 
             /**
              * <p>The name of the region.</p>

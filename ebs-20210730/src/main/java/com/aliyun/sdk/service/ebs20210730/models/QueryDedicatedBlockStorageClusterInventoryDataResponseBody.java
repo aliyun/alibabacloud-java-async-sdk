@@ -52,6 +52,10 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -101,6 +105,18 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
         private String diskCategory; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDedicatedBlockStorageClusterInventoryDataResponseBody model) {
+            this.data = model.data;
+            this.dbscId = model.dbscId;
+            this.dbscName = model.dbscName;
+            this.diskCategory = model.diskCategory;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -218,6 +234,14 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
             private Long availableSize; 
             private Long totalSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonitorItems model) {
+                this.availableSize = model.availableSize;
+                this.totalSize = model.totalSize;
+            } 
+
             /**
              * <p>Available capacity size of the dedicated block storage cluster.</p>
              * 
@@ -302,6 +326,15 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
             private MonitorItems monitorItems; 
             private String resourceId; 
             private String timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.monitorItems = model.monitorItems;
+                this.resourceId = model.resourceId;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The returned metrics.</p>

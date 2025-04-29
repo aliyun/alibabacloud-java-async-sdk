@@ -44,6 +44,10 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return monitorData
      */
@@ -77,6 +81,16 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDiskMonitorDataListResponseBody model) {
+            this.monitorData = model.monitorData;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The near real-time monitoring data of the disks.</p>
@@ -180,6 +194,15 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
             private Long burstIOCount; 
             private String diskId; 
             private String timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(MonitorData model) {
+                this.burstIOCount = model.burstIOCount;
+                this.diskId = model.diskId;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The number of burst I/O operations.</p>

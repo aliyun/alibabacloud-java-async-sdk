@@ -40,6 +40,10 @@ public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dbscId
      */
@@ -65,6 +69,15 @@ public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
         private String dbscId; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDedicatedBlockStorageClusterResponseBody model) {
+            this.dbscId = model.dbscId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the dedicated block storage cluster.</p>
