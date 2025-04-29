@@ -67,7 +67,10 @@ public class CreatePortRangeListResponseBody extends TeaModel {
         } 
 
         /**
-         * PortRangeListId.
+         * <p>The ID of the port list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prl-2ze9743****</p>
          */
         public Builder portRangeListId(String portRangeListId) {
             this.portRangeListId = portRangeListId;
@@ -75,7 +78,10 @@ public class CreatePortRangeListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

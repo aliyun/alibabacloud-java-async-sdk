@@ -314,10 +314,10 @@ public class ModifyInstanceSpecRequest extends Request {
         /**
          * <p>Specifies whether to allow cross-cluster instance type upgrade. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: force attaches the disk to the instance.</li>
+         * <li>false: does not force attach the disk to the instance.</li>
          * </ul>
-         * <p>Default value: false.</p>
+         * <p>Default value: false. Valid values:</p>
          * <p>When you set <code>AllowMigrateAcrossZone</code> to true and upgrade the instance based on the returned information, take note of the following items:</p>
          * <p>Instance that resides in the classic network:</p>
          * <ul>
@@ -338,10 +338,10 @@ public class ModifyInstanceSpecRequest extends Request {
         /**
          * <p>Specifies whether to submit an asynchronous request. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: force attaches the disk to the instance.</li>
+         * <li>false: does not force attach the disk to the instance.</li>
          * </ul>
-         * <p>Default value: false.</p>
+         * <p>Default value: false. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -454,6 +454,11 @@ public class ModifyInstanceSpecRequest extends Request {
          * <blockquote>
          * <p> This parameter is not publicly available.</p>
          * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Online</li>
+         * <li>Offline</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>null</p>

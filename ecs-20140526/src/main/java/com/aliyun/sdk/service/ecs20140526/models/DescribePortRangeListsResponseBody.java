@@ -80,7 +80,10 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p>A pagination token. If the return value is empty, no more data is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -88,7 +91,7 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
         }
 
         /**
-         * PortRangeLists.
+         * <p>Details of the port lists.</p>
          */
         public Builder portRangeLists(java.util.List<PortRangeLists> portRangeLists) {
             this.portRangeLists = portRangeLists;
@@ -96,7 +99,10 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6040AD98-11C3-5F78-9346-FCA8E9D8960F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +168,10 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The key of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -170,7 +179,10 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The value of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -315,7 +327,10 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
             } 
 
             /**
-             * AssociationCount.
+             * <p>The number of associated resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder associationCount(Integer associationCount) {
                 this.associationCount = associationCount;
@@ -323,7 +338,10 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the port list was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-04T07:11Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -331,7 +349,10 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the port list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -339,7 +360,10 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxEntries.
+             * <p>The maximum number of entries in the port list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxEntries(Integer maxEntries) {
                 this.maxEntries = maxEntries;
@@ -347,7 +371,10 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
             }
 
             /**
-             * PortRangeListId.
+             * <p>The ID of the port list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prl-2ze9743****</p>
              */
             public Builder portRangeListId(String portRangeListId) {
                 this.portRangeListId = portRangeListId;
@@ -355,7 +382,10 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
             }
 
             /**
-             * PortRangeListName.
+             * <p>The name of the port list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PortRangeListNameSample</p>
              */
             public Builder portRangeListName(String portRangeListName) {
                 this.portRangeListName = portRangeListName;
@@ -363,7 +393,10 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which to assign the port list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-2zeg82g****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -371,7 +404,7 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the port list.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

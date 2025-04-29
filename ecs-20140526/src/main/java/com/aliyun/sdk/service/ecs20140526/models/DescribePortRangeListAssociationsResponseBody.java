@@ -80,7 +80,10 @@ public class DescribePortRangeListAssociationsResponseBody extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If the return value is empty, no more data is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -88,7 +91,7 @@ public class DescribePortRangeListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * PortRangeListAssociations.
+         * <p>The resources that are associated with the port list.</p>
          */
         public Builder portRangeListAssociations(java.util.List<PortRangeListAssociations> portRangeListAssociations) {
             this.portRangeListAssociations = portRangeListAssociations;
@@ -96,7 +99,10 @@ public class DescribePortRangeListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +168,10 @@ public class DescribePortRangeListAssociationsResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceId.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2zefu72****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -170,7 +179,10 @@ public class DescribePortRangeListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the resource. Valid value: SecurityGroup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SecurityGroup</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

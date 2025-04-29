@@ -172,6 +172,7 @@ public class DescribePortRangeListEntriesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the port list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +185,7 @@ public class DescribePortRangeListEntriesRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the port list. You can call the <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

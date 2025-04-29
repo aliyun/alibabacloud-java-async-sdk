@@ -660,23 +660,32 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/172789.html">Overview</a>.
-     * Take note of the following items:</p>
+     * <h3><a href="#"></a>Considerations</h3>
      * <ul>
-     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query information about an ECS instance, the instance is locked for security reasons, and you cannot create a custom image from the instance.</li>
-     * <li>To optimize the image, we recommend that you specify <code>DetectionStrategy</code> when you create a custom image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview</a>.</li>
-     * <li>You can use the created custom image only if the image is in the Available (<code>Available</code>) state.
-     * You can call the CreateImage operation to create a custom image by using one of the following methods. The following request parameters are sorted by priority from high to low: <code>InstanceId</code> &gt; <code>DiskDeviceMapping</code> &gt; <code>SnapshotId</code>. If your request contains two or more of the preceding parameters, the custom image is created based on the parameter that has a higher priority.</li>
-     * <li><strong>Create a custom image from an ECS instance</strong>. You need to only specify the instance ID by using <code>InstanceId</code>. The instance must be in the Running (<code>Running</code>) or Stopped (<code>Stopped</code>) state. After you call the CreateImage operation, a snapshot is created for each disk of the instance. When you create a custom image from a running ECS instance, cache data may not be written to disks. In this case, the data of the custom image may be slightly different from the data of the instance. Before you create a custom image from the instance, we recommend that you stop the instance by calling the <a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a> operation.</li>
-     * <li><strong>Create a custom image from a system disk snapshot of an ECS instance</strong>. You need to only specify the ID of the system disk snapshot by using <code>SnapshotId</code>. The specified system disk snapshot must be created after July 15, 2013.</li>
-     * <li><strong>Create a custom image from multiple snapshots</strong>. You must specify data mappings between the snapshots and the disks to be created by using the parameters that start with <code>DiskDeviceMapping</code>. Take note of the following items:<ul>
-     * <li>You can specify only one snapshot to create the system disk in the custom image. The device name of the system disk must be /dev/xvda.</li>
-     * <li>You can specify up to 16 snapshots to create data disks in the custom image. The device names of the data disks must be unique and range from /dev/xvdb to /dev/xvdz in alphabetical order.</li>
-     * <li>You can leave <code>SnapshotId</code> empty. In this case, an empty data disk with the specified size is created.</li>
-     * <li>The specified snapshot must be created after July 15, 2013.</li>
+     * <li>This operation is an asynchronous operation. After a request to create a custom image is sent, an image ID is returned but the creation of the custom image is in progress. You can call the <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> operation to query the status of the custom image. When the status of the custom image is <code>Available</code> in the response, the image is created and available. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Overview of custom images</a>.</li>
+     * <li>If the response contains {&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}} when you query information about an ECS instance, the instance is locked for security reasons, and you cannot create a custom image from the instance.</li>
+     * <li>To optimize the image, we recommend that you specify <code>DetectionStrategy</code> when you create a custom image. For information about the image check feature, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview</a>.
+     * You can call the CreateImage operation to create a custom image by using one of the following methods. The following request parameters are prioritized in descending order: InstanceId, DiskDeviceMapping, and SnapshotId. If your request contains two or more of these parameters, the custom image is created based on the parameter that has a higher priority.</li>
+     * <li><strong>Create a custom image from an instance</strong>. Specify an instance ID (<code>InstanceId</code>).<ul>
+     * <li>The ECS instance must be in the Running (<code>Running</code>) or Stopped (<code>Stopped</code>) state.</li>
+     * <li>After the CreateImage operation is called, a snapshot is created for each cloud disk of the instance.
+     * **
+     * <strong>Note</strong> When you create a custom image from a running ECS instance, cache data may not be written to disks. In this case, the data of the custom image may be slightly different from the data of the instance. Before you create a custom image from the instance, we recommend that you stop the instance by calling the StopInstancesoperation.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Create a custom image from a snapshot. The specified snapshot must be created after July 15, 2013.</strong><ul>
+     * <li><strong>Create a custom image from a system disk snapshot of an ECS instance</strong>. You need to only specify the ID of the system disk snapshot by using <code>SnapshotId</code>.</li>
+     * <li><strong>Create a custom image from a system disk snapshot and data disk snapshots of an ECS instance</strong>. You need to establish data association between the disks by specifying <code>DiskDeviceMapping</code>.<ul>
+     * <li>You can specify only one snapshot to create the system disk in the custom image.</li>
+     * <li>You can specify up to 16 snapshots to use to create data disks in the custom image. If you do not specify <code>DiskDeviceMapping.N.SnapshotId</code>, an empty data disk with the default capacity is created.</li>
      * </ul>
      * </li>
      * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p> When an ECS instance is released, the system disk of the instance is converted to a pay-as-you-go data disk. You cannot create a custom image from the snapshot of this disk. You must create a custom image from the snapshot of this disk before the instance is released.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of CreateImage  CreateImageRequest
      * @return CreateImageResponse
@@ -1327,7 +1336,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
      * <p>If a disk snapshot that is contained in a snapshot-consistent group has been used to create a custom image, the disk snapshot is retained after the snapshot-consistent group is deleted. Before you can delete the disk snapshot, you must call the <a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a> operation to delete the custom image. Then, you can call the <a href="https://help.aliyun.com/document_detail/25525.html">DeleteSnapshot</a> operation to delete the disk snapshot.</p>
      * 
      * @param request the request parameters of DeleteSnapshotGroup  DeleteSnapshotGroupRequest
@@ -3411,20 +3419,22 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you are familiar with the billing methods and pricing of Elastic Compute Service (ECS). For more information, see the <a href="https://www.alibabacloud.com/product/ecs#pricing">Elastic Compute Service</a> product page.
-     * Take note of the following items:</p>
+     * <h3><a href="#"></a>Precautions</h3>
      * <ul>
-     * <li>The instances must be in the <strong>Running</strong> (<code>Running</code>) or <strong>Stopped</strong> (<code>Stopped</code>) state, and you cannot have overdue payments for them.</li>
-     * <li>After you change the billing method, outstanding payments are automatically completed. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set <code>AutoPay</code> to <code>false</code> to generate an unpaid order. Then, you can log on to the <a href="https://ecs.console.aliyun.com/">ECS console</a> to pay for the order.</li>
+     * <li>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/56220.html">subscription</a> and <a href="https://help.aliyun.com/document_detail/40653.html">pay-as-you-go</a> billing methods and <a href="https://www.alibabacloud.com/product/ecs#pricing">pricing</a> of ECS.</li>
+     * <li>The instances must be in the <strong>Running</strong> (<code>Running</code>) or <strong>Stopped</strong> (<code>Stopped</code>) state, and you have no overdue payments for the instances.</li>
+     * <li>After you change the billing method, the payment is automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set <code>AutoPay</code> to <code>false</code> to generate an unpaid order. Then, you can log on to the <a href="https://ecs.console.aliyun.com/">ECS console</a> to pay for the order.</li>
+     * </ul>
+     * <h3><a href="#"></a>Considerations</h3>
+     * <ul>
      * <li><strong>Change the billing method from subscription to pay-as-you-go</strong>:<ul>
-     * <li>Your ECS usage determines whether the billing method of an instance can be changed from subscription to pay-as-you-go.</li>
      * <li>After you change the billing method of an instance from subscription to pay-as-you-go, the new billing method remains in effect for the remaining lifecycle of the instance. The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.</li>
-     * <li><strong>Refund rule</strong>: You have a quota for the total refund amount each month, and unused balance of this quota is not carried forward into the next month. After you use up the refund quota of the current month, you can change the billing method only in the next month. The refund amount incurred when you change the billing method is calculated based on the following formula: <strong>Number of vCPUs × (Number of remaining days × 24 ± Number of remaining or elapsed hours)</strong>.</li>
+     * <li><strong>Refund rule</strong>: You have a quota for the total refund amount each month, and unused balance of this quota is not carried forward into the next month. After you use up the refund quota of the current month, you can change the billing method only in the next month. The refund amount incurred when you change the billing method is calculated based on the following formula: <strong>Number of vCPUs × (Number of remaining days × 24 ± Number of remaining or elapsed hours)</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/85517.html">Change the billing method of an instance from subscription to pay-as-you-go</a>.</li>
      * </ul>
      * </li>
      * <li><strong>Change the billing method from pay-as-you-go to subscription</strong>:<ul>
-     * <li>You can change the billing method of all data disks that are attached to an instance from pay-as-you-go to subscription.</li>
-     * <li>This operation cannot be called for a pay-as-you-go instance that has an automatic release time set.</li>
+     * <li>You can change the billing method of all data disks attached to an instance from pay-as-you-go to subscription.</li>
+     * <li>This operation cannot be called for a pay-as-you-go instance that has an automatic release time set. For more information, see <a href="https://help.aliyun.com/document_detail/49884.html">Change the billing method of an instance from subscription to pay-as-you-go</a>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -3928,11 +3938,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot call this operation to start ECS instances that are locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</p>
+     * <p>After you complete the overdue payment for a pay-as-you-go ECS instance, you do not need to call this operation to reactivate the instance. The system automatically reactivates the instance to restore the instance to the status before the payment became overdue. Automatic reactivation occasionally fails. Take note of the status of automatic reactivation. If the automatic reactivation fails, call this operation to manually reactivate the instance.</p>
      * <ul>
-     * <li>The instance must be in the <strong>Stopped</strong> <code>(Stopped)</code> state.</li>
-     * <li>You must pay the bills and reactivate the instance within 15 days after the instance is suspended due to overdue payments. Otherwise, the instance is released and the data cannot be restored. If you cannot restart an instance of the Virtual Private Cloud (VPC) type, try again later.</li>
-     * <li>After the operation is called, the instance enters the <strong>Starting</strong> <code>(Starting)</code> state.</li>
+     * <li>The instance must be in the <strong>Expired</strong> <code>(Stopped)</code> state.</li>
+     * <li>You cannot call this operation to start ECS instances that are locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of ReActivateInstances  ReActivateInstancesRequest
@@ -4163,17 +4172,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <p>Before you call this operation, refer to <a href="https://help.aliyun.com/document_detail/50134.html">Replace the operating system (system disk) of an instance</a>.
      * When you call this operation for an ECS instance, take note of the following items:</p>
      * <ul>
-     * <li>The billing method of the system disk cannot be changed.</li>
-     * <li>The category of the system disk cannot be changed.</li>
-     * <li>Make sure that no unpaid orders are associated with the instance.</li>
-     * <li>The instance must be in the <code>Stopped</code> state.
-     * **
-     * <strong>Note</strong> The operation is applicable only to instances of the Virtual Private Cloud (VPC) type. If the instance is a pay-as-you-go instance and default economical mode is enabled, enable standard mode when you stop the instance. This prevents the instance from being unable to restart due to insufficient ECS resources after the system disk is replaced. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</li>
-     * <li>The instance cannot be locked for security reasons. If the value of <code>OperationLocks</code> in the DescribeInstances response contains <code>&quot;LockReason&quot;: &quot;security&quot;</code> for an instance, the instance is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
-     * <li>You can configure <code>SystemDisk.Size</code> to specify the capacity of the new system disk.
-     * After you call the ReplaceSystemDisk operation, you can use one of the following methods to check whether the system disk is replaced:</li>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query the status of the new system disk. If the new system disk is in the In Use state, the system disk is replaced.</li>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to query the status of the instance whose system disk is replaced. If the <code>OperationLocks</code> parameter is empty, the system disk is replaced.</li>
+     * <li><p>The billing method of the system disk cannot be changed.</p>
+     * </li>
+     * <li><p>The category of the system disk cannot be changed.</p>
+     * </li>
+     * <li><p>Make sure that no unpaid orders are associated with the instance.</p>
+     * </li>
+     * <li><p>The instance must be in the <code>Stopped</code> state.</p>
+     * <p><strong>Note</strong> The operation is applicable only to instances of the Virtual Private Cloud (VPC) type. If the instance is a pay-as-you-go instance and default economical mode is enabled, enable standard mode when you stop the instance. This prevents the instance from being unable to restart due to insufficient ECS resources after the system disk is replaced. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</p>
+     * </li>
+     * <li><p>The instance cannot be locked for security reasons. If the value of <code>OperationLocks</code> in the DescribeInstances response contains <code>&quot;LockReason&quot;: &quot;security&quot;</code> for an instance, the instance is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</p>
+     * </li>
+     * <li><p>You can configure <code>SystemDisk.Size</code> to specify the capacity of the new system disk.
+     * After you call the ReplaceSystemDisk operation, you can use one of the following methods to check whether the system disk is replaced:</p>
+     * </li>
+     * <li><p>Call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query the status of the new system disk. If the new system disk is in the In Use state, the system disk is replaced.</p>
+     * </li>
+     * <li><p>Call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to query the status of the instance whose system disk is replaced. If the <code>OperationLocks</code> parameter is empty, the system disk is replaced.</p>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of ReplaceSystemDisk  ReplaceSystemDiskRequest
@@ -4254,19 +4270,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> Alibaba Cloud modified verification rules for the RevokeSecurityGroup operation on July 8, 2024. When you use the RevokeSecurityGroup operation to delete a security group rule that does not exist, the &quot;InvalidSecurityGroupRule.RuleNotExist&quot; error code is returned instead of a success response. Update the RevokeSecurityGroup operation to use the new verification rules with the new error code based on your business requirements.
-     * When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:</p>
+     * <p> Alibaba Cloud modified verification rules for the RevokeSecurityGroup operation on July 8, 2024. When you call the RevokeSecurityGroup operation to delete a security group rule that does not exist, the &quot;InvalidParam.SecurityGroupRuleId&quot; error code is returned instead of a success response. Update the RevokeSecurityGroup operation to use the new verification rules with the new error code based on your business requirements.
+     * You can use one of the following groups of parameters to specify the security group rules that you want to delete:</p>
      * </blockquote>
      * <ul>
      * <li>Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules.<ul>
-     * <li>If a security group rule ID that you specify does not exist, an error is reported.</li>
+     * <li>If a specified security group rule ID does not exist, the call to RevokeSecurityGroup fails.</li>
      * </ul>
      * </li>
      * <li>Parameters that start with Permissions.<ul>
      * <li>If no security group rule matches the specified parameters, the call to RevokeSecurityGroup is successful but no security group rules are deleted.</li>
      * <li>Define an inbound security group rule by configuring the following parameters together:<ul>
-     * <li>Source: You can specify one parameter from SourceCidrIp (IPv4 address), Ipv6SourceCidrIp (IPv6 address), SourcePrefixListId (prefix list ID), and SourceGroupId (source security group ID).</li>
-     * <li>PortRange: specifies the range of destination port numbers.</li>
+     * <li>Source: You can specify one parameter from SourceCidrIp (IPv4 address), Ipv6SourceCidrIp (IPv6 address), SourcetPrefixListId (prefix list ID), and SourceGroupId (source security group ID).</li>
+     * <li>PortRange: specifies the destination port range.</li>
      * <li>IpProtocol: specifies the protocol.</li>
      * <li>Policy: specifies the action.</li>
      * </ul>
@@ -4275,35 +4291,39 @@ public interface AsyncClient extends SdkAutoCloseable {
      * </li>
      * </ul>
      * <blockquote>
-     * <p> You cannot specify the security group rule IDs and the parameters that start with Permissions in the same request.</p>
+     * <p> You cannot specify the IDs of security group rules and the parameters that start with Permissions in the same request.</p>
      * </blockquote>
      * <h3><a href="#"></a>Sample requests</h3>
      * <ul>
-     * <li>Delete security group rules by specifying their IDs.<!---->
-     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;, // The security group ID.
-     * &quot;SecurityGroupRuleId&quot;:[&quot;sgr-bpdfmk****&quot;,&quot;sgr-bpdfmg****&quot;] // The IDs of the security group rules.</li>
-     * <li>Delete security group rules by specifying a CIDR block.<!---->
+     * <li>Delete a security group rule based on the rule ID:<!---->
+     * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;, //Specify the ID of the security group.
+     * &quot;SecurityGroupRuleId&quot;:[&quot;sgr-bpdfmk****&quot;,&quot;sgr-bpdfmg****&quot;] //Specify the ID of the security group rule.</li>
+     * <li>Delete a security group rule based on an IPv4 CIDR block:<!---->
      * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;,
      * &quot;Permissions&quot;:[
      *   {
-     * &quot;SourceCidrIp&quot;:&quot;10.0.0.0/8&quot;, // The source IPv4 CIDR block.
-     * &quot;IpProtocol&quot;:&quot;TCP&quot;, // The protocol.
-     * &quot;PortRange&quot;:&quot;80/80&quot;, // The range of destination port numbers.    &quot;Policy&quot;:&quot;accept&quot; // The action.  }
+     * &quot;SourceCidrIp&quot;:&quot;10.0.0.0/8&quot;, //Specify the source IPv4 CIDR block.
+     * &quot;IpProtocol&quot;:&quot;TCP&quot;, //Specify the protocol.
+     * &quot;PortRange&quot;:&quot;80/80&quot;, //Specify the destination port range.
+     * &quot;Policy&quot;:&quot;accept&quot; //Specify the action.
+     *   }
      * ]</li>
-     * <li>Delete security group rules in which a security group is specified.<!---->
+     * <li>Delete a security group rule in which a security group is referenced:<!---->
      * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;,
      * &quot;Permissions&quot;:[
      *   {
-     * &quot;SourceGroupId&quot;:&quot;sg-bp67acfmxa123b****&quot;, // The ID of the source security group.    &quot;IpProtocol&quot;:&quot;TCP,&quot;
+     * &quot;SourceGroupId&quot;:&quot;sg-bp67acfmxa123b****&quot;, //Specify the ID of the source security group.
+     * &quot;IpProtocol&quot;:&quot;TCP,&quot;
      * &quot;PortRange&quot;:&quot;80/80&quot;,
      * &quot;Policy&quot;:&quot;accept&quot;
      *   ]
      * }</li>
-     * <li>Delete security group rules in which a prefix list is specified.<!---->
+     * <li>Delete a security group rule in which a prefix list is referenced:<!---->
      * &quot;SecurityGroupId&quot;:&quot;sg-bp67acfmxazb4p****&quot;,
      * &quot;Permissions&quot;:[
      *   {
-     *    &quot;SourcePrefixListId&quot;:&quot;pl-x1j1k5ykzqlixdcy****&quot;, // The ID of the source prefix list.    &quot;IpProtocol&quot;:&quot;TCP&quot;,
+     * &quot;SourcePrefixListId&quot;:pl-x1j1k5ykzqlixdcy****&quot;, //Specify the ID of the source prefix list.
+     * &quot;IpProtocol&quot;:&quot;TCP&quot;,
      * &quot;PortRange&quot;:&quot;80/80&quot;,
      * &quot;Policy&quot;:&quot;accept&quot;
      *   }
@@ -4418,8 +4438,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>\<em>\</em> When you create an ECS instance, you are charged for ECS resources, including the <a href="https://help.aliyun.com/document_detail/25398.html">instance type</a>, <a href="https://help.aliyun.com/document_detail/179021.html">image</a>, <a href="https://help.aliyun.com/document_detail/179022.html">block storage</a>, and <a href="https://help.aliyun.com/document_detail/25411.html">public bandwidth</a>. Before you call this operation, familiarize yourself with the billing rules and
-     * <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources. \<em>\</em>
+     * <p>When you create an ECS instance, you are charged for ECS resources, including the <a href="https://help.aliyun.com/document_detail/25398.html">instance type</a>, <a href="https://help.aliyun.com/document_detail/179021.html">image</a>, <a href="https://help.aliyun.com/document_detail/179022.html">block storage</a>, and <a href="https://help.aliyun.com/document_detail/25411.html">public bandwidth</a>. Before you call this operation, familiarize yourself with the billing rules and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources. 
      * This operation is an asynchronous operation. After a request to create ECS instances is sent, ECS instance IDs are returned but the creation and startup of the instances may be incomplete. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instances. When the status of an instance is <code>Running</code> in the DescribeInstanceStatus response, the instance is created and started.</p>
      * <h3><a href="#"></a>Considerations</h3>
      * <ul>
@@ -4628,7 +4647,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you add tags to a resource, Alibaba Cloud checks the number of existing tags of the resource. If the maximum number of tags is reached, an error message is returned. For more information, see the &quot;Tag limits&quot; section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Before you add tags to a resource, Alibaba Cloud checks the number of existing tags of the resource. If the maximum number of tags is reached, an error message is returned. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Tag limits</a>.</p>
      * 
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse

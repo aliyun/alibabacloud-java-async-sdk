@@ -22,6 +22,10 @@ public class CopyImageRequest extends Request {
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationDescription")
     private String destinationDescription;
 
@@ -32,6 +36,10 @@ public class CopyImageRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationRegionId")
     private String destinationRegionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EncryptAlgorithm")
@@ -83,9 +91,11 @@ public class CopyImageRequest extends Request {
     private CopyImageRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.clientToken = builder.clientToken;
         this.destinationDescription = builder.destinationDescription;
         this.destinationImageName = builder.destinationImageName;
         this.destinationRegionId = builder.destinationRegionId;
+        this.dryRun = builder.dryRun;
         this.encryptAlgorithm = builder.encryptAlgorithm;
         this.encrypted = builder.encrypted;
         this.imageId = builder.imageId;
@@ -120,6 +130,13 @@ public class CopyImageRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return destinationDescription
      */
     public String getDestinationDescription() {
@@ -138,6 +155,13 @@ public class CopyImageRequest extends Request {
      */
     public String getDestinationRegionId() {
         return this.destinationRegionId;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -219,9 +243,11 @@ public class CopyImageRequest extends Request {
 
     public static final class Builder extends Request.Builder<CopyImageRequest, Builder> {
         private String sourceRegionId; 
+        private String clientToken; 
         private String destinationDescription; 
         private String destinationImageName; 
         private String destinationRegionId; 
+        private Boolean dryRun; 
         private String encryptAlgorithm; 
         private Boolean encrypted; 
         private String imageId; 
@@ -241,9 +267,11 @@ public class CopyImageRequest extends Request {
         private Builder(CopyImageRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.clientToken = request.clientToken;
             this.destinationDescription = request.destinationDescription;
             this.destinationImageName = request.destinationImageName;
             this.destinationRegionId = request.destinationRegionId;
+            this.dryRun = request.dryRun;
             this.encryptAlgorithm = request.encryptAlgorithm;
             this.encrypted = request.encrypted;
             this.imageId = request.imageId;
@@ -263,6 +291,15 @@ public class CopyImageRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -299,6 +336,15 @@ public class CopyImageRequest extends Request {
         public Builder destinationRegionId(String destinationRegionId) {
             this.putQueryParameter("DestinationRegionId", destinationRegionId);
             this.destinationRegionId = destinationRegionId;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

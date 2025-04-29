@@ -224,7 +224,14 @@ public class DescribePortRangeListsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Valid values: 1 to 100.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -233,7 +240,10 @@ public class DescribePortRangeListsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>727d41872117f2816343eeb432fbc5bfd21dc824589d2a4be0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -260,7 +270,7 @@ public class DescribePortRangeListsRequest extends Request {
         }
 
         /**
-         * PortRangeListId.
+         * <p>The ID of the port list. Valid values of N: 0 to 100.</p>
          */
         public Builder portRangeListId(java.util.List<String> portRangeListId) {
             this.putQueryParameter("PortRangeListId", portRangeListId);
@@ -269,7 +279,10 @@ public class DescribePortRangeListsRequest extends Request {
         }
 
         /**
-         * PortRangeListName.
+         * <p>The name of the port list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http://, https://, com.aliyun, or com.alibabacloud. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PortRangeListNameSample</p>
          */
         public Builder portRangeListName(String portRangeListName) {
             this.putQueryParameter("PortRangeListName", portRangeListName);
@@ -278,6 +291,7 @@ public class DescribePortRangeListsRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,7 +304,13 @@ public class DescribePortRangeListsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned in the response. You can call the <a href="https://help.aliyun.com/document_detail/2716558.html">ListResourceGroups</a> operation to query the most recent resource group list.</p>
+         * <blockquote>
+         * <p> A default resource group is not supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -317,7 +337,7 @@ public class DescribePortRangeListsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags that are added to the port list.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -385,7 +405,11 @@ public class DescribePortRangeListsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of tag N. Valid values: 1 to 20.</p>
+             * <p>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key for PortRangeList</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -393,7 +417,10 @@ public class DescribePortRangeListsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value for PortRangeList</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -67,7 +67,7 @@ public class DescribePortRangeListEntriesResponseBody extends TeaModel {
         } 
 
         /**
-         * Entries.
+         * <p>Port list entries.</p>
          */
         public Builder entries(java.util.List<Entries> entries) {
             this.entries = entries;
@@ -75,7 +75,10 @@ public class DescribePortRangeListEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>882304EC-5CE2-5860-98ED-3FA1D8D74A0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class DescribePortRangeListEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the port range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description information of PortRangeList</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -149,7 +155,10 @@ public class DescribePortRangeListEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * PortRange.
+             * <p>The port range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80/80</p>
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;

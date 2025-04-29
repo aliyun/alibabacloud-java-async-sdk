@@ -30,6 +30,10 @@ public class ModifyImageAttributeRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Features")
     private Features features;
 
@@ -80,6 +84,7 @@ public class ModifyImageAttributeRequest extends Request {
         this.sourceRegionId = builder.sourceRegionId;
         this.bootMode = builder.bootMode;
         this.description = builder.description;
+        this.dryRun = builder.dryRun;
         this.features = builder.features;
         this.imageFamily = builder.imageFamily;
         this.imageId = builder.imageId;
@@ -125,6 +130,13 @@ public class ModifyImageAttributeRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -208,6 +220,7 @@ public class ModifyImageAttributeRequest extends Request {
         private String sourceRegionId; 
         private String bootMode; 
         private String description; 
+        private Boolean dryRun; 
         private Features features; 
         private String imageFamily; 
         private String imageId; 
@@ -229,6 +242,7 @@ public class ModifyImageAttributeRequest extends Request {
             this.sourceRegionId = request.sourceRegionId;
             this.bootMode = request.bootMode;
             this.description = request.description;
+            this.dryRun = request.dryRun;
             this.features = request.features;
             this.imageFamily = request.imageFamily;
             this.imageId = request.imageId;
@@ -281,6 +295,15 @@ public class ModifyImageAttributeRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

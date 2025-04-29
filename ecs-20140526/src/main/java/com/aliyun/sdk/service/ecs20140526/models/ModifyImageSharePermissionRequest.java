@@ -26,6 +26,10 @@ public class ModifyImageSharePermissionRequest extends Request {
     private java.util.List<String> addAccount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
@@ -67,6 +71,7 @@ public class ModifyImageSharePermissionRequest extends Request {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
         this.addAccount = builder.addAccount;
+        this.dryRun = builder.dryRun;
         this.imageId = builder.imageId;
         this.isPublic = builder.isPublic;
         this.launchPermission = builder.launchPermission;
@@ -103,6 +108,13 @@ public class ModifyImageSharePermissionRequest extends Request {
      */
     public java.util.List<String> getAddAccount() {
         return this.addAccount;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -171,6 +183,7 @@ public class ModifyImageSharePermissionRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyImageSharePermissionRequest, Builder> {
         private String sourceRegionId; 
         private java.util.List<String> addAccount; 
+        private Boolean dryRun; 
         private String imageId; 
         private Boolean isPublic; 
         private String launchPermission; 
@@ -189,6 +202,7 @@ public class ModifyImageSharePermissionRequest extends Request {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
             this.addAccount = request.addAccount;
+            this.dryRun = request.dryRun;
             this.imageId = request.imageId;
             this.isPublic = request.isPublic;
             this.launchPermission = request.launchPermission;
@@ -218,6 +232,15 @@ public class ModifyImageSharePermissionRequest extends Request {
         public Builder addAccount(java.util.List<String> addAccount) {
             this.putQueryParameter("AddAccount", addAccount);
             this.addAccount = addAccount;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

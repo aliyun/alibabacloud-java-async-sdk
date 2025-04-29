@@ -22,6 +22,10 @@ public class DeleteImageRequest extends Request {
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
@@ -54,6 +58,7 @@ public class DeleteImageRequest extends Request {
     private DeleteImageRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.dryRun = builder.dryRun;
         this.force = builder.force;
         this.imageId = builder.imageId;
         this.ownerAccount = builder.ownerAccount;
@@ -81,6 +86,13 @@ public class DeleteImageRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -134,6 +146,7 @@ public class DeleteImageRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteImageRequest, Builder> {
         private String sourceRegionId; 
+        private Boolean dryRun; 
         private Boolean force; 
         private String imageId; 
         private String ownerAccount; 
@@ -149,6 +162,7 @@ public class DeleteImageRequest extends Request {
         private Builder(DeleteImageRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.dryRun = request.dryRun;
             this.force = request.force;
             this.imageId = request.imageId;
             this.ownerAccount = request.ownerAccount;
@@ -164,6 +178,15 @@ public class DeleteImageRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

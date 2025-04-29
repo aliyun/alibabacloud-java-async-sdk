@@ -793,7 +793,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PortRangeListId.
+             * <p>The ID of the port list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prl-2ze9743****</p>
              */
             public Builder portRangeListId(String portRangeListId) {
                 this.portRangeListId = portRangeListId;
@@ -801,7 +804,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PortRangeListName.
+             * <p>The name of the port list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PortRangeListNameSample</p>
              */
             public Builder portRangeListName(String portRangeListName) {
                 this.portRangeListName = portRangeListName;
