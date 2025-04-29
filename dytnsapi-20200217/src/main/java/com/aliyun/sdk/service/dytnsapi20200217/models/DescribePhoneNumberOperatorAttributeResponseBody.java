@@ -48,6 +48,10 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePhoneNumberOperatorAttributeResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -243,6 +258,18 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
             private Boolean isNumberPortability; 
             private Long numberSegment; 
             private String province; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.basicCarrier = model.basicCarrier;
+                this.carrier = model.carrier;
+                this.city = model.city;
+                this.isNumberPortability = model.isNumberPortability;
+                this.numberSegment = model.numberSegment;
+                this.province = model.province;
+            } 
 
             /**
              * <p>The basic carrier. Valid values:</p>

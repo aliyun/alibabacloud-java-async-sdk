@@ -44,6 +44,10 @@ public class TwoElementsVerificationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class TwoElementsVerificationResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TwoElementsVerificationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code. Valid values:</p>
@@ -173,6 +187,14 @@ public class TwoElementsVerificationResponseBody extends TeaModel {
         public static final class Builder {
             private String basicCarrier; 
             private Integer isConsistent; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.basicCarrier = model.basicCarrier;
+                this.isConsistent = model.isConsistent;
+            } 
 
             /**
              * <p>The basic carriers. Valid values:</p>

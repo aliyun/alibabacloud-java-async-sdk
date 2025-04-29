@@ -48,6 +48,10 @@ public class GetUAIDConversionSignResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetUAIDConversionSignResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUAIDConversionSignResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -191,6 +206,15 @@ public class GetUAIDConversionSignResponseBody extends TeaModel {
             private String carrier; 
             private String outId; 
             private String sign; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.carrier = model.carrier;
+                this.outId = model.outId;
+                this.sign = model.sign;
+            } 
 
             /**
              * Carrier.

@@ -44,6 +44,10 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
         private String message; 
         private PhoneNumberAttribute phoneNumberAttribute; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePhoneNumberAttributeResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.phoneNumberAttribute = model.phoneNumberAttribute;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code. Valid values:</p>
@@ -222,6 +236,18 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
             private Boolean isNumberPortability; 
             private Long numberSegment; 
             private String province; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhoneNumberAttribute model) {
+                this.basicCarrier = model.basicCarrier;
+                this.carrier = model.carrier;
+                this.city = model.city;
+                this.isNumberPortability = model.isNumberPortability;
+                this.numberSegment = model.numberSegment;
+                this.province = model.province;
+            } 
 
             /**
              * <p>The basic carrier. Valid values:</p>

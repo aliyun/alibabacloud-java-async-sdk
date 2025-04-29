@@ -44,6 +44,10 @@ public class DescribePhoneTwiceTelVerifyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DescribePhoneTwiceTelVerifyResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePhoneTwiceTelVerifyResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code. Valid values:</p>
@@ -177,6 +191,14 @@ public class DescribePhoneTwiceTelVerifyResponseBody extends TeaModel {
         public static final class Builder {
             private String carrier; 
             private String verifyResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.carrier = model.carrier;
+                this.verifyResult = model.verifyResult;
+            } 
 
             /**
              * <p>The carrier. Valid values:</p>

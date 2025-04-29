@@ -48,6 +48,10 @@ public class DescribeMobileOperatorAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class DescribeMobileOperatorAttributeResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMobileOperatorAttributeResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -239,6 +254,19 @@ public class DescribeMobileOperatorAttributeResponseBody extends TeaModel {
             private String province; 
             private String realNumber; 
             private String segmentCarrier; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.basicCarrier = model.basicCarrier;
+                this.carrier = model.carrier;
+                this.city = model.city;
+                this.isNumberPortability = model.isNumberPortability;
+                this.province = model.province;
+                this.realNumber = model.realNumber;
+                this.segmentCarrier = model.segmentCarrier;
+            } 
 
             /**
              * BasicCarrier.

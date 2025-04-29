@@ -48,6 +48,10 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CompanyThreeElementsVerificationResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -194,6 +209,14 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
             private String enterpriseStatus; 
             private String openTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DetailInfo model) {
+                this.enterpriseStatus = model.enterpriseStatus;
+                this.openTime = model.openTime;
+            } 
+
             /**
              * <p>The business status of the enterprise.</p>
              * 
@@ -290,6 +313,16 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
             private java.util.List<String> inconsistentData; 
             private Long reasonCode; 
             private String verifyResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.detailInfo = model.detailInfo;
+                this.inconsistentData = model.inconsistentData;
+                this.reasonCode = model.reasonCode;
+                this.verifyResult = model.verifyResult;
+            } 
 
             /**
              * <p>The information about the enterprise.</p>

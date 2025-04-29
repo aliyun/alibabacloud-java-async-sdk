@@ -48,6 +48,10 @@ public class DescribePhoneNumberOperatorAttributeAnnualResponseBody extends TeaM
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribePhoneNumberOperatorAttributeAnnualResponseBody extends TeaM
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePhoneNumberOperatorAttributeAnnualResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -227,6 +242,18 @@ public class DescribePhoneNumberOperatorAttributeAnnualResponseBody extends TeaM
             private String mts; 
             private Boolean numberPortability; 
             private String province; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.basicCarrier = model.basicCarrier;
+                this.carrier = model.carrier;
+                this.city = model.city;
+                this.mts = model.mts;
+                this.numberPortability = model.numberPortability;
+                this.province = model.province;
+            } 
 
             /**
              * BasicCarrier.

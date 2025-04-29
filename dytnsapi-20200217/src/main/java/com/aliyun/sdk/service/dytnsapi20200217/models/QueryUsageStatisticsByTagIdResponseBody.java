@@ -48,6 +48,10 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryUsageStatisticsByTagIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. <strong>OK</strong> indicates that the request is successful.</p>
@@ -303,6 +318,23 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
             private Long tagId; 
             private String tagName; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.authorizationCode = model.authorizationCode;
+                this.failTotal = model.failTotal;
+                this.gmtDateStr = model.gmtDateStr;
+                this.id = model.id;
+                this.industryName = model.industryName;
+                this.partnerId = model.partnerId;
+                this.sceneName = model.sceneName;
+                this.successTotal = model.successTotal;
+                this.tagId = model.tagId;
+                this.tagName = model.tagName;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The authorization code.</p>

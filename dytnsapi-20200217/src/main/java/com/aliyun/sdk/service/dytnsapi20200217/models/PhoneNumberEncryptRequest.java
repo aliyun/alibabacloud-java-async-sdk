@@ -33,6 +33,10 @@ public class PhoneNumberEncryptRequest extends Request {
     private String mask;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
+    private String outId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
@@ -49,6 +53,7 @@ public class PhoneNumberEncryptRequest extends Request {
         this.authCode = builder.authCode;
         this.inputNumber = builder.inputNumber;
         this.mask = builder.mask;
+        this.outId = builder.outId;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -62,7 +67,7 @@ public class PhoneNumberEncryptRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -86,6 +91,13 @@ public class PhoneNumberEncryptRequest extends Request {
      */
     public String getMask() {
         return this.mask;
+    }
+
+    /**
+     * @return outId
+     */
+    public String getOutId() {
+        return this.outId;
     }
 
     /**
@@ -113,6 +125,7 @@ public class PhoneNumberEncryptRequest extends Request {
         private String authCode; 
         private String inputNumber; 
         private String mask; 
+        private String outId; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -126,6 +139,7 @@ public class PhoneNumberEncryptRequest extends Request {
             this.authCode = request.authCode;
             this.inputNumber = request.inputNumber;
             this.mask = request.mask;
+            this.outId = request.outId;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -176,6 +190,15 @@ public class PhoneNumberEncryptRequest extends Request {
         public Builder mask(String mask) {
             this.putQueryParameter("Mask", mask);
             this.mask = mask;
+            return this;
+        }
+
+        /**
+         * OutId.
+         */
+        public Builder outId(String outId) {
+            this.putQueryParameter("OutId", outId);
+            this.outId = outId;
             return this;
         }
 

@@ -48,6 +48,10 @@ public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePhoneNumberAnalysisResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -180,6 +195,14 @@ public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
             private String code; 
             private String number; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.code = model.code;
+                this.number = model.number;
+            } 
+
             /**
              * Code.
              */
@@ -234,6 +257,13 @@ public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<List> list; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+            } 
 
             /**
              * List.

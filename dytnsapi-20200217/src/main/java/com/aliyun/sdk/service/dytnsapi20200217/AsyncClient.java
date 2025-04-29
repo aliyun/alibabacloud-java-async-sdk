@@ -300,22 +300,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</p>
      * <ul>
-     * <li>You are charged only if the value of Code is OK and the value of IsPrivacyNumber is true or false.</li>
-     * <li>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</li>
-     * <li>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <strong>Activate Now</strong>, enter the required information, and then submit your application. After your application is approved, you can use the label.</li>
-     * </ul>
-     * <h3><a href="#qps"></a>QPS limits</h3>
-     * <p>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * 
-     * @param request the request parameters of PhoneNumberStatusForVirtual  PhoneNumberStatusForVirtualRequest
-     * @return PhoneNumberStatusForVirtualResponse
-     */
-    CompletableFuture<PhoneNumberStatusForVirtualResponse> phoneNumberStatusForVirtual(PhoneNumberStatusForVirtualRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</p>
-     * <ul>
      * <li>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</li>
      * <li>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <strong>Activate Now</strong>, enter the required information, and then submit your application. After your application is approved, you can use the label.</li>
      * </ul>

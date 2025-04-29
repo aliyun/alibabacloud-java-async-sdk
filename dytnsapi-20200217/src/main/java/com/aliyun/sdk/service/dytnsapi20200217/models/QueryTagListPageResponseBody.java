@@ -48,6 +48,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryTagListPageResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTagListPageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. <strong>OK</strong> indicates that the request is successful.</p>
@@ -316,6 +331,24 @@ public class QueryTagListPageResponseBody extends TeaModel {
             private Long sceneId; 
             private String sceneName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.apiName = model.apiName;
+                this.code = model.code;
+                this.docAddress = model.docAddress;
+                this.id = model.id;
+                this.industryId = model.industryId;
+                this.industryName = model.industryName;
+                this.introduction = model.introduction;
+                this.isOpen = model.isOpen;
+                this.name = model.name;
+                this.saleStatusStr = model.saleStatusStr;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+            } 
+
             /**
              * <p>The API operation that is called by the frontend.</p>
              * 
@@ -537,6 +570,17 @@ public class QueryTagListPageResponseBody extends TeaModel {
             private java.util.List<Records> records; 
             private Long totalCount; 
             private Long totalPage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.records = model.records;
+                this.totalCount = model.totalCount;
+                this.totalPage = model.totalPage;
+            } 
 
             /**
              * <p>The page number.</p>

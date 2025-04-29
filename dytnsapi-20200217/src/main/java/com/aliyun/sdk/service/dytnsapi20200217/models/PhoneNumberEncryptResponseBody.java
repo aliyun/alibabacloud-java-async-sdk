@@ -44,6 +44,10 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PhoneNumberEncryptResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -145,10 +159,14 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OriginalNumber")
         private String originalNumber;
 
+        @com.aliyun.core.annotation.NameInMap("OutId")
+        private String outId;
+
         private Data(Builder builder) {
             this.encryptedNumber = builder.encryptedNumber;
             this.expireTime = builder.expireTime;
             this.originalNumber = builder.originalNumber;
+            this.outId = builder.outId;
         }
 
         public static Builder builder() {
@@ -180,10 +198,28 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
             return this.originalNumber;
         }
 
+        /**
+         * @return outId
+         */
+        public String getOutId() {
+            return this.outId;
+        }
+
         public static final class Builder {
             private String encryptedNumber; 
             private String expireTime; 
             private String originalNumber; 
+            private String outId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.encryptedNumber = model.encryptedNumber;
+                this.expireTime = model.expireTime;
+                this.originalNumber = model.originalNumber;
+                this.outId = model.outId;
+            } 
 
             /**
              * <p>The encrypted phone number.</p>
@@ -215,6 +251,14 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
              */
             public Builder originalNumber(String originalNumber) {
                 this.originalNumber = originalNumber;
+                return this;
+            }
+
+            /**
+             * OutId.
+             */
+            public Builder outId(String outId) {
+                this.outId = outId;
                 return this;
             }
 

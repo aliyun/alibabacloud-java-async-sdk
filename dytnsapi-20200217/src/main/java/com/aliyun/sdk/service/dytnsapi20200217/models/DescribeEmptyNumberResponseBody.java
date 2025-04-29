@@ -44,6 +44,10 @@ public class DescribeEmptyNumberResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DescribeEmptyNumberResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEmptyNumberResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code. Valid values:</p>
@@ -172,6 +186,14 @@ public class DescribeEmptyNumberResponseBody extends TeaModel {
         public static final class Builder {
             private String number; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.number = model.number;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The specified phone number.</p>

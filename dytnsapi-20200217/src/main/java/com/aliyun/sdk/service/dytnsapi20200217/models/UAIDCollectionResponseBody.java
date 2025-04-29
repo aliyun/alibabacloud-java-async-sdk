@@ -48,6 +48,10 @@ public class UAIDCollectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class UAIDCollectionResponseBody extends TeaModel {
         private String message; 
         private Model model; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UAIDCollectionResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -167,6 +182,13 @@ public class UAIDCollectionResponseBody extends TeaModel {
 
         public static final class Builder {
             private String uaid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.uaid = model.uaid;
+            } 
 
             /**
              * Uaid.

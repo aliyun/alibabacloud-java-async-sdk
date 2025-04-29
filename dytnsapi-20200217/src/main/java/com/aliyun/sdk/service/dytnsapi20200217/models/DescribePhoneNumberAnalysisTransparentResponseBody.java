@@ -48,6 +48,10 @@ public class DescribePhoneNumberAnalysisTransparentResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class DescribePhoneNumberAnalysisTransparentResponseBody extends TeaModel
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePhoneNumberAnalysisTransparentResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -215,6 +230,17 @@ public class DescribePhoneNumberAnalysisTransparentResponseBody extends TeaModel
             private String score1; 
             private String score2; 
             private String score3; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deviceRisk = model.deviceRisk;
+                this.ipRisk = model.ipRisk;
+                this.score1 = model.score1;
+                this.score2 = model.score2;
+                this.score3 = model.score3;
+            } 
 
             /**
              * Device_risk.

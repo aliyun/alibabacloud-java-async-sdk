@@ -44,6 +44,10 @@ public class InvalidPhoneNumberFilterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class InvalidPhoneNumberFilterResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(InvalidPhoneNumberFilterResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code. Valid values:</p>
@@ -205,6 +219,16 @@ public class InvalidPhoneNumberFilterResponseBody extends TeaModel {
             private String encryptedNumber; 
             private String expireTime; 
             private String originalNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.code = model.code;
+                this.encryptedNumber = model.encryptedNumber;
+                this.expireTime = model.expireTime;
+                this.originalNumber = model.originalNumber;
+            } 
 
             /**
              * <p>The returned filter results.</p>

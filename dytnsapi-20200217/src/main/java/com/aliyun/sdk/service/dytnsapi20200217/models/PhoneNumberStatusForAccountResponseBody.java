@@ -44,6 +44,10 @@ public class PhoneNumberStatusForAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class PhoneNumberStatusForAccountResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PhoneNumberStatusForAccountResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code. Valid values:</p>
@@ -173,6 +187,14 @@ public class PhoneNumberStatusForAccountResponseBody extends TeaModel {
         public static final class Builder {
             private String carrier; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.carrier = model.carrier;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The basic carrier who assings the phone number. If the queried phone number involves mobile number portability, the carrier after mobile number portability is returned. Valid values:</p>

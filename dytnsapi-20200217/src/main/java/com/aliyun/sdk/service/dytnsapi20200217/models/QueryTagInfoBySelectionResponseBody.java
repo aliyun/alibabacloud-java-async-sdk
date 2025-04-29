@@ -48,6 +48,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTagInfoBySelectionResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. <strong>OK</strong> indicates that the request is successful.</p>
@@ -195,6 +210,14 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         public static final class Builder {
             private String code; 
             private String desc; 
+
+            private Builder() {
+            } 
+
+            private Builder(ValueDict model) {
+                this.code = model.code;
+                this.desc = model.desc;
+            } 
 
             /**
              * <p>The English name.</p>
@@ -316,6 +339,18 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private java.util.List<ValueDict> valueDict; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParamList model) {
+                this.code = model.code;
+                this.hint = model.hint;
+                this.must = model.must;
+                this.name = model.name;
+                this.type = model.type;
+                this.valueDict = model.valueDict;
+            } 
 
             /**
              * <p>The English name of the parameter.</p>
@@ -574,6 +609,26 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             private String sceneName; 
             private Long tagId; 
             private String tagName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.authCodeList = model.authCodeList;
+                this.complexityType = model.complexityType;
+                this.demoAddress = model.demoAddress;
+                this.docAddress = model.docAddress;
+                this.enumDefinitionAddress = model.enumDefinitionAddress;
+                this.flowName = model.flowName;
+                this.industryId = model.industryId;
+                this.industryName = model.industryName;
+                this.paramList = model.paramList;
+                this.richTextDescription = model.richTextDescription;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+                this.tagId = model.tagId;
+                this.tagName = model.tagName;
+            } 
 
             /**
              * <p>The list of available authorization codes.</p>

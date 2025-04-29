@@ -44,6 +44,10 @@ public class PhoneNumberConvertServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class PhoneNumberConvertServiceResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PhoneNumberConvertServiceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -183,6 +197,16 @@ public class PhoneNumberConvertServiceResponseBody extends TeaModel {
             private String number; 
             private String numberMd5; 
             private String numberSha256; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.converResult = model.converResult;
+                this.number = model.number;
+                this.numberMd5 = model.numberMd5;
+                this.numberSha256 = model.numberSha256;
+            } 
 
             /**
              * ConverResult.
