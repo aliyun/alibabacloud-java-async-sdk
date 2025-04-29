@@ -52,6 +52,10 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelStaticInfoResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -308,6 +324,23 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             private java.util.List<String> service; 
             private String themeTag; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExpandInfo model) {
+                this.checkIn = model.checkIn;
+                this.checkOut = model.checkOut;
+                this.decorateTime = model.decorateTime;
+                this.floors = model.floors;
+                this.hotelFacilities = model.hotelFacilities;
+                this.hotelType = model.hotelType;
+                this.openingTime = model.openingTime;
+                this.roomFacilities = model.roomFacilities;
+                this.rooms = model.rooms;
+                this.service = model.service;
+                this.themeTag = model.themeTag;
+            } 
+
             /**
              * check_in.
              */
@@ -459,6 +492,15 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             private Integer tag; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Imageinfos model) {
+                this.desc = model.desc;
+                this.tag = model.tag;
+                this.url = model.url;
+            } 
+
             /**
              * desc.
              */
@@ -582,6 +624,18 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             private String length; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(BedInfos model) {
+                this.bedDesc = model.bedDesc;
+                this.bedNum = model.bedNum;
+                this.bedSize = model.bedSize;
+                this.bedType = model.bedType;
+                this.length = model.length;
+                this.width = model.width;
+            } 
+
             /**
              * bed_desc.
              */
@@ -668,6 +722,13 @@ public class HotelStaticInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BedInfos> bedInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(BedInfoGroupList model) {
+                this.bedInfos = model.bedInfos;
+            } 
 
             /**
              * bed_Infos.
@@ -775,6 +836,18 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             private String bedType; 
             private String length; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoomInfosBedInfos model) {
+                this.bedDesc = model.bedDesc;
+                this.bedNum = model.bedNum;
+                this.bedSize = model.bedSize;
+                this.bedType = model.bedType;
+                this.length = model.length;
+                this.width = model.width;
+            } 
 
             /**
              * bed_desc.
@@ -1078,6 +1151,31 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             private String window; 
             private String windowBad; 
             private String windowView; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoomInfos model) {
+                this.bedInfoGroupList = model.bedInfoGroupList;
+                this.bedInfos = model.bedInfos;
+                this.extraBed = model.extraBed;
+                this.extraBedDesc = model.extraBedDesc;
+                this.floor = model.floor;
+                this.internetWay = model.internetWay;
+                this.maxOccupancy = model.maxOccupancy;
+                this.roomFacilities = model.roomFacilities;
+                this.roomFacilityList = model.roomFacilityList;
+                this.roomId = model.roomId;
+                this.roomImage = model.roomImage;
+                this.roomImages = model.roomImages;
+                this.roomName = model.roomName;
+                this.roomType = model.roomType;
+                this.roomarea = model.roomarea;
+                this.rooms = model.rooms;
+                this.window = model.window;
+                this.windowBad = model.windowBad;
+                this.windowView = model.windowView;
+            } 
 
             /**
              * bed_info_group_list.
@@ -1666,6 +1764,46 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             private String themes; 
             private Boolean visaReminding; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotelStaticInfos model) {
+                this.blockRoomTypeInformation = model.blockRoomTypeInformation;
+                this.brand = model.brand;
+                this.brandName = model.brandName;
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.country = model.country;
+                this.countryCode = model.countryCode;
+                this.description = model.description;
+                this.district = model.district;
+                this.districtName = model.districtName;
+                this.expandInfo = model.expandInfo;
+                this.hotelAddress = model.hotelAddress;
+                this.hotelEnAddress = model.hotelEnAddress;
+                this.hotelEnName = model.hotelEnName;
+                this.hotelId = model.hotelId;
+                this.hotelName = model.hotelName;
+                this.hotelOpenTime = model.hotelOpenTime;
+                this.hotelPhones = model.hotelPhones;
+                this.hotelPolicies = model.hotelPolicies;
+                this.hotelfax = model.hotelfax;
+                this.hotelpics = model.hotelpics;
+                this.imageinfos = model.imageinfos;
+                this.invoiceProviderMethod = model.invoiceProviderMethod;
+                this.invoiceTypes = model.invoiceTypes;
+                this.location = model.location;
+                this.province = model.province;
+                this.provinceName = model.provinceName;
+                this.ratingAverage = model.ratingAverage;
+                this.roomInfos = model.roomInfos;
+                this.star = model.star;
+                this.starRate = model.starRate;
+                this.status = model.status;
+                this.themes = model.themes;
+                this.visaReminding = model.visaReminding;
+            } 
+
             /**
              * block_room_type_information.
              */
@@ -1976,6 +2114,13 @@ public class HotelStaticInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HotelStaticInfos> hotelStaticInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.hotelStaticInfos = model.hotelStaticInfos;
+            } 
 
             /**
              * hotel_static_infos.

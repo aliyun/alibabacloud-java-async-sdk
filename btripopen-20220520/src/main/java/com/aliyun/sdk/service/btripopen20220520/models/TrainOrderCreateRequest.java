@@ -90,7 +90,7 @@ public class TrainOrderCreateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -392,6 +392,16 @@ public class TrainOrderCreateRequest extends Request {
             private Long ticketPrice; 
             private String ticketType; 
 
+            private Builder() {
+            } 
+
+            private Builder(BookTicketInfos model) {
+                this.passengerId = model.passengerId;
+                this.seatType = model.seatType;
+                this.ticketPrice = model.ticketPrice;
+                this.ticketType = model.ticketType;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -552,6 +562,19 @@ public class TrainOrderCreateRequest extends Request {
             private String depTime; 
             private String trainNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(BookTrainInfos model) {
+                this.arrStationCode = model.arrStationCode;
+                this.bookTicketInfos = model.bookTicketInfos;
+                this.chooseBeds = model.chooseBeds;
+                this.chooseSeats = model.chooseSeats;
+                this.depStationCode = model.depStationCode;
+                this.depTime = model.depTime;
+                this.trainNo = model.trainNo;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -671,6 +694,14 @@ public class TrainOrderCreateRequest extends Request {
             private String customerApplyId; 
             private String customerItineraryId; 
 
+            private Builder() {
+            } 
+
+            private Builder(BusinessInfo model) {
+                this.customerApplyId = model.customerApplyId;
+                this.customerItineraryId = model.customerItineraryId;
+            } 
+
             /**
              * customer_apply_id.
              */
@@ -752,6 +783,15 @@ public class TrainOrderCreateRequest extends Request {
             private String passengerId; 
             private String passengerMobile; 
             private String passengerName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactInfo model) {
+                this.passengerId = model.passengerId;
+                this.passengerMobile = model.passengerMobile;
+                this.passengerName = model.passengerName;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -932,6 +972,22 @@ public class TrainOrderCreateRequest extends Request {
             private String invoiceTitle; 
             private String projectCode; 
             private String projectTitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(CostCenterInfo model) {
+                this.cascadeDeptName = model.cascadeDeptName;
+                this.costCenterId = model.costCenterId;
+                this.costCenterName = model.costCenterName;
+                this.costCenterNo = model.costCenterNo;
+                this.departId = model.departId;
+                this.departName = model.departName;
+                this.invoiceId = model.invoiceId;
+                this.invoiceTitle = model.invoiceTitle;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+            } 
 
             /**
              * cascade_dept_name.
@@ -1139,6 +1195,20 @@ public class TrainOrderCreateRequest extends Request {
             private String passengerMobile; 
             private String passengerName; 
             private String validDateEnd; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerOpenInfoS model) {
+                this.costCenterInfo = model.costCenterInfo;
+                this.countryCode = model.countryCode;
+                this.passengerCertNo = model.passengerCertNo;
+                this.passengerCertType = model.passengerCertType;
+                this.passengerId = model.passengerId;
+                this.passengerMobile = model.passengerMobile;
+                this.passengerName = model.passengerName;
+                this.validDateEnd = model.validDateEnd;
+            } 
 
             /**
              * cost_center_info.

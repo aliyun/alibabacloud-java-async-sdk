@@ -52,6 +52,10 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryReimbursementOrderResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -290,6 +306,21 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private String settlementTime; 
             private Integer voucherType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExpenseCompositions model) {
+                this.billSettlementId = model.billSettlementId;
+                this.capitalDirection = model.capitalDirection;
+                this.feeType = model.feeType;
+                this.orderId = model.orderId;
+                this.remark = model.remark;
+                this.remindTagList = model.remindTagList;
+                this.settlementAmount = model.settlementAmount;
+                this.settlementTime = model.settlementTime;
+                this.voucherType = model.voucherType;
+            } 
+
             /**
              * bill_settlement_id.
              */
@@ -460,6 +491,18 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private String invoiceDate; 
             private String invoiceNumber; 
             private String invoiceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvoiceInfos model) {
+                this.amount = model.amount;
+                this.invoiceCode = model.invoiceCode;
+                this.invoiceData = model.invoiceData;
+                this.invoiceDate = model.invoiceDate;
+                this.invoiceNumber = model.invoiceNumber;
+                this.invoiceType = model.invoiceType;
+            } 
 
             /**
              * amount.
@@ -668,6 +711,23 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private String remark; 
             private String settlementType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Expenses model) {
+                this.amount = model.amount;
+                this.currency = model.currency;
+                this.expenseCity = model.expenseCity;
+                this.expenseCompositions = model.expenseCompositions;
+                this.expenseTime = model.expenseTime;
+                this.expenseType = model.expenseType;
+                this.expenseTypeCode = model.expenseTypeCode;
+                this.invoiceInfos = model.invoiceInfos;
+                this.reimbExpenseId = model.reimbExpenseId;
+                this.remark = model.remark;
+                this.settlementType = model.settlementType;
+            } 
+
             /**
              * amount.
              */
@@ -855,6 +915,18 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private String trafficWay; 
             private String tripWay; 
 
+            private Builder() {
+            } 
+
+            private Builder(Itineraries model) {
+                this.arrCity = model.arrCity;
+                this.arrDate = model.arrDate;
+                this.depCity = model.depCity;
+                this.depDate = model.depDate;
+                this.trafficWay = model.trafficWay;
+                this.tripWay = model.tripWay;
+            } 
+
             /**
              * arr_city.
              */
@@ -953,6 +1025,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         public static final class Builder {
             private String amount; 
             private String payeeUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PaymentInfos model) {
+                this.amount = model.amount;
+                this.payeeUserId = model.payeeUserId;
+            } 
 
             /**
              * amount.
@@ -1308,6 +1388,38 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private String travelThirdApplyId; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.companyAmount = model.companyAmount;
+                this.companyPayAmount = model.companyPayAmount;
+                this.corpId = model.corpId;
+                this.costCenterCode = model.costCenterCode;
+                this.costCenterName = model.costCenterName;
+                this.expenses = model.expenses;
+                this.expensesCoverDeptId = model.expensesCoverDeptId;
+                this.expensesCoverDeptName = model.expensesCoverDeptName;
+                this.expensesCoverInvoiceTitle = model.expensesCoverInvoiceTitle;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.isDeleted = model.isDeleted;
+                this.itineraries = model.itineraries;
+                this.paymentFinishTime = model.paymentFinishTime;
+                this.paymentInfos = model.paymentInfos;
+                this.personalAmount = model.personalAmount;
+                this.processEndTime = model.processEndTime;
+                this.projectCode = model.projectCode;
+                this.projectName = model.projectName;
+                this.reason = model.reason;
+                this.reimbursementNo = model.reimbursementNo;
+                this.remark = model.remark;
+                this.status = model.status;
+                this.travelThirdApplyId = model.travelThirdApplyId;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * company_amount.

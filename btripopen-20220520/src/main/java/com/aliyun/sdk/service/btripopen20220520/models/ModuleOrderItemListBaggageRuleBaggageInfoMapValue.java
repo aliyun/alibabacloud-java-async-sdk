@@ -92,6 +92,10 @@ public class ModuleOrderItemListBaggageRuleBaggageInfoMapValue extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return carryFreepc
      */
@@ -221,6 +225,28 @@ public class ModuleOrderItemListBaggageRuleBaggageInfoMapValue extends TeaModel 
         private Boolean allWeight; 
         private Long totalPcs; 
         private Long totalWeight; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModuleOrderItemListBaggageRuleBaggageInfoMapValue model) {
+            this.carryFreepc = model.carryFreepc;
+            this.carryBagWeight = model.carryBagWeight;
+            this.carryBagSize = model.carryBagSize;
+            this.isAllCarryBagWeight = model.isAllCarryBagWeight;
+            this.airline = model.airline;
+            this.startAirport = model.startAirport;
+            this.endAirport = model.endAirport;
+            this.startCityCode = model.startCityCode;
+            this.endCityCode = model.endCityCode;
+            this.freePcs = model.freePcs;
+            this.baggageWeight = model.baggageWeight;
+            this.baggageUnit = model.baggageUnit;
+            this.baggageSize = model.baggageSize;
+            this.allWeight = model.allWeight;
+            this.totalPcs = model.totalPcs;
+            this.totalWeight = model.totalWeight;
+        } 
 
         /**
          * carry_freepc.

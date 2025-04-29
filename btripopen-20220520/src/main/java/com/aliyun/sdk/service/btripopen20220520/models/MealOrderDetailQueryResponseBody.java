@@ -52,6 +52,10 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(MealOrderDetailQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -430,6 +446,33 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
             private String thirdPartApplyId; 
             private String userAlipayId; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.applyId = model.applyId;
+                this.corpCodeOrderId = model.corpCodeOrderId;
+                this.corpId = model.corpId;
+                this.corpPayAmount = model.corpPayAmount;
+                this.corpRefundAmount = model.corpRefundAmount;
+                this.mealReason = model.mealReason;
+                this.merchantName = model.merchantName;
+                this.orderId = model.orderId;
+                this.orderStatus = model.orderStatus;
+                this.orderSubStatus = model.orderSubStatus;
+                this.orderType = model.orderType;
+                this.payAmount = model.payAmount;
+                this.payType = model.payType;
+                this.personPayAmount = model.personPayAmount;
+                this.personRefundAmount = model.personRefundAmount;
+                this.refundAmount = model.refundAmount;
+                this.sceneName = model.sceneName;
+                this.settleTime = model.settleTime;
+                this.thirdPartApplyId = model.thirdPartApplyId;
+                this.userAlipayId = model.userAlipayId;
+                this.userId = model.userId;
+            } 
 
             /**
              * apply_id.

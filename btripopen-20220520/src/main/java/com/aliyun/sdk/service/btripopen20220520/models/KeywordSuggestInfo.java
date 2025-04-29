@@ -76,6 +76,10 @@ public class KeywordSuggestInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return address
      */
@@ -173,6 +177,24 @@ public class KeywordSuggestInfo extends TeaModel {
         private Integer region; 
         private Integer type; 
         private String typeDesc; 
+
+        private Builder() {
+        } 
+
+        private Builder(KeywordSuggestInfo model) {
+            this.address = model.address;
+            this.businessAreaWithCity = model.businessAreaWithCity;
+            this.cityCode = model.cityCode;
+            this.cityName = model.cityName;
+            this.displayName = model.displayName;
+            this.hotelId = model.hotelId;
+            this.icon = model.icon;
+            this.point = model.point;
+            this.price = model.price;
+            this.region = model.region;
+            this.type = model.type;
+            this.typeDesc = model.typeDesc;
+        } 
 
         /**
          * address.

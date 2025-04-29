@@ -52,6 +52,10 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AllBaseCityInfoQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -263,6 +279,19 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
             private Long id; 
             private java.util.List<String> otherNameList; 
 
+            private Builder() {
+            } 
+
+            private Builder(AllCityBaseInfoList model) {
+                this.adcode = model.adcode;
+                this.cityCode = model.cityCode;
+                this.cityLevel = model.cityLevel;
+                this.cityName = model.cityName;
+                this.cnNameTree = model.cnNameTree;
+                this.id = model.id;
+                this.otherNameList = model.otherNameList;
+            } 
+
             /**
              * adcode.
              */
@@ -357,6 +386,13 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AllCityBaseInfoList> allCityBaseInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.allCityBaseInfoList = model.allCityBaseInfoList;
+            } 
 
             /**
              * all_city_base_info_list.

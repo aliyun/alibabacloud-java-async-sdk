@@ -46,7 +46,7 @@ public class AddInvoiceEntityRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -184,6 +184,15 @@ public class AddInvoiceEntityRequest extends Request {
             private String entityId; 
             private String entityName; 
             private String entityType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Entities model) {
+                this.entityId = model.entityId;
+                this.entityName = model.entityName;
+                this.entityType = model.entityType;
+            } 
 
             /**
              * <p>This parameter is required.</p>

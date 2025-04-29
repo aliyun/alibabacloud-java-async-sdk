@@ -52,6 +52,10 @@ public class FlightOrderDetailInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightOrderDetailInfoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightOrderDetailInfoResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -572,6 +588,45 @@ public class FlightOrderDetailInfoResponseBody extends TeaModel {
             private Long ticketPrice; 
             private String tuigaiqianInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightInfoList model) {
+                this.airlineCode = model.airlineCode;
+                this.airlineName = model.airlineName;
+                this.airlineSimpleName = model.airlineSimpleName;
+                this.arrAirport = model.arrAirport;
+                this.arrAirportCode = model.arrAirportCode;
+                this.arrAirportCodeName = model.arrAirportCodeName;
+                this.arrCity = model.arrCity;
+                this.arrCityCode = model.arrCityCode;
+                this.arrTerminal = model.arrTerminal;
+                this.arrTime = model.arrTime;
+                this.baggage = model.baggage;
+                this.buildPrice = model.buildPrice;
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.carrier = model.carrier;
+                this.depAirport = model.depAirport;
+                this.depAirportCode = model.depAirportCode;
+                this.depAirportCodeName = model.depAirportCodeName;
+                this.depCity = model.depCity;
+                this.depCityCode = model.depCityCode;
+                this.depTerminal = model.depTerminal;
+                this.depTime = model.depTime;
+                this.flightNo = model.flightNo;
+                this.lastCabin = model.lastCabin;
+                this.lastFlightNo = model.lastFlightNo;
+                this.meal = model.meal;
+                this.oilPrice = model.oilPrice;
+                this.segmentType = model.segmentType;
+                this.stopArrTime = model.stopArrTime;
+                this.stopCity = model.stopCity;
+                this.stopDepTime = model.stopDepTime;
+                this.ticketPrice = model.ticketPrice;
+                this.tuigaiqianInfo = model.tuigaiqianInfo;
+            } 
+
             /**
              * airline_code.
              */
@@ -911,6 +966,16 @@ public class FlightOrderDetailInfoResponseBody extends TeaModel {
             private String ticketNo; 
             private String ticketStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(TicketInfoList model) {
+                this.openTicketStatus = model.openTicketStatus;
+                this.pnrCode = model.pnrCode;
+                this.ticketNo = model.ticketNo;
+                this.ticketStatus = model.ticketStatus;
+            } 
+
             /**
              * open_ticket_status.
              */
@@ -1077,6 +1142,21 @@ public class FlightOrderDetailInfoResponseBody extends TeaModel {
             private String phone; 
             private String ticketNo; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TravelerInfoList model) {
+                this.birthDate = model.birthDate;
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.openTicketStatus = model.openTicketStatus;
+                this.passengerName = model.passengerName;
+                this.passengerType = model.passengerType;
+                this.phone = model.phone;
+                this.ticketNo = model.ticketNo;
+                this.userId = model.userId;
+            } 
 
             /**
              * birth_date.
@@ -1416,6 +1496,32 @@ public class FlightOrderDetailInfoResponseBody extends TeaModel {
             private Long totalOilPrice; 
             private Long totalOrderPrice; 
             private java.util.List<TravelerInfoList> travelerInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.alipayTradeNo = model.alipayTradeNo;
+                this.bookUserId = model.bookUserId;
+                this.btripOrderId = model.btripOrderId;
+                this.contactName = model.contactName;
+                this.contactPhone = model.contactPhone;
+                this.disOrderId = model.disOrderId;
+                this.extra = model.extra;
+                this.flightInfoList = model.flightInfoList;
+                this.lastPayTime = model.lastPayTime;
+                this.payStatus = model.payStatus;
+                this.payTime = model.payTime;
+                this.promotionPrice = model.promotionPrice;
+                this.settleAmount = model.settleAmount;
+                this.settleType = model.settleType;
+                this.status = model.status;
+                this.ticketInfoList = model.ticketInfoList;
+                this.totalBuildPrice = model.totalBuildPrice;
+                this.totalOilPrice = model.totalOilPrice;
+                this.totalOrderPrice = model.totalOrderPrice;
+                this.travelerInfoList = model.travelerInfoList;
+            } 
 
             /**
              * alipay_trade_no.

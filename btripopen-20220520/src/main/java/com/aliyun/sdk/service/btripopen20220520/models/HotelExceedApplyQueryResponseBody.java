@@ -52,6 +52,10 @@ public class HotelExceedApplyQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelExceedApplyQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelExceedApplyQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -259,6 +275,19 @@ public class HotelExceedApplyQueryResponseBody extends TeaModel {
             private Long price; 
             private Boolean together; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplyIntentionInfoDo model) {
+                this.checkIn = model.checkIn;
+                this.checkOut = model.checkOut;
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.price = model.price;
+                this.together = model.together;
+                this.type = model.type;
+            } 
 
             /**
              * check_in.
@@ -498,6 +527,25 @@ public class HotelExceedApplyQueryResponseBody extends TeaModel {
             private String thirdpartCorpId; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.applyId = model.applyId;
+                this.applyIntentionInfoDo = model.applyIntentionInfoDo;
+                this.btripCause = model.btripCause;
+                this.corpId = model.corpId;
+                this.exceedReason = model.exceedReason;
+                this.exceedType = model.exceedType;
+                this.originStandard = model.originStandard;
+                this.status = model.status;
+                this.submitTime = model.submitTime;
+                this.thirdpartApplyId = model.thirdpartApplyId;
+                this.thirdpartCorpId = model.thirdpartCorpId;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * apply_id.

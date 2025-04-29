@@ -51,7 +51,7 @@ public class FlightRefundPreCalRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -207,6 +207,15 @@ public class FlightRefundPreCalRequest extends Request {
             private String flightNo; 
             private String passengerName; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerSegmentInfoList model) {
+                this.flightNo = model.flightNo;
+                this.passengerName = model.passengerName;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

@@ -52,6 +52,10 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CooperatorFlightBillSettlementQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -220,6 +236,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bill_record_time")
         private String billRecordTime;
 
+        @com.aliyun.core.annotation.NameInMap("book_channel")
+        private String bookChannel;
+
         @com.aliyun.core.annotation.NameInMap("book_mode")
         private String bookMode;
 
@@ -328,6 +347,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
 
+        @com.aliyun.core.annotation.NameInMap("flight_trip_type")
+        private String flightTripType;
+
         @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
@@ -384,6 +406,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("order_status_desc")
         private String orderStatusDesc;
+
+        @com.aliyun.core.annotation.NameInMap("order_ticket_no")
+        private String orderTicketNo;
 
         @com.aliyun.core.annotation.NameInMap("over_apply_id")
         private String overApplyId;
@@ -518,6 +543,7 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             this.arrStation = builder.arrStation;
             this.arrTime = builder.arrTime;
             this.billRecordTime = builder.billRecordTime;
+            this.bookChannel = builder.bookChannel;
             this.bookMode = builder.bookMode;
             this.bookTime = builder.bookTime;
             this.bookerId = builder.bookerId;
@@ -554,6 +580,7 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             this.feeType = builder.feeType;
             this.feeTypeDesc = builder.feeTypeDesc;
             this.flightNo = builder.flightNo;
+            this.flightTripType = builder.flightTripType;
             this.index = builder.index;
             this.insOrderId = builder.insOrderId;
             this.insuranceFee = builder.insuranceFee;
@@ -573,6 +600,7 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             this.oilFee = builder.oilFee;
             this.orderId = builder.orderId;
             this.orderStatusDesc = builder.orderStatusDesc;
+            this.orderTicketNo = builder.orderTicketNo;
             this.overApplyId = builder.overApplyId;
             this.paymentDepartmentId = builder.paymentDepartmentId;
             this.paymentDepartmentName = builder.paymentDepartmentName;
@@ -745,6 +773,13 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getBillRecordTime() {
             return this.billRecordTime;
+        }
+
+        /**
+         * @return bookChannel
+         */
+        public String getBookChannel() {
+            return this.bookChannel;
         }
 
         /**
@@ -1000,6 +1035,13 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return flightTripType
+         */
+        public String getFlightTripType() {
+            return this.flightTripType;
+        }
+
+        /**
          * @return index
          */
         public String getIndex() {
@@ -1130,6 +1172,13 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getOrderStatusDesc() {
             return this.orderStatusDesc;
+        }
+
+        /**
+         * @return orderTicketNo
+         */
+        public String getOrderTicketNo() {
+            return this.orderTicketNo;
         }
 
         /**
@@ -1417,6 +1466,7 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             private String arrStation; 
             private String arrTime; 
             private String billRecordTime; 
+            private String bookChannel; 
             private String bookMode; 
             private String bookTime; 
             private String bookerId; 
@@ -1453,6 +1503,7 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             private String feeType; 
             private String feeTypeDesc; 
             private String flightNo; 
+            private String flightTripType; 
             private String index; 
             private String insOrderId; 
             private Double insuranceFee; 
@@ -1472,6 +1523,7 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             private Double oilFee; 
             private String orderId; 
             private String orderStatusDesc; 
+            private String orderTicketNo; 
             private String overApplyId; 
             private String paymentDepartmentId; 
             private String paymentDepartmentName; 
@@ -1510,6 +1562,126 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             private Integer voucherType; 
             private String voucherTypeDesc; 
             private String voyageName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.advanceDay = model.advanceDay;
+                this.airlineCorpCode = model.airlineCorpCode;
+                this.airlineCorpName = model.airlineCorpName;
+                this.alipayId = model.alipayId;
+                this.alipayTradeNo = model.alipayTradeNo;
+                this.applyArrCityCode = model.applyArrCityCode;
+                this.applyArrCityName = model.applyArrCityName;
+                this.applyDepCityCode = model.applyDepCityCode;
+                this.applyDepCityName = model.applyDepCityName;
+                this.applyExtendField = model.applyExtendField;
+                this.applyId = model.applyId;
+                this.arrAirportCode = model.arrAirportCode;
+                this.arrCity = model.arrCity;
+                this.arrCityCode = model.arrCityCode;
+                this.arrDate = model.arrDate;
+                this.arrStation = model.arrStation;
+                this.arrTime = model.arrTime;
+                this.billRecordTime = model.billRecordTime;
+                this.bookChannel = model.bookChannel;
+                this.bookMode = model.bookMode;
+                this.bookTime = model.bookTime;
+                this.bookerId = model.bookerId;
+                this.bookerJobNo = model.bookerJobNo;
+                this.bookerName = model.bookerName;
+                this.btripCouponFee = model.btripCouponFee;
+                this.buildFee = model.buildFee;
+                this.businessTripResult = model.businessTripResult;
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.capitalDirection = model.capitalDirection;
+                this.cascadeDepartment = model.cascadeDepartment;
+                this.categoryDesc = model.categoryDesc;
+                this.changeFee = model.changeFee;
+                this.changeResult = model.changeResult;
+                this.cooperatorBillCode = model.cooperatorBillCode;
+                this.cooperatorName = model.cooperatorName;
+                this.cooperatorOrderId = model.cooperatorOrderId;
+                this.corpPayOrderFee = model.corpPayOrderFee;
+                this.corpSettlePrice = model.corpSettlePrice;
+                this.costCenter = model.costCenter;
+                this.costCenterNumber = model.costCenterNumber;
+                this.coupon = model.coupon;
+                this.depAirportCode = model.depAirportCode;
+                this.depCityCode = model.depCityCode;
+                this.department = model.department;
+                this.departmentId = model.departmentId;
+                this.deptCity = model.deptCity;
+                this.deptDate = model.deptDate;
+                this.deptStation = model.deptStation;
+                this.deptTime = model.deptTime;
+                this.discount = model.discount;
+                this.exceedReason = model.exceedReason;
+                this.feeType = model.feeType;
+                this.feeTypeDesc = model.feeTypeDesc;
+                this.flightNo = model.flightNo;
+                this.flightTripType = model.flightTripType;
+                this.index = model.index;
+                this.insOrderId = model.insOrderId;
+                this.insuranceFee = model.insuranceFee;
+                this.insuranceNumber = model.insuranceNumber;
+                this.invoiceTitle = model.invoiceTitle;
+                this.itemType = model.itemType;
+                this.itineraryNum = model.itineraryNum;
+                this.itineraryPrice = model.itineraryPrice;
+                this.mileage = model.mileage;
+                this.mostDifferenceDeptTime = model.mostDifferenceDeptTime;
+                this.mostDifferenceDiscount = model.mostDifferenceDiscount;
+                this.mostDifferenceFlightNo = model.mostDifferenceFlightNo;
+                this.mostDifferencePrice = model.mostDifferencePrice;
+                this.mostDifferenceReason = model.mostDifferenceReason;
+                this.mostPrice = model.mostPrice;
+                this.negotiationCouponFee = model.negotiationCouponFee;
+                this.oilFee = model.oilFee;
+                this.orderId = model.orderId;
+                this.orderStatusDesc = model.orderStatusDesc;
+                this.orderTicketNo = model.orderTicketNo;
+                this.overApplyId = model.overApplyId;
+                this.paymentDepartmentId = model.paymentDepartmentId;
+                this.paymentDepartmentName = model.paymentDepartmentName;
+                this.personSettlePrice = model.personSettlePrice;
+                this.preBookTip = model.preBookTip;
+                this.primaryId = model.primaryId;
+                this.projectCode = model.projectCode;
+                this.projectName = model.projectName;
+                this.refundFee = model.refundFee;
+                this.refundResult = model.refundResult;
+                this.refundUpgradeCost = model.refundUpgradeCost;
+                this.remark = model.remark;
+                this.repeatRefund = model.repeatRefund;
+                this.sealPrice = model.sealPrice;
+                this.serviceFee = model.serviceFee;
+                this.settleTypeDesc = model.settleTypeDesc;
+                this.settlementFee = model.settlementFee;
+                this.settlementGrantFee = model.settlementGrantFee;
+                this.settlementTime = model.settlementTime;
+                this.settlementType = model.settlementType;
+                this.status = model.status;
+                this.statusDesc = model.statusDesc;
+                this.subOrderId = model.subOrderId;
+                this.taxRate = model.taxRate;
+                this.thirdInvoiceId = model.thirdInvoiceId;
+                this.thirdItineraryId = model.thirdItineraryId;
+                this.ticketId = model.ticketId;
+                this.trade = model.trade;
+                this.tradeActionDesc = model.tradeActionDesc;
+                this.travelerId = model.travelerId;
+                this.travelerJobNo = model.travelerJobNo;
+                this.travelerMemberType = model.travelerMemberType;
+                this.travelerMemberTypeName = model.travelerMemberTypeName;
+                this.travelerName = model.travelerName;
+                this.upgradeCost = model.upgradeCost;
+                this.voucherType = model.voucherType;
+                this.voucherTypeDesc = model.voucherTypeDesc;
+                this.voyageName = model.voyageName;
+            } 
 
             /**
              * advance_day.
@@ -1652,6 +1824,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder billRecordTime(String billRecordTime) {
                 this.billRecordTime = billRecordTime;
+                return this;
+            }
+
+            /**
+             * book_channel.
+             */
+            public Builder bookChannel(String bookChannel) {
+                this.bookChannel = bookChannel;
                 return this;
             }
 
@@ -1944,6 +2124,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * flight_trip_type.
+             */
+            public Builder flightTripType(String flightTripType) {
+                this.flightTripType = flightTripType;
+                return this;
+            }
+
+            /**
              * index.
              */
             public Builder index(String index) {
@@ -2092,6 +2280,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder orderStatusDesc(String orderStatusDesc) {
                 this.orderStatusDesc = orderStatusDesc;
+                return this;
+            }
+
+            /**
+             * order_ticket_no.
+             */
+            public Builder orderTicketNo(String orderTicketNo) {
+                this.orderTicketNo = orderTicketNo;
                 return this;
             }
 
@@ -2509,6 +2705,19 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             private String periodStart; 
             private String scrollId; 
             private Long totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.category = model.category;
+                this.corpId = model.corpId;
+                this.items = model.items;
+                this.periodEnd = model.periodEnd;
+                this.periodStart = model.periodStart;
+                this.scrollId = model.scrollId;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * category.

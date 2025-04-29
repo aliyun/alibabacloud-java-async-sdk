@@ -52,6 +52,10 @@ public class HotelCityCodeListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelCityCodeListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelCityCodeListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -200,6 +216,14 @@ public class HotelCityCodeListResponseBody extends TeaModel {
             private String districtCode; 
             private String districtName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Districts model) {
+                this.districtCode = model.districtCode;
+                this.districtName = model.districtName;
+            } 
+
             /**
              * district_code.
              */
@@ -278,6 +302,15 @@ public class HotelCityCodeListResponseBody extends TeaModel {
             private String cityCode; 
             private String cityName; 
             private java.util.List<Districts> districts; 
+
+            private Builder() {
+            } 
+
+            private Builder(Citys model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.districts = model.districts;
+            } 
 
             /**
              * city_code.
@@ -365,6 +398,15 @@ public class HotelCityCodeListResponseBody extends TeaModel {
             private java.util.List<Citys> citys; 
             private String proviceCode; 
             private String provinceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.citys = model.citys;
+                this.proviceCode = model.proviceCode;
+                this.provinceName = model.provinceName;
+            } 
 
             /**
              * citys.

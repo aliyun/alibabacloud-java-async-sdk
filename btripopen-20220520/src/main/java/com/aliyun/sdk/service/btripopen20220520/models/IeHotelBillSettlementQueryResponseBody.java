@@ -52,6 +52,10 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IeHotelBillSettlementQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -1292,6 +1308,105 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             private Integer voucherType; 
             private String voucherTypeDesc; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.alipayTradeNo = model.alipayTradeNo;
+                this.amountCurrency = model.amountCurrency;
+                this.applyArrCityCode = model.applyArrCityCode;
+                this.applyArrCityName = model.applyArrCityName;
+                this.applyDepCityCode = model.applyDepCityCode;
+                this.applyDepCityName = model.applyDepCityName;
+                this.applyExtendField = model.applyExtendField;
+                this.applyId = model.applyId;
+                this.averageNights = model.averageNights;
+                this.billRecordTime = model.billRecordTime;
+                this.bookMode = model.bookMode;
+                this.bookReason = model.bookReason;
+                this.bookTime = model.bookTime;
+                this.bookerId = model.bookerId;
+                this.bookerJobNo = model.bookerJobNo;
+                this.bookerName = model.bookerName;
+                this.brandGroup = model.brandGroup;
+                this.brandName = model.brandName;
+                this.businessExpense = model.businessExpense;
+                this.businessTripResult = model.businessTripResult;
+                this.capitalDirection = model.capitalDirection;
+                this.cascadeDepartment = model.cascadeDepartment;
+                this.categoryDesc = model.categoryDesc;
+                this.checkInDate = model.checkInDate;
+                this.checkoutDate = model.checkoutDate;
+                this.city = model.city;
+                this.cityCode = model.cityCode;
+                this.corpRefundFee = model.corpRefundFee;
+                this.corpTotalFee = model.corpTotalFee;
+                this.costCenter = model.costCenter;
+                this.costCenterNumber = model.costCenterNumber;
+                this.country = model.country;
+                this.countryCode = model.countryCode;
+                this.deductibleTax = model.deductibleTax;
+                this.department = model.department;
+                this.departmentId = model.departmentId;
+                this.exceedReason = model.exceedReason;
+                this.feeType = model.feeType;
+                this.feeTypeDesc = model.feeTypeDesc;
+                this.fines = model.fines;
+                this.foreignBusinessExpense = model.foreignBusinessExpense;
+                this.hotelName = model.hotelName;
+                this.hotelStar = model.hotelStar;
+                this.index = model.index;
+                this.invoiceTitle = model.invoiceTitle;
+                this.isEarlyDeparture = model.isEarlyDeparture;
+                this.isNegotiation = model.isNegotiation;
+                this.isShareStr = model.isShareStr;
+                this.mainApplyId = model.mainApplyId;
+                this.nights = model.nights;
+                this.orderId = model.orderId;
+                this.orderPrice = model.orderPrice;
+                this.orderStatusDesc = model.orderStatusDesc;
+                this.orderType = model.orderType;
+                this.originalReserveRule = model.originalReserveRule;
+                this.overApplyId = model.overApplyId;
+                this.paymentDepartmentId = model.paymentDepartmentId;
+                this.paymentDepartmentName = model.paymentDepartmentName;
+                this.personRefundFee = model.personRefundFee;
+                this.personSettlePrice = model.personSettlePrice;
+                this.primaryId = model.primaryId;
+                this.projectCode = model.projectCode;
+                this.projectName = model.projectName;
+                this.promotionFee = model.promotionFee;
+                this.rate = model.rate;
+                this.remark = model.remark;
+                this.reserveRule = model.reserveRule;
+                this.roomNo = model.roomNo;
+                this.roomNumber = model.roomNumber;
+                this.roomPrice = model.roomPrice;
+                this.roomType = model.roomType;
+                this.serviceFee = model.serviceFee;
+                this.settleTypeDesc = model.settleTypeDesc;
+                this.settlementFee = model.settlementFee;
+                this.settlementGrantFee = model.settlementGrantFee;
+                this.settlementTime = model.settlementTime;
+                this.settlementType = model.settlementType;
+                this.status = model.status;
+                this.statusDesc = model.statusDesc;
+                this.subOrderId = model.subOrderId;
+                this.taxRate = model.taxRate;
+                this.thirdInvoiceId = model.thirdInvoiceId;
+                this.thirdItineraryId = model.thirdItineraryId;
+                this.thirdPartBusinessId = model.thirdPartBusinessId;
+                this.thirdpartApplyId = model.thirdpartApplyId;
+                this.totalNights = model.totalNights;
+                this.tradeActionDesc = model.tradeActionDesc;
+                this.travelerId = model.travelerId;
+                this.travelerJobNo = model.travelerJobNo;
+                this.travelerMemberType = model.travelerMemberType;
+                this.travelerName = model.travelerName;
+                this.voucherType = model.voucherType;
+                this.voucherTypeDesc = model.voucherTypeDesc;
+            } 
+
             /**
              * alipay_trade_no.
              */
@@ -2158,6 +2273,20 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             private String periodStart; 
             private String scrollId; 
             private Long totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.category = model.category;
+                this.corpId = model.corpId;
+                this.dataList = model.dataList;
+                this.orderId = model.orderId;
+                this.periodEnd = model.periodEnd;
+                this.periodStart = model.periodStart;
+                this.scrollId = model.scrollId;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * category.

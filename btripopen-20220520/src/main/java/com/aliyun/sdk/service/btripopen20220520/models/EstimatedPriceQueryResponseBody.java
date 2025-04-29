@@ -52,6 +52,10 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(EstimatedPriceQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -239,6 +255,17 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             private Long total; 
             private Integer tripDays; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotelFeeDetail model) {
+                this.city = model.city;
+                this.criterion = model.criterion;
+                this.itineraryId = model.itineraryId;
+                this.total = model.total;
+                this.tripDays = model.tripDays;
+            } 
+
             /**
              * city.
              */
@@ -366,6 +393,17 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             private String seatGrade; 
             private String vehicleNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cheapest model) {
+                this.arrTime = model.arrTime;
+                this.depTime = model.depTime;
+                this.fee = model.fee;
+                this.seatGrade = model.seatGrade;
+                this.vehicleNo = model.vehicleNo;
+            } 
+
             /**
              * arr_time.
              */
@@ -492,6 +530,17 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             private Long fee; 
             private String seatGrade; 
             private String vehicleNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(MostExpensive model) {
+                this.arrTime = model.arrTime;
+                this.depTime = model.depTime;
+                this.fee = model.fee;
+                this.seatGrade = model.seatGrade;
+                this.vehicleNo = model.vehicleNo;
+            } 
 
             /**
              * arr_time.
@@ -668,6 +717,21 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             private MostExpensive mostExpensive; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(BtripRoutes model) {
+                this.arrCity = model.arrCity;
+                this.arrDate = model.arrDate;
+                this.cheapest = model.cheapest;
+                this.depCity = model.depCity;
+                this.depDate = model.depDate;
+                this.errMsg = model.errMsg;
+                this.itineraryId = model.itineraryId;
+                this.mostExpensive = model.mostExpensive;
+                this.success = model.success;
+            } 
+
             /**
              * arr_city.
              */
@@ -827,6 +891,17 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             private Long minFee; 
             private Boolean success; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrafficFee model) {
+                this.btripRoutes = model.btripRoutes;
+                this.errMsg = model.errMsg;
+                this.maxFee = model.maxFee;
+                this.minFee = model.minFee;
+                this.success = model.success;
+            } 
+
             /**
              * btrip_routes.
              */
@@ -929,6 +1004,15 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             private java.util.List<HotelFeeDetail> hotelFeeDetail; 
             private Long totalHotelFee; 
             private TrafficFee trafficFee; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.hotelFeeDetail = model.hotelFeeDetail;
+                this.totalHotelFee = model.totalHotelFee;
+                this.trafficFee = model.trafficFee;
+            } 
 
             /**
              * hotel_fee_detail.

@@ -52,6 +52,10 @@ public class FlightCancelOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightCancelOrderResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightCancelOrderResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -223,6 +239,16 @@ public class FlightCancelOrderResponseBody extends TeaModel {
             private String failCode; 
             private String failReason; 
             private String orderStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.cancelTime = model.cancelTime;
+                this.failCode = model.failCode;
+                this.failReason = model.failReason;
+                this.orderStatus = model.orderStatus;
+            } 
 
             /**
              * cancel_time.

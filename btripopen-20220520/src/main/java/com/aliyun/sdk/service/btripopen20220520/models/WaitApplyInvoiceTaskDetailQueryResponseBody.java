@@ -52,6 +52,10 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(WaitApplyInvoiceTaskDetailQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -469,6 +485,36 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             private String vasMallSpecialInvoiceFee; 
             private String vehicleInvoiceFee; 
             private String vehicleNormalInvoiceFee; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.contact = model.contact;
+                this.email = model.email;
+                this.flightInvoiceFee = model.flightInvoiceFee;
+                this.fuPointInvoiceFee = model.fuPointInvoiceFee;
+                this.hotelNormalInvoiceFee = model.hotelNormalInvoiceFee;
+                this.hotelSpecialInvoiceFee = model.hotelSpecialInvoiceFee;
+                this.internationalFlightInvoiceFee = model.internationalFlightInvoiceFee;
+                this.internationalHotelInvoiceFee = model.internationalHotelInvoiceFee;
+                this.invoiceThirdPartId = model.invoiceThirdPartId;
+                this.invoiceTitle = model.invoiceTitle;
+                this.mailAddress = model.mailAddress;
+                this.mailCity = model.mailCity;
+                this.mailFullAddress = model.mailFullAddress;
+                this.mailProvince = model.mailProvince;
+                this.mealNormalInvoiceFee = model.mealNormalInvoiceFee;
+                this.penaltyFee = model.penaltyFee;
+                this.remark = model.remark;
+                this.serviceFee = model.serviceFee;
+                this.telephone = model.telephone;
+                this.trainAccelerationPackageInvoiceFee = model.trainAccelerationPackageInvoiceFee;
+                this.trainInvoiceFee = model.trainInvoiceFee;
+                this.vasMallSpecialInvoiceFee = model.vasMallSpecialInvoiceFee;
+                this.vehicleInvoiceFee = model.vehicleInvoiceFee;
+                this.vehicleNormalInvoiceFee = model.vehicleNormalInvoiceFee;
+            } 
 
             /**
              * contact.

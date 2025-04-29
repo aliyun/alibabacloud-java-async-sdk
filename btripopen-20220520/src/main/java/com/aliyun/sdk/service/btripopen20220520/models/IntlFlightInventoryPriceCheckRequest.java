@@ -71,7 +71,7 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -324,6 +324,17 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
             private String certValidDate; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(CertInfo model) {
+                this.certNation = model.certNation;
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.certValidDate = model.certValidDate;
+                this.name = model.name;
+            } 
+
             /**
              * cert_nation.
              */
@@ -459,6 +470,17 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
             private Integer certType; 
             private String certValidDate; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubsidiaryCertInfoList model) {
+                this.certNation = model.certNation;
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.certValidDate = model.certValidDate;
+                this.name = model.name;
+            } 
 
             /**
              * cert_nation.
@@ -804,6 +826,34 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
             private java.util.List<SubsidiaryCertInfoList> subsidiaryCertInfoList; 
             private String userId; 
             private Integer userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerList model) {
+                this.birthday = model.birthday;
+                this.cascadeDeptMask = model.cascadeDeptMask;
+                this.cascadeDeptName = model.cascadeDeptName;
+                this.certInfo = model.certInfo;
+                this.costCenterName = model.costCenterName;
+                this.costCenterNumber = model.costCenterNumber;
+                this.deptId = model.deptId;
+                this.deptName = model.deptName;
+                this.gender = model.gender;
+                this.invoiceId = model.invoiceId;
+                this.invoiceTitle = model.invoiceTitle;
+                this.jobNo = model.jobNo;
+                this.mobileCountryCode = model.mobileCountryCode;
+                this.nationality = model.nationality;
+                this.nationalityCode = model.nationalityCode;
+                this.passengerType = model.passengerType;
+                this.phone = model.phone;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+                this.subsidiaryCertInfoList = model.subsidiaryCertInfoList;
+                this.userId = model.userId;
+                this.userType = model.userType;
+            } 
 
             /**
              * <p>This parameter is required.</p>

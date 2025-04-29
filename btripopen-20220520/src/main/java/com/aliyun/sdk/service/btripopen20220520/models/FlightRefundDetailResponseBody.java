@@ -52,6 +52,10 @@ public class FlightRefundDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightRefundDetailResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightRefundDetailResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -223,6 +239,16 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             private Long refundFee; 
             private Long refundPrice; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundFeeList model) {
+                this.alipayTradeNo = model.alipayTradeNo;
+                this.refundFee = model.refundFee;
+                this.refundPrice = model.refundPrice;
+                this.status = model.status;
+            } 
 
             /**
              * alipay_trade_no.
@@ -402,6 +428,22 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             private java.util.List<RefundFeeList> refundFeeList; 
             private Long refundPrice; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.btripOrderId = model.btripOrderId;
+                this.btripSubOrderId = model.btripSubOrderId;
+                this.disOrderId = model.disOrderId;
+                this.disSubOrderId = model.disSubOrderId;
+                this.isVoluntary = model.isVoluntary;
+                this.reason = model.reason;
+                this.refundFee = model.refundFee;
+                this.refundFeeList = model.refundFeeList;
+                this.refundPrice = model.refundPrice;
+                this.status = model.status;
+            } 
 
             /**
              * btrip_order_id.

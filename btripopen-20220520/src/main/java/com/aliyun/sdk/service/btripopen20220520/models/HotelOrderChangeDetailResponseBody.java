@@ -52,6 +52,10 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelOrderChangeDetailResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -224,6 +240,16 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
             private Long price; 
             private Long refundPrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoomDailyRefundInfos model) {
+                this.checkInDate = model.checkInDate;
+                this.penaltyPrice = model.penaltyPrice;
+                this.price = model.price;
+                this.refundPrice = model.refundPrice;
+            } 
+
             /**
              * check_in_date.
              */
@@ -318,6 +344,15 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
             private java.util.List<String> cancelDate; 
             private java.util.List<RoomDailyRefundInfos> roomDailyRefundInfos; 
             private Integer roomNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoomInfoList model) {
+                this.cancelDate = model.cancelDate;
+                this.roomDailyRefundInfos = model.roomDailyRefundInfos;
+                this.roomNo = model.roomNo;
+            } 
 
             /**
              * cancel_date.
@@ -525,6 +560,25 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
             private Integer source; 
             private Integer status; 
             private String workOrderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.changeOrderId = model.changeOrderId;
+                this.changeType = model.changeType;
+                this.corpId = model.corpId;
+                this.disOrderId = model.disOrderId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.reason = model.reason;
+                this.remarks = model.remarks;
+                this.roomInfoList = model.roomInfoList;
+                this.saleOrderId = model.saleOrderId;
+                this.source = model.source;
+                this.status = model.status;
+                this.workOrderId = model.workOrderId;
+            } 
 
             /**
              * change_order_id.

@@ -45,7 +45,7 @@ public class ElectronicItineraryBatchApplyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -191,6 +191,16 @@ public class ElectronicItineraryBatchApplyRequest extends Request {
             private String purchaserTaxNo; 
             private Integer purchaserType; 
             private String ticketNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplyItineraryList model) {
+                this.purchaserName = model.purchaserName;
+                this.purchaserTaxNo = model.purchaserTaxNo;
+                this.purchaserType = model.purchaserType;
+                this.ticketNo = model.ticketNo;
+            } 
 
             /**
              * purchaser_name.

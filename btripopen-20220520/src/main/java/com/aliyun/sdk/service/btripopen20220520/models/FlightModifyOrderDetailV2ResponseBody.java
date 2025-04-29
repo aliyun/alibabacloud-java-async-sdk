@@ -52,6 +52,10 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightModifyOrderDetailV2ResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -242,6 +258,17 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             private String latestPayTimeStr; 
             private String refundRule; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attributes model) {
+                this.baggageRule = model.baggageRule;
+                this.changeRule = model.changeRule;
+                this.latestPayTime = model.latestPayTime;
+                this.latestPayTimeStr = model.latestPayTimeStr;
+                this.refundRule = model.refundRule;
+            } 
+
             /**
              * baggage_rule.
              */
@@ -356,6 +383,16 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             private String contactName; 
             private String contactPhone; 
             private Boolean sendMsgToPassenger; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactInfoDTO model) {
+                this.contactEmail = model.contactEmail;
+                this.contactName = model.contactName;
+                this.contactPhone = model.contactPhone;
+                this.sendMsgToPassenger = model.sendMsgToPassenger;
+            } 
 
             /**
              * contact_email.
@@ -476,6 +513,17 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             private Object newSegment; 
             private java.util.List<String> passengerNames; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightChange model) {
+                this.changeDesc = model.changeDesc;
+                this.changeStatus = model.changeStatus;
+                this.changeStatusCode = model.changeStatusCode;
+                this.newSegment = model.newSegment;
+                this.passengerNames = model.passengerNames;
+            } 
+
             /**
              * change_desc.
              */
@@ -566,6 +614,14 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         public static final class Builder {
             private Integer journeyIndex; 
             private Integer segmentIndex; 
+
+            private Builder() {
+            } 
+
+            private Builder(SegmentPosition model) {
+                this.journeyIndex = model.journeyIndex;
+                this.segmentIndex = model.segmentIndex;
+            } 
 
             /**
              * journey_index.
@@ -994,6 +1050,44 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             private String stopCity; 
             private String stopDepTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DestFlightInfoDTOS model) {
+                this.airlineCode = model.airlineCode;
+                this.airlineIconUrl = model.airlineIconUrl;
+                this.airlineName = model.airlineName;
+                this.arrAirportCode = model.arrAirportCode;
+                this.arrAirportName = model.arrAirportName;
+                this.arrCityCode = model.arrCityCode;
+                this.arrCityName = model.arrCityName;
+                this.arrTerminal = model.arrTerminal;
+                this.arrTime = model.arrTime;
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.cabinClassName = model.cabinClassName;
+                this.cabinDiscount = model.cabinDiscount;
+                this.carrierAirlineCode = model.carrierAirlineCode;
+                this.carrierAirlineIconUrl = model.carrierAirlineIconUrl;
+                this.carrierAirlineName = model.carrierAirlineName;
+                this.carrierFlightNo = model.carrierFlightNo;
+                this.depAirportCode = model.depAirportCode;
+                this.depAirportName = model.depAirportName;
+                this.depCityCode = model.depCityCode;
+                this.depCityName = model.depCityName;
+                this.depTerminal = model.depTerminal;
+                this.depTime = model.depTime;
+                this.flightChange = model.flightChange;
+                this.flightNo = model.flightNo;
+                this.flightType = model.flightType;
+                this.mealDesc = model.mealDesc;
+                this.segmentIId = model.segmentIId;
+                this.segmentPosition = model.segmentPosition;
+                this.stopArrTime = model.stopArrTime;
+                this.stopCity = model.stopCity;
+                this.stopDepTime = model.stopDepTime;
+            } 
+
             /**
              * airline_code.
              */
@@ -1313,6 +1407,15 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             private Long serviceFee; 
             private Long upgradePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeFee model) {
+                this.changeFee = model.changeFee;
+                this.serviceFee = model.serviceFee;
+                this.upgradePrice = model.upgradePrice;
+            } 
+
             /**
              * change_fee.
              */
@@ -1384,6 +1487,9 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("pid")
         private Long pid;
 
+        @com.aliyun.core.annotation.NameInMap("ticket_no_segment_map")
+        private java.util.Map<String, ?> ticketNoSegmentMap;
+
         @com.aliyun.core.annotation.NameInMap("ticket_nos")
         private java.util.List<String> ticketNos;
 
@@ -1399,6 +1505,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             this.passengerType = builder.passengerType;
             this.phone = builder.phone;
             this.pid = builder.pid;
+            this.ticketNoSegmentMap = builder.ticketNoSegmentMap;
             this.ticketNos = builder.ticketNos;
         }
 
@@ -1488,6 +1595,13 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return ticketNoSegmentMap
+         */
+        public java.util.Map<String, ?> getTicketNoSegmentMap() {
+            return this.ticketNoSegmentMap;
+        }
+
+        /**
          * @return ticketNos
          */
         public java.util.List<String> getTicketNos() {
@@ -1506,7 +1620,27 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             private Integer passengerType; 
             private String phone; 
             private Long pid; 
+            private java.util.Map<String, ?> ticketNoSegmentMap; 
             private java.util.List<String> ticketNos; 
+
+            private Builder() {
+            } 
+
+            private Builder(TravelerInfoDTOS model) {
+                this.birthDate = model.birthDate;
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.changeFee = model.changeFee;
+                this.gender = model.gender;
+                this.originTicketNos = model.originTicketNos;
+                this.passengerId = model.passengerId;
+                this.passengerName = model.passengerName;
+                this.passengerType = model.passengerType;
+                this.phone = model.phone;
+                this.pid = model.pid;
+                this.ticketNoSegmentMap = model.ticketNoSegmentMap;
+                this.ticketNos = model.ticketNos;
+            } 
 
             /**
              * birth_date.
@@ -1593,6 +1727,14 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
              */
             public Builder pid(Long pid) {
                 this.pid = pid;
+                return this;
+            }
+
+            /**
+             * ticket_no_segment_map.
+             */
+            public Builder ticketNoSegmentMap(java.util.Map<String, ?> ticketNoSegmentMap) {
+                this.ticketNoSegmentMap = ticketNoSegmentMap;
                 return this;
             }
 
@@ -1870,6 +2012,32 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             private Long totalPrice; 
             private Long totalServiceFeePrice; 
             private java.util.List<TravelerInfoDTOS> travelerInfoDTOS; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.applyTime = model.applyTime;
+                this.attributes = model.attributes;
+                this.bookUserEmail = model.bookUserEmail;
+                this.bookUserName = model.bookUserName;
+                this.bookuserPhone = model.bookuserPhone;
+                this.changeFailReason = model.changeFailReason;
+                this.contactInfoDTO = model.contactInfoDTO;
+                this.destFlightInfoDTOS = model.destFlightInfoDTOS;
+                this.lastPayTime = model.lastPayTime;
+                this.orderId = model.orderId;
+                this.outOrderId = model.outOrderId;
+                this.outSubOrderId = model.outSubOrderId;
+                this.payTime = model.payTime;
+                this.reason = model.reason;
+                this.status = model.status;
+                this.subOrderId = model.subOrderId;
+                this.ticketTime = model.ticketTime;
+                this.totalPrice = model.totalPrice;
+                this.totalServiceFeePrice = model.totalServiceFeePrice;
+                this.travelerInfoDTOS = model.travelerInfoDTOS;
+            } 
 
             /**
              * apply_time.

@@ -52,6 +52,10 @@ public class InsureRefundDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class InsureRefundDetailResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(InsureRefundDetailResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -223,6 +239,16 @@ public class InsureRefundDetailResponseBody extends TeaModel {
             private String certNo; 
             private String certType; 
             private String phone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applicant model) {
+                this.certName = model.certName;
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.phone = model.phone;
+            } 
 
             /**
              * cert_name.
@@ -402,6 +428,22 @@ public class InsureRefundDetailResponseBody extends TeaModel {
             private Long price; 
             private Integer settleType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(InsureOrder model) {
+                this.applicant = model.applicant;
+                this.bizOrderId = model.bizOrderId;
+                this.bizType = model.bizType;
+                this.closeTime = model.closeTime;
+                this.insOrderId = model.insOrderId;
+                this.outInsOrderId = model.outInsOrderId;
+                this.payTime = model.payTime;
+                this.price = model.price;
+                this.settleType = model.settleType;
+                this.status = model.status;
+            } 
 
             /**
              * applicant.
@@ -618,6 +660,21 @@ public class InsureRefundDetailResponseBody extends TeaModel {
             private String depTime; 
             private String flightNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(InsureSegment model) {
+                this.arrAirportCode = model.arrAirportCode;
+                this.arrCity = model.arrCity;
+                this.arrCityCode = model.arrCityCode;
+                this.arrTime = model.arrTime;
+                this.depAirportCode = model.depAirportCode;
+                this.depCity = model.depCity;
+                this.depCityCode = model.depCityCode;
+                this.depTime = model.depTime;
+                this.flightNo = model.flightNo;
+            } 
+
             /**
              * arr_airport_code.
              */
@@ -800,6 +857,19 @@ public class InsureRefundDetailResponseBody extends TeaModel {
             private String certType; 
             private String gender; 
             private String phone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Insured model) {
+                this.birthday = model.birthday;
+                this.btripUserId = model.btripUserId;
+                this.certName = model.certName;
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.gender = model.gender;
+                this.phone = model.phone;
+            } 
 
             /**
              * birthday.
@@ -1064,6 +1134,27 @@ public class InsureRefundDetailResponseBody extends TeaModel {
             private String status; 
             private String subInsOrderId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubOrderRefundList model) {
+                this.effectiveEndTime = model.effectiveEndTime;
+                this.effectiveStartTime = model.effectiveStartTime;
+                this.insureSegment = model.insureSegment;
+                this.insureTime = model.insureTime;
+                this.insured = model.insured;
+                this.outSubInsOrderId = model.outSubInsOrderId;
+                this.policyNo = model.policyNo;
+                this.policyRefundNo = model.policyRefundNo;
+                this.price = model.price;
+                this.productName = model.productName;
+                this.productNo = model.productNo;
+                this.refundStatus = model.refundStatus;
+                this.refundTime = model.refundTime;
+                this.status = model.status;
+                this.subInsOrderId = model.subInsOrderId;
+            } 
+
             /**
              * effective_end_time.
              */
@@ -1294,6 +1385,19 @@ public class InsureRefundDetailResponseBody extends TeaModel {
             private InsureOrder insureOrder; 
             private String outApplyId; 
             private java.util.List<SubOrderRefundList> subOrderRefundList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.applyId = model.applyId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.insOrderId = model.insOrderId;
+                this.insureOrder = model.insureOrder;
+                this.outApplyId = model.outApplyId;
+                this.subOrderRefundList = model.subOrderRefundList;
+            } 
 
             /**
              * apply_id.

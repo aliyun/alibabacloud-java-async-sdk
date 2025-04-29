@@ -36,6 +36,10 @@ public class ModuleFlightItemListItemListFlightRuleInfosValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return refundChangeRuleDesc
      */
@@ -53,6 +57,14 @@ public class ModuleFlightItemListItemListFlightRuleInfosValue extends TeaModel {
     public static final class Builder {
         private String refundChangeRuleDesc; 
         private String baggageDesc; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModuleFlightItemListItemListFlightRuleInfosValue model) {
+            this.refundChangeRuleDesc = model.refundChangeRuleDesc;
+            this.baggageDesc = model.baggageDesc;
+        } 
 
         /**
          * refund_change_rule_desc.

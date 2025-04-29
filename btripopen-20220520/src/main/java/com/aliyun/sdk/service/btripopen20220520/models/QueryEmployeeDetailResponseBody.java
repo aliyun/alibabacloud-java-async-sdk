@@ -56,6 +56,10 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryEmployeeDetailResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -186,6 +203,9 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
      * <p>QueryEmployeeDetailResponseBody</p>
      */
     public static class Module extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("email")
+        private String email;
+
         @com.aliyun.core.annotation.NameInMap("is_leave")
         private Boolean isLeave;
 
@@ -204,6 +224,9 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("out_employee_id")
         private String outEmployeeId;
 
+        @com.aliyun.core.annotation.NameInMap("phone_no")
+        private String phoneNo;
+
         @com.aliyun.core.annotation.NameInMap("real_name")
         private String realName;
 
@@ -211,12 +234,14 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
         private String realNameEn;
 
         private Module(Builder builder) {
+            this.email = builder.email;
             this.isLeave = builder.isLeave;
             this.jobNumber = builder.jobNumber;
             this.nickName = builder.nickName;
             this.outDeptId = builder.outDeptId;
             this.outDeptIdList = builder.outDeptIdList;
             this.outEmployeeId = builder.outEmployeeId;
+            this.phoneNo = builder.phoneNo;
             this.realName = builder.realName;
             this.realNameEn = builder.realNameEn;
         }
@@ -227,6 +252,13 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
 
         public static Module create() {
             return builder().build();
+        }
+
+        /**
+         * @return email
+         */
+        public String getEmail() {
+            return this.email;
         }
 
         /**
@@ -272,6 +304,13 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return phoneNo
+         */
+        public String getPhoneNo() {
+            return this.phoneNo;
+        }
+
+        /**
          * @return realName
          */
         public String getRealName() {
@@ -286,14 +325,40 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String email; 
             private Boolean isLeave; 
             private String jobNumber; 
             private String nickName; 
             private String outDeptId; 
             private java.util.List<String> outDeptIdList; 
             private String outEmployeeId; 
+            private String phoneNo; 
             private String realName; 
             private String realNameEn; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.email = model.email;
+                this.isLeave = model.isLeave;
+                this.jobNumber = model.jobNumber;
+                this.nickName = model.nickName;
+                this.outDeptId = model.outDeptId;
+                this.outDeptIdList = model.outDeptIdList;
+                this.outEmployeeId = model.outEmployeeId;
+                this.phoneNo = model.phoneNo;
+                this.realName = model.realName;
+                this.realNameEn = model.realNameEn;
+            } 
+
+            /**
+             * email.
+             */
+            public Builder email(String email) {
+                this.email = email;
+                return this;
+            }
 
             /**
              * is_leave.
@@ -340,6 +405,14 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
              */
             public Builder outEmployeeId(String outEmployeeId) {
                 this.outEmployeeId = outEmployeeId;
+                return this;
+            }
+
+            /**
+             * phone_no.
+             */
+            public Builder phoneNo(String phoneNo) {
+                this.phoneNo = phoneNo;
                 return this;
             }
 

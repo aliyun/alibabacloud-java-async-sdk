@@ -52,6 +52,10 @@ public class TicketChangingApplyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TicketChangingApplyResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TicketChangingApplyResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -367,6 +383,28 @@ public class TicketChangingApplyResponseBody extends TeaModel {
             private String retryClientTips; 
             private Integer status; 
             private Long upgradeFee; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.bookingChangedTotalFee = model.bookingChangedTotalFee;
+                this.bookingOriginTotalFee = model.bookingOriginTotalFee;
+                this.bookingPriceChanged = model.bookingPriceChanged;
+                this.btripOrderId = model.btripOrderId;
+                this.btripSubOrderId = model.btripSubOrderId;
+                this.canPay = model.canPay;
+                this.changeFee = model.changeFee;
+                this.deadlineTime = model.deadlineTime;
+                this.disOrderId = model.disOrderId;
+                this.disSubOrderId = model.disSubOrderId;
+                this.maxRetryTimes = model.maxRetryTimes;
+                this.nextRetryInterval = model.nextRetryInterval;
+                this.retry = model.retry;
+                this.retryClientTips = model.retryClientTips;
+                this.status = model.status;
+                this.upgradeFee = model.upgradeFee;
+            } 
 
             /**
              * booking_changed_total_fee.

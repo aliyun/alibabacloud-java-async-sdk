@@ -52,6 +52,10 @@ public class TrainStationSearchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TrainStationSearchResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrainStationSearchResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -200,6 +216,14 @@ public class TrainStationSearchResponseBody extends TeaModel {
             private String code; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cities model) {
+                this.code = model.code;
+                this.name = model.name;
+            } 
+
             /**
              * code.
              */
@@ -254,6 +278,13 @@ public class TrainStationSearchResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Cities> cities; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.cities = model.cities;
+            } 
 
             /**
              * cities.

@@ -52,6 +52,10 @@ public class InsureOrderCreateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class InsureOrderCreateResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(InsureOrderCreateResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -224,6 +240,16 @@ public class InsureOrderCreateResponseBody extends TeaModel {
             private String status; 
             private String subInsOrderId; 
 
+            private Builder() {
+            } 
+
+            private Builder(InsureOrderDetailList model) {
+                this.outSubInsOrderId = model.outSubInsOrderId;
+                this.policyNo = model.policyNo;
+                this.status = model.status;
+                this.subInsOrderId = model.subInsOrderId;
+            } 
+
             /**
              * out_sub_ins_order_id.
              */
@@ -330,6 +356,16 @@ public class InsureOrderCreateResponseBody extends TeaModel {
             private java.util.List<InsureOrderDetailList> insureOrderDetailList; 
             private String insureOrderId; 
             private Long premium; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.copies = model.copies;
+                this.insureOrderDetailList = model.insureOrderDetailList;
+                this.insureOrderId = model.insureOrderId;
+                this.premium = model.premium;
+            } 
 
             /**
              * copies.

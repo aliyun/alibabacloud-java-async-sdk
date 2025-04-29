@@ -46,7 +46,7 @@ public class ApplyInvoiceTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -434,6 +434,36 @@ public class ApplyInvoiceTaskRequest extends Request {
             private String vasMallSpecialInvoiceFee; 
             private String vehicleInvoiceFee; 
             private String vehicleNormalInvoiceFee; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvoiceTaskList model) {
+                this.contact = model.contact;
+                this.email = model.email;
+                this.flightInvoiceFee = model.flightInvoiceFee;
+                this.fuPointInvoiceFee = model.fuPointInvoiceFee;
+                this.hotelNormalInvoiceFee = model.hotelNormalInvoiceFee;
+                this.hotelSpecialInvoiceFee = model.hotelSpecialInvoiceFee;
+                this.internationalFlightInvoiceFee = model.internationalFlightInvoiceFee;
+                this.internationalHotelInvoiceFee = model.internationalHotelInvoiceFee;
+                this.invoiceThirdPartId = model.invoiceThirdPartId;
+                this.invoiceType = model.invoiceType;
+                this.mailAddress = model.mailAddress;
+                this.mailCity = model.mailCity;
+                this.mailFullAddress = model.mailFullAddress;
+                this.mailProvince = model.mailProvince;
+                this.mealNormalInvoiceFee = model.mealNormalInvoiceFee;
+                this.penaltyFee = model.penaltyFee;
+                this.remark = model.remark;
+                this.serviceFee = model.serviceFee;
+                this.telephone = model.telephone;
+                this.trainAccelerationPackageInvoiceFee = model.trainAccelerationPackageInvoiceFee;
+                this.trainInvoiceFee = model.trainInvoiceFee;
+                this.vasMallSpecialInvoiceFee = model.vasMallSpecialInvoiceFee;
+                this.vehicleInvoiceFee = model.vehicleInvoiceFee;
+                this.vehicleNormalInvoiceFee = model.vehicleNormalInvoiceFee;
+            } 
 
             /**
              * contact.

@@ -52,6 +52,10 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IntlFlightOtaItemDetailResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -236,6 +252,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private String airlineIcon; 
             private Boolean cheapFlight; 
 
+            private Builder() {
+            } 
+
+            private Builder(AirlineInfo model) {
+                this.airlineChineseName = model.airlineChineseName;
+                this.airlineChineseShortName = model.airlineChineseShortName;
+                this.airlineCode = model.airlineCode;
+                this.airlineIcon = model.airlineIcon;
+                this.cheapFlight = model.cheapFlight;
+            } 
+
             /**
              * airline_chinese_name.
              */
@@ -351,6 +378,16 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private String airportShortName; 
             private String terminal; 
 
+            private Builder() {
+            } 
+
+            private Builder(ArrAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.airportShortName = model.airportShortName;
+                this.terminal = model.terminal;
+            } 
+
             /**
              * airport_code.
              */
@@ -457,6 +494,16 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private String airportName; 
             private String airportShortName; 
             private String terminal; 
+
+            private Builder() {
+            } 
+
+            private Builder(DepAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.airportShortName = model.airportShortName;
+                this.terminal = model.terminal;
+            } 
 
             /**
              * airport_code.
@@ -577,6 +624,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private String airlineIcon; 
             private Boolean cheapFlight; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperatingAirlineInfo model) {
+                this.airlineChineseName = model.airlineChineseName;
+                this.airlineChineseShortName = model.airlineChineseShortName;
+                this.airlineCode = model.airlineCode;
+                this.airlineIcon = model.airlineIcon;
+                this.cheapFlight = model.cheapFlight;
+            } 
+
             /**
              * airline_chinese_name.
              */
@@ -667,6 +725,14 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         public static final class Builder {
             private OperatingAirlineInfo operatingAirlineInfo; 
             private String operatingFlightNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightShareInfo model) {
+                this.operatingAirlineInfo = model.operatingAirlineInfo;
+                this.operatingFlightNo = model.operatingFlightNo;
+            } 
 
             /**
              * operating_airline_info.
@@ -831,6 +897,22 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private String stopDepTime; 
             private String stopTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightStopInfo model) {
+                this.stopAirport = model.stopAirport;
+                this.stopAirportName = model.stopAirportName;
+                this.stopArrTerm = model.stopArrTerm;
+                this.stopArrTime = model.stopArrTime;
+                this.stopCityCode = model.stopCityCode;
+                this.stopCityName = model.stopCityName;
+                this.stopCityNames = model.stopCityNames;
+                this.stopDepTerm = model.stopDepTerm;
+                this.stopDepTime = model.stopDepTime;
+                this.stopTime = model.stopTime;
+            } 
+
             /**
              * stop_airport.
              */
@@ -962,6 +1044,14 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private Integer depCityLuggageDirect; 
             private Integer stopCityLuggageDirect; 
 
+            private Builder() {
+            } 
+
+            private Builder(LuggageDirectInfo model) {
+                this.depCityLuggageDirect = model.depCityLuggageDirect;
+                this.stopCityLuggageDirect = model.stopCityLuggageDirect;
+            } 
+
             /**
              * dep_city_luggage_direct.
              */
@@ -1052,6 +1142,16 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private Integer depCityVisaType; 
             private java.util.List<String> stopCityVisaRemarks; 
             private java.util.List<Integer> stopCityVisaTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(SegmentVisaRemark model) {
+                this.depCityVisaRemark = model.depCityVisaRemark;
+                this.depCityVisaType = model.depCityVisaType;
+                this.stopCityVisaRemarks = model.stopCityVisaRemarks;
+                this.stopCityVisaTypes = model.stopCityVisaTypes;
+            } 
 
             /**
              * dep_city_visa_remark.
@@ -1484,6 +1584,43 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private String transferTime; 
             private Integer transferTimeNumber; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightSegmentInfos model) {
+                this.airlineInfo = model.airlineInfo;
+                this.arrAirportInfo = model.arrAirportInfo;
+                this.arrCityCode = model.arrCityCode;
+                this.arrCityName = model.arrCityName;
+                this.arrTime = model.arrTime;
+                this.baggageDesc = model.baggageDesc;
+                this.depAirportInfo = model.depAirportInfo;
+                this.depCityCode = model.depCityCode;
+                this.depCityName = model.depCityName;
+                this.depTime = model.depTime;
+                this.duration = model.duration;
+                this.flightNo = model.flightNo;
+                this.flightShareInfo = model.flightShareInfo;
+                this.flightSize = model.flightSize;
+                this.flightStopInfo = model.flightStopInfo;
+                this.flightType = model.flightType;
+                this.luggageDirectInfo = model.luggageDirectInfo;
+                this.manufacturer = model.manufacturer;
+                this.mealDesc = model.mealDesc;
+                this.onTimeRate = model.onTimeRate;
+                this.oneMore = model.oneMore;
+                this.oneMoreShow = model.oneMoreShow;
+                this.segmentIndex = model.segmentIndex;
+                this.segmentKey = model.segmentKey;
+                this.segmentVisaRemark = model.segmentVisaRemark;
+                this.share = model.share;
+                this.shortFlightSize = model.shortFlightSize;
+                this.stop = model.stop;
+                this.totalTime = model.totalTime;
+                this.transferTime = model.transferTime;
+                this.transferTimeNumber = model.transferTimeNumber;
+            } 
+
             /**
              * airline_info.
              */
@@ -1891,6 +2028,23 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private Integer journeyIndex; 
             private Integer transferTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightJourneyInfos model) {
+                this.arrCityCode = model.arrCityCode;
+                this.arrCityName = model.arrCityName;
+                this.arrTime = model.arrTime;
+                this.depCityCode = model.depCityCode;
+                this.depCityName = model.depCityName;
+                this.depTime = model.depTime;
+                this.duration = model.duration;
+                this.extensions = model.extensions;
+                this.flightSegmentInfos = model.flightSegmentInfos;
+                this.journeyIndex = model.journeyIndex;
+                this.transferTime = model.transferTime;
+            } 
+
             /**
              * arr_city_code.
              */
@@ -2030,6 +2184,14 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private String baggageDesc; 
             private String refundChangeRuleDesc; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightRuleInfo model) {
+                this.baggageDesc = model.baggageDesc;
+                this.refundChangeRuleDesc = model.refundChangeRuleDesc;
+            } 
+
             /**
              * baggage_desc.
              */
@@ -2097,6 +2259,14 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private Integer journeyIndex; 
             private Integer segmentIndex; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegmentPosition model) {
+                this.journeyIndex = model.journeyIndex;
+                this.segmentIndex = model.segmentIndex;
+            } 
+
             /**
              * journey_index.
              */
@@ -2163,6 +2333,14 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         public static final class Builder {
             private FlightRuleInfo flightRuleInfo; 
             private SegmentPosition segmentPosition; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightRuleInfoList model) {
+                this.flightRuleInfo = model.flightRuleInfo;
+                this.segmentPosition = model.segmentPosition;
+            } 
 
             /**
              * flight_rule_info.
@@ -2242,6 +2420,15 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private String baggageDigest; 
             private java.util.Map<String, java.util.List<ModuleGroupItemSubItemsBaggageRuleBaggageInfoMapValue>> baggageInfoMap; 
             private Boolean structuredBaggage; 
+
+            private Builder() {
+            } 
+
+            private Builder(BaggageRule model) {
+                this.baggageDigest = model.baggageDigest;
+                this.baggageInfoMap = model.baggageInfoMap;
+                this.structuredBaggage = model.structuredBaggage;
+            } 
 
             /**
              * baggage_digest.
@@ -2353,6 +2540,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private java.util.Map<String, java.util.List<ModuleGroupItemSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap; 
             private String refundChangeDigest; 
             private Boolean structuredRefund; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundChangeRule model) {
+                this.cancelFeeInd = model.cancelFeeInd;
+                this.changeFeeInd = model.changeFeeInd;
+                this.offerPenaltyInfoMap = model.offerPenaltyInfoMap;
+                this.refundChangeDigest = model.refundChangeDigest;
+                this.structuredRefund = model.structuredRefund;
+            } 
 
             /**
              * cancel_fee_ind.
@@ -2480,6 +2678,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private java.util.List<String> segmentKeys; 
             private java.util.Map<String, ModuleGroupItemSubItemsShoppingItemMapValue> shoppingItemMap; 
             private String uniqKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubItems model) {
+                this.baggageRule = model.baggageRule;
+                this.refundChangeRule = model.refundChangeRule;
+                this.segmentKeys = model.segmentKeys;
+                this.shoppingItemMap = model.shoppingItemMap;
+                this.uniqKey = model.uniqKey;
+            } 
 
             /**
              * baggage_rule.
@@ -2632,6 +2841,19 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private java.util.Map<String, java.util.List<ModuleGroupItemSubItemPositionMapValue>> subItemPositionMap; 
             private java.util.List<SubItems> subItems; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupItem model) {
+                this.agreementPriceCodes = model.agreementPriceCodes;
+                this.flightRuleInfoList = model.flightRuleInfoList;
+                this.itemId = model.itemId;
+                this.itemType = model.itemType;
+                this.shoppingItemMap = model.shoppingItemMap;
+                this.subItemPositionMap = model.subItemPositionMap;
+                this.subItems = model.subItems;
+            } 
+
             /**
              * agreement_price_codes.
              */
@@ -2739,6 +2961,14 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private java.util.List<String> contents; 
             private String mainTitle; 
 
+            private Builder() {
+            } 
+
+            private Builder(ShutterDocs model) {
+                this.contents = model.contents;
+                this.mainTitle = model.mainTitle;
+            } 
+
             /**
              * contents.
              */
@@ -2829,6 +3059,16 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private GroupItem groupItem; 
             private java.util.List<ShutterDocs> shutterDocs; 
             private Integer tripType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.flightJourneyInfos = model.flightJourneyInfos;
+                this.groupItem = model.groupItem;
+                this.shutterDocs = model.shutterDocs;
+                this.tripType = model.tripType;
+            } 
 
             /**
              * flight_journey_infos.

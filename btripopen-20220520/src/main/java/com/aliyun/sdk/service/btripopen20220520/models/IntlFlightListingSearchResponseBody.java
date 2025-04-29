@@ -52,6 +52,10 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IntlFlightListingSearchResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -212,6 +228,15 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             private String itemType; 
             private java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValue> shoppingItemMap; 
 
+            private Builder() {
+            } 
+
+            private Builder(BestPriceItem model) {
+                this.agreementPriceCodes = model.agreementPriceCodes;
+                this.itemType = model.itemType;
+                this.shoppingItemMap = model.shoppingItemMap;
+            } 
+
             /**
              * agreement_price_codes.
              */
@@ -322,6 +347,17 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             private String airlineCode; 
             private String airlineIcon; 
             private Boolean cheapFlight; 
+
+            private Builder() {
+            } 
+
+            private Builder(AirlineInfo model) {
+                this.airlineChineseName = model.airlineChineseName;
+                this.airlineChineseShortName = model.airlineChineseShortName;
+                this.airlineCode = model.airlineCode;
+                this.airlineIcon = model.airlineIcon;
+                this.cheapFlight = model.cheapFlight;
+            } 
 
             /**
              * airline_chinese_name.
@@ -438,6 +474,16 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             private String airportShortName; 
             private String terminal; 
 
+            private Builder() {
+            } 
+
+            private Builder(ArrAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.airportShortName = model.airportShortName;
+                this.terminal = model.terminal;
+            } 
+
             /**
              * airport_code.
              */
@@ -544,6 +590,16 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             private String airportName; 
             private String airportShortName; 
             private String terminal; 
+
+            private Builder() {
+            } 
+
+            private Builder(DepAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.airportShortName = model.airportShortName;
+                this.terminal = model.terminal;
+            } 
 
             /**
              * airport_code.
@@ -664,6 +720,17 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             private String airlineIcon; 
             private Boolean cheapFlight; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperatingAirlineInfo model) {
+                this.airlineChineseName = model.airlineChineseName;
+                this.airlineChineseShortName = model.airlineChineseShortName;
+                this.airlineCode = model.airlineCode;
+                this.airlineIcon = model.airlineIcon;
+                this.cheapFlight = model.cheapFlight;
+            } 
+
             /**
              * airline_chinese_name.
              */
@@ -754,6 +821,14 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         public static final class Builder {
             private OperatingAirlineInfo operatingAirlineInfo; 
             private String operatingFlightNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightShareInfo model) {
+                this.operatingAirlineInfo = model.operatingAirlineInfo;
+                this.operatingFlightNo = model.operatingFlightNo;
+            } 
 
             /**
              * operating_airline_info.
@@ -917,6 +992,22 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             private String stopDepTerm; 
             private String stopDepTime; 
             private String stopTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightStopInfo model) {
+                this.stopAirport = model.stopAirport;
+                this.stopAirportName = model.stopAirportName;
+                this.stopArrTerm = model.stopArrTerm;
+                this.stopArrTime = model.stopArrTime;
+                this.stopCityCode = model.stopCityCode;
+                this.stopCityName = model.stopCityName;
+                this.stopCityNames = model.stopCityNames;
+                this.stopDepTerm = model.stopDepTerm;
+                this.stopDepTime = model.stopDepTime;
+                this.stopTime = model.stopTime;
+            } 
 
             /**
              * stop_airport.
@@ -1385,6 +1476,42 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             private String transferTime; 
             private Integer transferTimeNumber; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightSegmentInfos model) {
+                this.airlineInfo = model.airlineInfo;
+                this.arrAirportInfo = model.arrAirportInfo;
+                this.arrCityCode = model.arrCityCode;
+                this.arrCityName = model.arrCityName;
+                this.arrTime = model.arrTime;
+                this.baggageDesc = model.baggageDesc;
+                this.depAirportInfo = model.depAirportInfo;
+                this.depCityCode = model.depCityCode;
+                this.depCityName = model.depCityName;
+                this.depTime = model.depTime;
+                this.duration = model.duration;
+                this.flightNo = model.flightNo;
+                this.flightShareInfo = model.flightShareInfo;
+                this.flightSize = model.flightSize;
+                this.flightStopInfo = model.flightStopInfo;
+                this.flightType = model.flightType;
+                this.manufacturer = model.manufacturer;
+                this.mealDesc = model.mealDesc;
+                this.miles = model.miles;
+                this.onTimeRate = model.onTimeRate;
+                this.oneMore = model.oneMore;
+                this.oneMoreShow = model.oneMoreShow;
+                this.segmentIndex = model.segmentIndex;
+                this.segmentKey = model.segmentKey;
+                this.share = model.share;
+                this.shortFlightSize = model.shortFlightSize;
+                this.stop = model.stop;
+                this.totalTime = model.totalTime;
+                this.transferTime = model.transferTime;
+                this.transferTimeNumber = model.transferTimeNumber;
+            } 
+
             /**
              * airline_info.
              */
@@ -1775,6 +1902,22 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             private Integer journeyIndex; 
             private Integer transferTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightJourneyInfos model) {
+                this.arrCityCode = model.arrCityCode;
+                this.arrCityName = model.arrCityName;
+                this.arrTime = model.arrTime;
+                this.depCityCode = model.depCityCode;
+                this.depCityName = model.depCityName;
+                this.depTime = model.depTime;
+                this.duration = model.duration;
+                this.flightSegmentInfos = model.flightSegmentInfos;
+                this.journeyIndex = model.journeyIndex;
+                this.transferTime = model.transferTime;
+            } 
+
             /**
              * arr_city_code.
              */
@@ -1909,6 +2052,14 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             private BestPriceItem bestPriceItem; 
             private java.util.List<FlightJourneyInfos> flightJourneyInfos; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightItemList model) {
+                this.bestPriceItem = model.bestPriceItem;
+                this.flightJourneyInfos = model.flightJourneyInfos;
+            } 
+
             /**
              * best_price_item.
              */
@@ -1999,6 +2150,16 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             private Boolean needContinue; 
             private String queryRecordId; 
             private String token; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.flightItemList = model.flightItemList;
+                this.needContinue = model.needContinue;
+                this.queryRecordId = model.queryRecordId;
+                this.token = model.token;
+            } 
 
             /**
              * flight_item_list.

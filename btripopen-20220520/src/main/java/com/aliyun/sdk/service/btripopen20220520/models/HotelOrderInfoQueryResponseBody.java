@@ -52,6 +52,10 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelOrderInfoQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -392,6 +408,30 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             private Integer settleType; 
             private Integer tripMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(BaseOrderInfo model) {
+                this.bookMode = model.bookMode;
+                this.bookerId = model.bookerId;
+                this.bookerName = model.bookerName;
+                this.btripCorpId = model.btripCorpId;
+                this.category = model.category;
+                this.checkInTime = model.checkInTime;
+                this.checkOutTime = model.checkOutTime;
+                this.isAgreementPrice = model.isAgreementPrice;
+                this.nights = model.nights;
+                this.orderCreateTime = model.orderCreateTime;
+                this.orderId = model.orderId;
+                this.orderStatus = model.orderStatus;
+                this.orderStatusDesc = model.orderStatusDesc;
+                this.payStatus = model.payStatus;
+                this.payTime = model.payTime;
+                this.roomNum = model.roomNum;
+                this.settleType = model.settleType;
+                this.tripMode = model.tripMode;
+            } 
+
             /**
              * book_mode.
              */
@@ -623,6 +663,17 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             private String departName; 
             private String outDepartId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Department model) {
+                this.cascadeDeptMask = model.cascadeDeptMask;
+                this.cascadeDeptName = model.cascadeDeptName;
+                this.departId = model.departId;
+                this.departName = model.departName;
+                this.outDepartId = model.outDepartId;
+            } 
+
             /**
              * cascade_dept_mask.
              */
@@ -809,6 +860,22 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             private Boolean needApply; 
             private String realName; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BookerInfo model) {
+                this.bookerRole = model.bookerRole;
+                this.contactEmail = model.contactEmail;
+                this.contactPhone = model.contactPhone;
+                this.corpId = model.corpId;
+                this.department = model.department;
+                this.enName = model.enName;
+                this.jobNo = model.jobNo;
+                this.needApply = model.needApply;
+                this.realName = model.realName;
+                this.userId = model.userId;
+            } 
 
             /**
              * booker_role.
@@ -1085,6 +1152,26 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             private String hotelNameEn; 
             private String star; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotelInfo model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.countryCode = model.countryCode;
+                this.countryName = model.countryName;
+                this.districtCode = model.districtCode;
+                this.districtName = model.districtName;
+                this.hotelAddress = model.hotelAddress;
+                this.hotelBrandCode = model.hotelBrandCode;
+                this.hotelBrandName = model.hotelBrandName;
+                this.hotelGroup = model.hotelGroup;
+                this.hotelId = model.hotelId;
+                this.hotelName = model.hotelName;
+                this.hotelNameEn = model.hotelNameEn;
+                this.star = model.star;
+            } 
+
             /**
              * city_code.
              */
@@ -1284,6 +1371,17 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             private Long promotionAmount; 
             private Long totalRoomAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotelOrderFeeInfo model) {
+                this.orderAmount = model.orderAmount;
+                this.otherFee = model.otherFee;
+                this.payAmount = model.payAmount;
+                this.promotionAmount = model.promotionAmount;
+                this.totalRoomAmount = model.totalRoomAmount;
+            } 
+
             /**
              * order_amount.
              */
@@ -1435,6 +1533,19 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             private Long refundStartTime; 
             private Integer refundType; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotelOrderRefundInfo model) {
+                this.cancelFine = model.cancelFine;
+                this.refundApplyId = model.refundApplyId;
+                this.refundEndTime = model.refundEndTime;
+                this.refundPrice = model.refundPrice;
+                this.refundReason = model.refundReason;
+                this.refundStartTime = model.refundStartTime;
+                this.refundType = model.refundType;
+            } 
+
             /**
              * cancel_fine.
              */
@@ -1566,6 +1677,16 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             private Long flowNo; 
             private Long id; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExceedApply model) {
+                this.exceedReason = model.exceedReason;
+                this.exceedType = model.exceedType;
+                this.flowNo = model.flowNo;
+                this.id = model.id;
+            } 
+
             /**
              * exceed_reason.
              */
@@ -1684,6 +1805,17 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             private String applyId; 
             private java.util.List<ExceedApply> exceedApply; 
             private String itineraryNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplyInfo model) {
+                this.applyBusinessId = model.applyBusinessId;
+                this.applyBusinessName = model.applyBusinessName;
+                this.applyId = model.applyId;
+                this.exceedApply = model.exceedApply;
+                this.itineraryNo = model.itineraryNo;
+            } 
 
             /**
              * apply_business_id.
@@ -1811,6 +1943,17 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             private String departId; 
             private String departName; 
             private String outDepartId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TraverInfosDepartment model) {
+                this.cascadeDeptMask = model.cascadeDeptMask;
+                this.cascadeDeptName = model.cascadeDeptName;
+                this.departId = model.departId;
+                this.departName = model.departName;
+                this.outDepartId = model.outDepartId;
+            } 
 
             /**
              * cascade_dept_mask.
@@ -1986,6 +2129,21 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             private String invoiceTitle; 
             private String projectCode; 
             private String projectTitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(TripCostCenter model) {
+                this.costCenterCode = model.costCenterCode;
+                this.costCenterId = model.costCenterId;
+                this.costCenterName = model.costCenterName;
+                this.externalExtField = model.externalExtField;
+                this.feeType = model.feeType;
+                this.invoiceId = model.invoiceId;
+                this.invoiceTitle = model.invoiceTitle;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+            } 
 
             /**
              * cost_center_code.
@@ -2218,6 +2376,23 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             private TripCostCenter tripCostCenter; 
             private Integer userType; 
 
+            private Builder() {
+            } 
+
+            private Builder(TraverInfos model) {
+                this.applyInfo = model.applyInfo;
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.department = model.department;
+                this.jobNo = model.jobNo;
+                this.telephone = model.telephone;
+                this.travelerId = model.travelerId;
+                this.travelerName = model.travelerName;
+                this.travelerType = model.travelerType;
+                this.tripCostCenter = model.tripCostCenter;
+                this.userType = model.userType;
+            } 
+
             /**
              * apply_info.
              */
@@ -2369,6 +2544,15 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             private String roomTypeName; 
             private java.util.List<TraverInfos> traverInfos; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoomTraverInfo model) {
+                this.liveRoomNo = model.liveRoomNo;
+                this.roomTypeName = model.roomTypeName;
+                this.traverInfos = model.traverInfos;
+            } 
+
             /**
              * live_room_no.
              */
@@ -2491,6 +2675,18 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             private HotelOrderFeeInfo hotelOrderFeeInfo; 
             private java.util.List<HotelOrderRefundInfo> hotelOrderRefundInfo; 
             private java.util.List<RoomTraverInfo> roomTraverInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.baseOrderInfo = model.baseOrderInfo;
+                this.bookerInfo = model.bookerInfo;
+                this.hotelInfo = model.hotelInfo;
+                this.hotelOrderFeeInfo = model.hotelOrderFeeInfo;
+                this.hotelOrderRefundInfo = model.hotelOrderRefundInfo;
+                this.roomTraverInfo = model.roomTraverInfo;
+            } 
 
             /**
              * base_order_info.

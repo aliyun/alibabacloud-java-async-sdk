@@ -52,6 +52,10 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightOrderDetailV2ResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -230,6 +246,16 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private String contactPhone; 
             private Boolean sendMsgToPassenger; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContactInfoDTO model) {
+                this.contactEmail = model.contactEmail;
+                this.contactName = model.contactName;
+                this.contactPhone = model.contactPhone;
+                this.sendMsgToPassenger = model.sendMsgToPassenger;
+            } 
+
             /**
              * contact_email.
              */
@@ -349,6 +375,17 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private Object newSegment; 
             private java.util.List<String> passengerNames; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightChange model) {
+                this.changeDesc = model.changeDesc;
+                this.changeStatus = model.changeStatus;
+                this.changeStatusCode = model.changeStatusCode;
+                this.newSegment = model.newSegment;
+                this.passengerNames = model.passengerNames;
+            } 
+
             /**
              * change_desc.
              */
@@ -439,6 +476,14 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         public static final class Builder {
             private Integer journeyIndex; 
             private Integer segmentIndex; 
+
+            private Builder() {
+            } 
+
+            private Builder(SegmentPosition model) {
+                this.journeyIndex = model.journeyIndex;
+                this.segmentIndex = model.segmentIndex;
+            } 
 
             /**
              * journey_index.
@@ -1095,6 +1140,63 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private String stopDepTime; 
             private Integer stopQuantity; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegmentList model) {
+                this.airLineCode = model.airLineCode;
+                this.airLineEnglishName = model.airLineEnglishName;
+                this.airLineName = model.airLineName;
+                this.airLinePhone = model.airLinePhone;
+                this.airlineIconUrl = model.airlineIconUrl;
+                this.airlineShortName = model.airlineShortName;
+                this.arrAirportCode = model.arrAirportCode;
+                this.arrAirportName = model.arrAirportName;
+                this.arrCityCode = model.arrCityCode;
+                this.arrCityName = model.arrCityName;
+                this.arrTime = model.arrTime;
+                this.arriveTerminal = model.arriveTerminal;
+                this.cabin = model.cabin;
+                this.cabinAndDiscount = model.cabinAndDiscount;
+                this.cabinClass = model.cabinClass;
+                this.cabinClassName = model.cabinClassName;
+                this.codeShare = model.codeShare;
+                this.deadlineText = model.deadlineText;
+                this.depAirportCode = model.depAirportCode;
+                this.depAirportName = model.depAirportName;
+                this.depCityCode = model.depCityCode;
+                this.depCityName = model.depCityName;
+                this.depDate = model.depDate;
+                this.depTime = model.depTime;
+                this.departTerminal = model.departTerminal;
+                this.discount = model.discount;
+                this.flightChange = model.flightChange;
+                this.flightNo = model.flightNo;
+                this.flightType = model.flightType;
+                this.flyDuration = model.flyDuration;
+                this.manufacturer = model.manufacturer;
+                this.mealDesc = model.mealDesc;
+                this.onTimeRate = model.onTimeRate;
+                this.operatingAirShortName = model.operatingAirShortName;
+                this.operatingAirlineCode = model.operatingAirlineCode;
+                this.operatingAirlineEnglishName = model.operatingAirlineEnglishName;
+                this.operatingAirlineIconUrl = model.operatingAirlineIconUrl;
+                this.operatingAirlineName = model.operatingAirlineName;
+                this.operatingAirlinePhone = model.operatingAirlinePhone;
+                this.operatingFlightNo = model.operatingFlightNo;
+                this.planeType = model.planeType;
+                this.raisePrice = model.raisePrice;
+                this.segmentId = model.segmentId;
+                this.segmentIndex = model.segmentIndex;
+                this.segmentPosition = model.segmentPosition;
+                this.stopAirport = model.stopAirport;
+                this.stopArrTime = model.stopArrTime;
+                this.stopCity = model.stopCity;
+                this.stopCityName = model.stopCityName;
+                this.stopDepTime = model.stopDepTime;
+                this.stopQuantity = model.stopQuantity;
+            } 
+
             /**
              * air_line_code.
              */
@@ -1740,6 +1842,29 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private String refundChangeDetails; 
             private java.util.List<SegmentList> segmentList; 
 
+            private Builder() {
+            } 
+
+            private Builder(Journeys model) {
+                this.allFlyDuration = model.allFlyDuration;
+                this.allFlyDurationAfterChange = model.allFlyDurationAfterChange;
+                this.applyId = model.applyId;
+                this.arrCityCode = model.arrCityCode;
+                this.arrCityName = model.arrCityName;
+                this.arrTime = model.arrTime;
+                this.baggageDetails = model.baggageDetails;
+                this.depCityCode = model.depCityCode;
+                this.depCityName = model.depCityName;
+                this.depTime = model.depTime;
+                this.flightStatus = model.flightStatus;
+                this.iataNo = model.iataNo;
+                this.isReshopJourney = model.isReshopJourney;
+                this.isTransfer = model.isTransfer;
+                this.journeyTitle = model.journeyTitle;
+                this.refundChangeDetails = model.refundChangeDetails;
+                this.segmentList = model.segmentList;
+            } 
+
             /**
              * all_fly_duration.
              */
@@ -1954,6 +2079,16 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private String tripType; 
             private Integer tripTypeCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightTaleInfoDTO model) {
+                this.journeys = model.journeys;
+                this.noticeTips = model.noticeTips;
+                this.tripType = model.tripType;
+                this.tripTypeCode = model.tripTypeCode;
+            } 
+
             /**
              * journeys.
              */
@@ -2156,6 +2291,24 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private String idCheckCode; 
             private String issueCountry; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Credential model) {
+                this.birthDate = model.birthDate;
+                this.certIssueDate = model.certIssueDate;
+                this.certIssuePlace = model.certIssuePlace;
+                this.credentialNo = model.credentialNo;
+                this.driveLicenceFirst = model.driveLicenceFirst;
+                this.driveLicenceType = model.driveLicenceType;
+                this.expireDate = model.expireDate;
+                this.holderNationality = model.holderNationality;
+                this.id = model.id;
+                this.idCheckCode = model.idCheckCode;
+                this.issueCountry = model.issueCountry;
+                this.type = model.type;
+            } 
 
             /**
              * birth_date.
@@ -2424,6 +2577,24 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private String issueCountry; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Credentials model) {
+                this.birthDate = model.birthDate;
+                this.certIssueDate = model.certIssueDate;
+                this.certIssuePlace = model.certIssuePlace;
+                this.credentialNo = model.credentialNo;
+                this.driveLicenceFirst = model.driveLicenceFirst;
+                this.driveLicenceType = model.driveLicenceType;
+                this.expireDate = model.expireDate;
+                this.holderNationality = model.holderNationality;
+                this.id = model.id;
+                this.idCheckCode = model.idCheckCode;
+                this.issueCountry = model.issueCountry;
+                this.type = model.type;
+            } 
+
             /**
              * birth_date.
              */
@@ -2582,6 +2753,15 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private Integer journeyIndex; 
             private Integer openTicketStatus; 
             private Integer segmentIndex; 
+
+            private Builder() {
+            } 
+
+            private Builder(SegmentOpenTicketList model) {
+                this.journeyIndex = model.journeyIndex;
+                this.openTicketStatus = model.openTicketStatus;
+                this.segmentIndex = model.segmentIndex;
+            } 
 
             /**
              * journey_index.
@@ -2756,6 +2936,22 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private String ticketNo; 
             private Long ticketPrice; 
             private String ticketStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tickets model) {
+                this.channel = model.channel;
+                this.journeyTitle = model.journeyTitle;
+                this.openTicketStatus = model.openTicketStatus;
+                this.pcc = model.pcc;
+                this.segmentOpenTicketList = model.segmentOpenTicketList;
+                this.ticketAuthMemo = model.ticketAuthMemo;
+                this.ticketAuthStatus = model.ticketAuthStatus;
+                this.ticketNo = model.ticketNo;
+                this.ticketPrice = model.ticketPrice;
+                this.ticketStatus = model.ticketStatus;
+            } 
 
             /**
              * channel.
@@ -3202,6 +3398,40 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private java.util.List<Tickets> tickets; 
             private Integer type; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerList model) {
+                this.birthday = model.birthday;
+                this.btripUserId = model.btripUserId;
+                this.code = model.code;
+                this.country = model.country;
+                this.countryCode = model.countryCode;
+                this.credential = model.credential;
+                this.credentials = model.credentials;
+                this.email = model.email;
+                this.enFirstName = model.enFirstName;
+                this.enLastName = model.enLastName;
+                this.englishName = model.englishName;
+                this.gender = model.gender;
+                this.id = model.id;
+                this.isComplete = model.isComplete;
+                this.isFrequently = model.isFrequently;
+                this.memo = model.memo;
+                this.mobileCountryCode = model.mobileCountryCode;
+                this.mobilePhoneNumber = model.mobilePhoneNumber;
+                this.name = model.name;
+                this.oneself = model.oneself;
+                this.orderName = model.orderName;
+                this.outPassengerId = model.outPassengerId;
+                this.phone = model.phone;
+                this.shengPiPinyin = model.shengPiPinyin;
+                this.ticketNos = model.ticketNos;
+                this.tickets = model.tickets;
+                this.type = model.type;
+                this.userId = model.userId;
+            } 
 
             /**
              * birthday.
@@ -3729,6 +3959,35 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private Boolean sendcpsms; 
             private Integer status; 
             private Long totalServiceFeePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.b2gVipCode = model.b2gVipCode;
+                this.bookSuccTime = model.bookSuccTime;
+                this.bookUserId = model.bookUserId;
+                this.bookUserName = model.bookUserName;
+                this.buildPrice = model.buildPrice;
+                this.contactInfoDTO = model.contactInfoDTO;
+                this.createTime = model.createTime;
+                this.facevalue = model.facevalue;
+                this.flightTaleInfoDTO = model.flightTaleInfoDTO;
+                this.isProtocol = model.isProtocol;
+                this.isemergency = model.isemergency;
+                this.issendmessage = model.issendmessage;
+                this.oilPrice = model.oilPrice;
+                this.orderId = model.orderId;
+                this.orderPrice = model.orderPrice;
+                this.outOrderId = model.outOrderId;
+                this.passengerList = model.passengerList;
+                this.passengerSegmentMap = model.passengerSegmentMap;
+                this.payTime = model.payTime;
+                this.saleprice = model.saleprice;
+                this.sendcpsms = model.sendcpsms;
+                this.status = model.status;
+                this.totalServiceFeePrice = model.totalServiceFeePrice;
+            } 
 
             /**
              * b2g_vip_code.

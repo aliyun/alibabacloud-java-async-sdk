@@ -52,6 +52,10 @@ public class QueryCorpDetailInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class QueryCorpDetailInfoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCorpDetailInfoResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -247,6 +263,18 @@ public class QueryCorpDetailInfoResponseBody extends TeaModel {
             private String superAdminName; 
             private String superAdminPhone; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.corpId = model.corpId;
+                this.corpName = model.corpName;
+                this.openAgentId = model.openAgentId;
+                this.superAdminName = model.superAdminName;
+                this.superAdminPhone = model.superAdminPhone;
+                this.userId = model.userId;
+            } 
 
             /**
              * corp_id.

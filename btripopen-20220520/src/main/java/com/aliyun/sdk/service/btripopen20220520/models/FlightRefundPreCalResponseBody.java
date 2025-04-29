@@ -52,6 +52,10 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightRefundPreCalResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -235,6 +251,17 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             private Long preRefundMoney; 
             private Long refundFee; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultiRefundCalList model) {
+                this.canApplyRefund = model.canApplyRefund;
+                this.name = model.name;
+                this.preRefundMoney = model.preRefundMoney;
+                this.refundFee = model.refundFee;
+                this.userId = model.userId;
+            } 
 
             /**
              * can_apply_refund.
@@ -374,6 +401,18 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             private String reasonShow; 
             private Integer reasonType; 
             private Integer volunteer; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReturnReason model) {
+                this.extendDesc = model.extendDesc;
+                this.person = model.person;
+                this.reasonCode = model.reasonCode;
+                this.reasonShow = model.reasonShow;
+                this.reasonType = model.reasonType;
+                this.volunteer = model.volunteer;
+            } 
 
             /**
              * extend_desc.
@@ -545,6 +584,20 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             private java.util.List<ReturnReason> returnReason; 
             private String sessionId; 
             private String tips; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.flightChange = model.flightChange;
+                this.itemUnitId = model.itemUnitId;
+                this.multiRefundCalList = model.multiRefundCalList;
+                this.preRefundMoney = model.preRefundMoney;
+                this.refundFee = model.refundFee;
+                this.returnReason = model.returnReason;
+                this.sessionId = model.sessionId;
+                this.tips = model.tips;
+            } 
 
             /**
              * flight_change.

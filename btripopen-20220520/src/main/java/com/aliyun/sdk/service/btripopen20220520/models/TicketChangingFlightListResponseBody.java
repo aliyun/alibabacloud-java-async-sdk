@@ -52,6 +52,10 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TicketChangingFlightListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -212,6 +228,15 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private String airlineName; 
             private String airlineSimpleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AirlineInfo model) {
+                this.airlineCode = model.airlineCode;
+                this.airlineName = model.airlineName;
+                this.airlineSimpleName = model.airlineSimpleName;
+            } 
+
             /**
              * airline_code.
              */
@@ -322,6 +347,17 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private String cityCode; 
             private String cityName; 
             private String terminal; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArrAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.terminal = model.terminal;
+            } 
 
             /**
              * airport_code.
@@ -437,6 +473,16 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private Integer ticketPrice; 
             private Integer upgradeFee; 
             private Integer upgradePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModifyPriceList model) {
+                this.passengerType = model.passengerType;
+                this.ticketPrice = model.ticketPrice;
+                this.upgradeFee = model.upgradeFee;
+                this.upgradePrice = model.upgradePrice;
+            } 
 
             /**
              * passenger_type.
@@ -593,6 +639,20 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private java.util.List<ModifyPriceList> modifyPriceList; 
             private String otaItemid; 
 
+            private Builder() {
+            } 
+
+            private Builder(CabinList model) {
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.cabinDesc = model.cabinDesc;
+                this.cabinDiscount = model.cabinDiscount;
+                this.childCabin = model.childCabin;
+                this.leftNum = model.leftNum;
+                this.modifyPriceList = model.modifyPriceList;
+                this.otaItemid = model.otaItemid;
+            } 
+
             /**
              * cabin.
              */
@@ -744,6 +804,17 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private String cityName; 
             private String terminal; 
 
+            private Builder() {
+            } 
+
+            private Builder(DepAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.terminal = model.terminal;
+            } 
+
             /**
              * airport_code.
              */
@@ -858,6 +929,16 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private Integer ticketPrice; 
             private Integer upgradeFee; 
             private Integer upgradePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(LowestCabinPrice model) {
+                this.passengerType = model.passengerType;
+                this.ticketPrice = model.ticketPrice;
+                this.upgradeFee = model.upgradeFee;
+                this.upgradePrice = model.upgradePrice;
+            } 
 
             /**
              * passenger_type.
@@ -1218,6 +1299,37 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private String stopCity; 
             private String stopDepTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightInfoList model) {
+                this.airlineInfo = model.airlineInfo;
+                this.arrAirportInfo = model.arrAirportInfo;
+                this.cabinList = model.cabinList;
+                this.carrierAirline = model.carrierAirline;
+                this.carrierNo = model.carrierNo;
+                this.depAirportInfo = model.depAirportInfo;
+                this.flightNo = model.flightNo;
+                this.flightSize = model.flightSize;
+                this.flightType = model.flightType;
+                this.isProtocol = model.isProtocol;
+                this.isShare = model.isShare;
+                this.isStop = model.isStop;
+                this.lowestCabin = model.lowestCabin;
+                this.lowestCabinClass = model.lowestCabinClass;
+                this.lowestCabinDesc = model.lowestCabinDesc;
+                this.lowestCabinNum = model.lowestCabinNum;
+                this.lowestCabinPrice = model.lowestCabinPrice;
+                this.mealDesc = model.mealDesc;
+                this.modifyFlightArrTime = model.modifyFlightArrTime;
+                this.modifyFlightDepDate = model.modifyFlightDepDate;
+                this.modifyFlightDepTime = model.modifyFlightDepTime;
+                this.sessionId = model.sessionId;
+                this.stopArrTime = model.stopArrTime;
+                this.stopCity = model.stopCity;
+                this.stopDepTime = model.stopDepTime;
+            } 
+
             /**
              * airline_info.
              */
@@ -1456,6 +1568,13 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FlightInfoList> flightInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.flightInfoList = model.flightInfoList;
+            } 
 
             /**
              * flight_info_list.

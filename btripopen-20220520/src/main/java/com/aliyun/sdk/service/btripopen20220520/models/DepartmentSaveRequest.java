@@ -39,7 +39,7 @@ public class DepartmentSaveRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -202,6 +202,19 @@ public class DepartmentSaveRequest extends Request {
             private Integer status; 
             private String thirdDepartId; 
             private String thirdDepartPid; 
+
+            private Builder() {
+            } 
+
+            private Builder(DepartList model) {
+                this.departId = model.departId;
+                this.departName = model.departName;
+                this.departPid = model.departPid;
+                this.managerIds = model.managerIds;
+                this.status = model.status;
+                this.thirdDepartId = model.thirdDepartId;
+                this.thirdDepartPid = model.thirdDepartPid;
+            } 
 
             /**
              * depart_id.

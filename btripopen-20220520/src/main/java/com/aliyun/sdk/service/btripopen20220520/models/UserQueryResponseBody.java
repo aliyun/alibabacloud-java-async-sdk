@@ -52,6 +52,10 @@ public class UserQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class UserQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UserQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -227,6 +243,16 @@ public class UserQueryResponseBody extends TeaModel {
             private String thirdPartEmployeeId; 
             private String thirdPartJobNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.employeeNick = model.employeeNick;
+                this.leaveStatus = model.leaveStatus;
+                this.thirdPartEmployeeId = model.thirdPartEmployeeId;
+                this.thirdPartJobNo = model.thirdPartJobNo;
+            } 
+
             /**
              * employee_nick.
              */
@@ -333,6 +359,16 @@ public class UserQueryResponseBody extends TeaModel {
             private java.util.List<Items> items; 
             private String pageToken; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.hasMore = model.hasMore;
+                this.items = model.items;
+                this.pageToken = model.pageToken;
+                this.total = model.total;
+            } 
 
             /**
              * has_more.

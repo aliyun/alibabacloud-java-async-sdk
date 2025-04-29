@@ -52,6 +52,10 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TravelStandardListQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -239,6 +255,17 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
             private Long ruleId; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(MainReserveRule model) {
+                this.openServiceTypeList = model.openServiceTypeList;
+                this.ruleCode = model.ruleCode;
+                this.ruleDesc = model.ruleDesc;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
              * open_service_type_list.
              */
@@ -330,6 +357,14 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * key.
              */
@@ -408,6 +443,15 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
             private java.util.List<DataList> dataList; 
             private String title; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReserveRuleDesc model) {
+                this.dataList = model.dataList;
+                this.title = model.title;
+                this.type = model.type;
+            } 
 
             /**
              * data_list.
@@ -496,6 +540,15 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
             private java.util.List<ReserveRuleDesc> reserveRuleDesc; 
             private Integer scope; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.mainReserveRule = model.mainReserveRule;
+                this.reserveRuleDesc = model.reserveRuleDesc;
+                this.scope = model.scope;
+            } 
+
             /**
              * main_reserve_rule.
              */
@@ -570,6 +623,14 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Items> items; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.items = model.items;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * items.

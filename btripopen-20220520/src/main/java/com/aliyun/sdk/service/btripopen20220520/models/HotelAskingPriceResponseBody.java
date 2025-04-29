@@ -52,6 +52,10 @@ public class HotelAskingPriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelAskingPriceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelAskingPriceResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -260,6 +276,19 @@ public class HotelAskingPriceResponseBody extends TeaModel {
             private Double minPrice; 
             private Double originalMinPrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotelAskingPriceDetails model) {
+                this.cityCode = model.cityCode;
+                this.hotelAddress = model.hotelAddress;
+                this.hotelCode = model.hotelCode;
+                this.hotelName = model.hotelName;
+                this.isProtocol = model.isProtocol;
+                this.minPrice = model.minPrice;
+                this.originalMinPrice = model.originalMinPrice;
+            } 
+
             /**
              * city_code.
              */
@@ -354,6 +383,13 @@ public class HotelAskingPriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HotelAskingPriceDetails> hotelAskingPriceDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.hotelAskingPriceDetails = model.hotelAskingPriceDetails;
+            } 
 
             /**
              * hotel_asking_price_details.

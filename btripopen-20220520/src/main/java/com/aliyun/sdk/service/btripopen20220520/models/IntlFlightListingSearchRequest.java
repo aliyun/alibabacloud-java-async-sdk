@@ -115,7 +115,7 @@ public class IntlFlightListingSearchRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -562,6 +562,20 @@ public class IntlFlightListingSearchRequest extends Request {
             private String marketFlightNo; 
             private String operateFlightNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(SelectedFlights model) {
+                this.arrAirportCode = model.arrAirportCode;
+                this.arrCityCode = model.arrCityCode;
+                this.cabinType = model.cabinType;
+                this.depAirportCode = model.depAirportCode;
+                this.depCityCode = model.depCityCode;
+                this.flightTime = model.flightTime;
+                this.marketFlightNo = model.marketFlightNo;
+                this.operateFlightNo = model.operateFlightNo;
+            } 
+
             /**
              * arr_airport_code.
              */
@@ -719,6 +733,16 @@ public class IntlFlightListingSearchRequest extends Request {
             private String depDate; 
             private java.util.List<SelectedFlights> selectedFlights; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchJourneys model) {
+                this.arrCityCode = model.arrCityCode;
+                this.depCityCode = model.depCityCode;
+                this.depDate = model.depDate;
+                this.selectedFlights = model.selectedFlights;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -838,6 +862,16 @@ public class IntlFlightListingSearchRequest extends Request {
             private Integer certType; 
             private String fullName; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchPassengerList model) {
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.fullName = model.fullName;
+                this.type = model.type;
+            } 
 
             /**
              * <p>This parameter is required.</p>

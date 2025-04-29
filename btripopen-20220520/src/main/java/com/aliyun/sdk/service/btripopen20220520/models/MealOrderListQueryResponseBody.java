@@ -52,6 +52,10 @@ public class MealOrderListQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class MealOrderListQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(MealOrderListQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -275,6 +291,20 @@ public class MealOrderListQueryResponseBody extends TeaModel {
             private Long personPayAmount; 
             private String settleTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrderList model) {
+                this.corpPayAmount = model.corpPayAmount;
+                this.merchantName = model.merchantName;
+                this.orderId = model.orderId;
+                this.orderStatus = model.orderStatus;
+                this.orderType = model.orderType;
+                this.payAmount = model.payAmount;
+                this.personPayAmount = model.personPayAmount;
+                this.settleTime = model.settleTime;
+            } 
+
             /**
              * corp_pay_amount.
              */
@@ -377,6 +407,13 @@ public class MealOrderListQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OrderList> orderList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.orderList = model.orderList;
+            } 
 
             /**
              * order_list.

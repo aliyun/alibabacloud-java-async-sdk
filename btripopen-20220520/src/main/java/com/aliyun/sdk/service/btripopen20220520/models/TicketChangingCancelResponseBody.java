@@ -52,6 +52,10 @@ public class TicketChangingCancelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TicketChangingCancelResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TicketChangingCancelResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -211,6 +227,15 @@ public class TicketChangingCancelResponseBody extends TeaModel {
             private String cancelTime; 
             private String disSubOrderId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.cancelTime = model.cancelTime;
+                this.disSubOrderId = model.disSubOrderId;
+                this.status = model.status;
+            } 
 
             /**
              * cancel_time.

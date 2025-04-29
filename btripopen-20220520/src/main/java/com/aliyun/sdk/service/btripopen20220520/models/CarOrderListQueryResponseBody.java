@@ -56,6 +56,10 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CarOrderListQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -307,6 +324,21 @@ public class CarOrderListQueryResponseBody extends TeaModel {
             private String tradeId; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(PriceInfoList model) {
+                this.categoryCode = model.categoryCode;
+                this.categoryType = model.categoryType;
+                this.gmtCreate = model.gmtCreate;
+                this.passengerName = model.passengerName;
+                this.payType = model.payType;
+                this.personPrice = model.personPrice;
+                this.price = model.price;
+                this.tradeId = model.tradeId;
+                this.type = model.type;
+            } 
+
             /**
              * category_code.
              */
@@ -429,6 +461,14 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         public static final class Builder {
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserAffiliateList model) {
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * user_id.
@@ -1145,6 +1185,68 @@ public class CarOrderListQueryResponseBody extends TeaModel {
             private String userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.applyId = model.applyId;
+                this.applyShowId = model.applyShowId;
+                this.btripTitle = model.btripTitle;
+                this.businessCategory = model.businessCategory;
+                this.cancelTime = model.cancelTime;
+                this.carInfo = model.carInfo;
+                this.carLevel = model.carLevel;
+                this.corpId = model.corpId;
+                this.corpName = model.corpName;
+                this.costCenterId = model.costCenterId;
+                this.costCenterName = model.costCenterName;
+                this.costCenterNumber = model.costCenterNumber;
+                this.deptId = model.deptId;
+                this.deptName = model.deptName;
+                this.driverConfirmTime = model.driverConfirmTime;
+                this.estimatePrice = model.estimatePrice;
+                this.fromAddress = model.fromAddress;
+                this.fromCityAdCode = model.fromCityAdCode;
+                this.fromCityName = model.fromCityName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.invoiceId = model.invoiceId;
+                this.invoiceTitle = model.invoiceTitle;
+                this.isSpecial = model.isSpecial;
+                this.memo = model.memo;
+                this.orderId = model.orderId;
+                this.orderStatus = model.orderStatus;
+                this.passengerName = model.passengerName;
+                this.payTime = model.payTime;
+                this.priceInfoList = model.priceInfoList;
+                this.projectCode = model.projectCode;
+                this.projectId = model.projectId;
+                this.projectTitle = model.projectTitle;
+                this.provider = model.provider;
+                this.publishTime = model.publishTime;
+                this.realFromAddress = model.realFromAddress;
+                this.realFromCityAdCode = model.realFromCityAdCode;
+                this.realFromCityName = model.realFromCityName;
+                this.realToAddress = model.realToAddress;
+                this.realToCityAdCode = model.realToCityAdCode;
+                this.realToCityName = model.realToCityName;
+                this.serviceType = model.serviceType;
+                this.specialTypes = model.specialTypes;
+                this.takenTime = model.takenTime;
+                this.thirdpartApplyId = model.thirdpartApplyId;
+                this.thirdpartBusinessId = model.thirdpartBusinessId;
+                this.thirdpartItineraryId = model.thirdpartItineraryId;
+                this.toAddress = model.toAddress;
+                this.toCityAdCode = model.toCityAdCode;
+                this.toCityName = model.toCityName;
+                this.travelDistance = model.travelDistance;
+                this.userAffiliateList = model.userAffiliateList;
+                this.userConfirm = model.userConfirm;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * apply_id.
              */
@@ -1655,6 +1757,15 @@ public class CarOrderListQueryResponseBody extends TeaModel {
             private Integer page; 
             private Integer pageSize; 
             private Integer totalNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.totalNumber = model.totalNumber;
+            } 
 
             /**
              * page.

@@ -161,7 +161,7 @@ public class HotelOrderCreateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -872,6 +872,29 @@ public class HotelOrderCreateRequest extends Request {
             private String receiverPhone; 
             private String remark; 
 
+            private Builder() {
+            } 
+
+            private Builder(InvoiceInfo model) {
+                this.buyerAdd = model.buyerAdd;
+                this.buyerBankAcc = model.buyerBankAcc;
+                this.buyerBankAdd = model.buyerBankAdd;
+                this.buyerPhone = model.buyerPhone;
+                this.buyerTaxNum = model.buyerTaxNum;
+                this.deliveryAddress = model.deliveryAddress;
+                this.deliveryArea = model.deliveryArea;
+                this.deliveryCity = model.deliveryCity;
+                this.deliveryProvince = model.deliveryProvince;
+                this.deliveryStreet = model.deliveryStreet;
+                this.email = model.email;
+                this.invoiceMaterial = model.invoiceMaterial;
+                this.invoiceTitle = model.invoiceTitle;
+                this.invoiceType = model.invoiceType;
+                this.receiverName = model.receiverName;
+                this.receiverPhone = model.receiverPhone;
+                this.remark = model.remark;
+            } 
+
             /**
              * buyer_add.
              */
@@ -1205,6 +1228,26 @@ public class HotelOrderCreateRequest extends Request {
             private String staffNo; 
             private Integer userType; 
 
+            private Builder() {
+            } 
+
+            private Builder(OccupantInfoList model) {
+                this.cardNo = model.cardNo;
+                this.cardType = model.cardType;
+                this.customerType = model.customerType;
+                this.departmentId = model.departmentId;
+                this.departmentName = model.departmentName;
+                this.email = model.email;
+                this.employeeType = model.employeeType;
+                this.firstName = model.firstName;
+                this.lastName = model.lastName;
+                this.name = model.name;
+                this.phone = model.phone;
+                this.roomNo = model.roomNo;
+                this.staffNo = model.staffNo;
+                this.userType = model.userType;
+            } 
+
             /**
              * card_no.
              */
@@ -1431,6 +1474,19 @@ public class HotelOrderCreateRequest extends Request {
             private Long promotionPrice; 
             private String promotionType; 
 
+            private Builder() {
+            } 
+
+            private Builder(PromotionDetailInfoList model) {
+                this.checkStatus = model.checkStatus;
+                this.needCheck = model.needCheck;
+                this.promotionCode = model.promotionCode;
+                this.promotionId = model.promotionId;
+                this.promotionName = model.promotionName;
+                this.promotionPrice = model.promotionPrice;
+                this.promotionType = model.promotionType;
+            } 
+
             /**
              * check_status.
              */
@@ -1537,6 +1593,14 @@ public class HotelOrderCreateRequest extends Request {
         public static final class Builder {
             private java.util.List<PromotionDetailInfoList> promotionDetailInfoList; 
             private Long promotionTotalPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(PromotionInfo model) {
+                this.promotionDetailInfoList = model.promotionDetailInfoList;
+                this.promotionTotalPrice = model.promotionTotalPrice;
+            } 
 
             /**
              * promotion_detail_info_list.

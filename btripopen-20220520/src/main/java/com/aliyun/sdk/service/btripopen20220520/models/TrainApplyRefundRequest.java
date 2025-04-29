@@ -58,7 +58,7 @@ public class TrainApplyRefundRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -252,6 +252,16 @@ public class TrainApplyRefundRequest extends Request {
             private String passengerId; 
             private String passengerName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RefundPassengerInfos model) {
+                this.passengerCertNo = model.passengerCertNo;
+                this.passengerCertType = model.passengerCertType;
+                this.passengerId = model.passengerId;
+                this.passengerName = model.passengerName;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -361,6 +371,15 @@ public class TrainApplyRefundRequest extends Request {
             private String depTime; 
             private java.util.List<RefundPassengerInfos> refundPassengerInfos; 
             private String trainNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundTrainInfos model) {
+                this.depTime = model.depTime;
+                this.refundPassengerInfos = model.refundPassengerInfos;
+                this.trainNo = model.trainNo;
+            } 
 
             /**
              * <p>This parameter is required.</p>

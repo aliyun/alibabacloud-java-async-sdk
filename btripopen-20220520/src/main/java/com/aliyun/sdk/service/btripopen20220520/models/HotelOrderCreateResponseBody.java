@@ -52,6 +52,10 @@ public class HotelOrderCreateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelOrderCreateResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelOrderCreateResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -211,6 +227,15 @@ public class HotelOrderCreateResponseBody extends TeaModel {
             private Long btripOrderId; 
             private String paymentNo; 
             private Long totalPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.btripOrderId = model.btripOrderId;
+                this.paymentNo = model.paymentNo;
+                this.totalPrice = model.totalPrice;
+            } 
 
             /**
              * btrip_order_id.

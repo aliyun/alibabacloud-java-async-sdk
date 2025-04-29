@@ -89,7 +89,7 @@ public class FlightModifyApplyV2Request extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -374,6 +374,14 @@ public class FlightModifyApplyV2Request extends Request {
         public static final class Builder {
             private String passengerId; 
             private java.util.List<String> segmentIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerSegmentRelations model) {
+                this.passengerId = model.passengerId;
+                this.segmentIdList = model.segmentIdList;
+            } 
 
             /**
              * passenger_id.

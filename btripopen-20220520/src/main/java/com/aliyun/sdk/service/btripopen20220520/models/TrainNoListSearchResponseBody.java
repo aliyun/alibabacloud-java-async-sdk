@@ -52,6 +52,10 @@ public class TrainNoListSearchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TrainNoListSearchResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrainNoListSearchResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -226,6 +242,16 @@ public class TrainNoListSearchResponseBody extends TeaModel {
             private String seatName; 
             private String seatType; 
             private String stock; 
+
+            private Builder() {
+            } 
+
+            private Builder(SeatInfos model) {
+                this.price = model.price;
+                this.seatName = model.seatName;
+                this.seatType = model.seatType;
+                this.stock = model.stock;
+            } 
 
             /**
              * price.
@@ -490,6 +516,29 @@ public class TrainNoListSearchResponseBody extends TeaModel {
             private String trainNo; 
             private String trainType; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrainStationSearchVOS model) {
+                this.arrDayTag = model.arrDayTag;
+                this.arrStationCode = model.arrStationCode;
+                this.arrStationName = model.arrStationName;
+                this.arrTime = model.arrTime;
+                this.costTime = model.costTime;
+                this.depStationCode = model.depStationCode;
+                this.depStationName = model.depStationName;
+                this.depTime = model.depTime;
+                this.isEndStation = model.isEndStation;
+                this.isStartStation = model.isStartStation;
+                this.price = model.price;
+                this.saleFlag = model.saleFlag;
+                this.saleFlagMsg = model.saleFlagMsg;
+                this.seagmentIndex = model.seagmentIndex;
+                this.seatInfos = model.seatInfos;
+                this.trainNo = model.trainNo;
+                this.trainType = model.trainType;
+            } 
+
             /**
              * arr_day_tag.
              */
@@ -700,6 +749,16 @@ public class TrainNoListSearchResponseBody extends TeaModel {
             private String seatName; 
             private String seatType; 
             private String stock; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransferDetailListSeatInfos model) {
+                this.price = model.price;
+                this.seatName = model.seatName;
+                this.seatType = model.seatType;
+                this.stock = model.stock;
+            } 
 
             /**
              * price.
@@ -964,6 +1023,29 @@ public class TrainNoListSearchResponseBody extends TeaModel {
             private String trainNo; 
             private String trainType; 
 
+            private Builder() {
+            } 
+
+            private Builder(TransferDetailList model) {
+                this.arrDayTag = model.arrDayTag;
+                this.arrStationCode = model.arrStationCode;
+                this.arrStationName = model.arrStationName;
+                this.arrTime = model.arrTime;
+                this.costTime = model.costTime;
+                this.depStationCode = model.depStationCode;
+                this.depStationName = model.depStationName;
+                this.depTime = model.depTime;
+                this.isEndStation = model.isEndStation;
+                this.isStartStation = model.isStartStation;
+                this.price = model.price;
+                this.saleFlag = model.saleFlag;
+                this.saleFlagMsg = model.saleFlagMsg;
+                this.seatInfos = model.seatInfos;
+                this.segmentIndex = model.segmentIndex;
+                this.trainNo = model.trainNo;
+                this.trainType = model.trainType;
+            } 
+
             /**
              * arr_day_tag.
              */
@@ -1199,6 +1281,18 @@ public class TrainNoListSearchResponseBody extends TeaModel {
             private java.util.List<TransferDetailList> transferDetailList; 
             private String transferType; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrainTransferStationSearchVOs model) {
+                this.arrStation = model.arrStation;
+                this.depStation = model.depStation;
+                this.lineKey = model.lineKey;
+                this.middleStation = model.middleStation;
+                this.transferDetailList = model.transferDetailList;
+                this.transferType = model.transferType;
+            } 
+
             /**
              * arr_station.
              */
@@ -1297,6 +1391,14 @@ public class TrainNoListSearchResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<TrainStationSearchVOS> trainStationSearchVOS; 
             private java.util.List<TrainTransferStationSearchVOs> trainTransferStationSearchVOs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.trainStationSearchVOS = model.trainStationSearchVOS;
+                this.trainTransferStationSearchVOs = model.trainTransferStationSearchVOs;
+            } 
 
             /**
              * train_station_search_v_o_s.

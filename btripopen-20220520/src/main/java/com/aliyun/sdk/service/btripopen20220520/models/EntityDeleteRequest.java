@@ -51,7 +51,7 @@ public class EntityDeleteRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -197,6 +197,14 @@ public class EntityDeleteRequest extends Request {
         public static final class Builder {
             private String entityId; 
             private String entityType; 
+
+            private Builder() {
+            } 
+
+            private Builder(EntityDOList model) {
+                this.entityId = model.entityId;
+                this.entityType = model.entityType;
+            } 
 
             /**
              * <p>This parameter is required.</p>

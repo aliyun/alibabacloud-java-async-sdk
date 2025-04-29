@@ -52,6 +52,10 @@ public class HotelRoomInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelRoomInfoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelRoomInfoResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -251,6 +267,18 @@ public class HotelRoomInfoResponseBody extends TeaModel {
             private String length; 
             private String width; 
 
+            private Builder() {
+            } 
+
+            private Builder(BedInfos model) {
+                this.bedDesc = model.bedDesc;
+                this.bedNum = model.bedNum;
+                this.bedSize = model.bedSize;
+                this.bedType = model.bedType;
+                this.length = model.length;
+                this.width = model.width;
+            } 
+
             /**
              * bed_desc.
              */
@@ -337,6 +365,13 @@ public class HotelRoomInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BedInfos> bedInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(BedInfoGroupList model) {
+                this.bedInfos = model.bedInfos;
+            } 
 
             /**
              * bed_infos.
@@ -444,6 +479,18 @@ public class HotelRoomInfoResponseBody extends TeaModel {
             private String bedType; 
             private String length; 
             private String width; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModuleBedInfos model) {
+                this.bedDesc = model.bedDesc;
+                this.bedNum = model.bedNum;
+                this.bedSize = model.bedSize;
+                this.bedType = model.bedType;
+                this.length = model.length;
+                this.width = model.width;
+            } 
 
             /**
              * bed_desc.
@@ -555,6 +602,15 @@ public class HotelRoomInfoResponseBody extends TeaModel {
             private String bedInfos2; 
             private Integer tag; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoomImages model) {
+                this.bedInfos2 = model.bedInfos2;
+                this.tag = model.tag;
+                this.url = model.url;
+            } 
 
             /**
              * bed_infos2.
@@ -858,6 +914,33 @@ public class HotelRoomInfoResponseBody extends TeaModel {
             private String window; 
             private String windowBad; 
             private String windowView; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.bedInfoGroupList = model.bedInfoGroupList;
+                this.bedInfos = model.bedInfos;
+                this.extraBed = model.extraBed;
+                this.extraBedDesc = model.extraBedDesc;
+                this.floor = model.floor;
+                this.internetWay = model.internetWay;
+                this.maxOccupancy = model.maxOccupancy;
+                this.roomDesc = model.roomDesc;
+                this.roomFacilities = model.roomFacilities;
+                this.roomFacilityList = model.roomFacilityList;
+                this.roomId = model.roomId;
+                this.roomImage = model.roomImage;
+                this.roomImages = model.roomImages;
+                this.roomName = model.roomName;
+                this.roomType = model.roomType;
+                this.roomarea = model.roomarea;
+                this.rooms = model.rooms;
+                this.smoke = model.smoke;
+                this.window = model.window;
+                this.windowBad = model.windowBad;
+                this.windowView = model.windowView;
+            } 
 
             /**
              * bed_info_group_list.

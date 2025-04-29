@@ -52,6 +52,10 @@ public class EntityAddResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class EntityAddResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(EntityAddResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -202,6 +218,14 @@ public class EntityAddResponseBody extends TeaModel {
         public static final class Builder {
             private Integer addNum; 
             private Integer selectedUserNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.addNum = model.addNum;
+                this.selectedUserNum = model.selectedUserNum;
+            } 
 
             /**
              * add_num.

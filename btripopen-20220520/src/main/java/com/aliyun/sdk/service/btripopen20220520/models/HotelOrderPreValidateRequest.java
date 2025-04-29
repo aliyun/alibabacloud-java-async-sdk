@@ -110,7 +110,7 @@ public class HotelOrderPreValidateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -484,6 +484,16 @@ public class HotelOrderPreValidateRequest extends Request {
             private String rateStartTime; 
             private Integer roomCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(DailyList model) {
+                this.board = model.board;
+                this.price = model.price;
+                this.rateStartTime = model.rateStartTime;
+                this.roomCount = model.roomCount;
+            } 
+
             /**
              * board.
              */
@@ -614,6 +624,18 @@ public class HotelOrderPreValidateRequest extends Request {
             private String phone; 
             private String staffNo; 
             private Integer userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(OccupantInfoList model) {
+                this.cardNo = model.cardNo;
+                this.cardType = model.cardType;
+                this.name = model.name;
+                this.phone = model.phone;
+                this.staffNo = model.staffNo;
+                this.userType = model.userType;
+            } 
 
             /**
              * card_no.

@@ -52,6 +52,10 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelSuggestV2ResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -307,6 +323,23 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
             private Integer region; 
             private Integer type; 
             private String typeDesc; 
+
+            private Builder() {
+            } 
+
+            private Builder(GuessSuggestInfos model) {
+                this.address = model.address;
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.displayName = model.displayName;
+                this.hotelId = model.hotelId;
+                this.icon = model.icon;
+                this.point = model.point;
+                this.price = model.price;
+                this.region = model.region;
+                this.type = model.type;
+                this.typeDesc = model.typeDesc;
+            } 
 
             /**
              * address.
@@ -554,6 +587,23 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
             private Integer region; 
             private Integer type; 
             private String typeDesc; 
+
+            private Builder() {
+            } 
+
+            private Builder(BusinessAreaWithCity model) {
+                this.address = model.address;
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.displayName = model.displayName;
+                this.hotelId = model.hotelId;
+                this.icon = model.icon;
+                this.point = model.point;
+                this.price = model.price;
+                this.region = model.region;
+                this.type = model.type;
+                this.typeDesc = model.typeDesc;
+            } 
 
             /**
              * address.
@@ -814,6 +864,24 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
             private Integer type; 
             private String typeDesc; 
 
+            private Builder() {
+            } 
+
+            private Builder(KeywordSuggestInfos model) {
+                this.address = model.address;
+                this.businessAreaWithCity = model.businessAreaWithCity;
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.displayName = model.displayName;
+                this.hotelId = model.hotelId;
+                this.icon = model.icon;
+                this.point = model.point;
+                this.price = model.price;
+                this.region = model.region;
+                this.type = model.type;
+                this.typeDesc = model.typeDesc;
+            } 
+
             /**
              * address.
              */
@@ -949,6 +1017,13 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         public static final class Builder {
             private String displayName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PopularInfos model) {
+                this.displayName = model.displayName;
+            } 
+
             /**
              * display_name.
              */
@@ -1019,6 +1094,15 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
             private String icon; 
             private java.util.List<PopularInfos> popularInfos; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(PopularSuggestInfos model) {
+                this.icon = model.icon;
+                this.popularInfos = model.popularInfos;
+                this.title = model.title;
+            } 
 
             /**
              * icon.
@@ -1118,6 +1202,16 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
             private java.util.List<KeywordSuggestInfos> keywordSuggestInfos; 
             private java.util.List<PopularSuggestInfos> popularSuggestInfos; 
             private String tips; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.guessSuggestInfos = model.guessSuggestInfos;
+                this.keywordSuggestInfos = model.keywordSuggestInfos;
+                this.popularSuggestInfos = model.popularSuggestInfos;
+                this.tips = model.tips;
+            } 
 
             /**
              * guess_suggest_infos.

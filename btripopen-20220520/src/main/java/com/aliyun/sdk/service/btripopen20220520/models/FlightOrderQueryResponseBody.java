@@ -52,6 +52,10 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightOrderQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -536,6 +552,42 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private Integer ticketStatusCode; 
             private Double upgradeFee; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightChangeTicketInfoList model) {
+                this.applyId = model.applyId;
+                this.arrAirport = model.arrAirport;
+                this.arrAirportCode = model.arrAirportCode;
+                this.arrCity = model.arrCity;
+                this.arrCityCode = model.arrCityCode;
+                this.arrTime = model.arrTime;
+                this.changeCabin = model.changeCabin;
+                this.changeCabinLevel = model.changeCabinLevel;
+                this.changeFee = model.changeFee;
+                this.changeFlightNo = model.changeFlightNo;
+                this.changeOrderId = model.changeOrderId;
+                this.changeReason = model.changeReason;
+                this.changeType = model.changeType;
+                this.depAirport = model.depAirport;
+                this.depAirportCode = model.depAirportCode;
+                this.depCity = model.depCity;
+                this.depCityCode = model.depCityCode;
+                this.depTime = model.depTime;
+                this.discount = model.discount;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModify = model.gmtModify;
+                this.journeyIndex = model.journeyIndex;
+                this.originTicketNo = model.originTicketNo;
+                this.outApplyId = model.outApplyId;
+                this.segmentIndex = model.segmentIndex;
+                this.stopCity = model.stopCity;
+                this.ticketNo = model.ticketNo;
+                this.ticketStatus = model.ticketStatus;
+                this.ticketStatusCode = model.ticketStatusCode;
+                this.upgradeFee = model.upgradeFee;
+            } 
+
             /**
              * apply_id.
              */
@@ -789,12 +841,819 @@ public class FlightOrderQueryResponseBody extends TeaModel {
      *
      * <p>FlightOrderQueryResponseBody</p>
      */
+    public static class ArrAirportCityCounty extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("adcode")
+        private String adcode;
+
+        @com.aliyun.core.annotation.NameInMap("airport_city_code")
+        private String airportCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("airport_city_name")
+        private String airportCityName;
+
+        @com.aliyun.core.annotation.NameInMap("airport_code")
+        private String airportCode;
+
+        @com.aliyun.core.annotation.NameInMap("airport_name")
+        private String airportName;
+
+        @com.aliyun.core.annotation.NameInMap("airport_parent_city_name")
+        private String airportParentCityName;
+
+        @com.aliyun.core.annotation.NameInMap("county_city_adcode")
+        private String countyCityAdcode;
+
+        @com.aliyun.core.annotation.NameInMap("county_city_name")
+        private String countyCityName;
+
+        @com.aliyun.core.annotation.NameInMap("prefecture_city_adcode")
+        private String prefectureCityAdcode;
+
+        @com.aliyun.core.annotation.NameInMap("prefecture_city_name")
+        private String prefectureCityName;
+
+        private ArrAirportCityCounty(Builder builder) {
+            this.adcode = builder.adcode;
+            this.airportCityCode = builder.airportCityCode;
+            this.airportCityName = builder.airportCityName;
+            this.airportCode = builder.airportCode;
+            this.airportName = builder.airportName;
+            this.airportParentCityName = builder.airportParentCityName;
+            this.countyCityAdcode = builder.countyCityAdcode;
+            this.countyCityName = builder.countyCityName;
+            this.prefectureCityAdcode = builder.prefectureCityAdcode;
+            this.prefectureCityName = builder.prefectureCityName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ArrAirportCityCounty create() {
+            return builder().build();
+        }
+
+        /**
+         * @return adcode
+         */
+        public String getAdcode() {
+            return this.adcode;
+        }
+
+        /**
+         * @return airportCityCode
+         */
+        public String getAirportCityCode() {
+            return this.airportCityCode;
+        }
+
+        /**
+         * @return airportCityName
+         */
+        public String getAirportCityName() {
+            return this.airportCityName;
+        }
+
+        /**
+         * @return airportCode
+         */
+        public String getAirportCode() {
+            return this.airportCode;
+        }
+
+        /**
+         * @return airportName
+         */
+        public String getAirportName() {
+            return this.airportName;
+        }
+
+        /**
+         * @return airportParentCityName
+         */
+        public String getAirportParentCityName() {
+            return this.airportParentCityName;
+        }
+
+        /**
+         * @return countyCityAdcode
+         */
+        public String getCountyCityAdcode() {
+            return this.countyCityAdcode;
+        }
+
+        /**
+         * @return countyCityName
+         */
+        public String getCountyCityName() {
+            return this.countyCityName;
+        }
+
+        /**
+         * @return prefectureCityAdcode
+         */
+        public String getPrefectureCityAdcode() {
+            return this.prefectureCityAdcode;
+        }
+
+        /**
+         * @return prefectureCityName
+         */
+        public String getPrefectureCityName() {
+            return this.prefectureCityName;
+        }
+
+        public static final class Builder {
+            private String adcode; 
+            private String airportCityCode; 
+            private String airportCityName; 
+            private String airportCode; 
+            private String airportName; 
+            private String airportParentCityName; 
+            private String countyCityAdcode; 
+            private String countyCityName; 
+            private String prefectureCityAdcode; 
+            private String prefectureCityName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArrAirportCityCounty model) {
+                this.adcode = model.adcode;
+                this.airportCityCode = model.airportCityCode;
+                this.airportCityName = model.airportCityName;
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.airportParentCityName = model.airportParentCityName;
+                this.countyCityAdcode = model.countyCityAdcode;
+                this.countyCityName = model.countyCityName;
+                this.prefectureCityAdcode = model.prefectureCityAdcode;
+                this.prefectureCityName = model.prefectureCityName;
+            } 
+
+            /**
+             * adcode.
+             */
+            public Builder adcode(String adcode) {
+                this.adcode = adcode;
+                return this;
+            }
+
+            /**
+             * airport_city_code.
+             */
+            public Builder airportCityCode(String airportCityCode) {
+                this.airportCityCode = airportCityCode;
+                return this;
+            }
+
+            /**
+             * airport_city_name.
+             */
+            public Builder airportCityName(String airportCityName) {
+                this.airportCityName = airportCityName;
+                return this;
+            }
+
+            /**
+             * airport_code.
+             */
+            public Builder airportCode(String airportCode) {
+                this.airportCode = airportCode;
+                return this;
+            }
+
+            /**
+             * airport_name.
+             */
+            public Builder airportName(String airportName) {
+                this.airportName = airportName;
+                return this;
+            }
+
+            /**
+             * airport_parent_city_name.
+             */
+            public Builder airportParentCityName(String airportParentCityName) {
+                this.airportParentCityName = airportParentCityName;
+                return this;
+            }
+
+            /**
+             * county_city_adcode.
+             */
+            public Builder countyCityAdcode(String countyCityAdcode) {
+                this.countyCityAdcode = countyCityAdcode;
+                return this;
+            }
+
+            /**
+             * county_city_name.
+             */
+            public Builder countyCityName(String countyCityName) {
+                this.countyCityName = countyCityName;
+                return this;
+            }
+
+            /**
+             * prefecture_city_adcode.
+             */
+            public Builder prefectureCityAdcode(String prefectureCityAdcode) {
+                this.prefectureCityAdcode = prefectureCityAdcode;
+                return this;
+            }
+
+            /**
+             * prefecture_city_name.
+             */
+            public Builder prefectureCityName(String prefectureCityName) {
+                this.prefectureCityName = prefectureCityName;
+                return this;
+            }
+
+            public ArrAirportCityCounty build() {
+                return new ArrAirportCityCounty(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FlightOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderQueryResponseBody</p>
+     */
+    public static class DepAirportCityCounty extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("adcode")
+        private String adcode;
+
+        @com.aliyun.core.annotation.NameInMap("airport_city_code")
+        private String airportCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("airport_city_name")
+        private String airportCityName;
+
+        @com.aliyun.core.annotation.NameInMap("airport_code")
+        private String airportCode;
+
+        @com.aliyun.core.annotation.NameInMap("airport_name")
+        private String airportName;
+
+        @com.aliyun.core.annotation.NameInMap("airport_parent_city_name")
+        private String airportParentCityName;
+
+        @com.aliyun.core.annotation.NameInMap("county_city_adcode")
+        private String countyCityAdcode;
+
+        @com.aliyun.core.annotation.NameInMap("county_city_name")
+        private String countyCityName;
+
+        @com.aliyun.core.annotation.NameInMap("prefecture_city_adcode")
+        private String prefectureCityAdcode;
+
+        @com.aliyun.core.annotation.NameInMap("prefecture_city_name")
+        private String prefectureCityName;
+
+        private DepAirportCityCounty(Builder builder) {
+            this.adcode = builder.adcode;
+            this.airportCityCode = builder.airportCityCode;
+            this.airportCityName = builder.airportCityName;
+            this.airportCode = builder.airportCode;
+            this.airportName = builder.airportName;
+            this.airportParentCityName = builder.airportParentCityName;
+            this.countyCityAdcode = builder.countyCityAdcode;
+            this.countyCityName = builder.countyCityName;
+            this.prefectureCityAdcode = builder.prefectureCityAdcode;
+            this.prefectureCityName = builder.prefectureCityName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DepAirportCityCounty create() {
+            return builder().build();
+        }
+
+        /**
+         * @return adcode
+         */
+        public String getAdcode() {
+            return this.adcode;
+        }
+
+        /**
+         * @return airportCityCode
+         */
+        public String getAirportCityCode() {
+            return this.airportCityCode;
+        }
+
+        /**
+         * @return airportCityName
+         */
+        public String getAirportCityName() {
+            return this.airportCityName;
+        }
+
+        /**
+         * @return airportCode
+         */
+        public String getAirportCode() {
+            return this.airportCode;
+        }
+
+        /**
+         * @return airportName
+         */
+        public String getAirportName() {
+            return this.airportName;
+        }
+
+        /**
+         * @return airportParentCityName
+         */
+        public String getAirportParentCityName() {
+            return this.airportParentCityName;
+        }
+
+        /**
+         * @return countyCityAdcode
+         */
+        public String getCountyCityAdcode() {
+            return this.countyCityAdcode;
+        }
+
+        /**
+         * @return countyCityName
+         */
+        public String getCountyCityName() {
+            return this.countyCityName;
+        }
+
+        /**
+         * @return prefectureCityAdcode
+         */
+        public String getPrefectureCityAdcode() {
+            return this.prefectureCityAdcode;
+        }
+
+        /**
+         * @return prefectureCityName
+         */
+        public String getPrefectureCityName() {
+            return this.prefectureCityName;
+        }
+
+        public static final class Builder {
+            private String adcode; 
+            private String airportCityCode; 
+            private String airportCityName; 
+            private String airportCode; 
+            private String airportName; 
+            private String airportParentCityName; 
+            private String countyCityAdcode; 
+            private String countyCityName; 
+            private String prefectureCityAdcode; 
+            private String prefectureCityName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DepAirportCityCounty model) {
+                this.adcode = model.adcode;
+                this.airportCityCode = model.airportCityCode;
+                this.airportCityName = model.airportCityName;
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.airportParentCityName = model.airportParentCityName;
+                this.countyCityAdcode = model.countyCityAdcode;
+                this.countyCityName = model.countyCityName;
+                this.prefectureCityAdcode = model.prefectureCityAdcode;
+                this.prefectureCityName = model.prefectureCityName;
+            } 
+
+            /**
+             * adcode.
+             */
+            public Builder adcode(String adcode) {
+                this.adcode = adcode;
+                return this;
+            }
+
+            /**
+             * airport_city_code.
+             */
+            public Builder airportCityCode(String airportCityCode) {
+                this.airportCityCode = airportCityCode;
+                return this;
+            }
+
+            /**
+             * airport_city_name.
+             */
+            public Builder airportCityName(String airportCityName) {
+                this.airportCityName = airportCityName;
+                return this;
+            }
+
+            /**
+             * airport_code.
+             */
+            public Builder airportCode(String airportCode) {
+                this.airportCode = airportCode;
+                return this;
+            }
+
+            /**
+             * airport_name.
+             */
+            public Builder airportName(String airportName) {
+                this.airportName = airportName;
+                return this;
+            }
+
+            /**
+             * airport_parent_city_name.
+             */
+            public Builder airportParentCityName(String airportParentCityName) {
+                this.airportParentCityName = airportParentCityName;
+                return this;
+            }
+
+            /**
+             * county_city_adcode.
+             */
+            public Builder countyCityAdcode(String countyCityAdcode) {
+                this.countyCityAdcode = countyCityAdcode;
+                return this;
+            }
+
+            /**
+             * county_city_name.
+             */
+            public Builder countyCityName(String countyCityName) {
+                this.countyCityName = countyCityName;
+                return this;
+            }
+
+            /**
+             * prefecture_city_adcode.
+             */
+            public Builder prefectureCityAdcode(String prefectureCityAdcode) {
+                this.prefectureCityAdcode = prefectureCityAdcode;
+                return this;
+            }
+
+            /**
+             * prefecture_city_name.
+             */
+            public Builder prefectureCityName(String prefectureCityName) {
+                this.prefectureCityName = prefectureCityName;
+                return this;
+            }
+
+            public DepAirportCityCounty build() {
+                return new DepAirportCityCounty(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FlightOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderQueryResponseBody</p>
+     */
+    public static class StopAirportCityCounty extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("adcode")
+        private String adcode;
+
+        @com.aliyun.core.annotation.NameInMap("airport_city_code")
+        private String airportCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("airport_city_name")
+        private String airportCityName;
+
+        @com.aliyun.core.annotation.NameInMap("airport_code")
+        private String airportCode;
+
+        @com.aliyun.core.annotation.NameInMap("airport_name")
+        private String airportName;
+
+        @com.aliyun.core.annotation.NameInMap("airport_parent_city_name")
+        private String airportParentCityName;
+
+        @com.aliyun.core.annotation.NameInMap("county_city_adcode")
+        private String countyCityAdcode;
+
+        @com.aliyun.core.annotation.NameInMap("county_city_name")
+        private String countyCityName;
+
+        @com.aliyun.core.annotation.NameInMap("prefecture_city_adcode")
+        private String prefectureCityAdcode;
+
+        @com.aliyun.core.annotation.NameInMap("prefecture_city_name")
+        private String prefectureCityName;
+
+        private StopAirportCityCounty(Builder builder) {
+            this.adcode = builder.adcode;
+            this.airportCityCode = builder.airportCityCode;
+            this.airportCityName = builder.airportCityName;
+            this.airportCode = builder.airportCode;
+            this.airportName = builder.airportName;
+            this.airportParentCityName = builder.airportParentCityName;
+            this.countyCityAdcode = builder.countyCityAdcode;
+            this.countyCityName = builder.countyCityName;
+            this.prefectureCityAdcode = builder.prefectureCityAdcode;
+            this.prefectureCityName = builder.prefectureCityName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StopAirportCityCounty create() {
+            return builder().build();
+        }
+
+        /**
+         * @return adcode
+         */
+        public String getAdcode() {
+            return this.adcode;
+        }
+
+        /**
+         * @return airportCityCode
+         */
+        public String getAirportCityCode() {
+            return this.airportCityCode;
+        }
+
+        /**
+         * @return airportCityName
+         */
+        public String getAirportCityName() {
+            return this.airportCityName;
+        }
+
+        /**
+         * @return airportCode
+         */
+        public String getAirportCode() {
+            return this.airportCode;
+        }
+
+        /**
+         * @return airportName
+         */
+        public String getAirportName() {
+            return this.airportName;
+        }
+
+        /**
+         * @return airportParentCityName
+         */
+        public String getAirportParentCityName() {
+            return this.airportParentCityName;
+        }
+
+        /**
+         * @return countyCityAdcode
+         */
+        public String getCountyCityAdcode() {
+            return this.countyCityAdcode;
+        }
+
+        /**
+         * @return countyCityName
+         */
+        public String getCountyCityName() {
+            return this.countyCityName;
+        }
+
+        /**
+         * @return prefectureCityAdcode
+         */
+        public String getPrefectureCityAdcode() {
+            return this.prefectureCityAdcode;
+        }
+
+        /**
+         * @return prefectureCityName
+         */
+        public String getPrefectureCityName() {
+            return this.prefectureCityName;
+        }
+
+        public static final class Builder {
+            private String adcode; 
+            private String airportCityCode; 
+            private String airportCityName; 
+            private String airportCode; 
+            private String airportName; 
+            private String airportParentCityName; 
+            private String countyCityAdcode; 
+            private String countyCityName; 
+            private String prefectureCityAdcode; 
+            private String prefectureCityName; 
+
+            private Builder() {
+            } 
+
+            private Builder(StopAirportCityCounty model) {
+                this.adcode = model.adcode;
+                this.airportCityCode = model.airportCityCode;
+                this.airportCityName = model.airportCityName;
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.airportParentCityName = model.airportParentCityName;
+                this.countyCityAdcode = model.countyCityAdcode;
+                this.countyCityName = model.countyCityName;
+                this.prefectureCityAdcode = model.prefectureCityAdcode;
+                this.prefectureCityName = model.prefectureCityName;
+            } 
+
+            /**
+             * adcode.
+             */
+            public Builder adcode(String adcode) {
+                this.adcode = adcode;
+                return this;
+            }
+
+            /**
+             * airport_city_code.
+             */
+            public Builder airportCityCode(String airportCityCode) {
+                this.airportCityCode = airportCityCode;
+                return this;
+            }
+
+            /**
+             * airport_city_name.
+             */
+            public Builder airportCityName(String airportCityName) {
+                this.airportCityName = airportCityName;
+                return this;
+            }
+
+            /**
+             * airport_code.
+             */
+            public Builder airportCode(String airportCode) {
+                this.airportCode = airportCode;
+                return this;
+            }
+
+            /**
+             * airport_name.
+             */
+            public Builder airportName(String airportName) {
+                this.airportName = airportName;
+                return this;
+            }
+
+            /**
+             * airport_parent_city_name.
+             */
+            public Builder airportParentCityName(String airportParentCityName) {
+                this.airportParentCityName = airportParentCityName;
+                return this;
+            }
+
+            /**
+             * county_city_adcode.
+             */
+            public Builder countyCityAdcode(String countyCityAdcode) {
+                this.countyCityAdcode = countyCityAdcode;
+                return this;
+            }
+
+            /**
+             * county_city_name.
+             */
+            public Builder countyCityName(String countyCityName) {
+                this.countyCityName = countyCityName;
+                return this;
+            }
+
+            /**
+             * prefecture_city_adcode.
+             */
+            public Builder prefectureCityAdcode(String prefectureCityAdcode) {
+                this.prefectureCityAdcode = prefectureCityAdcode;
+                return this;
+            }
+
+            /**
+             * prefecture_city_name.
+             */
+            public Builder prefectureCityName(String prefectureCityName) {
+                this.prefectureCityName = prefectureCityName;
+                return this;
+            }
+
+            public StopAirportCityCounty build() {
+                return new StopAirportCityCounty(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FlightOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderQueryResponseBody</p>
+     */
+    public static class StopCityInfoList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("stop_airport_city_county")
+        private StopAirportCityCounty stopAirportCityCounty;
+
+        @com.aliyun.core.annotation.NameInMap("stop_airport_code")
+        private String stopAirportCode;
+
+        private StopCityInfoList(Builder builder) {
+            this.stopAirportCityCounty = builder.stopAirportCityCounty;
+            this.stopAirportCode = builder.stopAirportCode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StopCityInfoList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return stopAirportCityCounty
+         */
+        public StopAirportCityCounty getStopAirportCityCounty() {
+            return this.stopAirportCityCounty;
+        }
+
+        /**
+         * @return stopAirportCode
+         */
+        public String getStopAirportCode() {
+            return this.stopAirportCode;
+        }
+
+        public static final class Builder {
+            private StopAirportCityCounty stopAirportCityCounty; 
+            private String stopAirportCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(StopCityInfoList model) {
+                this.stopAirportCityCounty = model.stopAirportCityCounty;
+                this.stopAirportCode = model.stopAirportCode;
+            } 
+
+            /**
+             * stop_airport_city_county.
+             */
+            public Builder stopAirportCityCounty(StopAirportCityCounty stopAirportCityCounty) {
+                this.stopAirportCityCounty = stopAirportCityCounty;
+                return this;
+            }
+
+            /**
+             * stop_airport_code.
+             */
+            public Builder stopAirportCode(String stopAirportCode) {
+                this.stopAirportCode = stopAirportCode;
+                return this;
+            }
+
+            public StopCityInfoList build() {
+                return new StopCityInfoList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FlightOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderQueryResponseBody</p>
+     */
     public static class FlightInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
 
         @com.aliyun.core.annotation.NameInMap("airline_name")
         private String airlineName;
+
+        @com.aliyun.core.annotation.NameInMap("arr_airport_city_county")
+        private ArrAirportCityCounty arrAirportCityCounty;
 
         @com.aliyun.core.annotation.NameInMap("arr_airport_code")
         private String arrAirportCode;
@@ -822,6 +1681,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("cabin_level")
         private String cabinLevel;
+
+        @com.aliyun.core.annotation.NameInMap("dep_airport_city_county")
+        private DepAirportCityCounty depAirportCityCounty;
 
         @com.aliyun.core.annotation.NameInMap("dep_airport_code")
         private String depAirportCode;
@@ -859,9 +1721,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("stop_city")
         private java.util.List<String> stopCity;
 
+        @com.aliyun.core.annotation.NameInMap("stop_city_info_list")
+        private java.util.List<StopCityInfoList> stopCityInfoList;
+
         private FlightInfoList(Builder builder) {
             this.airlineCode = builder.airlineCode;
             this.airlineName = builder.airlineName;
+            this.arrAirportCityCounty = builder.arrAirportCityCounty;
             this.arrAirportCode = builder.arrAirportCode;
             this.arrAirportName = builder.arrAirportName;
             this.arrCityAdCode = builder.arrCityAdCode;
@@ -871,6 +1737,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             this.arrTime = builder.arrTime;
             this.cabin = builder.cabin;
             this.cabinLevel = builder.cabinLevel;
+            this.depAirportCityCounty = builder.depAirportCityCounty;
             this.depAirportCode = builder.depAirportCode;
             this.depAirportName = builder.depAirportName;
             this.depCityAdCode = builder.depCityAdCode;
@@ -883,6 +1750,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             this.journeyIndex = builder.journeyIndex;
             this.segmentIndex = builder.segmentIndex;
             this.stopCity = builder.stopCity;
+            this.stopCityInfoList = builder.stopCityInfoList;
         }
 
         public static Builder builder() {
@@ -905,6 +1773,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         public String getAirlineName() {
             return this.airlineName;
+        }
+
+        /**
+         * @return arrAirportCityCounty
+         */
+        public ArrAirportCityCounty getArrAirportCityCounty() {
+            return this.arrAirportCityCounty;
         }
 
         /**
@@ -968,6 +1843,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         public String getCabinLevel() {
             return this.cabinLevel;
+        }
+
+        /**
+         * @return depAirportCityCounty
+         */
+        public DepAirportCityCounty getDepAirportCityCounty() {
+            return this.depAirportCityCounty;
         }
 
         /**
@@ -1054,9 +1936,17 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             return this.stopCity;
         }
 
+        /**
+         * @return stopCityInfoList
+         */
+        public java.util.List<StopCityInfoList> getStopCityInfoList() {
+            return this.stopCityInfoList;
+        }
+
         public static final class Builder {
             private String airlineCode; 
             private String airlineName; 
+            private ArrAirportCityCounty arrAirportCityCounty; 
             private String arrAirportCode; 
             private String arrAirportName; 
             private String arrCityAdCode; 
@@ -1066,6 +1956,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String arrTime; 
             private String cabin; 
             private String cabinLevel; 
+            private DepAirportCityCounty depAirportCityCounty; 
             private String depAirportCode; 
             private String depAirportName; 
             private String depCityAdCode; 
@@ -1078,6 +1969,39 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private Integer journeyIndex; 
             private Integer segmentIndex; 
             private java.util.List<String> stopCity; 
+            private java.util.List<StopCityInfoList> stopCityInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightInfoList model) {
+                this.airlineCode = model.airlineCode;
+                this.airlineName = model.airlineName;
+                this.arrAirportCityCounty = model.arrAirportCityCounty;
+                this.arrAirportCode = model.arrAirportCode;
+                this.arrAirportName = model.arrAirportName;
+                this.arrCityAdCode = model.arrCityAdCode;
+                this.arrCityCode = model.arrCityCode;
+                this.arrCityName = model.arrCityName;
+                this.arrTerminal = model.arrTerminal;
+                this.arrTime = model.arrTime;
+                this.cabin = model.cabin;
+                this.cabinLevel = model.cabinLevel;
+                this.depAirportCityCounty = model.depAirportCityCounty;
+                this.depAirportCode = model.depAirportCode;
+                this.depAirportName = model.depAirportName;
+                this.depCityAdCode = model.depCityAdCode;
+                this.depCityCode = model.depCityCode;
+                this.depCityName = model.depCityName;
+                this.depTerminal = model.depTerminal;
+                this.depTime = model.depTime;
+                this.flightMile = model.flightMile;
+                this.flightNo = model.flightNo;
+                this.journeyIndex = model.journeyIndex;
+                this.segmentIndex = model.segmentIndex;
+                this.stopCity = model.stopCity;
+                this.stopCityInfoList = model.stopCityInfoList;
+            } 
 
             /**
              * airline_code.
@@ -1092,6 +2016,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder airlineName(String airlineName) {
                 this.airlineName = airlineName;
+                return this;
+            }
+
+            /**
+             * arr_airport_city_county.
+             */
+            public Builder arrAirportCityCounty(ArrAirportCityCounty arrAirportCityCounty) {
+                this.arrAirportCityCounty = arrAirportCityCounty;
                 return this;
             }
 
@@ -1164,6 +2096,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder cabinLevel(String cabinLevel) {
                 this.cabinLevel = cabinLevel;
+                return this;
+            }
+
+            /**
+             * dep_airport_city_county.
+             */
+            public Builder depAirportCityCounty(DepAirportCityCounty depAirportCityCounty) {
+                this.depAirportCityCounty = depAirportCityCounty;
                 return this;
             }
 
@@ -1260,6 +2200,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder stopCity(java.util.List<String> stopCity) {
                 this.stopCity = stopCity;
+                return this;
+            }
+
+            /**
+             * stop_city_info_list.
+             */
+            public Builder stopCityInfoList(java.util.List<StopCityInfoList> stopCityInfoList) {
+                this.stopCityInfoList = stopCityInfoList;
                 return this;
             }
 
@@ -1553,6 +2501,34 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private Integer refundType; 
             private Integer segmentIndex; 
             private String ticketNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightRefundTicketInfoList model) {
+                this.applyId = model.applyId;
+                this.arrAirport = model.arrAirport;
+                this.arrAirportCode = model.arrAirportCode;
+                this.arrCity = model.arrCity;
+                this.arrCityCode = model.arrCityCode;
+                this.companyRefundTicketFee = model.companyRefundTicketFee;
+                this.depAirport = model.depAirport;
+                this.depAirportCode = model.depAirportCode;
+                this.depCity = model.depCity;
+                this.depCityCode = model.depCityCode;
+                this.flightNo = model.flightNo;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModify = model.gmtModify;
+                this.journeyIndex = model.journeyIndex;
+                this.outApplyId = model.outApplyId;
+                this.personalRefundTicketFee = model.personalRefundTicketFee;
+                this.refundOrderId = model.refundOrderId;
+                this.refundReason = model.refundReason;
+                this.refundTicketFee = model.refundTicketFee;
+                this.refundType = model.refundType;
+                this.segmentIndex = model.segmentIndex;
+                this.ticketNo = model.ticketNo;
+            } 
 
             /**
              * apply_id.
@@ -2057,6 +3033,37 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private Integer ticketStatusCode; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightTicketInfoList model) {
+                this.arrAirport = model.arrAirport;
+                this.arrAirportCode = model.arrAirportCode;
+                this.arrCity = model.arrCity;
+                this.arrCityCode = model.arrCityCode;
+                this.buildPrice = model.buildPrice;
+                this.changed = model.changed;
+                this.depAirport = model.depAirport;
+                this.depAirportCode = model.depAirportCode;
+                this.depCity = model.depCity;
+                this.depCityCode = model.depCityCode;
+                this.discount = model.discount;
+                this.flightNo = model.flightNo;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModify = model.gmtModify;
+                this.journeyIndex = model.journeyIndex;
+                this.oilPrice = model.oilPrice;
+                this.payType = model.payType;
+                this.personalPrice = model.personalPrice;
+                this.segmentIndex = model.segmentIndex;
+                this.settlePrice = model.settlePrice;
+                this.ticketNo = model.ticketNo;
+                this.ticketPrice = model.ticketPrice;
+                this.ticketStatus = model.ticketStatus;
+                this.ticketStatusCode = model.ticketStatusCode;
+                this.userId = model.userId;
+            } 
+
             /**
              * arr_airport.
              */
@@ -2344,6 +3351,17 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private Integer status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(InsuranceInfoList model) {
+                this.amount = model.amount;
+                this.insuranceNo = model.insuranceNo;
+                this.name = model.name;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * amount.
              */
@@ -2434,6 +3452,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvoiceInfo model) {
+                this.id = model.id;
+                this.title = model.title;
+            } 
 
             /**
              * id.
@@ -2729,6 +3755,33 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String thirdpartItineraryId; 
             private Integer tripType; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderBaseInfo model) {
+                this.applyId = model.applyId;
+                this.btripTitle = model.btripTitle;
+                this.contactName = model.contactName;
+                this.corpId = model.corpId;
+                this.corpName = model.corpName;
+                this.departId = model.departId;
+                this.departName = model.departName;
+                this.exceedApplyId = model.exceedApplyId;
+                this.exceedThirdPartApplyId = model.exceedThirdPartApplyId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModify = model.gmtModify;
+                this.itineraryId = model.itineraryId;
+                this.orderId = model.orderId;
+                this.orderStatus = model.orderStatus;
+                this.supplier = model.supplier;
+                this.thirdpartApplyId = model.thirdpartApplyId;
+                this.thirdpartBusinessId = model.thirdpartBusinessId;
+                this.thirdpartCorpId = model.thirdpartCorpId;
+                this.thirdpartItineraryId = model.thirdpartItineraryId;
+                this.tripType = model.tripType;
+                this.userId = model.userId;
+            } 
 
             /**
              * apply_id.
@@ -3045,6 +4098,22 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String userName; 
             private Integer userType; 
 
+            private Builder() {
+            } 
+
+            private Builder(PassengerInfoList model) {
+                this.costCenterId = model.costCenterId;
+                this.costCenterName = model.costCenterName;
+                this.costCenterNumber = model.costCenterNumber;
+                this.projectCode = model.projectCode;
+                this.projectId = model.projectId;
+                this.projectTitle = model.projectTitle;
+                this.thirdpartProjectId = model.thirdpartProjectId;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.userType = model.userType;
+            } 
+
             /**
              * cost_center_id.
              */
@@ -3236,6 +4305,19 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String tradeId; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(PriceInfoList model) {
+                this.categoryCode = model.categoryCode;
+                this.gmtCreate = model.gmtCreate;
+                this.passengerName = model.passengerName;
+                this.payType = model.payType;
+                this.price = model.price;
+                this.tradeId = model.tradeId;
+                this.type = model.type;
+            } 
+
             /**
              * category_code.
              */
@@ -3426,6 +4508,21 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private OrderBaseInfo orderBaseInfo; 
             private java.util.List<PassengerInfoList> passengerInfoList; 
             private java.util.List<PriceInfoList> priceInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.flightChangeTicketInfoList = model.flightChangeTicketInfoList;
+                this.flightInfoList = model.flightInfoList;
+                this.flightRefundTicketInfoList = model.flightRefundTicketInfoList;
+                this.flightTicketInfoList = model.flightTicketInfoList;
+                this.insuranceInfoList = model.insuranceInfoList;
+                this.invoiceInfo = model.invoiceInfo;
+                this.orderBaseInfo = model.orderBaseInfo;
+                this.passengerInfoList = model.passengerInfoList;
+                this.priceInfoList = model.priceInfoList;
+            } 
 
             /**
              * flight_change_ticket_info_list.

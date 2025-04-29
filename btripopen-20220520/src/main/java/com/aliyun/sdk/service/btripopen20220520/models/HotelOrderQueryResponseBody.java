@@ -52,6 +52,10 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelOrderQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -374,6 +390,28 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private Integer roomNum; 
             private String roomType; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotelInfo model) {
+                this.brandCode = model.brandCode;
+                this.brandGroup = model.brandGroup;
+                this.brandName = model.brandName;
+                this.checkIn = model.checkIn;
+                this.checkOut = model.checkOut;
+                this.city = model.city;
+                this.cityAdCode = model.cityAdCode;
+                this.countryCode = model.countryCode;
+                this.countryName = model.countryName;
+                this.hotelAddress = model.hotelAddress;
+                this.hotelName = model.hotelName;
+                this.hotelPhone = model.hotelPhone;
+                this.hotelSupportVatInvoiceType = model.hotelSupportVatInvoiceType;
+                this.night = model.night;
+                this.roomNum = model.roomNum;
+                this.roomType = model.roomType;
+            } 
+
             /**
              * brand_code.
              */
@@ -552,6 +590,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvoiceInfo model) {
+                this.id = model.id;
+                this.title = model.title;
+            } 
 
             /**
              * id.
@@ -859,6 +905,34 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private String thirdpartItineraryId; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderBaseInfo model) {
+                this.applyId = model.applyId;
+                this.btripTitle = model.btripTitle;
+                this.category = model.category;
+                this.corpId = model.corpId;
+                this.corpName = model.corpName;
+                this.departId = model.departId;
+                this.departName = model.departName;
+                this.exceedApplyNos = model.exceedApplyNos;
+                this.extendField = model.extendField;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.itineraryId = model.itineraryId;
+                this.orderStatus = model.orderStatus;
+                this.orderType = model.orderType;
+                this.supplier = model.supplier;
+                this.thirdpartApplyId = model.thirdpartApplyId;
+                this.thirdpartBusinessId = model.thirdpartBusinessId;
+                this.thirdpartDepartId = model.thirdpartDepartId;
+                this.thirdpartItineraryId = model.thirdpartItineraryId;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * apply_id.
@@ -1243,6 +1317,27 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private String userName; 
             private Integer userType; 
 
+            private Builder() {
+            } 
+
+            private Builder(PassengerList model) {
+                this.applyId = model.applyId;
+                this.costCenterId = model.costCenterId;
+                this.costCenterName = model.costCenterName;
+                this.costCenterNumber = model.costCenterNumber;
+                this.itineraryId = model.itineraryId;
+                this.occupantType = model.occupantType;
+                this.projectCode = model.projectCode;
+                this.projectId = model.projectId;
+                this.projectTitle = model.projectTitle;
+                this.thirdpartApplyId = model.thirdpartApplyId;
+                this.thirdpartCostCenterId = model.thirdpartCostCenterId;
+                this.thirdpartProjectId = model.thirdpartProjectId;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.userType = model.userType;
+            } 
+
             /**
              * apply_id.
              */
@@ -1462,6 +1557,18 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private String tradeId; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(PriceInfoList model) {
+                this.categoryCode = model.categoryCode;
+                this.gmtCreate = model.gmtCreate;
+                this.payType = model.payType;
+                this.price = model.price;
+                this.tradeId = model.tradeId;
+                this.type = model.type;
+            } 
+
             /**
              * category_code.
              */
@@ -1596,6 +1703,17 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private OrderBaseInfo orderBaseInfo; 
             private java.util.List<PassengerList> passengerList; 
             private java.util.List<PriceInfoList> priceInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.hotelInfo = model.hotelInfo;
+                this.invoiceInfo = model.invoiceInfo;
+                this.orderBaseInfo = model.orderBaseInfo;
+                this.passengerList = model.passengerList;
+                this.priceInfoList = model.priceInfoList;
+            } 
 
             /**
              * hotel_info.

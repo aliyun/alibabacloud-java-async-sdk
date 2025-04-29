@@ -70,7 +70,7 @@ public class ExternalUserUpdateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -321,6 +321,17 @@ public class ExternalUserUpdateRequest extends Request {
             private String certNo; 
             private Integer certType; 
             private String nationality; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertRequestList model) {
+                this.certExpiredTime = model.certExpiredTime;
+                this.certNation = model.certNation;
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.nationality = model.nationality;
+            } 
 
             /**
              * cert_expired_time.

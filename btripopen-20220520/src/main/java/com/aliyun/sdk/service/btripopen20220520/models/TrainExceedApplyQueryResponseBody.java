@@ -52,6 +52,10 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrainExceedApplyQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -331,6 +347,25 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
             private String trainNo; 
             private String trainTypeDesc; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplyIntentionInfoDO model) {
+                this.arrCity = model.arrCity;
+                this.arrCityName = model.arrCityName;
+                this.arrStation = model.arrStation;
+                this.arrTime = model.arrTime;
+                this.depCity = model.depCity;
+                this.depCityName = model.depCityName;
+                this.depStation = model.depStation;
+                this.depTime = model.depTime;
+                this.price = model.price;
+                this.seatName = model.seatName;
+                this.trainNo = model.trainNo;
+                this.trainTypeDesc = model.trainTypeDesc;
+                this.type = model.type;
+            } 
 
             /**
              * arr_city.
@@ -618,6 +653,25 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
             private String thirdpartCorpId; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.applyId = model.applyId;
+                this.applyIntentionInfoDO = model.applyIntentionInfoDO;
+                this.btripCause = model.btripCause;
+                this.corpId = model.corpId;
+                this.exceedReason = model.exceedReason;
+                this.exceedType = model.exceedType;
+                this.originStandard = model.originStandard;
+                this.status = model.status;
+                this.submitTime = model.submitTime;
+                this.thirdpartApplyId = model.thirdpartApplyId;
+                this.thirdpartCorpId = model.thirdpartCorpId;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * apply_id.

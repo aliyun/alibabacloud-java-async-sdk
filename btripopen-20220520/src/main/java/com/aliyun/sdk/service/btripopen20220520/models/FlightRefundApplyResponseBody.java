@@ -52,6 +52,10 @@ public class FlightRefundApplyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightRefundApplyResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightRefundApplyResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -235,6 +251,17 @@ public class FlightRefundApplyResponseBody extends TeaModel {
             private Long refundApplyId; 
             private Long refundFee; 
             private Long refundMoney; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.disOrderId = model.disOrderId;
+                this.disSubOrderId = model.disSubOrderId;
+                this.refundApplyId = model.refundApplyId;
+                this.refundFee = model.refundFee;
+                this.refundMoney = model.refundMoney;
+            } 
 
             /**
              * dis_order_id.

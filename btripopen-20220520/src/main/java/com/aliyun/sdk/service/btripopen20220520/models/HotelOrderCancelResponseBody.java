@@ -52,6 +52,10 @@ public class HotelOrderCancelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelOrderCancelResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelOrderCancelResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -223,6 +239,16 @@ public class HotelOrderCancelResponseBody extends TeaModel {
             private String code; 
             private String desc; 
             private Long forfeitFee; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.cancelSuccess = model.cancelSuccess;
+                this.code = model.code;
+                this.desc = model.desc;
+                this.forfeitFee = model.forfeitFee;
+            } 
 
             /**
              * cancel_success.

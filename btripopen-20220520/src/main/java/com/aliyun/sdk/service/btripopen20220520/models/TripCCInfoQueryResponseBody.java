@@ -52,6 +52,10 @@ public class TripCCInfoQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TripCCInfoQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TripCCInfoQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -202,6 +218,14 @@ public class TripCCInfoQueryResponseBody extends TeaModel {
         public static final class Builder {
             private String notifier; 
             private Long notifyStartTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.notifier = model.notifier;
+                this.notifyStartTime = model.notifyStartTime;
+            } 
 
             /**
              * notifier.

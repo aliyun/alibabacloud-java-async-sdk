@@ -52,6 +52,10 @@ public class CostCenterSaveResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CostCenterSaveResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CostCenterSaveResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -190,6 +206,13 @@ public class CostCenterSaveResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long id; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.id = model.id;
+            } 
 
             /**
              * id.

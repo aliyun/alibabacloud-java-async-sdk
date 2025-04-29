@@ -52,6 +52,10 @@ public class TravelStandardQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TravelStandardQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TravelStandardQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -239,6 +255,17 @@ public class TravelStandardQueryResponseBody extends TeaModel {
             private Long ruleId; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(MainReserveRule model) {
+                this.openServiceTypeList = model.openServiceTypeList;
+                this.ruleCode = model.ruleCode;
+                this.ruleDesc = model.ruleDesc;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
              * open_service_type_list.
              */
@@ -330,6 +357,14 @@ public class TravelStandardQueryResponseBody extends TeaModel {
             private String code; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModuleConfigList model) {
+                this.code = model.code;
+                this.value = model.value;
+            } 
+
             /**
              * code.
              */
@@ -397,6 +432,14 @@ public class TravelStandardQueryResponseBody extends TeaModel {
             private MainReserveRule mainReserveRule; 
             private java.util.List<ModuleConfigList> moduleConfigList; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReserveRule model) {
+                this.mainReserveRule = model.mainReserveRule;
+                this.moduleConfigList = model.moduleConfigList;
+            } 
+
             /**
              * main_reserve_rule.
              */
@@ -463,6 +506,14 @@ public class TravelStandardQueryResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> activatedServiceTypeList; 
             private ReserveRule reserveRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.activatedServiceTypeList = model.activatedServiceTypeList;
+                this.reserveRule = model.reserveRule;
+            } 
 
             /**
              * activated_service_type_list.

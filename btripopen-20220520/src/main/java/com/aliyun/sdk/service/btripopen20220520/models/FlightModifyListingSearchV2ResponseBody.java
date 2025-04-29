@@ -52,6 +52,10 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightModifyListingSearchV2ResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -242,6 +258,17 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private String airlineIcon; 
             private Boolean cheapFlight; 
 
+            private Builder() {
+            } 
+
+            private Builder(AirlineInfo model) {
+                this.airlineChineseName = model.airlineChineseName;
+                this.airlineChineseShortName = model.airlineChineseShortName;
+                this.airlineCode = model.airlineCode;
+                this.airlineIcon = model.airlineIcon;
+                this.cheapFlight = model.cheapFlight;
+            } 
+
             /**
              * airline_chinese_name.
              */
@@ -357,6 +384,16 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private String airportShortName; 
             private String terminal; 
 
+            private Builder() {
+            } 
+
+            private Builder(ArrAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.airportShortName = model.airportShortName;
+                this.terminal = model.terminal;
+            } 
+
             /**
              * airport_code.
              */
@@ -463,6 +500,16 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private String airportName; 
             private String airportShortName; 
             private String terminal; 
+
+            private Builder() {
+            } 
+
+            private Builder(DepAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.airportShortName = model.airportShortName;
+                this.terminal = model.terminal;
+            } 
 
             /**
              * airport_code.
@@ -583,6 +630,17 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private String airlineIcon; 
             private Boolean cheapFlight; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperatingAirlineInfo model) {
+                this.airlineChineseName = model.airlineChineseName;
+                this.airlineChineseShortName = model.airlineChineseShortName;
+                this.airlineCode = model.airlineCode;
+                this.airlineIcon = model.airlineIcon;
+                this.cheapFlight = model.cheapFlight;
+            } 
+
             /**
              * airline_chinese_name.
              */
@@ -673,6 +731,14 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         public static final class Builder {
             private OperatingAirlineInfo operatingAirlineInfo; 
             private String operatingFlightNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightShareInfo model) {
+                this.operatingAirlineInfo = model.operatingAirlineInfo;
+                this.operatingFlightNo = model.operatingFlightNo;
+            } 
 
             /**
              * operating_airline_info.
@@ -800,6 +866,19 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private String stopCityName; 
             private String stopDepTerm; 
             private String stopDepTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightStopInfo model) {
+                this.stopAirport = model.stopAirport;
+                this.stopArrTerm = model.stopArrTerm;
+                this.stopArrTime = model.stopArrTime;
+                this.stopCityCode = model.stopCityCode;
+                this.stopCityName = model.stopCityName;
+                this.stopDepTerm = model.stopDepTerm;
+                this.stopDepTime = model.stopDepTime;
+            } 
 
             /**
              * stop_airport.
@@ -943,6 +1022,17 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private String airlineCode; 
             private String airlineIcon; 
             private Boolean cheapFlight; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransferAirlineInfo model) {
+                this.airlineChineseName = model.airlineChineseName;
+                this.airlineChineseShortName = model.airlineChineseShortName;
+                this.airlineCode = model.airlineCode;
+                this.airlineIcon = model.airlineIcon;
+                this.cheapFlight = model.cheapFlight;
+            } 
 
             /**
              * airline_chinese_name.
@@ -1106,6 +1196,20 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private String transferFlightSize; 
             private Boolean transferShare; 
             private Integer transferStopTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightTransferInfo model) {
+                this.transferAirlineInfo = model.transferAirlineInfo;
+                this.transferCityCode = model.transferCityCode;
+                this.transferCityName = model.transferCityName;
+                this.transferDepTime = model.transferDepTime;
+                this.transferFlightNo = model.transferFlightNo;
+                this.transferFlightSize = model.transferFlightSize;
+                this.transferShare = model.transferShare;
+                this.transferStopTime = model.transferStopTime;
+            } 
 
             /**
              * transfer_airline_info.
@@ -1305,6 +1409,21 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private Integer reShopInfChangeFee; 
             private Integer reShopInfPrice; 
             private Integer reShopInfPriceGap; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReShopPriceInfoDTO model) {
+                this.reShopAdultChangeFee = model.reShopAdultChangeFee;
+                this.reShopAdultPrice = model.reShopAdultPrice;
+                this.reShopAdultPriceGap = model.reShopAdultPriceGap;
+                this.reShopChildChangeFee = model.reShopChildChangeFee;
+                this.reShopChildPrice = model.reShopChildPrice;
+                this.reShopChildPriceGap = model.reShopChildPriceGap;
+                this.reShopInfChangeFee = model.reShopInfChangeFee;
+                this.reShopInfPrice = model.reShopInfPrice;
+                this.reShopInfPriceGap = model.reShopInfPriceGap;
+            } 
 
             /**
              * re_shop_adult_change_fee.
@@ -1560,6 +1679,25 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private Integer originalAdultPrice; 
             private Integer originalAdultTotalPrice; 
             private ReShopPriceInfoDTO reShopPriceInfoDTO; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceInfoDTO model) {
+                this.adultPrice = model.adultPrice;
+                this.adultTax = model.adultTax;
+                this.adultTotalPrice = model.adultTotalPrice;
+                this.beforeControlPrice = model.beforeControlPrice;
+                this.childPrice = model.childPrice;
+                this.childTax = model.childTax;
+                this.childTotalPrice = model.childTotalPrice;
+                this.infantPrice = model.infantPrice;
+                this.infantTax = model.infantTax;
+                this.infantTotalPrice = model.infantTotalPrice;
+                this.originalAdultPrice = model.originalAdultPrice;
+                this.originalAdultTotalPrice = model.originalAdultTotalPrice;
+                this.reShopPriceInfoDTO = model.reShopPriceInfoDTO;
+            } 
 
             /**
              * adult_price.
@@ -2016,6 +2154,39 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private Boolean stop; 
             private Boolean transfer; 
 
+            private Builder() {
+            } 
+
+            private Builder(DirectFlightList model) {
+                this.airlineInfo = model.airlineInfo;
+                this.arrAirportInfo = model.arrAirportInfo;
+                this.arrCityCode = model.arrCityCode;
+                this.arrTime = model.arrTime;
+                this.cabinClass = model.cabinClass;
+                this.cabinClassName = model.cabinClassName;
+                this.depAirportInfo = model.depAirportInfo;
+                this.depCityCode = model.depCityCode;
+                this.depTime = model.depTime;
+                this.duration = model.duration;
+                this.flightNo = model.flightNo;
+                this.flightShareInfo = model.flightShareInfo;
+                this.flightSize = model.flightSize;
+                this.flightStopInfo = model.flightStopInfo;
+                this.flightTransferInfo = model.flightTransferInfo;
+                this.flightType = model.flightType;
+                this.journeySeq = model.journeySeq;
+                this.leftNum = model.leftNum;
+                this.manufacturer = model.manufacturer;
+                this.mealDesc = model.mealDesc;
+                this.priceInfoDTO = model.priceInfoDTO;
+                this.segmentSeq = model.segmentSeq;
+                this.share = model.share;
+                this.shortFlightSize = model.shortFlightSize;
+                this.spanDay = model.spanDay;
+                this.stop = model.stop;
+                this.transfer = model.transfer;
+            } 
+
             /**
              * airline_info.
              */
@@ -2319,6 +2490,17 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private String airlineIcon; 
             private Boolean cheapFlight; 
 
+            private Builder() {
+            } 
+
+            private Builder(TransferFlightListAirlineInfo model) {
+                this.airlineChineseName = model.airlineChineseName;
+                this.airlineChineseShortName = model.airlineChineseShortName;
+                this.airlineCode = model.airlineCode;
+                this.airlineIcon = model.airlineIcon;
+                this.cheapFlight = model.cheapFlight;
+            } 
+
             /**
              * airline_chinese_name.
              */
@@ -2434,6 +2616,16 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private String airportShortName; 
             private String terminal; 
 
+            private Builder() {
+            } 
+
+            private Builder(TransferFlightListArrAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.airportShortName = model.airportShortName;
+                this.terminal = model.terminal;
+            } 
+
             /**
              * airport_code.
              */
@@ -2540,6 +2732,16 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private String airportName; 
             private String airportShortName; 
             private String terminal; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransferFlightListDepAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.airportShortName = model.airportShortName;
+                this.terminal = model.terminal;
+            } 
 
             /**
              * airport_code.
@@ -2660,6 +2862,17 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private String airlineIcon; 
             private Boolean cheapFlight; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightShareInfoOperatingAirlineInfo model) {
+                this.airlineChineseName = model.airlineChineseName;
+                this.airlineChineseShortName = model.airlineChineseShortName;
+                this.airlineCode = model.airlineCode;
+                this.airlineIcon = model.airlineIcon;
+                this.cheapFlight = model.cheapFlight;
+            } 
+
             /**
              * airline_chinese_name.
              */
@@ -2750,6 +2963,14 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         public static final class Builder {
             private FlightShareInfoOperatingAirlineInfo operatingAirlineInfo; 
             private String operatingFlightNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransferFlightListFlightShareInfo model) {
+                this.operatingAirlineInfo = model.operatingAirlineInfo;
+                this.operatingFlightNo = model.operatingFlightNo;
+            } 
 
             /**
              * operating_airline_info.
@@ -2877,6 +3098,19 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private String stopCityName; 
             private String stopDepTerm; 
             private String stopDepTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransferFlightListFlightStopInfo model) {
+                this.stopAirport = model.stopAirport;
+                this.stopArrTerm = model.stopArrTerm;
+                this.stopArrTime = model.stopArrTime;
+                this.stopCityCode = model.stopCityCode;
+                this.stopCityName = model.stopCityName;
+                this.stopDepTerm = model.stopDepTerm;
+                this.stopDepTime = model.stopDepTime;
+            } 
 
             /**
              * stop_airport.
@@ -3020,6 +3254,17 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private String airlineCode; 
             private String airlineIcon; 
             private Boolean cheapFlight; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightTransferInfoTransferAirlineInfo model) {
+                this.airlineChineseName = model.airlineChineseName;
+                this.airlineChineseShortName = model.airlineChineseShortName;
+                this.airlineCode = model.airlineCode;
+                this.airlineIcon = model.airlineIcon;
+                this.cheapFlight = model.cheapFlight;
+            } 
 
             /**
              * airline_chinese_name.
@@ -3183,6 +3428,20 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private String transferFlightSize; 
             private Boolean transferShare; 
             private Integer transferStopTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransferFlightListFlightTransferInfo model) {
+                this.transferAirlineInfo = model.transferAirlineInfo;
+                this.transferCityCode = model.transferCityCode;
+                this.transferCityName = model.transferCityName;
+                this.transferDepTime = model.transferDepTime;
+                this.transferFlightNo = model.transferFlightNo;
+                this.transferFlightSize = model.transferFlightSize;
+                this.transferShare = model.transferShare;
+                this.transferStopTime = model.transferStopTime;
+            } 
 
             /**
              * transfer_airline_info.
@@ -3382,6 +3641,21 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private Integer reShopInfChangeFee; 
             private Integer reShopInfPrice; 
             private Integer reShopInfPriceGap; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceInfoDTOReShopPriceInfoDTO model) {
+                this.reShopAdultChangeFee = model.reShopAdultChangeFee;
+                this.reShopAdultPrice = model.reShopAdultPrice;
+                this.reShopAdultPriceGap = model.reShopAdultPriceGap;
+                this.reShopChildChangeFee = model.reShopChildChangeFee;
+                this.reShopChildPrice = model.reShopChildPrice;
+                this.reShopChildPriceGap = model.reShopChildPriceGap;
+                this.reShopInfChangeFee = model.reShopInfChangeFee;
+                this.reShopInfPrice = model.reShopInfPrice;
+                this.reShopInfPriceGap = model.reShopInfPriceGap;
+            } 
 
             /**
              * re_shop_adult_change_fee.
@@ -3637,6 +3911,25 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private Integer originalAdultPrice; 
             private Integer originalAdultTotalPrice; 
             private PriceInfoDTOReShopPriceInfoDTO reShopPriceInfoDTO; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransferFlightListPriceInfoDTO model) {
+                this.adultPrice = model.adultPrice;
+                this.adultTax = model.adultTax;
+                this.adultTotalPrice = model.adultTotalPrice;
+                this.beforeControlPrice = model.beforeControlPrice;
+                this.childPrice = model.childPrice;
+                this.childTax = model.childTax;
+                this.childTotalPrice = model.childTotalPrice;
+                this.infantPrice = model.infantPrice;
+                this.infantTax = model.infantTax;
+                this.infantTotalPrice = model.infantTotalPrice;
+                this.originalAdultPrice = model.originalAdultPrice;
+                this.originalAdultTotalPrice = model.originalAdultTotalPrice;
+                this.reShopPriceInfoDTO = model.reShopPriceInfoDTO;
+            } 
 
             /**
              * adult_price.
@@ -4093,6 +4386,39 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private Boolean stop; 
             private Boolean transfer; 
 
+            private Builder() {
+            } 
+
+            private Builder(TransferFlightList model) {
+                this.airlineInfo = model.airlineInfo;
+                this.arrAirportInfo = model.arrAirportInfo;
+                this.arrCityCode = model.arrCityCode;
+                this.arrTime = model.arrTime;
+                this.cabinClass = model.cabinClass;
+                this.cabinClassName = model.cabinClassName;
+                this.depAirportInfo = model.depAirportInfo;
+                this.depCityCode = model.depCityCode;
+                this.depTime = model.depTime;
+                this.duration = model.duration;
+                this.flightNo = model.flightNo;
+                this.flightShareInfo = model.flightShareInfo;
+                this.flightSize = model.flightSize;
+                this.flightStopInfo = model.flightStopInfo;
+                this.flightTransferInfo = model.flightTransferInfo;
+                this.flightType = model.flightType;
+                this.journeySeq = model.journeySeq;
+                this.leftNum = model.leftNum;
+                this.manufacturer = model.manufacturer;
+                this.mealDesc = model.mealDesc;
+                this.priceInfoDTO = model.priceInfoDTO;
+                this.segmentSeq = model.segmentSeq;
+                this.share = model.share;
+                this.shortFlightSize = model.shortFlightSize;
+                this.spanDay = model.spanDay;
+                this.stop = model.stop;
+                this.transfer = model.transfer;
+            } 
+
             /**
              * airline_info.
              */
@@ -4419,6 +4745,19 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             private String sessionId; 
             private java.util.List<TransferFlightList> transferFlightList; 
             private String transferTitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.directFlightList = model.directFlightList;
+                this.nextReqWaitTime = model.nextReqWaitTime;
+                this.retry = model.retry;
+                this.searchRetryToken = model.searchRetryToken;
+                this.sessionId = model.sessionId;
+                this.transferFlightList = model.transferFlightList;
+                this.transferTitle = model.transferTitle;
+            } 
 
             /**
              * direct_flight_list.

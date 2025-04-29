@@ -39,7 +39,7 @@ public class IsvUserSaveRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -177,6 +177,17 @@ public class IsvUserSaveRequest extends Request {
             private String certNo; 
             private Integer certType; 
             private String nationality; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertList model) {
+                this.certExpiredTime = model.certExpiredTime;
+                this.certNation = model.certNation;
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.nationality = model.nationality;
+            } 
 
             /**
              * cert_expired_time.
@@ -486,6 +497,32 @@ public class IsvUserSaveRequest extends Request {
             private String userId; 
             private String userName; 
             private String userNick; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserList model) {
+                this.baseCityCode = model.baseCityCode;
+                this.birthday = model.birthday;
+                this.certList = model.certList;
+                this.departId = model.departId;
+                this.email = model.email;
+                this.gender = model.gender;
+                this.isAdmin = model.isAdmin;
+                this.jobNo = model.jobNo;
+                this.leaveStatus = model.leaveStatus;
+                this.managerUserId = model.managerUserId;
+                this.phone = model.phone;
+                this.position = model.position;
+                this.positionLevel = model.positionLevel;
+                this.realNameEn = model.realNameEn;
+                this.roleIdList = model.roleIdList;
+                this.thirdDepartId = model.thirdDepartId;
+                this.thirdDepartIdList = model.thirdDepartIdList;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.userNick = model.userNick;
+            } 
 
             /**
              * base_city_code.

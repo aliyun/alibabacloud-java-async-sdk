@@ -56,6 +56,10 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrainOrderListQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -244,6 +261,16 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             private String name; 
             private String number; 
 
+            private Builder() {
+            } 
+
+            private Builder(CostCenter model) {
+                this.corpId = model.corpId;
+                this.id = model.id;
+                this.name = model.name;
+                this.number = model.number;
+            } 
+
             /**
              * corp_id.
              */
@@ -326,6 +353,14 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Invoice model) {
+                this.id = model.id;
+                this.title = model.title;
+            } 
 
             /**
              * id.
@@ -550,6 +585,27 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             private String trainNo; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(PriceInfoList model) {
+                this.categoryCode = model.categoryCode;
+                this.categoryType = model.categoryType;
+                this.endCity = model.endCity;
+                this.endTime = model.endTime;
+                this.gmtCreate = model.gmtCreate;
+                this.originalTrainNo = model.originalTrainNo;
+                this.passengerName = model.passengerName;
+                this.payType = model.payType;
+                this.price = model.price;
+                this.seatType = model.seatType;
+                this.startCity = model.startCity;
+                this.startTime = model.startTime;
+                this.tradeId = model.tradeId;
+                this.trainNo = model.trainNo;
+                this.type = model.type;
+            } 
+
             /**
              * category_code.
              */
@@ -720,6 +776,14 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         public static final class Builder {
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserAffiliateList model) {
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * user_id.
@@ -1232,6 +1296,51 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             private String userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.applyId = model.applyId;
+                this.arrCity = model.arrCity;
+                this.arrCityAdCode = model.arrCityAdCode;
+                this.arrStation = model.arrStation;
+                this.arrTime = model.arrTime;
+                this.btripTitle = model.btripTitle;
+                this.contactName = model.contactName;
+                this.corpId = model.corpId;
+                this.corpName = model.corpName;
+                this.costCenter = model.costCenter;
+                this.depCity = model.depCity;
+                this.depCityAdCode = model.depCityAdCode;
+                this.depStation = model.depStation;
+                this.depTime = model.depTime;
+                this.departId = model.departId;
+                this.departName = model.departName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.invoice = model.invoice;
+                this.priceInfoList = model.priceInfoList;
+                this.projectCode = model.projectCode;
+                this.projectId = model.projectId;
+                this.projectTitle = model.projectTitle;
+                this.riderName = model.riderName;
+                this.runTime = model.runTime;
+                this.seatType = model.seatType;
+                this.status = model.status;
+                this.thirdPartBusinessId = model.thirdPartBusinessId;
+                this.thirdPartProjectId = model.thirdPartProjectId;
+                this.thirdpartApplyId = model.thirdpartApplyId;
+                this.thirdpartItineraryId = model.thirdpartItineraryId;
+                this.ticketCount = model.ticketCount;
+                this.ticketNo12306 = model.ticketNo12306;
+                this.trainNumber = model.trainNumber;
+                this.trainType = model.trainType;
+                this.userAffiliateList = model.userAffiliateList;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * apply_id.
              */
@@ -1606,6 +1715,15 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             private Integer page; 
             private Integer pageSize; 
             private Integer totalNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.totalNumber = model.totalNumber;
+            } 
 
             /**
              * page.

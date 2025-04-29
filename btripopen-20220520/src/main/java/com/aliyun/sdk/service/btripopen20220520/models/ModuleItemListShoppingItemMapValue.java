@@ -52,6 +52,10 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cabinQuantityList
      */
@@ -101,6 +105,18 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
         private String id; 
         private java.util.Map<String, ModuleItemListShoppingItemMapValueCabinQuantityValue> cabinQuantity; 
         private java.util.Map<String, ModuleItemListShoppingItemMapValueSegmentPriceValue> segmentPrice; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModuleItemListShoppingItemMapValue model) {
+            this.cabinQuantityList = model.cabinQuantityList;
+            this.searchPrice = model.searchPrice;
+            this.segmentPriceList = model.segmentPriceList;
+            this.id = model.id;
+            this.cabinQuantity = model.cabinQuantity;
+            this.segmentPrice = model.segmentPrice;
+        } 
 
         /**
          * cabin_quantity_list.
@@ -203,6 +219,14 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
             private Integer journeyIndex; 
             private Integer segmentIndex; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegmentPosition model) {
+                this.journeyIndex = model.journeyIndex;
+                this.segmentIndex = model.segmentIndex;
+            } 
+
             /**
              * journey_index.
              */
@@ -294,6 +318,16 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
             private String cabinClassName; 
             private String quantity; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cabin model) {
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.cabinClassName = model.cabinClassName;
+                this.quantity = model.quantity;
+            } 
+
             /**
              * cabin.
              */
@@ -377,6 +411,14 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
             private SegmentPosition segmentPosition; 
             private Cabin cabin; 
 
+            private Builder() {
+            } 
+
+            private Builder(CabinQuantityList model) {
+                this.segmentPosition = model.segmentPosition;
+                this.cabin = model.cabin;
+            } 
+
             /**
              * segment_position.
              */
@@ -455,6 +497,15 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
             private String discountInfo; 
             private Double discountNum; 
             private Boolean showTicketPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceShowInfo model) {
+                this.discountInfo = model.discountInfo;
+                this.discountNum = model.discountNum;
+                this.showTicketPrice = model.showTicketPrice;
+            } 
 
             /**
              * discount_info.
@@ -795,6 +846,36 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
             private Integer minBeforeControlPriceOfNormal; 
             private PriceShowInfo priceShowInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(SearchPrice model) {
+                this.floorPrice = model.floorPrice;
+                this.ticketPrice = model.ticketPrice;
+                this.sellPrice = model.sellPrice;
+                this.originalSellPrice = model.originalSellPrice;
+                this.baseTotalPrice = model.baseTotalPrice;
+                this.beforeControlPrice = model.beforeControlPrice;
+                this.tax = model.tax;
+                this.supplyPrice = model.supplyPrice;
+                this.basicCabinPrice = model.basicCabinPrice;
+                this.buildPrice = model.buildPrice;
+                this.oilPrice = model.oilPrice;
+                this.firstStandardPrice = model.firstStandardPrice;
+                this.businessStandardPrice = model.businessStandardPrice;
+                this.commonStandardPrice = model.commonStandardPrice;
+                this.interTicketPrice = model.interTicketPrice;
+                this.subtractedPrice = model.subtractedPrice;
+                this.originCommonPrice = model.originCommonPrice;
+                this.dynamicPromotionPrice = model.dynamicPromotionPrice;
+                this.installmentNum = model.installmentNum;
+                this.installmentPrice = model.installmentPrice;
+                this.competitionDynamicPrice = model.competitionDynamicPrice;
+                this.competitionPromotionPrice = model.competitionPromotionPrice;
+                this.minBeforeControlPriceOfNormal = model.minBeforeControlPriceOfNormal;
+                this.priceShowInfo = model.priceShowInfo;
+            } 
+
             /**
              * floor_price.
              */
@@ -1041,6 +1122,14 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
             private Integer journeyIndex; 
             private Integer segmentIndex; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegmentPriceListSegmentPosition model) {
+                this.journeyIndex = model.journeyIndex;
+                this.segmentIndex = model.segmentIndex;
+            } 
+
             /**
              * journey_index.
              */
@@ -1120,6 +1209,15 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
             private Integer sellPrice; 
             private Integer tax; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegmentPriceListSearchPrice model) {
+                this.ticketPrice = model.ticketPrice;
+                this.sellPrice = model.sellPrice;
+                this.tax = model.tax;
+            } 
+
             /**
              * ticket_price.
              */
@@ -1194,6 +1292,14 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
         public static final class Builder {
             private SegmentPriceListSegmentPosition segmentPosition; 
             private SegmentPriceListSearchPrice searchPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(SegmentPriceList model) {
+                this.segmentPosition = model.segmentPosition;
+                this.searchPrice = model.searchPrice;
+            } 
 
             /**
              * segment_position.

@@ -52,6 +52,10 @@ public class MonthBillGetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class MonthBillGetResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(MonthBillGetResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -332,6 +348,25 @@ public class MonthBillGetResponseBody extends TeaModel {
             private Double trainAmount; 
             private Double vasAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonthAccountBillDetail model) {
+                this.billConfirmed = model.billConfirmed;
+                this.carAmount = model.carAmount;
+                this.damageAmount = model.damageAmount;
+                this.flightAmount = model.flightAmount;
+                this.fuPoint = model.fuPoint;
+                this.hotelAmount = model.hotelAmount;
+                this.ieFlightAmount = model.ieFlightAmount;
+                this.ieHotelAmount = model.ieHotelAmount;
+                this.mailBillDate = model.mailBillDate;
+                this.mealAmount = model.mealAmount;
+                this.serviceAmount = model.serviceAmount;
+                this.trainAmount = model.trainAmount;
+                this.vasAmount = model.vasAmount;
+            } 
+
             /**
              * billConfirmed.
              */
@@ -537,6 +572,16 @@ public class MonthBillGetResponseBody extends TeaModel {
             private MonthAccountBillDetail monthAccountBillDetail; 
             private String startDate; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.endDate = model.endDate;
+                this.monthAccountBillDetail = model.monthAccountBillDetail;
+                this.startDate = model.startDate;
+                this.url = model.url;
+            } 
 
             /**
              * end_date.

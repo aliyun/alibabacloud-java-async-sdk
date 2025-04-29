@@ -48,6 +48,10 @@ public class IntlFlightOrderPayCheckResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -89,6 +93,17 @@ public class IntlFlightOrderPayCheckResponseBody extends TeaModel {
         private String resultMsg; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IntlFlightOrderPayCheckResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMsg = model.resultMsg;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * request_id.

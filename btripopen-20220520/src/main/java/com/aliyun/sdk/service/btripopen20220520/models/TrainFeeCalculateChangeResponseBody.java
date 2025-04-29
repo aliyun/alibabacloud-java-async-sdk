@@ -52,6 +52,10 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrainFeeCalculateChangeResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -226,6 +242,16 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
             private String passengerCertType; 
             private String passengerId; 
             private String passengerName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerInfo model) {
+                this.passengerCertNo = model.passengerCertNo;
+                this.passengerCertType = model.passengerCertType;
+                this.passengerId = model.passengerId;
+                this.passengerName = model.passengerName;
+            } 
 
             /**
              * passenger_cert_no.
@@ -370,6 +396,19 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
             private String seatType; 
             private Long ticketPrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeTicketDetails model) {
+                this.changeFee = model.changeFee;
+                this.changeRate = model.changeRate;
+                this.changeRefundFee = model.changeRefundFee;
+                this.changeRefundRate = model.changeRefundRate;
+                this.passengerInfo = model.passengerInfo;
+                this.seatType = model.seatType;
+                this.ticketPrice = model.ticketPrice;
+            } 
+
             /**
              * change_fee.
              */
@@ -513,6 +552,17 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
             private String depTime; 
             private String trainNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeTrainDetails model) {
+                this.arrStationCode = model.arrStationCode;
+                this.changeTicketDetails = model.changeTicketDetails;
+                this.depStationCode = model.depStationCode;
+                this.depTime = model.depTime;
+                this.trainNo = model.trainNo;
+            } 
+
             /**
              * arr_station_code.
              */
@@ -615,6 +665,15 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
             private java.util.List<ChangeTrainDetails> changeTrainDetails; 
             private String distributeOrderId; 
             private String orderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.changeTrainDetails = model.changeTrainDetails;
+                this.distributeOrderId = model.distributeOrderId;
+                this.orderId = model.orderId;
+            } 
 
             /**
              * change_train_details.

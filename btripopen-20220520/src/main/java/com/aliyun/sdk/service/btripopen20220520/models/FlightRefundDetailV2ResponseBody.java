@@ -52,6 +52,10 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightRefundDetailV2ResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -230,6 +246,16 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
             private String contactPhone; 
             private Boolean sendMsgToPassenger; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContactInfoDTO model) {
+                this.contactEmail = model.contactEmail;
+                this.contactName = model.contactName;
+                this.contactPhone = model.contactPhone;
+                this.sendMsgToPassenger = model.sendMsgToPassenger;
+            } 
+
             /**
              * contact_email.
              */
@@ -312,6 +338,14 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
         public static final class Builder {
             private Integer journeyIndex; 
             private Integer segmentIndex; 
+
+            private Builder() {
+            } 
+
+            private Builder(SegmentPosition model) {
+                this.journeyIndex = model.journeyIndex;
+                this.segmentIndex = model.segmentIndex;
+            } 
 
             /**
              * journey_index.
@@ -728,6 +762,43 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
             private String stopCity; 
             private String stopDepTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightInfoDTOS model) {
+                this.airlineCode = model.airlineCode;
+                this.airlineIconUrl = model.airlineIconUrl;
+                this.airlineName = model.airlineName;
+                this.arrAirportCode = model.arrAirportCode;
+                this.arrAirportName = model.arrAirportName;
+                this.arrCityCode = model.arrCityCode;
+                this.arrCityName = model.arrCityName;
+                this.arrTerminal = model.arrTerminal;
+                this.arrTime = model.arrTime;
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.cabinClassName = model.cabinClassName;
+                this.cabinDiscount = model.cabinDiscount;
+                this.carrierAirlineCode = model.carrierAirlineCode;
+                this.carrierAirlineIconUrl = model.carrierAirlineIconUrl;
+                this.carrierAirlineName = model.carrierAirlineName;
+                this.carrierFlightNo = model.carrierFlightNo;
+                this.depAirportCode = model.depAirportCode;
+                this.depAirportName = model.depAirportName;
+                this.depCityCode = model.depCityCode;
+                this.depCityName = model.depCityName;
+                this.depTerminal = model.depTerminal;
+                this.depTime = model.depTime;
+                this.flightNo = model.flightNo;
+                this.flightType = model.flightType;
+                this.mealDesc = model.mealDesc;
+                this.segmentId = model.segmentId;
+                this.segmentPosition = model.segmentPosition;
+                this.stopArrTime = model.stopArrTime;
+                this.stopCity = model.stopCity;
+                this.stopDepTime = model.stopDepTime;
+            } 
+
             /**
              * airline_code.
              */
@@ -1135,6 +1206,23 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
             private Long pid; 
             private java.util.List<String> ticketNos; 
 
+            private Builder() {
+            } 
+
+            private Builder(TravelerInfoDTOS model) {
+                this.birthDate = model.birthDate;
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.gender = model.gender;
+                this.originTicketNos = model.originTicketNos;
+                this.passengerId = model.passengerId;
+                this.passengerName = model.passengerName;
+                this.passengerType = model.passengerType;
+                this.phone = model.phone;
+                this.pid = model.pid;
+                this.ticketNos = model.ticketNos;
+            } 
+
             /**
              * birth_date.
              */
@@ -1441,6 +1529,28 @@ public class FlightRefundDetailV2ResponseBody extends TeaModel {
             private Integer status; 
             private Long subOrderId; 
             private java.util.List<TravelerInfoDTOS> travelerInfoDTOS; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.applyTime = model.applyTime;
+                this.contactInfoDTO = model.contactInfoDTO;
+                this.flightInfoDTOS = model.flightInfoDTOS;
+                this.nonRefundableChangeServicePrice = model.nonRefundableChangeServicePrice;
+                this.nonRefundableChangeUpgradePrice = model.nonRefundableChangeUpgradePrice;
+                this.orderId = model.orderId;
+                this.outOrderId = model.outOrderId;
+                this.outSubOrderId = model.outSubOrderId;
+                this.reason = model.reason;
+                this.reasonCode = model.reasonCode;
+                this.refundFailReason = model.refundFailReason;
+                this.refundHandlingFee = model.refundHandlingFee;
+                this.refundMoney = model.refundMoney;
+                this.status = model.status;
+                this.subOrderId = model.subOrderId;
+                this.travelerInfoDTOS = model.travelerInfoDTOS;
+            } 
 
             /**
              * apply_time.

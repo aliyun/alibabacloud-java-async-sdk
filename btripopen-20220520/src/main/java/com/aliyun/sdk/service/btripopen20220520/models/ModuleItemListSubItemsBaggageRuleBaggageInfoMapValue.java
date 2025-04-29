@@ -84,6 +84,10 @@ public class ModuleItemListSubItemsBaggageRuleBaggageInfoMapValue extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return carryFreepc
      */
@@ -197,6 +201,26 @@ public class ModuleItemListSubItemsBaggageRuleBaggageInfoMapValue extends TeaMod
         private String baggageUnit; 
         private String baggageSize; 
         private Boolean allWeight; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModuleItemListSubItemsBaggageRuleBaggageInfoMapValue model) {
+            this.carryFreepc = model.carryFreepc;
+            this.carryBagWeight = model.carryBagWeight;
+            this.carryBagSize = model.carryBagSize;
+            this.isAllCarryBagWeight = model.isAllCarryBagWeight;
+            this.airline = model.airline;
+            this.startAirport = model.startAirport;
+            this.endAirport = model.endAirport;
+            this.startCityCode = model.startCityCode;
+            this.endCityCode = model.endCityCode;
+            this.freePcs = model.freePcs;
+            this.baggageWeight = model.baggageWeight;
+            this.baggageUnit = model.baggageUnit;
+            this.baggageSize = model.baggageSize;
+            this.allWeight = model.allWeight;
+        } 
 
         /**
          * carry_freepc.

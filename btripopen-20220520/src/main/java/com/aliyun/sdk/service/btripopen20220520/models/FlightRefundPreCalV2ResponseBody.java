@@ -52,6 +52,10 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightRefundPreCalV2ResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -230,6 +246,16 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
             private Long preRefundMoney; 
             private Long refundChargeFee; 
 
+            private Builder() {
+            } 
+
+            private Builder(MultiRefundFeeDTOS model) {
+                this.passengerId = model.passengerId;
+                this.passengerName = model.passengerName;
+                this.preRefundMoney = model.preRefundMoney;
+                this.refundChargeFee = model.refundChargeFee;
+            } 
+
             /**
              * passenger_id.
              */
@@ -324,6 +350,15 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
             private String reason; 
             private Integer reasonType; 
             private Boolean volunteer; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundReasonOptionDTOS model) {
+                this.reason = model.reason;
+                this.reasonType = model.reasonType;
+                this.volunteer = model.volunteer;
+            } 
 
             /**
              * reason.
@@ -435,6 +470,17 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
             private Long refundChargeFee; 
             private java.util.List<RefundReasonOptionDTOS> refundReasonOptionDTOS; 
             private Long serviceChargeFee; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.multiRefundFeeDTOS = model.multiRefundFeeDTOS;
+                this.preRefundMoney = model.preRefundMoney;
+                this.refundChargeFee = model.refundChargeFee;
+                this.refundReasonOptionDTOS = model.refundReasonOptionDTOS;
+                this.serviceChargeFee = model.serviceChargeFee;
+            } 
 
             /**
              * multi_refund_fee_d_t_o_s.

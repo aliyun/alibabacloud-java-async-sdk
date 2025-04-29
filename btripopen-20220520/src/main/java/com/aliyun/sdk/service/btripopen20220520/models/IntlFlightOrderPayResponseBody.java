@@ -52,6 +52,10 @@ public class IntlFlightOrderPayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return module
      */
@@ -101,6 +105,18 @@ public class IntlFlightOrderPayResponseBody extends TeaModel {
         private String resultMsg; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IntlFlightOrderPayResponseBody model) {
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMsg = model.resultMsg;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * module.
@@ -187,6 +203,13 @@ public class IntlFlightOrderPayResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long price; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.price = model.price;
+            } 
 
             /**
              * price.

@@ -56,6 +56,10 @@ public class ExternalUserQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class ExternalUserQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExternalUserQueryResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -318,6 +335,22 @@ public class ExternalUserQueryResponseBody extends TeaModel {
             private String userId; 
             private String userNick; 
             private Integer userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.birthday = model.birthday;
+                this.corpId = model.corpId;
+                this.email = model.email;
+                this.externalUserId = model.externalUserId;
+                this.phone = model.phone;
+                this.realName = model.realName;
+                this.realNameEn = model.realNameEn;
+                this.userId = model.userId;
+                this.userNick = model.userNick;
+                this.userType = model.userType;
+            } 
 
             /**
              * birthday.

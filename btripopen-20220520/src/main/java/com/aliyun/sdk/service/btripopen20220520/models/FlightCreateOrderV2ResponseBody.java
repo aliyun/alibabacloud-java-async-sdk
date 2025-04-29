@@ -52,6 +52,10 @@ public class FlightCreateOrderV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightCreateOrderV2ResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightCreateOrderV2ResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -253,6 +269,18 @@ public class FlightCreateOrderV2ResponseBody extends TeaModel {
             private String outOrderId; 
             private Integer status; 
             private Long totalPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.asyncCreateOrderKey = model.asyncCreateOrderKey;
+                this.latestPayTime = model.latestPayTime;
+                this.orderId = model.orderId;
+                this.outOrderId = model.outOrderId;
+                this.status = model.status;
+                this.totalPrice = model.totalPrice;
+            } 
 
             /**
              * async_create_order_key.

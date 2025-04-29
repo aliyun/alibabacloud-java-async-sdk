@@ -52,6 +52,10 @@ public class TripTaskQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TripTaskQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TripTaskQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -286,6 +302,21 @@ public class TripTaskQueryResponseBody extends TeaModel {
             private String outResult; 
             private String owner; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordTasks model) {
+                this.actioner = model.actioner;
+                this.attributes = model.attributes;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtFinished = model.gmtFinished;
+                this.id = model.id;
+                this.nodeId = model.nodeId;
+                this.outResult = model.outResult;
+                this.owner = model.owner;
+                this.status = model.status;
+            } 
 
             /**
              * actioner.
@@ -494,6 +525,21 @@ public class TripTaskQueryResponseBody extends TeaModel {
             private String owner; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunningTasks model) {
+                this.actioner = model.actioner;
+                this.attributes = model.attributes;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtFinished = model.gmtFinished;
+                this.id = model.id;
+                this.nodeId = model.nodeId;
+                this.outResult = model.outResult;
+                this.owner = model.owner;
+                this.status = model.status;
+            } 
+
             /**
              * actioner.
              */
@@ -628,6 +674,15 @@ public class TripTaskQueryResponseBody extends TeaModel {
             private Boolean needRefresh; 
             private java.util.List<RecordTasks> recordTasks; 
             private java.util.List<RunningTasks> runningTasks; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.needRefresh = model.needRefresh;
+                this.recordTasks = model.recordTasks;
+                this.runningTasks = model.runningTasks;
+            } 
 
             /**
              * needRefresh.

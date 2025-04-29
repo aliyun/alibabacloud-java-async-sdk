@@ -66,7 +66,7 @@ public class TicketChangingFlightListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -303,6 +303,17 @@ public class TicketChangingFlightListRequest extends Request {
             private String name; 
             private String type; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TravelerInfoList model) {
+                this.arrCity = model.arrCity;
+                this.depCity = model.depCity;
+                this.name = model.name;
+                this.type = model.type;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>This parameter is required.</p>

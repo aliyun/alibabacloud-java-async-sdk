@@ -63,6 +63,10 @@ public class AddressGetRequest extends Request {
     private String phone;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("session_parameters")
+    private String sessionParameters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("sub_corp_id")
     private String subCorpId;
 
@@ -108,6 +112,7 @@ public class AddressGetRequest extends Request {
         this.middlePage = builder.middlePage;
         this.orderId = builder.orderId;
         this.phone = builder.phone;
+        this.sessionParameters = builder.sessionParameters;
         this.subCorpId = builder.subCorpId;
         this.taobaoCallbackUrl = builder.taobaoCallbackUrl;
         this.thirdpartApplyId = builder.thirdpartApplyId;
@@ -126,7 +131,7 @@ public class AddressGetRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -209,6 +214,13 @@ public class AddressGetRequest extends Request {
     }
 
     /**
+     * @return sessionParameters
+     */
+    public String getSessionParameters() {
+        return this.sessionParameters;
+    }
+
+    /**
      * @return subCorpId
      */
     public String getSubCorpId() {
@@ -276,6 +288,7 @@ public class AddressGetRequest extends Request {
         private Integer middlePage; 
         private String orderId; 
         private String phone; 
+        private String sessionParameters; 
         private String subCorpId; 
         private String taobaoCallbackUrl; 
         private String thirdpartApplyId; 
@@ -302,6 +315,7 @@ public class AddressGetRequest extends Request {
             this.middlePage = request.middlePage;
             this.orderId = request.orderId;
             this.phone = request.phone;
+            this.sessionParameters = request.sessionParameters;
             this.subCorpId = request.subCorpId;
             this.taobaoCallbackUrl = request.taobaoCallbackUrl;
             this.thirdpartApplyId = request.thirdpartApplyId;
@@ -411,6 +425,15 @@ public class AddressGetRequest extends Request {
         public Builder phone(String phone) {
             this.putQueryParameter("phone", phone);
             this.phone = phone;
+            return this;
+        }
+
+        /**
+         * session_parameters.
+         */
+        public Builder sessionParameters(String sessionParameters) {
+            this.putQueryParameter("session_parameters", sessionParameters);
+            this.sessionParameters = sessionParameters;
             return this;
         }
 

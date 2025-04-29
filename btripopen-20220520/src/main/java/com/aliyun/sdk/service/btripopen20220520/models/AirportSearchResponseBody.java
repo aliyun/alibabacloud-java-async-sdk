@@ -52,6 +52,10 @@ public class AirportSearchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class AirportSearchResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AirportSearchResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -224,6 +240,16 @@ public class AirportSearchResponseBody extends TeaModel {
             private String name; 
             private String travelName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cities model) {
+                this.code = model.code;
+                this.distance = model.distance;
+                this.name = model.name;
+                this.travelName = model.travelName;
+            } 
+
             /**
              * code.
              */
@@ -306,6 +332,14 @@ public class AirportSearchResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Cities> cities; 
             private Boolean nearby; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.cities = model.cities;
+                this.nearby = model.nearby;
+            } 
 
             /**
              * cities.

@@ -52,6 +52,10 @@ public class QueryGroupCorpListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -101,6 +105,18 @@ public class QueryGroupCorpListResponseBody extends TeaModel {
         private java.util.List<Module> module; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryGroupCorpListResponseBody model) {
+            this.requestId = model.requestId;
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * RequestId.
@@ -199,6 +215,14 @@ public class QueryGroupCorpListResponseBody extends TeaModel {
         public static final class Builder {
             private String corpId; 
             private String corpName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.corpId = model.corpId;
+                this.corpName = model.corpName;
+            } 
 
             /**
              * corp_id.

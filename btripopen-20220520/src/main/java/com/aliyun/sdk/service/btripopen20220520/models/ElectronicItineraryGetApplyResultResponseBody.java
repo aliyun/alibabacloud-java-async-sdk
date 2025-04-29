@@ -52,6 +52,10 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ElectronicItineraryGetApplyResultResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -230,6 +246,16 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
             private Integer itineraryStatus; 
             private String ticketNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApplyTicketList model) {
+                this.failedCode = model.failedCode;
+                this.failedReason = model.failedReason;
+                this.itineraryStatus = model.itineraryStatus;
+                this.ticketNo = model.ticketNo;
+            } 
+
             /**
              * failed_code.
              */
@@ -312,6 +338,14 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ApplyTicketList> applyTicketList; 
             private String batchApplyNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.applyTicketList = model.applyTicketList;
+                this.batchApplyNo = model.batchApplyNo;
+            } 
 
             /**
              * apply_ticket_list.

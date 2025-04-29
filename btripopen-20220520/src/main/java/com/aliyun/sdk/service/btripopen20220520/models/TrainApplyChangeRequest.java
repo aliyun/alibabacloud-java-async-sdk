@@ -73,7 +73,7 @@ public class TrainApplyChangeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -321,6 +321,16 @@ public class TrainApplyChangeRequest extends Request {
             private String passengerId; 
             private String passengerName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PassengerInfo model) {
+                this.passengerCertNo = model.passengerCertNo;
+                this.passengerCertType = model.passengerCertType;
+                this.passengerId = model.passengerId;
+                this.passengerName = model.passengerName;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -443,6 +453,16 @@ public class TrainApplyChangeRequest extends Request {
             private String seatType; 
             private String ticketPrice; 
             private String ticketType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChangeTicketInfoS model) {
+                this.passengerInfo = model.passengerInfo;
+                this.seatType = model.seatType;
+                this.ticketPrice = model.ticketPrice;
+                this.ticketType = model.ticketType;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -626,6 +646,21 @@ public class TrainApplyChangeRequest extends Request {
             private String originalDepTime; 
             private String originalTrainNo; 
             private String trainNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChangeTrainInfoS model) {
+                this.arrStationCode = model.arrStationCode;
+                this.changeTicketInfoS = model.changeTicketInfoS;
+                this.chooseBedS = model.chooseBedS;
+                this.chooseSeatS = model.chooseSeatS;
+                this.depStationCode = model.depStationCode;
+                this.depTime = model.depTime;
+                this.originalDepTime = model.originalDepTime;
+                this.originalTrainNo = model.originalTrainNo;
+                this.trainNo = model.trainNo;
+            } 
 
             /**
              * <p>This parameter is required.</p>

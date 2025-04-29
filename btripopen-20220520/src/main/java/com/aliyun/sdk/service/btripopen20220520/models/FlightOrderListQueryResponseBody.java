@@ -56,6 +56,10 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightOrderListQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -244,6 +261,16 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             private String name; 
             private String number; 
 
+            private Builder() {
+            } 
+
+            private Builder(CostCenter model) {
+                this.corpId = model.corpId;
+                this.id = model.id;
+                this.name = model.name;
+                this.number = model.number;
+            } 
+
             /**
              * corp_id.
              */
@@ -339,6 +366,15 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             private String name; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(InsureInfoList model) {
+                this.insureNo = model.insureNo;
+                this.name = model.name;
+                this.status = model.status;
+            } 
+
             /**
              * insure_no.
              */
@@ -413,6 +449,14 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Invoice model) {
+                this.id = model.id;
+                this.title = model.title;
+            } 
 
             /**
              * id.
@@ -625,6 +669,26 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             private String tradeId; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(PriceInfoList model) {
+                this.categoryCode = model.categoryCode;
+                this.categoryType = model.categoryType;
+                this.changeFlightNo = model.changeFlightNo;
+                this.discount = model.discount;
+                this.endTime = model.endTime;
+                this.gmtCreate = model.gmtCreate;
+                this.originalTicketNo = model.originalTicketNo;
+                this.passengerName = model.passengerName;
+                this.payType = model.payType;
+                this.price = model.price;
+                this.startTime = model.startTime;
+                this.ticketNo = model.ticketNo;
+                this.tradeId = model.tradeId;
+                this.type = model.type;
+            } 
+
             /**
              * category_code.
              */
@@ -787,6 +851,14 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         public static final class Builder {
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserAffiliateList model) {
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * user_id.
@@ -1299,6 +1371,51 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             private String userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.applyId = model.applyId;
+                this.arrAirport = model.arrAirport;
+                this.arrCity = model.arrCity;
+                this.arrCityAdCode = model.arrCityAdCode;
+                this.btripTitle = model.btripTitle;
+                this.cabinClass = model.cabinClass;
+                this.contactName = model.contactName;
+                this.corpId = model.corpId;
+                this.corpName = model.corpName;
+                this.costCenter = model.costCenter;
+                this.depAirport = model.depAirport;
+                this.depCity = model.depCity;
+                this.depCityAdCode = model.depCityAdCode;
+                this.depDate = model.depDate;
+                this.departId = model.departId;
+                this.departName = model.departName;
+                this.discount = model.discount;
+                this.flightNo = model.flightNo;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.insureInfoList = model.insureInfoList;
+                this.invoice = model.invoice;
+                this.passengerCount = model.passengerCount;
+                this.passengerName = model.passengerName;
+                this.priceInfoList = model.priceInfoList;
+                this.projectCode = model.projectCode;
+                this.projectId = model.projectId;
+                this.projectTitle = model.projectTitle;
+                this.retDate = model.retDate;
+                this.status = model.status;
+                this.thirdPartProjectId = model.thirdPartProjectId;
+                this.thirdpartApplyId = model.thirdpartApplyId;
+                this.thirdpartBusinessId = model.thirdpartBusinessId;
+                this.thirdpartItineraryId = model.thirdpartItineraryId;
+                this.tripType = model.tripType;
+                this.userAffiliateList = model.userAffiliateList;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * apply_id.
              */
@@ -1673,6 +1790,15 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             private Integer page; 
             private Integer pageSize; 
             private Integer totalNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.totalNumber = model.totalNumber;
+            } 
 
             /**
              * page.

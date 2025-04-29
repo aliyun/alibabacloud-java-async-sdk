@@ -48,6 +48,10 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
         private Module module; 
         private String requestId; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CorpAuthLinkInfoQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -192,6 +207,15 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
             private String openCorpId; 
             private String trueCorpId; 
 
+            private Builder() {
+            } 
+
+            private Builder(LinkCorps model) {
+                this.corpName = model.corpName;
+                this.openCorpId = model.openCorpId;
+                this.trueCorpId = model.trueCorpId;
+            } 
+
             /**
              * corp_name.
              */
@@ -279,6 +303,15 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
             private String openCorpId; 
             private String trueCorpId; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrgCorp model) {
+                this.corpName = model.corpName;
+                this.openCorpId = model.openCorpId;
+                this.trueCorpId = model.trueCorpId;
+            } 
+
             /**
              * corp_name.
              */
@@ -353,6 +386,14 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<LinkCorps> linkCorps; 
             private OrgCorp orgCorp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.linkCorps = model.linkCorps;
+                this.orgCorp = model.orgCorp;
+            } 
 
             /**
              * link_corps.

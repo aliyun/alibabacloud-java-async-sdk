@@ -52,6 +52,10 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelOrderPreValidateResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -159,6 +175,60 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelOrderPreValidateResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderPreValidateResponseBody</p>
+     */
+    public static class ItemInvoice extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("support_special")
+        private Boolean supportSpecial;
+
+        private ItemInvoice(Builder builder) {
+            this.supportSpecial = builder.supportSpecial;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ItemInvoice create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportSpecial
+         */
+        public Boolean getSupportSpecial() {
+            return this.supportSpecial;
+        }
+
+        public static final class Builder {
+            private Boolean supportSpecial; 
+
+            private Builder() {
+            } 
+
+            private Builder(ItemInvoice model) {
+                this.supportSpecial = model.supportSpecial;
+            } 
+
+            /**
+             * support_special.
+             */
+            public Builder supportSpecial(Boolean supportSpecial) {
+                this.supportSpecial = supportSpecial;
+                return this;
+            }
+
+            public ItemInvoice build() {
+                return new ItemInvoice(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link HotelOrderPreValidateResponseBody} extends {@link TeaModel}
@@ -262,6 +332,19 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             private String promotionName; 
             private Long promotionPrice; 
             private String promotionType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PromotionDetailInfoList model) {
+                this.checkStatus = model.checkStatus;
+                this.needCheck = model.needCheck;
+                this.promotionCode = model.promotionCode;
+                this.promotionId = model.promotionId;
+                this.promotionName = model.promotionName;
+                this.promotionPrice = model.promotionPrice;
+                this.promotionType = model.promotionType;
+            } 
 
             /**
              * check_status.
@@ -381,6 +464,15 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             private java.util.Map<String, String> extAttrMap; 
             private java.util.List<PromotionDetailInfoList> promotionDetailInfoList; 
             private Long promotionTotalPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(PromotionInfo model) {
+                this.extAttrMap = model.extAttrMap;
+                this.promotionDetailInfoList = model.promotionDetailInfoList;
+                this.promotionTotalPrice = model.promotionTotalPrice;
+            } 
 
             /**
              * ext_attr_map.
@@ -541,6 +633,21 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             private String roundingPrice; 
             private Long serviceFee; 
 
+            private Builder() {
+            } 
+
+            private Builder(RatePlanDaily model) {
+                this.board = model.board;
+                this.discountPrice = model.discountPrice;
+                this.maxBookingNum = model.maxBookingNum;
+                this.price = model.price;
+                this.rateStartTime = model.rateStartTime;
+                this.roomCount = model.roomCount;
+                this.roundingDiscountPrice = model.roundingDiscountPrice;
+                this.roundingPrice = model.roundingPrice;
+                this.serviceFee = model.serviceFee;
+            } 
+
             /**
              * board.
              */
@@ -664,6 +771,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             private Long hour; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(BtripHotelCancelPolicyInfoDTOList model) {
+                this.hour = model.hour;
+                this.value = model.value;
+            } 
+
             /**
              * hour.
              */
@@ -754,6 +869,16 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             private Integer cancelPolicyType; 
             private String content; 
             private String shortDesc; 
+
+            private Builder() {
+            } 
+
+            private Builder(BtripHotelCancelPolicyDTO model) {
+                this.btripHotelCancelPolicyInfoDTOList = model.btripHotelCancelPolicyInfoDTOList;
+                this.cancelPolicyType = model.cancelPolicyType;
+                this.content = model.content;
+                this.shortDesc = model.shortDesc;
+            } 
 
             /**
              * btrip_hotel_cancel_policy_info_d_t_o_list.
@@ -946,6 +1071,23 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             private Long totalOrderPrice; 
             private Long totalRoomPrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(RatePlanInfo model) {
+                this.bedDesc = model.bedDesc;
+                this.btripHotelCancelPolicyDTO = model.btripHotelCancelPolicyDTO;
+                this.earliestCheckInTime = model.earliestCheckInTime;
+                this.latestCheckOutTime = model.latestCheckOutTime;
+                this.maxBookingNum = model.maxBookingNum;
+                this.maxOccupancyNum = model.maxOccupancyNum;
+                this.needCertificate = model.needCertificate;
+                this.needEmail = model.needEmail;
+                this.needEnglishName = model.needEnglishName;
+                this.totalOrderPrice = model.totalOrderPrice;
+                this.totalRoomPrice = model.totalRoomPrice;
+            } 
+
             /**
              * bed_desc.
              */
@@ -1051,6 +1193,9 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extend_info")
         private String extendInfo;
 
+        @com.aliyun.core.annotation.NameInMap("item_invoice")
+        private ItemInvoice itemInvoice;
+
         @com.aliyun.core.annotation.NameInMap("itinerary_no")
         private String itineraryNo;
 
@@ -1071,6 +1216,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
 
         private Module(Builder builder) {
             this.extendInfo = builder.extendInfo;
+            this.itemInvoice = builder.itemInvoice;
             this.itineraryNo = builder.itineraryNo;
             this.promotionInfo = builder.promotionInfo;
             this.ratePlanDaily = builder.ratePlanDaily;
@@ -1092,6 +1238,13 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
          */
         public String getExtendInfo() {
             return this.extendInfo;
+        }
+
+        /**
+         * @return itemInvoice
+         */
+        public ItemInvoice getItemInvoice() {
+            return this.itemInvoice;
         }
 
         /**
@@ -1138,6 +1291,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
 
         public static final class Builder {
             private String extendInfo; 
+            private ItemInvoice itemInvoice; 
             private String itineraryNo; 
             private PromotionInfo promotionInfo; 
             private java.util.List<RatePlanDaily> ratePlanDaily; 
@@ -1145,11 +1299,33 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             private RatePlanInfo ratePlanInfo; 
             private String validateResKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.extendInfo = model.extendInfo;
+                this.itemInvoice = model.itemInvoice;
+                this.itineraryNo = model.itineraryNo;
+                this.promotionInfo = model.promotionInfo;
+                this.ratePlanDaily = model.ratePlanDaily;
+                this.ratePlanId = model.ratePlanId;
+                this.ratePlanInfo = model.ratePlanInfo;
+                this.validateResKey = model.validateResKey;
+            } 
+
             /**
              * extend_info.
              */
             public Builder extendInfo(String extendInfo) {
                 this.extendInfo = extendInfo;
+                return this;
+            }
+
+            /**
+             * item_invoice.
+             */
+            public Builder itemInvoice(ItemInvoice itemInvoice) {
+                this.itemInvoice = itemInvoice;
                 return this;
             }
 

@@ -52,6 +52,10 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return module
      */
@@ -101,6 +105,18 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
         private String resultMsg; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IntlFlightSegmentAvailableCertResponseBody model) {
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMsg = model.resultMsg;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * module.
@@ -200,6 +216,14 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
             private Integer journeyIndex; 
             private Integer segmentIndex; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegmentPosition model) {
+                this.journeyIndex = model.journeyIndex;
+                this.segmentIndex = model.segmentIndex;
+            } 
+
             /**
              * journey_index.
              */
@@ -267,6 +291,14 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
             private java.util.List<Integer> certTypes; 
             private SegmentPosition segmentPosition; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegmentAvailableCertList model) {
+                this.certTypes = model.certTypes;
+                this.segmentPosition = model.segmentPosition;
+            } 
+
             /**
              * cert_types.
              */
@@ -321,6 +353,13 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SegmentAvailableCertList> segmentAvailableCertList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.segmentAvailableCertList = model.segmentAvailableCertList;
+            } 
 
             /**
              * segment_available_cert_list.

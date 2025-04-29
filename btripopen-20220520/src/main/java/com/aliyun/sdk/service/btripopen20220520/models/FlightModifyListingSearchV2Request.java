@@ -94,7 +94,7 @@ public class FlightModifyListingSearchV2Request extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -398,6 +398,14 @@ public class FlightModifyListingSearchV2Request extends Request {
             private String passengerId; 
             private java.util.List<String> segmentIdList; 
 
+            private Builder() {
+            } 
+
+            private Builder(PassengerSegmentRelations model) {
+                this.passengerId = model.passengerId;
+                this.segmentIdList = model.segmentIdList;
+            } 
+
             /**
              * passenger_id.
              */
@@ -524,6 +532,19 @@ public class FlightModifyListingSearchV2Request extends Request {
             private String marketingFlightNo; 
             private String operatingFlightNo; 
             private Integer segmentSeq; 
+
+            private Builder() {
+            } 
+
+            private Builder(SelectedSegments model) {
+                this.arrCityCode = model.arrCityCode;
+                this.depCityCode = model.depCityCode;
+                this.depDateTime = model.depDateTime;
+                this.journeySeq = model.journeySeq;
+                this.marketingFlightNo = model.marketingFlightNo;
+                this.operatingFlightNo = model.operatingFlightNo;
+                this.segmentSeq = model.segmentSeq;
+            } 
 
             /**
              * arr_city_code.

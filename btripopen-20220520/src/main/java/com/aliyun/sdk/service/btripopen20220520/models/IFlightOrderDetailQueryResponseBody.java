@@ -52,6 +52,10 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IFlightOrderDetailQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -476,6 +492,37 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private String stopCityCode; 
             private String stopDepTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightModifySegmentList model) {
+                this.airlineCode = model.airlineCode;
+                this.airlineName = model.airlineName;
+                this.arrApt = model.arrApt;
+                this.arrAptCode = model.arrAptCode;
+                this.arrCity = model.arrCity;
+                this.arrCityCode = model.arrCityCode;
+                this.arrTerminal = model.arrTerminal;
+                this.arrTime = model.arrTime;
+                this.carrierAirlineCode = model.carrierAirlineCode;
+                this.carrierAirlineName = model.carrierAirlineName;
+                this.depApt = model.depApt;
+                this.depAptCode = model.depAptCode;
+                this.depCity = model.depCity;
+                this.depCityCode = model.depCityCode;
+                this.depTerminal = model.depTerminal;
+                this.depTime = model.depTime;
+                this.flightNo = model.flightNo;
+                this.journeyIndex = model.journeyIndex;
+                this.segmentIndex = model.segmentIndex;
+                this.share = model.share;
+                this.stopAptCode = model.stopAptCode;
+                this.stopArrTime = model.stopArrTime;
+                this.stopCity = model.stopCity;
+                this.stopCityCode = model.stopCityCode;
+                this.stopDepTime = model.stopDepTime;
+            } 
+
             /**
              * airline_code.
              */
@@ -739,6 +786,15 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private String cabinClass; 
             private String flightNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(CabinClass model) {
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.flightNo = model.flightNo;
+            } 
+
             /**
              * cabin.
              */
@@ -837,6 +893,16 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private String flightNo; 
             private String ticketNo; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightOrderModifyTicketList model) {
+                this.cabinClass = model.cabinClass;
+                this.flightNo = model.flightNo;
+                this.ticketNo = model.ticketNo;
+                this.userId = model.userId;
+            } 
 
             /**
              * cabin_class.
@@ -944,6 +1010,16 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private Long modifyUpgradeFee; 
             private Long taxGap; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModifyFee model) {
+                this.modifyHandFee = model.modifyHandFee;
+                this.modifyUpgradeFee = model.modifyUpgradeFee;
+                this.taxGap = model.taxGap;
+                this.userId = model.userId;
+            } 
 
             /**
              * modify_hand_fee.
@@ -1160,6 +1236,25 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private String submitModifyTime; 
             private Boolean voluntary; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightModifyOrderList model) {
+                this.corpPayPrice = model.corpPayPrice;
+                this.flightModifySegmentList = model.flightModifySegmentList;
+                this.flightOrderModifyTicketList = model.flightOrderModifyTicketList;
+                this.modifyApplyId = model.modifyApplyId;
+                this.modifyFee = model.modifyFee;
+                this.modifyOrderStatus = model.modifyOrderStatus;
+                this.modifyTotalFee = model.modifyTotalFee;
+                this.passengerList = model.passengerList;
+                this.personPayPrice = model.personPayPrice;
+                this.relateModifyApplyId = model.relateModifyApplyId;
+                this.serviceFee = model.serviceFee;
+                this.submitModifyTime = model.submitModifyTime;
+                this.voluntary = model.voluntary;
+            } 
+
             /**
              * corp_pay_price.
              */
@@ -1327,6 +1422,15 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private String cabinClass; 
             private String flightNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightOrderRefundTicketListCabinClass model) {
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.flightNo = model.flightNo;
+            } 
+
             /**
              * cabin.
              */
@@ -1425,6 +1529,16 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private String flightNo; 
             private String ticketNo; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightOrderRefundTicketList model) {
+                this.cabinClass = model.cabinClass;
+                this.flightNo = model.flightNo;
+                this.ticketNo = model.ticketNo;
+                this.userId = model.userId;
+            } 
 
             /**
              * cabin_class.
@@ -1592,6 +1706,21 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private Long refundModifyUpgradeAmount; 
             private Long refundTaxHandFee; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightPassengerFee model) {
+                this.noRefundModifyHandFee = model.noRefundModifyHandFee;
+                this.noRefundModifyUpgradeFee = model.noRefundModifyUpgradeFee;
+                this.refundAmount = model.refundAmount;
+                this.refundHandFee = model.refundHandFee;
+                this.refundModifyAmount = model.refundModifyAmount;
+                this.refundModifyHandAmount = model.refundModifyHandAmount;
+                this.refundModifyUpgradeAmount = model.refundModifyUpgradeAmount;
+                this.refundTaxHandFee = model.refundTaxHandFee;
+                this.userId = model.userId;
+            } 
 
             /**
              * no_refund_modify_hand_fee.
@@ -1991,6 +2120,37 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private String stopCity; 
             private String stopCityCode; 
             private String stopDepTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightRefundSegmentList model) {
+                this.airlineCode = model.airlineCode;
+                this.airlineName = model.airlineName;
+                this.arrApt = model.arrApt;
+                this.arrAptCode = model.arrAptCode;
+                this.arrCity = model.arrCity;
+                this.arrCityCode = model.arrCityCode;
+                this.arrTerminal = model.arrTerminal;
+                this.arrTime = model.arrTime;
+                this.carrierAirlineCode = model.carrierAirlineCode;
+                this.carrierAirlineName = model.carrierAirlineName;
+                this.depApt = model.depApt;
+                this.depAptCode = model.depAptCode;
+                this.depCity = model.depCity;
+                this.depCityCode = model.depCityCode;
+                this.depTerminal = model.depTerminal;
+                this.depTime = model.depTime;
+                this.flightNo = model.flightNo;
+                this.journeyIndex = model.journeyIndex;
+                this.segmentIndex = model.segmentIndex;
+                this.share = model.share;
+                this.stopAptCode = model.stopAptCode;
+                this.stopArrTime = model.stopArrTime;
+                this.stopCity = model.stopCity;
+                this.stopCityCode = model.stopCityCode;
+                this.stopDepTime = model.stopDepTime;
+            } 
 
             /**
              * airline_code.
@@ -2411,6 +2571,28 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private String submitRefundTime; 
             private Boolean voluntary; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightRefundOrderList model) {
+                this.corpRefundAmount = model.corpRefundAmount;
+                this.flightOrderRefundTicketList = model.flightOrderRefundTicketList;
+                this.flightPassengerFee = model.flightPassengerFee;
+                this.flightRefundSegmentList = model.flightRefundSegmentList;
+                this.passengerList = model.passengerList;
+                this.personRefundAmount = model.personRefundAmount;
+                this.refundApplyId = model.refundApplyId;
+                this.refundHandFee = model.refundHandFee;
+                this.refundOrderStatus = model.refundOrderStatus;
+                this.refundServiceFee = model.refundServiceFee;
+                this.refundTotalAmount = model.refundTotalAmount;
+                this.relateModifyApplyId = model.relateModifyApplyId;
+                this.relateRefundApplyId = model.relateRefundApplyId;
+                this.repeatRefund = model.repeatRefund;
+                this.submitRefundTime = model.submitRefundTime;
+                this.voluntary = model.voluntary;
+            } 
+
             /**
              * corp_refund_Amount.
              */
@@ -2590,6 +2772,14 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private String userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(BookerInfo model) {
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * user_id.
              */
@@ -2680,6 +2870,16 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private String insPayType; 
             private Integer insTotalPrice; 
             private String tradeAction; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightOrderInsureList model) {
+                this.insOrderId = model.insOrderId;
+                this.insPayType = model.insPayType;
+                this.insTotalPrice = model.insTotalPrice;
+                this.tradeAction = model.tradeAction;
+            } 
 
             /**
              * ins_order_id.
@@ -2775,6 +2975,15 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private String cabin; 
             private String cabinClass; 
             private String flightNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightOrderTicketListCabinClass model) {
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.flightNo = model.flightNo;
+            } 
 
             /**
              * cabin.
@@ -2886,6 +3095,17 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private String ticketNo; 
             private Integer ticketPrice; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightOrderTicketList model) {
+                this.cabinClass = model.cabinClass;
+                this.tax = model.tax;
+                this.ticketNo = model.ticketNo;
+                this.ticketPrice = model.ticketPrice;
+                this.userId = model.userId;
+            } 
 
             /**
              * cabin_class.
@@ -3253,6 +3473,37 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private String stopCity; 
             private String stopCityCode; 
             private String stopDepTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightSegmentList model) {
+                this.airlineCode = model.airlineCode;
+                this.airlineName = model.airlineName;
+                this.arrApt = model.arrApt;
+                this.arrAptCode = model.arrAptCode;
+                this.arrCity = model.arrCity;
+                this.arrCityCode = model.arrCityCode;
+                this.arrTerminal = model.arrTerminal;
+                this.arrTime = model.arrTime;
+                this.carrierAirlineCode = model.carrierAirlineCode;
+                this.carrierAirlineName = model.carrierAirlineName;
+                this.depApt = model.depApt;
+                this.depAptCode = model.depAptCode;
+                this.depCity = model.depCity;
+                this.depCityCode = model.depCityCode;
+                this.depTerminal = model.depTerminal;
+                this.depTime = model.depTime;
+                this.flightNo = model.flightNo;
+                this.journeyIndex = model.journeyIndex;
+                this.segmentIndex = model.segmentIndex;
+                this.share = model.share;
+                this.stopAptCode = model.stopAptCode;
+                this.stopArrTime = model.stopArrTime;
+                this.stopCity = model.stopCity;
+                this.stopCityCode = model.stopCityCode;
+                this.stopDepTime = model.stopDepTime;
+            } 
 
             /**
              * airline_code.
@@ -3624,6 +3875,24 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private String projectTitle; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerList model) {
+                this.costCenterId = model.costCenterId;
+                this.costCenterName = model.costCenterName;
+                this.departmentId = model.departmentId;
+                this.departmentName = model.departmentName;
+                this.invoiceId = model.invoiceId;
+                this.invoiceTitle = model.invoiceTitle;
+                this.jobNo = model.jobNo;
+                this.passengerType = model.passengerType;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * cost_center_id.
@@ -4012,6 +4281,34 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private String thirdPartApplyId; 
             private Integer tripType; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightSaleOrder model) {
+                this.applyId = model.applyId;
+                this.bookType = model.bookType;
+                this.bookerInfo = model.bookerInfo;
+                this.corpPayPrice = model.corpPayPrice;
+                this.exceedApplyId = model.exceedApplyId;
+                this.flightOrderInsureList = model.flightOrderInsureList;
+                this.flightOrderTicketList = model.flightOrderTicketList;
+                this.flightSegmentList = model.flightSegmentList;
+                this.mixPay = model.mixPay;
+                this.orderCreateTime = model.orderCreateTime;
+                this.orderId = model.orderId;
+                this.orderPayTime = model.orderPayTime;
+                this.orderReservePrice = model.orderReservePrice;
+                this.orderStatus = model.orderStatus;
+                this.orderStatusDesc = model.orderStatusDesc;
+                this.orderType = model.orderType;
+                this.passengerList = model.passengerList;
+                this.payType = model.payType;
+                this.personPayPrice = model.personPayPrice;
+                this.serviceFee = model.serviceFee;
+                this.thirdPartApplyId = model.thirdPartApplyId;
+                this.tripType = model.tripType;
+            } 
+
             /**
              * apply_id.
              */
@@ -4250,6 +4547,15 @@ public class IFlightOrderDetailQueryResponseBody extends TeaModel {
             private java.util.List<FlightModifyOrderList> flightModifyOrderList; 
             private java.util.List<FlightRefundOrderList> flightRefundOrderList; 
             private FlightSaleOrder flightSaleOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.flightModifyOrderList = model.flightModifyOrderList;
+                this.flightRefundOrderList = model.flightRefundOrderList;
+                this.flightSaleOrder = model.flightSaleOrder;
+            } 
 
             /**
              * flight_modify_order_list.

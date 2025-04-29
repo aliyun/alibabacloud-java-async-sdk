@@ -52,6 +52,10 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TicketChangingEnquiryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -212,6 +228,15 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String airlineName; 
             private String airlineSimpleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AirlineInfo model) {
+                this.airlineCode = model.airlineCode;
+                this.airlineName = model.airlineName;
+                this.airlineSimpleName = model.airlineSimpleName;
+            } 
+
             /**
              * airline_code.
              */
@@ -322,6 +347,17 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String cityCode; 
             private String cityName; 
             private String terminal; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArrAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.terminal = model.terminal;
+            } 
 
             /**
              * airport_code.
@@ -438,6 +474,16 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String image; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Description model) {
+                this.desc = model.desc;
+                this.icon = model.icon;
+                this.image = model.image;
+                this.title = model.title;
+            } 
+
             /**
              * desc.
              */
@@ -544,6 +590,16 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String largest; 
             private String middle; 
             private String smallest; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageDO model) {
+                this.image = model.image;
+                this.largest = model.largest;
+                this.middle = model.middle;
+                this.smallest = model.smallest;
+            } 
 
             /**
              * image.
@@ -676,6 +732,18 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private Boolean isHighlight; 
             private String subTitle; 
 
+            private Builder() {
+            } 
+
+            private Builder(BaggageSubContentVisualizes model) {
+                this.baggageDesc = model.baggageDesc;
+                this.baggageSubContentType = model.baggageSubContentType;
+                this.description = model.description;
+                this.imageDO = model.imageDO;
+                this.isHighlight = model.isHighlight;
+                this.subTitle = model.subTitle;
+            } 
+
             /**
              * baggage_desc.
              */
@@ -798,6 +866,16 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String icon; 
             private Integer style; 
             private String subTitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(BaggageSubContents model) {
+                this.baggageDesc = model.baggageDesc;
+                this.icon = model.icon;
+                this.style = model.style;
+                this.subTitle = model.subTitle;
+            } 
 
             /**
              * baggage_desc.
@@ -942,6 +1020,19 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String ptc; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(BaggageSubItems model) {
+                this.attributes = model.attributes;
+                this.baggageSubContentVisualizes = model.baggageSubContentVisualizes;
+                this.baggageSubContents = model.baggageSubContents;
+                this.content = model.content;
+                this.isStruct = model.isStruct;
+                this.ptc = model.ptc;
+                this.title = model.title;
+            } 
+
             /**
              * <p>attributes</p>
              */
@@ -1060,6 +1151,15 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String logo; 
             private String tipsDesc; 
             private String tipsImage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tips model) {
+                this.logo = model.logo;
+                this.tipsDesc = model.tipsDesc;
+                this.tipsImage = model.tipsImage;
+            } 
 
             /**
              * logo.
@@ -1184,6 +1284,18 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String title; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(BaggageDetails model) {
+                this.baggageSubItems = model.baggageSubItems;
+                this.index = model.index;
+                this.tableHead = model.tableHead;
+                this.tips = model.tips;
+                this.title = model.title;
+                this.type = model.type;
+            } 
+
             /**
              * baggage_sub_items.
              */
@@ -1295,6 +1407,15 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String icon; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtraContents model) {
+                this.content = model.content;
+                this.icon = model.icon;
+                this.title = model.title;
+            } 
+
             /**
              * content.
              */
@@ -1381,6 +1502,15 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String feeDesc; 
             private String feeRange; 
             private String style; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundSubContents model) {
+                this.feeDesc = model.feeDesc;
+                this.feeRange = model.feeRange;
+                this.style = model.style;
+            } 
 
             /**
              * fee_desc.
@@ -1492,6 +1622,17 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String ptc; 
             private java.util.List<RefundSubContents> refundSubContents; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundSubItems model) {
+                this.content = model.content;
+                this.isStruct = model.isStruct;
+                this.ptc = model.ptc;
+                this.refundSubContents = model.refundSubContents;
+                this.title = model.title;
+            } 
 
             /**
              * content.
@@ -1632,6 +1773,18 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String title; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeDetails model) {
+                this.extraContents = model.extraContents;
+                this.index = model.index;
+                this.refundSubItems = model.refundSubItems;
+                this.tableHead = model.tableHead;
+                this.title = model.title;
+                this.type = model.type;
+            } 
+
             /**
              * extra_contents.
              */
@@ -1743,6 +1896,15 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String icon; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(RefundDetailsExtraContents model) {
+                this.content = model.content;
+                this.icon = model.icon;
+                this.title = model.title;
+            } 
+
             /**
              * content.
              */
@@ -1829,6 +1991,15 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String feeDesc; 
             private String feeRange; 
             private String style; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundSubItemsRefundSubContents model) {
+                this.feeDesc = model.feeDesc;
+                this.feeRange = model.feeRange;
+                this.style = model.style;
+            } 
 
             /**
              * fee_desc.
@@ -1940,6 +2111,17 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String ptc; 
             private java.util.List<RefundSubItemsRefundSubContents> refundSubContents; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundDetailsRefundSubItems model) {
+                this.content = model.content;
+                this.isStruct = model.isStruct;
+                this.ptc = model.ptc;
+                this.refundSubContents = model.refundSubContents;
+                this.title = model.title;
+            } 
 
             /**
              * content.
@@ -2080,6 +2262,18 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String title; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(RefundDetails model) {
+                this.extraContents = model.extraContents;
+                this.index = model.index;
+                this.refundSubItems = model.refundSubItems;
+                this.tableHead = model.tableHead;
+                this.title = model.title;
+                this.type = model.type;
+            } 
+
             /**
              * extra_contents.
              */
@@ -2191,6 +2385,15 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private java.util.List<ChangeDetails> changeDetails; 
             private java.util.List<RefundDetails> refundDetails; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeOtaItemRuleRq model) {
+                this.baggageDetails = model.baggageDetails;
+                this.changeDetails = model.changeDetails;
+                this.refundDetails = model.refundDetails;
+            } 
+
             /**
              * baggage_details.
              */
@@ -2289,6 +2492,16 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private Integer ticketPrice; 
             private Integer upgradeFee; 
             private Integer upgradePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModifyPriceList model) {
+                this.passengerType = model.passengerType;
+                this.ticketPrice = model.ticketPrice;
+                this.upgradeFee = model.upgradeFee;
+                this.upgradePrice = model.upgradePrice;
+            } 
 
             /**
              * passenger_type.
@@ -2457,6 +2670,21 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private java.util.List<ModifyPriceList> modifyPriceList; 
             private String otaItemid; 
 
+            private Builder() {
+            } 
+
+            private Builder(CabinList model) {
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.cabinDesc = model.cabinDesc;
+                this.cabinDiscount = model.cabinDiscount;
+                this.changeOtaItemRuleRq = model.changeOtaItemRuleRq;
+                this.childCabin = model.childCabin;
+                this.leftNum = model.leftNum;
+                this.modifyPriceList = model.modifyPriceList;
+                this.otaItemid = model.otaItemid;
+            } 
+
             /**
              * cabin.
              */
@@ -2616,6 +2844,17 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String cityName; 
             private String terminal; 
 
+            private Builder() {
+            } 
+
+            private Builder(DepAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.terminal = model.terminal;
+            } 
+
             /**
              * airport_code.
              */
@@ -2730,6 +2969,16 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private Integer ticketPrice; 
             private Integer upgradeFee; 
             private Integer upgradePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(LowestCabinPrice model) {
+                this.passengerType = model.passengerType;
+                this.ticketPrice = model.ticketPrice;
+                this.upgradeFee = model.upgradeFee;
+                this.upgradePrice = model.upgradePrice;
+            } 
 
             /**
              * passenger_type.
@@ -3006,6 +3255,30 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String modifyFlightDepTime; 
             private String sessionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightInfoList model) {
+                this.airlineInfo = model.airlineInfo;
+                this.arrAirportInfo = model.arrAirportInfo;
+                this.cabinList = model.cabinList;
+                this.carrierAirline = model.carrierAirline;
+                this.carrierNo = model.carrierNo;
+                this.depAirportInfo = model.depAirportInfo;
+                this.depCityCode = model.depCityCode;
+                this.flightNo = model.flightNo;
+                this.isShare = model.isShare;
+                this.lowestCabin = model.lowestCabin;
+                this.lowestCabinClass = model.lowestCabinClass;
+                this.lowestCabinDesc = model.lowestCabinDesc;
+                this.lowestCabinNum = model.lowestCabinNum;
+                this.lowestCabinPrice = model.lowestCabinPrice;
+                this.modifyFlightArrTime = model.modifyFlightArrTime;
+                this.modifyFlightDepDate = model.modifyFlightDepDate;
+                this.modifyFlightDepTime = model.modifyFlightDepTime;
+                this.sessionId = model.sessionId;
+            } 
+
             /**
              * airline_info.
              */
@@ -3188,6 +3461,13 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FlightInfoList> flightInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.flightInfoList = model.flightInfoList;
+            } 
 
             /**
              * flight_info_list.

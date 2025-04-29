@@ -51,7 +51,7 @@ public class ApplyExternalNodeStatusUpdateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -231,6 +231,17 @@ public class ApplyExternalNodeStatusUpdateRequest extends Request {
             private String operatorName; 
             private String result; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationRecords model) {
+                this.comment = model.comment;
+                this.operateTime = model.operateTime;
+                this.operatorName = model.operatorName;
+                this.result = model.result;
+                this.type = model.type;
+            } 
 
             /**
              * comment.

@@ -124,6 +124,10 @@ public class ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueSegmen
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return floorPrice
      */
@@ -317,6 +321,36 @@ public class ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueSegmen
         private Integer competitionPromotionPrice; 
         private Integer minBeforeControlPriceOfNormal; 
         private PriceShowInfo priceShowInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceValue model) {
+            this.floorPrice = model.floorPrice;
+            this.ticketPrice = model.ticketPrice;
+            this.sellPrice = model.sellPrice;
+            this.originalSellPrice = model.originalSellPrice;
+            this.baseTotalPrice = model.baseTotalPrice;
+            this.beforeControlPrice = model.beforeControlPrice;
+            this.tax = model.tax;
+            this.supplyPrice = model.supplyPrice;
+            this.basicCabinPrice = model.basicCabinPrice;
+            this.buildPrice = model.buildPrice;
+            this.oilPrice = model.oilPrice;
+            this.firstStandardPrice = model.firstStandardPrice;
+            this.businessStandardPrice = model.businessStandardPrice;
+            this.commonStandardPrice = model.commonStandardPrice;
+            this.interTicketPrice = model.interTicketPrice;
+            this.subtractedPrice = model.subtractedPrice;
+            this.originCommonPrice = model.originCommonPrice;
+            this.dynamicPromotionPrice = model.dynamicPromotionPrice;
+            this.installmentNum = model.installmentNum;
+            this.installmentPrice = model.installmentPrice;
+            this.competitionDynamicPrice = model.competitionDynamicPrice;
+            this.competitionPromotionPrice = model.competitionPromotionPrice;
+            this.minBeforeControlPriceOfNormal = model.minBeforeControlPriceOfNormal;
+            this.priceShowInfo = model.priceShowInfo;
+        } 
 
         /**
          * floor_price.
@@ -574,6 +608,15 @@ public class ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueSegmen
             private String discountInfo; 
             private Double discountNum; 
             private Boolean showTicketPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceShowInfo model) {
+                this.discountInfo = model.discountInfo;
+                this.discountNum = model.discountNum;
+                this.showTicketPrice = model.showTicketPrice;
+            } 
 
             /**
              * discount_info.

@@ -36,6 +36,10 @@ public class ModuleGroupItemSubItemPositionMapValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return journeyIndex
      */
@@ -53,6 +57,14 @@ public class ModuleGroupItemSubItemPositionMapValue extends TeaModel {
     public static final class Builder {
         private Integer journeyIndex; 
         private Integer segmentIndex; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModuleGroupItemSubItemPositionMapValue model) {
+            this.journeyIndex = model.journeyIndex;
+            this.segmentIndex = model.segmentIndex;
+        } 
 
         /**
          * journey_index.

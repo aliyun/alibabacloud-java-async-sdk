@@ -56,6 +56,10 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return httpStatusCode
      */
@@ -113,6 +117,19 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
         private String resultMsg; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IntlFlightCreateOrderResponseBody model) {
+            this.httpStatusCode = model.httpStatusCode;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMsg = model.resultMsg;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * http_status_code.
@@ -279,6 +296,19 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
             private Integer payStatus; 
             private Integer status; 
             private Long totalPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.asyncCreateOrderKey = model.asyncCreateOrderKey;
+                this.latestPayTime = model.latestPayTime;
+                this.orderId = model.orderId;
+                this.outOrderId = model.outOrderId;
+                this.payStatus = model.payStatus;
+                this.status = model.status;
+                this.totalPrice = model.totalPrice;
+            } 
 
             /**
              * async_create_order_key.

@@ -52,7 +52,7 @@ public class TrainFeeCalculateChangeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -211,6 +211,15 @@ public class TrainFeeCalculateChangeRequest extends Request {
             private String passengerCertNo; 
             private String passengerCertType; 
             private String passengerName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerInfo model) {
+                this.passengerCertNo = model.passengerCertNo;
+                this.passengerCertType = model.passengerCertType;
+                this.passengerName = model.passengerName;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -375,6 +384,20 @@ public class TrainFeeCalculateChangeRequest extends Request {
             private PassengerInfo passengerInfo; 
             private String seatType; 
             private String trainNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChangeTrainDetails model) {
+                this.arrStationCode = model.arrStationCode;
+                this.depStationCode = model.depStationCode;
+                this.depTime = model.depTime;
+                this.originalDepTime = model.originalDepTime;
+                this.originalTrainNo = model.originalTrainNo;
+                this.passengerInfo = model.passengerInfo;
+                this.seatType = model.seatType;
+                this.trainNo = model.trainNo;
+            } 
 
             /**
              * <p>This parameter is required.</p>

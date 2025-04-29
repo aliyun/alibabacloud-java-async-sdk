@@ -67,7 +67,7 @@ public class IsvRuleSaveRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -267,6 +267,14 @@ public class IsvRuleSaveRequest extends Request {
         public static final class Builder {
             private String entityId; 
             private Integer entityType; 
+
+            private Builder() {
+            } 
+
+            private Builder(BookuserList model) {
+                this.entityId = model.entityId;
+                this.entityType = model.entityType;
+            } 
 
             /**
              * <p>This parameter is required.</p>

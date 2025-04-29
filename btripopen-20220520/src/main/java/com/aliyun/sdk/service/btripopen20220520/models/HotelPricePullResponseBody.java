@@ -52,6 +52,10 @@ public class HotelPricePullResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelPricePullResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelPricePullResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -203,6 +219,14 @@ public class HotelPricePullResponseBody extends TeaModel {
             private Long hour; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(BtripHotelCancelPolicyInfoDTOList model) {
+                this.hour = model.hour;
+                this.value = model.value;
+            } 
+
             /**
              * hour.
              */
@@ -269,6 +293,14 @@ public class HotelPricePullResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList; 
             private Integer cancelPolicyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(BtripHotelCancelPolicy model) {
+                this.btripHotelCancelPolicyInfoDTOList = model.btripHotelCancelPolicyInfoDTOList;
+                this.cancelPolicyType = model.cancelPolicyType;
+            } 
 
             /**
              * btrip_hotel_cancel_policy_info_d_t_o_list.
@@ -360,6 +392,16 @@ public class HotelPricePullResponseBody extends TeaModel {
             private Long lastDiscountsPrice; 
             private Long price; 
             private String startDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(RateDailys model) {
+                this.discountPrice = model.discountPrice;
+                this.lastDiscountsPrice = model.lastDiscountsPrice;
+                this.price = model.price;
+                this.startDate = model.startDate;
+            } 
 
             /**
              * discount_price.
@@ -707,6 +749,36 @@ public class HotelPricePullResponseBody extends TeaModel {
             private String rpId; 
             private String sellerId; 
             private Boolean supportSpecialInvoice; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rates model) {
+                this.breakfast = model.breakfast;
+                this.breakfastCount = model.breakfastCount;
+                this.btripHotelCancelPolicy = model.btripHotelCancelPolicy;
+                this.cancelPolicyDesc = model.cancelPolicyDesc;
+                this.companyAassist = model.companyAassist;
+                this.currencyCode = model.currencyCode;
+                this.instantConfirm = model.instantConfirm;
+                this.itemId = model.itemId;
+                this.maxAdvHours = model.maxAdvHours;
+                this.maxDays = model.maxDays;
+                this.minAdvHours = model.minAdvHours;
+                this.minDays = model.minDays;
+                this.nod = model.nod;
+                this.nop = model.nop;
+                this.paymentType = model.paymentType;
+                this.price = model.price;
+                this.promotionInfo = model.promotionInfo;
+                this.quota = model.quota;
+                this.rateDailys = model.rateDailys;
+                this.rateId = model.rateId;
+                this.ratePlanName = model.ratePlanName;
+                this.rpId = model.rpId;
+                this.sellerId = model.sellerId;
+                this.supportSpecialInvoice = model.supportSpecialInvoice;
+            } 
 
             /**
              * breakfast.
@@ -1083,6 +1155,25 @@ public class HotelPricePullResponseBody extends TeaModel {
             private Integer status; 
             private String windowType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rooms model) {
+                this.area = model.area;
+                this.bed = model.bed;
+                this.bedTypeString = model.bedTypeString;
+                this.facility = model.facility;
+                this.floor = model.floor;
+                this.maxOccupancy = model.maxOccupancy;
+                this.networkService = model.networkService;
+                this.pics = model.pics;
+                this.rates = model.rates;
+                this.roomId = model.roomId;
+                this.roomName = model.roomName;
+                this.status = model.status;
+                this.windowType = model.windowType;
+            } 
+
             /**
              * area.
              */
@@ -1274,6 +1365,17 @@ public class HotelPricePullResponseBody extends TeaModel {
             private java.util.List<Rooms> rooms; 
             private String searchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotelPriceInfos model) {
+                this.address = model.address;
+                this.hotelId = model.hotelId;
+                this.hotelName = model.hotelName;
+                this.rooms = model.rooms;
+                this.searchId = model.searchId;
+            } 
+
             /**
              * address.
              */
@@ -1352,6 +1454,13 @@ public class HotelPricePullResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HotelPriceInfos> hotelPriceInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.hotelPriceInfos = model.hotelPriceInfos;
+            } 
 
             /**
              * hotel_price_infos.

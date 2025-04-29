@@ -896,6 +896,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<IsvUserSaveResponse> isvUserSave(IsvUserSaveRequest request);
 
     /**
+     * @param request the request parameters of MealApplyAdd  MealApplyAddRequest
+     * @return MealApplyAddResponse
+     */
+    CompletableFuture<MealApplyAddResponse> mealApplyAdd(MealApplyAddRequest request);
+
+    /**
+     * @param request the request parameters of MealApplyApprove  MealApplyApproveRequest
+     * @return MealApplyApproveResponse
+     */
+    CompletableFuture<MealApplyApproveResponse> mealApplyApprove(MealApplyApproveRequest request);
+
+    /**
+     * @param request the request parameters of MealApplyQuery  MealApplyQueryRequest
+     * @return MealApplyQueryResponse
+     */
+    CompletableFuture<MealApplyQueryResponse> mealApplyQuery(MealApplyQueryRequest request);
+
+    /**
      * @param request the request parameters of MealBillSettlementQuery  MealBillSettlementQueryRequest
      * @return MealBillSettlementQueryResponse
      */

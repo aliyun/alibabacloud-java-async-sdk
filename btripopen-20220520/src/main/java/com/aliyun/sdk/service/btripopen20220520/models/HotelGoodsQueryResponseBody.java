@@ -52,6 +52,10 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelGoodsQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -200,6 +216,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private Long hour; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(BtripHotelCancelPolicyInfoDTOList model) {
+                this.hour = model.hour;
+                this.value = model.value;
+            } 
+
             /**
              * hour.
              */
@@ -266,6 +290,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList; 
             private Integer cancelPolicyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(BtripHotelCancelPolicyDTO model) {
+                this.btripHotelCancelPolicyInfoDTOList = model.btripHotelCancelPolicyInfoDTOList;
+                this.cancelPolicyType = model.cancelPolicyType;
+            } 
 
             /**
              * btrip_hotel_cancel_policy_info_d_t_o_list.
@@ -346,6 +378,15 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private String cancelPolicyTitle; 
             private String checkIn; 
 
+            private Builder() {
+            } 
+
+            private Builder(BtripCancelRule model) {
+                this.btripHotelCancelPolicyDTO = model.btripHotelCancelPolicyDTO;
+                this.cancelPolicyTitle = model.cancelPolicyTitle;
+                this.checkIn = model.checkIn;
+            } 
+
             /**
              * btrip_hotel_cancel_policy_d_t_o.
              */
@@ -421,6 +462,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private String desc; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(BtripHotelCancelDesc model) {
+                this.desc = model.desc;
+                this.title = model.title;
+            } 
+
             /**
              * desc.
              */
@@ -487,6 +536,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> labelName; 
             private String moneyDesc; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiscountDetail model) {
+                this.labelName = model.labelName;
+                this.moneyDesc = model.moneyDesc;
+            } 
 
             /**
              * label_name.
@@ -590,6 +647,17 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private java.util.List<DiscountDetail> discountDetail; 
             private String subTitle; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiscountDesc model) {
+                this.cashReduceTotal = model.cashReduceTotal;
+                this.dinamicLabel = model.dinamicLabel;
+                this.discountDetail = model.discountDetail;
+                this.subTitle = model.subTitle;
+                this.title = model.title;
+            } 
 
             /**
              * cash_reduce_total.
@@ -753,6 +821,20 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private Integer lastNum; 
             private String rateStartTime; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(HotelDetailRatePriceDTO model) {
+                this.beforeDiscountPrice = model.beforeDiscountPrice;
+                this.breakfast = model.breakfast;
+                this.discountPrice = model.discountPrice;
+                this.lastDiscountsPrice = model.lastDiscountsPrice;
+                this.lastDiscountsRoundingPrice = model.lastDiscountsRoundingPrice;
+                this.lastNum = model.lastNum;
+                this.rateStartTime = model.rateStartTime;
+                this.status = model.status;
+            } 
 
             /**
              * before_discount_price.
@@ -1361,6 +1443,55 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private Boolean supportSpecialInvoice; 
             private String unroundingDailyPriceFormatYuan; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rates model) {
+                this.bedDesc = model.bedDesc;
+                this.bedType = model.bedType;
+                this.breakfast = model.breakfast;
+                this.btripCancelRule = model.btripCancelRule;
+                this.btripHotelCancelDesc = model.btripHotelCancelDesc;
+                this.canSmoking = model.canSmoking;
+                this.cancelPolicyDesc = model.cancelPolicyDesc;
+                this.cancelPolicyType = model.cancelPolicyType;
+                this.companyAassist = model.companyAassist;
+                this.confirmType = model.confirmType;
+                this.currencyCode = model.currencyCode;
+                this.dailyPriceFormatYuan = model.dailyPriceFormatYuan;
+                this.dailyPriceView = model.dailyPriceView;
+                this.discountDesc = model.discountDesc;
+                this.endTimeDaily = model.endTimeDaily;
+                this.hotelDetailRatePriceDTO = model.hotelDetailRatePriceDTO;
+                this.instantConfirm = model.instantConfirm;
+                this.inventoryDesc = model.inventoryDesc;
+                this.inventoryPrice = model.inventoryPrice;
+                this.isBusinessPay4Goods = model.isBusinessPay4Goods;
+                this.isGuarantee = model.isGuarantee;
+                this.isNeedEmail = model.isNeedEmail;
+                this.itemId = model.itemId;
+                this.lastCancelTime = model.lastCancelTime;
+                this.maxOccupancy = model.maxOccupancy;
+                this.minAdvHours = model.minAdvHours;
+                this.minDays = model.minDays;
+                this.nod = model.nod;
+                this.nop = model.nop;
+                this.orderShipTime = model.orderShipTime;
+                this.paymentType = model.paymentType;
+                this.priceType = model.priceType;
+                this.promotionInfo = model.promotionInfo;
+                this.rateId = model.rateId;
+                this.ratePlanName = model.ratePlanName;
+                this.rpId = model.rpId;
+                this.sellerId = model.sellerId;
+                this.startTimeDaily = model.startTimeDaily;
+                this.status = model.status;
+                this.supplierCode = model.supplierCode;
+                this.supplierName = model.supplierName;
+                this.supportSpecialInvoice = model.supportSpecialInvoice;
+                this.unroundingDailyPriceFormatYuan = model.unroundingDailyPriceFormatYuan;
+            } 
+
             /**
              * bed_desc.
              */
@@ -1780,6 +1911,16 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private String highlightColorColor; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoomService model) {
+                this.color = model.color;
+                this.desc = model.desc;
+                this.highlightColorColor = model.highlightColorColor;
+                this.title = model.title;
+            } 
+
             /**
              * color.
              */
@@ -2030,6 +2171,28 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private Long srid; 
             private Integer status; 
             private String windowType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rooms model) {
+                this.area = model.area;
+                this.bedTypeString = model.bedTypeString;
+                this.extraBed = model.extraBed;
+                this.facility = model.facility;
+                this.floor = model.floor;
+                this.maxOccupancy = model.maxOccupancy;
+                this.name = model.name;
+                this.networkService = model.networkService;
+                this.pics = model.pics;
+                this.rates = model.rates;
+                this.roomDasc = model.roomDasc;
+                this.roomFacility = model.roomFacility;
+                this.roomService = model.roomService;
+                this.srid = model.srid;
+                this.status = model.status;
+                this.windowType = model.windowType;
+            } 
 
             /**
              * area.
@@ -2341,6 +2504,25 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private String lateArrivalTime; 
             private java.util.List<Rooms> rooms; 
             private String searchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.address = model.address;
+                this.bookingInstructions = model.bookingInstructions;
+                this.canForeigner = model.canForeigner;
+                this.checkIn = model.checkIn;
+                this.checkOut = model.checkOut;
+                this.descriptions = model.descriptions;
+                this.dinamicBannerPicUrls = model.dinamicBannerPicUrls;
+                this.earlyArrivalTime = model.earlyArrivalTime;
+                this.hotelId = model.hotelId;
+                this.hotelName = model.hotelName;
+                this.lateArrivalTime = model.lateArrivalTime;
+                this.rooms = model.rooms;
+                this.searchId = model.searchId;
+            } 
 
             /**
              * address.

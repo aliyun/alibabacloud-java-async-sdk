@@ -44,6 +44,10 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return searchPrice
      */
@@ -77,6 +81,16 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
         private String id; 
         private java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue> cabinQuantity; 
         private java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValueSegmentPriceValue> segmentPrice; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModuleItemListSubItemsShoppingItemMapValue model) {
+            this.searchPrice = model.searchPrice;
+            this.id = model.id;
+            this.cabinQuantity = model.cabinQuantity;
+            this.segmentPrice = model.segmentPrice;
+        } 
 
         /**
          * search_price.
@@ -174,6 +188,15 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
             private String discountInfo; 
             private Double discountNum; 
             private Boolean showTicketPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceShowInfo model) {
+                this.discountInfo = model.discountInfo;
+                this.discountNum = model.discountNum;
+                this.showTicketPrice = model.showTicketPrice;
+            } 
 
             /**
              * discount_info.
@@ -513,6 +536,36 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
             private Integer competitionPromotionPrice; 
             private Integer minBeforeControlPriceOfNormal; 
             private PriceShowInfo priceShowInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchPrice model) {
+                this.floorPrice = model.floorPrice;
+                this.ticketPrice = model.ticketPrice;
+                this.sellPrice = model.sellPrice;
+                this.originalSellPrice = model.originalSellPrice;
+                this.baseTotalPrice = model.baseTotalPrice;
+                this.beforeControlPrice = model.beforeControlPrice;
+                this.tax = model.tax;
+                this.supplyPrice = model.supplyPrice;
+                this.basicCabinPrice = model.basicCabinPrice;
+                this.buildPrice = model.buildPrice;
+                this.oilPrice = model.oilPrice;
+                this.firstStandardPrice = model.firstStandardPrice;
+                this.businessStandardPrice = model.businessStandardPrice;
+                this.commonStandardPrice = model.commonStandardPrice;
+                this.interTicketPrice = model.interTicketPrice;
+                this.subtractedPrice = model.subtractedPrice;
+                this.originCommonPrice = model.originCommonPrice;
+                this.dynamicPromotionPrice = model.dynamicPromotionPrice;
+                this.installmentNum = model.installmentNum;
+                this.installmentPrice = model.installmentPrice;
+                this.competitionDynamicPrice = model.competitionDynamicPrice;
+                this.competitionPromotionPrice = model.competitionPromotionPrice;
+                this.minBeforeControlPriceOfNormal = model.minBeforeControlPriceOfNormal;
+                this.priceShowInfo = model.priceShowInfo;
+            } 
 
             /**
              * floor_price.

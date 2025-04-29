@@ -40,6 +40,10 @@ public class ModuleAgentInfosAttributeShowInfoMapValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class ModuleAgentInfosAttributeShowInfoMapValue extends TeaModel {
         private String code; 
         private String name; 
         private String text; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModuleAgentInfosAttributeShowInfoMapValue model) {
+            this.code = model.code;
+            this.name = model.name;
+            this.text = model.text;
+        } 
 
         /**
          * code.

@@ -2668,6 +2668,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of MealApplyAdd  MealApplyAddRequest
+     * @return MealApplyAddResponse
+     */
+    @Override
+    public CompletableFuture<MealApplyAddResponse> mealApplyAdd(MealApplyAddRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MealApplyAdd").setMethod(HttpMethod.POST).setPathRegex("/apply/v1/meal").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MealApplyAddResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MealApplyAddResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of MealApplyApprove  MealApplyApproveRequest
+     * @return MealApplyApproveResponse
+     */
+    @Override
+    public CompletableFuture<MealApplyApproveResponse> mealApplyApprove(MealApplyApproveRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MealApplyApprove").setMethod(HttpMethod.PUT).setPathRegex("/apply/v1/meal").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MealApplyApproveResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MealApplyApproveResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of MealApplyQuery  MealApplyQueryRequest
+     * @return MealApplyQueryResponse
+     */
+    @Override
+    public CompletableFuture<MealApplyQueryResponse> mealApplyQuery(MealApplyQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MealApplyQuery").setMethod(HttpMethod.GET).setPathRegex("/apply/v1/meal").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MealApplyQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MealApplyQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of MealBillSettlementQuery  MealBillSettlementQueryRequest
      * @return MealBillSettlementQueryResponse
      */

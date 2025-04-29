@@ -56,6 +56,10 @@ public class AccessTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class AccessTokenResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AccessTokenResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -226,6 +243,14 @@ public class AccessTokenResponseBody extends TeaModel {
             private Long expire; 
             private String token; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.expire = model.expire;
+                this.token = model.token;
+            } 
+
             /**
              * expire.
              */
@@ -304,6 +329,15 @@ public class AccessTokenResponseBody extends TeaModel {
             private Long expire; 
             private Long start; 
             private String token; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.expire = model.expire;
+                this.start = model.start;
+                this.token = model.token;
+            } 
 
             /**
              * expire.

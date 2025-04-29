@@ -48,6 +48,10 @@ public class OrderRefundDetailQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -89,6 +93,17 @@ public class OrderRefundDetailQueryResponseBody extends TeaModel {
         private String message; 
         private Module module; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(OrderRefundDetailQueryResponseBody model) {
+            this.requestId = model.requestId;
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -228,6 +243,18 @@ public class OrderRefundDetailQueryResponseBody extends TeaModel {
             private Long refundAmountPerson; 
             private String supplierRefundId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RefundDetails model) {
+                this.personPayChannel = model.personPayChannel;
+                this.personRefundId = model.personRefundId;
+                this.refundAmount = model.refundAmount;
+                this.refundAmountCorp = model.refundAmountCorp;
+                this.refundAmountPerson = model.refundAmountPerson;
+                this.supplierRefundId = model.supplierRefundId;
+            } 
+
             /**
              * person_pay_channel.
              */
@@ -338,6 +365,15 @@ public class OrderRefundDetailQueryResponseBody extends TeaModel {
             private String orderId; 
             private java.util.List<RefundDetails> refundDetails; 
             private Long totalAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.orderId = model.orderId;
+                this.refundDetails = model.refundDetails;
+                this.totalAmount = model.totalAmount;
+            } 
 
             /**
              * order_id.

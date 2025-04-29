@@ -52,6 +52,10 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelOrderDetailInfoResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -200,6 +216,14 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private Long hour; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(BtripHotelCancelPolicyInfoDTOList model) {
+                this.hour = model.hour;
+                this.value = model.value;
+            } 
+
             /**
              * hour.
              */
@@ -267,6 +291,14 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private java.util.List<BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList; 
             private Integer cancelPolicyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(BtripHotelCancelPolicyDTO model) {
+                this.btripHotelCancelPolicyInfoDTOList = model.btripHotelCancelPolicyInfoDTOList;
+                this.cancelPolicyType = model.cancelPolicyType;
+            } 
+
             /**
              * btrip_hotel_cancel_policy_info_d_t_o_list.
              */
@@ -333,6 +365,14 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String cancelEndTime; 
             private String cancelStartTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(CancelInfo model) {
+                this.cancelEndTime = model.cancelEndTime;
+                this.cancelStartTime = model.cancelStartTime;
+            } 
 
             /**
              * cancel_end_time.
@@ -436,6 +476,17 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private String hotelName; 
             private String hotelTel; 
             private Long shid; 
+
+            private Builder() {
+            } 
+
+            private Builder(HotelDetailInfo model) {
+                this.address = model.address;
+                this.cityName = model.cityName;
+                this.hotelName = model.hotelName;
+                this.hotelTel = model.hotelTel;
+                this.shid = model.shid;
+            } 
 
             /**
              * address.
@@ -623,6 +674,22 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private Long roomRefundPrice; 
             private String travelerId; 
             private String travelerName; 
+
+            private Builder() {
+            } 
+
+            private Builder(HotelSaleOrderRoomInfos model) {
+                this.checkinDate = model.checkinDate;
+                this.checkoutDate = model.checkoutDate;
+                this.penalSum = model.penalSum;
+                this.realCheckoutDate = model.realCheckoutDate;
+                this.refundStatus = model.refundStatus;
+                this.roomNo = model.roomNo;
+                this.roomPrice = model.roomPrice;
+                this.roomRefundPrice = model.roomRefundPrice;
+                this.travelerId = model.travelerId;
+                this.travelerName = model.travelerName;
+            } 
 
             /**
              * checkin_date.
@@ -959,6 +1026,31 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private String receiverPhone; 
             private String remark; 
 
+            private Builder() {
+            } 
+
+            private Builder(InvoiceInfo model) {
+                this.billingMoney = model.billingMoney;
+                this.buyerAdd = model.buyerAdd;
+                this.buyerBankAcc = model.buyerBankAcc;
+                this.buyerBankAdd = model.buyerBankAdd;
+                this.buyerPhone = model.buyerPhone;
+                this.buyerTaxNum = model.buyerTaxNum;
+                this.deliveryAddress = model.deliveryAddress;
+                this.deliveryArea = model.deliveryArea;
+                this.deliveryCity = model.deliveryCity;
+                this.deliveryProvince = model.deliveryProvince;
+                this.deliveryStreet = model.deliveryStreet;
+                this.email = model.email;
+                this.invoiceMaterial = model.invoiceMaterial;
+                this.invoiceTitle = model.invoiceTitle;
+                this.invoiceType = model.invoiceType;
+                this.postage = model.postage;
+                this.receiverName = model.receiverName;
+                this.receiverPhone = model.receiverPhone;
+                this.remark = model.remark;
+            } 
+
             /**
              * billing_money.
              */
@@ -1257,6 +1349,22 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private String settleSubjectId; 
             private String settleSubjectName; 
             private String settleSubjectNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(CostCenterInfoList model) {
+                this.costCenterId = model.costCenterId;
+                this.costCenterName = model.costCenterName;
+                this.costCenterNo = model.costCenterNo;
+                this.costCenterPrices = model.costCenterPrices;
+                this.costCenterRatios = model.costCenterRatios;
+                this.costCenterSubjectCode = model.costCenterSubjectCode;
+                this.costCenterSubjectName = model.costCenterSubjectName;
+                this.settleSubjectId = model.settleSubjectId;
+                this.settleSubjectName = model.settleSubjectName;
+                this.settleSubjectNo = model.settleSubjectNo;
+            } 
 
             /**
              * cost_center_id.
@@ -1569,6 +1677,29 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private String staffNo; 
             private Integer userType; 
 
+            private Builder() {
+            } 
+
+            private Builder(OccupantInfoList model) {
+                this.cardNo = model.cardNo;
+                this.cardType = model.cardType;
+                this.costCenterInfoList = model.costCenterInfoList;
+                this.customerType = model.customerType;
+                this.departmentId = model.departmentId;
+                this.departmentName = model.departmentName;
+                this.email = model.email;
+                this.employeeType = model.employeeType;
+                this.firstName = model.firstName;
+                this.isBooker = model.isBooker;
+                this.lastName = model.lastName;
+                this.name = model.name;
+                this.phone = model.phone;
+                this.roomNo = model.roomNo;
+                this.selected = model.selected;
+                this.staffNo = model.staffNo;
+                this.userType = model.userType;
+            } 
+
             /**
              * card_no.
              */
@@ -1827,6 +1958,20 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private String roomId; 
             private String roomName; 
             private Long roomPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoomNightPriceInfoList model) {
+                this.board = model.board;
+                this.boardNum = model.boardNum;
+                this.checkIn = model.checkIn;
+                this.ratePlanId = model.ratePlanId;
+                this.ratePlanName = model.ratePlanName;
+                this.roomId = model.roomId;
+                this.roomName = model.roomName;
+                this.roomPrice = model.roomPrice;
+            } 
 
             /**
              * board.
@@ -2386,6 +2531,51 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private String settleType; 
             private String supplierOrderId; 
             private Long totalPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.actualCheckInTime = model.actualCheckInTime;
+                this.actualCheckOutTime = model.actualCheckOutTime;
+                this.btripHotelCancelPolicyDTO = model.btripHotelCancelPolicyDTO;
+                this.btripOrderId = model.btripOrderId;
+                this.cancelFine = model.cancelFine;
+                this.cancelInfo = model.cancelInfo;
+                this.checkIn = model.checkIn;
+                this.checkOut = model.checkOut;
+                this.confirmOrderTime = model.confirmOrderTime;
+                this.contractName = model.contractName;
+                this.contractTel = model.contractTel;
+                this.createOrderTime = model.createOrderTime;
+                this.earlyArrivalTime = model.earlyArrivalTime;
+                this.earlyDeparture = model.earlyDeparture;
+                this.guestCount = model.guestCount;
+                this.hotelDetailInfo = model.hotelDetailInfo;
+                this.hotelSaleOrderRoomInfos = model.hotelSaleOrderRoomInfos;
+                this.invoiceInfo = model.invoiceInfo;
+                this.itemId = model.itemId;
+                this.lastArrivalTime = model.lastArrivalTime;
+                this.occupantInfoList = model.occupantInfoList;
+                this.orderStatus = model.orderStatus;
+                this.orderStatusDesc = model.orderStatusDesc;
+                this.outConfirmCode = model.outConfirmCode;
+                this.payTime = model.payTime;
+                this.productType = model.productType;
+                this.purchaseOrderId = model.purchaseOrderId;
+                this.refundPrice = model.refundPrice;
+                this.refundReason = model.refundReason;
+                this.refundServiceFee = model.refundServiceFee;
+                this.roomNightPriceInfoList = model.roomNightPriceInfoList;
+                this.roomNumber = model.roomNumber;
+                this.roomTypeName = model.roomTypeName;
+                this.sellerId = model.sellerId;
+                this.sellerName = model.sellerName;
+                this.serviceFee = model.serviceFee;
+                this.settleType = model.settleType;
+                this.supplierOrderId = model.supplierOrderId;
+                this.totalPrice = model.totalPrice;
+            } 
 
             /**
              * actual_check_in_time.

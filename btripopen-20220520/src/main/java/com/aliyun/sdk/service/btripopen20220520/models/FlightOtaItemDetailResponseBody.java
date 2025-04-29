@@ -52,6 +52,10 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightOtaItemDetailResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -230,6 +246,16 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             private String image; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Description model) {
+                this.desc = model.desc;
+                this.icon = model.icon;
+                this.image = model.image;
+                this.title = model.title;
+            } 
+
             /**
              * desc.
              */
@@ -336,6 +362,16 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             private String largest; 
             private String middle; 
             private String smallest; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageDO model) {
+                this.image = model.image;
+                this.largest = model.largest;
+                this.middle = model.middle;
+                this.smallest = model.smallest;
+            } 
 
             /**
              * image.
@@ -467,6 +503,18 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             private ImageDO imageDO; 
             private Boolean isHighlight; 
             private String subTitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(BaggageSubContentVisualizes model) {
+                this.baggageDesc = model.baggageDesc;
+                this.baggageSubContentType = model.baggageSubContentType;
+                this.description = model.description;
+                this.imageDO = model.imageDO;
+                this.isHighlight = model.isHighlight;
+                this.subTitle = model.subTitle;
+            } 
 
             /**
              * <p>baggage_desc</p>
@@ -603,6 +651,17 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             private String ptc; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(BaggageSubItems model) {
+                this.baggageSubContentVisualizes = model.baggageSubContentVisualizes;
+                this.extraContentVisualizes = model.extraContentVisualizes;
+                this.isStruct = model.isStruct;
+                this.ptc = model.ptc;
+                this.title = model.title;
+            } 
+
             /**
              * baggage_sub_content_visualizes.
              */
@@ -705,6 +764,15 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             private String logo; 
             private String tipsDesc; 
             private String tipsImage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tips model) {
+                this.logo = model.logo;
+                this.tipsDesc = model.tipsDesc;
+                this.tipsImage = model.tipsImage;
+            } 
 
             /**
              * logo.
@@ -829,6 +897,18 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             private String title; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(BaggageRule model) {
+                this.baggageSubItems = model.baggageSubItems;
+                this.index = model.index;
+                this.tableHead = model.tableHead;
+                this.tips = model.tips;
+                this.title = model.title;
+                this.type = model.type;
+            } 
+
             /**
              * baggage_sub_items.
              */
@@ -928,6 +1008,14 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             private String content; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtraContents model) {
+                this.content = model.content;
+                this.title = model.title;
+            } 
+
             /**
              * content.
              */
@@ -1006,6 +1094,15 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             private String feeDesc; 
             private String feeRange; 
             private Integer style; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundSubContents model) {
+                this.feeDesc = model.feeDesc;
+                this.feeRange = model.feeRange;
+                this.style = model.style;
+            } 
 
             /**
              * fee_desc.
@@ -1105,6 +1202,16 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             private String ptc; 
             private java.util.List<RefundSubContents> refundSubContents; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundSubItems model) {
+                this.isStruct = model.isStruct;
+                this.ptc = model.ptc;
+                this.refundSubContents = model.refundSubContents;
+                this.title = model.title;
+            } 
 
             /**
              * is_struct.
@@ -1285,6 +1392,22 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             private String title; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeRule model) {
+                this.extraContents = model.extraContents;
+                this.flightNo = model.flightNo;
+                this.freeBaggage = model.freeBaggage;
+                this.index = model.index;
+                this.level = model.level;
+                this.refundSubItems = model.refundSubItems;
+                this.subTableHead = model.subTableHead;
+                this.tableHead = model.tableHead;
+                this.title = model.title;
+                this.type = model.type;
+            } 
+
             /**
              * extra_contents.
              */
@@ -1416,6 +1539,14 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             private String content; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(RefundRuleExtraContents model) {
+                this.content = model.content;
+                this.title = model.title;
+            } 
+
             /**
              * content.
              */
@@ -1494,6 +1625,15 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             private String feeDesc; 
             private String feeRange; 
             private Integer style; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundSubItemsRefundSubContents model) {
+                this.feeDesc = model.feeDesc;
+                this.feeRange = model.feeRange;
+                this.style = model.style;
+            } 
 
             /**
              * fee_desc.
@@ -1593,6 +1733,16 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             private String ptc; 
             private java.util.List<RefundSubItemsRefundSubContents> refundSubContents; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundRuleRefundSubItems model) {
+                this.isStruct = model.isStruct;
+                this.ptc = model.ptc;
+                this.refundSubContents = model.refundSubContents;
+                this.title = model.title;
+            } 
 
             /**
              * is_struct.
@@ -1773,6 +1923,22 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             private String title; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(RefundRule model) {
+                this.extraContents = model.extraContents;
+                this.flightNo = model.flightNo;
+                this.freeBaggage = model.freeBaggage;
+                this.index = model.index;
+                this.level = model.level;
+                this.refundSubItems = model.refundSubItems;
+                this.subTableHead = model.subTableHead;
+                this.tableHead = model.tableHead;
+                this.title = model.title;
+                this.type = model.type;
+            } 
+
             /**
              * extra_contents.
              */
@@ -1951,6 +2117,18 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
             private Integer sellPrice; 
             private java.util.List<Integer> sellPriceList; 
             private Integer tripType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.baggageRule = model.baggageRule;
+                this.changeRule = model.changeRule;
+                this.refundRule = model.refundRule;
+                this.sellPrice = model.sellPrice;
+                this.sellPriceList = model.sellPriceList;
+                this.tripType = model.tripType;
+            } 
 
             /**
              * baggage_rule.

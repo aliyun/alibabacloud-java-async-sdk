@@ -52,6 +52,10 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrainOrderDetailQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -310,6 +326,23 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private Long ticketPrice; 
             private Integer ticketStatus; 
             private String ticketType; 
+
+            private Builder() {
+            } 
+
+            private Builder(BookTicketInfos model) {
+                this.coachNo = model.coachNo;
+                this.failCode = model.failCode;
+                this.failReason = model.failReason;
+                this.passengerId = model.passengerId;
+                this.realTicketPrice = model.realTicketPrice;
+                this.seatNo = model.seatNo;
+                this.seatType = model.seatType;
+                this.ticketEntrance = model.ticketEntrance;
+                this.ticketPrice = model.ticketPrice;
+                this.ticketStatus = model.ticketStatus;
+                this.ticketType = model.ticketType;
+            } 
 
             /**
              * coach_no.
@@ -522,6 +555,20 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private String depTime; 
             private String trainNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(BookTrainInfos model) {
+                this.arrStationCode = model.arrStationCode;
+                this.arrStationName = model.arrStationName;
+                this.arriveTime = model.arriveTime;
+                this.bookTicketInfos = model.bookTicketInfos;
+                this.depStationCode = model.depStationCode;
+                this.depStationName = model.depStationName;
+                this.depTime = model.depTime;
+                this.trainNo = model.trainNo;
+            } 
+
             /**
              * arr_station_code.
              */
@@ -684,6 +731,18 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private String lastPayTime; 
             private Integer status; 
             private String ticketNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(BookInfos model) {
+                this.bookTrainInfos = model.bookTrainInfos;
+                this.failCode = model.failCode;
+                this.failMsg = model.failMsg;
+                this.lastPayTime = model.lastPayTime;
+                this.status = model.status;
+                this.ticketNo = model.ticketNo;
+            } 
 
             /**
              * book_train_infos.
@@ -928,6 +987,26 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private Long ticketPrice; 
             private String ticketStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeTicketInfos model) {
+                this.changeCost = model.changeCost;
+                this.changeDiff = model.changeDiff;
+                this.changeGapHandingFee = model.changeGapHandingFee;
+                this.changeMinTicketAmountHandingFee = model.changeMinTicketAmountHandingFee;
+                this.coachNo = model.coachNo;
+                this.failCode = model.failCode;
+                this.failReason = model.failReason;
+                this.passengerId = model.passengerId;
+                this.realTicketPrice = model.realTicketPrice;
+                this.seatNo = model.seatNo;
+                this.seatType = model.seatType;
+                this.ticketEntrance = model.ticketEntrance;
+                this.ticketPrice = model.ticketPrice;
+                this.ticketStatus = model.ticketStatus;
+            } 
+
             /**
              * change_cost.
              */
@@ -1163,6 +1242,20 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private String depTime; 
             private String trainNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeTrainInfos model) {
+                this.arrStationCode = model.arrStationCode;
+                this.arrStationName = model.arrStationName;
+                this.arriveTime = model.arriveTime;
+                this.changeTicketInfos = model.changeTicketInfos;
+                this.depStationCode = model.depStationCode;
+                this.depStationName = model.depStationName;
+                this.depTime = model.depTime;
+                this.trainNo = model.trainNo;
+            } 
+
             /**
              * arr_station_code.
              */
@@ -1314,6 +1407,17 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private String outChangeApplyId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeInfos model) {
+                this.changeApplyId = model.changeApplyId;
+                this.changeTrainInfos = model.changeTrainInfos;
+                this.limitPayTime = model.limitPayTime;
+                this.outChangeApplyId = model.outChangeApplyId;
+                this.status = model.status;
+            } 
+
             /**
              * change_apply_id.
              */
@@ -1405,6 +1509,14 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private String passengerId; 
             private Long refundPrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(OfflineRefundInfos model) {
+                this.passengerId = model.passengerId;
+                this.refundPrice = model.refundPrice;
+            } 
+
             /**
              * passenger_id.
              */
@@ -1495,6 +1607,16 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private java.util.List<OfflineRefundInfos> offlineRefundInfos; 
             private String offlineRefundType; 
             private Long refundTotalPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(OfflineRefundDetails model) {
+                this.offlineRefundId = model.offlineRefundId;
+                this.offlineRefundInfos = model.offlineRefundInfos;
+                this.offlineRefundType = model.offlineRefundType;
+                this.refundTotalPrice = model.refundTotalPrice;
+            } 
 
             /**
              * offline_refund_id.
@@ -1686,6 +1808,23 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private String passengerId; 
             private String projectCode; 
             private String projectTitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(CostCenterInfo model) {
+                this.cascadeDeptName = model.cascadeDeptName;
+                this.costCenterId = model.costCenterId;
+                this.costCenterName = model.costCenterName;
+                this.costCenterNo = model.costCenterNo;
+                this.departId = model.departId;
+                this.departName = model.departName;
+                this.invoiceId = model.invoiceId;
+                this.invoiceTitle = model.invoiceTitle;
+                this.passengerId = model.passengerId;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+            } 
 
             /**
              * cascade_dept_name.
@@ -1898,6 +2037,20 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private String passengerName; 
             private String validDateEnd; 
 
+            private Builder() {
+            } 
+
+            private Builder(PassengerInfoS model) {
+                this.costCenterInfo = model.costCenterInfo;
+                this.countryCode = model.countryCode;
+                this.passengerCertNo = model.passengerCertNo;
+                this.passengerCertType = model.passengerCertType;
+                this.passengerId = model.passengerId;
+                this.passengerMobile = model.passengerMobile;
+                this.passengerName = model.passengerName;
+                this.validDateEnd = model.validDateEnd;
+            } 
+
             /**
              * cost_center_info.
              */
@@ -2036,6 +2189,16 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private Long refundCost; 
             private Long refundPrice; 
             private Long ticketPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundTicketInfos model) {
+                this.passengerId = model.passengerId;
+                this.refundCost = model.refundCost;
+                this.refundPrice = model.refundPrice;
+                this.ticketPrice = model.ticketPrice;
+            } 
 
             /**
              * passenger_id.
@@ -2179,6 +2342,19 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private String depTime; 
             private java.util.List<RefundTicketInfos> refundTicketInfos; 
             private String trainNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundTrainInfo model) {
+                this.arrStationName = model.arrStationName;
+                this.arrTime = model.arrTime;
+                this.depStationCode = model.depStationCode;
+                this.depStationName = model.depStationName;
+                this.depTime = model.depTime;
+                this.refundTicketInfos = model.refundTicketInfos;
+                this.trainNo = model.trainNo;
+            } 
 
             /**
              * arr_station_name.
@@ -2334,6 +2510,18 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private String refundId; 
             private java.util.List<RefundTrainInfo> refundTrainInfo; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundInfos model) {
+                this.failCode = model.failCode;
+                this.failMsg = model.failMsg;
+                this.outRefundId = model.outRefundId;
+                this.refundId = model.refundId;
+                this.refundTrainInfo = model.refundTrainInfo;
+                this.status = model.status;
+            } 
 
             /**
              * fail_code.
@@ -2496,6 +2684,19 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private String outOrderId; 
             private java.util.List<PassengerInfoS> passengerInfoS; 
             private java.util.List<RefundInfos> refundInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.bookInfos = model.bookInfos;
+                this.changeInfos = model.changeInfos;
+                this.offlineRefundDetails = model.offlineRefundDetails;
+                this.orderId = model.orderId;
+                this.outOrderId = model.outOrderId;
+                this.passengerInfoS = model.passengerInfoS;
+                this.refundInfos = model.refundInfos;
+            } 
 
             /**
              * book_infos.

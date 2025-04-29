@@ -52,6 +52,10 @@ public class CommonApplyQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CommonApplyQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CommonApplyQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -319,6 +335,24 @@ public class CommonApplyQueryResponseBody extends TeaModel {
             private String tripCause; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.applyId = model.applyId;
+                this.bizCategory = model.bizCategory;
+                this.cause = model.cause;
+                this.corpId = model.corpId;
+                this.extendValue = model.extendValue;
+                this.gmtCreate = model.gmtCreate;
+                this.status = model.status;
+                this.thirdpartCorpId = model.thirdpartCorpId;
+                this.thirdpartId = model.thirdpartId;
+                this.tripCause = model.tripCause;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * apply_id.

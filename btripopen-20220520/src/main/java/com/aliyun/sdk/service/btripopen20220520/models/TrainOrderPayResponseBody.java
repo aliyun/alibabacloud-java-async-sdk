@@ -52,6 +52,10 @@ public class TrainOrderPayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TrainOrderPayResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrainOrderPayResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -214,6 +230,15 @@ public class TrainOrderPayResponseBody extends TeaModel {
             private String orderId; 
             private String outOrderId; 
             private Boolean status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.orderId = model.orderId;
+                this.outOrderId = model.outOrderId;
+                this.status = model.status;
+            } 
 
             /**
              * order_id.

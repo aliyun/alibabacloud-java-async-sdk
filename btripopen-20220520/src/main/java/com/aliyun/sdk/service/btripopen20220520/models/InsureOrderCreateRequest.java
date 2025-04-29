@@ -83,7 +83,7 @@ public class InsureOrderCreateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -397,6 +397,19 @@ public class InsureOrderCreateRequest extends Request {
             private String gender; 
             private String phone; 
 
+            private Builder() {
+            } 
+
+            private Builder(Applicant model) {
+                this.birthday = model.birthday;
+                this.btripUserId = model.btripUserId;
+                this.certName = model.certName;
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.gender = model.gender;
+                this.phone = model.phone;
+            } 
+
             /**
              * birthday.
              */
@@ -588,6 +601,21 @@ public class InsureOrderCreateRequest extends Request {
             private String depTime; 
             private String flightNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(InsureSegment model) {
+                this.arrAirportCode = model.arrAirportCode;
+                this.arrCity = model.arrCity;
+                this.arrCityCode = model.arrCityCode;
+                this.arrTime = model.arrTime;
+                this.depAirportCode = model.depAirportCode;
+                this.depCity = model.depCity;
+                this.depCityCode = model.depCityCode;
+                this.depTime = model.depTime;
+                this.flightNo = model.flightNo;
+            } 
+
             /**
              * arr_airport_code.
              */
@@ -771,6 +799,19 @@ public class InsureOrderCreateRequest extends Request {
             private String gender; 
             private String phone; 
 
+            private Builder() {
+            } 
+
+            private Builder(Insured model) {
+                this.birthday = model.birthday;
+                this.btripUserId = model.btripUserId;
+                this.certName = model.certName;
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.gender = model.gender;
+                this.phone = model.phone;
+            } 
+
             /**
              * birthday.
              */
@@ -889,6 +930,15 @@ public class InsureOrderCreateRequest extends Request {
             private InsureSegment insureSegment; 
             private Insured insured; 
             private String outSubInsOrderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InsPersonAndSegmentList model) {
+                this.insureSegment = model.insureSegment;
+                this.insured = model.insured;
+                this.outSubInsOrderId = model.outSubInsOrderId;
+            } 
 
             /**
              * insure_segment.

@@ -52,6 +52,10 @@ public class ApplyQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ApplyQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApplyQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -260,6 +276,19 @@ public class ApplyQueryResponseBody extends TeaModel {
             private String userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApproverList model) {
+                this.note = model.note;
+                this.operateTime = model.operateTime;
+                this.order = model.order;
+                this.status = model.status;
+                this.statusDesc = model.statusDesc;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * note.
              */
@@ -367,6 +396,14 @@ public class ApplyQueryResponseBody extends TeaModel {
             private String scenarioTemplateId; 
             private String scenarioTemplateName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CarRule model) {
+                this.scenarioTemplateId = model.scenarioTemplateId;
+                this.scenarioTemplateName = model.scenarioTemplateName;
+            } 
+
             /**
              * scenario_template_id.
              */
@@ -445,6 +482,15 @@ public class ApplyQueryResponseBody extends TeaModel {
             private String cityCode; 
             private String cityName; 
             private Long fee; 
+
+            private Builder() {
+            } 
+
+            private Builder(HotelCitys model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.fee = model.fee;
+            } 
 
             /**
              * city_code.
@@ -532,6 +578,15 @@ public class ApplyQueryResponseBody extends TeaModel {
             private String cityCode; 
             private String cityName; 
             private Long fee; 
+
+            private Builder() {
+            } 
+
+            private Builder(HotelIntlCitys model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.fee = model.fee;
+            } 
 
             /**
              * city_code.
@@ -908,6 +963,39 @@ public class ApplyQueryResponseBody extends TeaModel {
             private String trainSeats; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExternalTravelerList model) {
+                this.attribute = model.attribute;
+                this.businessDiscount = model.businessDiscount;
+                this.costCenterName = model.costCenterName;
+                this.departId = model.departId;
+                this.economyDiscount = model.economyDiscount;
+                this.externalUserId = model.externalUserId;
+                this.firstDiscount = model.firstDiscount;
+                this.flightCabins = model.flightCabins;
+                this.flightIntlRuleCode = model.flightIntlRuleCode;
+                this.flightRuleCode = model.flightRuleCode;
+                this.hotelCitys = model.hotelCitys;
+                this.hotelIntlCitys = model.hotelIntlCitys;
+                this.hotelIntlRuleCode = model.hotelIntlRuleCode;
+                this.hotelRuleCode = model.hotelRuleCode;
+                this.invoiceName = model.invoiceName;
+                this.paymentDepartmentId = model.paymentDepartmentId;
+                this.paymentDepartmentName = model.paymentDepartmentName;
+                this.premiumEconomyDiscount = model.premiumEconomyDiscount;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+                this.reserveType = model.reserveType;
+                this.thirdPartInvoiceId = model.thirdPartInvoiceId;
+                this.thirdpartCostCenterId = model.thirdpartCostCenterId;
+                this.thirdpartDepartId = model.thirdpartDepartId;
+                this.trainRuleCode = model.trainRuleCode;
+                this.trainSeats = model.trainSeats;
+                this.userName = model.userName;
+            } 
+
             /**
              * attribute.
              */
@@ -1175,6 +1263,14 @@ public class ApplyQueryResponseBody extends TeaModel {
             private String param; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotelShare model) {
+                this.param = model.param;
+                this.type = model.type;
+            } 
+
             /**
              * param.
              */
@@ -1229,6 +1325,13 @@ public class ApplyQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer hotelAvailableNightsPerDay; 
+
+            private Builder() {
+            } 
+
+            private Builder(ItineraryTravelStandard model) {
+                this.hotelAvailableNightsPerDay = model.hotelAvailableNightsPerDay;
+            } 
 
             /**
              * hotel_available_nights_per_day.
@@ -1481,6 +1584,30 @@ public class ApplyQueryResponseBody extends TeaModel {
             private Integer trafficType; 
             private Integer tripWay; 
 
+            private Builder() {
+            } 
+
+            private Builder(ItineraryList model) {
+                this.arrCity = model.arrCity;
+                this.arrCityCode = model.arrCityCode;
+                this.arrDate = model.arrDate;
+                this.attribute = model.attribute;
+                this.costCenterName = model.costCenterName;
+                this.depCity = model.depCity;
+                this.depCityCode = model.depCityCode;
+                this.depDate = model.depDate;
+                this.invoiceName = model.invoiceName;
+                this.itineraryId = model.itineraryId;
+                this.itineraryTravelStandard = model.itineraryTravelStandard;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+                this.thirdpartCostCenterId = model.thirdpartCostCenterId;
+                this.thirdpartInvoiceId = model.thirdpartInvoiceId;
+                this.thirdpartItineraryId = model.thirdpartItineraryId;
+                this.trafficType = model.trafficType;
+                this.tripWay = model.tripWay;
+            } 
+
             /**
              * arr_city.
              */
@@ -1663,6 +1790,13 @@ public class ApplyQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer hotelAvailableNightsPerDay; 
+
+            private Builder() {
+            } 
+
+            private Builder(ItinerarySetListItineraryTravelStandard model) {
+                this.hotelAvailableNightsPerDay = model.hotelAvailableNightsPerDay;
+            } 
 
             /**
              * hotel_available_nights_per_day.
@@ -1879,6 +2013,27 @@ public class ApplyQueryResponseBody extends TeaModel {
             private String thirdpartItineraryId; 
             private Integer trafficType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ItinerarySetList model) {
+                this.arrDate = model.arrDate;
+                this.attribute = model.attribute;
+                this.cityCodeSet = model.cityCodeSet;
+                this.citySet = model.citySet;
+                this.costCenterName = model.costCenterName;
+                this.depDate = model.depDate;
+                this.invoiceName = model.invoiceName;
+                this.itineraryId = model.itineraryId;
+                this.itineraryTravelStandard = model.itineraryTravelStandard;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+                this.thirdpartCostCenterId = model.thirdpartCostCenterId;
+                this.thirdpartInvoiceId = model.thirdpartInvoiceId;
+                this.thirdpartItineraryId = model.thirdpartItineraryId;
+                this.trafficType = model.trafficType;
+            } 
+
             /**
              * arr_date.
              */
@@ -2050,6 +2205,14 @@ public class ApplyQueryResponseBody extends TeaModel {
             private String cityCode; 
             private String cityName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CarCitySet model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+            } 
+
             /**
              * city_code.
              */
@@ -2128,6 +2291,15 @@ public class ApplyQueryResponseBody extends TeaModel {
             private String cityCode; 
             private String cityName; 
             private Long fee; 
+
+            private Builder() {
+            } 
+
+            private Builder(TravelerListHotelCitys model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.fee = model.fee;
+            } 
 
             /**
              * city_code.
@@ -2215,6 +2387,15 @@ public class ApplyQueryResponseBody extends TeaModel {
             private String cityCode; 
             private String cityName; 
             private Long fee; 
+
+            private Builder() {
+            } 
+
+            private Builder(TravelerListHotelIntlCitys model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.fee = model.fee;
+            } 
 
             /**
              * city_code.
@@ -2603,6 +2784,40 @@ public class ApplyQueryResponseBody extends TeaModel {
             private String userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TravelerList model) {
+                this.attribute = model.attribute;
+                this.businessDiscount = model.businessDiscount;
+                this.carCitySet = model.carCitySet;
+                this.costCenterName = model.costCenterName;
+                this.departId = model.departId;
+                this.economyDiscount = model.economyDiscount;
+                this.firstDiscount = model.firstDiscount;
+                this.flightCabins = model.flightCabins;
+                this.flightIntlRuleCode = model.flightIntlRuleCode;
+                this.flightRuleCode = model.flightRuleCode;
+                this.hotelCitys = model.hotelCitys;
+                this.hotelIntlCitys = model.hotelIntlCitys;
+                this.hotelIntlRuleCode = model.hotelIntlRuleCode;
+                this.hotelRuleCode = model.hotelRuleCode;
+                this.invoiceName = model.invoiceName;
+                this.paymentDepartmentId = model.paymentDepartmentId;
+                this.paymentDepartmentName = model.paymentDepartmentName;
+                this.premiumEconomyDiscount = model.premiumEconomyDiscount;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+                this.reserveType = model.reserveType;
+                this.thirdPartInvoiceId = model.thirdPartInvoiceId;
+                this.thirdpartCostCenterId = model.thirdpartCostCenterId;
+                this.thirdpartDepartId = model.thirdpartDepartId;
+                this.trainRuleCode = model.trainRuleCode;
+                this.trainSeats = model.trainSeats;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * attribute.
              */
@@ -2910,6 +3125,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("limit_traveler")
         private Integer limitTraveler;
 
+        @com.aliyun.core.annotation.NameInMap("meal_budget")
+        private Long mealBudget;
+
         @com.aliyun.core.annotation.NameInMap("payment_department_id")
         private String paymentDepartmentId;
 
@@ -2985,6 +3203,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             this.itineraryRule = builder.itineraryRule;
             this.itinerarySetList = builder.itinerarySetList;
             this.limitTraveler = builder.limitTraveler;
+            this.mealBudget = builder.mealBudget;
             this.paymentDepartmentId = builder.paymentDepartmentId;
             this.paymentDepartmentName = builder.paymentDepartmentName;
             this.status = builder.status;
@@ -3174,6 +3393,13 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return mealBudget
+         */
+        public Long getMealBudget() {
+            return this.mealBudget;
+        }
+
+        /**
          * @return paymentDepartmentId
          */
         public String getPaymentDepartmentId() {
@@ -3316,6 +3542,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             private Integer itineraryRule; 
             private java.util.List<ItinerarySetList> itinerarySetList; 
             private Integer limitTraveler; 
+            private Long mealBudget; 
             private String paymentDepartmentId; 
             private String paymentDepartmentName; 
             private Integer status; 
@@ -3333,6 +3560,53 @@ public class ApplyQueryResponseBody extends TeaModel {
             private String userId; 
             private String userName; 
             private Long vehicleBudget; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.applyShowId = model.applyShowId;
+                this.approverList = model.approverList;
+                this.budget = model.budget;
+                this.budgetMerge = model.budgetMerge;
+                this.carRule = model.carRule;
+                this.corpId = model.corpId;
+                this.corpName = model.corpName;
+                this.departId = model.departId;
+                this.departName = model.departName;
+                this.extendField = model.extendField;
+                this.externalTravelerList = model.externalTravelerList;
+                this.flightBudget = model.flightBudget;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.hotelBudget = model.hotelBudget;
+                this.hotelShare = model.hotelShare;
+                this.id = model.id;
+                this.intlFlightBudget = model.intlFlightBudget;
+                this.intlHotelBudget = model.intlHotelBudget;
+                this.itineraryList = model.itineraryList;
+                this.itineraryRule = model.itineraryRule;
+                this.itinerarySetList = model.itinerarySetList;
+                this.limitTraveler = model.limitTraveler;
+                this.mealBudget = model.mealBudget;
+                this.paymentDepartmentId = model.paymentDepartmentId;
+                this.paymentDepartmentName = model.paymentDepartmentName;
+                this.status = model.status;
+                this.statusDesc = model.statusDesc;
+                this.thirdpartBusinessId = model.thirdpartBusinessId;
+                this.thirdpartId = model.thirdpartId;
+                this.togetherBookRule = model.togetherBookRule;
+                this.trainBudget = model.trainBudget;
+                this.travelerList = model.travelerList;
+                this.tripCause = model.tripCause;
+                this.tripDay = model.tripDay;
+                this.tripTitle = model.tripTitle;
+                this.type = model.type;
+                this.unionNo = model.unionNo;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.vehicleBudget = model.vehicleBudget;
+            } 
 
             /**
              * apply_show_id.
@@ -3518,6 +3792,14 @@ public class ApplyQueryResponseBody extends TeaModel {
              */
             public Builder limitTraveler(Integer limitTraveler) {
                 this.limitTraveler = limitTraveler;
+                return this;
+            }
+
+            /**
+             * meal_budget.
+             */
+            public Builder mealBudget(Long mealBudget) {
+                this.mealBudget = mealBudget;
                 return this;
             }
 

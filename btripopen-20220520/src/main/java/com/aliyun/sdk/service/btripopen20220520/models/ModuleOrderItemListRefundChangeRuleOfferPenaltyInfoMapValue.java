@@ -88,6 +88,10 @@ public class ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue extends
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return struct
      */
@@ -209,6 +213,27 @@ public class ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue extends
         private Integer endTime; 
         private Integer timeUnitCode; 
         private String title; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue model) {
+            this.struct = model.struct;
+            this.cancelFeeInd = model.cancelFeeInd;
+            this.changeFeeInd = model.changeFeeInd;
+            this.upgradeFeeInd = model.upgradeFeeInd;
+            this.reissueInd = model.reissueInd;
+            this.penaltyTypeCode = model.penaltyTypeCode;
+            this.penaltyApplyRangeCode = model.penaltyApplyRangeCode;
+            this.penaltyChargeTypeCode = model.penaltyChargeTypeCode;
+            this.fee = model.fee;
+            this.currency = model.currency;
+            this.penaltyPercent = model.penaltyPercent;
+            this.startTime = model.startTime;
+            this.endTime = model.endTime;
+            this.timeUnitCode = model.timeUnitCode;
+            this.title = model.title;
+        } 
 
         /**
          * struct.

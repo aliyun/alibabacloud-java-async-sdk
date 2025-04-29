@@ -52,6 +52,10 @@ public class HotelIndexInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelIndexInfoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelIndexInfoResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -200,6 +216,14 @@ public class HotelIndexInfoResponseBody extends TeaModel {
             private String hotelId; 
             private String hotelStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.hotelId = model.hotelId;
+                this.hotelStatus = model.hotelStatus;
+            } 
+
             /**
              * hotel_id.
              */
@@ -278,6 +302,15 @@ public class HotelIndexInfoResponseBody extends TeaModel {
             private java.util.List<Items> items; 
             private Integer pageSize; 
             private String pageToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.items = model.items;
+                this.pageSize = model.pageSize;
+                this.pageToken = model.pageToken;
+            } 
 
             /**
              * items.

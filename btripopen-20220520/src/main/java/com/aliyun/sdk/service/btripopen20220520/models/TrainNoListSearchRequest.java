@@ -63,7 +63,7 @@ public class TrainNoListSearchRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -228,6 +228,13 @@ public class TrainNoListSearchRequest extends Request {
 
         public static final class Builder {
             private Boolean needTransfer; 
+
+            private Builder() {
+            } 
+
+            private Builder(Option model) {
+                this.needTransfer = model.needTransfer;
+            } 
 
             /**
              * need_transfer.

@@ -52,6 +52,10 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrainTicketScanQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -446,6 +462,34 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             private String ticketNo; 
             private String trainNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.applyId = model.applyId;
+                this.arrStation = model.arrStation;
+                this.billDate = model.billDate;
+                this.coachName = model.coachName;
+                this.costCenter = model.costCenter;
+                this.depStation = model.depStation;
+                this.depTime = model.depTime;
+                this.department = model.department;
+                this.id = model.id;
+                this.invoiceTitle = model.invoiceTitle;
+                this.orderId = model.orderId;
+                this.ossUrl = model.ossUrl;
+                this.passenger = model.passenger;
+                this.price = model.price;
+                this.project = model.project;
+                this.seat = model.seat;
+                this.seatNo = model.seatNo;
+                this.serialNumber = model.serialNumber;
+                this.taxAmount = model.taxAmount;
+                this.taxRate = model.taxRate;
+                this.ticketNo = model.ticketNo;
+                this.trainNo = model.trainNo;
+            } 
+
             /**
              * apply_id.
              */
@@ -714,6 +758,17 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalPage; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.items = model.items;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.totalPage = model.totalPage;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * items.

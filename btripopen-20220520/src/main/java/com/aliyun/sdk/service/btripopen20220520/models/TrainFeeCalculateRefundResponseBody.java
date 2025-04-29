@@ -52,6 +52,10 @@ public class TrainFeeCalculateRefundResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TrainFeeCalculateRefundResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrainFeeCalculateRefundResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -226,6 +242,16 @@ public class TrainFeeCalculateRefundResponseBody extends TeaModel {
             private String passengerCertType; 
             private String passengerId; 
             private String passengerName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerInfo model) {
+                this.passengerCertNo = model.passengerCertNo;
+                this.passengerCertType = model.passengerCertType;
+                this.passengerId = model.passengerId;
+                this.passengerName = model.passengerName;
+            } 
 
             /**
              * passenger_cert_no.
@@ -357,6 +383,18 @@ public class TrainFeeCalculateRefundResponseBody extends TeaModel {
             private Long refundPrice; 
             private Long refundRate; 
             private Long ticketPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundTicketDetails model) {
+                this.canRefund = model.canRefund;
+                this.passengerInfo = model.passengerInfo;
+                this.refundCostFee = model.refundCostFee;
+                this.refundPrice = model.refundPrice;
+                this.refundRate = model.refundRate;
+                this.ticketPrice = model.ticketPrice;
+            } 
 
             /**
              * can_refund.
@@ -493,6 +531,17 @@ public class TrainFeeCalculateRefundResponseBody extends TeaModel {
             private java.util.List<RefundTicketDetails> refundTicketDetails; 
             private String trainNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(RefundTrainDetails model) {
+                this.arrStationCode = model.arrStationCode;
+                this.depStationCode = model.depStationCode;
+                this.depTime = model.depTime;
+                this.refundTicketDetails = model.refundTicketDetails;
+                this.trainNo = model.trainNo;
+            } 
+
             /**
              * arr_station_code.
              */
@@ -595,6 +644,15 @@ public class TrainFeeCalculateRefundResponseBody extends TeaModel {
             private String distributeOrderId; 
             private String orderId; 
             private java.util.List<RefundTrainDetails> refundTrainDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.distributeOrderId = model.distributeOrderId;
+                this.orderId = model.orderId;
+                this.refundTrainDetails = model.refundTrainDetails;
+            } 
 
             /**
              * distribute_order_id.

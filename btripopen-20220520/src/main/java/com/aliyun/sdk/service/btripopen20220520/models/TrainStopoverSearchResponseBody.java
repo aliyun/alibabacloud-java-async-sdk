@@ -52,6 +52,10 @@ public class TrainStopoverSearchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TrainStopoverSearchResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrainStopoverSearchResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -250,6 +266,18 @@ public class TrainStopoverSearchResponseBody extends TeaModel {
             private String stationNo; 
             private String stationType; 
             private String stopOverTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.arrTime = model.arrTime;
+                this.depTime = model.depTime;
+                this.stationName = model.stationName;
+                this.stationNo = model.stationNo;
+                this.stationType = model.stationType;
+                this.stopOverTime = model.stopOverTime;
+            } 
 
             /**
              * arr_time.

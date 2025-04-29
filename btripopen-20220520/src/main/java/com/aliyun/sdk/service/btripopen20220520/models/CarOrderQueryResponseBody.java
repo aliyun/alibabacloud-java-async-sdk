@@ -52,6 +52,10 @@ public class CarOrderQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CarOrderQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CarOrderQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -518,6 +534,40 @@ public class CarOrderQueryResponseBody extends TeaModel {
             private String toCityName; 
             private String travelDistance; 
 
+            private Builder() {
+            } 
+
+            private Builder(CarInfo model) {
+                this.businessCategory = model.businessCategory;
+                this.cancelTime = model.cancelTime;
+                this.carInfo = model.carInfo;
+                this.carLevel = model.carLevel;
+                this.driverCard = model.driverCard;
+                this.driverConfirmTime = model.driverConfirmTime;
+                this.driverName = model.driverName;
+                this.estimatePrice = model.estimatePrice;
+                this.fromAddress = model.fromAddress;
+                this.fromCityAdCode = model.fromCityAdCode;
+                this.fromCityName = model.fromCityName;
+                this.isSpecial = model.isSpecial;
+                this.memo = model.memo;
+                this.payTime = model.payTime;
+                this.publishTime = model.publishTime;
+                this.realFromAddress = model.realFromAddress;
+                this.realFromCityAdCode = model.realFromCityAdCode;
+                this.realFromCityName = model.realFromCityName;
+                this.realToAddress = model.realToAddress;
+                this.realToCityAdCode = model.realToCityAdCode;
+                this.realToCityName = model.realToCityName;
+                this.serviceType = model.serviceType;
+                this.specialTypes = model.specialTypes;
+                this.takenTime = model.takenTime;
+                this.toAddress = model.toAddress;
+                this.toCityAdCode = model.toCityAdCode;
+                this.toCityName = model.toCityName;
+                this.travelDistance = model.travelDistance;
+            } 
+
             /**
              * business_category.
              */
@@ -793,6 +843,14 @@ public class CarOrderQueryResponseBody extends TeaModel {
             private Long id; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(InvoiceInfo model) {
+                this.id = model.id;
+                this.title = model.title;
+            } 
+
             /**
              * id.
              */
@@ -1063,6 +1121,31 @@ public class CarOrderQueryResponseBody extends TeaModel {
             private String thirdpartItineraryId; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderBaseInfo model) {
+                this.applyId = model.applyId;
+                this.btripCause = model.btripCause;
+                this.btripTitle = model.btripTitle;
+                this.corpId = model.corpId;
+                this.corpName = model.corpName;
+                this.departId = model.departId;
+                this.departName = model.departName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.itineraryId = model.itineraryId;
+                this.orderId = model.orderId;
+                this.orderStatus = model.orderStatus;
+                this.subOrderId = model.subOrderId;
+                this.thirdDepartId = model.thirdDepartId;
+                this.thirdpartApplyId = model.thirdpartApplyId;
+                this.thirdpartBusinessId = model.thirdpartBusinessId;
+                this.thirdpartItineraryId = model.thirdpartItineraryId;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * apply_id.
@@ -1375,6 +1458,23 @@ public class CarOrderQueryResponseBody extends TeaModel {
             private String userName; 
             private Integer userType; 
 
+            private Builder() {
+            } 
+
+            private Builder(PassengerList model) {
+                this.costCenterId = model.costCenterId;
+                this.costCenterName = model.costCenterName;
+                this.costCenterNumber = model.costCenterNumber;
+                this.projectCode = model.projectCode;
+                this.projectId = model.projectId;
+                this.projectTitle = model.projectTitle;
+                this.thirdpartCostCenterId = model.thirdpartCostCenterId;
+                this.thirdpartProjectId = model.thirdpartProjectId;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.userType = model.userType;
+            } 
+
             /**
              * cost_center_id.
              */
@@ -1574,6 +1674,19 @@ public class CarOrderQueryResponseBody extends TeaModel {
             private String tradeId; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(PriceInfoList model) {
+                this.categoryCode = model.categoryCode;
+                this.gmtCreate = model.gmtCreate;
+                this.payType = model.payType;
+                this.personPrice = model.personPrice;
+                this.price = model.price;
+                this.tradeId = model.tradeId;
+                this.type = model.type;
+            } 
+
             /**
              * category_code.
              */
@@ -1716,6 +1829,17 @@ public class CarOrderQueryResponseBody extends TeaModel {
             private OrderBaseInfo orderBaseInfo; 
             private java.util.List<PassengerList> passengerList; 
             private java.util.List<PriceInfoList> priceInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.carInfo = model.carInfo;
+                this.invoiceInfo = model.invoiceInfo;
+                this.orderBaseInfo = model.orderBaseInfo;
+                this.passengerList = model.passengerList;
+                this.priceInfoList = model.priceInfoList;
+            } 
 
             /**
              * car_info.

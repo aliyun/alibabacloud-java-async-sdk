@@ -52,6 +52,10 @@ public class CarSceneQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CarSceneQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CarSceneQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -214,6 +230,15 @@ public class CarSceneQueryResponseBody extends TeaModel {
             private String scenarioTemplateId; 
             private String scenarioTemplateName; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.scenarioTemplateId = model.scenarioTemplateId;
+                this.scenarioTemplateName = model.scenarioTemplateName;
+                this.state = model.state;
+            } 
 
             /**
              * scenarioTemplateId.

@@ -52,6 +52,10 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return module
      */
@@ -101,6 +105,18 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         private String resultMsg; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IntlFlightInventoryPriceCheckResponseBody model) {
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.resultCode = model.resultCode;
+            this.resultMsg = model.resultMsg;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * module.
@@ -224,6 +240,16 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
             private Long taxPrice; 
             private Long ticketPrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangedPrice model) {
+                this.buildPrice = model.buildPrice;
+                this.oilPrice = model.oilPrice;
+                this.taxPrice = model.taxPrice;
+                this.ticketPrice = model.ticketPrice;
+            } 
+
             /**
              * build_price.
              */
@@ -330,6 +356,16 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
             private Long oilPrice; 
             private Long taxPrice; 
             private Long ticketPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(OriginalPrice model) {
+                this.buildPrice = model.buildPrice;
+                this.oilPrice = model.oilPrice;
+                this.taxPrice = model.taxPrice;
+                this.ticketPrice = model.ticketPrice;
+            } 
 
             /**
              * build_price.
@@ -438,6 +474,16 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
             private OriginalPrice originalPrice; 
             private Integer passengerType; 
 
+            private Builder() {
+            } 
+
+            private Builder(PassengerChangedPriceInfoList model) {
+                this.changed = model.changed;
+                this.changedPrice = model.changedPrice;
+                this.originalPrice = model.originalPrice;
+                this.passengerType = model.passengerType;
+            } 
+
             /**
              * changed.
              */
@@ -544,6 +590,16 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
             private Integer failType; 
             private java.util.List<PassengerChangedPriceInfoList> passengerChangedPriceInfoList; 
             private String renderKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.checkSuccess = model.checkSuccess;
+                this.failType = model.failType;
+                this.passengerChangedPriceInfoList = model.passengerChangedPriceInfoList;
+                this.renderKey = model.renderKey;
+            } 
 
             /**
              * check_success.

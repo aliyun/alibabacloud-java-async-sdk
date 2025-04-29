@@ -56,6 +56,10 @@ public class CarApplyQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applyList
      */
@@ -113,6 +117,19 @@ public class CarApplyQueryResponseBody extends TeaModel {
         private Boolean success; 
         private Integer total; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CarApplyQueryResponseBody model) {
+            this.applyList = model.applyList;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.total = model.total;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * apply_list.
@@ -279,6 +296,19 @@ public class CarApplyQueryResponseBody extends TeaModel {
             private String statusDesc; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApproverList model) {
+                this.note = model.note;
+                this.operateTime = model.operateTime;
+                this.order = model.order;
+                this.status = model.status;
+                this.statusDesc = model.statusDesc;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * note.
@@ -531,6 +561,26 @@ public class CarApplyQueryResponseBody extends TeaModel {
             private String projectTitle; 
             private Integer trafficType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ItineraryList model) {
+                this.arrCity = model.arrCity;
+                this.arrCityCode = model.arrCityCode;
+                this.arrDate = model.arrDate;
+                this.costCenterId = model.costCenterId;
+                this.costCenterName = model.costCenterName;
+                this.depCity = model.depCity;
+                this.depCityCode = model.depCityCode;
+                this.depDate = model.depDate;
+                this.invoiceId = model.invoiceId;
+                this.invoiceName = model.invoiceName;
+                this.itineraryId = model.itineraryId;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+                this.trafficType = model.trafficType;
+            } 
+
             /**
              * arr_city.
              */
@@ -694,6 +744,14 @@ public class CarApplyQueryResponseBody extends TeaModel {
             private String cityCode; 
             private String cityName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CarCitySet model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+            } 
+
             /**
              * city_code.
              */
@@ -760,6 +818,14 @@ public class CarApplyQueryResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CarCitySet> carCitySet; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TravelerStandard model) {
+                this.carCitySet = model.carCitySet;
+                this.userId = model.userId;
+            } 
 
             /**
              * car_city_set.
@@ -1007,6 +1073,29 @@ public class CarApplyQueryResponseBody extends TeaModel {
             private String tripTitle; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplyList model) {
+                this.approverList = model.approverList;
+                this.businessType = model.businessType;
+                this.departId = model.departId;
+                this.departName = model.departName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.itineraryList = model.itineraryList;
+                this.orderId = model.orderId;
+                this.relatedThirdApplyId = model.relatedThirdApplyId;
+                this.status = model.status;
+                this.statusDesc = model.statusDesc;
+                this.thirdpartId = model.thirdpartId;
+                this.travelerStandard = model.travelerStandard;
+                this.tripCause = model.tripCause;
+                this.tripTitle = model.tripTitle;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * approver_list.

@@ -73,7 +73,7 @@ public class FlightOtaSearchV2Request extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -355,6 +355,19 @@ public class FlightOtaSearchV2Request extends Request {
             private String marketFlightNo; 
             private String operateFlightNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(SelectedFlights model) {
+                this.arrAirportCode = model.arrAirportCode;
+                this.arrCityCode = model.arrCityCode;
+                this.depAirportCode = model.depAirportCode;
+                this.depCityCode = model.depCityCode;
+                this.flightTime = model.flightTime;
+                this.marketFlightNo = model.marketFlightNo;
+                this.operateFlightNo = model.operateFlightNo;
+            } 
+
             /**
              * arr_airport_code.
              */
@@ -492,6 +505,16 @@ public class FlightOtaSearchV2Request extends Request {
             private String depCityCode; 
             private String depDate; 
             private java.util.List<SelectedFlights> selectedFlights; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchJourneys model) {
+                this.arrCityCode = model.arrCityCode;
+                this.depCityCode = model.depCityCode;
+                this.depDate = model.depDate;
+                this.selectedFlights = model.selectedFlights;
+            } 
 
             /**
              * <p>This parameter is required.</p>

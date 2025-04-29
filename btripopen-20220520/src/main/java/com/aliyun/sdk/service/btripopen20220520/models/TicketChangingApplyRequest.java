@@ -79,7 +79,7 @@ public class TicketChangingApplyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -335,6 +335,15 @@ public class TicketChangingApplyRequest extends Request {
             private String outUserId; 
             private String passengerName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PassengerInfoList model) {
+                this.originFlightNo = model.originFlightNo;
+                this.outUserId = model.outUserId;
+                this.passengerName = model.passengerName;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -468,6 +477,18 @@ public class TicketChangingApplyRequest extends Request {
             private String depDate; 
             private String flightNo; 
             private java.util.List<PassengerInfoList> passengerInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModifyFlightInfoList model) {
+                this.arrCity = model.arrCity;
+                this.cabin = model.cabin;
+                this.depCity = model.depCity;
+                this.depDate = model.depDate;
+                this.flightNo = model.flightNo;
+                this.passengerInfoList = model.passengerInfoList;
+            } 
 
             /**
              * <p>This parameter is required.</p>

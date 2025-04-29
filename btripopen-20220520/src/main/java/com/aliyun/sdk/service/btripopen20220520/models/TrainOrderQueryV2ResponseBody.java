@@ -52,6 +52,10 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrainOrderQueryV2ResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -506,6 +522,39 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private String useTicket; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeTicketInfoList model) {
+                this.changeCoachNo = model.changeCoachNo;
+                this.changeGapFee = model.changeGapFee;
+                this.changeHandlingFee = model.changeHandlingFee;
+                this.changeSeatNo = model.changeSeatNo;
+                this.changeSeatTypeName = model.changeSeatTypeName;
+                this.changeServiceFee = model.changeServiceFee;
+                this.changeTrainNo = model.changeTrainNo;
+                this.changeTrainTypeName = model.changeTrainTypeName;
+                this.checkInTime = model.checkInTime;
+                this.checkOutTime = model.checkOutTime;
+                this.endTime = model.endTime;
+                this.fromCityName = model.fromCityName;
+                this.fromStationName = model.fromStationName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModify = model.gmtModify;
+                this.originTicketNo = model.originTicketNo;
+                this.outTicketStatus = model.outTicketStatus;
+                this.segmentIndex = model.segmentIndex;
+                this.shortTicketNo = model.shortTicketNo;
+                this.startTime = model.startTime;
+                this.ticketEntrance = model.ticketEntrance;
+                this.ticketNo = model.ticketNo;
+                this.ticketStatus = model.ticketStatus;
+                this.toCityName = model.toCityName;
+                this.toStationName = model.toStationName;
+                this.useTicket = model.useTicket;
+                this.userId = model.userId;
+            } 
+
             /**
              * change_coach_no.
              */
@@ -772,6 +821,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvoiceInfo model) {
+                this.id = model.id;
+                this.title = model.title;
+            } 
 
             /**
              * id.
@@ -1079,6 +1136,34 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private Integer tripType; 
             private String userId; 
             private String userNick; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderBaseInfo model) {
+                this.applyId = model.applyId;
+                this.btripTitle = model.btripTitle;
+                this.contactName = model.contactName;
+                this.contactPhone = model.contactPhone;
+                this.corpId = model.corpId;
+                this.corpName = model.corpName;
+                this.departId = model.departId;
+                this.departName = model.departName;
+                this.exceedApplyId = model.exceedApplyId;
+                this.exceedThirdpartApplyId = model.exceedThirdpartApplyId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModify = model.gmtModify;
+                this.itineraryId = model.itineraryId;
+                this.orderId = model.orderId;
+                this.orderStatus = model.orderStatus;
+                this.thirdPartBusinessId = model.thirdPartBusinessId;
+                this.thirdpartApplyId = model.thirdpartApplyId;
+                this.thirdpartDepartId = model.thirdpartDepartId;
+                this.thirdpartItineraryId = model.thirdpartItineraryId;
+                this.tripType = model.tripType;
+                this.userId = model.userId;
+                this.userNick = model.userNick;
+            } 
 
             /**
              * apply_id.
@@ -1415,6 +1500,23 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private String userName; 
             private Integer userType; 
 
+            private Builder() {
+            } 
+
+            private Builder(PassengerInfoList model) {
+                this.costCenterId = model.costCenterId;
+                this.costCenterName = model.costCenterName;
+                this.costCenterNumber = model.costCenterNumber;
+                this.projectCode = model.projectCode;
+                this.projectId = model.projectId;
+                this.projectTitle = model.projectTitle;
+                this.thirdpartCostCenterId = model.thirdpartCostCenterId;
+                this.thirdpartProjectId = model.thirdpartProjectId;
+                this.userId = model.userId;
+                this.userName = model.userName;
+                this.userType = model.userType;
+            } 
+
             /**
              * cost_center_id.
              */
@@ -1614,6 +1716,19 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private String tradeId; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(PriceInfoList model) {
+                this.categoryCode = model.categoryCode;
+                this.gmtCreate = model.gmtCreate;
+                this.passengerName = model.passengerName;
+                this.payType = model.payType;
+                this.price = model.price;
+                this.tradeId = model.tradeId;
+                this.type = model.type;
+            } 
+
             /**
              * category_code.
              */
@@ -1768,6 +1883,18 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private Double refundServiceFee; 
             private String ticketNo; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundTicketInfoList model) {
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModify = model.gmtModify;
+                this.refundFee = model.refundFee;
+                this.refundServiceFee = model.refundServiceFee;
+                this.ticketNo = model.ticketNo;
+                this.userId = model.userId;
+            } 
 
             /**
              * gmt_create.
@@ -2107,6 +2234,34 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private String trainTypeName; 
             private String useTicket; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrainTicketInfos model) {
+                this.changed = model.changed;
+                this.checkInTime = model.checkInTime;
+                this.checkOutTime = model.checkOutTime;
+                this.coachNo = model.coachNo;
+                this.endTime = model.endTime;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModify = model.gmtModify;
+                this.outTicketStatus = model.outTicketStatus;
+                this.payType = model.payType;
+                this.seatNo = model.seatNo;
+                this.seatTypeName = model.seatTypeName;
+                this.segmentIndex = model.segmentIndex;
+                this.serviceFee = model.serviceFee;
+                this.shortTicketNo = model.shortTicketNo;
+                this.startTime = model.startTime;
+                this.ticketEntrance = model.ticketEntrance;
+                this.ticketNo = model.ticketNo;
+                this.ticketPrice = model.ticketPrice;
+                this.ticketStatus = model.ticketStatus;
+                this.trainTypeName = model.trainTypeName;
+                this.useTicket = model.useTicket;
+                this.userId = model.userId;
+            } 
 
             /**
              * changed.
@@ -2502,6 +2657,28 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private String toStationName; 
             private String trainNo; 
             private java.util.List<TrainTicketInfos> trainTicketInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrainInfoList model) {
+                this.arrTime = model.arrTime;
+                this.depTime = model.depTime;
+                this.fromCityAdCode = model.fromCityAdCode;
+                this.fromCityName = model.fromCityName;
+                this.fromStationName = model.fromStationName;
+                this.itemId = model.itemId;
+                this.runTime = model.runTime;
+                this.subFromCityAdCode = model.subFromCityAdCode;
+                this.subFromCityAdName = model.subFromCityAdName;
+                this.subToCityCode = model.subToCityCode;
+                this.subToCityName = model.subToCityName;
+                this.toCityAdCode = model.toCityAdCode;
+                this.toCityName = model.toCityName;
+                this.toStationName = model.toStationName;
+                this.trainNo = model.trainNo;
+                this.trainTicketInfos = model.trainTicketInfos;
+            } 
 
             /**
              * arr_time.
@@ -2913,6 +3090,33 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private String toStationName; 
             private String waitTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrainTransferInfo model) {
+                this.costTime = model.costTime;
+                this.endTime = model.endTime;
+                this.fromCityAdCode = model.fromCityAdCode;
+                this.fromCityName = model.fromCityName;
+                this.fromStationName = model.fromStationName;
+                this.middleCity = model.middleCity;
+                this.middleCityAdCode = model.middleCityAdCode;
+                this.middleDate = model.middleDate;
+                this.middleStation = model.middleStation;
+                this.middleType = model.middleType;
+                this.startTime = model.startTime;
+                this.subFromCityAdCode = model.subFromCityAdCode;
+                this.subFromCityAdName = model.subFromCityAdName;
+                this.subMiddleCityCode = model.subMiddleCityCode;
+                this.subMiddleCityName = model.subMiddleCityName;
+                this.subToCityCode = model.subToCityCode;
+                this.subToCityName = model.subToCityName;
+                this.toCityAdCode = model.toCityAdCode;
+                this.toCityName = model.toCityName;
+                this.toStationName = model.toStationName;
+                this.waitTime = model.waitTime;
+            } 
+
             /**
              * cost_time.
              */
@@ -3132,6 +3336,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private java.util.List<TrainInfoList> trainInfoList; 
             private TrainTransferInfo trainTransferInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrainOrderInfo model) {
+                this.trainInfoList = model.trainInfoList;
+                this.trainTransferInfo = model.trainTransferInfo;
+            } 
+
             /**
              * train_info_list.
              */
@@ -3258,6 +3470,19 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private java.util.List<PriceInfoList> priceInfoList; 
             private java.util.List<RefundTicketInfoList> refundTicketInfoList; 
             private TrainOrderInfo trainOrderInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.changeTicketInfoList = model.changeTicketInfoList;
+                this.invoiceInfo = model.invoiceInfo;
+                this.orderBaseInfo = model.orderBaseInfo;
+                this.passengerInfoList = model.passengerInfoList;
+                this.priceInfoList = model.priceInfoList;
+                this.refundTicketInfoList = model.refundTicketInfoList;
+                this.trainOrderInfo = model.trainOrderInfo;
+            } 
 
             /**
              * change_ticket_info_list.

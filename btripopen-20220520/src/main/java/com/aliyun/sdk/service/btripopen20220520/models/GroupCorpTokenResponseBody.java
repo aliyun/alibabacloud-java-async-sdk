@@ -52,6 +52,10 @@ public class GroupCorpTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GroupCorpTokenResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GroupCorpTokenResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -217,6 +233,15 @@ public class GroupCorpTokenResponseBody extends TeaModel {
             private Long expire; 
             private Long start; 
             private String token; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.expire = model.expire;
+                this.start = model.start;
+                this.token = model.token;
+            } 
 
             /**
              * expire.

@@ -52,6 +52,10 @@ public class FlightListingSearchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightListingSearchResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightListingSearchResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -212,6 +228,15 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String airlineName; 
             private String airlineSimpleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AirlineInfo model) {
+                this.airlineCode = model.airlineCode;
+                this.airlineName = model.airlineName;
+                this.airlineSimpleName = model.airlineSimpleName;
+            } 
+
             /**
              * airline_code.
              */
@@ -322,6 +347,17 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String cityCode; 
             private String cityName; 
             private String terminal; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArrAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.terminal = model.terminal;
+            } 
 
             /**
              * airport_code.
@@ -450,6 +486,17 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String cityName; 
             private String terminal; 
 
+            private Builder() {
+            } 
+
+            private Builder(DepAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.terminal = model.terminal;
+            } 
+
             /**
              * airport_code.
              */
@@ -565,6 +612,16 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String image; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Description model) {
+                this.desc = model.desc;
+                this.icon = model.icon;
+                this.image = model.image;
+                this.title = model.title;
+            } 
+
             /**
              * desc.
              */
@@ -671,6 +728,16 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String largest; 
             private String middle; 
             private String smallest; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageDO model) {
+                this.image = model.image;
+                this.largest = model.largest;
+                this.middle = model.middle;
+                this.smallest = model.smallest;
+            } 
 
             /**
              * image.
@@ -802,6 +869,18 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private ImageDO imageDO; 
             private Boolean isHighlight; 
             private String subTitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(BaggageSubContentVisualizes model) {
+                this.baggageDesc = model.baggageDesc;
+                this.baggageSubContentType = model.baggageSubContentType;
+                this.description = model.description;
+                this.imageDO = model.imageDO;
+                this.isHighlight = model.isHighlight;
+                this.subTitle = model.subTitle;
+            } 
 
             /**
              * baggage_desc.
@@ -938,6 +1017,17 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String ptc; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(BaggageSubItems model) {
+                this.baggageSubContentVisualizes = model.baggageSubContentVisualizes;
+                this.extraContentVisualizes = model.extraContentVisualizes;
+                this.isStruct = model.isStruct;
+                this.ptc = model.ptc;
+                this.title = model.title;
+            } 
+
             /**
              * baggage_sub_content_visualizes.
              */
@@ -1043,6 +1133,15 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String logo; 
             private String tipsDesc; 
             private String tipsImage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tips model) {
+                this.logo = model.logo;
+                this.tipsDesc = model.tipsDesc;
+                this.tipsImage = model.tipsImage;
+            } 
 
             /**
              * logo.
@@ -1166,6 +1265,18 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private Tips tips; 
             private String title; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(BaggageItem model) {
+                this.baggageSubItems = model.baggageSubItems;
+                this.index = model.index;
+                this.tableHead = model.tableHead;
+                this.tips = model.tips;
+                this.title = model.title;
+                this.type = model.type;
+            } 
 
             /**
              * baggage_sub_items.
@@ -1314,6 +1425,18 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String timeType; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Info model) {
+                this.content = model.content;
+                this.cost = model.cost;
+                this.costPercent = model.costPercent;
+                this.timeStamp = model.timeStamp;
+                this.timeType = model.timeType;
+                this.title = model.title;
+            } 
+
             /**
              * content.
              */
@@ -1413,6 +1536,14 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private Boolean able; 
             private java.util.List<Info> info; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeRule model) {
+                this.able = model.able;
+                this.info = model.info;
+            } 
+
             /**
              * able.
              */
@@ -1479,6 +1610,14 @@ public class FlightListingSearchResponseBody extends TeaModel {
         public static final class Builder {
             private String content; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtraContents model) {
+                this.content = model.content;
+                this.title = model.title;
+            } 
 
             /**
              * content.
@@ -1558,6 +1697,15 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String feeDesc; 
             private String feeRange; 
             private Integer style; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundSubContents model) {
+                this.feeDesc = model.feeDesc;
+                this.feeRange = model.feeRange;
+                this.style = model.style;
+            } 
 
             /**
              * fee_desc.
@@ -1657,6 +1805,16 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String ptc; 
             private java.util.List<RefundSubContents> refundSubContents; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundSubItems model) {
+                this.isStruct = model.isStruct;
+                this.ptc = model.ptc;
+                this.refundSubContents = model.refundSubContents;
+                this.title = model.title;
+            } 
 
             /**
              * <p>isStruct : true</p>
@@ -1806,6 +1964,19 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String tableHead; 
             private String title; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChangeRuleItem model) {
+                this.extraContents = model.extraContents;
+                this.index = model.index;
+                this.refundSubItems = model.refundSubItems;
+                this.subTableHead = model.subTableHead;
+                this.tableHead = model.tableHead;
+                this.title = model.title;
+                this.type = model.type;
+            } 
 
             /**
              * extra_contents.
@@ -1962,6 +2133,18 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String timeType; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(RefundRuleInfo model) {
+                this.content = model.content;
+                this.cost = model.cost;
+                this.costPercent = model.costPercent;
+                this.timeStamp = model.timeStamp;
+                this.timeType = model.timeType;
+                this.title = model.title;
+            } 
+
             /**
              * content.
              */
@@ -2061,6 +2244,14 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private Boolean able; 
             private java.util.List<RefundRuleInfo> info; 
 
+            private Builder() {
+            } 
+
+            private Builder(RefundRule model) {
+                this.able = model.able;
+                this.info = model.info;
+            } 
+
             /**
              * able.
              */
@@ -2127,6 +2318,14 @@ public class FlightListingSearchResponseBody extends TeaModel {
         public static final class Builder {
             private String content; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundRuleItemExtraContents model) {
+                this.content = model.content;
+                this.title = model.title;
+            } 
 
             /**
              * content.
@@ -2206,6 +2405,15 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String feeDesc; 
             private String feeRange; 
             private Integer style; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundSubItemsRefundSubContents model) {
+                this.feeDesc = model.feeDesc;
+                this.feeRange = model.feeRange;
+                this.style = model.style;
+            } 
 
             /**
              * fee_desc.
@@ -2305,6 +2513,16 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String ptc; 
             private java.util.List<RefundSubItemsRefundSubContents> refundSubContents; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundRuleItemRefundSubItems model) {
+                this.isStruct = model.isStruct;
+                this.ptc = model.ptc;
+                this.refundSubContents = model.refundSubContents;
+                this.title = model.title;
+            } 
 
             /**
              * <p>isStruct : true</p>
@@ -2454,6 +2672,19 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String tableHead; 
             private String title; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundRuleItem model) {
+                this.extraContents = model.extraContents;
+                this.index = model.index;
+                this.refundSubItems = model.refundSubItems;
+                this.subTableHead = model.subTableHead;
+                this.tableHead = model.tableHead;
+                this.title = model.title;
+                this.type = model.type;
+            } 
 
             /**
              * extra_contents.
@@ -2610,6 +2841,18 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String timeType; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(SignRuleInfo model) {
+                this.content = model.content;
+                this.cost = model.cost;
+                this.costPercent = model.costPercent;
+                this.timeStamp = model.timeStamp;
+                this.timeType = model.timeType;
+                this.title = model.title;
+            } 
+
             /**
              * content.
              */
@@ -2708,6 +2951,14 @@ public class FlightListingSearchResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean able; 
             private java.util.List<SignRuleInfo> info; 
+
+            private Builder() {
+            } 
+
+            private Builder(SignRule model) {
+                this.able = model.able;
+                this.info = model.info;
+            } 
 
             /**
              * able.
@@ -2824,6 +3075,18 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String timeType; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(UpgradeRuleInfo model) {
+                this.content = model.content;
+                this.cost = model.cost;
+                this.costPercent = model.costPercent;
+                this.timeStamp = model.timeStamp;
+                this.timeType = model.timeType;
+                this.title = model.title;
+            } 
+
             /**
              * content.
              */
@@ -2922,6 +3185,14 @@ public class FlightListingSearchResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean able; 
             private java.util.List<UpgradeRuleInfo> info; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpgradeRule model) {
+                this.able = model.able;
+                this.info = model.info;
+            } 
 
             /**
              * able.
@@ -3085,6 +3356,22 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private SignRule signRule; 
             private String tuigaiqianInfo; 
             private UpgradeRule upgradeRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightRuleList model) {
+                this.baggageInfo = model.baggageInfo;
+                this.baggageItem = model.baggageItem;
+                this.changeRule = model.changeRule;
+                this.changeRuleItem = model.changeRuleItem;
+                this.extra = model.extra;
+                this.refundRule = model.refundRule;
+                this.refundRuleItem = model.refundRuleItem;
+                this.signRule = model.signRule;
+                this.tuigaiqianInfo = model.tuigaiqianInfo;
+                this.upgradeRule = model.upgradeRule;
+            } 
 
             /**
              * baggage_info.
@@ -3661,6 +3948,51 @@ public class FlightListingSearchResponseBody extends TeaModel {
             private String totalPrice; 
             private Integer tripType; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightList model) {
+                this.airlineInfo = model.airlineInfo;
+                this.arrAirportInfo = model.arrAirportInfo;
+                this.arrDate = model.arrDate;
+                this.basicCabinPrice = model.basicCabinPrice;
+                this.buildPrice = model.buildPrice;
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.carrierAirline = model.carrierAirline;
+                this.carrierNo = model.carrierNo;
+                this.depAirportInfo = model.depAirportInfo;
+                this.depCityCode = model.depCityCode;
+                this.depDate = model.depDate;
+                this.discount = model.discount;
+                this.flightNo = model.flightNo;
+                this.flightRuleList = model.flightRuleList;
+                this.flightRuleListStr = model.flightRuleListStr;
+                this.flightSize = model.flightSize;
+                this.flightType = model.flightType;
+                this.invoiceType = model.invoiceType;
+                this.isProtocol = model.isProtocol;
+                this.isShare = model.isShare;
+                this.isStop = model.isStop;
+                this.isTransfer = model.isTransfer;
+                this.mealDesc = model.mealDesc;
+                this.oilPrice = model.oilPrice;
+                this.otaItemId = model.otaItemId;
+                this.price = model.price;
+                this.productType = model.productType;
+                this.productTypeDesc = model.productTypeDesc;
+                this.promotionPrice = model.promotionPrice;
+                this.remainedSeatCount = model.remainedSeatCount;
+                this.secretParams = model.secretParams;
+                this.segmentNumber = model.segmentNumber;
+                this.stopArrTime = model.stopArrTime;
+                this.stopCity = model.stopCity;
+                this.stopDepTime = model.stopDepTime;
+                this.ticketPrice = model.ticketPrice;
+                this.totalPrice = model.totalPrice;
+                this.tripType = model.tripType;
+            } 
+
             /**
              * airline_info.
              */
@@ -4011,6 +4343,13 @@ public class FlightListingSearchResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FlightList> flightList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.flightList = model.flightList;
+            } 
 
             /**
              * flight_list.

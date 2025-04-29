@@ -52,6 +52,10 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightItineraryScanQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -326,6 +342,24 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             private String validFromDate; 
             private String validToDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Flights model) {
+                this.arrivalStation = model.arrivalStation;
+                this.cabinClass = model.cabinClass;
+                this.carrier = model.carrier;
+                this.departureStation = model.departureStation;
+                this.flightDate = model.flightDate;
+                this.flightNumber = model.flightNumber;
+                this.flightTime = model.flightTime;
+                this.freeBaggageAllowance = model.freeBaggageAllowance;
+                this.index = model.index;
+                this.seatClass = model.seatClass;
+                this.validFromDate = model.validFromDate;
+                this.validToDate = model.validToDate;
+            } 
+
             /**
              * <p>航班至</p>
              */
@@ -520,6 +554,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_name")
         private String passengerName;
 
+        @com.aliyun.core.annotation.NameInMap("pdf_oss_url")
+        private String pdfOssUrl;
+
         @com.aliyun.core.annotation.NameInMap("project")
         private String project;
 
@@ -528,6 +565,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("purchaser_name")
         private String purchaserName;
+
+        @com.aliyun.core.annotation.NameInMap("purchaser_tax_no")
+        private String purchaserTaxNo;
 
         @com.aliyun.core.annotation.NameInMap("purchaser_type")
         private Integer purchaserType;
@@ -570,9 +610,11 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             this.orderId = builder.orderId;
             this.ossUrl = builder.ossUrl;
             this.passengerName = builder.passengerName;
+            this.pdfOssUrl = builder.pdfOssUrl;
             this.project = builder.project;
             this.promptMessage = builder.promptMessage;
             this.purchaserName = builder.purchaserName;
+            this.purchaserTaxNo = builder.purchaserTaxNo;
             this.purchaserType = builder.purchaserType;
             this.taxAmount = builder.taxAmount;
             this.taxRate = builder.taxRate;
@@ -724,6 +766,13 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return pdfOssUrl
+         */
+        public String getPdfOssUrl() {
+            return this.pdfOssUrl;
+        }
+
+        /**
          * @return project
          */
         public String getProject() {
@@ -742,6 +791,13 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
          */
         public String getPurchaserName() {
             return this.purchaserName;
+        }
+
+        /**
+         * @return purchaserTaxNo
+         */
+        public String getPurchaserTaxNo() {
+            return this.purchaserTaxNo;
         }
 
         /**
@@ -813,9 +869,11 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             private Long orderId; 
             private String ossUrl; 
             private String passengerName; 
+            private String pdfOssUrl; 
             private String project; 
             private String promptMessage; 
             private String purchaserName; 
+            private String purchaserTaxNo; 
             private Integer purchaserType; 
             private String taxAmount; 
             private String taxRate; 
@@ -823,6 +881,43 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             private String ticketPrice; 
             private String totalPrice; 
             private String validationCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.agentCode = model.agentCode;
+                this.applyId = model.applyId;
+                this.billDate = model.billDate;
+                this.build = model.build;
+                this.costCenter = model.costCenter;
+                this.department = model.department;
+                this.flights = model.flights;
+                this.fuelSurcharge = model.fuelSurcharge;
+                this.id = model.id;
+                this.insurance = model.insurance;
+                this.invoiceTitle = model.invoiceTitle;
+                this.invoiceType = model.invoiceType;
+                this.issueCompany = model.issueCompany;
+                this.issueDate = model.issueDate;
+                this.itineraryNum = model.itineraryNum;
+                this.ofdOssUrl = model.ofdOssUrl;
+                this.orderId = model.orderId;
+                this.ossUrl = model.ossUrl;
+                this.passengerName = model.passengerName;
+                this.pdfOssUrl = model.pdfOssUrl;
+                this.project = model.project;
+                this.promptMessage = model.promptMessage;
+                this.purchaserName = model.purchaserName;
+                this.purchaserTaxNo = model.purchaserTaxNo;
+                this.purchaserType = model.purchaserType;
+                this.taxAmount = model.taxAmount;
+                this.taxRate = model.taxRate;
+                this.ticketNo = model.ticketNo;
+                this.ticketPrice = model.ticketPrice;
+                this.totalPrice = model.totalPrice;
+                this.validationCode = model.validationCode;
+            } 
 
             /**
              * <p>销售单位代号</p>
@@ -986,6 +1081,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * pdf_oss_url.
+             */
+            public Builder pdfOssUrl(String pdfOssUrl) {
+                this.pdfOssUrl = pdfOssUrl;
+                return this;
+            }
+
+            /**
              * project.
              */
             public Builder project(String project) {
@@ -1006,6 +1109,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
              */
             public Builder purchaserName(String purchaserName) {
                 this.purchaserName = purchaserName;
+                return this;
+            }
+
+            /**
+             * purchaser_tax_no.
+             */
+            public Builder purchaserTaxNo(String purchaserTaxNo) {
+                this.purchaserTaxNo = purchaserTaxNo;
                 return this;
             }
 
@@ -1154,6 +1265,17 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalPage; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.items = model.items;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.totalPage = model.totalPage;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * items.

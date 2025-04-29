@@ -52,6 +52,10 @@ public class FlightCreateOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightCreateOrderResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightCreateOrderResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -271,6 +287,20 @@ public class FlightCreateOrderResponseBody extends TeaModel {
             private Integer payStatus; 
             private Long paymentPrice; 
             private Long totalPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.alipayTradeNo = model.alipayTradeNo;
+                this.btripOrderId = model.btripOrderId;
+                this.disOrderId = model.disOrderId;
+                this.lastPayTime = model.lastPayTime;
+                this.orderStatus = model.orderStatus;
+                this.payStatus = model.payStatus;
+                this.paymentPrice = model.paymentPrice;
+                this.totalPrice = model.totalPrice;
+            } 
 
             /**
              * alipay_trade_no.

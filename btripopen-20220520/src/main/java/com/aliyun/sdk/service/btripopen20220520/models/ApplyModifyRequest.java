@@ -94,6 +94,10 @@ public class ApplyModifyRequest extends Request {
     private Integer limitTraveler;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("meal_budget")
+    private Long mealBudget;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("payment_department_id")
     private String paymentDepartmentId;
 
@@ -194,6 +198,7 @@ public class ApplyModifyRequest extends Request {
         this.itineraryRule = builder.itineraryRule;
         this.itinerarySetList = builder.itinerarySetList;
         this.limitTraveler = builder.limitTraveler;
+        this.mealBudget = builder.mealBudget;
         this.paymentDepartmentId = builder.paymentDepartmentId;
         this.paymentDepartmentName = builder.paymentDepartmentName;
         this.status = builder.status;
@@ -223,7 +228,7 @@ public class ApplyModifyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -359,6 +364,13 @@ public class ApplyModifyRequest extends Request {
      */
     public Integer getLimitTraveler() {
         return this.limitTraveler;
+    }
+
+    /**
+     * @return mealBudget
+     */
+    public Long getMealBudget() {
+        return this.mealBudget;
     }
 
     /**
@@ -514,6 +526,7 @@ public class ApplyModifyRequest extends Request {
         private Integer itineraryRule; 
         private java.util.List<ItinerarySetList> itinerarySetList; 
         private Integer limitTraveler; 
+        private Long mealBudget; 
         private String paymentDepartmentId; 
         private String paymentDepartmentName; 
         private Integer status; 
@@ -559,6 +572,7 @@ public class ApplyModifyRequest extends Request {
             this.itineraryRule = request.itineraryRule;
             this.itinerarySetList = request.itinerarySetList;
             this.limitTraveler = request.limitTraveler;
+            this.mealBudget = request.mealBudget;
             this.paymentDepartmentId = request.paymentDepartmentId;
             this.paymentDepartmentName = request.paymentDepartmentName;
             this.status = request.status;
@@ -758,6 +772,15 @@ public class ApplyModifyRequest extends Request {
         public Builder limitTraveler(Integer limitTraveler) {
             this.putBodyParameter("limit_traveler", limitTraveler);
             this.limitTraveler = limitTraveler;
+            return this;
+        }
+
+        /**
+         * meal_budget.
+         */
+        public Builder mealBudget(Long mealBudget) {
+            this.putBodyParameter("meal_budget", mealBudget);
+            this.mealBudget = mealBudget;
             return this;
         }
 
@@ -994,6 +1017,14 @@ public class ApplyModifyRequest extends Request {
             private String scenarioTemplateId; 
             private String scenarioTemplateName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CarRule model) {
+                this.scenarioTemplateId = model.scenarioTemplateId;
+                this.scenarioTemplateName = model.scenarioTemplateName;
+            } 
+
             /**
              * scenario_template_id.
              */
@@ -1072,6 +1103,15 @@ public class ApplyModifyRequest extends Request {
             private String cityCode; 
             private String cityName; 
             private Long fee; 
+
+            private Builder() {
+            } 
+
+            private Builder(HotelCitys model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.fee = model.fee;
+            } 
 
             /**
              * city_code.
@@ -1159,6 +1199,15 @@ public class ApplyModifyRequest extends Request {
             private String cityCode; 
             private String cityName; 
             private Long fee; 
+
+            private Builder() {
+            } 
+
+            private Builder(HotelIntlCitys model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.fee = model.fee;
+            } 
 
             /**
              * city_code.
@@ -1378,6 +1427,26 @@ public class ApplyModifyRequest extends Request {
             private Integer reserveType; 
             private Long trainRuleCode; 
             private String trainSeats; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefaultStandard model) {
+                this.businessDiscount = model.businessDiscount;
+                this.economyDiscount = model.economyDiscount;
+                this.firstDiscount = model.firstDiscount;
+                this.flightCabins = model.flightCabins;
+                this.flightIntlRuleCode = model.flightIntlRuleCode;
+                this.flightRuleCode = model.flightRuleCode;
+                this.hotelCitys = model.hotelCitys;
+                this.hotelIntlCitys = model.hotelIntlCitys;
+                this.hotelIntlRuleCode = model.hotelIntlRuleCode;
+                this.hotelRuleCode = model.hotelRuleCode;
+                this.premiumEconomyDiscount = model.premiumEconomyDiscount;
+                this.reserveType = model.reserveType;
+                this.trainRuleCode = model.trainRuleCode;
+                this.trainSeats = model.trainSeats;
+            } 
 
             /**
              * business_discount.
@@ -1674,6 +1743,25 @@ public class ApplyModifyRequest extends Request {
             private String userName; 
             private String userNameEn; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExternalTravelerList model) {
+                this.attribute = model.attribute;
+                this.costCenterId = model.costCenterId;
+                this.externalUserId = model.externalUserId;
+                this.invoiceId = model.invoiceId;
+                this.paymentDepartmentId = model.paymentDepartmentId;
+                this.paymentDepartmentName = model.paymentDepartmentName;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+                this.thirdPartInvoiceId = model.thirdPartInvoiceId;
+                this.thirdpartCostCenterId = model.thirdpartCostCenterId;
+                this.thirdpartDepartId = model.thirdpartDepartId;
+                this.userName = model.userName;
+                this.userNameEn = model.userNameEn;
+            } 
+
             /**
              * attribute.
              */
@@ -1841,6 +1929,15 @@ public class ApplyModifyRequest extends Request {
             private String cityName; 
             private Long fee; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExternalTravelerStandardHotelCitys model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.fee = model.fee;
+            } 
+
             /**
              * city_code.
              */
@@ -1927,6 +2024,15 @@ public class ApplyModifyRequest extends Request {
             private String cityCode; 
             private String cityName; 
             private Long fee; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExternalTravelerStandardHotelIntlCitys model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.fee = model.fee;
+            } 
 
             /**
              * city_code.
@@ -2147,6 +2253,26 @@ public class ApplyModifyRequest extends Request {
             private Long trainRuleCode; 
             private String trainSeats; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExternalTravelerStandard model) {
+                this.businessDiscount = model.businessDiscount;
+                this.economyDiscount = model.economyDiscount;
+                this.firstDiscount = model.firstDiscount;
+                this.flightCabins = model.flightCabins;
+                this.flightIntlRuleCode = model.flightIntlRuleCode;
+                this.flightRuleCode = model.flightRuleCode;
+                this.hotelCitys = model.hotelCitys;
+                this.hotelIntlCitys = model.hotelIntlCitys;
+                this.hotelIntlRuleCode = model.hotelIntlRuleCode;
+                this.hotelRuleCode = model.hotelRuleCode;
+                this.premiumEconomyDiscount = model.premiumEconomyDiscount;
+                this.reserveType = model.reserveType;
+                this.trainRuleCode = model.trainRuleCode;
+                this.trainSeats = model.trainSeats;
+            } 
+
             /**
              * business_discount.
              */
@@ -2313,6 +2439,14 @@ public class ApplyModifyRequest extends Request {
             private String param; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotelShare model) {
+                this.param = model.param;
+                this.type = model.type;
+            } 
+
             /**
              * param.
              */
@@ -2367,6 +2501,13 @@ public class ApplyModifyRequest extends Request {
 
         public static final class Builder {
             private Integer hotelAvailableNightsPerDay; 
+
+            private Builder() {
+            } 
+
+            private Builder(ItineraryTravelStandard model) {
+                this.hotelAvailableNightsPerDay = model.hotelAvailableNightsPerDay;
+            } 
 
             /**
              * hotel_available_nights_per_day.
@@ -2650,6 +2791,32 @@ public class ApplyModifyRequest extends Request {
             private Integer trafficType; 
             private Integer tripWay; 
 
+            private Builder() {
+            } 
+
+            private Builder(ItineraryList model) {
+                this.arrCity = model.arrCity;
+                this.arrCityCode = model.arrCityCode;
+                this.arrDate = model.arrDate;
+                this.attribute = model.attribute;
+                this.costCenterId = model.costCenterId;
+                this.depCity = model.depCity;
+                this.depCityCode = model.depCityCode;
+                this.depDate = model.depDate;
+                this.invoiceId = model.invoiceId;
+                this.itineraryId = model.itineraryId;
+                this.itineraryTravelStandard = model.itineraryTravelStandard;
+                this.needHotel = model.needHotel;
+                this.needTraffic = model.needTraffic;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+                this.provinceTravelCityAdcodes = model.provinceTravelCityAdcodes;
+                this.thirdPartInvoiceId = model.thirdPartInvoiceId;
+                this.thirdpartCostCenterId = model.thirdpartCostCenterId;
+                this.trafficType = model.trafficType;
+                this.tripWay = model.tripWay;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -2863,6 +3030,13 @@ public class ApplyModifyRequest extends Request {
 
         public static final class Builder {
             private Integer hotelAvailableNightsPerDay; 
+
+            private Builder() {
+            } 
+
+            private Builder(ItinerarySetListItineraryTravelStandard model) {
+                this.hotelAvailableNightsPerDay = model.hotelAvailableNightsPerDay;
+            } 
 
             /**
              * hotel_available_nights_per_day.
@@ -3078,6 +3252,27 @@ public class ApplyModifyRequest extends Request {
             private String thirdPartInvoiceId; 
             private String thirdpartCostCenterId; 
             private Integer trafficType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ItinerarySetList model) {
+                this.arrDate = model.arrDate;
+                this.attribute = model.attribute;
+                this.cityCodeSet = model.cityCodeSet;
+                this.citySet = model.citySet;
+                this.costCenterId = model.costCenterId;
+                this.depDate = model.depDate;
+                this.invoiceId = model.invoiceId;
+                this.itineraryId = model.itineraryId;
+                this.itineraryTravelStandard = model.itineraryTravelStandard;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+                this.provinceTravelCityAdcodes = model.provinceTravelCityAdcodes;
+                this.thirdPartInvoiceId = model.thirdPartInvoiceId;
+                this.thirdpartCostCenterId = model.thirdpartCostCenterId;
+                this.trafficType = model.trafficType;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -3382,6 +3577,24 @@ public class ApplyModifyRequest extends Request {
             private String userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TravelerList model) {
+                this.attribute = model.attribute;
+                this.costCenterId = model.costCenterId;
+                this.invoiceId = model.invoiceId;
+                this.paymentDepartmentId = model.paymentDepartmentId;
+                this.paymentDepartmentName = model.paymentDepartmentName;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+                this.thirdPartInvoiceId = model.thirdPartInvoiceId;
+                this.thirdpartCostCenterId = model.thirdpartCostCenterId;
+                this.thirdpartDepartId = model.thirdpartDepartId;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * attribute.
              */
@@ -3534,6 +3747,14 @@ public class ApplyModifyRequest extends Request {
             private String cityCode; 
             private String cityName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CarCitySet model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -3612,6 +3833,15 @@ public class ApplyModifyRequest extends Request {
             private String cityCode; 
             private String cityName; 
             private Long fee; 
+
+            private Builder() {
+            } 
+
+            private Builder(TravelerStandardHotelCitys model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.fee = model.fee;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -3699,6 +3929,15 @@ public class ApplyModifyRequest extends Request {
             private String cityCode; 
             private String cityName; 
             private Long fee; 
+
+            private Builder() {
+            } 
+
+            private Builder(TravelerStandardHotelIntlCitys model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+                this.fee = model.fee;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -3942,6 +4181,28 @@ public class ApplyModifyRequest extends Request {
             private Long trainRuleCode; 
             private String trainSeats; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TravelerStandard model) {
+                this.businessDiscount = model.businessDiscount;
+                this.carCitySet = model.carCitySet;
+                this.economyDiscount = model.economyDiscount;
+                this.firstDiscount = model.firstDiscount;
+                this.flightCabins = model.flightCabins;
+                this.flightIntlRuleCode = model.flightIntlRuleCode;
+                this.flightRuleCode = model.flightRuleCode;
+                this.hotelCitys = model.hotelCitys;
+                this.hotelIntlCitys = model.hotelIntlCitys;
+                this.hotelIntlRuleCode = model.hotelIntlRuleCode;
+                this.hotelRuleCode = model.hotelRuleCode;
+                this.premiumEconomyDiscount = model.premiumEconomyDiscount;
+                this.reserveType = model.reserveType;
+                this.trainRuleCode = model.trainRuleCode;
+                this.trainSeats = model.trainSeats;
+                this.userId = model.userId;
+            } 
 
             /**
              * business_discount.

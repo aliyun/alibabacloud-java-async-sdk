@@ -52,6 +52,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(InsInvoiceScanQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -289,6 +305,21 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             private String taxRate; 
             private String unit; 
             private String unitPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvoiceDetails model) {
+                this.amount = model.amount;
+                this.index = model.index;
+                this.itemName = model.itemName;
+                this.quantity = model.quantity;
+                this.specification = model.specification;
+                this.tax = model.tax;
+                this.taxRate = model.taxRate;
+                this.unit = model.unit;
+                this.unitPrice = model.unitPrice;
+            } 
 
             /**
              * <p>金额</p>
@@ -914,6 +945,54 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             private String totalAmountInWords; 
             private String xmlOssUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.amountWithTax = model.amountWithTax;
+                this.amountWithoutTax = model.amountWithoutTax;
+                this.billDate = model.billDate;
+                this.category = model.category;
+                this.checkCode = model.checkCode;
+                this.costCenter = model.costCenter;
+                this.department = model.department;
+                this.drawer = model.drawer;
+                this.id = model.id;
+                this.insuranceCompany = model.insuranceCompany;
+                this.insuranceOrderId = model.insuranceOrderId;
+                this.insuranceType = model.insuranceType;
+                this.invoiceCode = model.invoiceCode;
+                this.invoiceDay = model.invoiceDay;
+                this.invoiceDetails = model.invoiceDetails;
+                this.invoiceLocation = model.invoiceLocation;
+                this.invoiceNo = model.invoiceNo;
+                this.invoiceTitle = model.invoiceTitle;
+                this.invoiceType = model.invoiceType;
+                this.machineCode = model.machineCode;
+                this.ofdOssUrl = model.ofdOssUrl;
+                this.orderId = model.orderId;
+                this.ossUrl = model.ossUrl;
+                this.passenger = model.passenger;
+                this.passwordArea = model.passwordArea;
+                this.project = model.project;
+                this.purchaserBankAccountInfo = model.purchaserBankAccountInfo;
+                this.purchaserContactInfo = model.purchaserContactInfo;
+                this.purchaserName = model.purchaserName;
+                this.purchaserTaxNo = model.purchaserTaxNo;
+                this.recipient = model.recipient;
+                this.remarks = model.remarks;
+                this.reviewer = model.reviewer;
+                this.sellerBankAccountInfo = model.sellerBankAccountInfo;
+                this.sellerContactInfo = model.sellerContactInfo;
+                this.sellerName = model.sellerName;
+                this.sellerTaxNo = model.sellerTaxNo;
+                this.smartCheckCode = model.smartCheckCode;
+                this.taxAmount = model.taxAmount;
+                this.taxRate = model.taxRate;
+                this.totalAmountInWords = model.totalAmountInWords;
+                this.xmlOssUrl = model.xmlOssUrl;
+            } 
+
             /**
              * amount_with_tax.
              */
@@ -1354,6 +1433,17 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalPage; 
             private Integer totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.items = model.items;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.totalPage = model.totalPage;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * items.

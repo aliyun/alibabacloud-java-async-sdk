@@ -52,6 +52,10 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightModifyOtaSearchV2ResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -229,6 +245,16 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             private String className; 
             private Integer innerCabinClass; 
             private String quantity; 
+
+            private Builder() {
+            } 
+
+            private Builder(CabinClassInfo model) {
+                this.cabinClass = model.cabinClass;
+                this.className = model.className;
+                this.innerCabinClass = model.innerCabinClass;
+                this.quantity = model.quantity;
+            } 
 
             /**
              * cabin_class.
@@ -396,6 +422,21 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             private Integer reShopInfChangeFee; 
             private Integer reShopInfPrice; 
             private Integer reShopInfPriceGap; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReShopPriceInfoDTO model) {
+                this.reShopAdultChangeFee = model.reShopAdultChangeFee;
+                this.reShopAdultPrice = model.reShopAdultPrice;
+                this.reShopAdultPriceGap = model.reShopAdultPriceGap;
+                this.reShopChildChangeFee = model.reShopChildChangeFee;
+                this.reShopChildPrice = model.reShopChildPrice;
+                this.reShopChildPriceGap = model.reShopChildPriceGap;
+                this.reShopInfChangeFee = model.reShopInfChangeFee;
+                this.reShopInfPrice = model.reShopInfPrice;
+                this.reShopInfPriceGap = model.reShopInfPriceGap;
+            } 
 
             /**
              * re_shop_adult_change_fee.
@@ -651,6 +692,25 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             private Integer originalAdultPrice; 
             private Integer originalAdultTotalPrice; 
             private ReShopPriceInfoDTO reShopPriceInfoDTO; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceInfoDTO model) {
+                this.adultPrice = model.adultPrice;
+                this.adultTax = model.adultTax;
+                this.adultTotalPrice = model.adultTotalPrice;
+                this.beforeControlPrice = model.beforeControlPrice;
+                this.childPrice = model.childPrice;
+                this.childTax = model.childTax;
+                this.childTotalPrice = model.childTotalPrice;
+                this.infantPrice = model.infantPrice;
+                this.infantTax = model.infantTax;
+                this.infantTotalPrice = model.infantTotalPrice;
+                this.originalAdultPrice = model.originalAdultPrice;
+                this.originalAdultTotalPrice = model.originalAdultTotalPrice;
+                this.reShopPriceInfoDTO = model.reShopPriceInfoDTO;
+            } 
 
             /**
              * adult_price.
@@ -915,6 +975,23 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             private Integer quantity; 
             private Boolean supportChildTicket; 
 
+            private Builder() {
+            } 
+
+            private Builder(AgentInfos model) {
+                this.attributeShowInfoMap = model.attributeShowInfoMap;
+                this.bestDiscount = model.bestDiscount;
+                this.cabinClassInfo = model.cabinClassInfo;
+                this.cabinCode = model.cabinCode;
+                this.cabinName = model.cabinName;
+                this.itemId = model.itemId;
+                this.modifyTypeDesc = model.modifyTypeDesc;
+                this.modifyTypeName = model.modifyTypeName;
+                this.priceInfoDTO = model.priceInfoDTO;
+                this.quantity = model.quantity;
+                this.supportChildTicket = model.supportChildTicket;
+            } 
+
             /**
              * attribute_show_info_map.
              */
@@ -1077,6 +1154,16 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             private String className; 
             private Integer innerCabinClass; 
             private String quantity; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgentInfoCabinClassInfo model) {
+                this.cabinClass = model.cabinClass;
+                this.className = model.className;
+                this.innerCabinClass = model.innerCabinClass;
+                this.quantity = model.quantity;
+            } 
 
             /**
              * cabin_class.
@@ -1247,6 +1334,21 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             private Integer reShopInfChangeFee; 
             private Integer reShopInfPrice; 
             private Integer reShopInfPriceGap; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceInfoDTOReShopPriceInfoDTO model) {
+                this.reShopAdultChangeFee = model.reShopAdultChangeFee;
+                this.reShopAdultPrice = model.reShopAdultPrice;
+                this.reShopAdultPriceGap = model.reShopAdultPriceGap;
+                this.reShopChildChangeFee = model.reShopChildChangeFee;
+                this.reShopChildPrice = model.reShopChildPrice;
+                this.reShopChildPriceGap = model.reShopChildPriceGap;
+                this.reShopInfChangeFee = model.reShopInfChangeFee;
+                this.reShopInfPrice = model.reShopInfPrice;
+                this.reShopInfPriceGap = model.reShopInfPriceGap;
+            } 
 
             /**
              * re_shop_adult_change_fee.
@@ -1502,6 +1604,25 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             private Integer originalAdultPrice; 
             private Integer originalAdultTotalPrice; 
             private PriceInfoDTOReShopPriceInfoDTO reShopPriceInfoDTO; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgentInfoPriceInfoDTO model) {
+                this.adultPrice = model.adultPrice;
+                this.adultTax = model.adultTax;
+                this.adultTotalPrice = model.adultTotalPrice;
+                this.beforeControlPrice = model.beforeControlPrice;
+                this.childPrice = model.childPrice;
+                this.childTax = model.childTax;
+                this.childTotalPrice = model.childTotalPrice;
+                this.infantPrice = model.infantPrice;
+                this.infantTax = model.infantTax;
+                this.infantTotalPrice = model.infantTotalPrice;
+                this.originalAdultPrice = model.originalAdultPrice;
+                this.originalAdultTotalPrice = model.originalAdultTotalPrice;
+                this.reShopPriceInfoDTO = model.reShopPriceInfoDTO;
+            } 
 
             /**
              * adult_price.
@@ -1766,6 +1887,23 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             private Integer quantity; 
             private Boolean supportChildTicket; 
 
+            private Builder() {
+            } 
+
+            private Builder(AgentInfo model) {
+                this.attributeShowInfoMap = model.attributeShowInfoMap;
+                this.bestDiscount = model.bestDiscount;
+                this.cabinClassInfo = model.cabinClassInfo;
+                this.cabinCode = model.cabinCode;
+                this.cabinName = model.cabinName;
+                this.itemId = model.itemId;
+                this.modifyTypeDesc = model.modifyTypeDesc;
+                this.modifyTypeName = model.modifyTypeName;
+                this.priceInfoDTO = model.priceInfoDTO;
+                this.quantity = model.quantity;
+                this.supportChildTicket = model.supportChildTicket;
+            } 
+
             /**
              * attribute_show_info_map.
              */
@@ -1932,6 +2070,16 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             private String airportShortName; 
             private String terminal; 
 
+            private Builder() {
+            } 
+
+            private Builder(DepAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.airportShortName = model.airportShortName;
+                this.terminal = model.terminal;
+            } 
+
             /**
              * airport_code.
              */
@@ -2038,6 +2186,16 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             private String airportName; 
             private String airportShortName; 
             private String terminal; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArrAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.airportShortName = model.airportShortName;
+                this.terminal = model.terminal;
+            } 
 
             /**
              * airport_code.
@@ -2157,6 +2315,17 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             private String airlineChineseShortName; 
             private String airlineIcon; 
             private Boolean cheapFlight; 
+
+            private Builder() {
+            } 
+
+            private Builder(AirlineInfo model) {
+                this.airlineCode = model.airlineCode;
+                this.airlineChineseName = model.airlineChineseName;
+                this.airlineChineseShortName = model.airlineChineseShortName;
+                this.airlineIcon = model.airlineIcon;
+                this.cheapFlight = model.cheapFlight;
+            } 
 
             /**
              * airline_code.
@@ -2285,6 +2454,17 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             private String airlineIcon; 
             private Boolean cheapFlight; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperatingAirlineInfo model) {
+                this.airlineCode = model.airlineCode;
+                this.airlineChineseName = model.airlineChineseName;
+                this.airlineChineseShortName = model.airlineChineseShortName;
+                this.airlineIcon = model.airlineIcon;
+                this.cheapFlight = model.cheapFlight;
+            } 
+
             /**
              * airline_code.
              */
@@ -2375,6 +2555,14 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         public static final class Builder {
             private String operatingFlightNo; 
             private OperatingAirlineInfo operatingAirlineInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightSharedInfo model) {
+                this.operatingFlightNo = model.operatingFlightNo;
+                this.operatingAirlineInfo = model.operatingAirlineInfo;
+            } 
 
             /**
              * operating_flight_no.
@@ -2502,6 +2690,19 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             private String stopAirport; 
             private String stopArrTerm; 
             private String stopDepTerm; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightStopInfo model) {
+                this.stopCityName = model.stopCityName;
+                this.stopArrTime = model.stopArrTime;
+                this.stopDepTime = model.stopDepTime;
+                this.stopCityCode = model.stopCityCode;
+                this.stopAirport = model.stopAirport;
+                this.stopArrTerm = model.stopArrTerm;
+                this.stopDepTerm = model.stopDepTerm;
+            } 
 
             /**
              * stop_city_name.
@@ -2862,6 +3063,35 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             private String mealDesc; 
             private String onTimeRate; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightSegmentInfos model) {
+                this.journeySeq = model.journeySeq;
+                this.segmentSeq = model.segmentSeq;
+                this.flightNo = model.flightNo;
+                this.depCityCode = model.depCityCode;
+                this.arrCityCode = model.arrCityCode;
+                this.depCityName = model.depCityName;
+                this.arrCityName = model.arrCityName;
+                this.depAirportInfo = model.depAirportInfo;
+                this.arrAirportInfo = model.arrAirportInfo;
+                this.depTime = model.depTime;
+                this.arrTime = model.arrTime;
+                this.airlineInfo = model.airlineInfo;
+                this.share = model.share;
+                this.flightSharedInfo = model.flightSharedInfo;
+                this.stop = model.stop;
+                this.flightStopInfo = model.flightStopInfo;
+                this.transferTime = model.transferTime;
+                this.duration = model.duration;
+                this.manufacturer = model.manufacturer;
+                this.flightType = model.flightType;
+                this.flightSize = model.flightSize;
+                this.mealDesc = model.mealDesc;
+                this.onTimeRate = model.onTimeRate;
+            } 
+
             /**
              * journey_seq.
              */
@@ -3109,6 +3339,15 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             private Integer childPassengerNum; 
             private Integer infantPassengerNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(PassengerCount model) {
+                this.adultPassengerNum = model.adultPassengerNum;
+                this.childPassengerNum = model.childPassengerNum;
+                this.infantPassengerNum = model.infantPassengerNum;
+            } 
+
             /**
              * adult_passenger_num.
              */
@@ -3231,6 +3470,18 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             private java.util.List<java.util.List<FlightSegmentInfos>> flightSegmentInfos; 
             private PassengerCount passengerCount; 
             private String sessionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.agentInfos = model.agentInfos;
+                this.agentInfo = model.agentInfo;
+                this.cacheKey = model.cacheKey;
+                this.flightSegmentInfos = model.flightSegmentInfos;
+                this.passengerCount = model.passengerCount;
+                this.sessionId = model.sessionId;
+            } 
 
             /**
              * agentInfos.

@@ -87,7 +87,7 @@ public class GroupUserSaveRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -392,6 +392,17 @@ public class GroupUserSaveRequest extends Request {
             private Integer certType; 
             private String nationality; 
 
+            private Builder() {
+            } 
+
+            private Builder(CertList model) {
+                this.certExpiredTime = model.certExpiredTime;
+                this.certNation = model.certNation;
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.nationality = model.nationality;
+            } 
+
             /**
              * cert_expired_time.
              */
@@ -532,6 +543,18 @@ public class GroupUserSaveRequest extends Request {
             private String managerUserId; 
             private String positionLevel; 
             private String subCorpId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubCorpIdList model) {
+                this.departIds = model.departIds;
+                this.email = model.email;
+                this.leaveStatus = model.leaveStatus;
+                this.managerUserId = model.managerUserId;
+                this.positionLevel = model.positionLevel;
+                this.subCorpId = model.subCorpId;
+            } 
 
             /**
              * depart_ids.

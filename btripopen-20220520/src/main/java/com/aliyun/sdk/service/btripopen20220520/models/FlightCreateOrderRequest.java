@@ -140,7 +140,7 @@ public class FlightCreateOrderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -610,6 +610,15 @@ public class FlightCreateOrderRequest extends Request {
             private String contactName; 
             private String contactPhone; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContactInfo model) {
+                this.contactEmail = model.contactEmail;
+                this.contactName = model.contactName;
+                this.contactPhone = model.contactPhone;
+            } 
+
             /**
              * contact_email.
              */
@@ -813,6 +822,24 @@ public class FlightCreateOrderRequest extends Request {
             private String phone; 
             private Integer sex; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TravelerInfoList model) {
+                this.birthday = model.birthday;
+                this.certNation = model.certNation;
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.certValidDate = model.certValidDate;
+                this.name = model.name;
+                this.nationality = model.nationality;
+                this.nationalityCode = model.nationalityCode;
+                this.outUserId = model.outUserId;
+                this.phone = model.phone;
+                this.sex = model.sex;
+                this.type = model.type;
+            } 
 
             /**
              * birthday.

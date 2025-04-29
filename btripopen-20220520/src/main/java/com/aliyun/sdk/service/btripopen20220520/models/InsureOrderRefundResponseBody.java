@@ -52,6 +52,10 @@ public class InsureOrderRefundResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class InsureOrderRefundResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(InsureOrderRefundResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -212,6 +228,15 @@ public class InsureOrderRefundResponseBody extends TeaModel {
             private String refundStatus; 
             private String subInsOrderId; 
 
+            private Builder() {
+            } 
+
+            private Builder(InsRefundList model) {
+                this.policyRefundNo = model.policyRefundNo;
+                this.refundStatus = model.refundStatus;
+                this.subInsOrderId = model.subInsOrderId;
+            } 
+
             /**
              * policy_refund_no.
              */
@@ -310,6 +335,16 @@ public class InsureOrderRefundResponseBody extends TeaModel {
             private String insOrderId; 
             private java.util.List<InsRefundList> insRefundList; 
             private String outApplyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.applyId = model.applyId;
+                this.insOrderId = model.insOrderId;
+                this.insRefundList = model.insRefundList;
+                this.outApplyId = model.outApplyId;
+            } 
 
             /**
              * apply_id.

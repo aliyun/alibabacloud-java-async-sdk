@@ -52,6 +52,10 @@ public class HotelSearchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class HotelSearchResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HotelSearchResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -199,6 +215,14 @@ public class HotelSearchResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> labelName; 
             private String moneyDesc; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiscountDetail model) {
+                this.labelName = model.labelName;
+                this.moneyDesc = model.moneyDesc;
+            } 
 
             /**
              * label_name.
@@ -302,6 +326,17 @@ public class HotelSearchResponseBody extends TeaModel {
             private java.util.List<DiscountDetail> discountDetail; 
             private String subTitle; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiscountDesc model) {
+                this.cashReduceTotal = model.cashReduceTotal;
+                this.dinamicLabel = model.dinamicLabel;
+                this.discountDetail = model.discountDetail;
+                this.subTitle = model.subTitle;
+                this.title = model.title;
+            } 
 
             /**
              * cash_reduce_total.
@@ -598,6 +633,31 @@ public class HotelSearchResponseBody extends TeaModel {
             private Integer status; 
             private String tel; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.brandName = model.brandName;
+                this.btandCode = model.btandCode;
+                this.cityCode = model.cityCode;
+                this.discountDesc = model.discountDesc;
+                this.distance = model.distance;
+                this.districtCode = model.districtCode;
+                this.hotelAddress = model.hotelAddress;
+                this.hotelCode = model.hotelCode;
+                this.hotelEnName = model.hotelEnName;
+                this.hotelName = model.hotelName;
+                this.hotelStar = model.hotelStar;
+                this.imageUrl = model.imageUrl;
+                this.isProtocol = model.isProtocol;
+                this.location = model.location;
+                this.minPrice = model.minPrice;
+                this.originalMinPrice = model.originalMinPrice;
+                this.score = model.score;
+                this.status = model.status;
+                this.tel = model.tel;
+            } 
+
             /**
              * brand_name.
              */
@@ -764,10 +824,14 @@ public class HotelSearchResponseBody extends TeaModel {
      * <p>HotelSearchResponseBody</p>
      */
     public static class Module extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("count")
+        private Integer count;
+
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List<Items> items;
 
         private Module(Builder builder) {
+            this.count = builder.count;
             this.items = builder.items;
         }
 
@@ -780,6 +844,13 @@ public class HotelSearchResponseBody extends TeaModel {
         }
 
         /**
+         * @return count
+         */
+        public Integer getCount() {
+            return this.count;
+        }
+
+        /**
          * @return items
          */
         public java.util.List<Items> getItems() {
@@ -787,7 +858,24 @@ public class HotelSearchResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer count; 
             private java.util.List<Items> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.count = model.count;
+                this.items = model.items;
+            } 
+
+            /**
+             * count.
+             */
+            public Builder count(Integer count) {
+                this.count = count;
+                return this;
+            }
 
             /**
              * items.

@@ -52,6 +52,10 @@ public class InsureOrderApplyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class InsureOrderApplyResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(InsureOrderApplyResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -224,6 +240,16 @@ public class InsureOrderApplyResponseBody extends TeaModel {
             private String status; 
             private String subInsOrderId; 
 
+            private Builder() {
+            } 
+
+            private Builder(InsOrderPolicyList model) {
+                this.outSubInsOrderId = model.outSubInsOrderId;
+                this.policyNo = model.policyNo;
+                this.status = model.status;
+                this.subInsOrderId = model.subInsOrderId;
+            } 
+
             /**
              * out_sub_ins_order_id.
              */
@@ -306,6 +332,14 @@ public class InsureOrderApplyResponseBody extends TeaModel {
         public static final class Builder {
             private String insOrderId; 
             private java.util.List<InsOrderPolicyList> insOrderPolicyList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.insOrderId = model.insOrderId;
+                this.insOrderPolicyList = model.insOrderPolicyList;
+            } 
 
             /**
              * ins_order_id.

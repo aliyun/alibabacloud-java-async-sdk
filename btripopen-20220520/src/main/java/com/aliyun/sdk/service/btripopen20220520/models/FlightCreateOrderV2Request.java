@@ -89,7 +89,7 @@ public class FlightCreateOrderV2Request extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -384,6 +384,16 @@ public class FlightCreateOrderV2Request extends Request {
             private String contactName; 
             private String contactPhone; 
             private Boolean sendMsgToPassenger; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactInfo model) {
+                this.contactEmail = model.contactEmail;
+                this.contactName = model.contactName;
+                this.contactPhone = model.contactPhone;
+                this.sendMsgToPassenger = model.sendMsgToPassenger;
+            } 
 
             /**
              * contact_email.
@@ -691,6 +701,32 @@ public class FlightCreateOrderV2Request extends Request {
             private String projectTitle; 
             private String userId; 
             private Integer userType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Travelers model) {
+                this.birthday = model.birthday;
+                this.certNation = model.certNation;
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.certValidDate = model.certValidDate;
+                this.costCenterName = model.costCenterName;
+                this.costCenterNumber = model.costCenterNumber;
+                this.deptId = model.deptId;
+                this.deptName = model.deptName;
+                this.gender = model.gender;
+                this.invoiceTitle = model.invoiceTitle;
+                this.nationality = model.nationality;
+                this.nationalityCode = model.nationalityCode;
+                this.passengerName = model.passengerName;
+                this.passengerType = model.passengerType;
+                this.phone = model.phone;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+                this.userId = model.userId;
+                this.userType = model.userType;
+            } 
 
             /**
              * <p>This parameter is required.</p>

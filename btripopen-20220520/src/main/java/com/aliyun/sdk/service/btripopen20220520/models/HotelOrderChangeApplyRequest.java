@@ -63,7 +63,7 @@ public class HotelOrderChangeApplyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -245,6 +245,14 @@ public class HotelOrderChangeApplyRequest extends Request {
         public static final class Builder {
             private java.util.List<String> cancelDate; 
             private Integer roomNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoomInfoList model) {
+                this.cancelDate = model.cancelDate;
+                this.roomNo = model.roomNo;
+            } 
 
             /**
              * <p>This parameter is required.</p>

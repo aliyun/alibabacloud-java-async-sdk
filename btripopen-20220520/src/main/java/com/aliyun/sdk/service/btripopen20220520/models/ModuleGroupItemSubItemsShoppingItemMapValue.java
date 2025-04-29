@@ -32,6 +32,10 @@ public class ModuleGroupItemSubItemsShoppingItemMapValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return searchPrice
      */
@@ -41,6 +45,13 @@ public class ModuleGroupItemSubItemsShoppingItemMapValue extends TeaModel {
 
     public static final class Builder {
         private SearchPrice searchPrice; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModuleGroupItemSubItemsShoppingItemMapValue model) {
+            this.searchPrice = model.searchPrice;
+        } 
 
         /**
          * search_price.
@@ -111,6 +122,15 @@ public class ModuleGroupItemSubItemsShoppingItemMapValue extends TeaModel {
             private Integer ticketPrice; 
             private Integer sellPrice; 
             private Integer tax; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchPrice model) {
+                this.ticketPrice = model.ticketPrice;
+                this.sellPrice = model.sellPrice;
+                this.tax = model.tax;
+            } 
 
             /**
              * ticket_price.

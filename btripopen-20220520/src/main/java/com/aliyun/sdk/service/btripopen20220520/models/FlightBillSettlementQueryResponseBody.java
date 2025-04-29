@@ -52,6 +52,10 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightBillSettlementQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -217,6 +233,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bill_record_time")
         private String billRecordTime;
 
+        @com.aliyun.core.annotation.NameInMap("book_channel")
+        private String bookChannel;
+
         @com.aliyun.core.annotation.NameInMap("book_mode")
         private String bookMode;
 
@@ -322,6 +341,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
 
+        @com.aliyun.core.annotation.NameInMap("flight_trip_type")
+        private String flightTripType;
+
         @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
@@ -378,6 +400,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("order_id")
         private String orderId;
+
+        @com.aliyun.core.annotation.NameInMap("order_ticket_no")
+        private String orderTicketNo;
 
         @com.aliyun.core.annotation.NameInMap("over_apply_id")
         private String overApplyId;
@@ -481,6 +506,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("traveler_job_no")
         private String travelerJobNo;
 
+        @com.aliyun.core.annotation.NameInMap("traveler_member_type")
+        private String travelerMemberType;
+
         @com.aliyun.core.annotation.NameInMap("traveler_member_type_name")
         private String travelerMemberTypeName;
 
@@ -518,6 +546,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.arrStation = builder.arrStation;
             this.arrTime = builder.arrTime;
             this.billRecordTime = builder.billRecordTime;
+            this.bookChannel = builder.bookChannel;
             this.bookMode = builder.bookMode;
             this.bookTime = builder.bookTime;
             this.bookerId = builder.bookerId;
@@ -553,6 +582,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.feeType = builder.feeType;
             this.feeTypeDesc = builder.feeTypeDesc;
             this.flightNo = builder.flightNo;
+            this.flightTripType = builder.flightTripType;
             this.index = builder.index;
             this.insOrderId = builder.insOrderId;
             this.insuranceFee = builder.insuranceFee;
@@ -572,6 +602,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.offlineStatus = builder.offlineStatus;
             this.oilFee = builder.oilFee;
             this.orderId = builder.orderId;
+            this.orderTicketNo = builder.orderTicketNo;
             this.overApplyId = builder.overApplyId;
             this.paymentDepartmentId = builder.paymentDepartmentId;
             this.paymentDepartmentName = builder.paymentDepartmentName;
@@ -606,6 +637,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.tradeActionDesc = builder.tradeActionDesc;
             this.travelerId = builder.travelerId;
             this.travelerJobNo = builder.travelerJobNo;
+            this.travelerMemberType = builder.travelerMemberType;
             this.travelerMemberTypeName = builder.travelerMemberTypeName;
             this.travelerName = builder.travelerName;
             this.upgradeCost = builder.upgradeCost;
@@ -746,6 +778,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getBillRecordTime() {
             return this.billRecordTime;
+        }
+
+        /**
+         * @return bookChannel
+         */
+        public String getBookChannel() {
+            return this.bookChannel;
         }
 
         /**
@@ -994,6 +1033,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return flightTripType
+         */
+        public String getFlightTripType() {
+            return this.flightTripType;
+        }
+
+        /**
          * @return index
          */
         public String getIndex() {
@@ -1124,6 +1170,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getOrderId() {
             return this.orderId;
+        }
+
+        /**
+         * @return orderTicketNo
+         */
+        public String getOrderTicketNo() {
+            return this.orderTicketNo;
         }
 
         /**
@@ -1365,6 +1418,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return travelerMemberType
+         */
+        public String getTravelerMemberType() {
+            return this.travelerMemberType;
+        }
+
+        /**
          * @return travelerMemberTypeName
          */
         public String getTravelerMemberTypeName() {
@@ -1425,6 +1485,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String arrStation; 
             private String arrTime; 
             private String billRecordTime; 
+            private String bookChannel; 
             private String bookMode; 
             private String bookTime; 
             private String bookerId; 
@@ -1460,6 +1521,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String feeType; 
             private String feeTypeDesc; 
             private String flightNo; 
+            private String flightTripType; 
             private String index; 
             private String insOrderId; 
             private Double insuranceFee; 
@@ -1479,6 +1541,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String offlineStatus; 
             private Double oilFee; 
             private String orderId; 
+            private String orderTicketNo; 
             private String overApplyId; 
             private String paymentDepartmentId; 
             private String paymentDepartmentName; 
@@ -1513,12 +1576,135 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String tradeActionDesc; 
             private String travelerId; 
             private String travelerJobNo; 
+            private String travelerMemberType; 
             private String travelerMemberTypeName; 
             private String travelerName; 
             private Double upgradeCost; 
             private Integer voucherType; 
             private String voucherTypeDesc; 
             private String voyageName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.advanceDay = model.advanceDay;
+                this.airlineCorpCode = model.airlineCorpCode;
+                this.airlineCorpName = model.airlineCorpName;
+                this.alipayId = model.alipayId;
+                this.alipayTradeNo = model.alipayTradeNo;
+                this.applyArrCityCode = model.applyArrCityCode;
+                this.applyArrCityName = model.applyArrCityName;
+                this.applyDepCityCode = model.applyDepCityCode;
+                this.applyDepCityName = model.applyDepCityName;
+                this.applyExtendField = model.applyExtendField;
+                this.applyId = model.applyId;
+                this.arrAirportCode = model.arrAirportCode;
+                this.arrCity = model.arrCity;
+                this.arrCityCode = model.arrCityCode;
+                this.arrDate = model.arrDate;
+                this.arrStation = model.arrStation;
+                this.arrTime = model.arrTime;
+                this.billRecordTime = model.billRecordTime;
+                this.bookChannel = model.bookChannel;
+                this.bookMode = model.bookMode;
+                this.bookTime = model.bookTime;
+                this.bookerId = model.bookerId;
+                this.bookerJobNo = model.bookerJobNo;
+                this.bookerName = model.bookerName;
+                this.btripCouponFee = model.btripCouponFee;
+                this.buildFee = model.buildFee;
+                this.businessTripResult = model.businessTripResult;
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.capitalDirection = model.capitalDirection;
+                this.cascadeDepartment = model.cascadeDepartment;
+                this.categoryDesc = model.categoryDesc;
+                this.changeFee = model.changeFee;
+                this.changeReasonCode = model.changeReasonCode;
+                this.changeResult = model.changeResult;
+                this.corpPayOrderFee = model.corpPayOrderFee;
+                this.corpSettlePrice = model.corpSettlePrice;
+                this.costCenter = model.costCenter;
+                this.costCenterNumber = model.costCenterNumber;
+                this.coupon = model.coupon;
+                this.deductibleTax = model.deductibleTax;
+                this.depAirportCode = model.depAirportCode;
+                this.depCityCode = model.depCityCode;
+                this.department = model.department;
+                this.departmentId = model.departmentId;
+                this.deptCity = model.deptCity;
+                this.deptDate = model.deptDate;
+                this.deptStation = model.deptStation;
+                this.deptTime = model.deptTime;
+                this.discount = model.discount;
+                this.exceedReason = model.exceedReason;
+                this.feeType = model.feeType;
+                this.feeTypeDesc = model.feeTypeDesc;
+                this.flightNo = model.flightNo;
+                this.flightTripType = model.flightTripType;
+                this.index = model.index;
+                this.insOrderId = model.insOrderId;
+                this.insuranceFee = model.insuranceFee;
+                this.insuranceNumber = model.insuranceNumber;
+                this.invoiceTitle = model.invoiceTitle;
+                this.itemType = model.itemType;
+                this.itineraryNum = model.itineraryNum;
+                this.itineraryPrice = model.itineraryPrice;
+                this.mileage = model.mileage;
+                this.mostDifferenceDeptTime = model.mostDifferenceDeptTime;
+                this.mostDifferenceDiscount = model.mostDifferenceDiscount;
+                this.mostDifferenceFlightNo = model.mostDifferenceFlightNo;
+                this.mostDifferencePrice = model.mostDifferencePrice;
+                this.mostDifferenceReason = model.mostDifferenceReason;
+                this.mostPrice = model.mostPrice;
+                this.negotiationCouponFee = model.negotiationCouponFee;
+                this.offlineStatus = model.offlineStatus;
+                this.oilFee = model.oilFee;
+                this.orderId = model.orderId;
+                this.orderTicketNo = model.orderTicketNo;
+                this.overApplyId = model.overApplyId;
+                this.paymentDepartmentId = model.paymentDepartmentId;
+                this.paymentDepartmentName = model.paymentDepartmentName;
+                this.personSettlePrice = model.personSettlePrice;
+                this.preBookTip = model.preBookTip;
+                this.primaryId = model.primaryId;
+                this.projectCode = model.projectCode;
+                this.projectName = model.projectName;
+                this.refundAffiliateNo = model.refundAffiliateNo;
+                this.refundApplyId = model.refundApplyId;
+                this.refundFee = model.refundFee;
+                this.refundReasonCode = model.refundReasonCode;
+                this.refundResult = model.refundResult;
+                this.refundUpgradeCost = model.refundUpgradeCost;
+                this.remark = model.remark;
+                this.repeatRefund = model.repeatRefund;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+                this.sealPrice = model.sealPrice;
+                this.serviceFee = model.serviceFee;
+                this.settleTypeDesc = model.settleTypeDesc;
+                this.settlementFee = model.settlementFee;
+                this.settlementGrantFee = model.settlementGrantFee;
+                this.settlementTime = model.settlementTime;
+                this.settlementType = model.settlementType;
+                this.status = model.status;
+                this.statusDesc = model.statusDesc;
+                this.taxRate = model.taxRate;
+                this.thirdItineraryId = model.thirdItineraryId;
+                this.ticketId = model.ticketId;
+                this.trade = model.trade;
+                this.tradeActionDesc = model.tradeActionDesc;
+                this.travelerId = model.travelerId;
+                this.travelerJobNo = model.travelerJobNo;
+                this.travelerMemberType = model.travelerMemberType;
+                this.travelerMemberTypeName = model.travelerMemberTypeName;
+                this.travelerName = model.travelerName;
+                this.upgradeCost = model.upgradeCost;
+                this.voucherType = model.voucherType;
+                this.voucherTypeDesc = model.voucherTypeDesc;
+                this.voyageName = model.voyageName;
+            } 
 
             /**
              * advance_day.
@@ -1661,6 +1847,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder billRecordTime(String billRecordTime) {
                 this.billRecordTime = billRecordTime;
+                return this;
+            }
+
+            /**
+             * book_channel.
+             */
+            public Builder bookChannel(String bookChannel) {
+                this.bookChannel = bookChannel;
                 return this;
             }
 
@@ -1945,6 +2139,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * flight_trip_type.
+             */
+            public Builder flightTripType(String flightTripType) {
+                this.flightTripType = flightTripType;
+                return this;
+            }
+
+            /**
              * index.
              */
             public Builder index(String index) {
@@ -2093,6 +2295,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
+                return this;
+            }
+
+            /**
+             * order_ticket_no.
+             */
+            public Builder orderTicketNo(String orderTicketNo) {
+                this.orderTicketNo = orderTicketNo;
                 return this;
             }
 
@@ -2372,6 +2582,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * traveler_member_type.
+             */
+            public Builder travelerMemberType(String travelerMemberType) {
+                this.travelerMemberType = travelerMemberType;
+                return this;
+            }
+
+            /**
              * traveler_member_type_name.
              */
             public Builder travelerMemberTypeName(String travelerMemberTypeName) {
@@ -2529,6 +2747,19 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private String periodStart; 
             private String scrollId; 
             private Long totalNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.category = model.category;
+                this.corpId = model.corpId;
+                this.dataList = model.dataList;
+                this.periodEnd = model.periodEnd;
+                this.periodStart = model.periodStart;
+                this.scrollId = model.scrollId;
+                this.totalNum = model.totalNum;
+            } 
 
             /**
              * category.

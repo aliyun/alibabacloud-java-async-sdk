@@ -52,6 +52,10 @@ public class ApplyListQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ApplyListQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApplyListQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.moduleList = model.moduleList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -260,6 +276,19 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private String userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApproverList model) {
+                this.note = model.note;
+                this.operateTime = model.operateTime;
+                this.order = model.order;
+                this.status = model.status;
+                this.statusDesc = model.statusDesc;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * note.
              */
@@ -366,6 +395,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
         public static final class Builder {
             private String scenarioTemplateId; 
             private String scenarioTemplateName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CarRule model) {
+                this.scenarioTemplateId = model.scenarioTemplateId;
+                this.scenarioTemplateName = model.scenarioTemplateName;
+            } 
 
             /**
              * scenario_template_id.
@@ -529,6 +566,22 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private String projectTitle; 
             private String thirdpartDepartId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExternalTravelerList model) {
+                this.attribute = model.attribute;
+                this.costCenterName = model.costCenterName;
+                this.departId = model.departId;
+                this.externalUserId = model.externalUserId;
+                this.invoiceName = model.invoiceName;
+                this.paymentDepartmentName = model.paymentDepartmentName;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+                this.thirdpartDepartId = model.thirdpartDepartId;
+                this.userName = model.userName;
+            } 
 
             /**
              * attribute.
@@ -804,6 +857,26 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private String thirdpartItineraryId; 
             private Integer trafficType; 
             private Integer tripWay; 
+
+            private Builder() {
+            } 
+
+            private Builder(ItineraryList model) {
+                this.arrCity = model.arrCity;
+                this.arrDate = model.arrDate;
+                this.costCenterName = model.costCenterName;
+                this.depCity = model.depCity;
+                this.depDate = model.depDate;
+                this.invoiceName = model.invoiceName;
+                this.itineraryId = model.itineraryId;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+                this.thirdpartCostCenterId = model.thirdpartCostCenterId;
+                this.thirdpartInvoiceId = model.thirdpartInvoiceId;
+                this.thirdpartItineraryId = model.thirdpartItineraryId;
+                this.trafficType = model.trafficType;
+                this.tripWay = model.tripWay;
+            } 
 
             /**
              * arr_city.
@@ -1100,6 +1173,25 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private String thirdpartItineraryId; 
             private Integer trafficType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ItinerarySetList model) {
+                this.arrDate = model.arrDate;
+                this.cityCodeSet = model.cityCodeSet;
+                this.citySet = model.citySet;
+                this.costCenterName = model.costCenterName;
+                this.depDate = model.depDate;
+                this.invoiceName = model.invoiceName;
+                this.itineraryId = model.itineraryId;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+                this.thirdpartCostCenterId = model.thirdpartCostCenterId;
+                this.thirdpartInvoiceId = model.thirdpartInvoiceId;
+                this.thirdpartItineraryId = model.thirdpartItineraryId;
+                this.trafficType = model.trafficType;
+            } 
+
             /**
              * arr_date.
              */
@@ -1254,6 +1346,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
         public static final class Builder {
             private String cityCode; 
             private String cityName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CarCitySet model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+            } 
 
             /**
              * city_code.
@@ -1441,6 +1541,24 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private String thirdpartDepartId; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TravelerList model) {
+                this.attribute = model.attribute;
+                this.carCitySet = model.carCitySet;
+                this.costCenterName = model.costCenterName;
+                this.departId = model.departId;
+                this.invoiceName = model.invoiceName;
+                this.jobNo = model.jobNo;
+                this.paymentDepartmentName = model.paymentDepartmentName;
+                this.projectCode = model.projectCode;
+                this.projectTitle = model.projectTitle;
+                this.thirdpartDepartId = model.thirdpartDepartId;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * attribute.
@@ -1924,6 +2042,42 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private String unionNo; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModuleList model) {
+                this.applyShowId = model.applyShowId;
+                this.approverList = model.approverList;
+                this.carRule = model.carRule;
+                this.corpId = model.corpId;
+                this.corpName = model.corpName;
+                this.departId = model.departId;
+                this.departName = model.departName;
+                this.externalTravelerList = model.externalTravelerList;
+                this.flowCode = model.flowCode;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.itineraryList = model.itineraryList;
+                this.itineraryRule = model.itineraryRule;
+                this.itinerarySetList = model.itinerarySetList;
+                this.jobNo = model.jobNo;
+                this.paymentDepartmentId = model.paymentDepartmentId;
+                this.paymentDepartmentName = model.paymentDepartmentName;
+                this.status = model.status;
+                this.statusDesc = model.statusDesc;
+                this.thirdpartBusinessId = model.thirdpartBusinessId;
+                this.thirdpartId = model.thirdpartId;
+                this.travelerList = model.travelerList;
+                this.tripCause = model.tripCause;
+                this.tripDay = model.tripDay;
+                this.tripTitle = model.tripTitle;
+                this.type = model.type;
+                this.unionNo = model.unionNo;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * apply_show_id.

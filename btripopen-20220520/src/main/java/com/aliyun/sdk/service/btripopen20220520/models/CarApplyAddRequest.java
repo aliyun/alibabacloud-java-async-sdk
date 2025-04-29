@@ -129,7 +129,7 @@ public class CarApplyAddRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -543,6 +543,14 @@ public class CarApplyAddRequest extends Request {
             private String cityCode; 
             private String cityName; 
 
+            private Builder() {
+            } 
+
+            private Builder(CarCitySet model) {
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -610,6 +618,14 @@ public class CarApplyAddRequest extends Request {
         public static final class Builder {
             private java.util.List<CarCitySet> carCitySet; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TravelerStandard model) {
+                this.carCitySet = model.carCitySet;
+                this.userId = model.userId;
+            } 
 
             /**
              * car_city_set.

@@ -19,12 +19,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CooperatorHotelEventPushRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("change_order_status")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer changeOrderStatus;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("change_order_status_desc")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String changeOrderStatusDesc;
 
     @com.aliyun.core.annotation.Body
@@ -75,7 +73,7 @@ public class CooperatorHotelEventPushRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -163,10 +161,7 @@ public class CooperatorHotelEventPushRequest extends Request {
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11</p>
+         * change_order_status.
          */
         public Builder changeOrderStatus(Integer changeOrderStatus) {
             this.putBodyParameter("change_order_status", changeOrderStatus);
@@ -175,7 +170,7 @@ public class CooperatorHotelEventPushRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * change_order_status_desc.
          */
         public Builder changeOrderStatusDesc(String changeOrderStatusDesc) {
             this.putBodyParameter("change_order_status_desc", changeOrderStatusDesc);

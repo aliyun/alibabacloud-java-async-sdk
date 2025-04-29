@@ -56,6 +56,10 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         private String resultMsg; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FuPointBillSettlementQueryResponseBody model) {
+            this.code = model.code;
+            this.module = model.module;
+            this.morePage = model.morePage;
+            this.requestId = model.requestId;
+            this.resultMsg = model.resultMsg;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -1099,6 +1116,87 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             private Integer voucherType; 
             private String voucherTypeDesc; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.alipayId = model.alipayId;
+                this.alipayTradeNo = model.alipayTradeNo;
+                this.applyArrCityCode = model.applyArrCityCode;
+                this.applyArrCityName = model.applyArrCityName;
+                this.applyDepCityCode = model.applyDepCityCode;
+                this.applyDepCityName = model.applyDepCityName;
+                this.applyExtendField = model.applyExtendField;
+                this.applyId = model.applyId;
+                this.approverEmail = model.approverEmail;
+                this.approverId = model.approverId;
+                this.approverName = model.approverName;
+                this.awardNum = model.awardNum;
+                this.basisAmount = model.basisAmount;
+                this.billRecordTime = model.billRecordTime;
+                this.billingEntity = model.billingEntity;
+                this.bookMode = model.bookMode;
+                this.bookTime = model.bookTime;
+                this.bookerId = model.bookerId;
+                this.bookerJobNo = model.bookerJobNo;
+                this.bookerName = model.bookerName;
+                this.capitalDirection = model.capitalDirection;
+                this.cascadeDepartment = model.cascadeDepartment;
+                this.categoryDesc = model.categoryDesc;
+                this.categoryOrderSettlePrice = model.categoryOrderSettlePrice;
+                this.costCenter = model.costCenter;
+                this.costCenterNumber = model.costCenterNumber;
+                this.deductibleTax = model.deductibleTax;
+                this.department = model.department;
+                this.departmentId = model.departmentId;
+                this.feeType = model.feeType;
+                this.feeTypeDesc = model.feeTypeDesc;
+                this.foreignersTag = model.foreignersTag;
+                this.grantNum = model.grantNum;
+                this.index = model.index;
+                this.invoiceTitle = model.invoiceTitle;
+                this.location = model.location;
+                this.makeInvoice = model.makeInvoice;
+                this.orderId = model.orderId;
+                this.orderStatusDesc = model.orderStatusDesc;
+                this.originCategory = model.originCategory;
+                this.originOrderId = model.originOrderId;
+                this.overApplyId = model.overApplyId;
+                this.paymentDepartmentId = model.paymentDepartmentId;
+                this.paymentDepartmentName = model.paymentDepartmentName;
+                this.primaryId = model.primaryId;
+                this.projectCode = model.projectCode;
+                this.projectName = model.projectName;
+                this.purchaseOrderId = model.purchaseOrderId;
+                this.remark = model.remark;
+                this.saveAmount = model.saveAmount;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+                this.settleTypeDesc = model.settleTypeDesc;
+                this.settlementFee = model.settlementFee;
+                this.settlementGrantFee = model.settlementGrantFee;
+                this.settlementTime = model.settlementTime;
+                this.settlementType = model.settlementType;
+                this.showSubOrderId = model.showSubOrderId;
+                this.sio = model.sio;
+                this.status = model.status;
+                this.statusDesc = model.statusDesc;
+                this.subOrderId = model.subOrderId;
+                this.taxRate = model.taxRate;
+                this.thirdInvoiceId = model.thirdInvoiceId;
+                this.thirdItineraryId = model.thirdItineraryId;
+                this.tradeActionDesc = model.tradeActionDesc;
+                this.tradeReason = model.tradeReason;
+                this.travelerEmail = model.travelerEmail;
+                this.travelerId = model.travelerId;
+                this.travelerJobNo = model.travelerJobNo;
+                this.travelerMemberType = model.travelerMemberType;
+                this.travelerMemberTypeName = model.travelerMemberTypeName;
+                this.travelerName = model.travelerName;
+                this.voucherType = model.voucherType;
+                this.voucherTypeDesc = model.voucherTypeDesc;
+            } 
+
             /**
              * alipay_id.
              */
@@ -1812,6 +1910,19 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             private String periodStart; 
             private String scrollId; 
             private Long totalSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.category = model.category;
+                this.corpId = model.corpId;
+                this.items = model.items;
+                this.periodEnd = model.periodEnd;
+                this.periodStart = model.periodStart;
+                this.scrollId = model.scrollId;
+                this.totalSize = model.totalSize;
+            } 
 
             /**
              * category.

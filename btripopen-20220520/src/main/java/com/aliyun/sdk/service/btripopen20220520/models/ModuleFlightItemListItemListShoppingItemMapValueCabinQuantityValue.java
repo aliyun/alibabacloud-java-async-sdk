@@ -72,6 +72,10 @@ public class ModuleFlightItemListItemListShoppingItemMapValueCabinQuantityValue 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cabin
      */
@@ -161,6 +165,23 @@ public class ModuleFlightItemListItemListShoppingItemMapValueCabinQuantityValue 
         private Integer childCabinType; 
         private String infantBasicCabin; 
         private Integer innerCabinClass; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModuleFlightItemListItemListShoppingItemMapValueCabinQuantityValue model) {
+            this.cabin = model.cabin;
+            this.cabinClass = model.cabinClass;
+            this.cabinClassName = model.cabinClassName;
+            this.cabinClassMemo = model.cabinClassMemo;
+            this.specification = model.specification;
+            this.quantity = model.quantity;
+            this.linkCabins = model.linkCabins;
+            this.reshopChangeCabin = model.reshopChangeCabin;
+            this.childCabinType = model.childCabinType;
+            this.infantBasicCabin = model.infantBasicCabin;
+            this.innerCabinClass = model.innerCabinClass;
+        } 
 
         /**
          * cabin.

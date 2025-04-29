@@ -30,6 +30,10 @@ public class AddEmployeeRequest extends Request {
     private java.util.List<String> baseCityCodeList;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("base_location_list")
+    private java.util.List<BaseLocationList> baseLocationList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("birthday")
     private String birthday;
 
@@ -112,6 +116,7 @@ public class AddEmployeeRequest extends Request {
         this.attribute = builder.attribute;
         this.avatar = builder.avatar;
         this.baseCityCodeList = builder.baseCityCodeList;
+        this.baseLocationList = builder.baseLocationList;
         this.birthday = builder.birthday;
         this.certList = builder.certList;
         this.customRoleCodeList = builder.customRoleCodeList;
@@ -141,7 +146,7 @@ public class AddEmployeeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -165,6 +170,13 @@ public class AddEmployeeRequest extends Request {
      */
     public java.util.List<String> getBaseCityCodeList() {
         return this.baseCityCodeList;
+    }
+
+    /**
+     * @return baseLocationList
+     */
+    public java.util.List<BaseLocationList> getBaseLocationList() {
+        return this.baseLocationList;
     }
 
     /**
@@ -304,6 +316,7 @@ public class AddEmployeeRequest extends Request {
         private String attribute; 
         private String avatar; 
         private java.util.List<String> baseCityCodeList; 
+        private java.util.List<BaseLocationList> baseLocationList; 
         private String birthday; 
         private java.util.List<CertList> certList; 
         private java.util.List<String> customRoleCodeList; 
@@ -333,6 +346,7 @@ public class AddEmployeeRequest extends Request {
             this.attribute = request.attribute;
             this.avatar = request.avatar;
             this.baseCityCodeList = request.baseCityCodeList;
+            this.baseLocationList = request.baseLocationList;
             this.birthday = request.birthday;
             this.certList = request.certList;
             this.customRoleCodeList = request.customRoleCodeList;
@@ -379,6 +393,16 @@ public class AddEmployeeRequest extends Request {
             String baseCityCodeListShrink = shrink(baseCityCodeList, "base_city_code_list", "json");
             this.putBodyParameter("base_city_code_list", baseCityCodeListShrink);
             this.baseCityCodeList = baseCityCodeList;
+            return this;
+        }
+
+        /**
+         * base_location_list.
+         */
+        public Builder baseLocationList(java.util.List<BaseLocationList> baseLocationList) {
+            String baseLocationListShrink = shrink(baseLocationList, "base_location_list", "json");
+            this.putBodyParameter("base_location_list", baseLocationListShrink);
+            this.baseLocationList = baseLocationList;
             return this;
         }
 
@@ -572,6 +596,81 @@ public class AddEmployeeRequest extends Request {
      *
      * <p>AddEmployeeRequest</p>
      */
+    public static class BaseLocationList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("level")
+        private String level;
+
+        private BaseLocationList(Builder builder) {
+            this.code = builder.code;
+            this.level = builder.level;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BaseLocationList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String level; 
+
+            private Builder() {
+            } 
+
+            private Builder(BaseLocationList model) {
+                this.code = model.code;
+                this.level = model.level;
+            } 
+
+            /**
+             * code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * level.
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            public BaseLocationList build() {
+                return new BaseLocationList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AddEmployeeRequest} extends {@link TeaModel}
+     *
+     * <p>AddEmployeeRequest</p>
+     */
     public static class CertList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
@@ -705,6 +804,22 @@ public class AddEmployeeRequest extends Request {
             private String phone; 
             private String realName; 
             private String realNameEn; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertList model) {
+                this.birthday = model.birthday;
+                this.certExpiredTime = model.certExpiredTime;
+                this.certNation = model.certNation;
+                this.certNo = model.certNo;
+                this.certType = model.certType;
+                this.gender = model.gender;
+                this.nationality = model.nationality;
+                this.phone = model.phone;
+                this.realName = model.realName;
+                this.realNameEn = model.realNameEn;
+            } 
 
             /**
              * birthday.

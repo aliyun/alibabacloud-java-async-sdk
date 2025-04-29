@@ -52,6 +52,10 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightExceedApplyQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * code.
@@ -355,6 +371,27 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
             private String flightNo; 
             private Long price; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplyIntentionInfoDo model) {
+                this.arrAirportName = model.arrAirportName;
+                this.arrCity = model.arrCity;
+                this.arrCityName = model.arrCityName;
+                this.arrTime = model.arrTime;
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.cabinClassStr = model.cabinClassStr;
+                this.depAirportName = model.depAirportName;
+                this.depCity = model.depCity;
+                this.depCityName = model.depCityName;
+                this.depTime = model.depTime;
+                this.discount = model.discount;
+                this.flightNo = model.flightNo;
+                this.price = model.price;
+                this.type = model.type;
+            } 
 
             /**
              * arr_airport_name.
@@ -683,6 +720,27 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
             private Long price; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApplyIntentionInfoDoList model) {
+                this.arrAirportName = model.arrAirportName;
+                this.arrCity = model.arrCity;
+                this.arrCityName = model.arrCityName;
+                this.arrTime = model.arrTime;
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.cabinClassStr = model.cabinClassStr;
+                this.depAirportName = model.depAirportName;
+                this.depCity = model.depCity;
+                this.depCityName = model.depCityName;
+                this.depTime = model.depTime;
+                this.discount = model.discount;
+                this.flightNo = model.flightNo;
+                this.price = model.price;
+                this.type = model.type;
+            } 
+
             /**
              * arr_airport_name.
              */
@@ -985,6 +1043,25 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
             private String flightNo; 
             private Long price; 
             private String transferAirportName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplyRecommendFlights model) {
+                this.arrAirportName = model.arrAirportName;
+                this.arrCityName = model.arrCityName;
+                this.arrTime = model.arrTime;
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.cabinClassStr = model.cabinClassStr;
+                this.depAirportName = model.depAirportName;
+                this.depCityName = model.depCityName;
+                this.depTime = model.depTime;
+                this.discount = model.discount;
+                this.flightNo = model.flightNo;
+                this.price = model.price;
+                this.transferAirportName = model.transferAirportName;
+            } 
 
             /**
              * arr_airport_name.
@@ -1296,6 +1373,27 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
             private String thirdpartCorpId; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.applyId = model.applyId;
+                this.applyIntentionInfoDo = model.applyIntentionInfoDo;
+                this.applyIntentionInfoDoList = model.applyIntentionInfoDoList;
+                this.applyRecommendFlights = model.applyRecommendFlights;
+                this.btripCause = model.btripCause;
+                this.corpId = model.corpId;
+                this.exceedReason = model.exceedReason;
+                this.exceedType = model.exceedType;
+                this.originStandard = model.originStandard;
+                this.status = model.status;
+                this.submitTime = model.submitTime;
+                this.thirdpartApplyId = model.thirdpartApplyId;
+                this.thirdpartCorpId = model.thirdpartCorpId;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * apply_id.
