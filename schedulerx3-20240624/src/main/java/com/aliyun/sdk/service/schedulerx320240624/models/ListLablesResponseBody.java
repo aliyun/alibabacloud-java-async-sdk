@@ -48,6 +48,10 @@ public class ListLablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListLablesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLablesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -205,6 +220,16 @@ public class ListLablesResponseBody extends TeaModel {
             private String label; 
             private Boolean online; 
             private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.isDesignated = model.isDesignated;
+                this.label = model.label;
+                this.online = model.online;
+                this.size = model.size;
+            } 
 
             /**
              * IsDesignated.

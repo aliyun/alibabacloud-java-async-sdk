@@ -48,6 +48,10 @@ public class ListAppNamesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListAppNamesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAppNamesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -203,6 +218,16 @@ public class ListAppNamesResponseBody extends TeaModel {
             private String appName; 
             private Long id; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appGroupId = model.appGroupId;
+                this.appName = model.appName;
+                this.id = model.id;
+                this.title = model.title;
+            } 
 
             /**
              * AppGroupId.

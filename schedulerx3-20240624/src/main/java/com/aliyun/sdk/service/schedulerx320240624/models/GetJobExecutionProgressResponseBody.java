@@ -48,6 +48,10 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetJobExecutionProgressResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -182,6 +197,14 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
             private Long finished; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(RootProgress model) {
+                this.finished = model.finished;
+                this.total = model.total;
+            } 
+
             /**
              * Finished.
              */
@@ -260,6 +283,15 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
             private String code; 
             private String name; 
             private java.util.Map<String, String> tips; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatusType model) {
+                this.code = model.code;
+                this.name = model.name;
+                this.tips = model.tips;
+            } 
 
             /**
              * Code.
@@ -385,6 +417,18 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
             private Integer status; 
             private StatusType statusType; 
             private String workerAddr; 
+
+            private Builder() {
+            } 
+
+            private Builder(ShardingProgress model) {
+                this.id = model.id;
+                this.jobExecutionId = model.jobExecutionId;
+                this.result = model.result;
+                this.status = model.status;
+                this.statusType = model.statusType;
+                this.workerAddr = model.workerAddr;
+            } 
 
             /**
              * <p>id</p>
@@ -548,6 +592,19 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
             private Integer success; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskProgress model) {
+                this.failed = model.failed;
+                this.name = model.name;
+                this.pulled = model.pulled;
+                this.queue = model.queue;
+                this.running = model.running;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
              * Failed.
              */
@@ -654,6 +711,14 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
         public static final class Builder {
             private Long finished; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(TotalProgress model) {
+                this.finished = model.finished;
+                this.total = model.total;
+            } 
 
             /**
              * Finished.
@@ -793,6 +858,20 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
             private Integer total; 
             private String traceId; 
             private String workerAddr; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkerProgress model) {
+                this.failed = model.failed;
+                this.pulled = model.pulled;
+                this.queue = model.queue;
+                this.running = model.running;
+                this.success = model.success;
+                this.total = model.total;
+                this.traceId = model.traceId;
+                this.workerAddr = model.workerAddr;
+            } 
 
             /**
              * Failed.
@@ -956,6 +1035,18 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
             private java.util.List<TaskProgress> taskProgress; 
             private TotalProgress totalProgress; 
             private java.util.List<WorkerProgress> workerProgress; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.jobDescription = model.jobDescription;
+                this.rootProgress = model.rootProgress;
+                this.shardingProgress = model.shardingProgress;
+                this.taskProgress = model.taskProgress;
+                this.totalProgress = model.totalProgress;
+                this.workerProgress = model.workerProgress;
+            } 
 
             /**
              * JobDescription.

@@ -153,7 +153,7 @@ public class CreateJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -725,6 +725,20 @@ public class CreateJobRequest extends Request {
             private Boolean timeoutEnable; 
             private Boolean timeoutKillEnable; 
 
+            private Builder() {
+            } 
+
+            private Builder(NoticeConfig model) {
+                this.failEnable = model.failEnable;
+                this.failLimitTimes = model.failLimitTimes;
+                this.missWorkerEnable = model.missWorkerEnable;
+                this.sendChannel = model.sendChannel;
+                this.successNotice = model.successNotice;
+                this.timeout = model.timeout;
+                this.timeoutEnable = model.timeoutEnable;
+                this.timeoutKillEnable = model.timeoutKillEnable;
+            } 
+
             /**
              * FailEnable.
              */
@@ -839,6 +853,14 @@ public class CreateJobRequest extends Request {
         public static final class Builder {
             private Integer contactType; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(NoticeContacts model) {
+                this.contactType = model.contactType;
+                this.name = model.name;
+            } 
 
             /**
              * ContactType.

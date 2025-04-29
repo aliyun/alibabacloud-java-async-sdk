@@ -48,6 +48,10 @@ public class ListScheduleEventResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListScheduleEventResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListScheduleEventResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -242,6 +257,19 @@ public class ListScheduleEventResponseBody extends TeaModel {
             private String time; 
             private String workerAddr; 
 
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.appName = model.appName;
+                this.content = model.content;
+                this.event = model.event;
+                this.jobExecutionId = model.jobExecutionId;
+                this.jobName = model.jobName;
+                this.time = model.time;
+                this.workerAddr = model.workerAddr;
+            } 
+
             /**
              * AppName.
              */
@@ -375,6 +403,16 @@ public class ListScheduleEventResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Records> records; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.records = model.records;
+                this.total = model.total;
+            } 
 
             /**
              * PageNumber.

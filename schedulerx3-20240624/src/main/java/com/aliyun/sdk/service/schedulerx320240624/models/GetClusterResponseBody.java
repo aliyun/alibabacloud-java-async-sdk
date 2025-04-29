@@ -48,6 +48,10 @@ public class GetClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetClusterResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetClusterResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -182,6 +197,14 @@ public class GetClusterResponseBody extends TeaModel {
             private String vSwitchId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VSwitches model) {
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * VSwitchId.
              */
@@ -263,6 +286,9 @@ public class GetClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitches")
         private java.util.List<VSwitches> vSwitches;
 
+        @com.aliyun.core.annotation.NameInMap("VersionLifecycle")
+        private String versionLifecycle;
+
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
@@ -290,6 +316,7 @@ public class GetClusterResponseBody extends TeaModel {
             this.spm = builder.spm;
             this.status = builder.status;
             this.vSwitches = builder.vSwitches;
+            this.versionLifecycle = builder.versionLifecycle;
             this.vpcId = builder.vpcId;
             this.workerNum = builder.workerNum;
             this.zones = builder.zones;
@@ -423,6 +450,13 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return versionLifecycle
+         */
+        public String getVersionLifecycle() {
+            return this.versionLifecycle;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -461,9 +495,37 @@ public class GetClusterResponseBody extends TeaModel {
             private Integer spm; 
             private Integer status; 
             private java.util.List<VSwitches> vSwitches; 
+            private String versionLifecycle; 
             private String vpcId; 
             private Integer workerNum; 
             private java.util.List<String> zones; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.chargeType = model.chargeType;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterSpec = model.clusterSpec;
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.engineType = model.engineType;
+                this.engineVersion = model.engineVersion;
+                this.internetDomain = model.internetDomain;
+                this.intranetDomain = model.intranetDomain;
+                this.jobNum = model.jobNum;
+                this.kubeConfig = model.kubeConfig;
+                this.maxJobNum = model.maxJobNum;
+                this.productType = model.productType;
+                this.spm = model.spm;
+                this.status = model.status;
+                this.vSwitches = model.vSwitches;
+                this.versionLifecycle = model.versionLifecycle;
+                this.vpcId = model.vpcId;
+                this.workerNum = model.workerNum;
+                this.zones = model.zones;
+            } 
 
             /**
              * ChargeType.
@@ -598,6 +660,14 @@ public class GetClusterResponseBody extends TeaModel {
              */
             public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
                 this.vSwitches = vSwitches;
+                return this;
+            }
+
+            /**
+             * VersionLifecycle.
+             */
+            public Builder versionLifecycle(String versionLifecycle) {
+                this.versionLifecycle = versionLifecycle;
                 return this;
             }
 

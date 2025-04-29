@@ -49,6 +49,10 @@ public class ListClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -90,6 +94,17 @@ public class ListClustersResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClustersResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -186,6 +201,14 @@ public class ListClustersResponseBody extends TeaModel {
             private String vSwitchId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VSwitches model) {
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * VSwitchId.
              */
@@ -258,6 +281,9 @@ public class ListClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitches")
         private java.util.List<VSwitches> vSwitches;
 
+        @com.aliyun.core.annotation.NameInMap("VersionLifecycle")
+        private String versionLifecycle;
+
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
@@ -276,6 +302,7 @@ public class ListClustersResponseBody extends TeaModel {
             this.spInstanceId = builder.spInstanceId;
             this.status = builder.status;
             this.vSwitches = builder.vSwitches;
+            this.versionLifecycle = builder.versionLifecycle;
             this.vpcId = builder.vpcId;
         }
 
@@ -386,6 +413,13 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return versionLifecycle
+         */
+        public String getVersionLifecycle() {
+            return this.versionLifecycle;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -407,7 +441,30 @@ public class ListClustersResponseBody extends TeaModel {
             private String spInstanceId; 
             private Integer status; 
             private java.util.List<VSwitches> vSwitches; 
+            private String versionLifecycle; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.chargeType = model.chargeType;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterSpec = model.clusterSpec;
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.engineType = model.engineType;
+                this.engineVersion = model.engineVersion;
+                this.internetDomain = model.internetDomain;
+                this.intranetDomain = model.intranetDomain;
+                this.productType = model.productType;
+                this.spInstanceId = model.spInstanceId;
+                this.status = model.status;
+                this.vSwitches = model.vSwitches;
+                this.versionLifecycle = model.versionLifecycle;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * ChargeType.
@@ -522,6 +579,14 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
+             * VersionLifecycle.
+             */
+            public Builder versionLifecycle(String versionLifecycle) {
+                this.versionLifecycle = versionLifecycle;
+                return this;
+            }
+
+            /**
              * <p>VPC ID</p>
              * 
              * <strong>example:</strong>
@@ -606,6 +671,16 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Records> records; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.records = model.records;
+                this.total = model.total;
+            } 
 
             /**
              * PageNumber.

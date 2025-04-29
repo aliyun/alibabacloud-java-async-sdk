@@ -48,6 +48,10 @@ public class ListAppsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListAppsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAppsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -302,6 +317,24 @@ public class ListAppsResponseBody extends TeaModel {
             private String title; 
             private String updater; 
 
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.accessToken = model.accessToken;
+                this.appName = model.appName;
+                this.creator = model.creator;
+                this.enableLog = model.enableLog;
+                this.executorNum = model.executorNum;
+                this.id = model.id;
+                this.jobNum = model.jobNum;
+                this.leader = model.leader;
+                this.maxConcurrency = model.maxConcurrency;
+                this.maxJobs = model.maxJobs;
+                this.title = model.title;
+                this.updater = model.updater;
+            } 
+
             /**
              * <p>AccessToken</p>
              * 
@@ -475,6 +508,16 @@ public class ListAppsResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<Records> records; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.records = model.records;
+                this.total = model.total;
+            } 
 
             /**
              * PageNumber.

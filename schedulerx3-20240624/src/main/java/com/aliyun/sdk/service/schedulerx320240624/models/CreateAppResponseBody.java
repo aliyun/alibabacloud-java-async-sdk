@@ -48,6 +48,10 @@ public class CreateAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateAppResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAppResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -179,6 +194,14 @@ public class CreateAppResponseBody extends TeaModel {
         public static final class Builder {
             private String accessToken; 
             private Long appGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessToken = model.accessToken;
+                this.appGroupId = model.appGroupId;
+            } 
 
             /**
              * AccessToken.
