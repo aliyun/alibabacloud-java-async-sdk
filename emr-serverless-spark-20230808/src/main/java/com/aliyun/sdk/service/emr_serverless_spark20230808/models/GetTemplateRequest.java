@@ -112,6 +112,11 @@ public class GetTemplateRequest extends Request {
 
         /**
          * <p>The template type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>TASK</li>
+         * <li>SESSION</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>TASK</p>

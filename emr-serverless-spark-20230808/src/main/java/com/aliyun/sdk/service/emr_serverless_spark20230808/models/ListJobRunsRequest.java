@@ -277,7 +277,10 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * jobRunDeploymentId.
+         * <p>The job run ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jd-b6d003f1930f****</p>
          */
         public Builder jobRunDeploymentId(String jobRunDeploymentId) {
             this.putQueryParameter("jobRunDeploymentId", jobRunDeploymentId);
@@ -310,7 +313,10 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * minDuration.
+         * <p>The minimum running duration of the job. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60000</p>
          */
         public Builder minDuration(Long minDuration) {
             this.putQueryParameter("minDuration", minDuration);

@@ -529,7 +529,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job configurations of Spark.</p>
+             * <p>The configurations of the Spark jobs.</p>
              */
             public Builder configurationOverrides(ConfigurationOverrides configurationOverrides) {
                 this.configurationOverrides = configurationOverrides;
@@ -537,7 +537,10 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * displayReleaseVersion.
+             * <p>The version of the Spark engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</p>
              */
             public Builder displayReleaseVersion(String displayReleaseVersion) {
                 this.displayReleaseVersion = displayReleaseVersion;
@@ -556,7 +559,10 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * environmentId.
+             * <p>The environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-cpv569tlhtgndjl8****</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -575,7 +581,10 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * fusion.
+             * <p>Indicates whether the Fusion engine is used for acceleration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder fusion(Boolean fusion) {
                 this.fusion = fusion;
@@ -684,7 +693,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The tags of the job.</p>
              */
             public Builder tags(java.util.List<Tag> tags) {
                 this.tags = tags;

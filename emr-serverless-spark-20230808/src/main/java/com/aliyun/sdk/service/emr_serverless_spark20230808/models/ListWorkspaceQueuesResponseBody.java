@@ -546,7 +546,10 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The time when the workspace was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684115879955</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -595,7 +598,14 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * paymentType.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>PayAsYouGo</li>
+             * <li>Pre</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PayAsYouGo</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -647,7 +657,11 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queue type.</p>
+             * <p>The type of the queue. Valid values:</p>
+             * <ul>
+             * <li>instance</li>
+             * <li>instanceChildren</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>instance, instanceChildren</p>

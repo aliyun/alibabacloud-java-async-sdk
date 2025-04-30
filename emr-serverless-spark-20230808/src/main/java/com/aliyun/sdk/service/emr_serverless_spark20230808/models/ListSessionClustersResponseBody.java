@@ -868,7 +868,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * extra.
+             * <p>The additional metadata of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;extraInfoKey&quot;:&quot;extraInfoValue&quot;}</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
