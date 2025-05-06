@@ -48,6 +48,10 @@ public class RunSearchCaseFullTextRequest extends Request {
     private java.util.List<String> queryKeywords;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("referLevel")
+    private String referLevel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sortKeyAndDirection")
     private java.util.Map<String, String> sortKeyAndDirection;
 
@@ -64,6 +68,7 @@ public class RunSearchCaseFullTextRequest extends Request {
         this.pageParam = builder.pageParam;
         this.query = builder.query;
         this.queryKeywords = builder.queryKeywords;
+        this.referLevel = builder.referLevel;
         this.sortKeyAndDirection = builder.sortKeyAndDirection;
         this.thread = builder.thread;
     }
@@ -76,7 +81,7 @@ public class RunSearchCaseFullTextRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -131,6 +136,13 @@ public class RunSearchCaseFullTextRequest extends Request {
     }
 
     /**
+     * @return referLevel
+     */
+    public String getReferLevel() {
+        return this.referLevel;
+    }
+
+    /**
      * @return sortKeyAndDirection
      */
     public java.util.Map<String, String> getSortKeyAndDirection() {
@@ -152,6 +164,7 @@ public class RunSearchCaseFullTextRequest extends Request {
         private PageParam pageParam; 
         private String query; 
         private java.util.List<String> queryKeywords; 
+        private String referLevel; 
         private java.util.Map<String, String> sortKeyAndDirection; 
         private Thread thread; 
 
@@ -168,6 +181,7 @@ public class RunSearchCaseFullTextRequest extends Request {
             this.pageParam = request.pageParam;
             this.query = request.query;
             this.queryKeywords = request.queryKeywords;
+            this.referLevel = request.referLevel;
             this.sortKeyAndDirection = request.sortKeyAndDirection;
             this.thread = request.thread;
         } 
@@ -235,6 +249,15 @@ public class RunSearchCaseFullTextRequest extends Request {
             String queryKeywordsShrink = shrink(queryKeywords, "queryKeywords", "json");
             this.putBodyParameter("queryKeywords", queryKeywordsShrink);
             this.queryKeywords = queryKeywords;
+            return this;
+        }
+
+        /**
+         * referLevel.
+         */
+        public Builder referLevel(String referLevel) {
+            this.putBodyParameter("referLevel", referLevel);
+            this.referLevel = referLevel;
             return this;
         }
 
@@ -309,6 +332,14 @@ public class RunSearchCaseFullTextRequest extends Request {
             private String caseNo; 
             private String caseTitle; 
 
+            private Builder() {
+            } 
+
+            private Builder(FilterCondition model) {
+                this.caseNo = model.caseNo;
+                this.caseTitle = model.caseTitle;
+            } 
+
             /**
              * caseNo.
              */
@@ -375,6 +406,14 @@ public class RunSearchCaseFullTextRequest extends Request {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageParam model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+            } 
 
             /**
              * pageNumber.
@@ -443,6 +482,14 @@ public class RunSearchCaseFullTextRequest extends Request {
             private String content; 
             private String role; 
 
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.content = model.content;
+                this.role = model.role;
+            } 
+
             /**
              * content.
              */
@@ -497,6 +544,13 @@ public class RunSearchCaseFullTextRequest extends Request {
 
         public static final class Builder {
             private java.util.List<Messages> messages; 
+
+            private Builder() {
+            } 
+
+            private Builder(Thread model) {
+                this.messages = model.messages;
+            } 
 
             /**
              * messages.

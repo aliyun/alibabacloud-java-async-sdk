@@ -56,6 +56,10 @@ public class RunContractRuleGenerationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class RunContractRuleGenerationResponseBody extends TeaModel {
         private Boolean success; 
         private Usage usage; 
         private Integer httpStatusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunContractRuleGenerationResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.output = model.output;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.usage = model.usage;
+            this.httpStatusCode = model.httpStatusCode;
+        } 
 
         /**
          * Code.
@@ -244,6 +261,16 @@ public class RunContractRuleGenerationResponseBody extends TeaModel {
             private String ruleTag; 
             private String ruleTitle; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.riskLevel = model.riskLevel;
+                this.ruleSequence = model.ruleSequence;
+                this.ruleTag = model.ruleTag;
+                this.ruleTitle = model.ruleTitle;
+            } 
+
             /**
              * riskLevel.
              */
@@ -327,6 +354,14 @@ public class RunContractRuleGenerationResponseBody extends TeaModel {
             private String ruleTaskId; 
             private java.util.List<Rules> rules; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.ruleTaskId = model.ruleTaskId;
+                this.rules = model.rules;
+            } 
+
             /**
              * ruleTaskId.
              */
@@ -393,6 +428,14 @@ public class RunContractRuleGenerationResponseBody extends TeaModel {
         public static final class Builder {
             private Long input; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.input = model.input;
+                this.unit = model.unit;
+            } 
 
             /**
              * input.

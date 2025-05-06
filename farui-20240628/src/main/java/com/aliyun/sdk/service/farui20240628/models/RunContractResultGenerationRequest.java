@@ -55,7 +55,7 @@ public class RunContractResultGenerationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -227,6 +227,15 @@ public class RunContractResultGenerationRequest extends Request {
             private String ruleDesc; 
             private String ruleTitle; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomRules model) {
+                this.riskLevel = model.riskLevel;
+                this.ruleDesc = model.ruleDesc;
+                this.ruleTitle = model.ruleTitle;
+            } 
+
             /**
              * riskLevel.
              */
@@ -289,6 +298,13 @@ public class RunContractResultGenerationRequest extends Request {
 
         public static final class Builder {
             private java.util.List<CustomRules> customRules; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomRuleConfig model) {
+                this.customRules = model.customRules;
+            } 
 
             /**
              * customRules.
@@ -372,6 +388,16 @@ public class RunContractResultGenerationRequest extends Request {
             private String ruleSequence; 
             private String ruleTag; 
             private String ruleTitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.riskLevel = model.riskLevel;
+                this.ruleSequence = model.ruleSequence;
+                this.ruleTag = model.ruleTag;
+                this.ruleTitle = model.ruleTitle;
+            } 
 
             /**
              * riskLevel.
@@ -492,6 +518,17 @@ public class RunContractResultGenerationRequest extends Request {
             private String ruleTaskId; 
             private java.util.List<Rules> rules; 
 
+            private Builder() {
+            } 
+
+            private Builder(MetaData model) {
+                this.customRuleConfig = model.customRuleConfig;
+                this.fileId = model.fileId;
+                this.position = model.position;
+                this.ruleTaskId = model.ruleTaskId;
+                this.rules = model.rules;
+            } 
+
             /**
              * customRuleConfig.
              */
@@ -594,6 +631,15 @@ public class RunContractResultGenerationRequest extends Request {
             private MetaData metaData; 
             private String type; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Assistant model) {
+                this.metaData = model.metaData;
+                this.type = model.type;
+                this.version = model.version;
+            } 
 
             /**
              * metaData.

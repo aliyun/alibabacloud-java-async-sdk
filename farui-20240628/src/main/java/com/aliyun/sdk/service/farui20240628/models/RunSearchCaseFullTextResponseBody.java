@@ -52,6 +52,10 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunSearchCaseFullTextResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * code.
@@ -275,6 +291,20 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
             private String province; 
             private String specialLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrialCourt model) {
+                this.city = model.city;
+                this.commonLevel = model.commonLevel;
+                this.country = model.country;
+                this.county = model.county;
+                this.district = model.district;
+                this.name = model.name;
+                this.province = model.province;
+                this.specialLevel = model.specialLevel;
+            } 
+
             /**
              * city.
              */
@@ -359,8 +389,14 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appliedLaws")
         private String appliedLaws;
 
+        @com.aliyun.core.annotation.NameInMap("basicCase")
+        private String basicCase;
+
         @com.aliyun.core.annotation.NameInMap("caseBasic")
         private String caseBasic;
+
+        @com.aliyun.core.annotation.NameInMap("caseCause")
+        private String caseCause;
 
         @com.aliyun.core.annotation.NameInMap("caseFeature")
         private String caseFeature;
@@ -404,6 +440,9 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("documentType")
         private String documentType;
 
+        @com.aliyun.core.annotation.NameInMap("judgReason")
+        private String judgReason;
+
         @com.aliyun.core.annotation.NameInMap("keyfacts")
         private String keyfacts;
 
@@ -424,6 +463,9 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("referLevel")
         private String referLevel;
+
+        @com.aliyun.core.annotation.NameInMap("refereeGist")
+        private String refereeGist;
 
         @com.aliyun.core.annotation.NameInMap("sourceContent")
         private String sourceContent;
@@ -449,7 +491,9 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         private CaseDomain(Builder builder) {
             this.abstractObj = builder.abstractObj;
             this.appliedLaws = builder.appliedLaws;
+            this.basicCase = builder.basicCase;
             this.caseBasic = builder.caseBasic;
+            this.caseCause = builder.caseCause;
             this.caseFeature = builder.caseFeature;
             this.caseId = builder.caseId;
             this.caseNo = builder.caseNo;
@@ -464,6 +508,7 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
             this.disputeFocusTag = builder.disputeFocusTag;
             this.disputedpoints = builder.disputedpoints;
             this.documentType = builder.documentType;
+            this.judgReason = builder.judgReason;
             this.keyfacts = builder.keyfacts;
             this.legalBasis = builder.legalBasis;
             this.litigants = builder.litigants;
@@ -471,6 +516,7 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
             this.openCaseCause = builder.openCaseCause;
             this.preTrialProcess = builder.preTrialProcess;
             this.referLevel = builder.referLevel;
+            this.refereeGist = builder.refereeGist;
             this.sourceContent = builder.sourceContent;
             this.trialCourt = builder.trialCourt;
             this.trialDate = builder.trialDate;
@@ -503,10 +549,24 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         }
 
         /**
+         * @return basicCase
+         */
+        public String getBasicCase() {
+            return this.basicCase;
+        }
+
+        /**
          * @return caseBasic
          */
         public String getCaseBasic() {
             return this.caseBasic;
+        }
+
+        /**
+         * @return caseCause
+         */
+        public String getCaseCause() {
+            return this.caseCause;
         }
 
         /**
@@ -608,6 +668,13 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         }
 
         /**
+         * @return judgReason
+         */
+        public String getJudgReason() {
+            return this.judgReason;
+        }
+
+        /**
          * @return keyfacts
          */
         public String getKeyfacts() {
@@ -654,6 +721,13 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
          */
         public String getReferLevel() {
             return this.referLevel;
+        }
+
+        /**
+         * @return refereeGist
+         */
+        public String getRefereeGist() {
+            return this.refereeGist;
         }
 
         /**
@@ -708,7 +782,9 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         public static final class Builder {
             private String abstractObj; 
             private String appliedLaws; 
+            private String basicCase; 
             private String caseBasic; 
+            private String caseCause; 
             private String caseFeature; 
             private String caseId; 
             private String caseNo; 
@@ -723,6 +799,7 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
             private java.util.List<String> disputeFocusTag; 
             private String disputedpoints; 
             private String documentType; 
+            private String judgReason; 
             private String keyfacts; 
             private String legalBasis; 
             private String litigants; 
@@ -730,6 +807,7 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
             private String openCaseCause; 
             private String preTrialProcess; 
             private String referLevel; 
+            private String refereeGist; 
             private String sourceContent; 
             private TrialCourt trialCourt; 
             private String trialDate; 
@@ -737,6 +815,47 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
             private String trialProcess; 
             private String trialProgram; 
             private String verdict; 
+
+            private Builder() {
+            } 
+
+            private Builder(CaseDomain model) {
+                this.abstractObj = model.abstractObj;
+                this.appliedLaws = model.appliedLaws;
+                this.basicCase = model.basicCase;
+                this.caseBasic = model.caseBasic;
+                this.caseCause = model.caseCause;
+                this.caseFeature = model.caseFeature;
+                this.caseId = model.caseId;
+                this.caseNo = model.caseNo;
+                this.caseSummary = model.caseSummary;
+                this.caseTitle = model.caseTitle;
+                this.caseType = model.caseType;
+                this.closeCaseCause = model.closeCaseCause;
+                this.courtFindOut = model.courtFindOut;
+                this.courtThink = model.courtThink;
+                this.dataFrom = model.dataFrom;
+                this.disputeFocus = model.disputeFocus;
+                this.disputeFocusTag = model.disputeFocusTag;
+                this.disputedpoints = model.disputedpoints;
+                this.documentType = model.documentType;
+                this.judgReason = model.judgReason;
+                this.keyfacts = model.keyfacts;
+                this.legalBasis = model.legalBasis;
+                this.litigants = model.litigants;
+                this.litigationParticipant = model.litigationParticipant;
+                this.openCaseCause = model.openCaseCause;
+                this.preTrialProcess = model.preTrialProcess;
+                this.referLevel = model.referLevel;
+                this.refereeGist = model.refereeGist;
+                this.sourceContent = model.sourceContent;
+                this.trialCourt = model.trialCourt;
+                this.trialDate = model.trialDate;
+                this.trialLevel = model.trialLevel;
+                this.trialProcess = model.trialProcess;
+                this.trialProgram = model.trialProgram;
+                this.verdict = model.verdict;
+            } 
 
             /**
              * abstractObj.
@@ -755,10 +874,26 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
             }
 
             /**
+             * basicCase.
+             */
+            public Builder basicCase(String basicCase) {
+                this.basicCase = basicCase;
+                return this;
+            }
+
+            /**
              * caseBasic.
              */
             public Builder caseBasic(String caseBasic) {
                 this.caseBasic = caseBasic;
+                return this;
+            }
+
+            /**
+             * caseCause.
+             */
+            public Builder caseCause(String caseCause) {
+                this.caseCause = caseCause;
                 return this;
             }
 
@@ -875,6 +1010,14 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
             }
 
             /**
+             * judgReason.
+             */
+            public Builder judgReason(String judgReason) {
+                this.judgReason = judgReason;
+                return this;
+            }
+
+            /**
              * keyfacts.
              */
             public Builder keyfacts(String keyfacts) {
@@ -927,6 +1070,14 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
              */
             public Builder referLevel(String referLevel) {
                 this.referLevel = referLevel;
+                return this;
+            }
+
+            /**
+             * refereeGist.
+             */
+            public Builder refereeGist(String refereeGist) {
+                this.refereeGist = refereeGist;
                 return this;
             }
 
@@ -1003,11 +1154,15 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("caseDomain")
         private CaseDomain caseDomain;
 
+        @com.aliyun.core.annotation.NameInMap("mode")
+        private String mode;
+
         @com.aliyun.core.annotation.NameInMap("similarity")
         private String similarity;
 
         private CaseResult(Builder builder) {
             this.caseDomain = builder.caseDomain;
+            this.mode = builder.mode;
             this.similarity = builder.similarity;
         }
 
@@ -1027,6 +1182,13 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         }
 
         /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
          * @return similarity
          */
         public String getSimilarity() {
@@ -1035,13 +1197,31 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
 
         public static final class Builder {
             private CaseDomain caseDomain; 
+            private String mode; 
             private String similarity; 
+
+            private Builder() {
+            } 
+
+            private Builder(CaseResult model) {
+                this.caseDomain = model.caseDomain;
+                this.mode = model.mode;
+                this.similarity = model.similarity;
+            } 
 
             /**
              * caseDomain.
              */
             public Builder caseDomain(CaseDomain caseDomain) {
                 this.caseDomain = caseDomain;
+                return this;
+            }
+
+            /**
+             * mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
                 return this;
             }
 
@@ -1067,6 +1247,9 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
      * <p>RunSearchCaseFullTextResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("caseLevel")
+        private String caseLevel;
+
         @com.aliyun.core.annotation.NameInMap("caseResult")
         private java.util.List<CaseResult> caseResult;
 
@@ -1086,6 +1269,7 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         private Long totalCount;
 
         private Data(Builder builder) {
+            this.caseLevel = builder.caseLevel;
             this.caseResult = builder.caseResult;
             this.currentPage = builder.currentPage;
             this.pageSize = builder.pageSize;
@@ -1100,6 +1284,13 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return caseLevel
+         */
+        public String getCaseLevel() {
+            return this.caseLevel;
         }
 
         /**
@@ -1145,12 +1336,34 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String caseLevel; 
             private java.util.List<CaseResult> caseResult; 
             private Integer currentPage; 
             private Integer pageSize; 
             private String query; 
             private java.util.List<String> queryKeywords; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.caseLevel = model.caseLevel;
+                this.caseResult = model.caseResult;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.query = model.query;
+                this.queryKeywords = model.queryKeywords;
+                this.totalCount = model.totalCount;
+            } 
+
+            /**
+             * caseLevel.
+             */
+            public Builder caseLevel(String caseLevel) {
+                this.caseLevel = caseLevel;
+                return this;
+            }
 
             /**
              * caseResult.

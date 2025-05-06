@@ -52,6 +52,10 @@ public class RunSearchLawQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class RunSearchLawQueryResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunSearchLawQueryResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * code.
@@ -371,6 +387,28 @@ public class RunSearchLawQueryResponseBody extends TeaModel {
             private String thematicClassify; 
             private String timeliness; 
 
+            private Builder() {
+            } 
+
+            private Builder(LawDomain model) {
+                this.abolitionBasis = model.abolitionBasis;
+                this.implementYearMonthDate = model.implementYearMonthDate;
+                this.invalidBasis = model.invalidBasis;
+                this.issuingNo = model.issuingNo;
+                this.issuingOrgan = model.issuingOrgan;
+                this.lawId = model.lawId;
+                this.lawItemId = model.lawItemId;
+                this.lawName = model.lawName;
+                this.lawOrder = model.lawOrder;
+                this.lawSourceContent = model.lawSourceContent;
+                this.lawTitle = model.lawTitle;
+                this.modifyBasis = model.modifyBasis;
+                this.potencyLevel = model.potencyLevel;
+                this.releaseYearMonthDate = model.releaseYearMonthDate;
+                this.thematicClassify = model.thematicClassify;
+                this.timeliness = model.timeliness;
+            } 
+
             /**
              * abolitionBasis.
              */
@@ -550,6 +588,14 @@ public class RunSearchLawQueryResponseBody extends TeaModel {
             private LawDomain lawDomain; 
             private String similarity; 
 
+            private Builder() {
+            } 
+
+            private Builder(LawResult model) {
+                this.lawDomain = model.lawDomain;
+                this.similarity = model.similarity;
+            } 
+
             /**
              * lawDomain.
              */
@@ -616,6 +662,14 @@ public class RunSearchLawQueryResponseBody extends TeaModel {
         public static final class Builder {
             private String releaseYearMonthDate; 
             private String similarity; 
+
+            private Builder() {
+            } 
+
+            private Builder(SortKeyAndDirection model) {
+                this.releaseYearMonthDate = model.releaseYearMonthDate;
+                this.similarity = model.similarity;
+            } 
 
             /**
              * releaseYearMonthDate.
@@ -743,6 +797,19 @@ public class RunSearchLawQueryResponseBody extends TeaModel {
             private java.util.List<String> queryKeywords; 
             private SortKeyAndDirection sortKeyAndDirection; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.lawResult = model.lawResult;
+                this.pageSize = model.pageSize;
+                this.query = model.query;
+                this.queryKeywords = model.queryKeywords;
+                this.sortKeyAndDirection = model.sortKeyAndDirection;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * currentPage.

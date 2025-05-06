@@ -59,7 +59,7 @@ public class RunLegalAdviceConsultationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -259,6 +259,16 @@ public class RunLegalAdviceConsultationRequest extends Request {
             private String type; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Assistant model) {
+                this.id = model.id;
+                this.metaData = model.metaData;
+                this.type = model.type;
+                this.version = model.version;
+            } 
+
             /**
              * id.
              */
@@ -342,6 +352,14 @@ public class RunLegalAdviceConsultationRequest extends Request {
             private String content; 
             private String role; 
 
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.content = model.content;
+                this.role = model.role;
+            } 
+
             /**
              * content.
              */
@@ -396,6 +414,13 @@ public class RunLegalAdviceConsultationRequest extends Request {
 
         public static final class Builder {
             private java.util.List<Messages> messages; 
+
+            private Builder() {
+            } 
+
+            private Builder(Thread model) {
+                this.messages = model.messages;
+            } 
 
             /**
              * messages.

@@ -54,7 +54,7 @@ public class RunContractRuleGenerationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -211,6 +211,14 @@ public class RunContractRuleGenerationRequest extends Request {
             private String fileId; 
             private String position; 
 
+            private Builder() {
+            } 
+
+            private Builder(MetaData model) {
+                this.fileId = model.fileId;
+                this.position = model.position;
+            } 
+
             /**
              * fileId.
              */
@@ -289,6 +297,15 @@ public class RunContractRuleGenerationRequest extends Request {
             private MetaData metaData; 
             private String type; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Assistant model) {
+                this.metaData = model.metaData;
+                this.type = model.type;
+                this.version = model.version;
+            } 
 
             /**
              * metaData.

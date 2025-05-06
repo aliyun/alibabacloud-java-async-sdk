@@ -56,6 +56,10 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
         private Boolean success; 
         private Usage usage; 
         private String httpStatusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunContractResultGenerationResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.output = model.output;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.usage = model.usage;
+            this.httpStatusCode = model.httpStatusCode;
+        } 
 
         /**
          * Code.
@@ -267,6 +284,18 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
             private String riskBrief; 
             private String riskClause; 
             private String riskExplain; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubRisks model) {
+                this.originalContent = model.originalContent;
+                this.resultContent = model.resultContent;
+                this.resultType = model.resultType;
+                this.riskBrief = model.riskBrief;
+                this.riskClause = model.riskClause;
+                this.riskExplain = model.riskExplain;
+            } 
 
             /**
              * originalContent.
@@ -427,6 +456,19 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
             private String ruleTitle; 
             private java.util.List<SubRisks> subRisks; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.examineBrief = model.examineBrief;
+                this.examineResult = model.examineResult;
+                this.riskLevel = model.riskLevel;
+                this.ruleSequence = model.ruleSequence;
+                this.ruleTag = model.ruleTag;
+                this.ruleTitle = model.ruleTitle;
+                this.subRisks = model.subRisks;
+            } 
+
             /**
              * examineBrief.
              */
@@ -534,6 +576,14 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
             private Result result; 
             private String resultTaskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Output model) {
+                this.result = model.result;
+                this.resultTaskId = model.resultTaskId;
+            } 
+
             /**
              * result.
              */
@@ -600,6 +650,14 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
         public static final class Builder {
             private Long input; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.input = model.input;
+                this.unit = model.unit;
+            } 
 
             /**
              * input.

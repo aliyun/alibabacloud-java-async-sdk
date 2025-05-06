@@ -70,7 +70,7 @@ public class RunSearchLawQueryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -272,6 +272,13 @@ public class RunSearchLawQueryRequest extends Request {
         public static final class Builder {
             private String lawName; 
 
+            private Builder() {
+            } 
+
+            private Builder(FilterCondition model) {
+                this.lawName = model.lawName;
+            } 
+
             /**
              * lawName.
              */
@@ -330,6 +337,14 @@ public class RunSearchLawQueryRequest extends Request {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageParam model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+            } 
 
             /**
              * pageNumber.
@@ -398,6 +413,14 @@ public class RunSearchLawQueryRequest extends Request {
             private String content; 
             private String role; 
 
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.content = model.content;
+                this.role = model.role;
+            } 
+
             /**
              * content.
              */
@@ -452,6 +475,13 @@ public class RunSearchLawQueryRequest extends Request {
 
         public static final class Builder {
             private java.util.List<Messages> messages; 
+
+            private Builder() {
+            } 
+
+            private Builder(Thread model) {
+                this.messages = model.messages;
+            } 
 
             /**
              * messages.

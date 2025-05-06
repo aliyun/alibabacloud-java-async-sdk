@@ -64,6 +64,10 @@ public class RunLegalAdviceConsultationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class RunLegalAdviceConsultationResponseBody extends TeaModel {
         private Boolean success; 
         private Usage usage; 
         private String httpStatusCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunLegalAdviceConsultationResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.responseMarkdown = model.responseMarkdown;
+            this.round = model.round;
+            this.status = model.status;
+            this.success = model.success;
+            this.usage = model.usage;
+            this.httpStatusCode = model.httpStatusCode;
+        } 
 
         /**
          * Code.
@@ -271,6 +290,15 @@ public class RunLegalAdviceConsultationResponseBody extends TeaModel {
             private Integer inputTokens; 
             private Integer outputTokens; 
             private Integer totalTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+            } 
 
             /**
              * InputTokens.
