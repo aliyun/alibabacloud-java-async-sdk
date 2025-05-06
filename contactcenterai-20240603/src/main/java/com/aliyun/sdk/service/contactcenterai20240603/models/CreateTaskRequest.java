@@ -1209,6 +1209,9 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("level")
         private String level;
 
+        @com.aliyun.core.annotation.NameInMap("roleIdentification")
+        private Boolean roleIdentification;
+
         @com.aliyun.core.annotation.NameInMap("serviceChannel")
         private Integer serviceChannel;
 
@@ -1228,6 +1231,7 @@ public class CreateTaskRequest extends Request {
             this.clientChannel = builder.clientChannel;
             this.fileName = builder.fileName;
             this.level = builder.level;
+            this.roleIdentification = builder.roleIdentification;
             this.serviceChannel = builder.serviceChannel;
             this.serviceChannelKeywords = builder.serviceChannelKeywords;
             this.vocabularyId = builder.vocabularyId;
@@ -1278,6 +1282,13 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * @return roleIdentification
+         */
+        public Boolean getRoleIdentification() {
+            return this.roleIdentification;
+        }
+
+        /**
          * @return serviceChannel
          */
         public Integer getServiceChannel() {
@@ -1311,6 +1322,7 @@ public class CreateTaskRequest extends Request {
             private Integer clientChannel; 
             private String fileName; 
             private String level; 
+            private Boolean roleIdentification; 
             private Integer serviceChannel; 
             private java.util.List<String> serviceChannelKeywords; 
             private String vocabularyId; 
@@ -1325,6 +1337,7 @@ public class CreateTaskRequest extends Request {
                 this.clientChannel = model.clientChannel;
                 this.fileName = model.fileName;
                 this.level = model.level;
+                this.roleIdentification = model.roleIdentification;
                 this.serviceChannel = model.serviceChannel;
                 this.serviceChannelKeywords = model.serviceChannelKeywords;
                 this.vocabularyId = model.vocabularyId;
@@ -1371,6 +1384,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder level(String level) {
                 this.level = level;
+                return this;
+            }
+
+            /**
+             * roleIdentification.
+             */
+            public Builder roleIdentification(Boolean roleIdentification) {
+                this.roleIdentification = roleIdentification;
                 return this;
             }
 
