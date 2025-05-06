@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-dashdeviceconsole20250408</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>alibabacloud-dashdeviceconsole20250408</name>
   <description>Alibaba Cloud DashDeviceConsole (20250408) Async SDK for Java

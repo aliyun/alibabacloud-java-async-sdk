@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of DeletePrompt  DeletePromptRequest
+     * @return DeletePromptResponse
+     */
+    CompletableFuture<DeletePromptResponse> deletePrompt(DeletePromptRequest request);
+
+    /**
      * @param request the request parameters of GetPrompt  GetPromptRequest
      * @return GetPromptResponse
      */
