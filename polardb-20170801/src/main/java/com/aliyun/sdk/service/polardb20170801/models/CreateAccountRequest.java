@@ -33,7 +33,6 @@ public class CreateAccountRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountPrivilege")
-    @com.aliyun.core.annotation.Validation(maxLength = 900)
     private String accountPrivilege;
 
     @com.aliyun.core.annotation.Query
@@ -51,7 +50,6 @@ public class CreateAccountRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBName")
-    @com.aliyun.core.annotation.Validation(maxLength = 6400)
     private String DBName;
 
     @com.aliyun.core.annotation.Query

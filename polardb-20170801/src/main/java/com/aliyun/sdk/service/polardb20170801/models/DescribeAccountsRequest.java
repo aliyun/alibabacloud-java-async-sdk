@@ -197,7 +197,13 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * NodeType.
+         * <p>The node type. This parameter is required when you query the PolarDB search node account.</p>
+         * <ul>
+         * <li>Search</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Search</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);

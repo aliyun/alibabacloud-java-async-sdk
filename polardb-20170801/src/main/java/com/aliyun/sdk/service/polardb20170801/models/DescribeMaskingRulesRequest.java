@@ -104,7 +104,11 @@ public class DescribeMaskingRulesRequest extends Request {
         }
 
         /**
-         * InterfaceVersion.
+         * <p>Queries data masking rules or encryption rules. Valid values:</p>
+         * <p>v1: queries data masking rules. v2: queries data encryption rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder interfaceVersion(String interfaceVersion) {
             this.putQueryParameter("InterfaceVersion", interfaceVersion);

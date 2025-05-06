@@ -23,12 +23,20 @@ public class ModifyMaskingRulesRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultAlgo")
+    private String defaultAlgo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Enable")
     private String enable;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InterfaceVersion")
     private String interfaceVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaskingAlgo")
+    private String maskingAlgo;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleConfig")
@@ -51,8 +59,10 @@ public class ModifyMaskingRulesRequest extends Request {
     private ModifyMaskingRulesRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.defaultAlgo = builder.defaultAlgo;
         this.enable = builder.enable;
         this.interfaceVersion = builder.interfaceVersion;
+        this.maskingAlgo = builder.maskingAlgo;
         this.ruleConfig = builder.ruleConfig;
         this.ruleName = builder.ruleName;
         this.ruleNameList = builder.ruleNameList;
@@ -80,6 +90,13 @@ public class ModifyMaskingRulesRequest extends Request {
     }
 
     /**
+     * @return defaultAlgo
+     */
+    public String getDefaultAlgo() {
+        return this.defaultAlgo;
+    }
+
+    /**
      * @return enable
      */
     public String getEnable() {
@@ -91,6 +108,13 @@ public class ModifyMaskingRulesRequest extends Request {
      */
     public String getInterfaceVersion() {
         return this.interfaceVersion;
+    }
+
+    /**
+     * @return maskingAlgo
+     */
+    public String getMaskingAlgo() {
+        return this.maskingAlgo;
     }
 
     /**
@@ -123,8 +147,10 @@ public class ModifyMaskingRulesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyMaskingRulesRequest, Builder> {
         private String DBClusterId; 
+        private String defaultAlgo; 
         private String enable; 
         private String interfaceVersion; 
+        private String maskingAlgo; 
         private String ruleConfig; 
         private String ruleName; 
         private String ruleNameList; 
@@ -137,8 +163,10 @@ public class ModifyMaskingRulesRequest extends Request {
         private Builder(ModifyMaskingRulesRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.defaultAlgo = request.defaultAlgo;
             this.enable = request.enable;
             this.interfaceVersion = request.interfaceVersion;
+            this.maskingAlgo = request.maskingAlgo;
             this.ruleConfig = request.ruleConfig;
             this.ruleName = request.ruleName;
             this.ruleNameList = request.ruleNameList;
@@ -158,6 +186,15 @@ public class ModifyMaskingRulesRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * DefaultAlgo.
+         */
+        public Builder defaultAlgo(String defaultAlgo) {
+            this.putQueryParameter("DefaultAlgo", defaultAlgo);
+            this.defaultAlgo = defaultAlgo;
             return this;
         }
 
@@ -186,6 +223,15 @@ public class ModifyMaskingRulesRequest extends Request {
         public Builder interfaceVersion(String interfaceVersion) {
             this.putQueryParameter("InterfaceVersion", interfaceVersion);
             this.interfaceVersion = interfaceVersion;
+            return this;
+        }
+
+        /**
+         * MaskingAlgo.
+         */
+        public Builder maskingAlgo(String maskingAlgo) {
+            this.putQueryParameter("MaskingAlgo", maskingAlgo);
+            this.maskingAlgo = maskingAlgo;
             return this;
         }
 

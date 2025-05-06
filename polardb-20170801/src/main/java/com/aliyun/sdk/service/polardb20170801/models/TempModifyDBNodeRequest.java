@@ -215,7 +215,7 @@ public class TempModifyDBNodeRequest extends Request {
         }
 
         /**
-         * <p>The information of the added node.</p>
+         * <p>The information about the scaled/added node.</p>
          * <p>This parameter is required.</p>
          */
         public Builder DBNode(java.util.List<DBNode> DBNode) {
@@ -365,10 +365,15 @@ public class TempModifyDBNodeRequest extends Request {
             } 
 
             /**
-             * <p>The instance type of the added node. The instance type of the added node must be the same as the instance type of the original node.</p>
+             * <p>The specifications of the scaled/added node.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the instance types of original nodes.</p>
              * </blockquote>
+             * <ul>
+             * <li><p>The specification of the new node must be consistent with the specifications of the original nodes.</p>
+             * </li>
+             * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the specifications of the original nodes.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>polar.mysql.x4.medium</p>
@@ -379,7 +384,7 @@ public class TempModifyDBNodeRequest extends Request {
             }
 
             /**
-             * <p>The ID of the zone in which the added node is deployed. The instance type of the added node must be the same as the instance type of the original node.</p>
+             * <p>The ID of the zone in which the added node is deployed. It must be the same zone as the original nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-i</p>

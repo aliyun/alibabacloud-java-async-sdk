@@ -940,7 +940,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AutoUpgradeMinorVersion.
+         * <p>The minor version upgrade method.</p>
+         * <ul>
+         * <li>Auto</li>
+         * <li>Manual</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder autoUpgradeMinorVersion(String autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
