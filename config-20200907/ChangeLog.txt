@@ -1,3 +1,6 @@
+2025-05-06 Version: 1.0.11
+- Generated java-async 2020-09-07 for Config.
+
 2025-04-22 Version: 1.0.10
 - Generated java-async 2020-09-07 for Config.
 

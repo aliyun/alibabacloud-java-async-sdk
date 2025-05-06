@@ -31,11 +31,16 @@ public class GenerateAggregateCompliancePackReportRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String compliancePackId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MultiFiles")
+    private Boolean multiFiles;
+
     private GenerateAggregateCompliancePackReportRequest(Builder builder) {
         super(builder);
         this.aggregatorId = builder.aggregatorId;
         this.clientToken = builder.clientToken;
         this.compliancePackId = builder.compliancePackId;
+        this.multiFiles = builder.multiFiles;
     }
 
     public static Builder builder() {
@@ -72,10 +77,18 @@ public class GenerateAggregateCompliancePackReportRequest extends Request {
         return this.compliancePackId;
     }
 
+    /**
+     * @return multiFiles
+     */
+    public Boolean getMultiFiles() {
+        return this.multiFiles;
+    }
+
     public static final class Builder extends Request.Builder<GenerateAggregateCompliancePackReportRequest, Builder> {
         private String aggregatorId; 
         private String clientToken; 
         private String compliancePackId; 
+        private Boolean multiFiles; 
 
         private Builder() {
             super();
@@ -86,6 +99,7 @@ public class GenerateAggregateCompliancePackReportRequest extends Request {
             this.aggregatorId = request.aggregatorId;
             this.clientToken = request.clientToken;
             this.compliancePackId = request.compliancePackId;
+            this.multiFiles = request.multiFiles;
         } 
 
         /**
@@ -125,6 +139,15 @@ public class GenerateAggregateCompliancePackReportRequest extends Request {
         public Builder compliancePackId(String compliancePackId) {
             this.putBodyParameter("CompliancePackId", compliancePackId);
             this.compliancePackId = compliancePackId;
+            return this;
+        }
+
+        /**
+         * MultiFiles.
+         */
+        public Builder multiFiles(Boolean multiFiles) {
+            this.putBodyParameter("MultiFiles", multiFiles);
+            this.multiFiles = multiFiles;
             return this;
         }
 
