@@ -40,6 +40,10 @@ public class ModifyElasticResourceSpecResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -65,6 +69,15 @@ public class ModifyElasticResourceSpecResponseBody extends TeaModel {
         private Long orderId; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyElasticResourceSpecResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * OrderId.

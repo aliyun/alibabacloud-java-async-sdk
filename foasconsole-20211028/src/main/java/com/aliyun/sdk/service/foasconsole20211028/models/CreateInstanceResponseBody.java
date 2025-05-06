@@ -40,6 +40,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderInfo
      */
@@ -65,6 +69,15 @@ public class CreateInstanceResponseBody extends TeaModel {
         private OrderInfo orderInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateInstanceResponseBody model) {
+            this.orderInfo = model.orderInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * OrderInfo.
@@ -163,6 +176,16 @@ public class CreateInstanceResponseBody extends TeaModel {
             private Long orderId; 
             private String storageInstanceId; 
             private Long storageOrderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderInfo model) {
+                this.instanceId = model.instanceId;
+                this.orderId = model.orderId;
+                this.storageInstanceId = model.storageInstanceId;
+                this.storageOrderId = model.storageOrderId;
+            } 
 
             /**
              * InstanceId.

@@ -56,6 +56,10 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageIndex
      */
@@ -113,6 +117,19 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
         private Long totalCount; 
         private Integer totalPage; 
         private java.util.List<String> zoneIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSupportedZonesResponseBody model) {
+            this.pageIndex = model.pageIndex;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+            this.zoneIds = model.zoneIds;
+        } 
 
         /**
          * PageIndex.

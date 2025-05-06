@@ -40,6 +40,10 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return priceInfo
      */
@@ -65,6 +69,15 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
         private PriceInfo priceInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryCreateInstancePriceResponseBody model) {
+            this.priceInfo = model.priceInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * PriceInfo.
@@ -187,6 +200,18 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             private String monthPrice; 
             private String originalStandAmount; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(DepreciateInfo model) {
+                this.cheapRate = model.cheapRate;
+                this.cheapStandAmount = model.cheapStandAmount;
+                this.isShow = model.isShow;
+                this.monthPrice = model.monthPrice;
+                this.originalStandAmount = model.originalStandAmount;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * CheapRate.
@@ -311,6 +336,16 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             private String promotionOptionNo; 
             private Boolean selected; 
 
+            private Builder() {
+            } 
+
+            private Builder(OptionalPromotions model) {
+                this.promotionDesc = model.promotionDesc;
+                this.promotionName = model.promotionName;
+                this.promotionOptionNo = model.promotionOptionNo;
+                this.selected = model.selected;
+            } 
+
             /**
              * PromotionDesc.
              */
@@ -393,6 +428,14 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private Long ruleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.description = model.description;
+                this.ruleId = model.ruleId;
+            } 
 
             /**
              * Description.
@@ -580,6 +623,24 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             private String standDiscountPrice; 
             private String standPrice; 
             private Float tradeAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceInfo model) {
+                this.code = model.code;
+                this.currency = model.currency;
+                this.depreciateInfo = model.depreciateInfo;
+                this.discountAmount = model.discountAmount;
+                this.isContractActivity = model.isContractActivity;
+                this.message = model.message;
+                this.optionalPromotions = model.optionalPromotions;
+                this.originalAmount = model.originalAmount;
+                this.rules = model.rules;
+                this.standDiscountPrice = model.standDiscountPrice;
+                this.standPrice = model.standPrice;
+                this.tradeAmount = model.tradeAmount;
+            } 
 
             /**
              * Code.

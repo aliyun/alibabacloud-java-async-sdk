@@ -44,6 +44,10 @@ public class ConvertHybridInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errCode
      */
@@ -77,6 +81,16 @@ public class ConvertHybridInstanceResponseBody extends TeaModel {
         private OrderInfo orderInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConvertHybridInstanceResponseBody model) {
+            this.errCode = model.errCode;
+            this.orderInfo = model.orderInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * ErrCode.
@@ -171,6 +185,15 @@ public class ConvertHybridInstanceResponseBody extends TeaModel {
             private String elasticInstanceId; 
             private String instanceId; 
             private Long orderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderInfo model) {
+                this.elasticInstanceId = model.elasticInstanceId;
+                this.instanceId = model.instanceId;
+                this.orderId = model.orderId;
+            } 
 
             /**
              * ElasticInstanceId.

@@ -111,7 +111,7 @@ public class QueryCreateInstancePriceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -475,6 +475,14 @@ public class QueryCreateInstancePriceRequest extends Request {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(HaResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -542,6 +550,14 @@ public class QueryCreateInstancePriceRequest extends Request {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -597,6 +613,13 @@ public class QueryCreateInstancePriceRequest extends Request {
         public static final class Builder {
             private String bucket; 
 
+            private Builder() {
+            } 
+
+            private Builder(Oss model) {
+                this.bucket = model.bucket;
+            } 
+
             /**
              * Bucket.
              */
@@ -643,6 +666,13 @@ public class QueryCreateInstancePriceRequest extends Request {
 
         public static final class Builder {
             private Oss oss; 
+
+            private Builder() {
+            } 
+
+            private Builder(Storage model) {
+                this.oss = model.oss;
+            } 
 
             /**
              * Oss.

@@ -56,6 +56,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -113,6 +117,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Boolean success; 
         private Long totalCount; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.pageIndex = model.pageIndex;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * Instances.
@@ -232,6 +249,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String stepName; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalStageWithWeight model) {
+                this.stepIndex = model.stepIndex;
+                this.stepName = model.stepName;
+                this.weight = model.weight;
+            } 
+
             /**
              * StepIndex.
              */
@@ -343,6 +369,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String status; 
             private java.util.List<TotalStageWithWeight> totalStageWithWeight; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterStage model) {
+                this.clusterId = model.clusterId;
+                this.currentStage = model.currentStage;
+                this.message = model.message;
+                this.status = model.status;
+                this.totalStageWithWeight = model.totalStageWithWeight;
+            } 
+
             /**
              * ClusterId.
              */
@@ -433,6 +470,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String listenersStatus; 
             private String port; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserSlbListeners model) {
+                this.listenersStatus = model.listenersStatus;
+                this.port = model.port;
+            } 
 
             /**
              * ListenersStatus.
@@ -536,6 +581,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String slbIp; 
             private String slbStatus; 
             private java.util.List<UserSlbListeners> userSlbListeners; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserSlbDto model) {
+                this.existSlb = model.existSlb;
+                this.slbId = model.slbId;
+                this.slbIp = model.slbIp;
+                this.slbStatus = model.slbStatus;
+                this.userSlbListeners = model.userSlbListeners;
+            } 
 
             /**
              * ExistSlb.
@@ -699,6 +755,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String url; 
             private UserSlbDto userSlbDto; 
             private String vpcCidr; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterState model) {
+                this.clusterId = model.clusterId;
+                this.clusterStage = model.clusterStage;
+                this.createTimeout = model.createTimeout;
+                this.status = model.status;
+                this.subStatus = model.subStatus;
+                this.url = model.url;
+                this.userSlbDto = model.userSlbDto;
+                this.vpcCidr = model.vpcCidr;
+            } 
 
             /**
              * ClusterId.
@@ -959,6 +1029,26 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Float usedMemory; 
             private Float usedResource; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterUsedResources model) {
+                this.clusterId = model.clusterId;
+                this.elasticUsedCpu = model.elasticUsedCpu;
+                this.elasticUsedMemory = model.elasticUsedMemory;
+                this.elasticUsedResource = model.elasticUsedResource;
+                this.guaranteedUsedCpu = model.guaranteedUsedCpu;
+                this.guaranteedUsedMemory = model.guaranteedUsedMemory;
+                this.guaranteedUsedResource = model.guaranteedUsedResource;
+                this.ha = model.ha;
+                this.haUsedCpu = model.haUsedCpu;
+                this.haUsedMemory = model.haUsedMemory;
+                this.haUsedResource = model.haUsedResource;
+                this.usedCpu = model.usedCpu;
+                this.usedMemory = model.usedMemory;
+                this.usedResource = model.usedResource;
+            } 
+
             /**
              * ClusterId.
              */
@@ -1122,6 +1212,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String clusterId; 
             private Float usedStorage; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterUsedStorage model) {
+                this.clusterId = model.clusterId;
+                this.usedStorage = model.usedStorage;
+            } 
+
             /**
              * ClusterId.
              */
@@ -1189,6 +1287,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(ElasticResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -1255,6 +1361,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer cpu; 
             private Integer memoryGB; 
+
+            private Builder() {
+            } 
+
+            private Builder(HaResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
 
             /**
              * Cpu.
@@ -1395,6 +1509,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(HaVSwitchInfo model) {
+                this.availableIpAddressCount = model.availableIpAddressCount;
+                this.description = model.description;
+                this.regionId = model.regionId;
+                this.vSwitchCidr = model.vSwitchCidr;
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitchName = model.vSwitchName;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * AvailableIpAddressCount.
              */
@@ -1512,6 +1640,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private java.util.List<String> hostNames; 
             private String ip; 
 
+            private Builder() {
+            } 
+
+            private Builder(HostAliases model) {
+                this.hostNames = model.hostNames;
+                this.ip = model.ip;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -1615,6 +1751,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String bucketVersioningStatus; 
             private String endpoint; 
 
+            private Builder() {
+            } 
+
+            private Builder(OssInfo model) {
+                this.accessId = model.accessId;
+                this.accessKey = model.accessKey;
+                this.bucket = model.bucket;
+                this.bucketVersioningStatus = model.bucketVersioningStatus;
+                this.endpoint = model.endpoint;
+            } 
+
             /**
              * AccessId.
              */
@@ -1706,6 +1853,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -1761,6 +1916,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String bucket; 
 
+            private Builder() {
+            } 
+
+            private Builder(Oss model) {
+                this.bucket = model.bucket;
+            } 
+
             /**
              * Bucket.
              */
@@ -1792,10 +1954,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Oss")
         private Oss oss;
 
+        @com.aliyun.core.annotation.NameInMap("SupportCreateFullyManagedStorage")
+        private Boolean supportCreateFullyManagedStorage;
+
+        @com.aliyun.core.annotation.NameInMap("SupportMigrationProgressDetection")
+        private Boolean supportMigrationProgressDetection;
+
         private Storage(Builder builder) {
             this.fullyManaged = builder.fullyManaged;
             this.orderState = builder.orderState;
             this.oss = builder.oss;
+            this.supportCreateFullyManagedStorage = builder.supportCreateFullyManagedStorage;
+            this.supportMigrationProgressDetection = builder.supportMigrationProgressDetection;
         }
 
         public static Builder builder() {
@@ -1827,10 +1997,37 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.oss;
         }
 
+        /**
+         * @return supportCreateFullyManagedStorage
+         */
+        public Boolean getSupportCreateFullyManagedStorage() {
+            return this.supportCreateFullyManagedStorage;
+        }
+
+        /**
+         * @return supportMigrationProgressDetection
+         */
+        public Boolean getSupportMigrationProgressDetection() {
+            return this.supportMigrationProgressDetection;
+        }
+
         public static final class Builder {
             private Boolean fullyManaged; 
             private String orderState; 
             private Oss oss; 
+            private Boolean supportCreateFullyManagedStorage; 
+            private Boolean supportMigrationProgressDetection; 
+
+            private Builder() {
+            } 
+
+            private Builder(Storage model) {
+                this.fullyManaged = model.fullyManaged;
+                this.orderState = model.orderState;
+                this.oss = model.oss;
+                this.supportCreateFullyManagedStorage = model.supportCreateFullyManagedStorage;
+                this.supportMigrationProgressDetection = model.supportMigrationProgressDetection;
+            } 
 
             /**
              * FullyManaged.
@@ -1853,6 +2050,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder oss(Oss oss) {
                 this.oss = oss;
+                return this;
+            }
+
+            /**
+             * SupportCreateFullyManagedStorage.
+             */
+            public Builder supportCreateFullyManagedStorage(Boolean supportCreateFullyManagedStorage) {
+                this.supportCreateFullyManagedStorage = supportCreateFullyManagedStorage;
+                return this;
+            }
+
+            /**
+             * SupportMigrationProgressDetection.
+             */
+            public Builder supportMigrationProgressDetection(Boolean supportMigrationProgressDetection) {
+                this.supportMigrationProgressDetection = supportMigrationProgressDetection;
                 return this;
             }
 
@@ -1906,6 +2119,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -2045,6 +2266,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String vSwitchName; 
             private String vpcId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitchInfo model) {
+                this.availableIpAddressCount = model.availableIpAddressCount;
+                this.description = model.description;
+                this.regionId = model.regionId;
+                this.vSwitchCidr = model.vSwitchCidr;
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitchName = model.vSwitchName;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * AvailableIpAddressCount.
@@ -2208,6 +2443,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String status; 
             private String vpcId; 
             private String vpcName; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcInfo model) {
+                this.cidrBlock = model.cidrBlock;
+                this.description = model.description;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
 
             /**
              * CidrBlock.
@@ -2716,6 +2963,48 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String vpcId; 
             private VpcInfo vpcInfo; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.ansm = model.ansm;
+                this.architectureType = model.architectureType;
+                this.askClusterId = model.askClusterId;
+                this.chargeType = model.chargeType;
+                this.clusterState = model.clusterState;
+                this.clusterStatus = model.clusterStatus;
+                this.clusterUsedResources = model.clusterUsedResources;
+                this.clusterUsedStorage = model.clusterUsedStorage;
+                this.elastic = model.elastic;
+                this.elasticOrderState = model.elasticOrderState;
+                this.elasticResourceSpec = model.elasticResourceSpec;
+                this.ha = model.ha;
+                this.haResourceSpec = model.haResourceSpec;
+                this.haVSwitchIds = model.haVSwitchIds;
+                this.haVSwitchInfo = model.haVSwitchInfo;
+                this.haZoneId = model.haZoneId;
+                this.hostAliases = model.hostAliases;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.monitorType = model.monitorType;
+                this.orderState = model.orderState;
+                this.ossInfo = model.ossInfo;
+                this.region = model.region;
+                this.resourceCreateTime = model.resourceCreateTime;
+                this.resourceExpiredTime = model.resourceExpiredTime;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceId = model.resourceId;
+                this.resourceSpec = model.resourceSpec;
+                this.storage = model.storage;
+                this.tags = model.tags;
+                this.uid = model.uid;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vSwitchInfo = model.vSwitchInfo;
+                this.vpcId = model.vpcId;
+                this.vpcInfo = model.vpcInfo;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * Ansm.

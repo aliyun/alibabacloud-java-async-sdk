@@ -57,7 +57,7 @@ public class CreateNamespaceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -222,6 +222,14 @@ public class CreateNamespaceRequest extends Request {
         public static final class Builder {
             private Integer cpu; 
             private Integer memoryGB; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
 
             /**
              * Cpu.

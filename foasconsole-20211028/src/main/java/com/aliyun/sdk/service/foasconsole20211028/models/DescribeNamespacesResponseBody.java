@@ -56,6 +56,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return namespaces
      */
@@ -113,6 +117,19 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         private Boolean success; 
         private Long totalCount; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNamespacesResponseBody model) {
+            this.namespaces = model.namespaces;
+            this.pageIndex = model.pageIndex;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * Namespaces.
@@ -220,6 +237,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(ElasticResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -287,6 +312,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(GuaranteedResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -353,6 +386,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer cpu; 
             private Integer memoryGB; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
 
             /**
              * Cpu.
@@ -433,6 +474,15 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             private Float cu; 
             private Float memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceUsed model) {
+                this.cpu = model.cpu;
+                this.cu = model.cu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -507,6 +557,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.
@@ -670,6 +728,22 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             private ResourceUsed resourceUsed; 
             private String status; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Namespaces model) {
+                this.elasticResourceSpec = model.elasticResourceSpec;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.guaranteedResourceSpec = model.guaranteedResourceSpec;
+                this.ha = model.ha;
+                this.namespace = model.namespace;
+                this.resourceSpec = model.resourceSpec;
+                this.resourceUsed = model.resourceUsed;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * ElasticResourceSpec.

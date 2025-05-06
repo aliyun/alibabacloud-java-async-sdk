@@ -135,7 +135,7 @@ public class CreateInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -579,6 +579,14 @@ public class CreateInstanceRequest extends Request {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(HaResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -646,6 +654,14 @@ public class CreateInstanceRequest extends Request {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -700,6 +716,13 @@ public class CreateInstanceRequest extends Request {
 
         public static final class Builder {
             private String bucket; 
+
+            private Builder() {
+            } 
+
+            private Builder(Oss model) {
+                this.bucket = model.bucket;
+            } 
 
             /**
              * Bucket.
@@ -759,6 +782,14 @@ public class CreateInstanceRequest extends Request {
         public static final class Builder {
             private Boolean fullyManaged; 
             private Oss oss; 
+
+            private Builder() {
+            } 
+
+            private Builder(Storage model) {
+                this.fullyManaged = model.fullyManaged;
+                this.oss = model.oss;
+            } 
 
             /**
              * FullyManaged.
@@ -826,6 +857,14 @@ public class CreateInstanceRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

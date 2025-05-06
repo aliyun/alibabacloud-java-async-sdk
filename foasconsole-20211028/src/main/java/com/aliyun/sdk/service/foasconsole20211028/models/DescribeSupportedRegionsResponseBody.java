@@ -56,6 +56,10 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageIndex
      */
@@ -113,6 +117,19 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         private Boolean success; 
         private Long totalCount; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSupportedRegionsResponseBody model) {
+            this.pageIndex = model.pageIndex;
+            this.pageSize = model.pageSize;
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * PageIndex.
@@ -243,6 +260,16 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
             private String extra; 
             private String region; 
             private String regionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.description = model.description;
+                this.extra = model.extra;
+                this.region = model.region;
+                this.regionName = model.regionName;
+            } 
 
             /**
              * Description.

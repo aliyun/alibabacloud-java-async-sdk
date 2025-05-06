@@ -36,6 +36,10 @@ public class ModifyNamespaceSpecV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ModifyNamespaceSpecV2ResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyNamespaceSpecV2ResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.

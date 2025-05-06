@@ -36,6 +36,10 @@ public class ModifyPrepayNamespaceSpecResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ModifyPrepayNamespaceSpecResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyPrepayNamespaceSpecResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.

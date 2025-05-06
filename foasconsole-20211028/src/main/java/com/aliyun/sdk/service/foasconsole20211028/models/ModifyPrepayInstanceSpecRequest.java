@@ -67,7 +67,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -268,6 +268,14 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(HaResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -336,6 +344,14 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         public static final class Builder {
             private Integer cpu; 
             private Integer memoryGB; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
 
             /**
              * <p>This parameter is required.</p>

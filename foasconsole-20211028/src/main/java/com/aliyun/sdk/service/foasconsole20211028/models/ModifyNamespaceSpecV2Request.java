@@ -63,7 +63,7 @@ public class ModifyNamespaceSpecV2Request extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -253,6 +253,14 @@ public class ModifyNamespaceSpecV2Request extends Request {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(ElasticResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -327,6 +335,14 @@ public class ModifyNamespaceSpecV2Request extends Request {
         public static final class Builder {
             private Integer cpu; 
             private Integer memoryGB; 
+
+            private Builder() {
+            } 
+
+            private Builder(GuaranteedResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
 
             /**
              * <p>This parameter is required.</p>

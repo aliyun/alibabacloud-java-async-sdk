@@ -65,7 +65,7 @@ public class ConvertInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -257,6 +257,14 @@ public class ConvertInstanceRequest extends Request {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -331,6 +339,14 @@ public class ConvertInstanceRequest extends Request {
         public static final class Builder {
             private String namespace; 
             private ResourceSpec resourceSpec; 
+
+            private Builder() {
+            } 
+
+            private Builder(NamespaceResourceSpecs model) {
+                this.namespace = model.namespace;
+                this.resourceSpec = model.resourceSpec;
+            } 
 
             /**
              * <p>This parameter is required.</p>
