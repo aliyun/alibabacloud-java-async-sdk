@@ -43,6 +43,10 @@ public class CreateDatasetRequest extends Request {
     private DocumentHandleConfig documentHandleConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InvokeType")
+    private String invokeType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SearchDatasetEnable")
     private Integer searchDatasetEnable;
 
@@ -59,6 +63,7 @@ public class CreateDatasetRequest extends Request {
         this.datasetName = builder.datasetName;
         this.datasetType = builder.datasetType;
         this.documentHandleConfig = builder.documentHandleConfig;
+        this.invokeType = builder.invokeType;
         this.searchDatasetEnable = builder.searchDatasetEnable;
         this.workspaceId = builder.workspaceId;
     }
@@ -119,6 +124,13 @@ public class CreateDatasetRequest extends Request {
     }
 
     /**
+     * @return invokeType
+     */
+    public String getInvokeType() {
+        return this.invokeType;
+    }
+
+    /**
      * @return searchDatasetEnable
      */
     public Integer getSearchDatasetEnable() {
@@ -139,6 +151,7 @@ public class CreateDatasetRequest extends Request {
         private String datasetName; 
         private String datasetType; 
         private DocumentHandleConfig documentHandleConfig; 
+        private String invokeType; 
         private Integer searchDatasetEnable; 
         private String workspaceId; 
 
@@ -154,6 +167,7 @@ public class CreateDatasetRequest extends Request {
             this.datasetName = request.datasetName;
             this.datasetType = request.datasetType;
             this.documentHandleConfig = request.documentHandleConfig;
+            this.invokeType = request.invokeType;
             this.searchDatasetEnable = request.searchDatasetEnable;
             this.workspaceId = request.workspaceId;
         } 
@@ -214,6 +228,15 @@ public class CreateDatasetRequest extends Request {
             String documentHandleConfigShrink = shrink(documentHandleConfig, "DocumentHandleConfig", "json");
             this.putBodyParameter("DocumentHandleConfig", documentHandleConfigShrink);
             this.documentHandleConfig = documentHandleConfig;
+            return this;
+        }
+
+        /**
+         * InvokeType.
+         */
+        public Builder invokeType(String invokeType) {
+            this.putBodyParameter("InvokeType", invokeType);
+            this.invokeType = invokeType;
             return this;
         }
 
