@@ -52,6 +52,10 @@ public class ListWarningStrategyConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListWarningStrategyConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWarningStrategyConfigResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -248,6 +264,18 @@ public class ListWarningStrategyConfigResponseBody extends TeaModel {
             private Long maxNumber; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataData model) {
+                this.id = model.id;
+                this.intervalTime = model.intervalTime;
+                this.lambda = model.lambda;
+                this.level = model.level;
+                this.maxNumber = model.maxNumber;
+                this.name = model.name;
+            } 
+
             /**
              * Id.
              */
@@ -334,6 +362,13 @@ public class ListWarningStrategyConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataData> data; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.data = model.data;
+            } 
 
             /**
              * data.

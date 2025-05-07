@@ -60,6 +60,10 @@ public class ListRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class ListRulesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRulesResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.data = model.data;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -311,6 +329,20 @@ public class ListRulesResponseBody extends TeaModel {
             private Integer ruleType; 
             private Integer type; 
             private String typeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.businessCategoryNameList = model.businessCategoryNameList;
+                this.comments = model.comments;
+                this.createTime = model.createTime;
+                this.name = model.name;
+                this.rid = model.rid;
+                this.ruleType = model.ruleType;
+                this.type = model.type;
+                this.typeName = model.typeName;
+            } 
 
             /**
              * BusinessCategoryNameList.

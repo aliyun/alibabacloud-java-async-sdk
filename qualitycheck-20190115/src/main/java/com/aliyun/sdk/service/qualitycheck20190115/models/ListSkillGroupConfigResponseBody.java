@@ -48,6 +48,10 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSkillGroupConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -180,6 +195,14 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
             private Long rid; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleNameInfo model) {
+                this.rid = model.rid;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
              * Rid.
              */
@@ -234,6 +257,13 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RuleNameInfo> ruleNameInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(AllRuleList model) {
+                this.ruleNameInfo = model.ruleNameInfo;
+            } 
 
             /**
              * RuleNameInfo.
@@ -294,6 +324,14 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
             private Long rid; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleListRuleNameInfo model) {
+                this.rid = model.rid;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
              * Rid.
              */
@@ -348,6 +386,13 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RuleListRuleNameInfo> ruleNameInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleList model) {
+                this.ruleNameInfo = model.ruleNameInfo;
+            } 
 
             /**
              * RuleNameInfo.
@@ -432,6 +477,16 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
             private Integer symbol; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SkillGroupScreen model) {
+                this.dataType = model.dataType;
+                this.name = model.name;
+                this.symbol = model.symbol;
+                this.value = model.value;
+            } 
+
             /**
              * DataType.
              */
@@ -502,6 +557,13 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SkillGroupScreen> skillGroupScreen; 
+
+            private Builder() {
+            } 
+
+            private Builder(SkillGroupScreens model) {
+                this.skillGroupScreen = model.skillGroupScreen;
+            } 
 
             /**
              * SkillGroupScreen.
@@ -802,6 +864,34 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
             private Long vocabId; 
             private String vocabName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SkillGroupConfig model) {
+                this.allContentQualityCheck = model.allContentQualityCheck;
+                this.allRids = model.allRids;
+                this.allRuleList = model.allRuleList;
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.modelId = model.modelId;
+                this.modelName = model.modelName;
+                this.name = model.name;
+                this.qualityCheckType = model.qualityCheckType;
+                this.rid = model.rid;
+                this.ruleList = model.ruleList;
+                this.screenSwitch = model.screenSwitch;
+                this.skillGroupFrom = model.skillGroupFrom;
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+                this.skillGroupScreens = model.skillGroupScreens;
+                this.status = model.status;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.vocabId = model.vocabId;
+                this.vocabName = model.vocabName;
+            } 
+
             /**
              * AllContentQualityCheck.
              */
@@ -1016,6 +1106,13 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SkillGroupConfig> skillGroupConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.skillGroupConfig = model.skillGroupConfig;
+            } 
 
             /**
              * SkillGroupConfig.

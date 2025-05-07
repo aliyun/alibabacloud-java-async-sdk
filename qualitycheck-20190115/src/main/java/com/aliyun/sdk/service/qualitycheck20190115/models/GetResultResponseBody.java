@@ -64,6 +64,10 @@ public class GetResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class GetResultResponseBody extends TeaModel {
         private String requestId; 
         private String resultCountId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResultResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.data = model.data;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resultCountId = model.resultCountId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -271,6 +290,15 @@ public class GetResultResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String skillGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(Agent model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.skillGroup = model.skillGroup;
+            } 
 
             /**
              * Id.
@@ -407,6 +435,19 @@ public class GetResultResponseBody extends TeaModel {
             private Integer speechRate; 
             private String words; 
 
+            private Builder() {
+            } 
+
+            private Builder(AsrResult model) {
+                this.begin = model.begin;
+                this.emotionValue = model.emotionValue;
+                this.end = model.end;
+                this.identity = model.identity;
+                this.role = model.role;
+                this.speechRate = model.speechRate;
+                this.words = model.words;
+            } 
+
             /**
              * Begin.
              */
@@ -502,6 +543,13 @@ public class GetResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AsrResult> asrResult; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultInfoAsrResult model) {
+                this.asrResult = model.asrResult;
+            } 
+
             /**
              * AsrResult.
              */
@@ -572,6 +620,15 @@ public class GetResultResponseBody extends TeaModel {
             private String cid; 
             private Integer hitTime; 
             private String location; 
+
+            private Builder() {
+            } 
+
+            private Builder(Anchor model) {
+                this.cid = model.cid;
+                this.hitTime = model.hitTime;
+                this.location = model.location;
+            } 
 
             /**
              * <p>条件ID</p>
@@ -648,6 +705,14 @@ public class GetResultResponseBody extends TeaModel {
             private Integer from; 
             private Integer to; 
 
+            private Builder() {
+            } 
+
+            private Builder(Range model) {
+                this.from = model.from;
+                this.to = model.to;
+            } 
+
             /**
              * <p>对话开始索引</p>
              */
@@ -714,6 +779,14 @@ public class GetResultResponseBody extends TeaModel {
         public static final class Builder {
             private Long from; 
             private Long to; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeRange model) {
+                this.from = model.from;
+                this.to = model.to;
+            } 
 
             /**
              * <p>对话开始索引</p>
@@ -842,6 +915,19 @@ public class GetResultResponseBody extends TeaModel {
             private Integer roleId; 
             private TimeRange timeRange; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckRange model) {
+                this.absolute = model.absolute;
+                this.allSentencesSatisfy = model.allSentencesSatisfy;
+                this.anchor = model.anchor;
+                this.range = model.range;
+                this.role = model.role;
+                this.roleId = model.roleId;
+                this.timeRange = model.timeRange;
+            } 
+
             /**
              * <p>false: 相对位置; 会结合anchor以及角色来决定句子位置</p>
              */
@@ -937,6 +1023,13 @@ public class GetResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> exclude; 
 
+            private Builder() {
+            } 
+
+            private Builder(Excludes model) {
+                this.exclude = model.exclude;
+            } 
+
             /**
              * Exclude.
              */
@@ -1007,6 +1100,15 @@ public class GetResultResponseBody extends TeaModel {
             private Long nodeId; 
             private Integer nodeMatchStatus; 
             private String nodeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlowNodePrerequisiteParam model) {
+                this.nodeId = model.nodeId;
+                this.nodeMatchStatus = model.nodeMatchStatus;
+                this.nodeName = model.nodeName;
+            } 
 
             /**
              * <p>节点id</p>
@@ -1083,6 +1185,14 @@ public class GetResultResponseBody extends TeaModel {
             private Long id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Intent model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * <p>意图模型ID</p>
              */
@@ -1137,6 +1247,13 @@ public class GetResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Intent> intent; 
+
+            private Builder() {
+            } 
+
+            private Builder(Intents model) {
+                this.intent = model.intent;
+            } 
 
             /**
              * Intent.
@@ -1197,6 +1314,14 @@ public class GetResultResponseBody extends TeaModel {
             private Intents intents; 
             private String modelScene; 
 
+            private Builder() {
+            } 
+
+            private Builder(IntentModelCheckParm model) {
+                this.intents = model.intents;
+                this.modelScene = model.modelScene;
+            } 
+
             /**
              * <p>引用的意图模型</p>
              */
@@ -1251,6 +1376,13 @@ public class GetResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> keyword; 
+
+            private Builder() {
+            } 
+
+            private Builder(Keywords model) {
+                this.keyword = model.keyword;
+            } 
 
             /**
              * Keyword.
@@ -1635,6 +1767,41 @@ public class GetResultResponseBody extends TeaModel {
             private Integer target; 
             private Float threshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(Param model) {
+                this.average = model.average;
+                this.beginType = model.beginType;
+                this.caseSensitive = model.caseSensitive;
+                this.checkFirstSentence = model.checkFirstSentence;
+                this.checkType = model.checkType;
+                this.compareOperator = model.compareOperator;
+                this.contextChatMatch = model.contextChatMatch;
+                this.delayTime = model.delayTime;
+                this.endType = model.endType;
+                this.excludes = model.excludes;
+                this.flowNodePrerequisiteParam = model.flowNodePrerequisiteParam;
+                this.from = model.from;
+                this.fromEnd = model.fromEnd;
+                this.hitTime = model.hitTime;
+                this.inSentence = model.inSentence;
+                this.intentModelCheckParm = model.intentModelCheckParm;
+                this.interval = model.interval;
+                this.intervalEnd = model.intervalEnd;
+                this.keywordExtension = model.keywordExtension;
+                this.keywordMatchSize = model.keywordMatchSize;
+                this.keywords = model.keywords;
+                this.maxEmotionChangeValue = model.maxEmotionChangeValue;
+                this.minWordSize = model.minWordSize;
+                this.nearDialogue = model.nearDialogue;
+                this.notRegex = model.notRegex;
+                this.phrase = model.phrase;
+                this.regex = model.regex;
+                this.target = model.target;
+                this.threshold = model.threshold;
+            } 
+
             /**
              * <p>语速检测，是否计算整个对话平均语速，默认false</p>
              */
@@ -1954,6 +2121,17 @@ public class GetResultResponseBody extends TeaModel {
             private Param param; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Operator model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.oid = model.oid;
+                this.param = model.param;
+                this.type = model.type;
+            } 
+
             /**
              * <p>主键id</p>
              */
@@ -2032,6 +2210,13 @@ public class GetResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Operator> operator; 
+
+            private Builder() {
+            } 
+
+            private Builder(Operators model) {
+                this.operator = model.operator;
+            } 
 
             /**
              * Operator.
@@ -2152,6 +2337,19 @@ public class GetResultResponseBody extends TeaModel {
             private Operators operators; 
             private String rid; 
 
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.checkRange = model.checkRange;
+                this.cid = model.cid;
+                this.exclusion = model.exclusion;
+                this.id = model.id;
+                this.lambda = model.lambda;
+                this.operators = model.operators;
+                this.rid = model.rid;
+            } 
+
             /**
              * <p>检测范围</p>
              */
@@ -2247,6 +2445,13 @@ public class GetResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Conditions> conditions; 
 
+            private Builder() {
+            } 
+
+            private Builder(HitResultConditions model) {
+                this.conditions = model.conditions;
+            } 
+
             /**
              * Conditions.
              */
@@ -2293,6 +2498,13 @@ public class GetResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> cid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cid model) {
+                this.cid = model.cid;
+            } 
 
             /**
              * <p>条件id，可能是db中的主键，也可能是转换成的a, b, c</p>
@@ -2377,6 +2589,16 @@ public class GetResultResponseBody extends TeaModel {
             private Integer to; 
             private String val; 
 
+            private Builder() {
+            } 
+
+            private Builder(KeyWord model) {
+                this.cid = model.cid;
+                this.from = model.from;
+                this.to = model.to;
+                this.val = model.val;
+            } 
+
             /**
              * <p>条件id，可能是db中的主键，也可能是转换成的a, b, c</p>
              */
@@ -2447,6 +2669,13 @@ public class GetResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<KeyWord> keyWord; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeyWords model) {
+                this.keyWord = model.keyWord;
+            } 
 
             /**
              * KeyWord.
@@ -2542,6 +2771,17 @@ public class GetResultResponseBody extends TeaModel {
             private Integer end; 
             private String role; 
             private String words; 
+
+            private Builder() {
+            } 
+
+            private Builder(Phrase model) {
+                this.begin = model.begin;
+                this.emotionValue = model.emotionValue;
+                this.end = model.end;
+                this.role = model.role;
+                this.words = model.words;
+            } 
 
             /**
              * Begin.
@@ -2646,6 +2886,15 @@ public class GetResultResponseBody extends TeaModel {
             private KeyWords keyWords; 
             private Phrase phrase; 
 
+            private Builder() {
+            } 
+
+            private Builder(Hit model) {
+                this.cid = model.cid;
+                this.keyWords = model.keyWords;
+                this.phrase = model.phrase;
+            } 
+
             /**
              * <p>条件id，可能是db中的主键，也可能是转换成的a, b, c</p>
              */
@@ -2708,6 +2957,13 @@ public class GetResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Hit> hit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Hits model) {
+                this.hit = model.hit;
+            } 
 
             /**
              * Hit.
@@ -2852,6 +3108,21 @@ public class GetResultResponseBody extends TeaModel {
             private Integer score; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(HitResult model) {
+                this.conditions = model.conditions;
+                this.hits = model.hits;
+                this.name = model.name;
+                this.reviewResult = model.reviewResult;
+                this.rid = model.rid;
+                this.schemeId = model.schemeId;
+                this.schemeVersion = model.schemeVersion;
+                this.score = model.score;
+                this.type = model.type;
+            } 
+
             /**
              * Conditions.
              */
@@ -2963,6 +3234,13 @@ public class GetResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<HitResult> hitResult; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultInfoHitResult model) {
+                this.hitResult = model.hitResult;
+            } 
+
             /**
              * HitResult.
              */
@@ -3046,6 +3324,16 @@ public class GetResultResponseBody extends TeaModel {
             private String scoreName; 
             private String scoreNumber; 
 
+            private Builder() {
+            } 
+
+            private Builder(HitScore model) {
+                this.ruleId = model.ruleId;
+                this.scoreId = model.scoreId;
+                this.scoreName = model.scoreName;
+                this.scoreNumber = model.scoreNumber;
+            } 
+
             /**
              * RuleId.
              */
@@ -3116,6 +3404,13 @@ public class GetResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HitScore> hitScore; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultInfoHitScore model) {
+                this.hitScore = model.hitScore;
+            } 
 
             /**
              * HitScore.
@@ -3500,6 +3795,41 @@ public class GetResultResponseBody extends TeaModel {
             private String taskConfigName; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Recording model) {
+                this.business = model.business;
+                this.callId = model.callId;
+                this.callTime = model.callTime;
+                this.callType = model.callType;
+                this.callee = model.callee;
+                this.caller = model.caller;
+                this.customerName = model.customerName;
+                this.dataSetName = model.dataSetName;
+                this.dialogueSize = model.dialogueSize;
+                this.duration = model.duration;
+                this.id = model.id;
+                this.name = model.name;
+                this.primaryId = model.primaryId;
+                this.remark1 = model.remark1;
+                this.remark10 = model.remark10;
+                this.remark11 = model.remark11;
+                this.remark12 = model.remark12;
+                this.remark13 = model.remark13;
+                this.remark2 = model.remark2;
+                this.remark3 = model.remark3;
+                this.remark4 = model.remark4;
+                this.remark5 = model.remark5;
+                this.remark6 = model.remark6;
+                this.remark7 = model.remark7;
+                this.remark8 = model.remark8;
+                this.remark9 = model.remark9;
+                this.taskConfigId = model.taskConfigId;
+                this.taskConfigName = model.taskConfigName;
+                this.url = model.url;
+            } 
+
             /**
              * Business.
              */
@@ -3783,6 +4113,14 @@ public class GetResultResponseBody extends TeaModel {
             private Long rid; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReviewRightRule model) {
+                this.rid = model.rid;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
              * rid.
              */
@@ -3837,6 +4175,13 @@ public class GetResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ReviewRightRule> reviewRightRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReviewHistoryReviewRightRule model) {
+                this.reviewRightRule = model.reviewRightRule;
+            } 
 
             /**
              * ReviewRightRule.
@@ -4017,6 +4362,24 @@ public class GetResultResponseBody extends TeaModel {
             private String timeStr; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReviewHistory model) {
+                this.comments = model.comments;
+                this.complainResult = model.complainResult;
+                this.oldScore = model.oldScore;
+                this.operator = model.operator;
+                this.operatorName = model.operatorName;
+                this.reviewManagerType = model.reviewManagerType;
+                this.reviewResult = model.reviewResult;
+                this.reviewRightRule = model.reviewRightRule;
+                this.score = model.score;
+                this.time = model.time;
+                this.timeStr = model.timeStr;
+                this.type = model.type;
+            } 
+
             /**
              * Comments.
              */
@@ -4152,6 +4515,13 @@ public class GetResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ReviewHistory> reviewHistory; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReviewHistoryList model) {
+                this.reviewHistory = model.reviewHistory;
+            } 
+
             /**
              * ReviewHistory.
              */
@@ -4198,6 +4568,13 @@ public class GetResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Long> reviewKeyIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReviewKeyIdList model) {
+                this.reviewKeyIdList = model.reviewKeyIdList;
+            } 
 
             /**
              * ReviewKeyIdList.
@@ -4258,6 +4635,14 @@ public class GetResultResponseBody extends TeaModel {
             private ReviewKeyIdList reviewKeyIdList; 
             private Long reviewTypeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReviewTypeIdList model) {
+                this.reviewKeyIdList = model.reviewKeyIdList;
+                this.reviewTypeId = model.reviewTypeId;
+            } 
+
             /**
              * ReviewKeyIdList.
              */
@@ -4313,6 +4698,13 @@ public class GetResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ReviewTypeIdList> reviewTypeIdList; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultInfoReviewTypeIdList model) {
+                this.reviewTypeIdList = model.reviewTypeIdList;
+            } 
+
             /**
              * ReviewTypeIdList.
              */
@@ -4360,6 +4752,13 @@ public class GetResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Long> schemeIdList; 
 
+            private Builder() {
+            } 
+
+            private Builder(SchemeIdList model) {
+                this.schemeIdList = model.schemeIdList;
+            } 
+
             /**
              * SchemeIdList.
              */
@@ -4406,6 +4805,13 @@ public class GetResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> schemeNameList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SchemeNameList model) {
+                this.schemeNameList = model.schemeNameList;
+            } 
 
             /**
              * SchemeNameList.
@@ -4766,6 +5172,39 @@ public class GetResultResponseBody extends TeaModel {
             private String taskName; 
             private String vid; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultInfo model) {
+                this.agent = model.agent;
+                this.asrResult = model.asrResult;
+                this.assignmentTime = model.assignmentTime;
+                this.comments = model.comments;
+                this.createTime = model.createTime;
+                this.createTimeLong = model.createTimeLong;
+                this.errorMessage = model.errorMessage;
+                this.hitResult = model.hitResult;
+                this.hitScore = model.hitScore;
+                this.lastDataId = model.lastDataId;
+                this.recording = model.recording;
+                this.resolver = model.resolver;
+                this.reviewHistoryList = model.reviewHistoryList;
+                this.reviewResult = model.reviewResult;
+                this.reviewStatus = model.reviewStatus;
+                this.reviewTime = model.reviewTime;
+                this.reviewTimeLong = model.reviewTimeLong;
+                this.reviewType = model.reviewType;
+                this.reviewTypeIdList = model.reviewTypeIdList;
+                this.reviewer = model.reviewer;
+                this.schemeIdList = model.schemeIdList;
+                this.schemeNameList = model.schemeNameList;
+                this.score = model.score;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.vid = model.vid;
+            } 
+
             /**
              * Agent.
              */
@@ -5020,6 +5459,13 @@ public class GetResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ResultInfo> resultInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.resultInfo = model.resultInfo;
+            } 
 
             /**
              * ResultInfo.

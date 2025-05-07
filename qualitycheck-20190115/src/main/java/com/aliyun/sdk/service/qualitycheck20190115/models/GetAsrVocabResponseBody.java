@@ -48,6 +48,10 @@ public class GetAsrVocabResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAsrVocabResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAsrVocabResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -180,6 +195,14 @@ public class GetAsrVocabResponseBody extends TeaModel {
             private Integer weight; 
             private String word; 
 
+            private Builder() {
+            } 
+
+            private Builder(Word model) {
+                this.weight = model.weight;
+                this.word = model.word;
+            } 
+
             /**
              * Weight.
              */
@@ -234,6 +257,13 @@ public class GetAsrVocabResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Word> word; 
+
+            private Builder() {
+            } 
+
+            private Builder(Words model) {
+                this.word = model.word;
+            } 
 
             /**
              * Word.
@@ -317,6 +347,16 @@ public class GetAsrVocabResponseBody extends TeaModel {
             private String modelCustomizationId; 
             private String name; 
             private Words words; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.asrVersion = model.asrVersion;
+                this.modelCustomizationId = model.modelCustomizationId;
+                this.name = model.name;
+                this.words = model.words;
+            } 
 
             /**
              * AsrVersion.

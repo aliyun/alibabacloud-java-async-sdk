@@ -56,6 +56,10 @@ public class OperatorBasicInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -113,6 +117,19 @@ public class OperatorBasicInfo extends TeaModel {
         private Integer qualityCheckType; 
         private String type; 
         private String userGroup; 
+
+        private Builder() {
+        } 
+
+        private Builder(OperatorBasicInfo model) {
+            this.id = model.id;
+            this.name = model.name;
+            this.oid = model.oid;
+            this.param = model.param;
+            this.qualityCheckType = model.qualityCheckType;
+            this.type = model.type;
+            this.userGroup = model.userGroup;
+        } 
 
         /**
          * Id.
@@ -831,6 +848,65 @@ public class OperatorBasicInfo extends TeaModel {
             private Boolean useEasAlgorithm; 
             private Double velocity; 
             private Integer velocityInMint; 
+
+            private Builder() {
+            } 
+
+            private Builder(Param model) {
+                this.answerThreshold = model.answerThreshold;
+                this.antModelInfo = model.antModelInfo;
+                this.average = model.average;
+                this.beginType = model.beginType;
+                this.botId = model.botId;
+                this.caseSensitive = model.caseSensitive;
+                this.categoryPathCode = model.categoryPathCode;
+                this.checkFirstSentence = model.checkFirstSentence;
+                this.checkType = model.checkType;
+                this.compareOperator = model.compareOperator;
+                this.contextChatMatch = model.contextChatMatch;
+                this.customerParam = model.customerParam;
+                this.delayTime = model.delayTime;
+                this.differentRole = model.differentRole;
+                this.endType = model.endType;
+                this.excludes = model.excludes;
+                this.from = model.from;
+                this.fromEnd = model.fromEnd;
+                this.hitTime = model.hitTime;
+                this.inSentence = model.inSentence;
+                this.interval = model.interval;
+                this.intervalEnd = model.intervalEnd;
+                this.keywordExtension = model.keywordExtension;
+                this.keywordMatchSize = model.keywordMatchSize;
+                this.keywords = model.keywords;
+                this.knowledgeInfo = model.knowledgeInfo;
+                this.knowledgeSentenceNum = model.knowledgeSentenceNum;
+                this.knowledgeTargetId = model.knowledgeTargetId;
+                this.knowledgeTargetName = model.knowledgeTargetName;
+                this.knowledgeTargetType = model.knowledgeTargetType;
+                this.lgfSentences = model.lgfSentences;
+                this.maxEmotionChangeValue = model.maxEmotionChangeValue;
+                this.minWordSize = model.minWordSize;
+                this.nearDialogue = model.nearDialogue;
+                this.notRegex = model.notRegex;
+                this.phrase = model.phrase;
+                this.pkey = model.pkey;
+                this.poutputType = model.poutputType;
+                this.pvalues = model.pvalues;
+                this.questionThreshold = model.questionThreshold;
+                this.references = model.references;
+                this.regex = model.regex;
+                this.roleId = model.roleId;
+                this.score = model.score;
+                this.similarityThreshold = model.similarityThreshold;
+                this.similarlySentences = model.similarlySentences;
+                this.synonyms = model.synonyms;
+                this.target = model.target;
+                this.targetRole = model.targetRole;
+                this.threshold = model.threshold;
+                this.useEasAlgorithm = model.useEasAlgorithm;
+                this.velocity = model.velocity;
+                this.velocityInMint = model.velocityInMint;
+            } 
 
             /**
              * AnswerThreshold.

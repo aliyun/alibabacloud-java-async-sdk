@@ -68,6 +68,10 @@ public class GraphFlowNode extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conditions
      */
@@ -149,6 +153,22 @@ public class GraphFlowNode extends TeaModel {
         private Properties properties; 
         private Long rid; 
         private Boolean useConditions; 
+
+        private Builder() {
+        } 
+
+        private Builder(GraphFlowNode model) {
+            this.conditions = model.conditions;
+            this.content = model.content;
+            this.id = model.id;
+            this.index = model.index;
+            this.name = model.name;
+            this.nextNodes = model.nextNodes;
+            this.nodeType = model.nodeType;
+            this.properties = model.properties;
+            this.rid = model.rid;
+            this.useConditions = model.useConditions;
+        } 
 
         /**
          * Conditions.
@@ -327,6 +347,18 @@ public class GraphFlowNode extends TeaModel {
             private String name; 
             private Long nextNodeId; 
             private java.util.List<String> triggers; 
+
+            private Builder() {
+            } 
+
+            private Builder(NextNodes model) {
+                this.checkType = model.checkType;
+                this.index = model.index;
+                this.lambda = model.lambda;
+                this.name = model.name;
+                this.nextNodeId = model.nextNodeId;
+                this.triggers = model.triggers;
+            } 
 
             /**
              * CheckType.
@@ -570,6 +602,26 @@ public class GraphFlowNode extends TeaModel {
             private Integer scoreType; 
             private java.util.List<String> triggers; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.autoReview = model.autoReview;
+                this.branchJudge = model.branchJudge;
+                this.checkMoreSize = model.checkMoreSize;
+                this.checkType = model.checkType;
+                this.lambda = model.lambda;
+                this.role = model.role;
+                this.ruleScoreType = model.ruleScoreType;
+                this.sayType = model.sayType;
+                this.scoreNum = model.scoreNum;
+                this.scoreNumType = model.scoreNumType;
+                this.scoreRuleHitType = model.scoreRuleHitType;
+                this.scoreType = model.scoreType;
+                this.triggers = model.triggers;
+                this.type = model.type;
+            } 
 
             /**
              * AutoReview.

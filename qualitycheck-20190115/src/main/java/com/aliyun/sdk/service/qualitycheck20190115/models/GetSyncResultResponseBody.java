@@ -64,6 +64,10 @@ public class GetSyncResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class GetSyncResultResponseBody extends TeaModel {
         private String requestId; 
         private String resultCountId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSyncResultResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.data = model.data;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resultCountId = model.resultCountId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -271,6 +290,15 @@ public class GetSyncResultResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String skillGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(Agent model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.skillGroup = model.skillGroup;
+            } 
 
             /**
              * Id.
@@ -407,6 +435,19 @@ public class GetSyncResultResponseBody extends TeaModel {
             private Integer speechRate; 
             private String words; 
 
+            private Builder() {
+            } 
+
+            private Builder(AsrResult model) {
+                this.begin = model.begin;
+                this.emotionValue = model.emotionValue;
+                this.end = model.end;
+                this.role = model.role;
+                this.silenceDuration = model.silenceDuration;
+                this.speechRate = model.speechRate;
+                this.words = model.words;
+            } 
+
             /**
              * Begin.
              */
@@ -537,6 +578,16 @@ public class GetSyncResultResponseBody extends TeaModel {
             private Integer from; 
             private Integer to; 
             private String val; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeyWords model) {
+                this.cid = model.cid;
+                this.from = model.from;
+                this.to = model.to;
+                this.val = model.val;
+            } 
 
             /**
              * Cid.
@@ -681,6 +732,19 @@ public class GetSyncResultResponseBody extends TeaModel {
             private Integer speechRate; 
             private String words; 
 
+            private Builder() {
+            } 
+
+            private Builder(Phrase model) {
+                this.begin = model.begin;
+                this.emotionValue = model.emotionValue;
+                this.end = model.end;
+                this.role = model.role;
+                this.silenceDuration = model.silenceDuration;
+                this.speechRate = model.speechRate;
+                this.words = model.words;
+            } 
+
             /**
              * Begin.
              */
@@ -800,6 +864,15 @@ public class GetSyncResultResponseBody extends TeaModel {
             private java.util.List<KeyWords> keyWords; 
             private Phrase phrase; 
 
+            private Builder() {
+            } 
+
+            private Builder(Hits model) {
+                this.cid = model.cid;
+                this.keyWords = model.keyWords;
+                this.phrase = model.phrase;
+            } 
+
             /**
              * Cid.
              */
@@ -910,6 +983,17 @@ public class GetSyncResultResponseBody extends TeaModel {
             private Integer reviewResult; 
             private String rid; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(HitResult model) {
+                this.hits = model.hits;
+                this.name = model.name;
+                this.reviewResult = model.reviewResult;
+                this.rid = model.rid;
+                this.type = model.type;
+            } 
 
             /**
              * Hits.
@@ -1169,6 +1253,28 @@ public class GetSyncResultResponseBody extends TeaModel {
             private String remark2; 
             private String remark3; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Recording model) {
+                this.business = model.business;
+                this.callId = model.callId;
+                this.callTime = model.callTime;
+                this.callType = model.callType;
+                this.callee = model.callee;
+                this.caller = model.caller;
+                this.dataSetName = model.dataSetName;
+                this.duration = model.duration;
+                this.durationAudio = model.durationAudio;
+                this.id = model.id;
+                this.name = model.name;
+                this.primaryId = model.primaryId;
+                this.remark1 = model.remark1;
+                this.remark2 = model.remark2;
+                this.remark3 = model.remark3;
+                this.url = model.url;
+            } 
 
             /**
              * Business.
@@ -1504,6 +1610,27 @@ public class GetSyncResultResponseBody extends TeaModel {
             private Integer status; 
             private String taskId; 
             private String taskName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.agent = model.agent;
+                this.asrResult = model.asrResult;
+                this.comments = model.comments;
+                this.createTime = model.createTime;
+                this.errorMessage = model.errorMessage;
+                this.hitResult = model.hitResult;
+                this.recording = model.recording;
+                this.resolver = model.resolver;
+                this.reviewResult = model.reviewResult;
+                this.reviewStatus = model.reviewStatus;
+                this.reviewer = model.reviewer;
+                this.score = model.score;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+            } 
 
             /**
              * Agent.

@@ -60,6 +60,10 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPrecisionTaskResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.data = model.data;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -288,6 +306,18 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
             private Integer status; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Precision model) {
+                this.createTime = model.createTime;
+                this.modelId = model.modelId;
+                this.modelName = model.modelName;
+                this.precision = model.precision;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * CreateTime.
              */
@@ -374,6 +404,13 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Precision> precision; 
+
+            private Builder() {
+            } 
+
+            private Builder(Precisions model) {
+                this.precision = model.precision;
+            } 
 
             /**
              * Precision.
@@ -566,6 +603,25 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
             private String updateTime; 
             private Integer verifiedCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrecisionTask model) {
+                this.createTime = model.createTime;
+                this.dataSetId = model.dataSetId;
+                this.dataSetName = model.dataSetName;
+                this.duration = model.duration;
+                this.incorrectWords = model.incorrectWords;
+                this.name = model.name;
+                this.precisions = model.precisions;
+                this.source = model.source;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.totalCount = model.totalCount;
+                this.updateTime = model.updateTime;
+                this.verifiedCount = model.verifiedCount;
+            } 
+
             /**
              * CreateTime.
              */
@@ -708,6 +764,13 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PrecisionTask> precisionTask; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.precisionTask = model.precisionTask;
+            } 
 
             /**
              * PrecisionTask.

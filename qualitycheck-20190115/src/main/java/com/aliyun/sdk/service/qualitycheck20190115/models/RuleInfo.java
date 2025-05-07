@@ -248,6 +248,10 @@ public class RuleInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoReview
      */
@@ -689,6 +693,67 @@ public class RuleInfo extends TeaModel {
         private java.util.List<String> triggers; 
         private Integer type; 
         private String weight; 
+
+        private Builder() {
+        } 
+
+        private Builder(RuleInfo model) {
+            this.autoReview = model.autoReview;
+            this.businessCategoryNameList = model.businessCategoryNameList;
+            this.checkType = model.checkType;
+            this.comments = model.comments;
+            this.configType = model.configType;
+            this.createEmpName = model.createEmpName;
+            this.createEmpid = model.createEmpid;
+            this.createTime = model.createTime;
+            this.deny = model.deny;
+            this.dialogues = model.dialogues;
+            this.effective = model.effective;
+            this.effectiveEndTime = model.effectiveEndTime;
+            this.effectiveStartTime = model.effectiveStartTime;
+            this.endTime = model.endTime;
+            this.externalProperty = model.externalProperty;
+            this.fullCycle = model.fullCycle;
+            this.graphFlow = model.graphFlow;
+            this.isDelete = model.isDelete;
+            this.isOnline = model.isOnline;
+            this.lambda = model.lambda;
+            this.lastUpdateEmpName = model.lastUpdateEmpName;
+            this.lastUpdateEmpid = model.lastUpdateEmpid;
+            this.lastUpdateTime = model.lastUpdateTime;
+            this.level = model.level;
+            this.meet = model.meet;
+            this.modifyType = model.modifyType;
+            this.name = model.name;
+            this.operationMode = model.operationMode;
+            this.qualityCheckType = model.qualityCheckType;
+            this.rid = model.rid;
+            this.ruleCategoryName = model.ruleCategoryName;
+            this.ruleScoreType = model.ruleScoreType;
+            this.ruleType = model.ruleType;
+            this.schemeCheckType = model.schemeCheckType;
+            this.schemeId = model.schemeId;
+            this.schemeName = model.schemeName;
+            this.schemeRuleMappingId = model.schemeRuleMappingId;
+            this.scoreDeleted = model.scoreDeleted;
+            this.scoreId = model.scoreId;
+            this.scoreName = model.scoreName;
+            this.scoreNum = model.scoreNum;
+            this.scoreNumType = model.scoreNumType;
+            this.scoreRuleHitType = model.scoreRuleHitType;
+            this.scoreSubId = model.scoreSubId;
+            this.scoreSubName = model.scoreSubName;
+            this.scoreType = model.scoreType;
+            this.sortIndex = model.sortIndex;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.targetType = model.targetType;
+            this.taskFlowId = model.taskFlowId;
+            this.taskFlowType = model.taskFlowType;
+            this.triggers = model.triggers;
+            this.type = model.type;
+            this.weight = model.weight;
+        } 
 
         /**
          * AutoReview.

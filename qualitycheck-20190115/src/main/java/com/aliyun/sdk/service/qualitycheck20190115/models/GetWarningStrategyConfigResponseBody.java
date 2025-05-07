@@ -48,6 +48,10 @@ public class GetWarningStrategyConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetWarningStrategyConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetWarningStrategyConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -179,6 +194,14 @@ public class GetWarningStrategyConfigResponseBody extends TeaModel {
         public static final class Builder {
             private Long rangeNum; 
             private Long type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Range model) {
+                this.rangeNum = model.rangeNum;
+                this.type = model.type;
+            } 
 
             /**
              * RangeNum.
@@ -343,6 +366,22 @@ public class GetWarningStrategyConfigResponseBody extends TeaModel {
             private Range range; 
             private Long status; 
 
+            private Builder() {
+            } 
+
+            private Builder(WarningStrategyList model) {
+                this.code = model.code;
+                this.duration = model.duration;
+                this.durationExpression = model.durationExpression;
+                this.hitNumber = model.hitNumber;
+                this.hitNumberExpression = model.hitNumberExpression;
+                this.hitRuleList = model.hitRuleList;
+                this.hitType = model.hitType;
+                this.id = model.id;
+                this.range = model.range;
+                this.status = model.status;
+            } 
+
             /**
              * Code.
              */
@@ -462,6 +501,13 @@ public class GetWarningStrategyConfigResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<WarningStrategyList> warningStrategyList; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataWarningStrategyList model) {
+                this.warningStrategyList = model.warningStrategyList;
+            } 
+
             /**
              * warningStrategyList.
              */
@@ -580,6 +626,19 @@ public class GetWarningStrategyConfigResponseBody extends TeaModel {
             private Long maxNumber; 
             private String name; 
             private DataWarningStrategyList warningStrategyList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.id = model.id;
+                this.intervalTime = model.intervalTime;
+                this.lambda = model.lambda;
+                this.level = model.level;
+                this.maxNumber = model.maxNumber;
+                this.name = model.name;
+                this.warningStrategyList = model.warningStrategyList;
+            } 
 
             /**
              * Id.

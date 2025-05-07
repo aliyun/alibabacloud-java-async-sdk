@@ -80,6 +80,10 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -185,6 +189,25 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         private String requestId; 
         private String resultCountId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSchemeTaskConfigResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.lastDataId = model.lastDataId;
+            this.message = model.message;
+            this.messages = model.messages;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resultCountId = model.resultCountId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -328,6 +351,13 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<?> listObject; 
 
+            private Builder() {
+            } 
+
+            private Builder(ListObject model) {
+                this.listObject = model.listObject;
+            } 
+
             /**
              * ListObject.
              */
@@ -423,6 +453,17 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
             private Integer symbol; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssignConfigContest model) {
+                this.dataType = model.dataType;
+                this.listObject = model.listObject;
+                this.name = model.name;
+                this.symbol = model.symbol;
+                this.value = model.value;
+            } 
+
             /**
              * DataType.
              */
@@ -502,6 +543,13 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AssignConfigContest> assignConfigContest; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssignConfigContests model) {
+                this.assignConfigContest = model.assignConfigContest;
+            } 
+
             /**
              * AssignConfigContest.
              */
@@ -549,6 +597,13 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         public static final class Builder {
             private AssignConfigContests assignConfigContests; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssignConfig model) {
+                this.assignConfigContests = model.assignConfigContests;
+            } 
+
             /**
              * AssignConfigContests.
              */
@@ -595,6 +650,13 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AssignConfig> assignConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssignConfigs model) {
+                this.assignConfig = model.assignConfig;
+            } 
 
             /**
              * AssignConfig.
@@ -679,6 +741,16 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
             private Integer index; 
             private String resultParam; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataConfig model) {
+                this.assignConfigs = model.assignConfigs;
+                this.dataSets = model.dataSets;
+                this.index = model.index;
+                this.resultParam = model.resultParam;
+            } 
+
             /**
              * AssignConfigs.
              */
@@ -750,6 +822,13 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Long> schemeIdList; 
 
+            private Builder() {
+            } 
+
+            private Builder(SchemeIdList model) {
+                this.schemeIdList = model.schemeIdList;
+            } 
+
             /**
              * SchemeIdList.
              */
@@ -809,6 +888,14 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
             private String name; 
             private Long schemeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SchemeList model) {
+                this.name = model.name;
+                this.schemeId = model.schemeId;
+            } 
+
             /**
              * Name.
              */
@@ -863,6 +950,13 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SchemeList> schemeList; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSchemeList model) {
+                this.schemeList = model.schemeList;
+            } 
 
             /**
              * SchemeList.
@@ -1223,6 +1317,39 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
             private String vocabId; 
             private String vocabName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataData model) {
+                this.asrTaskPriority = model.asrTaskPriority;
+                this.asrVersion = model.asrVersion;
+                this.assignType = model.assignType;
+                this.createTime = model.createTime;
+                this.createUser = model.createUser;
+                this.dataConfig = model.dataConfig;
+                this.finishRate = model.finishRate;
+                this.id = model.id;
+                this.manualReview = model.manualReview;
+                this.modeCustomizationId = model.modeCustomizationId;
+                this.modelName = model.modelName;
+                this.name = model.name;
+                this.numberExecuting = model.numberExecuting;
+                this.numberFail = model.numberFail;
+                this.numberSuccess = model.numberSuccess;
+                this.numberSum = model.numberSum;
+                this.schemeIdList = model.schemeIdList;
+                this.schemeList = model.schemeList;
+                this.schemeTaskConfigId = model.schemeTaskConfigId;
+                this.sourceDataType = model.sourceDataType;
+                this.status = model.status;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.updateUser = model.updateUser;
+                this.userGroup = model.userGroup;
+                this.vocabId = model.vocabId;
+                this.vocabName = model.vocabName;
+            } 
+
             /**
              * AsrTaskPriority.
              */
@@ -1478,6 +1605,13 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DataData> data; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.data = model.data;
+            } 
+
             /**
              * Data.
              */
@@ -1524,6 +1658,13 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.message = model.message;
+            } 
 
             /**
              * Message.

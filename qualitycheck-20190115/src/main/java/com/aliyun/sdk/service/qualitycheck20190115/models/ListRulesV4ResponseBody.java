@@ -80,6 +80,10 @@ public class ListRulesV4ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return businessType
      */
@@ -185,6 +189,25 @@ public class ListRulesV4ResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRulesV4ResponseBody model) {
+            this.businessType = model.businessType;
+            this.code = model.code;
+            this.count = model.count;
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.messages = model.messages;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * BusinessType.

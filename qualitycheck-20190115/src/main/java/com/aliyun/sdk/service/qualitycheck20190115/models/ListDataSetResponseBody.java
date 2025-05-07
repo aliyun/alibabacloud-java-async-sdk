@@ -72,6 +72,10 @@ public class ListDataSetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -161,6 +165,23 @@ public class ListDataSetResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDataSetResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.messages = model.messages;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -552,6 +573,35 @@ public class ListDataSetResponseBody extends TeaModel {
             private String updateTime; 
             private String userGroup; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataData model) {
+                this.autoTranscoding = model.autoTranscoding;
+                this.channelId0 = model.channelId0;
+                this.channelId1 = model.channelId1;
+                this.channelType = model.channelType;
+                this.createTime = model.createTime;
+                this.createType = model.createType;
+                this.dataSetType = model.dataSetType;
+                this.isDelete = model.isDelete;
+                this.roleConfigProp = model.roleConfigProp;
+                this.roleConfigStatus = model.roleConfigStatus;
+                this.roleConfigTask = model.roleConfigTask;
+                this.setBucketName = model.setBucketName;
+                this.setDomain = model.setDomain;
+                this.setFolderName = model.setFolderName;
+                this.setId = model.setId;
+                this.setName = model.setName;
+                this.setNumber = model.setNumber;
+                this.setRoleArn = model.setRoleArn;
+                this.setType = model.setType;
+                this.sourceDataType = model.sourceDataType;
+                this.subDir = model.subDir;
+                this.updateTime = model.updateTime;
+                this.userGroup = model.userGroup;
+            } 
+
             /**
              * AutoTranscoding.
              */
@@ -775,6 +825,13 @@ public class ListDataSetResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DataData> data; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.data = model.data;
+            } 
+
             /**
              * Data.
              */
@@ -821,6 +878,13 @@ public class ListDataSetResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.message = model.message;
+            } 
 
             /**
              * Message.

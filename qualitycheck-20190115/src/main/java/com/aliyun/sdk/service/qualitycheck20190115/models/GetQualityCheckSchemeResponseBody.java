@@ -56,6 +56,10 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         private java.util.List<String> messages; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQualityCheckSchemeResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.messages = model.messages;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -267,6 +284,18 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             private Long schemeId; 
             private Integer score; 
             private Integer sourceScore; 
+
+            private Builder() {
+            } 
+
+            private Builder(SchemeCheckTypeList model) {
+                this.checkName = model.checkName;
+                this.checkType = model.checkType;
+                this.enable = model.enable;
+                this.schemeId = model.schemeId;
+                this.score = model.score;
+                this.sourceScore = model.sourceScore;
+            } 
 
             /**
              * CheckName.
@@ -546,6 +575,29 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             private String updateTime; 
             private String updateUserName; 
             private Long version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.createUserName = model.createUserName;
+                this.dataType = model.dataType;
+                this.description = model.description;
+                this.initScore = model.initScore;
+                this.name = model.name;
+                this.ruleIds = model.ruleIds;
+                this.ruleList = model.ruleList;
+                this.schemeCheckTypeList = model.schemeCheckTypeList;
+                this.schemeId = model.schemeId;
+                this.schemeTemplateId = model.schemeTemplateId;
+                this.status = model.status;
+                this.templateType = model.templateType;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.updateUserName = model.updateUserName;
+                this.version = model.version;
+            } 
 
             /**
              * CreateTime.

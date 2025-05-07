@@ -48,6 +48,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SyncQualityCheckResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -215,6 +230,17 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             private Integer pid; 
             private Integer to; 
             private String val; 
+
+            private Builder() {
+            } 
+
+            private Builder(HitKeyWords model) {
+                this.cid = model.cid;
+                this.from = model.from;
+                this.pid = model.pid;
+                this.to = model.to;
+                this.val = model.val;
+            } 
 
             /**
              * Cid.
@@ -379,6 +405,20 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             private Integer speechRate; 
             private String words; 
 
+            private Builder() {
+            } 
+
+            private Builder(Phrase model) {
+                this.begin = model.begin;
+                this.emotionValue = model.emotionValue;
+                this.end = model.end;
+                this.identity = model.identity;
+                this.role = model.role;
+                this.silenceDuration = model.silenceDuration;
+                this.speechRate = model.speechRate;
+                this.words = model.words;
+            } 
+
             /**
              * Begin.
              */
@@ -493,6 +533,14 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<HitKeyWords> hitKeyWords; 
             private Phrase phrase; 
+
+            private Builder() {
+            } 
+
+            private Builder(Hit model) {
+                this.hitKeyWords = model.hitKeyWords;
+                this.phrase = model.phrase;
+            } 
 
             /**
              * HitKeyWords.
@@ -620,6 +668,19 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             private Integer scoreNumType; 
             private Integer scoreType; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleInfoBase model) {
+                this.comments = model.comments;
+                this.level = model.level;
+                this.ruleCategoryName = model.ruleCategoryName;
+                this.scoreNum = model.scoreNum;
+                this.scoreNumType = model.scoreNumType;
+                this.scoreType = model.scoreType;
+                this.type = model.type;
+            } 
 
             /**
              * Comments.
@@ -752,6 +813,16 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             private RuleInfoBase ruleInfoBase; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.hit = model.hit;
+                this.rid = model.rid;
+                this.ruleInfoBase = model.ruleInfoBase;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
              * Hit.
              */
@@ -870,6 +941,17 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             private Integer score; 
             private String taskId; 
             private String tid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.beginTime = model.beginTime;
+                this.rules = model.rules;
+                this.score = model.score;
+                this.taskId = model.taskId;
+                this.tid = model.tid;
+            } 
 
             /**
              * BeginTime.

@@ -1,3 +1,6 @@
+2025-05-07 Version: 7.0.4
+- Generated java-async 2019-01-15 for Qualitycheck.
+
 2025-02-06 Version: 7.0.3
 - Generated java-async 2019-01-15 for Qualitycheck.
 

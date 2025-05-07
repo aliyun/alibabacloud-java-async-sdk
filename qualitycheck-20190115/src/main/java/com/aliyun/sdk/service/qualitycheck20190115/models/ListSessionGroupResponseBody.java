@@ -80,6 +80,10 @@ public class ListSessionGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -185,6 +189,25 @@ public class ListSessionGroupResponseBody extends TeaModel {
         private String requestId; 
         private String resultCountId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSessionGroupResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.lastDataId = model.lastDataId;
+            this.message = model.message;
+            this.messages = model.messages;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resultCountId = model.resultCountId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -328,6 +351,13 @@ public class ListSessionGroupResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> callerList; 
 
+            private Builder() {
+            } 
+
+            private Builder(CallerList model) {
+                this.callerList = model.callerList;
+            } 
+
             /**
              * CallerList.
              */
@@ -374,6 +404,13 @@ public class ListSessionGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> customerIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomerIdList model) {
+                this.customerIdList = model.customerIdList;
+            } 
 
             /**
              * CustomerIdList.
@@ -422,6 +459,13 @@ public class ListSessionGroupResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> customerNameList; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomerNameList model) {
+                this.customerNameList = model.customerNameList;
+            } 
+
             /**
              * CustomerNameList.
              */
@@ -468,6 +512,13 @@ public class ListSessionGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> customerServiceIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomerServiceIdList model) {
+                this.customerServiceIdList = model.customerServiceIdList;
+            } 
 
             /**
              * CustomerServiceIdList.
@@ -516,6 +567,13 @@ public class ListSessionGroupResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> customerServiceNameList; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomerServiceNameList model) {
+                this.customerServiceNameList = model.customerServiceNameList;
+            } 
+
             /**
              * CustomerServiceNameList.
              */
@@ -563,6 +621,13 @@ public class ListSessionGroupResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> reviewerList; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReviewerList model) {
+                this.reviewerList = model.reviewerList;
+            } 
+
             /**
              * ReviewerList.
              */
@@ -609,6 +674,13 @@ public class ListSessionGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> skillGroupNameList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SkillGroupNameList model) {
+                this.skillGroupNameList = model.skillGroupNameList;
+            } 
 
             /**
              * SkillGroupNameList.
@@ -861,6 +933,30 @@ public class ListSessionGroupResponseBody extends TeaModel {
             private Boolean sessionGroupReviewedOrComplained; 
             private SkillGroupNameList skillGroupNameList; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataData model) {
+                this.assignStatus = model.assignStatus;
+                this.callStartTime = model.callStartTime;
+                this.callerList = model.callerList;
+                this.customerIdList = model.customerIdList;
+                this.customerNameList = model.customerNameList;
+                this.customerServiceIdList = model.customerServiceIdList;
+                this.customerServiceNameList = model.customerServiceNameList;
+                this.hitSessionCount = model.hitSessionCount;
+                this.lastDataId = model.lastDataId;
+                this.reviewStatus = model.reviewStatus;
+                this.reviewerList = model.reviewerList;
+                this.schemeTaskConfigId = model.schemeTaskConfigId;
+                this.schemeTaskConfigName = model.schemeTaskConfigName;
+                this.score = model.score;
+                this.sessionCount = model.sessionCount;
+                this.sessionGroupId = model.sessionGroupId;
+                this.sessionGroupReviewedOrComplained = model.sessionGroupReviewedOrComplained;
+                this.skillGroupNameList = model.skillGroupNameList;
+            } 
+
             /**
              * AssignStatus.
              */
@@ -1044,6 +1140,13 @@ public class ListSessionGroupResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DataData> data; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.data = model.data;
+            } 
+
             /**
              * Data.
              */
@@ -1090,6 +1193,13 @@ public class ListSessionGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.message = model.message;
+            } 
 
             /**
              * Message.

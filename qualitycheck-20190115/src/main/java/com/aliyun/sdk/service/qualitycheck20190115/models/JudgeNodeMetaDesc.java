@@ -52,6 +52,10 @@ public class JudgeNodeMetaDesc extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actualValue
      */
@@ -101,6 +105,18 @@ public class JudgeNodeMetaDesc extends TeaModel {
         private Integer fieldType; 
         private Integer symbol; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(JudgeNodeMetaDesc model) {
+            this.actualValue = model.actualValue;
+            this.dataType = model.dataType;
+            this.field = model.field;
+            this.fieldType = model.fieldType;
+            this.symbol = model.symbol;
+            this.value = model.value;
+        } 
 
         /**
          * ActualValue.

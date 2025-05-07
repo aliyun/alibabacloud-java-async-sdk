@@ -56,6 +56,10 @@ public class TaskGraphFlow extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return flowRuleScoreType
      */
@@ -113,6 +117,19 @@ public class TaskGraphFlow extends TeaModel {
         private String ruleName; 
         private String showProperties; 
         private Boolean skipWhenFirstSessionNodeMiss; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskGraphFlow model) {
+            this.flowRuleScoreType = model.flowRuleScoreType;
+            this.id = model.id;
+            this.nodes = model.nodes;
+            this.rid = model.rid;
+            this.ruleName = model.ruleName;
+            this.showProperties = model.showProperties;
+            this.skipWhenFirstSessionNodeMiss = model.skipWhenFirstSessionNodeMiss;
+        } 
 
         /**
          * FlowRuleScoreType.

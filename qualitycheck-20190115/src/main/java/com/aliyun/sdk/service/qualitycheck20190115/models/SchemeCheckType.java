@@ -60,6 +60,10 @@ public class SchemeCheckType extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkName
      */
@@ -125,6 +129,20 @@ public class SchemeCheckType extends TeaModel {
         private Integer score; 
         private Integer sourceScore; 
         private java.util.List<TaskFlowScoreInfoList> taskFlowScoreInfoList; 
+
+        private Builder() {
+        } 
+
+        private Builder(SchemeCheckType model) {
+            this.checkName = model.checkName;
+            this.checkType = model.checkType;
+            this.enable = model.enable;
+            this.schemeId = model.schemeId;
+            this.schemeScoreInfoList = model.schemeScoreInfoList;
+            this.score = model.score;
+            this.sourceScore = model.sourceScore;
+            this.taskFlowScoreInfoList = model.taskFlowScoreInfoList;
+        } 
 
         /**
          * CheckName.
@@ -311,6 +329,20 @@ public class SchemeCheckType extends TeaModel {
             private Integer scoreType; 
             private Long taskFlowId; 
             private String taskFlowName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SchemeScoreInfoList model) {
+                this.name = model.name;
+                this.rid = model.rid;
+                this.scoreNum = model.scoreNum;
+                this.scoreNumType = model.scoreNumType;
+                this.scoreRuleHitType = model.scoreRuleHitType;
+                this.scoreType = model.scoreType;
+                this.taskFlowId = model.taskFlowId;
+                this.taskFlowName = model.taskFlowName;
+            } 
 
             /**
              * Name.
@@ -499,6 +531,20 @@ public class SchemeCheckType extends TeaModel {
             private Long taskFlowId; 
             private String taskFlowName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskFlowScoreInfoListSchemeScoreInfoList model) {
+                this.name = model.name;
+                this.rid = model.rid;
+                this.scoreNum = model.scoreNum;
+                this.scoreNumType = model.scoreNumType;
+                this.scoreRuleHitType = model.scoreRuleHitType;
+                this.scoreType = model.scoreType;
+                this.taskFlowId = model.taskFlowId;
+                this.taskFlowName = model.taskFlowName;
+            } 
+
             /**
              * Name.
              */
@@ -637,6 +683,16 @@ public class SchemeCheckType extends TeaModel {
             private Long taskFlowId; 
             private String taskFlowName; 
             private Integer taskFlowType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskFlowScoreInfoList model) {
+                this.schemeScoreInfoList = model.schemeScoreInfoList;
+                this.taskFlowId = model.taskFlowId;
+                this.taskFlowName = model.taskFlowName;
+                this.taskFlowType = model.taskFlowType;
+            } 
 
             /**
              * SchemeScoreInfoList.

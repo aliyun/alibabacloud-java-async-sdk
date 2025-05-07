@@ -577,6 +577,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UploadDataSyncResponse> uploadDataSync(UploadDataSyncRequest request);
 
     /**
+     * @param request the request parameters of UploadDataSyncForLLM  UploadDataSyncForLLMRequest
+     * @return UploadDataSyncForLLMResponse
+     */
+    CompletableFuture<UploadDataSyncForLLMResponse> uploadDataSyncForLLM(UploadDataSyncForLLMRequest request);
+
+    /**
      * @param request the request parameters of UploadDataV4  UploadDataV4Request
      * @return UploadDataV4Response
      */

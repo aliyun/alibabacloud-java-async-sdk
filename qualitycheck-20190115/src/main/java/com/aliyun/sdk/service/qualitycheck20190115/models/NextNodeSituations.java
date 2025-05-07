@@ -36,6 +36,10 @@ public class NextNodeSituations extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conditionGroup
      */
@@ -53,6 +57,14 @@ public class NextNodeSituations extends TeaModel {
     public static final class Builder {
         private java.util.List<ConditionGroup> conditionGroup; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(NextNodeSituations model) {
+            this.conditionGroup = model.conditionGroup;
+            this.type = model.type;
+        } 
 
         /**
          * ConditionGroup.
@@ -119,6 +131,14 @@ public class NextNodeSituations extends TeaModel {
         public static final class Builder {
             private java.util.List<JudgeNodeMetaDesc> conditions; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConditionGroup model) {
+                this.conditions = model.conditions;
+                this.type = model.type;
+            } 
 
             /**
              * Conditions.

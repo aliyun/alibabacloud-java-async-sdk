@@ -12,20 +12,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link BatchSubmitReviewInfoRequest} extends {@link RequestModel}
+ * {@link UploadDataSyncForLLMRequest} extends {@link RequestModel}
  *
- * <p>BatchSubmitReviewInfoRequest</p>
+ * <p>UploadDataSyncForLLMRequest</p>
  */
-public class BatchSubmitReviewInfoRequest extends Request {
+public class UploadDataSyncForLLMRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BaseMeAgentId")
     private Long baseMeAgentId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("jsonStr")
+    @com.aliyun.core.annotation.NameInMap("JsonStr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jsonStr;
 
-    private BatchSubmitReviewInfoRequest(Builder builder) {
+    private UploadDataSyncForLLMRequest(Builder builder) {
         super(builder);
         this.baseMeAgentId = builder.baseMeAgentId;
         this.jsonStr = builder.jsonStr;
@@ -35,7 +36,7 @@ public class BatchSubmitReviewInfoRequest extends Request {
         return new Builder();
     }
 
-    public static BatchSubmitReviewInfoRequest create() {
+    public static UploadDataSyncForLLMRequest create() {
         return builder().build();
     }
 
@@ -58,7 +59,7 @@ public class BatchSubmitReviewInfoRequest extends Request {
         return this.jsonStr;
     }
 
-    public static final class Builder extends Request.Builder<BatchSubmitReviewInfoRequest, Builder> {
+    public static final class Builder extends Request.Builder<UploadDataSyncForLLMRequest, Builder> {
         private Long baseMeAgentId; 
         private String jsonStr; 
 
@@ -66,14 +67,14 @@ public class BatchSubmitReviewInfoRequest extends Request {
             super();
         } 
 
-        private Builder(BatchSubmitReviewInfoRequest request) {
+        private Builder(UploadDataSyncForLLMRequest request) {
             super(request);
             this.baseMeAgentId = request.baseMeAgentId;
             this.jsonStr = request.jsonStr;
         } 
 
         /**
-         * <p>baseMeAgentId</p>
+         * BaseMeAgentId.
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -82,17 +83,17 @@ public class BatchSubmitReviewInfoRequest extends Request {
         }
 
         /**
-         * jsonStr.
+         * <p>This parameter is required.</p>
          */
         public Builder jsonStr(String jsonStr) {
-            this.putQueryParameter("jsonStr", jsonStr);
+            this.putQueryParameter("JsonStr", jsonStr);
             this.jsonStr = jsonStr;
             return this;
         }
 
         @Override
-        public BatchSubmitReviewInfoRequest build() {
-            return new BatchSubmitReviewInfoRequest(this);
+        public UploadDataSyncForLLMRequest build() {
+            return new UploadDataSyncForLLMRequest(this);
         } 
 
     } 

@@ -60,6 +60,10 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTaskAssignRulesResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.data = model.data;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -240,6 +258,14 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
             private String agentId; 
             private String agentName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Agent model) {
+                this.agentId = model.agentId;
+                this.agentName = model.agentName;
+            } 
+
             /**
              * AgentId.
              */
@@ -294,6 +320,13 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Agent> agent; 
+
+            private Builder() {
+            } 
+
+            private Builder(Agents model) {
+                this.agent = model.agent;
+            } 
 
             /**
              * Agent.
@@ -354,6 +387,14 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
             private String reviewerId; 
             private String reviewerName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Reviewer model) {
+                this.reviewerId = model.reviewerId;
+                this.reviewerName = model.reviewerName;
+            } 
+
             /**
              * ReviewerId.
              */
@@ -408,6 +449,13 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Reviewer> reviewer; 
+
+            private Builder() {
+            } 
+
+            private Builder(Reviewers model) {
+                this.reviewer = model.reviewer;
+            } 
 
             /**
              * Reviewer.
@@ -468,6 +516,14 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
             private String name; 
             private String rid; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleBasicInfo model) {
+                this.name = model.name;
+                this.rid = model.rid;
+            } 
+
             /**
              * Name.
              */
@@ -522,6 +578,13 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RuleBasicInfo> ruleBasicInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.ruleBasicInfo = model.ruleBasicInfo;
+            } 
 
             /**
              * RuleBasicInfo.
@@ -582,6 +645,14 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
             private String agentId; 
             private String agentName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SamplingModeAgent model) {
+                this.agentId = model.agentId;
+                this.agentName = model.agentName;
+            } 
+
             /**
              * AgentId.
              */
@@ -636,6 +707,13 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SamplingModeAgent> samplingModeAgent; 
+
+            private Builder() {
+            } 
+
+            private Builder(SamplingModeAgents model) {
+                this.samplingModeAgent = model.samplingModeAgent;
+            } 
 
             /**
              * SamplingModeAgent.
@@ -768,6 +846,20 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
             private Integer randomInspectionNumber; 
             private SamplingModeAgents samplingModeAgents; 
 
+            private Builder() {
+            } 
+
+            private Builder(SamplingMode model) {
+                this.anyNumberOfDraws = model.anyNumberOfDraws;
+                this.designated = model.designated;
+                this.dimension = model.dimension;
+                this.limit = model.limit;
+                this.numberOfDraws = model.numberOfDraws;
+                this.proportion = model.proportion;
+                this.randomInspectionNumber = model.randomInspectionNumber;
+                this.samplingModeAgents = model.samplingModeAgents;
+            } 
+
             /**
              * AnyNumberOfDraws.
              */
@@ -883,6 +975,14 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
             private String skillId; 
             private String skillName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SkillGroup model) {
+                this.skillId = model.skillId;
+                this.skillName = model.skillName;
+            } 
+
             /**
              * SkillId.
              */
@@ -937,6 +1037,13 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SkillGroup> skillGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(SkillGroups model) {
+                this.skillGroup = model.skillGroup;
+            } 
 
             /**
              * SkillGroup.
@@ -1201,6 +1308,31 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
             private String skillGroupsStr; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskAssignRuleInfo model) {
+                this.agents = model.agents;
+                this.agentsStr = model.agentsStr;
+                this.assignmentType = model.assignmentType;
+                this.callTimeEnd = model.callTimeEnd;
+                this.callTimeStart = model.callTimeStart;
+                this.callType = model.callType;
+                this.createTime = model.createTime;
+                this.durationMax = model.durationMax;
+                this.durationMin = model.durationMin;
+                this.enabled = model.enabled;
+                this.priority = model.priority;
+                this.reviewers = model.reviewers;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.rules = model.rules;
+                this.samplingMode = model.samplingMode;
+                this.skillGroups = model.skillGroups;
+                this.skillGroupsStr = model.skillGroupsStr;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * Agents.
              */
@@ -1391,6 +1523,13 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TaskAssignRuleInfo> taskAssignRuleInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.taskAssignRuleInfo = model.taskAssignRuleInfo;
+            } 
 
             /**
              * TaskAssignRuleInfo.

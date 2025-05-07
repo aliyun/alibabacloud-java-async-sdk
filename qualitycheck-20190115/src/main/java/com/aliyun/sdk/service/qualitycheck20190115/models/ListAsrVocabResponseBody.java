@@ -48,6 +48,10 @@ public class ListAsrVocabResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListAsrVocabResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAsrVocabResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -240,6 +255,19 @@ public class ListAsrVocabResponseBody extends TeaModel {
             private String updateTime; 
             private String vocabularyId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AsrVocab model) {
+                this.asrVersion = model.asrVersion;
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.modelCustomizationId = model.modelCustomizationId;
+                this.name = model.name;
+                this.updateTime = model.updateTime;
+                this.vocabularyId = model.vocabularyId;
+            } 
+
             /**
              * AsrVersion.
              */
@@ -334,6 +362,13 @@ public class ListAsrVocabResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AsrVocab> asrVocab; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.asrVocab = model.asrVocab;
+            } 
 
             /**
              * AsrVocab.

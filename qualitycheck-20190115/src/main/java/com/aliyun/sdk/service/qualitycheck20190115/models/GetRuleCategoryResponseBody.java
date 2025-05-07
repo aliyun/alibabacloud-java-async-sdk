@@ -48,6 +48,10 @@ public class GetRuleCategoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetRuleCategoryResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRuleCategoryResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -192,6 +207,15 @@ public class GetRuleCategoryResponseBody extends TeaModel {
             private Integer type; 
             private String typeName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleCountInfo model) {
+                this.select = model.select;
+                this.type = model.type;
+                this.typeName = model.typeName;
+            } 
+
             /**
              * Select.
              */
@@ -254,6 +278,13 @@ public class GetRuleCategoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RuleCountInfo> ruleCountInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.ruleCountInfo = model.ruleCountInfo;
+            } 
 
             /**
              * RuleCountInfo.

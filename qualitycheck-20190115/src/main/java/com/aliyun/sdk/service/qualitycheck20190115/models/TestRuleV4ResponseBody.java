@@ -52,6 +52,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class TestRuleV4ResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(TestRuleV4ResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -259,6 +275,19 @@ public class TestRuleV4ResponseBody extends TeaModel {
             private Long nextNodeId; 
             private NextNodeSituations situation; 
             private java.util.List<String> triggers; 
+
+            private Builder() {
+            } 
+
+            private Builder(BranchInfoList model) {
+                this.checkType = model.checkType;
+                this.index = model.index;
+                this.lambda = model.lambda;
+                this.name = model.name;
+                this.nextNodeId = model.nextNodeId;
+                this.situation = model.situation;
+                this.triggers = model.triggers;
+            } 
 
             /**
              * CheckType.
@@ -474,6 +503,23 @@ public class TestRuleV4ResponseBody extends TeaModel {
             private Integer to; 
             private String uuid; 
             private String val; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeyWords model) {
+                this.cid = model.cid;
+                this.customizeCode = model.customizeCode;
+                this.from = model.from;
+                this.oid = model.oid;
+                this.operatorKey = model.operatorKey;
+                this.pid = model.pid;
+                this.similarPhrase = model.similarPhrase;
+                this.tid = model.tid;
+                this.to = model.to;
+                this.uuid = model.uuid;
+                this.val = model.val;
+            } 
 
             /**
              * Cid.
@@ -794,6 +840,29 @@ public class TestRuleV4ResponseBody extends TeaModel {
             private String uuid; 
             private String words; 
 
+            private Builder() {
+            } 
+
+            private Builder(Phrase model) {
+                this.begin = model.begin;
+                this.beginTime = model.beginTime;
+                this.channelId = model.channelId;
+                this.emotionFineGrainedValue = model.emotionFineGrainedValue;
+                this.emotionValue = model.emotionValue;
+                this.end = model.end;
+                this.hitStatus = model.hitStatus;
+                this.hourMinSec = model.hourMinSec;
+                this.identity = model.identity;
+                this.pid = model.pid;
+                this.renterId = model.renterId;
+                this.role = model.role;
+                this.sid = model.sid;
+                this.silenceDuration = model.silenceDuration;
+                this.speechRate = model.speechRate;
+                this.uuid = model.uuid;
+                this.words = model.words;
+            } 
+
             /**
              * Begin.
              */
@@ -992,6 +1061,15 @@ public class TestRuleV4ResponseBody extends TeaModel {
             private java.util.List<String> cid; 
             private java.util.List<KeyWords> keyWords; 
             private Phrase phrase; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConditionHitInfoList model) {
+                this.cid = model.cid;
+                this.keyWords = model.keyWords;
+                this.phrase = model.phrase;
+            } 
 
             /**
              * Cid.
@@ -1200,6 +1278,25 @@ public class TestRuleV4ResponseBody extends TeaModel {
             private Integer scoreNumType; 
             private Long taskFlowId; 
 
+            private Builder() {
+            } 
+
+            private Builder(HitRuleReviewInfoList model) {
+                this.branchHitId = model.branchHitId;
+                this.branchInfoList = model.branchInfoList;
+                this.conditionHitInfoList = model.conditionHitInfoList;
+                this.conditionInfoList = model.conditionInfoList;
+                this.judgeNodeName = model.judgeNodeName;
+                this.lambda = model.lambda;
+                this.matched = model.matched;
+                this.nodeType = model.nodeType;
+                this.rid = model.rid;
+                this.ruleName = model.ruleName;
+                this.ruleScoreType = model.ruleScoreType;
+                this.scoreNumType = model.scoreNumType;
+                this.taskFlowId = model.taskFlowId;
+            } 
+
             /**
              * BranchHitId.
              */
@@ -1367,6 +1464,15 @@ public class TestRuleV4ResponseBody extends TeaModel {
             private Long rid; 
             private Integer taskFlowType; 
 
+            private Builder() {
+            } 
+
+            private Builder(HitTaskFlowList model) {
+                this.graphFlow = model.graphFlow;
+                this.rid = model.rid;
+                this.taskFlowType = model.taskFlowType;
+            } 
+
             /**
              * GraphFlow.
              */
@@ -1466,6 +1572,16 @@ public class TestRuleV4ResponseBody extends TeaModel {
             private Long rid; 
             private Integer taskFlowType; 
 
+            private Builder() {
+            } 
+
+            private Builder(UnhitRuleReviewInfoList model) {
+                this.conditionInfoList = model.conditionInfoList;
+                this.matched = model.matched;
+                this.rid = model.rid;
+                this.taskFlowType = model.taskFlowType;
+            } 
+
             /**
              * ConditionInfoList.
              */
@@ -1560,6 +1676,15 @@ public class TestRuleV4ResponseBody extends TeaModel {
             private java.util.List<HitRuleReviewInfoList> hitRuleReviewInfoList; 
             private java.util.List<HitTaskFlowList> hitTaskFlowList; 
             private java.util.List<UnhitRuleReviewInfoList> unhitRuleReviewInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.hitRuleReviewInfoList = model.hitRuleReviewInfoList;
+                this.hitTaskFlowList = model.hitTaskFlowList;
+                this.unhitRuleReviewInfoList = model.unhitRuleReviewInfoList;
+            } 
 
             /**
              * HitRuleReviewInfoList.

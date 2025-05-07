@@ -48,6 +48,10 @@ public class GetRuleDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetRuleDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRuleDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -192,6 +207,15 @@ public class GetRuleDetailResponseBody extends TeaModel {
             private Integer hitTime; 
             private String location; 
 
+            private Builder() {
+            } 
+
+            private Builder(Anchor model) {
+                this.anchorCid = model.anchorCid;
+                this.hitTime = model.hitTime;
+                this.location = model.location;
+            } 
+
             /**
              * AnchorCid.
              */
@@ -266,6 +290,14 @@ public class GetRuleDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Integer from; 
             private Integer to; 
+
+            private Builder() {
+            } 
+
+            private Builder(Range model) {
+                this.from = model.from;
+                this.to = model.to;
+            } 
 
             /**
              * From.
@@ -358,6 +390,16 @@ public class GetRuleDetailResponseBody extends TeaModel {
             private Range range; 
             private String role; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckRange model) {
+                this.absolute = model.absolute;
+                this.anchor = model.anchor;
+                this.range = model.range;
+                this.role = model.role;
+            } 
+
             /**
              * Absolute.
              */
@@ -429,6 +471,13 @@ public class GetRuleDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> antModelInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(AntModelInfo model) {
+                this.antModelInfo = model.antModelInfo;
+            } 
+
             /**
              * AntModelInfo.
              */
@@ -475,6 +524,13 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> excludes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Excludes model) {
+                this.excludes = model.excludes;
+            } 
 
             /**
              * Excludes.
@@ -523,6 +579,13 @@ public class GetRuleDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> operKeyWord; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperKeyWords model) {
+                this.operKeyWord = model.operKeyWord;
+            } 
+
             /**
              * OperKeyWord.
              */
@@ -569,6 +632,13 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> pvalues; 
+
+            private Builder() {
+            } 
+
+            private Builder(Pvalues model) {
+                this.pvalues = model.pvalues;
+            } 
 
             /**
              * Pvalues.
@@ -617,6 +687,13 @@ public class GetRuleDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> reference; 
 
+            private Builder() {
+            } 
+
+            private Builder(References model) {
+                this.reference = model.reference;
+            } 
+
             /**
              * Reference.
              */
@@ -663,6 +740,13 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> similarlySentence; 
+
+            private Builder() {
+            } 
+
+            private Builder(SimilarlySentences model) {
+                this.similarlySentence = model.similarlySentence;
+            } 
 
             /**
              * SimilarlySentence.
@@ -1071,6 +1155,43 @@ public class GetRuleDetailResponseBody extends TeaModel {
             private Float threshold; 
             private Integer velocityInMint; 
 
+            private Builder() {
+            } 
+
+            private Builder(Param model) {
+                this.antModelInfo = model.antModelInfo;
+                this.average = model.average;
+                this.beginType = model.beginType;
+                this.checkType = model.checkType;
+                this.compareOperator = model.compareOperator;
+                this.contextChatMatch = model.contextChatMatch;
+                this.delayTime = model.delayTime;
+                this.differentRole = model.differentRole;
+                this.excludes = model.excludes;
+                this.from = model.from;
+                this.fromEnd = model.fromEnd;
+                this.hitTime = model.hitTime;
+                this.inSentence = model.inSentence;
+                this.interval = model.interval;
+                this.keywordExtension = model.keywordExtension;
+                this.keywordMatchSize = model.keywordMatchSize;
+                this.maxEmotionChangeValue = model.maxEmotionChangeValue;
+                this.minWordSize = model.minWordSize;
+                this.notRegex = model.notRegex;
+                this.operKeyWords = model.operKeyWords;
+                this.phrase = model.phrase;
+                this.pvalues = model.pvalues;
+                this.references = model.references;
+                this.regex = model.regex;
+                this.score = model.score;
+                this.similarityThreshold = model.similarityThreshold;
+                this.similarlySentences = model.similarlySentences;
+                this.target = model.target;
+                this.targetRole = model.targetRole;
+                this.threshold = model.threshold;
+                this.velocityInMint = model.velocityInMint;
+            } 
+
             /**
              * AntModelInfo.
              */
@@ -1394,6 +1515,16 @@ public class GetRuleDetailResponseBody extends TeaModel {
             private Param param; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperatorBasicInfo model) {
+                this.oid = model.oid;
+                this.operName = model.operName;
+                this.param = model.param;
+                this.type = model.type;
+            } 
+
             /**
              * Oid.
              */
@@ -1464,6 +1595,13 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OperatorBasicInfo> operatorBasicInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Operators model) {
+                this.operatorBasicInfo = model.operatorBasicInfo;
+            } 
 
             /**
              * OperatorBasicInfo.
@@ -1548,6 +1686,16 @@ public class GetRuleDetailResponseBody extends TeaModel {
             private String operLambda; 
             private Operators operators; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConditionBasicInfo model) {
+                this.checkRange = model.checkRange;
+                this.conditionInfoCid = model.conditionInfoCid;
+                this.operLambda = model.operLambda;
+                this.operators = model.operators;
+            } 
+
             /**
              * CheckRange.
              */
@@ -1618,6 +1766,13 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ConditionBasicInfo> conditionBasicInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.conditionBasicInfo = model.conditionBasicInfo;
+            } 
 
             /**
              * ConditionBasicInfo.
@@ -1690,6 +1845,15 @@ public class GetRuleDetailResponseBody extends TeaModel {
             private String businessName; 
             private Integer serviceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(BusinessCategoryBasicInfo model) {
+                this.bid = model.bid;
+                this.businessName = model.businessName;
+                this.serviceType = model.serviceType;
+            } 
+
             /**
              * Bid.
              */
@@ -1753,6 +1917,13 @@ public class GetRuleDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(BusinessCategories model) {
+                this.businessCategoryBasicInfo = model.businessCategoryBasicInfo;
+            } 
+
             /**
              * BusinessCategoryBasicInfo.
              */
@@ -1799,6 +1970,13 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> trigger; 
+
+            private Builder() {
+            } 
+
+            private Builder(Triggers model) {
+                this.trigger = model.trigger;
+            } 
 
             /**
              * Trigger.
@@ -1883,6 +2061,16 @@ public class GetRuleDetailResponseBody extends TeaModel {
             private String ruleLambda; 
             private Triggers triggers; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleBasicInfo model) {
+                this.businessCategories = model.businessCategories;
+                this.rid = model.rid;
+                this.ruleLambda = model.ruleLambda;
+                this.triggers = model.triggers;
+            } 
+
             /**
              * BusinessCategories.
              */
@@ -1953,6 +2141,13 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RuleBasicInfo> ruleBasicInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.ruleBasicInfo = model.ruleBasicInfo;
+            } 
 
             /**
              * RuleBasicInfo.
@@ -2048,6 +2243,17 @@ public class GetRuleDetailResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Rules rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.conditions = model.conditions;
+                this.count = model.count;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.rules = model.rules;
+            } 
 
             /**
              * Conditions.

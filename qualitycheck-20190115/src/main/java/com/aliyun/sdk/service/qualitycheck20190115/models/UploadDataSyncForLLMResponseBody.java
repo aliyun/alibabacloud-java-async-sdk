@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UploadDataSyncResponseBody} extends {@link TeaModel}
+ * {@link UploadDataSyncForLLMResponseBody} extends {@link TeaModel}
  *
- * <p>UploadDataSyncResponseBody</p>
+ * <p>UploadDataSyncForLLMResponseBody</p>
  */
-public class UploadDataSyncResponseBody extends TeaModel {
+public class UploadDataSyncForLLMResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -32,7 +32,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private UploadDataSyncResponseBody(Builder builder) {
+    private UploadDataSyncForLLMResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UploadDataSyncResponseBody create() {
+    public static UploadDataSyncForLLMResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UploadDataSyncResponseBody model) {
+        private Builder(UploadDataSyncForLLMResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -145,71 +145,17 @@ public class UploadDataSyncResponseBody extends TeaModel {
             return this;
         }
 
-        public UploadDataSyncResponseBody build() {
-            return new UploadDataSyncResponseBody(this);
+        public UploadDataSyncForLLMResponseBody build() {
+            return new UploadDataSyncForLLMResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link UploadDataSyncResponseBody} extends {@link TeaModel}
+     * {@link UploadDataSyncForLLMResponseBody} extends {@link TeaModel}
      *
-     * <p>UploadDataSyncResponseBody</p>
-     */
-    public static class HandScoreIdList extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("HandScoreIdList")
-        private java.util.List<String> handScoreIdList;
-
-        private HandScoreIdList(Builder builder) {
-            this.handScoreIdList = builder.handScoreIdList;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static HandScoreIdList create() {
-            return builder().build();
-        }
-
-        /**
-         * @return handScoreIdList
-         */
-        public java.util.List<String> getHandScoreIdList() {
-            return this.handScoreIdList;
-        }
-
-        public static final class Builder {
-            private java.util.List<String> handScoreIdList; 
-
-            private Builder() {
-            } 
-
-            private Builder(HandScoreIdList model) {
-                this.handScoreIdList = model.handScoreIdList;
-            } 
-
-            /**
-             * HandScoreIdList.
-             */
-            public Builder handScoreIdList(java.util.List<String> handScoreIdList) {
-                this.handScoreIdList = handScoreIdList;
-                return this;
-            }
-
-            public HandScoreIdList build() {
-                return new HandScoreIdList(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link UploadDataSyncResponseBody} extends {@link TeaModel}
-     *
-     * <p>UploadDataSyncResponseBody</p>
+     * <p>UploadDataSyncForLLMResponseBody</p>
      */
     public static class ConditionBasicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionInfoCid")
@@ -261,9 +207,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link UploadDataSyncResponseBody} extends {@link TeaModel}
+     * {@link UploadDataSyncForLLMResponseBody} extends {@link TeaModel}
      *
-     * <p>UploadDataSyncResponseBody</p>
+     * <p>UploadDataSyncForLLMResponseBody</p>
      */
     public static class ConditionInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionBasicInfo")
@@ -315,9 +261,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link UploadDataSyncResponseBody} extends {@link TeaModel}
+     * {@link UploadDataSyncForLLMResponseBody} extends {@link TeaModel}
      *
-     * <p>UploadDataSyncResponseBody</p>
+     * <p>UploadDataSyncForLLMResponseBody</p>
      */
     public static class HitCids extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CidItem")
@@ -369,9 +315,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link UploadDataSyncResponseBody} extends {@link TeaModel}
+     * {@link UploadDataSyncForLLMResponseBody} extends {@link TeaModel}
      *
-     * <p>UploadDataSyncResponseBody</p>
+     * <p>UploadDataSyncForLLMResponseBody</p>
      */
     public static class HitKeyWord extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("From")
@@ -507,9 +453,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link UploadDataSyncResponseBody} extends {@link TeaModel}
+     * {@link UploadDataSyncForLLMResponseBody} extends {@link TeaModel}
      *
-     * <p>UploadDataSyncResponseBody</p>
+     * <p>UploadDataSyncForLLMResponseBody</p>
      */
     public static class HitKeyWords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HitKeyWord")
@@ -561,9 +507,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link UploadDataSyncResponseBody} extends {@link TeaModel}
+     * {@link UploadDataSyncForLLMResponseBody} extends {@link TeaModel}
      *
-     * <p>UploadDataSyncResponseBody</p>
+     * <p>UploadDataSyncForLLMResponseBody</p>
      */
     public static class Phrase extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
@@ -720,9 +666,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link UploadDataSyncResponseBody} extends {@link TeaModel}
+     * {@link UploadDataSyncForLLMResponseBody} extends {@link TeaModel}
      *
-     * <p>UploadDataSyncResponseBody</p>
+     * <p>UploadDataSyncForLLMResponseBody</p>
      */
     public static class ConditionHitInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HitCids")
@@ -816,9 +762,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link UploadDataSyncResponseBody} extends {@link TeaModel}
+     * {@link UploadDataSyncForLLMResponseBody} extends {@link TeaModel}
      *
-     * <p>UploadDataSyncResponseBody</p>
+     * <p>UploadDataSyncForLLMResponseBody</p>
      */
     public static class Hit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionHitInfo")
@@ -870,9 +816,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link UploadDataSyncResponseBody} extends {@link TeaModel}
+     * {@link UploadDataSyncForLLMResponseBody} extends {@link TeaModel}
      *
-     * <p>UploadDataSyncResponseBody</p>
+     * <p>UploadDataSyncForLLMResponseBody</p>
      */
     public static class RuleHitInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionInfo")
@@ -987,9 +933,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link UploadDataSyncResponseBody} extends {@link TeaModel}
+     * {@link UploadDataSyncForLLMResponseBody} extends {@link TeaModel}
      *
-     * <p>UploadDataSyncResponseBody</p>
+     * <p>UploadDataSyncForLLMResponseBody</p>
      */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleHitInfo")
@@ -1041,14 +987,11 @@ public class UploadDataSyncResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link UploadDataSyncResponseBody} extends {@link TeaModel}
+     * {@link UploadDataSyncForLLMResponseBody} extends {@link TeaModel}
      *
-     * <p>UploadDataSyncResponseBody</p>
+     * <p>UploadDataSyncForLLMResponseBody</p>
      */
     public static class ResultInfo extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("HandScoreIdList")
-        private HandScoreIdList handScoreIdList;
-
         @com.aliyun.core.annotation.NameInMap("Rules")
         private Rules rules;
 
@@ -1056,7 +999,6 @@ public class UploadDataSyncResponseBody extends TeaModel {
         private Integer score;
 
         private ResultInfo(Builder builder) {
-            this.handScoreIdList = builder.handScoreIdList;
             this.rules = builder.rules;
             this.score = builder.score;
         }
@@ -1067,13 +1009,6 @@ public class UploadDataSyncResponseBody extends TeaModel {
 
         public static ResultInfo create() {
             return builder().build();
-        }
-
-        /**
-         * @return handScoreIdList
-         */
-        public HandScoreIdList getHandScoreIdList() {
-            return this.handScoreIdList;
         }
 
         /**
@@ -1091,7 +1026,6 @@ public class UploadDataSyncResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private HandScoreIdList handScoreIdList; 
             private Rules rules; 
             private Integer score; 
 
@@ -1099,18 +1033,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
             } 
 
             private Builder(ResultInfo model) {
-                this.handScoreIdList = model.handScoreIdList;
                 this.rules = model.rules;
                 this.score = model.score;
             } 
-
-            /**
-             * HandScoreIdList.
-             */
-            public Builder handScoreIdList(HandScoreIdList handScoreIdList) {
-                this.handScoreIdList = handScoreIdList;
-                return this;
-            }
 
             /**
              * Rules.
@@ -1137,9 +1062,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link UploadDataSyncResponseBody} extends {@link TeaModel}
+     * {@link UploadDataSyncForLLMResponseBody} extends {@link TeaModel}
      *
-     * <p>UploadDataSyncResponseBody</p>
+     * <p>UploadDataSyncForLLMResponseBody</p>
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResultInfo")

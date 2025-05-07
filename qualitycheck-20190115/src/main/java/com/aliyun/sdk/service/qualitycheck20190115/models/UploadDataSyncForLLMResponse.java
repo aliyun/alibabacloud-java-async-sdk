@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetResultResponse} extends {@link TeaModel}
+ * {@link UploadDataSyncForLLMResponse} extends {@link TeaModel}
  *
- * <p>GetResultResponse</p>
+ * <p>UploadDataSyncForLLMResponse</p>
  */
-public class GetResultResponse extends Response {
+public class UploadDataSyncForLLMResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetResultResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetResultResponseBody body;
+    private UploadDataSyncForLLMResponseBody body;
 
-    private GetResultResponse(BuilderImpl builder) {
+    private UploadDataSyncForLLMResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetResultResponse create() {
+    public static UploadDataSyncForLLMResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetResultResponse extends Response {
     /**
      * @return body
      */
-    public GetResultResponseBody getBody() {
+    public UploadDataSyncForLLMResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetResultResponse, Builder> {
+    public interface Builder extends Response.Builder<UploadDataSyncForLLMResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetResultResponseBody body);
+        Builder body(UploadDataSyncForLLMResponseBody body);
 
         @Override
-        GetResultResponse build();
+        UploadDataSyncForLLMResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetResultResponse, Builder>
+            extends Response.BuilderImpl<UploadDataSyncForLLMResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetResultResponseBody body; 
+        private UploadDataSyncForLLMResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetResultResponse response) {
+        private BuilderImpl(UploadDataSyncForLLMResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetResultResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetResultResponseBody body) {
+        public Builder body(UploadDataSyncForLLMResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetResultResponse build() {
-            return new GetResultResponse(this);
+        public UploadDataSyncForLLMResponse build() {
+            return new UploadDataSyncForLLMResponse(this);
         } 
 
     } 

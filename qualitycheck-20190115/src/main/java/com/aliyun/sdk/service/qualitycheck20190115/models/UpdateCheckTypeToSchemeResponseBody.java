@@ -56,6 +56,10 @@ public class UpdateCheckTypeToSchemeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class UpdateCheckTypeToSchemeResponseBody extends TeaModel {
         private Messages messages; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateCheckTypeToSchemeResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.messages = model.messages;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -207,6 +224,13 @@ public class UpdateCheckTypeToSchemeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.message = model.message;
+            } 
 
             /**
              * Message.

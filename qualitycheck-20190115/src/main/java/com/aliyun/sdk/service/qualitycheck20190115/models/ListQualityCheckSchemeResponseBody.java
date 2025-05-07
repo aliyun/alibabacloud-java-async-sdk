@@ -64,6 +64,10 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -137,6 +141,21 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         private String requestId; 
         private String resultCountId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListQualityCheckSchemeResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.data = model.data;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resultCountId = model.resultCountId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -332,6 +351,20 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             private Integer scoreType; 
             private Integer targetType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.checkType = model.checkType;
+                this.name = model.name;
+                this.rid = model.rid;
+                this.ruleScoreType = model.ruleScoreType;
+                this.scoreNum = model.scoreNum;
+                this.scoreNumType = model.scoreNumType;
+                this.scoreType = model.scoreType;
+                this.targetType = model.targetType;
+            } 
+
             /**
              * CheckType.
              */
@@ -435,6 +468,13 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Rules> rules; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleList model) {
+                this.rules = model.rules;
+            } 
+
             /**
              * Rules.
              */
@@ -529,6 +569,17 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             private Integer enable; 
             private Integer score; 
             private Integer targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SchemeCheckTypeList model) {
+                this.checkName = model.checkName;
+                this.checkType = model.checkType;
+                this.enable = model.enable;
+                this.score = model.score;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * CheckName.
@@ -764,6 +815,26 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             private String updateTime; 
             private String updateUserName; 
             private Long version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.createUserName = model.createUserName;
+                this.dataType = model.dataType;
+                this.description = model.description;
+                this.name = model.name;
+                this.ruleList = model.ruleList;
+                this.schemeCheckTypeList = model.schemeCheckTypeList;
+                this.schemeId = model.schemeId;
+                this.status = model.status;
+                this.templateType = model.templateType;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.updateUserName = model.updateUserName;
+                this.version = model.version;
+            } 
 
             /**
              * CreateTime.

@@ -44,6 +44,10 @@ public class ApplyWsTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ApplyWsTokenResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApplyWsTokenResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -174,6 +188,15 @@ public class ApplyWsTokenResponseBody extends TeaModel {
             private String sessionId; 
             private String token; 
             private String wsEndpoint; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.sessionId = model.sessionId;
+                this.token = model.token;
+                this.wsEndpoint = model.wsEndpoint;
+            } 
 
             /**
              * SessionId.

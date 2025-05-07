@@ -48,6 +48,10 @@ public class UploadRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class UploadRuleResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadRuleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -167,6 +182,13 @@ public class UploadRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ridInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.ridInfo = model.ridInfo;
+            } 
 
             /**
              * RidInfo.

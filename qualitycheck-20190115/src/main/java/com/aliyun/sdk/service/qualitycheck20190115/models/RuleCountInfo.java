@@ -216,6 +216,10 @@ public class RuleCountInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoReview
      */
@@ -593,6 +597,59 @@ public class RuleCountInfo extends TeaModel {
         private String typeName; 
         private Long unReviewNumber; 
         private String userGroup; 
+
+        private Builder() {
+        } 
+
+        private Builder(RuleCountInfo model) {
+            this.autoReview = model.autoReview;
+            this.businessCategoryBasicInfoList = model.businessCategoryBasicInfoList;
+            this.businessCategoryNameList = model.businessCategoryNameList;
+            this.businessRange = model.businessRange;
+            this.checkNumber = model.checkNumber;
+            this.comments = model.comments;
+            this.createEmpName = model.createEmpName;
+            this.createEmpid = model.createEmpid;
+            this.createTime = model.createTime;
+            this.deny = model.deny;
+            this.effective = model.effective;
+            this.effectiveEndTime = model.effectiveEndTime;
+            this.effectiveStartTime = model.effectiveStartTime;
+            this.endTime = model.endTime;
+            this.fullCycle = model.fullCycle;
+            this.graphFlow = model.graphFlow;
+            this.hitNumber = model.hitNumber;
+            this.hitRate = model.hitRate;
+            this.hitRealViolationRate = model.hitRealViolationRate;
+            this.isDelete = model.isDelete;
+            this.isSelect = model.isSelect;
+            this.jobName = model.jobName;
+            this.lastUpdateEmpName = model.lastUpdateEmpName;
+            this.lastUpdateEmpid = model.lastUpdateEmpid;
+            this.lastUpdateTime = model.lastUpdateTime;
+            this.name = model.name;
+            this.operationMode = model.operationMode;
+            this.preReviewNumber = model.preReviewNumber;
+            this.problemNumber = model.problemNumber;
+            this.qualityCheckType = model.qualityCheckType;
+            this.realViolationNumber = model.realViolationNumber;
+            this.reviewAccuracyRate = model.reviewAccuracyRate;
+            this.reviewNumber = model.reviewNumber;
+            this.reviewRate = model.reviewRate;
+            this.reviewStatusName = model.reviewStatusName;
+            this.rid = model.rid;
+            this.ruleScoreSingleType = model.ruleScoreSingleType;
+            this.ruleScoreType = model.ruleScoreType;
+            this.ruleType = model.ruleType;
+            this.scoreSubId = model.scoreSubId;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.targetType = model.targetType;
+            this.type = model.type;
+            this.typeName = model.typeName;
+            this.unReviewNumber = model.unReviewNumber;
+            this.userGroup = model.userGroup;
+        } 
 
         /**
          * AutoReview.

@@ -60,6 +60,10 @@ public class VerifySentenceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class VerifySentenceResponseBody extends TeaModel {
         private Integer sourceRole; 
         private Boolean success; 
         private Integer targetRole; 
+
+        private Builder() {
+        } 
+
+        private Builder(VerifySentenceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.incorrectWords = model.incorrectWords;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.sourceRole = model.sourceRole;
+            this.success = model.success;
+            this.targetRole = model.targetRole;
+        } 
 
         /**
          * Code.
@@ -228,6 +246,13 @@ public class VerifySentenceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> line; 
 
+            private Builder() {
+            } 
+
+            private Builder(Line model) {
+                this.line = model.line;
+            } 
+
             /**
              * Line.
              */
@@ -287,6 +312,14 @@ public class VerifySentenceResponseBody extends TeaModel {
             private Line line; 
             private Integer position; 
 
+            private Builder() {
+            } 
+
+            private Builder(Source model) {
+                this.line = model.line;
+                this.position = model.position;
+            } 
+
             /**
              * Line.
              */
@@ -341,6 +374,13 @@ public class VerifySentenceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> line; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetLine model) {
+                this.line = model.line;
+            } 
 
             /**
              * Line.
@@ -400,6 +440,14 @@ public class VerifySentenceResponseBody extends TeaModel {
         public static final class Builder {
             private TargetLine line; 
             private Integer position; 
+
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.line = model.line;
+                this.position = model.position;
+            } 
 
             /**
              * Line.
@@ -480,6 +528,15 @@ public class VerifySentenceResponseBody extends TeaModel {
             private Target target; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Delta model) {
+                this.source = model.source;
+                this.target = model.target;
+                this.type = model.type;
+            } 
+
             /**
              * Source.
              */
@@ -542,6 +599,13 @@ public class VerifySentenceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Delta> delta; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.delta = model.delta;
+            } 
 
             /**
              * Delta.

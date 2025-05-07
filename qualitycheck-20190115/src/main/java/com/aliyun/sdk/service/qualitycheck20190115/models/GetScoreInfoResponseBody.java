@@ -48,6 +48,10 @@ public class GetScoreInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetScoreInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetScoreInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -204,6 +219,16 @@ public class GetScoreInfoResponseBody extends TeaModel {
             private String scoreSubName; 
             private Integer scoreType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScoreParam model) {
+                this.scoreNum = model.scoreNum;
+                this.scoreSubId = model.scoreSubId;
+                this.scoreSubName = model.scoreSubName;
+                this.scoreType = model.scoreType;
+            } 
+
             /**
              * ScoreNum.
              */
@@ -274,6 +299,13 @@ public class GetScoreInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ScoreParam> scoreParam; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScoreInfos model) {
+                this.scoreParam = model.scoreParam;
+            } 
 
             /**
              * ScoreParam.
@@ -346,6 +378,15 @@ public class GetScoreInfoResponseBody extends TeaModel {
             private ScoreInfos scoreInfos; 
             private String scoreName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScorePo model) {
+                this.scoreId = model.scoreId;
+                this.scoreInfos = model.scoreInfos;
+                this.scoreName = model.scoreName;
+            } 
+
             /**
              * ScoreId.
              */
@@ -408,6 +449,13 @@ public class GetScoreInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ScorePo> scorePo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.scorePo = model.scorePo;
+            } 
 
             /**
              * ScorePo.

@@ -52,6 +52,10 @@ public class RulesInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conditions
      */
@@ -101,6 +105,18 @@ public class RulesInfo extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private java.util.List<RuleInfo> rules; 
+
+        private Builder() {
+        } 
+
+        private Builder(RulesInfo model) {
+            this.conditions = model.conditions;
+            this.count = model.count;
+            this.dialogues = model.dialogues;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.rules = model.rules;
+        } 
 
         /**
          * Conditions.

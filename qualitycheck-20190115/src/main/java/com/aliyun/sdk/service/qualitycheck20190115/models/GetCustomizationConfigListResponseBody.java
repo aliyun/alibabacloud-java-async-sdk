@@ -48,6 +48,10 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCustomizationConfigListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -240,6 +255,19 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
             private Integer modelStatus; 
             private Integer taskType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModelCustomizationDataSetPo model) {
+                this.asrVersion = model.asrVersion;
+                this.createTime = model.createTime;
+                this.modeCustomizationId = model.modeCustomizationId;
+                this.modelId = model.modelId;
+                this.modelName = model.modelName;
+                this.modelStatus = model.modelStatus;
+                this.taskType = model.taskType;
+            } 
+
             /**
              * AsrVersion.
              */
@@ -334,6 +362,13 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ModelCustomizationDataSetPo> modelCustomizationDataSetPo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.modelCustomizationDataSetPo = model.modelCustomizationDataSetPo;
+            } 
 
             /**
              * ModelCustomizationDataSetPo.

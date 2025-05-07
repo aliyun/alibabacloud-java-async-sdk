@@ -44,6 +44,10 @@ public class BusinessCategoryBasicInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bid
      */
@@ -77,6 +81,16 @@ public class BusinessCategoryBasicInfo extends TeaModel {
         private String name; 
         private Long originalId; 
         private Integer serviceType; 
+
+        private Builder() {
+        } 
+
+        private Builder(BusinessCategoryBasicInfo model) {
+            this.bid = model.bid;
+            this.name = model.name;
+            this.originalId = model.originalId;
+            this.serviceType = model.serviceType;
+        } 
 
         /**
          * Bid.

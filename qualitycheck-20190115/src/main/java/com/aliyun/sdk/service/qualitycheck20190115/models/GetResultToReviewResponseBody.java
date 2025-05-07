@@ -48,6 +48,10 @@ public class GetResultToReviewResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetResultToReviewResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResultToReviewResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -288,6 +303,23 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private Integer speechRate; 
             private String words; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dialogue model) {
+                this.begin = model.begin;
+                this.beginTime = model.beginTime;
+                this.beginTimeMs = model.beginTimeMs;
+                this.emotionValue = model.emotionValue;
+                this.end = model.end;
+                this.hourMinSec = model.hourMinSec;
+                this.identity = model.identity;
+                this.role = model.role;
+                this.silenceDuration = model.silenceDuration;
+                this.speechRate = model.speechRate;
+                this.words = model.words;
+            } 
+
             /**
              * Begin.
              */
@@ -415,6 +447,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Dialogue> dialogue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dialogues model) {
+                this.dialogue = model.dialogue;
+            } 
+
             /**
              * Dialogue.
              */
@@ -510,6 +549,17 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private Long operator; 
             private String operatorName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ComplainHistories model) {
+                this.comments = model.comments;
+                this.operationTime = model.operationTime;
+                this.operationType = model.operationType;
+                this.operator = model.operator;
+                this.operatorName = model.operatorName;
+            } 
+
             /**
              * Comments.
              */
@@ -589,6 +639,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ComplainHistories> complainHistories; 
 
+            private Builder() {
+            } 
+
+            private Builder(HitRuleReviewInfoComplainHistories model) {
+                this.complainHistories = model.complainHistories;
+            } 
+
             /**
              * ComplainHistories.
              */
@@ -635,6 +692,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> cid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cid model) {
+                this.cid = model.cid;
+            } 
 
             /**
              * Cid.
@@ -755,6 +819,19 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private Integer to; 
             private String val; 
 
+            private Builder() {
+            } 
+
+            private Builder(KeyWord model) {
+                this.cid = model.cid;
+                this.customizeCode = model.customizeCode;
+                this.from = model.from;
+                this.pid = model.pid;
+                this.tid = model.tid;
+                this.to = model.to;
+                this.val = model.val;
+            } 
+
             /**
              * Cid.
              */
@@ -849,6 +926,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<KeyWord> keyWord; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeyWords model) {
+                this.keyWord = model.keyWord;
+            } 
 
             /**
              * KeyWord.
@@ -969,6 +1053,19 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private String role; 
             private String words; 
 
+            private Builder() {
+            } 
+
+            private Builder(Phrase model) {
+                this.begin = model.begin;
+                this.emotionValue = model.emotionValue;
+                this.end = model.end;
+                this.identity = model.identity;
+                this.pid = model.pid;
+                this.role = model.role;
+                this.words = model.words;
+            } 
+
             /**
              * Begin.
              */
@@ -1088,6 +1185,15 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private KeyWords keyWords; 
             private Phrase phrase; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConditionHitInfo model) {
+                this.cid = model.cid;
+                this.keyWords = model.keyWords;
+                this.phrase = model.phrase;
+            } 
+
             /**
              * Cid.
              */
@@ -1150,6 +1256,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ConditionHitInfo> conditionHitInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConditionHitInfoList model) {
+                this.conditionHitInfo = model.conditionHitInfo;
+            } 
 
             /**
              * ConditionHitInfo.
@@ -1245,6 +1358,17 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private String reviewTime; 
             private String reviewer; 
             private Long rid; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReviewInfo model) {
+                this.hitId = model.hitId;
+                this.reviewResult = model.reviewResult;
+                this.reviewTime = model.reviewTime;
+                this.reviewer = model.reviewer;
+                this.rid = model.rid;
+            } 
 
             /**
              * HitId.
@@ -1445,6 +1569,23 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private Long scoreSubId; 
             private String scoreSubName; 
 
+            private Builder() {
+            } 
+
+            private Builder(HitRuleReviewInfo model) {
+                this.autoReview = model.autoReview;
+                this.complainHistories = model.complainHistories;
+                this.complainable = model.complainable;
+                this.conditionHitInfoList = model.conditionHitInfoList;
+                this.reviewInfo = model.reviewInfo;
+                this.rid = model.rid;
+                this.ruleName = model.ruleName;
+                this.scoreId = model.scoreId;
+                this.scoreNum = model.scoreNum;
+                this.scoreSubId = model.scoreSubId;
+                this.scoreSubName = model.scoreSubName;
+            } 
+
             /**
              * AutoReview.
              */
@@ -1572,6 +1713,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<HitRuleReviewInfo> hitRuleReviewInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(HitRuleReviewInfoList model) {
+                this.hitRuleReviewInfo = model.hitRuleReviewInfo;
+            } 
+
             /**
              * HitRuleReviewInfo.
              */
@@ -1667,6 +1815,17 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private Long operator; 
             private String operatorName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ComplainHistoriesComplainHistories model) {
+                this.comments = model.comments;
+                this.operationTime = model.operationTime;
+                this.operationType = model.operationType;
+                this.operator = model.operator;
+                this.operatorName = model.operatorName;
+            } 
+
             /**
              * Comments.
              */
@@ -1745,6 +1904,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ComplainHistoriesComplainHistories> complainHistories; 
+
+            private Builder() {
+            } 
+
+            private Builder(ManualScoreInfoComplainHistories model) {
+                this.complainHistories = model.complainHistories;
+            } 
 
             /**
              * ComplainHistories.
@@ -1853,6 +2019,18 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private Long scoreSubId; 
             private String scoreSubName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ManualScoreInfo model) {
+                this.complainHistories = model.complainHistories;
+                this.complainable = model.complainable;
+                this.scoreId = model.scoreId;
+                this.scoreNum = model.scoreNum;
+                this.scoreSubId = model.scoreSubId;
+                this.scoreSubName = model.scoreSubName;
+            } 
+
             /**
              * ComplainHistories.
              */
@@ -1940,6 +2118,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ManualScoreInfo> manualScoreInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(ManualScoreInfoList model) {
+                this.manualScoreInfo = model.manualScoreInfo;
+            } 
+
             /**
              * ManualScoreInfo.
              */
@@ -1999,6 +2184,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private Long rid; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReviewRightRule model) {
+                this.rid = model.rid;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
              * rid.
              */
@@ -2053,6 +2246,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ReviewRightRule> reviewRightRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReviewHistoryReviewRightRule model) {
+                this.reviewRightRule = model.reviewRightRule;
+            } 
 
             /**
              * ReviewRightRule.
@@ -2233,6 +2433,24 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private String timeStr; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReviewHistory model) {
+                this.comments = model.comments;
+                this.complainResult = model.complainResult;
+                this.oldScore = model.oldScore;
+                this.operator = model.operator;
+                this.operatorName = model.operatorName;
+                this.reviewManagerType = model.reviewManagerType;
+                this.reviewResult = model.reviewResult;
+                this.reviewRightRule = model.reviewRightRule;
+                this.score = model.score;
+                this.time = model.time;
+                this.timeStr = model.timeStr;
+                this.type = model.type;
+            } 
+
             /**
              * Comments.
              */
@@ -2368,6 +2586,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ReviewHistory> reviewHistory; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReviewHistoryList model) {
+                this.reviewHistory = model.reviewHistory;
+            } 
+
             /**
              * ReviewHistory.
              */
@@ -2414,6 +2639,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Long> reviewKeyIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReviewKeyIdList model) {
+                this.reviewKeyIdList = model.reviewKeyIdList;
+            } 
 
             /**
              * ReviewKeyIdList.
@@ -2474,6 +2706,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private ReviewKeyIdList reviewKeyIdList; 
             private Long reviewTypeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReviewTypeIdList model) {
+                this.reviewKeyIdList = model.reviewKeyIdList;
+                this.reviewTypeId = model.reviewTypeId;
+            } 
+
             /**
              * ReviewKeyIdList.
              */
@@ -2528,6 +2768,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ReviewTypeIdList> reviewTypeIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataReviewTypeIdList model) {
+                this.reviewTypeIdList = model.reviewTypeIdList;
+            } 
 
             /**
              * ReviewTypeIdList.
@@ -2719,6 +2966,25 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private Integer status; 
             private Integer totalScore; 
             private String vid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.audioScheme = model.audioScheme;
+                this.audioURL = model.audioURL;
+                this.comments = model.comments;
+                this.dialogues = model.dialogues;
+                this.fileId = model.fileId;
+                this.fileMergeName = model.fileMergeName;
+                this.hitRuleReviewInfoList = model.hitRuleReviewInfoList;
+                this.manualScoreInfoList = model.manualScoreInfoList;
+                this.reviewHistoryList = model.reviewHistoryList;
+                this.reviewTypeIdList = model.reviewTypeIdList;
+                this.status = model.status;
+                this.totalScore = model.totalScore;
+                this.vid = model.vid;
+            } 
 
             /**
              * AudioScheme.

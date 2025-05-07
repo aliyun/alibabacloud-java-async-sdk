@@ -80,6 +80,10 @@ public class GetRulesCountListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return businessType
      */
@@ -185,6 +189,25 @@ public class GetRulesCountListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRulesCountListResponseBody model) {
+            this.businessType = model.businessType;
+            this.code = model.code;
+            this.count = model.count;
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.messages = model.messages;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * BusinessType.
@@ -328,6 +351,13 @@ public class GetRulesCountListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> data; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.data = model.data;
+            } 
+
             /**
              * Data.
              */
@@ -374,6 +404,13 @@ public class GetRulesCountListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Messages model) {
+                this.message = model.message;
+            } 
 
             /**
              * Message.

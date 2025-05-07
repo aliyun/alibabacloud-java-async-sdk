@@ -48,6 +48,10 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBusinessCategoryListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -192,6 +207,15 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
             private String businessName; 
             private Integer serviceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(BusinessCategoryBasicInfo model) {
+                this.bid = model.bid;
+                this.businessName = model.businessName;
+                this.serviceType = model.serviceType;
+            } 
+
             /**
              * Bid.
              */
@@ -254,6 +278,13 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.businessCategoryBasicInfo = model.businessCategoryBasicInfo;
+            } 
 
             /**
              * BusinessCategoryBasicInfo.

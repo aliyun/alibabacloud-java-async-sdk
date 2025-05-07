@@ -44,6 +44,10 @@ public class RuleTestDialogue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -77,6 +81,16 @@ public class RuleTestDialogue extends TeaModel {
         private Long id; 
         private String name; 
         private String userGroup; 
+
+        private Builder() {
+        } 
+
+        private Builder(RuleTestDialogue model) {
+            this.content = model.content;
+            this.id = model.id;
+            this.name = model.name;
+            this.userGroup = model.userGroup;
+        } 
 
         /**
          * Content.
@@ -255,6 +269,22 @@ public class RuleTestDialogue extends TeaModel {
             private Long silenceDuration; 
             private Long speechRate; 
             private String words; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.begin = model.begin;
+                this.beginTime = model.beginTime;
+                this.emotionValue = model.emotionValue;
+                this.end = model.end;
+                this.hourMinSec = model.hourMinSec;
+                this.identity = model.identity;
+                this.role = model.role;
+                this.silenceDuration = model.silenceDuration;
+                this.speechRate = model.speechRate;
+                this.words = model.words;
+            } 
 
             /**
              * Begin.

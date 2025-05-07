@@ -48,6 +48,10 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNextResultToVerifyResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -168,6 +183,13 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> line; 
 
+            private Builder() {
+            } 
+
+            private Builder(Line model) {
+                this.line = model.line;
+            } 
+
             /**
              * Line.
              */
@@ -227,6 +249,14 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
             private Line line; 
             private Integer position; 
 
+            private Builder() {
+            } 
+
+            private Builder(Source model) {
+                this.line = model.line;
+                this.position = model.position;
+            } 
+
             /**
              * Line.
              */
@@ -281,6 +311,13 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> line; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetLine model) {
+                this.line = model.line;
+            } 
 
             /**
              * Line.
@@ -340,6 +377,14 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         public static final class Builder {
             private TargetLine line; 
             private Integer position; 
+
+            private Builder() {
+            } 
+
+            private Builder(Target model) {
+                this.line = model.line;
+                this.position = model.position;
+            } 
 
             /**
              * Line.
@@ -420,6 +465,15 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
             private Target target; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Delta model) {
+                this.source = model.source;
+                this.target = model.target;
+                this.type = model.type;
+            } 
+
             /**
              * Source.
              */
@@ -482,6 +536,13 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Delta> delta; 
+
+            private Builder() {
+            } 
+
+            private Builder(Deltas model) {
+                this.delta = model.delta;
+            } 
 
             /**
              * Delta.
@@ -686,6 +747,26 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
             private Integer speechRate; 
             private String words; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dialogue model) {
+                this.begin = model.begin;
+                this.beginTime = model.beginTime;
+                this.deltas = model.deltas;
+                this.emotionValue = model.emotionValue;
+                this.end = model.end;
+                this.hourMinSec = model.hourMinSec;
+                this.identity = model.identity;
+                this.incorrectWords = model.incorrectWords;
+                this.role = model.role;
+                this.silenceDuration = model.silenceDuration;
+                this.sourceRole = model.sourceRole;
+                this.sourceWords = model.sourceWords;
+                this.speechRate = model.speechRate;
+                this.words = model.words;
+            } 
+
             /**
              * Begin.
              */
@@ -836,6 +917,13 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Dialogue> dialogue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dialogues model) {
+                this.dialogue = model.dialogue;
+            } 
 
             /**
              * Dialogue.
@@ -1039,6 +1127,26 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
             private String updateTime; 
             private Boolean verified; 
             private Integer verifiedCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.audioScheme = model.audioScheme;
+                this.audioURL = model.audioURL;
+                this.dialogues = model.dialogues;
+                this.duration = model.duration;
+                this.fileId = model.fileId;
+                this.fileName = model.fileName;
+                this.incorrectWords = model.incorrectWords;
+                this.index = model.index;
+                this.precision = model.precision;
+                this.status = model.status;
+                this.totalCount = model.totalCount;
+                this.updateTime = model.updateTime;
+                this.verified = model.verified;
+                this.verifiedCount = model.verifiedCount;
+            } 
 
             /**
              * AudioScheme.

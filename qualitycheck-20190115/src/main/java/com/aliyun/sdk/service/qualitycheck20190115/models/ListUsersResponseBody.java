@@ -60,6 +60,10 @@ public class ListUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -125,6 +129,20 @@ public class ListUsersResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUsersResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.data = model.data;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -324,6 +342,21 @@ public class ListUsersResponseBody extends TeaModel {
             private String updateTime; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.aliUid = model.aliUid;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.id = model.id;
+                this.loginUserType = model.loginUserType;
+                this.roleName = model.roleName;
+                this.updateTime = model.updateTime;
+                this.userName = model.userName;
+            } 
+
             /**
              * AliUid.
              */
@@ -434,6 +467,13 @@ public class ListUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<User> user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.user = model.user;
+            } 
 
             /**
              * User.

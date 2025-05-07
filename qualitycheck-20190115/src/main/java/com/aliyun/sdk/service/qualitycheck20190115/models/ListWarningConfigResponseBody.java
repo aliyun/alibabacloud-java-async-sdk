@@ -48,6 +48,10 @@ public class ListWarningConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListWarningConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWarningConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -180,6 +195,14 @@ public class ListWarningConfigResponseBody extends TeaModel {
             private Integer type; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Channel model) {
+                this.type = model.type;
+                this.url = model.url;
+            } 
+
             /**
              * Type.
              */
@@ -235,6 +258,13 @@ public class ListWarningConfigResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Channel> channel; 
 
+            private Builder() {
+            } 
+
+            private Builder(Channels model) {
+                this.channel = model.channel;
+            } 
+
             /**
              * Channel.
              */
@@ -281,6 +311,13 @@ public class ListWarningConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> ridList; 
+
+            private Builder() {
+            } 
+
+            private Builder(RidList model) {
+                this.ridList = model.ridList;
+            } 
 
             /**
              * RidList.
@@ -341,6 +378,14 @@ public class ListWarningConfigResponseBody extends TeaModel {
             private Long rid; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(WarningRule model) {
+                this.rid = model.rid;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
              * Rid.
              */
@@ -395,6 +440,13 @@ public class ListWarningConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<WarningRule> warningRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleList model) {
+                this.warningRule = model.warningRule;
+            } 
 
             /**
              * WarningRule.
@@ -527,6 +579,20 @@ public class ListWarningConfigResponseBody extends TeaModel {
             private Integer status; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(WarningConfigInfo model) {
+                this.channels = model.channels;
+                this.configId = model.configId;
+                this.configName = model.configName;
+                this.createTime = model.createTime;
+                this.ridList = model.ridList;
+                this.ruleList = model.ruleList;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * Channels.
              */
@@ -629,6 +695,13 @@ public class ListWarningConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<WarningConfigInfo> warningConfigInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.warningConfigInfo = model.warningConfigInfo;
+            } 
 
             /**
              * WarningConfigInfo.

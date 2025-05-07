@@ -64,6 +64,10 @@ public class ConditionBasicInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkRange
      */
@@ -137,6 +141,21 @@ public class ConditionBasicInfo extends TeaModel {
         private java.util.List<OperatorBasicInfo> operators; 
         private String rid; 
         private String userGroup; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConditionBasicInfo model) {
+            this.checkRange = model.checkRange;
+            this.cid = model.cid;
+            this.exclusion = model.exclusion;
+            this.id = model.id;
+            this.lambda = model.lambda;
+            this.name = model.name;
+            this.operators = model.operators;
+            this.rid = model.rid;
+            this.userGroup = model.userGroup;
+        } 
 
         /**
          * Check_range.
@@ -272,6 +291,15 @@ public class ConditionBasicInfo extends TeaModel {
             private Integer hitTime; 
             private String location; 
 
+            private Builder() {
+            } 
+
+            private Builder(Anchor model) {
+                this.cid = model.cid;
+                this.hitTime = model.hitTime;
+                this.location = model.location;
+            } 
+
             /**
              * Cid.
              */
@@ -346,6 +374,14 @@ public class ConditionBasicInfo extends TeaModel {
         public static final class Builder {
             private Integer from; 
             private Integer to; 
+
+            private Builder() {
+            } 
+
+            private Builder(Range model) {
+                this.from = model.from;
+                this.to = model.to;
+            } 
 
             /**
              * From.
@@ -461,6 +497,18 @@ public class ConditionBasicInfo extends TeaModel {
             private Range range; 
             private String role; 
             private Integer roleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckRange model) {
+                this.absolute = model.absolute;
+                this.allSentencesSatisfy = model.allSentencesSatisfy;
+                this.anchor = model.anchor;
+                this.range = model.range;
+                this.role = model.role;
+                this.roleId = model.roleId;
+            } 
 
             /**
              * Absolute.

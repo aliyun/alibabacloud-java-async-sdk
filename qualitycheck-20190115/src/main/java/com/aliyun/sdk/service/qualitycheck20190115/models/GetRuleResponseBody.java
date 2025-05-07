@@ -48,6 +48,10 @@ public class GetRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetRuleResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRuleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -167,6 +182,13 @@ public class GetRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> businessCategoryNameList; 
+
+            private Builder() {
+            } 
+
+            private Builder(BusinessCategoryNameList model) {
+                this.businessCategoryNameList = model.businessCategoryNameList;
+            } 
 
             /**
              * BusinessCategoryNameList.
@@ -467,6 +489,34 @@ public class GetRuleResponseBody extends TeaModel {
             private Integer type; 
             private String weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleInfo model) {
+                this.autoReview = model.autoReview;
+                this.businessCategoryNameList = model.businessCategoryNameList;
+                this.comments = model.comments;
+                this.createEmpid = model.createEmpid;
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.isDelete = model.isDelete;
+                this.isOnline = model.isOnline;
+                this.lastUpdateEmpid = model.lastUpdateEmpid;
+                this.lastUpdateTime = model.lastUpdateTime;
+                this.name = model.name;
+                this.rid = model.rid;
+                this.ruleLambda = model.ruleLambda;
+                this.ruleScoreType = model.ruleScoreType;
+                this.scoreId = model.scoreId;
+                this.scoreName = model.scoreName;
+                this.scoreSubId = model.scoreSubId;
+                this.scoreSubName = model.scoreSubName;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
+
             /**
              * AutoReview.
              */
@@ -682,6 +732,13 @@ public class GetRuleResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<RuleInfo> ruleInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.ruleInfo = model.ruleInfo;
+            } 
+
             /**
              * RuleInfo.
              */
@@ -728,6 +785,13 @@ public class GetRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private Rules rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.rules = model.rules;
+            } 
 
             /**
              * Rules.
