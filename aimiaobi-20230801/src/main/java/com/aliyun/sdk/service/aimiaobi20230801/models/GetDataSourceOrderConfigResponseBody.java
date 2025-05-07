@@ -182,6 +182,9 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -193,6 +196,7 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
 
         private UserConfigDataSourceList(Builder builder) {
             this.code = builder.code;
+            this.enable = builder.enable;
             this.name = builder.name;
             this.number = builder.number;
             this.type = builder.type;
@@ -211,6 +215,13 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
          */
         public String getCode() {
             return this.code;
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
         }
 
         /**
@@ -236,6 +247,7 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
+            private Boolean enable; 
             private String name; 
             private Integer number; 
             private String type; 
@@ -245,6 +257,7 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
 
             private Builder(UserConfigDataSourceList model) {
                 this.code = model.code;
+                this.enable = model.enable;
                 this.name = model.name;
                 this.number = model.number;
                 this.type = model.type;
@@ -255,6 +268,14 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
              */
             public Builder code(String code) {
                 this.code = code;
+                return this;
+            }
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
                 return this;
             }
 
