@@ -131,7 +131,7 @@ public class DescribeNetworkFlowTimeSeriesMetricRequest extends Request {
         /**
          * <p>The Web Application Firewall (WAF) instance ID.</p>
          * <blockquote>
-         * <p> Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to get the WAF instance ID.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to retrieve the WAF instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -145,12 +145,12 @@ public class DescribeNetworkFlowTimeSeriesMetricRequest extends Request {
         }
 
         /**
-         * <p>Specifies the type of data returned by each metric. Valid values:</p>
+         * <p>Specifies the data type to be returned. Valid values:</p>
          * <ul>
-         * <li>qps: Queries per second (QPS) of requests processed by WAF.</li>
-         * <li>total_requests: Total number of requests processed by WAF.</li>
-         * <li>top5_status: The top 5 HTTP status codes returned by WAF, along with their counts.</li>
-         * <li>top 5_upstream_status: The top 5 HTTP status codes returned by the origin server, along with their counts.</li>
+         * <li>qps: Returns the queries per second (QPS) processed by WAF. This value is calculated using a peak detection method: QPS is measured every 10 seconds, and the highest value within the specified time range is returned.</li>
+         * <li>total_requests: Returns the total number of requests processed by WAF.</li>
+         * <li>top5_status: Returns the top 5 HTTP status codes returned by the WAF to clients, along with their corresponding time series statistics.</li>
+         * <li>top 5_upstream_status: Returns the top 5 HTTP status codes returned by the origin server to clients, along with their corresponding time series data.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -164,7 +164,7 @@ public class DescribeNetworkFlowTimeSeriesMetricRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the WAF instance. Valid values:</p>
+         * <p>The region ID of WAF instance. Valid values:</p>
          * <ul>
          * <li><strong>cn-hangzhou</strong>: The Chinese mainland.</li>
          * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
@@ -264,11 +264,12 @@ public class DescribeNetworkFlowTimeSeriesMetricRequest extends Request {
             } 
 
             /**
-             * <p>The filter field. Valid values:</p>
+             * <p>The filter fields. Valid values:</p>
              * <ul>
-             * <li>matched_host: The protected object.</li>
-             * <li>cluster: The protected cluster.</li>
+             * <li>matched_host</li>
+             * <li>cluster</li>
              * </ul>
+             * <p>For details, see the <strong>Filter fields (Key)</strong> section below.</p>
              * 
              * <strong>example:</strong>
              * <p>matched_host</p>
@@ -279,7 +280,7 @@ public class DescribeNetworkFlowTimeSeriesMetricRequest extends Request {
             }
 
             /**
-             * <p>The filter operator.</p>
+             * <p>The filter operator. For details, see the <strong>Filter operators (OpValue)</strong> section below.</p>
              * 
              * <strong>example:</strong>
              * <p>eq</p>
@@ -290,7 +291,7 @@ public class DescribeNetworkFlowTimeSeriesMetricRequest extends Request {
             }
 
             /**
-             * <p>Specifies the values to filter by.</p>
+             * <p>The filter content.</p>
              * 
              * <strong>example:</strong>
              * <p>test.waf-top</p>
@@ -362,7 +363,7 @@ public class DescribeNetworkFlowTimeSeriesMetricRequest extends Request {
             } 
 
             /**
-             * <p>End time of the query range (UNIX timestamp, seconds).</p>
+             * <p>End time of the query range (Unix timestamp, seconds).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -374,7 +375,7 @@ public class DescribeNetworkFlowTimeSeriesMetricRequest extends Request {
             }
 
             /**
-             * <p>Start time of the query range (UNIX timestamp, seconds).</p>
+             * <p>Start time of the query range (Unix timestamp, seconds).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -446,7 +447,7 @@ public class DescribeNetworkFlowTimeSeriesMetricRequest extends Request {
             } 
 
             /**
-             * <p>An array of filter conditions. Multiple filter parameters use AND logic.</p>
+             * <p>The list of filter conditions. Each node describes a filter condition.</p>
              */
             public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;

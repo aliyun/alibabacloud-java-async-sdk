@@ -88,7 +88,7 @@ public class DescribeNetworkFlowTimeSeriesMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>D827FCFE-90A7-4330-9326-D33C8B4C7726</p>
@@ -99,7 +99,7 @@ public class DescribeNetworkFlowTimeSeriesMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time series metadata.</p>
+         * <p>The metadata of the returned data.</p>
          */
         public Builder timeSeriesMetaData(TimeSeriesMetaData timeSeriesMetaData) {
             this.timeSeriesMetaData = timeSeriesMetaData;
@@ -264,7 +264,7 @@ public class DescribeNetworkFlowTimeSeriesMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the query range (in UNIX timestamp, seconds). Same as the EndDate request parameter.</p>
+             * <p>The end time of the query range (Unix timestamp, seconds). Same as the EndDate request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>1713888600</p>
@@ -275,7 +275,7 @@ public class DescribeNetworkFlowTimeSeriesMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the query range (in UNIX timestamp, seconds). It is the same as the StartDate request parameter.</p>
+             * <p>The start time of the query range (Unix timestamp, seconds). Same as the StartDate request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>1713888000</p>
@@ -358,10 +358,10 @@ public class DescribeNetworkFlowTimeSeriesMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time granularity. For example, &quot;15m&quot; indicates that each data point is counted every 15 minutes. For details, see <strong>Time granularity of time series data points</strong>.</p>
+             * <p>The time granularity. For example, 15m indicates that each data point is counted every 15 minutes. For details, see the <strong>Time granularity of time series data points</strong> section below.</p>
              * 
              * <strong>example:</strong>
-             * <p>&quot;1m&quot;</p>
+             * <p>1m</p>
              */
             public Builder aggregateInterval(String aggregateInterval) {
                 this.aggregateInterval = aggregateInterval;
@@ -377,10 +377,10 @@ public class DescribeNetworkFlowTimeSeriesMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the returned data. Defaults to the value: request.</p>
+             * <p>The unit of the returned data. It is fixed as requests.</p>
              * 
              * <strong>example:</strong>
-             * <p>request</p>
+             * <p>requests</p>
              */
             public Builder units(String units) {
                 this.units = units;

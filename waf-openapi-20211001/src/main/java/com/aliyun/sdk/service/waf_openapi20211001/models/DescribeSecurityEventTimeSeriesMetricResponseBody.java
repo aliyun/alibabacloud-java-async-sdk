@@ -83,7 +83,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>D827FCFE-90A7-4330-9326-D33C8B4C7726</p>
+         * <p>D827FCFE-90A7-4330-9326-*****4C7726</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -264,7 +264,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the value of EndDate in the request parameters.</p>
+             * <p>The end of the time range to query. The value is a Unix timestamp. Unit: seconds. This value is the same as the value of EndDate in the request parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>1713888600</p>
@@ -275,7 +275,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the value of StartDate in the request parameters.</p>
+             * <p>The beginning of the time range to query. The value is a Unix timestamp. Unit: seconds. This value is the same as the value of StartDate in the request parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>1713888000</p>
@@ -358,7 +358,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The time granularity of data points in the time series data returned. For example, a value of 15m indicates that data points are collected at 15-minute intervals. For more information about the supported time granularities, see the &quot;<strong>Time granularities for data points in time series records</strong>&quot; section of the <strong>DescribeNetworkFlowTimeSeriesMetric</strong> topic.</p>
+             * <p>The time granularity of data points in the time series data returned. For example, a value of 15m indicates that data points are collected at 15-minute intervals. For more information about time granularities, see the <strong>Time granularities of data points in time series</strong> section below.</p>
              * 
              * <strong>example:</strong>
              * <p>1m</p>
@@ -377,7 +377,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The unit of the returned data. Defaults to the value: request.</p>
+             * <p>The unit of the statistics returned. It is fixed as requests.</p>
              * 
              * <strong>example:</strong>
              * <p>requests</p>

@@ -123,7 +123,7 @@ public class DescribeSecurityEventLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The metadata of logs returned.</p>
+         * <p>The metadata of the time series data returned.</p>
          */
         public Builder securityEventMetaData(SecurityEventMetaData securityEventMetaData) {
             this.securityEventMetaData = securityEventMetaData;
@@ -278,7 +278,7 @@ public class DescribeSecurityEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the returned data. Defaults to the value: requests.</p>
+             * <p>The unit of the statistics returned. The value is fixed as requests.</p>
              * 
              * <strong>example:</strong>
              * <p>requests</p>

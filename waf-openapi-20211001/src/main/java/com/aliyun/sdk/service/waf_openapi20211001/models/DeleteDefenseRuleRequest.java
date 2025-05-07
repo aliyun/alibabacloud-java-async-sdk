@@ -37,7 +37,6 @@ public class DeleteDefenseRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long templateId;
 
     private DeleteDefenseRuleRequest(Builder builder) {
@@ -176,7 +175,6 @@ public class DeleteDefenseRuleRequest extends Request {
 
         /**
          * <p>The ID of the protection rule template to which the protection rule that you want to delete belongs.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2221</p>

@@ -42,7 +42,6 @@ public class CreateDefenseRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long templateId;
 
     private CreateDefenseRuleRequest(Builder builder) {
@@ -212,7 +211,6 @@ public class CreateDefenseRuleRequest extends Request {
 
         /**
          * <p>The ID of the rule template for which you want to create a protection rule.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1122</p>
