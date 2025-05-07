@@ -1047,6 +1047,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BabelfishConfig")
         private BabelfishConfig babelfishConfig;
 
+        @com.aliyun.core.annotation.NameInMap("BlueGreenDeploymentName")
+        private String blueGreenDeploymentName;
+
+        @com.aliyun.core.annotation.NameInMap("BlueInstanceName")
+        private String blueInstanceName;
+
         @com.aliyun.core.annotation.NameInMap("BpeEnabled")
         private String bpeEnabled;
 
@@ -1070,6 +1076,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CompressionRatio")
         private String compressionRatio;
+
+        @com.aliyun.core.annotation.NameInMap("ComputeBurstEnabled")
+        private Boolean computeBurstEnabled;
 
         @com.aliyun.core.annotation.NameInMap("ConnectionMode")
         private String connectionMode;
@@ -1154,6 +1163,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("GeneralGroupName")
         private String generalGroupName;
+
+        @com.aliyun.core.annotation.NameInMap("GreenInstanceName")
+        private String greenInstanceName;
 
         @com.aliyun.core.annotation.NameInMap("GuardDBInstanceId")
         private String guardDBInstanceId;
@@ -1290,6 +1302,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.autoUpgradeMinorVersion = builder.autoUpgradeMinorVersion;
             this.availabilityValue = builder.availabilityValue;
             this.babelfishConfig = builder.babelfishConfig;
+            this.blueGreenDeploymentName = builder.blueGreenDeploymentName;
+            this.blueInstanceName = builder.blueInstanceName;
             this.bpeEnabled = builder.bpeEnabled;
             this.burstingEnabled = builder.burstingEnabled;
             this.canTempUpgrade = builder.canTempUpgrade;
@@ -1298,6 +1312,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.collation = builder.collation;
             this.compressionMode = builder.compressionMode;
             this.compressionRatio = builder.compressionRatio;
+            this.computeBurstEnabled = builder.computeBurstEnabled;
             this.connectionMode = builder.connectionMode;
             this.connectionString = builder.connectionString;
             this.consoleVersion = builder.consoleVersion;
@@ -1326,6 +1341,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.expireTime = builder.expireTime;
             this.extra = builder.extra;
             this.generalGroupName = builder.generalGroupName;
+            this.greenInstanceName = builder.greenInstanceName;
             this.guardDBInstanceId = builder.guardDBInstanceId;
             this.IPType = builder.IPType;
             this.incrementSourceDBInstanceId = builder.incrementSourceDBInstanceId;
@@ -1415,6 +1431,20 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return blueGreenDeploymentName
+         */
+        public String getBlueGreenDeploymentName() {
+            return this.blueGreenDeploymentName;
+        }
+
+        /**
+         * @return blueInstanceName
+         */
+        public String getBlueInstanceName() {
+            return this.blueInstanceName;
+        }
+
+        /**
          * @return bpeEnabled
          */
         public String getBpeEnabled() {
@@ -1468,6 +1498,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getCompressionRatio() {
             return this.compressionRatio;
+        }
+
+        /**
+         * @return computeBurstEnabled
+         */
+        public Boolean getComputeBurstEnabled() {
+            return this.computeBurstEnabled;
         }
 
         /**
@@ -1664,6 +1701,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getGeneralGroupName() {
             return this.generalGroupName;
+        }
+
+        /**
+         * @return greenInstanceName
+         */
+        public String getGreenInstanceName() {
+            return this.greenInstanceName;
         }
 
         /**
@@ -1973,6 +2017,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String autoUpgradeMinorVersion; 
             private String availabilityValue; 
             private BabelfishConfig babelfishConfig; 
+            private String blueGreenDeploymentName; 
+            private String blueInstanceName; 
             private String bpeEnabled; 
             private Boolean burstingEnabled; 
             private Boolean canTempUpgrade; 
@@ -1981,6 +2027,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String collation; 
             private String compressionMode; 
             private String compressionRatio; 
+            private Boolean computeBurstEnabled; 
             private String connectionMode; 
             private String connectionString; 
             private String consoleVersion; 
@@ -2009,6 +2056,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String expireTime; 
             private Extra extra; 
             private String generalGroupName; 
+            private String greenInstanceName; 
             private String guardDBInstanceId; 
             private String IPType; 
             private String incrementSourceDBInstanceId; 
@@ -2062,6 +2110,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.autoUpgradeMinorVersion = model.autoUpgradeMinorVersion;
                 this.availabilityValue = model.availabilityValue;
                 this.babelfishConfig = model.babelfishConfig;
+                this.blueGreenDeploymentName = model.blueGreenDeploymentName;
+                this.blueInstanceName = model.blueInstanceName;
                 this.bpeEnabled = model.bpeEnabled;
                 this.burstingEnabled = model.burstingEnabled;
                 this.canTempUpgrade = model.canTempUpgrade;
@@ -2070,6 +2120,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.collation = model.collation;
                 this.compressionMode = model.compressionMode;
                 this.compressionRatio = model.compressionRatio;
+                this.computeBurstEnabled = model.computeBurstEnabled;
                 this.connectionMode = model.connectionMode;
                 this.connectionString = model.connectionString;
                 this.consoleVersion = model.consoleVersion;
@@ -2098,6 +2149,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.expireTime = model.expireTime;
                 this.extra = model.extra;
                 this.generalGroupName = model.generalGroupName;
+                this.greenInstanceName = model.greenInstanceName;
                 this.guardDBInstanceId = model.guardDBInstanceId;
                 this.IPType = model.IPType;
                 this.incrementSourceDBInstanceId = model.incrementSourceDBInstanceId;
@@ -2207,6 +2259,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * BlueGreenDeploymentName.
+             */
+            public Builder blueGreenDeploymentName(String blueGreenDeploymentName) {
+                this.blueGreenDeploymentName = blueGreenDeploymentName;
+                return this;
+            }
+
+            /**
+             * BlueInstanceName.
+             */
+            public Builder blueInstanceName(String blueInstanceName) {
+                this.blueInstanceName = blueInstanceName;
+                return this;
+            }
+
+            /**
              * <p>A deprecated parameter. You do not need to specify this parameter.</p>
              * 
              * <strong>example:</strong>
@@ -2218,7 +2286,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An invalid parameter. You do not need to specify this parameter.</p>
+             * <p>Indicates whether the I/O burst feature is enabled for Premium ESSDs. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <blockquote>
+             * <p> For more information about the I/O burst feature, see <a href="https://help.aliyun.com/document_detail/2340501.html">What are Premium ESSDs?</a></p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2262,7 +2337,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved parameter.</p>
+             * <p>Indicates whether the data archiving feature is enabled for Premium ESSDs. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <p>For more information about the data archiving feature, see <a href="https://help.aliyun.com/document_detail/2701832.html">Use the data archiving feature</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>
@@ -2302,6 +2382,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder compressionRatio(String compressionRatio) {
                 this.compressionRatio = compressionRatio;
+                return this;
+            }
+
+            /**
+             * ComputeBurstEnabled.
+             */
+            public Builder computeBurstEnabled(Boolean computeBurstEnabled) {
+                this.computeBurstEnabled = computeBurstEnabled;
                 return this;
             }
 
@@ -2502,10 +2590,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>The storage type of the instance. Valid values:</p>
              * <ul>
-             * <li><strong>local_ssd</strong> or <strong>ephemeral_ssd</strong>: local SSD</li>
+             * <li><strong>local_ssd</strong> and <strong>ephemeral_ssd</strong>: Premium Local SSD</li>
              * <li><strong>cloud_ssd</strong>: standard SSD</li>
-             * <li><strong>cloud_essd</strong>: Enterprise SSD (ESSD).</li>
-             * <li><strong>general_essd</strong>: general ESSD</li>
+             * <li><strong>cloud_essd</strong>: ESSD</li>
+             * <li><strong>cloud_essd</strong>: Premium ESSD</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2654,6 +2742,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * GreenInstanceName.
+             */
+            public Builder greenInstanceName(String greenInstanceName) {
+                this.greenInstanceName = greenInstanceName;
+                return this;
+            }
+
+            /**
              * <p>The ID of the disaster recovery instance that is attached to the primary instance.</p>
              * 
              * <strong>example:</strong>
@@ -2717,7 +2813,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved parameter.</p>
+             * <p>Indicates whether Buffer Pool Extension (BPE) is enabled for Premium ESSDs.</p>
+             * <ul>
+             * <li><strong>1</strong>: enabled</li>
+             * <li><strong>0</strong>: disabled</li>
+             * </ul>
+             * <blockquote>
+             * <p> For more information, see <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension(BPE)</a>.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>None</p>
@@ -2849,12 +2952,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OptimizedWritesInfo contains two fields:</p>
+             * <p>The OptimizedWritesInfo parameter contains the following fields:</p>
              * <ul>
-             * <li><p>optimized_writes: Whether write optimization is enabled for the current instance.</p>
-             * </li>
-             * <li><p>init_optimized_writes: Whether write optimization can be enabled for the instance. Some instances do not display the write optimization switch in the console because init_optimized_writes is false.</p>
-             * </li>
+             * <li><strong>optimized_writes</strong>: indicates whether the 16K atomic write feature is enabled for the current instance.</li>
+             * <li><strong>init_optimized_writes</strong>: indicates whether the 16K atomic write feature can be enabled for the current instance. If init_optimized_writes is set to false, the 16K atomic write switch is not displayed for specific instances in the console.</li>
              * </ul>
              * 
              * <strong>example:</strong>

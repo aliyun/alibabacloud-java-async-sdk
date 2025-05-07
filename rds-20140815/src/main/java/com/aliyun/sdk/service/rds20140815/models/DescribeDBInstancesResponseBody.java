@@ -311,6 +311,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
      * <p>DescribeDBInstancesResponseBody</p>
      */
     public static class DBInstance extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BlueGreenDeploymentName")
+        private String blueGreenDeploymentName;
+
+        @com.aliyun.core.annotation.NameInMap("BlueInstanceName")
+        private String blueInstanceName;
+
         @com.aliyun.core.annotation.NameInMap("BpeEnabled")
         private String bpeEnabled;
 
@@ -410,6 +416,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GeneralGroupName")
         private String generalGroupName;
 
+        @com.aliyun.core.annotation.NameInMap("GreenInstanceName")
+        private String greenInstanceName;
+
         @com.aliyun.core.annotation.NameInMap("GuardDBInstanceId")
         private String guardDBInstanceId;
 
@@ -471,6 +480,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private String zoneId;
 
         private DBInstance(Builder builder) {
+            this.blueGreenDeploymentName = builder.blueGreenDeploymentName;
+            this.blueInstanceName = builder.blueInstanceName;
             this.bpeEnabled = builder.bpeEnabled;
             this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
@@ -504,6 +515,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.engineVersion = builder.engineVersion;
             this.expireTime = builder.expireTime;
             this.generalGroupName = builder.generalGroupName;
+            this.greenInstanceName = builder.greenInstanceName;
             this.guardDBInstanceId = builder.guardDBInstanceId;
             this.instanceNetworkType = builder.instanceNetworkType;
             this.ioAccelerationEnabled = builder.ioAccelerationEnabled;
@@ -532,6 +544,20 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         public static DBInstance create() {
             return builder().build();
+        }
+
+        /**
+         * @return blueGreenDeploymentName
+         */
+        public String getBlueGreenDeploymentName() {
+            return this.blueGreenDeploymentName;
+        }
+
+        /**
+         * @return blueInstanceName
+         */
+        public String getBlueInstanceName() {
+            return this.blueInstanceName;
         }
 
         /**
@@ -766,6 +792,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return greenInstanceName
+         */
+        public String getGreenInstanceName() {
+            return this.greenInstanceName;
+        }
+
+        /**
          * @return guardDBInstanceId
          */
         public String getGuardDBInstanceId() {
@@ -906,6 +939,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String blueGreenDeploymentName; 
+            private String blueInstanceName; 
             private String bpeEnabled; 
             private Boolean burstingEnabled; 
             private String category; 
@@ -939,6 +974,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String engineVersion; 
             private String expireTime; 
             private String generalGroupName; 
+            private String greenInstanceName; 
             private String guardDBInstanceId; 
             private String instanceNetworkType; 
             private String ioAccelerationEnabled; 
@@ -964,6 +1000,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             } 
 
             private Builder(DBInstance model) {
+                this.blueGreenDeploymentName = model.blueGreenDeploymentName;
+                this.blueInstanceName = model.blueInstanceName;
                 this.bpeEnabled = model.bpeEnabled;
                 this.burstingEnabled = model.burstingEnabled;
                 this.category = model.category;
@@ -997,6 +1035,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
                 this.engineVersion = model.engineVersion;
                 this.expireTime = model.expireTime;
                 this.generalGroupName = model.generalGroupName;
+                this.greenInstanceName = model.greenInstanceName;
                 this.guardDBInstanceId = model.guardDBInstanceId;
                 this.instanceNetworkType = model.instanceNetworkType;
                 this.ioAccelerationEnabled = model.ioAccelerationEnabled;
@@ -1018,6 +1057,22 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
                 this.vpcName = model.vpcName;
                 this.zoneId = model.zoneId;
             } 
+
+            /**
+             * BlueGreenDeploymentName.
+             */
+            public Builder blueGreenDeploymentName(String blueGreenDeploymentName) {
+                this.blueGreenDeploymentName = blueGreenDeploymentName;
+                return this;
+            }
+
+            /**
+             * BlueInstanceName.
+             */
+            public Builder blueInstanceName(String blueInstanceName) {
+                this.blueInstanceName = blueInstanceName;
+                return this;
+            }
 
             /**
              * <p>A deprecated parameter.</p>
@@ -1414,6 +1469,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder generalGroupName(String generalGroupName) {
                 this.generalGroupName = generalGroupName;
+                return this;
+            }
+
+            /**
+             * GreenInstanceName.
+             */
+            public Builder greenInstanceName(String greenInstanceName) {
+                this.greenInstanceName = greenInstanceName;
                 return this;
             }
 

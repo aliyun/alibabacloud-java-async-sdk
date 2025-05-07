@@ -2066,12 +2066,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBInstancesByPerformanceResponse> describeDBInstancesByPerformance(DescribeDBInstancesByPerformanceRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>This operation is phased out.</p>
+     * @deprecated OpenAPI DescribeDBInstancesForClone is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.  * @description This operation is phased out.
      * 
      * @param request the request parameters of DescribeDBInstancesForClone  DescribeDBInstancesForCloneRequest
      * @return DescribeDBInstancesForCloneResponse
      */
+    @Deprecated
     CompletableFuture<DescribeDBInstancesForCloneResponse> describeDBInstancesForClone(DescribeDBInstancesForCloneRequest request);
 
     /**
@@ -4488,17 +4488,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Note:</h3>
-     * <p>This operation is no longer maintained. We recommend that you enable or configure Database Autonomy Service (DAS) Enterprise Edition. For more information, see <a href="https://help.aliyun.com/document_detail/2778835.html">Enable or configure DAS Enterprise Edition</a>.</p>
-     * <h3><a href="#"></a>References</h3>
-     * <blockquote>
-     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
-     * </blockquote>
-     * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/476574.html">Use the SQL Explorer and Audit feature for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96766.html">Use the SQL Audit feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95712.html">Use the SQL Audit feature for an ApsaraDB RDS for SQL Server instance</a></li>
-     * </ul>
+     * <p>This operation can still be called but is no longer maintained. We recommend that you call the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead of this operation.</p>
      * 
      * @param request the request parameters of ModifySQLCollectorPolicy  ModifySQLCollectorPolicyRequest
      * @return ModifySQLCollectorPolicyResponse

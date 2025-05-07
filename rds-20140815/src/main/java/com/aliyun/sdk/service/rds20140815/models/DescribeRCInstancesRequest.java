@@ -46,6 +46,10 @@ public class DescribeRCInstancesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private String tag;
 
@@ -62,6 +66,7 @@ public class DescribeRCInstancesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.publicIp = builder.publicIp;
         this.regionId = builder.regionId;
+        this.status = builder.status;
         this.tag = builder.tag;
         this.vpcId = builder.vpcId;
     }
@@ -129,6 +134,13 @@ public class DescribeRCInstancesRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return tag
      */
     public String getTag() {
@@ -150,6 +162,7 @@ public class DescribeRCInstancesRequest extends Request {
         private Integer pageSize; 
         private String publicIp; 
         private String regionId; 
+        private String status; 
         private String tag; 
         private String vpcId; 
 
@@ -166,6 +179,7 @@ public class DescribeRCInstancesRequest extends Request {
             this.pageSize = request.pageSize;
             this.publicIp = request.publicIp;
             this.regionId = request.regionId;
+            this.status = request.status;
             this.tag = request.tag;
             this.vpcId = request.vpcId;
         } 
@@ -246,6 +260,15 @@ public class DescribeRCInstancesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 
