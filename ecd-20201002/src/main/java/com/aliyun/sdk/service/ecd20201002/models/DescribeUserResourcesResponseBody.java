@@ -1196,6 +1196,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
      * <p>DescribeUserResourcesResponseBody</p>
      */
     public static class Sessions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NickName")
+        private String nickName;
+
         @com.aliyun.core.annotation.NameInMap("ResourceSessionStartTime")
         private String resourceSessionStartTime;
 
@@ -1206,6 +1209,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         private String userPrincipalName;
 
         private Sessions(Builder builder) {
+            this.nickName = builder.nickName;
             this.resourceSessionStartTime = builder.resourceSessionStartTime;
             this.userId = builder.userId;
             this.userPrincipalName = builder.userPrincipalName;
@@ -1217,6 +1221,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         public static Sessions create() {
             return builder().build();
+        }
+
+        /**
+         * @return nickName
+         */
+        public String getNickName() {
+            return this.nickName;
         }
 
         /**
@@ -1241,6 +1252,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String nickName; 
             private String resourceSessionStartTime; 
             private String userId; 
             private String userPrincipalName; 
@@ -1249,10 +1261,19 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             } 
 
             private Builder(Sessions model) {
+                this.nickName = model.nickName;
                 this.resourceSessionStartTime = model.resourceSessionStartTime;
                 this.userId = model.userId;
                 this.userPrincipalName = model.userPrincipalName;
             } 
+
+            /**
+             * NickName.
+             */
+            public Builder nickName(String nickName) {
+                this.nickName = nickName;
+                return this;
+            }
 
             /**
              * ResourceSessionStartTime.
