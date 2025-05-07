@@ -317,10 +317,14 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
      * <p>GetDataSourceOrderConfigResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TotalDocSize")
+        private Integer totalDocSize;
+
         @com.aliyun.core.annotation.NameInMap("UserConfigDataSourceList")
         private java.util.List<UserConfigDataSourceList> userConfigDataSourceList;
 
         private Data(Builder builder) {
+            this.totalDocSize = builder.totalDocSize;
             this.userConfigDataSourceList = builder.userConfigDataSourceList;
         }
 
@@ -333,6 +337,13 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalDocSize
+         */
+        public Integer getTotalDocSize() {
+            return this.totalDocSize;
+        }
+
+        /**
          * @return userConfigDataSourceList
          */
         public java.util.List<UserConfigDataSourceList> getUserConfigDataSourceList() {
@@ -340,14 +351,24 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer totalDocSize; 
             private java.util.List<UserConfigDataSourceList> userConfigDataSourceList; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.totalDocSize = model.totalDocSize;
                 this.userConfigDataSourceList = model.userConfigDataSourceList;
             } 
+
+            /**
+             * TotalDocSize.
+             */
+            public Builder totalDocSize(Integer totalDocSize) {
+                this.totalDocSize = totalDocSize;
+                return this;
+            }
 
             /**
              * UserConfigDataSourceList.
