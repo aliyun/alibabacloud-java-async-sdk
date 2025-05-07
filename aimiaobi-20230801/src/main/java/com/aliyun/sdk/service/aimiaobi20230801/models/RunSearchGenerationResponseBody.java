@@ -8702,6 +8702,12 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class BizContext extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AskUser")
+        private String askUser;
+
+        @com.aliyun.core.annotation.NameInMap("AskUserKeywords")
+        private java.util.List<String> askUserKeywords;
+
         @com.aliyun.core.annotation.NameInMap("CurrentStep")
         private String currentStep;
 
@@ -8733,6 +8739,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private TokenCalculate tokenCalculate;
 
         private BizContext(Builder builder) {
+            this.askUser = builder.askUser;
+            this.askUserKeywords = builder.askUserKeywords;
             this.currentStep = builder.currentStep;
             this.generatedContent = builder.generatedContent;
             this.modelId = builder.modelId;
@@ -8751,6 +8759,20 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static BizContext create() {
             return builder().build();
+        }
+
+        /**
+         * @return askUser
+         */
+        public String getAskUser() {
+            return this.askUser;
+        }
+
+        /**
+         * @return askUserKeywords
+         */
+        public java.util.List<String> getAskUserKeywords() {
+            return this.askUserKeywords;
         }
 
         /**
@@ -8824,6 +8846,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String askUser; 
+            private java.util.List<String> askUserKeywords; 
             private String currentStep; 
             private GeneratedContent generatedContent; 
             private String modelId; 
@@ -8839,6 +8863,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(BizContext model) {
+                this.askUser = model.askUser;
+                this.askUserKeywords = model.askUserKeywords;
                 this.currentStep = model.currentStep;
                 this.generatedContent = model.generatedContent;
                 this.modelId = model.modelId;
@@ -8850,6 +8876,22 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 this.supplementEnable = model.supplementEnable;
                 this.tokenCalculate = model.tokenCalculate;
             } 
+
+            /**
+             * AskUser.
+             */
+            public Builder askUser(String askUser) {
+                this.askUser = askUser;
+                return this;
+            }
+
+            /**
+             * AskUserKeywords.
+             */
+            public Builder askUserKeywords(java.util.List<String> askUserKeywords) {
+                this.askUserKeywords = askUserKeywords;
+                return this;
+            }
 
             /**
              * CurrentStep.

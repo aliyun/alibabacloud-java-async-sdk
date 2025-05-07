@@ -767,15 +767,47 @@ public class RunSearchGenerationRequest extends Request {
      * <p>RunSearchGenerationRequest</p>
      */
     public static class BizContext extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AskUser")
+        private String askUser;
+
+        @com.aliyun.core.annotation.NameInMap("AskUserKeywords")
+        private java.util.List<String> askUserKeywords;
+
+        @com.aliyun.core.annotation.NameInMap("CurrentStep")
+        private String currentStep;
+
         @com.aliyun.core.annotation.NameInMap("MultimodalMediaSelection")
         private MultimodalMediaSelection multimodalMediaSelection;
+
+        @com.aliyun.core.annotation.NameInMap("NextStep")
+        private String nextStep;
 
         @com.aliyun.core.annotation.NameInMap("SkipCurrentSupplement")
         private Boolean skipCurrentSupplement;
 
+        @com.aliyun.core.annotation.NameInMap("SupplementDataType")
+        private String supplementDataType;
+
+        @com.aliyun.core.annotation.NameInMap("SupplementEnable")
+        private Boolean supplementEnable;
+
+        @com.aliyun.core.annotation.NameInMap("UserBack")
+        private String userBack;
+
+        @com.aliyun.core.annotation.NameInMap("UserBackKeywords")
+        private java.util.List<String> userBackKeywords;
+
         private BizContext(Builder builder) {
+            this.askUser = builder.askUser;
+            this.askUserKeywords = builder.askUserKeywords;
+            this.currentStep = builder.currentStep;
             this.multimodalMediaSelection = builder.multimodalMediaSelection;
+            this.nextStep = builder.nextStep;
             this.skipCurrentSupplement = builder.skipCurrentSupplement;
+            this.supplementDataType = builder.supplementDataType;
+            this.supplementEnable = builder.supplementEnable;
+            this.userBack = builder.userBack;
+            this.userBackKeywords = builder.userBackKeywords;
         }
 
         public static Builder builder() {
@@ -787,10 +819,38 @@ public class RunSearchGenerationRequest extends Request {
         }
 
         /**
+         * @return askUser
+         */
+        public String getAskUser() {
+            return this.askUser;
+        }
+
+        /**
+         * @return askUserKeywords
+         */
+        public java.util.List<String> getAskUserKeywords() {
+            return this.askUserKeywords;
+        }
+
+        /**
+         * @return currentStep
+         */
+        public String getCurrentStep() {
+            return this.currentStep;
+        }
+
+        /**
          * @return multimodalMediaSelection
          */
         public MultimodalMediaSelection getMultimodalMediaSelection() {
             return this.multimodalMediaSelection;
+        }
+
+        /**
+         * @return nextStep
+         */
+        public String getNextStep() {
+            return this.nextStep;
         }
 
         /**
@@ -800,17 +860,85 @@ public class RunSearchGenerationRequest extends Request {
             return this.skipCurrentSupplement;
         }
 
+        /**
+         * @return supplementDataType
+         */
+        public String getSupplementDataType() {
+            return this.supplementDataType;
+        }
+
+        /**
+         * @return supplementEnable
+         */
+        public Boolean getSupplementEnable() {
+            return this.supplementEnable;
+        }
+
+        /**
+         * @return userBack
+         */
+        public String getUserBack() {
+            return this.userBack;
+        }
+
+        /**
+         * @return userBackKeywords
+         */
+        public java.util.List<String> getUserBackKeywords() {
+            return this.userBackKeywords;
+        }
+
         public static final class Builder {
+            private String askUser; 
+            private java.util.List<String> askUserKeywords; 
+            private String currentStep; 
             private MultimodalMediaSelection multimodalMediaSelection; 
+            private String nextStep; 
             private Boolean skipCurrentSupplement; 
+            private String supplementDataType; 
+            private Boolean supplementEnable; 
+            private String userBack; 
+            private java.util.List<String> userBackKeywords; 
 
             private Builder() {
             } 
 
             private Builder(BizContext model) {
+                this.askUser = model.askUser;
+                this.askUserKeywords = model.askUserKeywords;
+                this.currentStep = model.currentStep;
                 this.multimodalMediaSelection = model.multimodalMediaSelection;
+                this.nextStep = model.nextStep;
                 this.skipCurrentSupplement = model.skipCurrentSupplement;
+                this.supplementDataType = model.supplementDataType;
+                this.supplementEnable = model.supplementEnable;
+                this.userBack = model.userBack;
+                this.userBackKeywords = model.userBackKeywords;
             } 
+
+            /**
+             * AskUser.
+             */
+            public Builder askUser(String askUser) {
+                this.askUser = askUser;
+                return this;
+            }
+
+            /**
+             * AskUserKeywords.
+             */
+            public Builder askUserKeywords(java.util.List<String> askUserKeywords) {
+                this.askUserKeywords = askUserKeywords;
+                return this;
+            }
+
+            /**
+             * CurrentStep.
+             */
+            public Builder currentStep(String currentStep) {
+                this.currentStep = currentStep;
+                return this;
+            }
 
             /**
              * MultimodalMediaSelection.
@@ -821,10 +949,50 @@ public class RunSearchGenerationRequest extends Request {
             }
 
             /**
+             * NextStep.
+             */
+            public Builder nextStep(String nextStep) {
+                this.nextStep = nextStep;
+                return this;
+            }
+
+            /**
              * SkipCurrentSupplement.
              */
             public Builder skipCurrentSupplement(Boolean skipCurrentSupplement) {
                 this.skipCurrentSupplement = skipCurrentSupplement;
+                return this;
+            }
+
+            /**
+             * SupplementDataType.
+             */
+            public Builder supplementDataType(String supplementDataType) {
+                this.supplementDataType = supplementDataType;
+                return this;
+            }
+
+            /**
+             * SupplementEnable.
+             */
+            public Builder supplementEnable(Boolean supplementEnable) {
+                this.supplementEnable = supplementEnable;
+                return this;
+            }
+
+            /**
+             * UserBack.
+             */
+            public Builder userBack(String userBack) {
+                this.userBack = userBack;
+                return this;
+            }
+
+            /**
+             * UserBackKeywords.
+             */
+            public Builder userBackKeywords(java.util.List<String> userBackKeywords) {
+                this.userBackKeywords = userBackKeywords;
                 return this;
             }
 
