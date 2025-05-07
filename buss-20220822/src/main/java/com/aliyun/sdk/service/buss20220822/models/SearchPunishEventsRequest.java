@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.buss20220822.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchPunishEventsRequest} extends {@link RequestModel}
  *
  * <p>SearchPunishEventsRequest</p>
@@ -18,15 +24,15 @@ public class SearchPunishEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BussinessCodes")
-    private java.util.List < String > bussinessCodes;
+    private java.util.List<String> bussinessCodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CaseCodes")
-    private java.util.List < String > caseCodes;
+    private java.util.List<String> caseCodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventCodes")
-    private java.util.List < String > eventCodes;
+    private java.util.List<String> eventCodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
@@ -49,7 +55,7 @@ public class SearchPunishEventsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -64,21 +70,21 @@ public class SearchPunishEventsRequest extends Request {
     /**
      * @return bussinessCodes
      */
-    public java.util.List < String > getBussinessCodes() {
+    public java.util.List<String> getBussinessCodes() {
         return this.bussinessCodes;
     }
 
     /**
      * @return caseCodes
      */
-    public java.util.List < String > getCaseCodes() {
+    public java.util.List<String> getCaseCodes() {
         return this.caseCodes;
     }
 
     /**
      * @return eventCodes
      */
-    public java.util.List < String > getEventCodes() {
+    public java.util.List<String> getEventCodes() {
         return this.eventCodes;
     }
 
@@ -91,9 +97,9 @@ public class SearchPunishEventsRequest extends Request {
 
     public static final class Builder extends Request.Builder<SearchPunishEventsRequest, Builder> {
         private String aliUid; 
-        private java.util.List < String > bussinessCodes; 
-        private java.util.List < String > caseCodes; 
-        private java.util.List < String > eventCodes; 
+        private java.util.List<String> bussinessCodes; 
+        private java.util.List<String> caseCodes; 
+        private java.util.List<String> eventCodes; 
         private String resourceId; 
 
         private Builder() {
@@ -110,7 +116,7 @@ public class SearchPunishEventsRequest extends Request {
         } 
 
         /**
-         * AliUid.
+         * <p>This parameter is required.</p>
          */
         public Builder aliUid(String aliUid) {
             this.putQueryParameter("AliUid", aliUid);
@@ -121,7 +127,7 @@ public class SearchPunishEventsRequest extends Request {
         /**
          * BussinessCodes.
          */
-        public Builder bussinessCodes(java.util.List < String > bussinessCodes) {
+        public Builder bussinessCodes(java.util.List<String> bussinessCodes) {
             String bussinessCodesShrink = shrink(bussinessCodes, "BussinessCodes", "json");
             this.putQueryParameter("BussinessCodes", bussinessCodesShrink);
             this.bussinessCodes = bussinessCodes;
@@ -131,7 +137,7 @@ public class SearchPunishEventsRequest extends Request {
         /**
          * CaseCodes.
          */
-        public Builder caseCodes(java.util.List < String > caseCodes) {
+        public Builder caseCodes(java.util.List<String> caseCodes) {
             String caseCodesShrink = shrink(caseCodes, "CaseCodes", "json");
             this.putQueryParameter("CaseCodes", caseCodesShrink);
             this.caseCodes = caseCodes;
@@ -141,7 +147,7 @@ public class SearchPunishEventsRequest extends Request {
         /**
          * EventCodes.
          */
-        public Builder eventCodes(java.util.List < String > eventCodes) {
+        public Builder eventCodes(java.util.List<String> eventCodes) {
             String eventCodesShrink = shrink(eventCodes, "EventCodes", "json");
             this.putQueryParameter("EventCodes", eventCodesShrink);
             this.eventCodes = eventCodes;

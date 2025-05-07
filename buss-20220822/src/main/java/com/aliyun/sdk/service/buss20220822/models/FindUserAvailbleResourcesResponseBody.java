@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.buss20220822.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FindUserAvailbleResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>FindUserAvailbleResourcesResponseBody</p>
@@ -57,6 +63,10 @@ public class FindUserAvailbleResourcesResponseBody extends TeaModel {
 
     public static FindUserAvailbleResourcesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -133,6 +143,21 @@ public class FindUserAvailbleResourcesResponseBody extends TeaModel {
         private Boolean success; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(FindUserAvailbleResourcesResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.data = model.data;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * Code.
          */
@@ -174,7 +199,7 @@ public class FindUserAvailbleResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>This parameter is required.</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -211,6 +236,12 @@ public class FindUserAvailbleResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FindUserAvailbleResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindUserAvailbleResourcesResponseBody</p>
+     */
     public static class PegCoordinates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BussinessCode")
         private String bussinessCode;
@@ -219,7 +250,7 @@ public class FindUserAvailbleResourcesResponseBody extends TeaModel {
         private String chargeType;
 
         @com.aliyun.core.annotation.NameInMap("Coordinate")
-        private java.util.Map < String, ? > coordinate;
+        private java.util.Map<String, ?> coordinate;
 
         @com.aliyun.core.annotation.NameInMap("IdType")
         private String idType;
@@ -288,7 +319,7 @@ public class FindUserAvailbleResourcesResponseBody extends TeaModel {
         /**
          * @return coordinate
          */
-        public java.util.Map < String, ? > getCoordinate() {
+        public java.util.Map<String, ?> getCoordinate() {
             return this.coordinate;
         }
 
@@ -358,7 +389,7 @@ public class FindUserAvailbleResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private String bussinessCode; 
             private String chargeType; 
-            private java.util.Map < String, ? > coordinate; 
+            private java.util.Map<String, ?> coordinate; 
             private String idType; 
             private String instanceId; 
             private String region; 
@@ -368,6 +399,24 @@ public class FindUserAvailbleResourcesResponseBody extends TeaModel {
             private String resourceType; 
             private String serviceCreatedTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PegCoordinates model) {
+                this.bussinessCode = model.bussinessCode;
+                this.chargeType = model.chargeType;
+                this.coordinate = model.coordinate;
+                this.idType = model.idType;
+                this.instanceId = model.instanceId;
+                this.region = model.region;
+                this.releaseTime = model.releaseTime;
+                this.resCreateTime = model.resCreateTime;
+                this.resourceStatus = model.resourceStatus;
+                this.resourceType = model.resourceType;
+                this.serviceCreatedTime = model.serviceCreatedTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * BussinessCode.
@@ -388,7 +437,7 @@ public class FindUserAvailbleResourcesResponseBody extends TeaModel {
             /**
              * Coordinate.
              */
-            public Builder coordinate(java.util.Map < String, ? > coordinate) {
+            public Builder coordinate(java.util.Map<String, ?> coordinate) {
                 this.coordinate = coordinate;
                 return this;
             }
@@ -472,6 +521,12 @@ public class FindUserAvailbleResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FindUserAvailbleResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindUserAvailbleResourcesResponseBody</p>
+     */
     public static class UserInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GcLevel")
         private String gcLevel;
@@ -546,6 +601,17 @@ public class FindUserAvailbleResourcesResponseBody extends TeaModel {
             private String userSite; 
             private Boolean whiteUser; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.gcLevel = model.gcLevel;
+                this.hitWhiteReason = model.hitWhiteReason;
+                this.userId = model.userId;
+                this.userSite = model.userSite;
+                this.whiteUser = model.whiteUser;
+            } 
+
             /**
              * GcLevel.
              */
@@ -593,9 +659,15 @@ public class FindUserAvailbleResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FindUserAvailbleResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindUserAvailbleResourcesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PegCoordinates")
-        private java.util.List < PegCoordinates> pegCoordinates;
+        private java.util.List<PegCoordinates> pegCoordinates;
 
         @com.aliyun.core.annotation.NameInMap("UserInfo")
         private UserInfo userInfo;
@@ -616,7 +688,7 @@ public class FindUserAvailbleResourcesResponseBody extends TeaModel {
         /**
          * @return pegCoordinates
          */
-        public java.util.List < PegCoordinates> getPegCoordinates() {
+        public java.util.List<PegCoordinates> getPegCoordinates() {
             return this.pegCoordinates;
         }
 
@@ -628,13 +700,21 @@ public class FindUserAvailbleResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < PegCoordinates> pegCoordinates; 
+            private java.util.List<PegCoordinates> pegCoordinates; 
             private UserInfo userInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pegCoordinates = model.pegCoordinates;
+                this.userInfo = model.userInfo;
+            } 
 
             /**
              * PegCoordinates.
              */
-            public Builder pegCoordinates(java.util.List < PegCoordinates> pegCoordinates) {
+            public Builder pegCoordinates(java.util.List<PegCoordinates> pegCoordinates) {
                 this.pegCoordinates = pegCoordinates;
                 return this;
             }

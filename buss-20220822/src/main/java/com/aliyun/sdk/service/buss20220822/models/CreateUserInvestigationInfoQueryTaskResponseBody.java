@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.buss20220822.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserInvestigationInfoQueryTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateUserInvestigationInfoQueryTaskResponseBody</p>
@@ -36,6 +42,10 @@ public class CreateUserInvestigationInfoQueryTaskResponseBody extends TeaModel {
 
     public static CreateUserInvestigationInfoQueryTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class CreateUserInvestigationInfoQueryTaskResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateUserInvestigationInfoQueryTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -110,6 +130,12 @@ public class CreateUserInvestigationInfoQueryTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateUserInvestigationInfoQueryTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateUserInvestigationInfoQueryTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("taskId")
         private String taskId;
@@ -135,6 +161,13 @@ public class CreateUserInvestigationInfoQueryTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.taskId = model.taskId;
+            } 
 
             /**
              * taskId.

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.buss20220822.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PunishResourceSearchRequest} extends {@link RequestModel}
  *
  * <p>PunishResourceSearchRequest</p>
@@ -13,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class PunishResourceSearchRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ActionCodes")
-    private java.util.List < String > actionCodes;
+    private java.util.List<String> actionCodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BussinessCodes")
-    private java.util.List < String > bussinessCodes;
+    private java.util.List<String> bussinessCodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Class")
@@ -49,7 +55,7 @@ public class PunishResourceSearchRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceCodes")
-    private java.util.List < String > sourceCodes;
+    private java.util.List<String> sourceCodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartDate")
@@ -65,7 +71,7 @@ public class PunishResourceSearchRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserIds")
-    private java.util.List < String > userIds;
+    private java.util.List<String> userIds;
 
     private PunishResourceSearchRequest(Builder builder) {
         super(builder);
@@ -93,7 +99,7 @@ public class PunishResourceSearchRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,14 +107,14 @@ public class PunishResourceSearchRequest extends Request {
     /**
      * @return actionCodes
      */
-    public java.util.List < String > getActionCodes() {
+    public java.util.List<String> getActionCodes() {
         return this.actionCodes;
     }
 
     /**
      * @return bussinessCodes
      */
-    public java.util.List < String > getBussinessCodes() {
+    public java.util.List<String> getBussinessCodes() {
         return this.bussinessCodes;
     }
 
@@ -164,7 +170,7 @@ public class PunishResourceSearchRequest extends Request {
     /**
      * @return sourceCodes
      */
-    public java.util.List < String > getSourceCodes() {
+    public java.util.List<String> getSourceCodes() {
         return this.sourceCodes;
     }
 
@@ -192,13 +198,13 @@ public class PunishResourceSearchRequest extends Request {
     /**
      * @return userIds
      */
-    public java.util.List < String > getUserIds() {
+    public java.util.List<String> getUserIds() {
         return this.userIds;
     }
 
     public static final class Builder extends Request.Builder<PunishResourceSearchRequest, Builder> {
-        private java.util.List < String > actionCodes; 
-        private java.util.List < String > bussinessCodes; 
+        private java.util.List<String> actionCodes; 
+        private java.util.List<String> bussinessCodes; 
         private String _class; 
         private String domain; 
         private Long endDate; 
@@ -206,11 +212,11 @@ public class PunishResourceSearchRequest extends Request {
         private String ip; 
         private Long page; 
         private Long pageSize; 
-        private java.util.List < String > sourceCodes; 
+        private java.util.List<String> sourceCodes; 
         private Long startDate; 
         private String status; 
         private String url; 
-        private java.util.List < String > userIds; 
+        private java.util.List<String> userIds; 
 
         private Builder() {
             super();
@@ -237,7 +243,7 @@ public class PunishResourceSearchRequest extends Request {
         /**
          * ActionCodes.
          */
-        public Builder actionCodes(java.util.List < String > actionCodes) {
+        public Builder actionCodes(java.util.List<String> actionCodes) {
             String actionCodesShrink = shrink(actionCodes, "ActionCodes", "json");
             this.putQueryParameter("ActionCodes", actionCodesShrink);
             this.actionCodes = actionCodes;
@@ -247,7 +253,7 @@ public class PunishResourceSearchRequest extends Request {
         /**
          * BussinessCodes.
          */
-        public Builder bussinessCodes(java.util.List < String > bussinessCodes) {
+        public Builder bussinessCodes(java.util.List<String> bussinessCodes) {
             String bussinessCodesShrink = shrink(bussinessCodes, "BussinessCodes", "json");
             this.putQueryParameter("BussinessCodes", bussinessCodesShrink);
             this.bussinessCodes = bussinessCodes;
@@ -320,7 +326,7 @@ public class PunishResourceSearchRequest extends Request {
         /**
          * SourceCodes.
          */
-        public Builder sourceCodes(java.util.List < String > sourceCodes) {
+        public Builder sourceCodes(java.util.List<String> sourceCodes) {
             String sourceCodesShrink = shrink(sourceCodes, "SourceCodes", "json");
             this.putQueryParameter("SourceCodes", sourceCodesShrink);
             this.sourceCodes = sourceCodes;
@@ -357,7 +363,7 @@ public class PunishResourceSearchRequest extends Request {
         /**
          * UserIds.
          */
-        public Builder userIds(java.util.List < String > userIds) {
+        public Builder userIds(java.util.List<String> userIds) {
             String userIdsShrink = shrink(userIds, "UserIds", "json");
             this.putQueryParameter("UserIds", userIdsShrink);
             this.userIds = userIds;

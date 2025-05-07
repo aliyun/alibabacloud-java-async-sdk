@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.buss20220822.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchPunishRequestResponseBody} extends {@link TeaModel}
  *
  * <p>SearchPunishRequestResponseBody</p>
@@ -21,7 +27,7 @@ public class SearchPunishRequestResponseBody extends TeaModel {
     private Long count;
 
     @com.aliyun.core.annotation.NameInMap("DataList")
-    private java.util.List < DataList> dataList;
+    private java.util.List<DataList> dataList;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -54,6 +60,10 @@ public class SearchPunishRequestResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return _class
      */
@@ -78,7 +88,7 @@ public class SearchPunishRequestResponseBody extends TeaModel {
     /**
      * @return dataList
      */
-    public java.util.List < DataList> getDataList() {
+    public java.util.List<DataList> getDataList() {
         return this.dataList;
     }
 
@@ -114,11 +124,25 @@ public class SearchPunishRequestResponseBody extends TeaModel {
         private String _class; 
         private String code; 
         private Long count; 
-        private java.util.List < DataList> dataList; 
+        private java.util.List<DataList> dataList; 
         private String message; 
         private Boolean success; 
         private Long totalCount; 
         private Long viewCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchPunishRequestResponseBody model) {
+            this._class = model._class;
+            this.code = model.code;
+            this.count = model.count;
+            this.dataList = model.dataList;
+            this.message = model.message;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.viewCount = model.viewCount;
+        } 
 
         /**
          * Class.
@@ -147,7 +171,7 @@ public class SearchPunishRequestResponseBody extends TeaModel {
         /**
          * DataList.
          */
-        public Builder dataList(java.util.List < DataList> dataList) {
+        public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
             return this;
         }
@@ -190,6 +214,12 @@ public class SearchPunishRequestResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchPunishRequestResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchPunishRequestResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AntiPunishRespTime")
         private String antiPunishRespTime;
@@ -254,11 +284,23 @@ public class SearchPunishRequestResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Modifier")
         private String modifier;
 
+        @com.aliyun.core.annotation.NameInMap("Operator")
+        private String operator;
+
+        @com.aliyun.core.annotation.NameInMap("OperatorNum")
+        private String operatorNum;
+
         @com.aliyun.core.annotation.NameInMap("PunishDomain")
         private String punishDomain;
 
         @com.aliyun.core.annotation.NameInMap("PunishIp")
         private String punishIp;
+
+        @com.aliyun.core.annotation.NameInMap("PunishOfficer")
+        private String punishOfficer;
+
+        @com.aliyun.core.annotation.NameInMap("PunishOfficerNum")
+        private String punishOfficerNum;
 
         @com.aliyun.core.annotation.NameInMap("PunishRequest")
         private String punishRequest;
@@ -309,8 +351,12 @@ public class SearchPunishRequestResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.ipString = builder.ipString;
             this.modifier = builder.modifier;
+            this.operator = builder.operator;
+            this.operatorNum = builder.operatorNum;
             this.punishDomain = builder.punishDomain;
             this.punishIp = builder.punishIp;
+            this.punishOfficer = builder.punishOfficer;
+            this.punishOfficerNum = builder.punishOfficerNum;
             this.punishRequest = builder.punishRequest;
             this.punishRespTime = builder.punishRespTime;
             this.punishResult = builder.punishResult;
@@ -478,6 +524,20 @@ public class SearchPunishRequestResponseBody extends TeaModel {
         }
 
         /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        /**
+         * @return operatorNum
+         */
+        public String getOperatorNum() {
+            return this.operatorNum;
+        }
+
+        /**
          * @return punishDomain
          */
         public String getPunishDomain() {
@@ -489,6 +549,20 @@ public class SearchPunishRequestResponseBody extends TeaModel {
          */
         public String getPunishIp() {
             return this.punishIp;
+        }
+
+        /**
+         * @return punishOfficer
+         */
+        public String getPunishOfficer() {
+            return this.punishOfficer;
+        }
+
+        /**
+         * @return punishOfficerNum
+         */
+        public String getPunishOfficerNum() {
+            return this.punishOfficerNum;
         }
 
         /**
@@ -576,8 +650,12 @@ public class SearchPunishRequestResponseBody extends TeaModel {
             private String instanceId; 
             private String ipString; 
             private String modifier; 
+            private String operator; 
+            private String operatorNum; 
             private String punishDomain; 
             private String punishIp; 
+            private String punishOfficer; 
+            private String punishOfficerNum; 
             private String punishRequest; 
             private String punishRespTime; 
             private String punishResult; 
@@ -587,6 +665,48 @@ public class SearchPunishRequestResponseBody extends TeaModel {
             private String reason; 
             private String sourceCode; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.antiPunishRespTime = model.antiPunishRespTime;
+                this.antiPunishTime = model.antiPunishTime;
+                this.antiResult = model.antiResult;
+                this.antiStatus = model.antiStatus;
+                this.bussinessCode = model.bussinessCode;
+                this.caseCode = model.caseCode;
+                this.caseExtendCode = model.caseExtendCode;
+                this.caseSubCode = model.caseSubCode;
+                this._class = model._class;
+                this.creator = model.creator;
+                this.deleted = model.deleted;
+                this.eventCode = model.eventCode;
+                this.expectedRemoveTime = model.expectedRemoveTime;
+                this.extRequestId = model.extRequestId;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.idType = model.idType;
+                this.instanceId = model.instanceId;
+                this.ipString = model.ipString;
+                this.modifier = model.modifier;
+                this.operator = model.operator;
+                this.operatorNum = model.operatorNum;
+                this.punishDomain = model.punishDomain;
+                this.punishIp = model.punishIp;
+                this.punishOfficer = model.punishOfficer;
+                this.punishOfficerNum = model.punishOfficerNum;
+                this.punishRequest = model.punishRequest;
+                this.punishRespTime = model.punishRespTime;
+                this.punishResult = model.punishResult;
+                this.punishStatus = model.punishStatus;
+                this.punishTime = model.punishTime;
+                this.punishUrl = model.punishUrl;
+                this.reason = model.reason;
+                this.sourceCode = model.sourceCode;
+                this.userId = model.userId;
+            } 
 
             /**
              * AntiPunishRespTime.
@@ -757,6 +877,22 @@ public class SearchPunishRequestResponseBody extends TeaModel {
             }
 
             /**
+             * Operator.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * OperatorNum.
+             */
+            public Builder operatorNum(String operatorNum) {
+                this.operatorNum = operatorNum;
+                return this;
+            }
+
+            /**
              * PunishDomain.
              */
             public Builder punishDomain(String punishDomain) {
@@ -769,6 +905,22 @@ public class SearchPunishRequestResponseBody extends TeaModel {
              */
             public Builder punishIp(String punishIp) {
                 this.punishIp = punishIp;
+                return this;
+            }
+
+            /**
+             * PunishOfficer.
+             */
+            public Builder punishOfficer(String punishOfficer) {
+                this.punishOfficer = punishOfficer;
+                return this;
+            }
+
+            /**
+             * PunishOfficerNum.
+             */
+            public Builder punishOfficerNum(String punishOfficerNum) {
+                this.punishOfficerNum = punishOfficerNum;
                 return this;
             }
 

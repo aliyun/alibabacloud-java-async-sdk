@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.buss20220822.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchPunishRequestRequest} extends {@link RequestModel}
  *
  * <p>SearchPunishRequestRequest</p>
@@ -13,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class SearchPunishRequestRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AntiStatuses")
-    private java.util.List < String > antiStatuses;
+    private java.util.List<String> antiStatuses;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BussinessCodes")
-    private java.util.List < String > bussinessCodes;
+    private java.util.List<String> bussinessCodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Class")
@@ -29,7 +35,7 @@ public class SearchPunishRequestRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventCodes")
-    private java.util.List < String > eventCodes;
+    private java.util.List<String> eventCodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExtRequestId")
@@ -65,7 +71,7 @@ public class SearchPunishRequestRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PunishStatuses")
-    private java.util.List < String > punishStatuses;
+    private java.util.List<String> punishStatuses;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PunishUrl")
@@ -77,7 +83,7 @@ public class SearchPunishRequestRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceCodes")
-    private java.util.List < String > sourceCodes;
+    private java.util.List<String> sourceCodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartDate")
@@ -85,7 +91,7 @@ public class SearchPunishRequestRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserIds")
-    private java.util.List < String > userIds;
+    private java.util.List<String> userIds;
 
     private SearchPunishRequestRequest(Builder builder) {
         super(builder);
@@ -118,7 +124,7 @@ public class SearchPunishRequestRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -126,14 +132,14 @@ public class SearchPunishRequestRequest extends Request {
     /**
      * @return antiStatuses
      */
-    public java.util.List < String > getAntiStatuses() {
+    public java.util.List<String> getAntiStatuses() {
         return this.antiStatuses;
     }
 
     /**
      * @return bussinessCodes
      */
-    public java.util.List < String > getBussinessCodes() {
+    public java.util.List<String> getBussinessCodes() {
         return this.bussinessCodes;
     }
 
@@ -154,7 +160,7 @@ public class SearchPunishRequestRequest extends Request {
     /**
      * @return eventCodes
      */
-    public java.util.List < String > getEventCodes() {
+    public java.util.List<String> getEventCodes() {
         return this.eventCodes;
     }
 
@@ -217,7 +223,7 @@ public class SearchPunishRequestRequest extends Request {
     /**
      * @return punishStatuses
      */
-    public java.util.List < String > getPunishStatuses() {
+    public java.util.List<String> getPunishStatuses() {
         return this.punishStatuses;
     }
 
@@ -238,7 +244,7 @@ public class SearchPunishRequestRequest extends Request {
     /**
      * @return sourceCodes
      */
-    public java.util.List < String > getSourceCodes() {
+    public java.util.List<String> getSourceCodes() {
         return this.sourceCodes;
     }
 
@@ -252,16 +258,16 @@ public class SearchPunishRequestRequest extends Request {
     /**
      * @return userIds
      */
-    public java.util.List < String > getUserIds() {
+    public java.util.List<String> getUserIds() {
         return this.userIds;
     }
 
     public static final class Builder extends Request.Builder<SearchPunishRequestRequest, Builder> {
-        private java.util.List < String > antiStatuses; 
-        private java.util.List < String > bussinessCodes; 
+        private java.util.List<String> antiStatuses; 
+        private java.util.List<String> bussinessCodes; 
         private String _class; 
         private Long endDate; 
-        private java.util.List < String > eventCodes; 
+        private java.util.List<String> eventCodes; 
         private String extRequestId; 
         private Long id; 
         private String idType; 
@@ -270,12 +276,12 @@ public class SearchPunishRequestRequest extends Request {
         private Long pageSize; 
         private String punishDomain; 
         private String punishIp; 
-        private java.util.List < String > punishStatuses; 
+        private java.util.List<String> punishStatuses; 
         private String punishUrl; 
         private String punishUrlFull; 
-        private java.util.List < String > sourceCodes; 
+        private java.util.List<String> sourceCodes; 
         private Long startDate; 
-        private java.util.List < String > userIds; 
+        private java.util.List<String> userIds; 
 
         private Builder() {
             super();
@@ -307,7 +313,7 @@ public class SearchPunishRequestRequest extends Request {
         /**
          * AntiStatuses.
          */
-        public Builder antiStatuses(java.util.List < String > antiStatuses) {
+        public Builder antiStatuses(java.util.List<String> antiStatuses) {
             String antiStatusesShrink = shrink(antiStatuses, "AntiStatuses", "json");
             this.putQueryParameter("AntiStatuses", antiStatusesShrink);
             this.antiStatuses = antiStatuses;
@@ -317,7 +323,7 @@ public class SearchPunishRequestRequest extends Request {
         /**
          * BussinessCodes.
          */
-        public Builder bussinessCodes(java.util.List < String > bussinessCodes) {
+        public Builder bussinessCodes(java.util.List<String> bussinessCodes) {
             String bussinessCodesShrink = shrink(bussinessCodes, "BussinessCodes", "json");
             this.putQueryParameter("BussinessCodes", bussinessCodesShrink);
             this.bussinessCodes = bussinessCodes;
@@ -345,7 +351,7 @@ public class SearchPunishRequestRequest extends Request {
         /**
          * EventCodes.
          */
-        public Builder eventCodes(java.util.List < String > eventCodes) {
+        public Builder eventCodes(java.util.List<String> eventCodes) {
             String eventCodesShrink = shrink(eventCodes, "EventCodes", "json");
             this.putQueryParameter("EventCodes", eventCodesShrink);
             this.eventCodes = eventCodes;
@@ -427,7 +433,7 @@ public class SearchPunishRequestRequest extends Request {
         /**
          * PunishStatuses.
          */
-        public Builder punishStatuses(java.util.List < String > punishStatuses) {
+        public Builder punishStatuses(java.util.List<String> punishStatuses) {
             String punishStatusesShrink = shrink(punishStatuses, "PunishStatuses", "json");
             this.putQueryParameter("PunishStatuses", punishStatusesShrink);
             this.punishStatuses = punishStatuses;
@@ -455,7 +461,7 @@ public class SearchPunishRequestRequest extends Request {
         /**
          * SourceCodes.
          */
-        public Builder sourceCodes(java.util.List < String > sourceCodes) {
+        public Builder sourceCodes(java.util.List<String> sourceCodes) {
             String sourceCodesShrink = shrink(sourceCodes, "SourceCodes", "json");
             this.putQueryParameter("SourceCodes", sourceCodesShrink);
             this.sourceCodes = sourceCodes;
@@ -474,7 +480,7 @@ public class SearchPunishRequestRequest extends Request {
         /**
          * UserIds.
          */
-        public Builder userIds(java.util.List < String > userIds) {
+        public Builder userIds(java.util.List<String> userIds) {
             String userIdsShrink = shrink(userIds, "UserIds", "json");
             this.putQueryParameter("UserIds", userIdsShrink);
             this.userIds = userIds;

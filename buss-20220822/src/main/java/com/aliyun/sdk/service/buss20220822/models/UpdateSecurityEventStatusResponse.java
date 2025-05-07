@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link PunishResourceSearchResponse} extends {@link TeaModel}
+ * {@link UpdateSecurityEventStatusResponse} extends {@link TeaModel}
  *
- * <p>PunishResourceSearchResponse</p>
+ * <p>UpdateSecurityEventStatusResponse</p>
  */
-public class PunishResourceSearchResponse extends Response {
+public class UpdateSecurityEventStatusResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class PunishResourceSearchResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private PunishResourceSearchResponseBody body;
+    private UpdateSecurityEventStatusResponseBody body;
 
-    private PunishResourceSearchResponse(BuilderImpl builder) {
+    private UpdateSecurityEventStatusResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static PunishResourceSearchResponse create() {
+    public static UpdateSecurityEventStatusResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class PunishResourceSearchResponse extends Response {
     /**
      * @return body
      */
-    public PunishResourceSearchResponseBody getBody() {
+    public UpdateSecurityEventStatusResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<PunishResourceSearchResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateSecurityEventStatusResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(PunishResourceSearchResponseBody body);
+        Builder body(UpdateSecurityEventStatusResponseBody body);
 
         @Override
-        PunishResourceSearchResponse build();
+        UpdateSecurityEventStatusResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<PunishResourceSearchResponse, Builder>
+            extends Response.BuilderImpl<UpdateSecurityEventStatusResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private PunishResourceSearchResponseBody body; 
+        private UpdateSecurityEventStatusResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(PunishResourceSearchResponse response) {
+        private BuilderImpl(UpdateSecurityEventStatusResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class PunishResourceSearchResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(PunishResourceSearchResponseBody body) {
+        public Builder body(UpdateSecurityEventStatusResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public PunishResourceSearchResponse build() {
-            return new PunishResourceSearchResponse(this);
+        public UpdateSecurityEventStatusResponse build() {
+            return new UpdateSecurityEventStatusResponse(this);
         } 
 
     } 

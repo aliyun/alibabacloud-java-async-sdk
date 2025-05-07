@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.buss20220822.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BusinessResultServiceResponseBody} extends {@link TeaModel}
  *
  * <p>BusinessResultServiceResponseBody</p>
@@ -40,6 +46,10 @@ public class BusinessResultServiceResponseBody extends TeaModel {
 
     public static BusinessResultServiceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -83,6 +93,17 @@ public class BusinessResultServiceResponseBody extends TeaModel {
         private String data; 
         private String message; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(BusinessResultServiceResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.data = model.data;
+            this.message = model.message;
+            this.success = model.success;
+        } 
 
         /**
          * Code.

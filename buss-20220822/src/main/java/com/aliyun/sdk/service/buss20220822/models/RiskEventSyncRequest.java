@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.buss20220822.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RiskEventSyncRequest} extends {@link RequestModel}
  *
  * <p>RiskEventSyncRequest</p>
@@ -85,7 +91,7 @@ public class RiskEventSyncRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -209,7 +215,7 @@ public class RiskEventSyncRequest extends Request {
         }
 
         /**
-         * DiscoveryTime.
+         * <p>This parameter is required.</p>
          */
         public Builder discoveryTime(Long discoveryTime) {
             this.putBodyParameter("DiscoveryTime", discoveryTime);
@@ -218,7 +224,7 @@ public class RiskEventSyncRequest extends Request {
         }
 
         /**
-         * EventName.
+         * <p>This parameter is required.</p>
          */
         public Builder eventName(String eventName) {
             this.putBodyParameter("EventName", eventName);
@@ -245,7 +251,7 @@ public class RiskEventSyncRequest extends Request {
         }
 
         /**
-         * RiskDetail.
+         * <p>This parameter is required.</p>
          */
         public Builder riskDetail(String riskDetail) {
             this.putBodyParameter("RiskDetail", riskDetail);
@@ -254,7 +260,7 @@ public class RiskEventSyncRequest extends Request {
         }
 
         /**
-         * RiskEffectType.
+         * <p>This parameter is required.</p>
          */
         public Builder riskEffectType(String riskEffectType) {
             this.putBodyParameter("RiskEffectType", riskEffectType);
@@ -272,7 +278,7 @@ public class RiskEventSyncRequest extends Request {
         }
 
         /**
-         * RiskType.
+         * <p>This parameter is required.</p>
          */
         public Builder riskType(String riskType) {
             this.putBodyParameter("RiskType", riskType);
@@ -281,7 +287,7 @@ public class RiskEventSyncRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>This parameter is required.</p>
          */
         public Builder source(String source) {
             this.putBodyParameter("Source", source);
@@ -290,7 +296,7 @@ public class RiskEventSyncRequest extends Request {
         }
 
         /**
-         * Submitter.
+         * <p>This parameter is required.</p>
          */
         public Builder submitter(String submitter) {
             this.putBodyParameter("Submitter", submitter);

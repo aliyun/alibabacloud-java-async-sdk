@@ -12,31 +12,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RiskEventSyncResponseBody} extends {@link TeaModel}
+ * {@link UpdateSecurityEventStatusResponseBody} extends {@link TeaModel}
  *
- * <p>RiskEventSyncResponseBody</p>
+ * <p>UpdateSecurityEventStatusResponseBody</p>
  */
-public class RiskEventSyncResponseBody extends TeaModel {
+public class UpdateSecurityEventStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @com.aliyun.core.annotation.NameInMap("Count")
-    private Integer count;
-
     @com.aliyun.core.annotation.NameInMap("Data")
-    private String data;
+    private Object data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private RiskEventSyncResponseBody(Builder builder) {
+    private UpdateSecurityEventStatusResponseBody(Builder builder) {
         this.code = builder.code;
-        this.count = builder.count;
         this.data = builder.data;
         this.message = builder.message;
+        this.requestId = builder.requestId;
         this.success = builder.success;
     }
 
@@ -44,7 +44,7 @@ public class RiskEventSyncResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RiskEventSyncResponseBody create() {
+    public static UpdateSecurityEventStatusResponseBody create() {
         return builder().build();
     }
 
@@ -60,16 +60,9 @@ public class RiskEventSyncResponseBody extends TeaModel {
     }
 
     /**
-     * @return count
-     */
-    public Integer getCount() {
-        return this.count;
-    }
-
-    /**
      * @return data
      */
-    public String getData() {
+    public Object getData() {
         return this.data;
     }
 
@@ -81,6 +74,13 @@ public class RiskEventSyncResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -89,19 +89,19 @@ public class RiskEventSyncResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Integer count; 
-        private String data; 
+        private Object data; 
         private String message; 
+        private String requestId; 
         private Boolean success; 
 
         private Builder() {
         } 
 
-        private Builder(RiskEventSyncResponseBody model) {
+        private Builder(UpdateSecurityEventStatusResponseBody model) {
             this.code = model.code;
-            this.count = model.count;
             this.data = model.data;
             this.message = model.message;
+            this.requestId = model.requestId;
             this.success = model.success;
         } 
 
@@ -114,17 +114,9 @@ public class RiskEventSyncResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
-         */
-        public Builder count(Integer count) {
-            this.count = count;
-            return this;
-        }
-
-        /**
          * Data.
          */
-        public Builder data(String data) {
+        public Builder data(Object data) {
             this.data = data;
             return this;
         }
@@ -138,6 +130,14 @@ public class RiskEventSyncResponseBody extends TeaModel {
         }
 
         /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
          * Success.
          */
         public Builder success(Boolean success) {
@@ -145,8 +145,8 @@ public class RiskEventSyncResponseBody extends TeaModel {
             return this;
         }
 
-        public RiskEventSyncResponseBody build() {
-            return new RiskEventSyncResponseBody(this);
+        public UpdateSecurityEventStatusResponseBody build() {
+            return new UpdateSecurityEventStatusResponseBody(this);
         } 
 
     } 

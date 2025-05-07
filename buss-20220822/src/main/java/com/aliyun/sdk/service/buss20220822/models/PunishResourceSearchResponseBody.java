@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.buss20220822.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PunishResourceSearchResponseBody} extends {@link TeaModel}
  *
  * <p>PunishResourceSearchResponseBody</p>
@@ -15,7 +21,7 @@ public class PunishResourceSearchResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("DataList")
-    private java.util.List < DataList> dataList;
+    private java.util.List<DataList> dataList;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -46,6 +52,10 @@ public class PunishResourceSearchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -56,7 +66,7 @@ public class PunishResourceSearchResponseBody extends TeaModel {
     /**
      * @return dataList
      */
-    public java.util.List < DataList> getDataList() {
+    public java.util.List<DataList> getDataList() {
         return this.dataList;
     }
 
@@ -90,11 +100,23 @@ public class PunishResourceSearchResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < DataList> dataList; 
+        private java.util.List<DataList> dataList; 
         private String message; 
         private String success; 
         private Integer totalCount; 
         private Integer viewCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(PunishResourceSearchResponseBody model) {
+            this.code = model.code;
+            this.dataList = model.dataList;
+            this.message = model.message;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.viewCount = model.viewCount;
+        } 
 
         /**
          * Code.
@@ -107,7 +129,7 @@ public class PunishResourceSearchResponseBody extends TeaModel {
         /**
          * DataList.
          */
-        public Builder dataList(java.util.List < DataList> dataList) {
+        public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
             return this;
         }
@@ -150,6 +172,12 @@ public class PunishResourceSearchResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PunishResourceSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>PunishResourceSearchResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionCode")
         private String actionCode;
@@ -451,6 +479,36 @@ public class PunishResourceSearchResponseBody extends TeaModel {
             private String status; 
             private String url; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.actionCode = model.actionCode;
+                this.bussinessCode = model.bussinessCode;
+                this._class = model._class;
+                this.coordinate = model.coordinate;
+                this.creator = model.creator;
+                this.deleted = model.deleted;
+                this.domain = model.domain;
+                this.extras = model.extras;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.ip = model.ip;
+                this.modifier = model.modifier;
+                this.objectId = model.objectId;
+                this.objectType = model.objectType;
+                this.objectValue = model.objectValue;
+                this.punishFrom = model.punishFrom;
+                this.reason = model.reason;
+                this.requestId = model.requestId;
+                this.sourceCode = model.sourceCode;
+                this.status = model.status;
+                this.url = model.url;
+                this.userId = model.userId;
+            } 
 
             /**
              * ActionCode.

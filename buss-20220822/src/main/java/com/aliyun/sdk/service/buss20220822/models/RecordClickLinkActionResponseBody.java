@@ -12,31 +12,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RiskEventSyncResponseBody} extends {@link TeaModel}
+ * {@link RecordClickLinkActionResponseBody} extends {@link TeaModel}
  *
- * <p>RiskEventSyncResponseBody</p>
+ * <p>RecordClickLinkActionResponseBody</p>
  */
-public class RiskEventSyncResponseBody extends TeaModel {
+public class RecordClickLinkActionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @com.aliyun.core.annotation.NameInMap("Data")
-    private String data;
-
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private RiskEventSyncResponseBody(Builder builder) {
+    private RecordClickLinkActionResponseBody(Builder builder) {
         this.code = builder.code;
         this.count = builder.count;
-        this.data = builder.data;
         this.message = builder.message;
+        this.requestId = builder.requestId;
         this.success = builder.success;
     }
 
@@ -44,7 +44,7 @@ public class RiskEventSyncResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RiskEventSyncResponseBody create() {
+    public static RecordClickLinkActionResponseBody create() {
         return builder().build();
     }
 
@@ -67,17 +67,17 @@ public class RiskEventSyncResponseBody extends TeaModel {
     }
 
     /**
-     * @return data
-     */
-    public String getData() {
-        return this.data;
-    }
-
-    /**
      * @return message
      */
     public String getMessage() {
         return this.message;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
@@ -90,18 +90,18 @@ public class RiskEventSyncResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer count; 
-        private String data; 
         private String message; 
+        private String requestId; 
         private Boolean success; 
 
         private Builder() {
         } 
 
-        private Builder(RiskEventSyncResponseBody model) {
+        private Builder(RecordClickLinkActionResponseBody model) {
             this.code = model.code;
             this.count = model.count;
-            this.data = model.data;
             this.message = model.message;
+            this.requestId = model.requestId;
             this.success = model.success;
         } 
 
@@ -122,18 +122,18 @@ public class RiskEventSyncResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
-         */
-        public Builder data(String data) {
-            this.data = data;
-            return this;
-        }
-
-        /**
          * Message.
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -145,8 +145,8 @@ public class RiskEventSyncResponseBody extends TeaModel {
             return this;
         }
 
-        public RiskEventSyncResponseBody build() {
-            return new RiskEventSyncResponseBody(this);
+        public RecordClickLinkActionResponseBody build() {
+            return new RecordClickLinkActionResponseBody(this);
         } 
 
     } 

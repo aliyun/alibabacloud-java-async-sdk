@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.buss20220822.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BusinessResultServiceRequest} extends {@link RequestModel}
  *
  * <p>BusinessResultServiceRequest</p>
@@ -33,7 +39,7 @@ public class BusinessResultServiceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.Map < String, ? > result;
+    private java.util.Map<String, ?> result;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Success")
@@ -58,7 +64,7 @@ public class BusinessResultServiceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +107,7 @@ public class BusinessResultServiceRequest extends Request {
     /**
      * @return result
      */
-    public java.util.Map < String, ? > getResult() {
+    public java.util.Map<String, ?> getResult() {
         return this.result;
     }
 
@@ -118,7 +124,7 @@ public class BusinessResultServiceRequest extends Request {
         private String errCode; 
         private String errMessage; 
         private String requestId; 
-        private java.util.Map < String, ? > result; 
+        private java.util.Map<String, ?> result; 
         private Boolean success; 
 
         private Builder() {
@@ -184,7 +190,7 @@ public class BusinessResultServiceRequest extends Request {
         /**
          * Result.
          */
-        public Builder result(java.util.Map < String, ? > result) {
+        public Builder result(java.util.Map<String, ?> result) {
             String resultShrink = shrink(result, "Result", "json");
             this.putQueryParameter("Result", resultShrink);
             this.result = result;

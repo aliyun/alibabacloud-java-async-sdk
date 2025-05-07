@@ -1,16 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.buss20220822.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FindInstanceInfoRequest} extends {@link RequestModel}
  *
  * <p>FindInstanceInfoRequest</p>
  */
 public class FindInstanceInfoRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("businessCodes")
+    private String businessCodes;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("bussinessCode")
     private String bussinessCode;
@@ -25,7 +35,7 @@ public class FindInstanceInfoRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("extras")
-    private java.util.Map < String, ? > extras;
+    private java.util.Map<String, ?> extras;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ip")
@@ -49,6 +59,7 @@ public class FindInstanceInfoRequest extends Request {
 
     private FindInstanceInfoRequest(Builder builder) {
         super(builder);
+        this.businessCodes = builder.businessCodes;
         this.bussinessCode = builder.bussinessCode;
         this.domain = builder.domain;
         this.endTime = builder.endTime;
@@ -68,9 +79,16 @@ public class FindInstanceInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return businessCodes
+     */
+    public String getBusinessCodes() {
+        return this.businessCodes;
     }
 
     /**
@@ -97,7 +115,7 @@ public class FindInstanceInfoRequest extends Request {
     /**
      * @return extras
      */
-    public java.util.Map < String, ? > getExtras() {
+    public java.util.Map<String, ?> getExtras() {
         return this.extras;
     }
 
@@ -137,10 +155,11 @@ public class FindInstanceInfoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<FindInstanceInfoRequest, Builder> {
+        private String businessCodes; 
         private String bussinessCode; 
         private String domain; 
         private Long endTime; 
-        private java.util.Map < String, ? > extras; 
+        private java.util.Map<String, ?> extras; 
         private String ip; 
         private Boolean needDNS; 
         private Long startTime; 
@@ -153,6 +172,7 @@ public class FindInstanceInfoRequest extends Request {
 
         private Builder(FindInstanceInfoRequest request) {
             super(request);
+            this.businessCodes = request.businessCodes;
             this.bussinessCode = request.bussinessCode;
             this.domain = request.domain;
             this.endTime = request.endTime;
@@ -163,6 +183,15 @@ public class FindInstanceInfoRequest extends Request {
             this.url = request.url;
             this.userId = request.userId;
         } 
+
+        /**
+         * businessCodes.
+         */
+        public Builder businessCodes(String businessCodes) {
+            this.putQueryParameter("businessCodes", businessCodes);
+            this.businessCodes = businessCodes;
+            return this;
+        }
 
         /**
          * bussinessCode.
@@ -194,7 +223,7 @@ public class FindInstanceInfoRequest extends Request {
         /**
          * extras.
          */
-        public Builder extras(java.util.Map < String, ? > extras) {
+        public Builder extras(java.util.Map<String, ?> extras) {
             String extrasShrink = shrink(extras, "extras", "json");
             this.putQueryParameter("extras", extrasShrink);
             this.extras = extras;

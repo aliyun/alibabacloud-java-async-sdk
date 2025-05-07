@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.buss20220822.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserInvestigationInfoQueryTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateUserInvestigationInfoQueryTaskRequest</p>
@@ -59,7 +65,7 @@ public class CreateUserInvestigationInfoQueryTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,7 +135,7 @@ public class CreateUserInvestigationInfoQueryTaskRequest extends Request {
         } 
 
         /**
-         * dataType.
+         * <p>This parameter is required.</p>
          */
         public Builder dataType(String dataType) {
             this.putQueryParameter("dataType", dataType);
@@ -138,7 +144,7 @@ public class CreateUserInvestigationInfoQueryTaskRequest extends Request {
         }
 
         /**
-         * employeeId.
+         * <p>This parameter is required.</p>
          */
         public Builder employeeId(String employeeId) {
             this.putQueryParameter("employeeId", employeeId);
@@ -147,7 +153,7 @@ public class CreateUserInvestigationInfoQueryTaskRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>This parameter is required.</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -156,7 +162,7 @@ public class CreateUserInvestigationInfoQueryTaskRequest extends Request {
         }
 
         /**
-         * ossFileName.
+         * <p>This parameter is required.</p>
          */
         public Builder ossFileName(String ossFileName) {
             this.putQueryParameter("ossFileName", ossFileName);
@@ -165,7 +171,7 @@ public class CreateUserInvestigationInfoQueryTaskRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);
@@ -174,7 +180,7 @@ public class CreateUserInvestigationInfoQueryTaskRequest extends Request {
         }
 
         /**
-         * userId.
+         * <p>This parameter is required.</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("userId", userId);

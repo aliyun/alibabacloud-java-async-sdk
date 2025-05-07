@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link PunishResourceSearchResponse} extends {@link TeaModel}
+ * {@link RecordClickLinkActionResponse} extends {@link TeaModel}
  *
- * <p>PunishResourceSearchResponse</p>
+ * <p>RecordClickLinkActionResponse</p>
  */
-public class PunishResourceSearchResponse extends Response {
+public class RecordClickLinkActionResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class PunishResourceSearchResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private PunishResourceSearchResponseBody body;
+    private RecordClickLinkActionResponseBody body;
 
-    private PunishResourceSearchResponse(BuilderImpl builder) {
+    private RecordClickLinkActionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static PunishResourceSearchResponse create() {
+    public static RecordClickLinkActionResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class PunishResourceSearchResponse extends Response {
     /**
      * @return body
      */
-    public PunishResourceSearchResponseBody getBody() {
+    public RecordClickLinkActionResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<PunishResourceSearchResponse, Builder> {
+    public interface Builder extends Response.Builder<RecordClickLinkActionResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(PunishResourceSearchResponseBody body);
+        Builder body(RecordClickLinkActionResponseBody body);
 
         @Override
-        PunishResourceSearchResponse build();
+        RecordClickLinkActionResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<PunishResourceSearchResponse, Builder>
+            extends Response.BuilderImpl<RecordClickLinkActionResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private PunishResourceSearchResponseBody body; 
+        private RecordClickLinkActionResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(PunishResourceSearchResponse response) {
+        private BuilderImpl(RecordClickLinkActionResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class PunishResourceSearchResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(PunishResourceSearchResponseBody body) {
+        public Builder body(RecordClickLinkActionResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public PunishResourceSearchResponse build() {
-            return new PunishResourceSearchResponse(this);
+        public RecordClickLinkActionResponse build() {
+            return new RecordClickLinkActionResponse(this);
         } 
 
     } 

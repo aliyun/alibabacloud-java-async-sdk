@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of BusinessResultService  BusinessResultServiceRequest
+     * @return BusinessResultServiceResponse
+     */
     @Override
     public CompletableFuture<BusinessResultServiceResponse> businessResultService(BusinessResultServiceRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateUserInvestigationInfoQueryTask  CreateUserInvestigationInfoQueryTaskRequest
+     * @return CreateUserInvestigationInfoQueryTaskResponse
+     */
     @Override
     public CompletableFuture<CreateUserInvestigationInfoQueryTaskResponse> createUserInvestigationInfoQueryTask(CreateUserInvestigationInfoQueryTaskRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FindInstanceInfo  FindInstanceInfoRequest
+     * @return FindInstanceInfoResponse
+     */
     @Override
     public CompletableFuture<FindInstanceInfoResponse> findInstanceInfo(FindInstanceInfoRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FindUserAvailbleResources  FindUserAvailbleResourcesRequest
+     * @return FindUserAvailbleResourcesResponse
+     */
     @Override
     public CompletableFuture<FindUserAvailbleResourcesResponse> findUserAvailbleResources(FindUserAvailbleResourcesRequest request) {
         try {
@@ -95,6 +111,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSecurityEventDetail  GetSecurityEventDetailRequest
+     * @return GetSecurityEventDetailResponse
+     */
+    @Override
+    public CompletableFuture<GetSecurityEventDetailResponse> getSecurityEventDetail(GetSecurityEventDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetSecurityEventDetail").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSecurityEventDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSecurityEventDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PunishResourceSearch  PunishResourceSearchRequest
+     * @return PunishResourceSearchResponse
+     */
     @Override
     public CompletableFuture<PunishResourceSearchResponse> punishResourceSearch(PunishResourceSearchRequest request) {
         try {
@@ -109,6 +147,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecordClickLinkAction  RecordClickLinkActionRequest
+     * @return RecordClickLinkActionResponse
+     */
+    @Override
+    public CompletableFuture<RecordClickLinkActionResponse> recordClickLinkAction(RecordClickLinkActionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RecordClickLinkAction").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RecordClickLinkActionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RecordClickLinkActionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RiskEventSync  RiskEventSyncRequest
+     * @return RiskEventSyncResponse
+     */
     @Override
     public CompletableFuture<RiskEventSyncResponse> riskEventSync(RiskEventSyncRequest request) {
         try {
@@ -123,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchPunishEvents  SearchPunishEventsRequest
+     * @return SearchPunishEventsResponse
+     */
     @Override
     public CompletableFuture<SearchPunishEventsResponse> searchPunishEvents(SearchPunishEventsRequest request) {
         try {
@@ -137,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchPunishRecords  SearchPunishRecordsRequest
+     * @return SearchPunishRecordsResponse
+     */
     @Override
     public CompletableFuture<SearchPunishRecordsResponse> searchPunishRecords(SearchPunishRecordsRequest request) {
         try {
@@ -151,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchPunishRequest  SearchPunishRequestRequest
+     * @return SearchPunishRequestResponse
+     */
     @Override
     public CompletableFuture<SearchPunishRequestResponse> searchPunishRequest(SearchPunishRequestRequest request) {
         try {
@@ -160,6 +232,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SearchPunishRequestResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateSecurityEventStatus  UpdateSecurityEventStatusRequest
+     * @return UpdateSecurityEventStatusResponse
+     */
+    @Override
+    public CompletableFuture<UpdateSecurityEventStatusResponse> updateSecurityEventStatus(UpdateSecurityEventStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateSecurityEventStatus").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateSecurityEventStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateSecurityEventStatusResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

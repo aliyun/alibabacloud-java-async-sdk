@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.buss20220822.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchPunishEventsResponseBody} extends {@link TeaModel}
  *
  * <p>SearchPunishEventsResponseBody</p>
@@ -15,7 +21,7 @@ public class SearchPunishEventsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("DataList")
-    private java.util.List < DataList> dataList;
+    private java.util.List<DataList> dataList;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -42,6 +48,10 @@ public class SearchPunishEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -52,7 +62,7 @@ public class SearchPunishEventsResponseBody extends TeaModel {
     /**
      * @return dataList
      */
-    public java.util.List < DataList> getDataList() {
+    public java.util.List<DataList> getDataList() {
         return this.dataList;
     }
 
@@ -79,10 +89,21 @@ public class SearchPunishEventsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < DataList> dataList; 
+        private java.util.List<DataList> dataList; 
         private String message; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchPunishEventsResponseBody model) {
+            this.code = model.code;
+            this.dataList = model.dataList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -95,7 +116,7 @@ public class SearchPunishEventsResponseBody extends TeaModel {
         /**
          * DataList.
          */
-        public Builder dataList(java.util.List < DataList> dataList) {
+        public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
             return this;
         }
@@ -130,6 +151,12 @@ public class SearchPunishEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchPunishEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchPunishEventsResponseBody</p>
+     */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BussinessCode")
         private String bussinessCode;
@@ -215,6 +242,18 @@ public class SearchPunishEventsResponseBody extends TeaModel {
             private String resourceId; 
             private String tipsCode; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.bussinessCode = model.bussinessCode;
+                this.caseCode = model.caseCode;
+                this.recordsCount = model.recordsCount;
+                this.resourceId = model.resourceId;
+                this.tipsCode = model.tipsCode;
+                this.userId = model.userId;
+            } 
 
             /**
              * BussinessCode.

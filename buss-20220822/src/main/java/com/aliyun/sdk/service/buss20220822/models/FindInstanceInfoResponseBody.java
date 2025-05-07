@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.buss20220822.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FindInstanceInfoResponseBody} extends {@link TeaModel}
  *
  * <p>FindInstanceInfoResponseBody</p>
@@ -44,6 +50,10 @@ public class FindInstanceInfoResponseBody extends TeaModel {
 
     public static FindInstanceInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -95,6 +105,18 @@ public class FindInstanceInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(FindInstanceInfoResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -150,6 +172,12 @@ public class FindInstanceInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FindInstanceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindInstanceInfoResponseBody</p>
+     */
     public static class UserInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GcLevel")
         private String gcLevel;
@@ -224,6 +252,17 @@ public class FindInstanceInfoResponseBody extends TeaModel {
             private String userSite; 
             private Boolean whiteUser; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.gcLevel = model.gcLevel;
+                this.hitWhiteReason = model.hitWhiteReason;
+                this.userId = model.userId;
+                this.userSite = model.userSite;
+                this.whiteUser = model.whiteUser;
+            } 
+
             /**
              * GcLevel.
              */
@@ -271,12 +310,18 @@ public class FindInstanceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FindInstanceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindInstanceInfoResponseBody</p>
+     */
     public static class PegInstanceInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BussinessCode")
         private String bussinessCode;
 
         @com.aliyun.core.annotation.NameInMap("Coordinate")
-        private java.util.Map < String, ? > coordinate;
+        private java.util.Map<String, ?> coordinate;
 
         @com.aliyun.core.annotation.NameInMap("IdType")
         private String idType;
@@ -321,7 +366,7 @@ public class FindInstanceInfoResponseBody extends TeaModel {
         /**
          * @return coordinate
          */
-        public java.util.Map < String, ? > getCoordinate() {
+        public java.util.Map<String, ?> getCoordinate() {
             return this.coordinate;
         }
 
@@ -362,12 +407,25 @@ public class FindInstanceInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String bussinessCode; 
-            private java.util.Map < String, ? > coordinate; 
+            private java.util.Map<String, ?> coordinate; 
             private String idType; 
             private String instanceId; 
             private String serviceCreatedTime; 
             private String userId; 
             private UserInfo userInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(PegInstanceInfoList model) {
+                this.bussinessCode = model.bussinessCode;
+                this.coordinate = model.coordinate;
+                this.idType = model.idType;
+                this.instanceId = model.instanceId;
+                this.serviceCreatedTime = model.serviceCreatedTime;
+                this.userId = model.userId;
+                this.userInfo = model.userInfo;
+            } 
 
             /**
              * BussinessCode.
@@ -380,7 +438,7 @@ public class FindInstanceInfoResponseBody extends TeaModel {
             /**
              * Coordinate.
              */
-            public Builder coordinate(java.util.Map < String, ? > coordinate) {
+            public Builder coordinate(java.util.Map<String, ?> coordinate) {
                 this.coordinate = coordinate;
                 return this;
             }
@@ -432,9 +490,15 @@ public class FindInstanceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FindInstanceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindInstanceInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PegInstanceInfoList")
-        private java.util.List < PegInstanceInfoList> pegInstanceInfoList;
+        private java.util.List<PegInstanceInfoList> pegInstanceInfoList;
 
         private Data(Builder builder) {
             this.pegInstanceInfoList = builder.pegInstanceInfoList;
@@ -451,17 +515,24 @@ public class FindInstanceInfoResponseBody extends TeaModel {
         /**
          * @return pegInstanceInfoList
          */
-        public java.util.List < PegInstanceInfoList> getPegInstanceInfoList() {
+        public java.util.List<PegInstanceInfoList> getPegInstanceInfoList() {
             return this.pegInstanceInfoList;
         }
 
         public static final class Builder {
-            private java.util.List < PegInstanceInfoList> pegInstanceInfoList; 
+            private java.util.List<PegInstanceInfoList> pegInstanceInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pegInstanceInfoList = model.pegInstanceInfoList;
+            } 
 
             /**
              * PegInstanceInfoList.
              */
-            public Builder pegInstanceInfoList(java.util.List < PegInstanceInfoList> pegInstanceInfoList) {
+            public Builder pegInstanceInfoList(java.util.List<PegInstanceInfoList> pegInstanceInfoList) {
                 this.pegInstanceInfoList = pegInstanceInfoList;
                 return this;
             }
