@@ -200,11 +200,19 @@ public class GetWebshellTokenResponseBody extends TeaModel {
      * <p>GetWebshellTokenResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("HttpUrl")
+        private String httpUrl;
+
         @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
+        @com.aliyun.core.annotation.NameInMap("WebSocketUrl")
+        private String webSocketUrl;
+
         private Data(Builder builder) {
+            this.httpUrl = builder.httpUrl;
             this.token = builder.token;
+            this.webSocketUrl = builder.webSocketUrl;
         }
 
         public static Builder builder() {
@@ -216,27 +224,61 @@ public class GetWebshellTokenResponseBody extends TeaModel {
         }
 
         /**
+         * @return httpUrl
+         */
+        public String getHttpUrl() {
+            return this.httpUrl;
+        }
+
+        /**
          * @return token
          */
         public String getToken() {
             return this.token;
         }
 
+        /**
+         * @return webSocketUrl
+         */
+        public String getWebSocketUrl() {
+            return this.webSocketUrl;
+        }
+
         public static final class Builder {
+            private String httpUrl; 
             private String token; 
+            private String webSocketUrl; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.httpUrl = model.httpUrl;
                 this.token = model.token;
+                this.webSocketUrl = model.webSocketUrl;
             } 
+
+            /**
+             * HttpUrl.
+             */
+            public Builder httpUrl(String httpUrl) {
+                this.httpUrl = httpUrl;
+                return this;
+            }
 
             /**
              * Token.
              */
             public Builder token(String token) {
                 this.token = token;
+                return this;
+            }
+
+            /**
+             * WebSocketUrl.
+             */
+            public Builder webSocketUrl(String webSocketUrl) {
+                this.webSocketUrl = webSocketUrl;
                 return this;
             }
 
