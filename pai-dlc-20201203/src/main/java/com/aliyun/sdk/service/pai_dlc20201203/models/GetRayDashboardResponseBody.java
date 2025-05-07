@@ -67,7 +67,10 @@ public class GetRayDashboardResponseBody extends TeaModel {
         } 
 
         /**
-         * metricsEnabled.
+         * <p>Indicates whether the dashboard has been integrated with CloudMonitor and supports ray metrics</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder metricsEnabled(String metricsEnabled) {
             this.metricsEnabled = metricsEnabled;
@@ -75,7 +78,10 @@ public class GetRayDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * url.
+         * <p>The Ray Dashboard URL</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://pre-pai-dlc-proxy-cn-hangzhou.aliyun.com/ray/dashboard/dlc1k7426goc7bvy">https://pre-pai-dlc-proxy-cn-hangzhou.aliyun.com/ray/dashboard/dlc1k7426goc7bvy</a></p>
          */
         public Builder url(String url) {
             this.url = url;

@@ -267,6 +267,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
+     * 
      * @param request the request parameters of GetRayDashboard  GetRayDashboardRequest
      * @return GetRayDashboardResponse
      */

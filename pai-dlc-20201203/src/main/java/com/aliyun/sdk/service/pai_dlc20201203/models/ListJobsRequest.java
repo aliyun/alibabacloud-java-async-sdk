@@ -47,6 +47,10 @@ public class ListJobsRequest extends Request {
     private String jobId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobIds")
+    private String jobIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobType")
     @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String jobType;
@@ -127,6 +131,7 @@ public class ListJobsRequest extends Request {
         this.endTime = builder.endTime;
         this.fromAllWorkspaces = builder.fromAllWorkspaces;
         this.jobId = builder.jobId;
+        this.jobIds = builder.jobIds;
         this.jobType = builder.jobType;
         this.order = builder.order;
         this.oversoldInfo = builder.oversoldInfo;
@@ -206,6 +211,13 @@ public class ListJobsRequest extends Request {
      */
     public String getJobId() {
         return this.jobId;
+    }
+
+    /**
+     * @return jobIds
+     */
+    public String getJobIds() {
+        return this.jobIds;
     }
 
     /**
@@ -335,6 +347,7 @@ public class ListJobsRequest extends Request {
         private String endTime; 
         private Boolean fromAllWorkspaces; 
         private String jobId; 
+        private String jobIds; 
         private String jobType; 
         private String order; 
         private String oversoldInfo; 
@@ -366,6 +379,7 @@ public class ListJobsRequest extends Request {
             this.endTime = request.endTime;
             this.fromAllWorkspaces = request.fromAllWorkspaces;
             this.jobId = request.jobId;
+            this.jobIds = request.jobIds;
             this.jobType = request.jobType;
             this.order = request.order;
             this.oversoldInfo = request.oversoldInfo;
@@ -474,6 +488,15 @@ public class ListJobsRequest extends Request {
         }
 
         /**
+         * JobIds.
+         */
+        public Builder jobIds(String jobIds) {
+            this.putQueryParameter("JobIds", jobIds);
+            this.jobIds = jobIds;
+            return this;
+        }
+
+        /**
          * <p>The job type. The default value null indicates any type. Valid values:</p>
          * <ul>
          * <li>TFJob</li>
@@ -551,7 +574,15 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * PaymentType.
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: Resource quota</li>
+         * <li>Spot: Preemptible resources</li>
+         * <li>PostPaid: Public resources</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
