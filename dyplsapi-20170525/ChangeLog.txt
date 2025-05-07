@@ -1,3 +1,6 @@
+2025-05-07 Version: 2.0.6
+- Generated java-async 2017-05-25 for Dyplsapi.
+
 2025-04-22 Version: 2.0.5
 - Generated java-async 2017-05-25 for Dyplsapi.
 

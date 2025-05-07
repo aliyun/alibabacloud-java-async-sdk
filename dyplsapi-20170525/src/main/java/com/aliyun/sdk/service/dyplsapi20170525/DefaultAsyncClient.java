@@ -125,6 +125,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BindAxbFixedLine  BindAxbFixedLineRequest
+     * @return BindAxbFixedLineResponse
+     */
+    @Override
+    public CompletableFuture<BindAxbFixedLineResponse> bindAxbFixedLine(BindAxbFixedLineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BindAxbFixedLine").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BindAxbFixedLineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BindAxbFixedLineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>An AXG protection solution can be configured to meet the requirements for grading users, limiting the scope of calls, and restricting order snatching. The letter G represents a phone number group to which you can add phone numbers as needed.</p>
      * <h3><a href="#qps"></a>QPS limits</h3>
@@ -188,6 +206,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<BindAxnExtensionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of BindAxnExtensionFixedLine  BindAxnExtensionFixedLineRequest
+     * @return BindAxnExtensionFixedLineResponse
+     */
+    @Override
+    public CompletableFuture<BindAxnExtensionFixedLineResponse> bindAxnExtensionFixedLine(BindAxnExtensionFixedLineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BindAxnExtensionFixedLine").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BindAxnExtensionFixedLineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BindAxnExtensionFixedLineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of BindAxnFixedLine  BindAxnFixedLineRequest
+     * @return BindAxnFixedLineResponse
+     */
+    @Override
+    public CompletableFuture<BindAxnFixedLineResponse> bindAxnFixedLine(BindAxnFixedLineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BindAxnFixedLine").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BindAxnFixedLineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BindAxnFixedLineResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -418,6 +472,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteAxbBindFixedLine  DeleteAxbBindFixedLineRequest
+     * @return DeleteAxbBindFixedLineResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAxbBindFixedLineResponse> deleteAxbBindFixedLine(DeleteAxbBindFixedLineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAxbBindFixedLine").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAxbBindFixedLineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAxbBindFixedLineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteAxgGroup  DeleteAxgGroupRequest
      * @return DeleteAxgGroupResponse
      */
@@ -430,6 +502,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteAxgGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAxnBindFixedLine  DeleteAxnBindFixedLineRequest
+     * @return DeleteAxnBindFixedLineResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAxnBindFixedLineResponse> deleteAxnBindFixedLine(DeleteAxnBindFixedLineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAxnBindFixedLine").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAxnBindFixedLineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAxnBindFixedLineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAxnExtensionBindFixedLine  DeleteAxnExtensionBindFixedLineRequest
+     * @return DeleteAxnExtensionBindFixedLineResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAxnExtensionBindFixedLineResponse> deleteAxnExtensionBindFixedLine(DeleteAxnExtensionBindFixedLineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAxnExtensionBindFixedLine").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAxnExtensionBindFixedLineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAxnExtensionBindFixedLineResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -656,6 +764,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<OperateBlackNoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryAxbBindFixedLine  QueryAxbBindFixedLineRequest
+     * @return QueryAxbBindFixedLineResponse
+     */
+    @Override
+    public CompletableFuture<QueryAxbBindFixedLineResponse> queryAxbBindFixedLine(QueryAxbBindFixedLineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryAxbBindFixedLine").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryAxbBindFixedLineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryAxbBindFixedLineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryAxnBindFixedLine  QueryAxnBindFixedLineRequest
+     * @return QueryAxnBindFixedLineResponse
+     */
+    @Override
+    public CompletableFuture<QueryAxnBindFixedLineResponse> queryAxnBindFixedLine(QueryAxnBindFixedLineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryAxnBindFixedLine").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryAxnBindFixedLineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryAxnBindFixedLineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryAxnExtensionBindFixedLine  QueryAxnExtensionBindFixedLineRequest
+     * @return QueryAxnExtensionBindFixedLineResponse
+     */
+    @Override
+    public CompletableFuture<QueryAxnExtensionBindFixedLineResponse> queryAxnExtensionBindFixedLine(QueryAxnExtensionBindFixedLineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryAxnExtensionBindFixedLine").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryAxnExtensionBindFixedLineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryAxnExtensionBindFixedLineResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -942,6 +1104,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UnlockSecretNoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAxbBindFixedLine  UpdateAxbBindFixedLineRequest
+     * @return UpdateAxbBindFixedLineResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAxbBindFixedLineResponse> updateAxbBindFixedLine(UpdateAxbBindFixedLineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateAxbBindFixedLine").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAxbBindFixedLineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAxbBindFixedLineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAxnBindFixedLine  UpdateAxnBindFixedLineRequest
+     * @return UpdateAxnBindFixedLineResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAxnBindFixedLineResponse> updateAxnBindFixedLine(UpdateAxnBindFixedLineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateAxnBindFixedLine").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAxnBindFixedLineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAxnBindFixedLineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAxnExtensionBindFixedLine  UpdateAxnExtensionBindFixedLineRequest
+     * @return UpdateAxnExtensionBindFixedLineResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAxnExtensionBindFixedLineResponse> updateAxnExtensionBindFixedLine(UpdateAxnExtensionBindFixedLineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateAxnExtensionBindFixedLine").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAxnExtensionBindFixedLineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAxnExtensionBindFixedLineResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

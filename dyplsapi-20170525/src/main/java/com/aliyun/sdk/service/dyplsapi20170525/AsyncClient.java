@@ -57,6 +57,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BindAxbResponse> bindAxb(BindAxbRequest request);
 
     /**
+     * @param request the request parameters of BindAxbFixedLine  BindAxbFixedLineRequest
+     * @return BindAxbFixedLineResponse
+     */
+    CompletableFuture<BindAxbFixedLineResponse> bindAxbFixedLine(BindAxbFixedLineRequest request);
+
+    /**
      * <b>description</b> :
      * <p>An AXG protection solution can be configured to meet the requirements for grading users, limiting the scope of calls, and restricting order snatching. The letter G represents a phone number group to which you can add phone numbers as needed.</p>
      * <h3><a href="#qps"></a>QPS limits</h3>
@@ -88,6 +94,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return BindAxnExtensionResponse
      */
     CompletableFuture<BindAxnExtensionResponse> bindAxnExtension(BindAxnExtensionRequest request);
+
+    /**
+     * @param request the request parameters of BindAxnExtensionFixedLine  BindAxnExtensionFixedLineRequest
+     * @return BindAxnExtensionFixedLineResponse
+     */
+    CompletableFuture<BindAxnExtensionFixedLineResponse> bindAxnExtensionFixedLine(BindAxnExtensionFixedLineRequest request);
+
+    /**
+     * @param request the request parameters of BindAxnFixedLine  BindAxnFixedLineRequest
+     * @return BindAxnFixedLineResponse
+     */
+    CompletableFuture<BindAxnFixedLineResponse> bindAxnFixedLine(BindAxnFixedLineRequest request);
 
     /**
      * @param request the request parameters of BindBatchAxg  BindBatchAxgRequest
@@ -182,10 +200,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSmsSignResponse> createSmsSign(CreateSmsSignRequest request);
 
     /**
+     * @param request the request parameters of DeleteAxbBindFixedLine  DeleteAxbBindFixedLineRequest
+     * @return DeleteAxbBindFixedLineResponse
+     */
+    CompletableFuture<DeleteAxbBindFixedLineResponse> deleteAxbBindFixedLine(DeleteAxbBindFixedLineRequest request);
+
+    /**
      * @param request the request parameters of DeleteAxgGroup  DeleteAxgGroupRequest
      * @return DeleteAxgGroupResponse
      */
     CompletableFuture<DeleteAxgGroupResponse> deleteAxgGroup(DeleteAxgGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAxnBindFixedLine  DeleteAxnBindFixedLineRequest
+     * @return DeleteAxnBindFixedLineResponse
+     */
+    CompletableFuture<DeleteAxnBindFixedLineResponse> deleteAxnBindFixedLine(DeleteAxnBindFixedLineRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAxnExtensionBindFixedLine  DeleteAxnExtensionBindFixedLineRequest
+     * @return DeleteAxnExtensionBindFixedLineResponse
+     */
+    CompletableFuture<DeleteAxnExtensionBindFixedLineResponse> deleteAxnExtensionBindFixedLine(DeleteAxnExtensionBindFixedLineRequest request);
 
     /**
      * @param request the request parameters of DeleteSecretAPhoneNoToCust  DeleteSecretAPhoneNoToCustRequest
@@ -280,6 +316,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return OperateBlackNoResponse
      */
     CompletableFuture<OperateBlackNoResponse> operateBlackNo(OperateBlackNoRequest request);
+
+    /**
+     * @param request the request parameters of QueryAxbBindFixedLine  QueryAxbBindFixedLineRequest
+     * @return QueryAxbBindFixedLineResponse
+     */
+    CompletableFuture<QueryAxbBindFixedLineResponse> queryAxbBindFixedLine(QueryAxbBindFixedLineRequest request);
+
+    /**
+     * @param request the request parameters of QueryAxnBindFixedLine  QueryAxnBindFixedLineRequest
+     * @return QueryAxnBindFixedLineResponse
+     */
+    CompletableFuture<QueryAxnBindFixedLineResponse> queryAxnBindFixedLine(QueryAxnBindFixedLineRequest request);
+
+    /**
+     * @param request the request parameters of QueryAxnExtensionBindFixedLine  QueryAxnExtensionBindFixedLineRequest
+     * @return QueryAxnExtensionBindFixedLineResponse
+     */
+    CompletableFuture<QueryAxnExtensionBindFixedLineResponse> queryAxnExtensionBindFixedLine(QueryAxnExtensionBindFixedLineRequest request);
 
     /**
      * <b>description</b> :
@@ -410,6 +464,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UnlockSecretNoResponse
      */
     CompletableFuture<UnlockSecretNoResponse> unlockSecretNo(UnlockSecretNoRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAxbBindFixedLine  UpdateAxbBindFixedLineRequest
+     * @return UpdateAxbBindFixedLineResponse
+     */
+    CompletableFuture<UpdateAxbBindFixedLineResponse> updateAxbBindFixedLine(UpdateAxbBindFixedLineRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAxnBindFixedLine  UpdateAxnBindFixedLineRequest
+     * @return UpdateAxnBindFixedLineResponse
+     */
+    CompletableFuture<UpdateAxnBindFixedLineResponse> updateAxnBindFixedLine(UpdateAxnBindFixedLineRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAxnExtensionBindFixedLine  UpdateAxnExtensionBindFixedLineRequest
+     * @return UpdateAxnExtensionBindFixedLineResponse
+     */
+    CompletableFuture<UpdateAxnExtensionBindFixedLineResponse> updateAxnExtensionBindFixedLine(UpdateAxnExtensionBindFixedLineRequest request);
 
     /**
      * <b>description</b> :
