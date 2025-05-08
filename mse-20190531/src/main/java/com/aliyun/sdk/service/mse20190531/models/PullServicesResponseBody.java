@@ -207,6 +207,9 @@ public class PullServicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
+        @com.aliyun.core.annotation.NameInMap("SaeAppId")
+        private String saeAppId;
+
         @com.aliyun.core.annotation.NameInMap("SourceId")
         private String sourceId;
 
@@ -220,6 +223,7 @@ public class PullServicesResponseBody extends TeaModel {
             this.groupName = builder.groupName;
             this.name = builder.name;
             this.namespace = builder.namespace;
+            this.saeAppId = builder.saeAppId;
             this.sourceId = builder.sourceId;
             this.sourceIdList = builder.sourceIdList;
             this.sourceType = builder.sourceType;
@@ -255,6 +259,13 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return saeAppId
+         */
+        public String getSaeAppId() {
+            return this.saeAppId;
+        }
+
+        /**
          * @return sourceId
          */
         public String getSourceId() {
@@ -279,6 +290,7 @@ public class PullServicesResponseBody extends TeaModel {
             private String groupName; 
             private String name; 
             private String namespace; 
+            private String saeAppId; 
             private String sourceId; 
             private java.util.List<Long> sourceIdList; 
             private String sourceType; 
@@ -290,6 +302,7 @@ public class PullServicesResponseBody extends TeaModel {
                 this.groupName = model.groupName;
                 this.name = model.name;
                 this.namespace = model.namespace;
+                this.saeAppId = model.saeAppId;
                 this.sourceId = model.sourceId;
                 this.sourceIdList = model.sourceIdList;
                 this.sourceType = model.sourceType;
@@ -325,6 +338,14 @@ public class PullServicesResponseBody extends TeaModel {
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * SaeAppId.
+             */
+            public Builder saeAppId(String saeAppId) {
+                this.saeAppId = saeAppId;
                 return this;
             }
 

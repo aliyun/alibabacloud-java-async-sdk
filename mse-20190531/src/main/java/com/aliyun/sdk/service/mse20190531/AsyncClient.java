@@ -274,6 +274,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePluginConfigResponse> createPluginConfig(CreatePluginConfigRequest request);
 
     /**
+     * @param request the request parameters of CreateWebFlowRule  CreateWebFlowRuleRequest
+     * @return CreateWebFlowRuleResponse
+     */
+    CompletableFuture<CreateWebFlowRuleResponse> createWebFlowRule(CreateWebFlowRuleRequest request);
+
+    /**
      * @param request the request parameters of CreateZnode  CreateZnodeRequest
      * @return CreateZnodeResponse
      */
@@ -466,6 +472,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteSwimmingLaneGroupResponse
      */
     CompletableFuture<DeleteSwimmingLaneGroupResponse> deleteSwimmingLaneGroup(DeleteSwimmingLaneGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteWebFlowRules  DeleteWebFlowRulesRequest
+     * @return DeleteWebFlowRulesResponse
+     */
+    CompletableFuture<DeleteWebFlowRulesResponse> deleteWebFlowRules(DeleteWebFlowRulesRequest request);
 
     /**
      * @param request the request parameters of DeleteZnode  DeleteZnodeRequest
@@ -1085,6 +1097,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
+     * @param request the request parameters of ListWebFlowRules  ListWebFlowRulesRequest
+     * @return ListWebFlowRulesResponse
+     */
+    CompletableFuture<ListWebFlowRulesResponse> listWebFlowRules(ListWebFlowRulesRequest request);
+
+    /**
      * @param request the request parameters of ListZkTrack  ListZkTrackRequest
      * @return ListZkTrackResponse
      */
@@ -1578,6 +1596,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateServiceSourceResponse
      */
     CompletableFuture<UpdateServiceSourceResponse> updateServiceSource(UpdateServiceSourceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateWebFlowRule  UpdateWebFlowRuleRequest
+     * @return UpdateWebFlowRuleResponse
+     */
+    CompletableFuture<UpdateWebFlowRuleResponse> updateWebFlowRule(UpdateWebFlowRuleRequest request);
 
     /**
      * @param request the request parameters of UpdateZnode  UpdateZnodeRequest

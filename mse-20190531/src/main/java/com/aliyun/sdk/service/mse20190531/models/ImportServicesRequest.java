@@ -318,6 +318,9 @@ public class ImportServicesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
+        @com.aliyun.core.annotation.NameInMap("SaeAppId")
+        private String saeAppId;
+
         @com.aliyun.core.annotation.NameInMap("ServicePort")
         private Long servicePort;
 
@@ -330,6 +333,7 @@ public class ImportServicesRequest extends Request {
             this.ips = builder.ips;
             this.name = builder.name;
             this.namespace = builder.namespace;
+            this.saeAppId = builder.saeAppId;
             this.servicePort = builder.servicePort;
             this.serviceProtocol = builder.serviceProtocol;
         }
@@ -378,6 +382,13 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
+         * @return saeAppId
+         */
+        public String getSaeAppId() {
+            return this.saeAppId;
+        }
+
+        /**
          * @return servicePort
          */
         public Long getServicePort() {
@@ -397,6 +408,7 @@ public class ImportServicesRequest extends Request {
             private java.util.List<String> ips; 
             private String name; 
             private String namespace; 
+            private String saeAppId; 
             private Long servicePort; 
             private String serviceProtocol; 
 
@@ -409,6 +421,7 @@ public class ImportServicesRequest extends Request {
                 this.ips = model.ips;
                 this.name = model.name;
                 this.namespace = model.namespace;
+                this.saeAppId = model.saeAppId;
                 this.servicePort = model.servicePort;
                 this.serviceProtocol = model.serviceProtocol;
             } 
@@ -459,6 +472,14 @@ public class ImportServicesRequest extends Request {
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * SaeAppId.
+             */
+            public Builder saeAppId(String saeAppId) {
+                this.saeAppId = saeAppId;
                 return this;
             }
 
