@@ -41,6 +41,10 @@ public class AddFileRequest extends Request {
     private String leaseId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OriginalFileUrl")
+    private String originalFileUrl;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Parser")
     @com.aliyun.core.annotation.Validation(required = true)
     private String parser;
@@ -56,6 +60,7 @@ public class AddFileRequest extends Request {
         this.categoryId = builder.categoryId;
         this.categoryType = builder.categoryType;
         this.leaseId = builder.leaseId;
+        this.originalFileUrl = builder.originalFileUrl;
         this.parser = builder.parser;
         this.tags = builder.tags;
     }
@@ -109,6 +114,13 @@ public class AddFileRequest extends Request {
     }
 
     /**
+     * @return originalFileUrl
+     */
+    public String getOriginalFileUrl() {
+        return this.originalFileUrl;
+    }
+
+    /**
      * @return parser
      */
     public String getParser() {
@@ -128,6 +140,7 @@ public class AddFileRequest extends Request {
         private String categoryId; 
         private String categoryType; 
         private String leaseId; 
+        private String originalFileUrl; 
         private String parser; 
         private java.util.List<String> tags; 
 
@@ -142,6 +155,7 @@ public class AddFileRequest extends Request {
             this.categoryId = request.categoryId;
             this.categoryType = request.categoryType;
             this.leaseId = request.leaseId;
+            this.originalFileUrl = request.originalFileUrl;
             this.parser = request.parser;
             this.tags = request.tags;
         } 
@@ -200,6 +214,15 @@ public class AddFileRequest extends Request {
         public Builder leaseId(String leaseId) {
             this.putBodyParameter("LeaseId", leaseId);
             this.leaseId = leaseId;
+            return this;
+        }
+
+        /**
+         * OriginalFileUrl.
+         */
+        public Builder originalFileUrl(String originalFileUrl) {
+            this.putBodyParameter("OriginalFileUrl", originalFileUrl);
+            this.originalFileUrl = originalFileUrl;
             return this;
         }
 
