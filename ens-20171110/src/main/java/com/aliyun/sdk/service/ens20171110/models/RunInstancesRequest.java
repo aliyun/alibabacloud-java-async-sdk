@@ -90,6 +90,11 @@ public class RunInstancesRequest extends Request {
     private String ipType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
+    private Long ipv6AddressCount;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
@@ -189,6 +194,7 @@ public class RunInstancesRequest extends Request {
         this.internetChargeType = builder.internetChargeType;
         this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
         this.ipType = builder.ipType;
+        this.ipv6AddressCount = builder.ipv6AddressCount;
         this.keyPairName = builder.keyPairName;
         this.netDistrictCode = builder.netDistrictCode;
         this.netWorkId = builder.netWorkId;
@@ -341,6 +347,13 @@ public class RunInstancesRequest extends Request {
      */
     public String getIpType() {
         return this.ipType;
+    }
+
+    /**
+     * @return ipv6AddressCount
+     */
+    public Long getIpv6AddressCount() {
+        return this.ipv6AddressCount;
     }
 
     /**
@@ -501,6 +514,7 @@ public class RunInstancesRequest extends Request {
         private String internetChargeType; 
         private Long internetMaxBandwidthOut; 
         private String ipType; 
+        private Long ipv6AddressCount; 
         private String keyPairName; 
         private String netDistrictCode; 
         private String netWorkId; 
@@ -545,6 +559,7 @@ public class RunInstancesRequest extends Request {
             this.internetChargeType = request.internetChargeType;
             this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
             this.ipType = request.ipType;
+            this.ipv6AddressCount = request.ipv6AddressCount;
             this.keyPairName = request.keyPairName;
             this.netDistrictCode = request.netDistrictCode;
             this.netWorkId = request.netWorkId;
@@ -814,6 +829,15 @@ public class RunInstancesRequest extends Request {
         public Builder ipType(String ipType) {
             this.putQueryParameter("IpType", ipType);
             this.ipType = ipType;
+            return this;
+        }
+
+        /**
+         * Ipv6AddressCount.
+         */
+        public Builder ipv6AddressCount(Long ipv6AddressCount) {
+            this.putQueryParameter("Ipv6AddressCount", ipv6AddressCount);
+            this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
 

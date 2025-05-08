@@ -36,6 +36,10 @@ public class CreateDiskRequest extends Request {
     private String ensRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceBillingCycle")
+    private String instanceBillingCycle;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceChargeType;
@@ -62,6 +66,7 @@ public class CreateDiskRequest extends Request {
         this.diskName = builder.diskName;
         this.encrypted = builder.encrypted;
         this.ensRegionId = builder.ensRegionId;
+        this.instanceBillingCycle = builder.instanceBillingCycle;
         this.instanceChargeType = builder.instanceChargeType;
         this.KMSKeyId = builder.KMSKeyId;
         this.size = builder.size;
@@ -111,6 +116,13 @@ public class CreateDiskRequest extends Request {
     }
 
     /**
+     * @return instanceBillingCycle
+     */
+    public String getInstanceBillingCycle() {
+        return this.instanceBillingCycle;
+    }
+
+    /**
      * @return instanceChargeType
      */
     public String getInstanceChargeType() {
@@ -150,6 +162,7 @@ public class CreateDiskRequest extends Request {
         private String diskName; 
         private Boolean encrypted; 
         private String ensRegionId; 
+        private String instanceBillingCycle; 
         private String instanceChargeType; 
         private String KMSKeyId; 
         private String size; 
@@ -166,6 +179,7 @@ public class CreateDiskRequest extends Request {
             this.diskName = request.diskName;
             this.encrypted = request.encrypted;
             this.ensRegionId = request.ensRegionId;
+            this.instanceBillingCycle = request.instanceBillingCycle;
             this.instanceChargeType = request.instanceChargeType;
             this.KMSKeyId = request.KMSKeyId;
             this.size = request.size;
@@ -228,6 +242,15 @@ public class CreateDiskRequest extends Request {
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
             this.ensRegionId = ensRegionId;
+            return this;
+        }
+
+        /**
+         * InstanceBillingCycle.
+         */
+        public Builder instanceBillingCycle(String instanceBillingCycle) {
+            this.putQueryParameter("InstanceBillingCycle", instanceBillingCycle);
+            this.instanceBillingCycle = instanceBillingCycle;
             return this;
         }
 

@@ -32,6 +32,10 @@ public class CreateSnapshotRequest extends Request {
     private String ensRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceBillingCycle")
+    private String instanceBillingCycle;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnapshotName")
     private String snapshotName;
 
@@ -40,6 +44,7 @@ public class CreateSnapshotRequest extends Request {
         this.description = builder.description;
         this.diskId = builder.diskId;
         this.ensRegionId = builder.ensRegionId;
+        this.instanceBillingCycle = builder.instanceBillingCycle;
         this.snapshotName = builder.snapshotName;
     }
 
@@ -78,6 +83,13 @@ public class CreateSnapshotRequest extends Request {
     }
 
     /**
+     * @return instanceBillingCycle
+     */
+    public String getInstanceBillingCycle() {
+        return this.instanceBillingCycle;
+    }
+
+    /**
      * @return snapshotName
      */
     public String getSnapshotName() {
@@ -88,6 +100,7 @@ public class CreateSnapshotRequest extends Request {
         private String description; 
         private String diskId; 
         private String ensRegionId; 
+        private String instanceBillingCycle; 
         private String snapshotName; 
 
         private Builder() {
@@ -99,6 +112,7 @@ public class CreateSnapshotRequest extends Request {
             this.description = request.description;
             this.diskId = request.diskId;
             this.ensRegionId = request.ensRegionId;
+            this.instanceBillingCycle = request.instanceBillingCycle;
             this.snapshotName = request.snapshotName;
         } 
 
@@ -138,6 +152,15 @@ public class CreateSnapshotRequest extends Request {
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
             this.ensRegionId = ensRegionId;
+            return this;
+        }
+
+        /**
+         * InstanceBillingCycle.
+         */
+        public Builder instanceBillingCycle(String instanceBillingCycle) {
+            this.putQueryParameter("InstanceBillingCycle", instanceBillingCycle);
+            this.instanceBillingCycle = instanceBillingCycle;
             return this;
         }
 

@@ -262,7 +262,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * <p>ENS节点ID数组。数组长度：1~100。</p>
+         * <p>The IDs of edge nodes. You can specify 1 to 100 IDs.</p>
          */
         public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);

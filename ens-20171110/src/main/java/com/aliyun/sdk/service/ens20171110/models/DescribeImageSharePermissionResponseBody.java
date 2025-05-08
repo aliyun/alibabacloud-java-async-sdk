@@ -227,7 +227,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * AliyunUid.
+             * <p>The Alibaba Cloud account with which you share the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1515285523xxxx</p>
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;

@@ -244,7 +244,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>标签键。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -268,7 +271,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>标签值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -664,6 +664,81 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeARMServerInstancesResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeARMServerInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeARMServerInstancesResponseBody</p>
+     */
     public static class Servers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AICInstances")
         private java.util.List<AICInstances> AICInstances;
@@ -701,6 +776,9 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         private Servers(Builder builder) {
             this.AICInstances = builder.AICInstances;
             this.creationTime = builder.creationTime;
@@ -714,6 +792,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             this.specName = builder.specName;
             this.state = builder.state;
             this.status = builder.status;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -808,6 +887,13 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private java.util.List<AICInstances> AICInstances; 
             private String creationTime; 
@@ -821,6 +907,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             private String specName; 
             private String state; 
             private String status; 
+            private java.util.List<Tags> tags; 
 
             private Builder() {
             } 
@@ -838,6 +925,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
                 this.specName = model.specName;
                 this.state = model.state;
                 this.status = model.status;
+                this.tags = model.tags;
             } 
 
             /**
@@ -980,6 +1068,14 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 
