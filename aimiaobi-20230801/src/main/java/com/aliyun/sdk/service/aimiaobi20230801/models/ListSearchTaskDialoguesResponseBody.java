@@ -241,7 +241,382 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
      *
      * <p>ListSearchTaskDialoguesResponseBody</p>
      */
+    public static class SearchSources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("DatasetName")
+        private String datasetName;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private SearchSources(Builder builder) {
+            this.code = builder.code;
+            this.datasetName = builder.datasetName;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SearchSources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return datasetName
+         */
+        public String getDatasetName() {
+            return this.datasetName;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String datasetName; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchSources model) {
+                this.code = model.code;
+                this.datasetName = model.datasetName;
+                this.name = model.name;
+            } 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * DatasetName.
+             */
+            public Builder datasetName(String datasetName) {
+                this.datasetName = datasetName;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public SearchSources build() {
+                return new SearchSources(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSearchTaskDialoguesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSearchTaskDialoguesResponseBody</p>
+     */
+    public static class SearchParam extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private String endTime;
+
+        @com.aliyun.core.annotation.NameInMap("MultimodalSearchTypes")
+        private java.util.List<String> multimodalSearchTypes;
+
+        @com.aliyun.core.annotation.NameInMap("SearchSources")
+        private java.util.List<SearchSources> searchSources;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private String startTime;
+
+        private SearchParam(Builder builder) {
+            this.endTime = builder.endTime;
+            this.multimodalSearchTypes = builder.multimodalSearchTypes;
+            this.searchSources = builder.searchSources;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SearchParam create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return multimodalSearchTypes
+         */
+        public java.util.List<String> getMultimodalSearchTypes() {
+            return this.multimodalSearchTypes;
+        }
+
+        /**
+         * @return searchSources
+         */
+        public java.util.List<SearchSources> getSearchSources() {
+            return this.searchSources;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private String endTime; 
+            private java.util.List<String> multimodalSearchTypes; 
+            private java.util.List<SearchSources> searchSources; 
+            private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchParam model) {
+                this.endTime = model.endTime;
+                this.multimodalSearchTypes = model.multimodalSearchTypes;
+                this.searchSources = model.searchSources;
+                this.startTime = model.startTime;
+            } 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * MultimodalSearchTypes.
+             */
+            public Builder multimodalSearchTypes(java.util.List<String> multimodalSearchTypes) {
+                this.multimodalSearchTypes = multimodalSearchTypes;
+                return this;
+            }
+
+            /**
+             * SearchSources.
+             */
+            public Builder searchSources(java.util.List<SearchSources> searchSources) {
+                this.searchSources = searchSources;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public SearchParam build() {
+                return new SearchParam(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSearchTaskDialoguesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSearchTaskDialoguesResponseBody</p>
+     */
+    public static class ChatConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DialogueType")
+        private Integer dialogueType;
+
+        @com.aliyun.core.annotation.NameInMap("EndToEnd")
+        private Boolean endToEnd;
+
+        @com.aliyun.core.annotation.NameInMap("GenerateLevel")
+        private String generateLevel;
+
+        @com.aliyun.core.annotation.NameInMap("GenerateTechnology")
+        private String generateTechnology;
+
+        @com.aliyun.core.annotation.NameInMap("SearchModels")
+        private java.util.List<String> searchModels;
+
+        @com.aliyun.core.annotation.NameInMap("SearchParam")
+        private SearchParam searchParam;
+
+        private ChatConfig(Builder builder) {
+            this.dialogueType = builder.dialogueType;
+            this.endToEnd = builder.endToEnd;
+            this.generateLevel = builder.generateLevel;
+            this.generateTechnology = builder.generateTechnology;
+            this.searchModels = builder.searchModels;
+            this.searchParam = builder.searchParam;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ChatConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dialogueType
+         */
+        public Integer getDialogueType() {
+            return this.dialogueType;
+        }
+
+        /**
+         * @return endToEnd
+         */
+        public Boolean getEndToEnd() {
+            return this.endToEnd;
+        }
+
+        /**
+         * @return generateLevel
+         */
+        public String getGenerateLevel() {
+            return this.generateLevel;
+        }
+
+        /**
+         * @return generateTechnology
+         */
+        public String getGenerateTechnology() {
+            return this.generateTechnology;
+        }
+
+        /**
+         * @return searchModels
+         */
+        public java.util.List<String> getSearchModels() {
+            return this.searchModels;
+        }
+
+        /**
+         * @return searchParam
+         */
+        public SearchParam getSearchParam() {
+            return this.searchParam;
+        }
+
+        public static final class Builder {
+            private Integer dialogueType; 
+            private Boolean endToEnd; 
+            private String generateLevel; 
+            private String generateTechnology; 
+            private java.util.List<String> searchModels; 
+            private SearchParam searchParam; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChatConfig model) {
+                this.dialogueType = model.dialogueType;
+                this.endToEnd = model.endToEnd;
+                this.generateLevel = model.generateLevel;
+                this.generateTechnology = model.generateTechnology;
+                this.searchModels = model.searchModels;
+                this.searchParam = model.searchParam;
+            } 
+
+            /**
+             * DialogueType.
+             */
+            public Builder dialogueType(Integer dialogueType) {
+                this.dialogueType = dialogueType;
+                return this;
+            }
+
+            /**
+             * EndToEnd.
+             */
+            public Builder endToEnd(Boolean endToEnd) {
+                this.endToEnd = endToEnd;
+                return this;
+            }
+
+            /**
+             * GenerateLevel.
+             */
+            public Builder generateLevel(String generateLevel) {
+                this.generateLevel = generateLevel;
+                return this;
+            }
+
+            /**
+             * GenerateTechnology.
+             */
+            public Builder generateTechnology(String generateTechnology) {
+                this.generateTechnology = generateTechnology;
+                return this;
+            }
+
+            /**
+             * SearchModels.
+             */
+            public Builder searchModels(java.util.List<String> searchModels) {
+                this.searchModels = searchModels;
+                return this;
+            }
+
+            /**
+             * SearchParam.
+             */
+            public Builder searchParam(SearchParam searchParam) {
+                this.searchParam = searchParam;
+                return this;
+            }
+
+            public ChatConfig build() {
+                return new ChatConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSearchTaskDialoguesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSearchTaskDialoguesResponseBody</p>
+     */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ChatConfig")
+        private ChatConfig chatConfig;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -276,6 +651,7 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
         private String text;
 
         private Data(Builder builder) {
+            this.chatConfig = builder.chatConfig;
             this.createTime = builder.createTime;
             this.dialogueType = builder.dialogueType;
             this.goodText = builder.goodText;
@@ -295,6 +671,13 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return chatConfig
+         */
+        public ChatConfig getChatConfig() {
+            return this.chatConfig;
         }
 
         /**
@@ -375,6 +758,7 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private ChatConfig chatConfig; 
             private String createTime; 
             private Integer dialogueType; 
             private String goodText; 
@@ -391,6 +775,7 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.chatConfig = model.chatConfig;
                 this.createTime = model.createTime;
                 this.dialogueType = model.dialogueType;
                 this.goodText = model.goodText;
@@ -403,6 +788,14 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
                 this.taskId = model.taskId;
                 this.text = model.text;
             } 
+
+            /**
+             * ChatConfig.
+             */
+            public Builder chatConfig(ChatConfig chatConfig) {
+                this.chatConfig = chatConfig;
+                return this;
+            }
 
             /**
              * CreateTime.
