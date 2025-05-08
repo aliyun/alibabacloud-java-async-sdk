@@ -253,6 +253,102 @@ public class GetPropertiesResponseBody extends TeaModel {
      *
      * <p>GetPropertiesResponseBody</p>
      */
+    public static class CopilotPreciseSearchSources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("DatasetName")
+        private String datasetName;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private CopilotPreciseSearchSources(Builder builder) {
+            this.code = builder.code;
+            this.datasetName = builder.datasetName;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CopilotPreciseSearchSources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return datasetName
+         */
+        public String getDatasetName() {
+            return this.datasetName;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String datasetName; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(CopilotPreciseSearchSources model) {
+                this.code = model.code;
+                this.datasetName = model.datasetName;
+                this.name = model.name;
+            } 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * DatasetName.
+             */
+            public Builder datasetName(String datasetName) {
+                this.datasetName = datasetName;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public CopilotPreciseSearchSources build() {
+                return new CopilotPreciseSearchSources(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetPropertiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPropertiesResponseBody</p>
+     */
     public static class Articles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Select")
         private Boolean select;
@@ -563,6 +659,9 @@ public class GetPropertiesResponseBody extends TeaModel {
      * <p>GetPropertiesResponseBody</p>
      */
     public static class IntelligentSearchConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CopilotPreciseSearchSources")
+        private java.util.List<CopilotPreciseSearchSources> copilotPreciseSearchSources;
+
         @com.aliyun.core.annotation.NameInMap("ProductDescription")
         private String productDescription;
 
@@ -573,6 +672,7 @@ public class GetPropertiesResponseBody extends TeaModel {
         private java.util.List<SearchSources> searchSources;
 
         private IntelligentSearchConfig(Builder builder) {
+            this.copilotPreciseSearchSources = builder.copilotPreciseSearchSources;
             this.productDescription = builder.productDescription;
             this.searchSamples = builder.searchSamples;
             this.searchSources = builder.searchSources;
@@ -584,6 +684,13 @@ public class GetPropertiesResponseBody extends TeaModel {
 
         public static IntelligentSearchConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return copilotPreciseSearchSources
+         */
+        public java.util.List<CopilotPreciseSearchSources> getCopilotPreciseSearchSources() {
+            return this.copilotPreciseSearchSources;
         }
 
         /**
@@ -608,6 +715,7 @@ public class GetPropertiesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<CopilotPreciseSearchSources> copilotPreciseSearchSources; 
             private String productDescription; 
             private java.util.List<SearchSamples> searchSamples; 
             private java.util.List<SearchSources> searchSources; 
@@ -616,10 +724,19 @@ public class GetPropertiesResponseBody extends TeaModel {
             } 
 
             private Builder(IntelligentSearchConfig model) {
+                this.copilotPreciseSearchSources = model.copilotPreciseSearchSources;
                 this.productDescription = model.productDescription;
                 this.searchSamples = model.searchSamples;
                 this.searchSources = model.searchSources;
             } 
+
+            /**
+             * CopilotPreciseSearchSources.
+             */
+            public Builder copilotPreciseSearchSources(java.util.List<CopilotPreciseSearchSources> copilotPreciseSearchSources) {
+                this.copilotPreciseSearchSources = copilotPreciseSearchSources;
+                return this;
+            }
 
             /**
              * ProductDescription.
