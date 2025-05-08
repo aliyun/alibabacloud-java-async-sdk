@@ -38,6 +38,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NextStage")
     private String nextStage;
 
+    @com.aliyun.core.annotation.NameInMap("NickName")
+    private String nickName;
+
     @com.aliyun.core.annotation.NameInMap("PasswordStrategy")
     private PasswordStrategy passwordStrategy;
 
@@ -79,6 +82,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         this.label = builder.label;
         this.loginToken = builder.loginToken;
         this.nextStage = builder.nextStage;
+        this.nickName = builder.nickName;
         this.passwordStrategy = builder.passwordStrategy;
         this.phone = builder.phone;
         this.props = builder.props;
@@ -151,6 +155,13 @@ public class GetLoginTokenResponseBody extends TeaModel {
      */
     public String getNextStage() {
         return this.nextStage;
+    }
+
+    /**
+     * @return nickName
+     */
+    public String getNickName() {
+        return this.nickName;
     }
 
     /**
@@ -238,6 +249,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         private String label; 
         private String loginToken; 
         private String nextStage; 
+        private String nickName; 
         private PasswordStrategy passwordStrategy; 
         private String phone; 
         private java.util.Map<String, String> props; 
@@ -261,6 +273,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
             this.label = model.label;
             this.loginToken = model.loginToken;
             this.nextStage = model.nextStage;
+            this.nickName = model.nickName;
             this.passwordStrategy = model.passwordStrategy;
             this.phone = model.phone;
             this.props = model.props;
@@ -357,6 +370,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
          */
         public Builder nextStage(String nextStage) {
             this.nextStage = nextStage;
+            return this;
+        }
+
+        /**
+         * NickName.
+         */
+        public Builder nickName(String nickName) {
+            this.nickName = nickName;
             return this;
         }
 
