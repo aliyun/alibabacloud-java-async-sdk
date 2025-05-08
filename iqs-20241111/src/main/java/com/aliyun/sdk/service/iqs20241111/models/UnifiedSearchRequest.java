@@ -17,28 +17,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnifiedSearchRequest</p>
  */
 public class UnifiedSearchRequest extends Request {
-    @com.aliyun.core.annotation.NameInMap("category")
-    private String category;
-
-    @com.aliyun.core.annotation.NameInMap("contents")
-    private RequestContents contents;
-
-    @com.aliyun.core.annotation.NameInMap("engineType")
-    private String engineType;
-
-    @com.aliyun.core.annotation.NameInMap("query")
-    private String query;
-
-    @com.aliyun.core.annotation.NameInMap("timeRange")
-    private String timeRange;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    private UnifiedSearchInput body;
 
     private UnifiedSearchRequest(Builder builder) {
         super(builder);
-        this.category = builder.category;
-        this.contents = builder.contents;
-        this.engineType = builder.engineType;
-        this.query = builder.query;
-        this.timeRange = builder.timeRange;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -55,46 +40,14 @@ public class UnifiedSearchRequest extends Request {
     }
 
     /**
-     * @return category
+     * @return body
      */
-    public String getCategory() {
-        return this.category;
-    }
-
-    /**
-     * @return contents
-     */
-    public RequestContents getContents() {
-        return this.contents;
-    }
-
-    /**
-     * @return engineType
-     */
-    public String getEngineType() {
-        return this.engineType;
-    }
-
-    /**
-     * @return query
-     */
-    public String getQuery() {
-        return this.query;
-    }
-
-    /**
-     * @return timeRange
-     */
-    public String getTimeRange() {
-        return this.timeRange;
+    public UnifiedSearchInput getBody() {
+        return this.body;
     }
 
     public static final class Builder extends Request.Builder<UnifiedSearchRequest, Builder> {
-        private String category; 
-        private RequestContents contents; 
-        private String engineType; 
-        private String query; 
-        private String timeRange; 
+        private UnifiedSearchInput body; 
 
         private Builder() {
             super();
@@ -102,50 +55,15 @@ public class UnifiedSearchRequest extends Request {
 
         private Builder(UnifiedSearchRequest request) {
             super(request);
-            this.category = request.category;
-            this.contents = request.contents;
-            this.engineType = request.engineType;
-            this.query = request.query;
-            this.timeRange = request.timeRange;
+            this.body = request.body;
         } 
 
         /**
-         * category.
+         * body.
          */
-        public Builder category(String category) {
-            this.category = category;
-            return this;
-        }
-
-        /**
-         * contents.
-         */
-        public Builder contents(RequestContents contents) {
-            this.contents = contents;
-            return this;
-        }
-
-        /**
-         * engineType.
-         */
-        public Builder engineType(String engineType) {
-            this.engineType = engineType;
-            return this;
-        }
-
-        /**
-         * query.
-         */
-        public Builder query(String query) {
-            this.query = query;
-            return this;
-        }
-
-        /**
-         * timeRange.
-         */
-        public Builder timeRange(String timeRange) {
-            this.timeRange = timeRange;
+        public Builder body(UnifiedSearchInput body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

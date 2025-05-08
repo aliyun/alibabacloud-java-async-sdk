@@ -17,32 +17,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnifiedSearchResponse</p>
  */
 public class UnifiedSearchResponse extends Response {
-    @com.aliyun.core.annotation.NameInMap("costCredits")
-    private UnifiedCostCredits costCredits;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @com.aliyun.core.annotation.NameInMap("pageItems")
-    private java.util.List<UnifiedPageItem> pageItems;
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
 
-    @com.aliyun.core.annotation.NameInMap("queryContext")
-    private UnifiedQueryContext queryContext;
-
-    @com.aliyun.core.annotation.NameInMap("requestId")
-    private String requestId;
-
-    @com.aliyun.core.annotation.NameInMap("sceneItems")
-    private java.util.List<UnifiedSceneItem> sceneItems;
-
-    @com.aliyun.core.annotation.NameInMap("searchInformation")
-    private UnifiedSearchInformation searchInformation;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private UnifiedSearchOutput body;
 
     private UnifiedSearchResponse(BuilderImpl builder) {
         super(builder);
-        this.costCredits = builder.costCredits;
-        this.pageItems = builder.pageItems;
-        this.queryContext = builder.queryContext;
-        this.requestId = builder.requestId;
-        this.sceneItems = builder.sceneItems;
-        this.searchInformation = builder.searchInformation;
+        this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
+        this.body = builder.body;
     }
 
     public static UnifiedSearchResponse create() {
@@ -55,60 +43,33 @@ public class UnifiedSearchResponse extends Response {
     }
 
     /**
-     * @return costCredits
+     * @return headers
      */
-    public UnifiedCostCredits getCostCredits() {
-        return this.costCredits;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
     /**
-     * @return pageItems
+     * @return statusCode
      */
-    public java.util.List<UnifiedPageItem> getPageItems() {
-        return this.pageItems;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     /**
-     * @return queryContext
+     * @return body
      */
-    public UnifiedQueryContext getQueryContext() {
-        return this.queryContext;
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
-     * @return sceneItems
-     */
-    public java.util.List<UnifiedSceneItem> getSceneItems() {
-        return this.sceneItems;
-    }
-
-    /**
-     * @return searchInformation
-     */
-    public UnifiedSearchInformation getSearchInformation() {
-        return this.searchInformation;
+    public UnifiedSearchOutput getBody() {
+        return this.body;
     }
 
     public interface Builder extends Response.Builder<UnifiedSearchResponse, Builder> {
 
-        Builder costCredits(UnifiedCostCredits costCredits);
+        Builder headers(java.util.Map<String, String> headers);
 
-        Builder pageItems(java.util.List<UnifiedPageItem> pageItems);
+        Builder statusCode(Integer statusCode);
 
-        Builder queryContext(UnifiedQueryContext queryContext);
-
-        Builder requestId(String requestId);
-
-        Builder sceneItems(java.util.List<UnifiedSceneItem> sceneItems);
-
-        Builder searchInformation(UnifiedSearchInformation searchInformation);
+        Builder body(UnifiedSearchOutput body);
 
         @Override
         UnifiedSearchResponse build();
@@ -118,12 +79,9 @@ public class UnifiedSearchResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<UnifiedSearchResponse, Builder>
             implements Builder {
-        private UnifiedCostCredits costCredits; 
-        private java.util.List<UnifiedPageItem> pageItems; 
-        private UnifiedQueryContext queryContext; 
-        private String requestId; 
-        private java.util.List<UnifiedSceneItem> sceneItems; 
-        private UnifiedSearchInformation searchInformation; 
+        private java.util.Map<String, String> headers; 
+        private Integer statusCode; 
+        private UnifiedSearchOutput body; 
 
         private BuilderImpl() {
             super();
@@ -131,65 +89,35 @@ public class UnifiedSearchResponse extends Response {
 
         private BuilderImpl(UnifiedSearchResponse response) {
             super(response);
-            this.costCredits = response.costCredits;
-            this.pageItems = response.pageItems;
-            this.queryContext = response.queryContext;
-            this.requestId = response.requestId;
-            this.sceneItems = response.sceneItems;
-            this.searchInformation = response.searchInformation;
+            this.headers = response.headers;
+            this.statusCode = response.statusCode;
+            this.body = response.body;
         } 
 
         /**
-         * costCredits.
+         * headers.
          */
         @Override
-        public Builder costCredits(UnifiedCostCredits costCredits) {
-            this.costCredits = costCredits;
+        public Builder headers(java.util.Map<String, String> headers) {
+            this.headers = headers;
             return this;
         }
 
         /**
-         * pageItems.
+         * statusCode.
          */
         @Override
-        public Builder pageItems(java.util.List<UnifiedPageItem> pageItems) {
-            this.pageItems = pageItems;
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
         /**
-         * queryContext.
+         * body.
          */
         @Override
-        public Builder queryContext(UnifiedQueryContext queryContext) {
-            this.queryContext = queryContext;
-            return this;
-        }
-
-        /**
-         * requestId.
-         */
-        @Override
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * sceneItems.
-         */
-        @Override
-        public Builder sceneItems(java.util.List<UnifiedSceneItem> sceneItems) {
-            this.sceneItems = sceneItems;
-            return this;
-        }
-
-        /**
-         * searchInformation.
-         */
-        @Override
-        public Builder searchInformation(UnifiedSearchInformation searchInformation) {
-            this.searchInformation = searchInformation;
+        public Builder body(UnifiedSearchOutput body) {
+            this.body = body;
             return this;
         }
 
