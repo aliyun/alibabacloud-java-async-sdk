@@ -20,6 +20,9 @@ public class ListDatasetsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("CustomSemanticSearchConfig")
+    private CustomSemanticSearchConfig customSemanticSearchConfig;
+
     @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List<Data> data;
 
@@ -41,11 +44,15 @@ public class ListDatasetsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
+    @com.aliyun.core.annotation.NameInMap("ThirdSearchConfig")
+    private ThirdSearchConfig thirdSearchConfig;
+
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDatasetsResponseBody(Builder builder) {
         this.code = builder.code;
+        this.customSemanticSearchConfig = builder.customSemanticSearchConfig;
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
@@ -53,6 +60,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.success = builder.success;
+        this.thirdSearchConfig = builder.thirdSearchConfig;
         this.totalCount = builder.totalCount;
     }
 
@@ -73,6 +81,13 @@ public class ListDatasetsResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return customSemanticSearchConfig
+     */
+    public CustomSemanticSearchConfig getCustomSemanticSearchConfig() {
+        return this.customSemanticSearchConfig;
     }
 
     /**
@@ -125,6 +140,13 @@ public class ListDatasetsResponseBody extends TeaModel {
     }
 
     /**
+     * @return thirdSearchConfig
+     */
+    public ThirdSearchConfig getThirdSearchConfig() {
+        return this.thirdSearchConfig;
+    }
+
+    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
@@ -133,6 +155,7 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private CustomSemanticSearchConfig customSemanticSearchConfig; 
         private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
@@ -140,6 +163,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Boolean success; 
+        private ThirdSearchConfig thirdSearchConfig; 
         private Integer totalCount; 
 
         private Builder() {
@@ -147,6 +171,7 @@ public class ListDatasetsResponseBody extends TeaModel {
 
         private Builder(ListDatasetsResponseBody model) {
             this.code = model.code;
+            this.customSemanticSearchConfig = model.customSemanticSearchConfig;
             this.data = model.data;
             this.httpStatusCode = model.httpStatusCode;
             this.message = model.message;
@@ -154,6 +179,7 @@ public class ListDatasetsResponseBody extends TeaModel {
             this.pageSize = model.pageSize;
             this.requestId = model.requestId;
             this.success = model.success;
+            this.thirdSearchConfig = model.thirdSearchConfig;
             this.totalCount = model.totalCount;
         } 
 
@@ -162,6 +188,14 @@ public class ListDatasetsResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * CustomSemanticSearchConfig.
+         */
+        public Builder customSemanticSearchConfig(CustomSemanticSearchConfig customSemanticSearchConfig) {
+            this.customSemanticSearchConfig = customSemanticSearchConfig;
             return this;
         }
 
@@ -222,6 +256,14 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         /**
+         * ThirdSearchConfig.
+         */
+        public Builder thirdSearchConfig(ThirdSearchConfig thirdSearchConfig) {
+            this.thirdSearchConfig = thirdSearchConfig;
+            return this;
+        }
+
+        /**
          * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
@@ -235,6 +277,123 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDatasetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDatasetsResponseBody</p>
+     */
+    public static class CustomSemanticSearchConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DatasetQuota")
+        private Integer datasetQuota;
+
+        @com.aliyun.core.annotation.NameInMap("DatasetUsedQuota")
+        private Integer datasetUsedQuota;
+
+        @com.aliyun.core.annotation.NameInMap("DocQuota")
+        private Long docQuota;
+
+        @com.aliyun.core.annotation.NameInMap("DocUsedQuota")
+        private Long docUsedQuota;
+
+        private CustomSemanticSearchConfig(Builder builder) {
+            this.datasetQuota = builder.datasetQuota;
+            this.datasetUsedQuota = builder.datasetUsedQuota;
+            this.docQuota = builder.docQuota;
+            this.docUsedQuota = builder.docUsedQuota;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomSemanticSearchConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return datasetQuota
+         */
+        public Integer getDatasetQuota() {
+            return this.datasetQuota;
+        }
+
+        /**
+         * @return datasetUsedQuota
+         */
+        public Integer getDatasetUsedQuota() {
+            return this.datasetUsedQuota;
+        }
+
+        /**
+         * @return docQuota
+         */
+        public Long getDocQuota() {
+            return this.docQuota;
+        }
+
+        /**
+         * @return docUsedQuota
+         */
+        public Long getDocUsedQuota() {
+            return this.docUsedQuota;
+        }
+
+        public static final class Builder {
+            private Integer datasetQuota; 
+            private Integer datasetUsedQuota; 
+            private Long docQuota; 
+            private Long docUsedQuota; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomSemanticSearchConfig model) {
+                this.datasetQuota = model.datasetQuota;
+                this.datasetUsedQuota = model.datasetUsedQuota;
+                this.docQuota = model.docQuota;
+                this.docUsedQuota = model.docUsedQuota;
+            } 
+
+            /**
+             * DatasetQuota.
+             */
+            public Builder datasetQuota(Integer datasetQuota) {
+                this.datasetQuota = datasetQuota;
+                return this;
+            }
+
+            /**
+             * DatasetUsedQuota.
+             */
+            public Builder datasetUsedQuota(Integer datasetUsedQuota) {
+                this.datasetUsedQuota = datasetUsedQuota;
+                return this;
+            }
+
+            /**
+             * DocQuota.
+             */
+            public Builder docQuota(Long docQuota) {
+                this.docQuota = docQuota;
+                return this;
+            }
+
+            /**
+             * DocUsedQuota.
+             */
+            public Builder docUsedQuota(Long docUsedQuota) {
+                this.docUsedQuota = docUsedQuota;
+                return this;
+            }
+
+            public CustomSemanticSearchConfig build() {
+                return new CustomSemanticSearchConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ListDatasetsResponseBody} extends {@link TeaModel}
@@ -260,6 +419,9 @@ public class ListDatasetsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasetType")
         private String datasetType;
 
+        @com.aliyun.core.annotation.NameInMap("DocUsedQuota")
+        private Long docUsedQuota;
+
         @com.aliyun.core.annotation.NameInMap("SearchDatasetEnable")
         private Integer searchDatasetEnable;
 
@@ -270,6 +432,7 @@ public class ListDatasetsResponseBody extends TeaModel {
             this.datasetId = builder.datasetId;
             this.datasetName = builder.datasetName;
             this.datasetType = builder.datasetType;
+            this.docUsedQuota = builder.docUsedQuota;
             this.searchDatasetEnable = builder.searchDatasetEnable;
         }
 
@@ -324,6 +487,13 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         /**
+         * @return docUsedQuota
+         */
+        public Long getDocUsedQuota() {
+            return this.docUsedQuota;
+        }
+
+        /**
          * @return searchDatasetEnable
          */
         public Integer getSearchDatasetEnable() {
@@ -337,6 +507,7 @@ public class ListDatasetsResponseBody extends TeaModel {
             private Long datasetId; 
             private String datasetName; 
             private String datasetType; 
+            private Long docUsedQuota; 
             private Integer searchDatasetEnable; 
 
             private Builder() {
@@ -349,6 +520,7 @@ public class ListDatasetsResponseBody extends TeaModel {
                 this.datasetId = model.datasetId;
                 this.datasetName = model.datasetName;
                 this.datasetType = model.datasetType;
+                this.docUsedQuota = model.docUsedQuota;
                 this.searchDatasetEnable = model.searchDatasetEnable;
             } 
 
@@ -401,6 +573,14 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
+             * DocUsedQuota.
+             */
+            public Builder docUsedQuota(Long docUsedQuota) {
+                this.docUsedQuota = docUsedQuota;
+                return this;
+            }
+
+            /**
              * SearchDatasetEnable.
              */
             public Builder searchDatasetEnable(Integer searchDatasetEnable) {
@@ -410,6 +590,81 @@ public class ListDatasetsResponseBody extends TeaModel {
 
             public Data build() {
                 return new Data(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListDatasetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDatasetsResponseBody</p>
+     */
+    public static class ThirdSearchConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DatasetQuota")
+        private Integer datasetQuota;
+
+        @com.aliyun.core.annotation.NameInMap("DatasetUsedQuota")
+        private Integer datasetUsedQuota;
+
+        private ThirdSearchConfig(Builder builder) {
+            this.datasetQuota = builder.datasetQuota;
+            this.datasetUsedQuota = builder.datasetUsedQuota;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ThirdSearchConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return datasetQuota
+         */
+        public Integer getDatasetQuota() {
+            return this.datasetQuota;
+        }
+
+        /**
+         * @return datasetUsedQuota
+         */
+        public Integer getDatasetUsedQuota() {
+            return this.datasetUsedQuota;
+        }
+
+        public static final class Builder {
+            private Integer datasetQuota; 
+            private Integer datasetUsedQuota; 
+
+            private Builder() {
+            } 
+
+            private Builder(ThirdSearchConfig model) {
+                this.datasetQuota = model.datasetQuota;
+                this.datasetUsedQuota = model.datasetUsedQuota;
+            } 
+
+            /**
+             * DatasetQuota.
+             */
+            public Builder datasetQuota(Integer datasetQuota) {
+                this.datasetQuota = datasetQuota;
+                return this;
+            }
+
+            /**
+             * DatasetUsedQuota.
+             */
+            public Builder datasetUsedQuota(Integer datasetUsedQuota) {
+                this.datasetUsedQuota = datasetUsedQuota;
+                return this;
+            }
+
+            public ThirdSearchConfig build() {
+                return new ThirdSearchConfig(this);
             } 
 
         } 

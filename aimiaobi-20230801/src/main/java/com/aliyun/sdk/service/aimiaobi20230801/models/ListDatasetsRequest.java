@@ -38,6 +38,10 @@ public class ListDatasetsRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncludeConfig")
+    private Boolean includeConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -65,6 +69,7 @@ public class ListDatasetsRequest extends Request {
         this.datasetName = builder.datasetName;
         this.datasetType = builder.datasetType;
         this.endTime = builder.endTime;
+        this.includeConfig = builder.includeConfig;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.searchDatasetEnable = builder.searchDatasetEnable;
@@ -121,6 +126,13 @@ public class ListDatasetsRequest extends Request {
     }
 
     /**
+     * @return includeConfig
+     */
+    public Boolean getIncludeConfig() {
+        return this.includeConfig;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -161,6 +173,7 @@ public class ListDatasetsRequest extends Request {
         private String datasetName; 
         private String datasetType; 
         private String endTime; 
+        private Boolean includeConfig; 
         private Integer pageNumber; 
         private String pageSize; 
         private Integer searchDatasetEnable; 
@@ -178,6 +191,7 @@ public class ListDatasetsRequest extends Request {
             this.datasetName = request.datasetName;
             this.datasetType = request.datasetType;
             this.endTime = request.endTime;
+            this.includeConfig = request.includeConfig;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.searchDatasetEnable = request.searchDatasetEnable;
@@ -227,6 +241,15 @@ public class ListDatasetsRequest extends Request {
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * IncludeConfig.
+         */
+        public Builder includeConfig(Boolean includeConfig) {
+            this.putBodyParameter("IncludeConfig", includeConfig);
+            this.includeConfig = includeConfig;
             return this;
         }
 
