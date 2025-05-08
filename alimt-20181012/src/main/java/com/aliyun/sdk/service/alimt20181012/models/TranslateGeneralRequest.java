@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TranslateGeneralRequest} extends {@link RequestModel}
  *
  * <p>TranslateGeneralRequest</p>
@@ -57,7 +63,7 @@ public class TranslateGeneralRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -136,7 +142,10 @@ public class TranslateGeneralRequest extends Request {
         }
 
         /**
-         * FormatType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder formatType(String formatType) {
             this.putBodyParameter("FormatType", formatType);
@@ -154,7 +163,10 @@ public class TranslateGeneralRequest extends Request {
         }
 
         /**
-         * SourceLanguage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder sourceLanguage(String sourceLanguage) {
             this.putBodyParameter("SourceLanguage", sourceLanguage);
@@ -163,7 +175,7 @@ public class TranslateGeneralRequest extends Request {
         }
 
         /**
-         * SourceText.
+         * <p>This parameter is required.</p>
          */
         public Builder sourceText(String sourceText) {
             this.putBodyParameter("SourceText", sourceText);
@@ -172,7 +184,10 @@ public class TranslateGeneralRequest extends Request {
         }
 
         /**
-         * TargetLanguage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder targetLanguage(String targetLanguage) {
             this.putBodyParameter("TargetLanguage", targetLanguage);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTranslateImageBatchResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetTranslateImageBatchResultResponseBody</p>
@@ -36,6 +42,10 @@ public class GetTranslateImageBatchResultResponseBody extends TeaModel {
 
     public static GetTranslateImageBatchResultResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class GetTranslateImageBatchResultResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTranslateImageBatchResultResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -110,6 +130,12 @@ public class GetTranslateImageBatchResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTranslateImageBatchResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTranslateImageBatchResultResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
@@ -208,6 +234,19 @@ public class GetTranslateImageBatchResultResponseBody extends TeaModel {
             private Boolean success; 
             private String templateJson; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.code = model.code;
+                this.finalImageUrl = model.finalImageUrl;
+                this.inPaintingUrl = model.inPaintingUrl;
+                this.message = model.message;
+                this.sourceImageUrl = model.sourceImageUrl;
+                this.success = model.success;
+                this.templateJson = model.templateJson;
+            } 
+
             /**
              * Code.
              */
@@ -271,9 +310,15 @@ public class GetTranslateImageBatchResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTranslateImageBatchResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTranslateImageBatchResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -294,7 +339,7 @@ public class GetTranslateImageBatchResultResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -306,13 +351,21 @@ public class GetTranslateImageBatchResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.result = model.result;
+                this.status = model.status;
+            } 
 
             /**
              * Result.
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TranslateGeneralVpcResponseBody} extends {@link TeaModel}
  *
  * <p>TranslateGeneralVpcResponseBody</p>
@@ -37,6 +43,10 @@ public class TranslateGeneralVpcResponseBody extends TeaModel {
 
     public static TranslateGeneralVpcResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +83,21 @@ public class TranslateGeneralVpcResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(TranslateGeneralVpcResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -98,7 +121,10 @@ public class TranslateGeneralVpcResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC2DCCC9-C3DF-4F59-8D8E-78185729F16D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,6 +137,12 @@ public class TranslateGeneralVpcResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TranslateGeneralVpcResponseBody} extends {@link TeaModel}
+     *
+     * <p>TranslateGeneralVpcResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DetectedLanguage")
         private String detectedLanguage;
@@ -160,6 +192,15 @@ public class TranslateGeneralVpcResponseBody extends TeaModel {
             private String detectedLanguage; 
             private String translated; 
             private String wordCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.detectedLanguage = model.detectedLanguage;
+                this.translated = model.translated;
+                this.wordCount = model.wordCount;
+            } 
 
             /**
              * DetectedLanguage.

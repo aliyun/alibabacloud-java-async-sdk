@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAsyncTranslateRequest} extends {@link RequestModel}
  *
  * <p>GetAsyncTranslateRequest</p>
@@ -29,7 +35,7 @@ public class GetAsyncTranslateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +60,10 @@ public class GetAsyncTranslateRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>77056ab7-7be1-4c2a-91a1-f20f63894048</p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);

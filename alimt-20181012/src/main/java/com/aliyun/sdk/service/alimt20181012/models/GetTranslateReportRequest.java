@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTranslateReportRequest} extends {@link RequestModel}
  *
  * <p>GetTranslateReportRequest</p>
@@ -47,7 +53,7 @@ public class GetTranslateReportRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +105,7 @@ public class GetTranslateReportRequest extends Request {
         } 
 
         /**
-         * ApiName.
+         * <p>This parameter is required.</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -108,7 +114,10 @@ public class GetTranslateReportRequest extends Request {
         }
 
         /**
-         * BeginTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-01 00:00:00</p>
          */
         public Builder beginTime(String beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -117,7 +126,10 @@ public class GetTranslateReportRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-01 23:59:59</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -126,7 +138,7 @@ public class GetTranslateReportRequest extends Request {
         }
 
         /**
-         * Group.
+         * <p>This parameter is required.</p>
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);

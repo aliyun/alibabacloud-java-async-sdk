@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocTranslateTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetDocTranslateTaskResponseBody</p>
@@ -48,6 +54,10 @@ public class GetDocTranslateTaskResponseBody extends TeaModel {
 
     public static GetDocTranslateTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -107,6 +117,19 @@ public class GetDocTranslateTaskResponseBody extends TeaModel {
         private String translateErrorCode; 
         private String translateErrorMessage; 
         private String translateFileUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDocTranslateTaskResponseBody model) {
+            this.pageCount = model.pageCount;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.taskId = model.taskId;
+            this.translateErrorCode = model.translateErrorCode;
+            this.translateErrorMessage = model.translateErrorMessage;
+            this.translateFileUrl = model.translateFileUrl;
+        } 
 
         /**
          * PageCount.

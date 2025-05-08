@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TranslateImageBatchRequest} extends {@link RequestModel}
  *
  * <p>TranslateImageBatchRequest</p>
@@ -56,7 +62,7 @@ public class TranslateImageBatchRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -153,7 +159,10 @@ public class TranslateImageBatchRequest extends Request {
         }
 
         /**
-         * ImageUrls.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/1.jpg,https://example.com/2.jpg,https://example.com/3.jpg">https://example.com/1.jpg,https://example.com/2.jpg,https://example.com/3.jpg</a></p>
          */
         public Builder imageUrls(String imageUrls) {
             this.putBodyParameter("ImageUrls", imageUrls);
@@ -162,7 +171,10 @@ public class TranslateImageBatchRequest extends Request {
         }
 
         /**
-         * SourceLanguage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder sourceLanguage(String sourceLanguage) {
             this.putBodyParameter("SourceLanguage", sourceLanguage);
@@ -171,7 +183,10 @@ public class TranslateImageBatchRequest extends Request {
         }
 
         /**
-         * TargetLanguage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder targetLanguage(String targetLanguage) {
             this.putBodyParameter("TargetLanguage", targetLanguage);

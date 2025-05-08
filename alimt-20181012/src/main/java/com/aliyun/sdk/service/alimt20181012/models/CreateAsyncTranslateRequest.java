@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAsyncTranslateRequest} extends {@link RequestModel}
  *
  * <p>CreateAsyncTranslateRequest</p>
@@ -59,7 +65,7 @@ public class CreateAsyncTranslateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,7 +135,10 @@ public class CreateAsyncTranslateRequest extends Request {
         } 
 
         /**
-         * ApiType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>translate_standard</p>
          */
         public Builder apiType(String apiType) {
             this.putBodyParameter("ApiType", apiType);
@@ -138,7 +147,10 @@ public class CreateAsyncTranslateRequest extends Request {
         }
 
         /**
-         * FormatType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder formatType(String formatType) {
             this.putBodyParameter("FormatType", formatType);
@@ -147,7 +159,10 @@ public class CreateAsyncTranslateRequest extends Request {
         }
 
         /**
-         * Scene.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         public Builder scene(String scene) {
             this.putBodyParameter("Scene", scene);
@@ -156,7 +171,10 @@ public class CreateAsyncTranslateRequest extends Request {
         }
 
         /**
-         * SourceLanguage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder sourceLanguage(String sourceLanguage) {
             this.putBodyParameter("SourceLanguage", sourceLanguage);
@@ -165,7 +183,10 @@ public class CreateAsyncTranslateRequest extends Request {
         }
 
         /**
-         * SourceText.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Opinion: We have finally gotten some relief at the pump. But it may not last long</p>
          */
         public Builder sourceText(String sourceText) {
             this.putBodyParameter("SourceText", sourceText);
@@ -174,7 +195,10 @@ public class CreateAsyncTranslateRequest extends Request {
         }
 
         /**
-         * TargetLanguage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder targetLanguage(String targetLanguage) {
             this.putBodyParameter("TargetLanguage", targetLanguage);

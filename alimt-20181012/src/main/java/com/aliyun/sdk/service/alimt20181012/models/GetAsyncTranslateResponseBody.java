@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAsyncTranslateResponseBody} extends {@link TeaModel}
  *
  * <p>GetAsyncTranslateResponseBody</p>
@@ -36,6 +42,10 @@ public class GetAsyncTranslateResponseBody extends TeaModel {
 
     public static GetAsyncTranslateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class GetAsyncTranslateResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAsyncTranslateResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -110,6 +130,12 @@ public class GetAsyncTranslateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAsyncTranslateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAsyncTranslateResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DetectedLanguage")
         private String detectedLanguage;
@@ -171,6 +197,16 @@ public class GetAsyncTranslateResponseBody extends TeaModel {
             private String status; 
             private String translatedText; 
             private String wordCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.detectedLanguage = model.detectedLanguage;
+                this.status = model.status;
+                this.translatedText = model.translatedText;
+                this.wordCount = model.wordCount;
+            } 
 
             /**
              * DetectedLanguage.

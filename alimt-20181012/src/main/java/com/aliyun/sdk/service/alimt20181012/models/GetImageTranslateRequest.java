@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetImageTranslateRequest} extends {@link RequestModel}
  *
  * <p>GetImageTranslateRequest</p>
@@ -46,7 +52,7 @@ public class GetImageTranslateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -107,7 +113,10 @@ public class GetImageTranslateRequest extends Request {
         }
 
         /**
-         * SourceLanguage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder sourceLanguage(String sourceLanguage) {
             this.putBodyParameter("SourceLanguage", sourceLanguage);
@@ -116,7 +125,10 @@ public class GetImageTranslateRequest extends Request {
         }
 
         /**
-         * TargetLanguage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder targetLanguage(String targetLanguage) {
             this.putBodyParameter("TargetLanguage", targetLanguage);
@@ -125,7 +137,10 @@ public class GetImageTranslateRequest extends Request {
         }
 
         /**
-         * Url.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxxxxx.oss-cn-shenzhen.aliyuncs.com/xxxxxx.jpg">http://xxxxxxx.oss-cn-shenzhen.aliyuncs.com/xxxxxx.jpg</a></p>
          */
         public Builder url(String url) {
             this.putBodyParameter("Url", url);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBatchTranslateByVPCResponseBody} extends {@link TeaModel}
  *
  * <p>GetBatchTranslateByVPCResponseBody</p>
@@ -21,7 +27,7 @@ public class GetBatchTranslateByVPCResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TranslatedList")
-    private java.util.List < java.util.Map<String, ?>> translatedList;
+    private java.util.List<java.util.Map<String, ?>> translatedList;
 
     private GetBatchTranslateByVPCResponseBody(Builder builder) {
         this.code = builder.code;
@@ -36,6 +42,10 @@ public class GetBatchTranslateByVPCResponseBody extends TeaModel {
 
     public static GetBatchTranslateByVPCResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -62,7 +72,7 @@ public class GetBatchTranslateByVPCResponseBody extends TeaModel {
     /**
      * @return translatedList
      */
-    public java.util.List < java.util.Map<String, ?>> getTranslatedList() {
+    public java.util.List<java.util.Map<String, ?>> getTranslatedList() {
         return this.translatedList;
     }
 
@@ -70,7 +80,17 @@ public class GetBatchTranslateByVPCResponseBody extends TeaModel {
         private Integer code; 
         private String message; 
         private String requestId; 
-        private java.util.List < java.util.Map<String, ?>> translatedList; 
+        private java.util.List<java.util.Map<String, ?>> translatedList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBatchTranslateByVPCResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.translatedList = model.translatedList;
+        } 
 
         /**
          * Code.
@@ -89,7 +109,10 @@ public class GetBatchTranslateByVPCResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC2DCCC9-C3DF-4F59-8D8E-78185729F16D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -99,7 +122,7 @@ public class GetBatchTranslateByVPCResponseBody extends TeaModel {
         /**
          * TranslatedList.
          */
-        public Builder translatedList(java.util.List < java.util.Map<String, ?>> translatedList) {
+        public Builder translatedList(java.util.List<java.util.Map<String, ?>> translatedList) {
             this.translatedList = translatedList;
             return this;
         }

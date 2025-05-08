@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDetectLanguageResponseBody} extends {@link TeaModel}
+ * {@link GetDetectLanguageVpcResponseBody} extends {@link TeaModel}
  *
- * <p>GetDetectLanguageResponseBody</p>
+ * <p>GetDetectLanguageVpcResponseBody</p>
  */
-public class GetDetectLanguageResponseBody extends TeaModel {
+public class GetDetectLanguageVpcResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DetectedLanguage")
     private String detectedLanguage;
 
@@ -26,7 +26,7 @@ public class GetDetectLanguageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private GetDetectLanguageResponseBody(Builder builder) {
+    private GetDetectLanguageVpcResponseBody(Builder builder) {
         this.detectedLanguage = builder.detectedLanguage;
         this.languageProbabilities = builder.languageProbabilities;
         this.requestId = builder.requestId;
@@ -36,7 +36,7 @@ public class GetDetectLanguageResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetDetectLanguageResponseBody create() {
+    public static GetDetectLanguageVpcResponseBody create() {
         return builder().build();
     }
 
@@ -73,7 +73,7 @@ public class GetDetectLanguageResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(GetDetectLanguageResponseBody model) {
+        private Builder(GetDetectLanguageVpcResponseBody model) {
             this.detectedLanguage = model.detectedLanguage;
             this.languageProbabilities = model.languageProbabilities;
             this.requestId = model.requestId;
@@ -103,8 +103,8 @@ public class GetDetectLanguageResponseBody extends TeaModel {
             return this;
         }
 
-        public GetDetectLanguageResponseBody build() {
-            return new GetDetectLanguageResponseBody(this);
+        public GetDetectLanguageVpcResponseBody build() {
+            return new GetDetectLanguageVpcResponseBody(this);
         } 
 
     } 

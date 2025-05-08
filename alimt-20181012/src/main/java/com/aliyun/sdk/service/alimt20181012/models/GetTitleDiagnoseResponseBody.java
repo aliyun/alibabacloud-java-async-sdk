@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTitleDiagnoseResponseBody} extends {@link TeaModel}
  *
  * <p>GetTitleDiagnoseResponseBody</p>
@@ -36,6 +42,10 @@ public class GetTitleDiagnoseResponseBody extends TeaModel {
 
     public static GetTitleDiagnoseResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class GetTitleDiagnoseResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTitleDiagnoseResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -110,6 +130,12 @@ public class GetTitleDiagnoseResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTitleDiagnoseResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTitleDiagnoseResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllUppercaseWords")
         private String allUppercaseWords;
@@ -243,6 +269,22 @@ public class GetTitleDiagnoseResponseBody extends TeaModel {
             private String totalScore; 
             private String wordCount; 
             private String wordSpelledCorrectError; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.allUppercaseWords = model.allUppercaseWords;
+                this.containCoreClasses = model.containCoreClasses;
+                this.disableWords = model.disableWords;
+                this.duplicateWords = model.duplicateWords;
+                this.languageQualityScore = model.languageQualityScore;
+                this.noFirstUppercaseList = model.noFirstUppercaseList;
+                this.overLengthLimit = model.overLengthLimit;
+                this.totalScore = model.totalScore;
+                this.wordCount = model.wordCount;
+                this.wordSpelledCorrectError = model.wordSpelledCorrectError;
+            } 
 
             /**
              * AllUppercaseWords.

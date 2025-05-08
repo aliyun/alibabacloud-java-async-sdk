@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetTranslateReportResponseBody} extends {@link TeaModel}
+ * {@link TranslateSearchResponseBody} extends {@link TeaModel}
  *
- * <p>GetTranslateReportResponseBody</p>
+ * <p>TranslateSearchResponseBody</p>
  */
-public class GetTranslateReportResponseBody extends TeaModel {
+public class TranslateSearchResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
-    private Integer code;
+    private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private String data;
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -29,7 +29,7 @@ public class GetTranslateReportResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private GetTranslateReportResponseBody(Builder builder) {
+    private TranslateSearchResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -40,7 +40,7 @@ public class GetTranslateReportResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetTranslateReportResponseBody create() {
+    public static TranslateSearchResponseBody create() {
         return builder().build();
     }
 
@@ -51,14 +51,14 @@ public class GetTranslateReportResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 
     /**
      * @return data
      */
-    public String getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -77,15 +77,15 @@ public class GetTranslateReportResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
-        private String data; 
+        private String code; 
+        private Data data; 
         private String message; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(GetTranslateReportResponseBody model) {
+        private Builder(TranslateSearchResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -95,7 +95,7 @@ public class GetTranslateReportResponseBody extends TeaModel {
         /**
          * Code.
          */
-        public Builder code(Integer code) {
+        public Builder code(String code) {
             this.code = code;
             return this;
         }
@@ -103,7 +103,7 @@ public class GetTranslateReportResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(String data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
@@ -124,10 +124,64 @@ public class GetTranslateReportResponseBody extends TeaModel {
             return this;
         }
 
-        public GetTranslateReportResponseBody build() {
-            return new GetTranslateReportResponseBody(this);
+        public TranslateSearchResponseBody build() {
+            return new TranslateSearchResponseBody(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link TranslateSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>TranslateSearchResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Translated")
+        private String translated;
+
+        private Data(Builder builder) {
+            this.translated = builder.translated;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return translated
+         */
+        public String getTranslated() {
+            return this.translated;
+        }
+
+        public static final class Builder {
+            private String translated; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.translated = model.translated;
+            } 
+
+            /**
+             * Translated.
+             */
+            public Builder translated(String translated) {
+                this.translated = translated;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

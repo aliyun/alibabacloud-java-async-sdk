@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTitleGenerateResponseBody} extends {@link TeaModel}
  *
  * <p>GetTitleGenerateResponseBody</p>
@@ -36,6 +42,10 @@ public class GetTitleGenerateResponseBody extends TeaModel {
 
     public static GetTitleGenerateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class GetTitleGenerateResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTitleGenerateResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -110,6 +130,12 @@ public class GetTitleGenerateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTitleGenerateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTitleGenerateResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Titles")
         private String titles;
@@ -135,6 +161,13 @@ public class GetTitleGenerateResponseBody extends TeaModel {
 
         public static final class Builder {
             private String titles; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.titles = model.titles;
+            } 
 
             /**
              * Titles.

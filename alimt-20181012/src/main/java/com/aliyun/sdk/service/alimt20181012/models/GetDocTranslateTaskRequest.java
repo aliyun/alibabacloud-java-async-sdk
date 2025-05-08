@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocTranslateTaskRequest} extends {@link RequestModel}
  *
  * <p>GetDocTranslateTaskRequest</p>
@@ -29,7 +35,7 @@ public class GetDocTranslateTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +60,10 @@ public class GetDocTranslateTaskRequest extends Request {
         } 
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0586df512c8b4bb382d7d9a6a01b5854</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

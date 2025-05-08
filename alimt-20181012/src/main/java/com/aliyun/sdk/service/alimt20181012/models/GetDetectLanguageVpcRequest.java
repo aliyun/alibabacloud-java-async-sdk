@@ -12,17 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDetectLanguageRequest} extends {@link RequestModel}
+ * {@link GetDetectLanguageVpcRequest} extends {@link RequestModel}
  *
- * <p>GetDetectLanguageRequest</p>
+ * <p>GetDetectLanguageVpcRequest</p>
  */
-public class GetDetectLanguageRequest extends Request {
+public class GetDetectLanguageVpcRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceText")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceText;
 
-    private GetDetectLanguageRequest(Builder builder) {
+    private GetDetectLanguageVpcRequest(Builder builder) {
         super(builder);
         this.sourceText = builder.sourceText;
     }
@@ -31,7 +30,7 @@ public class GetDetectLanguageRequest extends Request {
         return new Builder();
     }
 
-    public static GetDetectLanguageRequest create() {
+    public static GetDetectLanguageVpcRequest create() {
         return builder().build();
     }
 
@@ -47,20 +46,20 @@ public class GetDetectLanguageRequest extends Request {
         return this.sourceText;
     }
 
-    public static final class Builder extends Request.Builder<GetDetectLanguageRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetDetectLanguageVpcRequest, Builder> {
         private String sourceText; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetDetectLanguageRequest request) {
+        private Builder(GetDetectLanguageVpcRequest request) {
             super(request);
             this.sourceText = request.sourceText;
         } 
 
         /**
-         * <p>This parameter is required.</p>
+         * SourceText.
          */
         public Builder sourceText(String sourceText) {
             this.putBodyParameter("SourceText", sourceText);
@@ -69,8 +68,8 @@ public class GetDetectLanguageRequest extends Request {
         }
 
         @Override
-        public GetDetectLanguageRequest build() {
-            return new GetDetectLanguageRequest(this);
+        public GetDetectLanguageVpcRequest build() {
+            return new GetDetectLanguageVpcRequest(this);
         } 
 
     } 

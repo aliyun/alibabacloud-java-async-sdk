@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetImageTranslateTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetImageTranslateTaskResponseBody</p>
@@ -36,6 +42,10 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
 
     public static GetImageTranslateTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetImageTranslateTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -110,6 +130,12 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetImageTranslateTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetImageTranslateTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageData")
         private String imageData;
@@ -135,6 +161,13 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String imageData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.imageData = model.imageData;
+            } 
 
             /**
              * ImageData.

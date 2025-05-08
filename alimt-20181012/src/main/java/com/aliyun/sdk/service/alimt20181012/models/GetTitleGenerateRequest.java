@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTitleGenerateRequest} extends {@link RequestModel}
  *
  * <p>GetTitleGenerateRequest</p>
@@ -62,7 +68,7 @@ public class GetTitleGenerateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -150,7 +156,10 @@ public class GetTitleGenerateRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127896018</p>
          */
         public Builder categoryId(String categoryId) {
             this.putBodyParameter("CategoryId", categoryId);
@@ -177,7 +186,10 @@ public class GetTitleGenerateRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putBodyParameter("Language", language);
@@ -186,7 +198,10 @@ public class GetTitleGenerateRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ae</p>
          */
         public Builder platform(String platform) {
             this.putBodyParameter("Platform", platform);
@@ -195,7 +210,10 @@ public class GetTitleGenerateRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10pcs 80ml Kitchen Disposable</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

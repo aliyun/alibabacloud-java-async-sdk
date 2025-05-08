@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTitleIntelligenceRequest} extends {@link RequestModel}
  *
  * <p>GetTitleIntelligenceRequest</p>
@@ -51,7 +57,7 @@ public class GetTitleIntelligenceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +118,10 @@ public class GetTitleIntelligenceRequest extends Request {
         } 
 
         /**
-         * CatLevelThreeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder catLevelThreeId(Long catLevelThreeId) {
             this.putBodyParameter("CatLevelThreeId", catLevelThreeId);
@@ -121,7 +130,10 @@ public class GetTitleIntelligenceRequest extends Request {
         }
 
         /**
-         * CatLevelTwoId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222</p>
          */
         public Builder catLevelTwoId(Long catLevelTwoId) {
             this.putBodyParameter("CatLevelTwoId", catLevelTwoId);
@@ -148,7 +160,10 @@ public class GetTitleIntelligenceRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ae</p>
          */
         public Builder platform(String platform) {
             this.putBodyParameter("Platform", platform);

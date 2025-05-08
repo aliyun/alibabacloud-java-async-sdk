@@ -94,6 +94,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CreateAsyncTranslate  CreateAsyncTranslateRequest
+     * @return CreateAsyncTranslateResponse
+     */
     @Override
     public CompletableFuture<CreateAsyncTranslateResponse> createAsyncTranslate(CreateAsyncTranslateRequest request) {
         try {
@@ -108,6 +112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateImageTranslateTask  CreateImageTranslateTaskRequest
+     * @return CreateImageTranslateTaskResponse
+     */
     @Override
     public CompletableFuture<CreateImageTranslateTaskResponse> createImageTranslateTask(CreateImageTranslateTaskRequest request) {
         try {
@@ -122,6 +130,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAsyncTranslate  GetAsyncTranslateRequest
+     * @return GetAsyncTranslateResponse
+     */
     @Override
     public CompletableFuture<GetAsyncTranslateResponse> getAsyncTranslate(GetAsyncTranslateRequest request) {
         try {
@@ -136,6 +148,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetBatchTranslate  GetBatchTranslateRequest
+     * @return GetBatchTranslateResponse
+     */
     @Override
     public CompletableFuture<GetBatchTranslateResponse> getBatchTranslate(GetBatchTranslateRequest request) {
         try {
@@ -150,6 +166,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetBatchTranslateByVPC  GetBatchTranslateByVPCRequest
+     * @return GetBatchTranslateByVPCResponse
+     */
     @Override
     public CompletableFuture<GetBatchTranslateByVPCResponse> getBatchTranslateByVPC(GetBatchTranslateByVPCRequest request) {
         try {
@@ -164,6 +184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDetectLanguage  GetDetectLanguageRequest
+     * @return GetDetectLanguageResponse
+     */
     @Override
     public CompletableFuture<GetDetectLanguageResponse> getDetectLanguage(GetDetectLanguageRequest request) {
         try {
@@ -178,6 +202,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDetectLanguageVpc  GetDetectLanguageVpcRequest
+     * @return GetDetectLanguageVpcResponse
+     */
+    @Override
+    public CompletableFuture<GetDetectLanguageVpcResponse> getDetectLanguageVpc(GetDetectLanguageVpcRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDetectLanguageVpc").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDetectLanguageVpcResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDetectLanguageVpcResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDocTranslateTask  GetDocTranslateTaskRequest
+     * @return GetDocTranslateTaskResponse
+     */
     @Override
     public CompletableFuture<GetDocTranslateTaskResponse> getDocTranslateTask(GetDocTranslateTaskRequest request) {
         try {
@@ -192,6 +238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetImageDiagnose  GetImageDiagnoseRequest
+     * @return GetImageDiagnoseResponse
+     */
     @Override
     public CompletableFuture<GetImageDiagnoseResponse> getImageDiagnose(GetImageDiagnoseRequest request) {
         try {
@@ -206,6 +256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetImageTranslate  GetImageTranslateRequest
+     * @return GetImageTranslateResponse
+     */
     @Override
     public CompletableFuture<GetImageTranslateResponse> getImageTranslate(GetImageTranslateRequest request) {
         try {
@@ -220,6 +274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetImageTranslateTask  GetImageTranslateTaskRequest
+     * @return GetImageTranslateTaskResponse
+     */
     @Override
     public CompletableFuture<GetImageTranslateTaskResponse> getImageTranslateTask(GetImageTranslateTaskRequest request) {
         try {
@@ -234,6 +292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTitleDiagnose  GetTitleDiagnoseRequest
+     * @return GetTitleDiagnoseResponse
+     */
     @Override
     public CompletableFuture<GetTitleDiagnoseResponse> getTitleDiagnose(GetTitleDiagnoseRequest request) {
         try {
@@ -248,6 +310,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTitleGenerate  GetTitleGenerateRequest
+     * @return GetTitleGenerateResponse
+     */
     @Override
     public CompletableFuture<GetTitleGenerateResponse> getTitleGenerate(GetTitleGenerateRequest request) {
         try {
@@ -262,6 +328,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTitleIntelligence  GetTitleIntelligenceRequest
+     * @return GetTitleIntelligenceResponse
+     */
     @Override
     public CompletableFuture<GetTitleIntelligenceResponse> getTitleIntelligence(GetTitleIntelligenceRequest request) {
         try {
@@ -276,6 +346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTranslateImageBatchResult  GetTranslateImageBatchResultRequest
+     * @return GetTranslateImageBatchResultResponse
+     */
     @Override
     public CompletableFuture<GetTranslateImageBatchResultResponse> getTranslateImageBatchResult(GetTranslateImageBatchResultRequest request) {
         try {
@@ -290,6 +364,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTranslateReport  GetTranslateReportRequest
+     * @return GetTranslateReportResponse
+     */
     @Override
     public CompletableFuture<GetTranslateReportResponse> getTranslateReport(GetTranslateReportRequest request) {
         try {
@@ -304,6 +382,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenAlimtService  OpenAlimtServiceRequest
+     * @return OpenAlimtServiceResponse
+     */
     @Override
     public CompletableFuture<OpenAlimtServiceResponse> openAlimtService(OpenAlimtServiceRequest request) {
         try {
@@ -318,6 +400,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Translate  TranslateRequest
+     * @return TranslateResponse
+     */
     @Override
     public CompletableFuture<TranslateResponse> translate(TranslateRequest request) {
         try {
@@ -333,9 +419,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.  * @param request  the request parameters of TranslateECommerce  TranslateECommerceRequest
+     * @return TranslateECommerceResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<TranslateECommerceResponse> translateECommerce(TranslateECommerceRequest request) {
         try {
@@ -350,6 +437,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TranslateGeneral  TranslateGeneralRequest
+     * @return TranslateGeneralResponse
+     */
     @Override
     public CompletableFuture<TranslateGeneralResponse> translateGeneral(TranslateGeneralRequest request) {
         try {
@@ -364,6 +455,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TranslateGeneralVpc  TranslateGeneralVpcRequest
+     * @return TranslateGeneralVpcResponse
+     */
     @Override
     public CompletableFuture<TranslateGeneralVpcResponse> translateGeneralVpc(TranslateGeneralVpcRequest request) {
         try {
@@ -378,6 +473,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TranslateImage  TranslateImageRequest
+     * @return TranslateImageResponse
+     */
     @Override
     public CompletableFuture<TranslateImageResponse> translateImage(TranslateImageRequest request) {
         try {
@@ -392,6 +491,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TranslateImageBatch  TranslateImageBatchRequest
+     * @return TranslateImageBatchResponse
+     */
     @Override
     public CompletableFuture<TranslateImageBatchResponse> translateImageBatch(TranslateImageBatchRequest request) {
         try {
@@ -401,6 +504,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TranslateImageBatchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TranslateSearch  TranslateSearchRequest
+     * @return TranslateSearchResponse
+     */
+    @Override
+    public CompletableFuture<TranslateSearchResponse> translateSearch(TranslateSearchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TranslateSearch").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TranslateSearchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TranslateSearchResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

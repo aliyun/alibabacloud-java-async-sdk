@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAsyncTranslateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAsyncTranslateResponseBody</p>
@@ -36,6 +42,10 @@ public class CreateAsyncTranslateResponseBody extends TeaModel {
 
     public static CreateAsyncTranslateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class CreateAsyncTranslateResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAsyncTranslateResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -110,6 +130,12 @@ public class CreateAsyncTranslateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAsyncTranslateResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAsyncTranslateResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -150,8 +176,19 @@ public class CreateAsyncTranslateResponseBody extends TeaModel {
             private String jobId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.jobId = model.jobId;
+                this.status = model.status;
+            } 
+
             /**
-             * JobId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>98bbb007-71bb-448b-bab0-2695ce8f8599</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -159,7 +196,10 @@ public class CreateAsyncTranslateResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ready</p>
              */
             public Builder status(String status) {
                 this.status = status;

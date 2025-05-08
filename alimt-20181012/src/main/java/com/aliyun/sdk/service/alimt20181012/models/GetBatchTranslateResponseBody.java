@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBatchTranslateResponseBody} extends {@link TeaModel}
  *
  * <p>GetBatchTranslateResponseBody</p>
@@ -21,7 +27,7 @@ public class GetBatchTranslateResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TranslatedList")
-    private java.util.List < java.util.Map<String, ?>> translatedList;
+    private java.util.List<java.util.Map<String, ?>> translatedList;
 
     private GetBatchTranslateResponseBody(Builder builder) {
         this.code = builder.code;
@@ -36,6 +42,10 @@ public class GetBatchTranslateResponseBody extends TeaModel {
 
     public static GetBatchTranslateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -62,7 +72,7 @@ public class GetBatchTranslateResponseBody extends TeaModel {
     /**
      * @return translatedList
      */
-    public java.util.List < java.util.Map<String, ?>> getTranslatedList() {
+    public java.util.List<java.util.Map<String, ?>> getTranslatedList() {
         return this.translatedList;
     }
 
@@ -70,7 +80,17 @@ public class GetBatchTranslateResponseBody extends TeaModel {
         private Integer code; 
         private String message; 
         private String requestId; 
-        private java.util.List < java.util.Map<String, ?>> translatedList; 
+        private java.util.List<java.util.Map<String, ?>> translatedList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBatchTranslateResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.translatedList = model.translatedList;
+        } 
 
         /**
          * Code.
@@ -99,7 +119,7 @@ public class GetBatchTranslateResponseBody extends TeaModel {
         /**
          * TranslatedList.
          */
-        public Builder translatedList(java.util.List < java.util.Map<String, ?>> translatedList) {
+        public Builder translatedList(java.util.List<java.util.Map<String, ?>> translatedList) {
             this.translatedList = translatedList;
             return this;
         }

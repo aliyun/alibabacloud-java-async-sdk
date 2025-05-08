@@ -12,16 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetBatchTranslateRequest} extends {@link RequestModel}
+ * {@link TranslateSearchRequest} extends {@link RequestModel}
  *
- * <p>GetBatchTranslateRequest</p>
+ * <p>TranslateSearchRequest</p>
  */
-public class GetBatchTranslateRequest extends Request {
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ApiType")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String apiType;
-
+public class TranslateSearchRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FormatType")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -47,9 +42,8 @@ public class GetBatchTranslateRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String targetLanguage;
 
-    private GetBatchTranslateRequest(Builder builder) {
+    private TranslateSearchRequest(Builder builder) {
         super(builder);
-        this.apiType = builder.apiType;
         this.formatType = builder.formatType;
         this.scene = builder.scene;
         this.sourceLanguage = builder.sourceLanguage;
@@ -61,20 +55,13 @@ public class GetBatchTranslateRequest extends Request {
         return new Builder();
     }
 
-    public static GetBatchTranslateRequest create() {
+    public static TranslateSearchRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return apiType
-     */
-    public String getApiType() {
-        return this.apiType;
     }
 
     /**
@@ -112,8 +99,7 @@ public class GetBatchTranslateRequest extends Request {
         return this.targetLanguage;
     }
 
-    public static final class Builder extends Request.Builder<GetBatchTranslateRequest, Builder> {
-        private String apiType; 
+    public static final class Builder extends Request.Builder<TranslateSearchRequest, Builder> {
         private String formatType; 
         private String scene; 
         private String sourceLanguage; 
@@ -124,27 +110,14 @@ public class GetBatchTranslateRequest extends Request {
             super();
         } 
 
-        private Builder(GetBatchTranslateRequest request) {
+        private Builder(TranslateSearchRequest request) {
             super(request);
-            this.apiType = request.apiType;
             this.formatType = request.formatType;
             this.scene = request.scene;
             this.sourceLanguage = request.sourceLanguage;
             this.sourceText = request.sourceText;
             this.targetLanguage = request.targetLanguage;
         } 
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>translate_standard</p>
-         */
-        public Builder apiType(String apiType) {
-            this.putBodyParameter("ApiType", apiType);
-            this.apiType = apiType;
-            return this;
-        }
 
         /**
          * <p>This parameter is required.</p>
@@ -162,7 +135,7 @@ public class GetBatchTranslateRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>general</p>
+         * <p>query</p>
          */
         public Builder scene(String scene) {
             this.putBodyParameter("Scene", scene);
@@ -174,7 +147,7 @@ public class GetBatchTranslateRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>en</p>
+         * <p>zh</p>
          */
         public Builder sourceLanguage(String sourceLanguage) {
             this.putBodyParameter("SourceLanguage", sourceLanguage);
@@ -186,7 +159,7 @@ public class GetBatchTranslateRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;11&quot;:&quot;hello boy&quot;,&quot;12&quot;:&quot;go home&quot;,&quot;13&quot;:&quot;we can&quot;}</p>
+         * <p>今天天气不错</p>
          */
         public Builder sourceText(String sourceText) {
             this.putBodyParameter("SourceText", sourceText);
@@ -198,7 +171,7 @@ public class GetBatchTranslateRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>zh</p>
+         * <p>en</p>
          */
         public Builder targetLanguage(String targetLanguage) {
             this.putBodyParameter("TargetLanguage", targetLanguage);
@@ -207,8 +180,8 @@ public class GetBatchTranslateRequest extends Request {
         }
 
         @Override
-        public GetBatchTranslateRequest build() {
-            return new GetBatchTranslateRequest(this);
+        public TranslateSearchRequest build() {
+            return new TranslateSearchRequest(this);
         } 
 
     } 

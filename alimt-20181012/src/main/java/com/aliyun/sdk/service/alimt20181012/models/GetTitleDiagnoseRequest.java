@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTitleDiagnoseRequest} extends {@link RequestModel}
  *
  * <p>GetTitleDiagnoseRequest</p>
@@ -52,7 +58,7 @@ public class GetTitleDiagnoseRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +119,10 @@ public class GetTitleDiagnoseRequest extends Request {
         } 
 
         /**
-         * CategoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder categoryId(String categoryId) {
             this.putBodyParameter("CategoryId", categoryId);
@@ -131,7 +140,10 @@ public class GetTitleDiagnoseRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder language(String language) {
             this.putBodyParameter("Language", language);
@@ -140,7 +152,10 @@ public class GetTitleDiagnoseRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ae</p>
          */
         public Builder platform(String platform) {
             this.putBodyParameter("Platform", platform);
@@ -149,7 +164,10 @@ public class GetTitleDiagnoseRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Amroe Japan Comic Theme Uzumaki Naruto Namikaze Minato 3D Visual Cartoon 7 Color USB Touch</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

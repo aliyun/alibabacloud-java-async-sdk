@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetImageTranslateTaskResponse} extends {@link TeaModel}
+ * {@link GetDetectLanguageVpcResponse} extends {@link TeaModel}
  *
- * <p>GetImageTranslateTaskResponse</p>
+ * <p>GetDetectLanguageVpcResponse</p>
  */
-public class GetImageTranslateTaskResponse extends Response {
+public class GetDetectLanguageVpcResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetImageTranslateTaskResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetImageTranslateTaskResponseBody body;
+    private GetDetectLanguageVpcResponseBody body;
 
-    private GetImageTranslateTaskResponse(BuilderImpl builder) {
+    private GetDetectLanguageVpcResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetImageTranslateTaskResponse create() {
+    public static GetDetectLanguageVpcResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetImageTranslateTaskResponse extends Response {
     /**
      * @return body
      */
-    public GetImageTranslateTaskResponseBody getBody() {
+    public GetDetectLanguageVpcResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetImageTranslateTaskResponse, Builder> {
+    public interface Builder extends Response.Builder<GetDetectLanguageVpcResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetImageTranslateTaskResponseBody body);
+        Builder body(GetDetectLanguageVpcResponseBody body);
 
         @Override
-        GetImageTranslateTaskResponse build();
+        GetDetectLanguageVpcResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetImageTranslateTaskResponse, Builder>
+            extends Response.BuilderImpl<GetDetectLanguageVpcResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetImageTranslateTaskResponseBody body; 
+        private GetDetectLanguageVpcResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetImageTranslateTaskResponse response) {
+        private BuilderImpl(GetDetectLanguageVpcResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetImageTranslateTaskResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetImageTranslateTaskResponseBody body) {
+        public Builder body(GetDetectLanguageVpcResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetImageTranslateTaskResponse build() {
-            return new GetImageTranslateTaskResponse(this);
+        public GetDetectLanguageVpcResponse build() {
+            return new GetDetectLanguageVpcResponse(this);
         } 
 
     } 

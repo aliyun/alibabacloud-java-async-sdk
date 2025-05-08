@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetImageTranslateResponseBody} extends {@link TeaModel}
  *
  * <p>GetImageTranslateResponseBody</p>
@@ -36,6 +42,10 @@ public class GetImageTranslateResponseBody extends TeaModel {
 
     public static GetImageTranslateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class GetImageTranslateResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetImageTranslateResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -110,6 +130,12 @@ public class GetImageTranslateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetImageTranslateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetImageTranslateResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Orc")
         private String orc;
@@ -159,6 +185,15 @@ public class GetImageTranslateResponseBody extends TeaModel {
             private String orc; 
             private String pictureEditor; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.orc = model.orc;
+                this.pictureEditor = model.pictureEditor;
+                this.url = model.url;
+            } 
 
             /**
              * Orc.

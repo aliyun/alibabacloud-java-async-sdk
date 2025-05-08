@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TranslateRequest} extends {@link RequestModel}
  *
  * <p>TranslateRequest</p>
@@ -32,7 +38,7 @@ public class TranslateRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceText")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256000)
     private String sourceText;
 
     @com.aliyun.core.annotation.Body
@@ -58,7 +64,7 @@ public class TranslateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,7 +143,10 @@ public class TranslateRequest extends Request {
         }
 
         /**
-         * FormatType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder formatType(String formatType) {
             this.putBodyParameter("FormatType", formatType);
@@ -146,7 +155,10 @@ public class TranslateRequest extends Request {
         }
 
         /**
-         * Scene.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title</p>
          */
         public Builder scene(String scene) {
             this.putBodyParameter("Scene", scene);
@@ -155,7 +167,10 @@ public class TranslateRequest extends Request {
         }
 
         /**
-         * SourceLanguage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder sourceLanguage(String sourceLanguage) {
             this.putBodyParameter("SourceLanguage", sourceLanguage);
@@ -164,7 +179,7 @@ public class TranslateRequest extends Request {
         }
 
         /**
-         * SourceText.
+         * <p>This parameter is required.</p>
          */
         public Builder sourceText(String sourceText) {
             this.putBodyParameter("SourceText", sourceText);
@@ -173,7 +188,10 @@ public class TranslateRequest extends Request {
         }
 
         /**
-         * TargetLanguage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder targetLanguage(String targetLanguage) {
             this.putBodyParameter("TargetLanguage", targetLanguage);
