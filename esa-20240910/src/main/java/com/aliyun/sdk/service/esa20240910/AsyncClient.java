@@ -1488,6 +1488,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRoutineCanaryAreasResponse> listRoutineCanaryAreas(ListRoutineCanaryAreasRequest request);
 
     /**
+     * @param request the request parameters of ListRoutineCodeVersions  ListRoutineCodeVersionsRequest
+     * @return ListRoutineCodeVersionsResponse
+     */
+    CompletableFuture<ListRoutineCodeVersionsResponse> listRoutineCodeVersions(ListRoutineCodeVersionsRequest request);
+
+    /**
      * @param request the request parameters of ListRoutineRelatedRecords  ListRoutineRelatedRecordsRequest
      * @return ListRoutineRelatedRecordsResponse
      */
