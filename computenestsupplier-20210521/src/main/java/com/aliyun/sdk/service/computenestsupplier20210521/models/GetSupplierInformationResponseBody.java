@@ -291,7 +291,7 @@ public class GetSupplierInformationResponseBody extends TeaModel {
         }
 
         /**
-         * SupportContacts.
+         * <p>Contact information of the service provider</p>
          */
         public Builder supportContacts(java.util.List<SupportContacts> supportContacts) {
             this.supportContacts = supportContacts;
@@ -490,7 +490,10 @@ public class GetSupplierInformationResponseBody extends TeaModel {
             } 
 
             /**
-             * Type.
+             * <p>The type of contact information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Email</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -498,7 +501,10 @@ public class GetSupplierInformationResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of contact information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:supplier@example.com">supplier@example.com</a></p>
              */
             public Builder value(String value) {
                 this.value = value;

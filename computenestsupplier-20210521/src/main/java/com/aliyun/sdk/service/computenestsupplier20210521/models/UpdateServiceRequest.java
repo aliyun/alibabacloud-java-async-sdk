@@ -26,6 +26,10 @@ public class UpdateServiceRequest extends Request {
     private String approvalType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BuildParameters")
+    private String buildParameters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -127,6 +131,7 @@ public class UpdateServiceRequest extends Request {
         super(builder);
         this.alarmMetadata = builder.alarmMetadata;
         this.approvalType = builder.approvalType;
+        this.buildParameters = builder.buildParameters;
         this.clientToken = builder.clientToken;
         this.commodity = builder.commodity;
         this.complianceMetadata = builder.complianceMetadata;
@@ -178,6 +183,13 @@ public class UpdateServiceRequest extends Request {
      */
     public String getApprovalType() {
         return this.approvalType;
+    }
+
+    /**
+     * @return buildParameters
+     */
+    public String getBuildParameters() {
+        return this.buildParameters;
     }
 
     /**
@@ -351,6 +363,7 @@ public class UpdateServiceRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateServiceRequest, Builder> {
         private String alarmMetadata; 
         private String approvalType; 
+        private String buildParameters; 
         private String clientToken; 
         private Commodity commodity; 
         private ComplianceMetadata complianceMetadata; 
@@ -384,6 +397,7 @@ public class UpdateServiceRequest extends Request {
             super(request);
             this.alarmMetadata = request.alarmMetadata;
             this.approvalType = request.approvalType;
+            this.buildParameters = request.buildParameters;
             this.clientToken = request.clientToken;
             this.commodity = request.commodity;
             this.complianceMetadata = request.complianceMetadata;
@@ -438,6 +452,15 @@ public class UpdateServiceRequest extends Request {
         public Builder approvalType(String approvalType) {
             this.putQueryParameter("ApprovalType", approvalType);
             this.approvalType = approvalType;
+            return this;
+        }
+
+        /**
+         * BuildParameters.
+         */
+        public Builder buildParameters(String buildParameters) {
+            this.putQueryParameter("BuildParameters", buildParameters);
+            this.buildParameters = buildParameters;
             return this;
         }
 

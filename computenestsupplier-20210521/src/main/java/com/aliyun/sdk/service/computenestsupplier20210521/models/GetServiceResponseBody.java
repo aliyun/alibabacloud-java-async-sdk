@@ -809,7 +809,10 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * BuildParameters.
+         * <p>The parameters for building the service</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;ServiceTemplateId&quot;: &quot;st-xxxxx&quot;}</p>
          */
         public Builder buildParameters(String buildParameters) {
             this.buildParameters = buildParameters;
@@ -1286,7 +1289,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * SupportContacts.
+         * <p>Contact information of the service provider.</p>
          */
         public Builder supportContacts(java.util.List<SupportContacts> supportContacts) {
             this.supportContacts = supportContacts;
@@ -1721,7 +1724,7 @@ public class GetServiceResponseBody extends TeaModel {
              * <p>The package name.</p>
              * 
              * <strong>example:</strong>
-             * <p>按量付费套餐</p>
+             * <p>Pay-as-you-go package</p>
              */
             public Builder specificationName(String specificationName) {
                 this.specificationName = specificationName;
@@ -3552,14 +3555,10 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The service type. Valid values:</p>
-             * <ul>
-             * <li>marketplace: Alibaba Cloud Marketplace.</li>
-             * <li>Css: Lingxiao.</li>
-             * </ul>
+             * <p>The type of Contact information.</p>
              * 
              * <strong>example:</strong>
-             * <p>Marketplace</p>
+             * <p>Email</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -3567,7 +3566,10 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of Contact information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:supplier@test.com">supplier@test.com</a></p>
              */
             public Builder value(String value) {
                 this.value = value;
