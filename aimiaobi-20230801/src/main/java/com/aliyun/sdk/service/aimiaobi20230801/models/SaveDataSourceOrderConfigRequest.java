@@ -27,6 +27,10 @@ public class SaveDataSourceOrderConfigRequest extends Request {
     private String agentKey;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GenerateTechnology")
+    private String generateTechnology;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProductCode")
     @com.aliyun.core.annotation.Validation(required = true)
     private String productCode;
@@ -40,6 +44,7 @@ public class SaveDataSourceOrderConfigRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
+        this.generateTechnology = builder.generateTechnology;
         this.productCode = builder.productCode;
         this.userConfigDataSourceList = builder.userConfigDataSourceList;
     }
@@ -72,6 +77,13 @@ public class SaveDataSourceOrderConfigRequest extends Request {
     }
 
     /**
+     * @return generateTechnology
+     */
+    public String getGenerateTechnology() {
+        return this.generateTechnology;
+    }
+
+    /**
      * @return productCode
      */
     public String getProductCode() {
@@ -88,6 +100,7 @@ public class SaveDataSourceOrderConfigRequest extends Request {
     public static final class Builder extends Request.Builder<SaveDataSourceOrderConfigRequest, Builder> {
         private String regionId; 
         private String agentKey; 
+        private String generateTechnology; 
         private String productCode; 
         private java.util.List<UserConfigDataSourceList> userConfigDataSourceList; 
 
@@ -99,6 +112,7 @@ public class SaveDataSourceOrderConfigRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.agentKey = request.agentKey;
+            this.generateTechnology = request.generateTechnology;
             this.productCode = request.productCode;
             this.userConfigDataSourceList = request.userConfigDataSourceList;
         } 
@@ -121,6 +135,15 @@ public class SaveDataSourceOrderConfigRequest extends Request {
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
             this.agentKey = agentKey;
+            return this;
+        }
+
+        /**
+         * GenerateTechnology.
+         */
+        public Builder generateTechnology(String generateTechnology) {
+            this.putBodyParameter("GenerateTechnology", generateTechnology);
+            this.generateTechnology = generateTechnology;
             return this;
         }
 
@@ -164,6 +187,9 @@ public class SaveDataSourceOrderConfigRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String code;
 
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -177,6 +203,7 @@ public class SaveDataSourceOrderConfigRequest extends Request {
 
         private UserConfigDataSourceList(Builder builder) {
             this.code = builder.code;
+            this.enable = builder.enable;
             this.name = builder.name;
             this.number = builder.number;
             this.type = builder.type;
@@ -195,6 +222,13 @@ public class SaveDataSourceOrderConfigRequest extends Request {
          */
         public String getCode() {
             return this.code;
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
         }
 
         /**
@@ -220,6 +254,7 @@ public class SaveDataSourceOrderConfigRequest extends Request {
 
         public static final class Builder {
             private String code; 
+            private Boolean enable; 
             private String name; 
             private Integer number; 
             private String type; 
@@ -229,6 +264,7 @@ public class SaveDataSourceOrderConfigRequest extends Request {
 
             private Builder(UserConfigDataSourceList model) {
                 this.code = model.code;
+                this.enable = model.enable;
                 this.name = model.name;
                 this.number = model.number;
                 this.type = model.type;
@@ -242,6 +278,14 @@ public class SaveDataSourceOrderConfigRequest extends Request {
              */
             public Builder code(String code) {
                 this.code = code;
+                return this;
+            }
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
                 return this;
             }
 

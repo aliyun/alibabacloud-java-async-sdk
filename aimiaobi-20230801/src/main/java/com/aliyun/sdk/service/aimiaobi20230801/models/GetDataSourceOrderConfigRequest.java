@@ -27,6 +27,10 @@ public class GetDataSourceOrderConfigRequest extends Request {
     private String agentKey;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GenerateTechnology")
+    private String generateTechnology;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProductCode")
     @com.aliyun.core.annotation.Validation(required = true)
     private String productCode;
@@ -35,6 +39,7 @@ public class GetDataSourceOrderConfigRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
+        this.generateTechnology = builder.generateTechnology;
         this.productCode = builder.productCode;
     }
 
@@ -66,6 +71,13 @@ public class GetDataSourceOrderConfigRequest extends Request {
     }
 
     /**
+     * @return generateTechnology
+     */
+    public String getGenerateTechnology() {
+        return this.generateTechnology;
+    }
+
+    /**
      * @return productCode
      */
     public String getProductCode() {
@@ -75,6 +87,7 @@ public class GetDataSourceOrderConfigRequest extends Request {
     public static final class Builder extends Request.Builder<GetDataSourceOrderConfigRequest, Builder> {
         private String regionId; 
         private String agentKey; 
+        private String generateTechnology; 
         private String productCode; 
 
         private Builder() {
@@ -85,6 +98,7 @@ public class GetDataSourceOrderConfigRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.agentKey = request.agentKey;
+            this.generateTechnology = request.generateTechnology;
             this.productCode = request.productCode;
         } 
 
@@ -106,6 +120,15 @@ public class GetDataSourceOrderConfigRequest extends Request {
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
             this.agentKey = agentKey;
+            return this;
+        }
+
+        /**
+         * GenerateTechnology.
+         */
+        public Builder generateTechnology(String generateTechnology) {
+            this.putBodyParameter("GenerateTechnology", generateTechnology);
+            this.generateTechnology = generateTechnology;
             return this;
         }
 
