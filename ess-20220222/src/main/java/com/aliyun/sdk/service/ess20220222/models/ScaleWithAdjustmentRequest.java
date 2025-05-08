@@ -52,6 +52,10 @@ public class ScaleWithAdjustmentRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParallelTask")
+    private Boolean parallelTask;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -74,6 +78,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         this.minAdjustmentMagnitude = builder.minAdjustmentMagnitude;
         this.overrides = builder.overrides;
         this.ownerId = builder.ownerId;
+        this.parallelTask = builder.parallelTask;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.scalingGroupId = builder.scalingGroupId;
         this.syncActivity = builder.syncActivity;
@@ -149,6 +154,13 @@ public class ScaleWithAdjustmentRequest extends Request {
     }
 
     /**
+     * @return parallelTask
+     */
+    public Boolean getParallelTask() {
+        return this.parallelTask;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -178,6 +190,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         private Integer minAdjustmentMagnitude; 
         private Overrides overrides; 
         private Long ownerId; 
+        private Boolean parallelTask; 
         private String resourceOwnerAccount; 
         private String scalingGroupId; 
         private Boolean syncActivity; 
@@ -196,6 +209,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             this.minAdjustmentMagnitude = request.minAdjustmentMagnitude;
             this.overrides = request.overrides;
             this.ownerId = request.ownerId;
+            this.parallelTask = request.parallelTask;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.scalingGroupId = request.scalingGroupId;
             this.syncActivity = request.syncActivity;
@@ -299,6 +313,15 @@ public class ScaleWithAdjustmentRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ParallelTask.
+         */
+        public Builder parallelTask(Boolean parallelTask) {
+            this.putQueryParameter("ParallelTask", parallelTask);
+            this.parallelTask = parallelTask;
             return this;
         }
 
