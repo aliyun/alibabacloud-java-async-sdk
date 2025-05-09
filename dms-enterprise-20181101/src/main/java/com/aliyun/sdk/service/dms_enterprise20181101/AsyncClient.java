@@ -1803,6 +1803,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetWorkflowExtraInfoResponse> setWorkflowExtraInfo(SetWorkflowExtraInfoRequest request);
 
     /**
+     * @param request the request parameters of SimplyAddInstance  SimplyAddInstanceRequest
+     * @return SimplyAddInstanceResponse
+     */
+    CompletableFuture<SimplyAddInstanceResponse> simplyAddInstance(SimplyAddInstanceRequest request);
+
+    /**
      * @param request the request parameters of SkipDataCorrectRowCheck  SkipDataCorrectRowCheckRequest
      * @return SkipDataCorrectRowCheckResponse
      */

@@ -4787,6 +4787,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SimplyAddInstance  SimplyAddInstanceRequest
+     * @return SimplyAddInstanceResponse
+     */
+    @Override
+    public CompletableFuture<SimplyAddInstanceResponse> simplyAddInstance(SimplyAddInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SimplyAddInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SimplyAddInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SimplyAddInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of SkipDataCorrectRowCheck  SkipDataCorrectRowCheckRequest
      * @return SkipDataCorrectRowCheckResponse
      */
