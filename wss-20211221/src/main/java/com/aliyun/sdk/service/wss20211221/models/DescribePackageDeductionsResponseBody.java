@@ -56,6 +56,10 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deductions
      */
@@ -113,6 +117,19 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         private Long totalCount; 
         private Float totalUsedCoreTime; 
         private Long totalUsedTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePackageDeductionsResponseBody model) {
+            this.deductions = model.deductions;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.totalUsedCoreTime = model.totalUsedCoreTime;
+            this.totalUsedTime = model.totalUsedTime;
+        } 
 
         /**
          * Deductions.
@@ -351,6 +368,25 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
             private String staTime; 
             private Float usedCoreTime; 
             private Long usedTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Deductions model) {
+                this.cpu = model.cpu;
+                this.desktopId = model.desktopId;
+                this.desktopName = model.desktopName;
+                this.desktopType = model.desktopType;
+                this.endTime = model.endTime;
+                this.instanceState = model.instanceState;
+                this.memory = model.memory;
+                this.osType = model.osType;
+                this.regionId = model.regionId;
+                this.resourceType = model.resourceType;
+                this.staTime = model.staTime;
+                this.usedCoreTime = model.usedCoreTime;
+                this.usedTime = model.usedTime;
+            } 
 
             /**
              * Cpu.

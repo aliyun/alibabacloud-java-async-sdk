@@ -40,6 +40,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addresses
      */
@@ -65,6 +69,15 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
         private java.util.List<Addresses> addresses; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDeliveryAddressResponseBody model) {
+            this.addresses = model.addresses;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Addresses.
@@ -140,6 +153,14 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             private Long areaId; 
             private String areaName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Area model) {
+                this.areaId = model.areaId;
+                this.areaName = model.areaName;
+            } 
+
             /**
              * AreaId.
              */
@@ -206,6 +227,14 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
         public static final class Builder {
             private Long cityId; 
             private String cityName; 
+
+            private Builder() {
+            } 
+
+            private Builder(City model) {
+                this.cityId = model.cityId;
+                this.cityName = model.cityName;
+            } 
 
             /**
              * CityId.
@@ -274,6 +303,14 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             private Long provinceId; 
             private String provinceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Province model) {
+                this.provinceId = model.provinceId;
+                this.provinceName = model.provinceName;
+            } 
+
             /**
              * ProvinceId.
              */
@@ -340,6 +377,14 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
         public static final class Builder {
             private Long townId; 
             private String townName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Town model) {
+                this.townId = model.townId;
+                this.townName = model.townName;
+            } 
 
             /**
              * TownId.
@@ -491,6 +536,21 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
             private String postalCode; 
             private Province province; 
             private Town town; 
+
+            private Builder() {
+            } 
+
+            private Builder(Addresses model) {
+                this.area = model.area;
+                this.city = model.city;
+                this.contacts = model.contacts;
+                this.defaultAddress = model.defaultAddress;
+                this.detail = model.detail;
+                this.mobile = model.mobile;
+                this.postalCode = model.postalCode;
+                this.province = model.province;
+                this.town = model.town;
+            } 
 
             /**
              * Area.

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateMultiOrderRequest} extends {@link RequestModel}
+ * {@link DescribeMultiPriceRequest} extends {@link RequestModel}
  *
- * <p>CreateMultiOrderRequest</p>
+ * <p>DescribeMultiPriceRequest</p>
  */
-public class CreateMultiOrderRequest extends Request {
+public class DescribeMultiPriceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderItems")
     private java.util.List<OrderItems> orderItems;
@@ -26,18 +26,18 @@ public class CreateMultiOrderRequest extends Request {
     private String orderType;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Properties")
-    private java.util.Map<String, String> properties;
+    @com.aliyun.core.annotation.NameInMap("PackageCode")
+    private String packageCode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResellerOwnerUid")
     private Long resellerOwnerUid;
 
-    private CreateMultiOrderRequest(Builder builder) {
+    private DescribeMultiPriceRequest(Builder builder) {
         super(builder);
         this.orderItems = builder.orderItems;
         this.orderType = builder.orderType;
-        this.properties = builder.properties;
+        this.packageCode = builder.packageCode;
         this.resellerOwnerUid = builder.resellerOwnerUid;
     }
 
@@ -45,7 +45,7 @@ public class CreateMultiOrderRequest extends Request {
         return new Builder();
     }
 
-    public static CreateMultiOrderRequest create() {
+    public static DescribeMultiPriceRequest create() {
         return builder().build();
     }
 
@@ -69,10 +69,10 @@ public class CreateMultiOrderRequest extends Request {
     }
 
     /**
-     * @return properties
+     * @return packageCode
      */
-    public java.util.Map<String, String> getProperties() {
-        return this.properties;
+    public String getPackageCode() {
+        return this.packageCode;
     }
 
     /**
@@ -82,21 +82,21 @@ public class CreateMultiOrderRequest extends Request {
         return this.resellerOwnerUid;
     }
 
-    public static final class Builder extends Request.Builder<CreateMultiOrderRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeMultiPriceRequest, Builder> {
         private java.util.List<OrderItems> orderItems; 
         private String orderType; 
-        private java.util.Map<String, String> properties; 
+        private String packageCode; 
         private Long resellerOwnerUid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateMultiOrderRequest request) {
+        private Builder(DescribeMultiPriceRequest request) {
             super(request);
             this.orderItems = request.orderItems;
             this.orderType = request.orderType;
-            this.properties = request.properties;
+            this.packageCode = request.packageCode;
             this.resellerOwnerUid = request.resellerOwnerUid;
         } 
 
@@ -119,12 +119,11 @@ public class CreateMultiOrderRequest extends Request {
         }
 
         /**
-         * Properties.
+         * PackageCode.
          */
-        public Builder properties(java.util.Map<String, String> properties) {
-            String propertiesShrink = shrink(properties, "Properties", "json");
-            this.putQueryParameter("Properties", propertiesShrink);
-            this.properties = properties;
+        public Builder packageCode(String packageCode) {
+            this.putQueryParameter("PackageCode", packageCode);
+            this.packageCode = packageCode;
             return this;
         }
 
@@ -138,17 +137,17 @@ public class CreateMultiOrderRequest extends Request {
         }
 
         @Override
-        public CreateMultiOrderRequest build() {
-            return new CreateMultiOrderRequest(this);
+        public DescribeMultiPriceRequest build() {
+            return new DescribeMultiPriceRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link CreateMultiOrderRequest} extends {@link TeaModel}
+     * {@link DescribeMultiPriceRequest} extends {@link TeaModel}
      *
-     * <p>CreateMultiOrderRequest</p>
+     * <p>DescribeMultiPriceRequest</p>
      */
     public static class Components extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
@@ -221,22 +220,19 @@ public class CreateMultiOrderRequest extends Request {
     }
     /**
      * 
-     * {@link CreateMultiOrderRequest} extends {@link TeaModel}
+     * {@link DescribeMultiPriceRequest} extends {@link TeaModel}
      *
-     * <p>CreateMultiOrderRequest</p>
+     * <p>DescribeMultiPriceRequest</p>
      */
     public static class OrderItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
-        @com.aliyun.core.annotation.NameInMap("AutoPay")
-        private Boolean autoPay;
-
-        @com.aliyun.core.annotation.NameInMap("AutoRenew")
-        private Boolean autoRenew;
-
         @com.aliyun.core.annotation.NameInMap("Components")
         private java.util.List<Components> components;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceIds")
+        private java.util.List<String> instanceIds;
 
         @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
@@ -251,14 +247,12 @@ public class CreateMultiOrderRequest extends Request {
         private java.util.List<String> resourceIds;
 
         @com.aliyun.core.annotation.NameInMap("ResourceType")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceType;
 
         private OrderItems(Builder builder) {
             this.amount = builder.amount;
-            this.autoPay = builder.autoPay;
-            this.autoRenew = builder.autoRenew;
             this.components = builder.components;
+            this.instanceIds = builder.instanceIds;
             this.period = builder.period;
             this.periodUnit = builder.periodUnit;
             this.promotionId = builder.promotionId;
@@ -282,24 +276,17 @@ public class CreateMultiOrderRequest extends Request {
         }
 
         /**
-         * @return autoPay
-         */
-        public Boolean getAutoPay() {
-            return this.autoPay;
-        }
-
-        /**
-         * @return autoRenew
-         */
-        public Boolean getAutoRenew() {
-            return this.autoRenew;
-        }
-
-        /**
          * @return components
          */
         public java.util.List<Components> getComponents() {
             return this.components;
+        }
+
+        /**
+         * @return instanceIds
+         */
+        public java.util.List<String> getInstanceIds() {
+            return this.instanceIds;
         }
 
         /**
@@ -339,9 +326,8 @@ public class CreateMultiOrderRequest extends Request {
 
         public static final class Builder {
             private Integer amount; 
-            private Boolean autoPay; 
-            private Boolean autoRenew; 
             private java.util.List<Components> components; 
+            private java.util.List<String> instanceIds; 
             private Integer period; 
             private String periodUnit; 
             private String promotionId; 
@@ -353,9 +339,8 @@ public class CreateMultiOrderRequest extends Request {
 
             private Builder(OrderItems model) {
                 this.amount = model.amount;
-                this.autoPay = model.autoPay;
-                this.autoRenew = model.autoRenew;
                 this.components = model.components;
+                this.instanceIds = model.instanceIds;
                 this.period = model.period;
                 this.periodUnit = model.periodUnit;
                 this.promotionId = model.promotionId;
@@ -372,26 +357,18 @@ public class CreateMultiOrderRequest extends Request {
             }
 
             /**
-             * AutoPay.
-             */
-            public Builder autoPay(Boolean autoPay) {
-                this.autoPay = autoPay;
-                return this;
-            }
-
-            /**
-             * AutoRenew.
-             */
-            public Builder autoRenew(Boolean autoRenew) {
-                this.autoRenew = autoRenew;
-                return this;
-            }
-
-            /**
              * Components.
              */
             public Builder components(java.util.List<Components> components) {
                 this.components = components;
+                return this;
+            }
+
+            /**
+             * InstanceIds.
+             */
+            public Builder instanceIds(java.util.List<String> instanceIds) {
+                this.instanceIds = instanceIds;
                 return this;
             }
 
@@ -428,10 +405,7 @@ public class CreateMultiOrderRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>DurationPackage</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

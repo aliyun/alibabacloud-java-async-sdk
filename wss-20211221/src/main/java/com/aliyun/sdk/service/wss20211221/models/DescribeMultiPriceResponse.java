@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribePackageDeductionsResponse} extends {@link TeaModel}
+ * {@link DescribeMultiPriceResponse} extends {@link TeaModel}
  *
- * <p>DescribePackageDeductionsResponse</p>
+ * <p>DescribeMultiPriceResponse</p>
  */
-public class DescribePackageDeductionsResponse extends Response {
+public class DescribeMultiPriceResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribePackageDeductionsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribePackageDeductionsResponseBody body;
+    private DescribeMultiPriceResponseBody body;
 
-    private DescribePackageDeductionsResponse(BuilderImpl builder) {
+    private DescribeMultiPriceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribePackageDeductionsResponse create() {
+    public static DescribeMultiPriceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribePackageDeductionsResponse extends Response {
     /**
      * @return body
      */
-    public DescribePackageDeductionsResponseBody getBody() {
+    public DescribeMultiPriceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribePackageDeductionsResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeMultiPriceResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribePackageDeductionsResponseBody body);
+        Builder body(DescribeMultiPriceResponseBody body);
 
         @Override
-        DescribePackageDeductionsResponse build();
+        DescribeMultiPriceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribePackageDeductionsResponse, Builder>
+            extends Response.BuilderImpl<DescribeMultiPriceResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribePackageDeductionsResponseBody body; 
+        private DescribeMultiPriceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribePackageDeductionsResponse response) {
+        private BuilderImpl(DescribeMultiPriceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribePackageDeductionsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribePackageDeductionsResponseBody body) {
+        public Builder body(DescribeMultiPriceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribePackageDeductionsResponse build() {
-            return new DescribePackageDeductionsResponse(this);
+        public DescribeMultiPriceResponse build() {
+            return new DescribeMultiPriceResponse(this);
         } 
 
     } 
