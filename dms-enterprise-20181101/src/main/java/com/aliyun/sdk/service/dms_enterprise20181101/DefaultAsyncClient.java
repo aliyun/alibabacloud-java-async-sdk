@@ -1398,6 +1398,36 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>可以通过设置 <code>dryRun</code> 为 <code>true</code> 来执行预检查而不实际创建实例。</li>
      * </ul>
      * 
+     * @param request the request parameters of DescribeDifyAttribute  DescribeDifyAttributeRequest
+     * @return DescribeDifyAttributeResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDifyAttributeResponse> describeDifyAttribute(DescribeDifyAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDifyAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDifyAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDifyAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>workspaceOption</code> 参数指示是否新建工作空间，默认使用已有工作空间。</li>
+     * <li>如果选择新建工作空间 (<code>CreateNewInstance</code>)，则必须提供 <code>workspaceName</code> 和 <code>workspaceDescription</code>。</li>
+     * <li><code>vpcId</code>, <code>VSwitchID</code>, <code>zoneId</code>, <code>regionCode</code>, <code>ResourceQuota</code>, <code>Replicas</code>, <code>storageType</code>, <code>dbInstanceClass</code>, <code>dbEngineVersion</code>, <code>kvstoreEngineVersion</code> 是必填项。</li>
+     * <li>当 <code>storageType</code> 为 <code>oss</code> 时，需要指定 <code>ossBucketResourceId</code> 和 <code>ossPath</code>。</li>
+     * <li>如果需要新建数据库实例，则必须提供 <code>instanceAccount</code> 和 <code>instancePassword</code>。</li>
+     * <li>预付费模式下，<code>PayPeriodType</code> 和 <code>PayPeriod</code> 必须填写。</li>
+     * <li>可以通过设置 <code>dryRun</code> 为 <code>true</code> 来执行预检查而不实际创建实例。</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeDifyDefaultVpc  DescribeDifyDefaultVpcRequest
      * @return DescribeDifyDefaultVpcResponse
      */
@@ -1410,6 +1440,36 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeDifyDefaultVpcResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>workspaceOption</code> 参数指示是否新建工作空间，默认使用已有工作空间。</li>
+     * <li>如果选择新建工作空间 (<code>CreateNewInstance</code>)，则必须提供 <code>workspaceName</code> 和 <code>workspaceDescription</code>。</li>
+     * <li><code>vpcId</code>, <code>VSwitchID</code>, <code>zoneId</code>, <code>regionCode</code>, <code>ResourceQuota</code>, <code>Replicas</code>, <code>storageType</code>, <code>dbInstanceClass</code>, <code>dbEngineVersion</code>, <code>kvstoreEngineVersion</code> 是必填项。</li>
+     * <li>当 <code>storageType</code> 为 <code>oss</code> 时，需要指定 <code>ossBucketResourceId</code> 和 <code>ossPath</code>。</li>
+     * <li>如果需要新建数据库实例，则必须提供 <code>instanceAccount</code> 和 <code>instancePassword</code>。</li>
+     * <li>预付费模式下，<code>PayPeriodType</code> 和 <code>PayPeriod</code> 必须填写。</li>
+     * <li>可以通过设置 <code>dryRun</code> 为 <code>true</code> 来执行预检查而不实际创建实例。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeDifyRegions  DescribeDifyRegionsRequest
+     * @return DescribeDifyRegionsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDifyRegionsResponse> describeDifyRegions(DescribeDifyRegionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDifyRegions").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDifyRegionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDifyRegionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1575,6 +1635,35 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ExecuteStructSyncResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于将用户的自然语言问题转换为可执行的SQL查询语句。</li>
+     * <li>用户需要提供数据库ID (<code>dbId</code>) 和实例ID (<code>instanceId</code>)，以及想要查询的问题描述 (<code>question</code>)。</li>
+     * <li>可选参数包括业务知识 (<code>knowledge</code>)、数据库方言 (<code>dialect</code>)、历史消息 (<code>history</code>)、算法级别 (<code>level</code>) 和指定模型名称 (<code>model</code>)。</li>
+     * <li><code>dialect</code> 默认值为 &quot;SQL&quot;，表示生成标准SQL语句；<code>level</code> 默认值为 &quot;base&quot;，代表基础级别的处理。</li>
+     * <li>如果请求中包含多个表且这些表不属于同一个数据库，则返回的 <code>dbId</code> 将为0，表明这是一个跨库查询。</li>
+     * <li>返回结果中除了生成的SQL语句外，还包括了求解时用到的表、引用的知识点、展示用的SQL等信息，方便进一步理解和使用。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GenerateSqlFromNL  GenerateSqlFromNLRequest
+     * @return GenerateSqlFromNLResponse
+     */
+    @Override
+    public CompletableFuture<GenerateSqlFromNLResponse> generateSqlFromNL(GenerateSqlFromNLRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GenerateSqlFromNL").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateSqlFromNLResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateSqlFromNLResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3435,6 +3524,36 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>workspaceOption</code> 参数指示是否新建工作空间，默认使用已有工作空间。</li>
+     * <li>如果选择新建工作空间 (<code>CreateNewInstance</code>)，则必须提供 <code>workspaceName</code> 和 <code>workspaceDescription</code>。</li>
+     * <li><code>vpcId</code>, <code>VSwitchID</code>, <code>zoneId</code>, <code>regionCode</code>, <code>ResourceQuota</code>, <code>Replicas</code>, <code>storageType</code>, <code>dbInstanceClass</code>, <code>dbEngineVersion</code>, <code>kvstoreEngineVersion</code> 是必填项。</li>
+     * <li>当 <code>storageType</code> 为 <code>oss</code> 时，需要指定 <code>ossBucketResourceId</code> 和 <code>ossPath</code>。</li>
+     * <li>如果需要新建数据库实例，则必须提供 <code>instanceAccount</code> 和 <code>instancePassword</code>。</li>
+     * <li>预付费模式下，<code>PayPeriodType</code> 和 <code>PayPeriod</code> 必须填写。</li>
+     * <li>可以通过设置 <code>dryRun</code> 为 <code>true</code> 来执行预检查而不实际创建实例。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListDifyInstances  ListDifyInstancesRequest
+     * @return ListDifyInstancesResponse
+     */
+    @Override
+    public CompletableFuture<ListDifyInstancesResponse> listDifyInstances(ListDifyInstancesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDifyInstances").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDifyInstancesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDifyInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListEffectiveOrders  ListEffectiveOrdersRequest
      * @return ListEffectiveOrdersResponse
      */
@@ -4347,6 +4466,36 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ReRunTaskFlowInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>workspaceOption</code> 参数指示是否新建工作空间，默认使用已有工作空间。</li>
+     * <li>如果选择新建工作空间 (<code>CreateNewInstance</code>)，则必须提供 <code>workspaceName</code> 和 <code>workspaceDescription</code>。</li>
+     * <li><code>vpcId</code>, <code>VSwitchID</code>, <code>zoneId</code>, <code>regionCode</code>, <code>ResourceQuota</code>, <code>Replicas</code>, <code>storageType</code>, <code>dbInstanceClass</code>, <code>dbEngineVersion</code>, <code>kvstoreEngineVersion</code> 是必填项。</li>
+     * <li>当 <code>storageType</code> 为 <code>oss</code> 时，需要指定 <code>ossBucketResourceId</code> 和 <code>ossPath</code>。</li>
+     * <li>如果需要新建数据库实例，则必须提供 <code>instanceAccount</code> 和 <code>instancePassword</code>。</li>
+     * <li>预付费模式下，<code>PayPeriodType</code> 和 <code>PayPeriod</code> 必须填写。</li>
+     * <li>可以通过设置 <code>dryRun</code> 为 <code>true</code> 来执行预检查而不实际创建实例。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RedeployDifyInstance  RedeployDifyInstanceRequest
+     * @return RedeployDifyInstanceResponse
+     */
+    @Override
+    public CompletableFuture<RedeployDifyInstanceResponse> redeployDifyInstance(RedeployDifyInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RedeployDifyInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RedeployDifyInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RedeployDifyInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

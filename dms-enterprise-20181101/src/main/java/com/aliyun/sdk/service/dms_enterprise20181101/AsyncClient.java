@@ -562,10 +562,46 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <li>可以通过设置 <code>dryRun</code> 为 <code>true</code> 来执行预检查而不实际创建实例。</li>
      * </ul>
      * 
+     * @param request the request parameters of DescribeDifyAttribute  DescribeDifyAttributeRequest
+     * @return DescribeDifyAttributeResponse
+     */
+    CompletableFuture<DescribeDifyAttributeResponse> describeDifyAttribute(DescribeDifyAttributeRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>workspaceOption</code> 参数指示是否新建工作空间，默认使用已有工作空间。</li>
+     * <li>如果选择新建工作空间 (<code>CreateNewInstance</code>)，则必须提供 <code>workspaceName</code> 和 <code>workspaceDescription</code>。</li>
+     * <li><code>vpcId</code>, <code>VSwitchID</code>, <code>zoneId</code>, <code>regionCode</code>, <code>ResourceQuota</code>, <code>Replicas</code>, <code>storageType</code>, <code>dbInstanceClass</code>, <code>dbEngineVersion</code>, <code>kvstoreEngineVersion</code> 是必填项。</li>
+     * <li>当 <code>storageType</code> 为 <code>oss</code> 时，需要指定 <code>ossBucketResourceId</code> 和 <code>ossPath</code>。</li>
+     * <li>如果需要新建数据库实例，则必须提供 <code>instanceAccount</code> 和 <code>instancePassword</code>。</li>
+     * <li>预付费模式下，<code>PayPeriodType</code> 和 <code>PayPeriod</code> 必须填写。</li>
+     * <li>可以通过设置 <code>dryRun</code> 为 <code>true</code> 来执行预检查而不实际创建实例。</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeDifyDefaultVpc  DescribeDifyDefaultVpcRequest
      * @return DescribeDifyDefaultVpcResponse
      */
     CompletableFuture<DescribeDifyDefaultVpcResponse> describeDifyDefaultVpc(DescribeDifyDefaultVpcRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>workspaceOption</code> 参数指示是否新建工作空间，默认使用已有工作空间。</li>
+     * <li>如果选择新建工作空间 (<code>CreateNewInstance</code>)，则必须提供 <code>workspaceName</code> 和 <code>workspaceDescription</code>。</li>
+     * <li><code>vpcId</code>, <code>VSwitchID</code>, <code>zoneId</code>, <code>regionCode</code>, <code>ResourceQuota</code>, <code>Replicas</code>, <code>storageType</code>, <code>dbInstanceClass</code>, <code>dbEngineVersion</code>, <code>kvstoreEngineVersion</code> 是必填项。</li>
+     * <li>当 <code>storageType</code> 为 <code>oss</code> 时，需要指定 <code>ossBucketResourceId</code> 和 <code>ossPath</code>。</li>
+     * <li>如果需要新建数据库实例，则必须提供 <code>instanceAccount</code> 和 <code>instancePassword</code>。</li>
+     * <li>预付费模式下，<code>PayPeriodType</code> 和 <code>PayPeriod</code> 必须填写。</li>
+     * <li>可以通过设置 <code>dryRun</code> 为 <code>true</code> 来执行预检查而不实际创建实例。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeDifyRegions  DescribeDifyRegionsRequest
+     * @return DescribeDifyRegionsResponse
+     */
+    CompletableFuture<DescribeDifyRegionsResponse> describeDifyRegions(DescribeDifyRegionsRequest request);
 
     /**
      * <b>description</b> :
@@ -635,6 +671,23 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExecuteStructSyncResponse
      */
     CompletableFuture<ExecuteStructSyncResponse> executeStructSync(ExecuteStructSyncRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于将用户的自然语言问题转换为可执行的SQL查询语句。</li>
+     * <li>用户需要提供数据库ID (<code>dbId</code>) 和实例ID (<code>instanceId</code>)，以及想要查询的问题描述 (<code>question</code>)。</li>
+     * <li>可选参数包括业务知识 (<code>knowledge</code>)、数据库方言 (<code>dialect</code>)、历史消息 (<code>history</code>)、算法级别 (<code>level</code>) 和指定模型名称 (<code>model</code>)。</li>
+     * <li><code>dialect</code> 默认值为 &quot;SQL&quot;，表示生成标准SQL语句；<code>level</code> 默认值为 &quot;base&quot;，代表基础级别的处理。</li>
+     * <li>如果请求中包含多个表且这些表不属于同一个数据库，则返回的 <code>dbId</code> 将为0，表明这是一个跨库查询。</li>
+     * <li>返回结果中除了生成的SQL语句外，还包括了求解时用到的表、引用的知识点、展示用的SQL等信息，方便进一步理解和使用。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GenerateSqlFromNL  GenerateSqlFromNLRequest
+     * @return GenerateSqlFromNLResponse
+     */
+    CompletableFuture<GenerateSqlFromNLResponse> generateSqlFromNL(GenerateSqlFromNLRequest request);
 
     /**
      * @param request the request parameters of GetAbacPolicy  GetAbacPolicyRequest
@@ -1291,6 +1344,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDesensitizationRuleResponse> listDesensitizationRule(ListDesensitizationRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>workspaceOption</code> 参数指示是否新建工作空间，默认使用已有工作空间。</li>
+     * <li>如果选择新建工作空间 (<code>CreateNewInstance</code>)，则必须提供 <code>workspaceName</code> 和 <code>workspaceDescription</code>。</li>
+     * <li><code>vpcId</code>, <code>VSwitchID</code>, <code>zoneId</code>, <code>regionCode</code>, <code>ResourceQuota</code>, <code>Replicas</code>, <code>storageType</code>, <code>dbInstanceClass</code>, <code>dbEngineVersion</code>, <code>kvstoreEngineVersion</code> 是必填项。</li>
+     * <li>当 <code>storageType</code> 为 <code>oss</code> 时，需要指定 <code>ossBucketResourceId</code> 和 <code>ossPath</code>。</li>
+     * <li>如果需要新建数据库实例，则必须提供 <code>instanceAccount</code> 和 <code>instancePassword</code>。</li>
+     * <li>预付费模式下，<code>PayPeriodType</code> 和 <code>PayPeriod</code> 必须填写。</li>
+     * <li>可以通过设置 <code>dryRun</code> 为 <code>true</code> 来执行预检查而不实际创建实例。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListDifyInstances  ListDifyInstancesRequest
+     * @return ListDifyInstancesResponse
+     */
+    CompletableFuture<ListDifyInstancesResponse> listDifyInstances(ListDifyInstancesRequest request);
+
+    /**
      * @param request the request parameters of ListEffectiveOrders  ListEffectiveOrdersRequest
      * @return ListEffectiveOrdersResponse
      */
@@ -1607,6 +1678,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ReRunTaskFlowInstanceResponse
      */
     CompletableFuture<ReRunTaskFlowInstanceResponse> reRunTaskFlowInstance(ReRunTaskFlowInstanceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>workspaceOption</code> 参数指示是否新建工作空间，默认使用已有工作空间。</li>
+     * <li>如果选择新建工作空间 (<code>CreateNewInstance</code>)，则必须提供 <code>workspaceName</code> 和 <code>workspaceDescription</code>。</li>
+     * <li><code>vpcId</code>, <code>VSwitchID</code>, <code>zoneId</code>, <code>regionCode</code>, <code>ResourceQuota</code>, <code>Replicas</code>, <code>storageType</code>, <code>dbInstanceClass</code>, <code>dbEngineVersion</code>, <code>kvstoreEngineVersion</code> 是必填项。</li>
+     * <li>当 <code>storageType</code> 为 <code>oss</code> 时，需要指定 <code>ossBucketResourceId</code> 和 <code>ossPath</code>。</li>
+     * <li>如果需要新建数据库实例，则必须提供 <code>instanceAccount</code> 和 <code>instancePassword</code>。</li>
+     * <li>预付费模式下，<code>PayPeriodType</code> 和 <code>PayPeriod</code> 必须填写。</li>
+     * <li>可以通过设置 <code>dryRun</code> 为 <code>true</code> 来执行预检查而不实际创建实例。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RedeployDifyInstance  RedeployDifyInstanceRequest
+     * @return RedeployDifyInstanceResponse
+     */
+    CompletableFuture<RedeployDifyInstanceResponse> redeployDifyInstance(RedeployDifyInstanceRequest request);
 
     /**
      * @param request the request parameters of RefundPayAsYouGoOrder  RefundPayAsYouGoOrderRequest
