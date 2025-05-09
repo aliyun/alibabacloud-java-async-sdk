@@ -137,6 +137,15 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HasAclRecommend")
         private Boolean hasAclRecommend;
 
+        @com.aliyun.core.annotation.NameInMap("InBytes")
+        private Long inBytes;
+
+        @com.aliyun.core.annotation.NameInMap("MemberUid")
+        private Long memberUid;
+
+        @com.aliyun.core.annotation.NameInMap("OutBytes")
+        private Long outBytes;
+
         @com.aliyun.core.annotation.NameInMap("PortList")
         private java.util.List<String> portList;
 
@@ -158,6 +167,9 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SrcIpCnt")
         private Long srcIpCnt;
 
+        @com.aliyun.core.annotation.NameInMap("TotalBytes")
+        private Long totalBytes;
+
         @com.aliyun.core.annotation.NameInMap("TotalReplyBytes")
         private Long totalReplyBytes;
 
@@ -170,6 +182,9 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TrafficPercent7Day")
         private String trafficPercent7Day;
 
+        @com.aliyun.core.annotation.NameInMap("UnknownReason")
+        private java.util.List<String> unknownReason;
+
         private DataList(Builder builder) {
             this.aclRecommendDetail = builder.aclRecommendDetail;
             this.assetsInstanceId = builder.assetsInstanceId;
@@ -177,6 +192,9 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             this.assetsType = builder.assetsType;
             this.detailNum = builder.detailNum;
             this.hasAclRecommend = builder.hasAclRecommend;
+            this.inBytes = builder.inBytes;
+            this.memberUid = builder.memberUid;
+            this.outBytes = builder.outBytes;
             this.portList = builder.portList;
             this.publicIp = builder.publicIp;
             this.regionNo = builder.regionNo;
@@ -184,10 +202,12 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             this.riskReason = builder.riskReason;
             this.serviceNameList = builder.serviceNameList;
             this.srcIpCnt = builder.srcIpCnt;
+            this.totalBytes = builder.totalBytes;
             this.totalReplyBytes = builder.totalReplyBytes;
             this.trafficPercent1Day = builder.trafficPercent1Day;
             this.trafficPercent30Day = builder.trafficPercent30Day;
             this.trafficPercent7Day = builder.trafficPercent7Day;
+            this.unknownReason = builder.unknownReason;
         }
 
         public static Builder builder() {
@@ -241,6 +261,27 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         }
 
         /**
+         * @return inBytes
+         */
+        public Long getInBytes() {
+            return this.inBytes;
+        }
+
+        /**
+         * @return memberUid
+         */
+        public Long getMemberUid() {
+            return this.memberUid;
+        }
+
+        /**
+         * @return outBytes
+         */
+        public Long getOutBytes() {
+            return this.outBytes;
+        }
+
+        /**
          * @return portList
          */
         public java.util.List<String> getPortList() {
@@ -290,6 +331,13 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalBytes
+         */
+        public Long getTotalBytes() {
+            return this.totalBytes;
+        }
+
+        /**
          * @return totalReplyBytes
          */
         public Long getTotalReplyBytes() {
@@ -317,6 +365,13 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             return this.trafficPercent7Day;
         }
 
+        /**
+         * @return unknownReason
+         */
+        public java.util.List<String> getUnknownReason() {
+            return this.unknownReason;
+        }
+
         public static final class Builder {
             private String aclRecommendDetail; 
             private String assetsInstanceId; 
@@ -324,6 +379,9 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             private String assetsType; 
             private Integer detailNum; 
             private Boolean hasAclRecommend; 
+            private Long inBytes; 
+            private Long memberUid; 
+            private Long outBytes; 
             private java.util.List<String> portList; 
             private String publicIp; 
             private String regionNo; 
@@ -331,10 +389,12 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             private String riskReason; 
             private java.util.List<String> serviceNameList; 
             private Long srcIpCnt; 
+            private Long totalBytes; 
             private Long totalReplyBytes; 
             private String trafficPercent1Day; 
             private String trafficPercent30Day; 
             private String trafficPercent7Day; 
+            private java.util.List<String> unknownReason; 
 
             private Builder() {
             } 
@@ -346,6 +406,9 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
                 this.assetsType = model.assetsType;
                 this.detailNum = model.detailNum;
                 this.hasAclRecommend = model.hasAclRecommend;
+                this.inBytes = model.inBytes;
+                this.memberUid = model.memberUid;
+                this.outBytes = model.outBytes;
                 this.portList = model.portList;
                 this.publicIp = model.publicIp;
                 this.regionNo = model.regionNo;
@@ -353,10 +416,12 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
                 this.riskReason = model.riskReason;
                 this.serviceNameList = model.serviceNameList;
                 this.srcIpCnt = model.srcIpCnt;
+                this.totalBytes = model.totalBytes;
                 this.totalReplyBytes = model.totalReplyBytes;
                 this.trafficPercent1Day = model.trafficPercent1Day;
                 this.trafficPercent30Day = model.trafficPercent30Day;
                 this.trafficPercent7Day = model.trafficPercent7Day;
+                this.unknownReason = model.unknownReason;
             } 
 
             /**
@@ -432,6 +497,39 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
              */
             public Builder hasAclRecommend(Boolean hasAclRecommend) {
                 this.hasAclRecommend = hasAclRecommend;
+                return this;
+            }
+
+            /**
+             * <p>The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>235</p>
+             */
+            public Builder inBytes(Long inBytes) {
+                this.inBytes = inBytes;
+                return this;
+            }
+
+            /**
+             * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14151892****7022</p>
+             */
+            public Builder memberUid(Long memberUid) {
+                this.memberUid = memberUid;
+                return this;
+            }
+
+            /**
+             * <p>The outbound network throughput, which indicates the total number of bytes that are sent outbound. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1123</p>
+             */
+            public Builder outBytes(Long outBytes) {
+                this.outBytes = outBytes;
                 return this;
             }
 
@@ -513,6 +611,17 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The total inbound and outbound network throughput, which indicates the total number of bytes that are sent inbound and outbound. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>253023143</p>
+             */
+            public Builder totalBytes(Long totalBytes) {
+                this.totalBytes = totalBytes;
+                return this;
+            }
+
+            /**
              * <p>Outbound traffic in the last 7 days.</p>
              * 
              * <strong>example:</strong>
@@ -524,10 +633,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of traffic of a day. Unit: percent (%).</p>
+             * <p>For detailed traffic information, see the TotalBytes field.</p>
              * 
              * <strong>example:</strong>
-             * <p>11.1</p>
+             * <p>0</p>
              */
             public Builder trafficPercent1Day(String trafficPercent1Day) {
                 this.trafficPercent1Day = trafficPercent1Day;
@@ -535,10 +644,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of traffic of 30 days. Unit: percent (%).</p>
+             * <p>For detailed traffic information, see the TotalBytes field.</p>
              * 
              * <strong>example:</strong>
-             * <p>99.9</p>
+             * <p>0</p>
              */
             public Builder trafficPercent30Day(String trafficPercent30Day) {
                 this.trafficPercent30Day = trafficPercent30Day;
@@ -546,13 +655,21 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of traffic of seven days. Unit: percent (%).</p>
+             * <p>For detailed traffic information, see the TotalBytes field.</p>
              * 
              * <strong>example:</strong>
-             * <p>77.7</p>
+             * <p>0</p>
              */
             public Builder trafficPercent7Day(String trafficPercent7Day) {
                 this.trafficPercent7Day = trafficPercent7Day;
+                return this;
+            }
+
+            /**
+             * <p>Reasons for not analyzing the protocol when the protocol is identified as Unknown.</p>
+             */
+            public Builder unknownReason(java.util.List<String> unknownReason) {
+                this.unknownReason = unknownReason;
                 return this;
             }
 

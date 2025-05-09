@@ -738,6 +738,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         private String srcIP;
 
         @com.aliyun.core.annotation.NameInMap("SrcIPTag")
+        @Deprecated
         private String srcIPTag;
 
         @com.aliyun.core.annotation.NameInMap("SrcPrivateIPList")

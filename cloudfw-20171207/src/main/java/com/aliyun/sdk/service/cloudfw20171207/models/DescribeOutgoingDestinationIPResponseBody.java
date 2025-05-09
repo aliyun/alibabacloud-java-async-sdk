@@ -209,9 +209,13 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
+        @com.aliyun.core.annotation.NameInMap("UnknownReason")
+        private java.util.List<String> unknownReason;
+
         private ApplicationPortList(Builder builder) {
             this.applicationName = builder.applicationName;
             this.port = builder.port;
+            this.unknownReason = builder.unknownReason;
         }
 
         public static Builder builder() {
@@ -236,9 +240,17 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             return this.port;
         }
 
+        /**
+         * @return unknownReason
+         */
+        public java.util.List<String> getUnknownReason() {
+            return this.unknownReason;
+        }
+
         public static final class Builder {
             private String applicationName; 
             private Integer port; 
+            private java.util.List<String> unknownReason; 
 
             private Builder() {
             } 
@@ -246,6 +258,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             private Builder(ApplicationPortList model) {
                 this.applicationName = model.applicationName;
                 this.port = model.port;
+                this.unknownReason = model.unknownReason;
             } 
 
             /**
@@ -287,6 +300,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
              */
             public Builder port(Integer port) {
                 this.port = port;
+                return this;
+            }
+
+            /**
+             * UnknownReason.
+             */
+            public Builder unknownReason(java.util.List<String> unknownReason) {
+                this.unknownReason = unknownReason;
                 return this;
             }
 

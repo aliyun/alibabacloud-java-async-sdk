@@ -379,6 +379,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInvadeEventListResponse> describeInvadeEventList(DescribeInvadeEventListRequest request);
 
     /**
+     * @param request the request parameters of DescribeLogStoreInfo  DescribeLogStoreInfoRequest
+     * @return DescribeLogStoreInfoResponse
+     */
+    CompletableFuture<DescribeLogStoreInfoResponse> describeLogStoreInfo(DescribeLogStoreInfoRequest request);
+
+    /**
      * @param request the request parameters of DescribeNatAclPageStatus  DescribeNatAclPageStatusRequest
      * @return DescribeNatAclPageStatusResponse
      */
@@ -407,6 +413,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeNatFirewallPolicyPriorUsedResponse
      */
     CompletableFuture<DescribeNatFirewallPolicyPriorUsedResponse> describeNatFirewallPolicyPriorUsed(DescribeNatFirewallPolicyPriorUsedRequest request);
+
+    /**
+     * @param request the request parameters of DescribeNatFirewallTrafficTrend  DescribeNatFirewallTrafficTrendRequest
+     * @return DescribeNatFirewallTrafficTrendResponse
+     */
+    CompletableFuture<DescribeNatFirewallTrafficTrendResponse> describeNatFirewallTrafficTrend(DescribeNatFirewallTrafficTrendRequest request);
 
     /**
      * @param request the request parameters of DescribeOutgoingDestinationIP  DescribeOutgoingDestinationIPRequest
@@ -587,6 +599,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVpcFirewallControlPolicyResponse> describeVpcFirewallControlPolicy(DescribeVpcFirewallControlPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call the DescribeVpcFirewallDefaultIPSConfig operation to query the intrusion prevention configurations of a VPC firewall.</p>
+     * <h2>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
      * @param request the request parameters of DescribeVpcFirewallDefaultIPSConfig  DescribeVpcFirewallDefaultIPSConfigRequest
      * @return DescribeVpcFirewallDefaultIPSConfigResponse
      */

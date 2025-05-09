@@ -106,7 +106,14 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * BasicRules.
+         * <p>Indicates whether basic policies are enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder basicRules(Integer basicRules) {
             this.basicRules = basicRules;
@@ -114,7 +121,14 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EnableAllPatch.
+         * <p>Indicates whether virtual patching is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enableAllPatch(Integer enableAllPatch) {
             this.enableAllPatch = enableAllPatch;
@@ -122,7 +136,10 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>850A84D6-0DE4-4797-A1E8-00090125adf1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +147,15 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RuleClass.
+         * <p>The level of the rule group for the IPS. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: loose.</li>
+         * <li><strong>2</strong>: medium.</li>
+         * <li><strong>3</strong>: strict.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleClass(Integer ruleClass) {
             this.ruleClass = ruleClass;
@@ -138,7 +163,14 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RunMode.
+         * <p>The mode of the intrusion prevention system (IPS). Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: block mode</li>
+         * <li><strong>0</strong>: monitor mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder runMode(Integer runMode) {
             this.runMode = runMode;
