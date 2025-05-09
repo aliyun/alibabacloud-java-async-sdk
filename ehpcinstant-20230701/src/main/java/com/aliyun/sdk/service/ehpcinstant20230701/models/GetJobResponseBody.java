@@ -1247,6 +1247,9 @@ public class GetJobResponseBody extends TeaModel {
      * <p>GetJobResponseBody</p>
      */
     public static class JobInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppExtraInfo")
+        private String appExtraInfo;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -1278,6 +1281,7 @@ public class GetJobResponseBody extends TeaModel {
         private java.util.List<Tasks> tasks;
 
         private JobInfo(Builder builder) {
+            this.appExtraInfo = builder.appExtraInfo;
             this.createTime = builder.createTime;
             this.deploymentPolicy = builder.deploymentPolicy;
             this.endTime = builder.endTime;
@@ -1296,6 +1300,13 @@ public class GetJobResponseBody extends TeaModel {
 
         public static JobInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return appExtraInfo
+         */
+        public String getAppExtraInfo() {
+            return this.appExtraInfo;
         }
 
         /**
@@ -1369,6 +1380,7 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appExtraInfo; 
             private String createTime; 
             private DeploymentPolicy deploymentPolicy; 
             private String endTime; 
@@ -1384,6 +1396,7 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             private Builder(JobInfo model) {
+                this.appExtraInfo = model.appExtraInfo;
                 this.createTime = model.createTime;
                 this.deploymentPolicy = model.deploymentPolicy;
                 this.endTime = model.endTime;
@@ -1395,6 +1408,14 @@ public class GetJobResponseBody extends TeaModel {
                 this.status = model.status;
                 this.tasks = model.tasks;
             } 
+
+            /**
+             * AppExtraInfo.
+             */
+            public Builder appExtraInfo(String appExtraInfo) {
+                this.appExtraInfo = appExtraInfo;
+                return this;
+            }
 
             /**
              * CreateTime.

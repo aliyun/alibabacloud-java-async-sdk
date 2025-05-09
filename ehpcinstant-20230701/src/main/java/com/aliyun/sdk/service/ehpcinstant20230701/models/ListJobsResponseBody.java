@@ -233,6 +233,9 @@ public class ListJobsResponseBody extends TeaModel {
      * <p>ListJobsResponseBody</p>
      */
     public static class JobList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppExtraInfo")
+        private String appExtraInfo;
+
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
@@ -273,6 +276,7 @@ public class ListJobsResponseBody extends TeaModel {
         private Boolean taskSustainable;
 
         private JobList(Builder builder) {
+            this.appExtraInfo = builder.appExtraInfo;
             this.appName = builder.appName;
             this.createTime = builder.createTime;
             this.endTime = builder.endTime;
@@ -294,6 +298,13 @@ public class ListJobsResponseBody extends TeaModel {
 
         public static JobList create() {
             return builder().build();
+        }
+
+        /**
+         * @return appExtraInfo
+         */
+        public String getAppExtraInfo() {
+            return this.appExtraInfo;
         }
 
         /**
@@ -388,6 +399,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appExtraInfo; 
             private String appName; 
             private String createTime; 
             private String endTime; 
@@ -406,6 +418,7 @@ public class ListJobsResponseBody extends TeaModel {
             } 
 
             private Builder(JobList model) {
+                this.appExtraInfo = model.appExtraInfo;
                 this.appName = model.appName;
                 this.createTime = model.createTime;
                 this.endTime = model.endTime;
@@ -420,6 +433,14 @@ public class ListJobsResponseBody extends TeaModel {
                 this.taskCount = model.taskCount;
                 this.taskSustainable = model.taskSustainable;
             } 
+
+            /**
+             * AppExtraInfo.
+             */
+            public Builder appExtraInfo(String appExtraInfo) {
+                this.appExtraInfo = appExtraInfo;
+                return this;
+            }
 
             /**
              * AppName.
