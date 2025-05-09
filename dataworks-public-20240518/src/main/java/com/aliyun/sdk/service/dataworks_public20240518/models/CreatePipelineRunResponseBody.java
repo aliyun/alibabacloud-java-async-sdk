@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateResourceResponseBody} extends {@link TeaModel}
+ * {@link CreatePipelineRunResponseBody} extends {@link TeaModel}
  *
- * <p>CreateResourceResponseBody</p>
+ * <p>CreatePipelineRunResponseBody</p>
  */
-public class CreateResourceResponseBody extends TeaModel {
+public class CreatePipelineRunResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Id")
-    private Long id;
+    private String id;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateResourceResponseBody(Builder builder) {
+    private CreatePipelineRunResponseBody(Builder builder) {
         this.id = builder.id;
         this.requestId = builder.requestId;
     }
@@ -32,7 +32,7 @@ public class CreateResourceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateResourceResponseBody create() {
+    public static CreatePipelineRunResponseBody create() {
         return builder().build();
     }
 
@@ -43,7 +43,7 @@ public class CreateResourceResponseBody extends TeaModel {
     /**
      * @return id
      */
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 
@@ -55,41 +55,41 @@ public class CreateResourceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Long id; 
+        private String id; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(CreateResourceResponseBody model) {
+        private Builder(CreatePipelineRunResponseBody model) {
             this.id = model.id;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The ID of the file resource.</p>
+         * <p>The ID of the process.</p>
          * 
          * <strong>example:</strong>
-         * <p>631478864897630XXXX</p>
+         * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>
          */
-        public Builder id(Long id) {
+        public Builder id(String id) {
             this.id = id;
             return this;
         }
 
         /**
-         * <p>A5B97987-66EA-5563-9599-A2752292XXXX</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>The ID of the file resource.</p>
+         * <p>7C352CB7-CD88-50CF-9D0D-E81BDF02XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateResourceResponseBody build() {
-            return new CreateResourceResponseBody(this);
+        public CreatePipelineRunResponseBody build() {
+            return new CreatePipelineRunResponseBody(this);
         } 
 
     } 

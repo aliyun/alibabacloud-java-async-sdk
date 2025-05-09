@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateResourceResponseBody} extends {@link TeaModel}
+ * {@link ExecPipelineRunStageResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateResourceResponseBody</p>
+ * <p>ExecPipelineRunStageResponseBody</p>
  */
-public class UpdateResourceResponseBody extends TeaModel {
+public class ExecPipelineRunStageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private UpdateResourceResponseBody(Builder builder) {
+    private ExecPipelineRunStageResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -32,7 +32,7 @@ public class UpdateResourceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateResourceResponseBody create() {
+    public static ExecPipelineRunStageResponseBody create() {
         return builder().build();
     }
 
@@ -61,16 +61,16 @@ public class UpdateResourceResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UpdateResourceResponseBody model) {
+        private Builder(ExecPipelineRunStageResponseBody model) {
             this.requestId = model.requestId;
             this.success = model.success;
         } 
 
         /**
-         * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>4CDF7B72-020B-542A-8465-21CFFA81XXXX</p>
+         * <p>AFBB799F-8578-51C5-A766-E922EDB8XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,8 +80,12 @@ public class UpdateResourceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * <p>**</p>
+         * <p><strong>Note:</strong> The value of this parameter indicates only whether the stage is triggered but does not indicate whether the execution of the stage is successful.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -92,8 +96,8 @@ public class UpdateResourceResponseBody extends TeaModel {
             return this;
         }
 
-        public UpdateResourceResponseBody build() {
-            return new UpdateResourceResponseBody(this);
+        public ExecPipelineRunStageResponseBody build() {
+            return new ExecPipelineRunStageResponseBody(this);
         } 
 
     } 

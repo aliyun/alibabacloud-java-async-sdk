@@ -12,34 +12,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ExecDeploymentStageRequest} extends {@link RequestModel}
+ * {@link AbolishPipelineRunRequest} extends {@link RequestModel}
  *
- * <p>ExecDeploymentStageRequest</p>
+ * <p>AbolishPipelineRunRequest</p>
  */
-public class ExecDeploymentStageRequest extends Request {
+public class AbolishPipelineRunRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Code")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String code;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
     @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
-    private ExecDeploymentStageRequest(Builder builder) {
+    private AbolishPipelineRunRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.code = builder.code;
         this.id = builder.id;
         this.projectId = builder.projectId;
     }
@@ -48,7 +42,7 @@ public class ExecDeploymentStageRequest extends Request {
         return new Builder();
     }
 
-    public static ExecDeploymentStageRequest create() {
+    public static AbolishPipelineRunRequest create() {
         return builder().build();
     }
 
@@ -65,13 +59,6 @@ public class ExecDeploymentStageRequest extends Request {
     }
 
     /**
-     * @return code
-     */
-    public String getCode() {
-        return this.code;
-    }
-
-    /**
      * @return id
      */
     public String getId() {
@@ -85,9 +72,8 @@ public class ExecDeploymentStageRequest extends Request {
         return this.projectId;
     }
 
-    public static final class Builder extends Request.Builder<ExecDeploymentStageRequest, Builder> {
+    public static final class Builder extends Request.Builder<AbolishPipelineRunRequest, Builder> {
         private String regionId; 
-        private String code; 
         private String id; 
         private Long projectId; 
 
@@ -95,10 +81,9 @@ public class ExecDeploymentStageRequest extends Request {
             super();
         } 
 
-        private Builder(ExecDeploymentStageRequest request) {
+        private Builder(AbolishPipelineRunRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.code = request.code;
             this.id = request.id;
             this.projectId = request.projectId;
         } 
@@ -113,24 +98,11 @@ public class ExecDeploymentStageRequest extends Request {
         }
 
         /**
-         * <p>The code of the stage in the process. You can call the GetDeployment operation to query the code.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DEV_CHECK</p>
-         */
-        public Builder code(String code) {
-            this.putBodyParameter("Code", code);
-            this.code = code;
-            return this;
-        }
-
-        /**
          * <p>The ID of the process.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>
+         * <p>1606087c-9ac4-43f0-83a8-0b5ced21XXXX</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -139,22 +111,22 @@ public class ExecDeploymentStageRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</p>
-         * <p>You can use this parameter to specify the DataWorks workspace on which you want to perform the API operation.</p>
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
-            this.putQueryParameter("ProjectId", projectId);
+            this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
             return this;
         }
 
         @Override
-        public ExecDeploymentStageRequest build() {
-            return new ExecDeploymentStageRequest(this);
+        public AbolishPipelineRunRequest build() {
+            return new AbolishPipelineRunRequest(this);
         } 
 
     } 

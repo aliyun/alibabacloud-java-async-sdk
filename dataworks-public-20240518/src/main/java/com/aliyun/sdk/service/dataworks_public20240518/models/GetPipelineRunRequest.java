@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDeploymentRequest} extends {@link RequestModel}
+ * {@link GetPipelineRunRequest} extends {@link RequestModel}
  *
- * <p>GetDeploymentRequest</p>
+ * <p>GetPipelineRunRequest</p>
  */
-public class GetDeploymentRequest extends Request {
+public class GetPipelineRunRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -31,7 +31,7 @@ public class GetDeploymentRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
-    private GetDeploymentRequest(Builder builder) {
+    private GetPipelineRunRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.id = builder.id;
@@ -42,7 +42,7 @@ public class GetDeploymentRequest extends Request {
         return new Builder();
     }
 
-    public static GetDeploymentRequest create() {
+    public static GetPipelineRunRequest create() {
         return builder().build();
     }
 
@@ -72,7 +72,7 @@ public class GetDeploymentRequest extends Request {
         return this.projectId;
     }
 
-    public static final class Builder extends Request.Builder<GetDeploymentRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetPipelineRunRequest, Builder> {
         private String regionId; 
         private String id; 
         private Long projectId; 
@@ -81,7 +81,7 @@ public class GetDeploymentRequest extends Request {
             super();
         } 
 
-        private Builder(GetDeploymentRequest request) {
+        private Builder(GetPipelineRunRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.id = request.id;
@@ -102,7 +102,7 @@ public class GetDeploymentRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>
+         * <p>a7ef0634-20ec-4a7c-a214-54020f****</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -125,8 +125,8 @@ public class GetDeploymentRequest extends Request {
         }
 
         @Override
-        public GetDeploymentRequest build() {
-            return new GetDeploymentRequest(this);
+        public GetPipelineRunRequest build() {
+            return new GetPipelineRunRequest(this);
         } 
 
     } 

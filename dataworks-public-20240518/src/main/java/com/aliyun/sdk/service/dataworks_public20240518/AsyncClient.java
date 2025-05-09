@@ -20,10 +20,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
-     * @param request the request parameters of AbolishDeployment  AbolishDeploymentRequest
-     * @return AbolishDeploymentResponse
+     * @param request the request parameters of AbolishPipelineRun  AbolishPipelineRunRequest
+     * @return AbolishPipelineRunResponse
      */
-    CompletableFuture<AbolishDeploymentResponse> abolishDeployment(AbolishDeploymentRequest request);
+    CompletableFuture<AbolishPipelineRunResponse> abolishPipelineRun(AbolishPipelineRunRequest request);
 
     /**
      * @param request the request parameters of AddEntityIntoMetaCollection  AddEntityIntoMetaCollectionRequest
@@ -169,17 +169,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You cannot use this API operation to create a process for multiple entities at a time. If you specify multiple entities in a request, the system creates a process only for the first entity.</p>
-     * </blockquote>
-     * 
-     * @param request the request parameters of CreateDeployment  CreateDeploymentRequest
-     * @return CreateDeploymentResponse
-     */
-    CompletableFuture<CreateDeploymentResponse> createDeployment(CreateDeploymentRequest request);
-
-    /**
-     * <b>description</b> :
-     * <blockquote>
      * <p> You cannot use this API operation to create multiple UDFs at a time. If you specify multiple UDFs by using FlowSpec, the system creates only the first specified UDF.</p>
      * </blockquote>
      * 
@@ -221,6 +210,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNodeResponse> createNode(CreateNodeRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot use this API operation to create a process for multiple entities at a time. If you specify multiple entities in a request, the system creates a process only for the first entity.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreatePipelineRun  CreatePipelineRunRequest
+     * @return CreatePipelineRunResponse
+     */
+    CompletableFuture<CreatePipelineRunResponse> createPipelineRun(CreatePipelineRunRequest request);
+
+    /**
      * @param request the request parameters of CreateProject  CreateProjectRequest
      * @return CreateProjectResponse
      */
@@ -234,15 +234,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateProjectMemberResponse
      */
     CompletableFuture<CreateProjectMemberResponse> createProjectMember(CreateProjectMemberRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>Private</p>
-     * 
-     * @param request the request parameters of CreateResource  CreateResourceRequest
-     * @return CreateResourceResponse
-     */
-    CompletableFuture<CreateResourceResponse> createResource(CreateResourceRequest request);
 
     /**
      * <b>description</b> :
@@ -522,10 +513,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      *  The execution of a stage is asynchronous. The response of this operation indicates only whether a stage is triggered but does not indicate whether the execution of the stage is successful. You can call the GetDeployment operation to check whether the execution is successful.</p>
      * </blockquote>
      * 
-     * @param request the request parameters of ExecDeploymentStage  ExecDeploymentStageRequest
-     * @return ExecDeploymentStageResponse
+     * @param request the request parameters of ExecPipelineRunStage  ExecPipelineRunStageRequest
+     * @return ExecPipelineRunStageResponse
      */
-    CompletableFuture<ExecDeploymentStageResponse> execDeploymentStage(ExecDeploymentStageRequest request);
+    CompletableFuture<ExecPipelineRunStageResponse> execPipelineRunStage(ExecPipelineRunStageRequest request);
 
     /**
      * <b>description</b> :
@@ -645,12 +636,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDatabaseResponse> getDatabase(GetDatabaseRequest request);
 
     /**
-     * @param request the request parameters of GetDeployment  GetDeploymentRequest
-     * @return GetDeploymentResponse
-     */
-    CompletableFuture<GetDeploymentResponse> getDeployment(GetDeploymentRequest request);
-
-    /**
      * @param request the request parameters of GetFunction  GetFunctionRequest
      * @return GetFunctionResponse
      */
@@ -694,6 +679,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetPartitionResponse
      */
     CompletableFuture<GetPartitionResponse> getPartition(GetPartitionRequest request);
+
+    /**
+     * @param request the request parameters of GetPipelineRun  GetPipelineRunRequest
+     * @return GetPipelineRunResponse
+     */
+    CompletableFuture<GetPipelineRunResponse> getPipelineRun(GetPipelineRunRequest request);
 
     /**
      * <b>description</b> :
@@ -1004,12 +995,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request);
 
     /**
-     * @param request the request parameters of ListDeployments  ListDeploymentsRequest
-     * @return ListDeploymentsResponse
-     */
-    CompletableFuture<ListDeploymentsResponse> listDeployments(ListDeploymentsRequest request);
-
-    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -1080,6 +1065,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPartitionsResponse
      */
     CompletableFuture<ListPartitionsResponse> listPartitions(ListPartitionsRequest request);
+
+    /**
+     * @param request the request parameters of ListPipelineRuns  ListPipelineRunsRequest
+     * @return ListPipelineRunsResponse
+     */
+    CompletableFuture<ListPipelineRunsResponse> listPipelineRuns(ListPipelineRunsRequest request);
 
     /**
      * <b>description</b> :
@@ -1499,12 +1490,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateProjectResponse
      */
     CompletableFuture<UpdateProjectResponse> updateProject(UpdateProjectRequest request);
-
-    /**
-     * @param request the request parameters of UpdateResource  UpdateResourceRequest
-     * @return UpdateResourceResponse
-     */
-    CompletableFuture<UpdateResourceResponse> updateResource(UpdateResourceRequest request);
 
     /**
      * <b>description</b> :

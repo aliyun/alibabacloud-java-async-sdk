@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateResourceResponse} extends {@link TeaModel}
+ * {@link AbolishPipelineRunResponse} extends {@link TeaModel}
  *
- * <p>UpdateResourceResponse</p>
+ * <p>AbolishPipelineRunResponse</p>
  */
-public class UpdateResourceResponse extends Response {
+public class AbolishPipelineRunResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class UpdateResourceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateResourceResponseBody body;
+    private AbolishPipelineRunResponseBody body;
 
-    private UpdateResourceResponse(BuilderImpl builder) {
+    private AbolishPipelineRunResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateResourceResponse create() {
+    public static AbolishPipelineRunResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class UpdateResourceResponse extends Response {
     /**
      * @return body
      */
-    public UpdateResourceResponseBody getBody() {
+    public AbolishPipelineRunResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateResourceResponse, Builder> {
+    public interface Builder extends Response.Builder<AbolishPipelineRunResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateResourceResponseBody body);
+        Builder body(AbolishPipelineRunResponseBody body);
 
         @Override
-        UpdateResourceResponse build();
+        AbolishPipelineRunResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateResourceResponse, Builder>
+            extends Response.BuilderImpl<AbolishPipelineRunResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private UpdateResourceResponseBody body; 
+        private AbolishPipelineRunResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateResourceResponse response) {
+        private BuilderImpl(AbolishPipelineRunResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class UpdateResourceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateResourceResponseBody body) {
+        public Builder body(AbolishPipelineRunResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateResourceResponse build() {
-            return new UpdateResourceResponse(this);
+        public AbolishPipelineRunResponse build() {
+            return new AbolishPipelineRunResponse(this);
         } 
 
     } 

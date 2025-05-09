@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateResourceResponse} extends {@link TeaModel}
+ * {@link ListPipelineRunsResponse} extends {@link TeaModel}
  *
- * <p>CreateResourceResponse</p>
+ * <p>ListPipelineRunsResponse</p>
  */
-public class CreateResourceResponse extends Response {
+public class ListPipelineRunsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CreateResourceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateResourceResponseBody body;
+    private ListPipelineRunsResponseBody body;
 
-    private CreateResourceResponse(BuilderImpl builder) {
+    private ListPipelineRunsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateResourceResponse create() {
+    public static ListPipelineRunsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CreateResourceResponse extends Response {
     /**
      * @return body
      */
-    public CreateResourceResponseBody getBody() {
+    public ListPipelineRunsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateResourceResponse, Builder> {
+    public interface Builder extends Response.Builder<ListPipelineRunsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateResourceResponseBody body);
+        Builder body(ListPipelineRunsResponseBody body);
 
         @Override
-        CreateResourceResponse build();
+        ListPipelineRunsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateResourceResponse, Builder>
+            extends Response.BuilderImpl<ListPipelineRunsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateResourceResponseBody body; 
+        private ListPipelineRunsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateResourceResponse response) {
+        private BuilderImpl(ListPipelineRunsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CreateResourceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateResourceResponseBody body) {
+        public Builder body(ListPipelineRunsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateResourceResponse build() {
-            return new CreateResourceResponse(this);
+        public ListPipelineRunsResponse build() {
+            return new ListPipelineRunsResponse(this);
         } 
 
     } 

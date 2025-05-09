@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDeploymentResponseBody} extends {@link TeaModel}
+ * {@link ListPipelineRunsResponseBody} extends {@link TeaModel}
  *
- * <p>GetDeploymentResponseBody</p>
+ * <p>ListPipelineRunsResponseBody</p>
  */
-public class GetDeploymentResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("Pipeline")
-    private Pipeline pipeline;
+public class ListPipelineRunsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("PagingInfo")
+    private PagingInfo pagingInfo;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private GetDeploymentResponseBody(Builder builder) {
-        this.pipeline = builder.pipeline;
+    private ListPipelineRunsResponseBody(Builder builder) {
+        this.pagingInfo = builder.pagingInfo;
         this.requestId = builder.requestId;
     }
 
@@ -32,7 +32,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetDeploymentResponseBody create() {
+    public static ListPipelineRunsResponseBody create() {
         return builder().build();
     }
 
@@ -41,10 +41,10 @@ public class GetDeploymentResponseBody extends TeaModel {
     }
 
     /**
-     * @return pipeline
+     * @return pagingInfo
      */
-    public Pipeline getPipeline() {
-        return this.pipeline;
+    public PagingInfo getPagingInfo() {
+        return this.pagingInfo;
     }
 
     /**
@@ -55,22 +55,22 @@ public class GetDeploymentResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Pipeline pipeline; 
+        private PagingInfo pagingInfo; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(GetDeploymentResponseBody model) {
-            this.pipeline = model.pipeline;
+        private Builder(ListPipelineRunsResponseBody model) {
+            this.pagingInfo = model.pagingInfo;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The information about the process.</p>
+         * <p>The pagination information.</p>
          */
-        public Builder pipeline(Pipeline pipeline) {
-            this.pipeline = pipeline;
+        public Builder pagingInfo(PagingInfo pagingInfo) {
+            this.pagingInfo = pagingInfo;
             return this;
         }
 
@@ -78,24 +78,24 @@ public class GetDeploymentResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>08468352-032C-5262-AEDC-68C9FA05XXXX</p>
+         * <p>7C352CB7-CD88-50CF-9D0D-E81BDF02XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GetDeploymentResponseBody build() {
-            return new GetDeploymentResponseBody(this);
+        public ListPipelineRunsResponseBody build() {
+            return new ListPipelineRunsResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetDeploymentResponseBody} extends {@link TeaModel}
+     * {@link ListPipelineRunsResponseBody} extends {@link TeaModel}
      *
-     * <p>GetDeploymentResponseBody</p>
+     * <p>ListPipelineRunsResponseBody</p>
      */
     public static class Stages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
@@ -236,7 +236,7 @@ public class GetDeploymentResponseBody extends TeaModel {
              * <p>The description of the stage.</p>
              * 
              * <strong>example:</strong>
-             * <p>Phase description</p>
+             * <p>Check before going online to development</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -244,7 +244,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the stage.</p>
+             * <p>The additional information about the stage.</p>
              */
             public Builder detail(java.util.Map<String, ?> detail) {
                 this.detail = detail;
@@ -252,10 +252,10 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned for the stage.</p>
+             * <p>The error message returned during the stage.</p>
              * 
              * <strong>example:</strong>
-             * <p>Exception information XXX</p>
+             * <p>Error message</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -266,7 +266,7 @@ public class GetDeploymentResponseBody extends TeaModel {
              * <p>The name of the stage.</p>
              * 
              * <strong>example:</strong>
-             * <p>Publish package build</p>
+             * <p>Check before going online to development</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -286,7 +286,7 @@ public class GetDeploymentResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>INIT</p>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -305,7 +305,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the stage.</p>
+             * <p>The type of the stage. This parameter indicates the operation type in the stage.</p>
              * <p>Valid values:</p>
              * <ul>
              * <li>Deploy</li>
@@ -316,7 +316,7 @@ public class GetDeploymentResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>BUILD</p>
+             * <p>Check</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -332,11 +332,11 @@ public class GetDeploymentResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link GetDeploymentResponseBody} extends {@link TeaModel}
+     * {@link ListPipelineRunsResponseBody} extends {@link TeaModel}
      *
-     * <p>GetDeploymentResponseBody</p>
+     * <p>ListPipelineRunsResponseBody</p>
      */
-    public static class Pipeline extends TeaModel {
+    public static class PipelineRuns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
@@ -361,7 +361,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        private Pipeline(Builder builder) {
+        private PipelineRuns(Builder builder) {
             this.createTime = builder.createTime;
             this.creator = builder.creator;
             this.id = builder.id;
@@ -376,7 +376,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Pipeline create() {
+        public static PipelineRuns create() {
             return builder().build();
         }
 
@@ -449,7 +449,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Pipeline model) {
+            private Builder(PipelineRuns model) {
                 this.createTime = model.createTime;
                 this.creator = model.creator;
                 this.id = model.id;
@@ -464,7 +464,7 @@ public class GetDeploymentResponseBody extends TeaModel {
              * <p>The time when the process was created. This value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
-             * <p>1724984066000</p>
+             * <p>1702736654000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -475,7 +475,7 @@ public class GetDeploymentResponseBody extends TeaModel {
              * <p>The creator of the process.</p>
              * 
              * <strong>example:</strong>
-             * <p>137946317766XXXX</p>
+             * <p>110755000425XXXX</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -483,10 +483,10 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the process.</p>
+             * <p>The process ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>
+             * <p>097c73fe-ed6e-4fb1-b109-a5d59e46cd58</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -494,7 +494,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned when the process fails.</p>
+             * <p>The error message returned during the stage.</p>
              * 
              * <strong>example:</strong>
              * <p>Error message</p>
@@ -508,7 +508,7 @@ public class GetDeploymentResponseBody extends TeaModel {
              * <p>The time when the process was modified. This value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
-             * <p>1724984066000</p>
+             * <p>1702736654000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -519,7 +519,7 @@ public class GetDeploymentResponseBody extends TeaModel {
              * <p>The DataWorks workspace ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>56160</p>
+             * <p>70199</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -527,7 +527,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about stages in the process.</p>
+             * <p>The stages of the process.</p>
              */
             public Builder stages(java.util.List<Stages> stages) {
                 this.stages = stages;
@@ -547,15 +547,141 @@ public class GetDeploymentResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>RUNNING</p>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
                 return this;
             }
 
-            public Pipeline build() {
-                return new Pipeline(this);
+            public PipelineRuns build() {
+                return new PipelineRuns(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListPipelineRunsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPipelineRunsResponseBody</p>
+     */
+    public static class PagingInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
+        private Integer pageNumber;
+
+        @com.aliyun.core.annotation.NameInMap("PageSize")
+        private Integer pageSize;
+
+        @com.aliyun.core.annotation.NameInMap("PipelineRuns")
+        private java.util.List<PipelineRuns> pipelineRuns;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Integer totalCount;
+
+        private PagingInfo(Builder builder) {
+            this.pageNumber = builder.pageNumber;
+            this.pageSize = builder.pageSize;
+            this.pipelineRuns = builder.pipelineRuns;
+            this.totalCount = builder.totalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PagingInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return pageNumber
+         */
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return pipelineRuns
+         */
+        public java.util.List<PipelineRuns> getPipelineRuns() {
+            return this.pipelineRuns;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public static final class Builder {
+            private Integer pageNumber; 
+            private Integer pageSize; 
+            private java.util.List<PipelineRuns> pipelineRuns; 
+            private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagingInfo model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.pipelineRuns = model.pipelineRuns;
+                this.totalCount = model.totalCount;
+            } 
+
+            /**
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder pageNumber(Integer pageNumber) {
+                this.pageNumber = pageNumber;
+                return this;
+            }
+
+            /**
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder pageSize(Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * <p>The processes.</p>
+             */
+            public Builder pipelineRuns(java.util.List<PipelineRuns> pipelineRuns) {
+                this.pipelineRuns = pipelineRuns;
+                return this;
+            }
+
+            /**
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2524</p>
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
+            public PagingInfo build() {
+                return new PagingInfo(this);
             } 
 
         } 

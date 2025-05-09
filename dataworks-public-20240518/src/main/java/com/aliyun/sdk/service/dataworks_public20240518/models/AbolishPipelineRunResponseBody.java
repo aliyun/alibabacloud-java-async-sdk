@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AbolishDeploymentResponseBody} extends {@link TeaModel}
+ * {@link AbolishPipelineRunResponseBody} extends {@link TeaModel}
  *
- * <p>AbolishDeploymentResponseBody</p>
+ * <p>AbolishPipelineRunResponseBody</p>
  */
-public class AbolishDeploymentResponseBody extends TeaModel {
+public class AbolishPipelineRunResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private AbolishDeploymentResponseBody(Builder builder) {
+    private AbolishPipelineRunResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -32,7 +32,7 @@ public class AbolishDeploymentResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static AbolishDeploymentResponseBody create() {
+    public static AbolishPipelineRunResponseBody create() {
         return builder().build();
     }
 
@@ -61,7 +61,7 @@ public class AbolishDeploymentResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(AbolishDeploymentResponseBody model) {
+        private Builder(AbolishPipelineRunResponseBody model) {
             this.requestId = model.requestId;
             this.success = model.success;
         } 
@@ -92,8 +92,8 @@ public class AbolishDeploymentResponseBody extends TeaModel {
             return this;
         }
 
-        public AbolishDeploymentResponseBody build() {
-            return new AbolishDeploymentResponseBody(this);
+        public AbolishPipelineRunResponseBody build() {
+            return new AbolishPipelineRunResponseBody(this);
         } 
 
     } 

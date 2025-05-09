@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateDeploymentResponse} extends {@link TeaModel}
+ * {@link GetPipelineRunResponse} extends {@link TeaModel}
  *
- * <p>CreateDeploymentResponse</p>
+ * <p>GetPipelineRunResponse</p>
  */
-public class CreateDeploymentResponse extends Response {
+public class GetPipelineRunResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CreateDeploymentResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateDeploymentResponseBody body;
+    private GetPipelineRunResponseBody body;
 
-    private CreateDeploymentResponse(BuilderImpl builder) {
+    private GetPipelineRunResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateDeploymentResponse create() {
+    public static GetPipelineRunResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CreateDeploymentResponse extends Response {
     /**
      * @return body
      */
-    public CreateDeploymentResponseBody getBody() {
+    public GetPipelineRunResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateDeploymentResponse, Builder> {
+    public interface Builder extends Response.Builder<GetPipelineRunResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateDeploymentResponseBody body);
+        Builder body(GetPipelineRunResponseBody body);
 
         @Override
-        CreateDeploymentResponse build();
+        GetPipelineRunResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateDeploymentResponse, Builder>
+            extends Response.BuilderImpl<GetPipelineRunResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateDeploymentResponseBody body; 
+        private GetPipelineRunResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateDeploymentResponse response) {
+        private BuilderImpl(GetPipelineRunResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CreateDeploymentResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateDeploymentResponseBody body) {
+        public Builder body(GetPipelineRunResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateDeploymentResponse build() {
-            return new CreateDeploymentResponse(this);
+        public GetPipelineRunResponse build() {
+            return new GetPipelineRunResponse(this);
         } 
 
     } 

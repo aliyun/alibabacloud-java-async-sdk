@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AbolishDeploymentResponse} extends {@link TeaModel}
+ * {@link ExecPipelineRunStageResponse} extends {@link TeaModel}
  *
- * <p>AbolishDeploymentResponse</p>
+ * <p>ExecPipelineRunStageResponse</p>
  */
-public class AbolishDeploymentResponse extends Response {
+public class ExecPipelineRunStageResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class AbolishDeploymentResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private AbolishDeploymentResponseBody body;
+    private ExecPipelineRunStageResponseBody body;
 
-    private AbolishDeploymentResponse(BuilderImpl builder) {
+    private ExecPipelineRunStageResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static AbolishDeploymentResponse create() {
+    public static ExecPipelineRunStageResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class AbolishDeploymentResponse extends Response {
     /**
      * @return body
      */
-    public AbolishDeploymentResponseBody getBody() {
+    public ExecPipelineRunStageResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AbolishDeploymentResponse, Builder> {
+    public interface Builder extends Response.Builder<ExecPipelineRunStageResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(AbolishDeploymentResponseBody body);
+        Builder body(ExecPipelineRunStageResponseBody body);
 
         @Override
-        AbolishDeploymentResponse build();
+        ExecPipelineRunStageResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AbolishDeploymentResponse, Builder>
+            extends Response.BuilderImpl<ExecPipelineRunStageResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private AbolishDeploymentResponseBody body; 
+        private ExecPipelineRunStageResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AbolishDeploymentResponse response) {
+        private BuilderImpl(ExecPipelineRunStageResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class AbolishDeploymentResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(AbolishDeploymentResponseBody body) {
+        public Builder body(ExecPipelineRunStageResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AbolishDeploymentResponse build() {
-            return new AbolishDeploymentResponse(this);
+        public ExecPipelineRunStageResponse build() {
+            return new ExecPipelineRunStageResponse(this);
         } 
 
     } 

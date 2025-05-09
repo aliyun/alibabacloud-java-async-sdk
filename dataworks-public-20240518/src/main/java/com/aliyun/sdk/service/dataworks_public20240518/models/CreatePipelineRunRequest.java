@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateDeploymentRequest} extends {@link RequestModel}
+ * {@link CreatePipelineRunRequest} extends {@link RequestModel}
  *
- * <p>CreateDeploymentRequest</p>
+ * <p>CreatePipelineRunRequest</p>
  */
-public class CreateDeploymentRequest extends Request {
+public class CreatePipelineRunRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -40,7 +40,7 @@ public class CreateDeploymentRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    private CreateDeploymentRequest(Builder builder) {
+    private CreatePipelineRunRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.description = builder.description;
@@ -53,7 +53,7 @@ public class CreateDeploymentRequest extends Request {
         return new Builder();
     }
 
-    public static CreateDeploymentRequest create() {
+    public static CreatePipelineRunRequest create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class CreateDeploymentRequest extends Request {
         return this.type;
     }
 
-    public static final class Builder extends Request.Builder<CreateDeploymentRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreatePipelineRunRequest, Builder> {
         private String regionId; 
         private String description; 
         private java.util.List<String> objectIds; 
@@ -108,7 +108,7 @@ public class CreateDeploymentRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDeploymentRequest request) {
+        private Builder(CreatePipelineRunRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.description = request.description;
@@ -154,8 +154,7 @@ public class CreateDeploymentRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
-         * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID. You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,8 +184,8 @@ public class CreateDeploymentRequest extends Request {
         }
 
         @Override
-        public CreateDeploymentRequest build() {
-            return new CreateDeploymentRequest(this);
+        public CreatePipelineRunRequest build() {
+            return new CreatePipelineRunRequest(this);
         } 
 
     } 

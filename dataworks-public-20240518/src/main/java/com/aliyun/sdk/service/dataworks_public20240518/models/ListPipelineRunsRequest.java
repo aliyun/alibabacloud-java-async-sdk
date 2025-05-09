@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListDeploymentsRequest} extends {@link RequestModel}
+ * {@link ListPipelineRunsRequest} extends {@link RequestModel}
  *
- * <p>ListDeploymentsRequest</p>
+ * <p>ListPipelineRunsRequest</p>
  */
-public class ListDeploymentsRequest extends Request {
+public class ListPipelineRunsRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -44,7 +44,7 @@ public class ListDeploymentsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    private ListDeploymentsRequest(Builder builder) {
+    private ListPipelineRunsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.creator = builder.creator;
@@ -58,7 +58,7 @@ public class ListDeploymentsRequest extends Request {
         return new Builder();
     }
 
-    public static ListDeploymentsRequest create() {
+    public static ListPipelineRunsRequest create() {
         return builder().build();
     }
 
@@ -109,7 +109,7 @@ public class ListDeploymentsRequest extends Request {
         return this.status;
     }
 
-    public static final class Builder extends Request.Builder<ListDeploymentsRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListPipelineRunsRequest, Builder> {
         private String regionId; 
         private String creator; 
         private Integer pageNumber; 
@@ -121,7 +121,7 @@ public class ListDeploymentsRequest extends Request {
             super();
         } 
 
-        private Builder(ListDeploymentsRequest request) {
+        private Builder(ListPipelineRunsRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.creator = request.creator;
@@ -144,7 +144,7 @@ public class ListDeploymentsRequest extends Request {
          * <p>The ID of the user who creates the processes. This parameter specifies a filter condition.</p>
          * 
          * <strong>example:</strong>
-         * <p>110755000425XXXX</p>
+         * <p>110755000425****</p>
          */
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
@@ -203,7 +203,7 @@ public class ListDeploymentsRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>RUNNING</p>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -212,8 +212,8 @@ public class ListDeploymentsRequest extends Request {
         }
 
         @Override
-        public ListDeploymentsRequest build() {
-            return new ListDeploymentsRequest(this);
+        public ListPipelineRunsRequest build() {
+            return new ListPipelineRunsRequest(this);
         } 
 
     } 
