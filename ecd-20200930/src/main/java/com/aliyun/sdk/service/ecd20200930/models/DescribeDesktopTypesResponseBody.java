@@ -67,7 +67,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of cloud desktop types.</p>
+         * <p>The specifications.</p>
          */
         public Builder desktopTypes(java.util.List<DesktopTypes> desktopTypes) {
             this.desktopTypes = desktopTypes;
@@ -342,7 +342,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GPU memory size. Unit: MB. This parameter applies to GPU-enabled cloud computers only.</p>
+             * <p>The GPU memory size. For GPU-accelerated cloud computers, this return value is significant. Unit: MB.</p>
              * 
              * <strong>example:</strong>
              * <p>2048</p>
@@ -375,7 +375,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sessions supported by the current specification.</p>
+             * <p>The number of sessions supported by the specification.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -397,7 +397,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array of sales modes.</p>
+             * <p>The sales modes of the specifications.</p>
              */
             public Builder scopes(java.util.List<String> scopes) {
                 this.scopes = scopes;
@@ -405,7 +405,12 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The stock status.</p>
+             * <p>The inventory status of the specification.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Insufficient</li>
+             * <li>Sufficient</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Sufficient</p>

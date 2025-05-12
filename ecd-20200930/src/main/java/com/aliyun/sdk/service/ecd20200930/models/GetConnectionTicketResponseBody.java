@@ -154,7 +154,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The credential that is returned to connect to the cloud computer. Before you use the credential, you must Base64 decode the content of the credential, save the credential as an xxx.ica file, and then open the file. Python sample code:</p>
+         * <p>Before you use the credential, you must Base64 decode the content of the credential, save the credential as an xxx.ica file, and then open the file. Python sample code:</p>
          * <pre><code>import base64
          * response = {
          *     &quot;Ticket&quot;: &quot;W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********&quot;,
@@ -186,7 +186,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the cloud computer connection task.</p>
+         * <p>The ID of the connection task.</p>
          * 
          * <strong>example:</strong>
          * <p>2afbad19-778a-4fc5-9674-1f19c638****</p>
@@ -231,7 +231,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The credential of the cloud computer connection.</p>
+         * <p>The credentials for connecting to the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>

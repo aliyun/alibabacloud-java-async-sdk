@@ -135,7 +135,7 @@ public class DescribeCenterPolicyListRequest extends Request {
          * <p>The business type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>1: public cloud.</li>
+         * <li>1: public cloud</li>
          * <li>8: commercial edition.</li>
          * </ul>
          * <p>This parameter is required.</p>

@@ -919,7 +919,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The client IP address whitelist.</p>
+         * <p>The client IP address whitelists.</p>
          */
         public Builder authorizeAccessPolicyRule(java.util.List<AuthorizeAccessPolicyRule> authorizeAccessPolicyRule) {
             this.putQueryParameter("AuthorizeAccessPolicyRule", authorizeAccessPolicyRule);
@@ -1017,7 +1017,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The details of the domain name resolution rules.</p>
+         * <p>The domain resolution rules.</p>
          */
         public Builder domainResolveRule(java.util.List<DomainResolveRule> domainResolveRule) {
             this.putQueryParameter("DomainResolveRule", domainResolveRule);
@@ -1475,7 +1475,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The client IP addresses that you want to delete from the whitelist.</p>
+         * <p>The client IP address whitelists that you want to delete.</p>
          */
         public Builder revokeAccessPolicyRule(java.util.List<RevokeAccessPolicyRule> revokeAccessPolicyRule) {
             this.putQueryParameter("RevokeAccessPolicyRule", revokeAccessPolicyRule);
@@ -1768,14 +1768,11 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to provide the AI Assistant function in the DesktopAssistant when the cloud computer is accessed from the Alibaba Cloud Workspace desktop clients (including the Windows client and the macOS client).</p>
-         * <blockquote>
-         * <p>Desktop clients of V7.7 and higher versions required.</p>
-         * </blockquote>
+         * <p>Specifies whether to display the Xiaoying AI Assistant entry in the DesktopAssistant menu.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>off: the AI Aisstant function is not provided.</li>
-         * <li>on: the AI Aisstant function is provided.</li>
+         * <li>off: does not display the Xiaoying AI Assistant entry in the DesktopAssistant menu.</li>
+         * <li>on: displays the Xiaoying AI Assistant entry in the DesktopAssistant menu.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1848,7 +1845,7 @@ public class ModifyPolicyGroupRequest extends Request {
             } 
 
             /**
-             * <p>The client CIDR block from which end users can connect to cloud computers. The value is an IPv4 CIDR block.</p>
+             * <p>The client CIDR block. Specify an IPv4 CIDR block.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2440,16 +2437,16 @@ public class ModifyPolicyGroupRequest extends Request {
              * <p>The peripheral type.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>usbKey</li>
-             * <li>other</li>
-             * <li>graphicsTablet</li>
-             * <li>printer</li>
-             * <li>cardReader</li>
-             * <li>scanner</li>
-             * <li>storage</li>
-             * <li>camera</li>
-             * <li>adb</li>
-             * <li>networkInterfaceCard: the NIC device</li>
+             * <li>usbKey: UKeys</li>
+             * <li>other: other peripheral devices.</li>
+             * <li>graphicsTablet: graphics tablets.</li>
+             * <li>printer: printers.</li>
+             * <li>cardReader: card readers.</li>
+             * <li>scanner: scanners.</li>
+             * <li>storage: storage devices.</li>
+             * <li>camera: web cameras.</li>
+             * <li>adb: Android Debug Bridge (ADB) device</li>
+             * <li>networkInterfaceCard: NIC devices.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2495,7 +2492,7 @@ public class ModifyPolicyGroupRequest extends Request {
              * <p>Valid values:</p>
              * <ul>
              * <li>deviceRedirect: device redirection</li>
-             * <li>usbRedirect: USB redirection</li>
+             * <li>usbRedirect: USB redirection.</li>
              * <li>off: redirection disabled</li>
              * </ul>
              * 
@@ -2580,7 +2577,7 @@ public class ModifyPolicyGroupRequest extends Request {
             } 
 
             /**
-             * <p>The description of domain name resolution rule.</p>
+             * <p>The policy description.</p>
              * 
              * <strong>example:</strong>
              * <p>description policy</p>
@@ -2602,7 +2599,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow the domain name resolution rule.</p>
+             * <p>The resolution policy.</p>
              * <p>Valid values:</p>
              * <ul>
              * <li>allow</li>
@@ -2677,7 +2674,7 @@ public class ModifyPolicyGroupRequest extends Request {
             } 
 
             /**
-             * <p>The client CIDR block that you want to delete. After it is deleted, end users cannot connect to cloud computers from the CIDR block. The value is an IPv4 CIDR block.</p>
+             * <p>The client CIDR block that you want to delete. Specify an IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/16</p>
@@ -2688,7 +2685,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The description of the client IP addresses that you want to delete from the whitelist.</p>
+             * <p>The description of the client IP address whitelist that you want to delete.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

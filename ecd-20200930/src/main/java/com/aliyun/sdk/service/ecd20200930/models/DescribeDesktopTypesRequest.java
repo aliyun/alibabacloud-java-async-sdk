@@ -322,7 +322,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer pool when you change instance types of cloud computers. If you specify this parameter, the information about whether the instance type is compatible with the cloud computer pool is included in the response.</p>
+         * <p>The ID of the cloud computer share you want to modify. If this parameter is provided, the response will include compatibility information for the specified specification.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-abcdefg****</p>
@@ -346,151 +346,35 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the instance types of cloud computers.</p>
+         * <p>The specification ID.</p>
          * <blockquote>
-         * <p> If the values of the <code>InstanceTypeFamily</code> and <code>DesktopTypeId</code> parameters are empty, all instance types of cloud computers are queried.</p>
+         * <p> If both <code>InstanceTypeFamily</code> and <code>DesktopTypeId</code> are empty, all cloud computer specifications will be queried.</p>
          * </blockquote>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>eds.hf.4c8g</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>ecd.basic.large</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>ecd.advanced.large</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>ecd.basic.small</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>ecd.graphics.2xlarge</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>eds.hf.8c16g</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>eds.hf.12c24g</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>eds.general.8c16g</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>eds.general.16c32g</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>ecd.advanced.xlarge</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>eds.graphics.16c1t4</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>ecd.graphics.xlarge</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>ecd.performance.2xlarge</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>eds.general.8c32g</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>eds.general.2c2g</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>eds.general.2c4g</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>eds.graphics.24c1t4</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>eds.general.4c8g</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>eds.general.4c16g</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>eds.general.2c8g</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>eds.enterprise_office.4c8g</li>
+         * <li>eds.hf.4c8g</li>
+         * <li>ecd.basic.large</li>
+         * <li>ecd.advanced.large</li>
+         * <li>eds.enterprise_office.8c16g</li>
+         * <li>ecd.basic.small</li>
+         * <li>ecd.graphics.2xlarge</li>
+         * <li>eds.hf.8c16g</li>
+         * <li>eds.hf.12c24g</li>
+         * <li>eds.general.8c16g</li>
+         * <li>eds.general.16c32g</li>
+         * <li>ecd.advanced.xlarge</li>
+         * <li>eds.graphics.16c1t4</li>
+         * <li>ecd.graphics.xlarge</li>
+         * <li>ecd.performance.2xlarge</li>
+         * <li>eds.general.8c32g</li>
+         * <li>eds.general.2c2g</li>
+         * <li>eds.general.2c4g</li>
+         * <li>eds.graphics.24c1t4</li>
+         * <li>eds.general.4c8g</li>
+         * <li>eds.enterprise_office.2c4g</li>
+         * <li>eds.general.4c16g</li>
+         * <li>eds.general.2c8g</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -503,7 +387,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * <p>The array of specifications.</p>
+         * <p>The specification IDs.</p>
          */
         public Builder desktopTypeIdList(java.util.List<String> desktopTypeIdList) {
             this.putQueryParameter("DesktopTypeIdList", desktopTypeIdList);
@@ -524,7 +408,8 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * <p>The type of the pre-installed GPU driver. Valid values:</p>
+         * <p>The GPU driver type.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>T4</li>
          * <li>A10</li>
@@ -554,60 +439,20 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance family.</p>
+         * <p>The name of the specification family.</p>
          * <blockquote>
-         * <p> If the values of the <code>InstanceTypeFamily</code> and <code>DesktopTypeId</code> parameters are empty, all instance families of cloud computers are queried.</p>
+         * <p> If both <code>InstanceTypeFamily</code> and <code>DesktopTypeId</code> are empty, all specification families will be queried.</p>
          * </blockquote>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>ecd.advanced</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>eds.graphics</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>ecd.basic</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>eds.hf</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>ecd.graphics</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>eds.general</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>ecd.performance</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>ecd.advanced</li>
+         * <li>eds.graphics</li>
+         * <li>ecd.basic</li>
+         * <li>eds.enterprise_office</li>
+         * <li>eds.hf</li>
+         * <li>ecd.graphics</li>
+         * <li>eds.general</li>
+         * <li>ecd.performance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -632,10 +477,11 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * <p>The sort criterion. If left empty, the entries will be in descending order based on the creation time. Valid values:</p>
+         * <p>The sorting field. If this parameter is not provided, results are sorted by creation time in descending order.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>Memory: sort by memory size</li>
-         * <li>Cpu: sort by number of CPU cores</li>
+         * <li>Memory: sorts by memory size.</li>
+         * <li>Cpu: sorts by the number of vCPUs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -660,7 +506,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -673,10 +519,11 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * <p>The sales mode. Valid values:</p>
+         * <p>The sales mode of the specification.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>MonthPackage: monthly subscription</li>
-         * <li>FastBuy: fast buy</li>
+         * <li>MonthPackage: the monthly subscription mode.</li>
+         * <li>FastBuy: the quick purchase mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -689,10 +536,11 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values:</p>
+         * <p>The sorting order.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>ASC: in ascending order [default]</li>
-         * <li>DESC: in descending order</li>
+         * <li>ASC (default): the ascending order.</li>
+         * <li>DESC: the descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -705,7 +553,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * <p>The number of sessions supported.</p>
+         * <p>The number of sessions supported by the specification.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -718,7 +566,7 @@ public class DescribeDesktopTypesRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p> This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

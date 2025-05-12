@@ -131,7 +131,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the NAS file system.</p>
+         * <p>The IDs of the NAS file systems.</p>
          * 
          * <strong>example:</strong>
          * <p>04f314****</p>
@@ -143,7 +143,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to filter NAS file systems that only support the user profile management (UPM) feature.</p>
+         * <p>Specifies whether to include only NAS file systems that support the User Profile Management (UPM) feature in the query results.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -181,7 +181,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The ID of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
@@ -193,7 +193,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

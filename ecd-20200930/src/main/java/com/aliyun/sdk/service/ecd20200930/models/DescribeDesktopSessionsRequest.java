@@ -285,7 +285,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The ID the end user. It is the same as EndUserId. Either one of these two parameters is required.</p>
+         * <p>The user ID. This parameter functions the same as the <code>EndUserId</code> parameter. You only need to include one of them in your request.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -297,7 +297,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the office network.</p>
+         * <p>The office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>

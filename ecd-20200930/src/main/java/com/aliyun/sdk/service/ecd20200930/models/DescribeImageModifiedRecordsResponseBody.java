@@ -93,7 +93,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the image modification record.</p>
+         * <p>The image change records.</p>
          */
         public Builder imageModifiedRecords(java.util.List<ImageModifiedRecords> imageModifiedRecords) {
             this.imageModifiedRecords = imageModifiedRecords;

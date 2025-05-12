@@ -1042,7 +1042,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computer must be in the Running state.</p>
+     * <p>The cloud computer must be in the Running state. The ticket obtained by calling this operation will expire in 10 minutes.</p>
      * 
      * @param request the request parameters of GetConnectionTicket  GetConnectionTicketRequest
      * @return GetConnectionTicketResponse

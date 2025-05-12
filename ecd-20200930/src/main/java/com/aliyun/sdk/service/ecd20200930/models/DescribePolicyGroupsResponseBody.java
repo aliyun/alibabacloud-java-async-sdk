@@ -127,7 +127,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the cloud computer policies.</p>
+         * <p>The cloud computer policies.</p>
          */
         public Builder describePolicyGroups(java.util.List<DescribePolicyGroups> describePolicyGroups) {
             this.describePolicyGroups = describePolicyGroups;

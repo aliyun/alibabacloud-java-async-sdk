@@ -80,7 +80,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the NAS file systems.</p>
+         * <p>The NAS file systems.</p>
          */
         public Builder fileSystems(java.util.List<FileSystems> fileSystems) {
             this.fileSystems = fileSystems;
@@ -249,7 +249,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the desktop group.</p>
+             * <p>The ID of the cloud computer share.</p>
              * 
              * <strong>example:</strong>
              * <p>dg-9eeyf15b25nyl****</p>
@@ -260,7 +260,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the desktop group.</p>
+             * <p>The name of the cloud computer share.</p>
              * 
              * <strong>example:</strong>
              * <p>test_dg</p>
@@ -685,7 +685,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p>This parameter is not publicly available.</p>
+             * <p> This parameter is not publicly available.</p>
              * </blockquote>
              */
             public Builder allowOperateUserDrive(Boolean allowOperateUserDrive) {
@@ -694,7 +694,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array of the app steaming delivery groups bound with UPM-supported NAS.</p>
+             * <p>The application delivery groups that are associated with the UPM-supported NAS file systems.</p>
              */
             public Builder appInstanceGroups(java.util.List<AppInstanceGroups> appInstanceGroups) {
                 this.appInstanceGroups = appInstanceGroups;
@@ -739,7 +739,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The desktop groups that are associated with the NAS file systems that support the UPM feature.</p>
+             * <p>The cloud computer shares that are associated with the UPM-supported NAS file systems.</p>
              */
             public Builder desktopGroups(java.util.List<DesktopGroups> desktopGroups) {
                 this.desktopGroups = desktopGroups;
@@ -799,7 +799,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the NAS file system. Valid value: Universal NAS. This value indicates that the NAS file system is a General-purpose one.</p>
+             * <p>The type of the NAS file system. The only valid value is <code>standard</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>standard</p>
@@ -810,7 +810,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The used storage of the NAS file system. Unit: byte.</p>
+             * <p>The used capacity of the NAS file system. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -850,7 +850,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace.</p>
+             * <p>The ID of the office network.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+dir-363353****</p>
@@ -861,7 +861,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workspace.</p>
+             * <p>The name of the office network.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -872,7 +872,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array of office networks.</p>
+             * <p>The office networks.</p>
              */
             public Builder officeSites(java.util.List<OfficeSites> officeSites) {
                 this.officeSites = officeSites;
@@ -902,10 +902,11 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type of the NAS file system. Valid values:</p>
+             * <p>The storage type of the NAS file system.</p>
+             * <p>Valid values:</p>
              * <ul>
-             * <li>Upm: UPM NAS</li>
-             * <li>ShareNas: Shared NAS</li>
+             * <li>Upm: the UPM-supported NAS file system.</li>
+             * <li>ShareNas: the shared NAS file system.</li>
              * </ul>
              * 
              * <strong>example:</strong>

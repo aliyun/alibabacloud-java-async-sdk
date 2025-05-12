@@ -387,9 +387,9 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * <p>The size of the system disk. Unit: GB.</p>
+         * <p>The size of the system disk. Unit: GiB.</p>
          * <blockquote>
-         * <p>The size of the system disk cannot be smaller than the size of the image.</p>
+         * <p> The system disk must be at least as large as the image.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

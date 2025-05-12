@@ -1522,7 +1522,7 @@ public class CreateCenterPolicyRequest extends Request {
          * <p>The business type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>1: public cloud.</li>
+         * <li>1: public cloud</li>
          * <li>8: commercial edition.</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -1783,11 +1783,11 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enforce session bandwidth limit.</p>
+         * <p>Specifies whether to enforce the peak bandwidth limit for sessions.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>off: doesn&quot;t enforce session bandwidth limit.</li>
-         * <li>on: enforces session bandwidth limit.</li>
+         * <li>off: doesn&quot;t enforce the peak bandwidth limit for sessions.</li>
+         * <li>on: enforces the peak bandwidth limit for sessions.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1817,11 +1817,11 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether end users in the same workspace can share cloud computers.</p>
+         * <p>Specifies whether to allow end users in the same office network to share cloud computers.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>off: End users in the same workspace cannot share cloud computers.</li>
-         * <li>on: End users in the same workspace can share cloud computers</li>
+         * <li>off: doesn&quot;t allow end users in the same office network to share cloud computers.</li>
+         * <li>on: allows end users in the same office network to share cloud computers.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1863,7 +1863,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The file transfer policy on the web client.</p>
+         * <p>The file transfer feature on the web client.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>all: File upload and download are supported.</li>
@@ -1882,13 +1882,13 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The network communication protocol.</p>
+         * <p>The protocol for network communication.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>tcp: TCP is used when UDP/AST is restricted.</li>
          * <li>rtc: AST is used for high-frequency audio and video streaming.</li>
-         * <li>auto: UTO enables automatic switch between AST and UDP modes based on desktop content.</li>
-         * <li>both: UDP is ideal for office and HD graphic design use.</li>
+         * <li>auto: UTO is used to enable automatic switch between AST and UDP modes based on desktop content.</li>
+         * <li>both: UDP is used for office and HD graphic design use.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2014,7 +2014,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display the Restart button in the DesktopAssistant menu when end users connect to cloud computers from mobile clients (Android clients and iOS clients).</p>
+         * <p>Specifies whether to display the Restart button in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</p>
          * <blockquote>
          * <p> This feature applies to only mobile clients of version 7.4.0 or later.</p>
          * </blockquote>
@@ -2034,7 +2034,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display the Stop button in the DesktopAssistant menu when end users connect to cloud computers from mobile clients (Android clients and iOS clients).</p>
+         * <p>Specifies whether to display the Stop button in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</p>
          * <blockquote>
          * <p> This feature applies to only mobile clients of version 7.4.0 or later.</p>
          * </blockquote>
@@ -2088,7 +2088,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The network redirection policies.</p>
+         * <p>The network redirection policy.</p>
          * <blockquote>
          * <p> This parameter is in private preview and only available to specific users.</p>
          * </blockquote>
@@ -2200,7 +2200,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The event that triggers screen recording.</p>
+         * <p>The events that trigger screen recording.</p>
          */
         public Builder recordEvents(java.util.List<String> recordEvents) {
             this.putQueryParameter("RecordEvents", recordEvents);
@@ -2374,7 +2374,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The height of the resolution. Unit: pixel. Valid values for cloud applications: 500 to 50000. Valid values for cloud computers: 480 to 4096.</p>
+         * <p>The resolution height. Unit: pixel. Valid values for cloud applications: 500 to 50000. Valid values for cloud computers: 480 to 4096.</p>
          * 
          * <strong>example:</strong>
          * <p>1280</p>
@@ -2403,7 +2403,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The width of the resolution. Unit: pixel. Valid values for cloud applications: 500 to 50000. Valid values for cloud computers: 480 to 4096.</p>
+         * <p>The resolution width. Unit: pixel. Valid values for cloud applications: 500 to 50000. Valid values for cloud computers: 480 to 4096.</p>
          * 
          * <strong>example:</strong>
          * <p>720</p>
@@ -2419,7 +2419,7 @@ public class CreateCenterPolicyRequest extends Request {
          * <p>Valid values:</p>
          * <ul>
          * <li>app: cloud applications.</li>
-         * <li>Desktop: cloud computers.</li>
+         * <li>desktop: cloud computers.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -2468,7 +2468,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The bandwidth peak of the session. Valid values: 2000 to 100000.</p>
+         * <p>The bandwidth peak allowed for sessions. Unit: Kbit/s. Valid values: 2000 to 100000.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -2589,7 +2589,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The average bitrate for video encoding. Valid values: 1000 to 50000.</p>
+         * <p>The average bitrate for video encoding. Unit: Kbit/s. Valid values: 1000 to 50000.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -2625,7 +2625,7 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The peak bitrate for video encoding. Valid values: 1000 to 50000.</p>
+         * <p>The peak bitrate for video encoding. Unit: Kbit/s. Valid values: 1000 to 50000.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -3565,7 +3565,7 @@ public class CreateCenterPolicyRequest extends Request {
              * <p>The peripheral type.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>usbKey: U keys.</li>
+             * <li>usbKey: UKeys.</li>
              * <li>other: other peripheral devices.</li>
              * <li>graphicsTablet: graphics tablets.</li>
              * <li>cardReader: card readers.</li>
@@ -3618,9 +3618,9 @@ public class CreateCenterPolicyRequest extends Request {
              * <p>The redirection type.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>deviceRedirect: enables device redirection.</li>
-             * <li>usbRedirect: enables USB redirection.</li>
-             * <li>off: disables any type of redirection.</li>
+             * <li>deviceRedirect: device redirection.</li>
+             * <li>usbRedirect: USB redirection.</li>
+             * <li>off: redirection disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
