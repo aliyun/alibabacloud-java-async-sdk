@@ -75,7 +75,7 @@ public class RestartServiceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region where the service is deployed.</p>
+         * <p>The ID of the region in which the service resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

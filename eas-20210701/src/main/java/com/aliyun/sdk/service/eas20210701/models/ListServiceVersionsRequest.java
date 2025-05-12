@@ -103,7 +103,7 @@ public class ListServiceVersionsRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the service.</p>
+         * <p>The ID of the region in which the service resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -543,6 +543,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateGatewayResponse> updateGateway(UpdateGatewayRequest request);
 
     /**
+     * @param request the request parameters of UpdateGroup  UpdateGroupRequest
+     * @return UpdateGroupResponse
+     */
+    CompletableFuture<UpdateGroupResponse> updateGroup(UpdateGroupRequest request);
+
+    /**
      * @param request the request parameters of UpdateResource  UpdateResourceRequest
      * @return UpdateResourceResponse
      */

@@ -251,7 +251,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * <p>The custom tag.</p>
+         * <p>The labels.</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             this.putBodyParameter("Labels", labels);
@@ -406,7 +406,7 @@ public class CreateResourceRequest extends Request {
             } 
 
             /**
-             * <p>The result.</p>
+             * <p>The effect.</p>
              * <p>Valid values:</p>
              * <ul>
              * <li>PreferNoSchedule</li>
