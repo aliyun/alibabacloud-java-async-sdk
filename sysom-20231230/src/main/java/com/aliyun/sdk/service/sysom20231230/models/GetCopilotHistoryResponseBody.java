@@ -44,6 +44,10 @@ public class GetCopilotHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetCopilotHistoryResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCopilotHistoryResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * code.
@@ -174,6 +188,15 @@ public class GetCopilotHistoryResponseBody extends TeaModel {
             private String content; 
             private String time; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.time = model.time;
+                this.user = model.user;
+            } 
 
             /**
              * content.

@@ -48,6 +48,10 @@ public class ListInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListInstancesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * code.
@@ -299,6 +314,24 @@ public class ListInstancesResponseBody extends TeaModel {
             private String osVersionId; 
             private String region; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clusterId = model.clusterId;
+                this.instance = model.instance;
+                this.kernelVersion = model.kernelVersion;
+                this.meta = model.meta;
+                this.osArch = model.osArch;
+                this.osHealthScore = model.osHealthScore;
+                this.osName = model.osName;
+                this.osNameId = model.osNameId;
+                this.osVersion = model.osVersion;
+                this.osVersionId = model.osVersionId;
+                this.region = model.region;
+                this.status = model.status;
+            } 
 
             /**
              * cluster_id.

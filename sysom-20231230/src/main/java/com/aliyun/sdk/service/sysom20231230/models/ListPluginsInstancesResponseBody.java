@@ -48,6 +48,10 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPluginsInstancesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * code.
@@ -179,6 +194,14 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * tag_key.
@@ -330,6 +353,21 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
             private String region; 
             private String resourceGroupId; 
             private String resourceGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceTag = model.instanceTag;
+                this.osName = model.osName;
+                this.privateIp = model.privateIp;
+                this.publicIp = model.publicIp;
+                this.region = model.region;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceGroupName = model.resourceGroupName;
+            } 
 
             /**
              * instance_id.

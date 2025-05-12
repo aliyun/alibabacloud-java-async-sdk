@@ -44,6 +44,10 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetServiceFuncStatusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * code.
@@ -223,6 +237,19 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
             private String mem; 
             private String systemProfiling; 
 
+            private Builder() {
+            } 
+
+            private Builder(Args model) {
+                this.addCmd = model.addCmd;
+                this.cpu = model.cpu;
+                this.javaStorePath = model.javaStorePath;
+                this.locks = model.locks;
+                this.loop = model.loop;
+                this.mem = model.mem;
+                this.systemProfiling = model.systemProfiling;
+            } 
+
             /**
              * add_cmd.
              */
@@ -317,6 +344,13 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private Args args; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.args = model.args;
+            } 
 
             /**
              * args.

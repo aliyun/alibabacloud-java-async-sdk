@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDiagnosisResultResponse} extends {@link TeaModel}
+ * {@link CheckInstanceSupportResponse} extends {@link TeaModel}
  *
- * <p>GetDiagnosisResultResponse</p>
+ * <p>CheckInstanceSupportResponse</p>
  */
-public class GetDiagnosisResultResponse extends Response {
+public class CheckInstanceSupportResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetDiagnosisResultResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetDiagnosisResultResponseBody body;
+    private CheckInstanceSupportResponseBody body;
 
-    private GetDiagnosisResultResponse(BuilderImpl builder) {
+    private CheckInstanceSupportResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetDiagnosisResultResponse create() {
+    public static CheckInstanceSupportResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetDiagnosisResultResponse extends Response {
     /**
      * @return body
      */
-    public GetDiagnosisResultResponseBody getBody() {
+    public CheckInstanceSupportResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetDiagnosisResultResponse, Builder> {
+    public interface Builder extends Response.Builder<CheckInstanceSupportResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetDiagnosisResultResponseBody body);
+        Builder body(CheckInstanceSupportResponseBody body);
 
         @Override
-        GetDiagnosisResultResponse build();
+        CheckInstanceSupportResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetDiagnosisResultResponse, Builder>
+            extends Response.BuilderImpl<CheckInstanceSupportResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetDiagnosisResultResponseBody body; 
+        private CheckInstanceSupportResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetDiagnosisResultResponse response) {
+        private BuilderImpl(CheckInstanceSupportResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetDiagnosisResultResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetDiagnosisResultResponseBody body) {
+        public Builder body(CheckInstanceSupportResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetDiagnosisResultResponse build() {
-            return new GetDiagnosisResultResponse(this);
+        public CheckInstanceSupportResponse build() {
+            return new CheckInstanceSupportResponse(this);
         } 
 
     } 

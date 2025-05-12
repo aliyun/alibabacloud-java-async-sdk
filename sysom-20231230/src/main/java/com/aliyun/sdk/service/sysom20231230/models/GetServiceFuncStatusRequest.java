@@ -47,7 +47,7 @@ public class GetServiceFuncStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -186,6 +186,15 @@ public class GetServiceFuncStatusRequest extends Request {
             private String functionName; 
             private String instance; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Params model) {
+                this.functionName = model.functionName;
+                this.instance = model.instance;
+                this.uid = model.uid;
+            } 
 
             /**
              * <p>This parameter is required.</p>

@@ -44,6 +44,10 @@ public class GetAgentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class GetAgentResponseBody extends TeaModel {
         private String code; 
         private Data data; 
         private String message; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAgentResponseBody model) {
+            this.requestId = model.requestId;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+        } 
 
         /**
          * RequestId.
@@ -207,6 +221,18 @@ public class GetAgentResponseBody extends TeaModel {
             private String updatedAt; 
             private String upgradeScript; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Versions model) {
+                this.createdAt = model.createdAt;
+                this.installScript = model.installScript;
+                this.uninstallScript = model.uninstallScript;
+                this.updatedAt = model.updatedAt;
+                this.upgradeScript = model.upgradeScript;
+                this.version = model.version;
+            } 
 
             /**
              * created_at.
@@ -378,6 +404,20 @@ public class GetAgentResponseBody extends TeaModel {
             private String type; 
             private String updatedAt; 
             private java.util.List<Versions> versions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createdAt = model.createdAt;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.supportArch = model.supportArch;
+                this.type = model.type;
+                this.updatedAt = model.updatedAt;
+                this.versions = model.versions;
+            } 
 
             /**
              * created_at.

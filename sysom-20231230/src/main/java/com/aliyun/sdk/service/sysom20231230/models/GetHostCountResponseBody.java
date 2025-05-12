@@ -48,6 +48,10 @@ public class GetHostCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetHostCountResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHostCountResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * code.
@@ -179,6 +194,14 @@ public class GetHostCountResponseBody extends TeaModel {
         public static final class Builder {
             private Long time; 
             private Integer value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.time = model.time;
+                this.value = model.value;
+            } 
 
             /**
              * time.

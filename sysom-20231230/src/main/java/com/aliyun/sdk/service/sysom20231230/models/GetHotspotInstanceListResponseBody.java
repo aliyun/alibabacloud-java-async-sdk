@@ -44,6 +44,10 @@ public class GetHotspotInstanceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetHotspotInstanceListResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHotspotInstanceListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * code.
@@ -162,6 +176,14 @@ public class GetHotspotInstanceListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> columns; 
             private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.columns = model.columns;
+                this.values = model.values;
+            } 
 
             /**
              * columns.

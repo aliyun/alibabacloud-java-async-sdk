@@ -44,6 +44,10 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHotspotTrackingResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * code.
@@ -160,6 +174,14 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
             private java.util.List<String> columns; 
             private java.util.List<java.util.List<String>> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(Flame model) {
+                this.columns = model.columns;
+                this.values = model.values;
+            } 
+
             /**
              * columns.
              */
@@ -227,6 +249,14 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
             private java.util.List<String> columns; 
             private java.util.List<java.util.List<String>> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(Series model) {
+                this.columns = model.columns;
+                this.values = model.values;
+            } 
+
             /**
              * columns.
              */
@@ -293,6 +323,14 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
         public static final class Builder {
             private Flame flame; 
             private Series series; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.flame = model.flame;
+                this.series = model.series;
+            } 
 
             /**
              * flame.

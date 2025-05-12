@@ -40,6 +40,10 @@ public class GetHealthPercentageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class GetHealthPercentageResponseBody extends TeaModel {
         private String code; 
         private java.util.List<Data> data; 
         private String message; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHealthPercentageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+        } 
 
         /**
          * code.
@@ -139,6 +152,14 @@ public class GetHealthPercentageResponseBody extends TeaModel {
         public static final class Builder {
             private String type; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * type.

@@ -48,6 +48,10 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -89,6 +93,17 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.total = model.total;
+        } 
 
         /**
          * RequestId.
@@ -191,6 +206,15 @@ public class ListInstanceStatusResponseBody extends TeaModel {
             private String instance; 
             private String region; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instance = model.instance;
+                this.region = model.region;
+                this.status = model.status;
+            } 
 
             /**
              * instance.

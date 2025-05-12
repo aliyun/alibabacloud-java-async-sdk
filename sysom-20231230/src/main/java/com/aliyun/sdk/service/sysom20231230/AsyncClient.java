@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AuthDiagnosisResponse> authDiagnosis(AuthDiagnosisRequest request);
 
     /**
+     * @param request the request parameters of CheckInstanceSupport  CheckInstanceSupportRequest
+     * @return CheckInstanceSupportResponse
+     */
+    CompletableFuture<CheckInstanceSupportResponse> checkInstanceSupport(CheckInstanceSupportRequest request);
+
+    /**
      * @param request the request parameters of GenerateCopilotResponse  GenerateCopilotResponseRequest
      * @return GenerateCopilotResponseResponse
      */

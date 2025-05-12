@@ -17,13 +17,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateEventsAttentionRequest</p>
  */
 public class UpdateEventsAttentionRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateEventsAttentionRequestBody body;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mode")
+    private Integer mode;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("range")
+    private String range;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("uuid")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String uuid;
 
     private UpdateEventsAttentionRequest(Builder builder) {
         super(builder);
-        this.body = builder.body;
+        this.mode = builder.mode;
+        this.range = builder.range;
+        this.uuid = builder.uuid;
     }
 
     public static Builder builder() {
@@ -34,20 +45,36 @@ public class UpdateEventsAttentionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
 
     /**
-     * @return body
+     * @return mode
      */
-    public UpdateEventsAttentionRequestBody getBody() {
-        return this.body;
+    public Integer getMode() {
+        return this.mode;
+    }
+
+    /**
+     * @return range
+     */
+    public String getRange() {
+        return this.range;
+    }
+
+    /**
+     * @return uuid
+     */
+    public String getUuid() {
+        return this.uuid;
     }
 
     public static final class Builder extends Request.Builder<UpdateEventsAttentionRequest, Builder> {
-        private UpdateEventsAttentionRequestBody body; 
+        private Integer mode; 
+        private String range; 
+        private String uuid; 
 
         private Builder() {
             super();
@@ -55,16 +82,35 @@ public class UpdateEventsAttentionRequest extends Request {
 
         private Builder(UpdateEventsAttentionRequest request) {
             super(request);
-            this.body = request.body;
+            this.mode = request.mode;
+            this.range = request.range;
+            this.uuid = request.uuid;
         } 
 
         /**
-         * body.
+         * mode.
          */
-        public Builder body(UpdateEventsAttentionRequestBody body) {
-            String bodyShrink = shrink(body, "body", "json");
-            this.putQueryParameter("body", bodyShrink);
-            this.body = body;
+        public Builder mode(Integer mode) {
+            this.putBodyParameter("mode", mode);
+            this.mode = mode;
+            return this;
+        }
+
+        /**
+         * range.
+         */
+        public Builder range(String range) {
+            this.putBodyParameter("range", range);
+            this.range = range;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder uuid(String uuid) {
+            this.putBodyParameter("uuid", uuid);
+            this.uuid = uuid;
             return this;
         }
 
@@ -75,95 +121,4 @@ public class UpdateEventsAttentionRequest extends Request {
 
     } 
 
-    /**
-     * 
-     * {@link UpdateEventsAttentionRequest} extends {@link TeaModel}
-     *
-     * <p>UpdateEventsAttentionRequest</p>
-     */
-    public static class UpdateEventsAttentionRequestBody extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("mode")
-        private Integer mode;
-
-        @com.aliyun.core.annotation.NameInMap("range")
-        private String range;
-
-        @com.aliyun.core.annotation.NameInMap("uuid")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private String uuid;
-
-        private UpdateEventsAttentionRequestBody(Builder builder) {
-            this.mode = builder.mode;
-            this.range = builder.range;
-            this.uuid = builder.uuid;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static UpdateEventsAttentionRequestBody create() {
-            return builder().build();
-        }
-
-        /**
-         * @return mode
-         */
-        public Integer getMode() {
-            return this.mode;
-        }
-
-        /**
-         * @return range
-         */
-        public String getRange() {
-            return this.range;
-        }
-
-        /**
-         * @return uuid
-         */
-        public String getUuid() {
-            return this.uuid;
-        }
-
-        public static final class Builder {
-            private Integer mode; 
-            private String range; 
-            private String uuid; 
-
-            /**
-             * mode.
-             */
-            public Builder mode(Integer mode) {
-                this.mode = mode;
-                return this;
-            }
-
-            /**
-             * range.
-             */
-            public Builder range(String range) {
-                this.range = range;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>03de78af-f49f-433d-b5b1-0f6a70c493ba</p>
-             */
-            public Builder uuid(String uuid) {
-                this.uuid = uuid;
-                return this;
-            }
-
-            public UpdateEventsAttentionRequestBody build() {
-                return new UpdateEventsAttentionRequestBody(this);
-            } 
-
-        } 
-
-    }
 }

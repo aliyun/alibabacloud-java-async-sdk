@@ -44,6 +44,10 @@ public class GenerateCopilotResponseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GenerateCopilotResponseResponseBody extends TeaModel {
         private String data; 
         private String massage; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateCopilotResponseResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.massage = model.massage;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * code.

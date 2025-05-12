@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateFuncSwitchRecordResponseBody} extends {@link TeaModel}
+ * {@link CheckInstanceSupportResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateFuncSwitchRecordResponseBody</p>
+ * <p>CheckInstanceSupportResponseBody</p>
  */
-public class UpdateFuncSwitchRecordResponseBody extends TeaModel {
+public class CheckInstanceSupportResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private Data data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
@@ -29,7 +29,7 @@ public class UpdateFuncSwitchRecordResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    private UpdateFuncSwitchRecordResponseBody(Builder builder) {
+    private CheckInstanceSupportResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -40,7 +40,7 @@ public class UpdateFuncSwitchRecordResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateFuncSwitchRecordResponseBody create() {
+    public static CheckInstanceSupportResponseBody create() {
         return builder().build();
     }
 
@@ -58,7 +58,7 @@ public class UpdateFuncSwitchRecordResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Data getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -78,14 +78,14 @@ public class UpdateFuncSwitchRecordResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Data data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(UpdateFuncSwitchRecordResponseBody model) {
+        private Builder(CheckInstanceSupportResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -103,7 +103,7 @@ public class UpdateFuncSwitchRecordResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(Data data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -127,24 +127,32 @@ public class UpdateFuncSwitchRecordResponseBody extends TeaModel {
             return this;
         }
 
-        public UpdateFuncSwitchRecordResponseBody build() {
-            return new UpdateFuncSwitchRecordResponseBody(this);
+        public CheckInstanceSupportResponseBody build() {
+            return new CheckInstanceSupportResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link UpdateFuncSwitchRecordResponseBody} extends {@link TeaModel}
+     * {@link CheckInstanceSupportResponseBody} extends {@link TeaModel}
      *
-     * <p>UpdateFuncSwitchRecordResponseBody</p>
+     * <p>CheckInstanceSupportResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("task_id")
-        private String taskId;
+        @com.aliyun.core.annotation.NameInMap("instance")
+        private String instance;
+
+        @com.aliyun.core.annotation.NameInMap("reason")
+        private String reason;
+
+        @com.aliyun.core.annotation.NameInMap("support")
+        private Boolean support;
 
         private Data(Builder builder) {
-            this.taskId = builder.taskId;
+            this.instance = builder.instance;
+            this.reason = builder.reason;
+            this.support = builder.support;
         }
 
         public static Builder builder() {
@@ -156,27 +164,61 @@ public class UpdateFuncSwitchRecordResponseBody extends TeaModel {
         }
 
         /**
-         * @return taskId
+         * @return instance
          */
-        public String getTaskId() {
-            return this.taskId;
+        public String getInstance() {
+            return this.instance;
+        }
+
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
+        /**
+         * @return support
+         */
+        public Boolean getSupport() {
+            return this.support;
         }
 
         public static final class Builder {
-            private String taskId; 
+            private String instance; 
+            private String reason; 
+            private Boolean support; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.taskId = model.taskId;
+                this.instance = model.instance;
+                this.reason = model.reason;
+                this.support = model.support;
             } 
 
             /**
-             * task_id.
+             * instance.
              */
-            public Builder taskId(String taskId) {
-                this.taskId = taskId;
+            public Builder instance(String instance) {
+                this.instance = instance;
+                return this;
+            }
+
+            /**
+             * reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
+                return this;
+            }
+
+            /**
+             * support.
+             */
+            public Builder support(Boolean support) {
+                this.support = support;
                 return this;
             }
 

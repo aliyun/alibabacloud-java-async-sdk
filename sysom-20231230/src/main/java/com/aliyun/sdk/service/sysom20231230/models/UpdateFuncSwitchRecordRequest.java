@@ -47,7 +47,7 @@ public class UpdateFuncSwitchRecordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,6 +143,9 @@ public class UpdateFuncSwitchRecordRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("cpu")
         private String cpu;
 
+        @com.aliyun.core.annotation.NameInMap("duration")
+        private Integer duration;
+
         @com.aliyun.core.annotation.NameInMap("java_store_path")
         private String javaStorePath;
 
@@ -155,16 +158,21 @@ public class UpdateFuncSwitchRecordRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("mem")
         private String mem;
 
+        @com.aliyun.core.annotation.NameInMap("pid")
+        private Integer pid;
+
         @com.aliyun.core.annotation.NameInMap("system_profiling")
         private String systemProfiling;
 
         private Args(Builder builder) {
             this.addCmd = builder.addCmd;
             this.cpu = builder.cpu;
+            this.duration = builder.duration;
             this.javaStorePath = builder.javaStorePath;
             this.locks = builder.locks;
             this.loop = builder.loop;
             this.mem = builder.mem;
+            this.pid = builder.pid;
             this.systemProfiling = builder.systemProfiling;
         }
 
@@ -188,6 +196,13 @@ public class UpdateFuncSwitchRecordRequest extends Request {
          */
         public String getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return duration
+         */
+        public Integer getDuration() {
+            return this.duration;
         }
 
         /**
@@ -219,6 +234,13 @@ public class UpdateFuncSwitchRecordRequest extends Request {
         }
 
         /**
+         * @return pid
+         */
+        public Integer getPid() {
+            return this.pid;
+        }
+
+        /**
          * @return systemProfiling
          */
         public String getSystemProfiling() {
@@ -228,11 +250,28 @@ public class UpdateFuncSwitchRecordRequest extends Request {
         public static final class Builder {
             private String addCmd; 
             private String cpu; 
+            private Integer duration; 
             private String javaStorePath; 
             private String locks; 
             private Integer loop; 
             private String mem; 
+            private Integer pid; 
             private String systemProfiling; 
+
+            private Builder() {
+            } 
+
+            private Builder(Args model) {
+                this.addCmd = model.addCmd;
+                this.cpu = model.cpu;
+                this.duration = model.duration;
+                this.javaStorePath = model.javaStorePath;
+                this.locks = model.locks;
+                this.loop = model.loop;
+                this.mem = model.mem;
+                this.pid = model.pid;
+                this.systemProfiling = model.systemProfiling;
+            } 
 
             /**
              * add_cmd.
@@ -247,6 +286,14 @@ public class UpdateFuncSwitchRecordRequest extends Request {
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * duration.
+             */
+            public Builder duration(Integer duration) {
+                this.duration = duration;
                 return this;
             }
 
@@ -279,6 +326,14 @@ public class UpdateFuncSwitchRecordRequest extends Request {
              */
             public Builder mem(String mem) {
                 this.mem = mem;
+                return this;
+            }
+
+            /**
+             * pid.
+             */
+            public Builder pid(Integer pid) {
+                this.pid = pid;
                 return this;
             }
 
@@ -317,6 +372,9 @@ public class UpdateFuncSwitchRecordRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("op")
         private String op;
 
+        @com.aliyun.core.annotation.NameInMap("region")
+        private String region;
+
         @com.aliyun.core.annotation.NameInMap("uid")
         private String uid;
 
@@ -325,6 +383,7 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             this.functionName = builder.functionName;
             this.instance = builder.instance;
             this.op = builder.op;
+            this.region = builder.region;
             this.uid = builder.uid;
         }
 
@@ -365,6 +424,13 @@ public class UpdateFuncSwitchRecordRequest extends Request {
         }
 
         /**
+         * @return region
+         */
+        public String getRegion() {
+            return this.region;
+        }
+
+        /**
          * @return uid
          */
         public String getUid() {
@@ -376,7 +442,20 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             private String functionName; 
             private String instance; 
             private String op; 
+            private String region; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Params model) {
+                this.args = model.args;
+                this.functionName = model.functionName;
+                this.instance = model.instance;
+                this.op = model.op;
+                this.region = model.region;
+                this.uid = model.uid;
+            } 
 
             /**
              * args.
@@ -410,6 +489,14 @@ public class UpdateFuncSwitchRecordRequest extends Request {
              */
             public Builder op(String op) {
                 this.op = op;
+                return this;
+            }
+
+            /**
+             * region.
+             */
+            public Builder region(String region) {
+                this.region = region;
                 return this;
             }
 

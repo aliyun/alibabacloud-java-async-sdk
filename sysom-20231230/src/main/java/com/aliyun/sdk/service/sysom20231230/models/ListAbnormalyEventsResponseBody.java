@@ -26,10 +26,14 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
+    @com.aliyun.core.annotation.NameInMap("total")
+    private Integer total;
+
     private ListAbnormalyEventsResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
+        this.total = builder.total;
     }
 
     public static Builder builder() {
@@ -38,6 +42,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
 
     public static ListAbnormalyEventsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -61,10 +69,28 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         return this.message;
     }
 
+    /**
+     * @return total
+     */
+    public Integer getTotal() {
+        return this.total;
+    }
+
     public static final class Builder {
         private String code; 
         private java.util.List<Data> data; 
         private String message; 
+        private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAbnormalyEventsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.total = model.total;
+        } 
 
         /**
          * code.
@@ -90,6 +116,14 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * total.
+         */
+        public Builder total(Integer total) {
+            this.total = total;
+            return this;
+        }
+
         public ListAbnormalyEventsResponseBody build() {
             return new ListAbnormalyEventsResponseBody(this);
         } 
@@ -102,19 +136,94 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
      *
      * <p>ListAbnormalyEventsResponseBody</p>
      */
+    public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
+
+        private Result(Builder builder) {
+            this.status = builder.status;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Result create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String status; 
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.status = model.status;
+                this.url = model.url;
+            } 
+
+            /**
+             * status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public Result build() {
+                return new Result(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAbnormalyEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAbnormalyEventsResponseBody</p>
+     */
     public static class Opts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("label")
         private String label;
 
-        @com.aliyun.core.annotation.NameInMap("params")
-        private String params;
+        @com.aliyun.core.annotation.NameInMap("result")
+        private Result result;
 
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Opts(Builder builder) {
             this.label = builder.label;
-            this.params = builder.params;
+            this.result = builder.result;
             this.type = builder.type;
         }
 
@@ -134,10 +243,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         }
 
         /**
-         * @return params
+         * @return result
          */
-        public String getParams() {
-            return this.params;
+        public Result getResult() {
+            return this.result;
         }
 
         /**
@@ -149,8 +258,17 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String label; 
-            private String params; 
+            private Result result; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Opts model) {
+                this.label = model.label;
+                this.result = model.result;
+                this.type = model.type;
+            } 
 
             /**
              * label.
@@ -161,10 +279,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * params.
+             * result.
              */
-            public Builder params(String params) {
-                this.params = params;
+            public Builder result(Result result) {
+                this.result = result;
                 return this;
             }
 
@@ -191,13 +309,16 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("created_at")
-        private Float createdAt;
+        private Long createdAt;
 
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @com.aliyun.core.annotation.NameInMap("id")
-        private String id;
+        @com.aliyun.core.annotation.NameInMap("diag_status")
+        private Integer diagStatus;
+
+        @com.aliyun.core.annotation.NameInMap("end_at")
+        private Long endAt;
 
         @com.aliyun.core.annotation.NameInMap("instance")
         private String instance;
@@ -205,8 +326,17 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("item")
         private String item;
 
+        @com.aliyun.core.annotation.NameInMap("level")
+        private String level;
+
+        @com.aliyun.core.annotation.NameInMap("namespace")
+        private String namespace;
+
         @com.aliyun.core.annotation.NameInMap("opts")
-        private Opts opts;
+        private java.util.List<Opts> opts;
+
+        @com.aliyun.core.annotation.NameInMap("pod")
+        private String pod;
 
         @com.aliyun.core.annotation.NameInMap("region_id")
         private String regionId;
@@ -214,15 +344,23 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("uuid")
+        private String uuid;
+
         private Data(Builder builder) {
             this.createdAt = builder.createdAt;
             this.description = builder.description;
-            this.id = builder.id;
+            this.diagStatus = builder.diagStatus;
+            this.endAt = builder.endAt;
             this.instance = builder.instance;
             this.item = builder.item;
+            this.level = builder.level;
+            this.namespace = builder.namespace;
             this.opts = builder.opts;
+            this.pod = builder.pod;
             this.regionId = builder.regionId;
             this.type = builder.type;
+            this.uuid = builder.uuid;
         }
 
         public static Builder builder() {
@@ -236,7 +374,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         /**
          * @return createdAt
          */
-        public Float getCreatedAt() {
+        public Long getCreatedAt() {
             return this.createdAt;
         }
 
@@ -248,10 +386,17 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         }
 
         /**
-         * @return id
+         * @return diagStatus
          */
-        public String getId() {
-            return this.id;
+        public Integer getDiagStatus() {
+            return this.diagStatus;
+        }
+
+        /**
+         * @return endAt
+         */
+        public Long getEndAt() {
+            return this.endAt;
         }
 
         /**
@@ -269,10 +414,31 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
          * @return opts
          */
-        public Opts getOpts() {
+        public java.util.List<Opts> getOpts() {
             return this.opts;
+        }
+
+        /**
+         * @return pod
+         */
+        public String getPod() {
+            return this.pod;
         }
 
         /**
@@ -289,20 +455,51 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return uuid
+         */
+        public String getUuid() {
+            return this.uuid;
+        }
+
         public static final class Builder {
-            private Float createdAt; 
+            private Long createdAt; 
             private String description; 
-            private String id; 
+            private Integer diagStatus; 
+            private Long endAt; 
             private String instance; 
             private String item; 
-            private Opts opts; 
+            private String level; 
+            private String namespace; 
+            private java.util.List<Opts> opts; 
+            private String pod; 
             private String regionId; 
             private String type; 
+            private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createdAt = model.createdAt;
+                this.description = model.description;
+                this.diagStatus = model.diagStatus;
+                this.endAt = model.endAt;
+                this.instance = model.instance;
+                this.item = model.item;
+                this.level = model.level;
+                this.namespace = model.namespace;
+                this.opts = model.opts;
+                this.pod = model.pod;
+                this.regionId = model.regionId;
+                this.type = model.type;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * created_at.
              */
-            public Builder createdAt(Float createdAt) {
+            public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
                 return this;
             }
@@ -316,10 +513,18 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * diag_status.
              */
-            public Builder id(String id) {
-                this.id = id;
+            public Builder diagStatus(Integer diagStatus) {
+                this.diagStatus = diagStatus;
+                return this;
+            }
+
+            /**
+             * end_at.
+             */
+            public Builder endAt(Long endAt) {
+                this.endAt = endAt;
                 return this;
             }
 
@@ -340,10 +545,34 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
+             * level.
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
              * opts.
              */
-            public Builder opts(Opts opts) {
+            public Builder opts(java.util.List<Opts> opts) {
                 this.opts = opts;
+                return this;
+            }
+
+            /**
+             * pod.
+             */
+            public Builder pod(String pod) {
+                this.pod = pod;
                 return this;
             }
 
@@ -360,6 +589,14 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * uuid.
+             */
+            public Builder uuid(String uuid) {
+                this.uuid = uuid;
                 return this;
             }
 

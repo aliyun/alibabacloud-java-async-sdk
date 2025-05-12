@@ -44,6 +44,10 @@ public class UpgradeAgentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class UpgradeAgentResponseBody extends TeaModel {
         private String code; 
         private Data data; 
         private String message; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpgradeAgentResponseBody model) {
+            this.requestId = model.requestId;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+        } 
 
         /**
          * RequestId.
@@ -147,6 +161,13 @@ public class UpgradeAgentResponseBody extends TeaModel {
 
         public static final class Builder {
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.taskId = model.taskId;
+            } 
 
             /**
              * task_id.

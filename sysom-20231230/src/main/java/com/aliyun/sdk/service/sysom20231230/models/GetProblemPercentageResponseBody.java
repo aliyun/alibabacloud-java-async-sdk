@@ -48,6 +48,10 @@ public class GetProblemPercentageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetProblemPercentageResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProblemPercentageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * code.
@@ -179,6 +194,14 @@ public class GetProblemPercentageResponseBody extends TeaModel {
         public static final class Builder {
             private String type; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * type.

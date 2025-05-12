@@ -48,6 +48,10 @@ public class ListClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -89,6 +93,17 @@ public class ListClustersResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClustersResponseBody model) {
+            this.requestId = model.requestId;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.total = model.total;
+        } 
 
         /**
          * RequestId.
@@ -251,6 +266,20 @@ public class ListClustersResponseBody extends TeaModel {
             private String name; 
             private String region; 
             private String updatedAt; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clusterId = model.clusterId;
+                this.clusterStatus = model.clusterStatus;
+                this.clusterType = model.clusterType;
+                this.createdAt = model.createdAt;
+                this.id = model.id;
+                this.name = model.name;
+                this.region = model.region;
+                this.updatedAt = model.updatedAt;
+            } 
 
             /**
              * cluster_id.

@@ -48,6 +48,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesWithEcsInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * code.
@@ -180,6 +195,14 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceTag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * tag_key.
              */
@@ -222,6 +245,9 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instance_tag")
         private java.util.List<InstanceTag> instanceTag;
 
+        @com.aliyun.core.annotation.NameInMap("kernel_version")
+        private String kernelVersion;
+
         @com.aliyun.core.annotation.NameInMap("os_arch")
         private String osArch;
 
@@ -251,6 +277,7 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.instanceTag = builder.instanceTag;
+            this.kernelVersion = builder.kernelVersion;
             this.osArch = builder.osArch;
             this.osHealthScore = builder.osHealthScore;
             this.osName = builder.osName;
@@ -295,6 +322,13 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
          */
         public java.util.List<InstanceTag> getInstanceTag() {
             return this.instanceTag;
+        }
+
+        /**
+         * @return kernelVersion
+         */
+        public String getKernelVersion() {
+            return this.kernelVersion;
         }
 
         /**
@@ -358,6 +392,7 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceName; 
             private java.util.List<InstanceTag> instanceTag; 
+            private String kernelVersion; 
             private String osArch; 
             private String osHealthScore; 
             private String osName; 
@@ -366,6 +401,25 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String resourceGroupName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clusterId = model.clusterId;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceTag = model.instanceTag;
+                this.kernelVersion = model.kernelVersion;
+                this.osArch = model.osArch;
+                this.osHealthScore = model.osHealthScore;
+                this.osName = model.osName;
+                this.privateIp = model.privateIp;
+                this.publicIp = model.publicIp;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceGroupName = model.resourceGroupName;
+                this.status = model.status;
+            } 
 
             /**
              * cluster_id.
@@ -396,6 +450,14 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
              */
             public Builder instanceTag(java.util.List<InstanceTag> instanceTag) {
                 this.instanceTag = instanceTag;
+                return this;
+            }
+
+            /**
+             * kernel_version.
+             */
+            public Builder kernelVersion(String kernelVersion) {
+                this.kernelVersion = kernelVersion;
                 return this;
             }
 

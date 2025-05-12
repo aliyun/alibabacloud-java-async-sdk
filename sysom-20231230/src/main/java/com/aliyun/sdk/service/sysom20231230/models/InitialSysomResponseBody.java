@@ -44,6 +44,10 @@ public class InitialSysomResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class InitialSysomResponseBody extends TeaModel {
         private String code; 
         private Data data; 
         private String message; 
+
+        private Builder() {
+        } 
+
+        private Builder(InitialSysomResponseBody model) {
+            this.requestId = model.requestId;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+        } 
 
         /**
          * RequestId.
@@ -147,6 +161,13 @@ public class InitialSysomResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean roleExist; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.roleExist = model.roleExist;
+            } 
 
             /**
              * role_exist.

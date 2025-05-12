@@ -48,6 +48,10 @@ public class GetListRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetListRecordResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetListRecordResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * code.
@@ -218,6 +233,17 @@ public class GetListRecordResponseBody extends TeaModel {
             private String arguments; 
             private String failedLog; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.analysisId = model.analysisId;
+                this.analysisTime = model.analysisTime;
+                this.arguments = model.arguments;
+                this.failedLog = model.failedLog;
+                this.status = model.status;
+            } 
 
             /**
              * analysisId.

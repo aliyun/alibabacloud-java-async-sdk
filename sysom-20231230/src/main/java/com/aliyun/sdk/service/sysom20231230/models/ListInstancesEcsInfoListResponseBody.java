@@ -40,6 +40,10 @@ public class ListInstancesEcsInfoListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class ListInstancesEcsInfoListResponseBody extends TeaModel {
         private String code; 
         private java.util.List<Data> data; 
         private String message; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesEcsInfoListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+        } 
 
         /**
          * code.
@@ -163,6 +176,16 @@ public class ListInstancesEcsInfoListResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.ip = model.ip;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+                this.type = model.type;
+            } 
 
             /**
              * ip.

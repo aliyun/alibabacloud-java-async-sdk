@@ -49,6 +49,10 @@ public class ListDiagnosisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -90,6 +94,17 @@ public class ListDiagnosisResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDiagnosisResponseBody model) {
+            this.requestId = model.requestId;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.total = model.total;
+        } 
 
         /**
          * RequestId.
@@ -291,6 +306,23 @@ public class ListDiagnosisResponseBody extends TeaModel {
             private String taskId; 
             private String updatedAt; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.code = model.code;
+                this.command = model.command;
+                this.createdAt = model.createdAt;
+                this.errMsg = model.errMsg;
+                this.params = model.params;
+                this.result = model.result;
+                this.serviceName = model.serviceName;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.updatedAt = model.updatedAt;
+                this.url = model.url;
+            } 
 
             /**
              * code.

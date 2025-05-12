@@ -44,6 +44,10 @@ public class GetResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetResourcesResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourcesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * code.
@@ -171,6 +185,15 @@ public class GetResourcesResponseBody extends TeaModel {
             private Float total; 
             private String unit; 
             private Float usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.total = model.total;
+                this.unit = model.unit;
+                this.usage = model.usage;
+            } 
 
             /**
              * total.

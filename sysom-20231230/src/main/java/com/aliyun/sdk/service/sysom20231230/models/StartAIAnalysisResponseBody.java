@@ -44,6 +44,10 @@ public class StartAIAnalysisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class StartAIAnalysisResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartAIAnalysisResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * code.
@@ -150,6 +164,13 @@ public class StartAIAnalysisResponseBody extends TeaModel {
 
         public static final class Builder {
             private String analysisId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.analysisId = model.analysisId;
+            } 
 
             /**
              * analysis_id.

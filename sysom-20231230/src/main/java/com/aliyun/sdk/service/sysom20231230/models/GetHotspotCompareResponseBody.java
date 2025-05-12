@@ -48,6 +48,10 @@ public class GetHotspotCompareResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetHotspotCompareResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHotspotCompareResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * code.
@@ -183,6 +198,14 @@ public class GetHotspotCompareResponseBody extends TeaModel {
             private java.util.List<String> columns; 
             private java.util.List<java.util.List<String>> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(Flame model) {
+                this.columns = model.columns;
+                this.values = model.values;
+            } 
+
             /**
              * columns.
              */
@@ -250,6 +273,14 @@ public class GetHotspotCompareResponseBody extends TeaModel {
             private java.util.List<String> columns; 
             private java.util.List<java.util.List<String>> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(SeriesInstance1 model) {
+                this.columns = model.columns;
+                this.values = model.values;
+            } 
+
             /**
              * columns.
              */
@@ -316,6 +347,14 @@ public class GetHotspotCompareResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> columns; 
             private java.util.List<java.util.List<String>> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(SeriesInstance2 model) {
+                this.columns = model.columns;
+                this.values = model.values;
+            } 
 
             /**
              * columns.
@@ -395,6 +434,15 @@ public class GetHotspotCompareResponseBody extends TeaModel {
             private Flame flame; 
             private SeriesInstance1 seriesInstance1; 
             private SeriesInstance2 seriesInstance2; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.flame = model.flame;
+                this.seriesInstance1 = model.seriesInstance1;
+                this.seriesInstance2 = model.seriesInstance2;
+            } 
 
             /**
              * flame.

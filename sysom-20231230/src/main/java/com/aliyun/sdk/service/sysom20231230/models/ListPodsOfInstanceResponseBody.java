@@ -49,6 +49,10 @@ public class ListPodsOfInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -90,6 +94,17 @@ public class ListPodsOfInstanceResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPodsOfInstanceResponseBody model) {
+            this.requestId = model.requestId;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.total = model.total;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -186,6 +201,14 @@ public class ListPodsOfInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String namespace; 
             private String pod; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.namespace = model.namespace;
+                this.pod = model.pod;
+            } 
 
             /**
              * namespace.

@@ -48,6 +48,10 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -89,6 +93,17 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAgentInstallRecordsResponseBody model) {
+            this.requestId = model.requestId;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.total = model.total;
+        } 
 
         /**
          * RequestId.
@@ -227,6 +242,18 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
             private String pluginVersion; 
             private String status; 
             private String updatedAt; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createdAt = model.createdAt;
+                this.instanceId = model.instanceId;
+                this.pluginId = model.pluginId;
+                this.pluginVersion = model.pluginVersion;
+                this.status = model.status;
+                this.updatedAt = model.updatedAt;
+            } 
 
             /**
              * created_at.

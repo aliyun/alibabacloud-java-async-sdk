@@ -44,7 +44,7 @@ public class AuthDiagnosisRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -163,6 +163,14 @@ public class AuthDiagnosisRequest extends Request {
         public static final class Builder {
             private String instance; 
             private String region; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instance = model.instance;
+                this.region = model.region;
+            } 
 
             /**
              * instance.

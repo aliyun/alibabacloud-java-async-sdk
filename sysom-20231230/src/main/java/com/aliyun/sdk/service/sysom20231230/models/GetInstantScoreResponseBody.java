@@ -44,6 +44,10 @@ public class GetInstantScoreResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetInstantScoreResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstantScoreResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>集群ID</p>
@@ -201,6 +215,17 @@ public class GetInstantScoreResponseBody extends TeaModel {
             private Float load; 
             private Float saturation; 
             private Float total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.error = model.error;
+                this.latency = model.latency;
+                this.load = model.load;
+                this.saturation = model.saturation;
+                this.total = model.total;
+            } 
 
             /**
              * error.

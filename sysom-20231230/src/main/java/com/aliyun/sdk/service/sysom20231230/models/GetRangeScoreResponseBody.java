@@ -48,6 +48,10 @@ public class GetRangeScoreResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetRangeScoreResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Float total; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRangeScoreResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>代表资源一级ID的资源属性字段</p>
@@ -147,13 +162,13 @@ public class GetRangeScoreResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("time")
-        private Float time;
+        private Long time;
 
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         @com.aliyun.core.annotation.NameInMap("value")
-        private Float value;
+        private Long value;
 
         private Data(Builder builder) {
             this.time = builder.time;
@@ -172,7 +187,7 @@ public class GetRangeScoreResponseBody extends TeaModel {
         /**
          * @return time
          */
-        public Float getTime() {
+        public Long getTime() {
             return this.time;
         }
 
@@ -186,19 +201,28 @@ public class GetRangeScoreResponseBody extends TeaModel {
         /**
          * @return value
          */
-        public Float getValue() {
+        public Long getValue() {
             return this.value;
         }
 
         public static final class Builder {
-            private Float time; 
+            private Long time; 
             private String type; 
-            private Float value; 
+            private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.time = model.time;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * time.
              */
-            public Builder time(Float time) {
+            public Builder time(Long time) {
                 this.time = time;
                 return this;
             }
@@ -214,7 +238,7 @@ public class GetRangeScoreResponseBody extends TeaModel {
             /**
              * value.
              */
-            public Builder value(Float value) {
+            public Builder value(Long value) {
                 this.value = value;
                 return this;
             }

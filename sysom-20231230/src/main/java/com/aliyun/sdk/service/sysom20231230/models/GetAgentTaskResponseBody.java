@@ -44,6 +44,10 @@ public class GetAgentTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class GetAgentTaskResponseBody extends TeaModel {
         private String code; 
         private Data data; 
         private String message; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAgentTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+        } 
 
         /**
          * RequestId.
@@ -208,6 +222,18 @@ public class GetAgentTaskResponseBody extends TeaModel {
             private String result; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Jobs model) {
+                this.error = model.error;
+                this.instance = model.instance;
+                this.params = model.params;
+                this.region = model.region;
+                this.result = model.result;
+                this.status = model.status;
+            } 
+
             /**
              * error.
              */
@@ -306,6 +332,14 @@ public class GetAgentTaskResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Jobs> jobs; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.jobs = model.jobs;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * jobs.

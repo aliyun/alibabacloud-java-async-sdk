@@ -21,7 +21,7 @@ public class ListInstanceHealthResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private Data data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
@@ -48,6 +48,10 @@ public class ListInstanceHealthResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -58,7 +62,7 @@ public class ListInstanceHealthResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Data getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -85,10 +89,21 @@ public class ListInstanceHealthResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Data data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceHealthResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * code.
@@ -101,7 +116,7 @@ public class ListInstanceHealthResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(Data data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -239,6 +254,19 @@ public class ListInstanceHealthResponseBody extends TeaModel {
             private String regionId; 
             private Float score; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.images = model.images;
+                this.instance = model.instance;
+                this.namespace = model.namespace;
+                this.pod = model.pod;
+                this.regionId = model.regionId;
+                this.score = model.score;
+                this.status = model.status;
+            } 
 
             /**
              * images.
