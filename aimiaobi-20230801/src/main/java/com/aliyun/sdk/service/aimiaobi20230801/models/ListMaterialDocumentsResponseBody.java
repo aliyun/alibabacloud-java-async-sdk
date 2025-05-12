@@ -241,6 +241,165 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
      *
      * <p>ListMaterialDocumentsResponseBody</p>
      */
+    public static class FileAttr extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        private Double duration;
+
+        @com.aliyun.core.annotation.NameInMap("FileLength")
+        private Long fileLength;
+
+        @com.aliyun.core.annotation.NameInMap("FileName")
+        private String fileName;
+
+        @com.aliyun.core.annotation.NameInMap("Height")
+        private Integer height;
+
+        @com.aliyun.core.annotation.NameInMap("MimeType")
+        private String mimeType;
+
+        @com.aliyun.core.annotation.NameInMap("Width")
+        private Integer width;
+
+        private FileAttr(Builder builder) {
+            this.duration = builder.duration;
+            this.fileLength = builder.fileLength;
+            this.fileName = builder.fileName;
+            this.height = builder.height;
+            this.mimeType = builder.mimeType;
+            this.width = builder.width;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FileAttr create() {
+            return builder().build();
+        }
+
+        /**
+         * @return duration
+         */
+        public Double getDuration() {
+            return this.duration;
+        }
+
+        /**
+         * @return fileLength
+         */
+        public Long getFileLength() {
+            return this.fileLength;
+        }
+
+        /**
+         * @return fileName
+         */
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        /**
+         * @return height
+         */
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        /**
+         * @return mimeType
+         */
+        public String getMimeType() {
+            return this.mimeType;
+        }
+
+        /**
+         * @return width
+         */
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        public static final class Builder {
+            private Double duration; 
+            private Long fileLength; 
+            private String fileName; 
+            private Integer height; 
+            private String mimeType; 
+            private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileAttr model) {
+                this.duration = model.duration;
+                this.fileLength = model.fileLength;
+                this.fileName = model.fileName;
+                this.height = model.height;
+                this.mimeType = model.mimeType;
+                this.width = model.width;
+            } 
+
+            /**
+             * Duration.
+             */
+            public Builder duration(Double duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * FileLength.
+             */
+            public Builder fileLength(Long fileLength) {
+                this.fileLength = fileLength;
+                return this;
+            }
+
+            /**
+             * FileName.
+             */
+            public Builder fileName(String fileName) {
+                this.fileName = fileName;
+                return this;
+            }
+
+            /**
+             * Height.
+             */
+            public Builder height(Integer height) {
+                this.height = height;
+                return this;
+            }
+
+            /**
+             * MimeType.
+             */
+            public Builder mimeType(String mimeType) {
+                this.mimeType = mimeType;
+                return this;
+            }
+
+            /**
+             * Width.
+             */
+            public Builder width(Integer width) {
+                this.width = width;
+                return this;
+            }
+
+            public FileAttr build() {
+                return new FileAttr(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListMaterialDocumentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMaterialDocumentsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Author")
         private String author;
@@ -262,6 +421,12 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ExternalUrl")
         private String externalUrl;
+
+        @com.aliyun.core.annotation.NameInMap("FileAttr")
+        private FileAttr fileAttr;
+
+        @com.aliyun.core.annotation.NameInMap("FileKey")
+        private String fileKey;
 
         @com.aliyun.core.annotation.NameInMap("HtmlContent")
         private String htmlContent;
@@ -313,6 +478,8 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
             this.docKeywords = builder.docKeywords;
             this.docType = builder.docType;
             this.externalUrl = builder.externalUrl;
+            this.fileAttr = builder.fileAttr;
+            this.fileKey = builder.fileKey;
             this.htmlContent = builder.htmlContent;
             this.id = builder.id;
             this.pubTime = builder.pubTime;
@@ -384,6 +551,20 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
          */
         public String getExternalUrl() {
             return this.externalUrl;
+        }
+
+        /**
+         * @return fileAttr
+         */
+        public FileAttr getFileAttr() {
+            return this.fileAttr;
+        }
+
+        /**
+         * @return fileKey
+         */
+        public String getFileKey() {
+            return this.fileKey;
         }
 
         /**
@@ -492,6 +673,8 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
             private java.util.List<String> docKeywords; 
             private String docType; 
             private String externalUrl; 
+            private FileAttr fileAttr; 
+            private String fileKey; 
             private String htmlContent; 
             private Long id; 
             private String pubTime; 
@@ -518,6 +701,8 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
                 this.docKeywords = model.docKeywords;
                 this.docType = model.docType;
                 this.externalUrl = model.externalUrl;
+                this.fileAttr = model.fileAttr;
+                this.fileKey = model.fileKey;
                 this.htmlContent = model.htmlContent;
                 this.id = model.id;
                 this.pubTime = model.pubTime;
@@ -587,6 +772,22 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
              */
             public Builder externalUrl(String externalUrl) {
                 this.externalUrl = externalUrl;
+                return this;
+            }
+
+            /**
+             * FileAttr.
+             */
+            public Builder fileAttr(FileAttr fileAttr) {
+                this.fileAttr = fileAttr;
+                return this;
+            }
+
+            /**
+             * FileKey.
+             */
+            public Builder fileKey(String fileKey) {
+                this.fileKey = fileKey;
                 return this;
             }
 

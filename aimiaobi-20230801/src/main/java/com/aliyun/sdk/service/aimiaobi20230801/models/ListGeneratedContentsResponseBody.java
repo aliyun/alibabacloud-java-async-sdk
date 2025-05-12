@@ -241,6 +241,123 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
      *
      * <p>ListGeneratedContentsResponseBody</p>
      */
+    public static class FileAttr extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FileName")
+        private String fileName;
+
+        @com.aliyun.core.annotation.NameInMap("Height")
+        private Integer height;
+
+        @com.aliyun.core.annotation.NameInMap("TmpUrl")
+        private String tmpUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Width")
+        private Integer width;
+
+        private FileAttr(Builder builder) {
+            this.fileName = builder.fileName;
+            this.height = builder.height;
+            this.tmpUrl = builder.tmpUrl;
+            this.width = builder.width;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FileAttr create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fileName
+         */
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        /**
+         * @return height
+         */
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        /**
+         * @return tmpUrl
+         */
+        public String getTmpUrl() {
+            return this.tmpUrl;
+        }
+
+        /**
+         * @return width
+         */
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        public static final class Builder {
+            private String fileName; 
+            private Integer height; 
+            private String tmpUrl; 
+            private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileAttr model) {
+                this.fileName = model.fileName;
+                this.height = model.height;
+                this.tmpUrl = model.tmpUrl;
+                this.width = model.width;
+            } 
+
+            /**
+             * FileName.
+             */
+            public Builder fileName(String fileName) {
+                this.fileName = fileName;
+                return this;
+            }
+
+            /**
+             * Height.
+             */
+            public Builder height(Integer height) {
+                this.height = height;
+                return this;
+            }
+
+            /**
+             * TmpUrl.
+             */
+            public Builder tmpUrl(String tmpUrl) {
+                this.tmpUrl = tmpUrl;
+                return this;
+            }
+
+            /**
+             * Width.
+             */
+            public Builder width(Integer width) {
+                this.width = width;
+                return this;
+            }
+
+            public FileAttr build() {
+                return new FileAttr(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListGeneratedContentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGeneratedContentsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -259,6 +376,12 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
+
+        @com.aliyun.core.annotation.NameInMap("FileAttr")
+        private FileAttr fileAttr;
+
+        @com.aliyun.core.annotation.NameInMap("FileKey")
+        private String fileKey;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -294,6 +417,8 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.createUser = builder.createUser;
             this.deviceId = builder.deviceId;
+            this.fileAttr = builder.fileAttr;
+            this.fileKey = builder.fileKey;
             this.id = builder.id;
             this.keywordList = builder.keywordList;
             this.keywords = builder.keywords;
@@ -353,6 +478,20 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
          */
         public String getDeviceId() {
             return this.deviceId;
+        }
+
+        /**
+         * @return fileAttr
+         */
+        public FileAttr getFileAttr() {
+            return this.fileAttr;
+        }
+
+        /**
+         * @return fileKey
+         */
+        public String getFileKey() {
+            return this.fileKey;
         }
 
         /**
@@ -425,6 +564,8 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
             private String createTime; 
             private String createUser; 
             private String deviceId; 
+            private FileAttr fileAttr; 
+            private String fileKey; 
             private Long id; 
             private java.util.List<String> keywordList; 
             private String keywords; 
@@ -445,6 +586,8 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.createUser = model.createUser;
                 this.deviceId = model.deviceId;
+                this.fileAttr = model.fileAttr;
+                this.fileKey = model.fileKey;
                 this.id = model.id;
                 this.keywordList = model.keywordList;
                 this.keywords = model.keywords;
@@ -501,6 +644,22 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
+                return this;
+            }
+
+            /**
+             * FileAttr.
+             */
+            public Builder fileAttr(FileAttr fileAttr) {
+                this.fileAttr = fileAttr;
+                return this;
+            }
+
+            /**
+             * FileKey.
+             */
+            public Builder fileKey(String fileKey) {
+                this.fileKey = fileKey;
                 return this;
             }
 

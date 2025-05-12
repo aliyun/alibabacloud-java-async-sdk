@@ -35,6 +35,10 @@ public class ListGeneratedContentsRequest extends Request {
     private Integer current;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataType")
+    private String dataType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
@@ -64,6 +68,7 @@ public class ListGeneratedContentsRequest extends Request {
         this.agentKey = builder.agentKey;
         this.contentDomain = builder.contentDomain;
         this.current = builder.current;
+        this.dataType = builder.dataType;
         this.endTime = builder.endTime;
         this.query = builder.query;
         this.size = builder.size;
@@ -114,6 +119,13 @@ public class ListGeneratedContentsRequest extends Request {
     }
 
     /**
+     * @return dataType
+     */
+    public String getDataType() {
+        return this.dataType;
+    }
+
+    /**
      * @return endTime
      */
     public String getEndTime() {
@@ -160,6 +172,7 @@ public class ListGeneratedContentsRequest extends Request {
         private String agentKey; 
         private String contentDomain; 
         private Integer current; 
+        private String dataType; 
         private String endTime; 
         private String query; 
         private Integer size; 
@@ -177,6 +190,7 @@ public class ListGeneratedContentsRequest extends Request {
             this.agentKey = request.agentKey;
             this.contentDomain = request.contentDomain;
             this.current = request.current;
+            this.dataType = request.dataType;
             this.endTime = request.endTime;
             this.query = request.query;
             this.size = request.size;
@@ -221,6 +235,15 @@ public class ListGeneratedContentsRequest extends Request {
         public Builder current(Integer current) {
             this.putBodyParameter("Current", current);
             this.current = current;
+            return this;
+        }
+
+        /**
+         * DataType.
+         */
+        public Builder dataType(String dataType) {
+            this.putBodyParameter("DataType", dataType);
+            this.dataType = dataType;
             return this;
         }
 
