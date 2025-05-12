@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDBInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddVPCIPs")
+    private String addVPCIPs;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CacheSize")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer cacheSize;
@@ -107,6 +111,7 @@ public class CreateDBInstanceRequest extends Request {
 
     private CreateDBInstanceRequest(Builder builder) {
         super(builder);
+        this.addVPCIPs = builder.addVPCIPs;
         this.cacheSize = builder.cacheSize;
         this.chargeType = builder.chargeType;
         this.clientToken = builder.clientToken;
@@ -140,6 +145,13 @@ public class CreateDBInstanceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return addVPCIPs
+     */
+    public String getAddVPCIPs() {
+        return this.addVPCIPs;
     }
 
     /**
@@ -283,6 +295,7 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDBInstanceRequest, Builder> {
+        private String addVPCIPs; 
         private Integer cacheSize; 
         private String chargeType; 
         private String clientToken; 
@@ -310,6 +323,7 @@ public class CreateDBInstanceRequest extends Request {
 
         private Builder(CreateDBInstanceRequest request) {
             super(request);
+            this.addVPCIPs = request.addVPCIPs;
             this.cacheSize = request.cacheSize;
             this.chargeType = request.chargeType;
             this.clientToken = request.clientToken;
@@ -331,6 +345,15 @@ public class CreateDBInstanceRequest extends Request {
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * AddVPCIPs.
+         */
+        public Builder addVPCIPs(String addVPCIPs) {
+            this.putQueryParameter("AddVPCIPs", addVPCIPs);
+            this.addVPCIPs = addVPCIPs;
+            return this;
+        }
 
         /**
          * <p>The reserved cache size.</p>
@@ -387,12 +410,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specifications of the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>selectdb.xlarge</strong>: 4 CPU cores and 32 GB of memory</li>
-         * <li><strong>selectdb.2xlarge</strong>: 8 CPU cores and 64 GB of memory</li>
-         * <li><strong>selectdb.4xlarge</strong>: 16 CPU cores and 128 GB of memory</li>
-         * </ul>
+         * <p>The instance type. You can call the <a href="https://help.aliyun.com/document_detail/2853363.html">DescribeAllDBInstanceClass</a> operation to query instance types.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -417,7 +435,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DeployScheme.
+         * <p>The deployment method of the instance.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>multi_az</li>
+         * <li>single_az</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>single_az</p>
          */
         public Builder deployScheme(String deployScheme) {
             this.putQueryParameter("DeployScheme", deployScheme);
@@ -438,7 +464,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The database engine version of the instance. Default value: <strong>2.4</strong>.</p>
+         * <p>The database engine version of the instance. Default value: <strong>3.0</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -451,7 +477,12 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * MultiZone.
+         * <p>The configurations of multi-zone deployment.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>This parameter takes effect and is required only when DeployScheme is set to multi_az.</li>
+         * </ul>
          */
         public Builder multiZone(java.util.List<MultiZone> multiZone) {
             String multiZoneShrink = shrink(multiZone, "MultiZone", "json");
@@ -536,10 +567,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the instance.</p>
+         * <p>The subscription duration of the instance. Valid values:</p>
          * <ul>
-         * <li>Valid values when Period is set to Year: 1, 2, 3, and 5 (integer)</li>
-         * <li>Valid values when Period is set to Month: 1 to 9 (integer)</li>
+         * <li>If Period is set to Year, valid values of UsedTime are 1, 2, 3, 4, and 5.</li>
+         * <li>If Period is set to Month, valid values of UsedTime are 1 to 12.</li>
          * </ul>
          * <blockquote>
          * <p> This parameter takes effect and is required only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
@@ -653,7 +684,7 @@ public class CreateDBInstanceRequest extends Request {
             } 
 
             /**
-             * VSwitchIds.
+             * <p>The vSwitch IDs.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -662,10 +693,9 @@ public class CreateDBInstanceRequest extends Request {
 
             /**
              * <p>The zone ID.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>cn-hangzhou-e</p>
+             * <p>cn-hangzhou-k</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

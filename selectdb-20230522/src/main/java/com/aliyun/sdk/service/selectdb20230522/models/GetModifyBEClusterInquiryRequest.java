@@ -45,6 +45,10 @@ public class GetModifyBEClusterInquiryRequest extends Request {
     private String dbInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModifyClusterChargeType")
+    private Boolean modifyClusterChargeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PreCacheSize")
     private Long preCacheSize;
 
@@ -79,6 +83,7 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         this.commodityCode = builder.commodityCode;
         this.computeSize = builder.computeSize;
         this.dbInstanceId = builder.dbInstanceId;
+        this.modifyClusterChargeType = builder.modifyClusterChargeType;
         this.preCacheSize = builder.preCacheSize;
         this.preComputeSize = builder.preComputeSize;
         this.pricingCycle = builder.pricingCycle;
@@ -143,6 +148,13 @@ public class GetModifyBEClusterInquiryRequest extends Request {
     }
 
     /**
+     * @return modifyClusterChargeType
+     */
+    public Boolean getModifyClusterChargeType() {
+        return this.modifyClusterChargeType;
+    }
+
+    /**
      * @return preCacheSize
      */
     public Long getPreCacheSize() {
@@ -191,6 +203,7 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         private String commodityCode; 
         private Long computeSize; 
         private String dbInstanceId; 
+        private Boolean modifyClusterChargeType; 
         private Long preCacheSize; 
         private Long preComputeSize; 
         private String pricingCycle; 
@@ -210,6 +223,7 @@ public class GetModifyBEClusterInquiryRequest extends Request {
             this.commodityCode = request.commodityCode;
             this.computeSize = request.computeSize;
             this.dbInstanceId = request.dbInstanceId;
+            this.modifyClusterChargeType = request.modifyClusterChargeType;
             this.preCacheSize = request.preCacheSize;
             this.preComputeSize = request.preComputeSize;
             this.pricingCycle = request.pricingCycle;
@@ -267,7 +281,7 @@ public class GetModifyBEClusterInquiryRequest extends Request {
          * <li>selectdb_pre_public_intl: subscription commodity on the international site (alibabacloud.com)</li>
          * <li>selectdb_go_public_cn: pay-as-you-go commodity on the China site (aliyun.com)</li>
          * <li>selectdb_go_public_intl: pay-as-you-go commodity on the international site (alibabacloud.com)</li>
-         * <li>selectdb_pre_public_cn: subscription commodity on the China site (aliyun.com).</li>
+         * <li>selectdb_pre_public_cn: subscription commodity on the China site (aliyun.com)</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -302,6 +316,15 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
             this.dbInstanceId = dbInstanceId;
+            return this;
+        }
+
+        /**
+         * ModifyClusterChargeType.
+         */
+        public Builder modifyClusterChargeType(Boolean modifyClusterChargeType) {
+            this.putQueryParameter("ModifyClusterChargeType", modifyClusterChargeType);
+            this.modifyClusterChargeType = modifyClusterChargeType;
             return this;
         }
 

@@ -117,6 +117,31 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is supported only for instances that use the zone-redundant storage (ZRS) feature and meet the following requirements:</p>
+     * <ul>
+     * <li>The instance clusters reside in different zones.</li>
+     * <li>The billing method of the instance clusters is consistent.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateDBClusterBinding  CreateDBClusterBindingRequest
+     * @return CreateDBClusterBindingResponse
+     */
+    @Override
+    public CompletableFuture<CreateDBClusterBindingResponse> createDBClusterBinding(CreateDBClusterBindingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateDBClusterBinding").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDBClusterBindingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDBClusterBindingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateDBInstance  CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
      */
@@ -183,6 +208,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteDBClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDBClusterBinding  DeleteDBClusterBindingRequest
+     * @return DeleteDBClusterBindingResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDBClusterBindingResponse> deleteDBClusterBinding(DeleteDBClusterBindingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteDBClusterBinding").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDBClusterBindingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDBClusterBindingResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

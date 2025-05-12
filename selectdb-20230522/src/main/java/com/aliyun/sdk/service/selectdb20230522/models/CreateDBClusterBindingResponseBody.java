@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetModifyBEClusterInquiryResponseBody} extends {@link TeaModel}
+ * {@link CreateDBClusterBindingResponseBody} extends {@link TeaModel}
  *
- * <p>GetModifyBEClusterInquiryResponseBody</p>
+ * <p>CreateDBClusterBindingResponseBody</p>
  */
-public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
+public class CreateDBClusterBindingResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private GetModifyBEClusterInquiryResponseBody(Builder builder) {
+    private CreateDBClusterBindingResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
     }
@@ -32,7 +32,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetModifyBEClusterInquiryResponseBody create() {
+    public static CreateDBClusterBindingResponseBody create() {
         return builder().build();
     }
 
@@ -61,13 +61,13 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(GetModifyBEClusterInquiryResponseBody model) {
+        private Builder(CreateDBClusterBindingResponseBody model) {
             this.data = model.data;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The information returned.</p>
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,42 +75,42 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>06758CAB-1204-5852-A471-29C87D5C1D0F</p>
+         * <p>4773E4EC-025D-509F-AEA9-D53123FDFB0F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GetModifyBEClusterInquiryResponseBody build() {
-            return new GetModifyBEClusterInquiryResponseBody(this);
+        public CreateDBClusterBindingResponseBody build() {
+            return new CreateDBClusterBindingResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetModifyBEClusterInquiryResponseBody} extends {@link TeaModel}
+     * {@link CreateDBClusterBindingResponseBody} extends {@link TeaModel}
      *
-     * <p>GetModifyBEClusterInquiryResponseBody</p>
+     * <p>CreateDBClusterBindingResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Currency")
-        private String currency;
+        @com.aliyun.core.annotation.NameInMap("DbClusterId")
+        private String dbClusterId;
 
-        @com.aliyun.core.annotation.NameInMap("RefundAmount")
-        private String refundAmount;
+        @com.aliyun.core.annotation.NameInMap("DbInstanceId")
+        private String dbInstanceId;
 
-        @com.aliyun.core.annotation.NameInMap("TradeAmount")
-        private String tradeAmount;
+        @com.aliyun.core.annotation.NameInMap("DbInstanceName")
+        private String dbInstanceName;
 
         private Data(Builder builder) {
-            this.currency = builder.currency;
-            this.refundAmount = builder.refundAmount;
-            this.tradeAmount = builder.tradeAmount;
+            this.dbClusterId = builder.dbClusterId;
+            this.dbInstanceId = builder.dbInstanceId;
+            this.dbInstanceName = builder.dbInstanceName;
         }
 
         public static Builder builder() {
@@ -122,67 +122,70 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         }
 
         /**
-         * @return currency
+         * @return dbClusterId
          */
-        public String getCurrency() {
-            return this.currency;
+        public String getDbClusterId() {
+            return this.dbClusterId;
         }
 
         /**
-         * @return refundAmount
+         * @return dbInstanceId
          */
-        public String getRefundAmount() {
-            return this.refundAmount;
+        public String getDbInstanceId() {
+            return this.dbInstanceId;
         }
 
         /**
-         * @return tradeAmount
+         * @return dbInstanceName
          */
-        public String getTradeAmount() {
-            return this.tradeAmount;
+        public String getDbInstanceName() {
+            return this.dbInstanceName;
         }
 
         public static final class Builder {
-            private String currency; 
-            private String refundAmount; 
-            private String tradeAmount; 
+            private String dbClusterId; 
+            private String dbInstanceId; 
+            private String dbInstanceName; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.currency = model.currency;
-                this.refundAmount = model.refundAmount;
-                this.tradeAmount = model.tradeAmount;
+                this.dbClusterId = model.dbClusterId;
+                this.dbInstanceId = model.dbInstanceId;
+                this.dbInstanceName = model.dbInstanceName;
             } 
 
             /**
-             * <p>The currency.</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>CNY</p>
+             * <p>selectdb-cn-7213cjv2ez-be</p>
              */
-            public Builder currency(String currency) {
-                this.currency = currency;
+            public Builder dbClusterId(String dbClusterId) {
+                this.dbClusterId = dbClusterId;
                 return this;
             }
 
             /**
-             * RefundAmount.
+             * <p>The numeric ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6585</p>
              */
-            public Builder refundAmount(String refundAmount) {
-                this.refundAmount = refundAmount;
+            public Builder dbInstanceId(String dbInstanceId) {
+                this.dbInstanceId = dbInstanceId;
                 return this;
             }
 
             /**
-             * <p>The amount of money.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>1.76</p>
+             * <p>selectdb-cn-7213cjv2ez</p>
              */
-            public Builder tradeAmount(String tradeAmount) {
-                this.tradeAmount = tradeAmount;
+            public Builder dbInstanceName(String dbInstanceName) {
+                this.dbInstanceName = dbInstanceName;
                 return this;
             }
 

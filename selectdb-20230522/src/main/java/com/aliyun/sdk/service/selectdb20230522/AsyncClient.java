@@ -49,6 +49,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDBClusterResponse> createDBCluster(CreateDBClusterRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is supported only for instances that use the zone-redundant storage (ZRS) feature and meet the following requirements:</p>
+     * <ul>
+     * <li>The instance clusters reside in different zones.</li>
+     * <li>The billing method of the instance clusters is consistent.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateDBClusterBinding  CreateDBClusterBindingRequest
+     * @return CreateDBClusterBindingResponse
+     */
+    CompletableFuture<CreateDBClusterBindingResponse> createDBClusterBinding(CreateDBClusterBindingRequest request);
+
+    /**
      * @param request the request parameters of CreateDBInstance  CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
      */
@@ -71,6 +84,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDBClusterResponse
      */
     CompletableFuture<DeleteDBClusterResponse> deleteDBCluster(DeleteDBClusterRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDBClusterBinding  DeleteDBClusterBindingRequest
+     * @return DeleteDBClusterBindingResponse
+     */
+    CompletableFuture<DeleteDBClusterBindingResponse> deleteDBClusterBinding(DeleteDBClusterBindingRequest request);
 
     /**
      * @param request the request parameters of DeleteDBInstance  DeleteDBInstanceRequest
