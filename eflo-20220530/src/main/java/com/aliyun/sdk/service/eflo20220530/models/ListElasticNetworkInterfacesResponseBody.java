@@ -169,6 +169,81 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
      *
      * <p>ListElasticNetworkInterfacesResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListElasticNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListElasticNetworkInterfacesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -212,6 +287,9 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -239,6 +317,7 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
             this.resourceGroupId = builder.resourceGroupId;
             this.securityGroupId = builder.securityGroupId;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.type = builder.type;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -352,6 +431,13 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -394,6 +480,7 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String securityGroupId; 
             private String status; 
+            private java.util.List<Tags> tags; 
             private String type; 
             private String vSwitchId; 
             private String vpcId; 
@@ -417,6 +504,7 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
                 this.resourceGroupId = model.resourceGroupId;
                 this.securityGroupId = model.securityGroupId;
                 this.status = model.status;
+                this.tags = model.tags;
                 this.type = model.type;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
@@ -571,6 +659,14 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

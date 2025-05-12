@@ -47,6 +47,10 @@ public class CreateElasticNetworkInterfaceRequest extends Request {
     private String securityGroupId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -68,6 +72,7 @@ public class CreateElasticNetworkInterfaceRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.securityGroupId = builder.securityGroupId;
+        this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
@@ -136,6 +141,13 @@ public class CreateElasticNetworkInterfaceRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -164,6 +176,7 @@ public class CreateElasticNetworkInterfaceRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String securityGroupId; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -181,6 +194,7 @@ public class CreateElasticNetworkInterfaceRequest extends Request {
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.securityGroupId = request.securityGroupId;
+            this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
@@ -269,6 +283,15 @@ public class CreateElasticNetworkInterfaceRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putBodyParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
@@ -315,4 +338,79 @@ public class CreateElasticNetworkInterfaceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateElasticNetworkInterfaceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateElasticNetworkInterfaceRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

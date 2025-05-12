@@ -29,7 +29,6 @@ public class GetNetworkInterfaceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SubnetId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String subnetId;
 
     private GetNetworkInterfaceRequest(Builder builder) {
@@ -117,7 +116,6 @@ public class GetNetworkInterfaceRequest extends Request {
 
         /**
          * <p>Subnet of Lingjun</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>subnet-f3zfzmnc</p>
