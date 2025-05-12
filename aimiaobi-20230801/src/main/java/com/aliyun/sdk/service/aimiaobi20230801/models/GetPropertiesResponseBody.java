@@ -775,6 +775,102 @@ public class GetPropertiesResponseBody extends TeaModel {
      *
      * <p>GetPropertiesResponseBody</p>
      */
+    public static class SearchSourceList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("DatasetName")
+        private String datasetName;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private SearchSourceList(Builder builder) {
+            this.code = builder.code;
+            this.datasetName = builder.datasetName;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SearchSourceList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return datasetName
+         */
+        public String getDatasetName() {
+            return this.datasetName;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String datasetName; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchSourceList model) {
+                this.code = model.code;
+                this.datasetName = model.datasetName;
+                this.name = model.name;
+            } 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * DatasetName.
+             */
+            public Builder datasetName(String datasetName) {
+                this.datasetName = datasetName;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public SearchSourceList build() {
+                return new SearchSourceList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetPropertiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPropertiesResponseBody</p>
+     */
     public static class DataSearchSources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -1151,6 +1247,9 @@ public class GetPropertiesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntelligentSearchConfig")
         private IntelligentSearchConfig intelligentSearchConfig;
 
+        @com.aliyun.core.annotation.NameInMap("SearchSourceList")
+        private java.util.List<SearchSourceList> searchSourceList;
+
         @com.aliyun.core.annotation.NameInMap("SearchSources")
         private java.util.List<DataSearchSources> searchSources;
 
@@ -1171,6 +1270,7 @@ public class GetPropertiesResponseBody extends TeaModel {
             this.consoleConfig = builder.consoleConfig;
             this.generalConfigMap = builder.generalConfigMap;
             this.intelligentSearchConfig = builder.intelligentSearchConfig;
+            this.searchSourceList = builder.searchSourceList;
             this.searchSources = builder.searchSources;
             this.slrAuthorized = builder.slrAuthorized;
             this.userInfo = builder.userInfo;
@@ -1215,6 +1315,13 @@ public class GetPropertiesResponseBody extends TeaModel {
         }
 
         /**
+         * @return searchSourceList
+         */
+        public java.util.List<SearchSourceList> getSearchSourceList() {
+            return this.searchSourceList;
+        }
+
+        /**
          * @return searchSources
          */
         public java.util.List<DataSearchSources> getSearchSources() {
@@ -1254,6 +1361,7 @@ public class GetPropertiesResponseBody extends TeaModel {
             private ConsoleConfig consoleConfig; 
             private java.util.Map<String, ?> generalConfigMap; 
             private IntelligentSearchConfig intelligentSearchConfig; 
+            private java.util.List<SearchSourceList> searchSourceList; 
             private java.util.List<DataSearchSources> searchSources; 
             private Boolean slrAuthorized; 
             private UserInfo userInfo; 
@@ -1268,6 +1376,7 @@ public class GetPropertiesResponseBody extends TeaModel {
                 this.consoleConfig = model.consoleConfig;
                 this.generalConfigMap = model.generalConfigMap;
                 this.intelligentSearchConfig = model.intelligentSearchConfig;
+                this.searchSourceList = model.searchSourceList;
                 this.searchSources = model.searchSources;
                 this.slrAuthorized = model.slrAuthorized;
                 this.userInfo = model.userInfo;
@@ -1304,6 +1413,14 @@ public class GetPropertiesResponseBody extends TeaModel {
              */
             public Builder intelligentSearchConfig(IntelligentSearchConfig intelligentSearchConfig) {
                 this.intelligentSearchConfig = intelligentSearchConfig;
+                return this;
+            }
+
+            /**
+             * SearchSourceList.
+             */
+            public Builder searchSourceList(java.util.List<SearchSourceList> searchSourceList) {
+                this.searchSourceList = searchSourceList;
                 return this;
             }
 

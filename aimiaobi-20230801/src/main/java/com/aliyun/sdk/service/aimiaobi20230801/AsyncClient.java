@@ -290,6 +290,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSmartClipTaskResponse> getSmartClipTask(GetSmartClipTaskRequest request);
 
     /**
+     * @param request the request parameters of GetStyleLearningResult  GetStyleLearningResultRequest
+     * @return GetStyleLearningResultResponse
+     */
+    CompletableFuture<GetStyleLearningResultResponse> getStyleLearningResult(GetStyleLearningResultRequest request);
+
+    /**
      * @param request the request parameters of GetTopicById  GetTopicByIdRequest
      * @return GetTopicByIdResponse
      */
@@ -504,6 +510,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListWebReviewPointsResponse
      */
     CompletableFuture<ListWebReviewPointsResponse> listWebReviewPoints(ListWebReviewPointsRequest request);
+
+    /**
+     * @param request the request parameters of ListWritingStyles  ListWritingStylesRequest
+     * @return ListWritingStylesResponse
+     */
+    CompletableFuture<ListWritingStylesResponse> listWritingStyles(ListWritingStylesRequest request);
 
     /**
      * @param request the request parameters of QueryAsyncTask  QueryAsyncTaskRequest
@@ -742,6 +754,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunWritingResponse> runWriting(RunWritingRequest request);
 
     ResponseIterable<RunWritingResponseBody> runWritingWithResponseIterable(RunWritingRequest request);
+
+    /**
+     * @param request the request parameters of RunWritingV2  RunWritingV2Request
+     * @return RunWritingV2Response
+     */
+    CompletableFuture<RunWritingV2Response> runWritingV2(RunWritingV2Request request);
+
+    ResponseIterable<RunWritingV2ResponseBody> runWritingV2WithResponseIterable(RunWritingV2Request request);
 
     /**
      * @param request the request parameters of SaveCustomText  SaveCustomTextRequest
