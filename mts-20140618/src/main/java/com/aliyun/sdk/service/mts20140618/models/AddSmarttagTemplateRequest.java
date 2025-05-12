@@ -93,6 +93,10 @@ public class AddSmarttagTemplateRequest extends Request {
     private String scene;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateConfig")
+    private String templateConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
@@ -117,6 +121,7 @@ public class AddSmarttagTemplateRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.scene = builder.scene;
+        this.templateConfig = builder.templateConfig;
         this.templateName = builder.templateName;
     }
 
@@ -260,6 +265,13 @@ public class AddSmarttagTemplateRequest extends Request {
     }
 
     /**
+     * @return templateConfig
+     */
+    public String getTemplateConfig() {
+        return this.templateConfig;
+    }
+
+    /**
      * @return templateName
      */
     public String getTemplateName() {
@@ -285,6 +297,7 @@ public class AddSmarttagTemplateRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String scene; 
+        private String templateConfig; 
         private String templateName; 
 
         private Builder() {
@@ -311,6 +324,7 @@ public class AddSmarttagTemplateRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.scene = request.scene;
+            this.templateConfig = request.templateConfig;
             this.templateName = request.templateName;
         } 
 
@@ -482,6 +496,15 @@ public class AddSmarttagTemplateRequest extends Request {
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);
             this.scene = scene;
+            return this;
+        }
+
+        /**
+         * TemplateConfig.
+         */
+        public Builder templateConfig(String templateConfig) {
+            this.putQueryParameter("TemplateConfig", templateConfig);
+            this.templateConfig = templateConfig;
             return this;
         }
 

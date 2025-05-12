@@ -82,6 +82,10 @@ public class UpdateSmarttagTemplateRequest extends Request {
     private String scene;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateConfig")
+    private String templateConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
@@ -108,6 +112,7 @@ public class UpdateSmarttagTemplateRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.scene = builder.scene;
+        this.templateConfig = builder.templateConfig;
         this.templateId = builder.templateId;
         this.templateName = builder.templateName;
     }
@@ -238,6 +243,13 @@ public class UpdateSmarttagTemplateRequest extends Request {
     }
 
     /**
+     * @return templateConfig
+     */
+    public String getTemplateConfig() {
+        return this.templateConfig;
+    }
+
+    /**
      * @return templateId
      */
     public String getTemplateId() {
@@ -268,6 +280,7 @@ public class UpdateSmarttagTemplateRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String scene; 
+        private String templateConfig; 
         private String templateId; 
         private String templateName; 
 
@@ -293,6 +306,7 @@ public class UpdateSmarttagTemplateRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.scene = request.scene;
+            this.templateConfig = request.templateConfig;
             this.templateId = request.templateId;
             this.templateName = request.templateName;
         } 
@@ -438,6 +452,15 @@ public class UpdateSmarttagTemplateRequest extends Request {
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);
             this.scene = scene;
+            return this;
+        }
+
+        /**
+         * TemplateConfig.
+         */
+        public Builder templateConfig(String templateConfig) {
+            this.putQueryParameter("TemplateConfig", templateConfig);
+            this.templateConfig = templateConfig;
             return this;
         }
 
