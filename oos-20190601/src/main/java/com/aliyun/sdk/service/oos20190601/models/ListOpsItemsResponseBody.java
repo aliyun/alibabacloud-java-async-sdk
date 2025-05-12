@@ -48,6 +48,10 @@ public class ListOpsItemsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListOpsItemsResponseBody extends TeaModel {
         private java.util.List<OpsItems> opsItems; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOpsItemsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.opsItems = model.opsItems;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries returned on each page.</p>
@@ -299,6 +314,23 @@ public class ListOpsItemsResponseBody extends TeaModel {
             private java.util.Map<String, ?> tags; 
             private String title; 
             private String updateDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(OpsItems model) {
+                this.category = model.category;
+                this.createDate = model.createDate;
+                this.opsItemId = model.opsItemId;
+                this.priority = model.priority;
+                this.resources = model.resources;
+                this.severity = model.severity;
+                this.source = model.source;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.title = model.title;
+                this.updateDate = model.updateDate;
+            } 
 
             /**
              * <p>The category.</p>

@@ -60,7 +60,7 @@ public class ListOpsItemsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -265,6 +265,15 @@ public class ListOpsItemsRequest extends Request {
             private String name; 
             private String operator; 
             private java.util.List<String> value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.name = model.name;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The parameter name of the filter.</p>

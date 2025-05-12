@@ -44,6 +44,10 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationGroupConsume
      */
@@ -77,6 +81,16 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeApplicationGroupBillResponseBody model) {
+            this.applicationGroupConsume = model.applicationGroupConsume;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The consume of application group.</p>
@@ -264,6 +278,22 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             private String peakType; 
             private String performance; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationGroupConsume model) {
+                this.amount = model.amount;
+                this.creationTime = model.creationTime;
+                this.currency = model.currency;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceType = model.instanceType;
+                this.optimization = model.optimization;
+                this.peakType = model.peakType;
+                this.performance = model.performance;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The amount consumed by the instance.</p>

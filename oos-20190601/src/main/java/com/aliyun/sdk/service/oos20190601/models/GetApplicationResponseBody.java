@@ -36,6 +36,10 @@ public class GetApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return application
      */
@@ -53,6 +57,14 @@ public class GetApplicationResponseBody extends TeaModel {
     public static final class Builder {
         private Application application; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApplicationResponseBody model) {
+            this.application = model.application;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the application.</p>
@@ -134,6 +146,15 @@ public class GetApplicationResponseBody extends TeaModel {
             private java.util.List<String> contactGroups; 
             private String healthCheckUrl; 
             private java.util.List<String> templateIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlarmConfig model) {
+                this.contactGroups = model.contactGroups;
+                this.healthCheckUrl = model.healthCheckUrl;
+                this.templateIds = model.templateIds;
+            } 
 
             /**
              * <p>The alert contact list.</p>
@@ -308,6 +329,22 @@ public class GetApplicationResponseBody extends TeaModel {
             private String serviceId; 
             private java.util.Map<String, ?> tags; 
             private String updateDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Application model) {
+                this.alarmConfig = model.alarmConfig;
+                this.applicationSource = model.applicationSource;
+                this.applicationType = model.applicationType;
+                this.createDate = model.createDate;
+                this.description = model.description;
+                this.name = model.name;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serviceId = model.serviceId;
+                this.tags = model.tags;
+                this.updateDate = model.updateDate;
+            } 
 
             /**
              * <p>The configurations of application alerts.</p>

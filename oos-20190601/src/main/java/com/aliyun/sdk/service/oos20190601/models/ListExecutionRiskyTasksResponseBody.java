@@ -36,6 +36,10 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<RiskyTasks> riskyTasks; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExecutionRiskyTasksResponseBody model) {
+            this.requestId = model.requestId;
+            this.riskyTasks = model.riskyTasks;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -146,6 +158,16 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
             private String service; 
             private java.util.List<String> task; 
             private java.util.List<String> template; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskyTasks model) {
+                this.API = model.API;
+                this.service = model.service;
+                this.task = model.task;
+                this.template = model.template;
+            } 
 
             /**
              * <p>The name of the operation that the high-risk task calls.</p>

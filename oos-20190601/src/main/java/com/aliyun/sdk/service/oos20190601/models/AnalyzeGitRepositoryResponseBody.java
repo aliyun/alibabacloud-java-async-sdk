@@ -40,6 +40,10 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return analysisResults
      */
@@ -65,6 +69,15 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
         private java.util.List<AnalysisResults> analysisResults; 
         private Integer count; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AnalyzeGitRepositoryResponseBody model) {
+            this.analysisResults = model.analysisResults;
+            this.count = model.count;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AnalysisResults.
@@ -139,6 +152,14 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
         public static final class Builder {
             private String fileType; 
             private java.util.List<String> paths; 
+
+            private Builder() {
+            } 
+
+            private Builder(BuildFiles model) {
+                this.fileType = model.fileType;
+                this.paths = model.paths;
+            } 
 
             /**
              * FileType.
@@ -218,6 +239,15 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
             private java.util.List<BuildFiles> buildFiles; 
             private String buildType; 
             private String runtimeType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AnalysisResults model) {
+                this.buildFiles = model.buildFiles;
+                this.buildType = model.buildType;
+                this.runtimeType = model.runtimeType;
+            } 
 
             /**
              * BuildFiles.

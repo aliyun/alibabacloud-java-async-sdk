@@ -44,6 +44,10 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<ResourceExecutionStatus> resourceExecutionStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourceExecutionStatusResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.resourceExecutionStatus = model.resourceExecutionStatus;
+        } 
 
         /**
          * <p>The number of entries returned on each page.</p>
@@ -204,6 +218,17 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
             private String outputs; 
             private String resourceId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceExecutionStatus model) {
+                this.executionId = model.executionId;
+                this.executionTime = model.executionTime;
+                this.outputs = model.outputs;
+                this.resourceId = model.resourceId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the execution.</p>

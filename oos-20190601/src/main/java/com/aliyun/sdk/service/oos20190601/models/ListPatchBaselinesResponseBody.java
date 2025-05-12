@@ -44,6 +44,10 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<PatchBaselines> patchBaselines; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPatchBaselinesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.patchBaselines = model.patchBaselines;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of entries per page.</p>
@@ -168,6 +182,14 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -397,6 +419,27 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String updatedBy; 
             private String updatedDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(PatchBaselines model) {
+                this.approvedPatches = model.approvedPatches;
+                this.approvedPatchesEnableNonSecurity = model.approvedPatchesEnableNonSecurity;
+                this.createdBy = model.createdBy;
+                this.createdDate = model.createdDate;
+                this.description = model.description;
+                this.id = model.id;
+                this.isDefault = model.isDefault;
+                this.name = model.name;
+                this.operationSystem = model.operationSystem;
+                this.resourceGroupId = model.resourceGroupId;
+                this.shareType = model.shareType;
+                this.sources = model.sources;
+                this.tags = model.tags;
+                this.updatedBy = model.updatedBy;
+                this.updatedDate = model.updatedDate;
+            } 
 
             /**
              * <p>The approved patches.</p>

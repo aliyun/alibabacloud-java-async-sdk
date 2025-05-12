@@ -72,6 +72,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdBy
      */
@@ -161,6 +165,23 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListParameterVersionsResponseBody model) {
+            this.createdBy = model.createdBy;
+            this.createdDate = model.createdDate;
+            this.description = model.description;
+            this.id = model.id;
+            this.maxResults = model.maxResults;
+            this.name = model.name;
+            this.nextToken = model.nextToken;
+            this.parameterVersions = model.parameterVersions;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.type = model.type;
+        } 
 
         /**
          * <p>The user who created the common parameter.</p>
@@ -353,6 +374,16 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             private String updatedBy; 
             private String updatedDate; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParameterVersions model) {
+                this.parameterVersion = model.parameterVersion;
+                this.updatedBy = model.updatedBy;
+                this.updatedDate = model.updatedDate;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The version number of the common parameter.</p>

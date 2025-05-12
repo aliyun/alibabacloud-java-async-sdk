@@ -44,6 +44,10 @@ public class GetInventorySchemaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class GetInventorySchemaResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<Schemas> schemas; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInventorySchemaResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.schemas = model.schemas;
+        } 
 
         /**
          * <p>The number of entries per page.</p>
@@ -169,6 +183,14 @@ public class GetInventorySchemaResponseBody extends TeaModel {
             private String dataType; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attributes model) {
+                this.dataType = model.dataType;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The data type of the property.</p>
              * 
@@ -253,6 +275,15 @@ public class GetInventorySchemaResponseBody extends TeaModel {
             private java.util.List<Attributes> attributes; 
             private String typeName; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Schemas model) {
+                this.attributes = model.attributes;
+                this.typeName = model.typeName;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The properties of the configuration list.</p>

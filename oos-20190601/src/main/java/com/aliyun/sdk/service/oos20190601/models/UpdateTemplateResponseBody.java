@@ -36,6 +36,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class UpdateTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Template template; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.template = model.template;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -266,6 +278,26 @@ public class UpdateTemplateResponseBody extends TeaModel {
             private String templateVersion; 
             private String updatedBy; 
             private String updatedDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.createdBy = model.createdBy;
+                this.createdDate = model.createdDate;
+                this.description = model.description;
+                this.hasTrigger = model.hasTrigger;
+                this.hash = model.hash;
+                this.resourceGroupId = model.resourceGroupId;
+                this.shareType = model.shareType;
+                this.tags = model.tags;
+                this.templateFormat = model.templateFormat;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateVersion = model.templateVersion;
+                this.updatedBy = model.updatedBy;
+                this.updatedDate = model.updatedDate;
+            } 
 
             /**
              * <p>The user who created the template.</p>

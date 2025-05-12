@@ -60,6 +60,10 @@ public class ListInventoryEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return captureTime
      */
@@ -125,6 +129,20 @@ public class ListInventoryEntriesResponseBody extends TeaModel {
         private String requestId; 
         private String schemaVersion; 
         private String typeName; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInventoryEntriesResponseBody model) {
+            this.captureTime = model.captureTime;
+            this.entries = model.entries;
+            this.instanceId = model.instanceId;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.schemaVersion = model.schemaVersion;
+            this.typeName = model.typeName;
+        } 
 
         /**
          * <p>The time when the request was sent.</p>

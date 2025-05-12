@@ -44,6 +44,10 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<TemplateVersions> templateVersions; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTemplateVersionsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.templateVersions = model.templateVersions;
+        } 
 
         /**
          * <p>The number of entries per page.</p>
@@ -216,6 +230,18 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             private String updatedBy; 
             private String updatedDate; 
             private String versionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TemplateVersions model) {
+                this.description = model.description;
+                this.templateFormat = model.templateFormat;
+                this.templateVersion = model.templateVersion;
+                this.updatedBy = model.updatedBy;
+                this.updatedDate = model.updatedDate;
+                this.versionName = model.versionName;
+            } 
 
             /**
              * <p>The description of the version.</p>

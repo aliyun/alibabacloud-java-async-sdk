@@ -40,6 +40,10 @@ public class GetTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -65,6 +69,15 @@ public class GetTemplateResponseBody extends TeaModel {
         private String content; 
         private String requestId; 
         private Template template; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTemplateResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+            this.template = model.template;
+        } 
 
         /**
          * <p>The content of the template.</p>
@@ -313,6 +326,28 @@ public class GetTemplateResponseBody extends TeaModel {
             private String updatedBy; 
             private String updatedDate; 
             private String versionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.createdBy = model.createdBy;
+                this.createdDate = model.createdDate;
+                this.description = model.description;
+                this.hasTrigger = model.hasTrigger;
+                this.hash = model.hash;
+                this.resourceGroupId = model.resourceGroupId;
+                this.shareType = model.shareType;
+                this.tags = model.tags;
+                this.templateFormat = model.templateFormat;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateType = model.templateType;
+                this.templateVersion = model.templateVersion;
+                this.updatedBy = model.updatedBy;
+                this.updatedDate = model.updatedDate;
+                this.versionName = model.versionName;
+            } 
 
             /**
              * <p>The creator of the template.</p>

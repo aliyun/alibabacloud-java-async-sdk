@@ -44,6 +44,10 @@ public class SearchInventoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return entities
      */
@@ -77,6 +81,16 @@ public class SearchInventoryResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchInventoryResponseBody model) {
+            this.entities = model.entities;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Entities.

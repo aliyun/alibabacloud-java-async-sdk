@@ -75,7 +75,7 @@ public class CreateApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -341,6 +341,15 @@ public class CreateApplicationRequest extends Request {
             private java.util.List<String> contactGroups; 
             private String healthCheckUrl; 
             private java.util.List<String> templateIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlarmConfig model) {
+                this.contactGroups = model.contactGroups;
+                this.healthCheckUrl = model.healthCheckUrl;
+                this.templateIds = model.templateIds;
+            } 
 
             /**
              * <p>The alert contact groups.</p>

@@ -62,7 +62,7 @@ public class ListInventoryEntriesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -274,6 +274,15 @@ public class ListInventoryEntriesRequest extends Request {
             private String name; 
             private String operator; 
             private java.util.List<String> value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.name = model.name;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the component property. Valid values of N: 1 to 5.</p>

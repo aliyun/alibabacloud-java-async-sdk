@@ -40,6 +40,10 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<StateConfigurations> stateConfigurations; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListStateConfigurationsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.stateConfigurations = model.stateConfigurations;
+        } 
 
         /**
          * <p>The pagination token that was used in the next request to retrieve a new page of results.</p>
@@ -289,6 +302,26 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             private String templateName; 
             private String templateVersion; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(StateConfigurations model) {
+                this.configureMode = model.configureMode;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.parameters = model.parameters;
+                this.resourceGroupId = model.resourceGroupId;
+                this.scheduleExpression = model.scheduleExpression;
+                this.scheduleType = model.scheduleType;
+                this.stateConfigurationId = model.stateConfigurationId;
+                this.tags = model.tags;
+                this.targets = model.targets;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateVersion = model.templateVersion;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The configuration mode. Valid values:</p>

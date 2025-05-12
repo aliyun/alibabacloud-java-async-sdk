@@ -36,6 +36,10 @@ public class SetServiceSettingsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class SetServiceSettingsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<ServiceSettings> serviceSettings; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetServiceSettingsResponseBody model) {
+            this.requestId = model.requestId;
+            this.serviceSettings = model.serviceSettings;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -170,6 +182,18 @@ public class SetServiceSettingsResponseBody extends TeaModel {
             private Boolean deliverySlsEnabled; 
             private String deliverySlsProjectName; 
             private String rdcEnterpriseId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceSettings model) {
+                this.deliveryOssBucketName = model.deliveryOssBucketName;
+                this.deliveryOssEnabled = model.deliveryOssEnabled;
+                this.deliveryOssKeyPrefix = model.deliveryOssKeyPrefix;
+                this.deliverySlsEnabled = model.deliverySlsEnabled;
+                this.deliverySlsProjectName = model.deliverySlsProjectName;
+                this.rdcEnterpriseId = model.rdcEnterpriseId;
+            } 
 
             /**
              * <p>The name of OSS bucket to deliver.</p>

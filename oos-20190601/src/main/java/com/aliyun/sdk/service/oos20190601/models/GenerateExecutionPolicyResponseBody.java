@@ -40,6 +40,10 @@ public class GenerateExecutionPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return missingPolicy
      */
@@ -65,6 +69,15 @@ public class GenerateExecutionPolicyResponseBody extends TeaModel {
         private String missingPolicy; 
         private String policy; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateExecutionPolicyResponseBody model) {
+            this.missingPolicy = model.missingPolicy;
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The policies that are missing.</p>

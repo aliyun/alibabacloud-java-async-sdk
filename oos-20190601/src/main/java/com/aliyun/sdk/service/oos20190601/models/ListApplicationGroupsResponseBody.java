@@ -44,6 +44,10 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationGroups
      */
@@ -77,6 +81,16 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationGroupsResponseBody model) {
+            this.applicationGroups = model.applicationGroups;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the application group.</p>
@@ -290,6 +304,24 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             private String status; 
             private String statusReason; 
             private String updateDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationGroups model) {
+                this.applicationName = model.applicationName;
+                this.cmsGroupId = model.cmsGroupId;
+                this.createDate = model.createDate;
+                this.deployParameters = model.deployParameters;
+                this.deployRegionId = model.deployRegionId;
+                this.description = model.description;
+                this.importTagKey = model.importTagKey;
+                this.importTagValue = model.importTagValue;
+                this.name = model.name;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+                this.updateDate = model.updateDate;
+            } 
 
             /**
              * <p>The name of the application.</p>

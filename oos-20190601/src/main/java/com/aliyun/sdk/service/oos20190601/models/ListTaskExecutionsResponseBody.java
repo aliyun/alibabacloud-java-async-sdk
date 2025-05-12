@@ -44,6 +44,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<TaskExecutions> taskExecutions; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTaskExecutionsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.taskExecutions = model.taskExecutions;
+        } 
 
         /**
          * <p>The details of the task executions.</p>
@@ -372,6 +386,31 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             private String taskName; 
             private String templateId; 
             private String updateDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskExecutions model) {
+                this.childExecutionId = model.childExecutionId;
+                this.createDate = model.createDate;
+                this.endDate = model.endDate;
+                this.executionId = model.executionId;
+                this.extraData = model.extraData;
+                this.loop = model.loop;
+                this.loopBatchNumber = model.loopBatchNumber;
+                this.loopItem = model.loopItem;
+                this.outputs = model.outputs;
+                this.parentTaskExecutionId = model.parentTaskExecutionId;
+                this.properties = model.properties;
+                this.startDate = model.startDate;
+                this.status = model.status;
+                this.statusMessage = model.statusMessage;
+                this.taskAction = model.taskAction;
+                this.taskExecutionId = model.taskExecutionId;
+                this.taskName = model.taskName;
+                this.templateId = model.templateId;
+                this.updateDate = model.updateDate;
+            } 
 
             /**
              * <p>The output of the execution.</p>

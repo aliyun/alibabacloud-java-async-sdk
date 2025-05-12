@@ -44,6 +44,10 @@ public class ListInstancePatchesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ListInstancePatchesResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<Patches> patches; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancePatchesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.patches = model.patches;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of entries returned on each page.</p>
@@ -218,6 +232,18 @@ public class ListInstancePatchesResponseBody extends TeaModel {
             private String severity; 
             private String status; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Patches model) {
+                this.classification = model.classification;
+                this.installedTime = model.installedTime;
+                this.KBId = model.KBId;
+                this.severity = model.severity;
+                this.status = model.status;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The classification of the patch.</p>

@@ -36,6 +36,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return application
      */
@@ -53,6 +57,14 @@ public class CreateApplicationResponseBody extends TeaModel {
     public static final class Builder {
         private Application application; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateApplicationResponseBody model) {
+            this.application = model.application;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the application.</p>
@@ -158,6 +170,17 @@ public class CreateApplicationResponseBody extends TeaModel {
             private String name; 
             private java.util.Map<String, String> tags; 
             private String updateDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Application model) {
+                this.createDate = model.createDate;
+                this.description = model.description;
+                this.name = model.name;
+                this.tags = model.tags;
+                this.updateDate = model.updateDate;
+            } 
 
             /**
              * <p>The time when the application was created.</p>

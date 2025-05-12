@@ -44,6 +44,10 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<PackageStates> packageStates; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancePackageStatesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.packageStates = model.packageStates;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Page size.</p>
@@ -252,6 +266,21 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
             private String templateVersion; 
             private String templateVersionName; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(PackageStates model) {
+                this.description = model.description;
+                this.parameters = model.parameters;
+                this.publisher = model.publisher;
+                this.templateCategory = model.templateCategory;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateVersion = model.templateVersion;
+                this.templateVersionName = model.templateVersionName;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>Description</p>

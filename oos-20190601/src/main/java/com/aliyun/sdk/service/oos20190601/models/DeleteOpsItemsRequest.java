@@ -12,23 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeletePatchBaselineRequest} extends {@link RequestModel}
+ * {@link DeleteOpsItemsRequest} extends {@link RequestModel}
  *
- * <p>DeletePatchBaselineRequest</p>
+ * <p>DeleteOpsItemsRequest</p>
  */
-public class DeletePatchBaselineRequest extends Request {
+public class DeleteOpsItemsRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Name")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String name;
+    @com.aliyun.core.annotation.NameInMap("OpsItemIds")
+    private java.util.List<String> opsItemIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    private DeletePatchBaselineRequest(Builder builder) {
+    private DeleteOpsItemsRequest(Builder builder) {
         super(builder);
-        this.name = builder.name;
+        this.opsItemIds = builder.opsItemIds;
         this.regionId = builder.regionId;
     }
 
@@ -36,7 +35,7 @@ public class DeletePatchBaselineRequest extends Request {
         return new Builder();
     }
 
-    public static DeletePatchBaselineRequest create() {
+    public static DeleteOpsItemsRequest create() {
         return builder().build();
     }
 
@@ -46,10 +45,10 @@ public class DeletePatchBaselineRequest extends Request {
     }
 
     /**
-     * @return name
+     * @return opsItemIds
      */
-    public String getName() {
-        return this.name;
+    public java.util.List<String> getOpsItemIds() {
+        return this.opsItemIds;
     }
 
     /**
@@ -59,30 +58,26 @@ public class DeletePatchBaselineRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DeletePatchBaselineRequest, Builder> {
-        private String name; 
+    public static final class Builder extends Request.Builder<DeleteOpsItemsRequest, Builder> {
+        private java.util.List<String> opsItemIds; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeletePatchBaselineRequest request) {
+        private Builder(DeleteOpsItemsRequest request) {
             super(request);
-            this.name = request.name;
+            this.opsItemIds = request.opsItemIds;
             this.regionId = request.regionId;
         } 
 
         /**
-         * <p>The name of the patch baseline.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MyPatchBaseline</p>
+         * <p>The IDs of O&amp;M items.</p>
          */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
+        public Builder opsItemIds(java.util.List<String> opsItemIds) {
+            this.putQueryParameter("OpsItemIds", opsItemIds);
+            this.opsItemIds = opsItemIds;
             return this;
         }
 
@@ -99,8 +94,8 @@ public class DeletePatchBaselineRequest extends Request {
         }
 
         @Override
-        public DeletePatchBaselineRequest build() {
-            return new DeletePatchBaselineRequest(this);
+        public DeleteOpsItemsRequest build() {
+            return new DeleteOpsItemsRequest(this);
         } 
 
     } 

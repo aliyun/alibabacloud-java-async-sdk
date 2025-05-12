@@ -44,6 +44,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applications
      */
@@ -77,6 +81,16 @@ public class ListApplicationsResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationsResponseBody model) {
+            this.applications = model.applications;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the application.</p>
@@ -230,6 +244,19 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String resourceGroupId; 
             private java.util.Map<String, ?> tags; 
             private String updateDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.applicationType = model.applicationType;
+                this.createDate = model.createDate;
+                this.description = model.description;
+                this.name = model.name;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+                this.updateDate = model.updateDate;
+            } 
 
             /**
              * <p>The type of the application.</p>

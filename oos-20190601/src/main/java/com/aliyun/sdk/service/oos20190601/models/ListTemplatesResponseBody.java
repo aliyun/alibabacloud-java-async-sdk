@@ -44,6 +44,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ListTemplatesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<Templates> templates; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTemplatesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.templates = model.templates;
+        } 
 
         /**
          * <p>The number of entries returned on each page.</p>
@@ -408,6 +422,34 @@ public class ListTemplatesResponseBody extends TeaModel {
             private String updatedBy; 
             private String updatedDate; 
             private String versionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Templates model) {
+                this.category = model.category;
+                this.constraints = model.constraints;
+                this.createdBy = model.createdBy;
+                this.createdDate = model.createdDate;
+                this.description = model.description;
+                this.hasTrigger = model.hasTrigger;
+                this.hash = model.hash;
+                this.isFavorite = model.isFavorite;
+                this.popularity = model.popularity;
+                this.publisher = model.publisher;
+                this.resourceGroupId = model.resourceGroupId;
+                this.shareType = model.shareType;
+                this.tags = model.tags;
+                this.templateFormat = model.templateFormat;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateType = model.templateType;
+                this.templateVersion = model.templateVersion;
+                this.totalExecutionCount = model.totalExecutionCount;
+                this.updatedBy = model.updatedBy;
+                this.updatedDate = model.updatedDate;
+                this.versionName = model.versionName;
+            } 
 
             /**
              * <p>The template type.</p>

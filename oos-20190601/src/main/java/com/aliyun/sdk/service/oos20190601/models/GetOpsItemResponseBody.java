@@ -36,6 +36,10 @@ public class GetOpsItemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return opsItem
      */
@@ -53,6 +57,14 @@ public class GetOpsItemResponseBody extends TeaModel {
     public static final class Builder {
         private OpsItem opsItem; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOpsItemResponseBody model) {
+            this.opsItem = model.opsItem;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the O&amp;M item.</p>
@@ -302,6 +314,29 @@ public class GetOpsItemResponseBody extends TeaModel {
             private java.util.Map<String, ?> tags; 
             private String title; 
             private String updateDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(OpsItem model) {
+                this.attributes = model.attributes;
+                this.category = model.category;
+                this.createBy = model.createBy;
+                this.createDate = model.createDate;
+                this.description = model.description;
+                this.lastModifiedBy = model.lastModifiedBy;
+                this.opsItemId = model.opsItemId;
+                this.priority = model.priority;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resources = model.resources;
+                this.severity = model.severity;
+                this.solutions = model.solutions;
+                this.source = model.source;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.title = model.title;
+                this.updateDate = model.updateDate;
+            } 
 
             /**
              * <p>The information about the attributes of the O&amp;M item.</p>

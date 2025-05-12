@@ -36,6 +36,10 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<StateConfiguration> stateConfiguration; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateStateConfigurationResponseBody model) {
+            this.requestId = model.requestId;
+            this.stateConfiguration = model.stateConfiguration;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -266,6 +278,26 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             private String templateName; 
             private String templateVersion; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(StateConfiguration model) {
+                this.configureMode = model.configureMode;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.parameters = model.parameters;
+                this.resourceGroupId = model.resourceGroupId;
+                this.scheduleExpression = model.scheduleExpression;
+                this.scheduleType = model.scheduleType;
+                this.stateConfigurationId = model.stateConfigurationId;
+                this.tags = model.tags;
+                this.targets = model.targets;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateVersion = model.templateVersion;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The configuration mode. Valid values:</p>

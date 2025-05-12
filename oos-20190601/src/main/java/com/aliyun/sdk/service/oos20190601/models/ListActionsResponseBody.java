@@ -44,6 +44,10 @@ public class ListActionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actions
      */
@@ -77,6 +81,16 @@ public class ListActionsResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListActionsResponseBody model) {
+            this.actions = model.actions;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the actions.</p>
@@ -228,6 +242,19 @@ public class ListActionsResponseBody extends TeaModel {
             private Integer popularity; 
             private String properties; 
             private String templateVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Actions model) {
+                this.actionType = model.actionType;
+                this.createdDate = model.createdDate;
+                this.description = model.description;
+                this.OOSActionName = model.OOSActionName;
+                this.popularity = model.popularity;
+                this.properties = model.properties;
+                this.templateVersion = model.templateVersion;
+            } 
 
             /**
              * <p>The type of the action.</p>

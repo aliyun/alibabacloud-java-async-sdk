@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetParametersByPathResponse} extends {@link TeaModel}
+ * {@link DeleteOpsItemsResponse} extends {@link TeaModel}
  *
- * <p>GetParametersByPathResponse</p>
+ * <p>DeleteOpsItemsResponse</p>
  */
-public class GetParametersByPathResponse extends Response {
+public class DeleteOpsItemsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetParametersByPathResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetParametersByPathResponseBody body;
+    private DeleteOpsItemsResponseBody body;
 
-    private GetParametersByPathResponse(BuilderImpl builder) {
+    private DeleteOpsItemsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetParametersByPathResponse create() {
+    public static DeleteOpsItemsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetParametersByPathResponse extends Response {
     /**
      * @return body
      */
-    public GetParametersByPathResponseBody getBody() {
+    public DeleteOpsItemsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetParametersByPathResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteOpsItemsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetParametersByPathResponseBody body);
+        Builder body(DeleteOpsItemsResponseBody body);
 
         @Override
-        GetParametersByPathResponse build();
+        DeleteOpsItemsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetParametersByPathResponse, Builder>
+            extends Response.BuilderImpl<DeleteOpsItemsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetParametersByPathResponseBody body; 
+        private DeleteOpsItemsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetParametersByPathResponse response) {
+        private BuilderImpl(DeleteOpsItemsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetParametersByPathResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetParametersByPathResponseBody body) {
+        public Builder body(DeleteOpsItemsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetParametersByPathResponse build() {
-            return new GetParametersByPathResponse(this);
+        public DeleteOpsItemsResponse build() {
+            return new DeleteOpsItemsResponse(this);
         } 
 
     } 

@@ -36,6 +36,10 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationGroup
      */
@@ -53,6 +57,14 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
     public static final class Builder {
         private ApplicationGroup applicationGroup; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateApplicationGroupResponseBody model) {
+            this.applicationGroup = model.applicationGroup;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the application group.</p>
@@ -194,6 +206,20 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
             private String importTagValue; 
             private String name; 
             private String updatedDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationGroup model) {
+                this.applicationName = model.applicationName;
+                this.createdDate = model.createdDate;
+                this.deployRegionId = model.deployRegionId;
+                this.description = model.description;
+                this.importTagKey = model.importTagKey;
+                this.importTagValue = model.importTagValue;
+                this.name = model.name;
+                this.updatedDate = model.updatedDate;
+            } 
 
             /**
              * <p>The application name.</p>

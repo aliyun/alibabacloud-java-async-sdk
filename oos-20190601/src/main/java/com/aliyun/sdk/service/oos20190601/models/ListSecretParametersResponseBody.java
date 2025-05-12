@@ -44,6 +44,10 @@ public class ListSecretParametersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ListSecretParametersResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<Parameters> parameters; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSecretParametersResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.parameters = model.parameters;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -300,6 +314,25 @@ public class ListSecretParametersResponseBody extends TeaModel {
             private String type; 
             private String updatedBy; 
             private String updatedDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.createdBy = model.createdBy;
+                this.createdDate = model.createdDate;
+                this.description = model.description;
+                this.id = model.id;
+                this.keyId = model.keyId;
+                this.name = model.name;
+                this.parameterVersion = model.parameterVersion;
+                this.resourceGroupId = model.resourceGroupId;
+                this.shareType = model.shareType;
+                this.tags = model.tags;
+                this.type = model.type;
+                this.updatedBy = model.updatedBy;
+                this.updatedDate = model.updatedDate;
+            } 
 
             /**
              * <p>The user who created the parameter.</p>

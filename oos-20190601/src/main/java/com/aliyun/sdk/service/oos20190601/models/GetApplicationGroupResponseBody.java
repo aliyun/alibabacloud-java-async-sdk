@@ -36,6 +36,10 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationGroup
      */
@@ -53,6 +57,14 @@ public class GetApplicationGroupResponseBody extends TeaModel {
     public static final class Builder {
         private ApplicationGroup applicationGroup; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApplicationGroupResponseBody model) {
+            this.applicationGroup = model.applicationGroup;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the application group.</p>
@@ -290,6 +302,28 @@ public class GetApplicationGroupResponseBody extends TeaModel {
             private String status; 
             private String statusReason; 
             private String updateDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationGroup model) {
+                this.applicationName = model.applicationName;
+                this.applicationSource = model.applicationSource;
+                this.cmsGroupId = model.cmsGroupId;
+                this.createDate = model.createDate;
+                this.deployOutputs = model.deployOutputs;
+                this.deployParameters = model.deployParameters;
+                this.deployRegionId = model.deployRegionId;
+                this.description = model.description;
+                this.importTagKey = model.importTagKey;
+                this.importTagValue = model.importTagValue;
+                this.name = model.name;
+                this.operationMetadata = model.operationMetadata;
+                this.progress = model.progress;
+                this.status = model.status;
+                this.statusReason = model.statusReason;
+                this.updateDate = model.updateDate;
+            } 
 
             /**
              * <p>The name of the application.</p>

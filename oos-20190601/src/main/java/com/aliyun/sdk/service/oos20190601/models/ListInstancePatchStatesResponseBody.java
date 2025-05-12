@@ -44,6 +44,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instancePatchStates
      */
@@ -77,6 +81,16 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancePatchStatesResponseBody model) {
+            this.instancePatchStates = model.instancePatchStates;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of patches of the instance.</p>
@@ -302,6 +316,25 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             private String operationType; 
             private String ownerInformation; 
             private String patchGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstancePatchStates model) {
+                this.baselineId = model.baselineId;
+                this.failedCount = model.failedCount;
+                this.installedCount = model.installedCount;
+                this.installedOtherCount = model.installedOtherCount;
+                this.installedPendingRebootCount = model.installedPendingRebootCount;
+                this.installedRejectedCount = model.installedRejectedCount;
+                this.instanceId = model.instanceId;
+                this.missingCount = model.missingCount;
+                this.operationEndTime = model.operationEndTime;
+                this.operationStartTime = model.operationStartTime;
+                this.operationType = model.operationType;
+                this.ownerInformation = model.ownerInformation;
+                this.patchGroup = model.patchGroup;
+            } 
 
             /**
              * <p>The ID of the patch baseline.</p>

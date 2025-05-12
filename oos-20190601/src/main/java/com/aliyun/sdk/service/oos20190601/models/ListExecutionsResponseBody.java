@@ -48,6 +48,10 @@ public class ListExecutionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return executions
      */
@@ -89,6 +93,17 @@ public class ListExecutionsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExecutionsResponseBody model) {
+            this.executions = model.executions;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the task executions.</p>
@@ -132,7 +147,10 @@ public class ListExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of the executions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -200,6 +218,15 @@ public class ListExecutionsResponseBody extends TeaModel {
             private String taskAction; 
             private String taskExecutionId; 
             private String taskName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CurrentTasks model) {
+                this.taskAction = model.taskAction;
+                this.taskExecutionId = model.taskExecutionId;
+                this.taskName = model.taskName;
+            } 
 
             /**
              * <p>The execution template of the task.</p>
@@ -668,6 +695,46 @@ public class ListExecutionsResponseBody extends TeaModel {
             private String templateVersion; 
             private String updateDate; 
             private String waitingStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Executions model) {
+                this.category = model.category;
+                this.counters = model.counters;
+                this.createDate = model.createDate;
+                this.currentTasks = model.currentTasks;
+                this.description = model.description;
+                this.endDate = model.endDate;
+                this.executedBy = model.executedBy;
+                this.executionId = model.executionId;
+                this.isParent = model.isParent;
+                this.lastSuccessfulTriggerTime = model.lastSuccessfulTriggerTime;
+                this.lastTriggerOutputs = model.lastTriggerOutputs;
+                this.lastTriggerStatus = model.lastTriggerStatus;
+                this.lastTriggerStatusMessage = model.lastTriggerStatusMessage;
+                this.lastTriggerTime = model.lastTriggerTime;
+                this.mode = model.mode;
+                this.nextScheduleTime = model.nextScheduleTime;
+                this.outputs = model.outputs;
+                this.parameters = model.parameters;
+                this.parentExecutionId = model.parentExecutionId;
+                this.ramRole = model.ramRole;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceStatus = model.resourceStatus;
+                this.safetyCheck = model.safetyCheck;
+                this.startDate = model.startDate;
+                this.status = model.status;
+                this.statusMessage = model.statusMessage;
+                this.statusReason = model.statusReason;
+                this.tags = model.tags;
+                this.targets = model.targets;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateVersion = model.templateVersion;
+                this.updateDate = model.updateDate;
+                this.waitingStatus = model.waitingStatus;
+            } 
 
             /**
              * <p>The type of the execution template. Valid values: Other, TimerTrigger, EventTrigger, and AlarmTrigger.</p>

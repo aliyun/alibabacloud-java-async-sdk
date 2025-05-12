@@ -48,6 +48,10 @@ public class ListParametersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListParametersResponseBody extends TeaModel {
         private java.util.List<Parameters> parameters; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListParametersResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.parameters = model.parameters;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries per page. Valid values: 10 to 100. Default value: 50.</p>
@@ -311,6 +326,24 @@ public class ListParametersResponseBody extends TeaModel {
             private String type; 
             private String updatedBy; 
             private String updatedDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.createdBy = model.createdBy;
+                this.createdDate = model.createdDate;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.parameterVersion = model.parameterVersion;
+                this.resourceGroupId = model.resourceGroupId;
+                this.shareType = model.shareType;
+                this.tags = model.tags;
+                this.type = model.type;
+                this.updatedBy = model.updatedBy;
+                this.updatedDate = model.updatedDate;
+            } 
 
             /**
              * <p>The user who created the common parameter.</p>

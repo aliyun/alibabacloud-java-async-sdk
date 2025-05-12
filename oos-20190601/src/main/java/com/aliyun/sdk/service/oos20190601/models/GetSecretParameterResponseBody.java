@@ -36,6 +36,10 @@ public class GetSecretParameterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parameter
      */
@@ -53,6 +57,14 @@ public class GetSecretParameterResponseBody extends TeaModel {
     public static final class Builder {
         private Parameter parameter; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSecretParameterResponseBody model) {
+            this.parameter = model.parameter;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the encryption parameter.</p>
@@ -290,6 +302,28 @@ public class GetSecretParameterResponseBody extends TeaModel {
             private String updatedBy; 
             private String updatedDate; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameter model) {
+                this.constraints = model.constraints;
+                this.createdBy = model.createdBy;
+                this.createdDate = model.createdDate;
+                this.DKMSInstanceId = model.DKMSInstanceId;
+                this.description = model.description;
+                this.id = model.id;
+                this.keyId = model.keyId;
+                this.name = model.name;
+                this.parameterVersion = model.parameterVersion;
+                this.resourceGroupId = model.resourceGroupId;
+                this.shareType = model.shareType;
+                this.tags = model.tags;
+                this.type = model.type;
+                this.updatedBy = model.updatedBy;
+                this.updatedDate = model.updatedDate;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The constraints of the encryption parameter.</p>

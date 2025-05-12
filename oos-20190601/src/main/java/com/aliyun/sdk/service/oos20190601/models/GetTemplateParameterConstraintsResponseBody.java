@@ -36,6 +36,10 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parameterConstraints
      */
@@ -53,6 +57,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.Map<String, ?> parameterConstraints; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTemplateParameterConstraintsResponseBody model) {
+            this.parameterConstraints = model.parameterConstraints;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The constraints of the parameters.</p>

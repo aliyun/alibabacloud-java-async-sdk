@@ -48,6 +48,10 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return executionLogs
      */
@@ -89,6 +93,17 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExecutionLogsResponseBody model) {
+            this.executionLogs = model.executionLogs;
+            this.isTruncated = model.isTruncated;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The logs of the execution.</p>
@@ -215,6 +230,16 @@ public class ListExecutionLogsResponseBody extends TeaModel {
             private String message; 
             private String taskExecutionId; 
             private String timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExecutionLogs model) {
+                this.logType = model.logType;
+                this.message = model.message;
+                this.taskExecutionId = model.taskExecutionId;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The log type.</p>

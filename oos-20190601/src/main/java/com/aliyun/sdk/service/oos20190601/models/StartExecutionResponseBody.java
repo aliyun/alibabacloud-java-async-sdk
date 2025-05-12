@@ -36,6 +36,10 @@ public class StartExecutionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return execution
      */
@@ -53,6 +57,14 @@ public class StartExecutionResponseBody extends TeaModel {
     public static final class Builder {
         private Execution execution; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartExecutionResponseBody model) {
+            this.execution = model.execution;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the execution.</p>
@@ -134,6 +146,15 @@ public class StartExecutionResponseBody extends TeaModel {
             private String taskAction; 
             private String taskExecutionId; 
             private String taskName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CurrentTasks model) {
+                this.taskAction = model.taskAction;
+                this.taskExecutionId = model.taskExecutionId;
+                this.taskName = model.taskName;
+            } 
 
             /**
              * <p>The action of the task.</p>
@@ -482,6 +503,36 @@ public class StartExecutionResponseBody extends TeaModel {
             private String templateName; 
             private String templateVersion; 
             private String updateDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Execution model) {
+                this.counters = model.counters;
+                this.createDate = model.createDate;
+                this.currentTasks = model.currentTasks;
+                this.description = model.description;
+                this.endDate = model.endDate;
+                this.executedBy = model.executedBy;
+                this.executionId = model.executionId;
+                this.isParent = model.isParent;
+                this.loopMode = model.loopMode;
+                this.mode = model.mode;
+                this.outputs = model.outputs;
+                this.parameters = model.parameters;
+                this.parentExecutionId = model.parentExecutionId;
+                this.ramRole = model.ramRole;
+                this.resourceGroupId = model.resourceGroupId;
+                this.safetyCheck = model.safetyCheck;
+                this.startDate = model.startDate;
+                this.status = model.status;
+                this.statusMessage = model.statusMessage;
+                this.tags = model.tags;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateVersion = model.templateVersion;
+                this.updateDate = model.updateDate;
+            } 
 
             /**
              * <p>The number of executions.</p>

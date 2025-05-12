@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ChangeResourceGroupResponseBody} extends {@link TeaModel}
+ * {@link DeleteOpsItemsResponseBody} extends {@link TeaModel}
  *
- * <p>ChangeResourceGroupResponseBody</p>
+ * <p>DeleteOpsItemsResponseBody</p>
  */
-public class ChangeResourceGroupResponseBody extends TeaModel {
+public class DeleteOpsItemsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ChangeResourceGroupResponseBody(Builder builder) {
+    private DeleteOpsItemsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ChangeResourceGroupResponseBody create() {
+    public static DeleteOpsItemsResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,23 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ChangeResourceGroupResponseBody model) {
+        private Builder(DeleteOpsItemsResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>0620E49F-B884-5F98-A834-69D72922E5CF</p>
+         * <p>DBA6E6C8-F75D-41DE-AFF5-1FA03F551CA3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ChangeResourceGroupResponseBody build() {
-            return new ChangeResourceGroupResponseBody(this);
+        public DeleteOpsItemsResponseBody build() {
+            return new DeleteOpsItemsResponseBody(this);
         } 
 
     } 

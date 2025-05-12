@@ -48,6 +48,10 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return outputs
      */
@@ -89,6 +93,17 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
         private String ramRole; 
         private String requestId; 
         private java.util.List<Tasks> tasks; 
+
+        private Builder() {
+        } 
+
+        private Builder(ValidateTemplateContentResponseBody model) {
+            this.outputs = model.outputs;
+            this.parameters = model.parameters;
+            this.ramRole = model.ramRole;
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+        } 
 
         /**
          * <p>The outputs of the template.</p>
@@ -227,6 +242,17 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
             private String outputs; 
             private String properties; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.outputs = model.outputs;
+                this.properties = model.properties;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The description of the task.</p>

@@ -55,7 +55,7 @@ public class SearchInventoryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -238,6 +238,15 @@ public class SearchInventoryRequest extends Request {
             private String name; 
             private String operator; 
             private java.util.List<String> value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.name = model.name;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the component property. Valid values of N: 1 to 5. Different components have different property names. You can call the <a href="https://api.aliyun.com/#/?product=oos&version=2019-06-01&api=GetInventorySchema">GetInventorySchema</a> operation to query the property names of different components. For example, the ACS:InstanceInformation component has the InstanceId property. Therefore, you can set this parameter to ACS:InstanceInformation.InstanceId.</p>

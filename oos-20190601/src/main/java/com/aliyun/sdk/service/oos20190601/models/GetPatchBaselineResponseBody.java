@@ -36,6 +36,10 @@ public class GetPatchBaselineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return patchBaseline
      */
@@ -53,6 +57,14 @@ public class GetPatchBaselineResponseBody extends TeaModel {
     public static final class Builder {
         private PatchBaseline patchBaseline; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPatchBaselineResponseBody model) {
+            this.patchBaseline = model.patchBaseline;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the patch baseline.</p>
@@ -122,6 +134,14 @@ public class GetPatchBaselineResponseBody extends TeaModel {
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -387,6 +407,30 @@ public class GetPatchBaselineResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String updatedBy; 
             private String updatedDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(PatchBaseline model) {
+                this.approvalRules = model.approvalRules;
+                this.approvedPatches = model.approvedPatches;
+                this.approvedPatchesEnableNonSecurity = model.approvedPatchesEnableNonSecurity;
+                this.createdBy = model.createdBy;
+                this.createdDate = model.createdDate;
+                this.description = model.description;
+                this.id = model.id;
+                this.isDefault = model.isDefault;
+                this.name = model.name;
+                this.operationSystem = model.operationSystem;
+                this.rejectedPatches = model.rejectedPatches;
+                this.rejectedPatchesAction = model.rejectedPatchesAction;
+                this.resourceGroupId = model.resourceGroupId;
+                this.shareType = model.shareType;
+                this.sources = model.sources;
+                this.tags = model.tags;
+                this.updatedBy = model.updatedBy;
+                this.updatedDate = model.updatedDate;
+            } 
 
             /**
              * <p>The rules of scanning and installing patches for the specified operating system.</p>

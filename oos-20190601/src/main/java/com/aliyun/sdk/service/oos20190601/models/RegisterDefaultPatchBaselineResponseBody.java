@@ -36,6 +36,10 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return patchBaseline
      */
@@ -53,6 +57,14 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
     public static final class Builder {
         private PatchBaseline patchBaseline; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RegisterDefaultPatchBaselineResponseBody model) {
+            this.patchBaseline = model.patchBaseline;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the patch baseline.</p>
@@ -230,6 +242,23 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             private String shareType; 
             private String updatedBy; 
             private String updatedDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(PatchBaseline model) {
+                this.approvalRules = model.approvalRules;
+                this.createdBy = model.createdBy;
+                this.createdDate = model.createdDate;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.operationSystem = model.operationSystem;
+                this.resourceGroupId = model.resourceGroupId;
+                this.shareType = model.shareType;
+                this.updatedBy = model.updatedBy;
+                this.updatedDate = model.updatedDate;
+            } 
 
             /**
              * <p>The rules of scanning and installing patches for the specified operating system.</p>

@@ -48,6 +48,10 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
         private java.util.List<Parameters> parameters; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSecretParametersByPathResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.parameters = model.parameters;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries per page.</p>
@@ -323,6 +338,25 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             private String updatedBy; 
             private String updatedDate; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.constraints = model.constraints;
+                this.createdBy = model.createdBy;
+                this.createdDate = model.createdDate;
+                this.description = model.description;
+                this.id = model.id;
+                this.keyId = model.keyId;
+                this.name = model.name;
+                this.parameterVersion = model.parameterVersion;
+                this.shareType = model.shareType;
+                this.type = model.type;
+                this.updatedBy = model.updatedBy;
+                this.updatedDate = model.updatedDate;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The constraints of the encryption parameter.</p>

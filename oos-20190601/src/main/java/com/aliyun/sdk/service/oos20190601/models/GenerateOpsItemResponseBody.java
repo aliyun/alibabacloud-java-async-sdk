@@ -36,6 +36,10 @@ public class GenerateOpsItemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return opsItemIds
      */
@@ -53,6 +57,14 @@ public class GenerateOpsItemResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> opsItemIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateOpsItemResponseBody model) {
+            this.opsItemIds = model.opsItemIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The O&amp;M item list.</p>
