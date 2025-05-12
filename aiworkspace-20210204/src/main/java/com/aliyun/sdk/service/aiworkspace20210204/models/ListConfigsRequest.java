@@ -116,6 +116,7 @@ public class ListConfigsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,17 @@ public class ListConfigsRequest extends Request {
         }
 
         /**
-         * CategoryName.
+         * <p>The category of the configuration item. Supported categories:</p>
+         * <ul>
+         * <li>CommonResourceConfig</li>
+         * <li>DLCAutoRecycle</li>
+         * <li>DLCPriorityConfig</li>
+         * <li>DSWPriorityConfig</li>
+         * <li>QuotaMaximumDuration</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CommonResourceConfig</p>
          */
         public Builder categoryName(String categoryName) {
             this.putQueryParameter("CategoryName", categoryName);
@@ -137,7 +148,16 @@ public class ListConfigsRequest extends Request {
         }
 
         /**
-         * ConfigKeys.
+         * <p>The key of the configuration item. Supported keys:</p>
+         * <ul>
+         * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
+         * <li>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</li>
+         * <li>priorityConfig: Priority configuration. This key can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
+         * <li>quotaMaximumDuration Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tempStoragePath</p>
          */
         public Builder configKeys(String configKeys) {
             this.putQueryParameter("ConfigKeys", configKeys);
@@ -146,7 +166,10 @@ public class ListConfigsRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The tags used as filter conditions. Separate multiple tags with commas (,). These conditions are in an AND relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1=value1,key2=value2</p>
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -155,7 +178,14 @@ public class ListConfigsRequest extends Request {
         }
 
         /**
-         * Verbose.
+         * <p>Specifies whether to show the tag information.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder verbose(String verbose) {
             this.putQueryParameter("Verbose", verbose);

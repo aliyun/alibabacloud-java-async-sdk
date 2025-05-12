@@ -33,6 +33,9 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FileCreateTime")
     private String fileCreateTime;
 
+    @com.aliyun.core.annotation.NameInMap("FileFingerPrint")
+    private String fileFingerPrint;
+
     @com.aliyun.core.annotation.NameInMap("FileName")
     private String fileName;
 
@@ -60,6 +63,7 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         this.dataSize = builder.dataSize;
         this.datasetFileMetaId = builder.datasetFileMetaId;
         this.fileCreateTime = builder.fileCreateTime;
+        this.fileFingerPrint = builder.fileFingerPrint;
         this.fileName = builder.fileName;
         this.fileType = builder.fileType;
         this.fileUpdateTime = builder.fileUpdateTime;
@@ -117,6 +121,13 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
     }
 
     /**
+     * @return fileFingerPrint
+     */
+    public String getFileFingerPrint() {
+        return this.fileFingerPrint;
+    }
+
+    /**
      * @return fileName
      */
     public String getFileName() {
@@ -171,6 +182,7 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
         private Long dataSize; 
         private String datasetFileMetaId; 
         private String fileCreateTime; 
+        private String fileFingerPrint; 
         private String fileName; 
         private String fileType; 
         private String fileUpdateTime; 
@@ -188,6 +200,7 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
             this.dataSize = model.dataSize;
             this.datasetFileMetaId = model.datasetFileMetaId;
             this.fileCreateTime = model.fileCreateTime;
+            this.fileFingerPrint = model.fileFingerPrint;
             this.fileName = model.fileName;
             this.fileType = model.fileType;
             this.fileUpdateTime = model.fileUpdateTime;
@@ -237,6 +250,14 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
          */
         public Builder fileCreateTime(String fileCreateTime) {
             this.fileCreateTime = fileCreateTime;
+            return this;
+        }
+
+        /**
+         * FileFingerPrint.
+         */
+        public Builder fileFingerPrint(String fileFingerPrint) {
+            this.fileFingerPrint = fileFingerPrint;
             return this;
         }
 

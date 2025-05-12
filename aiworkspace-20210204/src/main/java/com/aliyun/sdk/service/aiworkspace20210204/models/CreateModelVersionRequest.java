@@ -380,7 +380,8 @@ public class CreateModelVersionRequest extends Request {
         /**
          * <p>The framework of the model. Valid values:</p>
          * <ul>
-         * <li>Pytorch -XGBoost</li>
+         * <li>Pytorch </li>
+         * <li>XGBoost</li>
          * <li>Keras</li>
          * <li>Caffe</li>
          * <li>Alink</li>

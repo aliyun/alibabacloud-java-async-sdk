@@ -74,6 +74,7 @@ public class UpdateConfigsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class UpdateConfigsRequest extends Request {
         }
 
         /**
-         * Configs.
+         * <p>The list of workspace configurations to update or add.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.putBodyParameter("Configs", configs);
@@ -154,7 +155,10 @@ public class UpdateConfigsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -162,7 +166,10 @@ public class UpdateConfigsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -255,7 +262,17 @@ public class UpdateConfigsRequest extends Request {
             } 
 
             /**
-             * CategoryName.
+             * <p>The category of the configuration item. Supported categories:</p>
+             * <ul>
+             * <li>CommonResourceConfig</li>
+             * <li>DLCAutoRecycle</li>
+             * <li>DLCPriorityConfig</li>
+             * <li>DSWPriorityConfig</li>
+             * <li>QuotaMaximumDuration</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CommonResourceConfig</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -263,7 +280,16 @@ public class UpdateConfigsRequest extends Request {
             }
 
             /**
-             * ConfigKey.
+             * <p>The key of the configuration item. Supported keys:</p>
+             * <ul>
+             * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
+             * <li>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</li>
+             * <li>priorityConfig: Priority configuration. This key can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
+             * <li>quotaMaximumDuration Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>tempStoragePath</p>
              */
             public Builder configKey(String configKey) {
                 this.configKey = configKey;
@@ -271,7 +297,10 @@ public class UpdateConfigsRequest extends Request {
             }
 
             /**
-             * ConfigValue.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test/s/</p>
              */
             public Builder configValue(String configValue) {
                 this.configValue = configValue;
@@ -279,7 +308,7 @@ public class UpdateConfigsRequest extends Request {
             }
 
             /**
-             * Labels.
+             * <p>The tags of the configuration item.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;

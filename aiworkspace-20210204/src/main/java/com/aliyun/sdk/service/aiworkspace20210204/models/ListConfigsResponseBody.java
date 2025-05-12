@@ -80,7 +80,7 @@ public class ListConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * Configs.
+         * <p>The configuration items.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -88,7 +88,10 @@ public class ListConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A******C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of items returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -162,7 +168,10 @@ public class ListConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -170,7 +179,10 @@ public class ListConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -250,7 +262,16 @@ public class ListConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfigKey.
+             * <p>The key of the configuration item. Supported keys:</p>
+             * <ul>
+             * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
+             * <li>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</li>
+             * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
+             * <li>quotaMaximumDuration Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>tempTableLifecycle</p>
              */
             public Builder configKey(String configKey) {
                 this.configKey = configKey;
@@ -258,7 +279,10 @@ public class ListConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigValue.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://***</p>
              */
             public Builder configValue(String configValue) {
                 this.configValue = configValue;
@@ -266,7 +290,7 @@ public class ListConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The tags of the configuration item.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;

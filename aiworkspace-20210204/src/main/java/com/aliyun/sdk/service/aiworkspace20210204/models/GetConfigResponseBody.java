@@ -119,7 +119,17 @@ public class GetConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * CategoryName.
+         * <p>The category of the configuration item. Supported categories:</p>
+         * <ul>
+         * <li>CommonResourceConfig</li>
+         * <li>DLCAutoRecycle</li>
+         * <li>DLCPriorityConfig</li>
+         * <li>DSWPriorityConfig</li>
+         * <li>QuotaMaximumDuration</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CommonResourceConfig</p>
          */
         public Builder categoryName(String categoryName) {
             this.categoryName = categoryName;
@@ -127,7 +137,16 @@ public class GetConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigKey.
+         * <p>The key of the configuration item. Supported keys:</p>
+         * <ul>
+         * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
+         * <li>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</li>
+         * <li>priorityConfig: Priority configuration. This key can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
+         * <li>quotaMaximumDuration Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tempStoragePath</p>
          */
         public Builder configKey(String configKey) {
             this.configKey = configKey;
@@ -135,7 +154,10 @@ public class GetConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigValue.
+         * <p>The value of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://***</p>
          */
         public Builder configValue(String configValue) {
             this.configValue = configValue;
@@ -143,7 +165,7 @@ public class GetConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The tags of the configuration item.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
@@ -151,7 +173,10 @@ public class GetConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A******C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +184,10 @@ public class GetConfigResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234******2</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -225,7 +253,10 @@ public class GetConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +264,10 @@ public class GetConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
