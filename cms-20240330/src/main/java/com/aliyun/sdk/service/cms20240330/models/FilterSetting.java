@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class FilterSetting extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("conditions")
-    private java.util.List < Conditions> conditions;
+    private java.util.List<Conditions> conditions;
 
     @com.aliyun.core.annotation.NameInMap("expression")
     private String expression;
@@ -35,10 +40,14 @@ public class FilterSetting extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conditions
      */
-    public java.util.List < Conditions> getConditions() {
+    public java.util.List<Conditions> getConditions() {
         return this.conditions;
     }
 
@@ -57,14 +66,23 @@ public class FilterSetting extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Conditions> conditions; 
+        private java.util.List<Conditions> conditions; 
         private String expression; 
         private String relation; 
+
+        private Builder() {
+        } 
+
+        private Builder(FilterSetting model) {
+            this.conditions = model.conditions;
+            this.expression = model.expression;
+            this.relation = model.relation;
+        } 
 
         /**
          * conditions.
          */
-        public Builder conditions(java.util.List < Conditions> conditions) {
+        public Builder conditions(java.util.List<Conditions> conditions) {
             this.conditions = conditions;
             return this;
         }
@@ -146,6 +164,15 @@ public class FilterSetting extends TeaModel {
             private String field; 
             private String op; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.field = model.field;
+                this.op = model.op;
+                this.value = model.value;
+            } 
 
             /**
              * field.

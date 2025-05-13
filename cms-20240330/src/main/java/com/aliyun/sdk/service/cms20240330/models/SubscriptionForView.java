@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -66,6 +71,10 @@ public class SubscriptionForView extends TeaModel {
 
     public static SubscriptionForView create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -157,6 +166,23 @@ public class SubscriptionForView extends TeaModel {
         private String updateTime; 
         private String userId; 
         private String workspace; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubscriptionForView model) {
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.enable = model.enable;
+            this.filterSetting = model.filterSetting;
+            this.notifyStrategyId = model.notifyStrategyId;
+            this.pushingSetting = model.pushingSetting;
+            this.subscriptionId = model.subscriptionId;
+            this.subscriptionName = model.subscriptionName;
+            this.updateTime = model.updateTime;
+            this.userId = model.userId;
+            this.workspace = model.workspace;
+        } 
 
         /**
          * createTime.
@@ -260,13 +286,13 @@ public class SubscriptionForView extends TeaModel {
      */
     public static class PushingSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alertActionIds")
-        private java.util.List < String > alertActionIds;
+        private java.util.List<String> alertActionIds;
 
         @com.aliyun.core.annotation.NameInMap("responsePlanId")
         private String responsePlanId;
 
         @com.aliyun.core.annotation.NameInMap("restoreActionIds")
-        private java.util.List < String > restoreActionIds;
+        private java.util.List<String> restoreActionIds;
 
         @com.aliyun.core.annotation.NameInMap("templateUuid")
         private String templateUuid;
@@ -289,7 +315,7 @@ public class SubscriptionForView extends TeaModel {
         /**
          * @return alertActionIds
          */
-        public java.util.List < String > getAlertActionIds() {
+        public java.util.List<String> getAlertActionIds() {
             return this.alertActionIds;
         }
 
@@ -303,7 +329,7 @@ public class SubscriptionForView extends TeaModel {
         /**
          * @return restoreActionIds
          */
-        public java.util.List < String > getRestoreActionIds() {
+        public java.util.List<String> getRestoreActionIds() {
             return this.restoreActionIds;
         }
 
@@ -315,15 +341,25 @@ public class SubscriptionForView extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > alertActionIds; 
+            private java.util.List<String> alertActionIds; 
             private String responsePlanId; 
-            private java.util.List < String > restoreActionIds; 
+            private java.util.List<String> restoreActionIds; 
             private String templateUuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(PushingSetting model) {
+                this.alertActionIds = model.alertActionIds;
+                this.responsePlanId = model.responsePlanId;
+                this.restoreActionIds = model.restoreActionIds;
+                this.templateUuid = model.templateUuid;
+            } 
 
             /**
              * alertActionIds.
              */
-            public Builder alertActionIds(java.util.List < String > alertActionIds) {
+            public Builder alertActionIds(java.util.List<String> alertActionIds) {
                 this.alertActionIds = alertActionIds;
                 return this;
             }
@@ -339,7 +375,7 @@ public class SubscriptionForView extends TeaModel {
             /**
              * restoreActionIds.
              */
-            public Builder restoreActionIds(java.util.List < String > restoreActionIds) {
+            public Builder restoreActionIds(java.util.List<String> restoreActionIds) {
                 this.restoreActionIds = restoreActionIds;
                 return this;
             }

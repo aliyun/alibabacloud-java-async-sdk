@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TransformerForView extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("actions")
-    private java.util.List < TransformAction > actions;
+    private java.util.List<TransformAction> actions;
 
     @com.aliyun.core.annotation.NameInMap("createTime")
     private String createTime;
@@ -72,10 +77,14 @@ public class TransformerForView extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actions
      */
-    public java.util.List < TransformAction > getActions() {
+    public java.util.List<TransformAction> getActions() {
         return this.actions;
     }
 
@@ -157,7 +166,7 @@ public class TransformerForView extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < TransformAction > actions; 
+        private java.util.List<TransformAction> actions; 
         private String createTime; 
         private String description; 
         private Boolean enable; 
@@ -170,10 +179,28 @@ public class TransformerForView extends TeaModel {
         private String userId; 
         private String workspace; 
 
+        private Builder() {
+        } 
+
+        private Builder(TransformerForView model) {
+            this.actions = model.actions;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.enable = model.enable;
+            this.filterSetting = model.filterSetting;
+            this.quitAfterMatch = model.quitAfterMatch;
+            this.sortId = model.sortId;
+            this.transformerId = model.transformerId;
+            this.transformerName = model.transformerName;
+            this.updateTime = model.updateTime;
+            this.userId = model.userId;
+            this.workspace = model.workspace;
+        } 
+
         /**
          * actions.
          */
-        public Builder actions(java.util.List < TransformAction > actions) {
+        public Builder actions(java.util.List<TransformAction> actions) {
             this.actions = actions;
             return this;
         }

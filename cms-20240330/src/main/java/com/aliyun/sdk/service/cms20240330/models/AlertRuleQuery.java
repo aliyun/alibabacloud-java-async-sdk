@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AlertRuleQuery</p>
  */
 public class AlertRuleQuery extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("checkAfterDataComplete")
+    private Boolean checkAfterDataComplete;
+
     @com.aliyun.core.annotation.NameInMap("duration")
     private Long duration;
 
@@ -22,13 +30,13 @@ public class AlertRuleQuery extends TeaModel {
     private AlertRuleSlsQueryJoin firstJoin;
 
     @com.aliyun.core.annotation.NameInMap("groupFieldList")
-    private java.util.List < String > groupFieldList;
+    private java.util.List<String> groupFieldList;
 
     @com.aliyun.core.annotation.NameInMap("groupType")
     private String groupType;
 
     @com.aliyun.core.annotation.NameInMap("queries")
-    private java.util.List < Queries> queries;
+    private java.util.List<Queries> queries;
 
     @com.aliyun.core.annotation.NameInMap("secondJoin")
     private AlertRuleSlsQueryJoin secondJoin;
@@ -38,6 +46,7 @@ public class AlertRuleQuery extends TeaModel {
     private String type;
 
     private AlertRuleQuery(Builder builder) {
+        this.checkAfterDataComplete = builder.checkAfterDataComplete;
         this.duration = builder.duration;
         this.expr = builder.expr;
         this.firstJoin = builder.firstJoin;
@@ -54,6 +63,17 @@ public class AlertRuleQuery extends TeaModel {
 
     public static AlertRuleQuery create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return checkAfterDataComplete
+     */
+    public Boolean getCheckAfterDataComplete() {
+        return this.checkAfterDataComplete;
     }
 
     /**
@@ -80,7 +100,7 @@ public class AlertRuleQuery extends TeaModel {
     /**
      * @return groupFieldList
      */
-    public java.util.List < String > getGroupFieldList() {
+    public java.util.List<String> getGroupFieldList() {
         return this.groupFieldList;
     }
 
@@ -94,7 +114,7 @@ public class AlertRuleQuery extends TeaModel {
     /**
      * @return queries
      */
-    public java.util.List < Queries> getQueries() {
+    public java.util.List<Queries> getQueries() {
         return this.queries;
     }
 
@@ -113,14 +133,38 @@ public class AlertRuleQuery extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean checkAfterDataComplete; 
         private Long duration; 
         private String expr; 
         private AlertRuleSlsQueryJoin firstJoin; 
-        private java.util.List < String > groupFieldList; 
+        private java.util.List<String> groupFieldList; 
         private String groupType; 
-        private java.util.List < Queries> queries; 
+        private java.util.List<Queries> queries; 
         private AlertRuleSlsQueryJoin secondJoin; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlertRuleQuery model) {
+            this.checkAfterDataComplete = model.checkAfterDataComplete;
+            this.duration = model.duration;
+            this.expr = model.expr;
+            this.firstJoin = model.firstJoin;
+            this.groupFieldList = model.groupFieldList;
+            this.groupType = model.groupType;
+            this.queries = model.queries;
+            this.secondJoin = model.secondJoin;
+            this.type = model.type;
+        } 
+
+        /**
+         * checkAfterDataComplete.
+         */
+        public Builder checkAfterDataComplete(Boolean checkAfterDataComplete) {
+            this.checkAfterDataComplete = checkAfterDataComplete;
+            return this;
+        }
 
         /**
          * duration.
@@ -149,7 +193,7 @@ public class AlertRuleQuery extends TeaModel {
         /**
          * groupFieldList.
          */
-        public Builder groupFieldList(java.util.List < String > groupFieldList) {
+        public Builder groupFieldList(java.util.List<String> groupFieldList) {
             this.groupFieldList = groupFieldList;
             return this;
         }
@@ -165,7 +209,7 @@ public class AlertRuleQuery extends TeaModel {
         /**
          * queries.
          */
-        public Builder queries(java.util.List < Queries> queries) {
+        public Builder queries(java.util.List<Queries> queries) {
             this.queries = queries;
             return this;
         }
@@ -199,7 +243,113 @@ public class AlertRuleQuery extends TeaModel {
      *
      * <p>AlertRuleQuery</p>
      */
+    public static class ApmFilters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("dim")
+        private String dim;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private ApmFilters(Builder builder) {
+            this.dim = builder.dim;
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ApmFilters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dim
+         */
+        public String getDim() {
+            return this.dim;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String dim; 
+            private String type; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApmFilters model) {
+                this.dim = model.dim;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
+            /**
+             * dim.
+             */
+            public Builder dim(String dim) {
+                this.dim = dim;
+                return this;
+            }
+
+            /**
+             * <p>查询类型</p>
+             * <p>This parameter is required.</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ApmFilters build() {
+                return new ApmFilters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AlertRuleQuery} extends {@link TeaModel}
+     *
+     * <p>AlertRuleQuery</p>
+     */
     public static class Queries extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("apmAlertMetricId")
+        private String apmAlertMetricId;
+
+        @com.aliyun.core.annotation.NameInMap("apmFilters")
+        private java.util.List<ApmFilters> apmFilters;
+
+        @com.aliyun.core.annotation.NameInMap("apmGroupBy")
+        private java.util.List<String> apmGroupBy;
+
         @com.aliyun.core.annotation.NameInMap("duration")
         private Long duration;
 
@@ -207,7 +357,6 @@ public class AlertRuleQuery extends TeaModel {
         private Long end;
 
         @com.aliyun.core.annotation.NameInMap("expr")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String expr;
 
         @com.aliyun.core.annotation.NameInMap("start")
@@ -217,9 +366,12 @@ public class AlertRuleQuery extends TeaModel {
         private String timeUnit;
 
         @com.aliyun.core.annotation.NameInMap("window")
-        private String window;
+        private Long window;
 
         private Queries(Builder builder) {
+            this.apmAlertMetricId = builder.apmAlertMetricId;
+            this.apmFilters = builder.apmFilters;
+            this.apmGroupBy = builder.apmGroupBy;
             this.duration = builder.duration;
             this.end = builder.end;
             this.expr = builder.expr;
@@ -234,6 +386,27 @@ public class AlertRuleQuery extends TeaModel {
 
         public static Queries create() {
             return builder().build();
+        }
+
+        /**
+         * @return apmAlertMetricId
+         */
+        public String getApmAlertMetricId() {
+            return this.apmAlertMetricId;
+        }
+
+        /**
+         * @return apmFilters
+         */
+        public java.util.List<ApmFilters> getApmFilters() {
+            return this.apmFilters;
+        }
+
+        /**
+         * @return apmGroupBy
+         */
+        public java.util.List<String> getApmGroupBy() {
+            return this.apmGroupBy;
         }
 
         /**
@@ -274,17 +447,59 @@ public class AlertRuleQuery extends TeaModel {
         /**
          * @return window
          */
-        public String getWindow() {
+        public Long getWindow() {
             return this.window;
         }
 
         public static final class Builder {
+            private String apmAlertMetricId; 
+            private java.util.List<ApmFilters> apmFilters; 
+            private java.util.List<String> apmGroupBy; 
             private Long duration; 
             private Long end; 
             private String expr; 
             private Long start; 
             private String timeUnit; 
-            private String window; 
+            private Long window; 
+
+            private Builder() {
+            } 
+
+            private Builder(Queries model) {
+                this.apmAlertMetricId = model.apmAlertMetricId;
+                this.apmFilters = model.apmFilters;
+                this.apmGroupBy = model.apmGroupBy;
+                this.duration = model.duration;
+                this.end = model.end;
+                this.expr = model.expr;
+                this.start = model.start;
+                this.timeUnit = model.timeUnit;
+                this.window = model.window;
+            } 
+
+            /**
+             * apmAlertMetricId.
+             */
+            public Builder apmAlertMetricId(String apmAlertMetricId) {
+                this.apmAlertMetricId = apmAlertMetricId;
+                return this;
+            }
+
+            /**
+             * apmFilters.
+             */
+            public Builder apmFilters(java.util.List<ApmFilters> apmFilters) {
+                this.apmFilters = apmFilters;
+                return this;
+            }
+
+            /**
+             * apmGroupBy.
+             */
+            public Builder apmGroupBy(java.util.List<String> apmGroupBy) {
+                this.apmGroupBy = apmGroupBy;
+                return this;
+            }
 
             /**
              * duration.
@@ -304,7 +519,6 @@ public class AlertRuleQuery extends TeaModel {
 
             /**
              * <p>查询表达式</p>
-             * <p>This parameter is required.</p>
              */
             public Builder expr(String expr) {
                 this.expr = expr;
@@ -330,7 +544,7 @@ public class AlertRuleQuery extends TeaModel {
             /**
              * <p>整点时间查询区间。  如果指定了window则不指定start、end</p>
              */
-            public Builder window(String window) {
+            public Builder window(Long window) {
                 this.window = window;
                 return this;
             }

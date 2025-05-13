@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AlertRuleSlsQueryJoin extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("conditions")
-    private java.util.List < Conditions> conditions;
+    private java.util.List<Conditions> conditions;
 
     @com.aliyun.core.annotation.NameInMap("type")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -32,10 +37,14 @@ public class AlertRuleSlsQueryJoin extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conditions
      */
-    public java.util.List < Conditions> getConditions() {
+    public java.util.List<Conditions> getConditions() {
         return this.conditions;
     }
 
@@ -47,13 +56,21 @@ public class AlertRuleSlsQueryJoin extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Conditions> conditions; 
+        private java.util.List<Conditions> conditions; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlertRuleSlsQueryJoin model) {
+            this.conditions = model.conditions;
+            this.type = model.type;
+        } 
 
         /**
          * conditions.
          */
-        public Builder conditions(java.util.List < Conditions> conditions) {
+        public Builder conditions(java.util.List<Conditions> conditions) {
             this.conditions = conditions;
             return this;
         }
@@ -138,6 +155,15 @@ public class AlertRuleSlsQueryJoin extends TeaModel {
             private String firstField; 
             private String oper; 
             private String secondField; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.firstField = model.firstField;
+                this.oper = model.oper;
+                this.secondField = model.secondField;
+            } 
 
             /**
              * <p>条件的左操作参数，格式为$<query_idx>.&lt;结果集字段名&gt;</p>

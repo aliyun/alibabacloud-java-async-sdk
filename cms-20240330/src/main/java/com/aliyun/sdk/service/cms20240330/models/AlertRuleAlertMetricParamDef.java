@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
     private String value;
 
     @com.aliyun.core.annotation.NameInMap("values")
-    private java.util.List < Values> values;
+    private java.util.List<Values> values;
 
     private AlertRuleAlertMetricParamDef(Builder builder) {
         this.maxWidth = builder.maxWidth;
@@ -53,6 +58,10 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
 
     public static AlertRuleAlertMetricParamDef create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -107,7 +116,7 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
     /**
      * @return values
      */
-    public java.util.List < Values> getValues() {
+    public java.util.List<Values> getValues() {
         return this.values;
     }
 
@@ -119,7 +128,21 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         private String placeholderEn; 
         private String type; 
         private String value; 
-        private java.util.List < Values> values; 
+        private java.util.List<Values> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlertRuleAlertMetricParamDef model) {
+            this.maxWidth = model.maxWidth;
+            this.minWidth = model.minWidth;
+            this.name = model.name;
+            this.placeholderCn = model.placeholderCn;
+            this.placeholderEn = model.placeholderEn;
+            this.type = model.type;
+            this.value = model.value;
+            this.values = model.values;
+        } 
 
         /**
          * maxWidth.
@@ -180,7 +203,7 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         /**
          * values.
          */
-        public Builder values(java.util.List < Values> values) {
+        public Builder values(java.util.List<Values> values) {
             this.values = values;
             return this;
         }
@@ -246,6 +269,15 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
             private String labelCn; 
             private String labelEn; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Values model) {
+                this.labelCn = model.labelCn;
+                this.labelEn = model.labelEn;
+                this.value = model.value;
+            } 
 
             /**
              * labelCn.

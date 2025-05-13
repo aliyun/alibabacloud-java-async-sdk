@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AlertRuleTimeSpan extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("dayOfWeek")
-    private java.util.List < Integer > dayOfWeek;
+    private java.util.List<Integer> dayOfWeek;
 
     @com.aliyun.core.annotation.NameInMap("endTime")
     private String endTime;
@@ -39,10 +44,14 @@ public class AlertRuleTimeSpan extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dayOfWeek
      */
-    public java.util.List < Integer > getDayOfWeek() {
+    public java.util.List<Integer> getDayOfWeek() {
         return this.dayOfWeek;
     }
 
@@ -68,15 +77,25 @@ public class AlertRuleTimeSpan extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Integer > dayOfWeek; 
+        private java.util.List<Integer> dayOfWeek; 
         private String endTime; 
         private String gmtOffset; 
         private String startTime; 
 
+        private Builder() {
+        } 
+
+        private Builder(AlertRuleTimeSpan model) {
+            this.dayOfWeek = model.dayOfWeek;
+            this.endTime = model.endTime;
+            this.gmtOffset = model.gmtOffset;
+            this.startTime = model.startTime;
+        } 
+
         /**
          * dayOfWeek.
          */
-        public Builder dayOfWeek(java.util.List < Integer > dayOfWeek) {
+        public Builder dayOfWeek(java.util.List<Integer> dayOfWeek) {
             this.dayOfWeek = dayOfWeek;
             return this;
         }

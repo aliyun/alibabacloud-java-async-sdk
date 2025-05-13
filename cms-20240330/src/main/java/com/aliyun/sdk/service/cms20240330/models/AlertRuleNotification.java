@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,19 +18,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AlertRuleNotification extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("contacts")
-    private java.util.List < String > contacts;
+    private java.util.List<String> contacts;
 
     @com.aliyun.core.annotation.NameInMap("customWebhooks")
-    private java.util.List < String > customWebhooks;
+    private java.util.List<String> customWebhooks;
 
     @com.aliyun.core.annotation.NameInMap("dingWebhooks")
-    private java.util.List < String > dingWebhooks;
+    private java.util.List<String> dingWebhooks;
 
     @com.aliyun.core.annotation.NameInMap("fsWebhooks")
-    private java.util.List < String > fsWebhooks;
+    private java.util.List<String> fsWebhooks;
 
     @com.aliyun.core.annotation.NameInMap("groups")
-    private java.util.List < String > groups;
+    private java.util.List<String> groups;
 
     @com.aliyun.core.annotation.NameInMap("notifyTime")
     private AlertRuleTimeSpan notifyTime;
@@ -34,10 +39,10 @@ public class AlertRuleNotification extends TeaModel {
     private Long silenceTime;
 
     @com.aliyun.core.annotation.NameInMap("slackWebhooks")
-    private java.util.List < String > slackWebhooks;
+    private java.util.List<String> slackWebhooks;
 
     @com.aliyun.core.annotation.NameInMap("wxWebhooks")
-    private java.util.List < String > wxWebhooks;
+    private java.util.List<String> wxWebhooks;
 
     private AlertRuleNotification(Builder builder) {
         this.contacts = builder.contacts;
@@ -59,38 +64,42 @@ public class AlertRuleNotification extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contacts
      */
-    public java.util.List < String > getContacts() {
+    public java.util.List<String> getContacts() {
         return this.contacts;
     }
 
     /**
      * @return customWebhooks
      */
-    public java.util.List < String > getCustomWebhooks() {
+    public java.util.List<String> getCustomWebhooks() {
         return this.customWebhooks;
     }
 
     /**
      * @return dingWebhooks
      */
-    public java.util.List < String > getDingWebhooks() {
+    public java.util.List<String> getDingWebhooks() {
         return this.dingWebhooks;
     }
 
     /**
      * @return fsWebhooks
      */
-    public java.util.List < String > getFsWebhooks() {
+    public java.util.List<String> getFsWebhooks() {
         return this.fsWebhooks;
     }
 
     /**
      * @return groups
      */
-    public java.util.List < String > getGroups() {
+    public java.util.List<String> getGroups() {
         return this.groups;
     }
 
@@ -111,32 +120,47 @@ public class AlertRuleNotification extends TeaModel {
     /**
      * @return slackWebhooks
      */
-    public java.util.List < String > getSlackWebhooks() {
+    public java.util.List<String> getSlackWebhooks() {
         return this.slackWebhooks;
     }
 
     /**
      * @return wxWebhooks
      */
-    public java.util.List < String > getWxWebhooks() {
+    public java.util.List<String> getWxWebhooks() {
         return this.wxWebhooks;
     }
 
     public static final class Builder {
-        private java.util.List < String > contacts; 
-        private java.util.List < String > customWebhooks; 
-        private java.util.List < String > dingWebhooks; 
-        private java.util.List < String > fsWebhooks; 
-        private java.util.List < String > groups; 
+        private java.util.List<String> contacts; 
+        private java.util.List<String> customWebhooks; 
+        private java.util.List<String> dingWebhooks; 
+        private java.util.List<String> fsWebhooks; 
+        private java.util.List<String> groups; 
         private AlertRuleTimeSpan notifyTime; 
         private Long silenceTime; 
-        private java.util.List < String > slackWebhooks; 
-        private java.util.List < String > wxWebhooks; 
+        private java.util.List<String> slackWebhooks; 
+        private java.util.List<String> wxWebhooks; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlertRuleNotification model) {
+            this.contacts = model.contacts;
+            this.customWebhooks = model.customWebhooks;
+            this.dingWebhooks = model.dingWebhooks;
+            this.fsWebhooks = model.fsWebhooks;
+            this.groups = model.groups;
+            this.notifyTime = model.notifyTime;
+            this.silenceTime = model.silenceTime;
+            this.slackWebhooks = model.slackWebhooks;
+            this.wxWebhooks = model.wxWebhooks;
+        } 
 
         /**
          * contacts.
          */
-        public Builder contacts(java.util.List < String > contacts) {
+        public Builder contacts(java.util.List<String> contacts) {
             this.contacts = contacts;
             return this;
         }
@@ -144,7 +168,7 @@ public class AlertRuleNotification extends TeaModel {
         /**
          * customWebhooks.
          */
-        public Builder customWebhooks(java.util.List < String > customWebhooks) {
+        public Builder customWebhooks(java.util.List<String> customWebhooks) {
             this.customWebhooks = customWebhooks;
             return this;
         }
@@ -152,7 +176,7 @@ public class AlertRuleNotification extends TeaModel {
         /**
          * dingWebhooks.
          */
-        public Builder dingWebhooks(java.util.List < String > dingWebhooks) {
+        public Builder dingWebhooks(java.util.List<String> dingWebhooks) {
             this.dingWebhooks = dingWebhooks;
             return this;
         }
@@ -160,7 +184,7 @@ public class AlertRuleNotification extends TeaModel {
         /**
          * fsWebhooks.
          */
-        public Builder fsWebhooks(java.util.List < String > fsWebhooks) {
+        public Builder fsWebhooks(java.util.List<String> fsWebhooks) {
             this.fsWebhooks = fsWebhooks;
             return this;
         }
@@ -168,7 +192,7 @@ public class AlertRuleNotification extends TeaModel {
         /**
          * groups.
          */
-        public Builder groups(java.util.List < String > groups) {
+        public Builder groups(java.util.List<String> groups) {
             this.groups = groups;
             return this;
         }
@@ -192,7 +216,7 @@ public class AlertRuleNotification extends TeaModel {
         /**
          * slackWebhooks.
          */
-        public Builder slackWebhooks(java.util.List < String > slackWebhooks) {
+        public Builder slackWebhooks(java.util.List<String> slackWebhooks) {
             this.slackWebhooks = slackWebhooks;
             return this;
         }
@@ -200,7 +224,7 @@ public class AlertRuleNotification extends TeaModel {
         /**
          * wxWebhooks.
          */
-        public Builder wxWebhooks(java.util.List < String > wxWebhooks) {
+        public Builder wxWebhooks(java.util.List<String> wxWebhooks) {
             this.wxWebhooks = wxWebhooks;
             return this;
         }

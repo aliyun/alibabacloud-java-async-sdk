@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,6 +20,9 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("dim")
     private String dim;
 
+    @com.aliyun.core.annotation.NameInMap("dimDisabled")
+    private Boolean dimDisabled;
+
     @com.aliyun.core.annotation.NameInMap("displayNameCn")
     private String displayNameCn;
 
@@ -24,17 +32,22 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("hidden")
     private Boolean hidden;
 
+    @com.aliyun.core.annotation.NameInMap("labelDisabled")
+    private Boolean labelDisabled;
+
     @com.aliyun.core.annotation.NameInMap("opt")
     private String opt;
 
     @com.aliyun.core.annotation.NameInMap("supportedOpts")
-    private java.util.List < SupportedOpts> supportedOpts;
+    private java.util.List<SupportedOpts> supportedOpts;
 
     private AlertRuleAlertMetricFilterDef(Builder builder) {
         this.dim = builder.dim;
+        this.dimDisabled = builder.dimDisabled;
         this.displayNameCn = builder.displayNameCn;
         this.displayNameEn = builder.displayNameEn;
         this.hidden = builder.hidden;
+        this.labelDisabled = builder.labelDisabled;
         this.opt = builder.opt;
         this.supportedOpts = builder.supportedOpts;
     }
@@ -47,11 +60,22 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dim
      */
     public String getDim() {
         return this.dim;
+    }
+
+    /**
+     * @return dimDisabled
+     */
+    public Boolean getDimDisabled() {
+        return this.dimDisabled;
     }
 
     /**
@@ -76,6 +100,13 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     }
 
     /**
+     * @return labelDisabled
+     */
+    public Boolean getLabelDisabled() {
+        return this.labelDisabled;
+    }
+
+    /**
      * @return opt
      */
     public String getOpt() {
@@ -85,23 +116,47 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     /**
      * @return supportedOpts
      */
-    public java.util.List < SupportedOpts> getSupportedOpts() {
+    public java.util.List<SupportedOpts> getSupportedOpts() {
         return this.supportedOpts;
     }
 
     public static final class Builder {
         private String dim; 
+        private Boolean dimDisabled; 
         private String displayNameCn; 
         private String displayNameEn; 
         private Boolean hidden; 
+        private Boolean labelDisabled; 
         private String opt; 
-        private java.util.List < SupportedOpts> supportedOpts; 
+        private java.util.List<SupportedOpts> supportedOpts; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlertRuleAlertMetricFilterDef model) {
+            this.dim = model.dim;
+            this.dimDisabled = model.dimDisabled;
+            this.displayNameCn = model.displayNameCn;
+            this.displayNameEn = model.displayNameEn;
+            this.hidden = model.hidden;
+            this.labelDisabled = model.labelDisabled;
+            this.opt = model.opt;
+            this.supportedOpts = model.supportedOpts;
+        } 
 
         /**
          * dim.
          */
         public Builder dim(String dim) {
             this.dim = dim;
+            return this;
+        }
+
+        /**
+         * dimDisabled.
+         */
+        public Builder dimDisabled(Boolean dimDisabled) {
+            this.dimDisabled = dimDisabled;
             return this;
         }
 
@@ -130,6 +185,14 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
         }
 
         /**
+         * labelDisabled.
+         */
+        public Builder labelDisabled(Boolean labelDisabled) {
+            this.labelDisabled = labelDisabled;
+            return this;
+        }
+
+        /**
          * opt.
          */
         public Builder opt(String opt) {
@@ -140,7 +203,7 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
         /**
          * supportedOpts.
          */
-        public Builder supportedOpts(java.util.List < SupportedOpts> supportedOpts) {
+        public Builder supportedOpts(java.util.List<SupportedOpts> supportedOpts) {
             this.supportedOpts = supportedOpts;
             return this;
         }
@@ -206,6 +269,15 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
             private String displayNameCn; 
             private String displayNameEn; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedOpts model) {
+                this.displayNameCn = model.displayNameCn;
+                this.displayNameEn = model.displayNameEn;
+                this.value = model.value;
+            } 
 
             /**
              * displayNameCn.

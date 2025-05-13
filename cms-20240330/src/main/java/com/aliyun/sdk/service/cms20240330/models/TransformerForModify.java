@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TransformerForModify extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("actions")
-    private java.util.List < TransformAction > actions;
+    private java.util.List<TransformAction> actions;
 
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -48,10 +53,14 @@ public class TransformerForModify extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actions
      */
-    public java.util.List < TransformAction > getActions() {
+    public java.util.List<TransformAction> getActions() {
         return this.actions;
     }
 
@@ -91,17 +100,29 @@ public class TransformerForModify extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < TransformAction > actions; 
+        private java.util.List<TransformAction> actions; 
         private String description; 
         private FilterSetting filterSetting; 
         private Boolean quitAfterMatch; 
         private Integer sortId; 
         private String transformerName; 
 
+        private Builder() {
+        } 
+
+        private Builder(TransformerForModify model) {
+            this.actions = model.actions;
+            this.description = model.description;
+            this.filterSetting = model.filterSetting;
+            this.quitAfterMatch = model.quitAfterMatch;
+            this.sortId = model.sortId;
+            this.transformerName = model.transformerName;
+        } 
+
         /**
          * actions.
          */
-        public Builder actions(java.util.List < TransformAction > actions) {
+        public Builder actions(java.util.List<TransformAction> actions) {
             this.actions = actions;
             return this;
         }

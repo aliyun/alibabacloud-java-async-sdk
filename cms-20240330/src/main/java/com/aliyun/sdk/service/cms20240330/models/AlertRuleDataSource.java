@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +17,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AlertRuleDataSource</p>
  */
 public class AlertRuleDataSource extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("appType")
+    private String appType;
+
     @com.aliyun.core.annotation.NameInMap("dsList")
-    private java.util.List < DsList> dsList;
+    private java.util.List<DsList> dsList;
 
     @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
@@ -21,14 +29,19 @@ public class AlertRuleDataSource extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
 
+    @com.aliyun.core.annotation.NameInMap("regionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.NameInMap("type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private AlertRuleDataSource(Builder builder) {
+        this.appType = builder.appType;
         this.dsList = builder.dsList;
         this.instanceId = builder.instanceId;
         this.namespace = builder.namespace;
+        this.regionId = builder.regionId;
         this.type = builder.type;
     }
 
@@ -40,10 +53,21 @@ public class AlertRuleDataSource extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return appType
+     */
+    public String getAppType() {
+        return this.appType;
+    }
+
     /**
      * @return dsList
      */
-    public java.util.List < DsList> getDsList() {
+    public java.util.List<DsList> getDsList() {
         return this.dsList;
     }
 
@@ -62,6 +86,13 @@ public class AlertRuleDataSource extends TeaModel {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -69,15 +100,37 @@ public class AlertRuleDataSource extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DsList> dsList; 
+        private String appType; 
+        private java.util.List<DsList> dsList; 
         private String instanceId; 
         private String namespace; 
+        private String regionId; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlertRuleDataSource model) {
+            this.appType = model.appType;
+            this.dsList = model.dsList;
+            this.instanceId = model.instanceId;
+            this.namespace = model.namespace;
+            this.regionId = model.regionId;
+            this.type = model.type;
+        } 
+
+        /**
+         * appType.
+         */
+        public Builder appType(String appType) {
+            this.appType = appType;
+            return this;
+        }
 
         /**
          * dsList.
          */
-        public Builder dsList(java.util.List < DsList> dsList) {
+        public Builder dsList(java.util.List<DsList> dsList) {
             this.dsList = dsList;
             return this;
         }
@@ -95,6 +148,14 @@ public class AlertRuleDataSource extends TeaModel {
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
 
@@ -180,6 +241,16 @@ public class AlertRuleDataSource extends TeaModel {
             private String regionId; 
             private String store; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DsList model) {
+                this.project = model.project;
+                this.regionId = model.regionId;
+                this.store = model.store;
+                this.type = model.type;
+            } 
 
             /**
              * project.

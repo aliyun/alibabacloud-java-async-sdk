@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,8 +39,11 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("integrationSetting")
     private String integrationSetting;
 
+    @com.aliyun.core.annotation.NameInMap("token")
+    private String token;
+
     @com.aliyun.core.annotation.NameInMap("transformerSetting")
-    private java.util.List < TransformAction > transformerSetting;
+    private java.util.List<TransformAction> transformerSetting;
 
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
@@ -57,6 +65,7 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
         this.enable = builder.enable;
         this.filterSetting = builder.filterSetting;
         this.integrationSetting = builder.integrationSetting;
+        this.token = builder.token;
         this.transformerSetting = builder.transformerSetting;
         this.type = builder.type;
         this.updateTime = builder.updateTime;
@@ -70,6 +79,10 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
 
     public static AlertEventIntegrationPolicyForView create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -122,9 +135,16 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     }
 
     /**
+     * @return token
+     */
+    public String getToken() {
+        return this.token;
+    }
+
+    /**
      * @return transformerSetting
      */
-    public java.util.List < TransformAction > getTransformerSetting() {
+    public java.util.List<TransformAction> getTransformerSetting() {
         return this.transformerSetting;
     }
 
@@ -164,11 +184,31 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
         private Boolean enable; 
         private FilterSetting filterSetting; 
         private String integrationSetting; 
-        private java.util.List < TransformAction > transformerSetting; 
+        private String token; 
+        private java.util.List<TransformAction> transformerSetting; 
         private String type; 
         private String updateTime; 
         private String userId; 
         private String workspace; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlertEventIntegrationPolicyForView model) {
+            this.alertEventIntegrationPolicyId = model.alertEventIntegrationPolicyId;
+            this.alertEventIntegrationPolicyName = model.alertEventIntegrationPolicyName;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.enable = model.enable;
+            this.filterSetting = model.filterSetting;
+            this.integrationSetting = model.integrationSetting;
+            this.token = model.token;
+            this.transformerSetting = model.transformerSetting;
+            this.type = model.type;
+            this.updateTime = model.updateTime;
+            this.userId = model.userId;
+            this.workspace = model.workspace;
+        } 
 
         /**
          * alertEventIntegrationPolicyId.
@@ -227,9 +267,17 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
         }
 
         /**
+         * token.
+         */
+        public Builder token(String token) {
+            this.token = token;
+            return this;
+        }
+
+        /**
          * transformerSetting.
          */
-        public Builder transformerSetting(java.util.List < TransformAction > transformerSetting) {
+        public Builder transformerSetting(java.util.List<TransformAction> transformerSetting) {
             this.transformerSetting = transformerSetting;
             return this;
         }

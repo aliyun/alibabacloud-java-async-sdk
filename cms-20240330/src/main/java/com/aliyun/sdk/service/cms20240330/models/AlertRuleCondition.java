@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,16 +21,19 @@ public class AlertRuleCondition extends TeaModel {
     private Integer alertCount;
 
     @com.aliyun.core.annotation.NameInMap("caseList")
-    private java.util.List < CaseList> caseList;
+    private java.util.List<CaseList> caseList;
 
     @com.aliyun.core.annotation.NameInMap("compareList")
-    private java.util.List < CompareList> compareList;
+    private java.util.List<CompareList> compareList;
 
     @com.aliyun.core.annotation.NameInMap("noDataAppendValue")
     private String noDataAppendValue;
 
     @com.aliyun.core.annotation.NameInMap("nodataAlertLevel")
     private String nodataAlertLevel;
+
+    @com.aliyun.core.annotation.NameInMap("relation")
+    private String relation;
 
     @com.aliyun.core.annotation.NameInMap("type")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -37,6 +45,7 @@ public class AlertRuleCondition extends TeaModel {
         this.compareList = builder.compareList;
         this.noDataAppendValue = builder.noDataAppendValue;
         this.nodataAlertLevel = builder.nodataAlertLevel;
+        this.relation = builder.relation;
         this.type = builder.type;
     }
 
@@ -46,6 +55,10 @@ public class AlertRuleCondition extends TeaModel {
 
     public static AlertRuleCondition create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -58,14 +71,14 @@ public class AlertRuleCondition extends TeaModel {
     /**
      * @return caseList
      */
-    public java.util.List < CaseList> getCaseList() {
+    public java.util.List<CaseList> getCaseList() {
         return this.caseList;
     }
 
     /**
      * @return compareList
      */
-    public java.util.List < CompareList> getCompareList() {
+    public java.util.List<CompareList> getCompareList() {
         return this.compareList;
     }
 
@@ -84,6 +97,13 @@ public class AlertRuleCondition extends TeaModel {
     }
 
     /**
+     * @return relation
+     */
+    public String getRelation() {
+        return this.relation;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -92,11 +112,25 @@ public class AlertRuleCondition extends TeaModel {
 
     public static final class Builder {
         private Integer alertCount; 
-        private java.util.List < CaseList> caseList; 
-        private java.util.List < CompareList> compareList; 
+        private java.util.List<CaseList> caseList; 
+        private java.util.List<CompareList> compareList; 
         private String noDataAppendValue; 
         private String nodataAlertLevel; 
+        private String relation; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlertRuleCondition model) {
+            this.alertCount = model.alertCount;
+            this.caseList = model.caseList;
+            this.compareList = model.compareList;
+            this.noDataAppendValue = model.noDataAppendValue;
+            this.nodataAlertLevel = model.nodataAlertLevel;
+            this.relation = model.relation;
+            this.type = model.type;
+        } 
 
         /**
          * <p>type=SLS_CONDITION时指定，满足条件几次后告警，默认为1</p>
@@ -109,7 +143,7 @@ public class AlertRuleCondition extends TeaModel {
         /**
          * <p>type=SLS_CONDITION时指定</p>
          */
-        public Builder caseList(java.util.List < CaseList> caseList) {
+        public Builder caseList(java.util.List<CaseList> caseList) {
             this.caseList = caseList;
             return this;
         }
@@ -117,7 +151,7 @@ public class AlertRuleCondition extends TeaModel {
         /**
          * compareList.
          */
-        public Builder compareList(java.util.List < CompareList> compareList) {
+        public Builder compareList(java.util.List<CompareList> compareList) {
             this.compareList = compareList;
             return this;
         }
@@ -135,6 +169,14 @@ public class AlertRuleCondition extends TeaModel {
          */
         public Builder nodataAlertLevel(String nodataAlertLevel) {
             this.nodataAlertLevel = nodataAlertLevel;
+            return this;
+        }
+
+        /**
+         * relation.
+         */
+        public Builder relation(String relation) {
+            this.relation = relation;
             return this;
         }
 
@@ -221,6 +263,16 @@ public class AlertRuleCondition extends TeaModel {
             private String level; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(CaseList model) {
+                this.condition = model.condition;
+                this.countCondition = model.countCondition;
+                this.level = model.level;
+                this.type = model.type;
+            } 
+
             /**
              * condition.
              */
@@ -305,6 +357,14 @@ public class AlertRuleCondition extends TeaModel {
             private String level; 
             private Double value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ValueLevelList model) {
+                this.level = model.level;
+                this.value = model.value;
+            } 
+
             /**
              * level.
              */
@@ -345,7 +405,7 @@ public class AlertRuleCondition extends TeaModel {
         private Double value;
 
         @com.aliyun.core.annotation.NameInMap("valueLevelList")
-        private java.util.List < ValueLevelList> valueLevelList;
+        private java.util.List<ValueLevelList> valueLevelList;
 
         @com.aliyun.core.annotation.NameInMap("yoyTimeUnit")
         private String yoyTimeUnit;
@@ -394,7 +454,7 @@ public class AlertRuleCondition extends TeaModel {
         /**
          * @return valueLevelList
          */
-        public java.util.List < ValueLevelList> getValueLevelList() {
+        public java.util.List<ValueLevelList> getValueLevelList() {
             return this.valueLevelList;
         }
 
@@ -416,9 +476,21 @@ public class AlertRuleCondition extends TeaModel {
             private String aggregate; 
             private String oper; 
             private Double value; 
-            private java.util.List < ValueLevelList> valueLevelList; 
+            private java.util.List<ValueLevelList> valueLevelList; 
             private String yoyTimeUnit; 
             private Integer yoyTimeValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(CompareList model) {
+                this.aggregate = model.aggregate;
+                this.oper = model.oper;
+                this.value = model.value;
+                this.valueLevelList = model.valueLevelList;
+                this.yoyTimeUnit = model.yoyTimeUnit;
+                this.yoyTimeValue = model.yoyTimeValue;
+            } 
 
             /**
              * aggregate.
@@ -447,7 +519,7 @@ public class AlertRuleCondition extends TeaModel {
             /**
              * valueLevelList.
              */
-            public Builder valueLevelList(java.util.List < ValueLevelList> valueLevelList) {
+            public Builder valueLevelList(java.util.List<ValueLevelList> valueLevelList) {
                 this.valueLevelList = valueLevelList;
                 return this;
             }

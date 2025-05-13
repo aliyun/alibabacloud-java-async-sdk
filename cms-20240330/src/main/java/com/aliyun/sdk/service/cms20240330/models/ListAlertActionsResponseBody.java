@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAlertActionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("alertActions")
-    private java.util.List < AlertActions> alertActions;
+    private java.util.List<AlertActions> alertActions;
 
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
@@ -43,10 +48,14 @@ public class ListAlertActionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alertActions
      */
-    public java.util.List < AlertActions> getAlertActions() {
+    public java.util.List<AlertActions> getAlertActions() {
         return this.alertActions;
     }
 
@@ -79,16 +88,27 @@ public class ListAlertActionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AlertActions> alertActions; 
+        private java.util.List<AlertActions> alertActions; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAlertActionsResponseBody model) {
+            this.alertActions = model.alertActions;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
+
         /**
          * alertActions.
          */
-        public Builder alertActions(java.util.List < AlertActions> alertActions) {
+        public Builder alertActions(java.util.List<AlertActions> alertActions) {
             this.alertActions = alertActions;
             return this;
         }
@@ -187,6 +207,15 @@ public class ListAlertActionsResponseBody extends TeaModel {
             private String essRuleId; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(EssParam model) {
+                this.essGroupId = model.essGroupId;
+                this.essRuleId = model.essRuleId;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * essGroupId.
              */
@@ -273,6 +302,15 @@ public class ListAlertActionsResponseBody extends TeaModel {
             private String function; 
             private String regionId; 
             private String service; 
+
+            private Builder() {
+            } 
+
+            private Builder(FcParam model) {
+                this.function = model.function;
+                this.regionId = model.regionId;
+                this.service = model.service;
+            } 
 
             /**
              * function.
@@ -361,6 +399,15 @@ public class ListAlertActionsResponseBody extends TeaModel {
             private String name; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(MnsParam model) {
+                this.mnsType = model.mnsType;
+                this.name = model.name;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * mnsType.
              */
@@ -435,6 +482,14 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagerDutyParam model) {
+                this.key = model.key;
+                this.url = model.url;
+            } 
 
             /**
              * key.
@@ -515,6 +570,15 @@ public class ListAlertActionsResponseBody extends TeaModel {
             private String project; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlsParam model) {
+                this.logstore = model.logstore;
+                this.project = model.project;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * logstore.
              */
@@ -557,7 +621,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         private String contentType;
 
         @com.aliyun.core.annotation.NameInMap("headers")
-        private java.util.Map < String, String > headers;
+        private java.util.Map<String, String> headers;
 
         @com.aliyun.core.annotation.NameInMap("method")
         private String method;
@@ -590,7 +654,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         /**
          * @return headers
          */
-        public java.util.Map < String, String > getHeaders() {
+        public java.util.Map<String, String> getHeaders() {
             return this.headers;
         }
 
@@ -610,9 +674,19 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String contentType; 
-            private java.util.Map < String, String > headers; 
+            private java.util.Map<String, String> headers; 
             private String method; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(WebhookParam model) {
+                this.contentType = model.contentType;
+                this.headers = model.headers;
+                this.method = model.method;
+                this.url = model.url;
+            } 
 
             /**
              * contentType.
@@ -625,7 +699,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             /**
              * headers.
              */
-            public Builder headers(java.util.Map < String, String > headers) {
+            public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
                 return this;
             }
@@ -780,6 +854,21 @@ public class ListAlertActionsResponseBody extends TeaModel {
             private SlsParam slsParam; 
             private String type; 
             private WebhookParam webhookParam; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertActions model) {
+                this.alertActionId = model.alertActionId;
+                this.alertActionName = model.alertActionName;
+                this.essParam = model.essParam;
+                this.fcParam = model.fcParam;
+                this.mnsParam = model.mnsParam;
+                this.pagerDutyParam = model.pagerDutyParam;
+                this.slsParam = model.slsParam;
+                this.type = model.type;
+                this.webhookParam = model.webhookParam;
+            } 
 
             /**
              * alertActionId.

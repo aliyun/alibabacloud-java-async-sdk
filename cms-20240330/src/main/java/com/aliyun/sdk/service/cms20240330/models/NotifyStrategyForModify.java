@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class NotifyStrategyForModify extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("customTemplateEntries")
-    private java.util.List < CustomTemplateEntries> customTemplateEntries;
+    private java.util.List<CustomTemplateEntries> customTemplateEntries;
 
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -31,7 +36,7 @@ public class NotifyStrategyForModify extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("routes")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Routes> routes;
+    private java.util.List<Routes> routes;
 
     private NotifyStrategyForModify(Builder builder) {
         this.customTemplateEntries = builder.customTemplateEntries;
@@ -50,10 +55,14 @@ public class NotifyStrategyForModify extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return customTemplateEntries
      */
-    public java.util.List < CustomTemplateEntries> getCustomTemplateEntries() {
+    public java.util.List<CustomTemplateEntries> getCustomTemplateEntries() {
         return this.customTemplateEntries;
     }
 
@@ -88,22 +97,34 @@ public class NotifyStrategyForModify extends TeaModel {
     /**
      * @return routes
      */
-    public java.util.List < Routes> getRoutes() {
+    public java.util.List<Routes> getRoutes() {
         return this.routes;
     }
 
     public static final class Builder {
-        private java.util.List < CustomTemplateEntries> customTemplateEntries; 
+        private java.util.List<CustomTemplateEntries> customTemplateEntries; 
         private String description; 
         private GroupingSetting groupingSetting; 
         private Boolean ignoreRestoredNotification; 
         private String notifyStrategyName; 
-        private java.util.List < Routes> routes; 
+        private java.util.List<Routes> routes; 
+
+        private Builder() {
+        } 
+
+        private Builder(NotifyStrategyForModify model) {
+            this.customTemplateEntries = model.customTemplateEntries;
+            this.description = model.description;
+            this.groupingSetting = model.groupingSetting;
+            this.ignoreRestoredNotification = model.ignoreRestoredNotification;
+            this.notifyStrategyName = model.notifyStrategyName;
+            this.routes = model.routes;
+        } 
 
         /**
          * customTemplateEntries.
          */
-        public Builder customTemplateEntries(java.util.List < CustomTemplateEntries> customTemplateEntries) {
+        public Builder customTemplateEntries(java.util.List<CustomTemplateEntries> customTemplateEntries) {
             this.customTemplateEntries = customTemplateEntries;
             return this;
         }
@@ -143,7 +164,7 @@ public class NotifyStrategyForModify extends TeaModel {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder routes(java.util.List < Routes> routes) {
+        public Builder routes(java.util.List<Routes> routes) {
             this.routes = routes;
             return this;
         }
@@ -200,6 +221,14 @@ public class NotifyStrategyForModify extends TeaModel {
             private String targetType; 
             private String templateUuid; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomTemplateEntries model) {
+                this.targetType = model.targetType;
+                this.templateUuid = model.templateUuid;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -231,7 +260,7 @@ public class NotifyStrategyForModify extends TeaModel {
      */
     public static class GroupingSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupingKeys")
-        private java.util.List < String > groupingKeys;
+        private java.util.List<String> groupingKeys;
 
         @com.aliyun.core.annotation.NameInMap("periodMin")
         private Integer periodMin;
@@ -260,7 +289,7 @@ public class NotifyStrategyForModify extends TeaModel {
         /**
          * @return groupingKeys
          */
-        public java.util.List < String > getGroupingKeys() {
+        public java.util.List<String> getGroupingKeys() {
             return this.groupingKeys;
         }
 
@@ -286,15 +315,25 @@ public class NotifyStrategyForModify extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > groupingKeys; 
+            private java.util.List<String> groupingKeys; 
             private Integer periodMin; 
             private Integer silenceSec; 
             private Integer times; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupingSetting model) {
+                this.groupingKeys = model.groupingKeys;
+                this.periodMin = model.periodMin;
+                this.silenceSec = model.silenceSec;
+                this.times = model.times;
+            } 
+
             /**
              * groupingKeys.
              */
-            public Builder groupingKeys(java.util.List < String > groupingKeys) {
+            public Builder groupingKeys(java.util.List<String> groupingKeys) {
                 this.groupingKeys = groupingKeys;
                 return this;
             }
@@ -342,11 +381,11 @@ public class NotifyStrategyForModify extends TeaModel {
         private String channelType;
 
         @com.aliyun.core.annotation.NameInMap("enabledSubChannels")
-        private java.util.List < String > enabledSubChannels;
+        private java.util.List<String> enabledSubChannels;
 
         @com.aliyun.core.annotation.NameInMap("receivers")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > receivers;
+        private java.util.List<String> receivers;
 
         private Channels(Builder builder) {
             this.channelType = builder.channelType;
@@ -372,21 +411,30 @@ public class NotifyStrategyForModify extends TeaModel {
         /**
          * @return enabledSubChannels
          */
-        public java.util.List < String > getEnabledSubChannels() {
+        public java.util.List<String> getEnabledSubChannels() {
             return this.enabledSubChannels;
         }
 
         /**
          * @return receivers
          */
-        public java.util.List < String > getReceivers() {
+        public java.util.List<String> getReceivers() {
             return this.receivers;
         }
 
         public static final class Builder {
             private String channelType; 
-            private java.util.List < String > enabledSubChannels; 
-            private java.util.List < String > receivers; 
+            private java.util.List<String> enabledSubChannels; 
+            private java.util.List<String> receivers; 
+
+            private Builder() {
+            } 
+
+            private Builder(Channels model) {
+                this.channelType = model.channelType;
+                this.enabledSubChannels = model.enabledSubChannels;
+                this.receivers = model.receivers;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -399,7 +447,7 @@ public class NotifyStrategyForModify extends TeaModel {
             /**
              * enabledSubChannels.
              */
-            public Builder enabledSubChannels(java.util.List < String > enabledSubChannels) {
+            public Builder enabledSubChannels(java.util.List<String> enabledSubChannels) {
                 this.enabledSubChannels = enabledSubChannels;
                 return this;
             }
@@ -407,7 +455,7 @@ public class NotifyStrategyForModify extends TeaModel {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder receivers(java.util.List < String > receivers) {
+            public Builder receivers(java.util.List<String> receivers) {
                 this.receivers = receivers;
                 return this;
             }
@@ -427,7 +475,7 @@ public class NotifyStrategyForModify extends TeaModel {
      */
     public static class EffectTimeRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dayInWeek")
-        private java.util.List < Integer > dayInWeek;
+        private java.util.List<Integer> dayInWeek;
 
         @com.aliyun.core.annotation.NameInMap("endTimeInMinute")
         @com.aliyun.core.annotation.Validation(maximum = 1439)
@@ -458,7 +506,7 @@ public class NotifyStrategyForModify extends TeaModel {
         /**
          * @return dayInWeek
          */
-        public java.util.List < Integer > getDayInWeek() {
+        public java.util.List<Integer> getDayInWeek() {
             return this.dayInWeek;
         }
 
@@ -484,15 +532,25 @@ public class NotifyStrategyForModify extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Integer > dayInWeek; 
+            private java.util.List<Integer> dayInWeek; 
             private Integer endTimeInMinute; 
             private Integer startTimeInMinute; 
             private String timeZone; 
 
+            private Builder() {
+            } 
+
+            private Builder(EffectTimeRange model) {
+                this.dayInWeek = model.dayInWeek;
+                this.endTimeInMinute = model.endTimeInMinute;
+                this.startTimeInMinute = model.startTimeInMinute;
+                this.timeZone = model.timeZone;
+            } 
+
             /**
              * dayInWeek.
              */
-            public Builder dayInWeek(java.util.List < Integer > dayInWeek) {
+            public Builder dayInWeek(java.util.List<Integer> dayInWeek) {
                 this.dayInWeek = dayInWeek;
                 return this;
             }
@@ -536,7 +594,7 @@ public class NotifyStrategyForModify extends TeaModel {
      */
     public static class Routes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("channels")
-        private java.util.List < Channels> channels;
+        private java.util.List<Channels> channels;
 
         @com.aliyun.core.annotation.NameInMap("effectTimeRange")
         private EffectTimeRange effectTimeRange;
@@ -545,7 +603,7 @@ public class NotifyStrategyForModify extends TeaModel {
         private FilterSetting filterSetting;
 
         @com.aliyun.core.annotation.NameInMap("severities")
-        private java.util.List < String > severities;
+        private java.util.List<String> severities;
 
         private Routes(Builder builder) {
             this.channels = builder.channels;
@@ -565,7 +623,7 @@ public class NotifyStrategyForModify extends TeaModel {
         /**
          * @return channels
          */
-        public java.util.List < Channels> getChannels() {
+        public java.util.List<Channels> getChannels() {
             return this.channels;
         }
 
@@ -586,20 +644,30 @@ public class NotifyStrategyForModify extends TeaModel {
         /**
          * @return severities
          */
-        public java.util.List < String > getSeverities() {
+        public java.util.List<String> getSeverities() {
             return this.severities;
         }
 
         public static final class Builder {
-            private java.util.List < Channels> channels; 
+            private java.util.List<Channels> channels; 
             private EffectTimeRange effectTimeRange; 
             private FilterSetting filterSetting; 
-            private java.util.List < String > severities; 
+            private java.util.List<String> severities; 
+
+            private Builder() {
+            } 
+
+            private Builder(Routes model) {
+                this.channels = model.channels;
+                this.effectTimeRange = model.effectTimeRange;
+                this.filterSetting = model.filterSetting;
+                this.severities = model.severities;
+            } 
 
             /**
              * channels.
              */
-            public Builder channels(java.util.List < Channels> channels) {
+            public Builder channels(java.util.List<Channels> channels) {
                 this.channels = channels;
                 return this;
             }
@@ -623,7 +691,7 @@ public class NotifyStrategyForModify extends TeaModel {
             /**
              * severities.
              */
-            public Builder severities(java.util.List < String > severities) {
+            public Builder severities(java.util.List<String> severities) {
                 this.severities = severities;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AlertRuleAlertMetricInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("filterValues")
-    private java.util.List < AlertRuleAlertMetricInputFilterValue > filterValues;
+    private java.util.List<AlertRuleAlertMetricInputFilterValue> filterValues;
 
     @com.aliyun.core.annotation.NameInMap("groupId")
     private String groupId;
@@ -22,7 +27,7 @@ public class AlertRuleAlertMetricInput extends TeaModel {
     private String metricId;
 
     @com.aliyun.core.annotation.NameInMap("paramValues")
-    private java.util.List < AlertRuleAlertMetricInputParamValue > paramValues;
+    private java.util.List<AlertRuleAlertMetricInputParamValue> paramValues;
 
     private AlertRuleAlertMetricInput(Builder builder) {
         this.filterValues = builder.filterValues;
@@ -39,10 +44,14 @@ public class AlertRuleAlertMetricInput extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return filterValues
      */
-    public java.util.List < AlertRuleAlertMetricInputFilterValue > getFilterValues() {
+    public java.util.List<AlertRuleAlertMetricInputFilterValue> getFilterValues() {
         return this.filterValues;
     }
 
@@ -63,20 +72,30 @@ public class AlertRuleAlertMetricInput extends TeaModel {
     /**
      * @return paramValues
      */
-    public java.util.List < AlertRuleAlertMetricInputParamValue > getParamValues() {
+    public java.util.List<AlertRuleAlertMetricInputParamValue> getParamValues() {
         return this.paramValues;
     }
 
     public static final class Builder {
-        private java.util.List < AlertRuleAlertMetricInputFilterValue > filterValues; 
+        private java.util.List<AlertRuleAlertMetricInputFilterValue> filterValues; 
         private String groupId; 
         private String metricId; 
-        private java.util.List < AlertRuleAlertMetricInputParamValue > paramValues; 
+        private java.util.List<AlertRuleAlertMetricInputParamValue> paramValues; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlertRuleAlertMetricInput model) {
+            this.filterValues = model.filterValues;
+            this.groupId = model.groupId;
+            this.metricId = model.metricId;
+            this.paramValues = model.paramValues;
+        } 
 
         /**
          * filterValues.
          */
-        public Builder filterValues(java.util.List < AlertRuleAlertMetricInputFilterValue > filterValues) {
+        public Builder filterValues(java.util.List<AlertRuleAlertMetricInputFilterValue> filterValues) {
             this.filterValues = filterValues;
             return this;
         }
@@ -100,7 +119,7 @@ public class AlertRuleAlertMetricInput extends TeaModel {
         /**
          * paramValues.
          */
-        public Builder paramValues(java.util.List < AlertRuleAlertMetricInputParamValue > paramValues) {
+        public Builder paramValues(java.util.List<AlertRuleAlertMetricInputParamValue> paramValues) {
             this.paramValues = paramValues;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class TransformAction extends TeaModel {
     private String labelKey;
 
     @com.aliyun.core.annotation.NameInMap("mapping")
-    private java.util.Map < String, String > mapping;
+    private java.util.Map<String, String> mapping;
 
     @com.aliyun.core.annotation.NameInMap("regExp")
     private String regExp;
@@ -59,6 +64,10 @@ public class TransformAction extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return filterSetting
      */
@@ -76,7 +85,7 @@ public class TransformAction extends TeaModel {
     /**
      * @return mapping
      */
-    public java.util.Map < String, String > getMapping() {
+    public java.util.Map<String, String> getMapping() {
         return this.mapping;
     }
 
@@ -125,13 +134,28 @@ public class TransformAction extends TeaModel {
     public static final class Builder {
         private FilterSetting filterSetting; 
         private String labelKey; 
-        private java.util.Map < String, String > mapping; 
+        private java.util.Map<String, String> mapping; 
         private String regExp; 
         private String source; 
         private String target; 
         private String type; 
         private String value; 
         private String variable; 
+
+        private Builder() {
+        } 
+
+        private Builder(TransformAction model) {
+            this.filterSetting = model.filterSetting;
+            this.labelKey = model.labelKey;
+            this.mapping = model.mapping;
+            this.regExp = model.regExp;
+            this.source = model.source;
+            this.target = model.target;
+            this.type = model.type;
+            this.value = model.value;
+            this.variable = model.variable;
+        } 
 
         /**
          * filterSetting.
@@ -152,7 +176,7 @@ public class TransformAction extends TeaModel {
         /**
          * mapping.
          */
-        public Builder mapping(java.util.Map < String, String > mapping) {
+        public Builder mapping(java.util.Map<String, String> mapping) {
             this.mapping = mapping;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,12 +18,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAlertActionsRequest extends Request {
     @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("regionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("alertActionIds")
-    private java.util.List < String > alertActionIds;
+    private java.util.List<String> alertActionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("alertActionName")
@@ -54,7 +59,7 @@ public class ListAlertActionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,7 @@ public class ListAlertActionsRequest extends Request {
     /**
      * @return alertActionIds
      */
-    public java.util.List < String > getAlertActionIds() {
+    public java.util.List<String> getAlertActionIds() {
         return this.alertActionIds;
     }
 
@@ -103,7 +108,7 @@ public class ListAlertActionsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListAlertActionsRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > alertActionIds; 
+        private java.util.List<String> alertActionIds; 
         private String alertActionName; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -124,10 +129,10 @@ public class ListAlertActionsRequest extends Request {
         } 
 
         /**
-         * regionId.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
-            this.putHostParameter("regionId", regionId);
+            this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
             return this;
         }
@@ -135,7 +140,7 @@ public class ListAlertActionsRequest extends Request {
         /**
          * alertActionIds.
          */
-        public Builder alertActionIds(java.util.List < String > alertActionIds) {
+        public Builder alertActionIds(java.util.List<String> alertActionIds) {
             String alertActionIdsShrink = shrink(alertActionIds, "alertActionIds", "json");
             this.putQueryParameter("alertActionIds", alertActionIdsShrink);
             this.alertActionIds = alertActionIds;

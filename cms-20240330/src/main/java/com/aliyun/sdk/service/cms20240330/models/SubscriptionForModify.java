@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -44,6 +49,10 @@ public class SubscriptionForModify extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -85,6 +94,17 @@ public class SubscriptionForModify extends TeaModel {
         private String notifyStrategyId; 
         private PushingSetting pushingSetting; 
         private String subscriptionName; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubscriptionForModify model) {
+            this.description = model.description;
+            this.filterSetting = model.filterSetting;
+            this.notifyStrategyId = model.notifyStrategyId;
+            this.pushingSetting = model.pushingSetting;
+            this.subscriptionName = model.subscriptionName;
+        } 
 
         /**
          * description.
@@ -140,13 +160,13 @@ public class SubscriptionForModify extends TeaModel {
      */
     public static class PushingSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alertActionIds")
-        private java.util.List < String > alertActionIds;
+        private java.util.List<String> alertActionIds;
 
         @com.aliyun.core.annotation.NameInMap("responsePlanId")
         private String responsePlanId;
 
         @com.aliyun.core.annotation.NameInMap("restoreActionIds")
-        private java.util.List < String > restoreActionIds;
+        private java.util.List<String> restoreActionIds;
 
         @com.aliyun.core.annotation.NameInMap("templateUuid")
         private String templateUuid;
@@ -169,7 +189,7 @@ public class SubscriptionForModify extends TeaModel {
         /**
          * @return alertActionIds
          */
-        public java.util.List < String > getAlertActionIds() {
+        public java.util.List<String> getAlertActionIds() {
             return this.alertActionIds;
         }
 
@@ -183,7 +203,7 @@ public class SubscriptionForModify extends TeaModel {
         /**
          * @return restoreActionIds
          */
-        public java.util.List < String > getRestoreActionIds() {
+        public java.util.List<String> getRestoreActionIds() {
             return this.restoreActionIds;
         }
 
@@ -195,15 +215,25 @@ public class SubscriptionForModify extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > alertActionIds; 
+            private java.util.List<String> alertActionIds; 
             private String responsePlanId; 
-            private java.util.List < String > restoreActionIds; 
+            private java.util.List<String> restoreActionIds; 
             private String templateUuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(PushingSetting model) {
+                this.alertActionIds = model.alertActionIds;
+                this.responsePlanId = model.responsePlanId;
+                this.restoreActionIds = model.restoreActionIds;
+                this.templateUuid = model.templateUuid;
+            } 
 
             /**
              * alertActionIds.
              */
-            public Builder alertActionIds(java.util.List < String > alertActionIds) {
+            public Builder alertActionIds(java.util.List<String> alertActionIds) {
                 this.alertActionIds = alertActionIds;
                 return this;
             }
@@ -219,7 +249,7 @@ public class SubscriptionForModify extends TeaModel {
             /**
              * restoreActionIds.
              */
-            public Builder restoreActionIds(java.util.List < String > restoreActionIds) {
+            public Builder restoreActionIds(java.util.List<String> restoreActionIds) {
                 this.restoreActionIds = restoreActionIds;
                 return this;
             }

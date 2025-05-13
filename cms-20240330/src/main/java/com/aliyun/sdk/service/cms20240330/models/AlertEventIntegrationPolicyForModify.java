@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20240330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class AlertEventIntegrationPolicyForModify extends TeaModel {
     private String integrationSetting;
 
     @com.aliyun.core.annotation.NameInMap("transformerSetting")
-    private java.util.List < TransformAction > transformerSetting;
+    private java.util.List<TransformAction> transformerSetting;
 
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
@@ -46,6 +51,10 @@ public class AlertEventIntegrationPolicyForModify extends TeaModel {
 
     public static AlertEventIntegrationPolicyForModify create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -79,7 +88,7 @@ public class AlertEventIntegrationPolicyForModify extends TeaModel {
     /**
      * @return transformerSetting
      */
-    public java.util.List < TransformAction > getTransformerSetting() {
+    public java.util.List<TransformAction> getTransformerSetting() {
         return this.transformerSetting;
     }
 
@@ -95,8 +104,20 @@ public class AlertEventIntegrationPolicyForModify extends TeaModel {
         private String description; 
         private FilterSetting filterSetting; 
         private String integrationSetting; 
-        private java.util.List < TransformAction > transformerSetting; 
+        private java.util.List<TransformAction> transformerSetting; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlertEventIntegrationPolicyForModify model) {
+            this.alertEventIntegrationPolicyName = model.alertEventIntegrationPolicyName;
+            this.description = model.description;
+            this.filterSetting = model.filterSetting;
+            this.integrationSetting = model.integrationSetting;
+            this.transformerSetting = model.transformerSetting;
+            this.type = model.type;
+        } 
 
         /**
          * <p>This parameter is required.</p>
@@ -133,7 +154,7 @@ public class AlertEventIntegrationPolicyForModify extends TeaModel {
         /**
          * transformerSetting.
          */
-        public Builder transformerSetting(java.util.List < TransformAction > transformerSetting) {
+        public Builder transformerSetting(java.util.List<TransformAction> transformerSetting) {
             this.transformerSetting = transformerSetting;
             return this;
         }
