@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskCallChatsRequest} extends {@link RequestModel}
  *
  * <p>TaskCallChatsRequest</p>
@@ -59,7 +65,7 @@ public class TaskCallChatsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -138,7 +144,10 @@ public class TaskCallChatsRequest extends Request {
         } 
 
         /**
-         * 坐席ID
+         * <p>坐席ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72</p>
          */
         public Builder agentId(Long agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -147,7 +156,10 @@ public class TaskCallChatsRequest extends Request {
         }
 
         /**
-         * 坐席标签
+         * <p>坐席标签</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AA</p>
          */
         public Builder agentTag(String agentTag) {
             this.putQueryParameter("AgentTag", agentTag);
@@ -156,7 +168,11 @@ public class TaskCallChatsRequest extends Request {
         }
 
         /**
-         * 外呼ID
+         * <p>外呼ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9b2eb6b8-7a27-4357-b5ec-104450086e24</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -192,7 +208,10 @@ public class TaskCallChatsRequest extends Request {
         }
 
         /**
-         * 任务ID
+         * <p>任务ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

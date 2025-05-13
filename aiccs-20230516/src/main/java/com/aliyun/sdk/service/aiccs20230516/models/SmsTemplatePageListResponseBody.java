@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SmsTemplatePageListResponseBody} extends {@link TeaModel}
  *
  * <p>SmsTemplatePageListResponseBody</p>
@@ -44,6 +50,10 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
 
     public static SmsTemplatePageListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -95,6 +105,18 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(SmsTemplatePageListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * Code.
@@ -150,6 +172,12 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SmsTemplatePageListResponseBody} extends {@link TeaModel}
+     *
+     * <p>SmsTemplatePageListResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -284,8 +312,27 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
             private String templateName; 
             private Long templateType; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.properties = model.properties;
+                this.shortUrlTaskId = model.shortUrlTaskId;
+                this.sign = model.sign;
+                this.smsType = model.smsType;
+                this.status = model.status;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateType = model.templateType;
+            } 
+
             /**
-             * 短信内容
+             * <p>短信内容</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值示例值</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -293,7 +340,10 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * <p>创建时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-26 11:34:59</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -301,7 +351,10 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
             }
 
             /**
-             * 模板所需参数
+             * <p>模板所需参数</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -309,7 +362,10 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
             }
 
             /**
-             * 智能短链ID
+             * <p>智能短链ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46</p>
              */
             public Builder shortUrlTaskId(Long shortUrlTaskId) {
                 this.shortUrlTaskId = shortUrlTaskId;
@@ -317,7 +373,10 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
             }
 
             /**
-             * 短信签名
+             * <p>短信签名</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a234n</p>
              */
             public Builder sign(String sign) {
                 this.sign = sign;
@@ -325,7 +384,10 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
             }
 
             /**
-             * 短信类型
+             * <p>短信类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder smsType(String smsType) {
                 this.smsType = smsType;
@@ -333,7 +395,10 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
             }
 
             /**
-             * 模板状态
+             * <p>模板状态</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -341,7 +406,10 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
             }
 
             /**
-             * 模板ID
+             * <p>模板ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>67</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -349,7 +417,10 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
             }
 
             /**
-             * 模板名称
+             * <p>模板名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值示例值</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -357,7 +428,10 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
             }
 
             /**
-             * 模板类型
+             * <p>模板类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56</p>
              */
             public Builder templateType(Long templateType) {
                 this.templateType = templateType;
@@ -371,9 +445,15 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SmsTemplatePageListResponseBody} extends {@link TeaModel}
+     *
+     * <p>SmsTemplatePageListResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
@@ -406,7 +486,7 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -439,16 +519,27 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNo; 
             private Long pageSize; 
             private Long totalCount; 
             private Long totalPage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+                this.totalPage = model.totalPage;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditTaskResponseBody} extends {@link TeaModel}
  *
  * <p>EditTaskResponseBody</p>
@@ -48,6 +54,10 @@ public class EditTaskResponseBody extends TeaModel {
 
     public static EditTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -107,6 +117,19 @@ public class EditTaskResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(EditTaskResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -170,6 +193,12 @@ public class EditTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EditTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>EditTaskResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
@@ -196,8 +225,18 @@ public class EditTaskResponseBody extends TeaModel {
         public static final class Builder {
             private Long taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.taskId = model.taskId;
+            } 
+
             /**
-             * 任务ID
+             * <p>任务ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>92</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AgentRecoverCallRequest} extends {@link RequestModel}
  *
  * <p>AgentRecoverCallRequest</p>
@@ -29,7 +35,7 @@ public class AgentRecoverCallRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Numbers")
-    private java.util.List < String > numbers;
+    private java.util.List<String> numbers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -45,7 +51,7 @@ public class AgentRecoverCallRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < String > tags;
+    private java.util.List<String> tags;
 
     private AgentRecoverCallRequest(Builder builder) {
         super(builder);
@@ -68,7 +74,7 @@ public class AgentRecoverCallRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -104,7 +110,7 @@ public class AgentRecoverCallRequest extends Request {
     /**
      * @return numbers
      */
-    public java.util.List < String > getNumbers() {
+    public java.util.List<String> getNumbers() {
         return this.numbers;
     }
 
@@ -132,7 +138,7 @@ public class AgentRecoverCallRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -141,11 +147,11 @@ public class AgentRecoverCallRequest extends Request {
         private String agentTag; 
         private String beginImportTime; 
         private String endImportTime; 
-        private java.util.List < String > numbers; 
+        private java.util.List<String> numbers; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
 
         private Builder() {
             super();
@@ -165,7 +171,10 @@ public class AgentRecoverCallRequest extends Request {
         } 
 
         /**
-         * 坐席ID
+         * <p>坐席ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder agentId(Long agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -174,7 +183,10 @@ public class AgentRecoverCallRequest extends Request {
         }
 
         /**
-         * 坐席标签
+         * <p>坐席标签</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder agentTag(String agentTag) {
             this.putQueryParameter("AgentTag", agentTag);
@@ -183,7 +195,10 @@ public class AgentRecoverCallRequest extends Request {
         }
 
         /**
-         * 查询开始导入时间
+         * <p>查询开始导入时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03-06 10:10:10</p>
          */
         public Builder beginImportTime(String beginImportTime) {
             this.putQueryParameter("BeginImportTime", beginImportTime);
@@ -192,7 +207,10 @@ public class AgentRecoverCallRequest extends Request {
         }
 
         /**
-         * 查询结束导入时间
+         * <p>查询结束导入时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-06 10:10:10</p>
          */
         public Builder endImportTime(String endImportTime) {
             this.putQueryParameter("EndImportTime", endImportTime);
@@ -201,9 +219,9 @@ public class AgentRecoverCallRequest extends Request {
         }
 
         /**
-         * 号码列表
+         * <p>号码列表</p>
          */
-        public Builder numbers(java.util.List < String > numbers) {
+        public Builder numbers(java.util.List<String> numbers) {
             String numbersShrink = shrink(numbers, "Numbers", "json");
             this.putQueryParameter("Numbers", numbersShrink);
             this.numbers = numbers;
@@ -238,9 +256,9 @@ public class AgentRecoverCallRequest extends Request {
         }
 
         /**
-         * 用户自定义标签列表
+         * <p>用户自定义标签列表</p>
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

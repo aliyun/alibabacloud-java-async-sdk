@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskCallInfoResponseBody} extends {@link TeaModel}
  *
  * <p>TaskCallInfoResponseBody</p>
@@ -44,6 +50,10 @@ public class TaskCallInfoResponseBody extends TeaModel {
 
     public static TaskCallInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -95,6 +105,18 @@ public class TaskCallInfoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskCallInfoResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * Code.
@@ -150,6 +172,12 @@ public class TaskCallInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TaskCallInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>TaskCallInfoResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FinishTotal")
         private Long finishTotal;
@@ -199,6 +227,15 @@ public class TaskCallInfoResponseBody extends TeaModel {
             private Long finishTotal; 
             private Long total; 
             private Long unCallTotal; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.finishTotal = model.finishTotal;
+                this.total = model.total;
+                this.unCallTotal = model.unCallTotal;
+            } 
 
             /**
              * FinishTotal.

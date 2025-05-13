@@ -12,14 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ImportNumberRequest} extends {@link RequestModel}
+ * {@link ImportNumberV2Request} extends {@link RequestModel}
  *
- * <p>ImportNumberRequest</p>
+ * <p>ImportNumberV2Request</p>
  */
-public class ImportNumberRequest extends Request {
+public class ImportNumberV2Request extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Customers")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Customers> customers;
 
     @com.aliyun.core.annotation.Query
@@ -28,7 +27,6 @@ public class ImportNumberRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OutId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String outId;
 
     @com.aliyun.core.annotation.Query
@@ -45,10 +43,9 @@ public class ImportNumberRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long taskId;
 
-    private ImportNumberRequest(Builder builder) {
+    private ImportNumberV2Request(Builder builder) {
         super(builder);
         this.customers = builder.customers;
         this.failReturn = builder.failReturn;
@@ -63,7 +60,7 @@ public class ImportNumberRequest extends Request {
         return new Builder();
     }
 
-    public static ImportNumberRequest create() {
+    public static ImportNumberV2Request create() {
         return builder().build();
     }
 
@@ -121,7 +118,7 @@ public class ImportNumberRequest extends Request {
         return this.taskId;
     }
 
-    public static final class Builder extends Request.Builder<ImportNumberRequest, Builder> {
+    public static final class Builder extends Request.Builder<ImportNumberV2Request, Builder> {
         private java.util.List<Customers> customers; 
         private Long failReturn; 
         private String outId; 
@@ -134,7 +131,7 @@ public class ImportNumberRequest extends Request {
             super();
         } 
 
-        private Builder(ImportNumberRequest request) {
+        private Builder(ImportNumberV2Request request) {
             super(request);
             this.customers = request.customers;
             this.failReturn = request.failReturn;
@@ -146,7 +143,7 @@ public class ImportNumberRequest extends Request {
         } 
 
         /**
-         * <p>This parameter is required.</p>
+         * Customers.
          */
         public Builder customers(java.util.List<Customers> customers) {
             String customersShrink = shrink(customers, "Customers", "json");
@@ -165,10 +162,7 @@ public class ImportNumberRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * OutId.
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -204,10 +198,7 @@ public class ImportNumberRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>92</p>
+         * TaskId.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -216,17 +207,17 @@ public class ImportNumberRequest extends Request {
         }
 
         @Override
-        public ImportNumberRequest build() {
-            return new ImportNumberRequest(this);
+        public ImportNumberV2Request build() {
+            return new ImportNumberV2Request(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ImportNumberRequest} extends {@link TeaModel}
+     * {@link ImportNumberV2Request} extends {@link TeaModel}
      *
-     * <p>ImportNumberRequest</p>
+     * <p>ImportNumberV2Request</p>
      */
     public static class Customers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientUrl")

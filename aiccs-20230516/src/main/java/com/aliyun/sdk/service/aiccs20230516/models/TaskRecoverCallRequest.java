@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskRecoverCallRequest} extends {@link RequestModel}
  *
  * <p>TaskRecoverCallRequest</p>
@@ -21,7 +27,7 @@ public class TaskRecoverCallRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Numbers")
-    private java.util.List < String > numbers;
+    private java.util.List<String> numbers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -37,7 +43,7 @@ public class TaskRecoverCallRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < String > tags;
+    private java.util.List<String> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
@@ -64,7 +70,7 @@ public class TaskRecoverCallRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -86,7 +92,7 @@ public class TaskRecoverCallRequest extends Request {
     /**
      * @return numbers
      */
-    public java.util.List < String > getNumbers() {
+    public java.util.List<String> getNumbers() {
         return this.numbers;
     }
 
@@ -114,7 +120,7 @@ public class TaskRecoverCallRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -128,11 +134,11 @@ public class TaskRecoverCallRequest extends Request {
     public static final class Builder extends Request.Builder<TaskRecoverCallRequest, Builder> {
         private String beginImportTime; 
         private String endImportTime; 
-        private java.util.List < String > numbers; 
+        private java.util.List<String> numbers; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
         private Long taskId; 
 
         private Builder() {
@@ -152,7 +158,10 @@ public class TaskRecoverCallRequest extends Request {
         } 
 
         /**
-         * 查询开始导入时间
+         * <p>查询开始导入时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;2023-01-09 18:58:19&quot;</p>
          */
         public Builder beginImportTime(String beginImportTime) {
             this.putQueryParameter("BeginImportTime", beginImportTime);
@@ -161,7 +170,10 @@ public class TaskRecoverCallRequest extends Request {
         }
 
         /**
-         * 查询结束导入时间
+         * <p>查询结束导入时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;2023-01-09 18:58:19&quot;</p>
          */
         public Builder endImportTime(String endImportTime) {
             this.putQueryParameter("EndImportTime", endImportTime);
@@ -170,9 +182,9 @@ public class TaskRecoverCallRequest extends Request {
         }
 
         /**
-         * 号码列表
+         * <p>号码列表</p>
          */
-        public Builder numbers(java.util.List < String > numbers) {
+        public Builder numbers(java.util.List<String> numbers) {
             String numbersShrink = shrink(numbers, "Numbers", "json");
             this.putQueryParameter("Numbers", numbersShrink);
             this.numbers = numbers;
@@ -207,9 +219,9 @@ public class TaskRecoverCallRequest extends Request {
         }
 
         /**
-         * 用户自定义标签列表
+         * <p>用户自定义标签列表</p>
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -217,7 +229,11 @@ public class TaskRecoverCallRequest extends Request {
         }
 
         /**
-         * 任务ID
+         * <p>任务ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

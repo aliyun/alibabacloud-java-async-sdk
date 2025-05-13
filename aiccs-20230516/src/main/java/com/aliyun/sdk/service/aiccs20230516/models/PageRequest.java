@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PageRequest} extends {@link RequestModel}
  *
  * <p>PageRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class PageRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Numbers")
-    private java.util.List < String > numbers;
+    private java.util.List<String> numbers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -53,7 +59,7 @@ public class PageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -61,7 +67,7 @@ public class PageRequest extends Request {
     /**
      * @return numbers
      */
-    public java.util.List < String > getNumbers() {
+    public java.util.List<String> getNumbers() {
         return this.numbers;
     }
 
@@ -101,7 +107,7 @@ public class PageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PageRequest, Builder> {
-        private java.util.List < String > numbers; 
+        private java.util.List<String> numbers; 
         private Long ownerId; 
         private Long pageNo; 
         private Long pageSize; 
@@ -125,7 +131,7 @@ public class PageRequest extends Request {
         /**
          * Numbers.
          */
-        public Builder numbers(java.util.List < String > numbers) {
+        public Builder numbers(java.util.List<String> numbers) {
             String numbersShrink = shrink(numbers, "Numbers", "json");
             this.putQueryParameter("Numbers", numbersShrink);
             this.numbers = numbers;

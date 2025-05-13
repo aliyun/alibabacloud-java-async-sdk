@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskListResponseBody} extends {@link TeaModel}
  *
  * <p>TaskListResponseBody</p>
@@ -21,7 +27,7 @@ public class TaskListResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Model")
-    private java.util.List < Model> model;
+    private java.util.List<Model> model;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -50,6 +56,10 @@ public class TaskListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -74,7 +84,7 @@ public class TaskListResponseBody extends TeaModel {
     /**
      * @return model
      */
-    public java.util.List < Model> getModel() {
+    public java.util.List<Model> getModel() {
         return this.model;
     }
 
@@ -103,10 +113,23 @@ public class TaskListResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private Long code; 
         private String message; 
-        private java.util.List < Model> model; 
+        private java.util.List<Model> model; 
         private String requestId; 
         private Boolean success; 
         private Long timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskListResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -135,7 +158,7 @@ public class TaskListResponseBody extends TeaModel {
         /**
          * Model.
          */
-        public Builder model(java.util.List < Model> model) {
+        public Builder model(java.util.List<Model> model) {
             this.model = model;
             return this;
         }
@@ -170,6 +193,12 @@ public class TaskListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TaskListResponseBody</p>
+     */
     public static class IntentTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntentDescription")
         private String intentDescription;
@@ -208,8 +237,19 @@ public class TaskListResponseBody extends TeaModel {
             private String intentDescription; 
             private String intentTag; 
 
+            private Builder() {
+            } 
+
+            private Builder(IntentTags model) {
+                this.intentDescription = model.intentDescription;
+                this.intentTag = model.intentTag;
+            } 
+
             /**
-             * 意向标签描述
+             * <p>意向标签描述</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder intentDescription(String intentDescription) {
                 this.intentDescription = intentDescription;
@@ -217,7 +257,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 意向标签ID
+             * <p>意向标签ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder intentTag(String intentTag) {
                 this.intentTag = intentTag;
@@ -231,6 +274,12 @@ public class TaskListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TaskListResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowCallTime")
         private String allowCallTime;
@@ -260,7 +309,7 @@ public class TaskListResponseBody extends TeaModel {
         private String importTime;
 
         @com.aliyun.core.annotation.NameInMap("IntentTags")
-        private java.util.List < IntentTags> intentTags;
+        private java.util.List<IntentTags> intentTags;
 
         @com.aliyun.core.annotation.NameInMap("InvalidReCall")
         private Long invalidReCall;
@@ -272,7 +321,7 @@ public class TaskListResponseBody extends TeaModel {
         private Long maxConcurrency;
 
         @com.aliyun.core.annotation.NameInMap("PersonalityTags")
-        private java.util.List < String > personalityTags;
+        private java.util.List<String> personalityTags;
 
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Long priority;
@@ -405,7 +454,7 @@ public class TaskListResponseBody extends TeaModel {
         /**
          * @return intentTags
          */
-        public java.util.List < IntentTags> getIntentTags() {
+        public java.util.List<IntentTags> getIntentTags() {
             return this.intentTags;
         }
 
@@ -433,7 +482,7 @@ public class TaskListResponseBody extends TeaModel {
         /**
          * @return personalityTags
          */
-        public java.util.List < String > getPersonalityTags() {
+        public java.util.List<String> getPersonalityTags() {
             return this.personalityTags;
         }
 
@@ -517,11 +566,11 @@ public class TaskListResponseBody extends TeaModel {
             private String flashSmsTemplateName; 
             private Long flashSmsType; 
             private String importTime; 
-            private java.util.List < IntentTags> intentTags; 
+            private java.util.List<IntentTags> intentTags; 
             private Long invalidReCall; 
             private String lastCallTime; 
             private Long maxConcurrency; 
-            private java.util.List < String > personalityTags; 
+            private java.util.List<String> personalityTags; 
             private Long priority; 
             private String properties; 
             private Long recallType; 
@@ -533,8 +582,41 @@ public class TaskListResponseBody extends TeaModel {
             private String templateId; 
             private String templateName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.allowCallTime = model.allowCallTime;
+                this.allowCallTimeFormat = model.allowCallTimeFormat;
+                this.allowDayOfWeek = model.allowDayOfWeek;
+                this.callType = model.callType;
+                this.createTime = model.createTime;
+                this.flashSmsTemplateId = model.flashSmsTemplateId;
+                this.flashSmsTemplateName = model.flashSmsTemplateName;
+                this.flashSmsType = model.flashSmsType;
+                this.importTime = model.importTime;
+                this.intentTags = model.intentTags;
+                this.invalidReCall = model.invalidReCall;
+                this.lastCallTime = model.lastCallTime;
+                this.maxConcurrency = model.maxConcurrency;
+                this.personalityTags = model.personalityTags;
+                this.priority = model.priority;
+                this.properties = model.properties;
+                this.recallType = model.recallType;
+                this.sendSms = model.sendSms;
+                this.smsName = model.smsName;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+            } 
+
             /**
-             * 外呼时间段
+             * <p>外呼时间段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“8:00~20:30”</p>
              */
             public Builder allowCallTime(String allowCallTime) {
                 this.allowCallTime = allowCallTime;
@@ -542,7 +624,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼时间段格式化
+             * <p>外呼时间段格式化</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“8:00 ~ 20:00”</p>
              */
             public Builder allowCallTimeFormat(String allowCallTimeFormat) {
                 this.allowCallTimeFormat = allowCallTimeFormat;
@@ -550,7 +635,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼时间
+             * <p>外呼时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“1,2,3”</p>
              */
             public Builder allowDayOfWeek(String allowDayOfWeek) {
                 this.allowDayOfWeek = allowDayOfWeek;
@@ -558,7 +646,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼类型
+             * <p>外呼类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95</p>
              */
             public Builder callType(Long callType) {
                 this.callType = callType;
@@ -566,7 +657,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * <p>创建时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-05 12:11:11</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -574,7 +668,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 闪信模板id
+             * <p>闪信模板id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder flashSmsTemplateId(Long flashSmsTemplateId) {
                 this.flashSmsTemplateId = flashSmsTemplateId;
@@ -582,7 +679,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 闪信模板名称
+             * <p>闪信模板名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值示例值</p>
              */
             public Builder flashSmsTemplateName(String flashSmsTemplateName) {
                 this.flashSmsTemplateName = flashSmsTemplateName;
@@ -590,7 +690,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 发送闪信配置，可选0，1；0表示否，1表示是
+             * <p>发送闪信配置，可选0，1；0表示否，1表示是</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder flashSmsType(Long flashSmsType) {
                 this.flashSmsType = flashSmsType;
@@ -598,7 +701,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 最近导入时间
+             * <p>最近导入时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-05 12:11:11</p>
              */
             public Builder importTime(String importTime) {
                 this.importTime = importTime;
@@ -606,15 +712,18 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 意向标签列表
+             * <p>意向标签列表</p>
              */
-            public Builder intentTags(java.util.List < IntentTags> intentTags) {
+            public Builder intentTags(java.util.List<IntentTags> intentTags) {
                 this.intentTags = intentTags;
                 return this;
             }
 
             /**
-             * 接通重呼次数
+             * <p>接通重呼次数</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31</p>
              */
             public Builder invalidReCall(Long invalidReCall) {
                 this.invalidReCall = invalidReCall;
@@ -622,7 +731,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 最后外呼时间
+             * <p>最后外呼时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-05 12:11:11</p>
              */
             public Builder lastCallTime(String lastCallTime) {
                 this.lastCallTime = lastCallTime;
@@ -630,7 +742,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 最大并发数
+             * <p>最大并发数</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95</p>
              */
             public Builder maxConcurrency(Long maxConcurrency) {
                 this.maxConcurrency = maxConcurrency;
@@ -638,15 +753,18 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 个性标签列表
+             * <p>个性标签列表</p>
              */
-            public Builder personalityTags(java.util.List < String > personalityTags) {
+            public Builder personalityTags(java.util.List<String> personalityTags) {
                 this.personalityTags = personalityTags;
                 return this;
             }
 
             /**
-             * 优先任务
+             * <p>优先任务</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66</p>
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
@@ -654,7 +772,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 任务所需参数
+             * <p>任务所需参数</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -662,7 +783,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 自动重呼
+             * <p>自动重呼</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder recallType(Long recallType) {
                 this.recallType = recallType;
@@ -670,7 +794,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 发送短信
+             * <p>发送短信</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39</p>
              */
             public Builder sendSms(Long sendSms) {
                 this.sendSms = sendSms;
@@ -678,7 +805,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 短信模板
+             * <p>短信模板</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder smsName(String smsName) {
                 this.smsName = smsName;
@@ -686,7 +816,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 任务状态
+             * <p>任务状态</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -694,7 +827,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 任务ID
+             * <p>任务ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -702,7 +838,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 任务名称
+             * <p>任务名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -710,7 +849,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 话术模板Id
+             * <p>话术模板Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值示例值</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -718,7 +860,10 @@ public class TaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 话术模板名称
+             * <p>话术模板名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

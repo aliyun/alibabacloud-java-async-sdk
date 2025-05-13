@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddTaskRequest} extends {@link RequestModel}
  *
  * <p>AddTaskRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class AddTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CallTimeList")
-    private java.util.List < CallTimeList> callTimeList;
+    private java.util.List<CallTimeList> callTimeList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CallbackUrl")
@@ -66,11 +72,11 @@ public class AddTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RepeatReason")
-    private java.util.List < String > repeatReason;
+    private java.util.List<String> repeatReason;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RepeatTimes")
-    private java.util.List < String > repeatTimes;
+    private java.util.List<String> repeatTimes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -82,7 +88,7 @@ public class AddTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SendSmsPlan")
-    private java.util.List < SendSmsPlan> sendSmsPlan;
+    private java.util.List<SendSmsPlan> sendSmsPlan;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
@@ -135,7 +141,7 @@ public class AddTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,7 +149,7 @@ public class AddTaskRequest extends Request {
     /**
      * @return callTimeList
      */
-    public java.util.List < CallTimeList> getCallTimeList() {
+    public java.util.List<CallTimeList> getCallTimeList() {
         return this.callTimeList;
     }
 
@@ -234,14 +240,14 @@ public class AddTaskRequest extends Request {
     /**
      * @return repeatReason
      */
-    public java.util.List < String > getRepeatReason() {
+    public java.util.List<String> getRepeatReason() {
         return this.repeatReason;
     }
 
     /**
      * @return repeatTimes
      */
-    public java.util.List < String > getRepeatTimes() {
+    public java.util.List<String> getRepeatTimes() {
         return this.repeatTimes;
     }
 
@@ -262,7 +268,7 @@ public class AddTaskRequest extends Request {
     /**
      * @return sendSmsPlan
      */
-    public java.util.List < SendSmsPlan> getSendSmsPlan() {
+    public java.util.List<SendSmsPlan> getSendSmsPlan() {
         return this.sendSmsPlan;
     }
 
@@ -295,7 +301,7 @@ public class AddTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddTaskRequest, Builder> {
-        private java.util.List < CallTimeList> callTimeList; 
+        private java.util.List<CallTimeList> callTimeList; 
         private String callbackUrl; 
         private Long flashSmsTemplateId; 
         private Long flashSmsType; 
@@ -308,11 +314,11 @@ public class AddTaskRequest extends Request {
         private String recordPath; 
         private Long repeatCount; 
         private Long repeatInterval; 
-        private java.util.List < String > repeatReason; 
-        private java.util.List < String > repeatTimes; 
+        private java.util.List<String> repeatReason; 
+        private java.util.List<String> repeatTimes; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < SendSmsPlan> sendSmsPlan; 
+        private java.util.List<SendSmsPlan> sendSmsPlan; 
         private String startTime; 
         private Long taskType; 
         private Long templateId; 
@@ -349,9 +355,9 @@ public class AddTaskRequest extends Request {
         } 
 
         /**
-         * 外呼时间
+         * <p>外呼时间</p>
          */
-        public Builder callTimeList(java.util.List < CallTimeList> callTimeList) {
+        public Builder callTimeList(java.util.List<CallTimeList> callTimeList) {
             String callTimeListShrink = shrink(callTimeList, "CallTimeList", "json");
             this.putQueryParameter("CallTimeList", callTimeListShrink);
             this.callTimeList = callTimeList;
@@ -359,7 +365,10 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 回调地址
+         * <p>回调地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
          */
         public Builder callbackUrl(String callbackUrl) {
             this.putQueryParameter("CallbackUrl", callbackUrl);
@@ -368,7 +377,10 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 当发送闪信配置为1时，闪信模板ID必填
+         * <p>当发送闪信配置为1时，闪信模板ID必填</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96</p>
          */
         public Builder flashSmsTemplateId(Long flashSmsTemplateId) {
             this.putQueryParameter("FlashSmsTemplateId", flashSmsTemplateId);
@@ -377,7 +389,10 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 发送闪信配置
+         * <p>发送闪信配置</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder flashSmsType(Long flashSmsType) {
             this.putQueryParameter("FlashSmsType", flashSmsType);
@@ -386,7 +401,10 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 并发数
+         * <p>并发数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99</p>
          */
         public Builder maxConcurrency(Long maxConcurrency) {
             this.putQueryParameter("MaxConcurrency", maxConcurrency);
@@ -395,7 +413,11 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 任务名称
+         * <p>任务名称</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -413,7 +435,10 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 播放间隔时长
+         * <p>播放间隔时长</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89</p>
          */
         public Builder playSleepVal(Long playSleepVal) {
             this.putQueryParameter("PlaySleepVal", playSleepVal);
@@ -422,7 +447,10 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 录音播放次数
+         * <p>录音播放次数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51</p>
          */
         public Builder playTimes(Long playTimes) {
             this.putQueryParameter("PlayTimes", playTimes);
@@ -431,7 +459,10 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 重呼配置
+         * <p>重呼配置</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53</p>
          */
         public Builder recallType(Long recallType) {
             this.putQueryParameter("RecallType", recallType);
@@ -440,7 +471,10 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 录音地址
+         * <p>录音地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         public Builder recordPath(String recordPath) {
             this.putQueryParameter("RecordPath", recordPath);
@@ -449,7 +483,10 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 重呼次数
+         * <p>重呼次数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37</p>
          */
         public Builder repeatCount(Long repeatCount) {
             this.putQueryParameter("RepeatCount", repeatCount);
@@ -458,7 +495,10 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 重呼间隔
+         * <p>重呼间隔</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         public Builder repeatInterval(Long repeatInterval) {
             this.putQueryParameter("RepeatInterval", repeatInterval);
@@ -467,9 +507,9 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 重呼条件
+         * <p>重呼条件</p>
          */
-        public Builder repeatReason(java.util.List < String > repeatReason) {
+        public Builder repeatReason(java.util.List<String> repeatReason) {
             String repeatReasonShrink = shrink(repeatReason, "RepeatReason", "json");
             this.putQueryParameter("RepeatReason", repeatReasonShrink);
             this.repeatReason = repeatReason;
@@ -477,9 +517,9 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 重呼时间
+         * <p>重呼时间</p>
          */
-        public Builder repeatTimes(java.util.List < String > repeatTimes) {
+        public Builder repeatTimes(java.util.List<String> repeatTimes) {
             String repeatTimesShrink = shrink(repeatTimes, "RepeatTimes", "json");
             this.putQueryParameter("RepeatTimes", repeatTimesShrink);
             this.repeatTimes = repeatTimes;
@@ -505,9 +545,9 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 短信发送规则
+         * <p>短信发送规则</p>
          */
-        public Builder sendSmsPlan(java.util.List < SendSmsPlan> sendSmsPlan) {
+        public Builder sendSmsPlan(java.util.List<SendSmsPlan> sendSmsPlan) {
             String sendSmsPlanShrink = shrink(sendSmsPlan, "SendSmsPlan", "json");
             this.putQueryParameter("SendSmsPlan", sendSmsPlanShrink);
             this.sendSmsPlan = sendSmsPlan;
@@ -515,7 +555,10 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 任务启动日期
+         * <p>任务启动日期</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-16</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -524,7 +567,11 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 任务类型
+         * <p>任务类型</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder taskType(Long taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -533,7 +580,10 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 话术模板ID
+         * <p>话术模板ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -542,7 +592,10 @@ public class AddTaskRequest extends Request {
         }
 
         /**
-         * 话术模板类型
+         * <p>话术模板类型</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder templateType(Long templateType) {
             this.putQueryParameter("TemplateType", templateType);
@@ -557,9 +610,15 @@ public class AddTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddTaskRequest} extends {@link TeaModel}
+     *
+     * <p>AddTaskRequest</p>
+     */
     public static class CallTimeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallTime")
-        private java.util.List < String > callTime;
+        private java.util.List<String> callTime;
 
         private CallTimeList(Builder builder) {
             this.callTime = builder.callTime;
@@ -576,17 +635,24 @@ public class AddTaskRequest extends Request {
         /**
          * @return callTime
          */
-        public java.util.List < String > getCallTime() {
+        public java.util.List<String> getCallTime() {
             return this.callTime;
         }
 
         public static final class Builder {
-            private java.util.List < String > callTime; 
+            private java.util.List<String> callTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallTimeList model) {
+                this.callTime = model.callTime;
+            } 
 
             /**
              * CallTime.
              */
-            public Builder callTime(java.util.List < String > callTime) {
+            public Builder callTime(java.util.List<String> callTime) {
                 this.callTime = callTime;
                 return this;
             }
@@ -598,9 +664,15 @@ public class AddTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddTaskRequest} extends {@link TeaModel}
+     *
+     * <p>AddTaskRequest</p>
+     */
     public static class SendSmsPlan extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntentTags")
-        private java.util.List < String > intentTags;
+        private java.util.List<String> intentTags;
 
         @com.aliyun.core.annotation.NameInMap("SmsTemplateId")
         private Long smsTemplateId;
@@ -621,7 +693,7 @@ public class AddTaskRequest extends Request {
         /**
          * @return intentTags
          */
-        public java.util.List < String > getIntentTags() {
+        public java.util.List<String> getIntentTags() {
             return this.intentTags;
         }
 
@@ -633,19 +705,30 @@ public class AddTaskRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > intentTags; 
+            private java.util.List<String> intentTags; 
             private Long smsTemplateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SendSmsPlan model) {
+                this.intentTags = model.intentTags;
+                this.smsTemplateId = model.smsTemplateId;
+            } 
+
             /**
-             * 意向标签
+             * <p>意向标签</p>
              */
-            public Builder intentTags(java.util.List < String > intentTags) {
+            public Builder intentTags(java.util.List<String> intentTags) {
                 this.intentTags = intentTags;
                 return this;
             }
 
             /**
-             * 短信模板ID
+             * <p>短信模板ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>71</p>
              */
             public Builder smsTemplateId(Long smsTemplateId) {
                 this.smsTemplateId = smsTemplateId;

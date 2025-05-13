@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddBlacklist  AddBlacklistRequest
+     * @return AddBlacklistResponse
+     */
     @Override
     public CompletableFuture<AddBlacklistResponse> addBlacklist(AddBlacklistRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddTask  AddTaskRequest
+     * @return AddTaskResponse
+     */
     @Override
     public CompletableFuture<AddTaskResponse> addTask(AddTaskRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AgentCancelCall  AgentCancelCallRequest
+     * @return AgentCancelCallResponse
+     */
     @Override
     public CompletableFuture<AgentCancelCallResponse> agentCancelCall(AgentCancelCallRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AgentRecoverCall  AgentRecoverCallRequest
+     * @return AgentRecoverCallResponse
+     */
     @Override
     public CompletableFuture<AgentRecoverCallResponse> agentRecoverCall(AgentRecoverCallRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Details  DetailsRequest
+     * @return DetailsResponse
+     */
     @Override
     public CompletableFuture<DetailsResponse> details(DetailsRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EditTask  EditTaskRequest
+     * @return EditTaskResponse
+     */
     @Override
     public CompletableFuture<EditTaskResponse> editTask(EditTaskRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ImportNumber  ImportNumberRequest
+     * @return ImportNumberResponse
+     */
     @Override
     public CompletableFuture<ImportNumberResponse> importNumber(ImportNumberRequest request) {
         try {
@@ -137,6 +165,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ImportNumberV2  ImportNumberV2Request
+     * @return ImportNumberV2Response
+     */
+    @Override
+    public CompletableFuture<ImportNumberV2Response> importNumberV2(ImportNumberV2Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ImportNumberV2").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ImportNumberV2Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ImportNumberV2Response> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of Page  PageRequest
+     * @return PageResponse
+     */
     @Override
     public CompletableFuture<PageResponse> page(PageRequest request) {
         try {
@@ -151,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SmsTemplateCreate  SmsTemplateCreateRequest
+     * @return SmsTemplateCreateResponse
+     */
     @Override
     public CompletableFuture<SmsTemplateCreateResponse> smsTemplateCreate(SmsTemplateCreateRequest request) {
         try {
@@ -165,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SmsTemplatePageList  SmsTemplatePageListRequest
+     * @return SmsTemplatePageListResponse
+     */
     @Override
     public CompletableFuture<SmsTemplatePageListResponse> smsTemplatePageList(SmsTemplatePageListRequest request) {
         try {
@@ -179,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TaskCallChats  TaskCallChatsRequest
+     * @return TaskCallChatsResponse
+     */
     @Override
     public CompletableFuture<TaskCallChatsResponse> taskCallChats(TaskCallChatsRequest request) {
         try {
@@ -193,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TaskCallInfo  TaskCallInfoRequest
+     * @return TaskCallInfoResponse
+     */
     @Override
     public CompletableFuture<TaskCallInfoResponse> taskCallInfo(TaskCallInfoRequest request) {
         try {
@@ -207,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TaskCallList  TaskCallListRequest
+     * @return TaskCallListResponse
+     */
     @Override
     public CompletableFuture<TaskCallListResponse> taskCallList(TaskCallListRequest request) {
         try {
@@ -221,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TaskCancelCall  TaskCancelCallRequest
+     * @return TaskCancelCallResponse
+     */
     @Override
     public CompletableFuture<TaskCancelCallResponse> taskCancelCall(TaskCancelCallRequest request) {
         try {
@@ -235,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TaskList  TaskListRequest
+     * @return TaskListResponse
+     */
     @Override
     public CompletableFuture<TaskListResponse> taskList(TaskListRequest request) {
         try {
@@ -249,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TaskRecoverCall  TaskRecoverCallRequest
+     * @return TaskRecoverCallResponse
+     */
     @Override
     public CompletableFuture<TaskRecoverCallResponse> taskRecoverCall(TaskRecoverCallRequest request) {
         try {
@@ -263,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TemplateList  TemplateListRequest
+     * @return TemplateListResponse
+     */
     @Override
     public CompletableFuture<TemplateListResponse> templateList(TemplateListRequest request) {
         try {
@@ -277,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAgentStatus  UpdateAgentStatusRequest
+     * @return UpdateAgentStatusResponse
+     */
     @Override
     public CompletableFuture<UpdateAgentStatusResponse> updateAgentStatus(UpdateAgentStatusRequest request) {
         try {
@@ -291,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTaskCustomer  UpdateTaskCustomerRequest
+     * @return UpdateTaskCustomerResponse
+     */
     @Override
     public CompletableFuture<UpdateTaskCustomerResponse> updateTaskCustomer(UpdateTaskCustomerRequest request) {
         try {

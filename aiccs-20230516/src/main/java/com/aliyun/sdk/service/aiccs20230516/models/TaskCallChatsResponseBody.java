@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskCallChatsResponseBody} extends {@link TeaModel}
  *
  * <p>TaskCallChatsResponseBody</p>
@@ -18,7 +24,7 @@ public class TaskCallChatsResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Model")
-    private java.util.List < Model> model;
+    private java.util.List<Model> model;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -46,6 +52,10 @@ public class TaskCallChatsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -63,7 +73,7 @@ public class TaskCallChatsResponseBody extends TeaModel {
     /**
      * @return model
      */
-    public java.util.List < Model> getModel() {
+    public java.util.List<Model> getModel() {
         return this.model;
     }
 
@@ -91,10 +101,22 @@ public class TaskCallChatsResponseBody extends TeaModel {
     public static final class Builder {
         private Long code; 
         private String message; 
-        private java.util.List < Model> model; 
+        private java.util.List<Model> model; 
         private String requestId; 
         private Boolean success; 
         private Long timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskCallChatsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * Code.
@@ -115,7 +137,7 @@ public class TaskCallChatsResponseBody extends TeaModel {
         /**
          * Model.
          */
-        public Builder model(java.util.List < Model> model) {
+        public Builder model(java.util.List<Model> model) {
             this.model = model;
             return this;
         }
@@ -150,6 +172,12 @@ public class TaskCallChatsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TaskCallChatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>TaskCallChatsResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -200,8 +228,20 @@ public class TaskCallChatsResponseBody extends TeaModel {
             private String createTime; 
             private String fromNumber; 
 
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.fromNumber = model.fromNumber;
+            } 
+
             /**
-             * 说话内容
+             * <p>说话内容</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -209,7 +249,10 @@ public class TaskCallChatsResponseBody extends TeaModel {
             }
 
             /**
-             * 说话时间
+             * <p>说话时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-13 14:56:46.604</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -217,7 +260,10 @@ public class TaskCallChatsResponseBody extends TeaModel {
             }
 
             /**
-             * 说话号码
+             * <p>说话号码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>138*****265</p>
              */
             public Builder fromNumber(String fromNumber) {
                 this.fromNumber = fromNumber;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAgentStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateAgentStatusRequest</p>
@@ -53,7 +59,7 @@ public class UpdateAgentStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -123,7 +129,10 @@ public class UpdateAgentStatusRequest extends Request {
         } 
 
         /**
-         * 坐席ID
+         * <p>坐席ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58</p>
          */
         public Builder agentId(Long agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -132,7 +141,10 @@ public class UpdateAgentStatusRequest extends Request {
         }
 
         /**
-         * 坐席状态 1:在线；2:忙碌；3:小休；4:离线
+         * <p>坐席状态 1:在线；2:忙碌；3:小休；4:离线</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder agentStatus(Long agentStatus) {
             this.putQueryParameter("AgentStatus", agentStatus);
@@ -141,7 +153,10 @@ public class UpdateAgentStatusRequest extends Request {
         }
 
         /**
-         * 坐席标签
+         * <p>坐席标签</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abac</p>
          */
         public Builder agentTag(String agentTag) {
             this.putQueryParameter("AgentTag", agentTag);

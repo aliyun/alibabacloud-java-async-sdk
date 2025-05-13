@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TemplateListResponseBody} extends {@link TeaModel}
  *
  * <p>TemplateListResponseBody</p>
@@ -18,7 +24,7 @@ public class TemplateListResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Model")
-    private java.util.List < Model> model;
+    private java.util.List<Model> model;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -46,6 +52,10 @@ public class TemplateListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -63,7 +73,7 @@ public class TemplateListResponseBody extends TeaModel {
     /**
      * @return model
      */
-    public java.util.List < Model> getModel() {
+    public java.util.List<Model> getModel() {
         return this.model;
     }
 
@@ -91,10 +101,22 @@ public class TemplateListResponseBody extends TeaModel {
     public static final class Builder {
         private Long code; 
         private String message; 
-        private java.util.List < Model> model; 
+        private java.util.List<Model> model; 
         private String requestId; 
         private Boolean success; 
         private Long timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(TemplateListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * Code.
@@ -115,7 +137,7 @@ public class TemplateListResponseBody extends TeaModel {
         /**
          * Model.
          */
-        public Builder model(java.util.List < Model> model) {
+        public Builder model(java.util.List<Model> model) {
             this.model = model;
             return this;
         }
@@ -150,12 +172,18 @@ public class TemplateListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TemplateListResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntentTags")
-        private java.util.List < java.util.Map<String, ?>> intentTags;
+        private java.util.List<java.util.Map<String, ?>> intentTags;
 
         @com.aliyun.core.annotation.NameInMap("PersonalityTags")
-        private java.util.List < String > personalityTags;
+        private java.util.List<String> personalityTags;
 
         @com.aliyun.core.annotation.NameInMap("Properties")
         private String properties;
@@ -189,14 +217,14 @@ public class TemplateListResponseBody extends TeaModel {
         /**
          * @return intentTags
          */
-        public java.util.List < java.util.Map<String, ?>> getIntentTags() {
+        public java.util.List<java.util.Map<String, ?>> getIntentTags() {
             return this.intentTags;
         }
 
         /**
          * @return personalityTags
          */
-        public java.util.List < String > getPersonalityTags() {
+        public java.util.List<String> getPersonalityTags() {
             return this.personalityTags;
         }
 
@@ -229,31 +257,46 @@ public class TemplateListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> intentTags; 
-            private java.util.List < String > personalityTags; 
+            private java.util.List<java.util.Map<String, ?>> intentTags; 
+            private java.util.List<String> personalityTags; 
             private String properties; 
             private Long templateId; 
             private String templateName; 
             private Long templateType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.intentTags = model.intentTags;
+                this.personalityTags = model.personalityTags;
+                this.properties = model.properties;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templateType = model.templateType;
+            } 
+
             /**
-             * 意向标签
+             * <p>意向标签</p>
              */
-            public Builder intentTags(java.util.List < java.util.Map<String, ?>> intentTags) {
+            public Builder intentTags(java.util.List<java.util.Map<String, ?>> intentTags) {
                 this.intentTags = intentTags;
                 return this;
             }
 
             /**
-             * 个性标签
+             * <p>个性标签</p>
              */
-            public Builder personalityTags(java.util.List < String > personalityTags) {
+            public Builder personalityTags(java.util.List<String> personalityTags) {
                 this.personalityTags = personalityTags;
                 return this;
             }
 
             /**
-             * 话术所需参数
+             * <p>话术所需参数</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -261,7 +304,10 @@ public class TemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * AI话术ID
+             * <p>AI话术ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>59</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -269,7 +315,10 @@ public class TemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * 话术模板名称
+             * <p>话术模板名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -277,7 +326,10 @@ public class TemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * 模板类型
+             * <p>模板类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55</p>
              */
             public Builder templateType(Long templateType) {
                 this.templateType = templateType;

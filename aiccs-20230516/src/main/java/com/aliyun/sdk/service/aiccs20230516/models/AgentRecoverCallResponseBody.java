@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AgentRecoverCallResponseBody} extends {@link TeaModel}
  *
  * <p>AgentRecoverCallResponseBody</p>
@@ -44,6 +50,10 @@ public class AgentRecoverCallResponseBody extends TeaModel {
 
     public static AgentRecoverCallResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +106,18 @@ public class AgentRecoverCallResponseBody extends TeaModel {
         private String success; 
         private Long timestamp; 
 
+        private Builder() {
+        } 
+
+        private Builder(AgentRecoverCallResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timestamp = model.timestamp;
+        } 
+
         /**
          * Code.
          */
@@ -129,7 +151,10 @@ public class AgentRecoverCallResponseBody extends TeaModel {
         }
 
         /**
-         * 坐席标签
+         * <p>坐席标签</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -150,9 +175,15 @@ public class AgentRecoverCallResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AgentRecoverCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>AgentRecoverCallResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UnHandleNumbers")
-        private java.util.List < String > unHandleNumbers;
+        private java.util.List<String> unHandleNumbers;
 
         private Model(Builder builder) {
             this.unHandleNumbers = builder.unHandleNumbers;
@@ -169,17 +200,24 @@ public class AgentRecoverCallResponseBody extends TeaModel {
         /**
          * @return unHandleNumbers
          */
-        public java.util.List < String > getUnHandleNumbers() {
+        public java.util.List<String> getUnHandleNumbers() {
             return this.unHandleNumbers;
         }
 
         public static final class Builder {
-            private java.util.List < String > unHandleNumbers; 
+            private java.util.List<String> unHandleNumbers; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.unHandleNumbers = model.unHandleNumbers;
+            } 
 
             /**
-             * 错误手机列表
+             * <p>错误手机列表</p>
              */
-            public Builder unHandleNumbers(java.util.List < String > unHandleNumbers) {
+            public Builder unHandleNumbers(java.util.List<String> unHandleNumbers) {
                 this.unHandleNumbers = unHandleNumbers;
                 return this;
             }

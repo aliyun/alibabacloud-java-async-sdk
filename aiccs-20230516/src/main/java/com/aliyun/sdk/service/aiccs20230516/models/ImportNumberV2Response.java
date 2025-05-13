@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateTaskCustomerResponse} extends {@link TeaModel}
+ * {@link ImportNumberV2Response} extends {@link TeaModel}
  *
- * <p>UpdateTaskCustomerResponse</p>
+ * <p>ImportNumberV2Response</p>
  */
-public class UpdateTaskCustomerResponse extends Response {
+public class ImportNumberV2Response extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class UpdateTaskCustomerResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateTaskCustomerResponseBody body;
+    private ImportNumberV2ResponseBody body;
 
-    private UpdateTaskCustomerResponse(BuilderImpl builder) {
+    private ImportNumberV2Response(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateTaskCustomerResponse create() {
+    public static ImportNumberV2Response create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class UpdateTaskCustomerResponse extends Response {
     /**
      * @return body
      */
-    public UpdateTaskCustomerResponseBody getBody() {
+    public ImportNumberV2ResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateTaskCustomerResponse, Builder> {
+    public interface Builder extends Response.Builder<ImportNumberV2Response, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateTaskCustomerResponseBody body);
+        Builder body(ImportNumberV2ResponseBody body);
 
         @Override
-        UpdateTaskCustomerResponse build();
+        ImportNumberV2Response build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateTaskCustomerResponse, Builder>
+            extends Response.BuilderImpl<ImportNumberV2Response, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private UpdateTaskCustomerResponseBody body; 
+        private ImportNumberV2ResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateTaskCustomerResponse response) {
+        private BuilderImpl(ImportNumberV2Response response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class UpdateTaskCustomerResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateTaskCustomerResponseBody body) {
+        public Builder body(ImportNumberV2ResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateTaskCustomerResponse build() {
-            return new UpdateTaskCustomerResponse(this);
+        public ImportNumberV2Response build() {
+            return new ImportNumberV2Response(this);
         } 
 
     } 

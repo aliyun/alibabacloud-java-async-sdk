@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TemplateListRequest} extends {@link RequestModel}
  *
  * <p>TemplateListRequest</p>
@@ -43,7 +49,7 @@ public class TemplateListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -122,7 +128,10 @@ public class TemplateListRequest extends Request {
         }
 
         /**
-         * 必须空参
+         * <p>必须空参</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

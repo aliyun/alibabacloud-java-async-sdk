@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AgentCancelCallRequest} extends {@link RequestModel}
  *
  * <p>AgentCancelCallRequest</p>
@@ -21,7 +27,7 @@ public class AgentCancelCallRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Numbers")
-    private java.util.List < String > numbers;
+    private java.util.List<String> numbers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -37,7 +43,7 @@ public class AgentCancelCallRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < String > tags;
+    private java.util.List<String> tags;
 
     private AgentCancelCallRequest(Builder builder) {
         super(builder);
@@ -58,7 +64,7 @@ public class AgentCancelCallRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -80,7 +86,7 @@ public class AgentCancelCallRequest extends Request {
     /**
      * @return numbers
      */
-    public java.util.List < String > getNumbers() {
+    public java.util.List<String> getNumbers() {
         return this.numbers;
     }
 
@@ -108,18 +114,18 @@ public class AgentCancelCallRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<AgentCancelCallRequest, Builder> {
         private Long agentId; 
         private String agentTag; 
-        private java.util.List < String > numbers; 
+        private java.util.List<String> numbers; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
 
         private Builder() {
             super();
@@ -137,7 +143,10 @@ public class AgentCancelCallRequest extends Request {
         } 
 
         /**
-         * 坐席ID
+         * <p>坐席ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder agentId(Long agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -146,7 +155,10 @@ public class AgentCancelCallRequest extends Request {
         }
 
         /**
-         * 坐席标签
+         * <p>坐席标签</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder agentTag(String agentTag) {
             this.putQueryParameter("AgentTag", agentTag);
@@ -155,9 +167,9 @@ public class AgentCancelCallRequest extends Request {
         }
 
         /**
-         * 号码列表
+         * <p>号码列表</p>
          */
-        public Builder numbers(java.util.List < String > numbers) {
+        public Builder numbers(java.util.List<String> numbers) {
             String numbersShrink = shrink(numbers, "Numbers", "json");
             this.putQueryParameter("Numbers", numbersShrink);
             this.numbers = numbers;
@@ -192,9 +204,9 @@ public class AgentCancelCallRequest extends Request {
         }
 
         /**
-         * 用户自定义标签列表
+         * <p>用户自定义标签列表</p>
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

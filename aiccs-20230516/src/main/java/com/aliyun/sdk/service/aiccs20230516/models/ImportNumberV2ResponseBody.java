@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AddTaskResponseBody} extends {@link TeaModel}
+ * {@link ImportNumberV2ResponseBody} extends {@link TeaModel}
  *
- * <p>AddTaskResponseBody</p>
+ * <p>ImportNumberV2ResponseBody</p>
  */
-public class AddTaskResponseBody extends TeaModel {
+public class ImportNumberV2ResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
@@ -33,12 +33,12 @@ public class AddTaskResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Success")
-    private Boolean success;
+    private String success;
 
     @com.aliyun.core.annotation.NameInMap("Timestamp")
     private Long timestamp;
 
-    private AddTaskResponseBody(Builder builder) {
+    private ImportNumberV2ResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.message = builder.message;
@@ -52,7 +52,7 @@ public class AddTaskResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static AddTaskResponseBody create() {
+    public static ImportNumberV2ResponseBody create() {
         return builder().build();
     }
 
@@ -98,7 +98,7 @@ public class AddTaskResponseBody extends TeaModel {
     /**
      * @return success
      */
-    public Boolean getSuccess() {
+    public String getSuccess() {
         return this.success;
     }
 
@@ -115,13 +115,13 @@ public class AddTaskResponseBody extends TeaModel {
         private String message; 
         private Model model; 
         private String requestId; 
-        private Boolean success; 
+        private String success; 
         private Long timestamp; 
 
         private Builder() {
         } 
 
-        private Builder(AddTaskResponseBody model) {
+        private Builder(ImportNumberV2ResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
             this.code = model.code;
             this.message = model.message;
@@ -174,7 +174,7 @@ public class AddTaskResponseBody extends TeaModel {
         /**
          * Success.
          */
-        public Builder success(Boolean success) {
+        public Builder success(String success) {
             this.success = success;
             return this;
         }
@@ -187,24 +187,40 @@ public class AddTaskResponseBody extends TeaModel {
             return this;
         }
 
-        public AddTaskResponseBody build() {
-            return new AddTaskResponseBody(this);
+        public ImportNumberV2ResponseBody build() {
+            return new ImportNumberV2ResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link AddTaskResponseBody} extends {@link TeaModel}
+     * {@link ImportNumberV2ResponseBody} extends {@link TeaModel}
      *
-     * <p>AddTaskResponseBody</p>
+     * <p>ImportNumberV2ResponseBody</p>
      */
     public static class Model extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("TaskId")
-        private Long taskId;
+        @com.aliyun.core.annotation.NameInMap("BatchId")
+        private Long batchId;
+
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private Long code;
+
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private String data;
+
+        @com.aliyun.core.annotation.NameInMap("ImportNum")
+        private Long importNum;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
 
         private Model(Builder builder) {
-            this.taskId = builder.taskId;
+            this.batchId = builder.batchId;
+            this.code = builder.code;
+            this.data = builder.data;
+            this.importNum = builder.importNum;
+            this.message = builder.message;
         }
 
         public static Builder builder() {
@@ -216,30 +232,95 @@ public class AddTaskResponseBody extends TeaModel {
         }
 
         /**
-         * @return taskId
+         * @return batchId
          */
-        public Long getTaskId() {
-            return this.taskId;
+        public Long getBatchId() {
+            return this.batchId;
+        }
+
+        /**
+         * @return code
+         */
+        public Long getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return data
+         */
+        public String getData() {
+            return this.data;
+        }
+
+        /**
+         * @return importNum
+         */
+        public Long getImportNum() {
+            return this.importNum;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
         }
 
         public static final class Builder {
-            private Long taskId; 
+            private Long batchId; 
+            private Long code; 
+            private String data; 
+            private Long importNum; 
+            private String message; 
 
             private Builder() {
             } 
 
             private Builder(Model model) {
-                this.taskId = model.taskId;
+                this.batchId = model.batchId;
+                this.code = model.code;
+                this.data = model.data;
+                this.importNum = model.importNum;
+                this.message = model.message;
             } 
 
             /**
-             * <p>任务ID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>47</p>
+             * BatchId.
              */
-            public Builder taskId(Long taskId) {
-                this.taskId = taskId;
+            public Builder batchId(Long batchId) {
+                this.batchId = batchId;
+                return this;
+            }
+
+            /**
+             * Code.
+             */
+            public Builder code(Long code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * Data.
+             */
+            public Builder data(String data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * ImportNum.
+             */
+            public Builder importNum(Long importNum) {
+                this.importNum = importNum;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
                 return this;
             }
 

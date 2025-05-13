@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskCancelCallRequest} extends {@link RequestModel}
  *
  * <p>TaskCancelCallRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class TaskCancelCallRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Numbers")
-    private java.util.List < String > numbers;
+    private java.util.List<String> numbers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -29,7 +35,7 @@ public class TaskCancelCallRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < String > tags;
+    private java.util.List<String> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
@@ -54,7 +60,7 @@ public class TaskCancelCallRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -62,7 +68,7 @@ public class TaskCancelCallRequest extends Request {
     /**
      * @return numbers
      */
-    public java.util.List < String > getNumbers() {
+    public java.util.List<String> getNumbers() {
         return this.numbers;
     }
 
@@ -90,7 +96,7 @@ public class TaskCancelCallRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -102,11 +108,11 @@ public class TaskCancelCallRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<TaskCancelCallRequest, Builder> {
-        private java.util.List < String > numbers; 
+        private java.util.List<String> numbers; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
         private Long taskId; 
 
         private Builder() {
@@ -126,7 +132,7 @@ public class TaskCancelCallRequest extends Request {
         /**
          * Numbers.
          */
-        public Builder numbers(java.util.List < String > numbers) {
+        public Builder numbers(java.util.List<String> numbers) {
             String numbersShrink = shrink(numbers, "Numbers", "json");
             this.putQueryParameter("Numbers", numbersShrink);
             this.numbers = numbers;
@@ -163,7 +169,7 @@ public class TaskCancelCallRequest extends Request {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -171,7 +177,11 @@ public class TaskCancelCallRequest extends Request {
         }
 
         /**
-         * 任务ID
+         * <p>任务ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

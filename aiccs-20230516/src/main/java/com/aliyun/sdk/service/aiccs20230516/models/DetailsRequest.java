@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetailsRequest} extends {@link RequestModel}
  *
  * <p>DetailsRequest</p>
@@ -25,7 +31,7 @@ public class DetailsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Numbers")
-    private java.util.List < String > numbers;
+    private java.util.List<String> numbers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -80,7 +86,7 @@ public class DetailsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -109,7 +115,7 @@ public class DetailsRequest extends Request {
     /**
      * @return numbers
      */
-    public java.util.List < String > getNumbers() {
+    public java.util.List<String> getNumbers() {
         return this.numbers;
     }
 
@@ -166,7 +172,7 @@ public class DetailsRequest extends Request {
         private Long batchId; 
         private String endTime; 
         private Long numberStatus; 
-        private java.util.List < String > numbers; 
+        private java.util.List<String> numbers; 
         private Long ownerId; 
         private Long pageNo; 
         private Long pageSize; 
@@ -195,7 +201,10 @@ public class DetailsRequest extends Request {
         } 
 
         /**
-         * 批次id
+         * <p>批次id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75</p>
          */
         public Builder batchId(Long batchId) {
             this.putQueryParameter("BatchId", batchId);
@@ -204,7 +213,10 @@ public class DetailsRequest extends Request {
         }
 
         /**
-         * 结束导入时间
+         * <p>结束导入时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-25 15:19:02</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -213,7 +225,10 @@ public class DetailsRequest extends Request {
         }
 
         /**
-         * 号码状态
+         * <p>号码状态</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder numberStatus(Long numberStatus) {
             this.putQueryParameter("NumberStatus", numberStatus);
@@ -222,9 +237,9 @@ public class DetailsRequest extends Request {
         }
 
         /**
-         * 号码列表
+         * <p>号码列表</p>
          */
-        public Builder numbers(java.util.List < String > numbers) {
+        public Builder numbers(java.util.List<String> numbers) {
             String numbersShrink = shrink(numbers, "Numbers", "json");
             this.putQueryParameter("Numbers", numbersShrink);
             this.numbers = numbers;
@@ -241,7 +256,10 @@ public class DetailsRequest extends Request {
         }
 
         /**
-         * 页数
+         * <p>页数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>77</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -250,7 +268,11 @@ public class DetailsRequest extends Request {
         }
 
         /**
-         * 每页条数
+         * <p>每页条数</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -277,7 +299,10 @@ public class DetailsRequest extends Request {
         }
 
         /**
-         * 开始导入时间
+         * <p>开始导入时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-25 15:19:02</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -286,7 +311,11 @@ public class DetailsRequest extends Request {
         }
 
         /**
-         * 任务id
+         * <p>任务id</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

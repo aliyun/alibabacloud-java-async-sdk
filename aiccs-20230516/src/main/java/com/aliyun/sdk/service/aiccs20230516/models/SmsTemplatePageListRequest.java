@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SmsTemplatePageListRequest} extends {@link RequestModel}
  *
  * <p>SmsTemplatePageListRequest</p>
@@ -73,7 +79,7 @@ public class SmsTemplatePageListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -188,7 +194,10 @@ public class SmsTemplatePageListRequest extends Request {
         }
 
         /**
-         * 页码
+         * <p>页码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -197,7 +206,10 @@ public class SmsTemplatePageListRequest extends Request {
         }
 
         /**
-         * 每页条数
+         * <p>每页条数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -224,7 +236,10 @@ public class SmsTemplatePageListRequest extends Request {
         }
 
         /**
-         * 短信签名
+         * <p>短信签名</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114ah23m</p>
          */
         public Builder sign(String sign) {
             this.putQueryParameter("Sign", sign);
@@ -233,7 +248,10 @@ public class SmsTemplatePageListRequest extends Request {
         }
 
         /**
-         * 短信类型
+         * <p>短信类型</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         public Builder smsType(Long smsType) {
             this.putQueryParameter("SmsType", smsType);
@@ -242,7 +260,10 @@ public class SmsTemplatePageListRequest extends Request {
         }
 
         /**
-         * 模板状态
+         * <p>模板状态</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92</p>
          */
         public Builder status(Long status) {
             this.putQueryParameter("Status", status);
@@ -251,7 +272,10 @@ public class SmsTemplatePageListRequest extends Request {
         }
 
         /**
-         * 模板ID
+         * <p>模板ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -260,7 +284,10 @@ public class SmsTemplatePageListRequest extends Request {
         }
 
         /**
-         * 模板类型
+         * <p>模板类型</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         public Builder templateType(Long templateType) {
             this.putQueryParameter("TemplateType", templateType);

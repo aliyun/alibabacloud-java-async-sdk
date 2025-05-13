@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetailsResponseBody} extends {@link TeaModel}
  *
  * <p>DetailsResponseBody</p>
@@ -44,6 +50,10 @@ public class DetailsResponseBody extends TeaModel {
 
     public static DetailsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -95,6 +105,18 @@ public class DetailsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetailsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * Code.
@@ -150,6 +172,12 @@ public class DetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetailsResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BatchId")
         private Long batchId;
@@ -320,8 +348,30 @@ public class DetailsResponseBody extends TeaModel {
             private String tag; 
             private Long taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.batchId = model.batchId;
+                this.callDesc = model.callDesc;
+                this.callId = model.callId;
+                this.callStatus = model.callStatus;
+                this.callType = model.callType;
+                this.importTime = model.importTime;
+                this.interceptReason = model.interceptReason;
+                this.number = model.number;
+                this.numberDesc = model.numberDesc;
+                this.numberMD5 = model.numberMD5;
+                this.numberStatus = model.numberStatus;
+                this.tag = model.tag;
+                this.taskId = model.taskId;
+            } 
+
             /**
-             * 批次号
+             * <p>批次号</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder batchId(Long batchId) {
                 this.batchId = batchId;
@@ -329,7 +379,10 @@ public class DetailsResponseBody extends TeaModel {
             }
 
             /**
-             * 呼叫状态描述
+             * <p>呼叫状态描述</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder callDesc(String callDesc) {
                 this.callDesc = callDesc;
@@ -337,7 +390,10 @@ public class DetailsResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼ID
+             * <p>外呼ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28dd74a4-30ec-43c0-9bec-272924c51eeb</p>
              */
             public Builder callId(String callId) {
                 this.callId = callId;
@@ -345,7 +401,10 @@ public class DetailsResponseBody extends TeaModel {
             }
 
             /**
-             * 呼叫状态
+             * <p>呼叫状态</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder callStatus(Long callStatus) {
                 this.callStatus = callStatus;
@@ -353,7 +412,10 @@ public class DetailsResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼类型
+             * <p>外呼类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2001</p>
              */
             public Builder callType(Long callType) {
                 this.callType = callType;
@@ -361,7 +423,10 @@ public class DetailsResponseBody extends TeaModel {
             }
 
             /**
-             * 导入时间
+             * <p>导入时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-25 15:19:02</p>
              */
             public Builder importTime(String importTime) {
                 this.importTime = importTime;
@@ -369,7 +434,10 @@ public class DetailsResponseBody extends TeaModel {
             }
 
             /**
-             * 拦截原因
+             * <p>拦截原因</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值示例值</p>
              */
             public Builder interceptReason(String interceptReason) {
                 this.interceptReason = interceptReason;
@@ -377,7 +445,10 @@ public class DetailsResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼号码
+             * <p>外呼号码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>188******454</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -385,7 +456,10 @@ public class DetailsResponseBody extends TeaModel {
             }
 
             /**
-             * 号码状态描述
+             * <p>号码状态描述</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值</p>
              */
             public Builder numberDesc(String numberDesc) {
                 this.numberDesc = numberDesc;
@@ -393,7 +467,10 @@ public class DetailsResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼号码MD5
+             * <p>外呼号码MD5</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cbe1b40f76f2cca4735954886b706ffa</p>
              */
             public Builder numberMD5(String numberMD5) {
                 this.numberMD5 = numberMD5;
@@ -401,7 +478,10 @@ public class DetailsResponseBody extends TeaModel {
             }
 
             /**
-             * 号码状态
+             * <p>号码状态</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder numberStatus(Long numberStatus) {
                 this.numberStatus = numberStatus;
@@ -409,7 +489,10 @@ public class DetailsResponseBody extends TeaModel {
             }
 
             /**
-             * 用户自定义标签
+             * <p>用户自定义标签</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -417,7 +500,10 @@ public class DetailsResponseBody extends TeaModel {
             }
 
             /**
-             * 任务ID
+             * <p>任务ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -431,9 +517,15 @@ public class DetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetailsResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
@@ -466,7 +558,7 @@ public class DetailsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -499,16 +591,27 @@ public class DetailsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNo; 
             private Long pageSize; 
             private Long totalCount; 
             private Float totalPage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+                this.totalPage = model.totalPage;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SmsTemplateCreateRequest} extends {@link RequestModel}
  *
  * <p>SmsTemplateCreateRequest</p>
@@ -66,7 +72,7 @@ public class SmsTemplateCreateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -154,7 +160,11 @@ public class SmsTemplateCreateRequest extends Request {
         } 
 
         /**
-         * 短信内容
+         * <p>短信内容</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -190,7 +200,11 @@ public class SmsTemplateCreateRequest extends Request {
         }
 
         /**
-         * 短信签名
+         * <p>短信签名</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ef2i29fsljf</p>
          */
         public Builder sign(String sign) {
             this.putQueryParameter("Sign", sign);
@@ -199,7 +213,10 @@ public class SmsTemplateCreateRequest extends Request {
         }
 
         /**
-         * 短信类型
+         * <p>短信类型</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73</p>
          */
         public Builder smsType(Long smsType) {
             this.putQueryParameter("SmsType", smsType);
@@ -208,7 +225,11 @@ public class SmsTemplateCreateRequest extends Request {
         }
 
         /**
-         * 模板名称
+         * <p>模板名称</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -217,7 +238,10 @@ public class SmsTemplateCreateRequest extends Request {
         }
 
         /**
-         * 模板类型
+         * <p>模板类型</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56</p>
          */
         public Builder templateType(Long templateType) {
             this.putQueryParameter("TemplateType", templateType);

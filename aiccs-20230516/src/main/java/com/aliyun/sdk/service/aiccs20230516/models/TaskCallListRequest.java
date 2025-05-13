@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskCallListRequest} extends {@link RequestModel}
  *
  * <p>TaskCallListRequest</p>
@@ -27,11 +33,11 @@ public class TaskCallListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IntentTags")
-    private java.util.List < String > intentTags;
+    private java.util.List<String> intentTags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Numbers")
-    private java.util.List < String > numbers;
+    private java.util.List<String> numbers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -82,7 +88,7 @@ public class TaskCallListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,14 +117,14 @@ public class TaskCallListRequest extends Request {
     /**
      * @return intentTags
      */
-    public java.util.List < String > getIntentTags() {
+    public java.util.List<String> getIntentTags() {
         return this.intentTags;
     }
 
     /**
      * @return numbers
      */
-    public java.util.List < String > getNumbers() {
+    public java.util.List<String> getNumbers() {
         return this.numbers;
     }
 
@@ -168,8 +174,8 @@ public class TaskCallListRequest extends Request {
         private String batchId; 
         private String callDate; 
         private String endCallDate; 
-        private java.util.List < String > intentTags; 
-        private java.util.List < String > numbers; 
+        private java.util.List<String> intentTags; 
+        private java.util.List<String> numbers; 
         private Long ownerId; 
         private Long page; 
         private Long pageSize; 
@@ -197,7 +203,10 @@ public class TaskCallListRequest extends Request {
         } 
 
         /**
-         * 导入号码时返回的批次号
+         * <p>导入号码时返回的批次号</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder batchId(String batchId) {
             this.putQueryParameter("BatchId", batchId);
@@ -206,7 +215,11 @@ public class TaskCallListRequest extends Request {
         }
 
         /**
-         * 开始外呼时间
+         * <p>开始外呼时间</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-25 00:00:00</p>
          */
         public Builder callDate(String callDate) {
             this.putQueryParameter("CallDate", callDate);
@@ -215,7 +228,11 @@ public class TaskCallListRequest extends Request {
         }
 
         /**
-         * 结束外呼时间
+         * <p>结束外呼时间</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-25 00:00:00</p>
          */
         public Builder endCallDate(String endCallDate) {
             this.putQueryParameter("EndCallDate", endCallDate);
@@ -224,9 +241,9 @@ public class TaskCallListRequest extends Request {
         }
 
         /**
-         * 意向标签
+         * <p>意向标签</p>
          */
-        public Builder intentTags(java.util.List < String > intentTags) {
+        public Builder intentTags(java.util.List<String> intentTags) {
             String intentTagsShrink = shrink(intentTags, "IntentTags", "json");
             this.putQueryParameter("IntentTags", intentTagsShrink);
             this.intentTags = intentTags;
@@ -234,9 +251,9 @@ public class TaskCallListRequest extends Request {
         }
 
         /**
-         * 号码列表
+         * <p>号码列表</p>
          */
-        public Builder numbers(java.util.List < String > numbers) {
+        public Builder numbers(java.util.List<String> numbers) {
             String numbersShrink = shrink(numbers, "Numbers", "json");
             this.putQueryParameter("Numbers", numbersShrink);
             this.numbers = numbers;
@@ -253,7 +270,11 @@ public class TaskCallListRequest extends Request {
         }
 
         /**
-         * 页数
+         * <p>页数</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -262,7 +283,10 @@ public class TaskCallListRequest extends Request {
         }
 
         /**
-         * 每页外呼记录数,正整数，默认10000
+         * <p>每页外呼记录数,正整数，默认10000</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -289,7 +313,11 @@ public class TaskCallListRequest extends Request {
         }
 
         /**
-         * 任务ID
+         * <p>任务ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

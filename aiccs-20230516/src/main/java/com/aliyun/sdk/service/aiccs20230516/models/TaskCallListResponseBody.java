@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskCallListResponseBody} extends {@link TeaModel}
  *
  * <p>TaskCallListResponseBody</p>
@@ -44,6 +50,10 @@ public class TaskCallListResponseBody extends TeaModel {
 
     public static TaskCallListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -95,6 +105,18 @@ public class TaskCallListResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private Long timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskCallListResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * Code.
@@ -150,6 +172,12 @@ public class TaskCallListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TaskCallListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TaskCallListResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddWx")
         private Long addWx;
@@ -656,8 +684,58 @@ public class TaskCallListResponseBody extends TeaModel {
             private String transferStatus; 
             private Long transferStatusCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.addWx = model.addWx;
+                this.addWxStatus = model.addWxStatus;
+                this.agentExtension = model.agentExtension;
+                this.agentId = model.agentId;
+                this.agentSpeakingDuration = model.agentSpeakingDuration;
+                this.agentSpeakingTime = model.agentSpeakingTime;
+                this.agentTag = model.agentTag;
+                this.answerRecall = model.answerRecall;
+                this.answerTime = model.answerTime;
+                this.batchId = model.batchId;
+                this.callBeginTime = model.callBeginTime;
+                this.callId = model.callId;
+                this.callTimes = model.callTimes;
+                this.callType = model.callType;
+                this.chatRecord = model.chatRecord;
+                this.gateway = model.gateway;
+                this.hangupTime = model.hangupTime;
+                this.hangupType = model.hangupType;
+                this.importTime = model.importTime;
+                this.individualTag = model.individualTag;
+                this.intentDescription = model.intentDescription;
+                this.intentTag = model.intentTag;
+                this.interceptReason = model.interceptReason;
+                this.keywords = model.keywords;
+                this.number = model.number;
+                this.numberMD5 = model.numberMD5;
+                this.properties = model.properties;
+                this.remark = model.remark;
+                this.ringTime = model.ringTime;
+                this.sms = model.sms;
+                this.speakingDuration = model.speakingDuration;
+                this.speakingTime = model.speakingTime;
+                this.speakingTurns = model.speakingTurns;
+                this.status = model.status;
+                this.statusCode = model.statusCode;
+                this.statusDescription = model.statusDescription;
+                this.tag = model.tag;
+                this.taskId = model.taskId;
+                this.templateId = model.templateId;
+                this.transferStatus = model.transferStatus;
+                this.transferStatusCode = model.transferStatusCode;
+            } 
+
             /**
-             * 加微
+             * <p>加微</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder addWx(Long addWx) {
                 this.addWx = addWx;
@@ -665,7 +743,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 加微进度
+             * <p>加微进度</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder addWxStatus(String addWxStatus) {
                 this.addWxStatus = addWxStatus;
@@ -673,7 +754,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 坐席分机
+             * <p>坐席分机</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112</p>
              */
             public Builder agentExtension(String agentExtension) {
                 this.agentExtension = agentExtension;
@@ -681,7 +765,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 坐席ID
+             * <p>坐席ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>87</p>
              */
             public Builder agentId(Long agentId) {
                 this.agentId = agentId;
@@ -689,7 +776,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 人工通话时长
+             * <p>人工通话时长</p>
+             * 
+             * <strong>example:</strong>
+             * <p>98</p>
              */
             public Builder agentSpeakingDuration(Long agentSpeakingDuration) {
                 this.agentSpeakingDuration = agentSpeakingDuration;
@@ -697,7 +787,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 人工通话时长
+             * <p>人工通话时长</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder agentSpeakingTime(String agentSpeakingTime) {
                 this.agentSpeakingTime = agentSpeakingTime;
@@ -705,7 +798,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 坐席标签
+             * <p>坐席标签</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder agentTag(String agentTag) {
                 this.agentTag = agentTag;
@@ -713,7 +809,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 是否接通重呼
+             * <p>是否接通重呼</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder answerRecall(Long answerRecall) {
                 this.answerRecall = answerRecall;
@@ -721,7 +820,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 接通时间
+             * <p>接通时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-26 18:58:25</p>
              */
             public Builder answerTime(String answerTime) {
                 this.answerTime = answerTime;
@@ -729,7 +831,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 批次ID
+             * <p>批次ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder batchId(String batchId) {
                 this.batchId = batchId;
@@ -737,7 +842,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 开始通话时间
+             * <p>开始通话时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-26 18:58:25</p>
              */
             public Builder callBeginTime(String callBeginTime) {
                 this.callBeginTime = callBeginTime;
@@ -745,7 +853,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼ID
+             * <p>外呼ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9197ed9e-ceda-42a5-b683-823b23ef208e</p>
              */
             public Builder callId(String callId) {
                 this.callId = callId;
@@ -753,7 +864,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 呼叫次数
+             * <p>呼叫次数</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder callTimes(String callTimes) {
                 this.callTimes = callTimes;
@@ -761,7 +875,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼类型
+             * <p>外呼类型</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder callType(Long callType) {
                 this.callType = callType;
@@ -769,7 +886,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 对话录音
+             * <p>对话录音</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder chatRecord(String chatRecord) {
                 this.chatRecord = chatRecord;
@@ -777,7 +897,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼网关
+             * <p>外呼网关</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder gateway(String gateway) {
                 this.gateway = gateway;
@@ -785,7 +908,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 挂断时间
+             * <p>挂断时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-26 18:58:25</p>
              */
             public Builder hangupTime(String hangupTime) {
                 this.hangupTime = hangupTime;
@@ -793,7 +919,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 挂机方式
+             * <p>挂机方式</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hangupType(Long hangupType) {
                 this.hangupType = hangupType;
@@ -801,7 +930,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 导入时间
+             * <p>导入时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-26 18:58:25</p>
              */
             public Builder importTime(String importTime) {
                 this.importTime = importTime;
@@ -809,7 +941,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 个性标签
+             * <p>个性标签</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder individualTag(String individualTag) {
                 this.individualTag = individualTag;
@@ -817,7 +952,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 意向说明
+             * <p>意向说明</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值示例值</p>
              */
             public Builder intentDescription(String intentDescription) {
                 this.intentDescription = intentDescription;
@@ -825,7 +963,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 意向标签
+             * <p>意向标签</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“C”</p>
              */
             public Builder intentTag(String intentTag) {
                 this.intentTag = intentTag;
@@ -833,7 +974,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 拦截原因
+             * <p>拦截原因</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值</p>
              */
             public Builder interceptReason(String interceptReason) {
                 this.interceptReason = interceptReason;
@@ -841,7 +985,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 回复关键词
+             * <p>回复关键词</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder keywords(String keywords) {
                 this.keywords = keywords;
@@ -849,7 +996,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼号码
+             * <p>外呼号码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>138*****123</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -857,7 +1007,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼号码MD5
+             * <p>外呼号码MD5</p>
+             * 
+             * <strong>example:</strong>
+             * <p>75916b635568954583783d</p>
              */
             public Builder numberMD5(String numberMD5) {
                 this.numberMD5 = numberMD5;
@@ -865,7 +1018,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 参数
+             * <p>参数</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -873,7 +1029,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * <p>备注</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -881,7 +1040,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 振铃时长
+             * <p>振铃时长</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66</p>
              */
             public Builder ringTime(Long ringTime) {
                 this.ringTime = ringTime;
@@ -889,7 +1051,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 挂机短信
+             * <p>挂机短信</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值</p>
              */
             public Builder sms(String sms) {
                 this.sms = sms;
@@ -897,7 +1062,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * AI通话时长
+             * <p>AI通话时长</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder speakingDuration(Long speakingDuration) {
                 this.speakingDuration = speakingDuration;
@@ -905,7 +1073,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * AI通话时长
+             * <p>AI通话时长</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值示例值</p>
              */
             public Builder speakingTime(String speakingTime) {
                 this.speakingTime = speakingTime;
@@ -913,7 +1084,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 对话轮次
+             * <p>对话轮次</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder speakingTurns(String speakingTurns) {
                 this.speakingTurns = speakingTurns;
@@ -921,7 +1095,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼状态
+             * <p>外呼状态</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值示例值</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -929,7 +1106,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼状态编码
+             * <p>外呼状态编码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder statusCode(Long statusCode) {
                 this.statusCode = statusCode;
@@ -937,7 +1117,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼状态描述
+             * <p>外呼状态描述</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder statusDescription(String statusDescription) {
                 this.statusDescription = statusDescription;
@@ -945,7 +1128,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 用户自定义标签
+             * <p>用户自定义标签</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -953,7 +1139,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼任务ID
+             * <p>外呼任务ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -961,7 +1150,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * AI话术ID
+             * <p>AI话术ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -969,7 +1161,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 转人工状态
+             * <p>转人工状态</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值</p>
              */
             public Builder transferStatus(String transferStatus) {
                 this.transferStatus = transferStatus;
@@ -977,7 +1172,10 @@ public class TaskCallListResponseBody extends TeaModel {
             }
 
             /**
-             * 转人工状态编码
+             * <p>转人工状态编码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder transferStatusCode(Long transferStatusCode) {
                 this.transferStatusCode = transferStatusCode;
@@ -991,9 +1189,15 @@ public class TaskCallListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TaskCallListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TaskCallListResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
@@ -1026,7 +1230,7 @@ public class TaskCallListResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -1059,16 +1263,27 @@ public class TaskCallListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNo; 
             private Long pageSize; 
             private Long totalCount; 
             private Long totalPage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+                this.totalPage = model.totalPage;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddBlacklistRequest} extends {@link RequestModel}
  *
  * <p>AddBlacklistRequest</p>
@@ -19,7 +25,7 @@ public class AddBlacklistRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Numbers")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > numbers;
+    private java.util.List<String> numbers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -56,7 +62,7 @@ public class AddBlacklistRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -71,7 +77,7 @@ public class AddBlacklistRequest extends Request {
     /**
      * @return numbers
      */
-    public java.util.List < String > getNumbers() {
+    public java.util.List<String> getNumbers() {
         return this.numbers;
     }
 
@@ -105,7 +111,7 @@ public class AddBlacklistRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddBlacklistRequest, Builder> {
         private String expiredDay; 
-        private java.util.List < String > numbers; 
+        private java.util.List<String> numbers; 
         private Long ownerId; 
         private String remark; 
         private String resourceOwnerAccount; 
@@ -126,7 +132,11 @@ public class AddBlacklistRequest extends Request {
         } 
 
         /**
-         * 有效天数
+         * <p>有效天数</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder expiredDay(String expiredDay) {
             this.putQueryParameter("ExpiredDay", expiredDay);
@@ -135,9 +145,10 @@ public class AddBlacklistRequest extends Request {
         }
 
         /**
-         * 号码列表
+         * <p>号码列表</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder numbers(java.util.List < String > numbers) {
+        public Builder numbers(java.util.List<String> numbers) {
             String numbersShrink = shrink(numbers, "Numbers", "json");
             this.putQueryParameter("Numbers", numbersShrink);
             this.numbers = numbers;
@@ -154,7 +165,11 @@ public class AddBlacklistRequest extends Request {
         }
 
         /**
-         * 备注
+         * <p>备注</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

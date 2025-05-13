@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskCancelCallResponseBody} extends {@link TeaModel}
  *
  * <p>TaskCancelCallResponseBody</p>
@@ -44,6 +50,10 @@ public class TaskCancelCallResponseBody extends TeaModel {
 
     public static TaskCancelCallResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -95,6 +105,18 @@ public class TaskCancelCallResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private Long timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskCancelCallResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * Code.
@@ -150,9 +172,15 @@ public class TaskCancelCallResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TaskCancelCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>TaskCancelCallResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UnHandleNumbers")
-        private java.util.List < String > unHandleNumbers;
+        private java.util.List<String> unHandleNumbers;
 
         private Model(Builder builder) {
             this.unHandleNumbers = builder.unHandleNumbers;
@@ -169,17 +197,24 @@ public class TaskCancelCallResponseBody extends TeaModel {
         /**
          * @return unHandleNumbers
          */
-        public java.util.List < String > getUnHandleNumbers() {
+        public java.util.List<String> getUnHandleNumbers() {
             return this.unHandleNumbers;
         }
 
         public static final class Builder {
-            private java.util.List < String > unHandleNumbers; 
+            private java.util.List<String> unHandleNumbers; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.unHandleNumbers = model.unHandleNumbers;
+            } 
 
             /**
-             * 错误手机号
+             * <p>错误手机号</p>
              */
-            public Builder unHandleNumbers(java.util.List < String > unHandleNumbers) {
+            public Builder unHandleNumbers(java.util.List<String> unHandleNumbers) {
                 this.unHandleNumbers = unHandleNumbers;
                 return this;
             }

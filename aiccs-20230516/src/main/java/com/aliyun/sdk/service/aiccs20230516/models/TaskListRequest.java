@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskListRequest} extends {@link RequestModel}
  *
  * <p>TaskListRequest</p>
@@ -58,7 +64,7 @@ public class TaskListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,7 +143,10 @@ public class TaskListRequest extends Request {
         } 
 
         /**
-         * 创建时间
+         * <p>创建时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-05 12:11:11</p>
          */
         public Builder createTime(String createTime) {
             this.putQueryParameter("CreateTime", createTime);
@@ -146,7 +155,10 @@ public class TaskListRequest extends Request {
         }
 
         /**
-         * 最后外呼时间
+         * <p>最后外呼时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-05 12:11:11</p>
          */
         public Builder lastCallTime(String lastCallTime) {
             this.putQueryParameter("LastCallTime", lastCallTime);
@@ -182,7 +194,10 @@ public class TaskListRequest extends Request {
         }
 
         /**
-         * 任务状态。1 未启用，2 启用中，4 已停止
+         * <p>任务状态。1 未启用，2 启用中，4 已停止</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder status(Long status) {
             this.putQueryParameter("Status", status);
@@ -191,7 +206,10 @@ public class TaskListRequest extends Request {
         }
 
         /**
-         * 任务ID
+         * <p>任务ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

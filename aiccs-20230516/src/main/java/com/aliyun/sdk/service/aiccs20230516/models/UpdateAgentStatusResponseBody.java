@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAgentStatusResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateAgentStatusResponseBody</p>
@@ -18,7 +24,7 @@ public class UpdateAgentStatusResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Model")
-    private java.util.Map < String, ? > model;
+    private java.util.Map<String, ?> model;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -46,6 +52,10 @@ public class UpdateAgentStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -63,7 +73,7 @@ public class UpdateAgentStatusResponseBody extends TeaModel {
     /**
      * @return model
      */
-    public java.util.Map < String, ? > getModel() {
+    public java.util.Map<String, ?> getModel() {
         return this.model;
     }
 
@@ -91,10 +101,22 @@ public class UpdateAgentStatusResponseBody extends TeaModel {
     public static final class Builder {
         private Long code; 
         private String message; 
-        private java.util.Map < String, ? > model; 
+        private java.util.Map<String, ?> model; 
         private String requestId; 
         private String success; 
         private Long timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateAgentStatusResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * Code.
@@ -115,7 +137,7 @@ public class UpdateAgentStatusResponseBody extends TeaModel {
         /**
          * Model.
          */
-        public Builder model(java.util.Map < String, ? > model) {
+        public Builder model(java.util.Map<String, ?> model) {
             this.model = model;
             return this;
         }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PageResponseBody} extends {@link TeaModel}
  *
  * <p>PageResponseBody</p>
@@ -44,6 +50,10 @@ public class PageResponseBody extends TeaModel {
 
     public static PageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -95,6 +105,18 @@ public class PageResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private Long timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(PageResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * Code.
@@ -150,6 +172,12 @@ public class PageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PageResponseBody} extends {@link TeaModel}
+     *
+     * <p>PageResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -224,8 +252,22 @@ public class PageResponseBody extends TeaModel {
             private String numberMD5; 
             private String remark; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.createTime = model.createTime;
+                this.expirationTime = model.expirationTime;
+                this.number = model.number;
+                this.numberMD5 = model.numberMD5;
+                this.remark = model.remark;
+            } 
+
             /**
-             * 添加时间
+             * <p>添加时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-03-06 10:10:10</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -233,7 +275,10 @@ public class PageResponseBody extends TeaModel {
             }
 
             /**
-             * 过期时间
+             * <p>过期时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder expirationTime(String expirationTime) {
                 this.expirationTime = expirationTime;
@@ -241,7 +286,10 @@ public class PageResponseBody extends TeaModel {
             }
 
             /**
-             * 手机号码
+             * <p>手机号码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13314206082</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -249,7 +297,10 @@ public class PageResponseBody extends TeaModel {
             }
 
             /**
-             * 手机号MD5
+             * <p>手机号MD5</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e10adc3949ba59abbe56e057f20f883e</p>
              */
             public Builder numberMD5(String numberMD5) {
                 this.numberMD5 = numberMD5;
@@ -257,7 +308,10 @@ public class PageResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * <p>备注</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -271,9 +325,15 @@ public class PageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PageResponseBody} extends {@link TeaModel}
+     *
+     * <p>PageResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
@@ -306,7 +366,7 @@ public class PageResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -339,16 +399,27 @@ public class PageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNo; 
             private Long pageSize; 
             private Long totalCount; 
             private Long totalPage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.list = model.list;
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+                this.totalPage = model.totalPage;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

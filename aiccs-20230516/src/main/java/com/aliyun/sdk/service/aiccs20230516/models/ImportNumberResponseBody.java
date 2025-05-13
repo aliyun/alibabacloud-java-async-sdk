@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20230516.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportNumberResponseBody} extends {@link TeaModel}
  *
  * <p>ImportNumberResponseBody</p>
@@ -44,6 +50,10 @@ public class ImportNumberResponseBody extends TeaModel {
 
     public static ImportNumberResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -95,6 +105,18 @@ public class ImportNumberResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private Long timestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImportNumberResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.model = model.model;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.timestamp = model.timestamp;
+        } 
 
         /**
          * Code.
@@ -150,6 +172,12 @@ public class ImportNumberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ImportNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportNumberResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BatchId")
         private Long batchId;
@@ -223,6 +251,17 @@ public class ImportNumberResponseBody extends TeaModel {
             private String data; 
             private Long importNum; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.batchId = model.batchId;
+                this.code = model.code;
+                this.data = model.data;
+                this.importNum = model.importNum;
+                this.message = model.message;
+            } 
 
             /**
              * BatchId.
