@@ -1530,6 +1530,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListApplicationsForSwimmingLane  ListApplicationsForSwimmingLaneRequest
+     * @return ListApplicationsForSwimmingLaneResponse
+     */
+    @Override
+    public CompletableFuture<ListApplicationsForSwimmingLaneResponse> listApplicationsForSwimmingLane(ListApplicationsForSwimmingLaneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListApplicationsForSwimmingLane").setMethod(HttpMethod.GET).setPathRegex("/pop/v1/cas/gray/listApplicationsForSwimmingLane").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListApplicationsForSwimmingLaneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListApplicationsForSwimmingLaneResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListChangeOrders  ListChangeOrdersRequest
      * @return ListChangeOrdersResponse
      */
