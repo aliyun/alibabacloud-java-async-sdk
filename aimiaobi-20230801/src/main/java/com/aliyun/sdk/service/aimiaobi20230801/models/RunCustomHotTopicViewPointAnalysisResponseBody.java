@@ -295,7 +295,190 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
      *
      * <p>RunCustomHotTopicViewPointAnalysisResponseBody</p>
      */
+    public static class Articles extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Author")
+        private String author;
+
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("PubTime")
+        private String pubTime;
+
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
+
+        @com.aliyun.core.annotation.NameInMap("Summary")
+        private String summary;
+
+        @com.aliyun.core.annotation.NameInMap("Title")
+        private String title;
+
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
+
+        private Articles(Builder builder) {
+            this.author = builder.author;
+            this.content = builder.content;
+            this.pubTime = builder.pubTime;
+            this.source = builder.source;
+            this.summary = builder.summary;
+            this.title = builder.title;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Articles create() {
+            return builder().build();
+        }
+
+        /**
+         * @return author
+         */
+        public String getAuthor() {
+            return this.author;
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return pubTime
+         */
+        public String getPubTime() {
+            return this.pubTime;
+        }
+
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
+         * @return summary
+         */
+        public String getSummary() {
+            return this.summary;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String author; 
+            private String content; 
+            private String pubTime; 
+            private String source; 
+            private String summary; 
+            private String title; 
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Articles model) {
+                this.author = model.author;
+                this.content = model.content;
+                this.pubTime = model.pubTime;
+                this.source = model.source;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
+            /**
+             * Author.
+             */
+            public Builder author(String author) {
+                this.author = author;
+                return this;
+            }
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * PubTime.
+             */
+            public Builder pubTime(String pubTime) {
+                this.pubTime = pubTime;
+                return this;
+            }
+
+            /**
+             * Source.
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * Summary.
+             */
+            public Builder summary(String summary) {
+                this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public Articles build() {
+                return new Articles(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunCustomHotTopicViewPointAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunCustomHotTopicViewPointAnalysisResponseBody</p>
+     */
     public static class Output extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Articles")
+        private java.util.List<Articles> articles;
+
         @com.aliyun.core.annotation.NameInMap("AskUser")
         private java.util.List<String> askUser;
 
@@ -315,6 +498,7 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         private String topicId;
 
         private Output(Builder builder) {
+            this.articles = builder.articles;
             this.askUser = builder.askUser;
             this.asyncTaskId = builder.asyncTaskId;
             this.attitude = builder.attitude;
@@ -329,6 +513,13 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
 
         public static Output create() {
             return builder().build();
+        }
+
+        /**
+         * @return articles
+         */
+        public java.util.List<Articles> getArticles() {
+            return this.articles;
         }
 
         /**
@@ -374,6 +565,7 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<Articles> articles; 
             private java.util.List<String> askUser; 
             private String asyncTaskId; 
             private String attitude; 
@@ -385,6 +577,7 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
             } 
 
             private Builder(Output model) {
+                this.articles = model.articles;
                 this.askUser = model.askUser;
                 this.asyncTaskId = model.asyncTaskId;
                 this.attitude = model.attitude;
@@ -392,6 +585,14 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
                 this.text = model.text;
                 this.topicId = model.topicId;
             } 
+
+            /**
+             * Articles.
+             */
+            public Builder articles(java.util.List<Articles> articles) {
+                this.articles = articles;
+                return this;
+            }
 
             /**
              * AskUser.
