@@ -88,7 +88,7 @@ public class AddConnectableClusterRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,10 @@ public class AddConnectableClusterRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>请求体。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;instanceId&quot;:&quot;es-cn-09k1rgid9000g****&quot; }</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);
@@ -110,7 +113,10 @@ public class AddConnectableClusterRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

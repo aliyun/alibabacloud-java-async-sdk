@@ -67,7 +67,10 @@ public class AddConnectableClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A5D8E74-565C-43DC-B031-29289FA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,14 @@ public class AddConnectableClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The following information is returned:</p>
+         * <ul>
+         * <li>true: The configuration is successful.</li>
+         * <li>false: The configuration failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

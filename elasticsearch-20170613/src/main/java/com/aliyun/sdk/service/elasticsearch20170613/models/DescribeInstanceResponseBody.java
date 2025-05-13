@@ -1913,8 +1913,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enablePublic")
         private Boolean enablePublic;
 
-        @com.aliyun.core.annotation.NameInMap("endtime")
-        private Long endtime;
+        @com.aliyun.core.annotation.NameInMap("endTime")
+        private Long endTime;
 
         @com.aliyun.core.annotation.NameInMap("esConfig")
         private java.util.Map<String, ?> esConfig;
@@ -2054,7 +2054,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.enableKibanaPrivateNetwork = builder.enableKibanaPrivateNetwork;
             this.enableKibanaPublicNetwork = builder.enableKibanaPublicNetwork;
             this.enablePublic = builder.enablePublic;
-            this.endtime = builder.endtime;
+            this.endTime = builder.endTime;
             this.esConfig = builder.esConfig;
             this.esIPBlacklist = builder.esIPBlacklist;
             this.esIPWhitelist = builder.esIPWhitelist;
@@ -2205,10 +2205,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * @return endtime
+         * @return endTime
          */
-        public Long getEndtime() {
-            return this.endtime;
+        public Long getEndTime() {
+            return this.endTime;
         }
 
         /**
@@ -2513,7 +2513,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean enableKibanaPrivateNetwork; 
             private Boolean enableKibanaPublicNetwork; 
             private Boolean enablePublic; 
-            private Long endtime; 
+            private Long endTime; 
             private java.util.Map<String, ?> esConfig; 
             private java.util.List<String> esIPBlacklist; 
             private java.util.List<String> esIPWhitelist; 
@@ -2574,7 +2574,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 this.enableKibanaPrivateNetwork = model.enableKibanaPrivateNetwork;
                 this.enableKibanaPublicNetwork = model.enableKibanaPublicNetwork;
                 this.enablePublic = model.enablePublic;
-                this.endtime = model.endtime;
+                this.endTime = model.endTime;
                 this.esConfig = model.esConfig;
                 this.esIPBlacklist = model.esIPBlacklist;
                 this.esIPWhitelist = model.esIPWhitelist;
@@ -2731,10 +2731,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * endtime.
+             * endTime.
              */
-            public Builder endtime(Long endtime) {
-                this.endtime = endtime;
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
                 return this;
             }
 
