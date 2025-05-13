@@ -448,6 +448,12 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
+        @com.aliyun.core.annotation.NameInMap("ApplicationEnableGreyTagRoute")
+        private Boolean applicationEnableGreyTagRoute;
+
+        @com.aliyun.core.annotation.NameInMap("ApplicationUpdateStrategy")
+        private String applicationUpdateStrategy;
+
         @com.aliyun.core.annotation.NameInMap("ApprovalId")
         private String approvalId;
 
@@ -499,6 +505,8 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.applicationEnableGreyTagRoute = builder.applicationEnableGreyTagRoute;
+            this.applicationUpdateStrategy = builder.applicationUpdateStrategy;
             this.approvalId = builder.approvalId;
             this.auto = builder.auto;
             this.batchCount = builder.batchCount;
@@ -537,6 +545,20 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
          */
         public String getAppName() {
             return this.appName;
+        }
+
+        /**
+         * @return applicationEnableGreyTagRoute
+         */
+        public Boolean getApplicationEnableGreyTagRoute() {
+            return this.applicationEnableGreyTagRoute;
+        }
+
+        /**
+         * @return applicationUpdateStrategy
+         */
+        public String getApplicationUpdateStrategy() {
+            return this.applicationUpdateStrategy;
         }
 
         /**
@@ -654,6 +676,8 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         public static final class Builder {
             private String appId; 
             private String appName; 
+            private Boolean applicationEnableGreyTagRoute; 
+            private String applicationUpdateStrategy; 
             private String approvalId; 
             private Boolean auto; 
             private Integer batchCount; 
@@ -677,6 +701,8 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.appId = model.appId;
                 this.appName = model.appName;
+                this.applicationEnableGreyTagRoute = model.applicationEnableGreyTagRoute;
+                this.applicationUpdateStrategy = model.applicationUpdateStrategy;
                 this.approvalId = model.approvalId;
                 this.auto = model.auto;
                 this.batchCount = model.batchCount;
@@ -714,6 +740,22 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
              */
             public Builder appName(String appName) {
                 this.appName = appName;
+                return this;
+            }
+
+            /**
+             * ApplicationEnableGreyTagRoute.
+             */
+            public Builder applicationEnableGreyTagRoute(Boolean applicationEnableGreyTagRoute) {
+                this.applicationEnableGreyTagRoute = applicationEnableGreyTagRoute;
+                return this;
+            }
+
+            /**
+             * ApplicationUpdateStrategy.
+             */
+            public Builder applicationUpdateStrategy(String applicationUpdateStrategy) {
+                this.applicationUpdateStrategy = applicationUpdateStrategy;
                 return this;
             }
 

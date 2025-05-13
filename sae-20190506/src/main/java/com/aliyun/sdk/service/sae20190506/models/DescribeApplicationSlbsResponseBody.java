@@ -742,6 +742,15 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
      * <p>DescribeApplicationSlbsResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppId")
+        private String appId;
+
+        @com.aliyun.core.annotation.NameInMap("AppName")
+        private String appName;
+
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private String clusterId;
+
         @com.aliyun.core.annotation.NameInMap("Internet")
         private java.util.List<Internet> internet;
 
@@ -773,6 +782,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         private String intranetSlbId;
 
         private Data(Builder builder) {
+            this.appId = builder.appId;
+            this.appName = builder.appName;
+            this.clusterId = builder.clusterId;
             this.internet = builder.internet;
             this.internetIp = builder.internetIp;
             this.internetSlbChargeType = builder.internetSlbChargeType;
@@ -791,6 +803,27 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
+        }
+
+        /**
+         * @return appName
+         */
+        public String getAppName() {
+            return this.appName;
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         /**
@@ -864,6 +897,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appId; 
+            private String appName; 
+            private String clusterId; 
             private java.util.List<Internet> internet; 
             private String internetIp; 
             private String internetSlbChargeType; 
@@ -879,6 +915,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.clusterId = model.clusterId;
                 this.internet = model.internet;
                 this.internetIp = model.internetIp;
                 this.internetSlbChargeType = model.internetSlbChargeType;
@@ -890,6 +929,30 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
                 this.intranetSlbExpired = model.intranetSlbExpired;
                 this.intranetSlbId = model.intranetSlbId;
             } 
+
+            /**
+             * AppId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
+
+            /**
+             * AppName.
+             */
+            public Builder appName(String appName) {
+                this.appName = appName;
+                return this;
+            }
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
 
             /**
              * <p>The configurations of the Internet-facing SLB instance.</p>

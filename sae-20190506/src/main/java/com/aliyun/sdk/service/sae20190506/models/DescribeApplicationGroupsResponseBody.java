@@ -256,6 +256,9 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PackageVersion")
         private String packageVersion;
 
+        @com.aliyun.core.annotation.NameInMap("PackageVersionId")
+        private String packageVersionId;
+
         @com.aliyun.core.annotation.NameInMap("Replicas")
         private Integer replicas;
 
@@ -275,6 +278,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             this.packageType = builder.packageType;
             this.packageUrl = builder.packageUrl;
             this.packageVersion = builder.packageVersion;
+            this.packageVersionId = builder.packageVersionId;
             this.replicas = builder.replicas;
             this.runningInstances = builder.runningInstances;
             this.webContainer = builder.webContainer;
@@ -352,6 +356,13 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return packageVersionId
+         */
+        public String getPackageVersionId() {
+            return this.packageVersionId;
+        }
+
+        /**
          * @return replicas
          */
         public Integer getReplicas() {
@@ -382,6 +393,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             private String packageType; 
             private String packageUrl; 
             private String packageVersion; 
+            private String packageVersionId; 
             private Integer replicas; 
             private Integer runningInstances; 
             private String webContainer; 
@@ -399,6 +411,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
                 this.packageType = model.packageType;
                 this.packageUrl = model.packageUrl;
                 this.packageVersion = model.packageVersion;
+                this.packageVersionId = model.packageVersionId;
                 this.replicas = model.replicas;
                 this.runningInstances = model.runningInstances;
                 this.webContainer = model.webContainer;
@@ -523,6 +536,14 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
              */
             public Builder packageVersion(String packageVersion) {
                 this.packageVersion = packageVersion;
+                return this;
+            }
+
+            /**
+             * PackageVersionId.
+             */
+            public Builder packageVersionId(String packageVersionId) {
+                this.packageVersionId = packageVersionId;
                 return this;
             }
 
