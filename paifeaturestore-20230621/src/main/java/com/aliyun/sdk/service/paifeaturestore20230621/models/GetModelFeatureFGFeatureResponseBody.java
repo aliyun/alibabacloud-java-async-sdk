@@ -48,6 +48,10 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return lookupFeatures
      */
@@ -89,6 +93,17 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> reserves; 
         private java.util.List<SequenceFeatures> sequenceFeatures; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetModelFeatureFGFeatureResponseBody model) {
+            this.lookupFeatures = model.lookupFeatures;
+            this.rawFeatures = model.rawFeatures;
+            this.requestId = model.requestId;
+            this.reserves = model.reserves;
+            this.sequenceFeatures = model.sequenceFeatures;
+        } 
 
         /**
          * LookupFeatures.
@@ -239,6 +254,19 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
             private String mapFeatureDomain; 
             private String mapFeatureName; 
             private String valueType; 
+
+            private Builder() {
+            } 
+
+            private Builder(LookupFeatures model) {
+                this.defaultValue = model.defaultValue;
+                this.featureName = model.featureName;
+                this.keyFeatureDomain = model.keyFeatureDomain;
+                this.keyFeatureName = model.keyFeatureName;
+                this.mapFeatureDomain = model.mapFeatureDomain;
+                this.mapFeatureName = model.mapFeatureName;
+                this.valueType = model.valueType;
+            } 
 
             /**
              * DefaultValue.
@@ -395,6 +423,18 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
             private String inputFeatureName; 
             private String valueType; 
 
+            private Builder() {
+            } 
+
+            private Builder(RawFeatures model) {
+                this.defaultValue = model.defaultValue;
+                this.featureDomain = model.featureDomain;
+                this.featureName = model.featureName;
+                this.featureType = model.featureType;
+                this.inputFeatureName = model.inputFeatureName;
+                this.valueType = model.valueType;
+            } 
+
             /**
              * DefaultValue.
              */
@@ -542,6 +582,18 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
             private String inputFeatureName; 
             private String valueType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubFeatures model) {
+                this.defaultValue = model.defaultValue;
+                this.featureDomain = model.featureDomain;
+                this.featureName = model.featureName;
+                this.featureType = model.featureType;
+                this.inputFeatureName = model.inputFeatureName;
+                this.valueType = model.valueType;
+            } 
+
             /**
              * DefaultValue.
              */
@@ -676,6 +728,17 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
             private String sequenceDelim; 
             private Long sequenceLength; 
             private java.util.List<SubFeatures> subFeatures; 
+
+            private Builder() {
+            } 
+
+            private Builder(SequenceFeatures model) {
+                this.attributeDelim = model.attributeDelim;
+                this.featureName = model.featureName;
+                this.sequenceDelim = model.sequenceDelim;
+                this.sequenceLength = model.sequenceLength;
+                this.subFeatures = model.subFeatures;
+            } 
 
             /**
              * AttributeDelim.

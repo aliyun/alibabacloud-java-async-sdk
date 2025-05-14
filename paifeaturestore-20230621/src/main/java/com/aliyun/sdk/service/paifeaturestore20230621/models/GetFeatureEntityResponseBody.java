@@ -56,6 +56,10 @@ public class GetFeatureEntityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gmtCreateTime
      */
@@ -113,6 +117,19 @@ public class GetFeatureEntityResponseBody extends TeaModel {
         private String projectId; 
         private String projectName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFeatureEntityResponseBody model) {
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.joinId = model.joinId;
+            this.name = model.name;
+            this.owner = model.owner;
+            this.projectId = model.projectId;
+            this.projectName = model.projectName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * GmtCreateTime.

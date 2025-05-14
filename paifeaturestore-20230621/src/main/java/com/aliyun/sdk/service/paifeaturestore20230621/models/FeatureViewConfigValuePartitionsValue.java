@@ -44,6 +44,10 @@ public class FeatureViewConfigValuePartitionsValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return value
      */
@@ -77,6 +81,16 @@ public class FeatureViewConfigValuePartitionsValue extends TeaModel {
         private java.util.List<String> values; 
         private String startValue; 
         private String endValue; 
+
+        private Builder() {
+        } 
+
+        private Builder(FeatureViewConfigValuePartitionsValue model) {
+            this.value = model.value;
+            this.values = model.values;
+            this.startValue = model.startValue;
+            this.endValue = model.endValue;
+        } 
 
         /**
          * Value.

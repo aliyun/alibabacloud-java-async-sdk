@@ -36,6 +36,10 @@ public class CreateLabelTableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return labelTableId
      */
@@ -53,6 +57,14 @@ public class CreateLabelTableResponseBody extends TeaModel {
     public static final class Builder {
         private String labelTableId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateLabelTableResponseBody model) {
+            this.labelTableId = model.labelTableId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * LabelTableId.

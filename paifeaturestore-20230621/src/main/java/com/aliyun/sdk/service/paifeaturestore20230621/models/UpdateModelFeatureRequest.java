@@ -66,7 +66,7 @@ public class UpdateModelFeatureRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -290,6 +290,16 @@ public class UpdateModelFeatureRequest extends Request {
             private String featureViewId; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Features model) {
+                this.aliasName = model.aliasName;
+                this.featureViewId = model.featureViewId;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * AliasName.

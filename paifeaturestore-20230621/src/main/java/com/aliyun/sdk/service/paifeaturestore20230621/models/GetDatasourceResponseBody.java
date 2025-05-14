@@ -64,6 +64,10 @@ public class GetDatasourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -137,6 +141,21 @@ public class GetDatasourceResponseBody extends TeaModel {
         private String type; 
         private String uri; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDatasourceResponseBody model) {
+            this.config = model.config;
+            this.datasourceId = model.datasourceId;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.type = model.type;
+            this.uri = model.uri;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * Config.

@@ -40,6 +40,10 @@ public class ListModelFeaturesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return modelFeatures
      */
@@ -65,6 +69,15 @@ public class ListModelFeaturesResponseBody extends TeaModel {
         private java.util.List<ModelFeatures> modelFeatures; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListModelFeaturesResponseBody model) {
+            this.modelFeatures = model.modelFeatures;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * ModelFeatures.
@@ -211,6 +224,20 @@ public class ListModelFeaturesResponseBody extends TeaModel {
             private String owner; 
             private String projectId; 
             private String projectName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModelFeatures model) {
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.labelTableName = model.labelTableName;
+                this.modelFeatureId = model.modelFeatureId;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+            } 
 
             /**
              * GmtCreateTime.

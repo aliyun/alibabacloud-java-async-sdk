@@ -92,6 +92,10 @@ public class GetProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -221,6 +225,28 @@ public class GetProjectResponseBody extends TeaModel {
         private String onlineDatasourceType; 
         private String owner; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProjectResponseBody model) {
+            this.description = model.description;
+            this.featureEntityCount = model.featureEntityCount;
+            this.featureViewCount = model.featureViewCount;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.modelCount = model.modelCount;
+            this.name = model.name;
+            this.offlineDatasourceId = model.offlineDatasourceId;
+            this.offlineDatasourceName = model.offlineDatasourceName;
+            this.offlineDatasourceType = model.offlineDatasourceType;
+            this.offlineLifecycle = model.offlineLifecycle;
+            this.onlineDatasourceId = model.onlineDatasourceId;
+            this.onlineDatasourceName = model.onlineDatasourceName;
+            this.onlineDatasourceType = model.onlineDatasourceType;
+            this.owner = model.owner;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Description.

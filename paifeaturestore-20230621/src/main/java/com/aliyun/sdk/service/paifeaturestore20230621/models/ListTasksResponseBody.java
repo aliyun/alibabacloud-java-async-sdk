@@ -40,6 +40,10 @@ public class ListTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListTasksResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Tasks> tasks; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTasksResponseBody model) {
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * RequestId.
@@ -235,6 +248,22 @@ public class ListTasksResponseBody extends TeaModel {
             private String status; 
             private String taskId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtExecutedTime = model.gmtExecutedTime;
+                this.gmtFinishedTime = model.gmtFinishedTime;
+                this.objectId = model.objectId;
+                this.objectType = model.objectType;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.type = model.type;
+            } 
 
             /**
              * GmtCreateTime.

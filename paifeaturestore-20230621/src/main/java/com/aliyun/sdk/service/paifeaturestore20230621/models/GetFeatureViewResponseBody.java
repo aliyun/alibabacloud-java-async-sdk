@@ -128,6 +128,10 @@ public class GetFeatureViewResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -329,6 +333,37 @@ public class GetFeatureViewResponseBody extends TeaModel {
         private String type; 
         private String writeMethod; 
         private Boolean writeToFeatureDB; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFeatureViewResponseBody model) {
+            this.config = model.config;
+            this.featureEntityId = model.featureEntityId;
+            this.featureEntityName = model.featureEntityName;
+            this.fields = model.fields;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.gmtSyncTime = model.gmtSyncTime;
+            this.joinId = model.joinId;
+            this.lastSyncConfig = model.lastSyncConfig;
+            this.mockTableName = model.mockTableName;
+            this.name = model.name;
+            this.owner = model.owner;
+            this.projectId = model.projectId;
+            this.projectName = model.projectName;
+            this.publishTableScript = model.publishTableScript;
+            this.registerDatasourceId = model.registerDatasourceId;
+            this.registerDatasourceName = model.registerDatasourceName;
+            this.registerTable = model.registerTable;
+            this.requestId = model.requestId;
+            this.syncOnlineTable = model.syncOnlineTable;
+            this.TTL = model.TTL;
+            this.tags = model.tags;
+            this.type = model.type;
+            this.writeMethod = model.writeMethod;
+            this.writeToFeatureDB = model.writeToFeatureDB;
+        } 
 
         /**
          * Config.
@@ -542,6 +577,177 @@ public class GetFeatureViewResponseBody extends TeaModel {
      *
      * <p>GetFeatureViewResponseBody</p>
      */
+    public static class Input extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Input(Builder builder) {
+            this.name = builder.name;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Input create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Input build() {
+                return new Input(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetFeatureViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureViewResponseBody</p>
+     */
+    public static class Transform extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Input")
+        private java.util.List<Input> input;
+
+        @com.aliyun.core.annotation.NameInMap("LLMConfigId")
+        private Integer LLMConfigId;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Transform(Builder builder) {
+            this.input = builder.input;
+            this.LLMConfigId = builder.LLMConfigId;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Transform create() {
+            return builder().build();
+        }
+
+        /**
+         * @return input
+         */
+        public java.util.List<Input> getInput() {
+            return this.input;
+        }
+
+        /**
+         * @return LLMConfigId
+         */
+        public Integer getLLMConfigId() {
+            return this.LLMConfigId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private java.util.List<Input> input; 
+            private Integer LLMConfigId; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Transform model) {
+                this.input = model.input;
+                this.LLMConfigId = model.LLMConfigId;
+                this.type = model.type;
+            } 
+
+            /**
+             * Input.
+             */
+            public Builder input(java.util.List<Input> input) {
+                this.input = input;
+                return this;
+            }
+
+            /**
+             * LLMConfigId.
+             */
+            public Builder LLMConfigId(Integer LLMConfigId) {
+                this.LLMConfigId = LLMConfigId;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Transform build() {
+                return new Transform(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetFeatureViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureViewResponseBody</p>
+     */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.List<String> attributes;
@@ -549,12 +755,16 @@ public class GetFeatureViewResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("Transform")
+        private Transform transform;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Fields(Builder builder) {
             this.attributes = builder.attributes;
             this.name = builder.name;
+            this.transform = builder.transform;
             this.type = builder.type;
         }
 
@@ -581,6 +791,13 @@ public class GetFeatureViewResponseBody extends TeaModel {
         }
 
         /**
+         * @return transform
+         */
+        public Transform getTransform() {
+            return this.transform;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -590,7 +807,18 @@ public class GetFeatureViewResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> attributes; 
             private String name; 
+            private Transform transform; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.attributes = model.attributes;
+                this.name = model.name;
+                this.transform = model.transform;
+                this.type = model.type;
+            } 
 
             /**
              * Attributes.
@@ -605,6 +833,14 @@ public class GetFeatureViewResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Transform.
+             */
+            public Builder transform(Transform transform) {
+                this.transform = transform;
                 return this;
             }
 

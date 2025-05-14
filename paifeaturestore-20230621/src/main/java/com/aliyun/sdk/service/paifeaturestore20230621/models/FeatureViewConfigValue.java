@@ -44,6 +44,10 @@ public class FeatureViewConfigValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return partitions
      */
@@ -77,6 +81,16 @@ public class FeatureViewConfigValue extends TeaModel {
         private String eventTime; 
         private Boolean equal; 
         private Boolean useMock; 
+
+        private Builder() {
+        } 
+
+        private Builder(FeatureViewConfigValue model) {
+            this.partitions = model.partitions;
+            this.eventTime = model.eventTime;
+            this.equal = model.equal;
+            this.useMock = model.useMock;
+        } 
 
         /**
          * Partitions.

@@ -36,6 +36,10 @@ public class CreateFeatureEntityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return featureEntityId
      */
@@ -53,6 +57,14 @@ public class CreateFeatureEntityResponseBody extends TeaModel {
     public static final class Builder {
         private String featureEntityId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateFeatureEntityResponseBody model) {
+            this.featureEntityId = model.featureEntityId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * FeatureEntityId.

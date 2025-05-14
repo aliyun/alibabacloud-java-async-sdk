@@ -40,6 +40,10 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return featureEntities
      */
@@ -65,6 +69,15 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
         private java.util.List<FeatureEntities> featureEntities; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFeatureEntitiesResponseBody model) {
+            this.featureEntities = model.featureEntities;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * FeatureEntities.
@@ -199,6 +212,19 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
             private String owner; 
             private String projectId; 
             private String projectName; 
+
+            private Builder() {
+            } 
+
+            private Builder(FeatureEntities model) {
+                this.featureEntityId = model.featureEntityId;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.joinId = model.joinId;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+            } 
 
             /**
              * FeatureEntityId.

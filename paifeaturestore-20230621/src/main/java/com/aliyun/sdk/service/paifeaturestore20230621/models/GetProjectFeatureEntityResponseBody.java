@@ -52,6 +52,10 @@ public class GetProjectFeatureEntityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return featureEntityId
      */
@@ -101,6 +105,18 @@ public class GetProjectFeatureEntityResponseBody extends TeaModel {
         private String projectName; 
         private String requestId; 
         private String workspaceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProjectFeatureEntityResponseBody model) {
+            this.featureEntityId = model.featureEntityId;
+            this.joinId = model.joinId;
+            this.name = model.name;
+            this.projectName = model.projectName;
+            this.requestId = model.requestId;
+            this.workspaceId = model.workspaceId;
+        } 
 
         /**
          * FeatureEntityId.

@@ -80,6 +80,10 @@ public class GetTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -185,6 +189,25 @@ public class GetTaskResponseBody extends TeaModel {
         private String runningConfig; 
         private String status; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskResponseBody model) {
+            this.config = model.config;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtExecutedTime = model.gmtExecutedTime;
+            this.gmtFinishedTime = model.gmtFinishedTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.objectId = model.objectId;
+            this.objectType = model.objectType;
+            this.projectId = model.projectId;
+            this.projectName = model.projectName;
+            this.requestId = model.requestId;
+            this.runningConfig = model.runningConfig;
+            this.status = model.status;
+            this.type = model.type;
+        } 
 
         /**
          * Config.

@@ -40,6 +40,10 @@ public class GetDatasourceTableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fields
      */
@@ -65,6 +69,15 @@ public class GetDatasourceTableResponseBody extends TeaModel {
         private java.util.List<Fields> fields; 
         private String requestId; 
         private String tableName; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDatasourceTableResponseBody model) {
+            this.fields = model.fields;
+            this.requestId = model.requestId;
+            this.tableName = model.tableName;
+        } 
 
         /**
          * Fields.
@@ -151,6 +164,15 @@ public class GetDatasourceTableResponseBody extends TeaModel {
             private java.util.List<String> attributes; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.attributes = model.attributes;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * Attributes.

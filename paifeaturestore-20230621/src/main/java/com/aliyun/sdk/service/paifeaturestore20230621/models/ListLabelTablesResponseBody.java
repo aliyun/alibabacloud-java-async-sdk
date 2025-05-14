@@ -40,6 +40,10 @@ public class ListLabelTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return labelTables
      */
@@ -65,6 +69,15 @@ public class ListLabelTablesResponseBody extends TeaModel {
         private java.util.List<LabelTables> labelTables; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLabelTablesResponseBody model) {
+            this.labelTables = model.labelTables;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * LabelTables.
@@ -223,6 +236,21 @@ public class ListLabelTablesResponseBody extends TeaModel {
             private String owner; 
             private String projectId; 
             private String projectName; 
+
+            private Builder() {
+            } 
+
+            private Builder(LabelTables model) {
+                this.datasourceId = model.datasourceId;
+                this.datasourceName = model.datasourceName;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.labelTableId = model.labelTableId;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+            } 
 
             /**
              * DatasourceId.

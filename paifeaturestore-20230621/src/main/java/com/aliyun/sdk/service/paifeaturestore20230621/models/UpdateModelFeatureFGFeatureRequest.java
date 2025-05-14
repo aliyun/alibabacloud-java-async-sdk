@@ -66,7 +66,7 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -331,6 +331,19 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             private String mapFeatureName; 
             private String valueType; 
 
+            private Builder() {
+            } 
+
+            private Builder(LookupFeatures model) {
+                this.defaultValue = model.defaultValue;
+                this.featureName = model.featureName;
+                this.keyFeatureDomain = model.keyFeatureDomain;
+                this.keyFeatureName = model.keyFeatureName;
+                this.mapFeatureDomain = model.mapFeatureDomain;
+                this.mapFeatureName = model.mapFeatureName;
+                this.valueType = model.valueType;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -513,6 +526,18 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             private String inputFeatureName; 
             private String valueType; 
 
+            private Builder() {
+            } 
+
+            private Builder(RawFeatures model) {
+                this.defaultValue = model.defaultValue;
+                this.featureDomain = model.featureDomain;
+                this.featureName = model.featureName;
+                this.featureType = model.featureType;
+                this.inputFeatureName = model.inputFeatureName;
+                this.valueType = model.valueType;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -684,6 +709,18 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             private String inputFeatureName; 
             private String valueType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SubFeatures model) {
+                this.defaultValue = model.defaultValue;
+                this.featureDomain = model.featureDomain;
+                this.featureName = model.featureName;
+                this.featureType = model.featureType;
+                this.inputFeatureName = model.inputFeatureName;
+                this.valueType = model.valueType;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -840,6 +877,17 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
             private String sequenceDelim; 
             private Long sequenceLength; 
             private java.util.List<SubFeatures> subFeatures; 
+
+            private Builder() {
+            } 
+
+            private Builder(SequenceFeatures model) {
+                this.attributeDelim = model.attributeDelim;
+                this.featureName = model.featureName;
+                this.sequenceDelim = model.sequenceDelim;
+                this.sequenceLength = model.sequenceLength;
+                this.subFeatures = model.subFeatures;
+            } 
 
             /**
              * <p>This parameter is required.</p>

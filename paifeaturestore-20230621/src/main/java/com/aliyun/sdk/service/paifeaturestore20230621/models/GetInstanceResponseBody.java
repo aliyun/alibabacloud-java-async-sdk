@@ -64,6 +64,10 @@ public class GetInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return featureDBInstanceInfo
      */
@@ -137,6 +141,21 @@ public class GetInstanceResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceResponseBody model) {
+            this.featureDBInstanceInfo = model.featureDBInstanceInfo;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.message = model.message;
+            this.progress = model.progress;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.type = model.type;
+        } 
 
         /**
          * FeatureDBInstanceInfo.
@@ -247,6 +266,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(FeatureDBInstanceInfo model) {
+                this.status = model.status;
+            } 
 
             /**
              * Status.

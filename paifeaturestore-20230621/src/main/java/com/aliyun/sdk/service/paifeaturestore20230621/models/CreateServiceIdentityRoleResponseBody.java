@@ -40,6 +40,10 @@ public class CreateServiceIdentityRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class CreateServiceIdentityRoleResponseBody extends TeaModel {
         private String code; 
         private String requestId; 
         private String roleName; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateServiceIdentityRoleResponseBody model) {
+            this.code = model.code;
+            this.requestId = model.requestId;
+            this.roleName = model.roleName;
+        } 
 
         /**
          * Code.

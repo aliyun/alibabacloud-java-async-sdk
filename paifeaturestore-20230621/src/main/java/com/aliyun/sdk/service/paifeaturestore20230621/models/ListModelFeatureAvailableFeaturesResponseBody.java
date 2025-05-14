@@ -40,6 +40,10 @@ public class ListModelFeatureAvailableFeaturesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return avaliableFeatures
      */
@@ -65,6 +69,15 @@ public class ListModelFeatureAvailableFeaturesResponseBody extends TeaModel {
         private java.util.List<AvaliableFeatures> avaliableFeatures; 
         private Long totalCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListModelFeatureAvailableFeaturesResponseBody model) {
+            this.avaliableFeatures = model.avaliableFeatures;
+            this.totalCount = model.totalCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AvaliableFeatures.
@@ -163,6 +176,16 @@ public class ListModelFeatureAvailableFeaturesResponseBody extends TeaModel {
             private String sourceName; 
             private String sourceType; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvaliableFeatures model) {
+                this.name = model.name;
+                this.sourceName = model.sourceName;
+                this.sourceType = model.sourceType;
+                this.type = model.type;
+            } 
 
             /**
              * Name.

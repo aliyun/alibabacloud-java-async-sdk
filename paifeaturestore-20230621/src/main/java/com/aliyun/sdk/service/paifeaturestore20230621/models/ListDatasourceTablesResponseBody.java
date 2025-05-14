@@ -40,6 +40,10 @@ public class ListDatasourceTablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListDatasourceTablesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> tables; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDatasourceTablesResponseBody model) {
+            this.requestId = model.requestId;
+            this.tables = model.tables;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * RequestId.

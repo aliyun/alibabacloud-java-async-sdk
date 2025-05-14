@@ -36,6 +36,10 @@ public class ListFeatureViewOnlineFeaturesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return onlineFeatures
      */
@@ -53,6 +57,14 @@ public class ListFeatureViewOnlineFeaturesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> onlineFeatures; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFeatureViewOnlineFeaturesResponseBody model) {
+            this.onlineFeatures = model.onlineFeatures;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * OnlineFeatures.

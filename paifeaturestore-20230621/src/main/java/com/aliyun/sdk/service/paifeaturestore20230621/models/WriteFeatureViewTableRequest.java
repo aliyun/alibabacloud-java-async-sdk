@@ -62,7 +62,7 @@ public class WriteFeatureViewTableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -256,6 +256,15 @@ public class WriteFeatureViewTableRequest extends Request {
             private String delimiter; 
             private Boolean omitHeader; 
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(UrlDatasource model) {
+                this.delimiter = model.delimiter;
+                this.omitHeader = model.omitHeader;
+                this.path = model.path;
+            } 
 
             /**
              * Delimiter.

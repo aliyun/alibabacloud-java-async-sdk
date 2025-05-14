@@ -40,6 +40,10 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return featureViews
      */
@@ -65,6 +69,15 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         private java.util.List<FeatureViews> featureViews; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectFeatureViewsResponseBody model) {
+            this.featureViews = model.featureViews;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * FeatureViews.
@@ -151,6 +164,15 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
             private java.util.List<String> attributes; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Features model) {
+                this.attributes = model.attributes;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * Attributes.
@@ -250,6 +272,16 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
             private java.util.List<Features> features; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(FeatureViews model) {
+                this.featureViewId = model.featureViewId;
+                this.features = model.features;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * FeatureViewId.

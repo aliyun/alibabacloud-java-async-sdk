@@ -36,6 +36,10 @@ public class CreateFeatureViewResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return featureViewId
      */
@@ -53,6 +57,14 @@ public class CreateFeatureViewResponseBody extends TeaModel {
     public static final class Builder {
         private String featureViewId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateFeatureViewResponseBody model) {
+            this.featureViewId = model.featureViewId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * FeatureViewId.

@@ -72,6 +72,10 @@ public class GetLabelTableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return datasourceId
      */
@@ -161,6 +165,23 @@ public class GetLabelTableResponseBody extends TeaModel {
         private String projectName; 
         private java.util.List<String> relatedModelFeatures; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLabelTableResponseBody model) {
+            this.datasourceId = model.datasourceId;
+            this.datasourceName = model.datasourceName;
+            this.fields = model.fields;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.name = model.name;
+            this.owner = model.owner;
+            this.projectId = model.projectId;
+            this.projectName = model.projectName;
+            this.relatedModelFeatures = model.relatedModelFeatures;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DatasourceId.
@@ -311,6 +332,15 @@ public class GetLabelTableResponseBody extends TeaModel {
             private java.util.List<String> attributes; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.attributes = model.attributes;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * Attributes.

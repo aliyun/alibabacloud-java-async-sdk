@@ -64,7 +64,7 @@ public class CreateLabelTableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -264,6 +264,15 @@ public class CreateLabelTableRequest extends Request {
             private java.util.List<String> attributes; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.attributes = model.attributes;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * <p>This parameter is required.</p>

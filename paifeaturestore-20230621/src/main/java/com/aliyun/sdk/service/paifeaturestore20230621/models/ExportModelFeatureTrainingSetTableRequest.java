@@ -71,7 +71,7 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -287,6 +287,14 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
             private String eventTime; 
             private java.util.Map<String, java.util.Map<String, ?>> partitions; 
 
+            private Builder() {
+            } 
+
+            private Builder(LabelInputConfig model) {
+                this.eventTime = model.eventTime;
+                this.partitions = model.partitions;
+            } 
+
             /**
              * EventTime.
              */
@@ -341,6 +349,13 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
 
         public static final class Builder {
             private java.util.Map<String, java.util.Map<String, ?>> partitions; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrainingSetConfig model) {
+                this.partitions = model.partitions;
+            } 
 
             /**
              * Partitions.

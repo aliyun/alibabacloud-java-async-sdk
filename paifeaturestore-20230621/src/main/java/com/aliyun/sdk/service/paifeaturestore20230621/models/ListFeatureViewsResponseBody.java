@@ -40,6 +40,10 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return featureViews
      */
@@ -65,6 +69,15 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         private java.util.List<FeatureViews> featureViews; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFeatureViewsResponseBody model) {
+            this.featureViews = model.featureViews;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * FeatureViews.
@@ -283,6 +296,26 @@ public class ListFeatureViewsResponseBody extends TeaModel {
             private Integer TTL; 
             private String type; 
             private Boolean writeToFeatureDB; 
+
+            private Builder() {
+            } 
+
+            private Builder(FeatureViews model) {
+                this.featureEntityName = model.featureEntityName;
+                this.featureViewId = model.featureViewId;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
+                this.registerDatasourceId = model.registerDatasourceId;
+                this.registerDatasourceName = model.registerDatasourceName;
+                this.registerTable = model.registerTable;
+                this.TTL = model.TTL;
+                this.type = model.type;
+                this.writeToFeatureDB = model.writeToFeatureDB;
+            } 
 
             /**
              * FeatureEntityName.

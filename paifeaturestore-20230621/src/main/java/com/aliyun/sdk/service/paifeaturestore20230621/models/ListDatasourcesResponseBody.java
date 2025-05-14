@@ -40,6 +40,10 @@ public class ListDatasourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return datasources
      */
@@ -65,6 +69,15 @@ public class ListDatasourcesResponseBody extends TeaModel {
         private java.util.List<Datasources> datasources; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDatasourcesResponseBody model) {
+            this.datasources = model.datasources;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Datasources.
@@ -211,6 +224,20 @@ public class ListDatasourcesResponseBody extends TeaModel {
             private String type; 
             private String uri; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Datasources model) {
+                this.config = model.config;
+                this.datasourceId = model.datasourceId;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.name = model.name;
+                this.type = model.type;
+                this.uri = model.uri;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * Config.

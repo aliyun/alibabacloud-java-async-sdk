@@ -88,6 +88,10 @@ public class GetModelFeatureResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return exportTrainingSetTableScript
      */
@@ -209,6 +213,27 @@ public class GetModelFeatureResponseBody extends TeaModel {
         private String requestId; 
         private String trainingSetFGTable; 
         private String trainingSetTable; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetModelFeatureResponseBody model) {
+            this.exportTrainingSetTableScript = model.exportTrainingSetTableScript;
+            this.features = model.features;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.labelPriorityLevel = model.labelPriorityLevel;
+            this.labelTableId = model.labelTableId;
+            this.labelTableName = model.labelTableName;
+            this.name = model.name;
+            this.owner = model.owner;
+            this.projectId = model.projectId;
+            this.projectName = model.projectName;
+            this.relations = model.relations;
+            this.requestId = model.requestId;
+            this.trainingSetFGTable = model.trainingSetFGTable;
+            this.trainingSetTable = model.trainingSetTable;
+        } 
 
         /**
          * ExportTrainingSetTableScript.
@@ -416,6 +441,17 @@ public class GetModelFeatureResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Features model) {
+                this.aliasName = model.aliasName;
+                this.featureViewId = model.featureViewId;
+                this.featureViewName = model.featureViewName;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * AliasName.
              */
@@ -519,6 +555,15 @@ public class GetModelFeatureResponseBody extends TeaModel {
             private String id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.domainType = model.domainType;
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * DomainType.
              */
@@ -609,6 +654,15 @@ public class GetModelFeatureResponseBody extends TeaModel {
             private String link; 
             private String to; 
 
+            private Builder() {
+            } 
+
+            private Builder(Links model) {
+                this.from = model.from;
+                this.link = model.link;
+                this.to = model.to;
+            } 
+
             /**
              * From.
              */
@@ -683,6 +737,14 @@ public class GetModelFeatureResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Domains> domains; 
             private java.util.List<Links> links; 
+
+            private Builder() {
+            } 
+
+            private Builder(Relations model) {
+                this.domains = model.domains;
+                this.links = model.links;
+            } 
 
             /**
              * Domains.

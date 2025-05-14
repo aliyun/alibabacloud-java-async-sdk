@@ -110,7 +110,7 @@ public class CreateFeatureViewRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -426,6 +426,186 @@ public class CreateFeatureViewRequest extends Request {
      *
      * <p>CreateFeatureViewRequest</p>
      */
+    public static class Input extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Input(Builder builder) {
+            this.name = builder.name;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Input create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FeatureView1</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Batch</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Input build() {
+                return new Input(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateFeatureViewRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFeatureViewRequest</p>
+     */
+    public static class Transform extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Input")
+        private java.util.List<Input> input;
+
+        @com.aliyun.core.annotation.NameInMap("LLMConfigId")
+        private Integer LLMConfigId;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Transform(Builder builder) {
+            this.input = builder.input;
+            this.LLMConfigId = builder.LLMConfigId;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Transform create() {
+            return builder().build();
+        }
+
+        /**
+         * @return input
+         */
+        public java.util.List<Input> getInput() {
+            return this.input;
+        }
+
+        /**
+         * @return LLMConfigId
+         */
+        public Integer getLLMConfigId() {
+            return this.LLMConfigId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private java.util.List<Input> input; 
+            private Integer LLMConfigId; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Transform model) {
+                this.input = model.input;
+                this.LLMConfigId = model.LLMConfigId;
+                this.type = model.type;
+            } 
+
+            /**
+             * Input.
+             */
+            public Builder input(java.util.List<Input> input) {
+                this.input = input;
+                return this;
+            }
+
+            /**
+             * LLMConfigId.
+             */
+            public Builder LLMConfigId(Integer LLMConfigId) {
+                this.LLMConfigId = LLMConfigId;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Batch</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Transform build() {
+                return new Transform(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateFeatureViewRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFeatureViewRequest</p>
+     */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.List<String> attributes;
@@ -433,12 +613,16 @@ public class CreateFeatureViewRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("Transform")
+        private java.util.List<Transform> transform;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Fields(Builder builder) {
             this.attributes = builder.attributes;
             this.name = builder.name;
+            this.transform = builder.transform;
             this.type = builder.type;
         }
 
@@ -465,6 +649,13 @@ public class CreateFeatureViewRequest extends Request {
         }
 
         /**
+         * @return transform
+         */
+        public java.util.List<Transform> getTransform() {
+            return this.transform;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -474,7 +665,18 @@ public class CreateFeatureViewRequest extends Request {
         public static final class Builder {
             private java.util.List<String> attributes; 
             private String name; 
+            private java.util.List<Transform> transform; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.attributes = model.attributes;
+                this.name = model.name;
+                this.transform = model.transform;
+                this.type = model.type;
+            } 
 
             /**
              * Attributes.
@@ -492,6 +694,14 @@ public class CreateFeatureViewRequest extends Request {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Transform.
+             */
+            public Builder transform(java.util.List<Transform> transform) {
+                this.transform = transform;
                 return this;
             }
 

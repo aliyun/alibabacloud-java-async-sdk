@@ -40,6 +40,10 @@ public class ListProjectsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return projects
      */
@@ -65,6 +69,15 @@ public class ListProjectsResponseBody extends TeaModel {
         private java.util.List<Projects> projects; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectsResponseBody model) {
+            this.projects = model.projects;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Projects.
@@ -307,6 +320,28 @@ public class ListProjectsResponseBody extends TeaModel {
             private String onlineDatasourceType; 
             private String owner; 
             private String projectId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Projects model) {
+                this.description = model.description;
+                this.featureEntityCount = model.featureEntityCount;
+                this.featureViewCount = model.featureViewCount;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.modelCount = model.modelCount;
+                this.name = model.name;
+                this.offlineDatasourceId = model.offlineDatasourceId;
+                this.offlineDatasourceName = model.offlineDatasourceName;
+                this.offlineDatasourceType = model.offlineDatasourceType;
+                this.offlineLifecycle = model.offlineLifecycle;
+                this.onlineDatasourceId = model.onlineDatasourceId;
+                this.onlineDatasourceName = model.onlineDatasourceName;
+                this.onlineDatasourceType = model.onlineDatasourceType;
+                this.owner = model.owner;
+                this.projectId = model.projectId;
+            } 
 
             /**
              * Description.

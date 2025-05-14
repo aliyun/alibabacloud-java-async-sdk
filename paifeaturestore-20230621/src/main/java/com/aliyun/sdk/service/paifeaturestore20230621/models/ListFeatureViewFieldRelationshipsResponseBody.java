@@ -36,6 +36,10 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return relationships
      */
@@ -53,6 +57,14 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Relationships> relationships; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFeatureViewFieldRelationshipsResponseBody model) {
+            this.relationships = model.relationships;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Relationships.
@@ -131,6 +143,15 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
             private String featureAliasName; 
             private String modelId; 
             private String modelName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Models model) {
+                this.featureAliasName = model.featureAliasName;
+                this.modelId = model.modelId;
+                this.modelName = model.modelName;
+            } 
 
             /**
              * FeatureAliasName.
@@ -230,6 +251,16 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
             private java.util.List<Models> models; 
             private String offlineTableName; 
             private String onlineTableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Relationships model) {
+                this.featureName = model.featureName;
+                this.models = model.models;
+                this.offlineTableName = model.offlineTableName;
+                this.onlineTableName = model.onlineTableName;
+            } 
 
             /**
              * FeatureName.
