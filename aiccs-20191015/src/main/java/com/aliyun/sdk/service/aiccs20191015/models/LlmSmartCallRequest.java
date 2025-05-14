@@ -36,6 +36,11 @@ public class LlmSmartCallRequest extends Request {
     private String callerNumber;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Extension")
+    @com.aliyun.core.annotation.Validation(maxLength = 5)
+    private String extension;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OutId")
     @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String outId;
@@ -54,6 +59,7 @@ public class LlmSmartCallRequest extends Request {
         this.bizParam = builder.bizParam;
         this.calledNumber = builder.calledNumber;
         this.callerNumber = builder.callerNumber;
+        this.extension = builder.extension;
         this.outId = builder.outId;
         this.promptParam = builder.promptParam;
         this.startWordParam = builder.startWordParam;
@@ -101,6 +107,13 @@ public class LlmSmartCallRequest extends Request {
     }
 
     /**
+     * @return extension
+     */
+    public String getExtension() {
+        return this.extension;
+    }
+
+    /**
      * @return outId
      */
     public String getOutId() {
@@ -126,6 +139,7 @@ public class LlmSmartCallRequest extends Request {
         private java.util.Map<String, ?> bizParam; 
         private String calledNumber; 
         private String callerNumber; 
+        private String extension; 
         private String outId; 
         private java.util.Map<String, ?> promptParam; 
         private java.util.Map<String, ?> startWordParam; 
@@ -140,6 +154,7 @@ public class LlmSmartCallRequest extends Request {
             this.bizParam = request.bizParam;
             this.calledNumber = request.calledNumber;
             this.callerNumber = request.callerNumber;
+            this.extension = request.extension;
             this.outId = request.outId;
             this.promptParam = request.promptParam;
             this.startWordParam = request.startWordParam;
@@ -185,6 +200,15 @@ public class LlmSmartCallRequest extends Request {
         public Builder callerNumber(String callerNumber) {
             this.putQueryParameter("CallerNumber", callerNumber);
             this.callerNumber = callerNumber;
+            return this;
+        }
+
+        /**
+         * Extension.
+         */
+        public Builder extension(String extension) {
+            this.putQueryParameter("Extension", extension);
+            this.extension = extension;
             return this;
         }
 

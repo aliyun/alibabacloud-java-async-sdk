@@ -1,3 +1,6 @@
+2025-05-14 Version: 2.0.5
+- Generated java-async 2019-10-15 for aiccs.
+
 2025-04-18 Version: 2.0.4
 - Generated java-async 2019-10-15 for aiccs.
 
