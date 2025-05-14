@@ -46,11 +46,11 @@ public class SubmitCopyrightJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
-    private String startTime;
+    private Long startTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TotalTime")
-    private String totalTime;
+    private Long totalTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserData")
@@ -127,14 +127,14 @@ public class SubmitCopyrightJobRequest extends Request {
     /**
      * @return startTime
      */
-    public String getStartTime() {
+    public Long getStartTime() {
         return this.startTime;
     }
 
     /**
      * @return totalTime
      */
-    public String getTotalTime() {
+    public Long getTotalTime() {
         return this.totalTime;
     }
 
@@ -152,8 +152,8 @@ public class SubmitCopyrightJobRequest extends Request {
         private String message; 
         private Output output; 
         private String params; 
-        private String startTime; 
-        private String totalTime; 
+        private Long startTime; 
+        private Long totalTime; 
         private String userData; 
 
         private Builder() {
@@ -238,7 +238,7 @@ public class SubmitCopyrightJobRequest extends Request {
         /**
          * StartTime.
          */
-        public Builder startTime(String startTime) {
+        public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
             return this;
@@ -247,7 +247,7 @@ public class SubmitCopyrightJobRequest extends Request {
         /**
          * TotalTime.
          */
-        public Builder totalTime(String totalTime) {
+        public Builder totalTime(Long totalTime) {
             this.putQueryParameter("TotalTime", totalTime);
             this.totalTime = totalTime;
             return this;
