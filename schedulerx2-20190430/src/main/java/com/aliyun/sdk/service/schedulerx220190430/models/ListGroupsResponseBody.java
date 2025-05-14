@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGroupsResponseBody</p>
  */
 public class ListGroupsResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
-    private AccessDeniedDetail accessDeniedDetail;
-
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
@@ -31,7 +33,6 @@ public class ListGroupsResponseBody extends TeaModel {
     private Boolean success;
 
     private ListGroupsResponseBody(Builder builder) {
-        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -47,11 +48,8 @@ public class ListGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
-    /**
-     * @return accessDeniedDetail
-     */
-    public AccessDeniedDetail getAccessDeniedDetail() {
-        return this.accessDeniedDetail;
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -90,20 +88,22 @@ public class ListGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private AccessDeniedDetail accessDeniedDetail; 
         private Integer code; 
         private Data data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
-        /**
-         * AccessDeniedDetail.
-         */
-        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
-            this.accessDeniedDetail = accessDeniedDetail;
-            return this;
-        }
+        private Builder() {
+        } 
+
+        private Builder(ListGroupsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -117,7 +117,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the applications.</p>
+         * <p>The applications.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -173,173 +173,6 @@ public class ListGroupsResponseBody extends TeaModel {
      *
      * <p>ListGroupsResponseBody</p>
      */
-    public static class AccessDeniedDetail extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("AuthAction")
-        private String authAction;
-
-        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
-        private String authPrincipalDisplayName;
-
-        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
-        private String authPrincipalOwnerId;
-
-        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
-        private String authPrincipalType;
-
-        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
-        private String encodedDiagnosticMessage;
-
-        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
-        private String noPermissionType;
-
-        @com.aliyun.core.annotation.NameInMap("PolicyType")
-        private String policyType;
-
-        private AccessDeniedDetail(Builder builder) {
-            this.authAction = builder.authAction;
-            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
-            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
-            this.authPrincipalType = builder.authPrincipalType;
-            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
-            this.noPermissionType = builder.noPermissionType;
-            this.policyType = builder.policyType;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static AccessDeniedDetail create() {
-            return builder().build();
-        }
-
-        /**
-         * @return authAction
-         */
-        public String getAuthAction() {
-            return this.authAction;
-        }
-
-        /**
-         * @return authPrincipalDisplayName
-         */
-        public String getAuthPrincipalDisplayName() {
-            return this.authPrincipalDisplayName;
-        }
-
-        /**
-         * @return authPrincipalOwnerId
-         */
-        public String getAuthPrincipalOwnerId() {
-            return this.authPrincipalOwnerId;
-        }
-
-        /**
-         * @return authPrincipalType
-         */
-        public String getAuthPrincipalType() {
-            return this.authPrincipalType;
-        }
-
-        /**
-         * @return encodedDiagnosticMessage
-         */
-        public String getEncodedDiagnosticMessage() {
-            return this.encodedDiagnosticMessage;
-        }
-
-        /**
-         * @return noPermissionType
-         */
-        public String getNoPermissionType() {
-            return this.noPermissionType;
-        }
-
-        /**
-         * @return policyType
-         */
-        public String getPolicyType() {
-            return this.policyType;
-        }
-
-        public static final class Builder {
-            private String authAction; 
-            private String authPrincipalDisplayName; 
-            private String authPrincipalOwnerId; 
-            private String authPrincipalType; 
-            private String encodedDiagnosticMessage; 
-            private String noPermissionType; 
-            private String policyType; 
-
-            /**
-             * AuthAction.
-             */
-            public Builder authAction(String authAction) {
-                this.authAction = authAction;
-                return this;
-            }
-
-            /**
-             * AuthPrincipalDisplayName.
-             */
-            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
-                this.authPrincipalDisplayName = authPrincipalDisplayName;
-                return this;
-            }
-
-            /**
-             * AuthPrincipalOwnerId.
-             */
-            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
-                this.authPrincipalOwnerId = authPrincipalOwnerId;
-                return this;
-            }
-
-            /**
-             * AuthPrincipalType.
-             */
-            public Builder authPrincipalType(String authPrincipalType) {
-                this.authPrincipalType = authPrincipalType;
-                return this;
-            }
-
-            /**
-             * EncodedDiagnosticMessage.
-             */
-            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
-                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
-                return this;
-            }
-
-            /**
-             * NoPermissionType.
-             */
-            public Builder noPermissionType(String noPermissionType) {
-                this.noPermissionType = noPermissionType;
-                return this;
-            }
-
-            /**
-             * PolicyType.
-             */
-            public Builder policyType(String policyType) {
-                this.policyType = policyType;
-                return this;
-            }
-
-            public AccessDeniedDetail build() {
-                return new AccessDeniedDetail(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link ListGroupsResponseBody} extends {@link TeaModel}
-     *
-     * <p>ListGroupsResponseBody</p>
-     */
     public static class AppGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppGroupId")
         private Long appGroupId;
@@ -359,6 +192,9 @@ public class ListGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        private String namespace;
+
         private AppGroups(Builder builder) {
             this.appGroupId = builder.appGroupId;
             this.appKey = builder.appKey;
@@ -366,6 +202,7 @@ public class ListGroupsResponseBody extends TeaModel {
             this.appVersion = builder.appVersion;
             this.description = builder.description;
             this.groupId = builder.groupId;
+            this.namespace = builder.namespace;
         }
 
         public static Builder builder() {
@@ -418,6 +255,13 @@ public class ListGroupsResponseBody extends TeaModel {
             return this.groupId;
         }
 
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
         public static final class Builder {
             private Long appGroupId; 
             private String appKey; 
@@ -425,6 +269,20 @@ public class ListGroupsResponseBody extends TeaModel {
             private Integer appVersion; 
             private String description; 
             private String groupId; 
+            private String namespace; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppGroups model) {
+                this.appGroupId = model.appGroupId;
+                this.appKey = model.appKey;
+                this.appName = model.appName;
+                this.appVersion = model.appVersion;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.namespace = model.namespace;
+            } 
 
             /**
              * <p>The application group ID.</p>
@@ -492,6 +350,17 @@ public class ListGroupsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * <p>The ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1a72ecb1-b4cc-400a-a71b-20cdec9b****</p>
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
             public AppGroups build() {
                 return new AppGroups(this);
             } 
@@ -507,7 +376,7 @@ public class ListGroupsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppGroups")
-        private java.util.List < AppGroups> appGroups;
+        private java.util.List<AppGroups> appGroups;
 
         private Data(Builder builder) {
             this.appGroups = builder.appGroups;
@@ -524,17 +393,24 @@ public class ListGroupsResponseBody extends TeaModel {
         /**
          * @return appGroups
          */
-        public java.util.List < AppGroups> getAppGroups() {
+        public java.util.List<AppGroups> getAppGroups() {
             return this.appGroups;
         }
 
         public static final class Builder {
-            private java.util.List < AppGroups> appGroups; 
+            private java.util.List<AppGroups> appGroups; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appGroups = model.appGroups;
+            } 
 
             /**
              * <p>The applications and their details.</p>
              */
-            public Builder appGroups(java.util.List < AppGroups> appGroups) {
+            public Builder appGroups(java.util.List<AppGroups> appGroups) {
                 this.appGroups = appGroups;
                 return this;
             }

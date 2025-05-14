@@ -113,6 +113,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteJobResponse> deleteJob(DeleteJobRequest request);
 
     /**
+     * @param request the request parameters of DeleteNamespace  DeleteNamespaceRequest
+     * @return DeleteNamespaceResponse
+     */
+    CompletableFuture<DeleteNamespaceResponse> deleteNamespace(DeleteNamespaceRequest request);
+
+    /**
      * @param request the request parameters of DeleteRouteStrategy  DeleteRouteStrategyRequest
      * @return DeleteRouteStrategyResponse
      */
@@ -253,6 +259,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request);
 
     /**
+     * @param request the request parameters of ListJobScriptHistory  ListJobScriptHistoryRequest
+     * @return ListJobScriptHistoryResponse
+     */
+    CompletableFuture<ListJobScriptHistoryResponse> listJobScriptHistory(ListJobScriptHistoryRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, you must add the following dependency to the pom.xml file:
      *     <dependency>
@@ -285,6 +297,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListWorkflowInstanceResponse
      */
     CompletableFuture<ListWorkflowInstanceResponse> listWorkflowInstance(ListWorkflowInstanceRequest request);
+
+    /**
+     * @param request the request parameters of ReadSchedulerxDesignateDetail  ReadSchedulerxDesignateDetailRequest
+     * @return ReadSchedulerxDesignateDetailResponse
+     */
+    CompletableFuture<ReadSchedulerxDesignateDetailResponse> readSchedulerxDesignateDetail(ReadSchedulerxDesignateDetailRequest request);
 
     /**
      * @param request the request parameters of RerunJob  RerunJobRequest
@@ -333,6 +351,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateJobResponse
      */
     CompletableFuture<UpdateJobResponse> updateJob(UpdateJobRequest request);
+
+    /**
+     * @param request the request parameters of UpdateJobScript  UpdateJobScriptRequest
+     * @return UpdateJobScriptResponse
+     */
+    CompletableFuture<UpdateJobScriptResponse> updateJobScript(UpdateJobScriptRequest request);
+
+    /**
+     * @param request the request parameters of UpdateNamespace  UpdateNamespaceRequest
+     * @return UpdateNamespaceResponse
+     */
+    CompletableFuture<UpdateNamespaceResponse> updateNamespace(UpdateNamespaceRequest request);
 
     /**
      * @param request the request parameters of UpdateWorkflow  UpdateWorkflowRequest

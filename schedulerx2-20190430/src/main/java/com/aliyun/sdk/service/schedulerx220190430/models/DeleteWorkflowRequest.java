@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -52,7 +57,7 @@ public class DeleteWorkflowRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +118,7 @@ public class DeleteWorkflowRequest extends Request {
         } 
 
         /**
-         * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+         * <p>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</p>
          * 
          * <strong>example:</strong>
          * <p>testSchedulerx.defaultGroup</p>

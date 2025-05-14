@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,6 +35,14 @@ public class UpdateAppGroupRequest extends Request {
     private Integer maxConcurrency;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorConfigJson")
+    private String monitorConfigJson;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorContactsJson")
+    private String monitorContactsJson;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
     @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
@@ -45,6 +58,8 @@ public class UpdateAppGroupRequest extends Request {
         this.description = builder.description;
         this.groupId = builder.groupId;
         this.maxConcurrency = builder.maxConcurrency;
+        this.monitorConfigJson = builder.monitorConfigJson;
+        this.monitorContactsJson = builder.monitorContactsJson;
         this.namespace = builder.namespace;
         this.regionId = builder.regionId;
     }
@@ -57,7 +72,7 @@ public class UpdateAppGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -91,6 +106,20 @@ public class UpdateAppGroupRequest extends Request {
     }
 
     /**
+     * @return monitorConfigJson
+     */
+    public String getMonitorConfigJson() {
+        return this.monitorConfigJson;
+    }
+
+    /**
+     * @return monitorContactsJson
+     */
+    public String getMonitorContactsJson() {
+        return this.monitorContactsJson;
+    }
+
+    /**
      * @return namespace
      */
     public String getNamespace() {
@@ -109,6 +138,8 @@ public class UpdateAppGroupRequest extends Request {
         private String description; 
         private String groupId; 
         private Integer maxConcurrency; 
+        private String monitorConfigJson; 
+        private String monitorContactsJson; 
         private String namespace; 
         private String regionId; 
 
@@ -122,6 +153,8 @@ public class UpdateAppGroupRequest extends Request {
             this.description = request.description;
             this.groupId = request.groupId;
             this.maxConcurrency = request.maxConcurrency;
+            this.monitorConfigJson = request.monitorConfigJson;
+            this.monitorContactsJson = request.monitorContactsJson;
             this.namespace = request.namespace;
             this.regionId = request.regionId;
         } 
@@ -172,6 +205,34 @@ public class UpdateAppGroupRequest extends Request {
         public Builder maxConcurrency(Integer maxConcurrency) {
             this.putQueryParameter("MaxConcurrency", maxConcurrency);
             this.maxConcurrency = maxConcurrency;
+            return this;
+        }
+
+        /**
+         * <p>The configuration of the alert. The value is a JSON string. For more information about this parameter, see <strong>Additional information about request parameters</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;sendChannel&quot;: &quot;ding,sms,mail,phone&quot;,
+         *     &quot;alarmType&quot;: &quot;Contacts&quot;,
+         *     &quot;webhookIsAtAll&quot;: false
+         * }</p>
+         */
+        public Builder monitorConfigJson(String monitorConfigJson) {
+            this.putQueryParameter("MonitorConfigJson", monitorConfigJson);
+            this.monitorConfigJson = monitorConfigJson;
+            return this;
+        }
+
+        /**
+         * <p>The configuration of alert contacts. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;userName&quot;:&quot;Tom&quot;,&quot;userPhone&quot;:&quot;89756******&quot;},{&quot;userName&quot;:&quot;Bob&quot;,&quot;ding&quot;:&quot;<a href="http://www.example.com%22%7D%5D">http://www.example.com&quot;}]</a></p>
+         */
+        public Builder monitorContactsJson(String monitorContactsJson) {
+            this.putQueryParameter("MonitorContactsJson", monitorContactsJson);
+            this.monitorContactsJson = monitorContactsJson;
             return this;
         }
 

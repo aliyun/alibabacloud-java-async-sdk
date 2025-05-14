@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetWorkerListResponseBody</p>
  */
 public class GetWorkerListResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
-    private AccessDeniedDetail accessDeniedDetail;
-
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
@@ -31,7 +33,6 @@ public class GetWorkerListResponseBody extends TeaModel {
     private Boolean success;
 
     private GetWorkerListResponseBody(Builder builder) {
-        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -47,11 +48,8 @@ public class GetWorkerListResponseBody extends TeaModel {
         return builder().build();
     }
 
-    /**
-     * @return accessDeniedDetail
-     */
-    public AccessDeniedDetail getAccessDeniedDetail() {
-        return this.accessDeniedDetail;
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -90,20 +88,22 @@ public class GetWorkerListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private AccessDeniedDetail accessDeniedDetail; 
         private Integer code; 
         private Data data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
-        /**
-         * AccessDeniedDetail.
-         */
-        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
-            this.accessDeniedDetail = accessDeniedDetail;
-            return this;
-        }
+        private Builder() {
+        } 
+
+        private Builder(GetWorkerListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code that is returned.</p>
@@ -167,173 +167,6 @@ public class GetWorkerListResponseBody extends TeaModel {
 
     } 
 
-    /**
-     * 
-     * {@link GetWorkerListResponseBody} extends {@link TeaModel}
-     *
-     * <p>GetWorkerListResponseBody</p>
-     */
-    public static class AccessDeniedDetail extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("AuthAction")
-        private String authAction;
-
-        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
-        private String authPrincipalDisplayName;
-
-        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
-        private String authPrincipalOwnerId;
-
-        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
-        private String authPrincipalType;
-
-        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
-        private String encodedDiagnosticMessage;
-
-        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
-        private String noPermissionType;
-
-        @com.aliyun.core.annotation.NameInMap("PolicyType")
-        private String policyType;
-
-        private AccessDeniedDetail(Builder builder) {
-            this.authAction = builder.authAction;
-            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
-            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
-            this.authPrincipalType = builder.authPrincipalType;
-            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
-            this.noPermissionType = builder.noPermissionType;
-            this.policyType = builder.policyType;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static AccessDeniedDetail create() {
-            return builder().build();
-        }
-
-        /**
-         * @return authAction
-         */
-        public String getAuthAction() {
-            return this.authAction;
-        }
-
-        /**
-         * @return authPrincipalDisplayName
-         */
-        public String getAuthPrincipalDisplayName() {
-            return this.authPrincipalDisplayName;
-        }
-
-        /**
-         * @return authPrincipalOwnerId
-         */
-        public String getAuthPrincipalOwnerId() {
-            return this.authPrincipalOwnerId;
-        }
-
-        /**
-         * @return authPrincipalType
-         */
-        public String getAuthPrincipalType() {
-            return this.authPrincipalType;
-        }
-
-        /**
-         * @return encodedDiagnosticMessage
-         */
-        public String getEncodedDiagnosticMessage() {
-            return this.encodedDiagnosticMessage;
-        }
-
-        /**
-         * @return noPermissionType
-         */
-        public String getNoPermissionType() {
-            return this.noPermissionType;
-        }
-
-        /**
-         * @return policyType
-         */
-        public String getPolicyType() {
-            return this.policyType;
-        }
-
-        public static final class Builder {
-            private String authAction; 
-            private String authPrincipalDisplayName; 
-            private String authPrincipalOwnerId; 
-            private String authPrincipalType; 
-            private String encodedDiagnosticMessage; 
-            private String noPermissionType; 
-            private String policyType; 
-
-            /**
-             * AuthAction.
-             */
-            public Builder authAction(String authAction) {
-                this.authAction = authAction;
-                return this;
-            }
-
-            /**
-             * AuthPrincipalDisplayName.
-             */
-            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
-                this.authPrincipalDisplayName = authPrincipalDisplayName;
-                return this;
-            }
-
-            /**
-             * AuthPrincipalOwnerId.
-             */
-            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
-                this.authPrincipalOwnerId = authPrincipalOwnerId;
-                return this;
-            }
-
-            /**
-             * AuthPrincipalType.
-             */
-            public Builder authPrincipalType(String authPrincipalType) {
-                this.authPrincipalType = authPrincipalType;
-                return this;
-            }
-
-            /**
-             * EncodedDiagnosticMessage.
-             */
-            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
-                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
-                return this;
-            }
-
-            /**
-             * NoPermissionType.
-             */
-            public Builder noPermissionType(String noPermissionType) {
-                this.noPermissionType = noPermissionType;
-                return this;
-            }
-
-            /**
-             * PolicyType.
-             */
-            public Builder policyType(String policyType) {
-                this.policyType = policyType;
-                return this;
-            }
-
-            public AccessDeniedDetail build() {
-                return new AccessDeniedDetail(this);
-            } 
-
-        } 
-
-    }
     /**
      * 
      * {@link GetWorkerListResponseBody} extends {@link TeaModel}
@@ -426,6 +259,18 @@ public class GetWorkerListResponseBody extends TeaModel {
             private String version; 
             private String workerAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(WorkerInfos model) {
+                this.ip = model.ip;
+                this.label = model.label;
+                this.port = model.port;
+                this.starter = model.starter;
+                this.version = model.version;
+                this.workerAddress = model.workerAddress;
+            } 
+
             /**
              * <p>The IP address of the worker.</p>
              * 
@@ -507,7 +352,7 @@ public class GetWorkerListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkerInfos")
-        private java.util.List < WorkerInfos> workerInfos;
+        private java.util.List<WorkerInfos> workerInfos;
 
         private Data(Builder builder) {
             this.workerInfos = builder.workerInfos;
@@ -524,17 +369,24 @@ public class GetWorkerListResponseBody extends TeaModel {
         /**
          * @return workerInfos
          */
-        public java.util.List < WorkerInfos> getWorkerInfos() {
+        public java.util.List<WorkerInfos> getWorkerInfos() {
             return this.workerInfos;
         }
 
         public static final class Builder {
-            private java.util.List < WorkerInfos> workerInfos; 
+            private java.util.List<WorkerInfos> workerInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.workerInfos = model.workerInfos;
+            } 
 
             /**
              * <p>The worker information.</p>
              */
-            public Builder workerInfos(java.util.List < WorkerInfos> workerInfos) {
+            public Builder workerInfos(java.util.List<WorkerInfos> workerInfos) {
                 this.workerInfos = workerInfos;
                 return this;
             }

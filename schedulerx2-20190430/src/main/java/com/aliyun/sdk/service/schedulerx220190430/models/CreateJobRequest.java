@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class CreateJobRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ContactInfo")
-    private java.util.List < ContactInfo> contactInfo;
+    private java.util.List<ContactInfo> contactInfo;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Content")
@@ -105,6 +110,10 @@ public class CreateJobRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Parameters")
     private String parameters;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    private Integer priority;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("QueueSize")
@@ -189,6 +198,7 @@ public class CreateJobRequest extends Request {
         this.namespaceSource = builder.namespaceSource;
         this.pageSize = builder.pageSize;
         this.parameters = builder.parameters;
+        this.priority = builder.priority;
         this.queueSize = builder.queueSize;
         this.regionId = builder.regionId;
         this.sendChannel = builder.sendChannel;
@@ -213,7 +223,7 @@ public class CreateJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -249,7 +259,7 @@ public class CreateJobRequest extends Request {
     /**
      * @return contactInfo
      */
-    public java.util.List < ContactInfo> getContactInfo() {
+    public java.util.List<ContactInfo> getContactInfo() {
         return this.contactInfo;
     }
 
@@ -373,6 +383,13 @@ public class CreateJobRequest extends Request {
     }
 
     /**
+     * @return priority
+     */
+    public Integer getPriority() {
+        return this.priority;
+    }
+
+    /**
      * @return queueSize
      */
     public Integer getQueueSize() {
@@ -475,7 +492,7 @@ public class CreateJobRequest extends Request {
         private String calendar; 
         private String className; 
         private Integer consumerSize; 
-        private java.util.List < ContactInfo> contactInfo; 
+        private java.util.List<ContactInfo> contactInfo; 
         private String content; 
         private Integer dataOffset; 
         private String description; 
@@ -493,6 +510,7 @@ public class CreateJobRequest extends Request {
         private String namespaceSource; 
         private Integer pageSize; 
         private String parameters; 
+        private Integer priority; 
         private Integer queueSize; 
         private String regionId; 
         private String sendChannel; 
@@ -536,6 +554,7 @@ public class CreateJobRequest extends Request {
             this.namespaceSource = request.namespaceSource;
             this.pageSize = request.pageSize;
             this.parameters = request.parameters;
+            this.priority = request.priority;
             this.queueSize = request.queueSize;
             this.regionId = request.regionId;
             this.sendChannel = request.sendChannel;
@@ -604,7 +623,7 @@ public class CreateJobRequest extends Request {
         /**
          * <p>The information about the alert contact.</p>
          */
-        public Builder contactInfo(java.util.List < ContactInfo> contactInfo) {
+        public Builder contactInfo(java.util.List<ContactInfo> contactInfo) {
             this.putBodyParameter("ContactInfo", contactInfo);
             this.contactInfo = contactInfo;
             return this;
@@ -842,6 +861,15 @@ public class CreateJobRequest extends Request {
         public Builder parameters(String parameters) {
             this.putBodyParameter("Parameters", parameters);
             this.parameters = parameters;
+            return this;
+        }
+
+        /**
+         * Priority.
+         */
+        public Builder priority(Integer priority) {
+            this.putQueryParameter("Priority", priority);
+            this.priority = priority;
             return this;
         }
 
@@ -1111,6 +1139,16 @@ public class CreateJobRequest extends Request {
             private String userMail; 
             private String userName; 
             private String userPhone; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactInfo model) {
+                this.ding = model.ding;
+                this.userMail = model.userMail;
+                this.userName = model.userName;
+                this.userPhone = model.userPhone;
+            } 
 
             /**
              * <p>The webhook URL of the DingTalk chatbot.<a href="https://open.dingtalk.com/document/org/application-types"></a></p>

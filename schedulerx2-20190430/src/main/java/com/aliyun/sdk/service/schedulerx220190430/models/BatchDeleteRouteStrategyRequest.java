@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class BatchDeleteRouteStrategyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("JobIdList")
-    private java.util.List < Long > jobIdList;
+    private java.util.List<Long> jobIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
@@ -47,7 +52,7 @@ public class BatchDeleteRouteStrategyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -62,7 +67,7 @@ public class BatchDeleteRouteStrategyRequest extends Request {
     /**
      * @return jobIdList
      */
-    public java.util.List < Long > getJobIdList() {
+    public java.util.List<Long> getJobIdList() {
         return this.jobIdList;
     }
 
@@ -82,7 +87,7 @@ public class BatchDeleteRouteStrategyRequest extends Request {
 
     public static final class Builder extends Request.Builder<BatchDeleteRouteStrategyRequest, Builder> {
         private String groupId; 
-        private java.util.List < Long > jobIdList; 
+        private java.util.List<Long> jobIdList; 
         private String namespace; 
         private String regionId; 
 
@@ -99,6 +104,7 @@ public class BatchDeleteRouteStrategyRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,15 +117,16 @@ public class BatchDeleteRouteStrategyRequest extends Request {
         }
 
         /**
-         * JobIdList.
+         * <p>The IDs of the jobs.</p>
          */
-        public Builder jobIdList(java.util.List < Long > jobIdList) {
+        public Builder jobIdList(java.util.List<Long> jobIdList) {
             this.putBodyParameter("JobIdList", jobIdList);
             this.jobIdList = jobIdList;
             return this;
         }
 
         /**
+         * <p>The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in the SchedulerX console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +139,7 @@ public class BatchDeleteRouteStrategyRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

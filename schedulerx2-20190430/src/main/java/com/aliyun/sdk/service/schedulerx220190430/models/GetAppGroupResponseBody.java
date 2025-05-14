@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAppGroupResponseBody</p>
  */
 public class GetAppGroupResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
-    private AccessDeniedDetail accessDeniedDetail;
-
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
@@ -31,7 +33,6 @@ public class GetAppGroupResponseBody extends TeaModel {
     private Boolean success;
 
     private GetAppGroupResponseBody(Builder builder) {
-        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -47,11 +48,8 @@ public class GetAppGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
-    /**
-     * @return accessDeniedDetail
-     */
-    public AccessDeniedDetail getAccessDeniedDetail() {
-        return this.accessDeniedDetail;
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -90,20 +88,22 @@ public class GetAppGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private AccessDeniedDetail accessDeniedDetail; 
         private Integer code; 
         private Data data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
-        /**
-         * AccessDeniedDetail.
-         */
-        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
-            this.accessDeniedDetail = accessDeniedDetail;
-            return this;
-        }
+        private Builder() {
+        } 
+
+        private Builder(GetAppGroupResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code that is returned.</p>
@@ -173,173 +173,6 @@ public class GetAppGroupResponseBody extends TeaModel {
      *
      * <p>GetAppGroupResponseBody</p>
      */
-    public static class AccessDeniedDetail extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("AuthAction")
-        private String authAction;
-
-        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
-        private String authPrincipalDisplayName;
-
-        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
-        private String authPrincipalOwnerId;
-
-        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
-        private String authPrincipalType;
-
-        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
-        private String encodedDiagnosticMessage;
-
-        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
-        private String noPermissionType;
-
-        @com.aliyun.core.annotation.NameInMap("PolicyType")
-        private String policyType;
-
-        private AccessDeniedDetail(Builder builder) {
-            this.authAction = builder.authAction;
-            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
-            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
-            this.authPrincipalType = builder.authPrincipalType;
-            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
-            this.noPermissionType = builder.noPermissionType;
-            this.policyType = builder.policyType;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static AccessDeniedDetail create() {
-            return builder().build();
-        }
-
-        /**
-         * @return authAction
-         */
-        public String getAuthAction() {
-            return this.authAction;
-        }
-
-        /**
-         * @return authPrincipalDisplayName
-         */
-        public String getAuthPrincipalDisplayName() {
-            return this.authPrincipalDisplayName;
-        }
-
-        /**
-         * @return authPrincipalOwnerId
-         */
-        public String getAuthPrincipalOwnerId() {
-            return this.authPrincipalOwnerId;
-        }
-
-        /**
-         * @return authPrincipalType
-         */
-        public String getAuthPrincipalType() {
-            return this.authPrincipalType;
-        }
-
-        /**
-         * @return encodedDiagnosticMessage
-         */
-        public String getEncodedDiagnosticMessage() {
-            return this.encodedDiagnosticMessage;
-        }
-
-        /**
-         * @return noPermissionType
-         */
-        public String getNoPermissionType() {
-            return this.noPermissionType;
-        }
-
-        /**
-         * @return policyType
-         */
-        public String getPolicyType() {
-            return this.policyType;
-        }
-
-        public static final class Builder {
-            private String authAction; 
-            private String authPrincipalDisplayName; 
-            private String authPrincipalOwnerId; 
-            private String authPrincipalType; 
-            private String encodedDiagnosticMessage; 
-            private String noPermissionType; 
-            private String policyType; 
-
-            /**
-             * AuthAction.
-             */
-            public Builder authAction(String authAction) {
-                this.authAction = authAction;
-                return this;
-            }
-
-            /**
-             * AuthPrincipalDisplayName.
-             */
-            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
-                this.authPrincipalDisplayName = authPrincipalDisplayName;
-                return this;
-            }
-
-            /**
-             * AuthPrincipalOwnerId.
-             */
-            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
-                this.authPrincipalOwnerId = authPrincipalOwnerId;
-                return this;
-            }
-
-            /**
-             * AuthPrincipalType.
-             */
-            public Builder authPrincipalType(String authPrincipalType) {
-                this.authPrincipalType = authPrincipalType;
-                return this;
-            }
-
-            /**
-             * EncodedDiagnosticMessage.
-             */
-            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
-                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
-                return this;
-            }
-
-            /**
-             * NoPermissionType.
-             */
-            public Builder noPermissionType(String noPermissionType) {
-                this.noPermissionType = noPermissionType;
-                return this;
-            }
-
-            /**
-             * PolicyType.
-             */
-            public Builder policyType(String policyType) {
-                this.policyType = policyType;
-                return this;
-            }
-
-            public AccessDeniedDetail build() {
-                return new AccessDeniedDetail(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link GetAppGroupResponseBody} extends {@link TeaModel}
-     *
-     * <p>GetAppGroupResponseBody</p>
-     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppKey")
         private String appKey;
@@ -365,6 +198,12 @@ public class GetAppGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorConfigJson")
         private String monitorConfigJson;
 
+        @com.aliyun.core.annotation.NameInMap("MonitorContactsJson")
+        private String monitorContactsJson;
+
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        private String namespace;
+
         private Data(Builder builder) {
             this.appKey = builder.appKey;
             this.appName = builder.appName;
@@ -374,6 +213,8 @@ public class GetAppGroupResponseBody extends TeaModel {
             this.groupId = builder.groupId;
             this.maxJobs = builder.maxJobs;
             this.monitorConfigJson = builder.monitorConfigJson;
+            this.monitorContactsJson = builder.monitorContactsJson;
+            this.namespace = builder.namespace;
         }
 
         public static Builder builder() {
@@ -440,6 +281,20 @@ public class GetAppGroupResponseBody extends TeaModel {
             return this.monitorConfigJson;
         }
 
+        /**
+         * @return monitorContactsJson
+         */
+        public String getMonitorContactsJson() {
+            return this.monitorContactsJson;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
         public static final class Builder {
             private String appKey; 
             private String appName; 
@@ -449,6 +304,24 @@ public class GetAppGroupResponseBody extends TeaModel {
             private String groupId; 
             private Integer maxJobs; 
             private String monitorConfigJson; 
+            private String monitorContactsJson; 
+            private String namespace; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appKey = model.appKey;
+                this.appName = model.appName;
+                this.appVersion = model.appVersion;
+                this.curJobs = model.curJobs;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.maxJobs = model.maxJobs;
+                this.monitorConfigJson = model.monitorConfigJson;
+                this.monitorContactsJson = model.monitorContactsJson;
+                this.namespace = model.namespace;
+            } 
 
             /**
              * <p>The AppKey of the application.</p>
@@ -528,13 +401,41 @@ public class GetAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the alert. The value is a JSON string. For more information, see <strong>the additional information about response parameters below this table.</strong></p>
+             * <p>The alert notification configurations.</p>
+             * <blockquote>
+             * <p> For more information about this parameter, see the following <strong>additional information about request parameters</strong>.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>{&quot;sendChannel&quot;:&quot;sms,mail,ding&quot;}</p>
              */
             public Builder monitorConfigJson(String monitorConfigJson) {
                 this.monitorConfigJson = monitorConfigJson;
+                return this;
+            }
+
+            /**
+             * <p>The alert contact configurations.</p>
+             * <blockquote>
+             * <p> For more information about this parameter, see the following <strong>additional information about request parameters</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>[ {&quot;name&quot;: &quot;Peter&quot;}, {&quot;name&quot;: &quot;Paul&quot;} ]</p>
+             */
+            public Builder monitorContactsJson(String monitorContactsJson) {
+                this.monitorContactsJson = monitorContactsJson;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
                 return this;
             }
 

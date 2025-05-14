@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetWorkFlowResponseBody</p>
  */
 public class GetWorkFlowResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
-    private AccessDeniedDetail accessDeniedDetail;
-
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
@@ -31,7 +33,6 @@ public class GetWorkFlowResponseBody extends TeaModel {
     private Boolean success;
 
     private GetWorkFlowResponseBody(Builder builder) {
-        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -47,11 +48,8 @@ public class GetWorkFlowResponseBody extends TeaModel {
         return builder().build();
     }
 
-    /**
-     * @return accessDeniedDetail
-     */
-    public AccessDeniedDetail getAccessDeniedDetail() {
-        return this.accessDeniedDetail;
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -90,20 +88,22 @@ public class GetWorkFlowResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private AccessDeniedDetail accessDeniedDetail; 
         private Integer code; 
         private Data data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
-        /**
-         * AccessDeniedDetail.
-         */
-        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
-            this.accessDeniedDetail = accessDeniedDetail;
-            return this;
-        }
+        private Builder() {
+        } 
+
+        private Builder(GetWorkFlowResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Error codes</p>
@@ -169,179 +169,21 @@ public class GetWorkFlowResponseBody extends TeaModel {
      *
      * <p>GetWorkFlowResponseBody</p>
      */
-    public static class AccessDeniedDetail extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("AuthAction")
-        private String authAction;
-
-        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
-        private String authPrincipalDisplayName;
-
-        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
-        private String authPrincipalOwnerId;
-
-        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
-        private String authPrincipalType;
-
-        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
-        private String encodedDiagnosticMessage;
-
-        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
-        private String noPermissionType;
-
-        @com.aliyun.core.annotation.NameInMap("PolicyType")
-        private String policyType;
-
-        private AccessDeniedDetail(Builder builder) {
-            this.authAction = builder.authAction;
-            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
-            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
-            this.authPrincipalType = builder.authPrincipalType;
-            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
-            this.noPermissionType = builder.noPermissionType;
-            this.policyType = builder.policyType;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static AccessDeniedDetail create() {
-            return builder().build();
-        }
-
-        /**
-         * @return authAction
-         */
-        public String getAuthAction() {
-            return this.authAction;
-        }
-
-        /**
-         * @return authPrincipalDisplayName
-         */
-        public String getAuthPrincipalDisplayName() {
-            return this.authPrincipalDisplayName;
-        }
-
-        /**
-         * @return authPrincipalOwnerId
-         */
-        public String getAuthPrincipalOwnerId() {
-            return this.authPrincipalOwnerId;
-        }
-
-        /**
-         * @return authPrincipalType
-         */
-        public String getAuthPrincipalType() {
-            return this.authPrincipalType;
-        }
-
-        /**
-         * @return encodedDiagnosticMessage
-         */
-        public String getEncodedDiagnosticMessage() {
-            return this.encodedDiagnosticMessage;
-        }
-
-        /**
-         * @return noPermissionType
-         */
-        public String getNoPermissionType() {
-            return this.noPermissionType;
-        }
-
-        /**
-         * @return policyType
-         */
-        public String getPolicyType() {
-            return this.policyType;
-        }
-
-        public static final class Builder {
-            private String authAction; 
-            private String authPrincipalDisplayName; 
-            private String authPrincipalOwnerId; 
-            private String authPrincipalType; 
-            private String encodedDiagnosticMessage; 
-            private String noPermissionType; 
-            private String policyType; 
-
-            /**
-             * AuthAction.
-             */
-            public Builder authAction(String authAction) {
-                this.authAction = authAction;
-                return this;
-            }
-
-            /**
-             * AuthPrincipalDisplayName.
-             */
-            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
-                this.authPrincipalDisplayName = authPrincipalDisplayName;
-                return this;
-            }
-
-            /**
-             * AuthPrincipalOwnerId.
-             */
-            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
-                this.authPrincipalOwnerId = authPrincipalOwnerId;
-                return this;
-            }
-
-            /**
-             * AuthPrincipalType.
-             */
-            public Builder authPrincipalType(String authPrincipalType) {
-                this.authPrincipalType = authPrincipalType;
-                return this;
-            }
-
-            /**
-             * EncodedDiagnosticMessage.
-             */
-            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
-                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
-                return this;
-            }
-
-            /**
-             * NoPermissionType.
-             */
-            public Builder noPermissionType(String noPermissionType) {
-                this.noPermissionType = noPermissionType;
-                return this;
-            }
-
-            /**
-             * PolicyType.
-             */
-            public Builder policyType(String policyType) {
-                this.policyType = policyType;
-                return this;
-            }
-
-            public AccessDeniedDetail build() {
-                return new AccessDeniedDetail(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link GetWorkFlowResponseBody} extends {@link TeaModel}
-     *
-     * <p>GetWorkFlowResponseBody</p>
-     */
     public static class WorkFlowInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("GroupId")
+        private String groupId;
+
+        @com.aliyun.core.annotation.NameInMap("MaxConcurrency")
+        private String maxConcurrency;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        private String namespace;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -357,7 +199,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
 
         private WorkFlowInfo(Builder builder) {
             this.description = builder.description;
+            this.groupId = builder.groupId;
+            this.maxConcurrency = builder.maxConcurrency;
             this.name = builder.name;
+            this.namespace = builder.namespace;
             this.status = builder.status;
             this.timeExpression = builder.timeExpression;
             this.timeType = builder.timeType;
@@ -380,10 +225,31 @@ public class GetWorkFlowResponseBody extends TeaModel {
         }
 
         /**
+         * @return groupId
+         */
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        /**
+         * @return maxConcurrency
+         */
+        public String getMaxConcurrency() {
+            return this.maxConcurrency;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
         }
 
         /**
@@ -416,11 +282,29 @@ public class GetWorkFlowResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
+            private String groupId; 
+            private String maxConcurrency; 
             private String name; 
+            private String namespace; 
             private String status; 
             private String timeExpression; 
             private String timeType; 
             private Long workflowId; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkFlowInfo model) {
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.maxConcurrency = model.maxConcurrency;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.status = model.status;
+                this.timeExpression = model.timeExpression;
+                this.timeType = model.timeType;
+                this.workflowId = model.workflowId;
+            } 
 
             /**
              * <p>The description of the workflow.</p>
@@ -434,6 +318,22 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
+             * GroupId.
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * MaxConcurrency.
+             */
+            public Builder maxConcurrency(String maxConcurrency) {
+                this.maxConcurrency = maxConcurrency;
+                return this;
+            }
+
+            /**
              * <p>The name of the workflow.</p>
              * 
              * <strong>example:</strong>
@@ -441,6 +341,14 @@ public class GetWorkFlowResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
                 return this;
             }
 
@@ -539,6 +447,14 @@ public class GetWorkFlowResponseBody extends TeaModel {
             private Long source; 
             private Long target; 
 
+            private Builder() {
+            } 
+
+            private Builder(Edges model) {
+                this.source = model.source;
+                this.target = model.target;
+            } 
+
             /**
              * <p>The ID of the source job.</p>
              * 
@@ -624,6 +540,15 @@ public class GetWorkFlowResponseBody extends TeaModel {
             private String label; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.id = model.id;
+                this.label = model.label;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The ID of the job.</p>
              * 
@@ -672,10 +597,10 @@ public class GetWorkFlowResponseBody extends TeaModel {
      */
     public static class WorkFlowNodeInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Edges")
-        private java.util.List < Edges> edges;
+        private java.util.List<Edges> edges;
 
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        private java.util.List<Nodes> nodes;
 
         private WorkFlowNodeInfo(Builder builder) {
             this.edges = builder.edges;
@@ -693,25 +618,33 @@ public class GetWorkFlowResponseBody extends TeaModel {
         /**
          * @return edges
          */
-        public java.util.List < Edges> getEdges() {
+        public java.util.List<Edges> getEdges() {
             return this.edges;
         }
 
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
         public static final class Builder {
-            private java.util.List < Edges> edges; 
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Edges> edges; 
+            private java.util.List<Nodes> nodes; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkFlowNodeInfo model) {
+                this.edges = model.edges;
+                this.nodes = model.nodes;
+            } 
 
             /**
              * <p>The workflow edges.</p>
              */
-            public Builder edges(java.util.List < Edges> edges) {
+            public Builder edges(java.util.List<Edges> edges) {
                 this.edges = edges;
                 return this;
             }
@@ -719,7 +652,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             /**
              * <p>The list of workflow nodes.</p>
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }
@@ -774,6 +707,14 @@ public class GetWorkFlowResponseBody extends TeaModel {
         public static final class Builder {
             private WorkFlowInfo workFlowInfo; 
             private WorkFlowNodeInfo workFlowNodeInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.workFlowInfo = model.workFlowInfo;
+                this.workFlowNodeInfo = model.workFlowNodeInfo;
+            } 
 
             /**
              * <p>The basic information of the workflow.</p>

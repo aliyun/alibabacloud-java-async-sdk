@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetJobInfoResponseBody</p>
  */
 public class GetJobInfoResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
-    private AccessDeniedDetail accessDeniedDetail;
-
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
@@ -31,7 +33,6 @@ public class GetJobInfoResponseBody extends TeaModel {
     private Boolean success;
 
     private GetJobInfoResponseBody(Builder builder) {
-        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -47,11 +48,8 @@ public class GetJobInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
-    /**
-     * @return accessDeniedDetail
-     */
-    public AccessDeniedDetail getAccessDeniedDetail() {
-        return this.accessDeniedDetail;
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -90,20 +88,22 @@ public class GetJobInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private AccessDeniedDetail accessDeniedDetail; 
         private Integer code; 
         private Data data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
-        /**
-         * AccessDeniedDetail.
-         */
-        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
-            this.accessDeniedDetail = accessDeniedDetail;
-            return this;
-        }
+        private Builder() {
+        } 
+
+        private Builder(GetJobInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -173,173 +173,6 @@ public class GetJobInfoResponseBody extends TeaModel {
      *
      * <p>GetJobInfoResponseBody</p>
      */
-    public static class AccessDeniedDetail extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("AuthAction")
-        private String authAction;
-
-        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
-        private String authPrincipalDisplayName;
-
-        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
-        private String authPrincipalOwnerId;
-
-        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
-        private String authPrincipalType;
-
-        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
-        private String encodedDiagnosticMessage;
-
-        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
-        private String noPermissionType;
-
-        @com.aliyun.core.annotation.NameInMap("PolicyType")
-        private String policyType;
-
-        private AccessDeniedDetail(Builder builder) {
-            this.authAction = builder.authAction;
-            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
-            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
-            this.authPrincipalType = builder.authPrincipalType;
-            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
-            this.noPermissionType = builder.noPermissionType;
-            this.policyType = builder.policyType;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static AccessDeniedDetail create() {
-            return builder().build();
-        }
-
-        /**
-         * @return authAction
-         */
-        public String getAuthAction() {
-            return this.authAction;
-        }
-
-        /**
-         * @return authPrincipalDisplayName
-         */
-        public String getAuthPrincipalDisplayName() {
-            return this.authPrincipalDisplayName;
-        }
-
-        /**
-         * @return authPrincipalOwnerId
-         */
-        public String getAuthPrincipalOwnerId() {
-            return this.authPrincipalOwnerId;
-        }
-
-        /**
-         * @return authPrincipalType
-         */
-        public String getAuthPrincipalType() {
-            return this.authPrincipalType;
-        }
-
-        /**
-         * @return encodedDiagnosticMessage
-         */
-        public String getEncodedDiagnosticMessage() {
-            return this.encodedDiagnosticMessage;
-        }
-
-        /**
-         * @return noPermissionType
-         */
-        public String getNoPermissionType() {
-            return this.noPermissionType;
-        }
-
-        /**
-         * @return policyType
-         */
-        public String getPolicyType() {
-            return this.policyType;
-        }
-
-        public static final class Builder {
-            private String authAction; 
-            private String authPrincipalDisplayName; 
-            private String authPrincipalOwnerId; 
-            private String authPrincipalType; 
-            private String encodedDiagnosticMessage; 
-            private String noPermissionType; 
-            private String policyType; 
-
-            /**
-             * AuthAction.
-             */
-            public Builder authAction(String authAction) {
-                this.authAction = authAction;
-                return this;
-            }
-
-            /**
-             * AuthPrincipalDisplayName.
-             */
-            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
-                this.authPrincipalDisplayName = authPrincipalDisplayName;
-                return this;
-            }
-
-            /**
-             * AuthPrincipalOwnerId.
-             */
-            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
-                this.authPrincipalOwnerId = authPrincipalOwnerId;
-                return this;
-            }
-
-            /**
-             * AuthPrincipalType.
-             */
-            public Builder authPrincipalType(String authPrincipalType) {
-                this.authPrincipalType = authPrincipalType;
-                return this;
-            }
-
-            /**
-             * EncodedDiagnosticMessage.
-             */
-            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
-                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
-                return this;
-            }
-
-            /**
-             * NoPermissionType.
-             */
-            public Builder noPermissionType(String noPermissionType) {
-                this.noPermissionType = noPermissionType;
-                return this;
-            }
-
-            /**
-             * PolicyType.
-             */
-            public Builder policyType(String policyType) {
-                this.policyType = policyType;
-                return this;
-            }
-
-            public AccessDeniedDetail build() {
-                return new AccessDeniedDetail(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link GetJobInfoResponseBody} extends {@link TeaModel}
-     *
-     * <p>GetJobInfoResponseBody</p>
-     */
     public static class ContactInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ding")
         private String ding;
@@ -401,6 +234,16 @@ public class GetJobInfoResponseBody extends TeaModel {
             private String userMail; 
             private String userName; 
             private String userPhone; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactInfo model) {
+                this.ding = model.ding;
+                this.userMail = model.userMail;
+                this.userName = model.userName;
+                this.userPhone = model.userPhone;
+            } 
 
             /**
              * <p>The webhook URL of the DingTalk chatbot.</p>
@@ -545,6 +388,18 @@ public class GetJobInfoResponseBody extends TeaModel {
             private Boolean timeoutEnable; 
             private Boolean timeoutKillEnable; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonitorConfig model) {
+                this.failEnable = model.failEnable;
+                this.missWorkerEnable = model.missWorkerEnable;
+                this.sendChannel = model.sendChannel;
+                this.timeout = model.timeout;
+                this.timeoutEnable = model.timeoutEnable;
+                this.timeoutKillEnable = model.timeoutKillEnable;
+            } 
+
             /**
              * <p>Indicates whether the Failure alarm switch was turned on. Valid values:</p>
              * <ul>
@@ -634,7 +489,7 @@ public class GetJobInfoResponseBody extends TeaModel {
      */
     public static class JobMonitorInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactInfo")
-        private java.util.List < ContactInfo> contactInfo;
+        private java.util.List<ContactInfo> contactInfo;
 
         @com.aliyun.core.annotation.NameInMap("MonitorConfig")
         private MonitorConfig monitorConfig;
@@ -655,7 +510,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         /**
          * @return contactInfo
          */
-        public java.util.List < ContactInfo> getContactInfo() {
+        public java.util.List<ContactInfo> getContactInfo() {
             return this.contactInfo;
         }
 
@@ -667,13 +522,21 @@ public class GetJobInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ContactInfo> contactInfo; 
+            private java.util.List<ContactInfo> contactInfo; 
             private MonitorConfig monitorConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobMonitorInfo model) {
+                this.contactInfo = model.contactInfo;
+                this.monitorConfig = model.monitorConfig;
+            } 
 
             /**
              * <p>The alert contact Information.</p>
              */
-            public Builder contactInfo(java.util.List < ContactInfo> contactInfo) {
+            public Builder contactInfo(java.util.List<ContactInfo> contactInfo) {
                 this.contactInfo = contactInfo;
                 return this;
             }
@@ -784,6 +647,18 @@ public class GetJobInfoResponseBody extends TeaModel {
             private Integer queueSize; 
             private Integer taskAttemptInterval; 
             private Integer taskMaxAttempt; 
+
+            private Builder() {
+            } 
+
+            private Builder(MapTaskXAttrs model) {
+                this.consumerSize = model.consumerSize;
+                this.dispatcherSize = model.dispatcherSize;
+                this.pageSize = model.pageSize;
+                this.queueSize = model.queueSize;
+                this.taskAttemptInterval = model.taskAttemptInterval;
+                this.taskMaxAttempt = model.taskMaxAttempt;
+            } 
 
             /**
              * <p>The number of threads that were triggered by a single worker at a time. Default value: 5.</p>
@@ -925,6 +800,16 @@ public class GetJobInfoResponseBody extends TeaModel {
             private Integer dataOffset; 
             private String timeExpression; 
             private Integer timeType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeConfig model) {
+                this.calendar = model.calendar;
+                this.dataOffset = model.dataOffset;
+                this.timeExpression = model.timeExpression;
+                this.timeType = model.timeType;
+            } 
 
             /**
              * <p>Custom calendar days specified if TimeType is set to <strong>1</strong> (cron).</p>
@@ -1214,6 +1099,29 @@ public class GetJobInfoResponseBody extends TeaModel {
             private TimeConfig timeConfig; 
             private String xAttrs; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobConfigInfo model) {
+                this.attemptInterval = model.attemptInterval;
+                this.className = model.className;
+                this.content = model.content;
+                this.description = model.description;
+                this.executeMode = model.executeMode;
+                this.jarUrl = model.jarUrl;
+                this.jobId = model.jobId;
+                this.jobMonitorInfo = model.jobMonitorInfo;
+                this.jobType = model.jobType;
+                this.mapTaskXAttrs = model.mapTaskXAttrs;
+                this.maxAttempt = model.maxAttempt;
+                this.maxConcurrency = model.maxConcurrency;
+                this.name = model.name;
+                this.parameters = model.parameters;
+                this.status = model.status;
+                this.timeConfig = model.timeConfig;
+                this.xAttrs = model.xAttrs;
+            } 
+
             /**
              * <p>The interval at which the system retried to run the job after a job failure. Default value: 30. Unit: seconds.</p>
              * 
@@ -1261,11 +1169,11 @@ public class GetJobInfoResponseBody extends TeaModel {
             /**
              * <p>The execution mode of the job. Valid values:</p>
              * <ul>
-             * <li><strong>Stand-alone operation</strong></li>
-             * <li><strong>Broadcast run</strong></li>
-             * <li><strong>Visual MapReduce</strong></li>
-             * <li><strong>MapReduce</strong></li>
-             * <li><strong>Shard run</strong></li>
+             * <li><strong>Stand-alone operation</strong>: standalone</li>
+             * <li><strong>Broadcast run</strong>: broadcast</li>
+             * <li><strong>Visual MapReduce</strong>: parallel</li>
+             * <li><strong>MapReduce</strong>: batch</li>
+             * <li><strong>Shard run</strong>: sharding</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1442,6 +1350,13 @@ public class GetJobInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private JobConfigInfo jobConfigInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.jobConfigInfo = model.jobConfigInfo;
+            } 
 
             /**
              * <p>The configurations of the job.</p>
