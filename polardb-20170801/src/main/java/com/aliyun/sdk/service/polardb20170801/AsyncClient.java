@@ -168,6 +168,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDatabaseResponse> createDatabase(CreateDatabaseRequest request);
 
     /**
+     * @param request the request parameters of CreateGlobalDataNetwork  CreateGlobalDataNetworkRequest
+     * @return CreateGlobalDataNetworkResponse
+     */
+    CompletableFuture<CreateGlobalDataNetworkResponse> createGlobalDataNetwork(CreateGlobalDataNetworkRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> A cluster belongs to only one GDN.</p>
@@ -295,6 +301,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDatabaseResponse
      */
     CompletableFuture<DeleteDatabaseResponse> deleteDatabase(DeleteDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of DeleteGlobalDataNetwork  DeleteGlobalDataNetworkRequest
+     * @return DeleteGlobalDataNetworkResponse
+     */
+    CompletableFuture<DeleteGlobalDataNetworkResponse> deleteGlobalDataNetwork(DeleteGlobalDataNetworkRequest request);
 
     /**
      * <b>description</b> :
@@ -605,6 +617,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDetachedBackupsResponse
      */
     CompletableFuture<DescribeDetachedBackupsResponse> describeDetachedBackups(DescribeDetachedBackupsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeGlobalDataNetworkList  DescribeGlobalDataNetworkListRequest
+     * @return DescribeGlobalDataNetworkListResponse
+     */
+    CompletableFuture<DescribeGlobalDataNetworkListResponse> describeGlobalDataNetworkList(DescribeGlobalDataNetworkListRequest request);
 
     /**
      * @param request the request parameters of DescribeGlobalDatabaseNetwork  DescribeGlobalDatabaseNetworkRequest

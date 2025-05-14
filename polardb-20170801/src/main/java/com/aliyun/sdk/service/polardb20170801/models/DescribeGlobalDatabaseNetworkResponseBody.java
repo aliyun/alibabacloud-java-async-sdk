@@ -47,6 +47,9 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GlobalDomainName")
     private String globalDomainName;
 
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private Labels labels;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -64,6 +67,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         this.GDNId = builder.GDNId;
         this.GDNStatus = builder.GDNStatus;
         this.globalDomainName = builder.globalDomainName;
+        this.labels = builder.labels;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
     }
@@ -151,6 +155,13 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     }
 
     /**
+     * @return labels
+     */
+    public Labels getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -175,6 +186,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         private String GDNId; 
         private String GDNStatus; 
         private String globalDomainName; 
+        private Labels labels; 
         private String requestId; 
         private String resourceGroupId; 
 
@@ -192,6 +204,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             this.GDNId = model.GDNId;
             this.GDNStatus = model.GDNStatus;
             this.globalDomainName = model.globalDomainName;
+            this.labels = model.labels;
             this.requestId = model.requestId;
             this.resourceGroupId = model.resourceGroupId;
         } 
@@ -310,6 +323,14 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
          */
         public Builder globalDomainName(String globalDomainName) {
             this.globalDomainName = globalDomainName;
+            return this;
+        }
+
+        /**
+         * Labels.
+         */
+        public Builder labels(Labels labels) {
+            this.labels = labels;
             return this;
         }
 
@@ -1156,6 +1177,60 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
 
             public DBClusters build() {
                 return new DBClusters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeGlobalDatabaseNetworkResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalDatabaseNetworkResponseBody</p>
+     */
+    public static class Labels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("GDNVersion")
+        private String GDNVersion;
+
+        private Labels(Builder builder) {
+            this.GDNVersion = builder.GDNVersion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return GDNVersion
+         */
+        public String getGDNVersion() {
+            return this.GDNVersion;
+        }
+
+        public static final class Builder {
+            private String GDNVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.GDNVersion = model.GDNVersion;
+            } 
+
+            /**
+             * GDNVersion.
+             */
+            public Builder GDNVersion(String GDNVersion) {
+                this.GDNVersion = GDNVersion;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
             } 
 
         } 

@@ -27,6 +27,10 @@ public class RemoveDBClusterFromGDNRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
+    private Boolean force;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GDNId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String GDNId;
@@ -55,6 +59,7 @@ public class RemoveDBClusterFromGDNRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.DBClusterId = builder.DBClusterId;
+        this.force = builder.force;
         this.GDNId = builder.GDNId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -88,6 +93,13 @@ public class RemoveDBClusterFromGDNRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
     }
 
     /**
@@ -135,6 +147,7 @@ public class RemoveDBClusterFromGDNRequest extends Request {
     public static final class Builder extends Request.Builder<RemoveDBClusterFromGDNRequest, Builder> {
         private String regionId; 
         private String DBClusterId; 
+        private Boolean force; 
         private String GDNId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -150,6 +163,7 @@ public class RemoveDBClusterFromGDNRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.DBClusterId = request.DBClusterId;
+            this.force = request.force;
             this.GDNId = request.GDNId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -180,6 +194,15 @@ public class RemoveDBClusterFromGDNRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * Force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
             return this;
         }
 

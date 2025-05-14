@@ -35,6 +35,10 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
     private String GDNDescription;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GDNVersion")
+    private String GDNVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -64,6 +68,7 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.enableGlobalDomainName = builder.enableGlobalDomainName;
         this.GDNDescription = builder.GDNDescription;
+        this.GDNVersion = builder.GDNVersion;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -114,6 +119,13 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
     }
 
     /**
+     * @return GDNVersion
+     */
+    public String getGDNVersion() {
+        return this.GDNVersion;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -160,6 +172,7 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
         private String DBClusterId; 
         private Boolean enableGlobalDomainName; 
         private String GDNDescription; 
+        private String GDNVersion; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceGroupId; 
@@ -177,6 +190,7 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.enableGlobalDomainName = request.enableGlobalDomainName;
             this.GDNDescription = request.GDNDescription;
+            this.GDNVersion = request.GDNVersion;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceGroupId = request.resourceGroupId;
@@ -234,6 +248,15 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
         public Builder GDNDescription(String GDNDescription) {
             this.putQueryParameter("GDNDescription", GDNDescription);
             this.GDNDescription = GDNDescription;
+            return this;
+        }
+
+        /**
+         * GDNVersion.
+         */
+        public Builder GDNVersion(String GDNVersion) {
+            this.putQueryParameter("GDNVersion", GDNVersion);
+            this.GDNVersion = GDNVersion;
             return this;
         }
 

@@ -281,6 +281,60 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
      *
      * <p>DescribeGlobalDatabaseNetworksResponseBody</p>
      */
+    public static class Labels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("GDNVersion")
+        private String GDNVersion;
+
+        private Labels(Builder builder) {
+            this.GDNVersion = builder.GDNVersion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return GDNVersion
+         */
+        public String getGDNVersion() {
+            return this.GDNVersion;
+        }
+
+        public static final class Builder {
+            private String GDNVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.GDNVersion = model.GDNVersion;
+            } 
+
+            /**
+             * GDNVersion.
+             */
+            public Builder GDNVersion(String GDNVersion) {
+                this.GDNVersion = GDNVersion;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeGlobalDatabaseNetworksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalDatabaseNetworksResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -303,6 +357,9 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GDNStatus")
         private String GDNStatus;
 
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private Labels labels;
+
         private Items(Builder builder) {
             this.createTime = builder.createTime;
             this.DBClusters = builder.DBClusters;
@@ -311,6 +368,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             this.GDNDescription = builder.GDNDescription;
             this.GDNId = builder.GDNId;
             this.GDNStatus = builder.GDNStatus;
+            this.labels = builder.labels;
         }
 
         public static Builder builder() {
@@ -370,6 +428,13 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             return this.GDNStatus;
         }
 
+        /**
+         * @return labels
+         */
+        public Labels getLabels() {
+            return this.labels;
+        }
+
         public static final class Builder {
             private String createTime; 
             private java.util.List<DBClusters> DBClusters; 
@@ -378,6 +443,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             private String GDNDescription; 
             private String GDNId; 
             private String GDNStatus; 
+            private Labels labels; 
 
             private Builder() {
             } 
@@ -390,6 +456,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
                 this.GDNDescription = model.GDNDescription;
                 this.GDNId = model.GDNId;
                 this.GDNStatus = model.GDNStatus;
+                this.labels = model.labels;
             } 
 
             /**
@@ -476,6 +543,14 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
              */
             public Builder GDNStatus(String GDNStatus) {
                 this.GDNStatus = GDNStatus;
+                return this;
+            }
+
+            /**
+             * Labels.
+             */
+            public Builder labels(Labels labels) {
+                this.labels = labels;
                 return this;
             }
 
