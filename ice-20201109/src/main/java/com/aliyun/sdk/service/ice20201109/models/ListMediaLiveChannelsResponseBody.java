@@ -1881,6 +1881,9 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VideoCodecSetting")
         private VideoCodecSetting videoCodecSetting;
 
+        @com.aliyun.core.annotation.NameInMap("VideoCodecType")
+        private String videoCodecType;
+
         @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
@@ -1889,6 +1892,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             this.name = builder.name;
             this.videoCodec = builder.videoCodec;
             this.videoCodecSetting = builder.videoCodecSetting;
+            this.videoCodecType = builder.videoCodecType;
             this.width = builder.width;
         }
 
@@ -1929,6 +1933,13 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
         }
 
         /**
+         * @return videoCodecType
+         */
+        public String getVideoCodecType() {
+            return this.videoCodecType;
+        }
+
+        /**
          * @return width
          */
         public Integer getWidth() {
@@ -1940,6 +1951,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
             private String name; 
             private String videoCodec; 
             private VideoCodecSetting videoCodecSetting; 
+            private String videoCodecType; 
             private Integer width; 
 
             private Builder() {
@@ -1950,6 +1962,7 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
                 this.name = model.name;
                 this.videoCodec = model.videoCodec;
                 this.videoCodecSetting = model.videoCodecSetting;
+                this.videoCodecType = model.videoCodecType;
                 this.width = model.width;
             } 
 
@@ -1991,6 +2004,14 @@ public class ListMediaLiveChannelsResponseBody extends TeaModel {
              */
             public Builder videoCodecSetting(VideoCodecSetting videoCodecSetting) {
                 this.videoCodecSetting = videoCodecSetting;
+                return this;
+            }
+
+            /**
+             * <p>视频转码方式（普通转码、窄带高清转码等）</p>
+             */
+            public Builder videoCodecType(String videoCodecType) {
+                this.videoCodecType = videoCodecType;
                 return this;
             }
 

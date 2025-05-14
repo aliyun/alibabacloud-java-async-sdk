@@ -1911,6 +1911,9 @@ public class UpdateMediaLiveChannelRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("VideoCodecSetting")
         private VideoCodecSetting videoCodecSetting;
 
+        @com.aliyun.core.annotation.NameInMap("VideoCodecType")
+        private String videoCodecType;
+
         @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
@@ -1919,6 +1922,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             this.name = builder.name;
             this.videoCodec = builder.videoCodec;
             this.videoCodecSetting = builder.videoCodecSetting;
+            this.videoCodecType = builder.videoCodecType;
             this.width = builder.width;
         }
 
@@ -1959,6 +1963,13 @@ public class UpdateMediaLiveChannelRequest extends Request {
         }
 
         /**
+         * @return videoCodecType
+         */
+        public String getVideoCodecType() {
+            return this.videoCodecType;
+        }
+
+        /**
          * @return width
          */
         public Integer getWidth() {
@@ -1970,6 +1981,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private String name; 
             private String videoCodec; 
             private VideoCodecSetting videoCodecSetting; 
+            private String videoCodecType; 
             private Integer width; 
 
             private Builder() {
@@ -1980,6 +1992,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
                 this.name = model.name;
                 this.videoCodec = model.videoCodec;
                 this.videoCodecSetting = model.videoCodecSetting;
+                this.videoCodecType = model.videoCodecType;
                 this.width = model.width;
             } 
 
@@ -2022,6 +2035,14 @@ public class UpdateMediaLiveChannelRequest extends Request {
              */
             public Builder videoCodecSetting(VideoCodecSetting videoCodecSetting) {
                 this.videoCodecSetting = videoCodecSetting;
+                return this;
+            }
+
+            /**
+             * VideoCodecType.
+             */
+            public Builder videoCodecType(String videoCodecType) {
+                this.videoCodecType = videoCodecType;
                 return this;
             }
 
