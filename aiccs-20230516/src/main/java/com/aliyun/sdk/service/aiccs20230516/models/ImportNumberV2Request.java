@@ -17,15 +17,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportNumberV2Request</p>
  */
 public class ImportNumberV2Request extends Request {
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Customers")
     private java.util.List<Customers> customers;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FailReturn")
     private Long failReturn;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
@@ -41,7 +41,7 @@ public class ImportNumberV2Request extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
@@ -147,7 +147,7 @@ public class ImportNumberV2Request extends Request {
          */
         public Builder customers(java.util.List<Customers> customers) {
             String customersShrink = shrink(customers, "Customers", "json");
-            this.putQueryParameter("Customers", customersShrink);
+            this.putBodyParameter("Customers", customersShrink);
             this.customers = customers;
             return this;
         }
@@ -156,7 +156,7 @@ public class ImportNumberV2Request extends Request {
          * FailReturn.
          */
         public Builder failReturn(Long failReturn) {
-            this.putQueryParameter("FailReturn", failReturn);
+            this.putBodyParameter("FailReturn", failReturn);
             this.failReturn = failReturn;
             return this;
         }
@@ -165,7 +165,7 @@ public class ImportNumberV2Request extends Request {
          * OutId.
          */
         public Builder outId(String outId) {
-            this.putQueryParameter("OutId", outId);
+            this.putBodyParameter("OutId", outId);
             this.outId = outId;
             return this;
         }
@@ -201,7 +201,7 @@ public class ImportNumberV2Request extends Request {
          * TaskId.
          */
         public Builder taskId(Long taskId) {
-            this.putQueryParameter("TaskId", taskId);
+            this.putBodyParameter("TaskId", taskId);
             this.taskId = taskId;
             return this;
         }
