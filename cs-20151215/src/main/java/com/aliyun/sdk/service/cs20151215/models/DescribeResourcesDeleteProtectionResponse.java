@@ -208,7 +208,7 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
             } 
 
             /**
-             * <p>The name of the resource.</p>
+             * <p>The resource name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -231,7 +231,7 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
             }
 
             /**
-             * <p>The type of resource for which deletion protection is enabled.</p>
+             * <p>The type of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>namespaces</p>
@@ -247,7 +247,6 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
              * <li>true: deletion protection is enabled.</li>
              * <li>false: deletion protection is disabled.</li>
              * </ul>
-             * <p>Default value: false</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

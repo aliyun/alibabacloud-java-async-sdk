@@ -67,7 +67,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried cluster(s) details.</p>
+         * <p>The queried cluster details.</p>
          */
         public Builder clusters(java.util.List<Clusters> clusters) {
             this.clusters = clusters;
@@ -1114,7 +1114,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource labels of the cluster.</p>
+             * <p>The resource tags of the cluster.</p>
              */
             public Builder tags(java.util.List<Tag> tags) {
                 this.tags = tags;

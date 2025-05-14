@@ -705,10 +705,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IP protocol stack of the cluster. Valid values:</p>
+         * <p>The IP stack of the cluster. Valid values:</p>
          * <ul>
-         * <li>ipv4: creates a cluster that supports only the IPv4 protocol stack.</li>
-         * <li>dual: creates a cluster that supports IPv4/IPv6 dual-stack.</li>
+         * <li>ipv4: The cluster is an IPv4 cluster.</li>
+         * <li>dual: The cluster is an IPv4/IPv6 dual-stack cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -958,7 +958,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource labels of the cluster.</p>
+         * <p>The resource tags of the cluster.</p>
          */
         public Builder tags(java.util.List<Tag> tags) {
             this.tags = tags;

@@ -107,13 +107,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#-openapi-"></a>Generate API request parameters in the ACK console</h3>
-     * <p>When you fail to create an ACK cluster by calling the CreateCluster operation due to invalid parameter settings, you can generate valid API request parameters in the ACK console. Procedure:</p>
+     * <h3><a href="#-openapi-"></a>Generate API request parameters through the ACK console</h3>
+     * <p>When calling the CreateCluster operation to create a cluster, if the API call fails due to invalid parameter settings, you can generate valid request parameters through the ACK console. Follow these steps:</p>
      * <ol>
-     * <li>Log on to the <a href="https://cs.console.aliyun.com">ACK console</a>. In the left-side navigation pane, click <strong>Clusters</strong>.</li>
-     * <li>On the <strong>Cluster</strong> page, click <strong>Cluster Templates</strong>.</li>
-     * <li>In the Select Cluster Template dialog box, select the type of cluster that you want to create and click Create. Then, configure the cluster setting parameters.</li>
-     * <li>After you configure the cluster parameters, click <strong>Generate API Request Parameters</strong> in the <strong>Confirm Order</strong> step.
+     * <li>Log on to the <a href="https://csnew.console.aliyun.com">ACK console</a>. In the left-side navigation pane, click <strong>Clusters</strong>.</li>
+     * <li>On the <strong>Clusters</strong> page, click <strong>Cluster Templates</strong>.</li>
+     * <li>In the Select Cluster Template dialog box, select the type of cluster you want to create and click Create. Then, configure the cluster parameters.</li>
+     * <li>In the <strong>Confirm</strong> step, click <strong>Generate API Request Parameters</strong>.
      * The API request parameters are displayed in the API Request Parameters dialog box.</li>
      * </ol>
      * 
@@ -127,6 +127,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateClusterDiagnosisResponse
      */
     CompletableFuture<CreateClusterDiagnosisResponse> createClusterDiagnosis(CreateClusterDiagnosisRequest request);
+
+    /**
+     * @param request the request parameters of CreateClusterInspectConfig  CreateClusterInspectConfigRequest
+     * @return CreateClusterInspectConfigResponse
+     */
+    CompletableFuture<CreateClusterInspectConfigResponse> createClusterInspectConfig(CreateClusterInspectConfigRequest request);
 
     /**
      * @param request the request parameters of CreateClusterNodePool  CreateClusterNodePoolRequest
@@ -186,6 +192,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteClusterResponse
      */
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
+
+    /**
+     * @param request the request parameters of DeleteClusterInspectConfig  DeleteClusterInspectConfigRequest
+     * @return DeleteClusterInspectConfigResponse
+     */
+    CompletableFuture<DeleteClusterInspectConfigResponse> deleteClusterInspectConfig(DeleteClusterInspectConfigRequest request);
 
     /**
      * @param request the request parameters of DeleteClusterNodepool  DeleteClusterNodepoolRequest
@@ -591,6 +603,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetClusterDiagnosisResultResponse> getClusterDiagnosisResult(GetClusterDiagnosisResultRequest request);
 
     /**
+     * @param request the request parameters of GetClusterInspectConfig  GetClusterInspectConfigRequest
+     * @return GetClusterInspectConfigResponse
+     */
+    CompletableFuture<GetClusterInspectConfigResponse> getClusterInspectConfig(GetClusterInspectConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetClusterInspectReportDetail  GetClusterInspectReportDetailRequest
+     * @return GetClusterInspectReportDetailResponse
+     */
+    CompletableFuture<GetClusterInspectReportDetailResponse> getClusterInspectReportDetail(GetClusterInspectReportDetailRequest request);
+
+    /**
      * @deprecated OpenAPI GetKubernetesTrigger is deprecated, please use CS::2015-12-15::DescribeTrigger instead.  * @param request  the request parameters of GetKubernetesTrigger  GetKubernetesTriggerRequest
      * @return GetKubernetesTriggerResponse
      */
@@ -640,6 +664,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListClusterChecksResponse
      */
     CompletableFuture<ListClusterChecksResponse> listClusterChecks(ListClusterChecksRequest request);
+
+    /**
+     * @param request the request parameters of ListClusterInspectReports  ListClusterInspectReportsRequest
+     * @return ListClusterInspectReportsResponse
+     */
+    CompletableFuture<ListClusterInspectReportsResponse> listClusterInspectReports(ListClusterInspectReportsRequest request);
 
     /**
      * <b>description</b> :
@@ -839,6 +869,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunClusterCheckResponse> runClusterCheck(RunClusterCheckRequest request);
 
     /**
+     * @param request the request parameters of RunClusterInspect  RunClusterInspectRequest
+     * @return RunClusterInspectResponse
+     */
+    CompletableFuture<RunClusterInspectResponse> runClusterInspect(RunClusterInspectRequest request);
+
+    /**
      * @deprecated OpenAPI ScaleCluster is deprecated, please use CS::2015-12-15::ModifyClusterNodePool instead.  * @param request  the request parameters of ScaleCluster  ScaleClusterRequest
      * @return ScaleClusterResponse
      */
@@ -912,6 +948,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateClusterAuditLogConfigResponse
      */
     CompletableFuture<UpdateClusterAuditLogConfigResponse> updateClusterAuditLogConfig(UpdateClusterAuditLogConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateClusterInspectConfig  UpdateClusterInspectConfigRequest
+     * @return UpdateClusterInspectConfigResponse
+     */
+    CompletableFuture<UpdateClusterInspectConfigResponse> updateClusterInspectConfig(UpdateClusterInspectConfigRequest request);
 
     /**
      * @param request the request parameters of UpdateContactGroupForAlert  UpdateContactGroupForAlertRequest

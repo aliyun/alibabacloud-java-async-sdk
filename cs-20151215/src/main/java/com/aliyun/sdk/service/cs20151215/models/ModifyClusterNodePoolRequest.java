@@ -700,7 +700,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The labels of the nodes in the node pool. You can add labels to the nodes in the cluster. You must add labels based on the following rules:</p>
+             * <p>The labels of the nodes in the node pool. You can add labels to the nodes in the cluster. You must add the label based on the following rules:</p>
              * <ul>
              * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
              * <li>The key must be unique and cannot exceed 64 characters in length. The value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with <code>aliyun</code>, <code>acs:</code>, <code>https://</code>, or <code>http://</code>. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
@@ -823,8 +823,8 @@ public class ModifyClusterNodePoolRequest extends Request {
             /**
              * <p>Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: yes.</li>
-             * <li><code>false</code>: no.</li>
+             * <li><code>true</code>: allows node restart.</li>
+             * <li><code>false</code>: does not allow node restart.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -925,10 +925,13 @@ public class ModifyClusterNodePoolRequest extends Request {
             /**
              * <p>Specifies whether ACK is allowed to automatically update the operating system. This parameter takes effect only when you specify <code>auto_upgrade=true</code>. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: yes.</li>
-             * <li><code>false</code>: no.</li>
+             * <li><code>true</code>: allows the auto upgrade of the OS.</li>
+             * <li><code>false</code>: does not allow the auto upgrade of the OS.</li>
              * </ul>
              * <p>Default value: <code>false</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoUpgradeOs(Boolean autoUpgradeOs) {
                 this.autoUpgradeOs = autoUpgradeOs;
@@ -938,10 +941,13 @@ public class ModifyClusterNodePoolRequest extends Request {
             /**
              * <p>Specifies whether ACK is allowed to automatically update the runtime. This parameter takes effect only when you specify <code>auto_upgrade=true</code>. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: yes.</li>
-             * <li><code>false</code>: no.</li>
+             * <li><code>true</code>: allows the auto upgrade of the runtime.</li>
+             * <li><code>false</code>: does not allow the auto upgrade of the runtime.</li>
              * </ul>
              * <p>Default value: <code>false</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoUpgradeRuntime(Boolean autoUpgradeRuntime) {
                 this.autoUpgradeRuntime = autoUpgradeRuntime;
@@ -1010,8 +1016,8 @@ public class ModifyClusterNodePoolRequest extends Request {
             /**
              * <p>Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: yes.</li>
-             * <li><code>false</code>: no.</li>
+             * <li><code>true</code>: allows node restart.</li>
+             * <li><code>false</code>: does not allow node restart.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1138,7 +1144,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             /**
              * <p>The maximum number of nodes that can be in the Unavailable state.</p>
              * <p>Valid values: 1 to 1000.</p>
-             * <p>Default value: 1</p>
+             * <p>Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1149,7 +1155,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The number of nodes that are temporarily added to the node pool during an auto upgrade. Additional nodes are used to host the workloads of nodes that are being updated.</p>
+             * <p>The number of additional nodes that are temporarily added to the node pool during an auto update. Additional nodes are used to host the workloads of nodes that are being updated.</p>
              * <blockquote>
              * <p> We recommend that you set the number of additional nodes to a value that does not exceed the current number of existing nodes.</p>
              * </blockquote>
@@ -1681,6 +1687,9 @@ public class ModifyClusterNodePoolRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("data_disks")
         private java.util.List<DataDisk> dataDisks;
 
+        @com.aliyun.core.annotation.NameInMap("deploymentset_id")
+        private String deploymentsetId;
+
         @com.aliyun.core.annotation.NameInMap("desired_size")
         private Long desiredSize;
 
@@ -1739,6 +1748,9 @@ public class ModifyClusterNodePoolRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("scaling_policy")
         private String scalingPolicy;
 
+        @com.aliyun.core.annotation.NameInMap("security_group_ids")
+        private java.util.List<String> securityGroupIds;
+
         @com.aliyun.core.annotation.NameInMap("spot_instance_pools")
         private Long spotInstancePools;
 
@@ -1789,6 +1801,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             this.autoRenewPeriod = builder.autoRenewPeriod;
             this.compensateWithOnDemand = builder.compensateWithOnDemand;
             this.dataDisks = builder.dataDisks;
+            this.deploymentsetId = builder.deploymentsetId;
             this.desiredSize = builder.desiredSize;
             this.imageId = builder.imageId;
             this.imageType = builder.imageType;
@@ -1808,6 +1821,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             this.privatePoolOptions = builder.privatePoolOptions;
             this.rdsInstances = builder.rdsInstances;
             this.scalingPolicy = builder.scalingPolicy;
+            this.securityGroupIds = builder.securityGroupIds;
             this.spotInstancePools = builder.spotInstancePools;
             this.spotInstanceRemedy = builder.spotInstanceRemedy;
             this.spotPriceLimit = builder.spotPriceLimit;
@@ -1859,6 +1873,13 @@ public class ModifyClusterNodePoolRequest extends Request {
          */
         public java.util.List<DataDisk> getDataDisks() {
             return this.dataDisks;
+        }
+
+        /**
+         * @return deploymentsetId
+         */
+        public String getDeploymentsetId() {
+            return this.deploymentsetId;
         }
 
         /**
@@ -1995,6 +2016,13 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return securityGroupIds
+         */
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        /**
          * @return spotInstancePools
          */
         public Long getSpotInstancePools() {
@@ -2104,6 +2132,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private Long autoRenewPeriod; 
             private Boolean compensateWithOnDemand; 
             private java.util.List<DataDisk> dataDisks; 
+            private String deploymentsetId; 
             private Long desiredSize; 
             private String imageId; 
             private String imageType; 
@@ -2123,6 +2152,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private PrivatePoolOptions privatePoolOptions; 
             private java.util.List<String> rdsInstances; 
             private String scalingPolicy; 
+            private java.util.List<String> securityGroupIds; 
             private Long spotInstancePools; 
             private Boolean spotInstanceRemedy; 
             private java.util.List<SpotPriceLimit> spotPriceLimit; 
@@ -2147,6 +2177,7 @@ public class ModifyClusterNodePoolRequest extends Request {
                 this.autoRenewPeriod = model.autoRenewPeriod;
                 this.compensateWithOnDemand = model.compensateWithOnDemand;
                 this.dataDisks = model.dataDisks;
+                this.deploymentsetId = model.deploymentsetId;
                 this.desiredSize = model.desiredSize;
                 this.imageId = model.imageId;
                 this.imageType = model.imageType;
@@ -2166,6 +2197,7 @@ public class ModifyClusterNodePoolRequest extends Request {
                 this.privatePoolOptions = model.privatePoolOptions;
                 this.rdsInstances = model.rdsInstances;
                 this.scalingPolicy = model.scalingPolicy;
+                this.securityGroupIds = model.securityGroupIds;
                 this.spotInstancePools = model.spotInstancePools;
                 this.spotInstanceRemedy = model.spotInstanceRemedy;
                 this.spotPriceLimit = model.spotPriceLimit;
@@ -2186,7 +2218,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             /**
              * <p>Specifies whether to enable auto-renewal for the nodes in the node pool. This parameter takes effect only when you set <code>instance_charge_type</code> to <code>PrePaid</code>. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: enables auto-renewal</li>
+             * <li><code>true</code>: enables auto-renewal.</li>
              * <li><code>false</code>: disables auto-renewal.</li>
              * </ul>
              * <p>Default value: <code>false</code></p>
@@ -2200,12 +2232,12 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The auto-renewal period. Valid values:</p>
+             * <p>The auto-renewal period. Valid value:</p>
              * <ul>
-             * <li>Valid values when PeriodUnit is set to Week: 1, 2, and 3</li>
-             * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60</li>
+             * <li>Valid values when PeriodUnit is set to Week: 1, 2, and 3.</li>
+             * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</li>
              * </ul>
-             * <p>Default value: 1</p>
+             * <p>Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2219,7 +2251,7 @@ public class ModifyClusterNodePoolRequest extends Request {
              * <p>Specifies whether to automatically create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created due to reasons such as the cost or insufficient inventory. This parameter takes effect only when you set <code>multi_az_policy</code> to <code>COST_OPTIMIZED</code>. Valid values:</p>
              * <ul>
              * <li><code>true</code>: automatically creates pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created</li>
-             * <li><code>false</code></li>
+             * <li><code>false</code>: does not create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2235,6 +2267,14 @@ public class ModifyClusterNodePoolRequest extends Request {
              */
             public Builder dataDisks(java.util.List<DataDisk> dataDisks) {
                 this.dataDisks = dataDisks;
+                return this;
+            }
+
+            /**
+             * deploymentset_id.
+             */
+            public Builder deploymentsetId(String deploymentsetId) {
+                this.deploymentsetId = deploymentsetId;
                 return this;
             }
 
@@ -2481,6 +2521,14 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
+             * security_group_ids.
+             */
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
+                this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            /**
              * <p>The number of instance types that are available for creating preemptible instances. Auto Scaling creates preemptible instances of multiple instance types that are available at the lowest cost. Valid values: 1 to 10.</p>
              * 
              * <strong>example:</strong>
@@ -2578,7 +2626,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the system disk is encrypted. Valid values: true false: does not encrypt the system disk.</p>
+             * <p>Indicates whether the system disk is encrypted. Valid values: true: encrypts the system disk. false: does not encrypt the system disk.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2707,7 +2755,7 @@ public class ModifyClusterNodePoolRequest extends Request {
              * <li><code>true</code>: enables confidential computing for the cluster.</li>
              * <li><code>false</code>: disables confidential computing for the cluster.</li>
              * </ul>
-             * <p>Default value: <code>false</code></p>
+             * <p>Default value: <code>false</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

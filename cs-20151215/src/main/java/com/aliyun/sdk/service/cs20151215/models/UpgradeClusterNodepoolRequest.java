@@ -199,7 +199,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * <p>The ID of the OS image that is used by the nodes.</p>
+         * <p>The ID of the OS image used by the nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun_2_1903_x64_20G_alibase_20200529.vhd</p>
@@ -211,7 +211,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * <p>The Kubernetes version that is used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the Kubernetes version of the cluster returned in the current_version parameter.</p>
+         * <p>The Kubernetes version used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation and get the Kubernetes version of the current cluster in the current_version field.</p>
          * 
          * <strong>example:</strong>
          * <p>1.22.15-aliyun.1</p>
@@ -223,7 +223,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * <p>The nodes that you want to update. If you do not specify this parameter, all nodes in the node pool are updated by default.</p>
+         * <p>The nodes you want to update. If you do not specify this parameter, all nodes in the node pool are updated by default.</p>
          */
         public Builder nodeNames(java.util.List<String> nodeNames) {
             this.putBodyParameter("node_names", nodeNames);
@@ -232,7 +232,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * <p>The rotation configuration.</p>
+         * <p>The rolling update configuration.</p>
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rolling_policy", rollingPolicy);
@@ -241,7 +241,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * <p>The runtime type. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the runtime information returned in the runtime parameter.</p>
+         * <p>The runtime type. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation and get the runtime information in the runtime field.</p>
          * 
          * <strong>example:</strong>
          * <p>containerd</p>
@@ -253,7 +253,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * <p>The version of the container runtime that is used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the runtime version returned in the runtime parameter.</p>
+         * <p>The version of the container runtime used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation and get the runtime version in the runtime field.</p>
          * 
          * <strong>example:</strong>
          * <p>1.5.10</p>
@@ -267,8 +267,8 @@ public class UpgradeClusterNodepoolRequest extends Request {
         /**
          * <p>Specifies whether to perform the update by replacing the system disk. Valid values:</p>
          * <ul>
-         * <li>true: updates by replacing the system disk.</li>
-         * <li>false: does not update by replacing the system disk.</li>
+         * <li>true: replaces the system disk.</li>
+         * <li>false: does not replace the system disk.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -376,10 +376,10 @@ public class UpgradeClusterNodepoolRequest extends Request {
             }
 
             /**
-             * <p>The policy that is used to pause the update. Valid values:</p>
+             * <p>The policy used to pause the update. Valid values:</p>
              * <ul>
-             * <li>FirstBatch: pauses the update after the first batch is completed.</li>
-             * <li>EveryBatch: pauses after each batch is completed.</li>
+             * <li>FirstBatch: pauses after the first batch is updated.</li>
+             * <li>EveryBatch: pauses after each batch is updated.</li>
              * <li>NotPause: does not pause.</li>
              * </ul>
              * 

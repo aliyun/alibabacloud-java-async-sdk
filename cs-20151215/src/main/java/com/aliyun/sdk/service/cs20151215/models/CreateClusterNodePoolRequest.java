@@ -600,7 +600,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The maximum number to which the Elastic Compute Service (ECS) instances in the node pool can be scaled. The number of nodes in the node pool cannot be greater than this value. This parameter takes effect only if <code>enable</code> is set to true. Valid values: [min_instances, 2000]. Default value: 0.</p>
+             * <p>The maximum number to which the Elastic Compute Service (ECS) instances in the node pool can be scaled. The number of nodes in the node pool cannot be greater than this value. This parameter takes effect only when <code>enable</code> is set to true. Valid values: [min_instances, 2000]. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -611,7 +611,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The minimum number to which the ECS instances in the node pool can be scaled. The number of nodes in the node pool cannot be smaller than this value. This parameter takes effect only if <code>enable</code> is set to true. Valid values: [0, max_instances]. Default value: 0.</p>
+             * <p>The minimum number to which the ECS instances in the node pool can be scaled. The number of nodes in the node pool cannot be smaller than this value. This parameter takes effect only when <code>enable</code> is set to true. Valid values: [0, max_instances]. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -622,7 +622,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The instance type that is used for auto scaling. This parameter takes effect only if <code>enable</code> is set to true. Valid values:</p>
+             * <p>The instance type that is used for auto scaling. This parameter takes effect only when <code>enable</code> is set to true. Valid values:</p>
              * <ul>
              * <li><code>cpu</code>: regular instance.</li>
              * <li><code>gpu</code>: GPU-accelerated instance.</li>
@@ -969,7 +969,7 @@ public class CreateClusterNodePoolRequest extends Request {
              * <li><code>true</code>: installs the CloudMonitor agent on ECS nodes.</li>
              * <li><code>false</code>: does not install the CloudMonitor agent on ECS nodes.</li>
              * </ul>
-             * <p>Default value: <code>false</code>.</p>
+             * <p>Default value: <code>false</code></p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1135,7 +1135,7 @@ public class CreateClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow node restart. This parameter takes effect only if <code>auto_repair</code> is set to true. Valid values:</p>
+             * <p>Specifies whether to allow node restart. This parameter takes effect only when <code>auto_repair</code> is set to true. Valid values:</p>
              * <ul>
              * <li><code>true</code>: allows node restart.</li>
              * <li><code>false</code>: does not allow node restart.</li>
@@ -1223,7 +1223,7 @@ public class CreateClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow the auto upgrade of the kubelet. This parameter takes effect only if <code>auto_upgrade</code> is set to true. Valid values:</p>
+             * <p>Specifies whether to allow the auto upgrade of the kubelet. This parameter takes effect only when <code>auto_upgrade</code> is set to true. Valid values:</p>
              * <ul>
              * <li><code>true</code>: allows the auto upgrade of the kubelet.</li>
              * <li><code>false</code>: does not allow the auto upgrade of the kubelet.</li>
@@ -1239,12 +1239,15 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow the auto upgrade of the OS. This parameter takes effect only if <code>auto_upgrade</code> is set to true. Valid values:</p>
+             * <p>Specifies whether to allow the auto upgrade of the OS. This parameter takes effect only when <code>auto_upgrade</code> is set to true. Valid values:</p>
              * <ul>
              * <li><code>true</code>: allows the auto upgrade of the OS.</li>
              * <li><code>false</code>: does not allow the auto upgrade of the OS.</li>
              * </ul>
              * <p>Default value: <code>false</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoUpgradeOs(Boolean autoUpgradeOs) {
                 this.autoUpgradeOs = autoUpgradeOs;
@@ -1252,12 +1255,15 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow the auto upgrade of the runtime. This parameter takes effect only if <code>auto_upgrade</code> is set to true. Valid values:</p>
+             * <p>Specifies whether to allow the auto upgrade of the runtime. This parameter takes effect only when <code>auto_upgrade</code> is set to true. Valid values:</p>
              * <ul>
              * <li><code>true</code>: allows the auto upgrade of the runtime.</li>
              * <li><code>false</code>: does not allow the auto upgrade of the runtime.</li>
              * </ul>
              * <p>Default value: <code>false</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoUpgradeRuntime(Boolean autoUpgradeRuntime) {
                 this.autoUpgradeRuntime = autoUpgradeRuntime;
@@ -1324,7 +1330,7 @@ public class CreateClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow node restart. This parameter takes effect only if <code>auto_vul_fix</code> is set to true. Valid values:</p>
+             * <p>Specifies whether to allow node restart. This parameter takes effect only when <code>auto_vul_fix</code> is set to true. Valid values:</p>
              * <ul>
              * <li><code>true</code>: allows node restart.</li>
              * <li><code>false</code>: does not allow node restart. If <code>auto_vul_fix</code> is set to true, the default value of this parameter is <code>false</code>. If <code>auto_vul_fix</code> is set to false, the default value of this parameter is <code>false</code>.</li>
@@ -1460,7 +1466,7 @@ public class CreateClusterNodePoolRequest extends Request {
 
             /**
              * <p>The maximum number of nodes that can be in the Unavailable state. Valid values: 1 to 1000.</p>
-             * <p>Default value: 1</p>
+             * <p>Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1482,7 +1488,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The percentage of additional nodes that are temporarily added to the node pool during an auto update. You must set this parameter or <code>surge</code>.</p>
+             * <p>The percentage of additional nodes that are temporarily added to the node pool during an auto upgrade. You must set this parameter or <code>surge</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1631,7 +1637,7 @@ public class CreateClusterNodePoolRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable auto node repair. This parameter takes effect only if <code>enable</code> is set to true.</p>
+             * <p>Specifies whether to enable auto node repair. This parameter takes effect only when <code>enable</code> is set to true.</p>
              * <ul>
              * <li><code>true</code>: enables auto node repair.</li>
              * <li><code>false</code>: disables auto node repair.</li>
@@ -1655,7 +1661,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable auto node upgrade. This parameter takes effect only if <code>enable</code> is set to true.</p>
+             * <p>Specifies whether to enable auto node upgrade. This parameter takes effect only when <code>enable</code> is set to true.</p>
              * <ul>
              * <li><code>true</code>: enables auto node upgrade.</li>
              * <li><code>false</code>: disables auto node upgrade.</li>
@@ -1679,7 +1685,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable auto Common Vulnerabilities and Exposures (CVE) patching. This parameter takes effect only if <code>enable</code> is set to true.</p>
+             * <p>Specifies whether to enable auto Common Vulnerabilities and Exposures (CVE) patching. This parameter takes effect only when <code>enable</code> is set to true.</p>
              * <ul>
              * <li><code>true</code>: enables auto CVE patching.</li>
              * <li><code>false</code>: disables auto CVE patching.</li>
@@ -1706,7 +1712,7 @@ public class CreateClusterNodePoolRequest extends Request {
              * <p>Specifies whether to enable the managed node pool feature. Valid values:</p>
              * <ul>
              * <li><code>true</code>: enables the managed node pool feature.</li>
-             * <li><code>false</code>: disables the managed node pool feature. Other parameters in this section take effect only if enable is set to true.</li>
+             * <li><code>false</code>: disables the managed node pool feature. Other parameters in this section take effect only when enable is set to true.</li>
              * </ul>
              * <p>Default value: false.</p>
              * 
@@ -1719,7 +1725,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The configurations of auto upgrade. The configurations take effects only if <code>enable</code> is set to true.</p>
+             * <p>The configurations of auto upgrade. The configurations take effect only when <code>enable</code> is set to true.</p>
              */
             public Builder upgradeConfig(UpgradeConfig upgradeConfig) {
                 this.upgradeConfig = upgradeConfig;
@@ -2882,8 +2888,8 @@ public class CreateClusterNodePoolRequest extends Request {
              * <li><code>AliyunLinux</code>: Alibaba Cloud Linux 2.</li>
              * <li><code>AliyunLinuxSecurity</code>: Alibaba Cloud Linux 2 (UEFI).</li>
              * <li><code>AliyunLinux3</code>: Alibaba Cloud Linux 3</li>
-             * <li><code>AliyunLinux3Arm64</code>: Alibaba Cloud Linux 3 (ARM).</li>
-             * <li><code>AliyunLinux3Security</code>: Alibaba Cloud Linux 3 (UEFI).</li>
+             * <li><code>AliyunLinux3Arm64</code>: Alibaba Cloud Linux 3 for ARM.</li>
+             * <li><code>AliyunLinux3Security</code>: Alibaba Cloud Linux 3 for ARM.</li>
              * <li><code>CentOS</code>: CentOS.</li>
              * <li><code>Windows</code>: Windows.</li>
              * <li><code>WindowsCore</code>: Windows Core.</li>
@@ -2905,7 +2911,7 @@ public class CreateClusterNodePoolRequest extends Request {
              * <li><code>PrePaid</code>: subscription.</li>
              * <li><code>PostPaid</code>: pay-as-you-go.</li>
              * </ul>
-             * <p>Default value: <code>PostPaid</code>.</p>
+             * <p>Default value: <code>PostPaid</code></p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2988,7 +2994,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The password for SSH logon. You must set this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+             * <p>The password for SSH logon. You must specify this parameter or the <code>key_pair</code> parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
              * 
              * <strong>example:</strong>
              * <p>Hello1234</p>
@@ -3058,7 +3064,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The billing cycle of nodes in the node pool. This parameter takes effect and is required if you set <code>instance_charge_type</code> to <code>PrePaid</code>. Valid values:</p>
+             * <p>The billing cycle of nodes in the node pool. This parameter takes effect and is required only when you set <code>instance_charge_type</code> to <code>PrePaid</code>. Valid values:</p>
              * <ul>
              * <li><code>Month</code>: The subscription duration is measured in months.</li>
              * <li><code>Week</code>: The subscription duration is measured in weeks.</li>
@@ -3074,7 +3080,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The OS distribution that is used. Valid values:</p>
+             * <p>The operating system distribution. Valid values:</p>
              * <ul>
              * <li><code>CentOS</code></li>
              * <li><code>AliyunLinux</code></li>
@@ -3161,12 +3167,15 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable Alibaba Cloud Linux Security Hardening. Valid values:</p>
+             * <p>Indicates whether Alibaba Cloud Linux Security Hardening is enabled. Valid values:</p>
              * <ul>
              * <li><code>true</code>: enables Alibaba Cloud Linux Security Hardening.</li>
              * <li><code>false</code>: disables Alibaba Cloud Linux Security Hardening.</li>
              * </ul>
              * <p>Default value: <code>false</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder securityHardeningOs(Boolean securityHardeningOs) {
                 this.securityHardeningOs = securityHardeningOs;
@@ -3273,7 +3282,7 @@ public class CreateClusterNodePoolRequest extends Request {
              * <li><code>cloud</code>: basic disk.</li>
              * <li><code>cloud_efficiency</code>: ultra disk.</li>
              * <li><code>cloud_ssd</code>: standard SSD.</li>
-             * <li><code>cloud_essd</code>: Enterprise ESSD (ESSD).</li>
+             * <li><code>cloud_essd</code>: ESSD.</li>
              * <li><code>cloud_auto</code>: ESSD AutoPL disk.</li>
              * <li><code>cloud_essd_entry</code>: ESSD Entry disk.</li>
              * </ul>
@@ -3288,7 +3297,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The encryption algorithm that is used to encrypt the system disk. The value is aes-256.</p>
+             * <p>The encryption algorithm that is used to encrypt the system disk. Set the value to aes-256.</p>
              * 
              * <strong>example:</strong>
              * <p>aes-256</p>
@@ -3310,7 +3319,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The ID of the Key Management Service (KMS) key that is used to encrypt the system disk.</p>
+             * <p>The ID of the KMS key that is used to encrypt the system disk.</p>
              * 
              * <strong>example:</strong>
              * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -3321,7 +3330,7 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
-             * <p>The performance level (PL) of the system disk. This parameter takes effect only for an ESSD.</p>
+             * <p>The PL of the system disk. This parameter takes effect only for an ESSD.</p>
              * <ul>
              * <li>PL0: moderate maximum concurrent I/O performance and low I/O latency.</li>
              * <li>PL1: moderate maximum concurrent I/O performance and low I/O latency.</li>
@@ -3329,7 +3338,7 @@ public class CreateClusterNodePoolRequest extends Request {
              * <li>PL3: ultra-high maximum concurrent I/O performance and ultra-low I/O latency.</li>
              * </ul>
              * <blockquote>
-             * <p> Disks support all of the preceding PLs. However, when you create a disk, the available PLs vary based on the ECS instance type that you selected. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</p>
+             * <p> Alibaba Cloud disks support the preceding PLs. However, when you create a disk, the available PLs vary based on the ECS instance type that you selected. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

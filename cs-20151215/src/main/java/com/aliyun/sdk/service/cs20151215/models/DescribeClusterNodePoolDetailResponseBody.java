@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterNodePoolDetailResponseBody</p>
  */
 public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("auto_mode")
+    private AutoMode autoMode;
+
     @com.aliyun.core.annotation.NameInMap("auto_scaling")
     private AutoScaling autoScaling;
 
@@ -57,6 +60,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     private TeeConfig teeConfig;
 
     private DescribeClusterNodePoolDetailResponseBody(Builder builder) {
+        this.autoMode = builder.autoMode;
         this.autoScaling = builder.autoScaling;
         this.hostNetwork = builder.hostNetwork;
         this.interconnectConfig = builder.interconnectConfig;
@@ -82,6 +86,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoMode
+     */
+    public AutoMode getAutoMode() {
+        return this.autoMode;
     }
 
     /**
@@ -176,6 +187,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private AutoMode autoMode; 
         private AutoScaling autoScaling; 
         private Boolean hostNetwork; 
         private InterconnectConfig interconnectConfig; 
@@ -194,6 +206,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeClusterNodePoolDetailResponseBody model) {
+            this.autoMode = model.autoMode;
             this.autoScaling = model.autoScaling;
             this.hostNetwork = model.hostNetwork;
             this.interconnectConfig = model.interconnectConfig;
@@ -208,6 +221,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             this.status = model.status;
             this.teeConfig = model.teeConfig;
         } 
+
+        /**
+         * auto_mode.
+         */
+        public Builder autoMode(AutoMode autoMode) {
+            this.autoMode = autoMode;
+            return this;
+        }
 
         /**
          * <p>The auto scaling configuration of the node pool.</p>
@@ -338,6 +359,60 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterNodePoolDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNodePoolDetailResponseBody</p>
+     */
+    public static class AutoMode extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enable")
+        private Boolean enable;
+
+        private AutoMode(Builder builder) {
+            this.enable = builder.enable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoMode create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoMode model) {
+                this.enable = model.enable;
+            } 
+
+            /**
+             * enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            public AutoMode build() {
+                return new AutoMode(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeClusterNodePoolDetailResponseBody} extends {@link TeaModel}
@@ -2671,7 +2746,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>【The field is deprecated】Please use the parameter security_hardening_os instead.</p>
+             * <p>[<strong>Deprecated</strong>] Please use the parameter security_hardening_os instead.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

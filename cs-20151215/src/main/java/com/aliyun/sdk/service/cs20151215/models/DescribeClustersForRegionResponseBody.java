@@ -67,7 +67,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the clusters returned.</p>
+         * <p>The information about the queried clusters.</p>
          */
         public Builder clusters(java.util.List<Clusters> clusters) {
             this.clusters = clusters;

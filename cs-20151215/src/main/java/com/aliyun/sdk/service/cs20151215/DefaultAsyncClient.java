@@ -290,13 +290,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#-openapi-"></a>Generate API request parameters in the ACK console</h3>
-     * <p>When you fail to create an ACK cluster by calling the CreateCluster operation due to invalid parameter settings, you can generate valid API request parameters in the ACK console. Procedure:</p>
+     * <h3><a href="#-openapi-"></a>Generate API request parameters through the ACK console</h3>
+     * <p>When calling the CreateCluster operation to create a cluster, if the API call fails due to invalid parameter settings, you can generate valid request parameters through the ACK console. Follow these steps:</p>
      * <ol>
-     * <li>Log on to the <a href="https://cs.console.aliyun.com">ACK console</a>. In the left-side navigation pane, click <strong>Clusters</strong>.</li>
-     * <li>On the <strong>Cluster</strong> page, click <strong>Cluster Templates</strong>.</li>
-     * <li>In the Select Cluster Template dialog box, select the type of cluster that you want to create and click Create. Then, configure the cluster setting parameters.</li>
-     * <li>After you configure the cluster parameters, click <strong>Generate API Request Parameters</strong> in the <strong>Confirm Order</strong> step.
+     * <li>Log on to the <a href="https://csnew.console.aliyun.com">ACK console</a>. In the left-side navigation pane, click <strong>Clusters</strong>.</li>
+     * <li>On the <strong>Clusters</strong> page, click <strong>Cluster Templates</strong>.</li>
+     * <li>In the Select Cluster Template dialog box, select the type of cluster you want to create and click Create. Then, configure the cluster parameters.</li>
+     * <li>In the <strong>Confirm</strong> step, click <strong>Generate API Request Parameters</strong>.
      * The API request parameters are displayed in the API Request Parameters dialog box.</li>
      * </ol>
      * 
@@ -330,6 +330,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateClusterDiagnosisResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateClusterInspectConfig  CreateClusterInspectConfigRequest
+     * @return CreateClusterInspectConfigResponse
+     */
+    @Override
+    public CompletableFuture<CreateClusterInspectConfigResponse> createClusterInspectConfig(CreateClusterInspectConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateClusterInspectConfig").setMethod(HttpMethod.POST).setPathRegex("/clusters/{clusterId}/inspectConfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateClusterInspectConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateClusterInspectConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -485,6 +503,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteClusterInspectConfig  DeleteClusterInspectConfigRequest
+     * @return DeleteClusterInspectConfigResponse
+     */
+    @Override
+    public CompletableFuture<DeleteClusterInspectConfigResponse> deleteClusterInspectConfig(DeleteClusterInspectConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteClusterInspectConfig").setMethod(HttpMethod.DELETE).setPathRegex("/clusters/{clusterId}/inspectConfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteClusterInspectConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteClusterInspectConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1614,6 +1650,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetClusterInspectConfig  GetClusterInspectConfigRequest
+     * @return GetClusterInspectConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetClusterInspectConfigResponse> getClusterInspectConfig(GetClusterInspectConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetClusterInspectConfig").setMethod(HttpMethod.GET).setPathRegex("/clusters/{clusterId}/inspectConfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetClusterInspectConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetClusterInspectConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetClusterInspectReportDetail  GetClusterInspectReportDetailRequest
+     * @return GetClusterInspectReportDetailResponse
+     */
+    @Override
+    public CompletableFuture<GetClusterInspectReportDetailResponse> getClusterInspectReportDetail(GetClusterInspectReportDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetClusterInspectReportDetail").setMethod(HttpMethod.GET).setPathRegex("/clusters/{clusterId}/inspectReports/{reportId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetClusterInspectReportDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetClusterInspectReportDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @deprecated OpenAPI GetKubernetesTrigger is deprecated, please use CS::2015-12-15::DescribeTrigger instead.  * @param request  the request parameters of GetKubernetesTrigger  GetKubernetesTriggerRequest
      * @return GetKubernetesTriggerResponse
      */
@@ -1743,6 +1815,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListClusterChecksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListClusterInspectReports  ListClusterInspectReportsRequest
+     * @return ListClusterInspectReportsResponse
+     */
+    @Override
+    public CompletableFuture<ListClusterInspectReportsResponse> listClusterInspectReports(ListClusterInspectReportsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListClusterInspectReports").setMethod(HttpMethod.GET).setPathRegex("/clusters/{clusterId}/inspectReports").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListClusterInspectReportsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListClusterInspectReportsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2234,6 +2324,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RunClusterInspect  RunClusterInspectRequest
+     * @return RunClusterInspectResponse
+     */
+    @Override
+    public CompletableFuture<RunClusterInspectResponse> runClusterInspect(RunClusterInspectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunClusterInspect").setMethod(HttpMethod.POST).setPathRegex("/clusters/{clusterId}/inspectReports").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunClusterInspectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunClusterInspectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @deprecated OpenAPI ScaleCluster is deprecated, please use CS::2015-12-15::ModifyClusterNodePool instead.  * @param request  the request parameters of ScaleCluster  ScaleClusterRequest
      * @return ScaleClusterResponse
      */
@@ -2435,6 +2543,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateClusterAuditLogConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateClusterInspectConfig  UpdateClusterInspectConfigRequest
+     * @return UpdateClusterInspectConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateClusterInspectConfigResponse> updateClusterInspectConfig(UpdateClusterInspectConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateClusterInspectConfig").setMethod(HttpMethod.PUT).setPathRegex("/clusters/{clusterId}/inspectConfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateClusterInspectConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateClusterInspectConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

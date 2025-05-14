@@ -60,7 +60,7 @@ public class CheckServiceRoleRequest extends Request {
         } 
 
         /**
-         * <p>The service roles that you want to check.</p>
+         * <p>The list of service roles you want to check.</p>
          * <p>This parameter is required.</p>
          */
         public Builder roles(java.util.List<Roles> roles) {
@@ -117,7 +117,7 @@ public class CheckServiceRoleRequest extends Request {
             } 
 
             /**
-             * <p>The name of the service role. For more information about ACK roles, see <a href="https://help.aliyun.com/document_detail/86483.html">ACK roles</a>.</p>
+             * <p>The server role name. For more information about the service roles and their permissions in ACK, see <a href="https://help.aliyun.com/document_detail/86483.html">ACK roles</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -103,7 +103,7 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The ID of the Container Service for Kubernetes (ACK) cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,11 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * <p>The type of resources for which deletion protection is enabled or disabled. You can specify namespaces or services.</p>
+         * <p>The type of the resource that you want to query. Valid values:</p>
+         * <ul>
+         * <li>Namespaces</li>
+         * <li>services</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +133,8 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * <p>The namespace to which the resource belongs.</p>
+         * <p>The namespace in which the resources that you want to query reside.</p>
+         * <p>This parameter is required when you set resource_type to services. Default value: default.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -141,7 +146,11 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * <p>The name of the resource that you want to query. Separate multiple resource names with commas (,).</p>
+         * <p>The names of the resources that you want to query. Separate multiple resource names with commas (,).</p>
+         * <ul>
+         * <li>When you set resource_type to namespaces, you must specify namespace names. If you leave this parameter empty, all namespaces in the cluster are queried.</li>
+         * <li>If you set resource_type to services, you must specify Service names.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>test1,test2</p>

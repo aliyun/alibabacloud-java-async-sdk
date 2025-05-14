@@ -73,6 +73,60 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
      *
      * <p>DescribeClusterNodePoolsResponseBody</p>
      */
+    public static class AutoMode extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enable")
+        private Boolean enable;
+
+        private AutoMode(Builder builder) {
+            this.enable = builder.enable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoMode create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoMode model) {
+                this.enable = model.enable;
+            } 
+
+            /**
+             * enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            public AutoMode build() {
+                return new AutoMode(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeClusterNodePoolsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNodePoolsResponseBody</p>
+     */
     public static class AutoScaling extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("eip_bandwidth")
         private Long eipBandwidth;
@@ -3262,6 +3316,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
      * <p>DescribeClusterNodePoolsResponseBody</p>
      */
     public static class Nodepools extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("auto_mode")
+        private AutoMode autoMode;
+
         @com.aliyun.core.annotation.NameInMap("auto_scaling")
         private AutoScaling autoScaling;
 
@@ -3296,6 +3353,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         private TeeConfig teeConfig;
 
         private Nodepools(Builder builder) {
+            this.autoMode = builder.autoMode;
             this.autoScaling = builder.autoScaling;
             this.interconnectConfig = builder.interconnectConfig;
             this.interconnectMode = builder.interconnectMode;
@@ -3315,6 +3373,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         public static Nodepools create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoMode
+         */
+        public AutoMode getAutoMode() {
+            return this.autoMode;
         }
 
         /**
@@ -3395,6 +3460,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AutoMode autoMode; 
             private AutoScaling autoScaling; 
             private InterconnectConfig interconnectConfig; 
             private String interconnectMode; 
@@ -3411,6 +3477,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             } 
 
             private Builder(Nodepools model) {
+                this.autoMode = model.autoMode;
                 this.autoScaling = model.autoScaling;
                 this.interconnectConfig = model.interconnectConfig;
                 this.interconnectMode = model.interconnectMode;
@@ -3423,6 +3490,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
                 this.status = model.status;
                 this.teeConfig = model.teeConfig;
             } 
+
+            /**
+             * auto_mode.
+             */
+            public Builder autoMode(AutoMode autoMode) {
+                this.autoMode = autoMode;
+                return this;
+            }
 
             /**
              * <p>The configurations of auto scaling.</p>
