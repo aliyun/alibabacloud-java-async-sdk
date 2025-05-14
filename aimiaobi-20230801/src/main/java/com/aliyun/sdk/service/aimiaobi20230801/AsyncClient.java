@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelAsyncTaskResponse> cancelAsyncTask(CancelAsyncTaskRequest request);
 
     /**
+     * @param request the request parameters of CancelAuditTask  CancelAuditTaskRequest
+     * @return CancelAuditTaskResponse
+     */
+    CompletableFuture<CancelAuditTaskResponse> cancelAuditTask(CancelAuditTaskRequest request);
+
+    /**
      * @param request the request parameters of ClearIntervenes  ClearIntervenesRequest
      * @return ClearIntervenesResponse
      */
@@ -524,6 +530,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryAsyncTaskResponse> queryAsyncTask(QueryAsyncTaskRequest request);
 
     /**
+     * @param request the request parameters of QueryAuditTask  QueryAuditTaskRequest
+     * @return QueryAuditTaskResponse
+     */
+    CompletableFuture<QueryAuditTaskResponse> queryAuditTask(QueryAuditTaskRequest request);
+
+    /**
      * @param request the request parameters of RunAbbreviationContent  RunAbbreviationContentRequest
      * @return RunAbbreviationContentResponse
      */
@@ -804,6 +816,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitAsyncTaskResponse
      */
     CompletableFuture<SubmitAsyncTaskResponse> submitAsyncTask(SubmitAsyncTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitAuditTask  SubmitAuditTaskRequest
+     * @return SubmitAuditTaskResponse
+     */
+    CompletableFuture<SubmitAuditTaskResponse> submitAuditTask(SubmitAuditTaskRequest request);
 
     /**
      * @param request the request parameters of SubmitCustomHotTopicBroadcastJob  SubmitCustomHotTopicBroadcastJobRequest
