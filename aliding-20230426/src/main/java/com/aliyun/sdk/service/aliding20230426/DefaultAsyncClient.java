@@ -113,6 +113,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddMultiDimTable  AddMultiDimTableRequest
+     * @return AddMultiDimTableResponse
+     */
+    @Override
+    public CompletableFuture<AddMultiDimTableResponse> addMultiDimTable(AddMultiDimTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddMultiDimTable").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/table/addMultiDimTable").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddMultiDimTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddMultiDimTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddPermission  AddPermissionRequest
      * @return AddPermissionResponse
      */
@@ -635,6 +653,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateMultiDimTableField  CreateMultiDimTableFieldRequest
+     * @return CreateMultiDimTableFieldResponse
+     */
+    @Override
+    public CompletableFuture<CreateMultiDimTableFieldResponse> createMultiDimTableField(CreateMultiDimTableFieldRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateMultiDimTableField").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/table/createMultiDimTableField").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMultiDimTableFieldResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateMultiDimTableFieldResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateOrUpdateFormData  CreateOrUpdateFormDataRequest
      * @return CreateOrUpdateFormDataResponse
      */
@@ -1113,6 +1149,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteMultiDimTableField  DeleteMultiDimTableFieldRequest
+     * @return DeleteMultiDimTableFieldResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMultiDimTableFieldResponse> deleteMultiDimTableField(DeleteMultiDimTableFieldRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteMultiDimTableField").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/table/deleteMultiDimTableField").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMultiDimTableFieldResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMultiDimTableFieldResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteMultiDimTableRecords  DeleteMultiDimTableRecordsRequest
+     * @return DeleteMultiDimTableRecordsResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMultiDimTableRecordsResponse> deleteMultiDimTableRecords(DeleteMultiDimTableRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteMultiDimTableRecords").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/table/deleteMultiDimTableRecords").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMultiDimTableRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMultiDimTableRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeletePermission  DeletePermissionRequest
      * @return DeletePermissionResponse
      */
@@ -1251,6 +1323,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteWorkspaceMembersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DocBlocksQuery  DocBlocksQueryRequest
+     * @return DocBlocksQueryResponse
+     */
+    @Override
+    public CompletableFuture<DocBlocksQueryResponse> docBlocksQuery(DocBlocksQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DocBlocksQuery").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/documents/docBlocksQuery").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DocBlocksQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DocBlocksQueryResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2511,6 +2601,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<InsertColumnsBeforeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of InsertMultiDimTableRecord  InsertMultiDimTableRecordRequest
+     * @return InsertMultiDimTableRecordResponse
+     */
+    @Override
+    public CompletableFuture<InsertMultiDimTableRecordResponse> insertMultiDimTableRecord(InsertMultiDimTableRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InsertMultiDimTableRecord").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/table/insertMultiDimTableRecord").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InsertMultiDimTableRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<InsertMultiDimTableRecordResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4159,6 +4267,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateMeetingRoomGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMultiDimTable  UpdateMultiDimTableRequest
+     * @return UpdateMultiDimTableResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMultiDimTableResponse> updateMultiDimTable(UpdateMultiDimTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMultiDimTable").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/table/updateMultiDimTable").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMultiDimTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMultiDimTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMultiDimTableField  UpdateMultiDimTableFieldRequest
+     * @return UpdateMultiDimTableFieldResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMultiDimTableFieldResponse> updateMultiDimTableField(UpdateMultiDimTableFieldRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMultiDimTableField").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/table/updateMultiDimTableField").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMultiDimTableFieldResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMultiDimTableFieldResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMultiDimTableRecords  UpdateMultiDimTableRecordsRequest
+     * @return UpdateMultiDimTableRecordsResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMultiDimTableRecordsResponse> updateMultiDimTableRecords(UpdateMultiDimTableRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMultiDimTableRecords").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/table/updateMultiDimTableRecords").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMultiDimTableRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMultiDimTableRecordsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

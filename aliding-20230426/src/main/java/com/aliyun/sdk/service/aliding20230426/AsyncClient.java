@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddMeetingRoomsResponse> addMeetingRooms(AddMeetingRoomsRequest request);
 
     /**
+     * @param request the request parameters of AddMultiDimTable  AddMultiDimTableRequest
+     * @return AddMultiDimTableResponse
+     */
+    CompletableFuture<AddMultiDimTableResponse> addMultiDimTable(AddMultiDimTableRequest request);
+
+    /**
      * @param request the request parameters of AddPermission  AddPermissionRequest
      * @return AddPermissionResponse
      */
@@ -218,6 +224,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMessageResponse> createMessage(CreateMessageRequest request);
 
     /**
+     * @param request the request parameters of CreateMultiDimTableField  CreateMultiDimTableFieldRequest
+     * @return CreateMultiDimTableFieldResponse
+     */
+    CompletableFuture<CreateMultiDimTableFieldResponse> createMultiDimTableField(CreateMultiDimTableFieldRequest request);
+
+    /**
      * @param request the request parameters of CreateOrUpdateFormData  CreateOrUpdateFormDataRequest
      * @return CreateOrUpdateFormDataResponse
      */
@@ -376,6 +388,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMeetingRoomGroupResponse> deleteMeetingRoomGroup(DeleteMeetingRoomGroupRequest request);
 
     /**
+     * @param request the request parameters of DeleteMultiDimTableField  DeleteMultiDimTableFieldRequest
+     * @return DeleteMultiDimTableFieldResponse
+     */
+    CompletableFuture<DeleteMultiDimTableFieldResponse> deleteMultiDimTableField(DeleteMultiDimTableFieldRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMultiDimTableRecords  DeleteMultiDimTableRecordsRequest
+     * @return DeleteMultiDimTableRecordsResponse
+     */
+    CompletableFuture<DeleteMultiDimTableRecordsResponse> deleteMultiDimTableRecords(DeleteMultiDimTableRecordsRequest request);
+
+    /**
      * @param request the request parameters of DeletePermission  DeletePermissionRequest
      * @return DeletePermissionResponse
      */
@@ -422,6 +446,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteWorkspaceMembersResponse
      */
     CompletableFuture<DeleteWorkspaceMembersResponse> deleteWorkspaceMembers(DeleteWorkspaceMembersRequest request);
+
+    /**
+     * @param request the request parameters of DocBlocksQuery  DocBlocksQueryRequest
+     * @return DocBlocksQueryResponse
+     */
+    CompletableFuture<DocBlocksQueryResponse> docBlocksQuery(DocBlocksQueryRequest request);
 
     /**
      * @param request the request parameters of DocUpdateContent  DocUpdateContentRequest
@@ -842,6 +872,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return InsertColumnsBeforeResponse
      */
     CompletableFuture<InsertColumnsBeforeResponse> insertColumnsBefore(InsertColumnsBeforeRequest request);
+
+    /**
+     * @param request the request parameters of InsertMultiDimTableRecord  InsertMultiDimTableRecordRequest
+     * @return InsertMultiDimTableRecordResponse
+     */
+    CompletableFuture<InsertMultiDimTableRecordResponse> insertMultiDimTableRecord(InsertMultiDimTableRecordRequest request);
 
     /**
      * @param request the request parameters of InsertRowsBefore  InsertRowsBeforeRequest
@@ -1390,6 +1426,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMeetingRoomGroupResponse
      */
     CompletableFuture<UpdateMeetingRoomGroupResponse> updateMeetingRoomGroup(UpdateMeetingRoomGroupRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMultiDimTable  UpdateMultiDimTableRequest
+     * @return UpdateMultiDimTableResponse
+     */
+    CompletableFuture<UpdateMultiDimTableResponse> updateMultiDimTable(UpdateMultiDimTableRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMultiDimTableField  UpdateMultiDimTableFieldRequest
+     * @return UpdateMultiDimTableFieldResponse
+     */
+    CompletableFuture<UpdateMultiDimTableFieldResponse> updateMultiDimTableField(UpdateMultiDimTableFieldRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMultiDimTableRecords  UpdateMultiDimTableRecordsRequest
+     * @return UpdateMultiDimTableRecordsResponse
+     */
+    CompletableFuture<UpdateMultiDimTableRecordsResponse> updateMultiDimTableRecords(UpdateMultiDimTableRecordsRequest request);
 
     /**
      * @param request the request parameters of UpdatePermission  UpdatePermissionRequest
