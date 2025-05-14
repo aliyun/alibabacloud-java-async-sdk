@@ -132,7 +132,14 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. Valid values:</p>
+         * <ul>
+         * <li>InternalError: an internal error. All errors, except for parameter validation errors, are classified as internal errors.</li>
+         * <li>ValidationError: a parameter validation error.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +147,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * EcsSpecs.
+         * <p>The specifications of the ECS instances returned on this page.</p>
          */
         public Builder ecsSpecs(java.util.List<EcsSpecs> ecsSpecs) {
             this.ecsSpecs = ecsSpecs;
@@ -148,7 +155,14 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li>400</li>
+         * <li>404</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -156,7 +170,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;XXX&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +181,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +192,14 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +207,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of ECS instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -246,7 +276,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The label key added to the ECS specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SupportResourcePackDeduction</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -254,7 +287,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The label value added to the ECS specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -477,7 +513,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             } 
 
             /**
-             * AcceleratorType.
+             * <p>The accelerator type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU</p>
              */
             public Builder acceleratorType(String acceleratorType) {
                 this.acceleratorType = acceleratorType;
@@ -485,7 +524,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * CPU.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder CPU(Long CPU) {
                 this.CPU = CPU;
@@ -493,7 +535,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>The currency unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -501,7 +546,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * GPU.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder GPU(Long GPU) {
                 this.GPU = GPU;
@@ -517,7 +565,17 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * GPUType.
+             * <p>The GPU type. Valid values:</p>
+             * <ul>
+             * <li>V100</li>
+             * <li>A100</li>
+             * <li>A10</li>
+             * <li>T4</li>
+             * <li>P100</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>v100</p>
              */
             public Builder GPUType(String GPUType) {
                 this.GPUType = GPUType;
@@ -525,7 +583,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceBandwidthRx.
+             * <p>The inbound bandwidth of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5120000</p>
              */
             public Builder instanceBandwidthRx(Long instanceBandwidthRx) {
                 this.instanceBandwidthRx = instanceBandwidthRx;
@@ -533,7 +594,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.gn5-c28g1.7xlarge</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -541,7 +605,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * IsAvailable.
+             * <p>Indicates whether the resource was available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isAvailable(Boolean isAvailable) {
                 this.isAvailable = isAvailable;
@@ -549,7 +616,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The labels of the ECS specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;foo&quot;: &quot;bar&quot;}</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
@@ -557,7 +627,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -565,7 +638,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * Price.
+             * <p>The price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22.8</p>
              */
             public Builder price(Double price) {
                 this.price = price;
@@ -581,7 +657,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskCapacity.
+             * <p>The size of the system disk. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder systemDiskCapacity(Long systemDiskCapacity) {
                 this.systemDiskCapacity = systemDiskCapacity;

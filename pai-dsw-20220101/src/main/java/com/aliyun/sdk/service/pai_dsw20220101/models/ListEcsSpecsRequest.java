@@ -116,10 +116,15 @@ public class ListEcsSpecsRequest extends Request {
         } 
 
         /**
+         * <p>The accelerator type.</p>
+         * <ul>
+         * <li>CPU: Only CPU computing is used.</li>
+         * <li>GPU: GPUs are used to accelerate computing.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>PRIVATE</p>
+         * <p>CPU</p>
          */
         public Builder acceleratorType(String acceleratorType) {
             this.putQueryParameter("AcceleratorType", acceleratorType);
@@ -128,7 +133,14 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sorting order. Valid values:</p>
+         * <ul>
+         * <li>ASC</li>
+         * <li>DESC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -137,7 +149,10 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -146,7 +161,10 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -155,7 +173,10 @@ public class ListEcsSpecsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field by which the query results are sorted. Set the value to gmtCreate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmtCreate</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
