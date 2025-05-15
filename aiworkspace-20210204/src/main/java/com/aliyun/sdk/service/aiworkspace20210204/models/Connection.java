@@ -335,10 +335,14 @@ public class Connection extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModelType")
         private String modelType;
 
+        @com.aliyun.core.annotation.NameInMap("ToolCall")
+        private Boolean toolCall;
+
         private Models(Builder builder) {
             this.displayName = builder.displayName;
             this.model = builder.model;
             this.modelType = builder.modelType;
+            this.toolCall = builder.toolCall;
         }
 
         public static Builder builder() {
@@ -370,10 +374,18 @@ public class Connection extends TeaModel {
             return this.modelType;
         }
 
+        /**
+         * @return toolCall
+         */
+        public Boolean getToolCall() {
+            return this.toolCall;
+        }
+
         public static final class Builder {
             private String displayName; 
             private String model; 
             private String modelType; 
+            private Boolean toolCall; 
 
             private Builder() {
             } 
@@ -382,6 +394,7 @@ public class Connection extends TeaModel {
                 this.displayName = model.displayName;
                 this.model = model.model;
                 this.modelType = model.modelType;
+                this.toolCall = model.toolCall;
             } 
 
             /**
@@ -405,6 +418,14 @@ public class Connection extends TeaModel {
              */
             public Builder modelType(String modelType) {
                 this.modelType = modelType;
+                return this;
+            }
+
+            /**
+             * ToolCall.
+             */
+            public Builder toolCall(Boolean toolCall) {
+                this.toolCall = toolCall;
                 return this;
             }
 

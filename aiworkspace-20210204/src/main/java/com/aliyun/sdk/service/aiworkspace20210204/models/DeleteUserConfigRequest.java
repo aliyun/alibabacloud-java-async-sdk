@@ -26,10 +26,15 @@ public class DeleteUserConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ConfigKey")
     private String configKey;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
+    private String scope;
+
     private DeleteUserConfigRequest(Builder builder) {
         super(builder);
         this.categoryName = builder.categoryName;
         this.configKey = builder.configKey;
+        this.scope = builder.scope;
     }
 
     public static Builder builder() {
@@ -59,9 +64,17 @@ public class DeleteUserConfigRequest extends Request {
         return this.configKey;
     }
 
+    /**
+     * @return scope
+     */
+    public String getScope() {
+        return this.scope;
+    }
+
     public static final class Builder extends Request.Builder<DeleteUserConfigRequest, Builder> {
         private String categoryName; 
         private String configKey; 
+        private String scope; 
 
         private Builder() {
             super();
@@ -71,6 +84,7 @@ public class DeleteUserConfigRequest extends Request {
             super(request);
             this.categoryName = request.categoryName;
             this.configKey = request.configKey;
+            this.scope = request.scope;
         } 
 
         /**
@@ -95,6 +109,15 @@ public class DeleteUserConfigRequest extends Request {
         public Builder configKey(String configKey) {
             this.putQueryParameter("ConfigKey", configKey);
             this.configKey = configKey;
+            return this;
+        }
+
+        /**
+         * Scope.
+         */
+        public Builder scope(String scope) {
+            this.putQueryParameter("Scope", scope);
+            this.scope = scope;
             return this;
         }
 
