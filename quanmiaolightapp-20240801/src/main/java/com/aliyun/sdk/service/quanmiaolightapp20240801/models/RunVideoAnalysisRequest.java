@@ -79,6 +79,10 @@ public class RunVideoAnalysisRequest extends Request {
     private java.util.List<TextProcessTasks> textProcessTasks;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("videoCaptionInfo")
+    private VideoCaptionInfo videoCaptionInfo;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("videoExtraInfo")
     private String videoExtraInfo;
 
@@ -119,6 +123,7 @@ public class RunVideoAnalysisRequest extends Request {
         this.splitInterval = builder.splitInterval;
         this.taskId = builder.taskId;
         this.textProcessTasks = builder.textProcessTasks;
+        this.videoCaptionInfo = builder.videoCaptionInfo;
         this.videoExtraInfo = builder.videoExtraInfo;
         this.videoModelCustomPromptTemplate = builder.videoModelCustomPromptTemplate;
         this.videoModelId = builder.videoModelId;
@@ -246,6 +251,13 @@ public class RunVideoAnalysisRequest extends Request {
     }
 
     /**
+     * @return videoCaptionInfo
+     */
+    public VideoCaptionInfo getVideoCaptionInfo() {
+        return this.videoCaptionInfo;
+    }
+
+    /**
      * @return videoExtraInfo
      */
     public String getVideoExtraInfo() {
@@ -303,6 +315,7 @@ public class RunVideoAnalysisRequest extends Request {
         private Integer splitInterval; 
         private String taskId; 
         private java.util.List<TextProcessTasks> textProcessTasks; 
+        private VideoCaptionInfo videoCaptionInfo; 
         private String videoExtraInfo; 
         private String videoModelCustomPromptTemplate; 
         private String videoModelId; 
@@ -331,6 +344,7 @@ public class RunVideoAnalysisRequest extends Request {
             this.splitInterval = request.splitInterval;
             this.taskId = request.taskId;
             this.textProcessTasks = request.textProcessTasks;
+            this.videoCaptionInfo = request.videoCaptionInfo;
             this.videoExtraInfo = request.videoExtraInfo;
             this.videoModelCustomPromptTemplate = request.videoModelCustomPromptTemplate;
             this.videoModelId = request.videoModelId;
@@ -478,6 +492,16 @@ public class RunVideoAnalysisRequest extends Request {
             String textProcessTasksShrink = shrink(textProcessTasks, "textProcessTasks", "json");
             this.putBodyParameter("textProcessTasks", textProcessTasksShrink);
             this.textProcessTasks = textProcessTasks;
+            return this;
+        }
+
+        /**
+         * videoCaptionInfo.
+         */
+        public Builder videoCaptionInfo(VideoCaptionInfo videoCaptionInfo) {
+            String videoCaptionInfoShrink = shrink(videoCaptionInfo, "videoCaptionInfo", "json");
+            this.putBodyParameter("videoCaptionInfo", videoCaptionInfoShrink);
+            this.videoCaptionInfo = videoCaptionInfo;
             return this;
         }
 
@@ -730,6 +754,177 @@ public class RunVideoAnalysisRequest extends Request {
 
             public TextProcessTasks build() {
                 return new TextProcessTasks(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunVideoAnalysisRequest} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisRequest</p>
+     */
+    public static class VideoCaptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("endTime")
+        private Long endTime;
+
+        @com.aliyun.core.annotation.NameInMap("speaker")
+        private String speaker;
+
+        @com.aliyun.core.annotation.NameInMap("startTime")
+        private Long startTime;
+
+        @com.aliyun.core.annotation.NameInMap("text")
+        private String text;
+
+        private VideoCaptions(Builder builder) {
+            this.endTime = builder.endTime;
+            this.speaker = builder.speaker;
+            this.startTime = builder.startTime;
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VideoCaptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return speaker
+         */
+        public String getSpeaker() {
+            return this.speaker;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private Long endTime; 
+            private String speaker; 
+            private Long startTime; 
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoCaptions model) {
+                this.endTime = model.endTime;
+                this.speaker = model.speaker;
+                this.startTime = model.startTime;
+                this.text = model.text;
+            } 
+
+            /**
+             * endTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * speaker.
+             */
+            public Builder speaker(String speaker) {
+                this.speaker = speaker;
+                return this;
+            }
+
+            /**
+             * startTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public VideoCaptions build() {
+                return new VideoCaptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunVideoAnalysisRequest} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisRequest</p>
+     */
+    public static class VideoCaptionInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("videoCaptions")
+        private java.util.List<VideoCaptions> videoCaptions;
+
+        private VideoCaptionInfo(Builder builder) {
+            this.videoCaptions = builder.videoCaptions;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VideoCaptionInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return videoCaptions
+         */
+        public java.util.List<VideoCaptions> getVideoCaptions() {
+            return this.videoCaptions;
+        }
+
+        public static final class Builder {
+            private java.util.List<VideoCaptions> videoCaptions; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoCaptionInfo model) {
+                this.videoCaptions = model.videoCaptions;
+            } 
+
+            /**
+             * videoCaptions.
+             */
+            public Builder videoCaptions(java.util.List<VideoCaptions> videoCaptions) {
+                this.videoCaptions = videoCaptions;
+                return this;
+            }
+
+            public VideoCaptionInfo build() {
+                return new VideoCaptionInfo(this);
             } 
 
         } 

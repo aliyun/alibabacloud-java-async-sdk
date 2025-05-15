@@ -677,6 +677,9 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endTimeFormat")
         private String endTimeFormat;
 
+        @com.aliyun.core.annotation.NameInMap("speaker")
+        private String speaker;
+
         @com.aliyun.core.annotation.NameInMap("startTime")
         private Long startTime;
 
@@ -689,6 +692,7 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         private VideoCaptions(Builder builder) {
             this.endTime = builder.endTime;
             this.endTimeFormat = builder.endTimeFormat;
+            this.speaker = builder.speaker;
             this.startTime = builder.startTime;
             this.startTimeFormat = builder.startTimeFormat;
             this.text = builder.text;
@@ -717,6 +721,13 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return speaker
+         */
+        public String getSpeaker() {
+            return this.speaker;
+        }
+
+        /**
          * @return startTime
          */
         public Long getStartTime() {
@@ -740,6 +751,7 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         public static final class Builder {
             private Long endTime; 
             private String endTimeFormat; 
+            private String speaker; 
             private Long startTime; 
             private String startTimeFormat; 
             private String text; 
@@ -750,6 +762,7 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
             private Builder(VideoCaptions model) {
                 this.endTime = model.endTime;
                 this.endTimeFormat = model.endTimeFormat;
+                this.speaker = model.speaker;
                 this.startTime = model.startTime;
                 this.startTimeFormat = model.startTimeFormat;
                 this.text = model.text;
@@ -768,6 +781,14 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
              */
             public Builder endTimeFormat(String endTimeFormat) {
                 this.endTimeFormat = endTimeFormat;
+                return this;
+            }
+
+            /**
+             * speaker.
+             */
+            public Builder speaker(String speaker) {
+                this.speaker = speaker;
                 return this;
             }
 

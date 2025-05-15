@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetVideoAnalysisTaskResponse> getVideoAnalysisTask(GetVideoAnalysisTaskRequest request);
 
     /**
+     * @param request the request parameters of ListAnalysisTagDetailByTaskId  ListAnalysisTagDetailByTaskIdRequest
+     * @return ListAnalysisTagDetailByTaskIdResponse
+     */
+    CompletableFuture<ListAnalysisTagDetailByTaskIdResponse> listAnalysisTagDetailByTaskId(ListAnalysisTagDetailByTaskIdRequest request);
+
+    /**
      * @param request the request parameters of ListHotTopicSummaries  ListHotTopicSummariesRequest
      * @return ListHotTopicSummariesResponse
      */
@@ -226,5 +232,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateVideoAnalysisConfigResponse
      */
     CompletableFuture<UpdateVideoAnalysisConfigResponse> updateVideoAnalysisConfig(UpdateVideoAnalysisConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateVideoAnalysisTask  UpdateVideoAnalysisTaskRequest
+     * @return UpdateVideoAnalysisTaskResponse
+     */
+    CompletableFuture<UpdateVideoAnalysisTaskResponse> updateVideoAnalysisTask(UpdateVideoAnalysisTaskRequest request);
 
 }
