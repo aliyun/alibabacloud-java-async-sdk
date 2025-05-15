@@ -251,6 +251,81 @@ public class ListServicesResponseBody extends TeaModel {
      *
      * <p>ListServicesResponseBody</p>
      */
+    public static class Softwares extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private String version;
+
+        private Softwares(Builder builder) {
+            this.name = builder.name;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Softwares create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Softwares model) {
+                this.name = model.name;
+                this.version = model.version;
+            } 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public Softwares build() {
+                return new Softwares(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServicesResponseBody</p>
+     */
     public static class ServiceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
@@ -264,11 +339,15 @@ public class ListServicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ShortDescription")
         private String shortDescription;
 
+        @com.aliyun.core.annotation.NameInMap("Softwares")
+        private java.util.List<Softwares> softwares;
+
         private ServiceInfos(Builder builder) {
             this.image = builder.image;
             this.locale = builder.locale;
             this.name = builder.name;
             this.shortDescription = builder.shortDescription;
+            this.softwares = builder.softwares;
         }
 
         public static Builder builder() {
@@ -307,11 +386,19 @@ public class ListServicesResponseBody extends TeaModel {
             return this.shortDescription;
         }
 
+        /**
+         * @return softwares
+         */
+        public java.util.List<Softwares> getSoftwares() {
+            return this.softwares;
+        }
+
         public static final class Builder {
             private String image; 
             private String locale; 
             private String name; 
             private String shortDescription; 
+            private java.util.List<Softwares> softwares; 
 
             private Builder() {
             } 
@@ -321,6 +408,7 @@ public class ListServicesResponseBody extends TeaModel {
                 this.locale = model.locale;
                 this.name = model.name;
                 this.shortDescription = model.shortDescription;
+                this.softwares = model.softwares;
             } 
 
             /**
@@ -368,6 +456,14 @@ public class ListServicesResponseBody extends TeaModel {
              */
             public Builder shortDescription(String shortDescription) {
                 this.shortDescription = shortDescription;
+                return this;
+            }
+
+            /**
+             * Softwares.
+             */
+            public Builder softwares(java.util.List<Softwares> softwares) {
+                this.softwares = softwares;
                 return this;
             }
 

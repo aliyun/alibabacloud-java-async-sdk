@@ -837,7 +837,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * SupportContacts.
+         * <p>Contact information of the service provider</p>
          */
         public Builder supportContacts(java.util.List<SupportContacts> supportContacts) {
             this.supportContacts = supportContacts;
@@ -2183,14 +2183,10 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The service type. Valid values:</p>
-             * <ul>
-             * <li>marketplace: Alibaba Cloud Marketplace.</li>
-             * <li>Css: Lingxiao.</li>
-             * </ul>
+             * <p>The type of contact information.</p>
              * 
              * <strong>example:</strong>
-             * <p>Marketplace</p>
+             * <p>Email</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2198,7 +2194,10 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of contact information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:supplier@example.com">supplier@example.com</a></p>
              */
             public Builder value(String value) {
                 this.value = value;

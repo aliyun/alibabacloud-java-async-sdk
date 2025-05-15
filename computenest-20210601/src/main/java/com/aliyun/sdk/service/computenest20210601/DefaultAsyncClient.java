@@ -385,6 +385,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListServiceInstanceBill  ListServiceInstanceBillRequest
+     * @return ListServiceInstanceBillResponse
+     */
+    @Override
+    public CompletableFuture<ListServiceInstanceBillResponse> listServiceInstanceBill(ListServiceInstanceBillRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListServiceInstanceBill").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListServiceInstanceBillResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListServiceInstanceBillResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListServiceInstanceLogs  ListServiceInstanceLogsRequest
      * @return ListServiceInstanceLogsResponse
      */
