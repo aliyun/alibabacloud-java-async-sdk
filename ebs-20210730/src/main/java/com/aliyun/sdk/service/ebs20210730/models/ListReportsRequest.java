@@ -17,9 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListReportsRequest</p>
  */
 public class ListReportsRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    private String appId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
     @com.aliyun.core.annotation.Query
@@ -44,6 +47,7 @@ public class ListReportsRequest extends Request {
 
     private ListReportsRequest(Builder builder) {
         super(builder);
+        this.appId = builder.appId;
         this.appName = builder.appName;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -63,6 +67,13 @@ public class ListReportsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appId
+     */
+    public String getAppId() {
+        return this.appId;
     }
 
     /**
@@ -108,6 +119,7 @@ public class ListReportsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListReportsRequest, Builder> {
+        private String appId; 
         private String appName; 
         private Integer maxResults; 
         private String nextToken; 
@@ -121,6 +133,7 @@ public class ListReportsRequest extends Request {
 
         private Builder(ListReportsRequest request) {
             super(request);
+            this.appId = request.appId;
             this.appName = request.appName;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -130,8 +143,16 @@ public class ListReportsRequest extends Request {
         } 
 
         /**
+         * AppId.
+         */
+        public Builder appId(String appId) {
+            this.putQueryParameter("AppId", appId);
+            this.appId = appId;
+            return this;
+        }
+
+        /**
          * <p>App name.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>App1</p>
