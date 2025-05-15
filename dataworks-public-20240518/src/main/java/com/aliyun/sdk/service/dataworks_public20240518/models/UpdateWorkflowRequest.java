@@ -43,6 +43,10 @@ public class UpdateWorkflowRequest extends Request {
     private Long id;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceMode")
+    private String instanceMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
@@ -81,6 +85,7 @@ public class UpdateWorkflowRequest extends Request {
         this.description = builder.description;
         this.envType = builder.envType;
         this.id = builder.id;
+        this.instanceMode = builder.instanceMode;
         this.name = builder.name;
         this.outputs = builder.outputs;
         this.owner = builder.owner;
@@ -146,6 +151,13 @@ public class UpdateWorkflowRequest extends Request {
     }
 
     /**
+     * @return instanceMode
+     */
+    public String getInstanceMode() {
+        return this.instanceMode;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -201,6 +213,7 @@ public class UpdateWorkflowRequest extends Request {
         private String description; 
         private String envType; 
         private Long id; 
+        private String instanceMode; 
         private String name; 
         private Outputs outputs; 
         private String owner; 
@@ -221,6 +234,7 @@ public class UpdateWorkflowRequest extends Request {
             this.description = request.description;
             this.envType = request.envType;
             this.id = request.id;
+            this.instanceMode = request.instanceMode;
             this.name = request.name;
             this.outputs = request.outputs;
             this.owner = request.owner;
@@ -299,6 +313,15 @@ public class UpdateWorkflowRequest extends Request {
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * InstanceMode.
+         */
+        public Builder instanceMode(String instanceMode) {
+            this.putBodyParameter("InstanceMode", instanceMode);
+            this.instanceMode = instanceMode;
             return this;
         }
 
