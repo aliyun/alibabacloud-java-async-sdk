@@ -105,7 +105,7 @@ public class CreateDiskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Size")
-    @com.aliyun.core.annotation.Validation(maximum = 65536, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 131072, minimum = 1)
     private Integer size;
 
     @com.aliyun.core.annotation.Query
@@ -516,10 +516,10 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>The category of the data disk. Valid values:</p>
+         * <p>The category of the data disk. Valid values for different disk categories:</p>
          * <ul>
          * <li>cloud: basic disk</li>
-         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_efficiency: utra disk</li>
          * <li>cloud_ssd: standard SSD</li>
          * <li>cloud_essd: ESSD</li>
          * <li>cloud_auto: ESSD AutoPL disk</li>
@@ -529,6 +529,12 @@ public class CreateDiskRequest extends Request {
          * <li>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</li>
          * </ul>
          * <p>Default value: cloud.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cloud_regional_disk_auto</li>
+         * <li>elastic_ephemeral_disk_standard</li>
+         * <li>elastic_ephemeral_disk_premium</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -728,7 +734,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * <p>The size of the data disk. Unit: GiB. This parameter is required. Valid values:</p>
+         * <p>The disk size. Unit: GiB. This parameter is required. Valid values for different disk categories:</p>
          * <ul>
          * <li><p>Valid values when DiskCategory is set to cloud: 5 to 2000.</p>
          * </li>

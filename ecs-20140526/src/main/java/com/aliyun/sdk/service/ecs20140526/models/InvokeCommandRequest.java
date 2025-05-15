@@ -111,6 +111,10 @@ public class InvokeCommandRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("WindowsPasswordName")
     private String windowsPasswordName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkingDir")
+    private String workingDir;
+
     private InvokeCommandRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
@@ -136,6 +140,7 @@ public class InvokeCommandRequest extends Request {
         this.timeout = builder.timeout;
         this.username = builder.username;
         this.windowsPasswordName = builder.windowsPasswordName;
+        this.workingDir = builder.workingDir;
     }
 
     public static Builder builder() {
@@ -312,6 +317,13 @@ public class InvokeCommandRequest extends Request {
         return this.windowsPasswordName;
     }
 
+    /**
+     * @return workingDir
+     */
+    public String getWorkingDir() {
+        return this.workingDir;
+    }
+
     public static final class Builder extends Request.Builder<InvokeCommandRequest, Builder> {
         private String sourceRegionId; 
         private String clientToken; 
@@ -336,6 +348,7 @@ public class InvokeCommandRequest extends Request {
         private Long timeout; 
         private String username; 
         private String windowsPasswordName; 
+        private String workingDir; 
 
         private Builder() {
             super();
@@ -366,6 +379,7 @@ public class InvokeCommandRequest extends Request {
             this.timeout = request.timeout;
             this.username = request.username;
             this.windowsPasswordName = request.windowsPasswordName;
+            this.workingDir = request.workingDir;
         } 
 
         /**
@@ -729,6 +743,15 @@ public class InvokeCommandRequest extends Request {
         public Builder windowsPasswordName(String windowsPasswordName) {
             this.putQueryParameter("WindowsPasswordName", windowsPasswordName);
             this.windowsPasswordName = windowsPasswordName;
+            return this;
+        }
+
+        /**
+         * WorkingDir.
+         */
+        public Builder workingDir(String workingDir) {
+            this.putQueryParameter("WorkingDir", workingDir);
+            this.workingDir = workingDir;
             return this;
         }
 

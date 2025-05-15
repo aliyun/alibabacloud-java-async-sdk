@@ -61,6 +61,10 @@ public class DescribeStorageSetsRequest extends Request {
     private String storageSetName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
@@ -76,6 +80,7 @@ public class DescribeStorageSetsRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.storageSetIds = builder.storageSetIds;
         this.storageSetName = builder.storageSetName;
+        this.tag = builder.tag;
         this.zoneId = builder.zoneId;
     }
 
@@ -163,6 +168,13 @@ public class DescribeStorageSetsRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -180,6 +192,7 @@ public class DescribeStorageSetsRequest extends Request {
         private Long resourceOwnerId; 
         private String storageSetIds; 
         private String storageSetName; 
+        private java.util.List<Tag> tag; 
         private String zoneId; 
 
         private Builder() {
@@ -198,6 +211,7 @@ public class DescribeStorageSetsRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.storageSetIds = request.storageSetIds;
             this.storageSetName = request.storageSetName;
+            this.tag = request.tag;
             this.zoneId = request.zoneId;
         } 
 
@@ -313,6 +327,15 @@ public class DescribeStorageSetsRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * <p>The zone ID of the storage set. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
          * 
          * <strong>example:</strong>
@@ -331,4 +354,79 @@ public class DescribeStorageSetsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStorageSetsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeStorageSetsRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

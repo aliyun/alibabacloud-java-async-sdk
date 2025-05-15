@@ -2681,7 +2681,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>  <strong>Instructions</strong>
-     *     *   Only Alibaba Cloud accounts can call this operation.</p>
+     *     *   You must grant the RAM user the <code>AliyunECSFullAccess</code> permissions. For information about how to grant permissions to a RAM user, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</p>
      * <ul>
      * <li><strong>Considerations</strong><ul>
      * <li>After Account-level EBS Default Encryption is disabled, the encryption status of existing cloud disks is not affected.</li>
@@ -2698,22 +2698,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The Account-level EBS Default Encryption feature is available only in specific regions and to specific users. To use Account-level EBS Default Encryption, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
+     * <p> The Account-level EBS Default Encryption feature is available only in specific regions and to specific users. To use the feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
      * </blockquote>
      * <ul>
      * <li><strong>Precautions</strong><ul>
-     * <li>Only Alibaba Cloud accounts can call this operation.</li>
+     * <li>To enable the Account-level EBS Default Encryption feature as a Resource Access Management (RAM) user, grant the <code>AliyunECSFullAccess</code> permission to the RAM user. For more information, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</li>
      * <li>Before you can enable the Account-level EBS Default Encryption feature in a region, you must <a href="https://help.aliyun.com/document_detail/480156.html">activate Key Management Service (KMS)</a> in the region.</li>
      * <li>After you enable the Account-level EBS Default Encryption feature in a region, you can purchase only encrypted cloud disks in the region. For more information, see the <a href="~~59643#50de175230erj~~">Limits</a> section of the &quot;Encrypt cloud disks&quot; topic.</li>
      * </ul>
      * </li>
      * <li><strong>Considerations</strong><ul>
-     * <li>After you enable the Account-level EBS Default Encryption feature in a region, new pay-as-you-go and subscription cloud disks in the region must be encrypted. You can use the KMS key configured for the Account-level EBS Default Encryption feature or specify other KMS keys to encrypt the cloud disks.</li>
+     * <li>After you enable the Account-level EBS Default Encryption feature in a region, new pay-as-you-go and subscription cloud disks in the region must be encrypted. You can use the KMS key configured for the feature or specify other KMS keys to encrypt the cloud disks.</li>
      * <li>The first time you enable the Account-level EBS Default Encryption feature in a region, the service key in the region is automatically used to encrypt EBS resources.</li>
      * </ul>
      * </li>
      * <li><strong>Suggestions</strong><ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/2851493.html">DescribeDiskEncryptionByDefaultStatus</a> operation to query whether the Account-level EBS Default Encryption feature is enabled in a region and the <a href="https://help.aliyun.com/document_detail/2851490.html">DescribeDiskDefaultKMSKeyId</a> operation to query the ID of the KMS key used by the Account-level EBS Default Encryption feature in a region.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/2851493.html">DescribeDiskEncryptionByDefaultStatus</a> operation to query whether the Account-level EBS Default Encryption feature is enabled in a region and the <a href="https://help.aliyun.com/document_detail/2851490.html">DescribeDiskDefaultKMSKeyId</a> operation to query the ID of the KMS key used by the feature in a region.</li>
      * <li>You can call the <a href="https://help.aliyun.com/document_detail/2851492.html">ModifyDiskDefaultKMSKeyId</a> or <a href="https://help.aliyun.com/document_detail/2851539.html">ResetDiskDefaultKMSKeyId</a> operation to change or reset the KMS key used by the Account-level EBS Default Encryption feature in a region.</li>
      * <li>You can call the <a href="https://help.aliyun.com/document_detail/2851491.html">DisableDiskEncryptionByDefault</a> operation to disable the Account-level EBS Default Encryption feature in a region.</li>
      * </ul>
@@ -3229,7 +3229,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Only Alibaba Cloud accounts can call this operation.</p>
+     * <p>  To call this operation as a Resource Access Management (RAM) user, grant the <code>AliyunECSFullAccess</code> permission to the RAM user. For more information, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</p>
      * <ul>
      * <li>Before you can call this operation in a region, make sure that the Account-level EBS Default Encryption feature is enabled in the region.</li>
      * <li>The first time you use a customer master key (CMK), you must use the <code>AliyunECSDiskEncryptDefaultRole</code> role to grant Elastic Compute Service (ECS) access to KMS resources. For more information, see <a href="https://help.aliyun.com/document_detail/2838993.html">Grant access to KMS keys through RAM roles</a>.</li>
@@ -4221,9 +4221,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Only Alibaba Cloud accounts can call this operation.</p>
+     * <p>  You must grant the RAM user the <code>AliyunECSFullAccess</code> permissions. For information about how to grant permissions to a RAM user, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</p>
      * <ul>
-     * <li>Before you can call this operation in a region, make sure that the Account-level Elastic Block Storage (EBS) Default Encryption feature is enabled in the region.</li>
+     * <li>Before you can call this operation in a region, make sure that the <strong>Account-level Elastic Block Storage (EBS) Default Encryption</strong> feature is enabled in the region.</li>
      * </ul>
      * 
      * @param request the request parameters of ResetDiskDefaultKMSKeyId  ResetDiskDefaultKMSKeyIdRequest

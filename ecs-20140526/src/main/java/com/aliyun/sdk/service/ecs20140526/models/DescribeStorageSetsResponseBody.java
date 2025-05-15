@@ -169,6 +169,135 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
      *
      * <p>DescribeStorageSetsResponseBody</p>
      */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeStorageSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStorageSetsResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List<Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List<Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeStorageSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStorageSetsResponseBody</p>
+     */
     public static class StorageSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -179,6 +308,9 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("StorageSetId")
         private String storageSetId;
 
@@ -188,6 +320,9 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StorageSetPartitionNumber")
         private Integer storageSetPartitionNumber;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private Tags tags;
+
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
@@ -195,9 +330,11 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.description = builder.description;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.storageSetId = builder.storageSetId;
             this.storageSetName = builder.storageSetName;
             this.storageSetPartitionNumber = builder.storageSetPartitionNumber;
+            this.tags = builder.tags;
             this.zoneId = builder.zoneId;
         }
 
@@ -231,6 +368,13 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return storageSetId
          */
         public String getStorageSetId() {
@@ -252,6 +396,13 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -262,9 +413,11 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             private String creationTime; 
             private String description; 
             private String regionId; 
+            private String resourceGroupId; 
             private String storageSetId; 
             private String storageSetName; 
             private Integer storageSetPartitionNumber; 
+            private Tags tags; 
             private String zoneId; 
 
             private Builder() {
@@ -274,9 +427,11 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
                 this.creationTime = model.creationTime;
                 this.description = model.description;
                 this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
                 this.storageSetId = model.storageSetId;
                 this.storageSetName = model.storageSetName;
                 this.storageSetPartitionNumber = model.storageSetPartitionNumber;
+                this.tags = model.tags;
                 this.zoneId = model.zoneId;
             } 
 
@@ -314,6 +469,14 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * <p>The ID of the storage set.</p>
              * 
              * <strong>example:</strong>
@@ -343,6 +506,14 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
              */
             public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
                 this.storageSetPartitionNumber = storageSetPartitionNumber;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 
