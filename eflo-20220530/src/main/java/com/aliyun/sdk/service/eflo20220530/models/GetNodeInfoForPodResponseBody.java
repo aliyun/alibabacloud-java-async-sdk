@@ -200,6 +200,15 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
+        @com.aliyun.core.annotation.NameInMap("hdeniIpv6SipQuota")
+        private Integer hdeniIpv6SipQuota;
+
+        @com.aliyun.core.annotation.NameInMap("hdeniSipQuota")
+        private Integer hdeniSipQuota;
+
+        @com.aliyun.core.annotation.NameInMap("leniIpv6SipQuota")
+        private Integer leniIpv6SipQuota;
+
         private Content(Builder builder) {
             this.clusterId = builder.clusterId;
             this.hdeniQuota = builder.hdeniQuota;
@@ -211,6 +220,9 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
             this.vSwitches = builder.vSwitches;
             this.vpcId = builder.vpcId;
             this.zoneId = builder.zoneId;
+            this.hdeniIpv6SipQuota = builder.hdeniIpv6SipQuota;
+            this.hdeniSipQuota = builder.hdeniSipQuota;
+            this.leniIpv6SipQuota = builder.leniIpv6SipQuota;
         }
 
         public static Builder builder() {
@@ -291,6 +303,27 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
             return this.zoneId;
         }
 
+        /**
+         * @return hdeniIpv6SipQuota
+         */
+        public Integer getHdeniIpv6SipQuota() {
+            return this.hdeniIpv6SipQuota;
+        }
+
+        /**
+         * @return hdeniSipQuota
+         */
+        public Integer getHdeniSipQuota() {
+            return this.hdeniSipQuota;
+        }
+
+        /**
+         * @return leniIpv6SipQuota
+         */
+        public Integer getLeniIpv6SipQuota() {
+            return this.leniIpv6SipQuota;
+        }
+
         public static final class Builder {
             private String clusterId; 
             private Integer hdeniQuota; 
@@ -302,6 +335,9 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
             private java.util.List<String> vSwitches; 
             private String vpcId; 
             private String zoneId; 
+            private Integer hdeniIpv6SipQuota; 
+            private Integer hdeniSipQuota; 
+            private Integer leniIpv6SipQuota; 
 
             private Builder() {
             } 
@@ -317,6 +353,9 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
                 this.vSwitches = model.vSwitches;
                 this.vpcId = model.vpcId;
                 this.zoneId = model.zoneId;
+                this.hdeniIpv6SipQuota = model.hdeniIpv6SipQuota;
+                this.hdeniSipQuota = model.hdeniSipQuota;
+                this.leniIpv6SipQuota = model.leniIpv6SipQuota;
             } 
 
             /**
@@ -423,6 +462,30 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
+                return this;
+            }
+
+            /**
+             * hdeniIpv6SipQuota.
+             */
+            public Builder hdeniIpv6SipQuota(Integer hdeniIpv6SipQuota) {
+                this.hdeniIpv6SipQuota = hdeniIpv6SipQuota;
+                return this;
+            }
+
+            /**
+             * hdeniSipQuota.
+             */
+            public Builder hdeniSipQuota(Integer hdeniSipQuota) {
+                this.hdeniSipQuota = hdeniSipQuota;
+                return this;
+            }
+
+            /**
+             * leniIpv6SipQuota.
+             */
+            public Builder leniIpv6SipQuota(Integer leniIpv6SipQuota) {
+                this.leniIpv6SipQuota = leniIpv6SipQuota;
                 return this;
             }
 
