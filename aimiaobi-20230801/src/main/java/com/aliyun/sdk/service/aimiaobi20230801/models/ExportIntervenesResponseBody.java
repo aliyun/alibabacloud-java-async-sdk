@@ -179,10 +179,14 @@ public class ExportIntervenesResponseBody extends TeaModel {
      * <p>ExportIntervenesResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private Integer code;
+
         @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
 
         private Data(Builder builder) {
+            this.code = builder.code;
             this.fileUrl = builder.fileUrl;
         }
 
@@ -195,6 +199,13 @@ public class ExportIntervenesResponseBody extends TeaModel {
         }
 
         /**
+         * @return code
+         */
+        public Integer getCode() {
+            return this.code;
+        }
+
+        /**
          * @return fileUrl
          */
         public String getFileUrl() {
@@ -202,14 +213,24 @@ public class ExportIntervenesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer code; 
             private String fileUrl; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.code = model.code;
                 this.fileUrl = model.fileUrl;
             } 
+
+            /**
+             * Code.
+             */
+            public Builder code(Integer code) {
+                this.code = code;
+                return this;
+            }
 
             /**
              * FileUrl.

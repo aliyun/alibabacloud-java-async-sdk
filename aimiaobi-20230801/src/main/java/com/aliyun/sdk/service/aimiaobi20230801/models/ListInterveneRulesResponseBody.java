@@ -455,6 +455,9 @@ public class ListInterveneRulesResponseBody extends TeaModel {
      * <p>ListInterveneRulesResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private Integer code;
+
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
@@ -468,6 +471,7 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         private Integer pageSize;
 
         private Data(Builder builder) {
+            this.code = builder.code;
             this.count = builder.count;
             this.interveneRuleList = builder.interveneRuleList;
             this.pageIndex = builder.pageIndex;
@@ -480,6 +484,13 @@ public class ListInterveneRulesResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public Integer getCode() {
+            return this.code;
         }
 
         /**
@@ -511,6 +522,7 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer code; 
             private Long count; 
             private java.util.List<InterveneRuleList> interveneRuleList; 
             private Integer pageIndex; 
@@ -520,11 +532,20 @@ public class ListInterveneRulesResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.code = model.code;
                 this.count = model.count;
                 this.interveneRuleList = model.interveneRuleList;
                 this.pageIndex = model.pageIndex;
                 this.pageSize = model.pageSize;
             } 
+
+            /**
+             * Code.
+             */
+            public Builder code(Integer code) {
+                this.code = code;
+                return this;
+            }
 
             /**
              * Count.

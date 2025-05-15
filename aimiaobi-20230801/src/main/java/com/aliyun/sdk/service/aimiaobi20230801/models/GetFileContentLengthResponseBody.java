@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetInterveneTemplateFileUrlResponseBody} extends {@link TeaModel}
+ * {@link GetFileContentLengthResponseBody} extends {@link TeaModel}
  *
- * <p>GetInterveneTemplateFileUrlResponseBody</p>
+ * <p>GetFileContentLengthResponseBody</p>
  */
-public class GetInterveneTemplateFileUrlResponseBody extends TeaModel {
+public class GetFileContentLengthResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -35,7 +35,7 @@ public class GetInterveneTemplateFileUrlResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private GetInterveneTemplateFileUrlResponseBody(Builder builder) {
+    private GetFileContentLengthResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
@@ -48,7 +48,7 @@ public class GetInterveneTemplateFileUrlResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetInterveneTemplateFileUrlResponseBody create() {
+    public static GetFileContentLengthResponseBody create() {
         return builder().build();
     }
 
@@ -109,7 +109,7 @@ public class GetInterveneTemplateFileUrlResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(GetInterveneTemplateFileUrlResponseBody model) {
+        private Builder(GetFileContentLengthResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.httpStatusCode = model.httpStatusCode;
@@ -166,28 +166,24 @@ public class GetInterveneTemplateFileUrlResponseBody extends TeaModel {
             return this;
         }
 
-        public GetInterveneTemplateFileUrlResponseBody build() {
-            return new GetInterveneTemplateFileUrlResponseBody(this);
+        public GetFileContentLengthResponseBody build() {
+            return new GetFileContentLengthResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetInterveneTemplateFileUrlResponseBody} extends {@link TeaModel}
+     * {@link GetFileContentLengthResponseBody} extends {@link TeaModel}
      *
-     * <p>GetInterveneTemplateFileUrlResponseBody</p>
+     * <p>GetFileContentLengthResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Code")
-        private Integer code;
-
-        @com.aliyun.core.annotation.NameInMap("FileUrl")
-        private String fileUrl;
+        @com.aliyun.core.annotation.NameInMap("WordNum")
+        private Long wordNum;
 
         private Data(Builder builder) {
-            this.code = builder.code;
-            this.fileUrl = builder.fileUrl;
+            this.wordNum = builder.wordNum;
         }
 
         public static Builder builder() {
@@ -199,44 +195,27 @@ public class GetInterveneTemplateFileUrlResponseBody extends TeaModel {
         }
 
         /**
-         * @return code
+         * @return wordNum
          */
-        public Integer getCode() {
-            return this.code;
-        }
-
-        /**
-         * @return fileUrl
-         */
-        public String getFileUrl() {
-            return this.fileUrl;
+        public Long getWordNum() {
+            return this.wordNum;
         }
 
         public static final class Builder {
-            private Integer code; 
-            private String fileUrl; 
+            private Long wordNum; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.code = model.code;
-                this.fileUrl = model.fileUrl;
+                this.wordNum = model.wordNum;
             } 
 
             /**
-             * Code.
+             * WordNum.
              */
-            public Builder code(Integer code) {
-                this.code = code;
-                return this;
-            }
-
-            /**
-             * FileUrl.
-             */
-            public Builder fileUrl(String fileUrl) {
-                this.fileUrl = fileUrl;
+            public Builder wordNum(Long wordNum) {
+                this.wordNum = wordNum;
                 return this;
             }
 

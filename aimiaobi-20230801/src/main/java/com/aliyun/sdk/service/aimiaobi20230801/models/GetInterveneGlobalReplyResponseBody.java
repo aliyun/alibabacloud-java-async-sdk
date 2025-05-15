@@ -254,10 +254,14 @@ public class GetInterveneGlobalReplyResponseBody extends TeaModel {
      * <p>GetInterveneGlobalReplyResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private Integer code;
+
         @com.aliyun.core.annotation.NameInMap("ReplyMessagList")
         private java.util.List<ReplyMessagList> replyMessagList;
 
         private Data(Builder builder) {
+            this.code = builder.code;
             this.replyMessagList = builder.replyMessagList;
         }
 
@@ -270,6 +274,13 @@ public class GetInterveneGlobalReplyResponseBody extends TeaModel {
         }
 
         /**
+         * @return code
+         */
+        public Integer getCode() {
+            return this.code;
+        }
+
+        /**
          * @return replyMessagList
          */
         public java.util.List<ReplyMessagList> getReplyMessagList() {
@@ -277,14 +288,24 @@ public class GetInterveneGlobalReplyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer code; 
             private java.util.List<ReplyMessagList> replyMessagList; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.code = model.code;
                 this.replyMessagList = model.replyMessagList;
             } 
+
+            /**
+             * Code.
+             */
+            public Builder code(Integer code) {
+                this.code = code;
+                return this;
+            }
 
             /**
              * ReplyMessagList.

@@ -317,6 +317,9 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
      * <p>ListInterveneImportTasksResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private Integer code;
+
         @com.aliyun.core.annotation.NameInMap("PageIndex")
         private Integer pageIndex;
 
@@ -330,6 +333,7 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
         private Integer totalSize;
 
         private Data(Builder builder) {
+            this.code = builder.code;
             this.pageIndex = builder.pageIndex;
             this.pageSize = builder.pageSize;
             this.statusList = builder.statusList;
@@ -342,6 +346,13 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public Integer getCode() {
+            return this.code;
         }
 
         /**
@@ -373,6 +384,7 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer code; 
             private Integer pageIndex; 
             private Integer pageSize; 
             private java.util.List<StatusList> statusList; 
@@ -382,11 +394,20 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.code = model.code;
                 this.pageIndex = model.pageIndex;
                 this.pageSize = model.pageSize;
                 this.statusList = model.statusList;
                 this.totalSize = model.totalSize;
             } 
+
+            /**
+             * Code.
+             */
+            public Builder code(Integer code) {
+                this.code = code;
+                return this;
+            }
 
             /**
              * PageIndex.

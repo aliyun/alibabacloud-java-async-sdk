@@ -242,6 +242,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEnterpriseVocAnalysisTaskResponse> getEnterpriseVocAnalysisTask(GetEnterpriseVocAnalysisTaskRequest request);
 
     /**
+     * @param request the request parameters of GetFileContentLength  GetFileContentLengthRequest
+     * @return GetFileContentLengthResponse
+     */
+    CompletableFuture<GetFileContentLengthResponse> getFileContentLength(GetFileContentLengthRequest request);
+
+    /**
      * @param request the request parameters of GetGeneratedContent  GetGeneratedContentRequest
      * @return GetGeneratedContentResponse
      */
@@ -542,6 +548,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunAbbreviationContentResponse> runAbbreviationContent(RunAbbreviationContentRequest request);
 
     ResponseIterable<RunAbbreviationContentResponseBody> runAbbreviationContentWithResponseIterable(RunAbbreviationContentRequest request);
+
+    /**
+     * @param request the request parameters of RunBookBrainmap  RunBookBrainmapRequest
+     * @return RunBookBrainmapResponse
+     */
+    CompletableFuture<RunBookBrainmapResponse> runBookBrainmap(RunBookBrainmapRequest request);
+
+    ResponseIterable<RunBookBrainmapResponseBody> runBookBrainmapWithResponseIterable(RunBookBrainmapRequest request);
 
     /**
      * @param request the request parameters of RunBookIntroduction  RunBookIntroductionRequest

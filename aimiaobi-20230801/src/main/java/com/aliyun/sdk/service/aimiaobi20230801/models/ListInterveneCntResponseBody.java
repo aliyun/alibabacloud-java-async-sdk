@@ -182,6 +182,9 @@ public class ListInterveneCntResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CntList")
         private java.util.List<?> cntList;
 
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private Integer code;
+
         @com.aliyun.core.annotation.NameInMap("PageCnt")
         private Integer pageCnt;
 
@@ -193,6 +196,7 @@ public class ListInterveneCntResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.cntList = builder.cntList;
+            this.code = builder.code;
             this.pageCnt = builder.pageCnt;
             this.pageIndex = builder.pageIndex;
             this.pageSize = builder.pageSize;
@@ -211,6 +215,13 @@ public class ListInterveneCntResponseBody extends TeaModel {
          */
         public java.util.List<?> getCntList() {
             return this.cntList;
+        }
+
+        /**
+         * @return code
+         */
+        public Integer getCode() {
+            return this.code;
         }
 
         /**
@@ -236,6 +247,7 @@ public class ListInterveneCntResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<?> cntList; 
+            private Integer code; 
             private Integer pageCnt; 
             private Integer pageIndex; 
             private Integer pageSize; 
@@ -245,6 +257,7 @@ public class ListInterveneCntResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.cntList = model.cntList;
+                this.code = model.code;
                 this.pageCnt = model.pageCnt;
                 this.pageIndex = model.pageIndex;
                 this.pageSize = model.pageSize;
@@ -255,6 +268,14 @@ public class ListInterveneCntResponseBody extends TeaModel {
              */
             public Builder cntList(java.util.List<?> cntList) {
                 this.cntList = cntList;
+                return this;
+            }
+
+            /**
+             * Code.
+             */
+            public Builder code(Integer code) {
+                this.code = code;
                 return this;
             }
 

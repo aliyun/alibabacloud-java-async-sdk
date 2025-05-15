@@ -530,10 +530,14 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
      * <p>GetInterveneRuleDetailResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private Integer code;
+
         @com.aliyun.core.annotation.NameInMap("InterveneRuleDetail")
         private InterveneRuleDetail interveneRuleDetail;
 
         private Data(Builder builder) {
+            this.code = builder.code;
             this.interveneRuleDetail = builder.interveneRuleDetail;
         }
 
@@ -546,6 +550,13 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return code
+         */
+        public Integer getCode() {
+            return this.code;
+        }
+
+        /**
          * @return interveneRuleDetail
          */
         public InterveneRuleDetail getInterveneRuleDetail() {
@@ -553,14 +564,24 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer code; 
             private InterveneRuleDetail interveneRuleDetail; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.code = model.code;
                 this.interveneRuleDetail = model.interveneRuleDetail;
             } 
+
+            /**
+             * Code.
+             */
+            public Builder code(Integer code) {
+                this.code = code;
+                return this;
+            }
 
             /**
              * InterveneRuleDetail.

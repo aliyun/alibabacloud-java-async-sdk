@@ -317,10 +317,14 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
      * <p>GetInterveneImportTaskInfoResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private Integer code;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private Status status;
 
         private Data(Builder builder) {
+            this.code = builder.code;
             this.status = builder.status;
         }
 
@@ -333,6 +337,13 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return code
+         */
+        public Integer getCode() {
+            return this.code;
+        }
+
+        /**
          * @return status
          */
         public Status getStatus() {
@@ -340,14 +351,24 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer code; 
             private Status status; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.code = model.code;
                 this.status = model.status;
             } 
+
+            /**
+             * Code.
+             */
+            public Builder code(Integer code) {
+                this.code = code;
+                return this;
+            }
 
             /**
              * Status.

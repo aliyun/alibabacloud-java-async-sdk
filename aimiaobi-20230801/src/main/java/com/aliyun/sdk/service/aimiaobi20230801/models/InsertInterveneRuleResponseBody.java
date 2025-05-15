@@ -179,10 +179,14 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
      * <p>InsertInterveneRuleResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private Integer code;
+
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
         private Data(Builder builder) {
+            this.code = builder.code;
             this.ruleId = builder.ruleId;
         }
 
@@ -195,6 +199,13 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return code
+         */
+        public Integer getCode() {
+            return this.code;
+        }
+
+        /**
          * @return ruleId
          */
         public Long getRuleId() {
@@ -202,14 +213,24 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer code; 
             private Long ruleId; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.code = model.code;
                 this.ruleId = model.ruleId;
             } 
+
+            /**
+             * Code.
+             */
+            public Builder code(Integer code) {
+                this.code = code;
+                return this;
+            }
 
             /**
              * RuleId.

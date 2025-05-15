@@ -12,19 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RunDocSmartCardRequest} extends {@link RequestModel}
+ * {@link RunBookBrainmapRequest} extends {@link RequestModel}
  *
- * <p>RunDocSmartCardRequest</p>
+ * <p>RunBookBrainmapRequest</p>
  */
-public class RunDocSmartCardRequest extends Request {
+public class RunBookBrainmapRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CleanCache")
+    private Boolean cleanCache;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String docId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeNumber")
+    private Integer nodeNumber;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Prompt")
@@ -36,16 +44,23 @@ public class RunDocSmartCardRequest extends Request {
     private String sessionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WordNumber")
+    private Integer wordNumber;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    private RunDocSmartCardRequest(Builder builder) {
+    private RunBookBrainmapRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.cleanCache = builder.cleanCache;
         this.docId = builder.docId;
+        this.nodeNumber = builder.nodeNumber;
         this.prompt = builder.prompt;
         this.sessionId = builder.sessionId;
+        this.wordNumber = builder.wordNumber;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -53,7 +68,7 @@ public class RunDocSmartCardRequest extends Request {
         return new Builder();
     }
 
-    public static RunDocSmartCardRequest create() {
+    public static RunBookBrainmapRequest create() {
         return builder().build();
     }
 
@@ -70,10 +85,24 @@ public class RunDocSmartCardRequest extends Request {
     }
 
     /**
+     * @return cleanCache
+     */
+    public Boolean getCleanCache() {
+        return this.cleanCache;
+    }
+
+    /**
      * @return docId
      */
     public String getDocId() {
         return this.docId;
+    }
+
+    /**
+     * @return nodeNumber
+     */
+    public Integer getNodeNumber() {
+        return this.nodeNumber;
     }
 
     /**
@@ -91,29 +120,42 @@ public class RunDocSmartCardRequest extends Request {
     }
 
     /**
+     * @return wordNumber
+     */
+    public Integer getWordNumber() {
+        return this.wordNumber;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
         return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<RunDocSmartCardRequest, Builder> {
+    public static final class Builder extends Request.Builder<RunBookBrainmapRequest, Builder> {
         private String regionId; 
+        private Boolean cleanCache; 
         private String docId; 
+        private Integer nodeNumber; 
         private String prompt; 
         private String sessionId; 
+        private Integer wordNumber; 
         private String workspaceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RunDocSmartCardRequest request) {
+        private Builder(RunBookBrainmapRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.cleanCache = request.cleanCache;
             this.docId = request.docId;
+            this.nodeNumber = request.nodeNumber;
             this.prompt = request.prompt;
             this.sessionId = request.sessionId;
+            this.wordNumber = request.wordNumber;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -127,14 +169,32 @@ public class RunDocSmartCardRequest extends Request {
         }
 
         /**
+         * CleanCache.
+         */
+        public Builder cleanCache(Boolean cleanCache) {
+            this.putBodyParameter("CleanCache", cleanCache);
+            this.cleanCache = cleanCache;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>84ufBYEeLMZOjRFo84HJ7ySL3Efr55</p>
+         * <p>12345</p>
          */
         public Builder docId(String docId) {
             this.putBodyParameter("DocId", docId);
             this.docId = docId;
+            return this;
+        }
+
+        /**
+         * NodeNumber.
+         */
+        public Builder nodeNumber(Integer nodeNumber) {
+            this.putBodyParameter("NodeNumber", nodeNumber);
+            this.nodeNumber = nodeNumber;
             return this;
         }
 
@@ -160,10 +220,19 @@ public class RunDocSmartCardRequest extends Request {
         }
 
         /**
+         * WordNumber.
+         */
+        public Builder wordNumber(Integer wordNumber) {
+            this.putBodyParameter("WordNumber", wordNumber);
+            this.wordNumber = wordNumber;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>llm-2setzb9x4ewsd</p>
+         * <p>llm-hx72jf15gqyobvd9</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -172,8 +241,8 @@ public class RunDocSmartCardRequest extends Request {
         }
 
         @Override
-        public RunDocSmartCardRequest build() {
-            return new RunDocSmartCardRequest(this);
+        public RunBookBrainmapRequest build() {
+            return new RunBookBrainmapRequest(this);
         } 
 
     } 

@@ -179,6 +179,9 @@ public class ImportInterveneFileAsyncResponseBody extends TeaModel {
      * <p>ImportInterveneFileAsyncResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private Integer code;
+
         @com.aliyun.core.annotation.NameInMap("FailIdList")
         private java.util.List<String> failIdList;
 
@@ -186,6 +189,7 @@ public class ImportInterveneFileAsyncResponseBody extends TeaModel {
         private String taskId;
 
         private Data(Builder builder) {
+            this.code = builder.code;
             this.failIdList = builder.failIdList;
             this.taskId = builder.taskId;
         }
@@ -196,6 +200,13 @@ public class ImportInterveneFileAsyncResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public Integer getCode() {
+            return this.code;
         }
 
         /**
@@ -213,6 +224,7 @@ public class ImportInterveneFileAsyncResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer code; 
             private java.util.List<String> failIdList; 
             private String taskId; 
 
@@ -220,9 +232,18 @@ public class ImportInterveneFileAsyncResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.code = model.code;
                 this.failIdList = model.failIdList;
                 this.taskId = model.taskId;
             } 
+
+            /**
+             * Code.
+             */
+            public Builder code(Integer code) {
+                this.code = code;
+                return this;
+            }
 
             /**
              * FailIdList.

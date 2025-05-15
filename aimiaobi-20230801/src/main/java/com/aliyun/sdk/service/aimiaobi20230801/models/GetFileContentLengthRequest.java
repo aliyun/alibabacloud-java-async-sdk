@@ -12,40 +12,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RunDocSmartCardRequest} extends {@link RequestModel}
+ * {@link GetFileContentLengthRequest} extends {@link RequestModel}
  *
- * <p>RunDocSmartCardRequest</p>
+ * <p>GetFileContentLengthRequest</p>
  */
-public class RunDocSmartCardRequest extends Request {
+public class GetFileContentLengthRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("DocId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String docId;
+    @com.aliyun.core.annotation.NameInMap("DocName")
+    private String docName;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Prompt")
-    private String prompt;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("SessionId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String sessionId;
+    @com.aliyun.core.annotation.NameInMap("FileUrl")
+    private String fileUrl;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    private RunDocSmartCardRequest(Builder builder) {
+    private GetFileContentLengthRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.docId = builder.docId;
-        this.prompt = builder.prompt;
-        this.sessionId = builder.sessionId;
+        this.docName = builder.docName;
+        this.fileUrl = builder.fileUrl;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -53,7 +46,7 @@ public class RunDocSmartCardRequest extends Request {
         return new Builder();
     }
 
-    public static RunDocSmartCardRequest create() {
+    public static GetFileContentLengthRequest create() {
         return builder().build();
     }
 
@@ -70,24 +63,17 @@ public class RunDocSmartCardRequest extends Request {
     }
 
     /**
-     * @return docId
+     * @return docName
      */
-    public String getDocId() {
-        return this.docId;
+    public String getDocName() {
+        return this.docName;
     }
 
     /**
-     * @return prompt
+     * @return fileUrl
      */
-    public String getPrompt() {
-        return this.prompt;
-    }
-
-    /**
-     * @return sessionId
-     */
-    public String getSessionId() {
-        return this.sessionId;
+    public String getFileUrl() {
+        return this.fileUrl;
     }
 
     /**
@@ -97,23 +83,21 @@ public class RunDocSmartCardRequest extends Request {
         return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<RunDocSmartCardRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetFileContentLengthRequest, Builder> {
         private String regionId; 
-        private String docId; 
-        private String prompt; 
-        private String sessionId; 
+        private String docName; 
+        private String fileUrl; 
         private String workspaceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RunDocSmartCardRequest request) {
+        private Builder(GetFileContentLengthRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.docId = request.docId;
-            this.prompt = request.prompt;
-            this.sessionId = request.sessionId;
+            this.docName = request.docName;
+            this.fileUrl = request.fileUrl;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -127,35 +111,20 @@ public class RunDocSmartCardRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>84ufBYEeLMZOjRFo84HJ7ySL3Efr55</p>
+         * DocName.
          */
-        public Builder docId(String docId) {
-            this.putBodyParameter("DocId", docId);
-            this.docId = docId;
+        public Builder docName(String docName) {
+            this.putBodyParameter("DocName", docName);
+            this.docName = docName;
             return this;
         }
 
         /**
-         * Prompt.
+         * FileUrl.
          */
-        public Builder prompt(String prompt) {
-            this.putBodyParameter("Prompt", prompt);
-            this.prompt = prompt;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
-         */
-        public Builder sessionId(String sessionId) {
-            this.putBodyParameter("SessionId", sessionId);
-            this.sessionId = sessionId;
+        public Builder fileUrl(String fileUrl) {
+            this.putBodyParameter("FileUrl", fileUrl);
+            this.fileUrl = fileUrl;
             return this;
         }
 
@@ -172,8 +141,8 @@ public class RunDocSmartCardRequest extends Request {
         }
 
         @Override
-        public RunDocSmartCardRequest build() {
-            return new RunDocSmartCardRequest(this);
+        public GetFileContentLengthRequest build() {
+            return new GetFileContentLengthRequest(this);
         } 
 
     } 
