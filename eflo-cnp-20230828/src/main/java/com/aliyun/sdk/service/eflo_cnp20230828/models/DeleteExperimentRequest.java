@@ -23,12 +23,18 @@ public class DeleteExperimentRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExperimentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long experimentId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     private DeleteExperimentRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.experimentId = builder.experimentId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -39,7 +45,7 @@ public class DeleteExperimentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -58,9 +64,17 @@ public class DeleteExperimentRequest extends Request {
         return this.experimentId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteExperimentRequest, Builder> {
         private String regionId; 
         private Long experimentId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -70,6 +84,7 @@ public class DeleteExperimentRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.experimentId = request.experimentId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -82,11 +97,27 @@ public class DeleteExperimentRequest extends Request {
         }
 
         /**
-         * ExperimentId.
+         * <p>Plan ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234</p>
          */
         public Builder experimentId(Long experimentId) {
             this.putQueryParameter("ExperimentId", experimentId);
             this.experimentId = experimentId;
+            return this;
+        }
+
+        /**
+         * <p>Resource Group Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-sdkfjgnvd24</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

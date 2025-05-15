@@ -23,6 +23,7 @@ public class CreateExperimentPlanTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrivacyLevel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String privacyLevel;
 
     @com.aliyun.core.annotation.Query
@@ -35,10 +36,12 @@ public class CreateExperimentPlanTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TemplatePipeline")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<TemplatePipeline> templatePipeline;
 
     private CreateExperimentPlanTemplateRequest(Builder builder) {
@@ -59,7 +62,7 @@ public class CreateExperimentPlanTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -138,7 +141,11 @@ public class CreateExperimentPlanTemplateRequest extends Request {
         }
 
         /**
-         * PrivacyLevel.
+         * <p>Privacy Level</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         public Builder privacyLevel(String privacyLevel) {
             this.putQueryParameter("PrivacyLevel", privacyLevel);
@@ -147,7 +154,10 @@ public class CreateExperimentPlanTemplateRequest extends Request {
         }
 
         /**
-         * TemplateDescription.
+         * <p>Template Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The template installs jdk and tomcat on a new ECS instance.</p>
          */
         public Builder templateDescription(String templateDescription) {
             this.putQueryParameter("TemplateDescription", templateDescription);
@@ -156,7 +166,10 @@ public class CreateExperimentPlanTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>Template ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4724</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -165,7 +178,11 @@ public class CreateExperimentPlanTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>Template Name</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -174,7 +191,8 @@ public class CreateExperimentPlanTemplateRequest extends Request {
         }
 
         /**
-         * TemplatePipeline.
+         * <p>Template Pipeline</p>
+         * <p>This parameter is required.</p>
          */
         public Builder templatePipeline(java.util.List<TemplatePipeline> templatePipeline) {
             String templatePipelineShrink = shrink(templatePipeline, "TemplatePipeline", "json");
@@ -198,6 +216,7 @@ public class CreateExperimentPlanTemplateRequest extends Request {
      */
     public static class EnvParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuPerWorker")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer cpuPerWorker;
 
         @com.aliyun.core.annotation.NameInMap("CudaVersion")
@@ -207,9 +226,11 @@ public class CreateExperimentPlanTemplateRequest extends Request {
         private String gpuDriverVersion;
 
         @com.aliyun.core.annotation.NameInMap("GpuPerWorker")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer gpuPerWorker;
 
         @com.aliyun.core.annotation.NameInMap("MemoryPerWorker")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer memoryPerWorker;
 
         @com.aliyun.core.annotation.NameInMap("NCCLVersion")
@@ -219,9 +240,11 @@ public class CreateExperimentPlanTemplateRequest extends Request {
         private String pyTorchVersion;
 
         @com.aliyun.core.annotation.NameInMap("ShareMemory")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer shareMemory;
 
         @com.aliyun.core.annotation.NameInMap("WorkerNum")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer workerNum;
 
         private EnvParams(Builder builder) {
@@ -318,8 +341,27 @@ public class CreateExperimentPlanTemplateRequest extends Request {
             private Integer shareMemory; 
             private Integer workerNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnvParams model) {
+                this.cpuPerWorker = model.cpuPerWorker;
+                this.cudaVersion = model.cudaVersion;
+                this.gpuDriverVersion = model.gpuDriverVersion;
+                this.gpuPerWorker = model.gpuPerWorker;
+                this.memoryPerWorker = model.memoryPerWorker;
+                this.NCCLVersion = model.NCCLVersion;
+                this.pyTorchVersion = model.pyTorchVersion;
+                this.shareMemory = model.shareMemory;
+                this.workerNum = model.workerNum;
+            } 
+
             /**
-             * CpuPerWorker.
+             * <p>CPU allocation count</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder cpuPerWorker(Integer cpuPerWorker) {
                 this.cpuPerWorker = cpuPerWorker;
@@ -327,7 +369,7 @@ public class CreateExperimentPlanTemplateRequest extends Request {
             }
 
             /**
-             * <p>cudaVersion</p>
+             * <p>CUDA Version</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -338,7 +380,7 @@ public class CreateExperimentPlanTemplateRequest extends Request {
             }
 
             /**
-             * <p>GpuDriverVersion</p>
+             * <p>GPU Driver Version</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -349,7 +391,11 @@ public class CreateExperimentPlanTemplateRequest extends Request {
             }
 
             /**
-             * GpuPerWorker.
+             * <p>GPU allocation count</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder gpuPerWorker(Integer gpuPerWorker) {
                 this.gpuPerWorker = gpuPerWorker;
@@ -357,7 +403,11 @@ public class CreateExperimentPlanTemplateRequest extends Request {
             }
 
             /**
-             * MemoryPerWorker.
+             * <p>Memory (GB) allocation count</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder memoryPerWorker(Integer memoryPerWorker) {
                 this.memoryPerWorker = memoryPerWorker;
@@ -365,7 +415,7 @@ public class CreateExperimentPlanTemplateRequest extends Request {
             }
 
             /**
-             * <p>NCCLVersion</p>
+             * <p>NCCL Version</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -376,7 +426,7 @@ public class CreateExperimentPlanTemplateRequest extends Request {
             }
 
             /**
-             * <p>PyTorchVersion</p>
+             * <p>PyTorch Version</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -387,7 +437,11 @@ public class CreateExperimentPlanTemplateRequest extends Request {
             }
 
             /**
-             * ShareMemory.
+             * <p>Shared Memory (GB) allocation count</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder shareMemory(Integer shareMemory) {
                 this.shareMemory = shareMemory;
@@ -395,7 +449,11 @@ public class CreateExperimentPlanTemplateRequest extends Request {
             }
 
             /**
-             * WorkerNum.
+             * <p>Number of nodes</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder workerNum(Integer workerNum) {
                 this.workerNum = workerNum;
@@ -417,21 +475,26 @@ public class CreateExperimentPlanTemplateRequest extends Request {
      */
     public static class TemplatePipeline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnvParams")
+        @com.aliyun.core.annotation.Validation(required = true)
         private EnvParams envParams;
 
         @com.aliyun.core.annotation.NameInMap("PipelineOrder")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer pipelineOrder;
 
         @com.aliyun.core.annotation.NameInMap("Scene")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String scene;
 
         @com.aliyun.core.annotation.NameInMap("SettingParams")
         private java.util.Map<String, String> settingParams;
 
         @com.aliyun.core.annotation.NameInMap("WorkloadId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long workloadId;
 
         @com.aliyun.core.annotation.NameInMap("WorkloadName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String workloadName;
 
         private TemplatePipeline(Builder builder) {
@@ -501,8 +564,21 @@ public class CreateExperimentPlanTemplateRequest extends Request {
             private Long workloadId; 
             private String workloadName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TemplatePipeline model) {
+                this.envParams = model.envParams;
+                this.pipelineOrder = model.pipelineOrder;
+                this.scene = model.scene;
+                this.settingParams = model.settingParams;
+                this.workloadId = model.workloadId;
+                this.workloadName = model.workloadName;
+            } 
+
             /**
-             * EnvParams.
+             * <p>Configured Environment Parameters</p>
+             * <p>This parameter is required.</p>
              */
             public Builder envParams(EnvParams envParams) {
                 this.envParams = envParams;
@@ -510,7 +586,11 @@ public class CreateExperimentPlanTemplateRequest extends Request {
             }
 
             /**
-             * PipelineOrder.
+             * <p>Node Order Number</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pipelineOrder(Integer pipelineOrder) {
                 this.pipelineOrder = pipelineOrder;
@@ -518,7 +598,11 @@ public class CreateExperimentPlanTemplateRequest extends Request {
             }
 
             /**
-             * Scene.
+             * <p>Usage Scenario, e.g., &quot;baseline&quot;</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baseline</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -526,7 +610,7 @@ public class CreateExperimentPlanTemplateRequest extends Request {
             }
 
             /**
-             * SettingParams.
+             * <p>Configured Workload Parameters</p>
              */
             public Builder settingParams(java.util.Map<String, String> settingParams) {
                 this.settingParams = settingParams;
@@ -534,7 +618,11 @@ public class CreateExperimentPlanTemplateRequest extends Request {
             }
 
             /**
-             * WorkloadId.
+             * <p>Workload ID</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder workloadId(Long workloadId) {
                 this.workloadId = workloadId;
@@ -542,7 +630,11 @@ public class CreateExperimentPlanTemplateRequest extends Request {
             }
 
             /**
-             * WorkloadName.
+             * <p>Workload Name</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder workloadName(String workloadName) {
                 this.workloadName = workloadName;

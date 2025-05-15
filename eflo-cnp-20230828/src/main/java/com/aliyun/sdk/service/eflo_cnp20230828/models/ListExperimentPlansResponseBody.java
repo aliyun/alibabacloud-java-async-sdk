@@ -44,6 +44,10 @@ public class ListExperimentPlansResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -77,6 +81,16 @@ public class ListExperimentPlansResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExperimentPlansResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Access Denied Detail</p>
@@ -131,6 +145,87 @@ public class ListExperimentPlansResponseBody extends TeaModel {
      *
      * <p>ListExperimentPlansResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>owner</p>
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListExperimentPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExperimentPlansResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -147,11 +242,17 @@ public class ListExperimentPlansResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        private Long resourceId;
+
         @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
@@ -168,8 +269,10 @@ public class ListExperimentPlansResponseBody extends TeaModel {
             this.planId = builder.planId;
             this.planTaskStatus = builder.planTaskStatus;
             this.resourceGroupId = builder.resourceGroupId;
+            this.resourceId = builder.resourceId;
             this.resourceName = builder.resourceName;
             this.startTime = builder.startTime;
+            this.tags = builder.tags;
             this.templateId = builder.templateId;
             this.templateName = builder.templateName;
             this.updateTime = builder.updateTime;
@@ -219,6 +322,13 @@ public class ListExperimentPlansResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceId
+         */
+        public Long getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
          * @return resourceName
          */
         public String getResourceName() {
@@ -230,6 +340,13 @@ public class ListExperimentPlansResponseBody extends TeaModel {
          */
         public String getStartTime() {
             return this.startTime;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -259,11 +376,31 @@ public class ListExperimentPlansResponseBody extends TeaModel {
             private Long planId; 
             private java.util.Map<String, Integer> planTaskStatus; 
             private String resourceGroupId; 
+            private Long resourceId; 
             private String resourceName; 
             private String startTime; 
+            private java.util.List<Tags> tags; 
             private Long templateId; 
             private String templateName; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.planId = model.planId;
+                this.planTaskStatus = model.planTaskStatus;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.startTime = model.startTime;
+                this.tags = model.tags;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>Creation Time</p>
@@ -318,6 +455,17 @@ public class ListExperimentPlansResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>189</p>
+             */
+            public Builder resourceId(Long resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
              * <p>Associated Resource Name</p>
              * 
              * <strong>example:</strong>
@@ -336,6 +484,14 @@ public class ListExperimentPlansResponseBody extends TeaModel {
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * <p>The tag.</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

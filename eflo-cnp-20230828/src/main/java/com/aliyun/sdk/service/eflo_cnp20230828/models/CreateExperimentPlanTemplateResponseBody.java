@@ -44,6 +44,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -78,8 +82,21 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateExperimentPlanTemplateResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>Access Denied Detail</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -87,7 +104,7 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -95,7 +112,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5514CB39-B7C0-5B89-8534-2DE1E0F2B7AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +123,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>total</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -244,8 +267,26 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             private Integer shareMemory; 
             private Integer workerNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnvParams model) {
+                this.cpuPerWorker = model.cpuPerWorker;
+                this.cudaVersion = model.cudaVersion;
+                this.gpuDriverVersion = model.gpuDriverVersion;
+                this.gpuPerWorker = model.gpuPerWorker;
+                this.memoryPerWorker = model.memoryPerWorker;
+                this.NCCLVersion = model.NCCLVersion;
+                this.pyTorchVersion = model.pyTorchVersion;
+                this.shareMemory = model.shareMemory;
+                this.workerNum = model.workerNum;
+            } 
+
             /**
-             * CpuPerWorker.
+             * <p>CPU Allocation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder cpuPerWorker(Integer cpuPerWorker) {
                 this.cpuPerWorker = cpuPerWorker;
@@ -264,7 +305,7 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>GpuDriverVersion</p>
+             * <p>GPU Driver Version</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -275,7 +316,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * GpuPerWorker.
+             * <p>GPU Allocation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder gpuPerWorker(Integer gpuPerWorker) {
                 this.gpuPerWorker = gpuPerWorker;
@@ -283,7 +327,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryPerWorker.
+             * <p>Memory (GB) Allocation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder memoryPerWorker(Integer memoryPerWorker) {
                 this.memoryPerWorker = memoryPerWorker;
@@ -291,7 +338,7 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>NCCLVersion</p>
+             * <p>NCCL Version</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -302,7 +349,7 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>PyTorchVersion</p>
+             * <p>PyTorch Version</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -313,7 +360,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ShareMemory.
+             * <p>Shared Memory (GB) Allocation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder shareMemory(Integer shareMemory) {
                 this.shareMemory = shareMemory;
@@ -321,7 +371,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerNum.
+             * <p>Number of Nodes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder workerNum(Integer workerNum) {
                 this.workerNum = workerNum;
@@ -427,8 +480,20 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             private Long workloadId; 
             private String workloadName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TemplatePipelineParam model) {
+                this.envParams = model.envParams;
+                this.pipelineOrder = model.pipelineOrder;
+                this.scene = model.scene;
+                this.settingParams = model.settingParams;
+                this.workloadId = model.workloadId;
+                this.workloadName = model.workloadName;
+            } 
+
             /**
-             * EnvParams.
+             * <p>Configured Environment Parameters</p>
              */
             public Builder envParams(EnvParams envParams) {
                 this.envParams = envParams;
@@ -436,7 +501,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineOrder.
+             * <p>Pipeline Order</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pipelineOrder(Integer pipelineOrder) {
                 this.pipelineOrder = pipelineOrder;
@@ -444,7 +512,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>Usage Scenario, e.g., &quot;baseline&quot;</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baseline</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -452,7 +523,7 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * SettingParams.
+             * <p>Configured Workload Parameters</p>
              */
             public Builder settingParams(java.util.Map<String, String> settingParams) {
                 this.settingParams = settingParams;
@@ -460,7 +531,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadId.
+             * <p>Workload ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder workloadId(Long workloadId) {
                 this.workloadId = workloadId;
@@ -468,7 +542,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadName.
+             * <p>Workload Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder workloadName(String workloadName) {
                 this.workloadName = workloadName;
@@ -501,6 +578,9 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivacyLevel")
         private String privacyLevel;
 
+        @com.aliyun.core.annotation.NameInMap("TemplateCode")
+        private Long templateCode;
+
         @com.aliyun.core.annotation.NameInMap("TemplateDescription")
         private String templateDescription;
 
@@ -524,6 +604,7 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             this.creatorUid = builder.creatorUid;
             this.isDelete = builder.isDelete;
             this.privacyLevel = builder.privacyLevel;
+            this.templateCode = builder.templateCode;
             this.templateDescription = builder.templateDescription;
             this.templateId = builder.templateId;
             this.templateName = builder.templateName;
@@ -566,6 +647,13 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
          */
         public String getPrivacyLevel() {
             return this.privacyLevel;
+        }
+
+        /**
+         * @return templateCode
+         */
+        public Long getTemplateCode() {
+            return this.templateCode;
         }
 
         /**
@@ -615,6 +703,7 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             private Long creatorUid; 
             private Integer isDelete; 
             private String privacyLevel; 
+            private Long templateCode; 
             private String templateDescription; 
             private Long templateId; 
             private String templateName; 
@@ -622,8 +711,28 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             private String updateTime; 
             private Long versionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.creatorUid = model.creatorUid;
+                this.isDelete = model.isDelete;
+                this.privacyLevel = model.privacyLevel;
+                this.templateCode = model.templateCode;
+                this.templateDescription = model.templateDescription;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templatePipelineParam = model.templatePipelineParam;
+                this.updateTime = model.updateTime;
+                this.versionId = model.versionId;
+            } 
+
             /**
-             * CreateTime.
+             * <p>Creation Time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-19T02:01:05Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -631,7 +740,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorUid.
+             * <p>Primary Account UID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12312312312312</p>
              */
             public Builder creatorUid(Long creatorUid) {
                 this.creatorUid = creatorUid;
@@ -639,7 +751,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * IsDelete.
+             * <p>Is Deleted</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isDelete(Integer isDelete) {
                 this.isDelete = isDelete;
@@ -647,7 +762,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * PrivacyLevel.
+             * <p>Privacy Level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder privacyLevel(String privacyLevel) {
                 this.privacyLevel = privacyLevel;
@@ -655,7 +773,21 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateDescription.
+             * <p>Template Code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder templateCode(Long templateCode) {
+                this.templateCode = templateCode;
+                return this;
+            }
+
+            /**
+             * <p>Template Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder templateDescription(String templateDescription) {
                 this.templateDescription = templateDescription;
@@ -663,7 +795,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>Template ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17615126</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -671,7 +806,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>Template Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -679,7 +817,7 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplatePipelineParam.
+             * <p>Template Pipeline</p>
              */
             public Builder templatePipelineParam(java.util.List<TemplatePipelineParam> templatePipelineParam) {
                 this.templatePipelineParam = templatePipelineParam;
@@ -687,7 +825,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Update Time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-16T01:58Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -695,7 +836,10 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * <p>Version ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder versionId(Long versionId) {
                 this.versionId = versionId;

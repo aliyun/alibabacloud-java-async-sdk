@@ -39,7 +39,7 @@ public class ListWorkloadsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +82,10 @@ public class ListWorkloadsRequest extends Request {
         }
 
         /**
-         * Scope.
+         * <p>Scope</p>
+         * 
+         * <strong>example:</strong>
+         * <p>common</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);

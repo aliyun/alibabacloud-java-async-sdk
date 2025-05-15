@@ -41,6 +41,10 @@ public class ListExperimentPlansRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    private Long resourceId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceName")
     private java.util.List<String> resourceName;
@@ -53,6 +57,14 @@ public class ListExperimentPlansRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StartTimeOrder")
     private String startTimeOrder;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    private Long templateId;
+
     private ListExperimentPlansRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -61,9 +73,12 @@ public class ListExperimentPlansRequest extends Request {
         this.page = builder.page;
         this.planTaskStatus = builder.planTaskStatus;
         this.resourceGroupId = builder.resourceGroupId;
+        this.resourceId = builder.resourceId;
         this.resourceName = builder.resourceName;
         this.size = builder.size;
         this.startTimeOrder = builder.startTimeOrder;
+        this.tag = builder.tag;
+        this.templateId = builder.templateId;
     }
 
     public static Builder builder() {
@@ -74,7 +89,7 @@ public class ListExperimentPlansRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -122,6 +137,13 @@ public class ListExperimentPlansRequest extends Request {
     }
 
     /**
+     * @return resourceId
+     */
+    public Long getResourceId() {
+        return this.resourceId;
+    }
+
+    /**
      * @return resourceName
      */
     public java.util.List<String> getResourceName() {
@@ -142,6 +164,20 @@ public class ListExperimentPlansRequest extends Request {
         return this.startTimeOrder;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
+     * @return templateId
+     */
+    public Long getTemplateId() {
+        return this.templateId;
+    }
+
     public static final class Builder extends Request.Builder<ListExperimentPlansRequest, Builder> {
         private String regionId; 
         private String creatTimeOrder; 
@@ -149,9 +185,12 @@ public class ListExperimentPlansRequest extends Request {
         private Integer page; 
         private java.util.List<String> planTaskStatus; 
         private String resourceGroupId; 
+        private Long resourceId; 
         private java.util.List<String> resourceName; 
         private Integer size; 
         private String startTimeOrder; 
+        private java.util.List<Tag> tag; 
+        private Long templateId; 
 
         private Builder() {
             super();
@@ -165,9 +204,12 @@ public class ListExperimentPlansRequest extends Request {
             this.page = request.page;
             this.planTaskStatus = request.planTaskStatus;
             this.resourceGroupId = request.resourceGroupId;
+            this.resourceId = request.resourceId;
             this.resourceName = request.resourceName;
             this.size = request.size;
             this.startTimeOrder = request.startTimeOrder;
+            this.tag = request.tag;
+            this.templateId = request.templateId;
         } 
 
         /**
@@ -238,6 +280,18 @@ public class ListExperimentPlansRequest extends Request {
         }
 
         /**
+         * <p>Resource ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>189</p>
+         */
+        public Builder resourceId(Long resourceId) {
+            this.putQueryParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
          * <p>Resource</p>
          */
         public Builder resourceName(java.util.List<String> resourceName) {
@@ -271,6 +325,28 @@ public class ListExperimentPlansRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>The tags.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * <p>Template Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96</p>
+         */
+        public Builder templateId(Long templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
+            return this;
+        }
+
         @Override
         public ListExperimentPlansRequest build() {
             return new ListExperimentPlansRequest(this);
@@ -278,4 +354,85 @@ public class ListExperimentPlansRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListExperimentPlansRequest} extends {@link TeaModel}
+     *
+     * <p>ListExperimentPlansRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>owner</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>Tag value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

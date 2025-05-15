@@ -23,6 +23,7 @@ public class GetResourceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
     private GetResourceRequest(Builder builder) {
@@ -39,7 +40,7 @@ public class GetResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,6 +84,7 @@ public class GetResourceRequest extends Request {
 
         /**
          * <p>The cluster ID of Lingjun</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ehpc-bj-uo8f26cpmo</p>

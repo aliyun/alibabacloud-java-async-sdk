@@ -72,6 +72,10 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return experimentId
      */
@@ -162,8 +166,28 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
         private Double tflops; 
         private Double samplesPerSecond; 
 
+        private Builder() {
+        } 
+
+        private Builder(DataResultsTaskIndividualResultMapValue model) {
+            this.experimentId = model.experimentId;
+            this.hostname = model.hostname;
+            this.podName = model.podName;
+            this.gpuNum = model.gpuNum;
+            this.gpuName = model.gpuName;
+            this.warningFlag = model.warningFlag;
+            this.warningMsg = model.warningMsg;
+            this.errorFlag = model.errorFlag;
+            this.errorMsg = model.errorMsg;
+            this.tflops = model.tflops;
+            this.samplesPerSecond = model.samplesPerSecond;
+        } 
+
         /**
-         * ExperimentId.
+         * <p>Experiment ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54</p>
          */
         public Builder experimentId(Long experimentId) {
             this.experimentId = experimentId;
@@ -171,7 +195,10 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
         }
 
         /**
-         * Hostname.
+         * <p>Host IP</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-jt-waf-app1</p>
          */
         public Builder hostname(String hostname) {
             this.hostname = hostname;
@@ -179,7 +206,10 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
         }
 
         /**
-         * PodName.
+         * <p>Pod name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fluxserv-6fc89b45cf-w8wq6</p>
          */
         public Builder podName(String podName) {
             this.podName = podName;
@@ -187,7 +217,10 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
         }
 
         /**
-         * GpuNum.
+         * <p>GPU数量</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder gpuNum(Integer gpuNum) {
             this.gpuNum = gpuNum;
@@ -195,7 +228,10 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
         }
 
         /**
-         * GpuName.
+         * <p>GPU名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8x OAM 810 GPU</p>
          */
         public Builder gpuName(String gpuName) {
             this.gpuName = gpuName;
@@ -203,7 +239,10 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
         }
 
         /**
-         * WarningFlag.
+         * <p>Whether there is a warning</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder warningFlag(Boolean warningFlag) {
             this.warningFlag = warningFlag;
@@ -211,7 +250,10 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
         }
 
         /**
-         * WarningMsg.
+         * <p>Warning message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>warning message</p>
          */
         public Builder warningMsg(String warningMsg) {
             this.warningMsg = warningMsg;
@@ -219,7 +261,10 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
         }
 
         /**
-         * ErrorFlag.
+         * <p>Whether there is an error</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder errorFlag(Boolean errorFlag) {
             this.errorFlag = errorFlag;
@@ -227,7 +272,10 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error message</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -235,7 +283,7 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
         }
 
         /**
-         * <p>TFLOPS</p>
+         * <p>TFLOPS value</p>
          * 
          * <strong>example:</strong>
          * <p>45</p>
@@ -246,7 +294,10 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
         }
 
         /**
-         * SamplesPerSecond.
+         * <p>Throughput</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder samplesPerSecond(Double samplesPerSecond) {
             this.samplesPerSecond = samplesPerSecond;

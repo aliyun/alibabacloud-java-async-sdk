@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChangeResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String resourceGroupId;
@@ -33,6 +37,7 @@ public class ChangeResourceGroupRequest extends Request {
 
     private ChangeResourceGroupRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
@@ -46,9 +51,16 @@ public class ChangeResourceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -73,6 +85,7 @@ public class ChangeResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChangeResourceGroupRequest, Builder> {
+        private String regionId; 
         private String resourceGroupId; 
         private String resourceId; 
         private String resourceType; 
@@ -83,10 +96,23 @@ public class ChangeResourceGroupRequest extends Request {
 
         private Builder(ChangeResourceGroupRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
         } 
+
+        /**
+         * <p>Region Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * <p>The resource group id.</p>

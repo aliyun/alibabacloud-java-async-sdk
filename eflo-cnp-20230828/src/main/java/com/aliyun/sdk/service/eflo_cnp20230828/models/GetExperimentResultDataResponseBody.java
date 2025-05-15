@@ -44,6 +44,10 @@ public class GetExperimentResultDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -78,8 +82,21 @@ public class GetExperimentResultDataResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetExperimentResultDataResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>Access Denied Details</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -87,7 +104,7 @@ public class GetExperimentResultDataResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -95,7 +112,10 @@ public class GetExperimentResultDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C1D34EC2-AB13-56F4-8322-F15AE563EA04</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +123,10 @@ public class GetExperimentResultDataResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total Count of Queries</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -196,8 +219,19 @@ public class GetExperimentResultDataResponseBody extends TeaModel {
             private Long timestamp; 
             private Double value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MetricsInfos model) {
+                this.gpuNum = model.gpuNum;
+                this.iteration = model.iteration;
+                this.tflops = model.tflops;
+                this.timestamp = model.timestamp;
+                this.value = model.value;
+            } 
+
             /**
-             * <p>gpu</p>
+             * <p>GPU</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -208,7 +242,7 @@ public class GetExperimentResultDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>iteration</p>
+             * <p>Iteration</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -230,7 +264,10 @@ public class GetExperimentResultDataResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>Operation Timestamp</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715393860</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -238,7 +275,10 @@ public class GetExperimentResultDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Metric Value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>126</p>
              */
             public Builder value(Double value) {
                 this.value = value;
@@ -320,8 +360,21 @@ public class GetExperimentResultDataResponseBody extends TeaModel {
             private java.util.List<MetricsInfos> metricsInfos; 
             private String podName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.gpuNum = model.gpuNum;
+                this.hostname = model.hostname;
+                this.metricsInfos = model.metricsInfos;
+                this.podName = model.podName;
+            } 
+
             /**
-             * GpuNum.
+             * <p>Number of GPUs</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder gpuNum(String gpuNum) {
                 this.gpuNum = gpuNum;
@@ -329,7 +382,10 @@ public class GetExperimentResultDataResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * <p>Host IP</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-jt-waf-app1</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -337,7 +393,7 @@ public class GetExperimentResultDataResponseBody extends TeaModel {
             }
 
             /**
-             * MetricsInfos.
+             * <p>List of Metrics Information</p>
              */
             public Builder metricsInfos(java.util.List<MetricsInfos> metricsInfos) {
                 this.metricsInfos = metricsInfos;
@@ -345,7 +401,10 @@ public class GetExperimentResultDataResponseBody extends TeaModel {
             }
 
             /**
-             * PodName.
+             * <p>Pod Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hzs-forge-sdxl-online-7ff4d86444-pc95h</p>
              */
             public Builder podName(String podName) {
                 this.podName = podName;

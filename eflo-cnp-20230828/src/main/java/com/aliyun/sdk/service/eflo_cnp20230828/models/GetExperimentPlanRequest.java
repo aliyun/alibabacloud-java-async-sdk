@@ -23,6 +23,7 @@ public class GetExperimentPlanRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long planId;
 
     private GetExperimentPlanRequest(Builder builder) {
@@ -39,7 +40,7 @@ public class GetExperimentPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,6 +84,7 @@ public class GetExperimentPlanRequest extends Request {
 
         /**
          * <p>Plan ID</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>189</p>

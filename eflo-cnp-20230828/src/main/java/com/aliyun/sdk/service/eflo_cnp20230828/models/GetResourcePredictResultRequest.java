@@ -27,6 +27,7 @@ public class GetResourcePredictResultRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long templateId;
 
     private GetResourcePredictResultRequest(Builder builder) {
@@ -44,7 +45,7 @@ public class GetResourcePredictResultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -96,7 +97,10 @@ public class GetResourcePredictResultRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>Resource ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36</p>
          */
         public Builder resourceId(Long resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -105,7 +109,11 @@ public class GetResourcePredictResultRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>Template ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>315797</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

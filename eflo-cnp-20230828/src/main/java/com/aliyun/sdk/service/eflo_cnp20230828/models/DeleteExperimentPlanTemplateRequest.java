@@ -23,6 +23,7 @@ public class DeleteExperimentPlanTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long templateId;
 
     private DeleteExperimentPlanTemplateRequest(Builder builder) {
@@ -39,7 +40,7 @@ public class DeleteExperimentPlanTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +83,11 @@ public class DeleteExperimentPlanTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>Template ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>346527</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

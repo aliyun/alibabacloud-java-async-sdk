@@ -40,6 +40,10 @@ public class GetResourcePredictResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -66,8 +70,20 @@ public class GetResourcePredictResultResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetResourcePredictResultResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Data.
+         * <p>Data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -75,7 +91,10 @@ public class GetResourcePredictResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5514CB39-B7C0-5B89-8534-2DE1E0F2B7AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +102,10 @@ public class GetResourcePredictResultResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>total</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

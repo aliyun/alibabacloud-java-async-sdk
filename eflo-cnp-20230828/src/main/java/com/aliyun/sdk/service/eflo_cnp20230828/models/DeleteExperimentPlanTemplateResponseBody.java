@@ -40,6 +40,10 @@ public class DeleteExperimentPlanTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -66,8 +70,20 @@ public class DeleteExperimentPlanTemplateResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteExperimentPlanTemplateResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Data.
+         * <p>Data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -75,7 +91,10 @@ public class DeleteExperimentPlanTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4D3FD55F-3BCD-5914-9B74-A1F4961327E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +102,10 @@ public class DeleteExperimentPlanTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total Count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

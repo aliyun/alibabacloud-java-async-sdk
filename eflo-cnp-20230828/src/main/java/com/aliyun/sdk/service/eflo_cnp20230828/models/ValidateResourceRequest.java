@@ -23,6 +23,7 @@ public class ValidateResourceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
     @com.aliyun.core.annotation.Body
@@ -44,7 +45,7 @@ public class ValidateResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,6 +98,7 @@ public class ValidateResourceRequest extends Request {
 
         /**
          * <p>Resource ID</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ehpc-sh-ouypm5aucy</p>
@@ -191,6 +193,16 @@ public class ValidateResourceRequest extends Request {
             private String accessKey; 
             private String endpoint; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserAccessParam model) {
+                this.accessId = model.accessId;
+                this.accessKey = model.accessKey;
+                this.endpoint = model.endpoint;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * <p>User ID</p>

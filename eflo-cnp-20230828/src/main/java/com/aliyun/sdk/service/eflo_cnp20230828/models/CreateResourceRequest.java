@@ -27,26 +27,22 @@ public class CreateResourceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterName;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ClusterType")
-    private String clusterType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MachineTypes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private MachineTypes machineTypes;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceType")
-    private String resourceType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserAccessParam")
+    @com.aliyun.core.annotation.Validation(required = true)
     private UserAccessParam userAccessParam;
 
     private CreateResourceRequest(Builder builder) {
@@ -55,9 +51,7 @@ public class CreateResourceRequest extends Request {
         this.clusterDesc = builder.clusterDesc;
         this.clusterId = builder.clusterId;
         this.clusterName = builder.clusterName;
-        this.clusterType = builder.clusterType;
         this.machineTypes = builder.machineTypes;
-        this.resourceType = builder.resourceType;
         this.userAccessParam = builder.userAccessParam;
     }
 
@@ -69,7 +63,7 @@ public class CreateResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,24 +97,10 @@ public class CreateResourceRequest extends Request {
     }
 
     /**
-     * @return clusterType
-     */
-    public String getClusterType() {
-        return this.clusterType;
-    }
-
-    /**
      * @return machineTypes
      */
     public MachineTypes getMachineTypes() {
         return this.machineTypes;
-    }
-
-    /**
-     * @return resourceType
-     */
-    public String getResourceType() {
-        return this.resourceType;
     }
 
     /**
@@ -135,9 +115,7 @@ public class CreateResourceRequest extends Request {
         private String clusterDesc; 
         private String clusterId; 
         private String clusterName; 
-        private String clusterType; 
         private MachineTypes machineTypes; 
-        private String resourceType; 
         private UserAccessParam userAccessParam; 
 
         private Builder() {
@@ -150,9 +128,7 @@ public class CreateResourceRequest extends Request {
             this.clusterDesc = request.clusterDesc;
             this.clusterId = request.clusterId;
             this.clusterName = request.clusterName;
-            this.clusterType = request.clusterType;
             this.machineTypes = request.machineTypes;
-            this.resourceType = request.resourceType;
             this.userAccessParam = request.userAccessParam;
         } 
 
@@ -179,6 +155,7 @@ public class CreateResourceRequest extends Request {
 
         /**
          * <p>Cluster ID</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ehpc-sh-fj71c0ycfw</p>
@@ -191,6 +168,7 @@ public class CreateResourceRequest extends Request {
 
         /**
          * <p>Cluster Name</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>tre-1-ppu</p>
@@ -202,19 +180,8 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * <p>Cluster Type</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ACK</p>
-         */
-        public Builder clusterType(String clusterType) {
-            this.putQueryParameter("ClusterType", clusterType);
-            this.clusterType = clusterType;
-            return this;
-        }
-
-        /**
          * <p>Machine Types</p>
+         * <p>This parameter is required.</p>
          */
         public Builder machineTypes(MachineTypes machineTypes) {
             String machineTypesShrink = shrink(machineTypes, "MachineTypes", "json");
@@ -224,19 +191,8 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * <p>Resource Type</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ACK</p>
-         */
-        public Builder resourceType(String resourceType) {
-            this.putQueryParameter("ResourceType", resourceType);
-            this.resourceType = resourceType;
-            return this;
-        }
-
-        /**
          * <p>User Access Parameters</p>
+         * <p>This parameter is required.</p>
          */
         public Builder userAccessParam(UserAccessParam userAccessParam) {
             String userAccessParamShrink = shrink(userAccessParam, "UserAccessParam", "json");
@@ -263,12 +219,14 @@ public class CreateResourceRequest extends Request {
         private Integer bondNum;
 
         @com.aliyun.core.annotation.NameInMap("CpuInfo")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String cpuInfo;
 
         @com.aliyun.core.annotation.NameInMap("DiskInfo")
         private String diskInfo;
 
         @com.aliyun.core.annotation.NameInMap("GpuInfo")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String gpuInfo;
 
         @com.aliyun.core.annotation.NameInMap("MemoryInfo")
@@ -392,6 +350,22 @@ public class CreateResourceRequest extends Request {
             private Integer nodeCount; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(MachineTypes model) {
+                this.bondNum = model.bondNum;
+                this.cpuInfo = model.cpuInfo;
+                this.diskInfo = model.diskInfo;
+                this.gpuInfo = model.gpuInfo;
+                this.memoryInfo = model.memoryInfo;
+                this.name = model.name;
+                this.networkInfo = model.networkInfo;
+                this.networkMode = model.networkMode;
+                this.nodeCount = model.nodeCount;
+                this.type = model.type;
+            } 
+
             /**
              * <p>Number of Network Bonds</p>
              * 
@@ -405,6 +379,7 @@ public class CreateResourceRequest extends Request {
 
             /**
              * <p>CPU Information</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>2x Intel Saphhire Rapid 8469C 48C CPU</p>
@@ -427,6 +402,7 @@ public class CreateResourceRequest extends Request {
 
             /**
              * <p>GPU Information</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>8x NVIDIA SXM4 80GB A100 GPU</p>
@@ -517,15 +493,19 @@ public class CreateResourceRequest extends Request {
      */
     public static class UserAccessParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accessId;
 
         @com.aliyun.core.annotation.NameInMap("AccessKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accessKey;
 
         @com.aliyun.core.annotation.NameInMap("Endpoint")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String endpoint;
 
         @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String workspaceId;
 
         private UserAccessParam(Builder builder) {
@@ -577,8 +557,19 @@ public class CreateResourceRequest extends Request {
             private String endpoint; 
             private String workspaceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserAccessParam model) {
+                this.accessId = model.accessId;
+                this.accessKey = model.accessKey;
+                this.endpoint = model.endpoint;
+                this.workspaceId = model.workspaceId;
+            } 
+
             /**
              * <p>User ID</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>
@@ -590,6 +581,7 @@ public class CreateResourceRequest extends Request {
 
             /**
              * <p>User Key</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -601,6 +593,7 @@ public class CreateResourceRequest extends Request {
 
             /**
              * <p>Endpoint</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -612,6 +605,7 @@ public class CreateResourceRequest extends Request {
 
             /**
              * <p>Workspace ID</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1245688643</p>

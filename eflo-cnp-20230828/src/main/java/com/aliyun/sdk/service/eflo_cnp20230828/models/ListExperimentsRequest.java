@@ -29,11 +29,16 @@ public class ListExperimentsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PlanId")
     private Long planId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private ListExperimentsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.order = builder.order;
         this.planId = builder.planId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -44,7 +49,7 @@ public class ListExperimentsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,10 +75,18 @@ public class ListExperimentsRequest extends Request {
         return this.planId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<ListExperimentsRequest, Builder> {
         private String regionId; 
         private Integer order; 
         private Long planId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class ListExperimentsRequest extends Request {
             this.regionId = request.regionId;
             this.order = request.order;
             this.planId = request.planId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -116,6 +130,18 @@ public class ListExperimentsRequest extends Request {
         public Builder planId(Long planId) {
             this.putQueryParameter("PlanId", planId);
             this.planId = planId;
+            return this;
+        }
+
+        /**
+         * <p>资源组id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-uo8f26cpmo</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -23,11 +23,16 @@ public class GetExperimentResultDataRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExperimentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long experimentId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Hostname")
     private String hostname;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkloadType")
@@ -38,6 +43,7 @@ public class GetExperimentResultDataRequest extends Request {
         this.regionId = builder.regionId;
         this.experimentId = builder.experimentId;
         this.hostname = builder.hostname;
+        this.resourceGroupId = builder.resourceGroupId;
         this.workloadType = builder.workloadType;
     }
 
@@ -49,7 +55,7 @@ public class GetExperimentResultDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -76,6 +82,13 @@ public class GetExperimentResultDataRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return workloadType
      */
     public String getWorkloadType() {
@@ -86,6 +99,7 @@ public class GetExperimentResultDataRequest extends Request {
         private String regionId; 
         private Long experimentId; 
         private String hostname; 
+        private String resourceGroupId; 
         private String workloadType; 
 
         private Builder() {
@@ -97,6 +111,7 @@ public class GetExperimentResultDataRequest extends Request {
             this.regionId = request.regionId;
             this.experimentId = request.experimentId;
             this.hostname = request.hostname;
+            this.resourceGroupId = request.resourceGroupId;
             this.workloadType = request.workloadType;
         } 
 
@@ -110,7 +125,11 @@ public class GetExperimentResultDataRequest extends Request {
         }
 
         /**
-         * ExperimentId.
+         * <p>Experiment ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234</p>
          */
         public Builder experimentId(Long experimentId) {
             this.putQueryParameter("ExperimentId", experimentId);
@@ -119,7 +138,10 @@ public class GetExperimentResultDataRequest extends Request {
         }
 
         /**
-         * Hostname.
+         * <p>Hostname</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iZj6ccwd7zwfms7hzaz2riZ</p>
          */
         public Builder hostname(String hostname) {
             this.putQueryParameter("Hostname", hostname);
@@ -128,7 +150,22 @@ public class GetExperimentResultDataRequest extends Request {
         }
 
         /**
-         * WorkloadType.
+         * <p>Resource Group Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-sfjgskdfj3k4</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>Workload Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI</p>
          */
         public Builder workloadType(String workloadType) {
             this.putQueryParameter("WorkloadType", workloadType);

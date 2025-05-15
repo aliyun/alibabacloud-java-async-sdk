@@ -44,6 +44,10 @@ public class CreateExperimentPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -77,6 +81,16 @@ public class CreateExperimentPlanResponseBody extends TeaModel {
         private Long data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateExperimentPlanResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Access denied information</p>
@@ -112,7 +126,7 @@ public class CreateExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total count of the query</p>
+         * <p>Total count</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

@@ -44,6 +44,10 @@ public class GetWorkloadResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -78,8 +82,21 @@ public class GetWorkloadResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetWorkloadResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>Access Denied Information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -87,7 +104,7 @@ public class GetWorkloadResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -95,7 +112,10 @@ public class GetWorkloadResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E67E2E4C-2B47-5C55-AA17-1D771E070AEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +123,10 @@ public class GetWorkloadResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>total</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -208,8 +231,23 @@ public class GetWorkloadResponseBody extends TeaModel {
             private String paramType; 
             private String paramValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParamSettings model) {
+                this.defaultValue = model.defaultValue;
+                this.paramDesc = model.paramDesc;
+                this.paramName = model.paramName;
+                this.paramRegex = model.paramRegex;
+                this.paramType = model.paramType;
+                this.paramValue = model.paramValue;
+            } 
+
             /**
-             * DefaultValue.
+             * <p>Default Parameter Value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -217,7 +255,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * ParamDesc.
+             * <p>Parameter Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>number</p>
              */
             public Builder paramDesc(String paramDesc) {
                 this.paramDesc = paramDesc;
@@ -225,7 +266,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * ParamName.
+             * <p>Parameter Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ITERATION</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -233,7 +277,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * ParamRegex.
+             * <p>Parameter Regular Expression</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[0-9]+</p>
              */
             public Builder paramRegex(String paramRegex) {
                 this.paramRegex = paramRegex;
@@ -241,7 +288,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * ParamType.
+             * <p>Parameter type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>number</p>
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -249,7 +299,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * ParamValue.
+             * <p>Parameter Value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -331,8 +384,21 @@ public class GetWorkloadResponseBody extends TeaModel {
             private String parameters; 
             private String softwareStack; 
 
+            private Builder() {
+            } 
+
+            private Builder(StaticConfig model) {
+                this.frameWork = model.frameWork;
+                this.os = model.os;
+                this.parameters = model.parameters;
+                this.softwareStack = model.softwareStack;
+            } 
+
             /**
-             * FrameWork.
+             * <p>Framework</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PyTorch</p>
              */
             public Builder frameWork(String frameWork) {
                 this.frameWork = frameWork;
@@ -340,7 +406,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * <p>Operating System</p>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -348,7 +417,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>Parameter Volume</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7B</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -356,7 +428,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareStack.
+             * <p>Software Stack</p>
+             * 
+             * <strong>example:</strong>
+             * <p>python</p>
              */
             public Builder softwareStack(String softwareStack) {
                 this.softwareStack = softwareStack;
@@ -570,8 +645,32 @@ public class GetWorkloadResponseBody extends TeaModel {
             private String workloadName; 
             private String workloadType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.defaultCpuPerWorker = model.defaultCpuPerWorker;
+                this.defaultGpuPerWorker = model.defaultGpuPerWorker;
+                this.defaultMemoryPerWorker = model.defaultMemoryPerWorker;
+                this.defaultShareMemory = model.defaultShareMemory;
+                this.family = model.family;
+                this.jobKind = model.jobKind;
+                this.paramSettings = model.paramSettings;
+                this.scene = model.scene;
+                this.scope = model.scope;
+                this.staticConfig = model.staticConfig;
+                this.versionId = model.versionId;
+                this.workloadDescription = model.workloadDescription;
+                this.workloadId = model.workloadId;
+                this.workloadName = model.workloadName;
+                this.workloadType = model.workloadType;
+            } 
+
             /**
-             * DefaultCpuPerWorker.
+             * <p>Default CPU Allocation per Worker</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder defaultCpuPerWorker(Integer defaultCpuPerWorker) {
                 this.defaultCpuPerWorker = defaultCpuPerWorker;
@@ -579,7 +678,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultGpuPerWorker.
+             * <p>Default GPU Allocation per Worker</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder defaultGpuPerWorker(Integer defaultGpuPerWorker) {
                 this.defaultGpuPerWorker = defaultGpuPerWorker;
@@ -587,7 +689,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultMemoryPerWorker.
+             * <p>Default Memory (GB) Allocation per Worker</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder defaultMemoryPerWorker(Integer defaultMemoryPerWorker) {
                 this.defaultMemoryPerWorker = defaultMemoryPerWorker;
@@ -595,7 +700,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultShareMemory.
+             * <p>Default Shared Memory (GB) Allocation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder defaultShareMemory(Integer defaultShareMemory) {
                 this.defaultShareMemory = defaultShareMemory;
@@ -603,7 +711,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * Family.
+             * <p>Workload Cluster, e.g., AI, GPU</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AI</p>
              */
             public Builder family(String family) {
                 this.family = family;
@@ -611,7 +722,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * JobKind.
+             * <p>Training Job Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PyTorchJob</p>
              */
             public Builder jobKind(String jobKind) {
                 this.jobKind = jobKind;
@@ -619,7 +733,7 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * ParamSettings.
+             * <p>Parameter Settings</p>
              */
             public Builder paramSettings(java.util.List<ParamSettings> paramSettings) {
                 this.paramSettings = paramSettings;
@@ -627,7 +741,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>Workload Usage Scenario</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NLP-LLM</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -635,7 +752,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>Scope Identifier for Workload Usage</p>
+             * 
+             * <strong>example:</strong>
+             * <p>common</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -643,7 +763,7 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * StaticConfig.
+             * <p>Static Configuration</p>
              */
             public Builder staticConfig(StaticConfig staticConfig) {
                 this.staticConfig = staticConfig;
@@ -651,7 +771,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * <p>Version ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder versionId(Long versionId) {
                 this.versionId = versionId;
@@ -659,7 +782,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadDescription.
+             * <p>Workload Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder workloadDescription(String workloadDescription) {
                 this.workloadDescription = workloadDescription;
@@ -667,7 +793,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadId.
+             * <p>Workload ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder workloadId(Long workloadId) {
                 this.workloadId = workloadId;
@@ -675,7 +804,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadName.
+             * <p>Workload Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder workloadName(String workloadName) {
                 this.workloadName = workloadName;
@@ -683,7 +815,10 @@ public class GetWorkloadResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadType.
+             * <p>Workload Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AI</p>
              */
             public Builder workloadType(String workloadType) {
                 this.workloadType = workloadType;

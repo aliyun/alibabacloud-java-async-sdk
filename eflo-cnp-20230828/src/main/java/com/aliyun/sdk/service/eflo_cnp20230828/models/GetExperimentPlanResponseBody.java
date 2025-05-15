@@ -44,6 +44,10 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -77,6 +81,16 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetExperimentPlanResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Access denied information</p>
@@ -228,6 +242,19 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             private Integer totalCPU; 
             private Integer totalGPU; 
             private Long totalMemory; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceNodes model) {
+                this.nodeName = model.nodeName;
+                this.requestCPU = model.requestCPU;
+                this.requestGPU = model.requestGPU;
+                this.requestMemory = model.requestMemory;
+                this.totalCPU = model.totalCPU;
+                this.totalGPU = model.totalGPU;
+                this.totalMemory = model.totalMemory;
+            } 
 
             /**
              * <p>Node name</p>
@@ -464,6 +491,23 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             private java.util.List<ResourceNodes> resourceNodes; 
             private Integer shareMemory; 
             private Integer workerNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnvParams model) {
+                this.cpuPerWorker = model.cpuPerWorker;
+                this.cudaVersion = model.cudaVersion;
+                this.extendParam = model.extendParam;
+                this.gpuDriverVersion = model.gpuDriverVersion;
+                this.gpuPerWorker = model.gpuPerWorker;
+                this.memoryPerWorker = model.memoryPerWorker;
+                this.NCCLVersion = model.NCCLVersion;
+                this.pyTorchVersion = model.pyTorchVersion;
+                this.resourceNodes = model.resourceNodes;
+                this.shareMemory = model.shareMemory;
+                this.workerNum = model.workerNum;
+            } 
 
             /**
              * <p>CPU allocation</p>
@@ -703,6 +747,20 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             private Long workloadId; 
             private String workloadName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PlanPipeline model) {
+                this.envParams = model.envParams;
+                this.pipelineOrder = model.pipelineOrder;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.scene = model.scene;
+                this.settingParams = model.settingParams;
+                this.workloadId = model.workloadId;
+                this.workloadName = model.workloadName;
+            } 
+
             /**
              * <p>Configured environment parameters</p>
              */
@@ -798,6 +856,87 @@ public class GetExperimentPlanResponseBody extends TeaModel {
      *
      * <p>GetExperimentPlanResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:testLXP:test-quota40-19</p>
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>000088aabb0019e4</p>
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetExperimentPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetExperimentPlanResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -814,6 +953,9 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private Long resourceId;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
@@ -829,6 +971,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             this.planPipeline = builder.planPipeline;
             this.resourceGroupId = builder.resourceGroupId;
             this.resourceId = builder.resourceId;
+            this.tags = builder.tags;
             this.templateId = builder.templateId;
             this.templateName = builder.templateName;
             this.updateTime = builder.updateTime;
@@ -878,6 +1021,13 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return templateId
          */
         public Long getTemplateId() {
@@ -904,9 +1054,25 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             private java.util.List<PlanPipeline> planPipeline; 
             private String resourceGroupId; 
             private Long resourceId; 
+            private java.util.List<Tags> tags; 
             private Long templateId; 
             private String templateName; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.planId = model.planId;
+                this.planPipeline = model.planPipeline;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceId = model.resourceId;
+                this.tags = model.tags;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>Creation time</p>
@@ -957,6 +1123,14 @@ public class GetExperimentPlanResponseBody extends TeaModel {
              */
             public Builder resourceId(Long resourceId) {
                 this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * <p>The tag.</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

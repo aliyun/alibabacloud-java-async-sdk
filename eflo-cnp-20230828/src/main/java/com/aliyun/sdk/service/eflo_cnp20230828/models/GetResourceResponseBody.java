@@ -44,6 +44,10 @@ public class GetResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -77,6 +81,16 @@ public class GetResourceResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Access denied information</p>
@@ -265,6 +279,22 @@ public class GetResourceResponseBody extends TeaModel {
             private Integer nodeCount; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(MachineType model) {
+                this.bondNum = model.bondNum;
+                this.cpuInfo = model.cpuInfo;
+                this.diskInfo = model.diskInfo;
+                this.gpuInfo = model.gpuInfo;
+                this.memoryInfo = model.memoryInfo;
+                this.name = model.name;
+                this.networkInfo = model.networkInfo;
+                this.networkMode = model.networkMode;
+                this.nodeCount = model.nodeCount;
+                this.type = model.type;
+            } 
+
             /**
              * <p>Number of network bonds</p>
              * 
@@ -414,6 +444,13 @@ public class GetResourceResponseBody extends TeaModel {
         public static final class Builder {
             private String nodeName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceNodes model) {
+                this.nodeName = model.nodeName;
+            } 
+
             /**
              * <p>Node name</p>
              * 
@@ -499,6 +536,16 @@ public class GetResourceResponseBody extends TeaModel {
             private String accessKey; 
             private String endpoint; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserAccessParam model) {
+                this.accessId = model.accessId;
+                this.accessKey = model.accessKey;
+                this.endpoint = model.endpoint;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * <p>User ID</p>
@@ -591,9 +638,6 @@ public class GetResourceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private Long resourceId;
 
-        @com.aliyun.core.annotation.NameInMap("ResourceName")
-        private String resourceName;
-
         @com.aliyun.core.annotation.NameInMap("ResourceNodes")
         private java.util.List<ResourceNodes> resourceNodes;
 
@@ -612,7 +656,6 @@ public class GetResourceResponseBody extends TeaModel {
             this.maxMemory = builder.maxMemory;
             this.memoryLimit = builder.memoryLimit;
             this.resourceId = builder.resourceId;
-            this.resourceName = builder.resourceName;
             this.resourceNodes = builder.resourceNodes;
             this.userAccessParam = builder.userAccessParam;
         }
@@ -703,13 +746,6 @@ public class GetResourceResponseBody extends TeaModel {
         }
 
         /**
-         * @return resourceName
-         */
-        public String getResourceName() {
-            return this.resourceName;
-        }
-
-        /**
          * @return resourceNodes
          */
         public java.util.List<ResourceNodes> getResourceNodes() {
@@ -735,9 +771,27 @@ public class GetResourceResponseBody extends TeaModel {
             private Long maxMemory; 
             private Long memoryLimit; 
             private Long resourceId; 
-            private String resourceName; 
             private java.util.List<ResourceNodes> resourceNodes; 
             private UserAccessParam userAccessParam; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clusterDesc = model.clusterDesc;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.cpuCoreLimit = model.cpuCoreLimit;
+                this.gpuLimit = model.gpuLimit;
+                this.machineType = model.machineType;
+                this.maxCpuCore = model.maxCpuCore;
+                this.maxGpu = model.maxGpu;
+                this.maxMemory = model.maxMemory;
+                this.memoryLimit = model.memoryLimit;
+                this.resourceId = model.resourceId;
+                this.resourceNodes = model.resourceNodes;
+                this.userAccessParam = model.userAccessParam;
+            } 
 
             /**
              * <p>Cluster description</p>
@@ -854,17 +908,6 @@ public class GetResourceResponseBody extends TeaModel {
              */
             public Builder resourceId(Long resourceId) {
                 this.resourceId = resourceId;
-                return this;
-            }
-
-            /**
-             * <p>Cluster name</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs.g6.4xlarge</p>
-             */
-            public Builder resourceName(String resourceName) {
-                this.resourceName = resourceName;
                 return this;
             }
 

@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteExperimentResponse> deleteExperiment(DeleteExperimentRequest request);
 
     /**
+     * @param request the request parameters of DeleteExperimentPlan  DeleteExperimentPlanRequest
+     * @return DeleteExperimentPlanResponse
+     */
+    CompletableFuture<DeleteExperimentPlanResponse> deleteExperimentPlan(DeleteExperimentPlanRequest request);
+
+    /**
      * @param request the request parameters of DeleteExperimentPlanTemplate  DeleteExperimentPlanTemplateRequest
      * @return DeleteExperimentPlanTemplateResponse
      */
@@ -66,6 +72,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetExperimentPlanResponse
      */
     CompletableFuture<GetExperimentPlanResponse> getExperimentPlan(GetExperimentPlanRequest request);
+
+    /**
+     * @param request the request parameters of GetExperimentPlanTemplate  GetExperimentPlanTemplateRequest
+     * @return GetExperimentPlanTemplateResponse
+     */
+    CompletableFuture<GetExperimentPlanTemplateResponse> getExperimentPlanTemplate(GetExperimentPlanTemplateRequest request);
 
     /**
      * @param request the request parameters of GetExperimentResultData  GetExperimentResultDataRequest
@@ -110,6 +122,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListExperimentsResponse> listExperiments(ListExperimentsRequest request);
 
     /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
      * @param request the request parameters of ListWorkloads  ListWorkloadsRequest
      * @return ListWorkloadsResponse
      */
@@ -120,6 +138,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopExperimentResponse
      */
     CompletableFuture<StopExperimentResponse> stopExperiment(StopExperimentRequest request);
+
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateExperimentPlan  UpdateExperimentPlanRequest
+     * @return UpdateExperimentPlanResponse
+     */
+    CompletableFuture<UpdateExperimentPlanResponse> updateExperimentPlan(UpdateExperimentPlanRequest request);
+
+    /**
+     * @param request the request parameters of UpdateExperimentPlanTemplate  UpdateExperimentPlanTemplateRequest
+     * @return UpdateExperimentPlanTemplateResponse
+     */
+    CompletableFuture<UpdateExperimentPlanTemplateResponse> updateExperimentPlanTemplate(UpdateExperimentPlanTemplateRequest request);
 
     /**
      * @param request the request parameters of ValidateResource  ValidateResourceRequest

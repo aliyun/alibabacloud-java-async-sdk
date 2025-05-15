@@ -40,6 +40,10 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExperimentPlanTemplatesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Data</p>
@@ -112,11 +125,23 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuPerWorker")
         private Integer cpuPerWorker;
 
+        @com.aliyun.core.annotation.NameInMap("CudaVersion")
+        private String cudaVersion;
+
+        @com.aliyun.core.annotation.NameInMap("GpuDriverVersion")
+        private String gpuDriverVersion;
+
         @com.aliyun.core.annotation.NameInMap("GpuPerWorker")
         private Integer gpuPerWorker;
 
         @com.aliyun.core.annotation.NameInMap("MemoryPerWorker")
         private Integer memoryPerWorker;
+
+        @com.aliyun.core.annotation.NameInMap("NCCLVersion")
+        private String NCCLVersion;
+
+        @com.aliyun.core.annotation.NameInMap("PyTorchVersion")
+        private String pyTorchVersion;
 
         @com.aliyun.core.annotation.NameInMap("ShareMemory")
         private Integer shareMemory;
@@ -126,8 +151,12 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
 
         private EnvParams(Builder builder) {
             this.cpuPerWorker = builder.cpuPerWorker;
+            this.cudaVersion = builder.cudaVersion;
+            this.gpuDriverVersion = builder.gpuDriverVersion;
             this.gpuPerWorker = builder.gpuPerWorker;
             this.memoryPerWorker = builder.memoryPerWorker;
+            this.NCCLVersion = builder.NCCLVersion;
+            this.pyTorchVersion = builder.pyTorchVersion;
             this.shareMemory = builder.shareMemory;
             this.workerNum = builder.workerNum;
         }
@@ -148,6 +177,20 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return cudaVersion
+         */
+        public String getCudaVersion() {
+            return this.cudaVersion;
+        }
+
+        /**
+         * @return gpuDriverVersion
+         */
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
+        }
+
+        /**
          * @return gpuPerWorker
          */
         public Integer getGpuPerWorker() {
@@ -159,6 +202,20 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
          */
         public Integer getMemoryPerWorker() {
             return this.memoryPerWorker;
+        }
+
+        /**
+         * @return NCCLVersion
+         */
+        public String getNCCLVersion() {
+            return this.NCCLVersion;
+        }
+
+        /**
+         * @return pyTorchVersion
+         */
+        public String getPyTorchVersion() {
+            return this.pyTorchVersion;
         }
 
         /**
@@ -177,10 +234,29 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer cpuPerWorker; 
+            private String cudaVersion; 
+            private String gpuDriverVersion; 
             private Integer gpuPerWorker; 
             private Integer memoryPerWorker; 
+            private String NCCLVersion; 
+            private String pyTorchVersion; 
             private Integer shareMemory; 
             private Integer workerNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnvParams model) {
+                this.cpuPerWorker = model.cpuPerWorker;
+                this.cudaVersion = model.cudaVersion;
+                this.gpuDriverVersion = model.gpuDriverVersion;
+                this.gpuPerWorker = model.gpuPerWorker;
+                this.memoryPerWorker = model.memoryPerWorker;
+                this.NCCLVersion = model.NCCLVersion;
+                this.pyTorchVersion = model.pyTorchVersion;
+                this.shareMemory = model.shareMemory;
+                this.workerNum = model.workerNum;
+            } 
 
             /**
              * <p>CPU allocation</p>
@@ -190,6 +266,28 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
              */
             public Builder cpuPerWorker(Integer cpuPerWorker) {
                 this.cpuPerWorker = cpuPerWorker;
+                return this;
+            }
+
+            /**
+             * <p>Cuda Version</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
+             */
+            public Builder cudaVersion(String cudaVersion) {
+                this.cudaVersion = cudaVersion;
+                return this;
+            }
+
+            /**
+             * <p>The version of the GPU driver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
+             */
+            public Builder gpuDriverVersion(String gpuDriverVersion) {
+                this.gpuDriverVersion = gpuDriverVersion;
                 return this;
             }
 
@@ -212,6 +310,28 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
              */
             public Builder memoryPerWorker(Integer memoryPerWorker) {
                 this.memoryPerWorker = memoryPerWorker;
+                return this;
+            }
+
+            /**
+             * <p>NCCL Version</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
+             */
+            public Builder NCCLVersion(String NCCLVersion) {
+                this.NCCLVersion = NCCLVersion;
+                return this;
+            }
+
+            /**
+             * <p>PyTorch Version</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
+             */
+            public Builder pyTorchVersion(String pyTorchVersion) {
+                this.pyTorchVersion = pyTorchVersion;
                 return this;
             }
 
@@ -336,6 +456,18 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
             private Long workloadId; 
             private String workloadName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TemplatePipelineParam model) {
+                this.envParams = model.envParams;
+                this.pipelineOrder = model.pipelineOrder;
+                this.scene = model.scene;
+                this.settingParams = model.settingParams;
+                this.workloadId = model.workloadId;
+                this.workloadName = model.workloadName;
+            } 
+
             /**
              * <p>Configured environment parameters</p>
              */
@@ -422,6 +554,9 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivacyLevel")
         private String privacyLevel;
 
+        @com.aliyun.core.annotation.NameInMap("TemplateCode")
+        private Long templateCode;
+
         @com.aliyun.core.annotation.NameInMap("TemplateDescription")
         private String templateDescription;
 
@@ -445,6 +580,7 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
             this.creatorUid = builder.creatorUid;
             this.isDelete = builder.isDelete;
             this.privacyLevel = builder.privacyLevel;
+            this.templateCode = builder.templateCode;
             this.templateDescription = builder.templateDescription;
             this.templateId = builder.templateId;
             this.templateName = builder.templateName;
@@ -487,6 +623,13 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
          */
         public String getPrivacyLevel() {
             return this.privacyLevel;
+        }
+
+        /**
+         * @return templateCode
+         */
+        public Long getTemplateCode() {
+            return this.templateCode;
         }
 
         /**
@@ -536,12 +679,30 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
             private Long creatorUid; 
             private Integer isDelete; 
             private String privacyLevel; 
+            private Long templateCode; 
             private String templateDescription; 
             private Long templateId; 
             private String templateName; 
             private java.util.List<TemplatePipelineParam> templatePipelineParam; 
             private String updateTime; 
             private Long versionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.creatorUid = model.creatorUid;
+                this.isDelete = model.isDelete;
+                this.privacyLevel = model.privacyLevel;
+                this.templateCode = model.templateCode;
+                this.templateDescription = model.templateDescription;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+                this.templatePipelineParam = model.templatePipelineParam;
+                this.updateTime = model.updateTime;
+                this.versionId = model.versionId;
+            } 
 
             /**
              * <p>Creation time</p>
@@ -584,6 +745,17 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
              */
             public Builder privacyLevel(String privacyLevel) {
                 this.privacyLevel = privacyLevel;
+                return this;
+            }
+
+            /**
+             * <p>The template code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>475315534</p>
+             */
+            public Builder templateCode(Long templateCode) {
+                this.templateCode = templateCode;
                 return this;
             }
 

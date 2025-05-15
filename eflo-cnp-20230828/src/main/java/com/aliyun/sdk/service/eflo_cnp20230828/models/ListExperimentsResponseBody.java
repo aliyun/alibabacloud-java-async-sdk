@@ -44,6 +44,10 @@ public class ListExperimentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -77,6 +81,16 @@ public class ListExperimentsResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExperimentsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Access denied information</p>
@@ -228,6 +242,19 @@ public class ListExperimentsResponseBody extends TeaModel {
             private Integer totalCPU; 
             private Integer totalGPU; 
             private Long totalMemory; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceNodes model) {
+                this.nodeName = model.nodeName;
+                this.requestCPU = model.requestCPU;
+                this.requestGPU = model.requestGPU;
+                this.requestMemory = model.requestMemory;
+                this.totalCPU = model.totalCPU;
+                this.totalGPU = model.totalGPU;
+                this.totalMemory = model.totalMemory;
+            } 
 
             /**
              * <p>Node name</p>
@@ -464,6 +491,23 @@ public class ListExperimentsResponseBody extends TeaModel {
             private java.util.List<ResourceNodes> resourceNodes; 
             private Integer shareMemory; 
             private Integer workerNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnvParams model) {
+                this.cpuPerWorker = model.cpuPerWorker;
+                this.cudaVersion = model.cudaVersion;
+                this.extendParam = model.extendParam;
+                this.gpuDriverVersion = model.gpuDriverVersion;
+                this.gpuPerWorker = model.gpuPerWorker;
+                this.memoryPerWorker = model.memoryPerWorker;
+                this.NCCLVersion = model.NCCLVersion;
+                this.pyTorchVersion = model.pyTorchVersion;
+                this.resourceNodes = model.resourceNodes;
+                this.shareMemory = model.shareMemory;
+                this.workerNum = model.workerNum;
+            } 
 
             /**
              * <p>Number of CPUs allocated</p>
@@ -738,6 +782,23 @@ public class ListExperimentsResponseBody extends TeaModel {
             private Double tflops; 
             private Boolean warningFlag; 
             private String warningMsg; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorWorker model) {
+                this.errorFlag = model.errorFlag;
+                this.errorMsg = model.errorMsg;
+                this.experimentId = model.experimentId;
+                this.gpuName = model.gpuName;
+                this.gpuNum = model.gpuNum;
+                this.hostname = model.hostname;
+                this.podName = model.podName;
+                this.samplesPerSecond = model.samplesPerSecond;
+                this.tflops = model.tflops;
+                this.warningFlag = model.warningFlag;
+                this.warningMsg = model.warningMsg;
+            } 
 
             /**
              * <p>Whether there is an error</p>
@@ -1019,6 +1080,23 @@ public class ListExperimentsResponseBody extends TeaModel {
             private Boolean warningFlag; 
             private String warningMsg; 
 
+            private Builder() {
+            } 
+
+            private Builder(WarningWorker model) {
+                this.errorFlag = model.errorFlag;
+                this.errorMsg = model.errorMsg;
+                this.experimentId = model.experimentId;
+                this.gpuName = model.gpuName;
+                this.gpuNum = model.gpuNum;
+                this.hostname = model.hostname;
+                this.podName = model.podName;
+                this.samplesPerSecond = model.samplesPerSecond;
+                this.tflops = model.tflops;
+                this.warningFlag = model.warningFlag;
+                this.warningMsg = model.warningMsg;
+            } 
+
             /**
              * <p>Whether there is an error</p>
              * 
@@ -1250,6 +1328,19 @@ public class ListExperimentsResponseBody extends TeaModel {
             private Double samplesPerSecond; 
             private Double secondsPerIteration; 
             private java.util.List<WarningWorker> warningWorker; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.duration = model.duration;
+                this.errorWorker = model.errorWorker;
+                this.experimentId = model.experimentId;
+                this.mfu = model.mfu;
+                this.samplesPerSecond = model.samplesPerSecond;
+                this.secondsPerIteration = model.secondsPerIteration;
+                this.warningWorker = model.warningWorker;
+            } 
 
             /**
              * <p>Duration</p>
@@ -1516,6 +1607,26 @@ public class ListExperimentsResponseBody extends TeaModel {
             private String status; 
             private Long updateTime; 
             private String workloadName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.envParams = model.envParams;
+                this.experimentId = model.experimentId;
+                this.experimentName = model.experimentName;
+                this.experimentType = model.experimentType;
+                this.getParams = model.getParams;
+                this.resourceName = model.resourceName;
+                this.results = model.results;
+                this.setParams = model.setParams;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+                this.workloadName = model.workloadName;
+            } 
 
             /**
              * <p>Creation time</p>

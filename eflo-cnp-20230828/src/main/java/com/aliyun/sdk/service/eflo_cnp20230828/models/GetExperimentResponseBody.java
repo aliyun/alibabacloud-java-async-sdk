@@ -44,6 +44,10 @@ public class GetExperimentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -78,8 +82,21 @@ public class GetExperimentResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetExperimentResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>Access denied detail</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -87,7 +104,7 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -95,7 +112,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>RequestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E67E2E4C-2B47-5C55-AA17-1D771E070AEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +123,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>total</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -220,8 +243,24 @@ public class GetExperimentResponseBody extends TeaModel {
             private Integer totalGPU; 
             private Long totalMemory; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceNodes model) {
+                this.nodeName = model.nodeName;
+                this.requestCPU = model.requestCPU;
+                this.requestGPU = model.requestGPU;
+                this.requestMemory = model.requestMemory;
+                this.totalCPU = model.totalCPU;
+                this.totalGPU = model.totalGPU;
+                this.totalMemory = model.totalMemory;
+            } 
+
             /**
-             * NodeName.
+             * <p>Node name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-jt-waf-app1</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -229,7 +268,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * RequestCPU.
+             * <p>Requested CPU</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder requestCPU(Integer requestCPU) {
                 this.requestCPU = requestCPU;
@@ -237,7 +279,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * RequestGPU.
+             * <p>Requested GPU</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder requestGPU(Integer requestGPU) {
                 this.requestGPU = requestGPU;
@@ -245,7 +290,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * RequestMemory.
+             * <p>Requested memory</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder requestMemory(Integer requestMemory) {
                 this.requestMemory = requestMemory;
@@ -253,7 +301,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCPU.
+             * <p>Total CPU</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder totalCPU(Integer totalCPU) {
                 this.totalCPU = totalCPU;
@@ -261,7 +312,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * TotalGPU.
+             * <p>Total GPU</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder totalGPU(Integer totalGPU) {
                 this.totalGPU = totalGPU;
@@ -269,7 +323,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * TotalMemory.
+             * <p>Total memory</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder totalMemory(Long totalMemory) {
                 this.totalMemory = totalMemory;
@@ -435,8 +492,28 @@ public class GetExperimentResponseBody extends TeaModel {
             private Integer shareMemory; 
             private Integer workerNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnvParams model) {
+                this.cpuPerWorker = model.cpuPerWorker;
+                this.cudaVersion = model.cudaVersion;
+                this.extendParam = model.extendParam;
+                this.gpuDriverVersion = model.gpuDriverVersion;
+                this.gpuPerWorker = model.gpuPerWorker;
+                this.memoryPerWorker = model.memoryPerWorker;
+                this.NCCLVersion = model.NCCLVersion;
+                this.pyTorchVersion = model.pyTorchVersion;
+                this.resourceNodes = model.resourceNodes;
+                this.shareMemory = model.shareMemory;
+                this.workerNum = model.workerNum;
+            } 
+
             /**
-             * CpuPerWorker.
+             * <p>CPU allocation number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder cpuPerWorker(Integer cpuPerWorker) {
                 this.cpuPerWorker = cpuPerWorker;
@@ -455,7 +532,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendParam.
+             * <p>Additional parameters</p>
              */
             public Builder extendParam(java.util.Map<String, String> extendParam) {
                 this.extendParam = extendParam;
@@ -463,7 +540,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>GpuDriverVersion</p>
+             * <p>GPU driver version</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -474,7 +551,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * GpuPerWorker.
+             * <p>GPU allocation number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder gpuPerWorker(Integer gpuPerWorker) {
                 this.gpuPerWorker = gpuPerWorker;
@@ -482,7 +562,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryPerWorker.
+             * <p>Memory Per Worker</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder memoryPerWorker(Integer memoryPerWorker) {
                 this.memoryPerWorker = memoryPerWorker;
@@ -490,7 +573,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>NCCLVersion</p>
+             * <p>NCCL version</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -501,7 +584,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>PyTorchVersion</p>
+             * <p>PyTorch version</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -512,7 +595,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceNodes.
+             * <p>Specified nodes</p>
              */
             public Builder resourceNodes(java.util.List<ResourceNodes> resourceNodes) {
                 this.resourceNodes = resourceNodes;
@@ -520,7 +603,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ShareMemory.
+             * <p>Share Memory</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder shareMemory(Integer shareMemory) {
                 this.shareMemory = shareMemory;
@@ -528,7 +614,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerNum.
+             * <p>Worker number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder workerNum(Integer workerNum) {
                 this.workerNum = workerNum;
@@ -682,8 +771,27 @@ public class GetExperimentResponseBody extends TeaModel {
             private Integer nodeCount; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(MachineType model) {
+                this.bondNum = model.bondNum;
+                this.cpuInfo = model.cpuInfo;
+                this.diskInfo = model.diskInfo;
+                this.gpuInfo = model.gpuInfo;
+                this.memoryInfo = model.memoryInfo;
+                this.name = model.name;
+                this.networkInfo = model.networkInfo;
+                this.networkMode = model.networkMode;
+                this.nodeCount = model.nodeCount;
+                this.type = model.type;
+            } 
+
             /**
-             * BondNum.
+             * <p>Number of network bonds</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder bondNum(Integer bondNum) {
                 this.bondNum = bondNum;
@@ -691,7 +799,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * CpuInfo.
+             * <p>CPU information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2x Intel Icelake 8369B 32C CPU</p>
              */
             public Builder cpuInfo(String cpuInfo) {
                 this.cpuInfo = cpuInfo;
@@ -699,7 +810,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * DiskInfo.
+             * <p>Disk information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2x 480GB SATA SSD \n 4x 3.84TB NVMe SSD</p>
              */
             public Builder diskInfo(String diskInfo) {
                 this.diskInfo = diskInfo;
@@ -707,7 +821,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * GpuInfo.
+             * <p>GPU information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8x NVIDIA SXM4 80GB A100 GPU</p>
              */
             public Builder gpuInfo(String gpuInfo) {
                 this.gpuInfo = gpuInfo;
@@ -715,7 +832,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryInfo.
+             * <p>Memory information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32x 64GB DDR4 3200 Memory</p>
              */
             public Builder memoryInfo(String memoryInfo) {
                 this.memoryInfo = memoryInfo;
@@ -723,7 +843,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Specification name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>efg1.nvga1n</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -731,7 +854,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInfo.
+             * <p>Network information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1x 100Gbps DP NIC for VPC \n 4x 100Gbps DP RoCE NIC</p>
              */
             public Builder networkInfo(String networkInfo) {
                 this.networkInfo = networkInfo;
@@ -739,7 +865,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkMode.
+             * <p>Network mode</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder networkMode(String networkMode) {
                 this.networkMode = networkMode;
@@ -747,7 +876,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * NodeCount.
+             * <p>Number of nodes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeCount(Integer nodeCount) {
                 this.nodeCount = nodeCount;
@@ -755,7 +887,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -801,8 +936,18 @@ public class GetExperimentResponseBody extends TeaModel {
         public static final class Builder {
             private String nodeName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceResourceNodes model) {
+                this.nodeName = model.nodeName;
+            } 
+
             /**
-             * NodeName.
+             * <p>Node name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InputCheck</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -884,8 +1029,21 @@ public class GetExperimentResponseBody extends TeaModel {
             private String endpoint; 
             private String workspaceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserAccessParam model) {
+                this.accessId = model.accessId;
+                this.accessKey = model.accessKey;
+                this.endpoint = model.endpoint;
+                this.workspaceId = model.workspaceId;
+            } 
+
             /**
-             * AccessId.
+             * <p>User ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder accessId(String accessId) {
                 this.accessId = accessId;
@@ -893,7 +1051,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * AccessKey.
+             * <p>User key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -901,7 +1062,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>endpoint</p>
+             * <p>Endpoint</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -912,7 +1073,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>Workspace ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123434542498</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -1078,8 +1242,28 @@ public class GetExperimentResponseBody extends TeaModel {
             private java.util.List<ResourceResourceNodes> resourceNodes; 
             private UserAccessParam userAccessParam; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.cpuCoreLimit = model.cpuCoreLimit;
+                this.gpuLimit = model.gpuLimit;
+                this.machineType = model.machineType;
+                this.maxCpuCore = model.maxCpuCore;
+                this.maxGpu = model.maxGpu;
+                this.maxMemory = model.maxMemory;
+                this.memoryLimit = model.memoryLimit;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceNodes = model.resourceNodes;
+                this.userAccessParam = model.userAccessParam;
+            } 
+
             /**
-             * CpuCoreLimit.
+             * <p>Used CPU</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder cpuCoreLimit(Integer cpuCoreLimit) {
                 this.cpuCoreLimit = cpuCoreLimit;
@@ -1087,7 +1271,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * GpuLimit.
+             * <p>Used GPU</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder gpuLimit(Integer gpuLimit) {
                 this.gpuLimit = gpuLimit;
@@ -1095,7 +1282,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * MachineType.
+             * <p>Instance type</p>
              */
             public Builder machineType(MachineType machineType) {
                 this.machineType = machineType;
@@ -1103,7 +1290,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCpuCore.
+             * <p>Used memory</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder maxCpuCore(Integer maxCpuCore) {
                 this.maxCpuCore = maxCpuCore;
@@ -1111,7 +1301,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * MaxGpu.
+             * <p>Used memory</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder maxGpu(Integer maxGpu) {
                 this.maxGpu = maxGpu;
@@ -1119,7 +1312,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * MaxMemory.
+             * <p>Used memory</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder maxMemory(Long maxMemory) {
                 this.maxMemory = maxMemory;
@@ -1127,7 +1323,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryLimit.
+             * <p>Used memory</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder memoryLimit(Long memoryLimit) {
                 this.memoryLimit = memoryLimit;
@@ -1135,7 +1334,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>Cluster ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>189</p>
              */
             public Builder resourceId(Long resourceId) {
                 this.resourceId = resourceId;
@@ -1143,7 +1345,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>Cluster name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.r8y.4xlarge</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -1151,7 +1356,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceNodes.
+             * <p>Resource node list</p>
              */
             public Builder resourceNodes(java.util.List<ResourceResourceNodes> resourceNodes) {
                 this.resourceNodes = resourceNodes;
@@ -1159,7 +1364,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * UserAccessParam.
+             * <p>User authorization parameters</p>
              */
             public Builder userAccessParam(UserAccessParam userAccessParam) {
                 this.userAccessParam = userAccessParam;
@@ -1325,8 +1530,28 @@ public class GetExperimentResponseBody extends TeaModel {
             private Boolean warningFlag; 
             private String warningMsg; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorWorker model) {
+                this.errorFlag = model.errorFlag;
+                this.errorMsg = model.errorMsg;
+                this.experimentId = model.experimentId;
+                this.gpuName = model.gpuName;
+                this.gpuNum = model.gpuNum;
+                this.hostname = model.hostname;
+                this.podName = model.podName;
+                this.samplesPerSecond = model.samplesPerSecond;
+                this.tflops = model.tflops;
+                this.warningFlag = model.warningFlag;
+                this.warningMsg = model.warningMsg;
+            } 
+
             /**
-             * ErrorFlag.
+             * <p>error flag</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder errorFlag(Boolean errorFlag) {
                 this.errorFlag = errorFlag;
@@ -1334,7 +1559,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>error message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Connection reset</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -1342,7 +1570,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ExperimentId.
+             * <p>Experiment ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>97</p>
              */
             public Builder experimentId(Long experimentId) {
                 this.experimentId = experimentId;
@@ -1350,7 +1581,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * GpuName.
+             * <p>GPU name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8x OAM 810 GPU</p>
              */
             public Builder gpuName(String gpuName) {
                 this.gpuName = gpuName;
@@ -1358,7 +1592,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * GpuNum.
+             * <p>Number of GPUs</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder gpuNum(Integer gpuNum) {
                 this.gpuNum = gpuNum;
@@ -1366,7 +1603,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * <p>Service address</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60.188.98.209</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -1374,7 +1614,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * PodName.
+             * <p>Pod name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hzs-forge-sdxl-online-7ff4d86444-pc95h</p>
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -1382,7 +1625,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * SamplesPerSecond.
+             * <p>Samples Per Second</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder samplesPerSecond(Double samplesPerSecond) {
                 this.samplesPerSecond = samplesPerSecond;
@@ -1390,7 +1636,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Tflops.
+             * <p>TFLOPS</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder tflops(Double tflops) {
                 this.tflops = tflops;
@@ -1398,7 +1647,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * WarningFlag.
+             * <p>Whether there is a warning</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder warningFlag(Boolean warningFlag) {
                 this.warningFlag = warningFlag;
@@ -1406,7 +1658,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * WarningMsg.
+             * <p>Warning message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warning message</p>
              */
             public Builder warningMsg(String warningMsg) {
                 this.warningMsg = warningMsg;
@@ -1572,8 +1827,28 @@ public class GetExperimentResponseBody extends TeaModel {
             private Boolean warningFlag; 
             private String warningMsg; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskIndividualResultList model) {
+                this.errorFlag = model.errorFlag;
+                this.errorMsg = model.errorMsg;
+                this.experimentId = model.experimentId;
+                this.gpuName = model.gpuName;
+                this.gpuNum = model.gpuNum;
+                this.hostname = model.hostname;
+                this.podName = model.podName;
+                this.samplesPerSecond = model.samplesPerSecond;
+                this.tflops = model.tflops;
+                this.warningFlag = model.warningFlag;
+                this.warningMsg = model.warningMsg;
+            } 
+
             /**
-             * ErrorFlag.
+             * <p>Whether there is an error</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder errorFlag(Boolean errorFlag) {
                 this.errorFlag = errorFlag;
@@ -1581,7 +1856,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>Error message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error message</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -1589,7 +1867,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ExperimentId.
+             * <p>实验ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48</p>
              */
             public Builder experimentId(Long experimentId) {
                 this.experimentId = experimentId;
@@ -1597,7 +1878,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * GpuName.
+             * <p>GPU name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8x OAM 810 GPU</p>
              */
             public Builder gpuName(String gpuName) {
                 this.gpuName = gpuName;
@@ -1605,7 +1889,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * GpuNum.
+             * <p>Number of GPUs</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder gpuNum(Integer gpuNum) {
                 this.gpuNum = gpuNum;
@@ -1613,7 +1900,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * <p>节点主机名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-jt-waf-app1</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -1621,7 +1911,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * PodName.
+             * <p>Pod名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fluxserv-6fc89b45cf-w8wq6</p>
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -1629,7 +1922,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * SamplesPerSecond.
+             * <p>Throughput</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28</p>
              */
             public Builder samplesPerSecond(Double samplesPerSecond) {
                 this.samplesPerSecond = samplesPerSecond;
@@ -1637,7 +1933,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Tflops.
+             * <p>TFLOPS value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder tflops(Double tflops) {
                 this.tflops = tflops;
@@ -1645,7 +1944,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * WarningFlag.
+             * <p>Whether there is a warning</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder warningFlag(Boolean warningFlag) {
                 this.warningFlag = warningFlag;
@@ -1653,7 +1955,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * WarningMsg.
+             * <p>Warning message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warning message</p>
              */
             public Builder warningMsg(String warningMsg) {
                 this.warningMsg = warningMsg;
@@ -1723,8 +2028,20 @@ public class GetExperimentResponseBody extends TeaModel {
             private Double lower; 
             private Double upper; 
 
+            private Builder() {
+            } 
+
+            private Builder(WarningBoundList model) {
+                this.iteration = model.iteration;
+                this.lower = model.lower;
+                this.upper = model.upper;
+            } 
+
             /**
-             * Iteration.
+             * <p>Iteration</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder iteration(Integer iteration) {
                 this.iteration = iteration;
@@ -1912,8 +2229,28 @@ public class GetExperimentResponseBody extends TeaModel {
             private Boolean warningFlag; 
             private String warningMsg; 
 
+            private Builder() {
+            } 
+
+            private Builder(WarningWorker model) {
+                this.errorFlag = model.errorFlag;
+                this.errorMsg = model.errorMsg;
+                this.experimentId = model.experimentId;
+                this.gpuName = model.gpuName;
+                this.gpuNum = model.gpuNum;
+                this.hostname = model.hostname;
+                this.podName = model.podName;
+                this.samplesPerSecond = model.samplesPerSecond;
+                this.tflops = model.tflops;
+                this.warningFlag = model.warningFlag;
+                this.warningMsg = model.warningMsg;
+            } 
+
             /**
-             * ErrorFlag.
+             * <p>Whether there is an error</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder errorFlag(Boolean errorFlag) {
                 this.errorFlag = errorFlag;
@@ -1921,7 +2258,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>Error message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error message</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -1929,7 +2269,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ExperimentId.
+             * <p>Experiment ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder experimentId(Long experimentId) {
                 this.experimentId = experimentId;
@@ -1937,7 +2280,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * GpuName.
+             * <p>GPU name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8x OAM 810 GPU</p>
              */
             public Builder gpuName(String gpuName) {
                 this.gpuName = gpuName;
@@ -1945,7 +2291,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * GpuNum.
+             * <p>Number of GPUs</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder gpuNum(Integer gpuNum) {
                 this.gpuNum = gpuNum;
@@ -1953,7 +2302,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * <p>Service address</p>
+             * 
+             * <strong>example:</strong>
+             * <p>whza008403</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -1961,7 +2313,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * PodName.
+             * <p>Pod name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fluxserv-6fc89b45cf-w8wq6</p>
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -1969,7 +2324,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * SamplesPerSecond.
+             * <p>Throughput</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder samplesPerSecond(Double samplesPerSecond) {
                 this.samplesPerSecond = samplesPerSecond;
@@ -1977,7 +2335,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Tflops.
+             * <p>TFLOPS value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder tflops(Double tflops) {
                 this.tflops = tflops;
@@ -1985,7 +2346,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * WarningFlag.
+             * <p>Whether there is an alarm</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder warningFlag(Boolean warningFlag) {
                 this.warningFlag = warningFlag;
@@ -1993,7 +2357,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * WarningMsg.
+             * <p>Alarm message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warging message</p>
              */
             public Builder warningMsg(String warningMsg) {
                 this.warningMsg = warningMsg;
@@ -2147,8 +2514,27 @@ public class GetExperimentResponseBody extends TeaModel {
             private java.util.List<WarningBoundList> warningBoundList; 
             private java.util.List<WarningWorker> warningWorker; 
 
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.duration = model.duration;
+                this.errorWorker = model.errorWorker;
+                this.experimentId = model.experimentId;
+                this.mfu = model.mfu;
+                this.samplesPerSecond = model.samplesPerSecond;
+                this.secondsPerIteration = model.secondsPerIteration;
+                this.taskIndividualResultList = model.taskIndividualResultList;
+                this.taskIndividualResultMap = model.taskIndividualResultMap;
+                this.warningBoundList = model.warningBoundList;
+                this.warningWorker = model.warningWorker;
+            } 
+
             /**
-             * Duration.
+             * <p>Duration</p>
+             * 
+             * <strong>example:</strong>
+             * <p>764</p>
              */
             public Builder duration(Double duration) {
                 this.duration = duration;
@@ -2156,7 +2542,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorWorker.
+             * <p>Error node</p>
              */
             public Builder errorWorker(java.util.List<ErrorWorker> errorWorker) {
                 this.errorWorker = errorWorker;
@@ -2164,7 +2550,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ExperimentId.
+             * <p>Parameter name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1748274952976261121</p>
              */
             public Builder experimentId(Long experimentId) {
                 this.experimentId = experimentId;
@@ -2183,7 +2572,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * SamplesPerSecond.
+             * <p>Samples Per Second</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder samplesPerSecond(Double samplesPerSecond) {
                 this.samplesPerSecond = samplesPerSecond;
@@ -2191,7 +2583,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * SecondsPerIteration.
+             * <p>Seconds per iteration</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder secondsPerIteration(Double secondsPerIteration) {
                 this.secondsPerIteration = secondsPerIteration;
@@ -2199,7 +2594,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * TaskIndividualResultList.
+             * <p>Task individual result list</p>
              */
             public Builder taskIndividualResultList(java.util.List<TaskIndividualResultList> taskIndividualResultList) {
                 this.taskIndividualResultList = taskIndividualResultList;
@@ -2207,7 +2602,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * TaskIndividualResultMap.
+             * <p>Invalid task results</p>
              */
             public Builder taskIndividualResultMap(java.util.Map<String, java.util.List<DataResultsTaskIndividualResultMapValue>> taskIndividualResultMap) {
                 this.taskIndividualResultMap = taskIndividualResultMap;
@@ -2215,7 +2610,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * WarningBoundList.
+             * <p>Warning bound list</p>
              */
             public Builder warningBoundList(java.util.List<WarningBoundList> warningBoundList) {
                 this.warningBoundList = warningBoundList;
@@ -2223,7 +2618,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * WarningWorker.
+             * <p>Warning worker</p>
              */
             public Builder warningWorker(java.util.List<WarningWorker> warningWorker) {
                 this.warningWorker = warningWorker;
@@ -2353,8 +2748,25 @@ public class GetExperimentResponseBody extends TeaModel {
             private Long taskId; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.params = model.params;
+                this.scene = model.scene;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * CreateTime.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-05 18:24:08</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -2362,7 +2774,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>End time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-05 18:34:08</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -2370,7 +2785,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Params.
+             * <p>Experiment parameters</p>
              */
             public Builder params(java.util.Map<String, String> params) {
                 this.params = params;
@@ -2378,7 +2793,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>Scene</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baseline</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -2386,7 +2804,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Start time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-05 18:24:08</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -2394,7 +2815,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2402,7 +2826,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Task ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>167420</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -2410,7 +2837,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Update time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-05 18:24:08</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -2516,8 +2946,23 @@ public class GetExperimentResponseBody extends TeaModel {
             private String paramType; 
             private String paramValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParamSettings model) {
+                this.defaultValue = model.defaultValue;
+                this.paramDesc = model.paramDesc;
+                this.paramName = model.paramName;
+                this.paramRegex = model.paramRegex;
+                this.paramType = model.paramType;
+                this.paramValue = model.paramValue;
+            } 
+
             /**
-             * DefaultValue.
+             * <p>Default parameter value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -2525,7 +2970,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ParamDesc.
+             * <p>Parameter description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>number</p>
              */
             public Builder paramDesc(String paramDesc) {
                 this.paramDesc = paramDesc;
@@ -2533,7 +2981,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ParamName.
+             * <p>Parameter name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ITERATION</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -2541,7 +2992,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ParamRegex.
+             * <p>Parameter regular expression</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[0-9]+</p>
              */
             public Builder paramRegex(String paramRegex) {
                 this.paramRegex = paramRegex;
@@ -2549,7 +3003,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ParamType.
+             * <p>Parameter type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>number</p>
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -2557,7 +3014,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ParamValue.
+             * <p>Parameter value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -2639,8 +3099,21 @@ public class GetExperimentResponseBody extends TeaModel {
             private String parameters; 
             private String softwareStack; 
 
+            private Builder() {
+            } 
+
+            private Builder(StaticConfig model) {
+                this.frameWork = model.frameWork;
+                this.os = model.os;
+                this.parameters = model.parameters;
+                this.softwareStack = model.softwareStack;
+            } 
+
             /**
-             * FrameWork.
+             * <p>Framework</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pyTorch</p>
              */
             public Builder frameWork(String frameWork) {
                 this.frameWork = frameWork;
@@ -2648,7 +3121,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * <p>Operating system</p>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -2656,7 +3132,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>Number of parameters</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7B</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -2664,7 +3143,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareStack.
+             * <p>Software stack</p>
+             * 
+             * <strong>example:</strong>
+             * <p>python</p>
              */
             public Builder softwareStack(String softwareStack) {
                 this.softwareStack = softwareStack;
@@ -2878,8 +3360,32 @@ public class GetExperimentResponseBody extends TeaModel {
             private String workloadName; 
             private String workloadType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Workload model) {
+                this.defaultCpuPerWorker = model.defaultCpuPerWorker;
+                this.defaultGpuPerWorker = model.defaultGpuPerWorker;
+                this.defaultMemoryPerWorker = model.defaultMemoryPerWorker;
+                this.defaultShareMemory = model.defaultShareMemory;
+                this.family = model.family;
+                this.jobKind = model.jobKind;
+                this.paramSettings = model.paramSettings;
+                this.scene = model.scene;
+                this.scope = model.scope;
+                this.staticConfig = model.staticConfig;
+                this.versionId = model.versionId;
+                this.workloadDescription = model.workloadDescription;
+                this.workloadId = model.workloadId;
+                this.workloadName = model.workloadName;
+                this.workloadType = model.workloadType;
+            } 
+
             /**
-             * DefaultCpuPerWorker.
+             * <p>Default CPU allocation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder defaultCpuPerWorker(Integer defaultCpuPerWorker) {
                 this.defaultCpuPerWorker = defaultCpuPerWorker;
@@ -2887,7 +3393,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultGpuPerWorker.
+             * <p>Default GPU allocation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder defaultGpuPerWorker(Integer defaultGpuPerWorker) {
                 this.defaultGpuPerWorker = defaultGpuPerWorker;
@@ -2895,7 +3404,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultMemoryPerWorker.
+             * <p>Default memory (GB) allocation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder defaultMemoryPerWorker(Integer defaultMemoryPerWorker) {
                 this.defaultMemoryPerWorker = defaultMemoryPerWorker;
@@ -2903,7 +3415,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultShareMemory.
+             * <p>Default shared memory (GB) allocation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder defaultShareMemory(Integer defaultShareMemory) {
                 this.defaultShareMemory = defaultShareMemory;
@@ -2911,7 +3426,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Family.
+             * <p>Workload cluster, AI, GPU</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AI</p>
              */
             public Builder family(String family) {
                 this.family = family;
@@ -2919,7 +3437,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * JobKind.
+             * <p>JobKind</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PyTorchJob</p>
              */
             public Builder jobKind(String jobKind) {
                 this.jobKind = jobKind;
@@ -2927,7 +3448,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ParamSettings.
+             * <p>Parameter settings</p>
              */
             public Builder paramSettings(java.util.List<ParamSettings> paramSettings) {
                 this.paramSettings = paramSettings;
@@ -2935,7 +3456,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>Workload usage scenario</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NLP-LLM</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -2943,7 +3467,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>Scope</p>
+             * 
+             * <strong>example:</strong>
+             * <p>common</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -2951,7 +3478,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * StaticConfig.
+             * <p>Static configuration</p>
              */
             public Builder staticConfig(StaticConfig staticConfig) {
                 this.staticConfig = staticConfig;
@@ -2959,7 +3486,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * <p>Version ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder versionId(Long versionId) {
                 this.versionId = versionId;
@@ -2967,7 +3497,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadDescription.
+             * <p>Workload description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder workloadDescription(String workloadDescription) {
                 this.workloadDescription = workloadDescription;
@@ -2975,7 +3508,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadId.
+             * <p>Workload ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder workloadId(Long workloadId) {
                 this.workloadId = workloadId;
@@ -2983,7 +3519,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadName.
+             * <p>Workload name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder workloadName(String workloadName) {
                 this.workloadName = workloadName;
@@ -2991,7 +3530,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadType.
+             * <p>Workload name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AI</p>
              */
             public Builder workloadType(String workloadType) {
                 this.workloadType = workloadType;
@@ -3229,8 +3771,34 @@ public class GetExperimentResponseBody extends TeaModel {
             private Workload workload; 
             private String workloadName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.envParams = model.envParams;
+                this.experimentId = model.experimentId;
+                this.experimentName = model.experimentName;
+                this.experimentType = model.experimentType;
+                this.getParams = model.getParams;
+                this.resource = model.resource;
+                this.resourceName = model.resourceName;
+                this.results = model.results;
+                this.setParams = model.setParams;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.task = model.task;
+                this.updateTime = model.updateTime;
+                this.workload = model.workload;
+                this.workloadName = model.workloadName;
+            } 
+
             /**
-             * CreateTime.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-29 02:16:35</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -3238,7 +3806,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>Task end time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-29 02:26:35</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -3246,7 +3817,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * EnvParams.
+             * <p>Running environment parameters</p>
              */
             public Builder envParams(EnvParams envParams) {
                 this.envParams = envParams;
@@ -3254,7 +3825,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ExperimentId.
+             * <p>Experiment ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1726882991828688898</p>
              */
             public Builder experimentId(Long experimentId) {
                 this.experimentId = experimentId;
@@ -3262,7 +3836,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ExperimentName.
+             * <p>Experiment name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder experimentName(String experimentName) {
                 this.experimentName = experimentName;
@@ -3270,7 +3847,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ExperimentType.
+             * <p>Experiment type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AI</p>
              */
             public Builder experimentType(String experimentType) {
                 this.experimentType = experimentType;
@@ -3278,7 +3858,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * GetParams.
+             * <p>Parsed workload parameters</p>
              */
             public Builder getParams(java.util.Map<String, String> getParams) {
                 this.getParams = getParams;
@@ -3286,7 +3866,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * <p>cluster info</p>
              */
             public Builder resource(Resource resource) {
                 this.resource = resource;
@@ -3294,7 +3874,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>Resource name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cifnews-guoyuan</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -3302,7 +3885,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * <p>Task results</p>
              */
             public Builder results(Results results) {
                 this.results = results;
@@ -3310,7 +3893,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * SetParams.
+             * <p>Running workload parameters</p>
              */
             public Builder setParams(java.util.Map<String, String> setParams) {
                 this.setParams = setParams;
@@ -3318,7 +3901,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Task start time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-29 02:16:35</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -3326,7 +3912,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -3334,7 +3923,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Task.
+             * <p>Experiment task</p>
              */
             public Builder task(Task task) {
                 this.task = task;
@@ -3342,7 +3931,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Update time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-29 02:16:35</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -3350,7 +3942,7 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Workload.
+             * <p>Workload information</p>
              */
             public Builder workload(Workload workload) {
                 this.workload = workload;
@@ -3358,7 +3950,10 @@ public class GetExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadName.
+             * <p>Workload name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder workloadName(String workloadName) {
                 this.workloadName = workloadName;
