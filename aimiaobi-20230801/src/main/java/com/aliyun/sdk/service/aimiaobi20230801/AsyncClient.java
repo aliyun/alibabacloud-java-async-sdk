@@ -116,6 +116,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMaterialByIdResponse> deleteMaterialById(DeleteMaterialByIdRequest request);
 
     /**
+     * @param request the request parameters of DeleteStyleLearningResult  DeleteStyleLearningResultRequest
+     * @return DeleteStyleLearningResultResponse
+     */
+    CompletableFuture<DeleteStyleLearningResultResponse> deleteStyleLearningResult(DeleteStyleLearningResultRequest request);
+
+    /**
      * @param request the request parameters of DocumentExtraction  DocumentExtractionRequest
      * @return DocumentExtractionResponse
      */

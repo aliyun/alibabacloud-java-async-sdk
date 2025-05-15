@@ -626,6 +626,9 @@ public class QueryAuditTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
+        @com.aliyun.core.annotation.NameInMap("HtmlContent")
+        private String htmlContent;
+
         @com.aliyun.core.annotation.NameInMap("Response")
         private Response response;
 
@@ -635,12 +638,17 @@ public class QueryAuditTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private Integer taskStatus;
 
+        @com.aliyun.core.annotation.NameInMap("Title")
+        private String title;
+
         private Data(Builder builder) {
             this.auditTime = builder.auditTime;
             this.content = builder.content;
+            this.htmlContent = builder.htmlContent;
             this.response = builder.response;
             this.status = builder.status;
             this.taskStatus = builder.taskStatus;
+            this.title = builder.title;
         }
 
         public static Builder builder() {
@@ -666,6 +674,13 @@ public class QueryAuditTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return htmlContent
+         */
+        public String getHtmlContent() {
+            return this.htmlContent;
+        }
+
+        /**
          * @return response
          */
         public Response getResponse() {
@@ -686,12 +701,21 @@ public class QueryAuditTaskResponseBody extends TeaModel {
             return this.taskStatus;
         }
 
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
         public static final class Builder {
             private String auditTime; 
             private String content; 
+            private String htmlContent; 
             private Response response; 
             private String status; 
             private Integer taskStatus; 
+            private String title; 
 
             private Builder() {
             } 
@@ -699,9 +723,11 @@ public class QueryAuditTaskResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.auditTime = model.auditTime;
                 this.content = model.content;
+                this.htmlContent = model.htmlContent;
                 this.response = model.response;
                 this.status = model.status;
                 this.taskStatus = model.taskStatus;
+                this.title = model.title;
             } 
 
             /**
@@ -717,6 +743,14 @@ public class QueryAuditTaskResponseBody extends TeaModel {
              */
             public Builder content(String content) {
                 this.content = content;
+                return this;
+            }
+
+            /**
+             * HtmlContent.
+             */
+            public Builder htmlContent(String htmlContent) {
+                this.htmlContent = htmlContent;
                 return this;
             }
 
@@ -741,6 +775,14 @@ public class QueryAuditTaskResponseBody extends TeaModel {
              */
             public Builder taskStatus(Integer taskStatus) {
                 this.taskStatus = taskStatus;
+                return this;
+            }
+
+            /**
+             * Title.
+             */
+            public Builder title(String title) {
+                this.title = title;
                 return this;
             }
 
