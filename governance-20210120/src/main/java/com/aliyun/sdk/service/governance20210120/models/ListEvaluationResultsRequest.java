@@ -26,6 +26,10 @@ public class ListEvaluationResultsRequest extends Request {
     private java.util.List<Filters> filters;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LensCode")
+    private String lensCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -41,6 +45,7 @@ public class ListEvaluationResultsRequest extends Request {
         super(builder);
         this.accountId = builder.accountId;
         this.filters = builder.filters;
+        this.lensCode = builder.lensCode;
         this.regionId = builder.regionId;
         this.scope = builder.scope;
         this.snapshotId = builder.snapshotId;
@@ -74,6 +79,13 @@ public class ListEvaluationResultsRequest extends Request {
     }
 
     /**
+     * @return lensCode
+     */
+    public String getLensCode() {
+        return this.lensCode;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -97,6 +109,7 @@ public class ListEvaluationResultsRequest extends Request {
     public static final class Builder extends Request.Builder<ListEvaluationResultsRequest, Builder> {
         private Long accountId; 
         private java.util.List<Filters> filters; 
+        private String lensCode; 
         private String regionId; 
         private String scope; 
         private String snapshotId; 
@@ -109,6 +122,7 @@ public class ListEvaluationResultsRequest extends Request {
             super(request);
             this.accountId = request.accountId;
             this.filters = request.filters;
+            this.lensCode = request.lensCode;
             this.regionId = request.regionId;
             this.scope = request.scope;
             this.snapshotId = request.snapshotId;
@@ -132,6 +146,15 @@ public class ListEvaluationResultsRequest extends Request {
         public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
             this.filters = filters;
+            return this;
+        }
+
+        /**
+         * LensCode.
+         */
+        public Builder lensCode(String lensCode) {
+            this.putQueryParameter("LensCode", lensCode);
+            this.lensCode = lensCode;
             return this;
         }
 

@@ -22,12 +22,17 @@ public class ListEvaluationMetadataRequest extends Request {
     private String language;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LensCode")
+    private String lensCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ListEvaluationMetadataRequest(Builder builder) {
         super(builder);
         this.language = builder.language;
+        this.lensCode = builder.lensCode;
         this.regionId = builder.regionId;
     }
 
@@ -52,6 +57,13 @@ public class ListEvaluationMetadataRequest extends Request {
     }
 
     /**
+     * @return lensCode
+     */
+    public String getLensCode() {
+        return this.lensCode;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -60,6 +72,7 @@ public class ListEvaluationMetadataRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListEvaluationMetadataRequest, Builder> {
         private String language; 
+        private String lensCode; 
         private String regionId; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class ListEvaluationMetadataRequest extends Request {
         private Builder(ListEvaluationMetadataRequest request) {
             super(request);
             this.language = request.language;
+            this.lensCode = request.lensCode;
             this.regionId = request.regionId;
         } 
 
@@ -85,6 +99,15 @@ public class ListEvaluationMetadataRequest extends Request {
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
             this.language = language;
+            return this;
+        }
+
+        /**
+         * LensCode.
+         */
+        public Builder lensCode(String lensCode) {
+            this.putQueryParameter("LensCode", lensCode);
+            this.lensCode = lensCode;
             return this;
         }
 
