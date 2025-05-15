@@ -26,6 +26,9 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Quota")
     private Long quota;
 
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -39,6 +42,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         this.logStoreName = builder.logStoreName;
         this.projectName = builder.projectName;
         this.quota = builder.quota;
+        this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.ttl = builder.ttl;
         this.used = builder.used;
@@ -78,6 +82,13 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -102,6 +113,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         private String logStoreName; 
         private String projectName; 
         private Long quota; 
+        private String regionId; 
         private String requestId; 
         private Integer ttl; 
         private Long used; 
@@ -113,6 +125,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
             this.logStoreName = model.logStoreName;
             this.projectName = model.projectName;
             this.quota = model.quota;
+            this.regionId = model.regionId;
             this.requestId = model.requestId;
             this.ttl = model.ttl;
             this.used = model.used;
@@ -139,6 +152,14 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
          */
         public Builder quota(Long quota) {
             this.quota = quota;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
 

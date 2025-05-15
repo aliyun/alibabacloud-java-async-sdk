@@ -26,6 +26,10 @@ public class DescribeOutgoingDomainRequest extends Request {
     private String currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataType")
+    private String dataType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
@@ -33,6 +37,10 @@ public class DescribeOutgoingDomainRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("EndTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsAITraffic")
+    private String isAITraffic;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -67,8 +75,10 @@ public class DescribeOutgoingDomainRequest extends Request {
         super(builder);
         this.categoryId = builder.categoryId;
         this.currentPage = builder.currentPage;
+        this.dataType = builder.dataType;
         this.domain = builder.domain;
         this.endTime = builder.endTime;
+        this.isAITraffic = builder.isAITraffic;
         this.lang = builder.lang;
         this.order = builder.order;
         this.pageSize = builder.pageSize;
@@ -106,6 +116,13 @@ public class DescribeOutgoingDomainRequest extends Request {
     }
 
     /**
+     * @return dataType
+     */
+    public String getDataType() {
+        return this.dataType;
+    }
+
+    /**
      * @return domain
      */
     public String getDomain() {
@@ -117,6 +134,13 @@ public class DescribeOutgoingDomainRequest extends Request {
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return isAITraffic
+     */
+    public String getIsAITraffic() {
+        return this.isAITraffic;
     }
 
     /**
@@ -171,8 +195,10 @@ public class DescribeOutgoingDomainRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeOutgoingDomainRequest, Builder> {
         private String categoryId; 
         private String currentPage; 
+        private String dataType; 
         private String domain; 
         private String endTime; 
+        private String isAITraffic; 
         private String lang; 
         private String order; 
         private String pageSize; 
@@ -189,8 +215,10 @@ public class DescribeOutgoingDomainRequest extends Request {
             super(request);
             this.categoryId = request.categoryId;
             this.currentPage = request.currentPage;
+            this.dataType = request.dataType;
             this.domain = request.domain;
             this.endTime = request.endTime;
+            this.isAITraffic = request.isAITraffic;
             this.lang = request.lang;
             this.order = request.order;
             this.pageSize = request.pageSize;
@@ -233,6 +261,15 @@ public class DescribeOutgoingDomainRequest extends Request {
         }
 
         /**
+         * DataType.
+         */
+        public Builder dataType(String dataType) {
+            this.putQueryParameter("DataType", dataType);
+            this.dataType = dataType;
+            return this;
+        }
+
+        /**
          * <p>The domain name in outbound connections.</p>
          * 
          * <strong>example:</strong>
@@ -254,6 +291,15 @@ public class DescribeOutgoingDomainRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * IsAITraffic.
+         */
+        public Builder isAITraffic(String isAITraffic) {
+            this.putQueryParameter("IsAITraffic", isAITraffic);
+            this.isAITraffic = isAITraffic;
             return this;
         }
 
