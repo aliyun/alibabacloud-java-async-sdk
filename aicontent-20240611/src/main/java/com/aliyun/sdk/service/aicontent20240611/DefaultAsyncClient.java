@@ -113,6 +113,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CountOralEvaluationStatisticsCalls  CountOralEvaluationStatisticsCallsRequest
+     * @return CountOralEvaluationStatisticsCallsResponse
+     */
+    @Override
+    public CompletableFuture<CountOralEvaluationStatisticsCallsResponse> countOralEvaluationStatisticsCalls(CountOralEvaluationStatisticsCallsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CountOralEvaluationStatisticsCalls").setMethod(HttpMethod.POST).setPathRegex("/api/v1/aliyunConsole/countOralEvaluationStatisticsCalls").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CountOralEvaluationStatisticsCallsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CountOralEvaluationStatisticsCallsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CountOralEvaluationStatisticsConcurrent  CountOralEvaluationStatisticsConcurrentRequest
+     * @return CountOralEvaluationStatisticsConcurrentResponse
+     */
+    @Override
+    public CompletableFuture<CountOralEvaluationStatisticsConcurrentResponse> countOralEvaluationStatisticsConcurrent(CountOralEvaluationStatisticsConcurrentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CountOralEvaluationStatisticsConcurrent").setMethod(HttpMethod.POST).setPathRegex("/api/v1/aliyunConsole/countOralEvaluationStatisticsConcurrent").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CountOralEvaluationStatisticsConcurrentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CountOralEvaluationStatisticsConcurrentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CountOralEvaluationStatisticsError  CountOralEvaluationStatisticsErrorRequest
+     * @return CountOralEvaluationStatisticsErrorResponse
+     */
+    @Override
+    public CompletableFuture<CountOralEvaluationStatisticsErrorResponse> countOralEvaluationStatisticsError(CountOralEvaluationStatisticsErrorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CountOralEvaluationStatisticsError").setMethod(HttpMethod.POST).setPathRegex("/api/v1/aliyunConsole/countOralEvaluationStatisticsError").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CountOralEvaluationStatisticsErrorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CountOralEvaluationStatisticsErrorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateAccessWarrant  CreateAccessWarrantRequest
      * @return CreateAccessWarrantResponse
      */
@@ -338,6 +392,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             future.completeExceptionally(e);
             return future;
         }
+    }
+
+    /**
+     * @param request the request parameters of ExecuteHundredThousandWhysDialogue  ExecuteHundredThousandWhysDialogueRequest
+     * @return ExecuteHundredThousandWhysDialogueResponse
+     */
+    @Override
+    public CompletableFuture<ExecuteHundredThousandWhysDialogueResponse> executeHundredThousandWhysDialogue(ExecuteHundredThousandWhysDialogueRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ExecuteHundredThousandWhysDialogue").setMethod(HttpMethod.POST).setPathRegex("/pop/api/v1/intelligentAgent/tenWWhys/executeDialogue").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExecuteHundredThousandWhysDialogueResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExecuteHundredThousandWhysDialogueResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<ExecuteHundredThousandWhysDialogueResponseBody> executeHundredThousandWhysDialogueWithResponseIterable(ExecuteHundredThousandWhysDialogueRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("ExecuteHundredThousandWhysDialogue").setMethod(HttpMethod.POST).setPathRegex("/pop/api/v1/intelligentAgent/tenWWhys/executeDialogue").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        ExecuteHundredThousandWhysDialogueResponseBodyIterator iterator = ExecuteHundredThousandWhysDialogueResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
     }
 
     /**

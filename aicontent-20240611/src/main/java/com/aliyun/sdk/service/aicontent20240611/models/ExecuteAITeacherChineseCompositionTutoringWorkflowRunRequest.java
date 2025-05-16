@@ -23,14 +23,17 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("essayRequirements")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String essayRequirements;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("essayTopic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String essayTopic;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("essayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String essayType;
 
     @com.aliyun.core.annotation.Body
@@ -39,31 +42,18 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("grade")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long grade;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("responseMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String responseMode;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("userId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
-
-    @com.aliyun.core.annotation.Header
-    @com.aliyun.core.annotation.NameInMap("callerParentId")
-    private Long callerParentId;
-
-    @com.aliyun.core.annotation.Header
-    @com.aliyun.core.annotation.NameInMap("callerType")
-    private String callerType;
-
-    @com.aliyun.core.annotation.Header
-    @com.aliyun.core.annotation.NameInMap("callerUid")
-    private Long callerUid;
-
-    @com.aliyun.core.annotation.Header
-    @com.aliyun.core.annotation.NameInMap("stsTokenCallerUid")
-    private Long stsTokenCallerUid;
 
     private ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest(Builder builder) {
         super(builder);
@@ -75,10 +65,6 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         this.grade = builder.grade;
         this.responseMode = builder.responseMode;
         this.userId = builder.userId;
-        this.callerParentId = builder.callerParentId;
-        this.callerType = builder.callerType;
-        this.callerUid = builder.callerUid;
-        this.stsTokenCallerUid = builder.stsTokenCallerUid;
     }
 
     public static Builder builder() {
@@ -150,34 +136,6 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         return this.userId;
     }
 
-    /**
-     * @return callerParentId
-     */
-    public Long getCallerParentId() {
-        return this.callerParentId;
-    }
-
-    /**
-     * @return callerType
-     */
-    public String getCallerType() {
-        return this.callerType;
-    }
-
-    /**
-     * @return callerUid
-     */
-    public Long getCallerUid() {
-        return this.callerUid;
-    }
-
-    /**
-     * @return stsTokenCallerUid
-     */
-    public Long getStsTokenCallerUid() {
-        return this.stsTokenCallerUid;
-    }
-
     public static final class Builder extends Request.Builder<ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest, Builder> {
         private String essayOutline; 
         private String essayRequirements; 
@@ -187,10 +145,6 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         private Long grade; 
         private String responseMode; 
         private String userId; 
-        private Long callerParentId; 
-        private String callerType; 
-        private Long callerUid; 
-        private Long stsTokenCallerUid; 
 
         private Builder() {
             super();
@@ -206,10 +160,6 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
             this.grade = request.grade;
             this.responseMode = request.responseMode;
             this.userId = request.userId;
-            this.callerParentId = request.callerParentId;
-            this.callerType = request.callerType;
-            this.callerUid = request.callerUid;
-            this.stsTokenCallerUid = request.stsTokenCallerUid;
         } 
 
         /**
@@ -222,7 +172,7 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
-         * essayRequirements.
+         * <p>This parameter is required.</p>
          */
         public Builder essayRequirements(String essayRequirements) {
             this.putBodyParameter("essayRequirements", essayRequirements);
@@ -231,7 +181,7 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
-         * essayTopic.
+         * <p>This parameter is required.</p>
          */
         public Builder essayTopic(String essayTopic) {
             this.putBodyParameter("essayTopic", essayTopic);
@@ -240,7 +190,10 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
-         * essayType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>essay</p>
          */
         public Builder essayType(String essayType) {
             this.putBodyParameter("essayType", essayType);
@@ -258,7 +211,10 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
-         * grade.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder grade(Long grade) {
             this.putBodyParameter("grade", grade);
@@ -267,7 +223,10 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
-         * responseMode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>streaming</p>
          */
         public Builder responseMode(String responseMode) {
             this.putBodyParameter("responseMode", responseMode);
@@ -276,47 +235,14 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
-         * userId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxx</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("userId", userId);
             this.userId = userId;
-            return this;
-        }
-
-        /**
-         * callerParentId.
-         */
-        public Builder callerParentId(Long callerParentId) {
-            this.putHeaderParameter("callerParentId", callerParentId);
-            this.callerParentId = callerParentId;
-            return this;
-        }
-
-        /**
-         * callerType.
-         */
-        public Builder callerType(String callerType) {
-            this.putHeaderParameter("callerType", callerType);
-            this.callerType = callerType;
-            return this;
-        }
-
-        /**
-         * callerUid.
-         */
-        public Builder callerUid(Long callerUid) {
-            this.putHeaderParameter("callerUid", callerUid);
-            this.callerUid = callerUid;
-            return this;
-        }
-
-        /**
-         * stsTokenCallerUid.
-         */
-        public Builder stsTokenCallerUid(Long stsTokenCallerUid) {
-            this.putHeaderParameter("stsTokenCallerUid", stsTokenCallerUid);
-            this.stsTokenCallerUid = stsTokenCallerUid;
             return this;
         }
 

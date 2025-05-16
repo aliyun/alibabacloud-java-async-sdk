@@ -44,6 +44,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse> aliyunConsoleOpenApiQueryAliyunConsoleServiceList(AliyunConsoleOpenApiQueryAliyunConsoleServiceListRequest request);
 
     /**
+     * @param request the request parameters of CountOralEvaluationStatisticsCalls  CountOralEvaluationStatisticsCallsRequest
+     * @return CountOralEvaluationStatisticsCallsResponse
+     */
+    CompletableFuture<CountOralEvaluationStatisticsCallsResponse> countOralEvaluationStatisticsCalls(CountOralEvaluationStatisticsCallsRequest request);
+
+    /**
+     * @param request the request parameters of CountOralEvaluationStatisticsConcurrent  CountOralEvaluationStatisticsConcurrentRequest
+     * @return CountOralEvaluationStatisticsConcurrentResponse
+     */
+    CompletableFuture<CountOralEvaluationStatisticsConcurrentResponse> countOralEvaluationStatisticsConcurrent(CountOralEvaluationStatisticsConcurrentRequest request);
+
+    /**
+     * @param request the request parameters of CountOralEvaluationStatisticsError  CountOralEvaluationStatisticsErrorRequest
+     * @return CountOralEvaluationStatisticsErrorResponse
+     */
+    CompletableFuture<CountOralEvaluationStatisticsErrorResponse> countOralEvaluationStatisticsError(CountOralEvaluationStatisticsErrorRequest request);
+
+    /**
      * @param request the request parameters of CreateAccessWarrant  CreateAccessWarrantRequest
      * @return CreateAccessWarrantResponse
      */
@@ -114,6 +132,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExecuteAITeacherSyncDialogueTranslateResponse
      */
     CompletableFuture<ExecuteAITeacherSyncDialogueTranslateResponse> executeAITeacherSyncDialogueTranslate(ExecuteAITeacherSyncDialogueTranslateRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteHundredThousandWhysDialogue  ExecuteHundredThousandWhysDialogueRequest
+     * @return ExecuteHundredThousandWhysDialogueResponse
+     */
+    CompletableFuture<ExecuteHundredThousandWhysDialogueResponse> executeHundredThousandWhysDialogue(ExecuteHundredThousandWhysDialogueRequest request);
+
+    ResponseIterable<ExecuteHundredThousandWhysDialogueResponseBody> executeHundredThousandWhysDialogueWithResponseIterable(ExecuteHundredThousandWhysDialogueRequest request);
 
     /**
      * @param request the request parameters of ExecuteTextbookAssistantDialogue  ExecuteTextbookAssistantDialogueRequest

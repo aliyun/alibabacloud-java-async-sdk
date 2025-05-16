@@ -23,6 +23,7 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends Request
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
     @com.aliyun.core.annotation.Body
@@ -35,18 +36,22 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends Request
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("questionInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String questionInfo;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("responseMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String responseMode;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("userAnswer")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userAnswer;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("userId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private ExecuteAITeacherEnglishParaphraseChatMessageRequest(Builder builder) {
@@ -166,7 +171,10 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends Request
         }
 
         /**
-         * content.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>How much is this?</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -193,7 +201,10 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends Request
         }
 
         /**
-         * questionInfo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>How to inquire about the price</p>
          */
         public Builder questionInfo(String questionInfo) {
             this.putBodyParameter("questionInfo", questionInfo);
@@ -202,7 +213,10 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends Request
         }
 
         /**
-         * responseMode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sreaming</p>
          */
         public Builder responseMode(String responseMode) {
             this.putBodyParameter("responseMode", responseMode);
@@ -211,7 +225,10 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends Request
         }
 
         /**
-         * userAnswer.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>How much is this?</p>
          */
         public Builder userAnswer(String userAnswer) {
             this.putBodyParameter("userAnswer", userAnswer);
@@ -220,7 +237,10 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends Request
         }
 
         /**
-         * userId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxx</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("userId", userId);

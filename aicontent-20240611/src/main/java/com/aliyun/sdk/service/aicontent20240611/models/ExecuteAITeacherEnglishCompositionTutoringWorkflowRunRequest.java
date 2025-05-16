@@ -33,6 +33,7 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("essayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String essayType;
 
     @com.aliyun.core.annotation.Body
@@ -195,7 +196,10 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
         }
 
         /**
-         * essayType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>essay</p>
          */
         public Builder essayType(String essayType) {
             this.putBodyParameter("essayType", essayType);

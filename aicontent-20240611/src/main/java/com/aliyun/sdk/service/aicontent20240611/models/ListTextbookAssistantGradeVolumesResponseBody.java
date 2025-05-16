@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private Data data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("errCode")
     private String errCode;
@@ -59,7 +59,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Data getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -99,7 +99,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Data data; 
+        private java.util.List<Data> data; 
         private String errCode; 
         private String errMessage; 
         private Integer httpStatusCode; 
@@ -121,7 +121,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(Data data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -183,11 +183,9 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
      */
     public static class GradeVolumes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("grade")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String grade;
 
         @com.aliyun.core.annotation.NameInMap("volume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String volume;
 
         private GradeVolumes(Builder builder) {
@@ -230,10 +228,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * grade.
              */
             public Builder grade(String grade) {
                 this.grade = grade;
@@ -241,10 +236,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * volume.
              */
             public Builder volume(String volume) {
                 this.volume = volume;
@@ -269,7 +261,6 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
         private java.util.List<GradeVolumes> gradeVolumes;
 
         @com.aliyun.core.annotation.NameInMap("textbookVersion")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String textbookVersion;
 
         private Data(Builder builder) {
@@ -320,10 +311,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>人教版</p>
+             * textbookVersion.
              */
             public Builder textbookVersion(String textbookVersion) {
                 this.textbookVersion = textbookVersion;
