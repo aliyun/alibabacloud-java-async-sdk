@@ -128,6 +128,10 @@ public class GetClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clientVersion
      */
@@ -329,6 +333,37 @@ public class GetClusterResponseBody extends TeaModel {
         private String resourceGroupId; 
         private SchedulerSpec schedulerSpec; 
         private String securityGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetClusterResponseBody model) {
+            this.clientVersion = model.clientVersion;
+            this.clusterCategory = model.clusterCategory;
+            this.clusterCreateTime = model.clusterCreateTime;
+            this.clusterCustomConfiguration = model.clusterCustomConfiguration;
+            this.clusterId = model.clusterId;
+            this.clusterMode = model.clusterMode;
+            this.clusterModifyTime = model.clusterModifyTime;
+            this.clusterName = model.clusterName;
+            this.clusterStatus = model.clusterStatus;
+            this.clusterVSwitchId = model.clusterVSwitchId;
+            this.clusterVpcId = model.clusterVpcId;
+            this.deleteProtection = model.deleteProtection;
+            this.ehpcVersion = model.ehpcVersion;
+            this.enableScaleIn = model.enableScaleIn;
+            this.enableScaleOut = model.enableScaleOut;
+            this.growInterval = model.growInterval;
+            this.idleInterval = model.idleInterval;
+            this.manager = model.manager;
+            this.maxCoreCount = model.maxCoreCount;
+            this.maxCount = model.maxCount;
+            this.monitorSpec = model.monitorSpec;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.schedulerSpec = model.schedulerSpec;
+            this.securityGroupId = model.securityGroupId;
+        } 
 
         /**
          * <p>The E-HPC Util version.</p>
@@ -577,7 +612,7 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorSpec.
+         * <p>The monitoring details of the cluster.</p>
          */
         public Builder monitorSpec(MonitorSpec monitorSpec) {
             this.monitorSpec = monitorSpec;
@@ -607,7 +642,7 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * SchedulerSpec.
+         * <p>The scheduler specifications of the cluster.</p>
          */
         public Builder schedulerSpec(SchedulerSpec schedulerSpec) {
             this.schedulerSpec = schedulerSpec;
@@ -674,6 +709,14 @@ public class GetClusterResponseBody extends TeaModel {
         public static final class Builder {
             private String args; 
             private String script; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterCustomConfiguration model) {
+                this.args = model.args;
+                this.script = model.script;
+            } 
 
             /**
              * <p>The arguments that are used to run the script after the scrip is installed.</p>
@@ -759,6 +802,15 @@ public class GetClusterResponseBody extends TeaModel {
             private String status; 
             private String type; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(DNS model) {
+                this.status = model.status;
+                this.type = model.type;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The state of the domain name resolution service. Valid values:</p>
@@ -864,6 +916,15 @@ public class GetClusterResponseBody extends TeaModel {
             private String status; 
             private String type; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(DirectoryService model) {
+                this.status = model.status;
+                this.type = model.type;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The state of the domain account service. Valid values:</p>
@@ -982,6 +1043,16 @@ public class GetClusterResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ManagerNode model) {
+                this.expiredTime = model.expiredTime;
+                this.instanceChargeType = model.instanceChargeType;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+            } 
+
             /**
              * <p>The expiration time of the management node.</p>
              * 
@@ -1092,6 +1163,15 @@ public class GetClusterResponseBody extends TeaModel {
             private String status; 
             private String type; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scheduler model) {
+                this.status = model.status;
+                this.type = model.type;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The scheduler state. Valid values:</p>
@@ -1217,6 +1297,16 @@ public class GetClusterResponseBody extends TeaModel {
             private ManagerNode managerNode; 
             private Scheduler scheduler; 
 
+            private Builder() {
+            } 
+
+            private Builder(Manager model) {
+                this.DNS = model.DNS;
+                this.directoryService = model.directoryService;
+                this.managerNode = model.managerNode;
+                this.scheduler = model.scheduler;
+            } 
+
             /**
              * <p>The configurations of the domain name resolution service.</p>
              */
@@ -1288,8 +1378,22 @@ public class GetClusterResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enableComputeLoadMonitor; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonitorSpec model) {
+                this.enableComputeLoadMonitor = model.enableComputeLoadMonitor;
+            } 
+
             /**
-             * EnableComputeLoadMonitor.
+             * <p>Indicates whether the monitoring component of compute nodes is enabled for the cluster. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableComputeLoadMonitor(Boolean enableComputeLoadMonitor) {
                 this.enableComputeLoadMonitor = enableComputeLoadMonitor;
@@ -1335,8 +1439,22 @@ public class GetClusterResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enableTopologyAwareness; 
 
+            private Builder() {
+            } 
+
+            private Builder(SchedulerSpec model) {
+                this.enableTopologyAwareness = model.enableTopologyAwareness;
+            } 
+
             /**
-             * EnableTopologyAwareness.
+             * <p>Indicates whether the topology awareness feature is enabled for the cluster. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableTopologyAwareness(Boolean enableTopologyAwareness) {
                 this.enableTopologyAwareness = enableTopologyAwareness;

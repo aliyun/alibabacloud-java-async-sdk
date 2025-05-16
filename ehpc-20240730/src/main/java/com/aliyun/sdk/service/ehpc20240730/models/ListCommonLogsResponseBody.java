@@ -52,6 +52,10 @@ public class ListCommonLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logs
      */
@@ -101,6 +105,18 @@ public class ListCommonLogsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private String uid; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCommonLogsResponseBody model) {
+            this.logs = model.logs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.uid = model.uid;
+        } 
 
         /**
          * <p>The brief information of operation logs.</p>
@@ -298,6 +314,21 @@ public class ListCommonLogsResponseBody extends TeaModel {
             private String status; 
             private String target; 
             private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(Logs model) {
+                this.action = model.action;
+                this.clusterId = model.clusterId;
+                this.logType = model.logType;
+                this.message = model.message;
+                this.operatorUid = model.operatorUid;
+                this.requestId = model.requestId;
+                this.status = model.status;
+                this.target = model.target;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The name of the action corresponding to the log.</p>

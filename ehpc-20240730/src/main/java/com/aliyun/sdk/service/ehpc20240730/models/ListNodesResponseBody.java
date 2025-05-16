@@ -48,6 +48,10 @@ public class ListNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodes
      */
@@ -89,6 +93,17 @@ public class ListNodesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNodesResponseBody model) {
+            this.nodes = model.nodes;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the nodes.</p>
@@ -203,6 +218,15 @@ public class ListNodesResponseBody extends TeaModel {
             private Integer cpu; 
             private Integer gpu; 
             private Integer memory; 
+
+            private Builder() {
+            } 
+
+            private Builder(TotalResources model) {
+                this.cpu = model.cpu;
+                this.gpu = model.gpu;
+                this.memory = model.memory;
+            } 
 
             /**
              * <p>The number of vCPUs.</p>
@@ -491,6 +515,31 @@ public class ListNodesResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.addTime = model.addTime;
+                this.deploymentSetId = model.deploymentSetId;
+                this.expiredTime = model.expiredTime;
+                this.hostname = model.hostname;
+                this.htEnabled = model.htEnabled;
+                this.id = model.id;
+                this.imageId = model.imageId;
+                this.instanceType = model.instanceType;
+                this.ipAddress = model.ipAddress;
+                this.keepAlive = model.keepAlive;
+                this.publicIpAddress = model.publicIpAddress;
+                this.queueName = model.queueName;
+                this.spotStrategy = model.spotStrategy;
+                this.stateInSched = model.stateInSched;
+                this.status = model.status;
+                this.totalResources = model.totalResources;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The time when the node was created.</p>

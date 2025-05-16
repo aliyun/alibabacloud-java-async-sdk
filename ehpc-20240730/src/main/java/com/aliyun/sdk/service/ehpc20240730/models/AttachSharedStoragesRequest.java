@@ -41,7 +41,7 @@ public class AttachSharedStoragesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -227,6 +227,20 @@ public class AttachSharedStoragesRequest extends Request {
             private String protocolType; 
             private String storageDirectory; 
             private String volumeType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SharedStorages model) {
+                this.fileSystemId = model.fileSystemId;
+                this.location = model.location;
+                this.mountDirectory = model.mountDirectory;
+                this.mountOptions = model.mountOptions;
+                this.mountTarget = model.mountTarget;
+                this.protocolType = model.protocolType;
+                this.storageDirectory = model.storageDirectory;
+                this.volumeType = model.volumeType;
+            } 
 
             /**
              * <p>The ID of the file system to be attached.</p>

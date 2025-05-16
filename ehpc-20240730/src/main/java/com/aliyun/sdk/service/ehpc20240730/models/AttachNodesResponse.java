@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateUserResponse} extends {@link TeaModel}
+ * {@link AttachNodesResponse} extends {@link TeaModel}
  *
- * <p>UpdateUserResponse</p>
+ * <p>AttachNodesResponse</p>
  */
-public class UpdateUserResponse extends Response {
+public class AttachNodesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class UpdateUserResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateUserResponseBody body;
+    private AttachNodesResponseBody body;
 
-    private UpdateUserResponse(BuilderImpl builder) {
+    private AttachNodesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateUserResponse create() {
+    public static AttachNodesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class UpdateUserResponse extends Response {
     /**
      * @return body
      */
-    public UpdateUserResponseBody getBody() {
+    public AttachNodesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateUserResponse, Builder> {
+    public interface Builder extends Response.Builder<AttachNodesResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateUserResponseBody body);
+        Builder body(AttachNodesResponseBody body);
 
         @Override
-        UpdateUserResponse build();
+        AttachNodesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateUserResponse, Builder>
+            extends Response.BuilderImpl<AttachNodesResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private UpdateUserResponseBody body; 
+        private AttachNodesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateUserResponse response) {
+        private BuilderImpl(AttachNodesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class UpdateUserResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateUserResponseBody body) {
+        public Builder body(AttachNodesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateUserResponse build() {
-            return new UpdateUserResponse(this);
+        public AttachNodesResponse build() {
+            return new AttachNodesResponse(this);
         } 
 
     } 

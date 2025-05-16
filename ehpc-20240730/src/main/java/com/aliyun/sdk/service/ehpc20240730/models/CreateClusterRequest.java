@@ -134,7 +134,7 @@ public class CreateClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -541,7 +541,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the queues in the cluster. The number of queues can be 0 to 8.</p>
+         * <p>The queues in the cluster. The number of queues can be 0 to 8.</p>
          */
         public Builder queues(java.util.List<QueueTemplate> queues) {
             String queuesShrink = shrink(queues, "Queues", "json");
@@ -577,7 +577,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The configurations of shared storage in the cluster.</p>
+         * <p>The shared storage resources of the cluster.</p>
          */
         public Builder sharedStorages(java.util.List<SharedStorageTemplate> sharedStorages) {
             String sharedStoragesShrink = shrink(sharedStorages, "SharedStorages", "json");
@@ -646,6 +646,14 @@ public class CreateClusterRequest extends Request {
         public static final class Builder {
             private String name; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdditionalPackages model) {
+                this.name = model.name;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The name of the software that you want to install in the cluster.</p>
@@ -746,6 +754,16 @@ public class CreateClusterRequest extends Request {
             private String servicesSpec; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Addons model) {
+                this.name = model.name;
+                this.resourcesSpec = model.resourcesSpec;
+                this.servicesSpec = model.servicesSpec;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The addon name.</p>
              * <p>This parameter is required.</p>
@@ -843,6 +861,14 @@ public class CreateClusterRequest extends Request {
             private String keyPairName; 
             private String password; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterCredentials model) {
+                this.keyPairName = model.keyPairName;
+                this.password = model.password;
+            } 
+
             /**
              * <p>The name of the key pair. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
              * <blockquote>
@@ -922,6 +948,14 @@ public class CreateClusterRequest extends Request {
             private String args; 
             private String script; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterCustomConfiguration model) {
+                this.args = model.args;
+                this.script = model.script;
+            } 
+
             /**
              * <p>The runtime parameters of the script after the cluster is created.</p>
              * 
@@ -995,11 +1029,19 @@ public class CreateClusterRequest extends Request {
             private String type; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(DNS model) {
+                this.type = model.type;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The domain name resolution type.</p>
-             * <p>Valid values:</p>
+             * <p>Valid value:</p>
              * <ul>
-             * <li>NIS: NIS.</li>
+             * <li>NIS</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1072,11 +1114,19 @@ public class CreateClusterRequest extends Request {
             private String type; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(DirectoryService model) {
+                this.type = model.type;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The type of the domain account.</p>
-             * <p>Valid values:</p>
+             * <p>Valid value:</p>
              * <ul>
-             * <li>NIS: NIS.</li>
+             * <li>NIS</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1148,6 +1198,14 @@ public class CreateClusterRequest extends Request {
         public static final class Builder {
             private String type; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scheduler model) {
+                this.type = model.type;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The scheduler type. Valid values:</p>
@@ -1253,6 +1311,16 @@ public class CreateClusterRequest extends Request {
             private NodeTemplate managerNode; 
             private Scheduler scheduler; 
 
+            private Builder() {
+            } 
+
+            private Builder(Manager model) {
+                this.DNS = model.DNS;
+                this.directoryService = model.directoryService;
+                this.managerNode = model.managerNode;
+                this.scheduler = model.scheduler;
+            } 
+
             /**
              * <p>The configurations of the domain name resolution service.</p>
              */
@@ -1262,7 +1330,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The configurations of the directory service.</p>
+             * <p>The configurations of the domain account service.</p>
              */
             public Builder directoryService(DirectoryService directoryService) {
                 this.directoryService = directoryService;
@@ -1335,6 +1403,14 @@ public class CreateClusterRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>

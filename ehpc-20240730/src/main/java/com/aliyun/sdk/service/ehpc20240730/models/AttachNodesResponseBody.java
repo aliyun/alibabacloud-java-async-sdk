@@ -12,23 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateUsersResponseBody} extends {@link TeaModel}
+ * {@link AttachNodesResponseBody} extends {@link TeaModel}
  *
- * <p>CreateUsersResponseBody</p>
+ * <p>AttachNodesResponseBody</p>
  */
-public class CreateUsersResponseBody extends TeaModel {
+public class AttachNodesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateUsersResponseBody(Builder builder) {
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
+
+    private AttachNodesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateUsersResponseBody create() {
+    public static AttachNodesResponseBody create() {
         return builder().build();
     }
 
@@ -43,29 +47,54 @@ public class CreateUsersResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private Boolean success; 
 
         private Builder() {
         } 
 
-        private Builder(CreateUsersResponseBody model) {
+        private Builder(AttachNodesResponseBody model) {
             this.requestId = model.requestId;
+            this.success = model.success;
         } 
 
         /**
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
+         * <p>2263XXXX-XXXX-XXXX-XXXX-XXXX2448XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateUsersResponseBody build() {
-            return new CreateUsersResponseBody(this);
+        /**
+         * <p>Indicates whether the request is successful.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public AttachNodesResponseBody build() {
+            return new AttachNodesResponseBody(this);
         } 
 
     } 

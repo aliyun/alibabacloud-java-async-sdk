@@ -39,7 +39,7 @@ public class InstallSoftwaresRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -144,6 +144,14 @@ public class InstallSoftwaresRequest extends Request {
         public static final class Builder {
             private String name; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdditionalPackages model) {
+                this.name = model.name;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The software name.</p>

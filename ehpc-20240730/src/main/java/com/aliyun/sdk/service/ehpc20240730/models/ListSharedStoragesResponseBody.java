@@ -40,6 +40,10 @@ public class ListSharedStoragesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListSharedStoragesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SharedStorages> sharedStorages; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSharedStoragesResponseBody model) {
+            this.requestId = model.requestId;
+            this.sharedStorages = model.sharedStorages;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -185,6 +198,17 @@ public class ListSharedStoragesResponseBody extends TeaModel {
             private String mountTarget; 
             private String protocolType; 
             private String storageDirectory; 
+
+            private Builder() {
+            } 
+
+            private Builder(MountInfo model) {
+                this.mountDirectory = model.mountDirectory;
+                this.mountOptions = model.mountOptions;
+                this.mountTarget = model.mountTarget;
+                this.protocolType = model.protocolType;
+                this.storageDirectory = model.storageDirectory;
+            } 
 
             /**
              * <p>The local mount directory of the attached file system.</p>
@@ -324,6 +348,16 @@ public class ListSharedStoragesResponseBody extends TeaModel {
             private String fileSystemProtocol; 
             private String fileSystemType; 
             private java.util.List<MountInfo> mountInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(SharedStorages model) {
+                this.fileSystemId = model.fileSystemId;
+                this.fileSystemProtocol = model.fileSystemProtocol;
+                this.fileSystemType = model.fileSystemType;
+                this.mountInfo = model.mountInfo;
+            } 
 
             /**
              * <p>The ID of the attached file system.</p>

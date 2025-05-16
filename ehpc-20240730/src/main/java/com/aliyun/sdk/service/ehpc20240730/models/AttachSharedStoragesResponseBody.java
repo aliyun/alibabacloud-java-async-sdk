@@ -40,6 +40,10 @@ public class AttachSharedStoragesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -65,6 +69,15 @@ public class AttachSharedStoragesResponseBody extends TeaModel {
         private String clusterId; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AttachSharedStoragesResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The cluster ID.</p>

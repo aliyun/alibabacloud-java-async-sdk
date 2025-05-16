@@ -99,7 +99,7 @@ public class UpdateClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -241,7 +241,11 @@ public class UpdateClusterRequest extends Request {
         } 
 
         /**
-         * <p>The client version. By default, the latest version is used.</p>
+         * <p>Specifies whether to enable auto scale-out for the cluster. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2.1.0</p>
@@ -253,7 +257,11 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * <p>The post-processing script of the cluster.</p>
+         * <p>Specifies whether to enable auto scale-in for the cluster. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          */
         public Builder clusterCustomConfiguration(ClusterCustomConfiguration clusterCustomConfiguration) {
             String clusterCustomConfigurationShrink = shrink(clusterCustomConfiguration, "ClusterCustomConfiguration", "json");
@@ -263,7 +271,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster description. The description must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>The URL that is used to download the post-processing script.</p>
          * 
          * <strong>example:</strong>
          * <p>slurm22.05.8-serverless-cluster-20240805</p>
@@ -275,8 +283,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+         * <p>The client version. By default, the latest version is used.</p>
          * 
          * <strong>example:</strong>
          * <p>ehpc-hz-FYUr32****</p>
@@ -288,7 +295,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster name. The name must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>The post-processing script of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>slurm22.05.8-serverless-cluster-20240805</p>
@@ -300,12 +307,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable deletion protection for the cluster. Deletion protection decides whether the cluster can be deleted in the console or by calling the DeleteCluster operation. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * <p>Default value: false.</p>
+         * <p>The idle duration of the compute nodes allowed by the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -317,10 +319,10 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto scale-in for the cluster. Valid values:</p>
+         * <p>The request result. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -333,11 +335,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto scale-out for the cluster. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>The response parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -349,7 +347,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * <p>The interval at which the cluster is automatically scaled out.</p>
+         * <p>The scheduler specifications of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -361,7 +359,11 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * <p>The idle duration of the compute nodes allowed by the cluster.</p>
+         * <p>Specifies whether to enable the topology awareness feature. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -373,7 +375,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * <p>The total maximum number of vCPUs for use by compute nodes in the cluster. Valid values: 0 to 100,000.</p>
+         * <p>The interval at which the cluster is automatically scaled out.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -385,7 +387,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of compute nodes that the cluster can manage. Valid values: 0 to 5,000.</p>
+         * <p>The arguments that are used to run the post-processing script.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -397,7 +399,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * MonitorSpec.
+         * <p>The monitoring details of the cluster.</p>
          */
         public Builder monitorSpec(MonitorSpec monitorSpec) {
             String monitorSpecShrink = shrink(monitorSpec, "MonitorSpec", "json");
@@ -407,7 +409,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * SchedulerSpec.
+         * <p>The scheduler specifications of the cluster.</p>
          */
         public Builder schedulerSpec(SchedulerSpec schedulerSpec) {
             String schedulerSpecShrink = shrink(schedulerSpec, "SchedulerSpec", "json");
@@ -467,8 +469,20 @@ public class UpdateClusterRequest extends Request {
             private String args; 
             private String script; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterCustomConfiguration model) {
+                this.args = model.args;
+                this.script = model.script;
+            } 
+
             /**
-             * <p>The arguments that are used to run the post-processing script.</p>
+             * <p>Specifies whether to enable the monitoring component of compute nodes. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>E-HPC cn-hangzhou</p>
@@ -479,7 +493,7 @@ public class UpdateClusterRequest extends Request {
             }
 
             /**
-             * <p>The URL that is used to download the post-processing script.</p>
+             * <p>The monitoring details of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>http://*****</p>
@@ -528,8 +542,22 @@ public class UpdateClusterRequest extends Request {
         public static final class Builder {
             private Boolean enableComputeLoadMonitor; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonitorSpec model) {
+                this.enableComputeLoadMonitor = model.enableComputeLoadMonitor;
+            } 
+
             /**
-             * EnableComputeLoadMonitor.
+             * <p>Specifies whether to enable the monitoring component of compute nodes. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableComputeLoadMonitor(Boolean enableComputeLoadMonitor) {
                 this.enableComputeLoadMonitor = enableComputeLoadMonitor;
@@ -575,8 +603,22 @@ public class UpdateClusterRequest extends Request {
         public static final class Builder {
             private Boolean enableTopologyAwareness; 
 
+            private Builder() {
+            } 
+
+            private Builder(SchedulerSpec model) {
+                this.enableTopologyAwareness = model.enableTopologyAwareness;
+            } 
+
             /**
-             * EnableTopologyAwareness.
+             * <p>Specifies whether to enable the topology awareness feature. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableTopologyAwareness(Boolean enableTopologyAwareness) {
                 this.enableTopologyAwareness = enableTopologyAwareness;

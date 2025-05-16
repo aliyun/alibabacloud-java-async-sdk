@@ -48,6 +48,10 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return additionalPackages
      */
@@ -89,6 +93,17 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstalledSoftwaresResponseBody model) {
+            this.additionalPackages = model.additionalPackages;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of installed software.</p>
@@ -252,6 +267,19 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
             private String status; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdditionalPackageInfos model) {
+                this.category = model.category;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.icon = model.icon;
+                this.name = model.name;
+                this.status = model.status;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The category into which the software falls.</p>
              * 
@@ -371,6 +399,13 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AdditionalPackageInfos> additionalPackageInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdditionalPackages model) {
+                this.additionalPackageInfos = model.additionalPackageInfos;
+            } 
 
             /**
              * AdditionalPackageInfos.

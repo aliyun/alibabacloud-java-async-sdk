@@ -52,6 +52,10 @@ public class ListQueuesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -101,6 +105,18 @@ public class ListQueuesResponseBody extends TeaModel {
         private java.util.List<Queues> queues; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListQueuesResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.queues = model.queues;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The cluster ID.</p>
@@ -227,6 +243,15 @@ public class ListQueuesResponseBody extends TeaModel {
             private Integer creatingCounts; 
             private Integer exceptionCounts; 
             private Integer runningCounts; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.creatingCounts = model.creatingCounts;
+                this.exceptionCounts = model.exceptionCounts;
+                this.runningCounts = model.runningCounts;
+            } 
 
             /**
              * <p>The number of compute nodes that are not ready.</p>
@@ -431,6 +456,24 @@ public class ListQueuesResponseBody extends TeaModel {
             private Integer totalCores; 
             private String updateTime; 
             private java.util.List<String> vSwitchIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Queues model) {
+                this.computeNodes = model.computeNodes;
+                this.createTime = model.createTime;
+                this.enableScaleIn = model.enableScaleIn;
+                this.enableScaleOut = model.enableScaleOut;
+                this.maxCount = model.maxCount;
+                this.maxCountPerCycle = model.maxCountPerCycle;
+                this.minCount = model.minCount;
+                this.nodes = model.nodes;
+                this.queueName = model.queueName;
+                this.totalCores = model.totalCores;
+                this.updateTime = model.updateTime;
+                this.vSwitchIds = model.vSwitchIds;
+            } 
 
             /**
              * <p>The hardware configurations of the compute nodes that are added in auto scale-outs. Up to five nodes are displayed.</p>

@@ -74,7 +74,7 @@ public class ListAvailableImagesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -338,6 +338,14 @@ public class ListAvailableImagesRequest extends Request {
             private String type; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(DirectoryService model) {
+                this.type = model.type;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The type of the domain account.</p>
              * 
@@ -410,6 +418,14 @@ public class ListAvailableImagesRequest extends Request {
         public static final class Builder {
             private String type; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scheduler model) {
+                this.type = model.type;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The scheduler type.</p>

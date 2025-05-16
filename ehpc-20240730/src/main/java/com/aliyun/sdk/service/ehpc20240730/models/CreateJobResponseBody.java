@@ -40,6 +40,10 @@ public class CreateJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -65,6 +69,15 @@ public class CreateJobResponseBody extends TeaModel {
         private String jobId; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateJobResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The job ID.</p>

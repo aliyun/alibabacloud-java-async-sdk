@@ -40,6 +40,10 @@ public class CreateNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceIds
      */
@@ -65,6 +69,15 @@ public class CreateNodesResponseBody extends TeaModel {
         private java.util.List<String> instanceIds; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNodesResponseBody model) {
+            this.instanceIds = model.instanceIds;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The IDs of the compute nodes to be created.</p>

@@ -41,6 +41,10 @@ public class InstallAddonResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addonId
      */
@@ -66,6 +70,15 @@ public class InstallAddonResponseBody extends TeaModel {
         private String addonId; 
         private String clusterId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(InstallAddonResponseBody model) {
+            this.addonId = model.addonId;
+            this.clusterId = model.clusterId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The addon ID.</p>

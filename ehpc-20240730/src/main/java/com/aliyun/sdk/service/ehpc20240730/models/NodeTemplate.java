@@ -80,6 +80,10 @@ public class NodeTemplate extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoRenew
      */
@@ -185,6 +189,25 @@ public class NodeTemplate extends TeaModel {
         private Float spotPriceLimit; 
         private String spotStrategy; 
         private SystemDisk systemDisk; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeTemplate model) {
+            this.autoRenew = model.autoRenew;
+            this.autoRenewPeriod = model.autoRenewPeriod;
+            this.dataDisks = model.dataDisks;
+            this.duration = model.duration;
+            this.enableHT = model.enableHT;
+            this.imageId = model.imageId;
+            this.instanceChargeType = model.instanceChargeType;
+            this.instanceType = model.instanceType;
+            this.period = model.period;
+            this.periodUnit = model.periodUnit;
+            this.spotPriceLimit = model.spotPriceLimit;
+            this.spotStrategy = model.spotStrategy;
+            this.systemDisk = model.systemDisk;
+        } 
 
         /**
          * AutoRenew.
@@ -400,6 +423,19 @@ public class NodeTemplate extends TeaModel {
             private Integer size; 
             private String snapshotId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisks model) {
+                this.category = model.category;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.device = model.device;
+                this.level = model.level;
+                this.mountDir = model.mountDir;
+                this.size = model.size;
+                this.snapshotId = model.snapshotId;
+            } 
+
             /**
              * Category.
              */
@@ -518,6 +554,15 @@ public class NodeTemplate extends TeaModel {
             private String category; 
             private String level; 
             private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.category = model.category;
+                this.level = model.level;
+                this.size = model.size;
+            } 
 
             /**
              * Category.

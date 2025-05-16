@@ -40,6 +40,10 @@ public class DeleteClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DeleteClusterResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteClusterResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The request ID.</p>

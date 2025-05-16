@@ -36,6 +36,10 @@ public class GetAddonResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addon
      */
@@ -54,8 +58,16 @@ public class GetAddonResponseBody extends TeaModel {
         private Addon addon; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetAddonResponseBody model) {
+            this.addon = model.addon;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The details about the addon.</p>
+         * <p>The information about the addon.</p>
          */
         public Builder addon(Addon addon) {
             this.addon = addon;
@@ -170,6 +182,18 @@ public class GetAddonResponseBody extends TeaModel {
             private String eipInstanceId; 
             private String instanceChargeType; 
             private String internetChargeType; 
+
+            private Builder() {
+            } 
+
+            private Builder(EipResource model) {
+                this.autoCreate = model.autoCreate;
+                this.bandwidth = model.bandwidth;
+                this.eipAddress = model.eipAddress;
+                this.eipInstanceId = model.eipInstanceId;
+                this.instanceChargeType = model.instanceChargeType;
+                this.internetChargeType = model.internetChargeType;
+            } 
 
             /**
              * <p>Indicates whether the EIP is automatically created.</p>
@@ -298,6 +322,14 @@ public class GetAddonResponseBody extends TeaModel {
             private java.util.List<AddonNodeTemplate> ecsResources; 
             private EipResource eipResource; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourcesSpec model) {
+                this.ecsResources = model.ecsResources;
+                this.eipResource = model.eipResource;
+            } 
+
             /**
              * <p>The Elastic Compute Service (ECS) resource configurations of the addon.</p>
              */
@@ -403,6 +435,17 @@ public class GetAddonResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(InputParams model) {
+                this.helpText = model.helpText;
+                this.label = model.label;
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The help information of the parameter.</p>
@@ -521,6 +564,15 @@ public class GetAddonResponseBody extends TeaModel {
             private String ipProtocol; 
             private Float port; 
             private String sourceCidrIp; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkACL model) {
+                this.ipProtocol = model.ipProtocol;
+                this.port = model.port;
+                this.sourceCidrIp = model.sourceCidrIp;
+            } 
 
             /**
              * <p>The protocol type. Valid values:</p>
@@ -648,6 +700,17 @@ public class GetAddonResponseBody extends TeaModel {
             private String serviceAccessType; 
             private String serviceAccessUrl; 
             private String serviceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServicesSpec model) {
+                this.inputParams = model.inputParams;
+                this.networkACL = model.networkACL;
+                this.serviceAccessType = model.serviceAccessType;
+                this.serviceAccessUrl = model.serviceAccessUrl;
+                this.serviceName = model.serviceName;
+            } 
 
             /**
              * <p>The parameter configurations of the service.</p>
@@ -848,6 +911,22 @@ public class GetAddonResponseBody extends TeaModel {
             private java.util.List<ServicesSpec> servicesSpec; 
             private String status; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Addon model) {
+                this.addonId = model.addonId;
+                this.description = model.description;
+                this.icon = model.icon;
+                this.installTime = model.installTime;
+                this.label = model.label;
+                this.name = model.name;
+                this.resourcesSpec = model.resourcesSpec;
+                this.servicesSpec = model.servicesSpec;
+                this.status = model.status;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The addon ID.</p>

@@ -39,7 +39,7 @@ public class UpdateNodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -144,6 +144,14 @@ public class UpdateNodesRequest extends Request {
         public static final class Builder {
             private String instanceId; 
             private Boolean keepAlive; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.instanceId = model.instanceId;
+                this.keepAlive = model.keepAlive;
+            } 
 
             /**
              * <p>The instance ID of the compute node.</p>

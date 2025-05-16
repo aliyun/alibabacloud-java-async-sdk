@@ -48,6 +48,10 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addons
      */
@@ -89,6 +93,17 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAddonTemplatesResponseBody model) {
+            this.addons = model.addons;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the addon templates.</p>
@@ -217,6 +232,16 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
             private String label; 
             private String name; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Addons model) {
+                this.description = model.description;
+                this.label = model.label;
+                this.name = model.name;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The addon description.</p>

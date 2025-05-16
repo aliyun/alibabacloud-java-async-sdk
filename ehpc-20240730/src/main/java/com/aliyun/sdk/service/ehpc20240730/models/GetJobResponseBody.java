@@ -40,6 +40,10 @@ public class GetJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobInfo
      */
@@ -65,6 +69,15 @@ public class GetJobResponseBody extends TeaModel {
         private JobInfo jobInfo; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetJobResponseBody model) {
+            this.jobInfo = model.jobInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The job details.</p>
@@ -174,6 +187,16 @@ public class GetJobResponseBody extends TeaModel {
             private String memory; 
             private String nodes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.cores = model.cores;
+                this.gpus = model.gpus;
+                this.memory = model.memory;
+                this.nodes = model.nodes;
+            } 
+
             /**
              * <p>The number of vCPUs used by the job on each node.</p>
              * 
@@ -281,6 +304,15 @@ public class GetJobResponseBody extends TeaModel {
             private String memory; 
             private String nodes; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourcesUsed model) {
+                this.cores = model.cores;
+                this.memory = model.memory;
+                this.nodes = model.nodes;
+            } 
+
             /**
              * <p>The number of vCPUs used by the job on each node.</p>
              * 
@@ -364,6 +396,14 @@ public class GetJobResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the environment variable.</p>
@@ -653,6 +693,32 @@ public class GetJobResponseBody extends TeaModel {
             private String startTime; 
             private String state; 
             private java.util.List<Variables> variables; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobInfo model) {
+                this.arrayJobId = model.arrayJobId;
+                this.arrayJobSubId = model.arrayJobSubId;
+                this.arrayRequest = model.arrayRequest;
+                this.commandLine = model.commandLine;
+                this.createTime = model.createTime;
+                this.errorLog = model.errorLog;
+                this.extraInfo = model.extraInfo;
+                this.jobId = model.jobId;
+                this.jobName = model.jobName;
+                this.jobQueue = model.jobQueue;
+                this.lastModifyTime = model.lastModifyTime;
+                this.nodeList = model.nodeList;
+                this.outputLog = model.outputLog;
+                this.priority = model.priority;
+                this.resources = model.resources;
+                this.resourcesUsed = model.resourcesUsed;
+                this.runasUser = model.runasUser;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.variables = model.variables;
+            } 
 
             /**
              * <p>The parent job ID. If the return value is a non-empty string, the job is an array job.</p>

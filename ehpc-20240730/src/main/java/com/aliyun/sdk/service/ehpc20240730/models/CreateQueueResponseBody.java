@@ -36,6 +36,10 @@ public class CreateQueueResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -53,6 +57,14 @@ public class CreateQueueResponseBody extends TeaModel {
     public static final class Builder {
         private String name; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateQueueResponseBody model) {
+            this.name = model.name;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The name of the created queue.</p>

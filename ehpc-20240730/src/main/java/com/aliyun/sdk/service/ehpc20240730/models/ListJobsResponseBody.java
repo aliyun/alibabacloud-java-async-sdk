@@ -52,6 +52,10 @@ public class ListJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobs
      */
@@ -101,6 +105,18 @@ public class ListJobsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListJobsResponseBody model) {
+            this.jobs = model.jobs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The jobs.</p>
@@ -243,6 +259,16 @@ public class ListJobsResponseBody extends TeaModel {
             private String memory; 
             private String nodes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.cores = model.cores;
+                this.gpus = model.gpus;
+                this.memory = model.memory;
+                this.nodes = model.nodes;
+            } 
+
             /**
              * <p>The number of vCPUs that were used to run the job.</p>
              * 
@@ -362,11 +388,21 @@ public class ListJobsResponseBody extends TeaModel {
             private String memory; 
             private String nodes; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourcesActualOccupied model) {
+                this.cores = model.cores;
+                this.gpus = model.gpus;
+                this.memory = model.memory;
+                this.nodes = model.nodes;
+            } 
+
             /**
-             * <p>The number of vCPUs that were used to run the job.</p>
+             * <p>Number of CPU cores.</p>
              * 
              * <strong>example:</strong>
-             * <p>6</p>
+             * <p>4</p>
              */
             public Builder cores(String cores) {
                 this.cores = cores;
@@ -374,7 +410,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of GPUs that were used to run the job.</p>
+             * <p>Number of CPUs</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -385,10 +421,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of memory that was used to run the job.</p>
+             * <p>Number of memory.</p>
              * 
              * <strong>example:</strong>
-             * <p>1536MB</p>
+             * <p>982MB</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -396,10 +432,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of compute nodes that were used to run the job.</p>
+             * <p>Number of compute nodes.</p>
              * 
              * <strong>example:</strong>
-             * <p>3</p>
+             * <p>2</p>
              */
             public Builder nodes(String nodes) {
                 this.nodes = nodes;
@@ -649,6 +685,30 @@ public class ListJobsResponseBody extends TeaModel {
             private String submitTime; 
             private String variables; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobSpec model) {
+                this.arrayJobId = model.arrayJobId;
+                this.arrayJobSubId = model.arrayJobSubId;
+                this.arrayRequest = model.arrayRequest;
+                this.comment = model.comment;
+                this.id = model.id;
+                this.jobQueue = model.jobQueue;
+                this.lastModifyTime = model.lastModifyTime;
+                this.nodeList = model.nodeList;
+                this.priority = model.priority;
+                this.resources = model.resources;
+                this.resourcesActualOccupied = model.resourcesActualOccupied;
+                this.runasUser = model.runasUser;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.stderrPath = model.stderrPath;
+                this.stdoutPath = model.stdoutPath;
+                this.submitTime = model.submitTime;
+                this.variables = model.variables;
+            } 
+
             /**
              * <p>The array job ID.</p>
              * 
@@ -761,7 +821,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourcesActualOccupied.
+             * <p>Actual resource usage of the job program</p>
              */
             public Builder resourcesActualOccupied(ResourcesActualOccupied resourcesActualOccupied) {
                 this.resourcesActualOccupied = resourcesActualOccupied;
@@ -780,7 +840,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Job start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1724122486</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -898,6 +961,14 @@ public class ListJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String jobName; 
             private JobSpec jobSpec; 
+
+            private Builder() {
+            } 
+
+            private Builder(Jobs model) {
+                this.jobName = model.jobName;
+                this.jobSpec = model.jobSpec;
+            } 
 
             /**
              * <p>The job name.</p>

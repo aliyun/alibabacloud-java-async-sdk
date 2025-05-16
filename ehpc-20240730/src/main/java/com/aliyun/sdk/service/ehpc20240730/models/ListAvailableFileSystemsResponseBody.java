@@ -48,6 +48,10 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileSystemList
      */
@@ -89,6 +93,17 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAvailableFileSystemsResponseBody model) {
+            this.fileSystemList = model.fileSystemList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The file systems.</p>
@@ -227,6 +242,17 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             private String status; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MountTargetList model) {
+                this.mountTargetDomain = model.mountTargetDomain;
+                this.networkType = model.networkType;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The address of the mount target.</p>
@@ -414,6 +440,20 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             private String status; 
             private String storageType; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileSystemList model) {
+                this.createTime = model.createTime;
+                this.fileSystemId = model.fileSystemId;
+                this.fileSystemType = model.fileSystemType;
+                this.mountTargetList = model.mountTargetList;
+                this.protocolType = model.protocolType;
+                this.status = model.status;
+                this.storageType = model.storageType;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The time when the file system was created.</p>

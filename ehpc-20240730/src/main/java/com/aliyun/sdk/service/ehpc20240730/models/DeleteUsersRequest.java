@@ -41,7 +41,7 @@ public class DeleteUsersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,6 +137,13 @@ public class DeleteUsersRequest extends Request {
 
         public static final class Builder {
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The name of user N that you want to delete.</p>

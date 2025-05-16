@@ -39,7 +39,7 @@ public class UpdateQueueRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -315,6 +315,28 @@ public class UpdateQueueRequest extends Request {
             private String reservedNodePoolId; 
             private java.util.List<String> vSwitchIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(Queue model) {
+                this.allocationStrategy = model.allocationStrategy;
+                this.computeNodes = model.computeNodes;
+                this.enableScaleIn = model.enableScaleIn;
+                this.enableScaleOut = model.enableScaleOut;
+                this.hostnamePrefix = model.hostnamePrefix;
+                this.hostnameSuffix = model.hostnameSuffix;
+                this.initialCount = model.initialCount;
+                this.interConnect = model.interConnect;
+                this.keepAliveNodes = model.keepAliveNodes;
+                this.maxCount = model.maxCount;
+                this.maxCountPerCycle = model.maxCountPerCycle;
+                this.minCount = model.minCount;
+                this.queueName = model.queueName;
+                this.ramRole = model.ramRole;
+                this.reservedNodePoolId = model.reservedNodePoolId;
+                this.vSwitchIds = model.vSwitchIds;
+            } 
+
             /**
              * <p>The policy based on which instance types are selected for compute nodes during auto scale-outs. Valid values:</p>
              * <ul>
@@ -355,8 +377,8 @@ public class UpdateQueueRequest extends Request {
             /**
              * <p>Specifies whether to enable auto scale-out for the queue. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: deletion protection is enabled.</li>
+             * <li>false: disables ASM.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -368,7 +390,7 @@ public class UpdateQueueRequest extends Request {
             }
 
             /**
-             * <p>The hostname prefix of the compute nodes in the queue.</p>
+             * <p>The hostname prefix of the added compute nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>compute</p>

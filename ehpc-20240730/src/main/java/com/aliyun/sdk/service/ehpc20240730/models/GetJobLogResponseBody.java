@@ -56,6 +56,10 @@ public class GetJobLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -113,6 +117,19 @@ public class GetJobLogResponseBody extends TeaModel {
         private String stdoutLog; 
         private String stdoutLogSize; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetJobLogResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+            this.stderrLog = model.stderrLog;
+            this.stderrLogSize = model.stderrLogSize;
+            this.stdoutLog = model.stdoutLog;
+            this.stdoutLogSize = model.stdoutLogSize;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The job ID.</p>

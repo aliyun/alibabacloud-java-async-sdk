@@ -59,7 +59,7 @@ public class ListSoftwaresRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -247,6 +247,14 @@ public class ListSoftwaresRequest extends Request {
         public static final class Builder {
             private String architecture; 
             private String osTag; 
+
+            private Builder() {
+            } 
+
+            private Builder(OsInfos model) {
+                this.architecture = model.architecture;
+                this.osTag = model.osTag;
+            } 
 
             /**
              * <p>The OS architecture. Valid values:</p>

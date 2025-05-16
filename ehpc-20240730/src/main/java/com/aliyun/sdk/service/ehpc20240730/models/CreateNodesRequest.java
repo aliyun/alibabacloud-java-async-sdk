@@ -89,7 +89,7 @@ public class CreateNodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -253,7 +253,10 @@ public class CreateNodesRequest extends Request {
         }
 
         /**
-         * DeploymentSetId.
+         * <p>Deployment set ID. You can obtain the deployment set ID through <a href="https://help.aliyun.com/document_detail/91313.html">DescribeDeploymentSets</a>. Currently, only deployment sets with a low network latency strategy are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-bp1frxuzdg87zh4pzq****</p>
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);
@@ -338,7 +341,10 @@ public class CreateNodesRequest extends Request {
         }
 
         /**
-         * ReservedNodePoolId.
+         * <p>Preset node pool ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rnp-756vlp7a</p>
          */
         public Builder reservedNodePoolId(String reservedNodePoolId) {
             this.putQueryParameter("ReservedNodePoolId", reservedNodePoolId);

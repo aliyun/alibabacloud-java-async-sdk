@@ -21,6 +21,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>The ECS instances must meet the following requirements:</p>
+     * <ul>
+     * <li>The ECS instances do not belong to any E-HPC cluster.</li>
+     * <li>The ECS instances reside in the same virtual private cloud (VPC) as the cluster.</li>
+     * <li>The ECS instances are in the Stopped state.
+     * Take of the following limits:</li>
+     * <li>You can specify multiple instance IDs to add them at a time. However, the instances must be of the same type.</li>
+     * <li>When an instance is added to the cluster, <a href="https://help.aliyun.com/zh/ecs/user-guide/re-initialize-a-system-disk">the system disk is reset</a> by using the image specified by the input parameters.</li>
+     * <li>If the instance has data disks, they are not automatically created and mounted after the instance is added.</li>
+     * <li>The hostname of the instance remains the same. Therefore, you must ensure that the hostname of the instance to be added is different from the hostname of an existing node in the cluster.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AttachNodes  AttachNodesRequest
+     * @return AttachNodesResponse
+     */
+    CompletableFuture<AttachNodesResponse> attachNodes(AttachNodesRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <p>When you call this operation, take note of the following items:</p>
      * <ul>
@@ -183,6 +202,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallAddonResponse> installAddon(InstallAddonRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Interface Description</h2>
+     * <p>When calling this interface, please note the following:</p>
+     * <ul>
+     * <li>The cluster status must be <code>Running</code>. </li>
+     * <li>If the cluster series is <code>Serverless</code>, ensure that there is at least one login node or compute node in the cluster; otherwise, software cannot be added to the target cluster.</li>
+     * </ul>
+     * 
      * @param request the request parameters of InstallSoftwares  InstallSoftwaresRequest
      * @return InstallSoftwaresResponse
      */
@@ -291,6 +318,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnInstallAddonResponse> unInstallAddon(UnInstallAddonRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Interface Description</h2>
+     * <p>When calling this interface, please note:
+     * The cluster status must be <code>Running</code>.</p>
+     * 
      * @param request the request parameters of UninstallSoftwares  UninstallSoftwaresRequest
      * @return UninstallSoftwaresResponse
      */

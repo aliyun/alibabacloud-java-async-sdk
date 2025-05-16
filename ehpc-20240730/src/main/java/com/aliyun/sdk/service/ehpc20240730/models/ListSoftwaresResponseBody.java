@@ -48,6 +48,10 @@ public class ListSoftwaresResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return additionalPackages
      */
@@ -89,6 +93,17 @@ public class ListSoftwaresResponseBody extends TeaModel {
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSoftwaresResponseBody model) {
+            this.additionalPackages = model.additionalPackages;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the software that can be installed in the cluster.</p>
@@ -192,6 +207,14 @@ public class ListSoftwaresResponseBody extends TeaModel {
             private String architecture; 
             private String osTag; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportOsInfos model) {
+                this.architecture = model.architecture;
+                this.osTag = model.osTag;
+            } 
+
             /**
              * <p>The OS architecture. Valid values:</p>
              * <ul>
@@ -256,6 +279,13 @@ public class ListSoftwaresResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SupportOsInfos> supportOsInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportOs model) {
+                this.supportOsInfos = model.supportOsInfos;
+            } 
 
             /**
              * SupportOsInfos.
@@ -328,6 +358,15 @@ public class ListSoftwaresResponseBody extends TeaModel {
             private SupportOs supportOs; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(VersionInfos model) {
+                this.latest = model.latest;
+                this.supportOs = model.supportOs;
+                this.version = model.version;
+            } 
+
             /**
              * <p>Indicates whether the version is the latest.</p>
              * 
@@ -396,6 +435,13 @@ public class ListSoftwaresResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VersionInfos> versionInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(Versions model) {
+                this.versionInfos = model.versionInfos;
+            } 
 
             /**
              * VersionInfos.
@@ -492,6 +538,17 @@ public class ListSoftwaresResponseBody extends TeaModel {
             private String name; 
             private Versions versions; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdditionalPackageInfos model) {
+                this.category = model.category;
+                this.description = model.description;
+                this.icon = model.icon;
+                this.name = model.name;
+                this.versions = model.versions;
+            } 
+
             /**
              * <p>The application category.</p>
              * 
@@ -579,6 +636,13 @@ public class ListSoftwaresResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AdditionalPackageInfos> additionalPackageInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdditionalPackages model) {
+                this.additionalPackageInfos = model.additionalPackageInfos;
+            } 
 
             /**
              * AdditionalPackageInfos.

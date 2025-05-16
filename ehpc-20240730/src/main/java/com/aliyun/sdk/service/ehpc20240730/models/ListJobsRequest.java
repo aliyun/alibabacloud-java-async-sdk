@@ -50,7 +50,7 @@ public class ListJobsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -220,8 +220,20 @@ public class ListJobsRequest extends Request {
             private String option; 
             private String threshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(Diagnosis model) {
+                this.operator = model.operator;
+                this.option = model.option;
+                this.threshold = model.threshold;
+            } 
+
             /**
-             * Operator.
+             * <p>Job diagnosis threshold comparator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>greater</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -229,7 +241,10 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * Option.
+             * <p>Job diagnosis and analysis metrics</p>
+             * 
+             * <strong>example:</strong>
+             * <p>run_duration</p>
              */
             public Builder option(String option) {
                 this.option = option;
@@ -237,7 +252,10 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * Threshold.
+             * <p>Job diagnosis threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -306,6 +324,15 @@ public class ListJobsRequest extends Request {
             private String executeOrder; 
             private String pendOrder; 
             private String submitOrder; 
+
+            private Builder() {
+            } 
+
+            private Builder(SortBy model) {
+                this.executeOrder = model.executeOrder;
+                this.pendOrder = model.pendOrder;
+                this.submitOrder = model.submitOrder;
+            } 
 
             /**
              * <p>The order in which jobs are sorted based on their execution time. Valid values:</p>
@@ -490,6 +517,21 @@ public class ListJobsRequest extends Request {
             private SortBy sortBy; 
             private java.util.List<String> users; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobFilter model) {
+                this.createTimeEnd = model.createTimeEnd;
+                this.createTimeStart = model.createTimeStart;
+                this.diagnosis = model.diagnosis;
+                this.jobName = model.jobName;
+                this.jobStatus = model.jobStatus;
+                this.nodes = model.nodes;
+                this.queues = model.queues;
+                this.sortBy = model.sortBy;
+                this.users = model.users;
+            } 
+
             /**
              * <p>The time when the job was last updated. The value is a UNIX timestamp representing the number of seconds that have elapsed since 1970-01-01T00:00:00Z.</p>
              * 
@@ -513,7 +555,7 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * Diagnosis.
+             * <p>Job diagnosis and analysis list.</p>
              */
             public Builder diagnosis(java.util.List<Diagnosis> diagnosis) {
                 this.diagnosis = diagnosis;

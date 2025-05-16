@@ -36,6 +36,10 @@ public class GetQueueResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return queue
      */
@@ -53,6 +57,14 @@ public class GetQueueResponseBody extends TeaModel {
     public static final class Builder {
         private Queue queue; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetQueueResponseBody model) {
+            this.queue = model.queue;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queue configurations.</p>
@@ -292,6 +304,28 @@ public class GetQueueResponseBody extends TeaModel {
             private String reservedNodePoolId; 
             private java.util.List<String> vSwitchIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(Queue model) {
+                this.allocationStrategy = model.allocationStrategy;
+                this.computeNodes = model.computeNodes;
+                this.enableScaleIn = model.enableScaleIn;
+                this.enableScaleOut = model.enableScaleOut;
+                this.hostnamePrefix = model.hostnamePrefix;
+                this.hostnameSuffix = model.hostnameSuffix;
+                this.initialCount = model.initialCount;
+                this.interConnect = model.interConnect;
+                this.keepAliveNodes = model.keepAliveNodes;
+                this.maxCount = model.maxCount;
+                this.maxCountPerCycle = model.maxCountPerCycle;
+                this.minCount = model.minCount;
+                this.queueName = model.queueName;
+                this.ramRole = model.ramRole;
+                this.reservedNodePoolId = model.reservedNodePoolId;
+                this.vSwitchIds = model.vSwitchIds;
+            } 
+
             /**
              * <p>The auto scale-out policy of the queue.</p>
              * 
@@ -454,7 +488,10 @@ public class GetQueueResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedNodePoolId.
+             * <p>Preset node pool ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rnp-756vlp7a</p>
              */
             public Builder reservedNodePoolId(String reservedNodePoolId) {
                 this.reservedNodePoolId = reservedNodePoolId;

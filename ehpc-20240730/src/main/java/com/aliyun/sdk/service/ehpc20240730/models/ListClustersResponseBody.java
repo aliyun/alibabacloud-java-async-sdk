@@ -48,6 +48,10 @@ public class ListClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusters
      */
@@ -89,6 +93,17 @@ public class ListClustersResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClustersResponseBody model) {
+            this.clusters = model.clusters;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of clusters.</p>
@@ -192,6 +207,14 @@ public class ListClustersResponseBody extends TeaModel {
             private String name; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdditionalPackages model) {
+                this.name = model.name;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The software name.</p>
              * 
@@ -264,6 +287,14 @@ public class ListClustersResponseBody extends TeaModel {
         public static final class Builder {
             private String ecsInstanceId; 
             private String eipInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcesSpec model) {
+                this.ecsInstanceId = model.ecsInstanceId;
+                this.eipInstanceId = model.eipInstanceId;
+            } 
 
             /**
              * <p>The instance ID.</p>
@@ -350,6 +381,15 @@ public class ListClustersResponseBody extends TeaModel {
             private String serviceAccessType; 
             private String serviceAccessUrl; 
             private String serviceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServicesSpec model) {
+                this.serviceAccessType = model.serviceAccessType;
+                this.serviceAccessUrl = model.serviceAccessUrl;
+                this.serviceName = model.serviceName;
+            } 
 
             /**
              * <p>The service access type.</p>
@@ -510,6 +550,20 @@ public class ListClustersResponseBody extends TeaModel {
             private String status; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Addons model) {
+                this.addonId = model.addonId;
+                this.description = model.description;
+                this.label = model.label;
+                this.name = model.name;
+                this.resourcesSpec = model.resourcesSpec;
+                this.servicesSpec = model.servicesSpec;
+                this.status = model.status;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The addon ID.</p>
              * 
@@ -639,6 +693,14 @@ public class ListClustersResponseBody extends TeaModel {
             private String args; 
             private String script; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterCustomConfiguration model) {
+                this.args = model.args;
+                this.script = model.script;
+            } 
+
             /**
              * <p>The parameters of the post-processing script.</p>
              * 
@@ -711,6 +773,14 @@ public class ListClustersResponseBody extends TeaModel {
         public static final class Builder {
             private String type; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(DNS model) {
+                this.type = model.type;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The resolution type.</p>
@@ -785,6 +855,14 @@ public class ListClustersResponseBody extends TeaModel {
             private String type; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(DirectoryService model) {
+                this.type = model.type;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The type of the domain account.</p>
              * 
@@ -857,6 +935,14 @@ public class ListClustersResponseBody extends TeaModel {
         public static final class Builder {
             private String type; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scheduler model) {
+                this.type = model.type;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The scheduler type.</p>
@@ -942,6 +1028,15 @@ public class ListClustersResponseBody extends TeaModel {
             private DNS DNS; 
             private DirectoryService directoryService; 
             private Scheduler scheduler; 
+
+            private Builder() {
+            } 
+
+            private Builder(Manager model) {
+                this.DNS = model.DNS;
+                this.directoryService = model.directoryService;
+                this.scheduler = model.scheduler;
+            } 
 
             /**
              * <p>The configurations of the domain name resolution service.</p>
@@ -1030,6 +1125,15 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer creatingCounts; 
             private Integer runningCounts; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.abnormalCounts = model.abnormalCounts;
+                this.creatingCounts = model.creatingCounts;
+                this.runningCounts = model.runningCounts;
+            } 
+
             /**
              * <p>The number of malfunctioning compute nodes.</p>
              * 
@@ -1113,6 +1217,14 @@ public class ListClustersResponseBody extends TeaModel {
         public static final class Builder {
             private Integer normalCounts; 
             private Integer sudoCounts; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.normalCounts = model.normalCounts;
+                this.sudoCounts = model.sudoCounts;
+            } 
 
             /**
              * <p>The number of ordinary users.</p>
@@ -1450,6 +1562,36 @@ public class ListClustersResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String securityGroupId; 
             private Users users; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clusters model) {
+                this.additionalPackages = model.additionalPackages;
+                this.addons = model.addons;
+                this.clusterCategory = model.clusterCategory;
+                this.clusterCreateTime = model.clusterCreateTime;
+                this.clusterCredentials = model.clusterCredentials;
+                this.clusterCustomConfiguration = model.clusterCustomConfiguration;
+                this.clusterDescription = model.clusterDescription;
+                this.clusterId = model.clusterId;
+                this.clusterMode = model.clusterMode;
+                this.clusterModifyTime = model.clusterModifyTime;
+                this.clusterName = model.clusterName;
+                this.clusterStatus = model.clusterStatus;
+                this.clusterUsedCoreTime = model.clusterUsedCoreTime;
+                this.clusterVSwitchId = model.clusterVSwitchId;
+                this.clusterVpcId = model.clusterVpcId;
+                this.deletionProtection = model.deletionProtection;
+                this.ehpcVersion = model.ehpcVersion;
+                this.manager = model.manager;
+                this.maxCoreCount = model.maxCoreCount;
+                this.maxCount = model.maxCount;
+                this.nodes = model.nodes;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityGroupId = model.securityGroupId;
+                this.users = model.users;
+            } 
 
             /**
              * <p>The information about installed software in the cluster.</p>

@@ -45,7 +45,7 @@ public class CreateJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -197,6 +197,16 @@ public class CreateJobRequest extends Request {
             private Integer gpus; 
             private String memory; 
             private Integer nodes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.cores = model.cores;
+                this.gpus = model.gpus;
+                this.memory = model.memory;
+                this.nodes = model.nodes;
+            } 
 
             /**
              * <p>The number of vCPUs to be allocated to each compute node.</p>
@@ -413,6 +423,24 @@ public class CreateJobRequest extends Request {
             private String stdoutPath; 
             private String variables; 
             private String wallTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobSpec model) {
+                this.arrayRequest = model.arrayRequest;
+                this.commandLine = model.commandLine;
+                this.jobQueue = model.jobQueue;
+                this.postCmdLine = model.postCmdLine;
+                this.priority = model.priority;
+                this.resources = model.resources;
+                this.runasUser = model.runasUser;
+                this.runasUserPassword = model.runasUserPassword;
+                this.stderrPath = model.stderrPath;
+                this.stdoutPath = model.stdoutPath;
+                this.variables = model.variables;
+                this.wallTime = model.wallTime;
+            } 
 
             /**
              * <p>The jobs in the queue.</p>

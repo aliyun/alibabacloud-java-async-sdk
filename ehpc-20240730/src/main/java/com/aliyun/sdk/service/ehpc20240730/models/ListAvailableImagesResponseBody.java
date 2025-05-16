@@ -52,6 +52,10 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return images
      */
@@ -101,6 +105,18 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAvailableImagesResponseBody model) {
+            this.images = model.images;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the images.</p>
@@ -318,6 +334,22 @@ public class ListAvailableImagesResponseBody extends TeaModel {
             private String OSNameEn; 
             private String platform; 
             private String size; 
+
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.architecture = model.architecture;
+                this.bootMode = model.bootMode;
+                this.description = model.description;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageOwnerAlias = model.imageOwnerAlias;
+                this.OSName = model.OSName;
+                this.OSNameEn = model.OSNameEn;
+                this.platform = model.platform;
+                this.size = model.size;
+            } 
 
             /**
              * <p>The OS architecture of the image. Valid values:</p>

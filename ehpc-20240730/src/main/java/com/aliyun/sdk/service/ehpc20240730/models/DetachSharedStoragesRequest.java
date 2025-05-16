@@ -41,7 +41,7 @@ public class DetachSharedStoragesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -138,6 +138,13 @@ public class DetachSharedStoragesRequest extends Request {
 
         public static final class Builder {
             private String mountDirectory; 
+
+            private Builder() {
+            } 
+
+            private Builder(SharedStorages model) {
+                this.mountDirectory = model.mountDirectory;
+            } 
 
             /**
              * <p>The local mount directory of the mounted file system.</p>

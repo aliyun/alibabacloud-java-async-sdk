@@ -52,6 +52,10 @@ public class SharedStorageTemplate extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileSystemId
      */
@@ -101,6 +105,18 @@ public class SharedStorageTemplate extends TeaModel {
         private String mountTargetDomain; 
         private String NASDirectory; 
         private String protocolType; 
+
+        private Builder() {
+        } 
+
+        private Builder(SharedStorageTemplate model) {
+            this.fileSystemId = model.fileSystemId;
+            this.mountDirectory = model.mountDirectory;
+            this.mountOptions = model.mountOptions;
+            this.mountTargetDomain = model.mountTargetDomain;
+            this.NASDirectory = model.NASDirectory;
+            this.protocolType = model.protocolType;
+        } 
 
         /**
          * FileSystemId.

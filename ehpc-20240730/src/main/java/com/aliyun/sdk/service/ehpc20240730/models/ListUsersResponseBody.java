@@ -48,6 +48,10 @@ public class ListUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListUsersResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private Users users; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUsersResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.users = model.users;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -228,6 +243,17 @@ public class ListUsersResponseBody extends TeaModel {
             private String userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.addTime = model.addTime;
+                this.group = model.group;
+                this.groupId = model.groupId;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The time when the user was first added.</p>
              * 
@@ -323,6 +349,13 @@ public class ListUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<UserInfo> userInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.userInfo = model.userInfo;
+            } 
 
             /**
              * UserInfo.

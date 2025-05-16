@@ -100,6 +100,10 @@ public class AddonNodeTemplate extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoRenew
      */
@@ -237,6 +241,29 @@ public class AddonNodeTemplate extends TeaModel {
         private Float spotPriceLimit; 
         private String spotStrategy; 
         private SystemDisk systemDisk; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddonNodeTemplate model) {
+            this.autoRenew = model.autoRenew;
+            this.autoRenewPeriod = model.autoRenewPeriod;
+            this.dataDisks = model.dataDisks;
+            this.duration = model.duration;
+            this.enableHT = model.enableHT;
+            this.imageId = model.imageId;
+            this.instanceChargeType = model.instanceChargeType;
+            this.instanceId = model.instanceId;
+            this.instanceType = model.instanceType;
+            this.osName = model.osName;
+            this.osNameEN = model.osNameEN;
+            this.period = model.period;
+            this.periodUnit = model.periodUnit;
+            this.privateIpAddress = model.privateIpAddress;
+            this.spotPriceLimit = model.spotPriceLimit;
+            this.spotStrategy = model.spotStrategy;
+            this.systemDisk = model.systemDisk;
+        } 
 
         /**
          * AutoRenew.
@@ -460,6 +487,16 @@ public class AddonNodeTemplate extends TeaModel {
             private String level; 
             private Integer size; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataDisks model) {
+                this.category = model.category;
+                this.deleteWithInstance = model.deleteWithInstance;
+                this.level = model.level;
+                this.size = model.size;
+            } 
+
             /**
              * Category.
              */
@@ -554,6 +591,15 @@ public class AddonNodeTemplate extends TeaModel {
             private String category; 
             private String level; 
             private Integer size; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.category = model.category;
+                this.level = model.level;
+                this.size = model.size;
+            } 
 
             /**
              * Category.

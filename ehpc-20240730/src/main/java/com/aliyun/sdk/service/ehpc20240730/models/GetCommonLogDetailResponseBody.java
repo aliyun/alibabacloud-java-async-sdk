@@ -56,6 +56,10 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return action
      */
@@ -113,6 +117,19 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         private String operatorUid; 
         private String requestId; 
         private String uid; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCommonLogDetailResponseBody model) {
+            this.action = model.action;
+            this.clusterId = model.clusterId;
+            this.logDetail = model.logDetail;
+            this.logType = model.logType;
+            this.operatorUid = model.operatorUid;
+            this.requestId = model.requestId;
+            this.uid = model.uid;
+        } 
 
         /**
          * <p>The action name.</p>
@@ -298,6 +315,19 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
             private String target; 
             private String time; 
 
+            private Builder() {
+            } 
+
+            private Builder(Stages model) {
+                this.logLevel = model.logLevel;
+                this.message = model.message;
+                this.method = model.method;
+                this.requestId = model.requestId;
+                this.status = model.status;
+                this.target = model.target;
+                this.time = model.time;
+            } 
+
             /**
              * <p>The log level.</p>
              * <p>Valid values:</p>
@@ -436,6 +466,14 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String stageName; 
             private java.util.List<Stages> stages; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogDetail model) {
+                this.stageName = model.stageName;
+                this.stages = model.stages;
+            } 
 
             /**
              * <p>The stage name of the log.</p>

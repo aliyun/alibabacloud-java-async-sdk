@@ -40,7 +40,7 @@ public class CreateUsersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -170,6 +170,16 @@ public class CreateUsersRequest extends Request {
             private String group; 
             private String password; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.authKey = model.authKey;
+                this.group = model.group;
+                this.password = model.password;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The public key of the user.</p>

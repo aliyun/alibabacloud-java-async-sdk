@@ -93,6 +93,10 @@ public class QueueTemplate extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allocationStrategy
      */
@@ -222,6 +226,28 @@ public class QueueTemplate extends TeaModel {
         private String ramRole; 
         private String reservedNodePoolId; 
         private java.util.List<String> vSwitchIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueueTemplate model) {
+            this.allocationStrategy = model.allocationStrategy;
+            this.computeNodes = model.computeNodes;
+            this.enableScaleIn = model.enableScaleIn;
+            this.enableScaleOut = model.enableScaleOut;
+            this.hostnamePrefix = model.hostnamePrefix;
+            this.hostnameSuffix = model.hostnameSuffix;
+            this.initialCount = model.initialCount;
+            this.interConnect = model.interConnect;
+            this.keepAliveNodes = model.keepAliveNodes;
+            this.maxCount = model.maxCount;
+            this.maxCountPerCycle = model.maxCountPerCycle;
+            this.minCount = model.minCount;
+            this.queueName = model.queueName;
+            this.ramRole = model.ramRole;
+            this.reservedNodePoolId = model.reservedNodePoolId;
+            this.vSwitchIds = model.vSwitchIds;
+        } 
 
         /**
          * AllocationStrategy.
