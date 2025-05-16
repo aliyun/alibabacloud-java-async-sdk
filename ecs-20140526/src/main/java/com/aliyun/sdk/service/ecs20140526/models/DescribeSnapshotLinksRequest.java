@@ -30,6 +30,14 @@ public class DescribeSnapshotLinksRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -68,6 +76,8 @@ public class DescribeSnapshotLinksRequest extends Request {
         this.sourceRegionId = builder.sourceRegionId;
         this.diskIds = builder.diskIds;
         this.instanceId = builder.instanceId;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -110,6 +120,20 @@ public class DescribeSnapshotLinksRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -172,6 +196,8 @@ public class DescribeSnapshotLinksRequest extends Request {
         private String sourceRegionId; 
         private String diskIds; 
         private String instanceId; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -190,6 +216,8 @@ public class DescribeSnapshotLinksRequest extends Request {
             this.sourceRegionId = request.sourceRegionId;
             this.diskIds = request.diskIds;
             this.instanceId = request.instanceId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -230,6 +258,24 @@ public class DescribeSnapshotLinksRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

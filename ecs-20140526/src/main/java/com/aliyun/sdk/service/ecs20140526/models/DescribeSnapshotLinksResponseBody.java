@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotLinksResponseBody</p>
  */
 public class DescribeSnapshotLinksResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -33,6 +36,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     private Integer totalCount;
 
     private DescribeSnapshotLinksResponseBody(Builder builder) {
+        this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -50,6 +54,13 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -88,6 +99,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -98,12 +110,21 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeSnapshotLinksResponseBody model) {
+            this.nextToken = model.nextToken;
             this.pageNumber = model.pageNumber;
             this.pageSize = model.pageSize;
             this.requestId = model.requestId;
             this.snapshotLinks = model.snapshotLinks;
             this.totalCount = model.totalCount;
         } 
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
 
         /**
          * <p>The page number.</p>
