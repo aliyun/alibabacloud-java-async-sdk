@@ -113,7 +113,10 @@ public class DeleteUserConfigRequest extends Request {
         }
 
         /**
-         * Scope.
+         * <p>The scope. Valid values: subUser and owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subUser</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);

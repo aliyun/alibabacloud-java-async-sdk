@@ -155,7 +155,7 @@ public class UpdateConfigsRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -269,6 +269,7 @@ public class UpdateConfigsRequest extends Request {
              * <li>DLCPriorityConfig</li>
              * <li>DSWPriorityConfig</li>
              * <li>QuotaMaximumDuration</li>
+             * <li>CommonTagConfig</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -284,8 +285,9 @@ public class UpdateConfigsRequest extends Request {
              * <ul>
              * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
              * <li>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</li>
-             * <li>priorityConfig: Priority configuration. This key can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
-             * <li>quotaMaximumDuration Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
+             * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
+             * <li>quotaMaximumDuration: Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
+             * <li>predefinedTags: The predefined tags of the workspace. All created resources must have tags.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -298,6 +300,9 @@ public class UpdateConfigsRequest extends Request {
 
             /**
              * <p>The value of the configuration item.</p>
+             * <ul>
+             * <li>When ConfigKey is predefinedTags, the ConfigValue follows this format: [{&quot;Type&quot;:&quot;Tag&quot;,&quot;Key&quot;:&quot;Key1&quot;,&quot;Value&quot;:&quot;{&quot;Products&quot;:&quot;DLC,DSW,EAS&quot;,&quot;Values&quot;:&quot;value1,value2,value3&quot;}&quot;}]. &quot;Products&quot; indicates the products that use the predefined tags.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>oss://test/s/</p>

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-aiworkspace20210204</artifactId>
-  <version>4.0.6</version>
+  <version>4.0.7</version>
   <packaging>jar</packaging>
   <name>alibabacloud-aiworkspace20210204</name>
   <description>Alibaba Cloud AIWorkSpace (20210204) Async SDK for Java

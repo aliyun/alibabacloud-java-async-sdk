@@ -315,7 +315,7 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>Compression Configuration</p>
+         * <p>The compression configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -327,7 +327,7 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>Evaluation Configuration</p>
+         * <p>The evaluation configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -339,7 +339,7 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>Other information.</p>
+         * <p>The additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -354,7 +354,7 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The format of the model. Valid values:</p>
+         * <p>The model format. Valid values:</p>
          * <ul>
          * <li>OfflineModel</li>
          * <li>SavedModel</li>
@@ -378,9 +378,9 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The framework of the model. Valid values:</p>
+         * <p>The model framework. Valid values:</p>
          * <ul>
-         * <li>Pytorch </li>
+         * <li>Pytorch</li>
          * <li>XGBoost</li>
          * <li>Keras</li>
          * <li>Caffe</li>
@@ -399,7 +399,7 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>Describes how to apply to downstream inference services. For example, describes the processor and container of EAS. Example: <code>{ &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</code></p>
+         * <p>Describes how to apply to downstream inference services. For example, describe the processor and container of EAS. Example: <code>{ &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</code></p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -413,7 +413,7 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The labels.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);
@@ -462,21 +462,21 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The source ID.</p>
+         * <p>The ID of the model source.</p>
          * <ul>
-         * <li>If the source type is Custom, this field is not limited.</li>
-         * <li>If the source is PAIFlow or TrainingService, the format is:</li>
+         * <li>If SourceType is set to Custom, this parameter is not limited.</li>
+         * <li>If SourceType is set to PAIFlow or TrainingService, the ID of the model source is in the following format:</li>
          * </ul>
          * <!---->
          * 
          * <pre><code>region=&lt;region_id&gt;,workspaceId=&lt;workspace_id&gt;,kind=&lt;kind&gt;,id=&lt;id&gt;
          * </code></pre>
-         * <p>Where,</p>
+         * <p>Take note of the following parameters:</p>
          * <ul>
-         * <li>region is the region ID.</li>
-         * <li>workspaceId is the ID of the workspace.</li>
-         * <li>kind is the type. Valid values: PipelineRun (PAIFlow) and ServiceJob (training service).</li>
-         * <li>id: a unique identifier.</li>
+         * <li>region indicates the region ID.</li>
+         * <li>workspaceId indicates the workspace ID.</li>
+         * <li>kind indicates the type. Valid values: PipelineRun (PAIFlow) and ServiceJob (training service).</li>
+         * <li>id indicates the unique identifier.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -493,7 +493,7 @@ public class CreateModelVersionRequest extends Request {
          * <ul>
          * <li>Custom (default)</li>
          * <li>PAIFlow</li>
-         * <li>TrainingService: PAI training service.</li>
+         * <li>TrainingService: the Platform for AI (PAI) training service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -506,7 +506,7 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The training configurations. Used for fine-tuning and incremental training.</p>
+         * <p>The training configurations, which is used for fine-tuning and incremental training.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -521,7 +521,7 @@ public class CreateModelVersionRequest extends Request {
          * <p>The URI of the model version, which is the location where the model is stored. Valid values:</p>
          * <ul>
          * <li>The HTTP(S) address of the model. Example: <code>https://myweb.com/mymodel.tar.gz</code>.</li>
-         * <li>The OSS path of the model, in the format of <code>oss://&lt;bucket&gt;.&lt;endpoint&gt;/object</code>. For endpoint, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>. Example: <code>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</code>.</li>
+         * <li>The OSS path of the model, in the format of <code>oss://&lt;bucket&gt;.&lt;endpoint&gt;/object</code>. For information about endpoints, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>. Example: <code>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</code>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -535,7 +535,7 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The version descriptions.</p>
+         * <p>The version description.</p>
          */
         public Builder versionDescription(String versionDescription) {
             this.putBodyParameter("VersionDescription", versionDescription);
@@ -544,7 +544,7 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * <p>The model version, which is unique for each model. If left empty, the first version is <strong>0.1.0</strong> by default. After that, the version number is increased by 1 in sequence. For example, the second version number is <strong>0.2.0</strong>. A version number consists of a major version number, a minor version number, and a stage version number, separated by periods (.). Among them: the major version number and minor version number are numeric. The stage version number begins with a digit and can include numbers, underscores, and letters. For example, the version number is 1.1.0 or 2.3.4_beta.</p>
+         * <p>The model version, which is unique for each model. If you leave this parameter empty, the first version is <strong>0.1.0</strong> by default. After that, the minor version number is increased by 1 in sequence. For example, the second version number is <strong>0.2.0</strong>. A version number consists of a major version number, a minor version number, and a stage version number, separated by periods (.). The major version number and minor version number are numeric. The stage version number begins with a digit and can include numbers, underscores, and letters. For example, the version number is 1.1.0 or 2.3.4_beta.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1.0</p>

@@ -59,6 +59,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCodeSourceResponse> createCodeSource(CreateCodeSourceRequest request);
 
     /**
+     * @param request the request parameters of CreateConnection  CreateConnectionRequest
+     * @return CreateConnectionResponse
+     */
+    CompletableFuture<CreateConnectionResponse> createConnection(CreateConnectionRequest request);
+
+    /**
      * @param request the request parameters of CreateDataset  CreateDatasetRequest
      * @return CreateDatasetResponse
      */
@@ -178,6 +184,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteConfigResponse
      */
     CompletableFuture<DeleteConfigResponse> deleteConfig(DeleteConfigRequest request);
+
+    /**
+     * @param request the request parameters of DeleteConnection  DeleteConnectionRequest
+     * @return DeleteConnectionResponse
+     */
+    CompletableFuture<DeleteConnectionResponse> deleteConnection(DeleteConnectionRequest request);
 
     /**
      * @param request the request parameters of DeleteDataset  DeleteDatasetRequest
@@ -306,6 +318,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetConfigResponse> getConfig(GetConfigRequest request);
 
     /**
+     * @param request the request parameters of GetConnection  GetConnectionRequest
+     * @return GetConnectionResponse
+     */
+    CompletableFuture<GetConnectionResponse> getConnection(GetConnectionRequest request);
+
+    /**
      * @param request the request parameters of GetDataset  GetDatasetRequest
      * @return GetDatasetResponse
      */
@@ -406,6 +424,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListConfigsResponse
      */
     CompletableFuture<ListConfigsResponse> listConfigs(ListConfigsRequest request);
+
+    /**
+     * @param request the request parameters of ListConnections  ListConnectionsRequest
+     * @return ListConnectionsResponse
+     */
+    CompletableFuture<ListConnectionsResponse> listConnections(ListConnectionsRequest request);
 
     /**
      * @param request the request parameters of ListDatasetFileMetas  ListDatasetFileMetasRequest
@@ -607,6 +631,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateConfigsResponse
      */
     CompletableFuture<UpdateConfigsResponse> updateConfigs(UpdateConfigsRequest request);
+
+    /**
+     * @param request the request parameters of UpdateConnection  UpdateConnectionRequest
+     * @return UpdateConnectionResponse
+     */
+    CompletableFuture<UpdateConnectionResponse> updateConnection(UpdateConnectionRequest request);
 
     /**
      * @param request the request parameters of UpdateDataset  UpdateDatasetRequest

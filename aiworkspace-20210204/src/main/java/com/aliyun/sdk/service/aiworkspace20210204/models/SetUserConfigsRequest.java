@@ -82,15 +82,19 @@ public class SetUserConfigsRequest extends Request {
      */
     public static class Configs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String categoryName;
 
         @com.aliyun.core.annotation.NameInMap("ConfigKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String configKey;
 
         @com.aliyun.core.annotation.NameInMap("ConfigValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String configValue;
 
         @com.aliyun.core.annotation.NameInMap("Scope")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String scope;
 
         private Configs(Builder builder) {
@@ -153,7 +157,8 @@ public class SetUserConfigsRequest extends Request {
             } 
 
             /**
-             * <p>The category. Currently, only DataPrivacyConfig is supported.</p>
+             * <p>The category. Only DataPrivacyConfig is supported.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>DataPrivacyConfig</p>
@@ -165,6 +170,7 @@ public class SetUserConfigsRequest extends Request {
 
             /**
              * <p>The key of the configuration item.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>customizePAIAssumedRole</p>
@@ -176,6 +182,7 @@ public class SetUserConfigsRequest extends Request {
 
             /**
              * <p>The value of the configuration item.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>role</p>
@@ -186,7 +193,8 @@ public class SetUserConfigsRequest extends Request {
             }
 
             /**
-             * <p>The scope. Currently, subUser and owner are supported.</p>
+             * <p>The scope. Valid values: subUser and owner.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>owner</p>
