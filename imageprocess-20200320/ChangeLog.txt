@@ -1,3 +1,6 @@
+2025-05-16 Version: 1.0.7
+- Generated java-async 2020-03-20 for imageprocess.
+
 2025-03-25 Version: 1.0.6
 - Generated java-async 2020-03-20 for imageprocess.
 
