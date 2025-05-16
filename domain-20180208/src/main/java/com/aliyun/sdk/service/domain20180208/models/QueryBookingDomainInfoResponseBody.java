@@ -60,6 +60,10 @@ public class QueryBookingDomainInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return auctionId
      */
@@ -125,6 +129,20 @@ public class QueryBookingDomainInfoResponseBody extends TeaModel {
         private String requestId; 
         private String snatchNo; 
         private Float transferInPrice; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryBookingDomainInfoResponseBody model) {
+            this.auctionId = model.auctionId;
+            this.bookEndTime = model.bookEndTime;
+            this.currency = model.currency;
+            this.maxBid = model.maxBid;
+            this.partnerType = model.partnerType;
+            this.requestId = model.requestId;
+            this.snatchNo = model.snatchNo;
+            this.transferInPrice = model.transferInPrice;
+        } 
 
         /**
          * AuctionId.

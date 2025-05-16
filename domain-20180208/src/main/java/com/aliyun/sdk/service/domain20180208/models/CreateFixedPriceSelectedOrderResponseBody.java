@@ -48,6 +48,10 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
         private Module module; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateFixedPriceSelectedOrderResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.httpStatusCode = model.httpStatusCode;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * ErrorCode.
@@ -203,6 +218,16 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
             private java.util.List<String> domainBlockTrade; 
             private String orderNo; 
             private Long price; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.domain = model.domain;
+                this.domainBlockTrade = model.domainBlockTrade;
+                this.orderNo = model.orderNo;
+                this.price = model.price;
+            } 
 
             /**
              * Domain.

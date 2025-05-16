@@ -52,6 +52,10 @@ public class QueryPurchasedDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPageNum
      */
@@ -101,6 +105,18 @@ public class QueryPurchasedDomainsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPurchasedDomainsResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * CurrentPageNum.
@@ -247,6 +263,18 @@ public class QueryPurchasedDomainsResponseBody extends TeaModel {
             private String operationTime; 
             private String productType; 
             private Double tradeMoney; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deliveryTime = model.deliveryTime;
+                this.domainName = model.domainName;
+                this.operationStatus = model.operationStatus;
+                this.operationTime = model.operationTime;
+                this.productType = model.productType;
+                this.tradeMoney = model.tradeMoney;
+            } 
 
             /**
              * DeliveryTime.

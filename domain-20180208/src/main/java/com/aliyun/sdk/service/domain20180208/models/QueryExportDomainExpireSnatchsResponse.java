@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdatePartnerReservePriceResponse} extends {@link TeaModel}
+ * {@link QueryExportDomainExpireSnatchsResponse} extends {@link TeaModel}
  *
- * <p>UpdatePartnerReservePriceResponse</p>
+ * <p>QueryExportDomainExpireSnatchsResponse</p>
  */
-public class UpdatePartnerReservePriceResponse extends Response {
+public class QueryExportDomainExpireSnatchsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class UpdatePartnerReservePriceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdatePartnerReservePriceResponseBody body;
+    private QueryExportDomainExpireSnatchsResponseBody body;
 
-    private UpdatePartnerReservePriceResponse(BuilderImpl builder) {
+    private QueryExportDomainExpireSnatchsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdatePartnerReservePriceResponse create() {
+    public static QueryExportDomainExpireSnatchsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class UpdatePartnerReservePriceResponse extends Response {
     /**
      * @return body
      */
-    public UpdatePartnerReservePriceResponseBody getBody() {
+    public QueryExportDomainExpireSnatchsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdatePartnerReservePriceResponse, Builder> {
+    public interface Builder extends Response.Builder<QueryExportDomainExpireSnatchsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdatePartnerReservePriceResponseBody body);
+        Builder body(QueryExportDomainExpireSnatchsResponseBody body);
 
         @Override
-        UpdatePartnerReservePriceResponse build();
+        QueryExportDomainExpireSnatchsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdatePartnerReservePriceResponse, Builder>
+            extends Response.BuilderImpl<QueryExportDomainExpireSnatchsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private UpdatePartnerReservePriceResponseBody body; 
+        private QueryExportDomainExpireSnatchsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdatePartnerReservePriceResponse response) {
+        private BuilderImpl(QueryExportDomainExpireSnatchsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class UpdatePartnerReservePriceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdatePartnerReservePriceResponseBody body) {
+        public Builder body(QueryExportDomainExpireSnatchsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdatePartnerReservePriceResponse build() {
-            return new UpdatePartnerReservePriceResponse(this);
+        public QueryExportDomainExpireSnatchsResponse build() {
+            return new QueryExportDomainExpireSnatchsResponse(this);
         } 
 
     } 

@@ -36,6 +36,10 @@ public class BidDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return auctionId
      */
@@ -53,6 +57,14 @@ public class BidDomainResponseBody extends TeaModel {
     public static final class Builder {
         private String auctionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BidDomainResponseBody model) {
+            this.auctionId = model.auctionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AuctionId.

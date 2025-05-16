@@ -48,6 +48,10 @@ public class CheckDomainStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -89,6 +93,17 @@ public class CheckDomainStatusResponseBody extends TeaModel {
         private Module module; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckDomainStatusResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.httpStatusCode = model.httpStatusCode;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * ErrorCode.
@@ -215,6 +230,17 @@ public class CheckDomainStatusResponseBody extends TeaModel {
             private Long endTime; 
             private Float price; 
             private Long regDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.deadDate = model.deadDate;
+                this.domain = model.domain;
+                this.endTime = model.endTime;
+                this.price = model.price;
+                this.regDate = model.regDate;
+            } 
 
             /**
              * DeadDate.

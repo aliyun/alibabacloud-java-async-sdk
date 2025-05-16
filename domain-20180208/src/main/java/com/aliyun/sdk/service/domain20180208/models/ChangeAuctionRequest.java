@@ -34,7 +34,7 @@ public class ChangeAuctionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -132,6 +132,15 @@ public class ChangeAuctionRequest extends Request {
             private String createTime; 
             private Float price; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BidRecords model) {
+                this.createTime = model.createTime;
+                this.price = model.price;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>This parameter is required.</p>
@@ -307,6 +316,22 @@ public class ChangeAuctionRequest extends Request {
             private Long timeLeft; 
             private String winner; 
             private Float winnerPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuctionList model) {
+                this.bidRecords = model.bidRecords;
+                this.domainName = model.domainName;
+                this.endTime = model.endTime;
+                this.isReserve = model.isReserve;
+                this.reservePrice = model.reservePrice;
+                this.reserveRange = model.reserveRange;
+                this.status = model.status;
+                this.timeLeft = model.timeLeft;
+                this.winner = model.winner;
+                this.winnerPrice = model.winnerPrice;
+            } 
 
             /**
              * BidRecords.

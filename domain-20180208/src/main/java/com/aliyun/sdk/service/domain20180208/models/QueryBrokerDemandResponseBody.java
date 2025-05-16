@@ -52,6 +52,10 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPageNum
      */
@@ -101,6 +105,18 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryBrokerDemandResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * CurrentPageNum.
@@ -415,6 +431,32 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
             private Float servicePayPrice; 
             private Float settleBasePrice; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.auditStatus = model.auditStatus;
+                this.bargainSellerMobile = model.bargainSellerMobile;
+                this.bargainSellerPrice = model.bargainSellerPrice;
+                this.bizId = model.bizId;
+                this.demandDomain = model.demandDomain;
+                this.demandPrice = model.demandPrice;
+                this.description = model.description;
+                this.email = model.email;
+                this.mobile = model.mobile;
+                this.orderType = model.orderType;
+                this.partnerDomain = model.partnerDomain;
+                this.payDomain = model.payDomain;
+                this.payPrice = model.payPrice;
+                this.payTime = model.payTime;
+                this.produceType = model.produceType;
+                this.publishTime = model.publishTime;
+                this.purchaseStatus = model.purchaseStatus;
+                this.servicePayPrice = model.servicePayPrice;
+                this.settleBasePrice = model.settleBasePrice;
+                this.status = model.status;
+            } 
 
             /**
              * AuditStatus.

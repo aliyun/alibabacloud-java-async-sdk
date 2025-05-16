@@ -36,6 +36,10 @@ public class ReserveDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return auctionId
      */
@@ -53,6 +57,14 @@ public class ReserveDomainResponseBody extends TeaModel {
     public static final class Builder {
         private String auctionId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ReserveDomainResponseBody model) {
+            this.auctionId = model.auctionId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AuctionId.

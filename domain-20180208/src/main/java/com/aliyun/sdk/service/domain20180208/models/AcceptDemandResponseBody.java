@@ -36,6 +36,10 @@ public class AcceptDemandResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bindUrl
      */
@@ -53,6 +57,14 @@ public class AcceptDemandResponseBody extends TeaModel {
     public static final class Builder {
         private String bindUrl; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AcceptDemandResponseBody model) {
+            this.bindUrl = model.bindUrl;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * BindUrl.

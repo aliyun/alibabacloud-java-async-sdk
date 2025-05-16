@@ -72,6 +72,10 @@ public class SubmitPurchaseInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allowRetry
      */
@@ -161,6 +165,23 @@ public class SubmitPurchaseInfoResponseBody extends TeaModel {
         private Object module; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitPurchaseInfoResponseBody model) {
+            this.allowRetry = model.allowRetry;
+            this.appName = model.appName;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errorArgs = model.errorArgs;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpStatusCode = model.httpStatusCode;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AllowRetry.

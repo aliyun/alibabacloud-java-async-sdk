@@ -36,6 +36,10 @@ public class QueryDomainTransferStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainTransferStatus
      */
@@ -53,6 +57,14 @@ public class QueryDomainTransferStatusResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DomainTransferStatus> domainTransferStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryDomainTransferStatusResponseBody model) {
+            this.domainTransferStatus = model.domainTransferStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DomainTransferStatus.
@@ -119,6 +131,14 @@ public class QueryDomainTransferStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String domainName; 
             private String domainStatusDescription; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainTransferStatus model) {
+                this.domainName = model.domainName;
+                this.domainStatusDescription = model.domainStatusDescription;
+            } 
 
             /**
              * DomainName.

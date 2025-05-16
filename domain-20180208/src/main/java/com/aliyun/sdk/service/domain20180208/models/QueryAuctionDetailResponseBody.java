@@ -124,6 +124,10 @@ public class QueryAuctionDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return auctionEndTime
      */
@@ -317,6 +321,36 @@ public class QueryAuctionDetailResponseBody extends TeaModel {
         private Float transferInPrice; 
         private Float yourCurrentBid; 
         private Float yourMaxBid; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryAuctionDetailResponseBody model) {
+            this.auctionEndTime = model.auctionEndTime;
+            this.auctionId = model.auctionId;
+            this.bookEndTime = model.bookEndTime;
+            this.bookedPartner = model.bookedPartner;
+            this.currency = model.currency;
+            this.deliveryTime = model.deliveryTime;
+            this.domainName = model.domainName;
+            this.domainType = model.domainType;
+            this.failCode = model.failCode;
+            this.highBid = model.highBid;
+            this.highBidder = model.highBidder;
+            this.nextValidBid = model.nextValidBid;
+            this.partnerType = model.partnerType;
+            this.payEndTime = model.payEndTime;
+            this.payPrice = model.payPrice;
+            this.payStatus = model.payStatus;
+            this.produceStatus = model.produceStatus;
+            this.requestId = model.requestId;
+            this.reserveMet = model.reserveMet;
+            this.reservePrice = model.reservePrice;
+            this.status = model.status;
+            this.transferInPrice = model.transferInPrice;
+            this.yourCurrentBid = model.yourCurrentBid;
+            this.yourMaxBid = model.yourMaxBid;
+        } 
 
         /**
          * AuctionEndTime.

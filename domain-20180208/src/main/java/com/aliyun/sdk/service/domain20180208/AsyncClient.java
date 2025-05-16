@@ -140,6 +140,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryExchangeRateResponse> queryExchangeRate(QueryExchangeRateRequest request);
 
     /**
+     * @param request the request parameters of QueryExportDomainExpireSnatchs  QueryExportDomainExpireSnatchsRequest
+     * @return QueryExportDomainExpireSnatchsResponse
+     */
+    CompletableFuture<QueryExportDomainExpireSnatchsResponse> queryExportDomainExpireSnatchs(QueryExportDomainExpireSnatchsRequest request);
+
+    /**
      * @param request the request parameters of QueryPurchasedDomains  QueryPurchasedDomainsRequest
      * @return QueryPurchasedDomainsResponse
      */

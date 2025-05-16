@@ -52,6 +52,10 @@ public class QueryBidRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPageNum
      */
@@ -101,6 +105,18 @@ public class QueryBidRecordsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryBidRecordsResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * CurrentPageNum.
@@ -235,6 +251,17 @@ public class QueryBidRecordsResponseBody extends TeaModel {
             private String bidder; 
             private String currency; 
             private String domainName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bid = model.bid;
+                this.bidTime = model.bidTime;
+                this.bidder = model.bidder;
+                this.currency = model.currency;
+                this.domainName = model.domainName;
+            } 
 
             /**
              * Bid.

@@ -52,6 +52,10 @@ public class QueryAuctionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPageNum
      */
@@ -101,6 +105,18 @@ public class QueryAuctionsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryAuctionsResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * CurrentPageNum.
@@ -475,6 +491,37 @@ public class QueryAuctionsResponseBody extends TeaModel {
             private Float transferInPrice; 
             private Float yourCurrentBid; 
             private Float yourMaxBid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.auctionEndTime = model.auctionEndTime;
+                this.auctionId = model.auctionId;
+                this.bookEndTime = model.bookEndTime;
+                this.bookedPartner = model.bookedPartner;
+                this.currency = model.currency;
+                this.deliveryTime = model.deliveryTime;
+                this.domainName = model.domainName;
+                this.domainType = model.domainType;
+                this.failCode = model.failCode;
+                this.highBid = model.highBid;
+                this.highBidder = model.highBidder;
+                this.nextValidBid = model.nextValidBid;
+                this.partnerType = model.partnerType;
+                this.payEndTime = model.payEndTime;
+                this.payPrice = model.payPrice;
+                this.payStatus = model.payStatus;
+                this.produceStatus = model.produceStatus;
+                this.reserveMax = model.reserveMax;
+                this.reserveMet = model.reserveMet;
+                this.reserveMin = model.reserveMin;
+                this.reservePrice = model.reservePrice;
+                this.status = model.status;
+                this.transferInPrice = model.transferInPrice;
+                this.yourCurrentBid = model.yourCurrentBid;
+                this.yourMaxBid = model.yourMaxBid;
+            } 
 
             /**
              * AuctionEndTime.

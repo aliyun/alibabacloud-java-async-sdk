@@ -36,6 +36,10 @@ public class QueryExchangeRateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return exchangeRate
      */
@@ -53,6 +57,14 @@ public class QueryExchangeRateResponseBody extends TeaModel {
     public static final class Builder {
         private Double exchangeRate; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryExchangeRateResponseBody model) {
+            this.exchangeRate = model.exchangeRate;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ExchangeRate.

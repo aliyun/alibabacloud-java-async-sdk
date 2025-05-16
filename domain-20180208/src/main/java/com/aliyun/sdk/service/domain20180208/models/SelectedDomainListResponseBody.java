@@ -44,6 +44,10 @@ public class SelectedDomainListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -77,6 +81,16 @@ public class SelectedDomainListResponseBody extends TeaModel {
         private Module module; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SelectedDomainListResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * ErrorCode.
@@ -150,6 +164,13 @@ public class SelectedDomainListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String downloadUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.downloadUrl = model.downloadUrl;
+            } 
 
             /**
              * DownloadUrl.

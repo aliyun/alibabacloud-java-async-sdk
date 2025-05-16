@@ -72,6 +72,10 @@ public class ReserveIntlDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allowRetry
      */
@@ -161,6 +165,23 @@ public class ReserveIntlDomainResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ReserveIntlDomainResponseBody model) {
+            this.allowRetry = model.allowRetry;
+            this.appName = model.appName;
+            this.auctionId = model.auctionId;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.errorArgs = model.errorArgs;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AllowRetry.

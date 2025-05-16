@@ -52,6 +52,10 @@ public class QueryBrokerDemandRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPageNum
      */
@@ -101,6 +105,18 @@ public class QueryBrokerDemandRecordResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryBrokerDemandRecordResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * CurrentPageNum.
@@ -212,6 +228,15 @@ public class QueryBrokerDemandRecordResponseBody extends TeaModel {
             private Long createTime; 
             private String description; 
 
+            private Builder() {
+            } 
+
+            private Builder(BrokerDemandRecord model) {
+                this.bizId = model.bizId;
+                this.createTime = model.createTime;
+                this.description = model.description;
+            } 
+
             /**
              * BizId.
              */
@@ -274,6 +299,13 @@ public class QueryBrokerDemandRecordResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BrokerDemandRecord> brokerDemandRecord; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.brokerDemandRecord = model.brokerDemandRecord;
+            } 
 
             /**
              * BrokerDemandRecord.
