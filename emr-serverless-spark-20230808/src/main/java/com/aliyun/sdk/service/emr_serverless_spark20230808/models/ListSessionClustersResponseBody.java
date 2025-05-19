@@ -530,6 +530,9 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("publicEndpointEnabled")
+        private Boolean publicEndpointEnabled;
+
         @com.aliyun.core.annotation.NameInMap("queueName")
         private String queueName;
 
@@ -573,6 +576,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.kind = builder.kind;
             this.name = builder.name;
+            this.publicEndpointEnabled = builder.publicEndpointEnabled;
             this.queueName = builder.queueName;
             this.releaseVersion = builder.releaseVersion;
             this.sessionClusterId = builder.sessionClusterId;
@@ -678,6 +682,13 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return publicEndpointEnabled
+         */
+        public Boolean getPublicEndpointEnabled() {
+            return this.publicEndpointEnabled;
+        }
+
+        /**
          * @return queueName
          */
         public String getQueueName() {
@@ -760,6 +771,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private Long gmtCreate; 
             private String kind; 
             private String name; 
+            private Boolean publicEndpointEnabled; 
             private String queueName; 
             private String releaseVersion; 
             private String sessionClusterId; 
@@ -787,6 +799,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
                 this.gmtCreate = model.gmtCreate;
                 this.kind = model.kind;
                 this.name = model.name;
+                this.publicEndpointEnabled = model.publicEndpointEnabled;
                 this.queueName = model.queueName;
                 this.releaseVersion = model.releaseVersion;
                 this.sessionClusterId = model.sessionClusterId;
@@ -925,6 +938,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * publicEndpointEnabled.
+             */
+            public Builder publicEndpointEnabled(Boolean publicEndpointEnabled) {
+                this.publicEndpointEnabled = publicEndpointEnabled;
                 return this;
             }
 

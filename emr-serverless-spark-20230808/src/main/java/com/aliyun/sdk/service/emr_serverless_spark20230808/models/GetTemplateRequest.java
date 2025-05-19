@@ -26,6 +26,10 @@ public class GetTemplateRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("templateBizId")
+    private String templateBizId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("templateType")
     private String templateType;
 
@@ -33,6 +37,7 @@ public class GetTemplateRequest extends Request {
         super(builder);
         this.workspaceBizId = builder.workspaceBizId;
         this.regionId = builder.regionId;
+        this.templateBizId = builder.templateBizId;
         this.templateType = builder.templateType;
     }
 
@@ -64,6 +69,13 @@ public class GetTemplateRequest extends Request {
     }
 
     /**
+     * @return templateBizId
+     */
+    public String getTemplateBizId() {
+        return this.templateBizId;
+    }
+
+    /**
      * @return templateType
      */
     public String getTemplateType() {
@@ -73,6 +85,7 @@ public class GetTemplateRequest extends Request {
     public static final class Builder extends Request.Builder<GetTemplateRequest, Builder> {
         private String workspaceBizId; 
         private String regionId; 
+        private String templateBizId; 
         private String templateType; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class GetTemplateRequest extends Request {
             super(request);
             this.workspaceBizId = request.workspaceBizId;
             this.regionId = request.regionId;
+            this.templateBizId = request.templateBizId;
             this.templateType = request.templateType;
         } 
 
@@ -107,6 +121,15 @@ public class GetTemplateRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * templateBizId.
+         */
+        public Builder templateBizId(String templateBizId) {
+            this.putQueryParameter("templateBizId", templateBizId);
+            this.templateBizId = templateBizId;
             return this;
         }
 

@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Template</p>
  */
 public class Template extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("bizId")
+    private String bizId;
+
     @com.aliyun.core.annotation.NameInMap("creator")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long creator;
@@ -35,9 +38,15 @@ public class Template extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String gmtModified;
 
+    @com.aliyun.core.annotation.NameInMap("isDefault")
+    private Boolean isDefault;
+
     @com.aliyun.core.annotation.NameInMap("modifier")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long modifier;
+
+    @com.aliyun.core.annotation.NameInMap("name")
+    private String name;
 
     @com.aliyun.core.annotation.NameInMap("sparkConf")
     private java.util.List<SparkConf> sparkConf;
@@ -74,12 +83,15 @@ public class Template extends TeaModel {
     private String templateType;
 
     private Template(Builder builder) {
+        this.bizId = builder.bizId;
         this.creator = builder.creator;
         this.displaySparkVersion = builder.displaySparkVersion;
         this.fusion = builder.fusion;
         this.gmtCreated = builder.gmtCreated;
         this.gmtModified = builder.gmtModified;
+        this.isDefault = builder.isDefault;
         this.modifier = builder.modifier;
+        this.name = builder.name;
         this.sparkConf = builder.sparkConf;
         this.sparkDriverCores = builder.sparkDriverCores;
         this.sparkDriverMemory = builder.sparkDriverMemory;
@@ -101,6 +113,13 @@ public class Template extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bizId
+     */
+    public String getBizId() {
+        return this.bizId;
     }
 
     /**
@@ -139,10 +158,24 @@ public class Template extends TeaModel {
     }
 
     /**
+     * @return isDefault
+     */
+    public Boolean getIsDefault() {
+        return this.isDefault;
+    }
+
+    /**
      * @return modifier
      */
     public Long getModifier() {
         return this.modifier;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -209,12 +242,15 @@ public class Template extends TeaModel {
     }
 
     public static final class Builder {
+        private String bizId; 
         private Long creator; 
         private String displaySparkVersion; 
         private Boolean fusion; 
         private String gmtCreated; 
         private String gmtModified; 
+        private Boolean isDefault; 
         private Long modifier; 
+        private String name; 
         private java.util.List<SparkConf> sparkConf; 
         private Integer sparkDriverCores; 
         private Long sparkDriverMemory; 
@@ -229,12 +265,15 @@ public class Template extends TeaModel {
         } 
 
         private Builder(Template model) {
+            this.bizId = model.bizId;
             this.creator = model.creator;
             this.displaySparkVersion = model.displaySparkVersion;
             this.fusion = model.fusion;
             this.gmtCreated = model.gmtCreated;
             this.gmtModified = model.gmtModified;
+            this.isDefault = model.isDefault;
             this.modifier = model.modifier;
+            this.name = model.name;
             this.sparkConf = model.sparkConf;
             this.sparkDriverCores = model.sparkDriverCores;
             this.sparkDriverMemory = model.sparkDriverMemory;
@@ -245,6 +284,14 @@ public class Template extends TeaModel {
             this.sparkVersion = model.sparkVersion;
             this.templateType = model.templateType;
         } 
+
+        /**
+         * bizId.
+         */
+        public Builder bizId(String bizId) {
+            this.bizId = bizId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -287,10 +334,26 @@ public class Template extends TeaModel {
         }
 
         /**
+         * isDefault.
+         */
+        public Builder isDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          */
         public Builder modifier(Long modifier) {
             this.modifier = modifier;
+            return this;
+        }
+
+        /**
+         * name.
+         */
+        public Builder name(String name) {
+            this.name = name;
             return this;
         }
 

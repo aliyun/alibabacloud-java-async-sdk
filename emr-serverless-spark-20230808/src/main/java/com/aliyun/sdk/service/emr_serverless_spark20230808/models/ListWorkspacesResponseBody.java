@@ -188,6 +188,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxResource")
         private String maxResource;
 
+        @com.aliyun.core.annotation.NameInMap("orderId")
+        private String orderId;
+
         @com.aliyun.core.annotation.NameInMap("paymentStatus")
         private String paymentStatus;
 
@@ -201,6 +204,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             this.expireTime = builder.expireTime;
             this.instanceId = builder.instanceId;
             this.maxResource = builder.maxResource;
+            this.orderId = builder.orderId;
             this.paymentStatus = builder.paymentStatus;
             this.usedResource = builder.usedResource;
         }
@@ -256,6 +260,13 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return orderId
+         */
+        public String getOrderId() {
+            return this.orderId;
+        }
+
+        /**
          * @return paymentStatus
          */
         public String getPaymentStatus() {
@@ -276,6 +287,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             private Long expireTime; 
             private String instanceId; 
             private String maxResource; 
+            private String orderId; 
             private String paymentStatus; 
             private String usedResource; 
 
@@ -289,6 +301,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
                 this.expireTime = model.expireTime;
                 this.instanceId = model.instanceId;
                 this.maxResource = model.maxResource;
+                this.orderId = model.orderId;
                 this.paymentStatus = model.paymentStatus;
                 this.usedResource = model.usedResource;
             } 
@@ -360,6 +373,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
              */
             public Builder maxResource(String maxResource) {
                 this.maxResource = maxResource;
+                return this;
+            }
+
+            /**
+             * orderId.
+             */
+            public Builder orderId(String orderId) {
+                this.orderId = orderId;
                 return this;
             }
 

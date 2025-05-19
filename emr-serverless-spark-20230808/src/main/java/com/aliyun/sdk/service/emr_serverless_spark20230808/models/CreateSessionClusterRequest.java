@@ -54,6 +54,10 @@ public class CreateSessionClusterRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("publicEndpointEnabled")
+    private Boolean publicEndpointEnabled;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("queueName")
     private String queueName;
 
@@ -76,6 +80,7 @@ public class CreateSessionClusterRequest extends Request {
         this.fusion = builder.fusion;
         this.kind = builder.kind;
         this.name = builder.name;
+        this.publicEndpointEnabled = builder.publicEndpointEnabled;
         this.queueName = builder.queueName;
         this.releaseVersion = builder.releaseVersion;
         this.regionId = builder.regionId;
@@ -158,6 +163,13 @@ public class CreateSessionClusterRequest extends Request {
     }
 
     /**
+     * @return publicEndpointEnabled
+     */
+    public Boolean getPublicEndpointEnabled() {
+        return this.publicEndpointEnabled;
+    }
+
+    /**
      * @return queueName
      */
     public String getQueueName() {
@@ -188,6 +200,7 @@ public class CreateSessionClusterRequest extends Request {
         private Boolean fusion; 
         private String kind; 
         private String name; 
+        private Boolean publicEndpointEnabled; 
         private String queueName; 
         private String releaseVersion; 
         private String regionId; 
@@ -207,6 +220,7 @@ public class CreateSessionClusterRequest extends Request {
             this.fusion = request.fusion;
             this.kind = request.kind;
             this.name = request.name;
+            this.publicEndpointEnabled = request.publicEndpointEnabled;
             this.queueName = request.queueName;
             this.releaseVersion = request.releaseVersion;
             this.regionId = request.regionId;
@@ -312,6 +326,15 @@ public class CreateSessionClusterRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * publicEndpointEnabled.
+         */
+        public Builder publicEndpointEnabled(Boolean publicEndpointEnabled) {
+            this.putBodyParameter("publicEndpointEnabled", publicEndpointEnabled);
+            this.publicEndpointEnabled = publicEndpointEnabled;
             return this;
         }
 
