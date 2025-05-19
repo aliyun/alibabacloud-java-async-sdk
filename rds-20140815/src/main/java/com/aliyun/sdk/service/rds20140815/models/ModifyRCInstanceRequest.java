@@ -22,6 +22,10 @@ public class ModifyRCInstanceRequest extends Request {
     private Boolean autoPay;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
 
@@ -38,6 +42,10 @@ public class ModifyRCInstanceRequest extends Request {
     private String instanceType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RebootTime")
     private String rebootTime;
 
@@ -52,10 +60,12 @@ public class ModifyRCInstanceRequest extends Request {
     private ModifyRCInstanceRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.direction = builder.direction;
         this.dryRun = builder.dryRun;
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
+        this.promotionCode = builder.promotionCode;
         this.rebootTime = builder.rebootTime;
         this.rebootWhenFinished = builder.rebootWhenFinished;
         this.regionId = builder.regionId;
@@ -79,6 +89,13 @@ public class ModifyRCInstanceRequest extends Request {
      */
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     /**
@@ -110,6 +127,13 @@ public class ModifyRCInstanceRequest extends Request {
     }
 
     /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
+    /**
      * @return rebootTime
      */
     public String getRebootTime() {
@@ -132,10 +156,12 @@ public class ModifyRCInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyRCInstanceRequest, Builder> {
         private Boolean autoPay; 
+        private Boolean autoUseCoupon; 
         private String direction; 
         private Boolean dryRun; 
         private String instanceId; 
         private String instanceType; 
+        private String promotionCode; 
         private String rebootTime; 
         private Boolean rebootWhenFinished; 
         private String regionId; 
@@ -147,10 +173,12 @@ public class ModifyRCInstanceRequest extends Request {
         private Builder(ModifyRCInstanceRequest request) {
             super(request);
             this.autoPay = request.autoPay;
+            this.autoUseCoupon = request.autoUseCoupon;
             this.direction = request.direction;
             this.dryRun = request.dryRun;
             this.instanceId = request.instanceId;
             this.instanceType = request.instanceType;
+            this.promotionCode = request.promotionCode;
             this.rebootTime = request.rebootTime;
             this.rebootWhenFinished = request.rebootWhenFinished;
             this.regionId = request.regionId;
@@ -172,6 +200,15 @@ public class ModifyRCInstanceRequest extends Request {
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
             this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * AutoUseCoupon.
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
             return this;
         }
 
@@ -231,6 +268,15 @@ public class ModifyRCInstanceRequest extends Request {
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
             this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putQueryParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
             return this;
         }
 

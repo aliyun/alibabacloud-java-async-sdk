@@ -63,12 +63,20 @@ public class CreateRCDiskRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Size")
     private Integer size;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
@@ -87,8 +95,10 @@ public class CreateRCDiskRequest extends Request {
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.size = builder.size;
         this.snapshotId = builder.snapshotId;
+        this.tag = builder.tag;
         this.zoneId = builder.zoneId;
     }
 
@@ -183,6 +193,13 @@ public class CreateRCDiskRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return size
      */
     public Integer getSize() {
@@ -194,6 +211,13 @@ public class CreateRCDiskRequest extends Request {
      */
     public String getSnapshotId() {
         return this.snapshotId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -215,8 +239,10 @@ public class CreateRCDiskRequest extends Request {
         private Integer period; 
         private String periodUnit; 
         private String regionId; 
+        private String resourceGroupId; 
         private Integer size; 
         private String snapshotId; 
+        private java.util.List<Tag> tag; 
         private String zoneId; 
 
         private Builder() {
@@ -236,19 +262,21 @@ public class CreateRCDiskRequest extends Request {
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.size = request.size;
             this.snapshotId = request.snapshotId;
+            this.tag = request.tag;
             this.zoneId = request.zoneId;
         } 
 
         /**
          * <p>Specifies whether to enable automatic payment. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables the feature. You must make sure that your account balance is sufficient.</li>
-         * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
+         * <li><strong>true</strong> (default): enables automatic payment. Make sure that your account balance is sufficient.</li>
+         * <li><strong>false</strong>: does not automatically complete the payment. An unpaid order is generated.</li>
          * </ul>
          * <blockquote>
-         * <p> Default value: true. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
+         * <p> If your account balance is insufficient, you can set the parameter to false. In this case, an unpaid order is generated. You can complete the payment in the Expenses and Costs console.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -280,7 +308,7 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
-         * <p>The disk description. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>. By default, this parameter is left empty.</p>
+         * <p>The disk description. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -292,12 +320,12 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
-         * <p>The category of the data disk. Valid values:</p>
+         * <p>The data disk type. Valid values:</p>
          * <ul>
-         * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
-         * <li><strong>cloud_ssd</strong>: standard SSD.</li>
-         * <li><strong>cloud_essd</strong>: ESSD.</li>
-         * <li><strong>cloud_auto</strong>: ESSD AutoPL disk.</li>
+         * <li><strong>cloud_efficiency</strong>: ultra disk</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD</li>
+         * <li><strong>cloud_essd</strong>: ESSD</li>
+         * <li><strong>cloud_auto</strong> (default): Premium ESSD</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -311,7 +339,6 @@ public class CreateRCDiskRequest extends Request {
 
         /**
          * <p>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters and digits. The name can contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
-         * <p>By default, this parameter is left empty.</p>
          * 
          * <strong>example:</strong>
          * <p>ZStack-Hybrid-Test-ECS-Instance</p>
@@ -347,10 +374,10 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
-         * <p>The performance level (PL) of the disk if the disk is an ESSD. Valid values:</p>
+         * <p>The performance level (PL) of ESSDs. Valid values:</p>
          * <ul>
          * <li><strong>PL0</strong>: A single ESSD delivers up to 10,000 random read/write IOPS.</li>
-         * <li><strong>PL1</strong> (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li><strong>PL1: An ESSD delivers up to 50,000 random read/write IOPS.</strong></li>
          * <li><strong>PL2</strong>: A single ESSD delivers up to 100,000 random read/write IOPS.</li>
          * <li><strong>PL3</strong>: A single ESSD delivers up to 1,000,000 random read/write IOPS.</li>
          * </ul>
@@ -403,13 +430,24 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * <p>The disk size. Unit: GiB. This parameter is required. Valid values:</p>
          * <ul>
-         * <li><p>Valid values if you set DiskCategory to <strong>cloud_essd_entry</strong>: 10 to 32768.</p>
+         * <li><p>Valid values if you set DiskCategory to <strong>cloud_efficiency</strong>: 20 to 32768.</p>
          * </li>
          * <li><p>Valid values if you set DiskCategory to <strong>cloud_ssd</strong>: 20 to 32768.</p>
          * </li>
-         * <li><p>Valid values if you set DiskCategory to <strong>cloud_essd</strong>: depend on the value of PerformanceLevel.</p>
+         * <li><p>Valid values if you set DiskCategory to <strong>cloud_auto</strong>: 1 to 65536.</p>
+         * </li>
+         * <li><p>Valid values when DiskCategory is set to cloud_essd: depending on the value of <strong>PerformanceLevel</strong>.****</p>
          * <ul>
          * <li>Valid values if PerformanceLevel is set to PL0: 1 to 65536</li>
          * <li>Valid values if PerformanceLevel is set to PL1: 20 to 65536</li>
@@ -417,14 +455,8 @@ public class CreateRCDiskRequest extends Request {
          * <li>Valid values if PerformanceLevel is set to PL3: 1261 to 65536</li>
          * </ul>
          * </li>
-         * <li><p>Valid values if you set DiskCategory to <strong>cloud_auto</strong>: 1 to 65536.</p>
-         * </li>
          * </ul>
-         * <p>If <code>SnapshotId</code> is specified, the following limits apply to <code>SnapshotId</code> and <code>Size</code>:</p>
-         * <ul>
-         * <li>If the size of the snapshot specified by <code>SnapshotId</code> is larger than the value of <code>Size</code>, the size of the created disk is equal to the size of the snapshot.</li>
-         * <li>If the size of the snapshot specified by <code>SnapshotId</code> is smaller than the value of <code>Size</code>, the size of the created disk is equal to the value of <code>Size</code>.</li>
-         * </ul>
+         * <p>If <strong>SnapshotId</strong> is specified and the size of the corresponding snapshot is greater than the <strong>Size</strong> value, the size of the created disk is the same as that of the snapshot. If the snapshot size is less than the <strong>Size</strong> value, the size of the created disk is equal to the <strong>Size</strong> value.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -436,11 +468,11 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
-         * <p>The snapshot that you want to use to create the disk. Snapshots that were created on or before July 15, 2013 cannot be used to create disks. The following limits apply to <code>SnapshotId</code> and <code>Size</code>:</p>
+         * <p>The snapshot that you want to use to create the disk.</p>
          * <ul>
-         * <li>If the size of the snapshot specified by <code>SnapshotId</code> is larger than the value of <code>Size</code>, the size of the created disk is equal to the specified snapshot size.</li>
-         * <li>If the size of the snapshot specified by <code>SnapshotId</code> is smaller than the value of <code>Size</code>, the size of the created disk is equal to the value of <code>Size</code>.</li>
+         * <li>If the size of the snapshot specified by <strong>SnapshotId</strong> is greater than the value of <strong>Size</strong>, the size of the created disk is equal to the specified snapshot size. If the snapshot size is less than the <strong>Size</strong> value, the size of the created disk is equal to the <strong>Size</strong> value.</li>
          * <li>You cannot create elastic ephemeral disks from snapshots.</li>
+         * <li>Snapshots that were created on or before July 15, 2013 cannot be used to create disks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -449,6 +481,15 @@ public class CreateRCDiskRequest extends Request {
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
             this.snapshotId = snapshotId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -472,4 +513,79 @@ public class CreateRCDiskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRCDiskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRCDiskRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

@@ -80,7 +80,7 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * RCInstanceList.
+         * <p>An array that consists of details of the instance.</p>
          */
         public Builder RCInstanceList(java.util.List<RCInstanceList> RCInstanceList) {
             this.RCInstanceList = RCInstanceList;
@@ -88,7 +88,10 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C048E440-EA84-5E97-8C81-2A7060D0****_th**</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of the assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(String total) {
             this.total = total;
@@ -266,7 +272,10 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             } 
 
             /**
-             * BlackholeThreshold.
+             * <p>The basic protection threshold for the asset. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5200</p>
              */
             public Builder blackholeThreshold(Integer blackholeThreshold) {
                 this.blackholeThreshold = blackholeThreshold;
@@ -274,7 +283,10 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * DefenseBpsThreshold.
+             * <p>The traffic scrubbing threshold for the asset measured in Mbit/s. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder defenseBpsThreshold(Integer defenseBpsThreshold) {
                 this.defenseBpsThreshold = defenseBpsThreshold;
@@ -282,7 +294,10 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * DefensePpsThreshold.
+             * <p>The traffic scrubbing threshold for the asset measured in packets per second (PPS). Unit: packets per second (pps).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70000</p>
              */
             public Builder defensePpsThreshold(Integer defensePpsThreshold) {
                 this.defensePpsThreshold = defensePpsThreshold;
@@ -290,7 +305,10 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticThreshold.
+             * <p>The burstable protection threshold for the asset. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12310</p>
              */
             public Builder elasticThreshold(Integer elasticThreshold) {
                 this.elasticThreshold = elasticThreshold;
@@ -298,7 +316,10 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceIp.
+             * <p>The IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39.105.XXX.XXX</p>
              */
             public Builder instanceIp(String instanceIp) {
                 this.instanceIp = instanceIp;
@@ -306,7 +327,15 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * IpStatus.
+             * <p>The DDoS mitigation status of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>mitigating</strong></li>
+             * <li><strong>blackholed</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder ipStatus(String ipStatus) {
                 this.ipStatus = ipStatus;
@@ -314,7 +343,14 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * IpVersion.
+             * <p>The IP version of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>v4</strong></li>
+             * <li><strong>v6</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>v4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -322,7 +358,14 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * IsBgppack.
+             * <p>Indicates whether the asset is added to the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isBgppack(Boolean isBgppack) {
                 this.isBgppack = isBgppack;
@@ -330,7 +373,14 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * IsFullProtection.
+             * <p>Indicates whether best-effort protection is enabled for the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Best-effort protection is disabled.</li>
+             * <li><strong>1</strong>: Best-effort protection is enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isFullProtection(Integer isFullProtection) {
                 this.isFullProtection = isFullProtection;
@@ -338,7 +388,10 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region code of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-wt97-a01</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -444,7 +497,10 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The ID of the RDS Custom instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rc-kti8hw44yy0x53******</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -452,7 +508,10 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rc-kti8hw44yy0x53******</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -460,7 +519,14 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * <p>The DDoS mitigation status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>abnormal</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -468,7 +534,10 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The type of the asset. The value is fixed to <strong>ecs</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -476,7 +545,7 @@ public class DescribeRCInstanceIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddressConfig.
+             * <p>An array that consists of the details of the asset.</p>
              */
             public Builder ipAddressConfig(java.util.List<IpAddressConfig> ipAddressConfig) {
                 this.ipAddressConfig = ipAddressConfig;

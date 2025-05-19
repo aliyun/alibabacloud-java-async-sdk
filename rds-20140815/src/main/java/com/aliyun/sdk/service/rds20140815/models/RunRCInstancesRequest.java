@@ -31,6 +31,10 @@ public class RunRCInstancesRequest extends Request {
     private Boolean autoRenew;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -112,6 +116,10 @@ public class RunRCInstancesRequest extends Request {
     private String periodUnit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -166,6 +174,7 @@ public class RunRCInstancesRequest extends Request {
         this.amount = builder.amount;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.clientToken = builder.clientToken;
         this.createAckEdgeParam = builder.createAckEdgeParam;
         this.createExtraParam = builder.createExtraParam;
@@ -186,6 +195,7 @@ public class RunRCInstancesRequest extends Request {
         this.password = builder.password;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
+        this.promotionCode = builder.promotionCode;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
@@ -232,6 +242,13 @@ public class RunRCInstancesRequest extends Request {
      */
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     /**
@@ -375,6 +392,13 @@ public class RunRCInstancesRequest extends Request {
     }
 
     /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -462,6 +486,7 @@ public class RunRCInstancesRequest extends Request {
         private Integer amount; 
         private Boolean autoPay; 
         private Boolean autoRenew; 
+        private Boolean autoUseCoupon; 
         private String clientToken; 
         private CreateAckEdgeParam createAckEdgeParam; 
         private String createExtraParam; 
@@ -482,6 +507,7 @@ public class RunRCInstancesRequest extends Request {
         private String password; 
         private Integer period; 
         private String periodUnit; 
+        private String promotionCode; 
         private String regionId; 
         private String resourceGroupId; 
         private String securityEnhancementStrategy; 
@@ -504,6 +530,7 @@ public class RunRCInstancesRequest extends Request {
             this.amount = request.amount;
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
+            this.autoUseCoupon = request.autoUseCoupon;
             this.clientToken = request.clientToken;
             this.createAckEdgeParam = request.createAckEdgeParam;
             this.createExtraParam = request.createExtraParam;
@@ -524,6 +551,7 @@ public class RunRCInstancesRequest extends Request {
             this.password = request.password;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
+            this.promotionCode = request.promotionCode;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.securityEnhancementStrategy = request.securityEnhancementStrategy;
@@ -583,6 +611,15 @@ public class RunRCInstancesRequest extends Request {
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * AutoUseCoupon.
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
             return this;
         }
 
@@ -819,6 +856,15 @@ public class RunRCInstancesRequest extends Request {
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
             this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putQueryParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
             return this;
         }
 

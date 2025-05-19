@@ -67,7 +67,7 @@ public class DescribeRCInstanceDdosCountResponseBody extends TeaModel {
         } 
 
         /**
-         * DdosCount.
+         * <p>The number of instances that are under DDoS attacks.</p>
          */
         public Builder ddosCount(DdosCount ddosCount) {
             this.ddosCount = ddosCount;
@@ -75,7 +75,10 @@ public class DescribeRCInstanceDdosCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F77F3176-AAEA-5836-B2B4-A854E3ED****_Zv**</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class DescribeRCInstanceDdosCountResponseBody extends TeaModel {
             } 
 
             /**
-             * BlackholeCount.
+             * <p>The number of instances for which blackhole filtering is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder blackholeCount(String blackholeCount) {
                 this.blackholeCount = blackholeCount;
@@ -162,7 +168,10 @@ public class DescribeRCInstanceDdosCountResponseBody extends TeaModel {
             }
 
             /**
-             * DefenseCount.
+             * <p>The number of instances for which traffic scrubbing is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder defenseCount(String defenseCount) {
                 this.defenseCount = defenseCount;
@@ -170,7 +179,10 @@ public class DescribeRCInstanceDdosCountResponseBody extends TeaModel {
             }
 
             /**
-             * InstacenCount.
+             * <p>The total number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder instacenCount(String instacenCount) {
                 this.instacenCount = instacenCount;

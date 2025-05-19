@@ -185,7 +185,10 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number. Default value: 1. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -194,7 +197,10 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * DdosRegionId.
+         * <p>The region ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder ddosRegionId(String ddosRegionId) {
             this.putQueryParameter("DdosRegionId", ddosRegionId);
@@ -203,7 +209,14 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * DdosStatus.
+         * <p>The DDoS mitigation status of the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>defense</strong>: queries assets for which traffic scrubbing is performed.</li>
+         * <li><strong>blackhole</strong>: queries assets for which blackhole filtering is triggered.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>defense</p>
          */
         public Builder ddosStatus(String ddosStatus) {
             this.putQueryParameter("DdosStatus", ddosStatus);
@@ -212,7 +225,10 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the RDS Custom instance to which the asset to query is added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rc-y6dn4pyuub1r89******</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -221,7 +237,10 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * InstanceIp.
+         * <p>The IP address of the asset to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.105.XXX.XXX</p>
          */
         public Builder instanceIp(String instanceIp) {
             this.putQueryParameter("InstanceIp", instanceIp);
@@ -230,7 +249,10 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the RDS Custom instance to which the asset to query is added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rc-y6dn4pyuub1r89******</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -239,7 +261,10 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The type of the asset that is assigned a public IP address. Set the value to <strong>ecs</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -248,7 +273,10 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of instances on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -257,7 +285,10 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region in which the RDS Custom instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -266,7 +297,10 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of the resource. Set the value to <strong>ecs</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

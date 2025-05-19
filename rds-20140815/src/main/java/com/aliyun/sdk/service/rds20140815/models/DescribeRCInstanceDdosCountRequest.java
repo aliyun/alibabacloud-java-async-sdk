@@ -87,7 +87,10 @@ public class DescribeRCInstanceDdosCountRequest extends Request {
         } 
 
         /**
-         * DdosRegionId.
+         * <p>The region ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder ddosRegionId(String ddosRegionId) {
             this.putQueryParameter("DdosRegionId", ddosRegionId);
@@ -96,7 +99,10 @@ public class DescribeRCInstanceDdosCountRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The type of the asset that is assigned a public IP address. Fixed value: <strong>ecs</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -105,7 +111,10 @@ public class DescribeRCInstanceDdosCountRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region in which the RDS Custom instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -169,6 +169,81 @@ public class DescribeRCDisksResponseBody extends TeaModel {
      *
      * <p>DescribeRCDisksResponseBody</p>
      */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeRCDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCDisksResponseBody</p>
+     */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -239,6 +314,9 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StorageSetId")
         private String storageSetId;
 
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -269,6 +347,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             this.status = builder.status;
             this.storageClusterId = builder.storageClusterId;
             this.storageSetId = builder.storageSetId;
+            this.tag = builder.tag;
             this.type = builder.type;
             this.zoneId = builder.zoneId;
         }
@@ -443,6 +522,13 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         }
 
         /**
+         * @return tag
+         */
+        public java.util.List<Tag> getTag() {
+            return this.tag;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -480,6 +566,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             private String status; 
             private String storageClusterId; 
             private String storageSetId; 
+            private java.util.List<Tag> tag; 
             private String type; 
             private String zoneId; 
 
@@ -510,6 +597,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
                 this.status = model.status;
                 this.storageClusterId = model.storageClusterId;
                 this.storageSetId = model.storageSetId;
+                this.tag = model.tag;
                 this.type = model.type;
                 this.zoneId = model.zoneId;
             } 
@@ -517,9 +605,9 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             /**
              * <p>The category of the disk. Valid values:</p>
              * <ul>
-             * <li><strong>cloud_efficiency</strong>: ultra disk</li>
-             * <li><strong>cloud_ssd</strong>: standard SSD</li>
-             * <li><strong>cloud_essd</strong>: ESSD</li>
+             * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
+             * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+             * <li><strong>cloud_essd</strong>: ESSD.</li>
              * <li><strong>cloud_auto</strong>: Premium ESSD</li>
              * </ul>
              * 
@@ -799,6 +887,14 @@ public class DescribeRCDisksResponseBody extends TeaModel {
              */
             public Builder storageSetId(String storageSetId) {
                 this.storageSetId = storageSetId;
+                return this;
+            }
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List<Tag> tag) {
+                this.tag = tag;
                 return this;
             }
 

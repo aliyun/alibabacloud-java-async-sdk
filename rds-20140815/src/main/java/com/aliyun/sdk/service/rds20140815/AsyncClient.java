@@ -2734,6 +2734,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRCInstanceAttributeResponse> describeRCInstanceAttribute(DescribeRCInstanceAttributeRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></p>
+     * 
      * @param request the request parameters of DescribeRCInstanceDdosCount  DescribeRCInstanceDdosCountRequest
      * @return DescribeRCInstanceDdosCountResponse
      */
@@ -2746,6 +2752,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRCInstanceHistoryEventsResponse> describeRCInstanceHistoryEvents(DescribeRCInstanceHistoryEventsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></p>
+     * <blockquote>
+     * <p> If one or more assets of the current Alibaba Cloud account are added to an <a href="https://help.aliyun.com/document_detail/63643.html">Anti-DDoS Origin instance</a>, you can call the DescribeRCInstanceIpAddress operation to query the DDoS mitigation information and the details of the Anti-DDoS Origin instance. The information and the details include the basic protection threshold and traffic scrubbing threshold for the assets, DDoS mitigation status of the assets, ID of the instance, and the mitigation status of the instance.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeRCInstanceIpAddress  DescribeRCInstanceIpAddressRequest
      * @return DescribeRCInstanceIpAddressResponse
      */
@@ -3113,7 +3128,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is phased out.</p>
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2627863.html">DescribeHistoryTasks</a> operation to query the tasks on an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance</p>
+     * </blockquote>
      * 
      * @param request the request parameters of DescribeTasks  DescribeTasksRequest
      * @return DescribeTasksResponse
@@ -4393,6 +4412,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyRCInstanceAttributeResponse> modifyRCInstanceAttribute(ModifyRCInstanceAttributeRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>Before you call this operation, make sure that you are familiar with the subscription and pay-as-you-go billing methods and pricing of RDS Custom.</li>
+     * <li>The instances must be in the <strong>Running</strong> or <strong>Stopped</strong> state, and you have no overdue payments for the instances.</li>
+     * <li>The disk is in the <strong>In_use</strong> state and the billing method of the disk has not been changed within the previous 15 minutes.</li>
+     * <li>After you change the billing method, the payment is automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled.</li>
+     * </ul>
+     * <h3><a href="#"></a>Considerations</h3>
+     * <p>For more information, see the following documentation:</p>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/2878542.html">Change the billing method of an instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2878547.html">Change the billing method of a disk</a></li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyRCInstanceChargeType  ModifyRCInstanceChargeTypeRequest
      * @return ModifyRCInstanceChargeTypeResponse
      */

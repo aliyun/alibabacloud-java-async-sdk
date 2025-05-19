@@ -114,7 +114,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -136,7 +136,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A103039D-B1B2-4C57-B989-7D7C0DA95426</p>
@@ -147,7 +147,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -385,7 +385,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The start time of the task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC .</p>
+             * <p>The start time of the task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-20T01:00Z</p>
@@ -420,7 +420,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             /**
              * <p>The estimated end time of the task.</p>
              * <blockquote>
-             * <p>In most cases, this parameter is empty.</p>
+             * <p> In most cases, this parameter is empty.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -443,7 +443,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the task in percentage.</p>
+             * <p>The task progress in percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -456,7 +456,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             /**
              * <p>The description of the task progress.</p>
              * <blockquote>
-             * <p>If no progress description is provided for the task, this parameter is empty.</p>
+             * <p> If no progress description is provided for the task, this parameter is empty.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -528,7 +528,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             /**
              * <p>The error code that is returned when an error occurs.</p>
              * <blockquote>
-             * <p>This parameter is returned only when an error occurs.</p>
+             * <p> This parameter is returned only when an error occurs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -554,7 +554,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task.</p>
+             * <p>The task ID. You can use one of the following methods to obtain the task ID:</p>
              * 
              * <strong>example:</strong>
              * <p>3472xxxxx</p>
