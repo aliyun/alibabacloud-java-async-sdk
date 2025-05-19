@@ -58,6 +58,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CheckModelFeatureFGFeature  CheckModelFeatureFGFeatureRequest
+     * @return CheckModelFeatureFGFeatureResponse
+     */
+    @Override
+    public CompletableFuture<CheckModelFeatureFGFeatureResponse> checkModelFeatureFGFeature(CheckModelFeatureFGFeatureRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CheckModelFeatureFGFeature").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{InstanceId}/modelfeatures/{ModelFeatureId}/action/checkfgfeature").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckModelFeatureFGFeatureResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckModelFeatureFGFeatureResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateDatasource  CreateDatasourceRequest
      * @return CreateDatasourceResponse
      */
@@ -124,6 +142,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateLLMConfig  CreateLLMConfigRequest
+     * @return CreateLLMConfigResponse
+     */
+    @Override
+    public CompletableFuture<CreateLLMConfigResponse> createLLMConfig(CreateLLMConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateLLMConfig").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{InstanceId}/llmconfigs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateLLMConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateLLMConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -250,6 +286,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteFeatureViewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteLLMConfig  DeleteLLMConfigRequest
+     * @return DeleteLLMConfigResponse
+     */
+    @Override
+    public CompletableFuture<DeleteLLMConfigResponse> deleteLLMConfig(DeleteLLMConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteLLMConfig").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/instances/{InstanceId}/llmconfigs/{LLMConfigId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteLLMConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteLLMConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -418,6 +472,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetLLMConfig  GetLLMConfigRequest
+     * @return GetLLMConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetLLMConfigResponse> getLLMConfig(GetLLMConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetLLMConfig").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{InstanceId}/llmconfigs/{LLMConfigId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetLLMConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetLLMConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetLabelTable  GetLabelTableRequest
      * @return GetLabelTableResponse
      */
@@ -556,6 +628,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDatasourceFeatureViews  ListDatasourceFeatureViewsRequest
+     * @return ListDatasourceFeatureViewsResponse
+     */
+    @Override
+    public CompletableFuture<ListDatasourceFeatureViewsResponse> listDatasourceFeatureViews(ListDatasourceFeatureViewsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDatasourceFeatureViews").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{InstanceId}/datasources/{DatasourceId}/featureviews").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDatasourceFeatureViewsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDatasourceFeatureViewsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -706,6 +796,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListLLMConfigs  ListLLMConfigsRequest
+     * @return ListLLMConfigsResponse
+     */
+    @Override
+    public CompletableFuture<ListLLMConfigsResponse> listLLMConfigs(ListLLMConfigsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListLLMConfigs").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{InstanceId}/llmconfigs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListLLMConfigsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListLLMConfigsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListLabelTables  ListLabelTablesRequest
      * @return ListLabelTablesResponse
      */
@@ -772,6 +880,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListProjectFeatureViewsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListProjectFeatures  ListProjectFeaturesRequest
+     * @return ListProjectFeaturesResponse
+     */
+    @Override
+    public CompletableFuture<ListProjectFeaturesResponse> listProjectFeatures(ListProjectFeaturesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListProjectFeatures").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{InstanceId}/projects/{ProjectId}/features").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListProjectFeaturesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListProjectFeaturesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -850,6 +976,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of StopTask  StopTaskRequest
+     * @return StopTaskResponse
+     */
+    @Override
+    public CompletableFuture<StopTaskResponse> stopTask(StopTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopTask").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{InstanceId}/tasks/{TaskId}/action/stop").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateDatasource  UpdateDatasourceRequest
      * @return UpdateDatasourceResponse
      */
@@ -862,6 +1006,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateDatasourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateLLMConfig  UpdateLLMConfigRequest
+     * @return UpdateLLMConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateLLMConfigResponse> updateLLMConfig(UpdateLLMConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateLLMConfig").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/instances/{InstanceId}/llmconfigs/{LLMConfigId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateLLMConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateLLMConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

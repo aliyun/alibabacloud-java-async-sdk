@@ -1,0 +1,292 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.paifeaturestore20230621.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ListProjectFeaturesRequest} extends {@link RequestModel}
+ *
+ * <p>ListProjectFeaturesRequest</p>
+ */
+public class ListProjectFeaturesRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String projectId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliasName")
+    private String aliasName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private String filter;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
+    private String order;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
+    private String sortBy;
+
+    private ListProjectFeaturesRequest(Builder builder) {
+        super(builder);
+        this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
+        this.projectId = builder.projectId;
+        this.aliasName = builder.aliasName;
+        this.filter = builder.filter;
+        this.name = builder.name;
+        this.order = builder.order;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.sortBy = builder.sortBy;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListProjectFeaturesRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return projectId
+     */
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    /**
+     * @return aliasName
+     */
+    public String getAliasName() {
+        return this.aliasName;
+    }
+
+    /**
+     * @return filter
+     */
+    public String getFilter() {
+        return this.filter;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return order
+     */
+    public String getOrder() {
+        return this.order;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return sortBy
+     */
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
+    public static final class Builder extends Request.Builder<ListProjectFeaturesRequest, Builder> {
+        private String regionId; 
+        private String instanceId; 
+        private String projectId; 
+        private String aliasName; 
+        private String filter; 
+        private String name; 
+        private String order; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String sortBy; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ListProjectFeaturesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.projectId = request.projectId;
+            this.aliasName = request.aliasName;
+            this.filter = request.filter;
+            this.name = request.name;
+            this.order = request.order;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.sortBy = request.sortBy;
+        } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
+         */
+        public Builder instanceId(String instanceId) {
+            this.putPathParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        public Builder projectId(String projectId) {
+            this.putPathParameter("ProjectId", projectId);
+            this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * AliasName.
+         */
+        public Builder aliasName(String aliasName) {
+            this.putQueryParameter("AliasName", aliasName);
+            this.aliasName = aliasName;
+            return this;
+        }
+
+        /**
+         * Filter.
+         */
+        public Builder filter(String filter) {
+            this.putQueryParameter("Filter", filter);
+            this.filter = filter;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * Order.
+         */
+        public Builder order(String order) {
+            this.putQueryParameter("Order", order);
+            this.order = order;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * SortBy.
+         */
+        public Builder sortBy(String sortBy) {
+            this.putQueryParameter("SortBy", sortBy);
+            this.sortBy = sortBy;
+            return this;
+        }
+
+        @Override
+        public ListProjectFeaturesRequest build() {
+            return new ListProjectFeaturesRequest(this);
+        } 
+
+    } 
+
+}

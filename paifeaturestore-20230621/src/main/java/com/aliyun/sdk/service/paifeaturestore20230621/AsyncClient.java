@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckInstanceDatasourceResponse> checkInstanceDatasource(CheckInstanceDatasourceRequest request);
 
     /**
+     * @param request the request parameters of CheckModelFeatureFGFeature  CheckModelFeatureFGFeatureRequest
+     * @return CheckModelFeatureFGFeatureResponse
+     */
+    CompletableFuture<CheckModelFeatureFGFeatureResponse> checkModelFeatureFGFeature(CheckModelFeatureFGFeatureRequest request);
+
+    /**
      * @param request the request parameters of CreateDatasource  CreateDatasourceRequest
      * @return CreateDatasourceResponse
      */
@@ -48,6 +54,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateInstanceResponse
      */
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
+
+    /**
+     * @param request the request parameters of CreateLLMConfig  CreateLLMConfigRequest
+     * @return CreateLLMConfigResponse
+     */
+    CompletableFuture<CreateLLMConfigResponse> createLLMConfig(CreateLLMConfigRequest request);
 
     /**
      * @param request the request parameters of CreateLabelTable  CreateLabelTableRequest
@@ -90,6 +102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteFeatureViewResponse
      */
     CompletableFuture<DeleteFeatureViewResponse> deleteFeatureView(DeleteFeatureViewRequest request);
+
+    /**
+     * @param request the request parameters of DeleteLLMConfig  DeleteLLMConfigRequest
+     * @return DeleteLLMConfigResponse
+     */
+    CompletableFuture<DeleteLLMConfigResponse> deleteLLMConfig(DeleteLLMConfigRequest request);
 
     /**
      * @param request the request parameters of DeleteLabelTable  DeleteLabelTableRequest
@@ -146,6 +164,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
 
     /**
+     * @param request the request parameters of GetLLMConfig  GetLLMConfigRequest
+     * @return GetLLMConfigResponse
+     */
+    CompletableFuture<GetLLMConfigResponse> getLLMConfig(GetLLMConfigRequest request);
+
+    /**
      * @param request the request parameters of GetLabelTable  GetLabelTableRequest
      * @return GetLabelTableResponse
      */
@@ -192,6 +216,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetTaskResponse
      */
     CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request);
+
+    /**
+     * @param request the request parameters of ListDatasourceFeatureViews  ListDatasourceFeatureViewsRequest
+     * @return ListDatasourceFeatureViewsResponse
+     */
+    CompletableFuture<ListDatasourceFeatureViewsResponse> listDatasourceFeatureViews(ListDatasourceFeatureViewsRequest request);
 
     /**
      * @param request the request parameters of ListDatasourceTables  ListDatasourceTablesRequest
@@ -242,6 +272,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
     /**
+     * @param request the request parameters of ListLLMConfigs  ListLLMConfigsRequest
+     * @return ListLLMConfigsResponse
+     */
+    CompletableFuture<ListLLMConfigsResponse> listLLMConfigs(ListLLMConfigsRequest request);
+
+    /**
      * @param request the request parameters of ListLabelTables  ListLabelTablesRequest
      * @return ListLabelTablesResponse
      */
@@ -264,6 +300,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListProjectFeatureViewsResponse
      */
     CompletableFuture<ListProjectFeatureViewsResponse> listProjectFeatureViews(ListProjectFeatureViewsRequest request);
+
+    /**
+     * @param request the request parameters of ListProjectFeatures  ListProjectFeaturesRequest
+     * @return ListProjectFeaturesResponse
+     */
+    CompletableFuture<ListProjectFeaturesResponse> listProjectFeatures(ListProjectFeaturesRequest request);
 
     /**
      * @param request the request parameters of ListProjects  ListProjectsRequest
@@ -290,10 +332,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishFeatureViewTableResponse> publishFeatureViewTable(PublishFeatureViewTableRequest request);
 
     /**
+     * @param request the request parameters of StopTask  StopTaskRequest
+     * @return StopTaskResponse
+     */
+    CompletableFuture<StopTaskResponse> stopTask(StopTaskRequest request);
+
+    /**
      * @param request the request parameters of UpdateDatasource  UpdateDatasourceRequest
      * @return UpdateDatasourceResponse
      */
     CompletableFuture<UpdateDatasourceResponse> updateDatasource(UpdateDatasourceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateLLMConfig  UpdateLLMConfigRequest
+     * @return UpdateLLMConfigResponse
+     */
+    CompletableFuture<UpdateLLMConfigResponse> updateLLMConfig(UpdateLLMConfigRequest request);
 
     /**
      * @param request the request parameters of UpdateLabelTable  UpdateLabelTableRequest
