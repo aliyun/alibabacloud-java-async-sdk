@@ -40,6 +40,10 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return featureConsistencyCheckConfigs
      */
@@ -65,6 +69,15 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         private java.util.List<FeatureConsistencyCheckConfigs> featureConsistencyCheckConfigs; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFeatureConsistencyCheckJobConfigsResponseBody model) {
+            this.featureConsistencyCheckConfigs = model.featureConsistencyCheckConfigs;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * FeatureConsistencyCheckConfigs.
@@ -775,6 +788,67 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
             private String vpcId; 
             private String workflowName; 
             private String workspaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FeatureConsistencyCheckConfigs model) {
+                this.compareFeature = model.compareFeature;
+                this.datasetId = model.datasetId;
+                this.datasetMountPath = model.datasetMountPath;
+                this.datasetName = model.datasetName;
+                this.datasetType = model.datasetType;
+                this.datasetUri = model.datasetUri;
+                this.defaultRoute = model.defaultRoute;
+                this.easServiceName = model.easServiceName;
+                this.easyRecPackagePath = model.easyRecPackagePath;
+                this.easyRecVersion = model.easyRecVersion;
+                this.featureConsistencyCheckJobConfigId = model.featureConsistencyCheckJobConfigId;
+                this.featureDisplayExclude = model.featureDisplayExclude;
+                this.featureLandingResourceId = model.featureLandingResourceId;
+                this.featureLandingResourceUri = model.featureLandingResourceUri;
+                this.featurePriority = model.featurePriority;
+                this.featureStoreItemId = model.featureStoreItemId;
+                this.featureStoreModelId = model.featureStoreModelId;
+                this.featureStoreProjectId = model.featureStoreProjectId;
+                this.featureStoreProjectName = model.featureStoreProjectName;
+                this.featureStoreSeqFeatureView = model.featureStoreSeqFeatureView;
+                this.featureStoreUserId = model.featureStoreUserId;
+                this.fgJarVersion = model.fgJarVersion;
+                this.fgJsonFileName = model.fgJsonFileName;
+                this.generateZip = model.generateZip;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.itemIdField = model.itemIdField;
+                this.itemTable = model.itemTable;
+                this.itemTablePartitionField = model.itemTablePartitionField;
+                this.itemTablePartitionFieldFormat = model.itemTablePartitionFieldFormat;
+                this.latestJobGmtSamplingEndTime = model.latestJobGmtSamplingEndTime;
+                this.latestJobGmtSamplingStartTime = model.latestJobGmtSamplingStartTime;
+                this.latestJobId = model.latestJobId;
+                this.name = model.name;
+                this.ossBucket = model.ossBucket;
+                this.ossResourceId = model.ossResourceId;
+                this.predictWorkerCount = model.predictWorkerCount;
+                this.predictWorkerCpu = model.predictWorkerCpu;
+                this.predictWorkerMemory = model.predictWorkerMemory;
+                this.sampleRate = model.sampleRate;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+                this.securityGroupId = model.securityGroupId;
+                this.serviceId = model.serviceId;
+                this.serviceName = model.serviceName;
+                this.status = model.status;
+                this.switchId = model.switchId;
+                this.useFeatureStore = model.useFeatureStore;
+                this.userIdField = model.userIdField;
+                this.userTable = model.userTable;
+                this.userTablePartitionField = model.userTablePartitionField;
+                this.userTablePartitionFieldFormat = model.userTablePartitionFieldFormat;
+                this.vpcId = model.vpcId;
+                this.workflowName = model.workflowName;
+                this.workspaceId = model.workspaceId;
+            } 
 
             /**
              * CompareFeature.

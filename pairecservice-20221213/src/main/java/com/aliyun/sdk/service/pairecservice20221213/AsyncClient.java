@@ -80,6 +80,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloneTrafficControlTaskResponse> cloneTrafficControlTask(CloneTrafficControlTaskRequest request);
 
     /**
+     * @param request the request parameters of CompareSampleConsistencyJob  CompareSampleConsistencyJobRequest
+     * @return CompareSampleConsistencyJobResponse
+     */
+    CompletableFuture<CompareSampleConsistencyJobResponse> compareSampleConsistencyJob(CompareSampleConsistencyJobRequest request);
+
+    /**
      * @param request the request parameters of CreateABMetric  CreateABMetricRequest
      * @return CreateABMetricResponse
      */
@@ -168,6 +174,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateResourceRuleItemResponse
      */
     CompletableFuture<CreateResourceRuleItemResponse> createResourceRuleItem(CreateResourceRuleItemRequest request);
+
+    /**
+     * @param request the request parameters of CreateSampleConsistencyJob  CreateSampleConsistencyJobRequest
+     * @return CreateSampleConsistencyJobResponse
+     */
+    CompletableFuture<CreateSampleConsistencyJobResponse> createSampleConsistencyJob(CreateSampleConsistencyJobRequest request);
 
     /**
      * @param request the request parameters of CreateScene  CreateSceneRequest
@@ -276,6 +288,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteResourceRuleItemResponse
      */
     CompletableFuture<DeleteResourceRuleItemResponse> deleteResourceRuleItem(DeleteResourceRuleItemRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSampleConsistencyJob  DeleteSampleConsistencyJobRequest
+     * @return DeleteSampleConsistencyJobResponse
+     */
+    CompletableFuture<DeleteSampleConsistencyJobResponse> deleteSampleConsistencyJob(DeleteSampleConsistencyJobRequest request);
 
     /**
      * @param request the request parameters of DeleteScene  DeleteSceneRequest
@@ -402,6 +420,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetResourceRuleResponse
      */
     CompletableFuture<GetResourceRuleResponse> getResourceRule(GetResourceRuleRequest request);
+
+    /**
+     * @param request the request parameters of GetSampleConsistencyJob  GetSampleConsistencyJobRequest
+     * @return GetSampleConsistencyJobResponse
+     */
+    CompletableFuture<GetSampleConsistencyJobResponse> getSampleConsistencyJob(GetSampleConsistencyJobRequest request);
 
     /**
      * @param request the request parameters of GetScene  GetSceneRequest
@@ -548,6 +572,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListResourceRulesResponse> listResourceRules(ListResourceRulesRequest request);
 
     /**
+     * @param request the request parameters of ListSampleConsistencyJobs  ListSampleConsistencyJobsRequest
+     * @return ListSampleConsistencyJobsResponse
+     */
+    CompletableFuture<ListSampleConsistencyJobsResponse> listSampleConsistencyJobs(ListSampleConsistencyJobsRequest request);
+
+    /**
      * @param request the request parameters of ListScenes  ListScenesRequest
      * @return ListScenesResponse
      */
@@ -626,6 +656,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PushResourceRuleResponse> pushResourceRule(PushResourceRuleRequest request);
 
     /**
+     * @param request the request parameters of QuerySampleConsistencyJobDifference  QuerySampleConsistencyJobDifferenceRequest
+     * @return QuerySampleConsistencyJobDifferenceResponse
+     */
+    CompletableFuture<QuerySampleConsistencyJobDifferenceResponse> querySampleConsistencyJobDifference(QuerySampleConsistencyJobDifferenceRequest request);
+
+    /**
      * @param request the request parameters of QueryTrafficControlTargetItemReportDetail  QueryTrafficControlTargetItemReportDetailRequest
      * @return QueryTrafficControlTargetItemReportDetailResponse
      */
@@ -644,6 +680,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReportABMetricGroupResponse> reportABMetricGroup(ReportABMetricGroupRequest request);
 
     /**
+     * @param request the request parameters of ReportSampleConsistencyJob  ReportSampleConsistencyJobRequest
+     * @return ReportSampleConsistencyJobResponse
+     */
+    CompletableFuture<ReportSampleConsistencyJobResponse> reportSampleConsistencyJob(ReportSampleConsistencyJobRequest request);
+
+    /**
      * @param request the request parameters of SplitTrafficControlTarget  SplitTrafficControlTargetRequest
      * @return SplitTrafficControlTargetResponse
      */
@@ -660,6 +702,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StartTrafficControlTaskResponse
      */
     CompletableFuture<StartTrafficControlTaskResponse> startTrafficControlTask(StartTrafficControlTaskRequest request);
+
+    /**
+     * @param request the request parameters of StopSampleConsistencyJob  StopSampleConsistencyJobRequest
+     * @return StopSampleConsistencyJobResponse
+     */
+    CompletableFuture<StopSampleConsistencyJobResponse> stopSampleConsistencyJob(StopSampleConsistencyJobRequest request);
 
     /**
      * @param request the request parameters of StopTrafficControlTarget  StopTrafficControlTargetRequest

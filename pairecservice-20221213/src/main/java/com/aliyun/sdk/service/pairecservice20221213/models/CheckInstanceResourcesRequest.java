@@ -27,6 +27,10 @@ public class CheckInstanceResourcesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    private String resourceId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
@@ -39,6 +43,7 @@ public class CheckInstanceResourcesRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.resourceId = builder.resourceId;
         this.type = builder.type;
         this.uri = builder.uri;
     }
@@ -51,7 +56,7 @@ public class CheckInstanceResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -71,6 +76,13 @@ public class CheckInstanceResourcesRequest extends Request {
     }
 
     /**
+     * @return resourceId
+     */
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -87,6 +99,7 @@ public class CheckInstanceResourcesRequest extends Request {
     public static final class Builder extends Request.Builder<CheckInstanceResourcesRequest, Builder> {
         private String instanceId; 
         private String regionId; 
+        private String resourceId; 
         private String type; 
         private String uri; 
 
@@ -98,6 +111,7 @@ public class CheckInstanceResourcesRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
             this.type = request.type;
             this.uri = request.uri;
         } 
@@ -120,6 +134,15 @@ public class CheckInstanceResourcesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceId.
+         */
+        public Builder resourceId(String resourceId) {
+            this.putBodyParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
             return this;
         }
 

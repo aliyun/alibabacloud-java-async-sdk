@@ -60,6 +60,10 @@ public class GetABMetricGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ABMetricIds
      */
@@ -125,6 +129,20 @@ public class GetABMetricGroupResponseBody extends TeaModel {
         private Boolean realtime; 
         private String requestId; 
         private String sceneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetABMetricGroupResponseBody model) {
+            this.ABMetricIds = model.ABMetricIds;
+            this.ABMetricNames = model.ABMetricNames;
+            this.description = model.description;
+            this.name = model.name;
+            this.owner = model.owner;
+            this.realtime = model.realtime;
+            this.requestId = model.requestId;
+            this.sceneId = model.sceneId;
+        } 
 
         /**
          * ABMetricIds.

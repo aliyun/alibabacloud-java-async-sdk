@@ -48,6 +48,10 @@ public class GetSubCrowdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gmtCreateTime
      */
@@ -89,6 +93,17 @@ public class GetSubCrowdResponseBody extends TeaModel {
         private String requestId; 
         private String source; 
         private String users; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSubCrowdResponseBody model) {
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.quantity = model.quantity;
+            this.requestId = model.requestId;
+            this.source = model.source;
+            this.users = model.users;
+        } 
 
         /**
          * GmtCreateTime.

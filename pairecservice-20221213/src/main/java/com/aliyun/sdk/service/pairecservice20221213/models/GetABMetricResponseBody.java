@@ -88,6 +88,10 @@ public class GetABMetricResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return definition
      */
@@ -209,6 +213,27 @@ public class GetABMetricResponseBody extends TeaModel {
         private Integer statisticsCycle; 
         private String tableMetaId; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetABMetricResponseBody model) {
+            this.definition = model.definition;
+            this.description = model.description;
+            this.leftMetricId = model.leftMetricId;
+            this.name = model.name;
+            this.operator = model.operator;
+            this.realtime = model.realtime;
+            this.requestId = model.requestId;
+            this.resultResourceId = model.resultResourceId;
+            this.resultTableMetaId = model.resultTableMetaId;
+            this.rightMetricId = model.rightMetricId;
+            this.sceneId = model.sceneId;
+            this.sceneName = model.sceneName;
+            this.statisticsCycle = model.statisticsCycle;
+            this.tableMetaId = model.tableMetaId;
+            this.type = model.type;
+        } 
 
         /**
          * Definition.

@@ -36,6 +36,10 @@ public class CreateABMetricGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ABMetricGroupId
      */
@@ -53,6 +57,14 @@ public class CreateABMetricGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String ABMetricGroupId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateABMetricGroupResponseBody model) {
+            this.ABMetricGroupId = model.ABMetricGroupId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ABMetricGroupId.

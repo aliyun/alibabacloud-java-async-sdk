@@ -40,6 +40,10 @@ public class ListInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -65,6 +69,15 @@ public class ListInstancesResponseBody extends TeaModel {
         private java.util.List<Instances> instances; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Instances.
@@ -151,6 +164,15 @@ public class ListInstancesResponseBody extends TeaModel {
             private String componentCode; 
             private java.util.Map<String, ?> meta; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataManagements model) {
+                this.componentCode = model.componentCode;
+                this.meta = model.meta;
+                this.type = model.type;
+            } 
 
             /**
              * ComponentCode.
@@ -239,6 +261,15 @@ public class ListInstancesResponseBody extends TeaModel {
             private java.util.Map<String, ?> meta; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Engines model) {
+                this.componentCode = model.componentCode;
+                this.meta = model.meta;
+                this.type = model.type;
+            } 
+
             /**
              * ComponentCode.
              */
@@ -325,6 +356,15 @@ public class ListInstancesResponseBody extends TeaModel {
             private String componentCode; 
             private java.util.Map<String, ?> meta; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Monitors model) {
+                this.componentCode = model.componentCode;
+                this.meta = model.meta;
+                this.type = model.type;
+            } 
 
             /**
              * ComponentCode.
@@ -413,6 +453,15 @@ public class ListInstancesResponseBody extends TeaModel {
             private java.util.List<Engines> engines; 
             private java.util.List<Monitors> monitors; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.dataManagements = model.dataManagements;
+                this.engines = model.engines;
+                this.monitors = model.monitors;
+            } 
+
             /**
              * DataManagements.
              */
@@ -475,6 +524,13 @@ public class ListInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean isEnable; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperatingTool model) {
+                this.isEnable = model.isEnable;
+            } 
 
             /**
              * IsEnable.
@@ -642,6 +698,23 @@ public class ListInstancesResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.chargeType = model.chargeType;
+                this.commodityCode = model.commodityCode;
+                this.config = model.config;
+                this.expiredTime = model.expiredTime;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.instanceId = model.instanceId;
+                this.operatingTool = model.operatingTool;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * ChargeType.

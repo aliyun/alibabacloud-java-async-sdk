@@ -36,6 +36,10 @@ public class CloneEngineConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return engineConfigId
      */
@@ -53,6 +57,14 @@ public class CloneEngineConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String engineConfigId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CloneEngineConfigResponseBody model) {
+            this.engineConfigId = model.engineConfigId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * EngineConfigId.

@@ -64,6 +64,10 @@ public class GetResourceRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -137,6 +141,21 @@ public class GetResourceRuleResponseBody extends TeaModel {
         private String resourceRuleId; 
         private String ruleComputingDefinition; 
         private java.util.List<RuleItems> ruleItems; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResourceRuleResponseBody model) {
+            this.description = model.description;
+            this.metricOperationType = model.metricOperationType;
+            this.metricPullInfo = model.metricPullInfo;
+            this.metricPullPeriod = model.metricPullPeriod;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.resourceRuleId = model.resourceRuleId;
+            this.ruleComputingDefinition = model.ruleComputingDefinition;
+            this.ruleItems = model.ruleItems;
+        } 
 
         /**
          * Description.
@@ -295,6 +314,17 @@ public class GetResourceRuleResponseBody extends TeaModel {
             private String minValue; 
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleItems model) {
+                this.description = model.description;
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * Description.

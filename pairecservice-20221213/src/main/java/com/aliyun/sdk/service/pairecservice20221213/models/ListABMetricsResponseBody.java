@@ -40,6 +40,10 @@ public class ListABMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ABMetrics
      */
@@ -65,6 +69,15 @@ public class ListABMetricsResponseBody extends TeaModel {
         private java.util.List<ABMetrics> ABMetrics; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListABMetricsResponseBody model) {
+            this.ABMetrics = model.ABMetrics;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * ABMetrics.
@@ -295,6 +308,27 @@ public class ListABMetricsResponseBody extends TeaModel {
             private Integer statisticsCycle; 
             private String tableMetaId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ABMetrics model) {
+                this.ABMetricId = model.ABMetricId;
+                this.definition = model.definition;
+                this.description = model.description;
+                this.leftMetricId = model.leftMetricId;
+                this.name = model.name;
+                this.operator = model.operator;
+                this.realtime = model.realtime;
+                this.resultResourceId = model.resultResourceId;
+                this.resultTableMetaId = model.resultTableMetaId;
+                this.rightMetricId = model.rightMetricId;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+                this.statisticsCycle = model.statisticsCycle;
+                this.tableMetaId = model.tableMetaId;
+                this.type = model.type;
+            } 
 
             /**
              * ABMetricId.

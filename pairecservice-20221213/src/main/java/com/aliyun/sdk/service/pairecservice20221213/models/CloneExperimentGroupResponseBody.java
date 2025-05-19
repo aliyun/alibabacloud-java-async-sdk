@@ -36,6 +36,10 @@ public class CloneExperimentGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return experimentGroupId
      */
@@ -53,6 +57,14 @@ public class CloneExperimentGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String experimentGroupId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CloneExperimentGroupResponseBody model) {
+            this.experimentGroupId = model.experimentGroupId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ExperimentGroupId.

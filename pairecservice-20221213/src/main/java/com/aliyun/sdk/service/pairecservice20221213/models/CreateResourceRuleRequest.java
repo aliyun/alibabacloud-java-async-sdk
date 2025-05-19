@@ -79,7 +79,7 @@ public class CreateResourceRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -346,6 +346,17 @@ public class CreateResourceRuleRequest extends Request {
             private Double minValue; 
             private String name; 
             private Double value; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleItems model) {
+                this.description = model.description;
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * Description.

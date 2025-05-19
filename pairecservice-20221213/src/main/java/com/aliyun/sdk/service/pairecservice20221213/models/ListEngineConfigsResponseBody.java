@@ -40,6 +40,10 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return engineConfigs
      */
@@ -65,6 +69,15 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         private java.util.List<EngineConfigs> engineConfigs; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEngineConfigsResponseBody model) {
+            this.engineConfigs = model.engineConfigs;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * EngineConfigs.
@@ -235,6 +248,22 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             private String name; 
             private String status; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(EngineConfigs model) {
+                this.configValue = model.configValue;
+                this.description = model.description;
+                this.engineConfigId = model.engineConfigId;
+                this.environment = model.environment;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.gmtReleasedTime = model.gmtReleasedTime;
+                this.name = model.name;
+                this.status = model.status;
+                this.version = model.version;
+            } 
 
             /**
              * ConfigValue.

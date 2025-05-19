@@ -88,6 +88,10 @@ public class GetTableMetaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return canDelete
      */
@@ -209,6 +213,27 @@ public class GetTableMetaResponseBody extends TeaModel {
         private String tableName; 
         private String type; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTableMetaResponseBody model) {
+            this.canDelete = model.canDelete;
+            this.config = model.config;
+            this.description = model.description;
+            this.fields = model.fields;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtImportedTime = model.gmtImportedTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.module = model.module;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.resourceId = model.resourceId;
+            this.tableMetaId = model.tableMetaId;
+            this.tableName = model.tableName;
+            this.type = model.type;
+            this.url = model.url;
+        } 
 
         /**
          * CanDelete.
@@ -403,6 +428,16 @@ public class GetTableMetaResponseBody extends TeaModel {
             private String meaning; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.isDimensionField = model.isDimensionField;
+                this.meaning = model.meaning;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * IsDimensionField.

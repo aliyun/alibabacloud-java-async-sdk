@@ -44,6 +44,10 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataPath
      */
@@ -77,6 +81,16 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
         private String ossPath; 
         private java.util.List<ReportsOfFeatureDiff> reportsOfFeatureDiff; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFeatureConsistencyCheckJobFeatureReportsResponseBody model) {
+            this.dataPath = model.dataPath;
+            this.ossPath = model.ossPath;
+            this.reportsOfFeatureDiff = model.reportsOfFeatureDiff;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DataPath.
@@ -207,6 +221,18 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
             private String logUserId; 
             private String offlineValue; 
             private String onlineValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReportsOfFeatureDiff model) {
+                this.featureName = model.featureName;
+                this.logItemId = model.logItemId;
+                this.logRequestId = model.logRequestId;
+                this.logUserId = model.logUserId;
+                this.offlineValue = model.offlineValue;
+                this.onlineValue = model.onlineValue;
+            } 
 
             /**
              * FeatureName.

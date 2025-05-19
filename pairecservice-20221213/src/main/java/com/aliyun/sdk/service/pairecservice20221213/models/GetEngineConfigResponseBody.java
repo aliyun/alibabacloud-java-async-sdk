@@ -64,6 +64,10 @@ public class GetEngineConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configValue
      */
@@ -137,6 +141,21 @@ public class GetEngineConfigResponseBody extends TeaModel {
         private String name; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEngineConfigResponseBody model) {
+            this.configValue = model.configValue;
+            this.description = model.description;
+            this.environment = model.environment;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.gmtReleasedTime = model.gmtReleasedTime;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * ConfigValue.

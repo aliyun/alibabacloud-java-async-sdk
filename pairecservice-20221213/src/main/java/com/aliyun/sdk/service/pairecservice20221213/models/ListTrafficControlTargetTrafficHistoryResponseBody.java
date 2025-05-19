@@ -40,6 +40,10 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
         private String requestId; 
         private String totalCount; 
         private java.util.List<TrafficControlTaskTrafficHistories> trafficControlTaskTrafficHistories; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTrafficControlTargetTrafficHistoryResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.trafficControlTaskTrafficHistories = model.trafficControlTaskTrafficHistories;
+        } 
 
         /**
          * RequestId.
@@ -187,6 +200,18 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
             private Double trafficControlTargetAimTraffic; 
             private Double trafficControlTargetTraffic; 
             private Double trafficControlTaskTraffic; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficControlTaskTrafficHistories model) {
+                this.experimentId = model.experimentId;
+                this.itemId = model.itemId;
+                this.recordTime = model.recordTime;
+                this.trafficControlTargetAimTraffic = model.trafficControlTargetAimTraffic;
+                this.trafficControlTargetTraffic = model.trafficControlTargetTraffic;
+                this.trafficControlTaskTraffic = model.trafficControlTaskTraffic;
+            } 
 
             /**
              * ExperimentId.

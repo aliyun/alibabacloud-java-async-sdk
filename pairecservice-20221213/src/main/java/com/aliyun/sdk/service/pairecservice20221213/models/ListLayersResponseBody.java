@@ -40,6 +40,10 @@ public class ListLayersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return layers
      */
@@ -65,6 +69,15 @@ public class ListLayersResponseBody extends TeaModel {
         private java.util.List<Layers> layers; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLayersResponseBody model) {
+            this.layers = model.layers;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Layers.
@@ -202,6 +215,19 @@ public class ListLayersResponseBody extends TeaModel {
             private String name; 
             private Long residualFlow; 
             private String sceneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Layers model) {
+                this.description = model.description;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.laboratoryId = model.laboratoryId;
+                this.layerId = model.layerId;
+                this.name = model.name;
+                this.residualFlow = model.residualFlow;
+                this.sceneId = model.sceneId;
+            } 
 
             /**
              * Description.

@@ -44,6 +44,10 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataPath
      */
@@ -77,6 +81,16 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
         private String ossPath; 
         private java.util.List<ReportsOfScoreDiff> reportsOfScoreDiff; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFeatureConsistencyCheckJobScoreReportsResponseBody model) {
+            this.dataPath = model.dataPath;
+            this.ossPath = model.ossPath;
+            this.reportsOfScoreDiff = model.reportsOfScoreDiff;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DataPath.
@@ -195,6 +209,17 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
             private String logUserId; 
             private String scoreDiff; 
             private String scoreDiffDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReportsOfScoreDiff model) {
+                this.logItemId = model.logItemId;
+                this.logRequestId = model.logRequestId;
+                this.logUserId = model.logUserId;
+                this.scoreDiff = model.scoreDiff;
+                this.scoreDiffDetail = model.scoreDiffDetail;
+            } 
 
             /**
              * LogItemId.

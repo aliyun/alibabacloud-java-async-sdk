@@ -36,6 +36,10 @@ public class CheckInstanceResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CheckInstanceResourcesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Resources> resources; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckInstanceResourcesResponseBody model) {
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+        } 
 
         /**
          * RequestId.
@@ -131,6 +143,15 @@ public class CheckInstanceResourcesResponseBody extends TeaModel {
             private String status; 
             private String type; 
             private String uri; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.status = model.status;
+                this.type = model.type;
+                this.uri = model.uri;
+            } 
 
             /**
              * Status.

@@ -40,6 +40,10 @@ public class GenerateTrafficControlTaskCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class GenerateTrafficControlTaskCodeResponseBody extends TeaModel {
         private String code; 
         private Boolean preNeedConfig; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateTrafficControlTaskCodeResponseBody model) {
+            this.code = model.code;
+            this.preNeedConfig = model.preNeedConfig;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.

@@ -36,6 +36,10 @@ public class TrafficControlTaskTrafficInfoTargetTrafficsDataValue extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return traffic
      */
@@ -53,6 +57,14 @@ public class TrafficControlTaskTrafficInfoTargetTrafficsDataValue extends TeaMod
     public static final class Builder {
         private Double traffic; 
         private Long recordTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrafficControlTaskTrafficInfoTargetTrafficsDataValue model) {
+            this.traffic = model.traffic;
+            this.recordTime = model.recordTime;
+        } 
 
         /**
          * Traffic.

@@ -36,6 +36,10 @@ public class CreateABMetricResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ABMetricId
      */
@@ -53,6 +57,14 @@ public class CreateABMetricResponseBody extends TeaModel {
     public static final class Builder {
         private String ABMetricId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateABMetricResponseBody model) {
+            this.ABMetricId = model.ABMetricId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ABMetricId.

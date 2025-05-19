@@ -40,6 +40,10 @@ public class ListCrowdsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return crowds
      */
@@ -65,6 +69,15 @@ public class ListCrowdsResponseBody extends TeaModel {
         private java.util.List<Crowds> crowds; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCrowdsResponseBody model) {
+            this.crowds = model.crowds;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Crowds.
@@ -214,6 +227,20 @@ public class ListCrowdsResponseBody extends TeaModel {
             private String quantity; 
             private String source; 
             private String users; 
+
+            private Builder() {
+            } 
+
+            private Builder(Crowds model) {
+                this.crowdId = model.crowdId;
+                this.description = model.description;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.label = model.label;
+                this.name = model.name;
+                this.quantity = model.quantity;
+                this.source = model.source;
+                this.users = model.users;
+            } 
 
             /**
              * CrowdId.

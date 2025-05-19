@@ -40,6 +40,10 @@ public class ListExperimentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return experiments
      */
@@ -65,6 +69,15 @@ public class ListExperimentsResponseBody extends TeaModel {
         private java.util.List<Experiments> experiments; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExperimentsResponseBody model) {
+            this.experiments = model.experiments;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Experiments.
@@ -322,6 +335,29 @@ public class ListExperimentsResponseBody extends TeaModel {
             private String sceneId; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Experiments model) {
+                this.aliasExperimentId = model.aliasExperimentId;
+                this.buckets = model.buckets;
+                this.config = model.config;
+                this.debugCrowdId = model.debugCrowdId;
+                this.debugUsers = model.debugUsers;
+                this.description = model.description;
+                this.experimentGroupId = model.experimentGroupId;
+                this.experimentId = model.experimentId;
+                this.flowPercent = model.flowPercent;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.laboratoryId = model.laboratoryId;
+                this.layerId = model.layerId;
+                this.name = model.name;
+                this.sceneId = model.sceneId;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * AliasExperimentId.

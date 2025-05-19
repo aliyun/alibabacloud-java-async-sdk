@@ -64,6 +64,10 @@ public class GetInstanceResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return category
      */
@@ -137,6 +141,21 @@ public class GetInstanceResourceResponseBody extends TeaModel {
         private String resourceId; 
         private String type; 
         private String uri; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceResourceResponseBody model) {
+            this.category = model.category;
+            this.config = model.config;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.group = model.group;
+            this.requestId = model.requestId;
+            this.resourceId = model.resourceId;
+            this.type = model.type;
+            this.uri = model.uri;
+        } 
 
         /**
          * Category.

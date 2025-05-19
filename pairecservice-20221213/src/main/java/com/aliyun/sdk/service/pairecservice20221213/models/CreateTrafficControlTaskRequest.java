@@ -50,6 +50,10 @@ public class CreateTrafficControlTaskRequest extends Request {
     private String executionTime;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FlinkResourceId")
+    private String flinkResourceId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -136,6 +140,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         this.description = builder.description;
         this.endTime = builder.endTime;
         this.executionTime = builder.executionTime;
+        this.flinkResourceId = builder.flinkResourceId;
         this.instanceId = builder.instanceId;
         this.itemConditionArray = builder.itemConditionArray;
         this.itemConditionExpress = builder.itemConditionExpress;
@@ -165,7 +170,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -224,6 +229,13 @@ public class CreateTrafficControlTaskRequest extends Request {
      */
     public String getExecutionTime() {
         return this.executionTime;
+    }
+
+    /**
+     * @return flinkResourceId
+     */
+    public String getFlinkResourceId() {
+        return this.flinkResourceId;
     }
 
     /**
@@ -368,6 +380,7 @@ public class CreateTrafficControlTaskRequest extends Request {
         private String description; 
         private String endTime; 
         private String executionTime; 
+        private String flinkResourceId; 
         private String instanceId; 
         private String itemConditionArray; 
         private String itemConditionExpress; 
@@ -402,6 +415,7 @@ public class CreateTrafficControlTaskRequest extends Request {
             this.description = request.description;
             this.endTime = request.endTime;
             this.executionTime = request.executionTime;
+            this.flinkResourceId = request.flinkResourceId;
             this.instanceId = request.instanceId;
             this.itemConditionArray = request.itemConditionArray;
             this.itemConditionExpress = request.itemConditionExpress;
@@ -492,6 +506,15 @@ public class CreateTrafficControlTaskRequest extends Request {
         public Builder executionTime(String executionTime) {
             this.putBodyParameter("ExecutionTime", executionTime);
             this.executionTime = executionTime;
+            return this;
+        }
+
+        /**
+         * FlinkResourceId.
+         */
+        public Builder flinkResourceId(String flinkResourceId) {
+            this.putBodyParameter("FlinkResourceId", flinkResourceId);
+            this.flinkResourceId = flinkResourceId;
             return this;
         }
 
@@ -848,6 +871,25 @@ public class CreateTrafficControlTaskRequest extends Request {
             private String status; 
             private Long toleranceValue; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficControlTargets model) {
+                this.endTime = model.endTime;
+                this.event = model.event;
+                this.itemConditionArray = model.itemConditionArray;
+                this.itemConditionExpress = model.itemConditionExpress;
+                this.itemConditionType = model.itemConditionType;
+                this.name = model.name;
+                this.newProductRegulation = model.newProductRegulation;
+                this.recallName = model.recallName;
+                this.startTime = model.startTime;
+                this.statisPeriod = model.statisPeriod;
+                this.status = model.status;
+                this.toleranceValue = model.toleranceValue;
+                this.value = model.value;
+            } 
 
             /**
              * EndTime.

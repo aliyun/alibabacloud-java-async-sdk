@@ -59,7 +59,7 @@ public class UpdateSceneRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -232,6 +232,14 @@ public class UpdateSceneRequest extends Request {
         public static final class Builder {
             private String flowCode; 
             private String flowName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Flows model) {
+                this.flowCode = model.flowCode;
+                this.flowName = model.flowName;
+            } 
 
             /**
              * FlowCode.

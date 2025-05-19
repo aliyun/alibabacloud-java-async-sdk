@@ -40,6 +40,10 @@ public class ListSubCrowdsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListSubCrowdsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SubCrowds> subCrowds; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSubCrowdsResponseBody model) {
+            this.requestId = model.requestId;
+            this.subCrowds = model.subCrowds;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -178,6 +191,17 @@ public class ListSubCrowdsResponseBody extends TeaModel {
             private String source; 
             private String subCrowdId; 
             private String users; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubCrowds model) {
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.quantity = model.quantity;
+                this.source = model.source;
+                this.subCrowdId = model.subCrowdId;
+                this.users = model.users;
+            } 
 
             /**
              * GmtCreateTime.

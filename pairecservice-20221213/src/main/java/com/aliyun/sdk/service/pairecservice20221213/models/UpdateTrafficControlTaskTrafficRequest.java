@@ -59,7 +59,7 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -280,6 +280,18 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
             private String trafficControlTargetId; 
             private Long trafficControlTargetTraffic; 
             private Long trafficControlTaskTraffic; 
+
+            private Builder() {
+            } 
+
+            private Builder(Traffics model) {
+                this.itemOrExperimentId = model.itemOrExperimentId;
+                this.recordTime = model.recordTime;
+                this.trafficControlTargetAimTraffic = model.trafficControlTargetAimTraffic;
+                this.trafficControlTargetId = model.trafficControlTargetId;
+                this.trafficControlTargetTraffic = model.trafficControlTargetTraffic;
+                this.trafficControlTaskTraffic = model.trafficControlTaskTraffic;
+            } 
 
             /**
              * ItemOrExperimentId.

@@ -108,6 +108,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -269,6 +273,32 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         private String reservedBuckets; 
         private String sceneId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetExperimentGroupResponseBody model) {
+            this.config = model.config;
+            this.crowdId = model.crowdId;
+            this.crowdTargetType = model.crowdTargetType;
+            this.debugCrowdId = model.debugCrowdId;
+            this.debugUsers = model.debugUsers;
+            this.description = model.description;
+            this.distributionTimeDuration = model.distributionTimeDuration;
+            this.distributionType = model.distributionType;
+            this.filter = model.filter;
+            this.holdingBuckets = model.holdingBuckets;
+            this.laboratoryId = model.laboratoryId;
+            this.layerId = model.layerId;
+            this.name = model.name;
+            this.needAA = model.needAA;
+            this.owner = model.owner;
+            this.randomFlow = model.randomFlow;
+            this.requestId = model.requestId;
+            this.reservedBuckets = model.reservedBuckets;
+            this.sceneId = model.sceneId;
+            this.status = model.status;
+        } 
 
         /**
          * Config.

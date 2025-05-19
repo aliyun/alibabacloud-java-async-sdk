@@ -40,6 +40,10 @@ public class DebugResourceRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentValues
      */
@@ -65,6 +69,15 @@ public class DebugResourceRuleResponseBody extends TeaModel {
         private java.util.Map<String, ?> currentValues; 
         private java.util.Map<String, ?> outputValues; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DebugResourceRuleResponseBody model) {
+            this.currentValues = model.currentValues;
+            this.outputValues = model.outputValues;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CurrentValues.

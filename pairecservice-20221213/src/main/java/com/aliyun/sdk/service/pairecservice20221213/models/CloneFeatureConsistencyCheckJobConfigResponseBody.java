@@ -36,6 +36,10 @@ public class CloneFeatureConsistencyCheckJobConfigResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return featureConsistencyCheckId
      */
@@ -53,6 +57,14 @@ public class CloneFeatureConsistencyCheckJobConfigResponseBody extends TeaModel 
     public static final class Builder {
         private String featureConsistencyCheckId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CloneFeatureConsistencyCheckJobConfigResponseBody model) {
+            this.featureConsistencyCheckId = model.featureConsistencyCheckId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * FeatureConsistencyCheckId.

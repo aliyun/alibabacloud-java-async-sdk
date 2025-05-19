@@ -96,6 +96,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -233,6 +237,29 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         private Long toleranceValue; 
         private String trafficControlTargetId; 
         private Float value; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTrafficControlTargetResponseBody model) {
+            this.endTime = model.endTime;
+            this.event = model.event;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.itemConditionArray = model.itemConditionArray;
+            this.itemConditionExpress = model.itemConditionExpress;
+            this.itemConditionType = model.itemConditionType;
+            this.name = model.name;
+            this.newProductRegulation = model.newProductRegulation;
+            this.recallName = model.recallName;
+            this.requestId = model.requestId;
+            this.splitParts = model.splitParts;
+            this.startTime = model.startTime;
+            this.statisPeriod = model.statisPeriod;
+            this.status = model.status;
+            this.toleranceValue = model.toleranceValue;
+            this.trafficControlTargetId = model.trafficControlTargetId;
+            this.value = model.value;
+        } 
 
         /**
          * EndTime.
@@ -431,6 +458,15 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
             private java.util.List<Long> setPoints; 
             private java.util.List<Long> setValues; 
             private java.util.List<Long> timePoints; 
+
+            private Builder() {
+            } 
+
+            private Builder(SplitParts model) {
+                this.setPoints = model.setPoints;
+                this.setValues = model.setValues;
+                this.timePoints = model.timePoints;
+            } 
 
             /**
              * SetPoints.

@@ -60,6 +60,10 @@ public class GetFeatureConsistencyCheckJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -125,6 +129,20 @@ public class GetFeatureConsistencyCheckJobResponseBody extends TeaModel {
         private java.util.List<String> logs; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFeatureConsistencyCheckJobResponseBody model) {
+            this.config = model.config;
+            this.featureConsistencyCheckJobConfigId = model.featureConsistencyCheckJobConfigId;
+            this.featureConsistencyCheckJobConfigName = model.featureConsistencyCheckJobConfigName;
+            this.gmtEndTime = model.gmtEndTime;
+            this.gmtStartTime = model.gmtStartTime;
+            this.logs = model.logs;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * Config.

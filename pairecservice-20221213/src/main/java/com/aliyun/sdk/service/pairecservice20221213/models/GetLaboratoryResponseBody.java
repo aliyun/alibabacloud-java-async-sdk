@@ -84,6 +84,10 @@ public class GetLaboratoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bucketCount
      */
@@ -197,6 +201,26 @@ public class GetLaboratoryResponseBody extends TeaModel {
         private String sceneId; 
         private String status; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLaboratoryResponseBody model) {
+            this.bucketCount = model.bucketCount;
+            this.bucketType = model.bucketType;
+            this.buckets = model.buckets;
+            this.crowdId = model.crowdId;
+            this.debugCrowdId = model.debugCrowdId;
+            this.debugUsers = model.debugUsers;
+            this.description = model.description;
+            this.environment = model.environment;
+            this.filter = model.filter;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.sceneId = model.sceneId;
+            this.status = model.status;
+            this.type = model.type;
+        } 
 
         /**
          * BucketCount.

@@ -56,6 +56,10 @@ public class GetLayerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -113,6 +117,19 @@ public class GetLayerResponseBody extends TeaModel {
         private String requestId; 
         private Long residualFlow; 
         private String sceneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLayerResponseBody model) {
+            this.description = model.description;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.laboratoryId = model.laboratoryId;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.residualFlow = model.residualFlow;
+            this.sceneId = model.sceneId;
+        } 
 
         /**
          * Description.

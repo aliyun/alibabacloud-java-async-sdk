@@ -36,6 +36,10 @@ public class CreateLayerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return layerId
      */
@@ -53,6 +57,14 @@ public class CreateLayerResponseBody extends TeaModel {
     public static final class Builder {
         private String layerId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateLayerResponseBody model) {
+            this.layerId = model.layerId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * LayerId.

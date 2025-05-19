@@ -40,6 +40,10 @@ public class ListLaboratoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return laboratories
      */
@@ -65,6 +69,15 @@ public class ListLaboratoriesResponseBody extends TeaModel {
         private java.util.List<Laboratories> laboratories; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLaboratoriesResponseBody model) {
+            this.laboratories = model.laboratories;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Laboratories.
@@ -286,6 +299,26 @@ public class ListLaboratoriesResponseBody extends TeaModel {
             private String sceneId; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Laboratories model) {
+                this.bucketCount = model.bucketCount;
+                this.bucketType = model.bucketType;
+                this.buckets = model.buckets;
+                this.crowdId = model.crowdId;
+                this.debugCrowdId = model.debugCrowdId;
+                this.debugUsers = model.debugUsers;
+                this.description = model.description;
+                this.environment = model.environment;
+                this.filter = model.filter;
+                this.laboratoryId = model.laboratoryId;
+                this.name = model.name;
+                this.sceneId = model.sceneId;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * BucketCount.

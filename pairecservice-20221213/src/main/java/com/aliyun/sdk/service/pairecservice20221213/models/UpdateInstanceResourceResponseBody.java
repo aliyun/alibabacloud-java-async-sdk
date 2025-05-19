@@ -32,6 +32,10 @@ public class UpdateInstanceResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class UpdateInstanceResourceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateInstanceResourceResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * RequestId.

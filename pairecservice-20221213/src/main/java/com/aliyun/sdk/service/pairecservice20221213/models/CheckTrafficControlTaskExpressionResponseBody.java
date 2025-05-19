@@ -40,6 +40,10 @@ public class CheckTrafficControlTaskExpressionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isValie
      */
@@ -65,6 +69,15 @@ public class CheckTrafficControlTaskExpressionResponseBody extends TeaModel {
         private Boolean isValie; 
         private String reason; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckTrafficControlTaskExpressionResponseBody model) {
+            this.isValie = model.isValie;
+            this.reason = model.reason;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * IsValie.

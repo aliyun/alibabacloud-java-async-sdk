@@ -36,6 +36,10 @@ public class CreateLaboratoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return laboratoryId
      */
@@ -53,6 +57,14 @@ public class CreateLaboratoryResponseBody extends TeaModel {
     public static final class Builder {
         private String laboratoryId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateLaboratoryResponseBody model) {
+            this.laboratoryId = model.laboratoryId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * LaboratoryId.

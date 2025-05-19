@@ -36,6 +36,10 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TrafficControlTaskTrafficInfo trafficControlTaskTrafficInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTrafficControlTaskTrafficResponseBody model) {
+            this.requestId = model.requestId;
+            this.trafficControlTaskTrafficInfo = model.trafficControlTaskTrafficInfo;
+        } 
 
         /**
          * RequestId.
@@ -120,6 +132,14 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
             private java.util.Map<String, TrafficControlTaskTrafficInfoTargetTrafficsDataValue> data; 
             private String trafficContorlTargetId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TargetTraffics model) {
+                this.data = model.data;
+                this.trafficContorlTargetId = model.trafficContorlTargetId;
+            } 
+
             /**
              * Data.
              */
@@ -186,6 +206,14 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<TargetTraffics> targetTraffics; 
             private java.util.Map<String, TrafficControlTaskTrafficInfoTaskTrafficsValue> taskTraffics; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficControlTaskTrafficInfo model) {
+                this.targetTraffics = model.targetTraffics;
+                this.taskTraffics = model.taskTraffics;
+            } 
 
             /**
              * TargetTraffics.

@@ -36,6 +36,10 @@ public class CreateResourceRuleItemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateResourceRuleItemResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String resourceRuleItemId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateResourceRuleItemResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceRuleItemId = model.resourceRuleItemId;
+        } 
 
         /**
          * RequestId.

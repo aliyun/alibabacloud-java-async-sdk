@@ -40,6 +40,10 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return featureConsistencyCheckJobs
      */
@@ -65,6 +69,15 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
         private java.util.List<FeatureConsistencyCheckJobs> featureConsistencyCheckJobs; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFeatureConsistencyCheckJobsResponseBody model) {
+            this.featureConsistencyCheckJobs = model.featureConsistencyCheckJobs;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * FeatureConsistencyCheckJobs.
@@ -211,6 +224,20 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
             private String gmtStartTime; 
             private java.util.List<String> logs; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(FeatureConsistencyCheckJobs model) {
+                this.config = model.config;
+                this.featureConsistencyCheckJobConfigId = model.featureConsistencyCheckJobConfigId;
+                this.featureConsistencyCheckJobConfigName = model.featureConsistencyCheckJobConfigName;
+                this.featureConsistencyCheckJobId = model.featureConsistencyCheckJobId;
+                this.gmtEndTime = model.gmtEndTime;
+                this.gmtStartTime = model.gmtStartTime;
+                this.logs = model.logs;
+                this.status = model.status;
+            } 
 
             /**
              * Config.

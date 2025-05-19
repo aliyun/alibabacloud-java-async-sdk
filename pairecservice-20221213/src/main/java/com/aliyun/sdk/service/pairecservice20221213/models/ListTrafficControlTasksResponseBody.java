@@ -40,6 +40,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         private String requestId; 
         private String totalCount; 
         private java.util.List<TrafficControlTasks> trafficControlTasks; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTrafficControlTasksResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.trafficControlTasks = model.trafficControlTasks;
+        } 
 
         /**
          * RequestId.
@@ -139,6 +152,14 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Long> setValues; 
             private java.util.List<Long> timePoints; 
+
+            private Builder() {
+            } 
+
+            private Builder(SplitParts model) {
+                this.setValues = model.setValues;
+                this.timePoints = model.timePoints;
+            } 
 
             /**
              * SetValues.
@@ -387,6 +408,29 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             private String trafficControlTargetId; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrafficControlTargets model) {
+                this.endTime = model.endTime;
+                this.event = model.event;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.itemConditionArray = model.itemConditionArray;
+                this.itemConditionExpress = model.itemConditionExpress;
+                this.itemConditionType = model.itemConditionType;
+                this.name = model.name;
+                this.newProductRegulation = model.newProductRegulation;
+                this.recallName = model.recallName;
+                this.splitParts = model.splitParts;
+                this.startTime = model.startTime;
+                this.statisPeriod = model.statisPeriod;
+                this.status = model.status;
+                this.toleranceValue = model.toleranceValue;
+                this.trafficControlTargetId = model.trafficControlTargetId;
+                this.value = model.value;
+            } 
+
             /**
              * EndTime.
              */
@@ -561,6 +605,12 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExecutionTime")
         private String executionTime;
 
+        @com.aliyun.core.annotation.NameInMap("FlinkResourceId")
+        private String flinkResourceId;
+
+        @com.aliyun.core.annotation.NameInMap("FlinkResourceName")
+        private String flinkResourceName;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
@@ -642,6 +692,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             this.endTime = builder.endTime;
             this.everPublished = builder.everPublished;
             this.executionTime = builder.executionTime;
+            this.flinkResourceId = builder.flinkResourceId;
+            this.flinkResourceName = builder.flinkResourceName;
             this.gmtCreateTime = builder.gmtCreateTime;
             this.gmtModifiedTime = builder.gmtModifiedTime;
             this.itemConditionArray = builder.itemConditionArray;
@@ -730,6 +782,20 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
          */
         public String getExecutionTime() {
             return this.executionTime;
+        }
+
+        /**
+         * @return flinkResourceId
+         */
+        public String getFlinkResourceId() {
+            return this.flinkResourceId;
+        }
+
+        /**
+         * @return flinkResourceName
+         */
+        public String getFlinkResourceName() {
+            return this.flinkResourceName;
         }
 
         /**
@@ -909,6 +975,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             private String endTime; 
             private Boolean everPublished; 
             private String executionTime; 
+            private String flinkResourceId; 
+            private String flinkResourceName; 
             private String gmtCreateTime; 
             private String gmtModifiedTime; 
             private String itemConditionArray; 
@@ -933,6 +1001,46 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             private String userConditionExpress; 
             private String userConditionType; 
             private String userTableMetaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficControlTasks model) {
+                this.behaviorTableMetaId = model.behaviorTableMetaId;
+                this.controlGranularity = model.controlGranularity;
+                this.controlLogic = model.controlLogic;
+                this.controlType = model.controlType;
+                this.description = model.description;
+                this.endTime = model.endTime;
+                this.everPublished = model.everPublished;
+                this.executionTime = model.executionTime;
+                this.flinkResourceId = model.flinkResourceId;
+                this.flinkResourceName = model.flinkResourceName;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.itemConditionArray = model.itemConditionArray;
+                this.itemConditionExpress = model.itemConditionExpress;
+                this.itemConditionType = model.itemConditionType;
+                this.itemTableMetaId = model.itemTableMetaId;
+                this.name = model.name;
+                this.preExperimentIds = model.preExperimentIds;
+                this.prepubStatus = model.prepubStatus;
+                this.prodExperimentIds = model.prodExperimentIds;
+                this.productStatus = model.productStatus;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+                this.serviceId = model.serviceId;
+                this.startTime = model.startTime;
+                this.statisBahaviorConditionExpress = model.statisBahaviorConditionExpress;
+                this.statisBehaviorConditionArray = model.statisBehaviorConditionArray;
+                this.statisBehaviorConditionType = model.statisBehaviorConditionType;
+                this.trafficControlTargets = model.trafficControlTargets;
+                this.trafficControlTaskId = model.trafficControlTaskId;
+                this.userConditionArray = model.userConditionArray;
+                this.userConditionExpress = model.userConditionExpress;
+                this.userConditionType = model.userConditionType;
+                this.userTableMetaId = model.userTableMetaId;
+            } 
 
             /**
              * BehaviorTableMetaId.
@@ -995,6 +1103,22 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
              */
             public Builder executionTime(String executionTime) {
                 this.executionTime = executionTime;
+                return this;
+            }
+
+            /**
+             * FlinkResourceId.
+             */
+            public Builder flinkResourceId(String flinkResourceId) {
+                this.flinkResourceId = flinkResourceId;
+                return this;
+            }
+
+            /**
+             * FlinkResourceName.
+             */
+            public Builder flinkResourceName(String flinkResourceName) {
+                this.flinkResourceName = flinkResourceName;
                 return this;
             }
 

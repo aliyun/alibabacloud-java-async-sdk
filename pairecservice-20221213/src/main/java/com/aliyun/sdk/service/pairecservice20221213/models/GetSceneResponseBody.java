@@ -44,6 +44,10 @@ public class GetSceneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -77,6 +81,16 @@ public class GetSceneResponseBody extends TeaModel {
         private java.util.List<Flows> flows; 
         private String name; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSceneResponseBody model) {
+            this.description = model.description;
+            this.flows = model.flows;
+            this.name = model.name;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Description.
@@ -162,6 +176,14 @@ public class GetSceneResponseBody extends TeaModel {
         public static final class Builder {
             private String flowCode; 
             private String flowName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Flows model) {
+                this.flowCode = model.flowCode;
+                this.flowName = model.flowName;
+            } 
 
             /**
              * FlowCode.

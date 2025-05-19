@@ -40,6 +40,10 @@ public class ListResourceRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListResourceRulesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ResourceRules> resourceRules; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourceRulesResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceRules = model.resourceRules;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * RequestId.
@@ -175,6 +188,17 @@ public class ListResourceRulesResponseBody extends TeaModel {
             private String minValue; 
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleItems model) {
+                this.description = model.description;
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * Description.
@@ -338,6 +362,20 @@ public class ListResourceRulesResponseBody extends TeaModel {
             private String resourceRuleId; 
             private String ruleComputingDefinition; 
             private java.util.List<RuleItems> ruleItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceRules model) {
+                this.description = model.description;
+                this.metricOperationType = model.metricOperationType;
+                this.metricPullInfo = model.metricPullInfo;
+                this.metricPullPeriod = model.metricPullPeriod;
+                this.name = model.name;
+                this.resourceRuleId = model.resourceRuleId;
+                this.ruleComputingDefinition = model.ruleComputingDefinition;
+                this.ruleItems = model.ruleItems;
+            } 
 
             /**
              * Description.

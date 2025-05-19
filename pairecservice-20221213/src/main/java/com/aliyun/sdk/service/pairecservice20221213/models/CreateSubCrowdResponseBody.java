@@ -36,6 +36,10 @@ public class CreateSubCrowdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateSubCrowdResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String subCrowdId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSubCrowdResponseBody model) {
+            this.requestId = model.requestId;
+            this.subCrowdId = model.subCrowdId;
+        } 
 
         /**
          * <p>Id of the request</p>

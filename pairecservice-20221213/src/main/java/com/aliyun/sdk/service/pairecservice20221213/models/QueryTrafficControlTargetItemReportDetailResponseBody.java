@@ -36,6 +36,10 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
     public static final class Builder {
         private String requestId; 
         private TrafficControlTargetItemReportDetail trafficControlTargetItemReportDetail; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTrafficControlTargetItemReportDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.trafficControlTargetItemReportDetail = model.trafficControlTargetItemReportDetail;
+        } 
 
         /**
          * RequestId.
@@ -143,6 +155,16 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             private String itemId; 
             private String targetProgress; 
             private Long targetTraffic; 
+
+            private Builder() {
+            } 
+
+            private Builder(ItemControlTailReportDetails model) {
+                this.features = model.features;
+                this.itemId = model.itemId;
+                this.targetProgress = model.targetProgress;
+                this.targetTraffic = model.targetTraffic;
+            } 
 
             /**
              * Features.
@@ -251,6 +273,16 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             private String targetProgress; 
             private Long targetTraffic; 
 
+            private Builder() {
+            } 
+
+            private Builder(ItemControlTopReportDetails model) {
+                this.features = model.features;
+                this.itemId = model.itemId;
+                this.targetProgress = model.targetProgress;
+                this.targetTraffic = model.targetTraffic;
+            } 
+
             /**
              * Features.
              */
@@ -333,6 +365,14 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
         public static final class Builder {
             private java.util.List<ItemControlTailReportDetails> itemControlTailReportDetails; 
             private java.util.List<ItemControlTopReportDetails> itemControlTopReportDetails; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficControlTargetItemReportDetail model) {
+                this.itemControlTailReportDetails = model.itemControlTailReportDetails;
+                this.itemControlTopReportDetails = model.itemControlTopReportDetails;
+            } 
 
             /**
              * ItemControlTailReportDetails.

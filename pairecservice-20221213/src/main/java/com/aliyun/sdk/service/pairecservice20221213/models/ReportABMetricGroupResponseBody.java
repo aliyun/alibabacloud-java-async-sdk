@@ -40,6 +40,10 @@ public class ReportABMetricGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return experimentReport
      */
@@ -65,6 +69,15 @@ public class ReportABMetricGroupResponseBody extends TeaModel {
         private java.util.Map<String, ExperimentReportValue> experimentReport; 
         private java.util.List<String> groupDimension; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ReportABMetricGroupResponseBody model) {
+            this.experimentReport = model.experimentReport;
+            this.groupDimension = model.groupDimension;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ExperimentReport.

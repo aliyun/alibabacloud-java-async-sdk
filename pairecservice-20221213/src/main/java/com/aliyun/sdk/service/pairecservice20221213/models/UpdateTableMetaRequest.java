@@ -81,7 +81,7 @@ public class UpdateTableMetaRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -379,6 +379,18 @@ public class UpdateTableMetaRequest extends Request {
             private String meaning; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.dataType = model.dataType;
+                this.isDimensionField = model.isDimensionField;
+                this.isPartitionField = model.isPartitionField;
+                this.meaning = model.meaning;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * DataType.

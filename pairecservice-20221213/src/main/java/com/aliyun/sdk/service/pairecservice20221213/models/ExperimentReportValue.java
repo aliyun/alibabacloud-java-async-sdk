@@ -36,6 +36,10 @@ public class ExperimentReportValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return baseline
      */
@@ -53,6 +57,14 @@ public class ExperimentReportValue extends TeaModel {
     public static final class Builder {
         private Boolean baseline; 
         private java.util.Map<String, java.util.Map<String, ?>> metricResults; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExperimentReportValue model) {
+            this.baseline = model.baseline;
+            this.metricResults = model.metricResults;
+        } 
 
         /**
          * Baseline.

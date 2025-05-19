@@ -40,6 +40,10 @@ public class ListInstanceResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListInstanceResourcesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Resources> resources; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceResourcesResponseBody model) {
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * RequestId.
@@ -211,6 +224,20 @@ public class ListInstanceResourcesResponseBody extends TeaModel {
             private String resourceId; 
             private String type; 
             private String uri; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.category = model.category;
+                this.config = model.config;
+                this.gmtCreateAt = model.gmtCreateAt;
+                this.gmtModifiedAt = model.gmtModifiedAt;
+                this.group = model.group;
+                this.resourceId = model.resourceId;
+                this.type = model.type;
+                this.uri = model.uri;
+            } 
 
             /**
              * Category.

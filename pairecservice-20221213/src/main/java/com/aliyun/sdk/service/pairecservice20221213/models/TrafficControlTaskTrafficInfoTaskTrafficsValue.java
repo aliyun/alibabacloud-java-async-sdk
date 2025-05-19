@@ -32,6 +32,10 @@ public class TrafficControlTaskTrafficInfoTaskTrafficsValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return traffic
      */
@@ -41,6 +45,13 @@ public class TrafficControlTaskTrafficInfoTaskTrafficsValue extends TeaModel {
 
     public static final class Builder {
         private Double traffic; 
+
+        private Builder() {
+        } 
+
+        private Builder(TrafficControlTaskTrafficInfoTaskTrafficsValue model) {
+            this.traffic = model.traffic;
+        } 
 
         /**
          * Traffic.

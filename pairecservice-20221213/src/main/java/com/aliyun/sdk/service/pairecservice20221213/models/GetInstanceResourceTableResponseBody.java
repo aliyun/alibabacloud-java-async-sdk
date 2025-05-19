@@ -40,6 +40,10 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fields
      */
@@ -65,6 +69,15 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
         private java.util.List<Fields> fields; 
         private String requestId; 
         private String tableName; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceResourceTableResponseBody model) {
+            this.fields = model.fields;
+            this.requestId = model.requestId;
+            this.tableName = model.tableName;
+        } 
 
         /**
          * Fields.
@@ -175,6 +188,17 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
             private String meaning; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.isDimensionField = model.isDimensionField;
+                this.isPartitionField = model.isPartitionField;
+                this.meaning = model.meaning;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * IsDimensionField.

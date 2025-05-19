@@ -40,6 +40,10 @@ public class ListScenesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListScenesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Scenes> scenes; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListScenesResponseBody model) {
+            this.requestId = model.requestId;
+            this.scenes = model.scenes;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -142,6 +155,14 @@ public class ListScenesResponseBody extends TeaModel {
         public static final class Builder {
             private String flowCode; 
             private String flowName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Flows model) {
+                this.flowCode = model.flowCode;
+                this.flowName = model.flowName;
+            } 
 
             /**
              * FlowCode.
@@ -233,6 +254,16 @@ public class ListScenesResponseBody extends TeaModel {
             private java.util.List<Flows> flows; 
             private String name; 
             private String sceneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scenes model) {
+                this.description = model.description;
+                this.flows = model.flows;
+                this.name = model.name;
+                this.sceneId = model.sceneId;
+            } 
 
             /**
              * Description.

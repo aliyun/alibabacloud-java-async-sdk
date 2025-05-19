@@ -64,6 +64,10 @@ public class GetCalculationJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ABMetricId
      */
@@ -137,6 +141,21 @@ public class GetCalculationJobResponseBody extends TeaModel {
         private String jobSource; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCalculationJobResponseBody model) {
+            this.ABMetricId = model.ABMetricId;
+            this.ABMetricName = model.ABMetricName;
+            this.bizDate = model.bizDate;
+            this.config = model.config;
+            this.gmtRanTime = model.gmtRanTime;
+            this.jobMessage = model.jobMessage;
+            this.jobSource = model.jobSource;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * ABMetricId.

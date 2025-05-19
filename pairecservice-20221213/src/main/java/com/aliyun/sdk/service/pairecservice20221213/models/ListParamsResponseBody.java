@@ -40,6 +40,10 @@ public class ListParamsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return params
      */
@@ -65,6 +69,15 @@ public class ListParamsResponseBody extends TeaModel {
         private java.util.List<Params> params; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListParamsResponseBody model) {
+            this.params = model.params;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Params.
@@ -178,6 +191,17 @@ public class ListParamsResponseBody extends TeaModel {
             private String name; 
             private String paramId; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Params model) {
+                this.environment = model.environment;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.name = model.name;
+                this.paramId = model.paramId;
+                this.value = model.value;
+            } 
 
             /**
              * Environment.

@@ -40,6 +40,10 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return experimentGroups
      */
@@ -65,6 +69,15 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         private java.util.List<ExperimentGroups> experimentGroups; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExperimentGroupsResponseBody model) {
+            this.experimentGroups = model.experimentGroups;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * ExperimentGroups.
@@ -358,6 +371,32 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
             private String reservedBuckets; 
             private String sceneId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExperimentGroups model) {
+                this.config = model.config;
+                this.crowdId = model.crowdId;
+                this.crowdTargetType = model.crowdTargetType;
+                this.debugCrowdId = model.debugCrowdId;
+                this.debugUsers = model.debugUsers;
+                this.description = model.description;
+                this.distributionTimeDuration = model.distributionTimeDuration;
+                this.distributionType = model.distributionType;
+                this.experimentGroupId = model.experimentGroupId;
+                this.filter = model.filter;
+                this.holdingBuckets = model.holdingBuckets;
+                this.laboratoryId = model.laboratoryId;
+                this.layerId = model.layerId;
+                this.name = model.name;
+                this.needAA = model.needAA;
+                this.owner = model.owner;
+                this.randomFlow = model.randomFlow;
+                this.reservedBuckets = model.reservedBuckets;
+                this.sceneId = model.sceneId;
+                this.status = model.status;
+            } 
 
             /**
              * Config.

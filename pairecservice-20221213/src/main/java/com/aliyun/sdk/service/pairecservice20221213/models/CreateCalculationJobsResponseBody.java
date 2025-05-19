@@ -36,6 +36,10 @@ public class CreateCalculationJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return calculationJobIds
      */
@@ -53,6 +57,14 @@ public class CreateCalculationJobsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> calculationJobIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCalculationJobsResponseBody model) {
+            this.calculationJobIds = model.calculationJobIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CalculationJobIds.

@@ -40,6 +40,10 @@ public class ListCalculationJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return calculationJobs
      */
@@ -65,6 +69,15 @@ public class ListCalculationJobsResponseBody extends TeaModel {
         private java.util.List<CalculationJobs> calculationJobs; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCalculationJobsResponseBody model) {
+            this.calculationJobs = model.calculationJobs;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * CalculationJobs.
@@ -211,6 +224,20 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             private java.util.List<String> jobMessage; 
             private String jobSource; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(CalculationJobs model) {
+                this.ABMetricName = model.ABMetricName;
+                this.bizDate = model.bizDate;
+                this.calculationJobId = model.calculationJobId;
+                this.config = model.config;
+                this.gmtRanTime = model.gmtRanTime;
+                this.jobMessage = model.jobMessage;
+                this.jobSource = model.jobSource;
+                this.status = model.status;
+            } 
 
             /**
              * ABMetricName.

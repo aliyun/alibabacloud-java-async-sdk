@@ -76,6 +76,10 @@ public class GetInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return chargeType
      */
@@ -173,6 +177,24 @@ public class GetInstanceResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceResponseBody model) {
+            this.chargeType = model.chargeType;
+            this.commodityCode = model.commodityCode;
+            this.config = model.config;
+            this.expiredTime = model.expiredTime;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.instanceId = model.instanceId;
+            this.operatingTool = model.operatingTool;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.type = model.type;
+        } 
 
         /**
          * ChargeType.
@@ -332,6 +354,15 @@ public class GetInstanceResponseBody extends TeaModel {
             private java.util.Map<String, ?> meta; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataManagements model) {
+                this.componentCode = model.componentCode;
+                this.meta = model.meta;
+                this.type = model.type;
+            } 
+
             /**
              * ComponentCode.
              */
@@ -418,6 +449,15 @@ public class GetInstanceResponseBody extends TeaModel {
             private String componentCode; 
             private java.util.Map<String, ?> meta; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Engines model) {
+                this.componentCode = model.componentCode;
+                this.meta = model.meta;
+                this.type = model.type;
+            } 
 
             /**
              * ComponentCode.
@@ -506,6 +546,15 @@ public class GetInstanceResponseBody extends TeaModel {
             private java.util.Map<String, ?> meta; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Monitors model) {
+                this.componentCode = model.componentCode;
+                this.meta = model.meta;
+                this.type = model.type;
+            } 
+
             /**
              * ComponentCode.
              */
@@ -593,6 +642,15 @@ public class GetInstanceResponseBody extends TeaModel {
             private java.util.List<Engines> engines; 
             private java.util.List<Monitors> monitors; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.dataManagements = model.dataManagements;
+                this.engines = model.engines;
+                this.monitors = model.monitors;
+            } 
+
             /**
              * DataManagements.
              */
@@ -655,6 +713,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean isEnable; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperatingTool model) {
+                this.isEnable = model.isEnable;
+            } 
 
             /**
              * IsEnable.

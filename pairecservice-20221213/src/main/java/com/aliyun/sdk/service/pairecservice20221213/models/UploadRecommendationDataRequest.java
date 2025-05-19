@@ -44,7 +44,7 @@ public class UploadRecommendationDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -163,6 +163,14 @@ public class UploadRecommendationDataRequest extends Request {
         public static final class Builder {
             private String fields; 
             private String operationType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.fields = model.fields;
+                this.operationType = model.operationType;
+            } 
 
             /**
              * Fields.

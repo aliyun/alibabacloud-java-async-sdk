@@ -40,6 +40,10 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ABMetricGroups
      */
@@ -65,6 +69,15 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
         private java.util.List<ABMetricGroups> ABMetricGroups; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListABMetricGroupsResponseBody model) {
+            this.ABMetricGroups = model.ABMetricGroups;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * ABMetricGroups.
@@ -211,6 +224,20 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
             private String owner; 
             private Boolean realtime; 
             private String sceneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ABMetricGroups model) {
+                this.ABMetricGroupId = model.ABMetricGroupId;
+                this.ABMetricIds = model.ABMetricIds;
+                this.ABMetricNames = model.ABMetricNames;
+                this.description = model.description;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.realtime = model.realtime;
+                this.sceneId = model.sceneId;
+            } 
 
             /**
              * ABMetricGroupId.
