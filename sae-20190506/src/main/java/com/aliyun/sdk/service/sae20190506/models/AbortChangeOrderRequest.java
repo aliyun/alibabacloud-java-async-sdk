@@ -22,9 +22,14 @@ public class AbortChangeOrderRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String changeOrderId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Rollback")
+    private Boolean rollback;
+
     private AbortChangeOrderRequest(Builder builder) {
         super(builder);
         this.changeOrderId = builder.changeOrderId;
+        this.rollback = builder.rollback;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class AbortChangeOrderRequest extends Request {
         return this.changeOrderId;
     }
 
+    /**
+     * @return rollback
+     */
+    public Boolean getRollback() {
+        return this.rollback;
+    }
+
     public static final class Builder extends Request.Builder<AbortChangeOrderRequest, Builder> {
         private String changeOrderId; 
+        private Boolean rollback; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class AbortChangeOrderRequest extends Request {
         private Builder(AbortChangeOrderRequest request) {
             super(request);
             this.changeOrderId = request.changeOrderId;
+            this.rollback = request.rollback;
         } 
 
         /**
@@ -69,6 +83,15 @@ public class AbortChangeOrderRequest extends Request {
         public Builder changeOrderId(String changeOrderId) {
             this.putQueryParameter("ChangeOrderId", changeOrderId);
             this.changeOrderId = changeOrderId;
+            return this;
+        }
+
+        /**
+         * Rollback.
+         */
+        public Builder rollback(Boolean rollback) {
+            this.putQueryParameter("Rollback", rollback);
+            this.rollback = rollback;
             return this;
         }
 

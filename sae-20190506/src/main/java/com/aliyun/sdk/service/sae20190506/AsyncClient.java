@@ -112,6 +112,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNamespaceResponse> createNamespace(CreateNamespaceRequest request);
 
     /**
+     * @param request the request parameters of CreateOrUpdateSwimmingLane  CreateOrUpdateSwimmingLaneRequest
+     * @return CreateOrUpdateSwimmingLaneResponse
+     */
+    CompletableFuture<CreateOrUpdateSwimmingLaneResponse> createOrUpdateSwimmingLane(CreateOrUpdateSwimmingLaneRequest request);
+
+    /**
+     * @param request the request parameters of CreateOrUpdateSwimmingLaneGroup  CreateOrUpdateSwimmingLaneGroupRequest
+     * @return CreateOrUpdateSwimmingLaneGroupResponse
+     */
+    CompletableFuture<CreateOrUpdateSwimmingLaneGroupResponse> createOrUpdateSwimmingLaneGroup(CreateOrUpdateSwimmingLaneGroupRequest request);
+
+    /**
      * @param request the request parameters of CreateSecret  CreateSecretRequest
      * @return CreateSecretResponse
      */
@@ -188,6 +200,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteSecretResponse
      */
     CompletableFuture<DeleteSecretResponse> deleteSecret(DeleteSecretRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSwimmingLaneGroup  DeleteSwimmingLaneGroupRequest
+     * @return DeleteSwimmingLaneGroupResponse
+     */
+    CompletableFuture<DeleteSwimmingLaneGroupResponse> deleteSwimmingLaneGroup(DeleteSwimmingLaneGroupRequest request);
 
     /**
      * <b>description</b> :
@@ -391,6 +409,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSecretResponse> describeSecret(DescribeSecretRequest request);
 
     /**
+     * @param request the request parameters of DescribeSwimmingLane  DescribeSwimmingLaneRequest
+     * @return DescribeSwimmingLaneResponse
+     */
+    CompletableFuture<DescribeSwimmingLaneResponse> describeSwimmingLane(DescribeSwimmingLaneRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Call the DescribeWebApplication operation to query web applications.</p>
      * 
@@ -520,6 +544,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWebshellTokenResponse> getWebshellToken(GetWebshellTokenRequest request);
 
     /**
+     * @param request the request parameters of ListAllSwimmingLaneGroups  ListAllSwimmingLaneGroupsRequest
+     * @return ListAllSwimmingLaneGroupsResponse
+     */
+    CompletableFuture<ListAllSwimmingLaneGroupsResponse> listAllSwimmingLaneGroups(ListAllSwimmingLaneGroupsRequest request);
+
+    /**
+     * @param request the request parameters of ListAllSwimmingLanes  ListAllSwimmingLanesRequest
+     * @return ListAllSwimmingLanesResponse
+     */
+    CompletableFuture<ListAllSwimmingLanesResponse> listAllSwimmingLanes(ListAllSwimmingLanesRequest request);
+
+    /**
      * @param request the request parameters of ListAppEvents  ListAppEventsRequest
      * @return ListAppEventsResponse
      */
@@ -619,6 +655,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListSecretsResponse
      */
     CompletableFuture<ListSecretsResponse> listSecrets(ListSecretsRequest request);
+
+    /**
+     * @param request the request parameters of ListSwimmingLaneGatewayRoutes  ListSwimmingLaneGatewayRoutesRequest
+     * @return ListSwimmingLaneGatewayRoutesResponse
+     */
+    CompletableFuture<ListSwimmingLaneGatewayRoutesResponse> listSwimmingLaneGatewayRoutes(ListSwimmingLaneGatewayRoutesRequest request);
+
+    /**
+     * @param request the request parameters of ListSwimmingLaneGroupTags  ListSwimmingLaneGroupTagsRequest
+     * @return ListSwimmingLaneGroupTagsResponse
+     */
+    CompletableFuture<ListSwimmingLaneGroupTagsResponse> listSwimmingLaneGroupTags(ListSwimmingLaneGroupTagsRequest request);
 
     /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
@@ -853,6 +901,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateSecretResponse
      */
     CompletableFuture<UpdateSecretResponse> updateSecret(UpdateSecretRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSwimmingLaneEnableAttribute  UpdateSwimmingLaneEnableAttributeRequest
+     * @return UpdateSwimmingLaneEnableAttributeResponse
+     */
+    CompletableFuture<UpdateSwimmingLaneEnableAttributeResponse> updateSwimmingLaneEnableAttribute(UpdateSwimmingLaneEnableAttributeRequest request);
 
     /**
      * <b>description</b> :

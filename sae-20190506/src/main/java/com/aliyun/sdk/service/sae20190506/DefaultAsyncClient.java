@@ -288,6 +288,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateOrUpdateSwimmingLane  CreateOrUpdateSwimmingLaneRequest
+     * @return CreateOrUpdateSwimmingLaneResponse
+     */
+    @Override
+    public CompletableFuture<CreateOrUpdateSwimmingLaneResponse> createOrUpdateSwimmingLane(CreateOrUpdateSwimmingLaneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateOrUpdateSwimmingLane").setMethod(HttpMethod.POST).setPathRegex("/pop/v1/cas/gray/createOrUpdateSwimmingLane").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateOrUpdateSwimmingLaneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateOrUpdateSwimmingLaneResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateOrUpdateSwimmingLaneGroup  CreateOrUpdateSwimmingLaneGroupRequest
+     * @return CreateOrUpdateSwimmingLaneGroupResponse
+     */
+    @Override
+    public CompletableFuture<CreateOrUpdateSwimmingLaneGroupResponse> createOrUpdateSwimmingLaneGroup(CreateOrUpdateSwimmingLaneGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateOrUpdateSwimmingLaneGroup").setMethod(HttpMethod.POST).setPathRegex("/pop/v1/cas/gray/createOrUpdateSwimmingLaneGroup").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateOrUpdateSwimmingLaneGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateOrUpdateSwimmingLaneGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateSecret  CreateSecretRequest
      * @return CreateSecretResponse
      */
@@ -504,6 +540,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteSecretResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteSwimmingLaneGroup  DeleteSwimmingLaneGroupRequest
+     * @return DeleteSwimmingLaneGroupResponse
+     */
+    @Override
+    public CompletableFuture<DeleteSwimmingLaneGroupResponse> deleteSwimmingLaneGroup(DeleteSwimmingLaneGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteSwimmingLaneGroup").setMethod(HttpMethod.POST).setPathRegex("/pop/v1/cas/gray/deleteSwimmingLaneGroup").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSwimmingLaneGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteSwimmingLaneGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1095,6 +1149,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeSwimmingLane  DescribeSwimmingLaneRequest
+     * @return DescribeSwimmingLaneResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSwimmingLaneResponse> describeSwimmingLane(DescribeSwimmingLaneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeSwimmingLane").setMethod(HttpMethod.GET).setPathRegex("/pop/v1/cas/gray/describeSwimmingLane").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSwimmingLaneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSwimmingLaneResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Call the DescribeWebApplication operation to query web applications.</p>
      * 
@@ -1440,6 +1512,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAllSwimmingLaneGroups  ListAllSwimmingLaneGroupsRequest
+     * @return ListAllSwimmingLaneGroupsResponse
+     */
+    @Override
+    public CompletableFuture<ListAllSwimmingLaneGroupsResponse> listAllSwimmingLaneGroups(ListAllSwimmingLaneGroupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAllSwimmingLaneGroups").setMethod(HttpMethod.GET).setPathRegex("/pop/v1/cas/gray/listSwimmingLaneGroups").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAllSwimmingLaneGroupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAllSwimmingLaneGroupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAllSwimmingLanes  ListAllSwimmingLanesRequest
+     * @return ListAllSwimmingLanesResponse
+     */
+    @Override
+    public CompletableFuture<ListAllSwimmingLanesResponse> listAllSwimmingLanes(ListAllSwimmingLanesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAllSwimmingLanes").setMethod(HttpMethod.GET).setPathRegex("/pop/v1/cas/gray/listSwimmingLanes").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAllSwimmingLanesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAllSwimmingLanesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListAppEvents  ListAppEventsRequest
      * @return ListAppEventsResponse
      */
@@ -1727,6 +1835,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListSecretsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSwimmingLaneGatewayRoutes  ListSwimmingLaneGatewayRoutesRequest
+     * @return ListSwimmingLaneGatewayRoutesResponse
+     */
+    @Override
+    public CompletableFuture<ListSwimmingLaneGatewayRoutesResponse> listSwimmingLaneGatewayRoutes(ListSwimmingLaneGatewayRoutesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSwimmingLaneGatewayRoutes").setMethod(HttpMethod.GET).setPathRegex("/pop/v1/cas/gray/listSwimmingLaneGatewayRoutes").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSwimmingLaneGatewayRoutesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSwimmingLaneGatewayRoutesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSwimmingLaneGroupTags  ListSwimmingLaneGroupTagsRequest
+     * @return ListSwimmingLaneGroupTagsResponse
+     */
+    @Override
+    public CompletableFuture<ListSwimmingLaneGroupTagsResponse> listSwimmingLaneGroupTags(ListSwimmingLaneGroupTagsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSwimmingLaneGroupTags").setMethod(HttpMethod.GET).setPathRegex("/pop/v1/cas/gray/listSwimmingLaneGroupTags").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSwimmingLaneGroupTagsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSwimmingLaneGroupTagsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2369,6 +2513,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateSecretResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateSwimmingLaneEnableAttribute  UpdateSwimmingLaneEnableAttributeRequest
+     * @return UpdateSwimmingLaneEnableAttributeResponse
+     */
+    @Override
+    public CompletableFuture<UpdateSwimmingLaneEnableAttributeResponse> updateSwimmingLaneEnableAttribute(UpdateSwimmingLaneEnableAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateSwimmingLaneEnableAttribute").setMethod(HttpMethod.POST).setPathRegex("/pop/v1/cas/gray/updateSwimmingLaneEnableAttribute").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateSwimmingLaneEnableAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateSwimmingLaneEnableAttributeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
