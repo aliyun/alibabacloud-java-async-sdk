@@ -28,10 +28,12 @@ public class InsertMultiDimTableRecordRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Records")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Records> records;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SheetIdOrName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sheetIdOrName;
 
     @com.aliyun.core.annotation.Body
@@ -138,7 +140,7 @@ public class InsertMultiDimTableRecordRequest extends Request {
         }
 
         /**
-         * Records.
+         * <p>This parameter is required.</p>
          */
         public Builder records(java.util.List<Records> records) {
             String recordsShrink = shrink(records, "Records", "json");
@@ -148,7 +150,7 @@ public class InsertMultiDimTableRecordRequest extends Request {
         }
 
         /**
-         * SheetIdOrName.
+         * <p>This parameter is required.</p>
          */
         public Builder sheetIdOrName(String sheetIdOrName) {
             this.putBodyParameter("SheetIdOrName", sheetIdOrName);
@@ -239,6 +241,7 @@ public class InsertMultiDimTableRecordRequest extends Request {
      */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Fields")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.Map<String, ?> fields;
 
         private Records(Builder builder) {
@@ -271,7 +274,7 @@ public class InsertMultiDimTableRecordRequest extends Request {
             } 
 
             /**
-             * Fields.
+             * <p>This parameter is required.</p>
              */
             public Builder fields(java.util.Map<String, ?> fields) {
                 this.fields = fields;

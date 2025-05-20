@@ -12,59 +12,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateMultiDimTableFieldRequest} extends {@link RequestModel}
+ * {@link QueryDentriesInfoRequest} extends {@link RequestModel}
  *
- * <p>CreateMultiDimTableFieldRequest</p>
+ * <p>QueryDentriesInfoRequest</p>
  */
-public class CreateMultiDimTableFieldRequest extends Request {
+public class QueryDentriesInfoRequest extends Request {
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("BaseId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String baseId;
+    @com.aliyun.core.annotation.NameInMap("AppIdsForAppProperties")
+    private java.util.List<String> appIdsForAppProperties;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("DentryId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String name;
+    private String dentryId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Property")
-    private java.util.Map<String, ?> property;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("SheetIdOrName")
+    @com.aliyun.core.annotation.NameInMap("SpaceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String sheetIdOrName;
+    private String spaceId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("UnionId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String type;
+    private String unionId;
 
-    private CreateMultiDimTableFieldRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WithThumbnail")
+    private Boolean withThumbnail;
+
+    private QueryDentriesInfoRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
-        this.baseId = builder.baseId;
-        this.name = builder.name;
-        this.property = builder.property;
-        this.sheetIdOrName = builder.sheetIdOrName;
+        this.appIdsForAppProperties = builder.appIdsForAppProperties;
+        this.dentryId = builder.dentryId;
+        this.spaceId = builder.spaceId;
         this.tenantContext = builder.tenantContext;
-        this.type = builder.type;
+        this.unionId = builder.unionId;
+        this.withThumbnail = builder.withThumbnail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateMultiDimTableFieldRequest create() {
+    public static QueryDentriesInfoRequest create() {
         return builder().build();
     }
 
@@ -81,31 +80,24 @@ public class CreateMultiDimTableFieldRequest extends Request {
     }
 
     /**
-     * @return baseId
+     * @return appIdsForAppProperties
      */
-    public String getBaseId() {
-        return this.baseId;
+    public java.util.List<String> getAppIdsForAppProperties() {
+        return this.appIdsForAppProperties;
     }
 
     /**
-     * @return name
+     * @return dentryId
      */
-    public String getName() {
-        return this.name;
+    public String getDentryId() {
+        return this.dentryId;
     }
 
     /**
-     * @return property
+     * @return spaceId
      */
-    public java.util.Map<String, ?> getProperty() {
-        return this.property;
-    }
-
-    /**
-     * @return sheetIdOrName
-     */
-    public String getSheetIdOrName() {
-        return this.sheetIdOrName;
+    public String getSpaceId() {
+        return this.spaceId;
     }
 
     /**
@@ -116,34 +108,41 @@ public class CreateMultiDimTableFieldRequest extends Request {
     }
 
     /**
-     * @return type
+     * @return unionId
      */
-    public String getType() {
-        return this.type;
+    public String getUnionId() {
+        return this.unionId;
     }
 
-    public static final class Builder extends Request.Builder<CreateMultiDimTableFieldRequest, Builder> {
+    /**
+     * @return withThumbnail
+     */
+    public Boolean getWithThumbnail() {
+        return this.withThumbnail;
+    }
+
+    public static final class Builder extends Request.Builder<QueryDentriesInfoRequest, Builder> {
         private AccountContext accountContext; 
-        private String baseId; 
-        private String name; 
-        private java.util.Map<String, ?> property; 
-        private String sheetIdOrName; 
+        private java.util.List<String> appIdsForAppProperties; 
+        private String dentryId; 
+        private String spaceId; 
         private TenantContext tenantContext; 
-        private String type; 
+        private String unionId; 
+        private Boolean withThumbnail; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateMultiDimTableFieldRequest request) {
+        private Builder(QueryDentriesInfoRequest request) {
             super(request);
             this.accountContext = request.accountContext;
-            this.baseId = request.baseId;
-            this.name = request.name;
-            this.property = request.property;
-            this.sheetIdOrName = request.sheetIdOrName;
+            this.appIdsForAppProperties = request.appIdsForAppProperties;
+            this.dentryId = request.dentryId;
+            this.spaceId = request.spaceId;
             this.tenantContext = request.tenantContext;
-            this.type = request.type;
+            this.unionId = request.unionId;
+            this.withThumbnail = request.withThumbnail;
         } 
 
         /**
@@ -157,42 +156,36 @@ public class CreateMultiDimTableFieldRequest extends Request {
         }
 
         /**
+         * AppIdsForAppProperties.
+         */
+        public Builder appIdsForAppProperties(java.util.List<String> appIdsForAppProperties) {
+            String appIdsForAppPropertiesShrink = shrink(appIdsForAppProperties, "AppIdsForAppProperties", "json");
+            this.putBodyParameter("AppIdsForAppProperties", appIdsForAppPropertiesShrink);
+            this.appIdsForAppProperties = appIdsForAppProperties;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>r1R7q3QmWew5lo02fxB7noNyJxxxxxx</p>
+         * <p>140901622636</p>
          */
-        public Builder baseId(String baseId) {
-            this.putBodyParameter("BaseId", baseId);
-            this.baseId = baseId;
+        public Builder dentryId(String dentryId) {
+            this.putBodyParameter("DentryId", dentryId);
+            this.dentryId = dentryId;
             return this;
         }
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22443475065</p>
          */
-        public Builder name(String name) {
-            this.putBodyParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * Property.
-         */
-        public Builder property(java.util.Map<String, ?> property) {
-            String propertyShrink = shrink(property, "Property", "json");
-            this.putBodyParameter("Property", propertyShrink);
-            this.property = property;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         */
-        public Builder sheetIdOrName(String sheetIdOrName) {
-            this.putBodyParameter("SheetIdOrName", sheetIdOrName);
-            this.sheetIdOrName = sheetIdOrName;
+        public Builder spaceId(String spaceId) {
+            this.putBodyParameter("SpaceId", spaceId);
+            this.spaceId = spaceId;
             return this;
         }
 
@@ -210,26 +203,35 @@ public class CreateMultiDimTableFieldRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>text</p>
+         * <p>urv3ZIAtcmmIgQzHq08YcAiEiE</p>
          */
-        public Builder type(String type) {
-            this.putBodyParameter("Type", type);
-            this.type = type;
+        public Builder unionId(String unionId) {
+            this.putBodyParameter("UnionId", unionId);
+            this.unionId = unionId;
+            return this;
+        }
+
+        /**
+         * WithThumbnail.
+         */
+        public Builder withThumbnail(Boolean withThumbnail) {
+            this.putBodyParameter("WithThumbnail", withThumbnail);
+            this.withThumbnail = withThumbnail;
             return this;
         }
 
         @Override
-        public CreateMultiDimTableFieldRequest build() {
-            return new CreateMultiDimTableFieldRequest(this);
+        public QueryDentriesInfoRequest build() {
+            return new QueryDentriesInfoRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link CreateMultiDimTableFieldRequest} extends {@link TeaModel}
+     * {@link QueryDentriesInfoRequest} extends {@link TeaModel}
      *
-     * <p>CreateMultiDimTableFieldRequest</p>
+     * <p>QueryDentriesInfoRequest</p>
      */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
@@ -285,9 +287,9 @@ public class CreateMultiDimTableFieldRequest extends Request {
     }
     /**
      * 
-     * {@link CreateMultiDimTableFieldRequest} extends {@link TeaModel}
+     * {@link QueryDentriesInfoRequest} extends {@link TeaModel}
      *
-     * <p>CreateMultiDimTableFieldRequest</p>
+     * <p>QueryDentriesInfoRequest</p>
      */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")

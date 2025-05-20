@@ -2607,6 +2607,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of InsertContentWithOptions  InsertContentWithOptionsRequest
+     * @return InsertContentWithOptionsResponse
+     */
+    @Override
+    public CompletableFuture<InsertContentWithOptionsResponse> insertContentWithOptions(InsertContentWithOptionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InsertContentWithOptions").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/documents/insertContentWithOptions").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InsertContentWithOptionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<InsertContentWithOptionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of InsertMultiDimTableRecord  InsertMultiDimTableRecordRequest
      * @return InsertMultiDimTableRecordResponse
      */
@@ -3151,6 +3169,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryConferenceMembersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryDentriesInfo  QueryDentriesInfoRequest
+     * @return QueryDentriesInfoResponse
+     */
+    @Override
+    public CompletableFuture<QueryDentriesInfoResponse> queryDentriesInfo(QueryDentriesInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryDentriesInfo").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/documents/queryDentriesInfo").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryDentriesInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryDentriesInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

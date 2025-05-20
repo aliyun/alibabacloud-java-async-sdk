@@ -239,12 +239,14 @@ public class AddMultiDimTableRequest extends Request {
      */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Property")
         private java.util.Map<String, ?> property;
 
         @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Fields(Builder builder) {
@@ -297,7 +299,7 @@ public class AddMultiDimTableRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -313,7 +315,10 @@ public class AddMultiDimTableRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;

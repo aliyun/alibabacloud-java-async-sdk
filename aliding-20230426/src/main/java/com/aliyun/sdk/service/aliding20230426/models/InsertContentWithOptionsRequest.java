@@ -12,59 +12,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateMultiDimTableFieldRequest} extends {@link RequestModel}
+ * {@link InsertContentWithOptionsRequest} extends {@link RequestModel}
  *
- * <p>CreateMultiDimTableFieldRequest</p>
+ * <p>InsertContentWithOptionsRequest</p>
  */
-public class CreateMultiDimTableFieldRequest extends Request {
+public class InsertContentWithOptionsRequest extends Request {
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("BaseId")
+    @com.aliyun.core.annotation.NameInMap("Content")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String baseId;
+    private java.util.Map<String, ?> content;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("DocumentId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String name;
+    private String documentId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Property")
-    private java.util.Map<String, ?> property;
+    @com.aliyun.core.annotation.NameInMap("Index")
+    private Integer index;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("SheetIdOrName")
+    @com.aliyun.core.annotation.NameInMap("OperatorId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String sheetIdOrName;
+    private String operatorId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Path")
+    private java.util.List<Integer> path;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Type")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String type;
-
-    private CreateMultiDimTableFieldRequest(Builder builder) {
+    private InsertContentWithOptionsRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
-        this.baseId = builder.baseId;
-        this.name = builder.name;
-        this.property = builder.property;
-        this.sheetIdOrName = builder.sheetIdOrName;
+        this.content = builder.content;
+        this.documentId = builder.documentId;
+        this.index = builder.index;
+        this.operatorId = builder.operatorId;
+        this.path = builder.path;
         this.tenantContext = builder.tenantContext;
-        this.type = builder.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateMultiDimTableFieldRequest create() {
+    public static InsertContentWithOptionsRequest create() {
         return builder().build();
     }
 
@@ -81,31 +80,38 @@ public class CreateMultiDimTableFieldRequest extends Request {
     }
 
     /**
-     * @return baseId
+     * @return content
      */
-    public String getBaseId() {
-        return this.baseId;
+    public java.util.Map<String, ?> getContent() {
+        return this.content;
     }
 
     /**
-     * @return name
+     * @return documentId
      */
-    public String getName() {
-        return this.name;
+    public String getDocumentId() {
+        return this.documentId;
     }
 
     /**
-     * @return property
+     * @return index
      */
-    public java.util.Map<String, ?> getProperty() {
-        return this.property;
+    public Integer getIndex() {
+        return this.index;
     }
 
     /**
-     * @return sheetIdOrName
+     * @return operatorId
      */
-    public String getSheetIdOrName() {
-        return this.sheetIdOrName;
+    public String getOperatorId() {
+        return this.operatorId;
+    }
+
+    /**
+     * @return path
+     */
+    public java.util.List<Integer> getPath() {
+        return this.path;
     }
 
     /**
@@ -115,35 +121,28 @@ public class CreateMultiDimTableFieldRequest extends Request {
         return this.tenantContext;
     }
 
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
-    }
-
-    public static final class Builder extends Request.Builder<CreateMultiDimTableFieldRequest, Builder> {
+    public static final class Builder extends Request.Builder<InsertContentWithOptionsRequest, Builder> {
         private AccountContext accountContext; 
-        private String baseId; 
-        private String name; 
-        private java.util.Map<String, ?> property; 
-        private String sheetIdOrName; 
+        private java.util.Map<String, ?> content; 
+        private String documentId; 
+        private Integer index; 
+        private String operatorId; 
+        private java.util.List<Integer> path; 
         private TenantContext tenantContext; 
-        private String type; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateMultiDimTableFieldRequest request) {
+        private Builder(InsertContentWithOptionsRequest request) {
             super(request);
             this.accountContext = request.accountContext;
-            this.baseId = request.baseId;
-            this.name = request.name;
-            this.property = request.property;
-            this.sheetIdOrName = request.sheetIdOrName;
+            this.content = request.content;
+            this.documentId = request.documentId;
+            this.index = request.index;
+            this.operatorId = request.operatorId;
+            this.path = request.path;
             this.tenantContext = request.tenantContext;
-            this.type = request.type;
         } 
 
         /**
@@ -160,39 +159,55 @@ public class CreateMultiDimTableFieldRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>r1R7q3QmWew5lo02fxB7noNyJxxxxxx</p>
+         * <p>content</p>
          */
-        public Builder baseId(String baseId) {
-            this.putBodyParameter("BaseId", baseId);
-            this.baseId = baseId;
+        public Builder content(java.util.Map<String, ?> content) {
+            String contentShrink = shrink(content, "Content", "json");
+            this.putBodyParameter("Content", contentShrink);
+            this.content = content;
             return this;
         }
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>documentId</p>
          */
-        public Builder name(String name) {
-            this.putBodyParameter("Name", name);
-            this.name = name;
+        public Builder documentId(String documentId) {
+            this.putBodyParameter("DocumentId", documentId);
+            this.documentId = documentId;
             return this;
         }
 
         /**
-         * Property.
+         * Index.
          */
-        public Builder property(java.util.Map<String, ?> property) {
-            String propertyShrink = shrink(property, "Property", "json");
-            this.putBodyParameter("Property", propertyShrink);
-            this.property = property;
+        public Builder index(Integer index) {
+            this.putBodyParameter("Index", index);
+            this.index = index;
             return this;
         }
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>union_id</p>
          */
-        public Builder sheetIdOrName(String sheetIdOrName) {
-            this.putBodyParameter("SheetIdOrName", sheetIdOrName);
-            this.sheetIdOrName = sheetIdOrName;
+        public Builder operatorId(String operatorId) {
+            this.putBodyParameter("OperatorId", operatorId);
+            this.operatorId = operatorId;
+            return this;
+        }
+
+        /**
+         * Path.
+         */
+        public Builder path(java.util.List<Integer> path) {
+            String pathShrink = shrink(path, "Path", "json");
+            this.putBodyParameter("Path", pathShrink);
+            this.path = path;
             return this;
         }
 
@@ -206,30 +221,18 @@ public class CreateMultiDimTableFieldRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>text</p>
-         */
-        public Builder type(String type) {
-            this.putBodyParameter("Type", type);
-            this.type = type;
-            return this;
-        }
-
         @Override
-        public CreateMultiDimTableFieldRequest build() {
-            return new CreateMultiDimTableFieldRequest(this);
+        public InsertContentWithOptionsRequest build() {
+            return new InsertContentWithOptionsRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link CreateMultiDimTableFieldRequest} extends {@link TeaModel}
+     * {@link InsertContentWithOptionsRequest} extends {@link TeaModel}
      *
-     * <p>CreateMultiDimTableFieldRequest</p>
+     * <p>InsertContentWithOptionsRequest</p>
      */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
@@ -285,9 +288,9 @@ public class CreateMultiDimTableFieldRequest extends Request {
     }
     /**
      * 
-     * {@link CreateMultiDimTableFieldRequest} extends {@link TeaModel}
+     * {@link InsertContentWithOptionsRequest} extends {@link TeaModel}
      *
-     * <p>CreateMultiDimTableFieldRequest</p>
+     * <p>InsertContentWithOptionsRequest</p>
      */
     public static class TenantContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tenantId")

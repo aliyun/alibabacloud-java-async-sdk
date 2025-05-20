@@ -874,6 +874,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InsertColumnsBeforeResponse> insertColumnsBefore(InsertColumnsBeforeRequest request);
 
     /**
+     * @param request the request parameters of InsertContentWithOptions  InsertContentWithOptionsRequest
+     * @return InsertContentWithOptionsResponse
+     */
+    CompletableFuture<InsertContentWithOptionsResponse> insertContentWithOptions(InsertContentWithOptionsRequest request);
+
+    /**
      * @param request the request parameters of InsertMultiDimTableRecord  InsertMultiDimTableRecordRequest
      * @return InsertMultiDimTableRecordResponse
      */
@@ -1054,6 +1060,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryConferenceMembersResponse
      */
     CompletableFuture<QueryConferenceMembersResponse> queryConferenceMembers(QueryConferenceMembersRequest request);
+
+    /**
+     * @param request the request parameters of QueryDentriesInfo  QueryDentriesInfoRequest
+     * @return QueryDentriesInfoResponse
+     */
+    CompletableFuture<QueryDentriesInfoResponse> queryDentriesInfo(QueryDentriesInfoRequest request);
 
     /**
      * @param request the request parameters of QueryDentry  QueryDentryRequest
