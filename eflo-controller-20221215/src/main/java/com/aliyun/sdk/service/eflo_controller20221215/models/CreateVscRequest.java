@@ -153,7 +153,10 @@ public class CreateVscRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Idempotent parameter</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -162,6 +165,7 @@ public class CreateVscRequest extends Request {
         }
 
         /**
+         * <p>Node ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +178,10 @@ public class CreateVscRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2xdkc6icwfha</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -183,7 +190,7 @@ public class CreateVscRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>Resource tags</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -192,7 +199,10 @@ public class CreateVscRequest extends Request {
         }
 
         /**
-         * VscName.
+         * <p>User-defined name for vscId, unique on a single compute node</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         public Builder vscName(String vscName) {
             this.putBodyParameter("VscName", vscName);
@@ -201,7 +211,10 @@ public class CreateVscRequest extends Request {
         }
 
         /**
-         * VscType.
+         * <p>Set VSC type, primary/standard, default value is primary</p>
+         * 
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         public Builder vscType(String vscType) {
             this.putBodyParameter("VscType", vscType);
@@ -269,7 +282,10 @@ public class CreateVscRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>Resource tag key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key001</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -277,7 +293,10 @@ public class CreateVscRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>Resource tag value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value001</p>
              */
             public Builder value(String value) {
                 this.value = value;

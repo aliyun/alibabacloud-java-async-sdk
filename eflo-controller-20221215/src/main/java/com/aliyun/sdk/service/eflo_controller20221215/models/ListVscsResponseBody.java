@@ -107,7 +107,10 @@ public class ListVscsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>No return. Please use TotalCount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -115,6 +118,7 @@ public class ListVscsResponseBody extends TeaModel {
         }
 
         /**
+         * <p>Indicates the position of the current call return read. An empty value means that the data has been fully read.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +130,7 @@ public class ListVscsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>03668372-18FF-5959-98D9-6B36A4643C7A</p>
@@ -137,7 +141,10 @@ public class ListVscsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total count of data under the current request conditions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -145,7 +152,7 @@ public class ListVscsResponseBody extends TeaModel {
         }
 
         /**
-         * Vscs.
+         * <p>VSC list</p>
          */
         public Builder vscs(java.util.List<Vscs> vscs) {
             this.vscs = vscs;
@@ -211,7 +218,10 @@ public class ListVscsResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>Tag key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key001</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -219,7 +229,10 @@ public class ListVscsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>Tag value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value001</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -351,7 +364,10 @@ public class ListVscsResponseBody extends TeaModel {
             } 
 
             /**
-             * NodeId.
+             * <p>Lingjun node ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-fzh47xd7u08</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -359,7 +375,10 @@ public class ListVscsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>Resource group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfm2zkwhkns57i</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -367,7 +386,10 @@ public class ListVscsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Status of Vsc</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -375,7 +397,7 @@ public class ListVscsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>Tags</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -383,7 +405,7 @@ public class ListVscsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VscId</p>
+             * <p>Vsc ID</p>
              * 
              * <strong>example:</strong>
              * <p>vsc-001</p>
@@ -394,7 +416,10 @@ public class ListVscsResponseBody extends TeaModel {
             }
 
             /**
-             * VscName.
+             * <p>Customized name of Vsc</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_name</p>
              */
             public Builder vscName(String vscName) {
                 this.vscName = vscName;
@@ -402,7 +427,10 @@ public class ListVscsResponseBody extends TeaModel {
             }
 
             /**
-             * VscType.
+             * <p>Vsc type, primary/standard</p>
+             * 
+             * <strong>example:</strong>
+             * <p>primary</p>
              */
             public Builder vscType(String vscType) {
                 this.vscType = vscType;

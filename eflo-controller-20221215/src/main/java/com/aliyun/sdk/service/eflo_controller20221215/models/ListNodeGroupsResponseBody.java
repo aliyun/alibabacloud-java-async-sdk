@@ -355,7 +355,10 @@ public class ListNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemMountEnabled.
+             * <p>Whether file storage mounting is supported</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
                 this.fileSystemMountEnabled = fileSystemMountEnabled;
@@ -440,7 +443,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>可用区id</p>
+             * <p>availability zone id</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shenzhen-c</p>

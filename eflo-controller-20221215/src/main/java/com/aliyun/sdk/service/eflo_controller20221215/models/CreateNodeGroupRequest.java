@@ -423,7 +423,10 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * FileSystemMountEnabled.
+             * <p>Whether file storage mounting is supported</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
                 this.fileSystemMountEnabled = fileSystemMountEnabled;

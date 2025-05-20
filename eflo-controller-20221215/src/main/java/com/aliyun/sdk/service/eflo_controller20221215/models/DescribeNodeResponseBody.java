@@ -366,7 +366,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否支持文件存储挂载</p>
+         * <p>Whether file storage mounting is supported</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
             this.fileSystemMountEnabled = fileSystemMountEnabled;

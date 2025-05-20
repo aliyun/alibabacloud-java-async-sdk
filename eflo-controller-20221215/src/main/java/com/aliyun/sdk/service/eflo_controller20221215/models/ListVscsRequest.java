@@ -152,7 +152,10 @@ public class ListVscsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of data records to be read in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -161,7 +164,10 @@ public class ListVscsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Marks the position to start reading from. If empty, it starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>563d42ae0b17572449ec8c97f7f66069</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -170,7 +176,7 @@ public class ListVscsRequest extends Request {
         }
 
         /**
-         * NodeIds.
+         * <p>List of node IDs</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             String nodeIdsShrink = shrink(nodeIds, "NodeIds", "json");
@@ -180,7 +186,10 @@ public class ListVscsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2xdkc6icwfha</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -189,7 +198,7 @@ public class ListVscsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>List of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -198,7 +207,10 @@ public class ListVscsRequest extends Request {
         }
 
         /**
-         * VscName.
+         * <p>Vsc name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         public Builder vscName(String vscName) {
             this.putBodyParameter("VscName", vscName);
@@ -267,7 +279,10 @@ public class ListVscsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>Tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key001</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -275,7 +290,10 @@ public class ListVscsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>Tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value001</p>
              */
             public Builder value(String value) {
                 this.value = value;

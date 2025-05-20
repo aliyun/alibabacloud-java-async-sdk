@@ -132,7 +132,10 @@ public class DescribeVscResponseBody extends TeaModel {
         } 
 
         /**
-         * NodeId.
+         * <p>ID of the compute node where the Vsc is located</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e01-cn-kvw44e6dn04</p>
          */
         public Builder nodeId(String nodeId) {
             this.nodeId = nodeId;
@@ -140,7 +143,7 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>
@@ -151,7 +154,10 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource Group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2k3rqlvv6ytq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -159,7 +165,10 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Status of the Vsc</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -167,7 +176,7 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * <p>VscId</p>
+         * <p>Vsc ID</p>
          * 
          * <strong>example:</strong>
          * <p>vsc-001</p>
@@ -178,7 +187,10 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * VscName.
+         * <p>Custom name of the Vsc</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         public Builder vscName(String vscName) {
             this.vscName = vscName;
@@ -186,7 +198,10 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * VscType.
+         * <p>Vsc type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         public Builder vscType(String vscType) {
             this.vscType = vscType;

@@ -2152,7 +2152,10 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * FileSystemMountEnabled.
+             * <p>Whether file system mounting is supported</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
                 this.fileSystemMountEnabled = fileSystemMountEnabled;

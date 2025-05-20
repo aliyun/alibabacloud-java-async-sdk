@@ -26,6 +26,10 @@ public class UpdateNodeGroupRequest extends Request {
     private Boolean fileSystemMountEnabled;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    private String imageId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
@@ -45,6 +49,7 @@ public class UpdateNodeGroupRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.fileSystemMountEnabled = builder.fileSystemMountEnabled;
+        this.imageId = builder.imageId;
         this.keyPairName = builder.keyPairName;
         this.newNodeGroupName = builder.newNodeGroupName;
         this.nodeGroupId = builder.nodeGroupId;
@@ -79,6 +84,13 @@ public class UpdateNodeGroupRequest extends Request {
     }
 
     /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
      * @return keyPairName
      */
     public String getKeyPairName() {
@@ -109,6 +121,7 @@ public class UpdateNodeGroupRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateNodeGroupRequest, Builder> {
         private String regionId; 
         private Boolean fileSystemMountEnabled; 
+        private String imageId; 
         private String keyPairName; 
         private String newNodeGroupName; 
         private String nodeGroupId; 
@@ -122,6 +135,7 @@ public class UpdateNodeGroupRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.fileSystemMountEnabled = request.fileSystemMountEnabled;
+            this.imageId = request.imageId;
             this.keyPairName = request.keyPairName;
             this.newNodeGroupName = request.newNodeGroupName;
             this.nodeGroupId = request.nodeGroupId;
@@ -138,11 +152,26 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * FileSystemMountEnabled.
+         * <p>Whether file storage mounting is supported</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
             this.putBodyParameter("FileSystemMountEnabled", fileSystemMountEnabled);
             this.fileSystemMountEnabled = fileSystemMountEnabled;
+            return this;
+        }
+
+        /**
+         * <p>节点组的默认镜像id，如果不设置，那么就不会改变。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i123847249284734</p>
+         */
+        public Builder imageId(String imageId) {
+            this.putBodyParameter("ImageId", imageId);
+            this.imageId = imageId;
             return this;
         }
 

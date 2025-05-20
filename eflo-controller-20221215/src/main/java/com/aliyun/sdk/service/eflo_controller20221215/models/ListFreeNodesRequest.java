@@ -214,7 +214,7 @@ public class ListFreeNodesRequest extends Request {
         }
 
         /**
-         * OperatingStates.
+         * <p>return array of operating states</p>
          */
         public Builder operatingStates(java.util.List<String> operatingStates) {
             this.putBodyParameter("OperatingStates", operatingStates);
