@@ -20,6 +20,9 @@ public class JobSettings extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AdvancedSettings")
     private java.util.Map<String, ?> advancedSettings;
 
+    @com.aliyun.core.annotation.NameInMap("AllocateAllRDMADevices")
+    private Boolean allocateAllRDMADevices;
+
     @com.aliyun.core.annotation.NameInMap("BusinessUserId")
     private String businessUserId;
 
@@ -73,6 +76,7 @@ public class JobSettings extends TeaModel {
 
     private JobSettings(Builder builder) {
         this.advancedSettings = builder.advancedSettings;
+        this.allocateAllRDMADevices = builder.allocateAllRDMADevices;
         this.businessUserId = builder.businessUserId;
         this.caller = builder.caller;
         this.disableEcsStockCheck = builder.disableEcsStockCheck;
@@ -109,6 +113,13 @@ public class JobSettings extends TeaModel {
      */
     public java.util.Map<String, ?> getAdvancedSettings() {
         return this.advancedSettings;
+    }
+
+    /**
+     * @return allocateAllRDMADevices
+     */
+    public Boolean getAllocateAllRDMADevices() {
+        return this.allocateAllRDMADevices;
     }
 
     /**
@@ -232,6 +243,7 @@ public class JobSettings extends TeaModel {
 
     public static final class Builder {
         private java.util.Map<String, ?> advancedSettings; 
+        private Boolean allocateAllRDMADevices; 
         private String businessUserId; 
         private String caller; 
         private Boolean disableEcsStockCheck; 
@@ -255,6 +267,7 @@ public class JobSettings extends TeaModel {
 
         private Builder(JobSettings model) {
             this.advancedSettings = model.advancedSettings;
+            this.allocateAllRDMADevices = model.allocateAllRDMADevices;
             this.businessUserId = model.businessUserId;
             this.caller = model.caller;
             this.disableEcsStockCheck = model.disableEcsStockCheck;
@@ -279,6 +292,14 @@ public class JobSettings extends TeaModel {
          */
         public Builder advancedSettings(java.util.Map<String, ?> advancedSettings) {
             this.advancedSettings = advancedSettings;
+            return this;
+        }
+
+        /**
+         * AllocateAllRDMADevices.
+         */
+        public Builder allocateAllRDMADevices(Boolean allocateAllRDMADevices) {
+            this.allocateAllRDMADevices = allocateAllRDMADevices;
             return this;
         }
 

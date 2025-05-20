@@ -20,6 +20,9 @@ public class JobSpec extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AssignNodeSpec")
     private AssignNodeSpec assignNodeSpec;
 
+    @com.aliyun.core.annotation.NameInMap("AutoScalingSpec")
+    private AutoScalingSpec autoScalingSpec;
+
     @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
 
@@ -32,11 +35,23 @@ public class JobSpec extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ImageConfig")
     private ImageConfig imageConfig;
 
+    @com.aliyun.core.annotation.NameInMap("IsCheif")
+    private Boolean isCheif;
+
+    @com.aliyun.core.annotation.NameInMap("LocalMountSpecs")
+    private java.util.List<LocalMountSpec> localMountSpecs;
+
     @com.aliyun.core.annotation.NameInMap("PodCount")
     private Long podCount;
 
     @com.aliyun.core.annotation.NameInMap("ResourceConfig")
     private ResourceConfig resourceConfig;
+
+    @com.aliyun.core.annotation.NameInMap("RestartPolicy")
+    private String restartPolicy;
+
+    @com.aliyun.core.annotation.NameInMap("ServiceSpec")
+    private ServiceSpec serviceSpec;
 
     @com.aliyun.core.annotation.NameInMap("SpotSpec")
     private SpotSpec spotSpec;
@@ -50,12 +65,17 @@ public class JobSpec extends TeaModel {
 
     private JobSpec(Builder builder) {
         this.assignNodeSpec = builder.assignNodeSpec;
+        this.autoScalingSpec = builder.autoScalingSpec;
         this.ecsSpec = builder.ecsSpec;
         this.extraPodSpec = builder.extraPodSpec;
         this.image = builder.image;
         this.imageConfig = builder.imageConfig;
+        this.isCheif = builder.isCheif;
+        this.localMountSpecs = builder.localMountSpecs;
         this.podCount = builder.podCount;
         this.resourceConfig = builder.resourceConfig;
+        this.restartPolicy = builder.restartPolicy;
+        this.serviceSpec = builder.serviceSpec;
         this.spotSpec = builder.spotSpec;
         this.type = builder.type;
         this.useSpotInstance = builder.useSpotInstance;
@@ -78,6 +98,13 @@ public class JobSpec extends TeaModel {
      */
     public AssignNodeSpec getAssignNodeSpec() {
         return this.assignNodeSpec;
+    }
+
+    /**
+     * @return autoScalingSpec
+     */
+    public AutoScalingSpec getAutoScalingSpec() {
+        return this.autoScalingSpec;
     }
 
     /**
@@ -109,6 +136,20 @@ public class JobSpec extends TeaModel {
     }
 
     /**
+     * @return isCheif
+     */
+    public Boolean getIsCheif() {
+        return this.isCheif;
+    }
+
+    /**
+     * @return localMountSpecs
+     */
+    public java.util.List<LocalMountSpec> getLocalMountSpecs() {
+        return this.localMountSpecs;
+    }
+
+    /**
      * @return podCount
      */
     public Long getPodCount() {
@@ -120,6 +161,20 @@ public class JobSpec extends TeaModel {
      */
     public ResourceConfig getResourceConfig() {
         return this.resourceConfig;
+    }
+
+    /**
+     * @return restartPolicy
+     */
+    public String getRestartPolicy() {
+        return this.restartPolicy;
+    }
+
+    /**
+     * @return serviceSpec
+     */
+    public ServiceSpec getServiceSpec() {
+        return this.serviceSpec;
     }
 
     /**
@@ -145,12 +200,17 @@ public class JobSpec extends TeaModel {
 
     public static final class Builder {
         private AssignNodeSpec assignNodeSpec; 
+        private AutoScalingSpec autoScalingSpec; 
         private String ecsSpec; 
         private ExtraPodSpec extraPodSpec; 
         private String image; 
         private ImageConfig imageConfig; 
+        private Boolean isCheif; 
+        private java.util.List<LocalMountSpec> localMountSpecs; 
         private Long podCount; 
         private ResourceConfig resourceConfig; 
+        private String restartPolicy; 
+        private ServiceSpec serviceSpec; 
         private SpotSpec spotSpec; 
         private String type; 
         private Boolean useSpotInstance; 
@@ -160,12 +220,17 @@ public class JobSpec extends TeaModel {
 
         private Builder(JobSpec model) {
             this.assignNodeSpec = model.assignNodeSpec;
+            this.autoScalingSpec = model.autoScalingSpec;
             this.ecsSpec = model.ecsSpec;
             this.extraPodSpec = model.extraPodSpec;
             this.image = model.image;
             this.imageConfig = model.imageConfig;
+            this.isCheif = model.isCheif;
+            this.localMountSpecs = model.localMountSpecs;
             this.podCount = model.podCount;
             this.resourceConfig = model.resourceConfig;
+            this.restartPolicy = model.restartPolicy;
+            this.serviceSpec = model.serviceSpec;
             this.spotSpec = model.spotSpec;
             this.type = model.type;
             this.useSpotInstance = model.useSpotInstance;
@@ -176,6 +241,14 @@ public class JobSpec extends TeaModel {
          */
         public Builder assignNodeSpec(AssignNodeSpec assignNodeSpec) {
             this.assignNodeSpec = assignNodeSpec;
+            return this;
+        }
+
+        /**
+         * AutoScalingSpec.
+         */
+        public Builder autoScalingSpec(AutoScalingSpec autoScalingSpec) {
+            this.autoScalingSpec = autoScalingSpec;
             return this;
         }
 
@@ -212,6 +285,22 @@ public class JobSpec extends TeaModel {
         }
 
         /**
+         * IsCheif.
+         */
+        public Builder isCheif(Boolean isCheif) {
+            this.isCheif = isCheif;
+            return this;
+        }
+
+        /**
+         * LocalMountSpecs.
+         */
+        public Builder localMountSpecs(java.util.List<LocalMountSpec> localMountSpecs) {
+            this.localMountSpecs = localMountSpecs;
+            return this;
+        }
+
+        /**
          * PodCount.
          */
         public Builder podCount(Long podCount) {
@@ -224,6 +313,22 @@ public class JobSpec extends TeaModel {
          */
         public Builder resourceConfig(ResourceConfig resourceConfig) {
             this.resourceConfig = resourceConfig;
+            return this;
+        }
+
+        /**
+         * RestartPolicy.
+         */
+        public Builder restartPolicy(String restartPolicy) {
+            this.restartPolicy = restartPolicy;
+            return this;
+        }
+
+        /**
+         * ServiceSpec.
+         */
+        public Builder serviceSpec(ServiceSpec serviceSpec) {
+            this.serviceSpec = serviceSpec;
             return this;
         }
 

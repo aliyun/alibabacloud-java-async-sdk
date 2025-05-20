@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SecurityContext</p>
  */
 public class SecurityContext extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Capabilities")
+    private SecurityContextCapabilities capabilities;
+
+    @com.aliyun.core.annotation.NameInMap("Privileged")
+    private Boolean privileged;
+
     @com.aliyun.core.annotation.NameInMap("RunAsGroup")
     private Long runAsGroup;
 
@@ -27,6 +33,8 @@ public class SecurityContext extends TeaModel {
     private SeccompProfile seccompProfile;
 
     private SecurityContext(Builder builder) {
+        this.capabilities = builder.capabilities;
+        this.privileged = builder.privileged;
         this.runAsGroup = builder.runAsGroup;
         this.runAsUser = builder.runAsUser;
         this.seccompProfile = builder.seccompProfile;
@@ -42,6 +50,20 @@ public class SecurityContext extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return capabilities
+     */
+    public SecurityContextCapabilities getCapabilities() {
+        return this.capabilities;
+    }
+
+    /**
+     * @return privileged
+     */
+    public Boolean getPrivileged() {
+        return this.privileged;
     }
 
     /**
@@ -66,6 +88,8 @@ public class SecurityContext extends TeaModel {
     }
 
     public static final class Builder {
+        private SecurityContextCapabilities capabilities; 
+        private Boolean privileged; 
         private Long runAsGroup; 
         private Long runAsUser; 
         private SeccompProfile seccompProfile; 
@@ -74,10 +98,28 @@ public class SecurityContext extends TeaModel {
         } 
 
         private Builder(SecurityContext model) {
+            this.capabilities = model.capabilities;
+            this.privileged = model.privileged;
             this.runAsGroup = model.runAsGroup;
             this.runAsUser = model.runAsUser;
             this.seccompProfile = model.seccompProfile;
         } 
+
+        /**
+         * Capabilities.
+         */
+        public Builder capabilities(SecurityContextCapabilities capabilities) {
+            this.capabilities = capabilities;
+            return this;
+        }
+
+        /**
+         * Privileged.
+         */
+        public Builder privileged(Boolean privileged) {
+            this.privileged = privileged;
+            return this;
+        }
 
         /**
          * RunAsGroup.
