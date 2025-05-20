@@ -166,6 +166,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetMultiModalEmbedding  GetMultiModalEmbeddingRequest
+     * @return GetMultiModalEmbeddingResponse
+     */
+    @Override
+    public CompletableFuture<GetMultiModalEmbeddingResponse> getMultiModalEmbedding(GetMultiModalEmbeddingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMultiModalEmbedding").setMethod(HttpMethod.POST).setPathRegex("/v3/openapi/workspaces/{workspace_name}/multi-modal-embedding/{service_id}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMultiModalEmbeddingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMultiModalEmbeddingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetPrediction  GetPredictionRequest
      * @return GetPredictionResponse
      */
