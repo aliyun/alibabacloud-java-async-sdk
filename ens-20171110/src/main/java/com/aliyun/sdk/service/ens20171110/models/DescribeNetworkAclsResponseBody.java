@@ -443,6 +443,9 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
+        private String destinationCidrBlock;
+
         @com.aliyun.core.annotation.NameInMap("NetworkAclEntryId")
         private String networkAclEntryId;
 
@@ -467,6 +470,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         private IngressAclEntries(Builder builder) {
             this.cidrBlock = builder.cidrBlock;
             this.description = builder.description;
+            this.destinationCidrBlock = builder.destinationCidrBlock;
             this.networkAclEntryId = builder.networkAclEntryId;
             this.networkAclEntryName = builder.networkAclEntryName;
             this.policy = builder.policy;
@@ -496,6 +500,13 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return destinationCidrBlock
+         */
+        public String getDestinationCidrBlock() {
+            return this.destinationCidrBlock;
         }
 
         /**
@@ -550,6 +561,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         public static final class Builder {
             private String cidrBlock; 
             private String description; 
+            private String destinationCidrBlock; 
             private String networkAclEntryId; 
             private String networkAclEntryName; 
             private String policy; 
@@ -564,6 +576,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             private Builder(IngressAclEntries model) {
                 this.cidrBlock = model.cidrBlock;
                 this.description = model.description;
+                this.destinationCidrBlock = model.destinationCidrBlock;
                 this.networkAclEntryId = model.networkAclEntryId;
                 this.networkAclEntryName = model.networkAclEntryName;
                 this.policy = model.policy;
@@ -592,6 +605,14 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * DestinationCidrBlock.
+             */
+            public Builder destinationCidrBlock(String destinationCidrBlock) {
+                this.destinationCidrBlock = destinationCidrBlock;
                 return this;
             }
 

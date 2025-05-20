@@ -28,6 +28,11 @@ public class CreateNetworkAclEntryRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
+    @com.aliyun.core.annotation.Validation(maxLength = 100, minLength = 1)
+    private String destinationCidrBlock;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Direction")
     @com.aliyun.core.annotation.Validation(required = true)
     private String direction;
@@ -66,6 +71,7 @@ public class CreateNetworkAclEntryRequest extends Request {
         super(builder);
         this.cidrBlock = builder.cidrBlock;
         this.description = builder.description;
+        this.destinationCidrBlock = builder.destinationCidrBlock;
         this.direction = builder.direction;
         this.networkAclEntryName = builder.networkAclEntryName;
         this.networkAclId = builder.networkAclId;
@@ -100,6 +106,13 @@ public class CreateNetworkAclEntryRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return destinationCidrBlock
+     */
+    public String getDestinationCidrBlock() {
+        return this.destinationCidrBlock;
     }
 
     /**
@@ -154,6 +167,7 @@ public class CreateNetworkAclEntryRequest extends Request {
     public static final class Builder extends Request.Builder<CreateNetworkAclEntryRequest, Builder> {
         private String cidrBlock; 
         private String description; 
+        private String destinationCidrBlock; 
         private String direction; 
         private String networkAclEntryName; 
         private String networkAclId; 
@@ -170,6 +184,7 @@ public class CreateNetworkAclEntryRequest extends Request {
             super(request);
             this.cidrBlock = request.cidrBlock;
             this.description = request.description;
+            this.destinationCidrBlock = request.destinationCidrBlock;
             this.direction = request.direction;
             this.networkAclEntryName = request.networkAclEntryName;
             this.networkAclId = request.networkAclId;
@@ -202,6 +217,15 @@ public class CreateNetworkAclEntryRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DestinationCidrBlock.
+         */
+        public Builder destinationCidrBlock(String destinationCidrBlock) {
+            this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
+            this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
