@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     /**
+     * @param request the request parameters of CheckServiceLinkedRoleEfloCnpForDeleting  CheckServiceLinkedRoleEfloCnpForDeletingRequest
+     * @return CheckServiceLinkedRoleEfloCnpForDeletingResponse
+     */
+    CompletableFuture<CheckServiceLinkedRoleEfloCnpForDeletingResponse> checkServiceLinkedRoleEfloCnpForDeleting(CheckServiceLinkedRoleEfloCnpForDeletingRequest request);
+
+    /**
      * @param request the request parameters of CreateExperimentPlan  CreateExperimentPlanRequest
      * @return CreateExperimentPlanResponse
      */
