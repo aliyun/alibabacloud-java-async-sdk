@@ -360,10 +360,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceDasProResponse> describeInstanceDasPro(DescribeInstanceDasProRequest request);
 
     /**
+     * @param request the request parameters of DescribeQueryExplain  DescribeQueryExplainRequest
+     * @return DescribeQueryExplainResponse
+     */
+    CompletableFuture<DescribeQueryExplainResponse> describeQueryExplain(DescribeQueryExplainRequest request);
+
+    /**
      * @param request the request parameters of DescribeSlowLogHistogramAsync  DescribeSlowLogHistogramAsyncRequest
      * @return DescribeSlowLogHistogramAsyncResponse
      */
     CompletableFuture<DescribeSlowLogHistogramAsyncResponse> describeSlowLogHistogramAsync(DescribeSlowLogHistogramAsyncRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSlowLogRecords  DescribeSlowLogRecordsRequest
+     * @return DescribeSlowLogRecordsResponse
+     */
+    CompletableFuture<DescribeSlowLogRecordsResponse> describeSlowLogRecords(DescribeSlowLogRecordsRequest request);
 
     /**
      * @param request the request parameters of DescribeSlowLogStatistic  DescribeSlowLogStatisticRequest
