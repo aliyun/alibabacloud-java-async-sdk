@@ -22,6 +22,10 @@ public class CompleteFileRequest extends Request {
     private String domainId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("crc64_hash")
+    private String crc64Hash;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("drive_id")
     @com.aliyun.core.annotation.Validation(required = true)
     private String driveId;
@@ -39,6 +43,7 @@ public class CompleteFileRequest extends Request {
     private CompleteFileRequest(Builder builder) {
         super(builder);
         this.domainId = builder.domainId;
+        this.crc64Hash = builder.crc64Hash;
         this.driveId = builder.driveId;
         this.fileId = builder.fileId;
         this.uploadId = builder.uploadId;
@@ -65,6 +70,13 @@ public class CompleteFileRequest extends Request {
     }
 
     /**
+     * @return crc64Hash
+     */
+    public String getCrc64Hash() {
+        return this.crc64Hash;
+    }
+
+    /**
      * @return driveId
      */
     public String getDriveId() {
@@ -87,6 +99,7 @@ public class CompleteFileRequest extends Request {
 
     public static final class Builder extends Request.Builder<CompleteFileRequest, Builder> {
         private String domainId; 
+        private String crc64Hash; 
         private String driveId; 
         private String fileId; 
         private String uploadId; 
@@ -98,6 +111,7 @@ public class CompleteFileRequest extends Request {
         private Builder(CompleteFileRequest request) {
             super(request);
             this.domainId = request.domainId;
+            this.crc64Hash = request.crc64Hash;
             this.driveId = request.driveId;
             this.fileId = request.fileId;
             this.uploadId = request.uploadId;
@@ -109,6 +123,15 @@ public class CompleteFileRequest extends Request {
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
             this.domainId = domainId;
+            return this;
+        }
+
+        /**
+         * crc64_hash.
+         */
+        public Builder crc64Hash(String crc64Hash) {
+            this.putBodyParameter("crc64_hash", crc64Hash);
+            this.crc64Hash = crc64Hash;
             return this;
         }
 

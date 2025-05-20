@@ -196,12 +196,12 @@ public class GetVideoPreviewPlayInfoRequest extends Request {
         }
 
         /**
-         * <p>The preview type. You must enable the corresponding video transcoding feature. Valid values:</p>
+         * <p>The category. It is the transcoding mode that you want to use. Valid values:</p>
          * <ul>
-         * <li>live_transcoding: previews a live stream while transcoding is in progress.</li>
-         * <li>quick_video: previews a video while transcoding is in progress.</li>
-         * <li>offline_audio: previews a piece of audio after the audio is transcoded offline.</li>
-         * <li>offline_video: previews a video after the video is transcoded offline.</li>
+         * <li>live_transcoding: plays a live stream while transcoding is in progress.</li>
+         * <li>quick_video: plays a video while transcoding is in progress.</li>
+         * <li>offline_audio: plays a piece of audio after the audio is transcoded offline.</li>
+         * <li>offline_video: plays a video after the video is transcoded offline.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -240,7 +240,10 @@ public class GetVideoPreviewPlayInfoRequest extends Request {
         }
 
         /**
-         * get_master_url.
+         * <p>Specifies whether to obtain the URL of the master M3U8 playlist. This parameter is valid only if the category parameter is set to quick_video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder getMasterUrl(Boolean getMasterUrl) {
             this.putBodyParameter("get_master_url", getMasterUrl);
@@ -249,7 +252,7 @@ public class GetVideoPreviewPlayInfoRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether not to query the playback URL. If you set this parameter to true, only transcoding metadata is returned. The video is not transcoded in the TS format, and the playback URL is not returned. If you set this parameter to false, the playback URL is returned. If the video has not been transcoded by using the template specified by template_id, the transcoding process is triggered. You are charged for the value-added service fees generated for transcoding.</p>
+         * <p>Specifies whether not to query the playback URL. If you set this parameter to true, only transcoding metadata is returned. The video is not transcoded in the TS format, and the playback URL is not returned. If you set this parameter to false, the playback URL is returned. If the video has not been transcoded by using the template specified by template_id, the transcoding process is triggered. You are charged value-added service fees generated for transcoding.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -261,7 +264,10 @@ public class GetVideoPreviewPlayInfoRequest extends Request {
         }
 
         /**
-         * re_transcode.
+         * <p>Specifies whether to initiate re-transcoding. If you set this parameter to true, the file is re-transcoded, with a fixed 202 response for retries. Before you use this parameter, contact us to enable it for you.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder reTranscode(Boolean reTranscode) {
             this.putBodyParameter("re_transcode", reTranscode);
@@ -270,7 +276,7 @@ public class GetVideoPreviewPlayInfoRequest extends Request {
         }
 
         /**
-         * <p>The share ID. If you want to manage a file by using a sharing link, carry the <code>x-share-token</code> header in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify at least either <code>share_id</code> or <code>drive_id</code>.</p>
+         * <p>The share ID. If you want to share a file, carry the <code>x-share-token</code> header for authentication in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify one of <code>share_id</code> and <code>drive_id</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>7JQX1FswpQ8</p>
@@ -294,7 +300,7 @@ public class GetVideoPreviewPlayInfoRequest extends Request {
         }
 
         /**
-         * <p>The validity period of the video preview. Unit: seconds. Default value: 900. Maximum value: 14400.</p>
+         * <p>The validity period of the URL. Unit: seconds. Default value: 900, which is 15 minutes. Maximum value: 14400, which is 4 hours.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>

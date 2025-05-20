@@ -435,7 +435,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * has_pwd.
+         * <p>Indicates whether a password is specified for the share link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasPwd(Boolean hasPwd) {
             this.hasPwd = hasPwd;
