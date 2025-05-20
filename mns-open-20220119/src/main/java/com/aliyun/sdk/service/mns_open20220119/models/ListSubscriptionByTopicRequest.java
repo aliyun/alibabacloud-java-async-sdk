@@ -22,6 +22,14 @@ public class ListSubscriptionByTopicRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointType")
+    private String endpointType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointValue")
+    private String endpointValue;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
@@ -40,6 +48,8 @@ public class ListSubscriptionByTopicRequest extends Request {
     private ListSubscriptionByTopicRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.endpointType = builder.endpointType;
+        this.endpointValue = builder.endpointValue;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.subscriptionName = builder.subscriptionName;
@@ -64,6 +74,20 @@ public class ListSubscriptionByTopicRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return endpointType
+     */
+    public String getEndpointType() {
+        return this.endpointType;
+    }
+
+    /**
+     * @return endpointValue
+     */
+    public String getEndpointValue() {
+        return this.endpointValue;
     }
 
     /**
@@ -96,6 +120,8 @@ public class ListSubscriptionByTopicRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListSubscriptionByTopicRequest, Builder> {
         private String regionId; 
+        private String endpointType; 
+        private String endpointValue; 
         private Long pageNum; 
         private Long pageSize; 
         private String subscriptionName; 
@@ -108,6 +134,8 @@ public class ListSubscriptionByTopicRequest extends Request {
         private Builder(ListSubscriptionByTopicRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.endpointType = request.endpointType;
+            this.endpointValue = request.endpointValue;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.subscriptionName = request.subscriptionName;
@@ -120,6 +148,24 @@ public class ListSubscriptionByTopicRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * EndpointType.
+         */
+        public Builder endpointType(String endpointType) {
+            this.putQueryParameter("EndpointType", endpointType);
+            this.endpointType = endpointType;
+            return this;
+        }
+
+        /**
+         * EndpointValue.
+         */
+        public Builder endpointValue(String endpointValue) {
+            this.putQueryParameter("EndpointValue", endpointValue);
+            this.endpointValue = endpointValue;
             return this;
         }
 

@@ -48,6 +48,10 @@ public class SubscribeRequest extends Request {
     private String pushType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StsRoleArn")
+    private String stsRoleArn;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubscriptionName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionName;
@@ -66,6 +70,7 @@ public class SubscribeRequest extends Request {
         this.notifyContentFormat = builder.notifyContentFormat;
         this.notifyStrategy = builder.notifyStrategy;
         this.pushType = builder.pushType;
+        this.stsRoleArn = builder.stsRoleArn;
         this.subscriptionName = builder.subscriptionName;
         this.topicName = builder.topicName;
     }
@@ -133,6 +138,13 @@ public class SubscribeRequest extends Request {
     }
 
     /**
+     * @return stsRoleArn
+     */
+    public String getStsRoleArn() {
+        return this.stsRoleArn;
+    }
+
+    /**
      * @return subscriptionName
      */
     public String getSubscriptionName() {
@@ -154,6 +166,7 @@ public class SubscribeRequest extends Request {
         private String notifyContentFormat; 
         private String notifyStrategy; 
         private String pushType; 
+        private String stsRoleArn; 
         private String subscriptionName; 
         private String topicName; 
 
@@ -170,6 +183,7 @@ public class SubscribeRequest extends Request {
             this.notifyContentFormat = request.notifyContentFormat;
             this.notifyStrategy = request.notifyStrategy;
             this.pushType = request.pushType;
+            this.stsRoleArn = request.stsRoleArn;
             this.subscriptionName = request.subscriptionName;
             this.topicName = request.topicName;
         } 
@@ -276,6 +290,15 @@ public class SubscribeRequest extends Request {
         public Builder pushType(String pushType) {
             this.putQueryParameter("PushType", pushType);
             this.pushType = pushType;
+            return this;
+        }
+
+        /**
+         * StsRoleArn.
+         */
+        public Builder stsRoleArn(String stsRoleArn) {
+            this.putQueryParameter("StsRoleArn", stsRoleArn);
+            this.stsRoleArn = stsRoleArn;
             return this;
         }
 
