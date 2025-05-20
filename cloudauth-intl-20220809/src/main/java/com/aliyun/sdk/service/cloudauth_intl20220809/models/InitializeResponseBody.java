@@ -143,6 +143,9 @@ public class InitializeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientCfg")
         private String clientCfg;
 
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private String protocol;
+
         @com.aliyun.core.annotation.NameInMap("TransactionId")
         private String transactionId;
 
@@ -151,6 +154,7 @@ public class InitializeResponseBody extends TeaModel {
 
         private Result(Builder builder) {
             this.clientCfg = builder.clientCfg;
+            this.protocol = builder.protocol;
             this.transactionId = builder.transactionId;
             this.transactionUrl = builder.transactionUrl;
         }
@@ -171,6 +175,13 @@ public class InitializeResponseBody extends TeaModel {
         }
 
         /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        /**
          * @return transactionId
          */
         public String getTransactionId() {
@@ -186,6 +197,7 @@ public class InitializeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String clientCfg; 
+            private String protocol; 
             private String transactionId; 
             private String transactionUrl; 
 
@@ -194,6 +206,7 @@ public class InitializeResponseBody extends TeaModel {
 
             private Builder(Result model) {
                 this.clientCfg = model.clientCfg;
+                this.protocol = model.protocol;
                 this.transactionId = model.transactionId;
                 this.transactionUrl = model.transactionUrl;
             } 
@@ -203,6 +216,14 @@ public class InitializeResponseBody extends TeaModel {
              */
             public Builder clientCfg(String clientCfg) {
                 this.clientCfg = clientCfg;
+                return this;
+            }
+
+            /**
+             * Protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
                 return this;
             }
 
