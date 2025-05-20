@@ -39,6 +39,10 @@ public class ListScheduleEventRequest extends Request {
     private String event;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
+    private String eventType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobExecutionId")
     private String jobExecutionId;
 
@@ -73,6 +77,7 @@ public class ListScheduleEventRequest extends Request {
         this.clusterId = builder.clusterId;
         this.endTime = builder.endTime;
         this.event = builder.event;
+        this.eventType = builder.eventType;
         this.jobExecutionId = builder.jobExecutionId;
         this.jobName = builder.jobName;
         this.keyword = builder.keyword;
@@ -131,6 +136,13 @@ public class ListScheduleEventRequest extends Request {
     }
 
     /**
+     * @return eventType
+     */
+    public String getEventType() {
+        return this.eventType;
+    }
+
+    /**
      * @return jobExecutionId
      */
     public String getJobExecutionId() {
@@ -185,6 +197,7 @@ public class ListScheduleEventRequest extends Request {
         private String clusterId; 
         private Long endTime; 
         private String event; 
+        private String eventType; 
         private String jobExecutionId; 
         private String jobName; 
         private String keyword; 
@@ -204,6 +217,7 @@ public class ListScheduleEventRequest extends Request {
             this.clusterId = request.clusterId;
             this.endTime = request.endTime;
             this.event = request.event;
+            this.eventType = request.eventType;
             this.jobExecutionId = request.jobExecutionId;
             this.jobName = request.jobName;
             this.keyword = request.keyword;
@@ -258,6 +272,15 @@ public class ListScheduleEventRequest extends Request {
         public Builder event(String event) {
             this.putQueryParameter("Event", event);
             this.event = event;
+            return this;
+        }
+
+        /**
+         * EventType.
+         */
+        public Builder eventType(String eventType) {
+            this.putQueryParameter("EventType", eventType);
+            this.eventType = eventType;
             return this;
         }
 

@@ -215,6 +215,9 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TimeType")
         private Integer timeType;
 
+        @com.aliyun.core.annotation.NameInMap("TotalTokens")
+        private Integer totalTokens;
+
         @com.aliyun.core.annotation.NameInMap("TriggerType")
         private Integer triggerType;
 
@@ -239,6 +242,7 @@ public class ListJobExecutionsResponseBody extends TeaModel {
             this.serverIp = builder.serverIp;
             this.status = builder.status;
             this.timeType = builder.timeType;
+            this.totalTokens = builder.totalTokens;
             this.triggerType = builder.triggerType;
             this.workAddr = builder.workAddr;
         }
@@ -371,6 +375,13 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalTokens
+         */
+        public Integer getTotalTokens() {
+            return this.totalTokens;
+        }
+
+        /**
          * @return triggerType
          */
         public Integer getTriggerType() {
@@ -402,6 +413,7 @@ public class ListJobExecutionsResponseBody extends TeaModel {
             private String serverIp; 
             private Integer status; 
             private Integer timeType; 
+            private Integer totalTokens; 
             private Integer triggerType; 
             private String workAddr; 
 
@@ -426,6 +438,7 @@ public class ListJobExecutionsResponseBody extends TeaModel {
                 this.serverIp = model.serverIp;
                 this.status = model.status;
                 this.timeType = model.timeType;
+                this.totalTokens = model.totalTokens;
                 this.triggerType = model.triggerType;
                 this.workAddr = model.workAddr;
             } 
@@ -563,6 +576,14 @@ public class ListJobExecutionsResponseBody extends TeaModel {
              */
             public Builder timeType(Integer timeType) {
                 this.timeType = timeType;
+                return this;
+            }
+
+            /**
+             * TotalTokens.
+             */
+            public Builder totalTokens(Integer totalTokens) {
+                this.totalTokens = totalTokens;
                 return this;
             }
 
