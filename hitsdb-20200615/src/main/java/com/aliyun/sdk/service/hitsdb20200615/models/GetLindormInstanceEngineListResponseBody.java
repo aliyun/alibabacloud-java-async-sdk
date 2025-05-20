@@ -44,6 +44,10 @@ public class GetLindormInstanceEngineListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -77,6 +81,16 @@ public class GetLindormInstanceEngineListResponseBody extends TeaModel {
         private java.util.List<EngineList> engineList; 
         private String instanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLindormInstanceEngineListResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.engineList = model.engineList;
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -193,6 +207,16 @@ public class GetLindormInstanceEngineListResponseBody extends TeaModel {
             private String netType; 
             private Integer port; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetInfoList model) {
+                this.accessType = model.accessType;
+                this.connectionString = model.connectionString;
+                this.netType = model.netType;
+                this.port = model.port;
+            } 
+
             /**
              * <p>The method by which the connection information can be used to access LindormTable. Valid values:</p>
              * <ul>
@@ -300,6 +324,14 @@ public class GetLindormInstanceEngineListResponseBody extends TeaModel {
         public static final class Builder {
             private String engineType; 
             private java.util.List<NetInfoList> netInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(EngineList model) {
+                this.engineType = model.engineType;
+                this.netInfoList = model.netInfoList;
+            } 
 
             /**
              * <p>The type of engine that can run on the instance. Valid values:</p>

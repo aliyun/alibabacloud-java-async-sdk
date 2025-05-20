@@ -94,7 +94,7 @@ public class ModifyLindormV2InstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -423,6 +423,18 @@ public class ModifyLindormV2InstanceRequest extends Request {
             private String nodeDiskType; 
             private String nodeSpec; 
             private String resourceGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeGroupList model) {
+                this.groupId = model.groupId;
+                this.nodeCount = model.nodeCount;
+                this.nodeDiskSize = model.nodeDiskSize;
+                this.nodeDiskType = model.nodeDiskType;
+                this.nodeSpec = model.nodeSpec;
+                this.resourceGroupName = model.resourceGroupName;
+            } 
 
             /**
              * GroupId.

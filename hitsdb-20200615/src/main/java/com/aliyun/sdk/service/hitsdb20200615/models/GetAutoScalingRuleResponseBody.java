@@ -64,6 +64,10 @@ public class GetAutoScalingRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -137,6 +141,21 @@ public class GetAutoScalingRuleResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAutoScalingRuleResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -451,6 +470,30 @@ public class GetAutoScalingRuleResponseBody extends TeaModel {
             private Integer thresholdLower; 
             private Integer thresholdUpper; 
             private String triggerCronExpr; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.configId = model.configId;
+                this.enabled = model.enabled;
+                this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
+                this.observationWindow = model.observationWindow;
+                this.operationType = model.operationType;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleType = model.ruleType;
+                this.scaleInStep = model.scaleInStep;
+                this.scaleOutStep = model.scaleOutStep;
+                this.silenceTime = model.silenceTime;
+                this.startTime = model.startTime;
+                this.targetMetric = model.targetMetric;
+                this.targetNodes = model.targetNodes;
+                this.thresholdLower = model.thresholdLower;
+                this.thresholdUpper = model.thresholdUpper;
+                this.triggerCronExpr = model.triggerCronExpr;
+            } 
 
             /**
              * ConfigId.

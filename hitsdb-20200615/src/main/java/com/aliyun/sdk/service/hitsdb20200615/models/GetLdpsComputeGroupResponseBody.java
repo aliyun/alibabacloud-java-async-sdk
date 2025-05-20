@@ -40,6 +40,10 @@ public class GetLdpsComputeGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupName
      */
@@ -65,6 +69,15 @@ public class GetLdpsComputeGroupResponseBody extends TeaModel {
         private String groupName; 
         private java.util.Map<String, ?> properties; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLdpsComputeGroupResponseBody model) {
+            this.groupName = model.groupName;
+            this.properties = model.properties;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * GroupName.

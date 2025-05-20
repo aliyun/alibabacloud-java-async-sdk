@@ -44,6 +44,10 @@ public class RenewLindormInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -77,6 +81,16 @@ public class RenewLindormInstanceResponseBody extends TeaModel {
         private String instanceId; 
         private Long orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RenewLindormInstanceResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.instanceId = model.instanceId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>

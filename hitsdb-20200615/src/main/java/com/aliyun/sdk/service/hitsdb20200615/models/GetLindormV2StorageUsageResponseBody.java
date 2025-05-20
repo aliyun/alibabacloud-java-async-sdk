@@ -48,6 +48,10 @@ public class GetLindormV2StorageUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetLindormV2StorageUsageResponseBody extends TeaModel {
         private java.util.Map<String, ?> instanceStorageZoneMap; 
         private String requestId; 
         private java.util.List<java.util.Map<String, ?>> usageByDiskCategory; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLindormV2StorageUsageResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.capacityByDiskCategory = model.capacityByDiskCategory;
+            this.instanceStorageZoneMap = model.instanceStorageZoneMap;
+            this.requestId = model.requestId;
+            this.usageByDiskCategory = model.usageByDiskCategory;
+        } 
 
         /**
          * AccessDeniedDetail.

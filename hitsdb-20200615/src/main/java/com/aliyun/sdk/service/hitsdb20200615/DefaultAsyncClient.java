@@ -439,6 +439,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If the version of the underlying storage engine in a Lindorm cluster is 4.1.9 or later, the storage usage values returned for the LStorageUsageList parameter prevail.</p>
+     * 
      * @param request the request parameters of GetLindormFsUsedDetail  GetLindormFsUsedDetailRequest
      * @return GetLindormFsUsedDetailResponse
      */

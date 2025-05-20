@@ -44,6 +44,10 @@ public class CreateLindormInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -78,8 +82,18 @@ public class CreateLindormInstanceResponseBody extends TeaModel {
         private Long orderId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateLindormInstanceResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.instanceId = model.instanceId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The detailed reason why the access was denied.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</p>

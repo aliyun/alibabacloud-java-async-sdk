@@ -108,6 +108,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -270,8 +274,37 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         private String requestId; 
         private String valid; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetLindormFsUsedDetailResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.fsCapacity = model.fsCapacity;
+            this.fsCapacityCold = model.fsCapacityCold;
+            this.fsCapacityHot = model.fsCapacityHot;
+            this.fsUsedCold = model.fsUsedCold;
+            this.fsUsedColdOnLindormSearch = model.fsUsedColdOnLindormSearch;
+            this.fsUsedColdOnLindormTSDB = model.fsUsedColdOnLindormTSDB;
+            this.fsUsedColdOnLindormTable = model.fsUsedColdOnLindormTable;
+            this.fsUsedHot = model.fsUsedHot;
+            this.fsUsedHotOnLindormSearch = model.fsUsedHotOnLindormSearch;
+            this.fsUsedHotOnLindormTSDB = model.fsUsedHotOnLindormTSDB;
+            this.fsUsedHotOnLindormTable = model.fsUsedHotOnLindormTable;
+            this.fsUsedOnLindormSearch = model.fsUsedOnLindormSearch;
+            this.fsUsedOnLindormTSDB = model.fsUsedOnLindormTSDB;
+            this.fsUsedOnLindormTable = model.fsUsedOnLindormTable;
+            this.fsUsedOnLindormTableData = model.fsUsedOnLindormTableData;
+            this.fsUsedOnLindormTableWAL = model.fsUsedOnLindormTableWAL;
+            this.lStorageUsageList = model.lStorageUsageList;
+            this.requestId = model.requestId;
+            this.valid = model.valid;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why the access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -279,7 +312,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FsCapacity.
+         * <p>The total storage space of the cluster. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85899345920</p>
          */
         public Builder fsCapacity(String fsCapacity) {
             this.fsCapacity = fsCapacity;
@@ -287,7 +323,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FsCapacityCold.
+         * <p>The cold storage space of the cluster. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85899345920</p>
          */
         public Builder fsCapacityCold(String fsCapacityCold) {
             this.fsCapacityCold = fsCapacityCold;
@@ -295,7 +334,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FsCapacityHot.
+         * <p>The hot storage space of the cluster. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85899345920</p>
          */
         public Builder fsCapacityHot(String fsCapacityHot) {
             this.fsCapacityHot = fsCapacityHot;
@@ -303,7 +345,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FsUsedCold.
+         * <p>The cold storage usage of the cluster. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33269</p>
          */
         public Builder fsUsedCold(String fsUsedCold) {
             this.fsUsedCold = fsUsedCold;
@@ -311,7 +356,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FsUsedColdOnLindormSearch.
+         * <p>The cold storage usage of the table data of the search engine. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33269</p>
          */
         public Builder fsUsedColdOnLindormSearch(String fsUsedColdOnLindormSearch) {
             this.fsUsedColdOnLindormSearch = fsUsedColdOnLindormSearch;
@@ -319,7 +367,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FsUsedColdOnLindormTSDB.
+         * <p>The cold storage usage of the table data of the time series engine. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33269</p>
          */
         public Builder fsUsedColdOnLindormTSDB(String fsUsedColdOnLindormTSDB) {
             this.fsUsedColdOnLindormTSDB = fsUsedColdOnLindormTSDB;
@@ -327,7 +378,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FsUsedColdOnLindormTable.
+         * <p>The cold storage usage of the table data of the wide table engine. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33269</p>
          */
         public Builder fsUsedColdOnLindormTable(String fsUsedColdOnLindormTable) {
             this.fsUsedColdOnLindormTable = fsUsedColdOnLindormTable;
@@ -335,7 +389,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FsUsedHot.
+         * <p>The hot storage usage of the cluster. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33269</p>
          */
         public Builder fsUsedHot(String fsUsedHot) {
             this.fsUsedHot = fsUsedHot;
@@ -343,7 +400,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FsUsedHotOnLindormSearch.
+         * <p>The hot storage usage of the table data of the search engine. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33269</p>
          */
         public Builder fsUsedHotOnLindormSearch(String fsUsedHotOnLindormSearch) {
             this.fsUsedHotOnLindormSearch = fsUsedHotOnLindormSearch;
@@ -351,7 +411,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FsUsedHotOnLindormTSDB.
+         * <p>The hot storage usage of the table data of the time series engine. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33269</p>
          */
         public Builder fsUsedHotOnLindormTSDB(String fsUsedHotOnLindormTSDB) {
             this.fsUsedHotOnLindormTSDB = fsUsedHotOnLindormTSDB;
@@ -359,7 +422,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FsUsedHotOnLindormTable.
+         * <p>The hot storage usage of the table data of the wide table engine. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33269</p>
          */
         public Builder fsUsedHotOnLindormTable(String fsUsedHotOnLindormTable) {
             this.fsUsedHotOnLindormTable = fsUsedHotOnLindormTable;
@@ -367,7 +433,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FsUsedOnLindormSearch.
+         * <p>The storage usage of the search engine. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33269</p>
          */
         public Builder fsUsedOnLindormSearch(String fsUsedOnLindormSearch) {
             this.fsUsedOnLindormSearch = fsUsedOnLindormSearch;
@@ -375,7 +444,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FsUsedOnLindormTSDB.
+         * <p>The storage usage of the time series engine. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33269</p>
          */
         public Builder fsUsedOnLindormTSDB(String fsUsedOnLindormTSDB) {
             this.fsUsedOnLindormTSDB = fsUsedOnLindormTSDB;
@@ -383,7 +455,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FsUsedOnLindormTable.
+         * <p>The space usage of the wide table engine. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33269</p>
          */
         public Builder fsUsedOnLindormTable(String fsUsedOnLindormTable) {
             this.fsUsedOnLindormTable = fsUsedOnLindormTable;
@@ -391,7 +466,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FsUsedOnLindormTableData.
+         * <p>The storage usage of the table data of the wide table engine. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33269</p>
          */
         public Builder fsUsedOnLindormTableData(String fsUsedOnLindormTableData) {
             this.fsUsedOnLindormTableData = fsUsedOnLindormTableData;
@@ -399,7 +477,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FsUsedOnLindormTableWAL.
+         * <p>The storage usage of the log data of the wide table engine. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33269</p>
          */
         public Builder fsUsedOnLindormTableWAL(String fsUsedOnLindormTableWAL) {
             this.fsUsedOnLindormTableWAL = fsUsedOnLindormTableWAL;
@@ -407,7 +488,7 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * LStorageUsageList.
+         * <p>If the version of the underlying storage engine is 4.1.9 or later, the storage usage values returned for the LStorageUsageList parameter prevail. Storage details are returned based on the storage type.</p>
          */
         public Builder lStorageUsageList(java.util.List<LStorageUsageList> lStorageUsageList) {
             this.lStorageUsageList = lStorageUsageList;
@@ -415,7 +496,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Each request has a unique ID. You can use the request ID to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F23D50C-400C-592C-9486-9D1E10179065</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -423,7 +507,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Valid.
+         * <p>Indicates whether the return value is valid. Valid values: true and false. If a value of false is returned, you must provide the request ID for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder valid(String valid) {
             this.valid = valid;
@@ -552,8 +639,25 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             private String usedLindormTsdb; 
             private String usedOther; 
 
+            private Builder() {
+            } 
+
+            private Builder(LStorageUsageList model) {
+                this.capacity = model.capacity;
+                this.diskType = model.diskType;
+                this.used = model.used;
+                this.usedLindormSearch = model.usedLindormSearch;
+                this.usedLindormSpark = model.usedLindormSpark;
+                this.usedLindormTable = model.usedLindormTable;
+                this.usedLindormTsdb = model.usedLindormTsdb;
+                this.usedOther = model.usedOther;
+            } 
+
             /**
-             * Capacity.
+             * <p>The total storage capacity. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85899345920</p>
              */
             public Builder capacity(String capacity) {
                 this.capacity = capacity;
@@ -561,7 +665,18 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * <p>The storage type of the cluster. Valid values:</p>
+             * <ul>
+             * <li>StandardCloudStorage</li>
+             * <li>PerformanceCloudStorage</li>
+             * <li>CapacityCloudStorage</li>
+             * <li>LocalSsdStorage</li>
+             * <li>LocalHddStorage</li>
+             * <li>LocalEbsStorage</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>StandardCloudStorage</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -569,7 +684,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Used.
+             * <p>The storage usage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33269</p>
              */
             public Builder used(String used) {
                 this.used = used;
@@ -577,7 +695,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UsedLindormSearch.
+             * <p>The storage usage of the search engine. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33269</p>
              */
             public Builder usedLindormSearch(String usedLindormSearch) {
                 this.usedLindormSearch = usedLindormSearch;
@@ -585,7 +706,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UsedLindormSpark.
+             * <p>The storage usage of the compute engine. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33269</p>
              */
             public Builder usedLindormSpark(String usedLindormSpark) {
                 this.usedLindormSpark = usedLindormSpark;
@@ -593,7 +717,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UsedLindormTable.
+             * <p>The storage usage of the wide table engine. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33269</p>
              */
             public Builder usedLindormTable(String usedLindormTable) {
                 this.usedLindormTable = usedLindormTable;
@@ -601,7 +728,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UsedLindormTsdb.
+             * <p>The storage usage of the time series engine. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33269</p>
              */
             public Builder usedLindormTsdb(String usedLindormTsdb) {
                 this.usedLindormTsdb = usedLindormTsdb;
@@ -609,7 +739,10 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UsedOther.
+             * <p>The storage usage of other resources, such as logs and recycle bins. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33269</p>
              */
             public Builder usedOther(String usedOther) {
                 this.usedOther = usedOther;

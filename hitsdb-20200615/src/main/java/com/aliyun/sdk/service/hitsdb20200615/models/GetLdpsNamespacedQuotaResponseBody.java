@@ -36,6 +36,10 @@ public class GetLdpsNamespacedQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return namespacedQuotas
      */
@@ -53,6 +57,14 @@ public class GetLdpsNamespacedQuotaResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<NamespacedQuotas> namespacedQuotas; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLdpsNamespacedQuotaResponseBody model) {
+            this.namespacedQuotas = model.namespacedQuotas;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * NamespacedQuotas.
@@ -155,6 +167,17 @@ public class GetLdpsNamespacedQuotaResponseBody extends TeaModel {
             private String name; 
             private String usedCpu; 
             private String usedMemory; 
+
+            private Builder() {
+            } 
+
+            private Builder(NamespacedQuotas model) {
+                this.cpuAmount = model.cpuAmount;
+                this.memoryAmount = model.memoryAmount;
+                this.name = model.name;
+                this.usedCpu = model.usedCpu;
+                this.usedMemory = model.usedMemory;
+            } 
 
             /**
              * CpuAmount.

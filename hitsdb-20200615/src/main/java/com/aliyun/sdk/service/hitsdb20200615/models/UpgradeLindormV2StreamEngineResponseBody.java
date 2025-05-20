@@ -36,6 +36,10 @@ public class UpgradeLindormV2StreamEngineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -53,6 +57,14 @@ public class UpgradeLindormV2StreamEngineResponseBody extends TeaModel {
     public static final class Builder {
         private String accessDeniedDetail; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpgradeLindormV2StreamEngineResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.

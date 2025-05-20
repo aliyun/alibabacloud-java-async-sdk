@@ -40,6 +40,10 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -65,6 +69,15 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private java.util.List<GroupList> groupList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLdpsComputeGroupsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.groupList = model.groupList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -187,6 +200,18 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
             private java.util.Map<String, ?> properties; 
             private String state; 
             private String webUI; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupList model) {
+                this.exceptionInfo = model.exceptionInfo;
+                this.groupName = model.groupName;
+                this.isDefault = model.isDefault;
+                this.properties = model.properties;
+                this.state = model.state;
+                this.webUI = model.webUI;
+            } 
 
             /**
              * ExceptionInfo.

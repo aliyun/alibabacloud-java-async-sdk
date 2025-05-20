@@ -40,6 +40,10 @@ public class CheckLdpsColumnarIndexStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -65,6 +69,15 @@ public class CheckLdpsColumnarIndexStatusResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private Boolean opened; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckLdpsColumnarIndexStatusResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.opened = model.opened;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.

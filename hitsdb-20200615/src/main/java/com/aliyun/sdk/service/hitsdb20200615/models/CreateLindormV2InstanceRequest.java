@@ -186,7 +186,7 @@ public class CreateLindormV2InstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -830,6 +830,17 @@ public class CreateLindormV2InstanceRequest extends Request {
             private String nodeSpec; 
             private String resourceGroupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(NodeGroupList model) {
+                this.nodeCount = model.nodeCount;
+                this.nodeDiskSize = model.nodeDiskSize;
+                this.nodeDiskType = model.nodeDiskType;
+                this.nodeSpec = model.nodeSpec;
+                this.resourceGroupName = model.resourceGroupName;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              */
@@ -921,6 +932,14 @@ public class CreateLindormV2InstanceRequest extends Request {
         public static final class Builder {
             private String engineType; 
             private java.util.List<NodeGroupList> nodeGroupList; 
+
+            private Builder() {
+            } 
+
+            private Builder(EngineList model) {
+                this.engineType = model.engineType;
+                this.nodeGroupList = model.nodeGroupList;
+            } 
 
             /**
              * <p>This parameter is required.</p>

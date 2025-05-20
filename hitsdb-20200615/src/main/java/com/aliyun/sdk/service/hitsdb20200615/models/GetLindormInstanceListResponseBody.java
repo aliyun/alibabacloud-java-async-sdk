@@ -48,6 +48,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceList
      */
@@ -90,8 +94,19 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         private String requestId; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetLindormInstanceListResponseBody model) {
+            this.instanceList = model.instanceList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
+
         /**
-         * <p>The list of instance.</p>
+         * <p>The instances.</p>
          */
         public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.instanceList = instanceList;
@@ -191,6 +206,14 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -541,6 +564,37 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceList model) {
+                this.aliUid = model.aliUid;
+                this.createMilliseconds = model.createMilliseconds;
+                this.createTime = model.createTime;
+                this.enableColumn = model.enableColumn;
+                this.enableCompute = model.enableCompute;
+                this.enableLts = model.enableLts;
+                this.enableMessage = model.enableMessage;
+                this.enableRow = model.enableRow;
+                this.enableStream = model.enableStream;
+                this.enableVector = model.enableVector;
+                this.engineType = model.engineType;
+                this.expireTime = model.expireTime;
+                this.expiredMilliseconds = model.expiredMilliseconds;
+                this.instanceAlias = model.instanceAlias;
+                this.instanceId = model.instanceId;
+                this.instanceStatus = model.instanceStatus;
+                this.instanceStorage = model.instanceStorage;
+                this.networkType = model.networkType;
+                this.payType = model.payType;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serviceType = model.serviceType;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The 16-digit AliUid of the Alibaba Cloud account that owns the instance.</p>
              * 
@@ -632,7 +686,11 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * EnableRow.
+             * <p>Indicates whether the table 3.0 storage engine is enabled, returning:</p>
+             * <p>true: Enabled. - false: Not enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableRow(Boolean enableRow) {
                 this.enableRow = enableRow;

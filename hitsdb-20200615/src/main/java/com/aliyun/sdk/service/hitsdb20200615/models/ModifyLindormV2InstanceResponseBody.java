@@ -44,6 +44,10 @@ public class ModifyLindormV2InstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -77,6 +81,16 @@ public class ModifyLindormV2InstanceResponseBody extends TeaModel {
         private String instanceId; 
         private Long orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyLindormV2InstanceResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.instanceId = model.instanceId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.

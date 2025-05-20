@@ -256,6 +256,10 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliUid
      */
@@ -714,6 +718,69 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         private String vswitchId; 
         private String zoneId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetLindormInstanceResponseBody model) {
+            this.aliUid = model.aliUid;
+            this.arbiterVSwitchId = model.arbiterVSwitchId;
+            this.arbiterZoneId = model.arbiterZoneId;
+            this.archVersion = model.archVersion;
+            this.archiveStorage = model.archiveStorage;
+            this.autoRenew = model.autoRenew;
+            this.coldStorage = model.coldStorage;
+            this.coreDiskCategory = model.coreDiskCategory;
+            this.coreNum = model.coreNum;
+            this.coreSingleStorage = model.coreSingleStorage;
+            this.coreSpec = model.coreSpec;
+            this.createMilliseconds = model.createMilliseconds;
+            this.createTime = model.createTime;
+            this.deletionProtection = model.deletionProtection;
+            this.diskCategory = model.diskCategory;
+            this.diskThreshold = model.diskThreshold;
+            this.diskUsage = model.diskUsage;
+            this.enableBlob = model.enableBlob;
+            this.enableCdc = model.enableCdc;
+            this.enableCompute = model.enableCompute;
+            this.enableKms = model.enableKms;
+            this.enableLProxy = model.enableLProxy;
+            this.enableLTS = model.enableLTS;
+            this.enableLsqlVersionV3 = model.enableLsqlVersionV3;
+            this.enableMLCtrl = model.enableMLCtrl;
+            this.enableSSL = model.enableSSL;
+            this.enableShs = model.enableShs;
+            this.enableStoreTDE = model.enableStoreTDE;
+            this.enableStream = model.enableStream;
+            this.engineList = model.engineList;
+            this.engineType = model.engineType;
+            this.expireTime = model.expireTime;
+            this.expiredMilliseconds = model.expiredMilliseconds;
+            this.instanceAlias = model.instanceAlias;
+            this.instanceId = model.instanceId;
+            this.instanceStatus = model.instanceStatus;
+            this.instanceStorage = model.instanceStorage;
+            this.logDiskCategory = model.logDiskCategory;
+            this.logNum = model.logNum;
+            this.logSingleStorage = model.logSingleStorage;
+            this.logSpec = model.logSpec;
+            this.maintainEndTime = model.maintainEndTime;
+            this.maintainStartTime = model.maintainStartTime;
+            this.multiZoneCombination = model.multiZoneCombination;
+            this.networkType = model.networkType;
+            this.payType = model.payType;
+            this.primaryVSwitchId = model.primaryVSwitchId;
+            this.primaryZoneId = model.primaryZoneId;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.serviceType = model.serviceType;
+            this.standbyVSwitchId = model.standbyVSwitchId;
+            this.standbyZoneId = model.standbyZoneId;
+            this.vpcId = model.vpcId;
+            this.vswitchId = model.vswitchId;
+            this.zoneId = model.zoneId;
+        } 
+
         /**
          * <p>16-digit AliUid of the Alibaba Cloud primary account (main account).</p>
          * 
@@ -776,7 +843,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether auto-renewal is enabled, with the following returns:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled. - <strong>false</strong>: Disabled.<blockquote>
+         * <li><strong>true</strong>: Enabled. </li>
+         * <li><strong>false</strong>: Disabled.<blockquote>
          * <p>This parameter is returned when the instance&quot;s payment type is prepaid.</p>
          * </blockquote>
          * </li>
@@ -876,7 +944,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether deletion protection is enabled, returning:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled. - <strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -944,7 +1013,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the data subscription feature for the instance is enabled. Returns:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled. - <strong>false</strong>: Not enabled.</li>
+         * <li><strong>true</strong>: Enabled. </li>
+         * <li><strong>false</strong>: Not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -958,7 +1028,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instance&quot;s compute engine is enabled, returning:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled. - <strong>false</strong>: Not enabled.</li>
+         * <li><strong>true</strong>: Enabled. </li>
+         * <li><strong>false</strong>: Not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -972,7 +1043,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the Key Management Service (KMS) is enabled, returning:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled. - <strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -984,9 +1056,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the wide-table engine supports Thrift and CQL protocols. If not supported, the SwitchLProxyService interface can be used to enable or disable.
-         * True indicates support
-         * False indicates no support</p>
+         * <p>Indicates whether LindormTable supports the Thrift and CQL protocols. If these protocols are not supported. You can call the SwitchLProxyService operation to enable or disable the support on these protocols for LindormTable.</p>
+         * <p>True: LindormTable supports the Thrift and CQL protocols.</p>
+         * <p>False: LindormTable does not support the Thrift and CQL protocols.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -1044,7 +1116,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether SSL link encryption is enabled, returning:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled. - <strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: Enabled. </li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1069,7 +1142,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the Transparent Data Encryption (TDE) is enabled, returning:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled. - <strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: Enabled. </li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1083,7 +1157,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instance has the stream engine enabled. Return values:</p>
          * <ul>
-         * <li><strong>true</strong>: Stream engine is enabled. - <strong>false</strong>: Stream engine is not enabled.</li>
+         * <li><strong>true</strong>: Stream engine is enabled. </li>
+         * <li><strong>false</strong>: Stream engine is not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1095,7 +1170,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The latest version number of the engine.</p>
+         * <p>The list of engines supported by the instance.</p>
          */
         public Builder engineList(java.util.List<EngineList> engineList) {
             this.engineList = engineList;
@@ -1105,7 +1180,10 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         /**
          * <p>Supported engine types, the return value is obtained by performing addition operations on the values of the following engine types.</p>
          * <ul>
-         * <li>1: Search Engine - 2: Time Series Engine - 4: Wide Table Engine - 8: File Engine<blockquote>
+         * <li>1: Search Engine </li>
+         * <li>2: Time Series Engine</li>
+         * <li>4: Wide Table Engine</li>
+         * <li>8: File Engine<blockquote>
          * <p>For example: If EngineType is 15, where 15 = 8 + 4 + 2 + 1, it indicates that the instance supports Search Engine, Time Series Engine, Wide Table Engine, and File Engine. If EngineType is 6, where 6 = 4 + 2, it signifies that the instance supports Time Series Engine and Wide Table Engine.</p>
          * </blockquote>
          * </li>
@@ -1214,7 +1292,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         /**
          * <p>Multi-zone instance, log node disk type, returns:</p>
          * <ul>
-         * <li><strong>cloud_efficiency</strong>：Standard cloud storage. - <strong>cloud_ssd</strong>：Performance cloud storage.</li>
+         * <li><strong>cloud_efficiency</strong>: Standard cloud storage. </li>
+         * <li><strong>cloud_ssd</strong>: Performance cloud storage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1283,7 +1362,17 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         /**
          * <p>Multi-zone combinations. For support details on zone combinations, please refer to the product page.</p>
          * <ul>
-         * <li><strong>ap-southeast-5abc-aliyun</strong>: Indonesia (Jakarta) A+B+C. - <strong>cn-hangzhou-ehi-aliyun</strong>: East China 1 (Hangzhou) E+H+I. - <strong>cn-beijing-acd-aliyun</strong>: North China 2 (Beijing) A+C+D. - <strong>ap-southeast-1-abc-aliyun</strong>: Singapore A+B+C. - <strong>cn-zhangjiakou-abc-aliyun</strong>: North China 3 (Zhangjiakou) A+B+C. - <strong>cn-shanghai-efg-aliyun</strong>: East China 2 (Shanghai) E+F+G. - <strong>cn-shanghai-abd-aliyun</strong>: East China 2 (Shanghai) A+B+D. - <strong>cn-hangzhou-bef-aliyun</strong>: East China 1 (Hangzhou) B+E+F. - <strong>cn-hangzhou-bce-aliyun</strong>: East China 1 (Hangzhou) B+C+E. - <strong>cn-beijing-fgh-aliyun</strong>: North China 2 (Beijing) F+G+H. - <strong>cn-shenzhen-abc-aliyun</strong>: South China 1 (Shenzhen) A+B+C.</li>
+         * <li><strong>ap-southeast-5abc-aliyun</strong>: Indonesia (Jakarta) A+B+C. </li>
+         * <li><strong>cn-hangzhou-ehi-aliyun</strong>: East China 1 (Hangzhou) E+H+I.</li>
+         * <li><strong>cn-beijing-acd-aliyun</strong>: North China 2 (Beijing) A+C+D.</li>
+         * <li><strong>ap-southeast-1-abc-aliyun</strong>: Singapore A+B+C.</li>
+         * <li><strong>cn-zhangjiakou-abc-aliyun</strong>: North China 3 (Zhangjiakou) A+B+C.</li>
+         * <li><strong>cn-shanghai-efg-aliyun</strong>: East China 2 (Shanghai) E+F+G.</li>
+         * <li><strong>cn-shanghai-abd-aliyun</strong>: East China 2 (Shanghai) A+B+D.</li>
+         * <li><strong>cn-hangzhou-bef-aliyun</strong>: East China 1 (Hangzhou) B+E+F.</li>
+         * <li><strong>cn-hangzhou-bce-aliyun</strong>: East China 1 (Hangzhou) B+C+E.</li>
+         * <li><strong>cn-beijing-fgh-aliyun</strong>: North China 2 (Beijing) F+G+H.</li>
+         * <li><strong>cn-shenzhen-abc-aliyun</strong>: South China 1 (Shenzhen) A+B+C.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1306,7 +1395,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>400</p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <p>PREPAY: subscription.
+         * POSTPAY: pay-as-you-go.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -1374,7 +1465,11 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         /**
          * <p>Instance type, valid values:</p>
          * <ul>
-         * <li><strong>lindorm</strong>：represents a Lindorm single-zone instance. - <strong>lindorm_multizone</strong>：represents a Lindorm multi-zone instance. - <strong>serverless_lindorm</strong>：represents a Lindorm Serverless instance. - <strong>lindorm_standalone</strong>：represents a Lindorm standalone instance. - <strong>lts</strong>：represents the Lindorm Data Channel Service type.</li>
+         * <li><strong>lindorm</strong>: represents a Lindorm single-zone instance.</li>
+         * <li><strong>lindorm_multizone</strong>: represents a Lindorm multi-zone instance.</li>
+         * <li><strong>serverless_lindorm</strong>: represents a Lindorm Serverless instance.</li>
+         * <li><strong>lindorm_standalone</strong>: represents a Lindorm standalone instance.</li>
+         * <li><strong>lts</strong>: represents the Lindorm Data Channel Service type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1453,6 +1548,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
      * <p>GetLindormInstanceResponseBody</p>
      */
     public static class EngineList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ArbiterCoreCount")
+        private String arbiterCoreCount;
+
         @com.aliyun.core.annotation.NameInMap("CoreCount")
         private String coreCount;
 
@@ -1471,16 +1569,29 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemorySize")
         private String memorySize;
 
+        @com.aliyun.core.annotation.NameInMap("PrimaryCoreCount")
+        private String primaryCoreCount;
+
+        @com.aliyun.core.annotation.NameInMap("Specification")
+        private String specification;
+
+        @com.aliyun.core.annotation.NameInMap("StandbyCoreCount")
+        private String standbyCoreCount;
+
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private EngineList(Builder builder) {
+            this.arbiterCoreCount = builder.arbiterCoreCount;
             this.coreCount = builder.coreCount;
             this.cpuCount = builder.cpuCount;
             this.engine = builder.engine;
             this.isLastVersion = builder.isLastVersion;
             this.latestVersion = builder.latestVersion;
             this.memorySize = builder.memorySize;
+            this.primaryCoreCount = builder.primaryCoreCount;
+            this.specification = builder.specification;
+            this.standbyCoreCount = builder.standbyCoreCount;
             this.version = builder.version;
         }
 
@@ -1490,6 +1601,13 @@ public class GetLindormInstanceResponseBody extends TeaModel {
 
         public static EngineList create() {
             return builder().build();
+        }
+
+        /**
+         * @return arbiterCoreCount
+         */
+        public String getArbiterCoreCount() {
+            return this.arbiterCoreCount;
         }
 
         /**
@@ -1535,6 +1653,27 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return primaryCoreCount
+         */
+        public String getPrimaryCoreCount() {
+            return this.primaryCoreCount;
+        }
+
+        /**
+         * @return specification
+         */
+        public String getSpecification() {
+            return this.specification;
+        }
+
+        /**
+         * @return standbyCoreCount
+         */
+        public String getStandbyCoreCount() {
+            return this.standbyCoreCount;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -1542,13 +1681,42 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String arbiterCoreCount; 
             private String coreCount; 
             private String cpuCount; 
             private String engine; 
             private Boolean isLastVersion; 
             private String latestVersion; 
             private String memorySize; 
+            private String primaryCoreCount; 
+            private String specification; 
+            private String standbyCoreCount; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(EngineList model) {
+                this.arbiterCoreCount = model.arbiterCoreCount;
+                this.coreCount = model.coreCount;
+                this.cpuCount = model.cpuCount;
+                this.engine = model.engine;
+                this.isLastVersion = model.isLastVersion;
+                this.latestVersion = model.latestVersion;
+                this.memorySize = model.memorySize;
+                this.primaryCoreCount = model.primaryCoreCount;
+                this.specification = model.specification;
+                this.standbyCoreCount = model.standbyCoreCount;
+                this.version = model.version;
+            } 
+
+            /**
+             * ArbiterCoreCount.
+             */
+            public Builder arbiterCoreCount(String arbiterCoreCount) {
+                this.arbiterCoreCount = arbiterCoreCount;
+                return this;
+            }
 
             /**
              * <p>The number of engine nodes.</p>
@@ -1625,6 +1793,33 @@ public class GetLindormInstanceResponseBody extends TeaModel {
              */
             public Builder memorySize(String memorySize) {
                 this.memorySize = memorySize;
+                return this;
+            }
+
+            /**
+             * PrimaryCoreCount.
+             */
+            public Builder primaryCoreCount(String primaryCoreCount) {
+                this.primaryCoreCount = primaryCoreCount;
+                return this;
+            }
+
+            /**
+             * <p>The specification of the engine node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lindorm.g.2xlarge</p>
+             */
+            public Builder specification(String specification) {
+                this.specification = specification;
+                return this;
+            }
+
+            /**
+             * StandbyCoreCount.
+             */
+            public Builder standbyCoreCount(String standbyCoreCount) {
+                this.standbyCoreCount = standbyCoreCount;
                 return this;
             }
 

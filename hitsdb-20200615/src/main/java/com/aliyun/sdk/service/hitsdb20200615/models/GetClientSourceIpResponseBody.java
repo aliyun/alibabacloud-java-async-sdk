@@ -40,6 +40,10 @@ public class GetClientSourceIpResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -65,6 +69,15 @@ public class GetClientSourceIpResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private String clientIp; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetClientSourceIpResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.clientIp = model.clientIp;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.

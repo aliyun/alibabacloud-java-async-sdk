@@ -97,7 +97,7 @@ public class GetLindormInstanceListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -248,7 +248,7 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The number of the pages to return,</p>
+         * <p>The number of the page to return.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -357,12 +357,12 @@ public class GetLindormInstanceListRequest extends Request {
          * <p>The engine supported by the instances that you want to query. The engines are indicated by different numbers:</p>
          * <ul>
          * <li><strong>1</strong>: LindormSearch.</li>
-         * <li><strong>2</strong>: LindormTSDB.</li>
-         * <li><strong>4</strong>: LindormTable.</li>
-         * <li><strong>8</strong>: LindormDFS.</li>
+         * <li><strong>2</strong>: LindormTSDB</li>
+         * <li><strong>4</strong>: LindormTable</li>
+         * <li><strong>8</strong>: LindormDFS</li>
          * </ul>
          * <blockquote>
-         * <p>The value of this parameter is the sum of all numbers that indicate the engines supported by the instance. For example, if you set the value of this parameter to 15, which is the sum of 1, 2, 4, and 8, this operation queries instances that support all four engines. If you set the value of this parameter to 6, which is the sum of 2 and 4, this operation queries instances that support LindormTSDB and LindormTable.</p>
+         * <p> The value of this parameter is the sum of all numbers that indicate the engines supported by the instance. For example, if you set the value of this parameter to 15, which is the sum of 1, 2, 4, and 8, this operation queries instances that support all four engines. If you set the value of this parameter to 6, which is the sum of 2 and 4, this operation queries instances that support LindormTSDB and LindormTable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -433,6 +433,14 @@ public class GetLindormInstanceListRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N of the instances you want to query. You can specify 1 to 20 tag keys.</p>

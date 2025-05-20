@@ -64,6 +64,10 @@ public class ListAutoScalingRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -137,6 +141,21 @@ public class ListAutoScalingRecordsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAutoScalingRecordsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -368,6 +387,23 @@ public class ListAutoScalingRecordsResponseBody extends TeaModel {
             private String strategy; 
             private String targetValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScaleRecords model) {
+                this.detail = model.detail;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.oldValue = model.oldValue;
+                this.resourceType = model.resourceType;
+                this.specGroupId = model.specGroupId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.strategy = model.strategy;
+                this.targetValue = model.targetValue;
+            } 
+
             /**
              * Detail.
              */
@@ -542,6 +578,17 @@ public class ListAutoScalingRecordsResponseBody extends TeaModel {
             private java.util.List<ScaleRecords> scaleRecords; 
             private Integer totalNum; 
             private Integer totalPage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.scaleRecords = model.scaleRecords;
+                this.totalNum = model.totalNum;
+                this.totalPage = model.totalPage;
+            } 
 
             /**
              * PageNum.

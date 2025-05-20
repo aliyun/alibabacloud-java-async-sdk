@@ -44,6 +44,10 @@ public class GetInstanceSecurityGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -77,6 +81,16 @@ public class GetInstanceSecurityGroupsResponseBody extends TeaModel {
         private String instanceId; 
         private String requestId; 
         private java.util.List<String> securityGroups; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceSecurityGroupsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+            this.securityGroups = model.securityGroups;
+        } 
 
         /**
          * AccessDeniedDetail.

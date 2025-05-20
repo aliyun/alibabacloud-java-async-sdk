@@ -52,6 +52,10 @@ public class GetLdpsResourceCostResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -101,6 +105,18 @@ public class GetLdpsResourceCostResponseBody extends TeaModel {
         private String requestId; 
         private Long startTime; 
         private Long totalResource; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLdpsResourceCostResponseBody model) {
+            this.endTime = model.endTime;
+            this.instanceId = model.instanceId;
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.totalResource = model.totalResource;
+        } 
 
         /**
          * EndTime.

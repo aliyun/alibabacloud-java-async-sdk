@@ -20,6 +20,12 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AliUid")
     private Long aliUid;
 
+    @com.aliyun.core.annotation.NameInMap("ArbiterVSwitchId")
+    private String arbiterVSwitchId;
+
+    @com.aliyun.core.annotation.NameInMap("ArbiterZoneId")
+    private String arbiterZoneId;
+
     @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
@@ -77,6 +83,12 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
+    @com.aliyun.core.annotation.NameInMap("PrimaryVSwitchId")
+    private String primaryVSwitchId;
+
+    @com.aliyun.core.annotation.NameInMap("PrimaryZoneId")
+    private String primaryZoneId;
+
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -88,6 +100,12 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("ServiceType")
     private String serviceType;
+
+    @com.aliyun.core.annotation.NameInMap("StandbyVSwitchId")
+    private String standbyVSwitchId;
+
+    @com.aliyun.core.annotation.NameInMap("StandbyZoneId")
+    private String standbyZoneId;
 
     @com.aliyun.core.annotation.NameInMap("StorageUsage")
     private StorageUsage storageUsage;
@@ -109,6 +127,8 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
 
     private GetLindormV2InstanceResponseBody(Builder builder) {
         this.aliUid = builder.aliUid;
+        this.arbiterVSwitchId = builder.arbiterVSwitchId;
+        this.arbiterZoneId = builder.arbiterZoneId;
         this.autoRenew = builder.autoRenew;
         this.coldStorage = builder.coldStorage;
         this.createMilliseconds = builder.createMilliseconds;
@@ -128,10 +148,14 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         this.maintainStartTime = builder.maintainStartTime;
         this.networkType = builder.networkType;
         this.payType = builder.payType;
+        this.primaryVSwitchId = builder.primaryVSwitchId;
+        this.primaryZoneId = builder.primaryZoneId;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
         this.serviceType = builder.serviceType;
+        this.standbyVSwitchId = builder.standbyVSwitchId;
+        this.standbyZoneId = builder.standbyZoneId;
         this.storageUsage = builder.storageUsage;
         this.vpcId = builder.vpcId;
         this.vswitchId = builder.vswitchId;
@@ -148,11 +172,29 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliUid
      */
     public Long getAliUid() {
         return this.aliUid;
+    }
+
+    /**
+     * @return arbiterVSwitchId
+     */
+    public String getArbiterVSwitchId() {
+        return this.arbiterVSwitchId;
+    }
+
+    /**
+     * @return arbiterZoneId
+     */
+    public String getArbiterZoneId() {
+        return this.arbiterZoneId;
     }
 
     /**
@@ -289,6 +331,20 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return primaryVSwitchId
+     */
+    public String getPrimaryVSwitchId() {
+        return this.primaryVSwitchId;
+    }
+
+    /**
+     * @return primaryZoneId
+     */
+    public String getPrimaryZoneId() {
+        return this.primaryZoneId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -314,6 +370,20 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
      */
     public String getServiceType() {
         return this.serviceType;
+    }
+
+    /**
+     * @return standbyVSwitchId
+     */
+    public String getStandbyVSwitchId() {
+        return this.standbyVSwitchId;
+    }
+
+    /**
+     * @return standbyZoneId
+     */
+    public String getStandbyZoneId() {
+        return this.standbyZoneId;
     }
 
     /**
@@ -360,6 +430,8 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long aliUid; 
+        private String arbiterVSwitchId; 
+        private String arbiterZoneId; 
         private Boolean autoRenew; 
         private Integer coldStorage; 
         private Long createMilliseconds; 
@@ -379,10 +451,14 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         private String maintainStartTime; 
         private String networkType; 
         private String payType; 
+        private String primaryVSwitchId; 
+        private String primaryZoneId; 
         private String regionId; 
         private String requestId; 
         private String resourceGroupId; 
         private String serviceType; 
+        private String standbyVSwitchId; 
+        private String standbyZoneId; 
         private StorageUsage storageUsage; 
         private String vpcId; 
         private String vswitchId; 
@@ -390,11 +466,69 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         private java.util.Map<String, ?> zoneEngineInfoMap; 
         private String zoneId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetLindormV2InstanceResponseBody model) {
+            this.aliUid = model.aliUid;
+            this.arbiterVSwitchId = model.arbiterVSwitchId;
+            this.arbiterZoneId = model.arbiterZoneId;
+            this.autoRenew = model.autoRenew;
+            this.coldStorage = model.coldStorage;
+            this.createMilliseconds = model.createMilliseconds;
+            this.deletionProtection = model.deletionProtection;
+            this.diskCategory = model.diskCategory;
+            this.diskThreshold = model.diskThreshold;
+            this.diskUsage = model.diskUsage;
+            this.enableCompute = model.enableCompute;
+            this.engineList = model.engineList;
+            this.expiredMilliseconds = model.expiredMilliseconds;
+            this.initialRootPassword = model.initialRootPassword;
+            this.instanceAlias = model.instanceAlias;
+            this.instanceId = model.instanceId;
+            this.instanceStatus = model.instanceStatus;
+            this.instanceType = model.instanceType;
+            this.maintainEndTime = model.maintainEndTime;
+            this.maintainStartTime = model.maintainStartTime;
+            this.networkType = model.networkType;
+            this.payType = model.payType;
+            this.primaryVSwitchId = model.primaryVSwitchId;
+            this.primaryZoneId = model.primaryZoneId;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.serviceType = model.serviceType;
+            this.standbyVSwitchId = model.standbyVSwitchId;
+            this.standbyZoneId = model.standbyZoneId;
+            this.storageUsage = model.storageUsage;
+            this.vpcId = model.vpcId;
+            this.vswitchId = model.vswitchId;
+            this.whiteIpList = model.whiteIpList;
+            this.zoneEngineInfoMap = model.zoneEngineInfoMap;
+            this.zoneId = model.zoneId;
+        } 
+
         /**
          * AliUid.
          */
         public Builder aliUid(Long aliUid) {
             this.aliUid = aliUid;
+            return this;
+        }
+
+        /**
+         * ArbiterVSwitchId.
+         */
+        public Builder arbiterVSwitchId(String arbiterVSwitchId) {
+            this.arbiterVSwitchId = arbiterVSwitchId;
+            return this;
+        }
+
+        /**
+         * ArbiterZoneId.
+         */
+        public Builder arbiterZoneId(String arbiterZoneId) {
+            this.arbiterZoneId = arbiterZoneId;
             return this;
         }
 
@@ -551,6 +685,22 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         }
 
         /**
+         * PrimaryVSwitchId.
+         */
+        public Builder primaryVSwitchId(String primaryVSwitchId) {
+            this.primaryVSwitchId = primaryVSwitchId;
+            return this;
+        }
+
+        /**
+         * PrimaryZoneId.
+         */
+        public Builder primaryZoneId(String primaryZoneId) {
+            this.primaryZoneId = primaryZoneId;
+            return this;
+        }
+
+        /**
          * RegionId.
          */
         public Builder regionId(String regionId) {
@@ -579,6 +729,22 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
          */
         public Builder serviceType(String serviceType) {
             this.serviceType = serviceType;
+            return this;
+        }
+
+        /**
+         * StandbyVSwitchId.
+         */
+        public Builder standbyVSwitchId(String standbyVSwitchId) {
+            this.standbyVSwitchId = standbyVSwitchId;
+            return this;
+        }
+
+        /**
+         * StandbyZoneId.
+         */
+        public Builder standbyZoneId(String standbyZoneId) {
+            this.standbyZoneId = standbyZoneId;
             return this;
         }
 
@@ -691,6 +857,15 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             private String address; 
             private String port; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConnectAddressList model) {
+                this.address = model.address;
+                this.port = model.port;
+                this.type = model.type;
+            } 
 
             /**
              * Address.
@@ -874,6 +1049,23 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             private String resourceGroupName; 
             private String specId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeGroup model) {
+                this.category = model.category;
+                this.cpuCoreCount = model.cpuCoreCount;
+                this.enableAttachLocalDisk = model.enableAttachLocalDisk;
+                this.localDiskCapacity = model.localDiskCapacity;
+                this.localDiskCategory = model.localDiskCategory;
+                this.memorySizeGiB = model.memorySizeGiB;
+                this.nodeSpec = model.nodeSpec;
+                this.quantity = model.quantity;
+                this.resourceGroupName = model.resourceGroupName;
+                this.specId = model.specId;
+                this.status = model.status;
+            } 
 
             /**
              * Category.
@@ -1062,6 +1254,18 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             private java.util.List<NodeGroup> nodeGroup; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(EngineList model) {
+                this.connectAddressList = model.connectAddressList;
+                this.engine = model.engine;
+                this.isLastVersion = model.isLastVersion;
+                this.latestVersion = model.latestVersion;
+                this.nodeGroup = model.nodeGroup;
+                this.version = model.version;
+            } 
+
             /**
              * ConnectAddressList.
              */
@@ -1161,6 +1365,14 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             private java.util.List<java.util.Map<String, ?>> capacityByDiskCategory; 
             private java.util.Map<String, ?> engineUsage; 
 
+            private Builder() {
+            } 
+
+            private Builder(StorageUsage model) {
+                this.capacityByDiskCategory = model.capacityByDiskCategory;
+                this.engineUsage = model.engineUsage;
+            } 
+
             /**
              * CapacityByDiskCategory.
              */
@@ -1227,6 +1439,14 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String groupName; 
             private String ipList; 
+
+            private Builder() {
+            } 
+
+            private Builder(WhiteIpList model) {
+                this.groupName = model.groupName;
+                this.ipList = model.ipList;
+            } 
 
             /**
              * GroupName.

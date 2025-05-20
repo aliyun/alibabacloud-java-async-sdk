@@ -48,6 +48,10 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
         private String instanceId; 
         private java.util.List<String> ipList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceIpWhiteListResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.groupList = model.groupList;
+            this.instanceId = model.instanceId;
+            this.ipList = model.ipList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -188,6 +203,14 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
         public static final class Builder {
             private String groupName; 
             private String securityIpList; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupList model) {
+                this.groupName = model.groupName;
+                this.securityIpList = model.securityIpList;
+            } 
 
             /**
              * <p>The name of the IP address whitelist.</p>

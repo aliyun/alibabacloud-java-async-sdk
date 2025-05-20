@@ -36,6 +36,10 @@ public class SwitchLSQLV3MySQLServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -53,6 +57,14 @@ public class SwitchLSQLV3MySQLServiceResponseBody extends TeaModel {
     public static final class Builder {
         private String accessDeniedDetail; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SwitchLSQLV3MySQLServiceResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the access denial.</p>

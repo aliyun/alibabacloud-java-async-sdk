@@ -44,6 +44,10 @@ public class GetEngineDefaultAuthResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -77,6 +81,16 @@ public class GetEngineDefaultAuthResponseBody extends TeaModel {
         private java.util.List<AuthInfos> authInfos; 
         private String instanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetEngineDefaultAuthResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.authInfos = model.authInfos;
+            this.instanceId = model.instanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -171,6 +185,15 @@ public class GetEngineDefaultAuthResponseBody extends TeaModel {
             private String engine; 
             private String password; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthInfos model) {
+                this.engine = model.engine;
+                this.password = model.password;
+                this.username = model.username;
+            } 
 
             /**
              * Engine.

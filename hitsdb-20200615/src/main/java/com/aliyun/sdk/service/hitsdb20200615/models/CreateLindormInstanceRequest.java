@@ -183,6 +183,10 @@ public class CreateLindormInstanceRequest extends Request {
     private String streamSpec;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TsdbNum")
     private Integer tsdbNum;
 
@@ -247,6 +251,7 @@ public class CreateLindormInstanceRequest extends Request {
         this.standbyZoneId = builder.standbyZoneId;
         this.streamNum = builder.streamNum;
         this.streamSpec = builder.streamSpec;
+        this.tag = builder.tag;
         this.tsdbNum = builder.tsdbNum;
         this.tsdbSpec = builder.tsdbSpec;
         this.VPCId = builder.VPCId;
@@ -262,7 +267,7 @@ public class CreateLindormInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -548,6 +553,13 @@ public class CreateLindormInstanceRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return tsdbNum
      */
     public Integer getTsdbNum() {
@@ -623,6 +635,7 @@ public class CreateLindormInstanceRequest extends Request {
         private String standbyZoneId; 
         private Integer streamNum; 
         private String streamSpec; 
+        private java.util.List<Tag> tag; 
         private Integer tsdbNum; 
         private String tsdbSpec; 
         private String VPCId; 
@@ -675,6 +688,7 @@ public class CreateLindormInstanceRequest extends Request {
             this.standbyZoneId = request.standbyZoneId;
             this.streamNum = request.streamNum;
             this.streamSpec = request.streamSpec;
+            this.tag = request.tag;
             this.tsdbNum = request.tsdbNum;
             this.tsdbSpec = request.tsdbSpec;
             this.VPCId = request.VPCId;
@@ -785,18 +799,34 @@ public class CreateLindormInstanceRequest extends Request {
 
         /**
          * <p>The specification of the nodes in the instance if you set DiskCategory to local_ssd_pro or local_hdd_pro.</p>
-         * <p>When DiskCategory is set to local_ssd_pro, you can set this parameter to the following values:</p>
+         * <p>Valid values when DiskCategory is set to local_ssd_pro (i3 instance types support only subscription instances):</p>
          * <ul>
-         * <li><strong>lindorm.i2.xlarge</strong>: Each node has 4 dedicated CPU cores and 32 GB of dedicated memory.</li>
-         * <li><strong>lindorm.i2.2xlarge</strong>: Each node has 8 dedicated CPU cores and 64 GB of dedicated memory.</li>
-         * <li><strong>lindorm.i2.4xlarge</strong>: Each node has 16 dedicated CPU cores and 128 GB of dedicated memory.</li>
-         * <li><strong>lindorm.i2.8xlarge</strong>: Each node has 32 dedicated CPU cores and 256 GB of dedicated memory.</li>
+         * <li><strong>lindorm.i4.xlarge</strong>: Each node has 4 CPU cores and 32 GB of memory.</li>
+         * <li><strong>lindorm.i4.2xlarge</strong>: Each node has 8 CPU cores and 64 GB of memory.</li>
+         * <li><strong>lindorm.i4.4xlarge</strong>: Each node has 16 CPU cores and 128 GB of memory.</li>
+         * <li><strong>lindorm.i4.8xlarge</strong>: Each node has 32 CPU cores and 256 GB of memory.</li>
+         * <li><strong>lindorm.i3.xlarge</strong>: Each node has 4 CPU cores and 32 GB of memory.</li>
+         * <li><strong>lindorm.i3.2xlarge</strong>: Each node has 8 CPU cores and 64 GB of memory.</li>
+         * <li><strong>lindorm.i3.4xlarge</strong>: Each node has 16 CPU cores and 128 GB of memory.</li>
+         * <li><strong>lindorm.i3.8xlarge</strong>: Each node has 32 CPU cores and 256 GB of memory.</li>
+         * <li><strong>lindorm.i2.xlarge</strong>: Each node has 4 CPU cores and 32 GB of memory.</li>
+         * <li><strong>lindorm.i2.2xlarge</strong>: Each node has 8 CPU cores and 64 GB of memory.</li>
+         * <li><strong>lindorm.i2.4xlarge</strong>: Each node has 16 CPU cores and 128 GB of memory.</li>
+         * <li><strong>lindorm.i2.8xlarge</strong>: Each node has 32 CPU cores and 256 GB of memory.</li>
          * </ul>
-         * <p>When DiskCategory is set to local_hdd_pro, you can set this parameter to the following values:</p>
+         * <p>Valid values when DiskCategory is set to local_hhd_pro:</p>
          * <ul>
-         * <li><strong>lindorm.d1.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
-         * <li><strong>lindorm.d1.4xlarge</strong>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</li>
-         * <li><strong>lindorm.d1.6xlarge</strong>: Each node has 24 dedicated CPU cores and 96 GB of dedicated memory.</li>
+         * <li><strong>lindorm.sd3c.3xlarge</strong>: Each node has 14 CPU cores and 56 GB of memory.</li>
+         * <li><strong>lindorm.sd3c.7xlarge</strong>: Each node has 28 CPU cores and 112 GB of memory.</li>
+         * <li><strong>lindorm.sd3c.14xlarge</strong>: Each node has 56 CPU cores and 224 GB of memory.</li>
+         * <li><strong>lindorm.d2c.6xlarge</strong>: Each node has 24 CPU cores and 88 GB of memory.</li>
+         * <li><strong>lindorm.d2c.12xlarge</strong>: Each node has 48 CPU cores and 176 GB of memory.</li>
+         * <li><strong>lindorm.d2c.24xlarge</strong>: Each node has 96 CPU cores and 352 GB of memory.</li>
+         * <li><strong>lindorm.d2s.5xlarge</strong>: Each node has 20 CPU cores and 88 GB of memory.</li>
+         * <li><strong>lindorm.d2s.10xlarge</strong>: Each node has 40 CPU cores and 176 GB of memory.</li>
+         * <li><strong>lindorm.d1.2xlarge</strong>: Each node has 8 CPU cores and 32 GB of memory.</li>
+         * <li><strong>lindorm.d1.4xlarge</strong>: Each node has 16 CPU cores and 64 GB of memory.</li>
+         * <li><strong>lindorm.d1.6xlarge</strong>: Each node has 24 CPU cores and 96 GB of memory.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1198,8 +1228,11 @@ public class CreateLindormInstanceRequest extends Request {
          * <p>The specification of the LindormSearch nodes in the instance. Valid values:</p>
          * <ul>
          * <li><strong>lindorm.g.xlarge</strong>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</li>
+         * <li><strong>lindorm.c.2xlarge</strong>: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</li>
          * <li><strong>lindorm.g.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
+         * <li><strong>lindorm.c.4xlarge</strong>: Each node has 16 dedicated CPU cores and 32 GB of dedicated memory.</li>
          * <li><strong>lindorm.g.4xlarge</strong>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</li>
+         * <li><strong>lindorm.c.8xlarge</strong>: Each node has 32 dedicated CPU cores and 64 GB of dedicated memory.</li>
          * <li><strong>lindorm.g.8xlarge</strong>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</li>
          * </ul>
          * 
@@ -1263,6 +1296,15 @@ public class CreateLindormInstanceRequest extends Request {
         public Builder streamSpec(String streamSpec) {
             this.putQueryParameter("StreamSpec", streamSpec);
             this.streamSpec = streamSpec;
+            return this;
+        }
+
+        /**
+         * <p>The tags that are added to instances.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -1346,4 +1388,91 @@ public class CreateLindormInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateLindormInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLindormInstanceRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The tag key. Valid values of N: 1 to 20.</p>
+             * <blockquote>
+             * <p> You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag value. Valid values of N: 1 to 20.</p>
+             * <blockquote>
+             * <p> You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
