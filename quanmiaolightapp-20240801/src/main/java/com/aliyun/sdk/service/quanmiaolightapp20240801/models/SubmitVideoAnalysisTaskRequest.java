@@ -864,10 +864,14 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
      * <p>SubmitVideoAnalysisTaskRequest</p>
      */
     public static class VideoCaptionInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("videoCaptionFileUrl")
+        private String videoCaptionFileUrl;
+
         @com.aliyun.core.annotation.NameInMap("videoCaptions")
         private java.util.List<VideoCaptions> videoCaptions;
 
         private VideoCaptionInfo(Builder builder) {
+            this.videoCaptionFileUrl = builder.videoCaptionFileUrl;
             this.videoCaptions = builder.videoCaptions;
         }
 
@@ -880,6 +884,13 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         }
 
         /**
+         * @return videoCaptionFileUrl
+         */
+        public String getVideoCaptionFileUrl() {
+            return this.videoCaptionFileUrl;
+        }
+
+        /**
          * @return videoCaptions
          */
         public java.util.List<VideoCaptions> getVideoCaptions() {
@@ -887,14 +898,24 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private String videoCaptionFileUrl; 
             private java.util.List<VideoCaptions> videoCaptions; 
 
             private Builder() {
             } 
 
             private Builder(VideoCaptionInfo model) {
+                this.videoCaptionFileUrl = model.videoCaptionFileUrl;
                 this.videoCaptions = model.videoCaptions;
             } 
+
+            /**
+             * videoCaptionFileUrl.
+             */
+            public Builder videoCaptionFileUrl(String videoCaptionFileUrl) {
+                this.videoCaptionFileUrl = videoCaptionFileUrl;
+                return this;
+            }
 
             /**
              * videoCaptions.
