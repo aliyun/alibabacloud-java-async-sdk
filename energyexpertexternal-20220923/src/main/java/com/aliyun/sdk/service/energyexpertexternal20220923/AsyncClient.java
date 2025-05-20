@@ -32,6 +32,25 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchUpdateSystemRunningPlanResponse> batchUpdateSystemRunningPlan(BatchUpdateSystemRunningPlanRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The interface provides Q&amp;A services within the scope of the selected directory in the session.</li>
+     * <li>The sessionId information is obtained through GetChatSessionList.</li>
+     * <li>You can also create a new session via the CreateChatSession interface.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of Chat  ChatRequest
+     * @return ChatResponse
+     */
+    CompletableFuture<ChatResponse> chat(ChatRequest request);
+
+    /**
+     * @param request the request parameters of CreateChatSession  CreateChatSessionRequest
+     * @return CreateChatSessionResponse
+     */
+    CompletableFuture<CreateChatSessionResponse> createChatSession(CreateChatSessionRequest request);
+
+    /**
      * @param request the request parameters of EditProhibitedDevices  EditProhibitedDevicesRequest
      * @return EditProhibitedDevicesResponse
      */
@@ -63,6 +82,31 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCarbonEmissionTrendResponse
      */
     CompletableFuture<GetCarbonEmissionTrendResponse> getCarbonEmissionTrend(GetCarbonEmissionTrendRequest request);
+
+    /**
+     * @param request the request parameters of GetChatFolderList  GetChatFolderListRequest
+     * @return GetChatFolderListResponse
+     */
+    CompletableFuture<GetChatFolderListResponse> getChatFolderList(GetChatFolderListRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API retrieves the list of historical documents within a session by passing in the session ID.</li>
+     * <li>The sessionId information is obtained through GetChatSessionList.</li>
+     * <li>A new session can also be created using the CreateChatSession interface.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetChatList  GetChatListRequest
+     * @return GetChatListResponse
+     */
+    CompletableFuture<GetChatListResponse> getChatList(GetChatListRequest request);
+
+    /**
+     * @param request the request parameters of GetChatSessionList  GetChatSessionListRequest
+     * @return GetChatSessionListResponse
+     */
+    CompletableFuture<GetChatSessionListResponse> getChatSessionList(GetChatSessionListRequest request);
 
     /**
      * <b>description</b> :

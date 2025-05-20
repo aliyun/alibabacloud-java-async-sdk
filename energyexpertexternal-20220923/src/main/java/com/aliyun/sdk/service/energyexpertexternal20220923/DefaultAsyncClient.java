@@ -76,6 +76,49 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The interface provides Q&amp;A services within the scope of the selected directory in the session.</li>
+     * <li>The sessionId information is obtained through GetChatSessionList.</li>
+     * <li>You can also create a new session via the CreateChatSession interface.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of Chat  ChatRequest
+     * @return ChatResponse
+     */
+    @Override
+    public CompletableFuture<ChatResponse> chat(ChatRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("Chat").setMethod(HttpMethod.POST).setPathRegex("/api/v2/aidoc/document/chat").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChatResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChatResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateChatSession  CreateChatSessionRequest
+     * @return CreateChatSessionResponse
+     */
+    @Override
+    public CompletableFuture<CreateChatSessionResponse> createChatSession(CreateChatSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateChatSession").setMethod(HttpMethod.POST).setPathRegex("/api/v2/aidoc/document/chat/session/create").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateChatSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateChatSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of EditProhibitedDevices  EditProhibitedDevicesRequest
      * @return EditProhibitedDevicesResponse
      */
@@ -163,6 +206,67 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetCarbonEmissionTrendResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetChatFolderList  GetChatFolderListRequest
+     * @return GetChatFolderListResponse
+     */
+    @Override
+    public CompletableFuture<GetChatFolderListResponse> getChatFolderList(GetChatFolderListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetChatFolderList").setMethod(HttpMethod.POST).setPathRegex("/api/v2/aidoc/document/chat/folder/list").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetChatFolderListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetChatFolderListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API retrieves the list of historical documents within a session by passing in the session ID.</li>
+     * <li>The sessionId information is obtained through GetChatSessionList.</li>
+     * <li>A new session can also be created using the CreateChatSession interface.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetChatList  GetChatListRequest
+     * @return GetChatListResponse
+     */
+    @Override
+    public CompletableFuture<GetChatListResponse> getChatList(GetChatListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetChatList").setMethod(HttpMethod.POST).setPathRegex("/api/v2/aidoc/document/chat/list").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetChatListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetChatListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetChatSessionList  GetChatSessionListRequest
+     * @return GetChatSessionListResponse
+     */
+    @Override
+    public CompletableFuture<GetChatSessionListResponse> getChatSessionList(GetChatSessionListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetChatSessionList").setMethod(HttpMethod.POST).setPathRegex("/api/v2/aidoc/document/chat/session/list").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetChatSessionListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetChatSessionListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
