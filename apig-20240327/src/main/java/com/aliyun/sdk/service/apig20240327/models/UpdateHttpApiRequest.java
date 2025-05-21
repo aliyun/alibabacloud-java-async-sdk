@@ -52,6 +52,10 @@ public class UpdateHttpApiRequest extends Request {
     private IngressConfig ingressConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("onlyChangeConfig")
+    private Boolean onlyChangeConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("protocols")
     private java.util.List<String> protocols;
 
@@ -69,6 +73,7 @@ public class UpdateHttpApiRequest extends Request {
         this.description = builder.description;
         this.enableAuth = builder.enableAuth;
         this.ingressConfig = builder.ingressConfig;
+        this.onlyChangeConfig = builder.onlyChangeConfig;
         this.protocols = builder.protocols;
         this.versionConfig = builder.versionConfig;
     }
@@ -143,6 +148,13 @@ public class UpdateHttpApiRequest extends Request {
     }
 
     /**
+     * @return onlyChangeConfig
+     */
+    public Boolean getOnlyChangeConfig() {
+        return this.onlyChangeConfig;
+    }
+
+    /**
      * @return protocols
      */
     public java.util.List<String> getProtocols() {
@@ -165,6 +177,7 @@ public class UpdateHttpApiRequest extends Request {
         private String description; 
         private Boolean enableAuth; 
         private IngressConfig ingressConfig; 
+        private Boolean onlyChangeConfig; 
         private java.util.List<String> protocols; 
         private HttpApiVersionConfig versionConfig; 
 
@@ -182,6 +195,7 @@ public class UpdateHttpApiRequest extends Request {
             this.description = request.description;
             this.enableAuth = request.enableAuth;
             this.ingressConfig = request.ingressConfig;
+            this.onlyChangeConfig = request.onlyChangeConfig;
             this.protocols = request.protocols;
             this.versionConfig = request.versionConfig;
         } 
@@ -266,6 +280,15 @@ public class UpdateHttpApiRequest extends Request {
         public Builder ingressConfig(IngressConfig ingressConfig) {
             this.putBodyParameter("ingressConfig", ingressConfig);
             this.ingressConfig = ingressConfig;
+            return this;
+        }
+
+        /**
+         * onlyChangeConfig.
+         */
+        public Builder onlyChangeConfig(Boolean onlyChangeConfig) {
+            this.putBodyParameter("onlyChangeConfig", onlyChangeConfig);
+            this.onlyChangeConfig = onlyChangeConfig;
             return this;
         }
 
