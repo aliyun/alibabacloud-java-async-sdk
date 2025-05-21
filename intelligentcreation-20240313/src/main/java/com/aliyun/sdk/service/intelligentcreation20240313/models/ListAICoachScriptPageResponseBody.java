@@ -352,15 +352,119 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
      *
      * <p>ListAICoachScriptPageResponseBody</p>
      */
+    public static class Levels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("max")
+        private Integer max;
+
+        @com.aliyun.core.annotation.NameInMap("min")
+        private Integer min;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private Levels(Builder builder) {
+            this.max = builder.max;
+            this.min = builder.min;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Levels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return max
+         */
+        public Integer getMax() {
+            return this.max;
+        }
+
+        /**
+         * @return min
+         */
+        public Integer getMin() {
+            return this.min;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private Integer max; 
+            private Integer min; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Levels model) {
+                this.max = model.max;
+                this.min = model.min;
+                this.name = model.name;
+            } 
+
+            /**
+             * max.
+             */
+            public Builder max(Integer max) {
+                this.max = max;
+                return this;
+            }
+
+            /**
+             * min.
+             */
+            public Builder min(Integer min) {
+                this.min = min;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Levels build() {
+                return new Levels(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAICoachScriptPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAICoachScriptPageResponseBody</p>
+     */
     public static class ScoreConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("levelEnabled")
+        private Boolean levelEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("levels")
+        private java.util.List<Levels> levels;
 
         @com.aliyun.core.annotation.NameInMap("passScore")
         private Integer passScore;
 
         private ScoreConfig(Builder builder) {
             this.enabled = builder.enabled;
+            this.levelEnabled = builder.levelEnabled;
+            this.levels = builder.levels;
             this.passScore = builder.passScore;
         }
 
@@ -380,6 +484,20 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return levelEnabled
+         */
+        public Boolean getLevelEnabled() {
+            return this.levelEnabled;
+        }
+
+        /**
+         * @return levels
+         */
+        public java.util.List<Levels> getLevels() {
+            return this.levels;
+        }
+
+        /**
          * @return passScore
          */
         public Integer getPassScore() {
@@ -388,6 +506,8 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean enabled; 
+            private Boolean levelEnabled; 
+            private java.util.List<Levels> levels; 
             private Integer passScore; 
 
             private Builder() {
@@ -395,6 +515,8 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
 
             private Builder(ScoreConfig model) {
                 this.enabled = model.enabled;
+                this.levelEnabled = model.levelEnabled;
+                this.levels = model.levels;
                 this.passScore = model.passScore;
             } 
 
@@ -403,6 +525,22 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * levelEnabled.
+             */
+            public Builder levelEnabled(Boolean levelEnabled) {
+                this.levelEnabled = levelEnabled;
+                return this;
+            }
+
+            /**
+             * levels.
+             */
+            public Builder levels(java.util.List<Levels> levels) {
+                this.levels = levels;
                 return this;
             }
 
@@ -446,6 +584,9 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("pointDeductionRuleEnabled")
         private Boolean pointDeductionRuleEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("similarPronunciationScoringEnabled")
+        private Boolean similarPronunciationScoringEnabled;
+
         @com.aliyun.core.annotation.NameInMap("standard")
         private Integer standard;
 
@@ -459,6 +600,7 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             this.expressivenessEnabled = builder.expressivenessEnabled;
             this.pointDeductionRule = builder.pointDeductionRule;
             this.pointDeductionRuleEnabled = builder.pointDeductionRuleEnabled;
+            this.similarPronunciationScoringEnabled = builder.similarPronunciationScoringEnabled;
             this.standard = builder.standard;
             this.standardEnabled = builder.standardEnabled;
         }
@@ -514,6 +656,13 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return similarPronunciationScoringEnabled
+         */
+        public Boolean getSimilarPronunciationScoringEnabled() {
+            return this.similarPronunciationScoringEnabled;
+        }
+
+        /**
          * @return standard
          */
         public Integer getStandard() {
@@ -534,6 +683,7 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             private Boolean expressivenessEnabled; 
             private Integer pointDeductionRule; 
             private Boolean pointDeductionRuleEnabled; 
+            private Boolean similarPronunciationScoringEnabled; 
             private Integer standard; 
             private Boolean standardEnabled; 
 
@@ -547,6 +697,7 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
                 this.expressivenessEnabled = model.expressivenessEnabled;
                 this.pointDeductionRule = model.pointDeductionRule;
                 this.pointDeductionRuleEnabled = model.pointDeductionRuleEnabled;
+                this.similarPronunciationScoringEnabled = model.similarPronunciationScoringEnabled;
                 this.standard = model.standard;
                 this.standardEnabled = model.standardEnabled;
             } 
@@ -596,6 +747,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
              */
             public Builder pointDeductionRuleEnabled(Boolean pointDeductionRuleEnabled) {
                 this.pointDeductionRuleEnabled = pointDeductionRuleEnabled;
+                return this;
+            }
+
+            /**
+             * similarPronunciationScoringEnabled.
+             */
+            public Builder similarPronunciationScoringEnabled(Boolean similarPronunciationScoringEnabled) {
+                this.similarPronunciationScoringEnabled = similarPronunciationScoringEnabled;
                 return this;
             }
 

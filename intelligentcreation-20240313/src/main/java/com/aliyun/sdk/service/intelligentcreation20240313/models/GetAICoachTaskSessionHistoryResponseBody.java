@@ -266,6 +266,9 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("audioUrl")
         private String audioUrl;
 
+        @com.aliyun.core.annotation.NameInMap("dateLabel")
+        private String dateLabel;
+
         @com.aliyun.core.annotation.NameInMap("evaluationFeedback")
         private String evaluationFeedback;
 
@@ -283,6 +286,7 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
 
         private ConversationList(Builder builder) {
             this.audioUrl = builder.audioUrl;
+            this.dateLabel = builder.dateLabel;
             this.evaluationFeedback = builder.evaluationFeedback;
             this.evaluationResult = builder.evaluationResult;
             this.message = builder.message;
@@ -303,6 +307,13 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
          */
         public String getAudioUrl() {
             return this.audioUrl;
+        }
+
+        /**
+         * @return dateLabel
+         */
+        public String getDateLabel() {
+            return this.dateLabel;
         }
 
         /**
@@ -342,6 +353,7 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String audioUrl; 
+            private String dateLabel; 
             private String evaluationFeedback; 
             private String evaluationResult; 
             private String message; 
@@ -353,6 +365,7 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
 
             private Builder(ConversationList model) {
                 this.audioUrl = model.audioUrl;
+                this.dateLabel = model.dateLabel;
                 this.evaluationFeedback = model.evaluationFeedback;
                 this.evaluationResult = model.evaluationResult;
                 this.message = model.message;
@@ -365,6 +378,14 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
              */
             public Builder audioUrl(String audioUrl) {
                 this.audioUrl = audioUrl;
+                return this;
+            }
+
+            /**
+             * dateLabel.
+             */
+            public Builder dateLabel(String dateLabel) {
+                this.dateLabel = dateLabel;
                 return this;
             }
 
