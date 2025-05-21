@@ -98,6 +98,9 @@ public class DescribeEIURangeResponseBody extends TeaModel {
      * <p>DescribeEIURangeResponseBody</p>
      */
     public static class EIUInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DefaultReservedNodeSize")
+        private String defaultReservedNodeSize;
+
         @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
@@ -110,6 +113,9 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MinValue")
         private String minValue;
 
+        @com.aliyun.core.annotation.NameInMap("ReservedNodeSizeRange")
+        private java.util.List<String> reservedNodeSizeRange;
+
         @com.aliyun.core.annotation.NameInMap("Step")
         private String step;
 
@@ -117,10 +123,12 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         private java.util.List<String> storageResourceRange;
 
         private EIUInfo(Builder builder) {
+            this.defaultReservedNodeSize = builder.defaultReservedNodeSize;
             this.defaultValue = builder.defaultValue;
             this.EIURange = builder.EIURange;
             this.maxValue = builder.maxValue;
             this.minValue = builder.minValue;
+            this.reservedNodeSizeRange = builder.reservedNodeSizeRange;
             this.step = builder.step;
             this.storageResourceRange = builder.storageResourceRange;
         }
@@ -131,6 +139,13 @@ public class DescribeEIURangeResponseBody extends TeaModel {
 
         public static EIUInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return defaultReservedNodeSize
+         */
+        public String getDefaultReservedNodeSize() {
+            return this.defaultReservedNodeSize;
         }
 
         /**
@@ -162,6 +177,13 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         }
 
         /**
+         * @return reservedNodeSizeRange
+         */
+        public java.util.List<String> getReservedNodeSizeRange() {
+            return this.reservedNodeSizeRange;
+        }
+
+        /**
          * @return step
          */
         public String getStep() {
@@ -176,10 +198,12 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String defaultReservedNodeSize; 
             private String defaultValue; 
             private java.util.List<Long> EIURange; 
             private String maxValue; 
             private String minValue; 
+            private java.util.List<String> reservedNodeSizeRange; 
             private String step; 
             private java.util.List<String> storageResourceRange; 
 
@@ -187,13 +211,23 @@ public class DescribeEIURangeResponseBody extends TeaModel {
             } 
 
             private Builder(EIUInfo model) {
+                this.defaultReservedNodeSize = model.defaultReservedNodeSize;
                 this.defaultValue = model.defaultValue;
                 this.EIURange = model.EIURange;
                 this.maxValue = model.maxValue;
                 this.minValue = model.minValue;
+                this.reservedNodeSizeRange = model.reservedNodeSizeRange;
                 this.step = model.step;
                 this.storageResourceRange = model.storageResourceRange;
             } 
+
+            /**
+             * DefaultReservedNodeSize.
+             */
+            public Builder defaultReservedNodeSize(String defaultReservedNodeSize) {
+                this.defaultReservedNodeSize = defaultReservedNodeSize;
+                return this;
+            }
 
             /**
              * <p>The suggested value for the number of EIUs.</p>
@@ -233,6 +267,14 @@ public class DescribeEIURangeResponseBody extends TeaModel {
              */
             public Builder minValue(String minValue) {
                 this.minValue = minValue;
+                return this;
+            }
+
+            /**
+             * ReservedNodeSizeRange.
+             */
+            public Builder reservedNodeSizeRange(java.util.List<String> reservedNodeSizeRange) {
+                this.reservedNodeSizeRange = reservedNodeSizeRange;
                 return this;
             }
 

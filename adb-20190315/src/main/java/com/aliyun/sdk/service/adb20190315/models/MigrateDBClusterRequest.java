@@ -27,6 +27,10 @@ public class MigrateDBClusterRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -82,6 +86,7 @@ public class MigrateDBClusterRequest extends Request {
         super(builder);
         this.computeResource = builder.computeResource;
         this.DBClusterId = builder.DBClusterId;
+        this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.productForm = builder.productForm;
@@ -122,6 +127,13 @@ public class MigrateDBClusterRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -218,6 +230,7 @@ public class MigrateDBClusterRequest extends Request {
     public static final class Builder extends Request.Builder<MigrateDBClusterRequest, Builder> {
         private String computeResource; 
         private String DBClusterId; 
+        private Boolean dryRun; 
         private String ownerAccount; 
         private Long ownerId; 
         private String productForm; 
@@ -240,6 +253,7 @@ public class MigrateDBClusterRequest extends Request {
             super(request);
             this.computeResource = request.computeResource;
             this.DBClusterId = request.DBClusterId;
+            this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.productForm = request.productForm;
@@ -278,6 +292,15 @@ public class MigrateDBClusterRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

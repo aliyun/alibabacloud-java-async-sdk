@@ -119,7 +119,7 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         } 
 
         /**
-         * DetectionItems.
+         * <p>The queried detection items and detection results.</p>
          */
         public Builder detectionItems(java.util.List<DetectionItems> detectionItems) {
             this.detectionItems = detectionItems;
@@ -127,7 +127,7 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The monitoring information about tables.</p>
+         * <p>The queried tables.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -171,7 +171,7 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
          * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>15</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -250,7 +250,10 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>The message of the detection result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>There are a total of 10 tables with an excessive number of primary keys.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -258,7 +261,10 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the detection item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Excessive primary key fields</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -266,7 +272,15 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The severity level of the detection result. Valid values:</p>
+             * <ul>
+             * <li>NORMAL</li>
+             * <li>WARNING</li>
+             * <li>CRITICAL</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>WARNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -411,7 +425,10 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * IsIncline.
+             * <p>Indicates whether data is skewed in the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isIncline(String isIncline) {
                 this.isIncline = isIncline;
@@ -419,7 +436,10 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ff</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -427,7 +447,10 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RowCount.
+             * <p>The number of rows in the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2565</p>
              */
             public Builder rowCount(Long rowCount) {
                 this.rowCount = rowCount;
@@ -435,7 +458,10 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Schema.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adm_analyze</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -443,7 +469,10 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The number of rows in the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2416527</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -451,7 +480,10 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             }
 
             /**
-             * SpaceRatio.
+             * <p>The percentage of the table size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>89</p>
              */
             public Builder spaceRatio(Double spaceRatio) {
                 this.spaceRatio = spaceRatio;
@@ -459,7 +491,10 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * <p>The total data size of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;
@@ -467,7 +502,10 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The column type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>executor</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -521,7 +559,7 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * Table.
+             * <p>The queried table.</p>
              */
             public Builder table(java.util.List<Table> table) {
                 this.table = table;

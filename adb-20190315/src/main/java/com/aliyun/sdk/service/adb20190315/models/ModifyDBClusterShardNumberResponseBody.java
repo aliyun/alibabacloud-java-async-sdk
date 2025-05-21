@@ -54,7 +54,10 @@ public class ModifyDBClusterShardNumberResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25B56BC7-4978-40B3-9E48-4B7067******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
