@@ -1602,9 +1602,17 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableSriov")
         private Boolean enableSriov;
 
+        @com.aliyun.core.annotation.NameInMap("VirtualFunctionQuantity")
+        private Integer virtualFunctionQuantity;
+
+        @com.aliyun.core.annotation.NameInMap("VirtualFunctionTotalQueueNumber")
+        private Integer virtualFunctionTotalQueueNumber;
+
         private EnhancedNetwork(Builder builder) {
             this.enableRss = builder.enableRss;
             this.enableSriov = builder.enableSriov;
+            this.virtualFunctionQuantity = builder.virtualFunctionQuantity;
+            this.virtualFunctionTotalQueueNumber = builder.virtualFunctionTotalQueueNumber;
         }
 
         public static Builder builder() {
@@ -1629,9 +1637,25 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             return this.enableSriov;
         }
 
+        /**
+         * @return virtualFunctionQuantity
+         */
+        public Integer getVirtualFunctionQuantity() {
+            return this.virtualFunctionQuantity;
+        }
+
+        /**
+         * @return virtualFunctionTotalQueueNumber
+         */
+        public Integer getVirtualFunctionTotalQueueNumber() {
+            return this.virtualFunctionTotalQueueNumber;
+        }
+
         public static final class Builder {
             private Boolean enableRss; 
             private Boolean enableSriov; 
+            private Integer virtualFunctionQuantity; 
+            private Integer virtualFunctionTotalQueueNumber; 
 
             private Builder() {
             } 
@@ -1639,6 +1663,8 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             private Builder(EnhancedNetwork model) {
                 this.enableRss = model.enableRss;
                 this.enableSriov = model.enableSriov;
+                this.virtualFunctionQuantity = model.virtualFunctionQuantity;
+                this.virtualFunctionTotalQueueNumber = model.virtualFunctionTotalQueueNumber;
             } 
 
             /**
@@ -1662,6 +1688,22 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
              */
             public Builder enableSriov(Boolean enableSriov) {
                 this.enableSriov = enableSriov;
+                return this;
+            }
+
+            /**
+             * VirtualFunctionQuantity.
+             */
+            public Builder virtualFunctionQuantity(Integer virtualFunctionQuantity) {
+                this.virtualFunctionQuantity = virtualFunctionQuantity;
+                return this;
+            }
+
+            /**
+             * VirtualFunctionTotalQueueNumber.
+             */
+            public Builder virtualFunctionTotalQueueNumber(Integer virtualFunctionTotalQueueNumber) {
+                this.virtualFunctionTotalQueueNumber = virtualFunctionTotalQueueNumber;
                 return this;
             }
 
