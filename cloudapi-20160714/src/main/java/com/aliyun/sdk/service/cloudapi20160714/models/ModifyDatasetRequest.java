@@ -24,8 +24,11 @@ public class ModifyDatasetRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatasetName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String datasetName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
@@ -35,6 +38,7 @@ public class ModifyDatasetRequest extends Request {
         super(builder);
         this.datasetId = builder.datasetId;
         this.datasetName = builder.datasetName;
+        this.description = builder.description;
         this.securityToken = builder.securityToken;
     }
 
@@ -66,6 +70,13 @@ public class ModifyDatasetRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -75,6 +86,7 @@ public class ModifyDatasetRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDatasetRequest, Builder> {
         private String datasetId; 
         private String datasetName; 
+        private String description; 
         private String securityToken; 
 
         private Builder() {
@@ -85,6 +97,7 @@ public class ModifyDatasetRequest extends Request {
             super(request);
             this.datasetId = request.datasetId;
             this.datasetName = request.datasetName;
+            this.description = request.description;
             this.securityToken = request.securityToken;
         } 
 
@@ -103,7 +116,6 @@ public class ModifyDatasetRequest extends Request {
 
         /**
          * <p>The name of the dataset.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>NewDatasetName</p>
@@ -111,6 +123,15 @@ public class ModifyDatasetRequest extends Request {
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
             this.datasetName = datasetName;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 

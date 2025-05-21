@@ -28,6 +28,10 @@ public class CreateDatasetRequest extends Request {
     private String datasetType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
@@ -39,6 +43,7 @@ public class CreateDatasetRequest extends Request {
         super(builder);
         this.datasetName = builder.datasetName;
         this.datasetType = builder.datasetType;
+        this.description = builder.description;
         this.securityToken = builder.securityToken;
         this.tag = builder.tag;
     }
@@ -71,6 +76,13 @@ public class CreateDatasetRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -87,6 +99,7 @@ public class CreateDatasetRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDatasetRequest, Builder> {
         private String datasetName; 
         private String datasetType; 
+        private String description; 
         private String securityToken; 
         private java.util.List<Tag> tag; 
 
@@ -98,6 +111,7 @@ public class CreateDatasetRequest extends Request {
             super(request);
             this.datasetName = request.datasetName;
             this.datasetType = request.datasetType;
+            this.description = request.description;
             this.securityToken = request.securityToken;
             this.tag = request.tag;
         } 
@@ -130,6 +144,15 @@ public class CreateDatasetRequest extends Request {
         public Builder datasetType(String datasetType) {
             this.putQueryParameter("DatasetType", datasetType);
             this.datasetType = datasetType;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 

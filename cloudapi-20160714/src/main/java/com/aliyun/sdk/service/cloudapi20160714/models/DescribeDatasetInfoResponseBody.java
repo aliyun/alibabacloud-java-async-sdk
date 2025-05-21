@@ -110,6 +110,9 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasetType")
         private String datasetType;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
@@ -118,6 +121,7 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
             this.datasetId = builder.datasetId;
             this.datasetName = builder.datasetName;
             this.datasetType = builder.datasetType;
+            this.description = builder.description;
             this.modifiedTime = builder.modifiedTime;
         }
 
@@ -158,6 +162,13 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
          * @return modifiedTime
          */
         public String getModifiedTime() {
@@ -169,6 +180,7 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
             private String datasetId; 
             private String datasetName; 
             private String datasetType; 
+            private String description; 
             private String modifiedTime; 
 
             private Builder() {
@@ -179,6 +191,7 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
                 this.datasetId = model.datasetId;
                 this.datasetName = model.datasetName;
                 this.datasetType = model.datasetType;
+                this.description = model.description;
                 this.modifiedTime = model.modifiedTime;
             } 
 
@@ -228,6 +241,14 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
              */
             public Builder datasetType(String datasetType) {
                 this.datasetType = datasetType;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
