@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteRoutineRelatedRouteResponse} extends {@link TeaModel}
+ * {@link DescribeSiteLogsResponse} extends {@link TeaModel}
  *
- * <p>DeleteRoutineRelatedRouteResponse</p>
+ * <p>DescribeSiteLogsResponse</p>
  */
-public class DeleteRoutineRelatedRouteResponse extends Response {
+public class DescribeSiteLogsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DeleteRoutineRelatedRouteResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteRoutineRelatedRouteResponseBody body;
+    private DescribeSiteLogsResponseBody body;
 
-    private DeleteRoutineRelatedRouteResponse(BuilderImpl builder) {
+    private DescribeSiteLogsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteRoutineRelatedRouteResponse create() {
+    public static DescribeSiteLogsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DeleteRoutineRelatedRouteResponse extends Response {
     /**
      * @return body
      */
-    public DeleteRoutineRelatedRouteResponseBody getBody() {
+    public DescribeSiteLogsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteRoutineRelatedRouteResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeSiteLogsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteRoutineRelatedRouteResponseBody body);
+        Builder body(DescribeSiteLogsResponseBody body);
 
         @Override
-        DeleteRoutineRelatedRouteResponse build();
+        DescribeSiteLogsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteRoutineRelatedRouteResponse, Builder>
+            extends Response.BuilderImpl<DescribeSiteLogsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DeleteRoutineRelatedRouteResponseBody body; 
+        private DescribeSiteLogsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteRoutineRelatedRouteResponse response) {
+        private BuilderImpl(DescribeSiteLogsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DeleteRoutineRelatedRouteResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteRoutineRelatedRouteResponseBody body) {
+        public Builder body(DescribeSiteLogsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteRoutineRelatedRouteResponse build() {
-            return new DeleteRoutineRelatedRouteResponse(this);
+        public DescribeSiteLogsResponse build() {
+            return new DescribeSiteLogsResponse(this);
         } 
 
     } 

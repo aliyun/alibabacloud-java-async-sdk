@@ -770,24 +770,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CreateRoutineRelatedRoute  CreateRoutineRelatedRouteRequest
-     * @return CreateRoutineRelatedRouteResponse
-     */
-    @Override
-    public CompletableFuture<CreateRoutineRelatedRouteResponse> createRoutineRelatedRoute(CreateRoutineRelatedRouteRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateRoutineRelatedRoute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRoutineRelatedRouteResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateRoutineRelatedRouteResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of CreateRoutineRoute  CreateRoutineRouteRequest
      * @return CreateRoutineRouteResponse
      */
@@ -1632,24 +1614,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DeleteRoutineRelatedRoute  DeleteRoutineRelatedRouteRequest
-     * @return DeleteRoutineRelatedRouteResponse
-     */
-    @Override
-    public CompletableFuture<DeleteRoutineRelatedRouteResponse> deleteRoutineRelatedRoute(DeleteRoutineRelatedRouteRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteRoutineRelatedRoute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRoutineRelatedRouteResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteRoutineRelatedRouteResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of DeleteRoutineRoute  DeleteRoutineRouteRequest
      * @return DeleteRoutineRouteResponse
      */
@@ -2069,6 +2033,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeRatePlanInstanceStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSiteLogs  DescribeSiteLogsRequest
+     * @return DescribeSiteLogsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSiteLogsResponse> describeSiteLogs(DescribeSiteLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSiteLogs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSiteLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSiteLogsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4619,6 +4601,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListWaitingRoomsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of OpenErService  OpenErServiceRequest
+     * @return OpenErServiceResponse
+     */
+    @Override
+    public CompletableFuture<OpenErServiceResponse> openErService(OpenErServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OpenErService").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenErServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OpenErServiceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -26,6 +26,10 @@ public class UpdateManagedTransformRequest extends Request {
     private String addRealClientIpHeader;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealClientIpHeaderName")
+    private String realClientIpHeaderName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
@@ -38,6 +42,7 @@ public class UpdateManagedTransformRequest extends Request {
         super(builder);
         this.addClientGeolocationHeader = builder.addClientGeolocationHeader;
         this.addRealClientIpHeader = builder.addRealClientIpHeader;
+        this.realClientIpHeaderName = builder.realClientIpHeaderName;
         this.siteId = builder.siteId;
         this.siteVersion = builder.siteVersion;
     }
@@ -70,6 +75,13 @@ public class UpdateManagedTransformRequest extends Request {
     }
 
     /**
+     * @return realClientIpHeaderName
+     */
+    public String getRealClientIpHeaderName() {
+        return this.realClientIpHeaderName;
+    }
+
+    /**
      * @return siteId
      */
     public Long getSiteId() {
@@ -86,6 +98,7 @@ public class UpdateManagedTransformRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateManagedTransformRequest, Builder> {
         private String addClientGeolocationHeader; 
         private String addRealClientIpHeader; 
+        private String realClientIpHeaderName; 
         private Long siteId; 
         private Integer siteVersion; 
 
@@ -97,6 +110,7 @@ public class UpdateManagedTransformRequest extends Request {
             super(request);
             this.addClientGeolocationHeader = request.addClientGeolocationHeader;
             this.addRealClientIpHeader = request.addRealClientIpHeader;
+            this.realClientIpHeaderName = request.realClientIpHeaderName;
             this.siteId = request.siteId;
             this.siteVersion = request.siteVersion;
         } 
@@ -130,6 +144,15 @@ public class UpdateManagedTransformRequest extends Request {
         public Builder addRealClientIpHeader(String addRealClientIpHeader) {
             this.putQueryParameter("AddRealClientIpHeader", addRealClientIpHeader);
             this.addRealClientIpHeader = addRealClientIpHeader;
+            return this;
+        }
+
+        /**
+         * RealClientIpHeaderName.
+         */
+        public Builder realClientIpHeaderName(String realClientIpHeaderName) {
+            this.putQueryParameter("RealClientIpHeaderName", realClientIpHeaderName);
+            this.realClientIpHeaderName = realClientIpHeaderName;
             return this;
         }
 

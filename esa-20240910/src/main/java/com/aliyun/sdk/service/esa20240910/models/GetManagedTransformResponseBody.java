@@ -23,6 +23,9 @@ public class GetManagedTransformResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AddRealClientIpHeader")
     private String addRealClientIpHeader;
 
+    @com.aliyun.core.annotation.NameInMap("RealClientIpHeaderName")
+    private String realClientIpHeaderName;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -32,6 +35,7 @@ public class GetManagedTransformResponseBody extends TeaModel {
     private GetManagedTransformResponseBody(Builder builder) {
         this.addClientGeolocationHeader = builder.addClientGeolocationHeader;
         this.addRealClientIpHeader = builder.addRealClientIpHeader;
+        this.realClientIpHeaderName = builder.realClientIpHeaderName;
         this.requestId = builder.requestId;
         this.siteVersion = builder.siteVersion;
     }
@@ -63,6 +67,13 @@ public class GetManagedTransformResponseBody extends TeaModel {
     }
 
     /**
+     * @return realClientIpHeaderName
+     */
+    public String getRealClientIpHeaderName() {
+        return this.realClientIpHeaderName;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -79,6 +90,7 @@ public class GetManagedTransformResponseBody extends TeaModel {
     public static final class Builder {
         private String addClientGeolocationHeader; 
         private String addRealClientIpHeader; 
+        private String realClientIpHeaderName; 
         private String requestId; 
         private Integer siteVersion; 
 
@@ -88,6 +100,7 @@ public class GetManagedTransformResponseBody extends TeaModel {
         private Builder(GetManagedTransformResponseBody model) {
             this.addClientGeolocationHeader = model.addClientGeolocationHeader;
             this.addRealClientIpHeader = model.addRealClientIpHeader;
+            this.realClientIpHeaderName = model.realClientIpHeaderName;
             this.requestId = model.requestId;
             this.siteVersion = model.siteVersion;
         } 
@@ -119,6 +132,14 @@ public class GetManagedTransformResponseBody extends TeaModel {
          */
         public Builder addRealClientIpHeader(String addRealClientIpHeader) {
             this.addRealClientIpHeader = addRealClientIpHeader;
+            return this;
+        }
+
+        /**
+         * RealClientIpHeaderName.
+         */
+        public Builder realClientIpHeaderName(String realClientIpHeaderName) {
+            this.realClientIpHeaderName = realClientIpHeaderName;
             return this;
         }
 

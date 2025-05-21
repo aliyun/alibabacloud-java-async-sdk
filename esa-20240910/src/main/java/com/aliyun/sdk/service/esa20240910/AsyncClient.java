@@ -270,12 +270,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRoutineRelatedRecordResponse> createRoutineRelatedRecord(CreateRoutineRelatedRecordRequest request);
 
     /**
-     * @param request the request parameters of CreateRoutineRelatedRoute  CreateRoutineRelatedRouteRequest
-     * @return CreateRoutineRelatedRouteResponse
-     */
-    CompletableFuture<CreateRoutineRelatedRouteResponse> createRoutineRelatedRoute(CreateRoutineRelatedRouteRequest request);
-
-    /**
      * @param request the request parameters of CreateRoutineRoute  CreateRoutineRouteRequest
      * @return CreateRoutineRouteResponse
      */
@@ -580,12 +574,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRoutineRelatedRecordResponse> deleteRoutineRelatedRecord(DeleteRoutineRelatedRecordRequest request);
 
     /**
-     * @param request the request parameters of DeleteRoutineRelatedRoute  DeleteRoutineRelatedRouteRequest
-     * @return DeleteRoutineRelatedRouteResponse
-     */
-    CompletableFuture<DeleteRoutineRelatedRouteResponse> deleteRoutineRelatedRoute(DeleteRoutineRelatedRouteRequest request);
-
-    /**
      * @param request the request parameters of DeleteRoutineRoute  DeleteRoutineRouteRequest
      * @return DeleteRoutineRouteResponse
      */
@@ -733,6 +721,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRatePlanInstanceStatusResponse
      */
     CompletableFuture<DescribeRatePlanInstanceStatusResponse> describeRatePlanInstanceStatus(DescribeRatePlanInstanceStatusRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSiteLogs  DescribeSiteLogsRequest
+     * @return DescribeSiteLogsResponse
+     */
+    CompletableFuture<DescribeSiteLogsResponse> describeSiteLogs(DescribeSiteLogsRequest request);
 
     /**
      * @param request the request parameters of DescribeSiteTimeSeriesData  DescribeSiteTimeSeriesDataRequest
@@ -1627,6 +1621,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListWaitingRoomsResponse
      */
     CompletableFuture<ListWaitingRoomsResponse> listWaitingRooms(ListWaitingRoomsRequest request);
+
+    /**
+     * @param request the request parameters of OpenErService  OpenErServiceRequest
+     * @return OpenErServiceResponse
+     */
+    CompletableFuture<OpenErServiceResponse> openErService(OpenErServiceRequest request);
 
     /**
      * @param request the request parameters of PreloadCaches  PreloadCachesRequest

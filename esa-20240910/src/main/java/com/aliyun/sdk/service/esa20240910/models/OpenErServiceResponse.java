@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateRoutineRelatedRouteResponse} extends {@link TeaModel}
+ * {@link OpenErServiceResponse} extends {@link TeaModel}
  *
- * <p>CreateRoutineRelatedRouteResponse</p>
+ * <p>OpenErServiceResponse</p>
  */
-public class CreateRoutineRelatedRouteResponse extends Response {
+public class OpenErServiceResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CreateRoutineRelatedRouteResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateRoutineRelatedRouteResponseBody body;
+    private OpenErServiceResponseBody body;
 
-    private CreateRoutineRelatedRouteResponse(BuilderImpl builder) {
+    private OpenErServiceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateRoutineRelatedRouteResponse create() {
+    public static OpenErServiceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CreateRoutineRelatedRouteResponse extends Response {
     /**
      * @return body
      */
-    public CreateRoutineRelatedRouteResponseBody getBody() {
+    public OpenErServiceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateRoutineRelatedRouteResponse, Builder> {
+    public interface Builder extends Response.Builder<OpenErServiceResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateRoutineRelatedRouteResponseBody body);
+        Builder body(OpenErServiceResponseBody body);
 
         @Override
-        CreateRoutineRelatedRouteResponse build();
+        OpenErServiceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateRoutineRelatedRouteResponse, Builder>
+            extends Response.BuilderImpl<OpenErServiceResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateRoutineRelatedRouteResponseBody body; 
+        private OpenErServiceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateRoutineRelatedRouteResponse response) {
+        private BuilderImpl(OpenErServiceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CreateRoutineRelatedRouteResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateRoutineRelatedRouteResponseBody body) {
+        public Builder body(OpenErServiceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateRoutineRelatedRouteResponse build() {
-            return new CreateRoutineRelatedRouteResponse(this);
+        public OpenErServiceResponse build() {
+            return new OpenErServiceResponse(this);
         } 
 
     } 

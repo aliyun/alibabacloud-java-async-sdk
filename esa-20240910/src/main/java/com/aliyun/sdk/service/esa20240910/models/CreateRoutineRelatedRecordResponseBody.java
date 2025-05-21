@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRoutineRelatedRecordResponseBody</p>
  */
 public class CreateRoutineRelatedRecordResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("RecordId")
+    private Long recordId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -24,6 +27,7 @@ public class CreateRoutineRelatedRecordResponseBody extends TeaModel {
     private String status;
 
     private CreateRoutineRelatedRecordResponseBody(Builder builder) {
+        this.recordId = builder.recordId;
         this.requestId = builder.requestId;
         this.status = builder.status;
     }
@@ -41,6 +45,13 @@ public class CreateRoutineRelatedRecordResponseBody extends TeaModel {
     }
 
     /**
+     * @return recordId
+     */
+    public Long getRecordId() {
+        return this.recordId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -55,6 +66,7 @@ public class CreateRoutineRelatedRecordResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long recordId; 
         private String requestId; 
         private String status; 
 
@@ -62,9 +74,18 @@ public class CreateRoutineRelatedRecordResponseBody extends TeaModel {
         } 
 
         private Builder(CreateRoutineRelatedRecordResponseBody model) {
+            this.recordId = model.recordId;
             this.requestId = model.requestId;
             this.status = model.status;
         } 
+
+        /**
+         * RecordId.
+         */
+        public Builder recordId(Long recordId) {
+            this.recordId = recordId;
+            return this;
+        }
 
         /**
          * <p>The request ID.</p>

@@ -12,27 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateRoutineRelatedRouteResponseBody} extends {@link TeaModel}
+ * {@link OpenErServiceResponseBody} extends {@link TeaModel}
  *
- * <p>CreateRoutineRelatedRouteResponseBody</p>
+ * <p>OpenErServiceResponseBody</p>
  */
-public class CreateRoutineRelatedRouteResponseBody extends TeaModel {
+public class OpenErServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("Status")
-    private String status;
-
-    private CreateRoutineRelatedRouteResponseBody(Builder builder) {
+    private OpenErServiceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.status = builder.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateRoutineRelatedRouteResponseBody create() {
+    public static OpenErServiceResponseBody create() {
         return builder().build();
     }
 
@@ -47,49 +43,29 @@ public class CreateRoutineRelatedRouteResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return status
-     */
-    public String getStatus() {
-        return this.status;
-    }
-
     public static final class Builder {
         private String requestId; 
-        private String status; 
 
         private Builder() {
         } 
 
-        private Builder(CreateRoutineRelatedRouteResponseBody model) {
+        private Builder(OpenErServiceResponseBody model) {
             this.requestId = model.requestId;
-            this.status = model.status;
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
+         * <p>5CC228B4-7A67-4016-9C9F-4A4133494A91</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        /**
-         * <p>Indicates whether the operation is successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
-         */
-        public Builder status(String status) {
-            this.status = status;
-            return this;
-        }
-
-        public CreateRoutineRelatedRouteResponseBody build() {
-            return new CreateRoutineRelatedRouteResponseBody(this);
+        public OpenErServiceResponseBody build() {
+            return new OpenErServiceResponseBody(this);
         } 
 
     } 
