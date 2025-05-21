@@ -836,6 +836,9 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sceneTaskList")
         private java.util.List<SceneTaskList> sceneTaskList;
 
+        @com.aliyun.core.annotation.NameInMap("sceneTranslate")
+        private String sceneTranslate;
+
         @com.aliyun.core.annotation.NameInMap("sentenceList")
         private java.util.List<SentenceList> sentenceList;
 
@@ -857,6 +860,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             this.sceneId = builder.sceneId;
             this.sceneImageList = builder.sceneImageList;
             this.sceneTaskList = builder.sceneTaskList;
+            this.sceneTranslate = builder.sceneTranslate;
             this.sentenceList = builder.sentenceList;
             this.target = builder.target;
             this.theme = builder.theme;
@@ -908,6 +912,13 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sceneTranslate
+         */
+        public String getSceneTranslate() {
+            return this.sceneTranslate;
+        }
+
+        /**
          * @return sentenceList
          */
         public java.util.List<SentenceList> getSentenceList() {
@@ -948,6 +959,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
             private String sceneId; 
             private java.util.List<String> sceneImageList; 
             private java.util.List<SceneTaskList> sceneTaskList; 
+            private String sceneTranslate; 
             private java.util.List<SentenceList> sentenceList; 
             private String target; 
             private Theme theme; 
@@ -963,6 +975,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
                 this.sceneId = model.sceneId;
                 this.sceneImageList = model.sceneImageList;
                 this.sceneTaskList = model.sceneTaskList;
+                this.sceneTranslate = model.sceneTranslate;
                 this.sentenceList = model.sentenceList;
                 this.target = model.target;
                 this.theme = model.theme;
@@ -1007,6 +1020,14 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
              */
             public Builder sceneTaskList(java.util.List<SceneTaskList> sceneTaskList) {
                 this.sceneTaskList = sceneTaskList;
+                return this;
+            }
+
+            /**
+             * sceneTranslate.
+             */
+            public Builder sceneTranslate(String sceneTranslate) {
+                this.sceneTranslate = sceneTranslate;
                 return this;
             }
 

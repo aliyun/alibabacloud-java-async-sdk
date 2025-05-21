@@ -287,14 +287,14 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sceneImageList")
         private java.util.List<String> sceneImageList;
 
-        @com.aliyun.core.annotation.NameInMap("sceneTransLate")
-        private String sceneTransLate;
+        @com.aliyun.core.annotation.NameInMap("sceneTranslate")
+        private String sceneTranslate;
 
         private SceneList(Builder builder) {
             this.scene = builder.scene;
             this.sceneId = builder.sceneId;
             this.sceneImageList = builder.sceneImageList;
-            this.sceneTransLate = builder.sceneTransLate;
+            this.sceneTranslate = builder.sceneTranslate;
         }
 
         public static Builder builder() {
@@ -327,17 +327,17 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * @return sceneTransLate
+         * @return sceneTranslate
          */
-        public String getSceneTransLate() {
-            return this.sceneTransLate;
+        public String getSceneTranslate() {
+            return this.sceneTranslate;
         }
 
         public static final class Builder {
             private String scene; 
             private String sceneId; 
             private java.util.List<String> sceneImageList; 
-            private String sceneTransLate; 
+            private String sceneTranslate; 
 
             private Builder() {
             } 
@@ -346,7 +346,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
                 this.scene = model.scene;
                 this.sceneId = model.sceneId;
                 this.sceneImageList = model.sceneImageList;
-                this.sceneTransLate = model.sceneTransLate;
+                this.sceneTranslate = model.sceneTranslate;
             } 
 
             /**
@@ -374,10 +374,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * sceneTransLate.
+             * sceneTranslate.
              */
-            public Builder sceneTransLate(String sceneTransLate) {
-                this.sceneTransLate = sceneTransLate;
+            public Builder sceneTranslate(String sceneTranslate) {
+                this.sceneTranslate = sceneTranslate;
                 return this;
             }
 
