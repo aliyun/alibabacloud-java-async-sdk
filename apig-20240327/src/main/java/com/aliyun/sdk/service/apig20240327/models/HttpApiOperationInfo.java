@@ -23,6 +23,9 @@ public class HttpApiOperationInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createTimestamp")
     private Long createTimestamp;
 
+    @com.aliyun.core.annotation.NameInMap("deployConfigs")
+    private java.util.List<HttpApiDeployConfig> deployConfigs;
+
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
@@ -50,9 +53,13 @@ public class HttpApiOperationInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("response")
     private HttpApiResponseContract response;
 
+    @com.aliyun.core.annotation.NameInMap("status")
+    private String status;
+
     private HttpApiOperationInfo(Builder builder) {
         this.authConfig = builder.authConfig;
         this.createTimestamp = builder.createTimestamp;
+        this.deployConfigs = builder.deployConfigs;
         this.description = builder.description;
         this.enableAuth = builder.enableAuth;
         this.method = builder.method;
@@ -62,6 +69,7 @@ public class HttpApiOperationInfo extends TeaModel {
         this.path = builder.path;
         this.request = builder.request;
         this.response = builder.response;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -88,6 +96,13 @@ public class HttpApiOperationInfo extends TeaModel {
      */
     public Long getCreateTimestamp() {
         return this.createTimestamp;
+    }
+
+    /**
+     * @return deployConfigs
+     */
+    public java.util.List<HttpApiDeployConfig> getDeployConfigs() {
+        return this.deployConfigs;
     }
 
     /**
@@ -153,9 +168,17 @@ public class HttpApiOperationInfo extends TeaModel {
         return this.response;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder {
         private AuthConfig authConfig; 
         private Long createTimestamp; 
+        private java.util.List<HttpApiDeployConfig> deployConfigs; 
         private String description; 
         private Boolean enableAuth; 
         private String method; 
@@ -165,6 +188,7 @@ public class HttpApiOperationInfo extends TeaModel {
         private String path; 
         private HttpApiRequestContract request; 
         private HttpApiResponseContract response; 
+        private String status; 
 
         private Builder() {
         } 
@@ -172,6 +196,7 @@ public class HttpApiOperationInfo extends TeaModel {
         private Builder(HttpApiOperationInfo model) {
             this.authConfig = model.authConfig;
             this.createTimestamp = model.createTimestamp;
+            this.deployConfigs = model.deployConfigs;
             this.description = model.description;
             this.enableAuth = model.enableAuth;
             this.method = model.method;
@@ -181,6 +206,7 @@ public class HttpApiOperationInfo extends TeaModel {
             this.path = model.path;
             this.request = model.request;
             this.response = model.response;
+            this.status = model.status;
         } 
 
         /**
@@ -196,6 +222,14 @@ public class HttpApiOperationInfo extends TeaModel {
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
+            return this;
+        }
+
+        /**
+         * deployConfigs.
+         */
+        public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
+            this.deployConfigs = deployConfigs;
             return this;
         }
 
@@ -268,6 +302,14 @@ public class HttpApiOperationInfo extends TeaModel {
          */
         public Builder response(HttpApiResponseContract response) {
             this.response = response;
+            return this;
+        }
+
+        /**
+         * status.
+         */
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 

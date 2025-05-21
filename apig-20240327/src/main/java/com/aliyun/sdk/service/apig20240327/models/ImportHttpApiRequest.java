@@ -18,12 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ImportHttpApiRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("deployConfigs")
+    private HttpApiDeployConfig deployConfigs;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mcpRouteId")
+    private String mcpRouteId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("name")
@@ -59,8 +67,10 @@ public class ImportHttpApiRequest extends Request {
 
     private ImportHttpApiRequest(Builder builder) {
         super(builder);
+        this.deployConfigs = builder.deployConfigs;
         this.description = builder.description;
         this.dryRun = builder.dryRun;
+        this.mcpRouteId = builder.mcpRouteId;
         this.name = builder.name;
         this.resourceGroupId = builder.resourceGroupId;
         this.specContentBase64 = builder.specContentBase64;
@@ -85,6 +95,13 @@ public class ImportHttpApiRequest extends Request {
     }
 
     /**
+     * @return deployConfigs
+     */
+    public HttpApiDeployConfig getDeployConfigs() {
+        return this.deployConfigs;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -96,6 +113,13 @@ public class ImportHttpApiRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return mcpRouteId
+     */
+    public String getMcpRouteId() {
+        return this.mcpRouteId;
     }
 
     /**
@@ -155,8 +179,10 @@ public class ImportHttpApiRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ImportHttpApiRequest, Builder> {
+        private HttpApiDeployConfig deployConfigs; 
         private String description; 
         private Boolean dryRun; 
+        private String mcpRouteId; 
         private String name; 
         private String resourceGroupId; 
         private String specContentBase64; 
@@ -172,8 +198,10 @@ public class ImportHttpApiRequest extends Request {
 
         private Builder(ImportHttpApiRequest request) {
             super(request);
+            this.deployConfigs = request.deployConfigs;
             this.description = request.description;
             this.dryRun = request.dryRun;
+            this.mcpRouteId = request.mcpRouteId;
             this.name = request.name;
             this.resourceGroupId = request.resourceGroupId;
             this.specContentBase64 = request.specContentBase64;
@@ -183,6 +211,15 @@ public class ImportHttpApiRequest extends Request {
             this.targetHttpApiId = request.targetHttpApiId;
             this.versionConfig = request.versionConfig;
         } 
+
+        /**
+         * deployConfigs.
+         */
+        public Builder deployConfigs(HttpApiDeployConfig deployConfigs) {
+            this.putBodyParameter("deployConfigs", deployConfigs);
+            this.deployConfigs = deployConfigs;
+            return this;
+        }
 
         /**
          * <p>The API description, which cannot exceed 255 bytes in length. If you do not specify a description, a description is extracted from the definition file.</p>
@@ -205,6 +242,15 @@ public class ImportHttpApiRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("dryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * mcpRouteId.
+         */
+        public Builder mcpRouteId(String mcpRouteId) {
+            this.putBodyParameter("mcpRouteId", mcpRouteId);
+            this.mcpRouteId = mcpRouteId;
             return this;
         }
 

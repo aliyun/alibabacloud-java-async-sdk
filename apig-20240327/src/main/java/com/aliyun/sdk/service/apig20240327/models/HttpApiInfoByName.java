@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HttpApiInfoByName</p>
  */
 public class HttpApiInfoByName extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
+    private String gatewayId;
+
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
@@ -30,6 +33,7 @@ public class HttpApiInfoByName extends TeaModel {
     private java.util.List<HttpApiApiInfo> versionedHttpApis;
 
     private HttpApiInfoByName(Builder builder) {
+        this.gatewayId = builder.gatewayId;
         this.name = builder.name;
         this.type = builder.type;
         this.versionEnabled = builder.versionEnabled;
@@ -46,6 +50,13 @@ public class HttpApiInfoByName extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return gatewayId
+     */
+    public String getGatewayId() {
+        return this.gatewayId;
     }
 
     /**
@@ -77,6 +88,7 @@ public class HttpApiInfoByName extends TeaModel {
     }
 
     public static final class Builder {
+        private String gatewayId; 
         private String name; 
         private String type; 
         private Boolean versionEnabled; 
@@ -86,11 +98,20 @@ public class HttpApiInfoByName extends TeaModel {
         } 
 
         private Builder(HttpApiInfoByName model) {
+            this.gatewayId = model.gatewayId;
             this.name = model.name;
             this.type = model.type;
             this.versionEnabled = model.versionEnabled;
             this.versionedHttpApis = model.versionedHttpApis;
         } 
+
+        /**
+         * GatewayId.
+         */
+        public Builder gatewayId(String gatewayId) {
+            this.gatewayId = gatewayId;
+            return this;
+        }
 
         /**
          * name.

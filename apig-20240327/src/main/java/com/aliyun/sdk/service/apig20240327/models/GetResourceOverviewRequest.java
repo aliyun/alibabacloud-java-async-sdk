@@ -17,8 +17,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResourceOverviewRequest</p>
  */
 public class GetResourceOverviewRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("gatewayType")
+    private String gatewayType;
+
     private GetResourceOverviewRequest(Builder builder) {
         super(builder);
+        this.gatewayType = builder.gatewayType;
     }
 
     public static Builder builder() {
@@ -34,7 +39,15 @@ public class GetResourceOverviewRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return gatewayType
+     */
+    public String getGatewayType() {
+        return this.gatewayType;
+    }
+
     public static final class Builder extends Request.Builder<GetResourceOverviewRequest, Builder> {
+        private String gatewayType; 
 
         private Builder() {
             super();
@@ -42,7 +55,17 @@ public class GetResourceOverviewRequest extends Request {
 
         private Builder(GetResourceOverviewRequest request) {
             super(request);
+            this.gatewayType = request.gatewayType;
         } 
+
+        /**
+         * gatewayType.
+         */
+        public Builder gatewayType(String gatewayType) {
+            this.putQueryParameter("gatewayType", gatewayType);
+            this.gatewayType = gatewayType;
+            return this;
+        }
 
         @Override
         public GetResourceOverviewRequest build() {

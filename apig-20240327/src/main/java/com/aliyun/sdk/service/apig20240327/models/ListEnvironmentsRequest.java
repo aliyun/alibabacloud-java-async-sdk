@@ -30,6 +30,10 @@ public class ListEnvironmentsRequest extends Request {
     private String gatewayNameLike;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("gatewayType")
+    private String gatewayType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("nameLike")
     private String nameLike;
 
@@ -50,6 +54,7 @@ public class ListEnvironmentsRequest extends Request {
         this.aliasLike = builder.aliasLike;
         this.gatewayId = builder.gatewayId;
         this.gatewayNameLike = builder.gatewayNameLike;
+        this.gatewayType = builder.gatewayType;
         this.nameLike = builder.nameLike;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -91,6 +96,13 @@ public class ListEnvironmentsRequest extends Request {
     }
 
     /**
+     * @return gatewayType
+     */
+    public String getGatewayType() {
+        return this.gatewayType;
+    }
+
+    /**
      * @return nameLike
      */
     public String getNameLike() {
@@ -122,6 +134,7 @@ public class ListEnvironmentsRequest extends Request {
         private String aliasLike; 
         private String gatewayId; 
         private String gatewayNameLike; 
+        private String gatewayType; 
         private String nameLike; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -136,6 +149,7 @@ public class ListEnvironmentsRequest extends Request {
             this.aliasLike = request.aliasLike;
             this.gatewayId = request.gatewayId;
             this.gatewayNameLike = request.gatewayNameLike;
+            this.gatewayType = request.gatewayType;
             this.nameLike = request.nameLike;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -175,6 +189,15 @@ public class ListEnvironmentsRequest extends Request {
         public Builder gatewayNameLike(String gatewayNameLike) {
             this.putQueryParameter("gatewayNameLike", gatewayNameLike);
             this.gatewayNameLike = gatewayNameLike;
+            return this;
+        }
+
+        /**
+         * gatewayType.
+         */
+        public Builder gatewayType(String gatewayType) {
+            this.putQueryParameter("gatewayType", gatewayType);
+            this.gatewayType = gatewayType;
             return this;
         }
 

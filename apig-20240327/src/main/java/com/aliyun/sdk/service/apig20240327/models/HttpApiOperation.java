@@ -20,6 +20,9 @@ public class HttpApiOperation extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("authConfig")
     private AuthConfig authConfig;
 
+    @com.aliyun.core.annotation.NameInMap("deployConfigs")
+    private java.util.List<HttpApiDeployConfig> deployConfigs;
+
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
@@ -49,6 +52,7 @@ public class HttpApiOperation extends TeaModel {
 
     private HttpApiOperation(Builder builder) {
         this.authConfig = builder.authConfig;
+        this.deployConfigs = builder.deployConfigs;
         this.description = builder.description;
         this.enableAuth = builder.enableAuth;
         this.method = builder.method;
@@ -76,6 +80,13 @@ public class HttpApiOperation extends TeaModel {
      */
     public AuthConfig getAuthConfig() {
         return this.authConfig;
+    }
+
+    /**
+     * @return deployConfigs
+     */
+    public java.util.List<HttpApiDeployConfig> getDeployConfigs() {
+        return this.deployConfigs;
     }
 
     /**
@@ -136,6 +147,7 @@ public class HttpApiOperation extends TeaModel {
 
     public static final class Builder {
         private AuthConfig authConfig; 
+        private java.util.List<HttpApiDeployConfig> deployConfigs; 
         private String description; 
         private Boolean enableAuth; 
         private String method; 
@@ -150,6 +162,7 @@ public class HttpApiOperation extends TeaModel {
 
         private Builder(HttpApiOperation model) {
             this.authConfig = model.authConfig;
+            this.deployConfigs = model.deployConfigs;
             this.description = model.description;
             this.enableAuth = model.enableAuth;
             this.method = model.method;
@@ -165,6 +178,14 @@ public class HttpApiOperation extends TeaModel {
          */
         public Builder authConfig(AuthConfig authConfig) {
             this.authConfig = authConfig;
+            return this;
+        }
+
+        /**
+         * deployConfigs.
+         */
+        public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
+            this.deployConfigs = deployConfigs;
             return this;
         }
 

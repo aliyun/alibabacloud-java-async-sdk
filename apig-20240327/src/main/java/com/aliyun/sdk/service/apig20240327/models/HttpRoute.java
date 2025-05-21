@@ -35,6 +35,9 @@ public class HttpRoute extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("environmentInfo")
     private EnvironmentInfo environmentInfo;
 
+    @com.aliyun.core.annotation.NameInMap("gatewayStatus")
+    private java.util.Map<String, String> gatewayStatus;
+
     @com.aliyun.core.annotation.NameInMap("match")
     private HttpRouteMatch match;
 
@@ -54,6 +57,7 @@ public class HttpRoute extends TeaModel {
         this.description = builder.description;
         this.domainInfos = builder.domainInfos;
         this.environmentInfo = builder.environmentInfo;
+        this.gatewayStatus = builder.gatewayStatus;
         this.match = builder.match;
         this.name = builder.name;
         this.routeId = builder.routeId;
@@ -115,6 +119,13 @@ public class HttpRoute extends TeaModel {
     }
 
     /**
+     * @return gatewayStatus
+     */
+    public java.util.Map<String, String> getGatewayStatus() {
+        return this.gatewayStatus;
+    }
+
+    /**
      * @return match
      */
     public HttpRouteMatch getMatch() {
@@ -149,6 +160,7 @@ public class HttpRoute extends TeaModel {
         private String description; 
         private java.util.List<DomainInfos> domainInfos; 
         private EnvironmentInfo environmentInfo; 
+        private java.util.Map<String, String> gatewayStatus; 
         private HttpRouteMatch match; 
         private String name; 
         private String routeId; 
@@ -164,6 +176,7 @@ public class HttpRoute extends TeaModel {
             this.description = model.description;
             this.domainInfos = model.domainInfos;
             this.environmentInfo = model.environmentInfo;
+            this.gatewayStatus = model.gatewayStatus;
             this.match = model.match;
             this.name = model.name;
             this.routeId = model.routeId;
@@ -215,6 +228,14 @@ public class HttpRoute extends TeaModel {
          */
         public Builder environmentInfo(EnvironmentInfo environmentInfo) {
             this.environmentInfo = environmentInfo;
+            return this;
+        }
+
+        /**
+         * gatewayStatus.
+         */
+        public Builder gatewayStatus(java.util.Map<String, String> gatewayStatus) {
+            this.gatewayStatus = gatewayStatus;
             return this;
         }
 

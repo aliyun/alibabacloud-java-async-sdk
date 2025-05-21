@@ -898,6 +898,12 @@ public class ListGatewaysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gatewayId")
         private String gatewayId;
 
+        @com.aliyun.core.annotation.NameInMap("gatewayType")
+        private String gatewayType;
+
+        @com.aliyun.core.annotation.NameInMap("legacy")
+        private Boolean legacy;
+
         @com.aliyun.core.annotation.NameInMap("loadBalancers")
         private java.util.List<LoadBalancers> loadBalancers;
 
@@ -949,6 +955,8 @@ public class ListGatewaysResponseBody extends TeaModel {
             this.createTimestamp = builder.createTimestamp;
             this.expireTimestamp = builder.expireTimestamp;
             this.gatewayId = builder.gatewayId;
+            this.gatewayType = builder.gatewayType;
+            this.legacy = builder.legacy;
             this.loadBalancers = builder.loadBalancers;
             this.name = builder.name;
             this.replicas = builder.replicas;
@@ -1007,6 +1015,20 @@ public class ListGatewaysResponseBody extends TeaModel {
          */
         public String getGatewayId() {
             return this.gatewayId;
+        }
+
+        /**
+         * @return gatewayType
+         */
+        public String getGatewayType() {
+            return this.gatewayType;
+        }
+
+        /**
+         * @return legacy
+         */
+        public Boolean getLegacy() {
+            return this.legacy;
         }
 
         /**
@@ -1120,6 +1142,8 @@ public class ListGatewaysResponseBody extends TeaModel {
             private Long createTimestamp; 
             private Long expireTimestamp; 
             private String gatewayId; 
+            private String gatewayType; 
+            private Boolean legacy; 
             private java.util.List<LoadBalancers> loadBalancers; 
             private String name; 
             private String replicas; 
@@ -1145,6 +1169,8 @@ public class ListGatewaysResponseBody extends TeaModel {
                 this.createTimestamp = model.createTimestamp;
                 this.expireTimestamp = model.expireTimestamp;
                 this.gatewayId = model.gatewayId;
+                this.gatewayType = model.gatewayType;
+                this.legacy = model.legacy;
                 this.loadBalancers = model.loadBalancers;
                 this.name = model.name;
                 this.replicas = model.replicas;
@@ -1221,6 +1247,22 @@ public class ListGatewaysResponseBody extends TeaModel {
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
+                return this;
+            }
+
+            /**
+             * gatewayType.
+             */
+            public Builder gatewayType(String gatewayType) {
+                this.gatewayType = gatewayType;
+                return this;
+            }
+
+            /**
+             * legacy.
+             */
+            public Builder legacy(Boolean legacy) {
+                this.legacy = legacy;
                 return this;
             }
 

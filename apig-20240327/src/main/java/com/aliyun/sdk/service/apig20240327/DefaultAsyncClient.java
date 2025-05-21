@@ -172,6 +172,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreatePluginAttachment  CreatePluginAttachmentRequest
+     * @return CreatePluginAttachmentResponse
+     */
+    @Override
+    public CompletableFuture<CreatePluginAttachmentResponse> createPluginAttachment(CreatePluginAttachmentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreatePluginAttachment").setMethod(HttpMethod.POST).setPathRegex("/v1/plugin-attachments").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePluginAttachmentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePluginAttachmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreatePolicy  CreatePolicyRequest
      * @return CreatePolicyResponse
      */
@@ -350,6 +368,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteHttpApiRouteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeletePluginAttachment  DeletePluginAttachmentRequest
+     * @return DeletePluginAttachmentResponse
+     */
+    @Override
+    public CompletableFuture<DeletePluginAttachmentResponse> deletePluginAttachment(DeletePluginAttachmentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeletePluginAttachment").setMethod(HttpMethod.DELETE).setPathRegex("/v1/plugin-attachments/{pluginAttachmentId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeletePluginAttachmentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeletePluginAttachmentResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -549,6 +585,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetHttpApiRouteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetPluginAttachment  GetPluginAttachmentRequest
+     * @return GetPluginAttachmentResponse
+     */
+    @Override
+    public CompletableFuture<GetPluginAttachmentResponse> getPluginAttachment(GetPluginAttachmentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPluginAttachment").setMethod(HttpMethod.GET).setPathRegex("/v1/plugin-attachments/{pluginAttachmentId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPluginAttachmentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetPluginAttachmentResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -766,6 +820,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListHttpApisResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListPlugins  ListPluginsRequest
+     * @return ListPluginsResponse
+     */
+    @Override
+    public CompletableFuture<ListPluginsResponse> listPlugins(ListPluginsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListPlugins").setMethod(HttpMethod.GET).setPathRegex("/v1/plugins").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPluginsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPluginsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1001,6 +1073,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateHttpApiRouteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdatePluginAttachment  UpdatePluginAttachmentRequest
+     * @return UpdatePluginAttachmentResponse
+     */
+    @Override
+    public CompletableFuture<UpdatePluginAttachmentResponse> updatePluginAttachment(UpdatePluginAttachmentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdatePluginAttachment").setMethod(HttpMethod.PUT).setPathRegex("/v1/plugin-attachments/{pluginAttachmentId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdatePluginAttachmentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdatePluginAttachmentResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -30,6 +30,10 @@ public class UpdateHttpApiRouteRequest extends Request {
     private BackendConfig backendConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("deployConfigs")
+    private java.util.List<HttpApiDeployConfig> deployConfigs;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
@@ -50,6 +54,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         this.httpApiId = builder.httpApiId;
         this.routeId = builder.routeId;
         this.backendConfig = builder.backendConfig;
+        this.deployConfigs = builder.deployConfigs;
         this.description = builder.description;
         this.domainIds = builder.domainIds;
         this.environmentId = builder.environmentId;
@@ -91,6 +96,13 @@ public class UpdateHttpApiRouteRequest extends Request {
     }
 
     /**
+     * @return deployConfigs
+     */
+    public java.util.List<HttpApiDeployConfig> getDeployConfigs() {
+        return this.deployConfigs;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -122,6 +134,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         private String httpApiId; 
         private String routeId; 
         private BackendConfig backendConfig; 
+        private java.util.List<HttpApiDeployConfig> deployConfigs; 
         private String description; 
         private java.util.List<String> domainIds; 
         private String environmentId; 
@@ -136,6 +149,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             this.httpApiId = request.httpApiId;
             this.routeId = request.routeId;
             this.backendConfig = request.backendConfig;
+            this.deployConfigs = request.deployConfigs;
             this.description = request.description;
             this.domainIds = request.domainIds;
             this.environmentId = request.environmentId;
@@ -172,6 +186,15 @@ public class UpdateHttpApiRouteRequest extends Request {
         public Builder backendConfig(BackendConfig backendConfig) {
             this.putBodyParameter("backendConfig", backendConfig);
             this.backendConfig = backendConfig;
+            return this;
+        }
+
+        /**
+         * deployConfigs.
+         */
+        public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
+            this.putBodyParameter("deployConfigs", deployConfigs);
+            this.deployConfigs = deployConfigs;
             return this;
         }
 

@@ -22,6 +22,10 @@ public class ListGatewaysRequest extends Request {
     private String gatewayId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("gatewayType")
+    private String gatewayType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("keyword")
     private String keyword;
 
@@ -48,6 +52,7 @@ public class ListGatewaysRequest extends Request {
     private ListGatewaysRequest(Builder builder) {
         super(builder);
         this.gatewayId = builder.gatewayId;
+        this.gatewayType = builder.gatewayType;
         this.keyword = builder.keyword;
         this.name = builder.name;
         this.pageNumber = builder.pageNumber;
@@ -74,6 +79,13 @@ public class ListGatewaysRequest extends Request {
      */
     public String getGatewayId() {
         return this.gatewayId;
+    }
+
+    /**
+     * @return gatewayType
+     */
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     /**
@@ -120,6 +132,7 @@ public class ListGatewaysRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListGatewaysRequest, Builder> {
         private String gatewayId; 
+        private String gatewayType; 
         private String keyword; 
         private String name; 
         private Integer pageNumber; 
@@ -134,6 +147,7 @@ public class ListGatewaysRequest extends Request {
         private Builder(ListGatewaysRequest request) {
             super(request);
             this.gatewayId = request.gatewayId;
+            this.gatewayType = request.gatewayType;
             this.keyword = request.keyword;
             this.name = request.name;
             this.pageNumber = request.pageNumber;
@@ -151,6 +165,15 @@ public class ListGatewaysRequest extends Request {
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);
             this.gatewayId = gatewayId;
+            return this;
+        }
+
+        /**
+         * gatewayType.
+         */
+        public Builder gatewayType(String gatewayType) {
+            this.putQueryParameter("gatewayType", gatewayType);
+            this.gatewayType = gatewayType;
             return this;
         }
 

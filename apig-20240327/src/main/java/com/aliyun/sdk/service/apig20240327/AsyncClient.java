@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateHttpApiRouteResponse> createHttpApiRoute(CreateHttpApiRouteRequest request);
 
     /**
+     * @param request the request parameters of CreatePluginAttachment  CreatePluginAttachmentRequest
+     * @return CreatePluginAttachmentResponse
+     */
+    CompletableFuture<CreatePluginAttachmentResponse> createPluginAttachment(CreatePluginAttachmentRequest request);
+
+    /**
      * @param request the request parameters of CreatePolicy  CreatePolicyRequest
      * @return CreatePolicyResponse
      */
@@ -130,6 +136,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteHttpApiRouteResponse
      */
     CompletableFuture<DeleteHttpApiRouteResponse> deleteHttpApiRoute(DeleteHttpApiRouteRequest request);
+
+    /**
+     * @param request the request parameters of DeletePluginAttachment  DeletePluginAttachmentRequest
+     * @return DeletePluginAttachmentResponse
+     */
+    CompletableFuture<DeletePluginAttachmentResponse> deletePluginAttachment(DeletePluginAttachmentRequest request);
 
     /**
      * @param request the request parameters of DeletePolicy  DeletePolicyRequest
@@ -197,6 +209,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetHttpApiRouteResponse
      */
     CompletableFuture<GetHttpApiRouteResponse> getHttpApiRoute(GetHttpApiRouteRequest request);
+
+    /**
+     * @param request the request parameters of GetPluginAttachment  GetPluginAttachmentRequest
+     * @return GetPluginAttachmentResponse
+     */
+    CompletableFuture<GetPluginAttachmentResponse> getPluginAttachment(GetPluginAttachmentRequest request);
 
     /**
      * @param request the request parameters of GetPolicy  GetPolicyRequest
@@ -270,6 +288,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListHttpApisResponse
      */
     CompletableFuture<ListHttpApisResponse> listHttpApis(ListHttpApisRequest request);
+
+    /**
+     * @param request the request parameters of ListPlugins  ListPluginsRequest
+     * @return ListPluginsResponse
+     */
+    CompletableFuture<ListPluginsResponse> listPlugins(ListPluginsRequest request);
 
     /**
      * @param request the request parameters of ListPolicyClasses  ListPolicyClassesRequest
@@ -349,6 +373,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateHttpApiRouteResponse
      */
     CompletableFuture<UpdateHttpApiRouteResponse> updateHttpApiRoute(UpdateHttpApiRouteRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePluginAttachment  UpdatePluginAttachmentRequest
+     * @return UpdatePluginAttachmentResponse
+     */
+    CompletableFuture<UpdatePluginAttachmentResponse> updatePluginAttachment(UpdatePluginAttachmentRequest request);
 
     /**
      * @param request the request parameters of UpdatePolicy  UpdatePolicyRequest

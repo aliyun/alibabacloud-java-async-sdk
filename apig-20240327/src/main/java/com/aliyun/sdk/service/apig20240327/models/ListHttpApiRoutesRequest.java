@@ -38,6 +38,10 @@ public class ListHttpApiRoutesRequest extends Request {
     private String environmentId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("forDeploy")
+    private Boolean forDeploy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("gatewayId")
     private String gatewayId;
 
@@ -80,6 +84,7 @@ public class ListHttpApiRoutesRequest extends Request {
         this.deployStatuses = builder.deployStatuses;
         this.domainId = builder.domainId;
         this.environmentId = builder.environmentId;
+        this.forDeploy = builder.forDeploy;
         this.gatewayId = builder.gatewayId;
         this.name = builder.name;
         this.nameLike = builder.nameLike;
@@ -137,6 +142,13 @@ public class ListHttpApiRoutesRequest extends Request {
      */
     public String getEnvironmentId() {
         return this.environmentId;
+    }
+
+    /**
+     * @return forDeploy
+     */
+    public Boolean getForDeploy() {
+        return this.forDeploy;
     }
 
     /**
@@ -208,6 +220,7 @@ public class ListHttpApiRoutesRequest extends Request {
         private String deployStatuses; 
         private String domainId; 
         private String environmentId; 
+        private Boolean forDeploy; 
         private String gatewayId; 
         private String name; 
         private String nameLike; 
@@ -229,6 +242,7 @@ public class ListHttpApiRoutesRequest extends Request {
             this.deployStatuses = request.deployStatuses;
             this.domainId = request.domainId;
             this.environmentId = request.environmentId;
+            this.forDeploy = request.forDeploy;
             this.gatewayId = request.gatewayId;
             this.name = request.name;
             this.nameLike = request.nameLike;
@@ -307,6 +321,15 @@ public class ListHttpApiRoutesRequest extends Request {
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("environmentId", environmentId);
             this.environmentId = environmentId;
+            return this;
+        }
+
+        /**
+         * forDeploy.
+         */
+        public Builder forDeploy(Boolean forDeploy) {
+            this.putQueryParameter("forDeploy", forDeploy);
+            this.forDeploy = forDeploy;
             return this;
         }
 

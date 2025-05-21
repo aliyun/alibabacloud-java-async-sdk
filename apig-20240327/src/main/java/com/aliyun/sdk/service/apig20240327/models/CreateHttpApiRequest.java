@@ -383,6 +383,9 @@ public class CreateHttpApiRequest extends Request {
      * <p>CreateHttpApiRequest</p>
      */
     public static class IngressConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("clusterId")
+        private String clusterId;
+
         @com.aliyun.core.annotation.NameInMap("environmentId")
         private String environmentId;
 
@@ -393,12 +396,14 @@ public class CreateHttpApiRequest extends Request {
         private Boolean overrideIngressIp;
 
         @com.aliyun.core.annotation.NameInMap("sourceId")
+        @Deprecated
         private String sourceId;
 
         @com.aliyun.core.annotation.NameInMap("watchNamespace")
         private String watchNamespace;
 
         private IngressConfig(Builder builder) {
+            this.clusterId = builder.clusterId;
             this.environmentId = builder.environmentId;
             this.ingressClass = builder.ingressClass;
             this.overrideIngressIp = builder.overrideIngressIp;
@@ -412,6 +417,13 @@ public class CreateHttpApiRequest extends Request {
 
         public static IngressConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         /**
@@ -450,6 +462,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         public static final class Builder {
+            private String clusterId; 
             private String environmentId; 
             private String ingressClass; 
             private Boolean overrideIngressIp; 
@@ -460,12 +473,21 @@ public class CreateHttpApiRequest extends Request {
             } 
 
             private Builder(IngressConfig model) {
+                this.clusterId = model.clusterId;
                 this.environmentId = model.environmentId;
                 this.ingressClass = model.ingressClass;
                 this.overrideIngressIp = model.overrideIngressIp;
                 this.sourceId = model.sourceId;
                 this.watchNamespace = model.watchNamespace;
             } 
+
+            /**
+             * clusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
 
             /**
              * <p>The environment ID.</p>

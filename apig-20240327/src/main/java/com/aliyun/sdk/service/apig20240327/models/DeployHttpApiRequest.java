@@ -22,6 +22,10 @@ public class DeployHttpApiRequest extends Request {
     private String httpApiId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("httpApiConfig")
+    private HttpApiConfig httpApiConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("restApiConfig")
     private RestApiConfig restApiConfig;
 
@@ -32,6 +36,7 @@ public class DeployHttpApiRequest extends Request {
     private DeployHttpApiRequest(Builder builder) {
         super(builder);
         this.httpApiId = builder.httpApiId;
+        this.httpApiConfig = builder.httpApiConfig;
         this.restApiConfig = builder.restApiConfig;
         this.routeId = builder.routeId;
     }
@@ -57,6 +62,13 @@ public class DeployHttpApiRequest extends Request {
     }
 
     /**
+     * @return httpApiConfig
+     */
+    public HttpApiConfig getHttpApiConfig() {
+        return this.httpApiConfig;
+    }
+
+    /**
      * @return restApiConfig
      */
     public RestApiConfig getRestApiConfig() {
@@ -72,6 +84,7 @@ public class DeployHttpApiRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeployHttpApiRequest, Builder> {
         private String httpApiId; 
+        private HttpApiConfig httpApiConfig; 
         private RestApiConfig restApiConfig; 
         private String routeId; 
 
@@ -82,6 +95,7 @@ public class DeployHttpApiRequest extends Request {
         private Builder(DeployHttpApiRequest request) {
             super(request);
             this.httpApiId = request.httpApiId;
+            this.httpApiConfig = request.httpApiConfig;
             this.restApiConfig = request.restApiConfig;
             this.routeId = request.routeId;
         } 
@@ -95,6 +109,15 @@ public class DeployHttpApiRequest extends Request {
         public Builder httpApiId(String httpApiId) {
             this.putPathParameter("httpApiId", httpApiId);
             this.httpApiId = httpApiId;
+            return this;
+        }
+
+        /**
+         * httpApiConfig.
+         */
+        public Builder httpApiConfig(HttpApiConfig httpApiConfig) {
+            this.putBodyParameter("httpApiConfig", httpApiConfig);
+            this.httpApiConfig = httpApiConfig;
             return this;
         }
 
@@ -126,6 +149,81 @@ public class DeployHttpApiRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeployHttpApiRequest} extends {@link TeaModel}
+     *
+     * <p>DeployHttpApiRequest</p>
+     */
+    public static class HttpApiConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("gatewayId")
+        private String gatewayId;
+
+        @com.aliyun.core.annotation.NameInMap("routeIds")
+        private java.util.List<String> routeIds;
+
+        private HttpApiConfig(Builder builder) {
+            this.gatewayId = builder.gatewayId;
+            this.routeIds = builder.routeIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HttpApiConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return gatewayId
+         */
+        public String getGatewayId() {
+            return this.gatewayId;
+        }
+
+        /**
+         * @return routeIds
+         */
+        public java.util.List<String> getRouteIds() {
+            return this.routeIds;
+        }
+
+        public static final class Builder {
+            private String gatewayId; 
+            private java.util.List<String> routeIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(HttpApiConfig model) {
+                this.gatewayId = model.gatewayId;
+                this.routeIds = model.routeIds;
+            } 
+
+            /**
+             * gatewayId.
+             */
+            public Builder gatewayId(String gatewayId) {
+                this.gatewayId = gatewayId;
+                return this;
+            }
+
+            /**
+             * routeIds.
+             */
+            public Builder routeIds(java.util.List<String> routeIds) {
+                this.routeIds = routeIds;
+                return this;
+            }
+
+            public HttpApiConfig build() {
+                return new HttpApiConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DeployHttpApiRequest} extends {@link TeaModel}
@@ -440,12 +538,20 @@ public class DeployHttpApiRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("environment")
         private Environment environment;
 
+        @com.aliyun.core.annotation.NameInMap("gatewayId")
+        private String gatewayId;
+
+        @com.aliyun.core.annotation.NameInMap("operationIds")
+        private java.util.List<String> operationIds;
+
         @com.aliyun.core.annotation.NameInMap("revisionId")
         private String revisionId;
 
         private RestApiConfig(Builder builder) {
             this.description = builder.description;
             this.environment = builder.environment;
+            this.gatewayId = builder.gatewayId;
+            this.operationIds = builder.operationIds;
             this.revisionId = builder.revisionId;
         }
 
@@ -472,6 +578,20 @@ public class DeployHttpApiRequest extends Request {
         }
 
         /**
+         * @return gatewayId
+         */
+        public String getGatewayId() {
+            return this.gatewayId;
+        }
+
+        /**
+         * @return operationIds
+         */
+        public java.util.List<String> getOperationIds() {
+            return this.operationIds;
+        }
+
+        /**
          * @return revisionId
          */
         public String getRevisionId() {
@@ -481,6 +601,8 @@ public class DeployHttpApiRequest extends Request {
         public static final class Builder {
             private String description; 
             private Environment environment; 
+            private String gatewayId; 
+            private java.util.List<String> operationIds; 
             private String revisionId; 
 
             private Builder() {
@@ -489,6 +611,8 @@ public class DeployHttpApiRequest extends Request {
             private Builder(RestApiConfig model) {
                 this.description = model.description;
                 this.environment = model.environment;
+                this.gatewayId = model.gatewayId;
+                this.operationIds = model.operationIds;
                 this.revisionId = model.revisionId;
             } 
 
@@ -508,6 +632,22 @@ public class DeployHttpApiRequest extends Request {
              */
             public Builder environment(Environment environment) {
                 this.environment = environment;
+                return this;
+            }
+
+            /**
+             * gatewayId.
+             */
+            public Builder gatewayId(String gatewayId) {
+                this.gatewayId = gatewayId;
+                return this;
+            }
+
+            /**
+             * operationIds.
+             */
+            public Builder operationIds(java.util.List<String> operationIds) {
+                this.operationIds = operationIds;
                 return this;
             }
 

@@ -26,6 +26,14 @@ public class UndeployHttpApiRequest extends Request {
     private String environmentId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gatewayId")
+    private String gatewayId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("operationId")
+    private String operationId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("routeId")
     private String routeId;
 
@@ -33,6 +41,8 @@ public class UndeployHttpApiRequest extends Request {
         super(builder);
         this.httpApiId = builder.httpApiId;
         this.environmentId = builder.environmentId;
+        this.gatewayId = builder.gatewayId;
+        this.operationId = builder.operationId;
         this.routeId = builder.routeId;
     }
 
@@ -64,6 +74,20 @@ public class UndeployHttpApiRequest extends Request {
     }
 
     /**
+     * @return gatewayId
+     */
+    public String getGatewayId() {
+        return this.gatewayId;
+    }
+
+    /**
+     * @return operationId
+     */
+    public String getOperationId() {
+        return this.operationId;
+    }
+
+    /**
      * @return routeId
      */
     public String getRouteId() {
@@ -73,6 +97,8 @@ public class UndeployHttpApiRequest extends Request {
     public static final class Builder extends Request.Builder<UndeployHttpApiRequest, Builder> {
         private String httpApiId; 
         private String environmentId; 
+        private String gatewayId; 
+        private String operationId; 
         private String routeId; 
 
         private Builder() {
@@ -83,6 +109,8 @@ public class UndeployHttpApiRequest extends Request {
             super(request);
             this.httpApiId = request.httpApiId;
             this.environmentId = request.environmentId;
+            this.gatewayId = request.gatewayId;
+            this.operationId = request.operationId;
             this.routeId = request.routeId;
         } 
 
@@ -107,6 +135,24 @@ public class UndeployHttpApiRequest extends Request {
         public Builder environmentId(String environmentId) {
             this.putBodyParameter("environmentId", environmentId);
             this.environmentId = environmentId;
+            return this;
+        }
+
+        /**
+         * gatewayId.
+         */
+        public Builder gatewayId(String gatewayId) {
+            this.putBodyParameter("gatewayId", gatewayId);
+            this.gatewayId = gatewayId;
+            return this;
+        }
+
+        /**
+         * operationId.
+         */
+        public Builder operationId(String operationId) {
+            this.putBodyParameter("operationId", operationId);
+            this.operationId = operationId;
             return this;
         }
 

@@ -26,22 +26,46 @@ public class HttpApiDeployConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("customDomainIds")
     private java.util.List<String> customDomainIds;
 
+    @com.aliyun.core.annotation.NameInMap("customDomainInfos")
+    private java.util.List<CustomDomainInfos> customDomainInfos;
+
     @com.aliyun.core.annotation.NameInMap("environmentId")
     private String environmentId;
+
+    @com.aliyun.core.annotation.NameInMap("gatewayId")
+    private String gatewayId;
+
+    @com.aliyun.core.annotation.NameInMap("gatewayInfo")
+    private GatewayInfo gatewayInfo;
+
+    @com.aliyun.core.annotation.NameInMap("mock")
+    private HttpApiMockContract mock;
 
     @com.aliyun.core.annotation.NameInMap("policyConfigs")
     private java.util.List<PolicyConfigs> policyConfigs;
 
+    @com.aliyun.core.annotation.NameInMap("routeBackend")
+    private Backend routeBackend;
+
     @com.aliyun.core.annotation.NameInMap("serviceConfigs")
     private java.util.List<ServiceConfigs> serviceConfigs;
+
+    @com.aliyun.core.annotation.NameInMap("subDomains")
+    private java.util.List<SubDomains> subDomains;
 
     private HttpApiDeployConfig(Builder builder) {
         this.autoDeploy = builder.autoDeploy;
         this.backendScene = builder.backendScene;
         this.customDomainIds = builder.customDomainIds;
+        this.customDomainInfos = builder.customDomainInfos;
         this.environmentId = builder.environmentId;
+        this.gatewayId = builder.gatewayId;
+        this.gatewayInfo = builder.gatewayInfo;
+        this.mock = builder.mock;
         this.policyConfigs = builder.policyConfigs;
+        this.routeBackend = builder.routeBackend;
         this.serviceConfigs = builder.serviceConfigs;
+        this.subDomains = builder.subDomains;
     }
 
     public static Builder builder() {
@@ -78,10 +102,38 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     /**
+     * @return customDomainInfos
+     */
+    public java.util.List<CustomDomainInfos> getCustomDomainInfos() {
+        return this.customDomainInfos;
+    }
+
+    /**
      * @return environmentId
      */
     public String getEnvironmentId() {
         return this.environmentId;
+    }
+
+    /**
+     * @return gatewayId
+     */
+    public String getGatewayId() {
+        return this.gatewayId;
+    }
+
+    /**
+     * @return gatewayInfo
+     */
+    public GatewayInfo getGatewayInfo() {
+        return this.gatewayInfo;
+    }
+
+    /**
+     * @return mock
+     */
+    public HttpApiMockContract getMock() {
+        return this.mock;
     }
 
     /**
@@ -92,19 +144,39 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     /**
+     * @return routeBackend
+     */
+    public Backend getRouteBackend() {
+        return this.routeBackend;
+    }
+
+    /**
      * @return serviceConfigs
      */
     public java.util.List<ServiceConfigs> getServiceConfigs() {
         return this.serviceConfigs;
     }
 
+    /**
+     * @return subDomains
+     */
+    public java.util.List<SubDomains> getSubDomains() {
+        return this.subDomains;
+    }
+
     public static final class Builder {
         private Boolean autoDeploy; 
         private String backendScene; 
         private java.util.List<String> customDomainIds; 
+        private java.util.List<CustomDomainInfos> customDomainInfos; 
         private String environmentId; 
+        private String gatewayId; 
+        private GatewayInfo gatewayInfo; 
+        private HttpApiMockContract mock; 
         private java.util.List<PolicyConfigs> policyConfigs; 
+        private Backend routeBackend; 
         private java.util.List<ServiceConfigs> serviceConfigs; 
+        private java.util.List<SubDomains> subDomains; 
 
         private Builder() {
         } 
@@ -113,9 +185,15 @@ public class HttpApiDeployConfig extends TeaModel {
             this.autoDeploy = model.autoDeploy;
             this.backendScene = model.backendScene;
             this.customDomainIds = model.customDomainIds;
+            this.customDomainInfos = model.customDomainInfos;
             this.environmentId = model.environmentId;
+            this.gatewayId = model.gatewayId;
+            this.gatewayInfo = model.gatewayInfo;
+            this.mock = model.mock;
             this.policyConfigs = model.policyConfigs;
+            this.routeBackend = model.routeBackend;
             this.serviceConfigs = model.serviceConfigs;
+            this.subDomains = model.subDomains;
         } 
 
         /**
@@ -143,10 +221,42 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
+         * customDomainInfos.
+         */
+        public Builder customDomainInfos(java.util.List<CustomDomainInfos> customDomainInfos) {
+            this.customDomainInfos = customDomainInfos;
+            return this;
+        }
+
+        /**
          * environmentId.
          */
         public Builder environmentId(String environmentId) {
             this.environmentId = environmentId;
+            return this;
+        }
+
+        /**
+         * gatewayId.
+         */
+        public Builder gatewayId(String gatewayId) {
+            this.gatewayId = gatewayId;
+            return this;
+        }
+
+        /**
+         * gatewayInfo.
+         */
+        public Builder gatewayInfo(GatewayInfo gatewayInfo) {
+            this.gatewayInfo = gatewayInfo;
+            return this;
+        }
+
+        /**
+         * mock.
+         */
+        public Builder mock(HttpApiMockContract mock) {
+            this.mock = mock;
             return this;
         }
 
@@ -159,10 +269,26 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
+         * routeBackend.
+         */
+        public Builder routeBackend(Backend routeBackend) {
+            this.routeBackend = routeBackend;
+            return this;
+        }
+
+        /**
          * serviceConfigs.
          */
         public Builder serviceConfigs(java.util.List<ServiceConfigs> serviceConfigs) {
             this.serviceConfigs = serviceConfigs;
+            return this;
+        }
+
+        /**
+         * subDomains.
+         */
+        public Builder subDomains(java.util.List<SubDomains> subDomains) {
+            this.subDomains = subDomains;
             return this;
         }
 
@@ -172,6 +298,102 @@ public class HttpApiDeployConfig extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HttpApiDeployConfig} extends {@link TeaModel}
+     *
+     * <p>HttpApiDeployConfig</p>
+     */
+    public static class CustomDomainInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("domainId")
+        private String domainId;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("protocol")
+        private String protocol;
+
+        private CustomDomainInfos(Builder builder) {
+            this.domainId = builder.domainId;
+            this.name = builder.name;
+            this.protocol = builder.protocol;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomDomainInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return domainId
+         */
+        public String getDomainId() {
+            return this.domainId;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public static final class Builder {
+            private String domainId; 
+            private String name; 
+            private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomDomainInfos model) {
+                this.domainId = model.domainId;
+                this.name = model.name;
+                this.protocol = model.protocol;
+            } 
+
+            /**
+             * domainId.
+             */
+            public Builder domainId(String domainId) {
+                this.domainId = domainId;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            public CustomDomainInfos build() {
+                return new CustomDomainInfos(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link HttpApiDeployConfig} extends {@link TeaModel}
@@ -434,6 +656,123 @@ public class HttpApiDeployConfig extends TeaModel {
 
             public ServiceConfigs build() {
                 return new ServiceConfigs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HttpApiDeployConfig} extends {@link TeaModel}
+     *
+     * <p>HttpApiDeployConfig</p>
+     */
+    public static class SubDomains extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("domainId")
+        private String domainId;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("networkType")
+        private String networkType;
+
+        @com.aliyun.core.annotation.NameInMap("protocol")
+        private String protocol;
+
+        private SubDomains(Builder builder) {
+            this.domainId = builder.domainId;
+            this.name = builder.name;
+            this.networkType = builder.networkType;
+            this.protocol = builder.protocol;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SubDomains create() {
+            return builder().build();
+        }
+
+        /**
+         * @return domainId
+         */
+        public String getDomainId() {
+            return this.domainId;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public static final class Builder {
+            private String domainId; 
+            private String name; 
+            private String networkType; 
+            private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubDomains model) {
+                this.domainId = model.domainId;
+                this.name = model.name;
+                this.networkType = model.networkType;
+                this.protocol = model.protocol;
+            } 
+
+            /**
+             * domainId.
+             */
+            public Builder domainId(String domainId) {
+                this.domainId = domainId;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * networkType.
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            public SubDomains build() {
+                return new SubDomains(this);
             } 
 
         } 

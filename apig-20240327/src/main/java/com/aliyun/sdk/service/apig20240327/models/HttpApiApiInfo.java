@@ -26,6 +26,9 @@ public class HttpApiApiInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("basePath")
     private String basePath;
 
+    @com.aliyun.core.annotation.NameInMap("deployCntMap")
+    private java.util.Map<String, HttpApiApiInfoDeployCntMapValue> deployCntMap;
+
     @com.aliyun.core.annotation.NameInMap("deployConfigs")
     private java.util.List<HttpApiDeployConfig> deployConfigs;
 
@@ -37,6 +40,9 @@ public class HttpApiApiInfo extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("environments")
     private java.util.List<Environments> environments;
+
+    @com.aliyun.core.annotation.NameInMap("gatewayId")
+    private String gatewayId;
 
     @com.aliyun.core.annotation.NameInMap("httpApiId")
     private String httpApiId;
@@ -63,10 +69,12 @@ public class HttpApiApiInfo extends TeaModel {
         this.aiProtocols = builder.aiProtocols;
         this.authConfig = builder.authConfig;
         this.basePath = builder.basePath;
+        this.deployCntMap = builder.deployCntMap;
         this.deployConfigs = builder.deployConfigs;
         this.description = builder.description;
         this.enabelAuth = builder.enabelAuth;
         this.environments = builder.environments;
+        this.gatewayId = builder.gatewayId;
         this.httpApiId = builder.httpApiId;
         this.ingressInfo = builder.ingressInfo;
         this.name = builder.name;
@@ -110,6 +118,13 @@ public class HttpApiApiInfo extends TeaModel {
     }
 
     /**
+     * @return deployCntMap
+     */
+    public java.util.Map<String, HttpApiApiInfoDeployCntMapValue> getDeployCntMap() {
+        return this.deployCntMap;
+    }
+
+    /**
      * @return deployConfigs
      */
     public java.util.List<HttpApiDeployConfig> getDeployConfigs() {
@@ -135,6 +150,13 @@ public class HttpApiApiInfo extends TeaModel {
      */
     public java.util.List<Environments> getEnvironments() {
         return this.environments;
+    }
+
+    /**
+     * @return gatewayId
+     */
+    public String getGatewayId() {
+        return this.gatewayId;
     }
 
     /**
@@ -190,10 +212,12 @@ public class HttpApiApiInfo extends TeaModel {
         private java.util.List<String> aiProtocols; 
         private AuthConfig authConfig; 
         private String basePath; 
+        private java.util.Map<String, HttpApiApiInfoDeployCntMapValue> deployCntMap; 
         private java.util.List<HttpApiDeployConfig> deployConfigs; 
         private String description; 
         private Boolean enabelAuth; 
         private java.util.List<Environments> environments; 
+        private String gatewayId; 
         private String httpApiId; 
         private IngressInfo ingressInfo; 
         private String name; 
@@ -209,10 +233,12 @@ public class HttpApiApiInfo extends TeaModel {
             this.aiProtocols = model.aiProtocols;
             this.authConfig = model.authConfig;
             this.basePath = model.basePath;
+            this.deployCntMap = model.deployCntMap;
             this.deployConfigs = model.deployConfigs;
             this.description = model.description;
             this.enabelAuth = model.enabelAuth;
             this.environments = model.environments;
+            this.gatewayId = model.gatewayId;
             this.httpApiId = model.httpApiId;
             this.ingressInfo = model.ingressInfo;
             this.name = model.name;
@@ -247,6 +273,14 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
+         * deployCntMap.
+         */
+        public Builder deployCntMap(java.util.Map<String, HttpApiApiInfoDeployCntMapValue> deployCntMap) {
+            this.deployCntMap = deployCntMap;
+            return this;
+        }
+
+        /**
          * deployConfigs.
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
@@ -275,6 +309,14 @@ public class HttpApiApiInfo extends TeaModel {
          */
         public Builder environments(java.util.List<Environments> environments) {
             this.environments = environments;
+            return this;
+        }
+
+        /**
+         * gatewayId.
+         */
+        public Builder gatewayId(String gatewayId) {
+            this.gatewayId = gatewayId;
             return this;
         }
 

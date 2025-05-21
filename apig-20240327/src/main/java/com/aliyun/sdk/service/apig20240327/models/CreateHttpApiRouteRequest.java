@@ -26,6 +26,10 @@ public class CreateHttpApiRouteRequest extends Request {
     private BackendConfig backendConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("deployConfigs")
+    private java.util.List<HttpApiDeployConfig> deployConfigs;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
@@ -49,6 +53,7 @@ public class CreateHttpApiRouteRequest extends Request {
         super(builder);
         this.httpApiId = builder.httpApiId;
         this.backendConfig = builder.backendConfig;
+        this.deployConfigs = builder.deployConfigs;
         this.description = builder.description;
         this.domainIds = builder.domainIds;
         this.environmentId = builder.environmentId;
@@ -81,6 +86,13 @@ public class CreateHttpApiRouteRequest extends Request {
      */
     public BackendConfig getBackendConfig() {
         return this.backendConfig;
+    }
+
+    /**
+     * @return deployConfigs
+     */
+    public java.util.List<HttpApiDeployConfig> getDeployConfigs() {
+        return this.deployConfigs;
     }
 
     /**
@@ -121,6 +133,7 @@ public class CreateHttpApiRouteRequest extends Request {
     public static final class Builder extends Request.Builder<CreateHttpApiRouteRequest, Builder> {
         private String httpApiId; 
         private BackendConfig backendConfig; 
+        private java.util.List<HttpApiDeployConfig> deployConfigs; 
         private String description; 
         private java.util.List<String> domainIds; 
         private String environmentId; 
@@ -135,6 +148,7 @@ public class CreateHttpApiRouteRequest extends Request {
             super(request);
             this.httpApiId = request.httpApiId;
             this.backendConfig = request.backendConfig;
+            this.deployConfigs = request.deployConfigs;
             this.description = request.description;
             this.domainIds = request.domainIds;
             this.environmentId = request.environmentId;
@@ -160,6 +174,15 @@ public class CreateHttpApiRouteRequest extends Request {
         public Builder backendConfig(BackendConfig backendConfig) {
             this.putBodyParameter("backendConfig", backendConfig);
             this.backendConfig = backendConfig;
+            return this;
+        }
+
+        /**
+         * deployConfigs.
+         */
+        public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
+            this.putBodyParameter("deployConfigs", deployConfigs);
+            this.deployConfigs = deployConfigs;
             return this;
         }
 

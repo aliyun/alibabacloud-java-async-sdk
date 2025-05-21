@@ -27,6 +27,14 @@ public class ListHttpApiOperationsRequest extends Request {
     private String consumerAuthorizationRuleId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("forDeploy")
+    private Boolean forDeploy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("gatewayId")
+    private String gatewayId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("method")
     private String method;
 
@@ -66,6 +74,8 @@ public class ListHttpApiOperationsRequest extends Request {
         super(builder);
         this.httpApiId = builder.httpApiId;
         this.consumerAuthorizationRuleId = builder.consumerAuthorizationRuleId;
+        this.forDeploy = builder.forDeploy;
+        this.gatewayId = builder.gatewayId;
         this.method = builder.method;
         this.name = builder.name;
         this.nameLike = builder.nameLike;
@@ -102,6 +112,20 @@ public class ListHttpApiOperationsRequest extends Request {
      */
     public String getConsumerAuthorizationRuleId() {
         return this.consumerAuthorizationRuleId;
+    }
+
+    /**
+     * @return forDeploy
+     */
+    public Boolean getForDeploy() {
+        return this.forDeploy;
+    }
+
+    /**
+     * @return gatewayId
+     */
+    public String getGatewayId() {
+        return this.gatewayId;
     }
 
     /**
@@ -170,6 +194,8 @@ public class ListHttpApiOperationsRequest extends Request {
     public static final class Builder extends Request.Builder<ListHttpApiOperationsRequest, Builder> {
         private String httpApiId; 
         private String consumerAuthorizationRuleId; 
+        private Boolean forDeploy; 
+        private String gatewayId; 
         private String method; 
         private String name; 
         private String nameLike; 
@@ -188,6 +214,8 @@ public class ListHttpApiOperationsRequest extends Request {
             super(request);
             this.httpApiId = request.httpApiId;
             this.consumerAuthorizationRuleId = request.consumerAuthorizationRuleId;
+            this.forDeploy = request.forDeploy;
+            this.gatewayId = request.gatewayId;
             this.method = request.method;
             this.name = request.name;
             this.nameLike = request.nameLike;
@@ -221,6 +249,24 @@ public class ListHttpApiOperationsRequest extends Request {
         public Builder consumerAuthorizationRuleId(String consumerAuthorizationRuleId) {
             this.putQueryParameter("consumerAuthorizationRuleId", consumerAuthorizationRuleId);
             this.consumerAuthorizationRuleId = consumerAuthorizationRuleId;
+            return this;
+        }
+
+        /**
+         * forDeploy.
+         */
+        public Builder forDeploy(Boolean forDeploy) {
+            this.putQueryParameter("forDeploy", forDeploy);
+            this.forDeploy = forDeploy;
+            return this;
+        }
+
+        /**
+         * gatewayId.
+         */
+        public Builder gatewayId(String gatewayId) {
+            this.putQueryParameter("gatewayId", gatewayId);
+            this.gatewayId = gatewayId;
             return this;
         }
 

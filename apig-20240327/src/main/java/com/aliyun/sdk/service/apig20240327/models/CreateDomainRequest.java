@@ -34,6 +34,10 @@ public class CreateDomainRequest extends Request {
     private Boolean forceHttps;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gatewayType")
+    private String gatewayType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("http2Option")
     private String http2Option;
 
@@ -73,6 +77,7 @@ public class CreateDomainRequest extends Request {
         this.certIdentifier = builder.certIdentifier;
         this.clientCACert = builder.clientCACert;
         this.forceHttps = builder.forceHttps;
+        this.gatewayType = builder.gatewayType;
         this.http2Option = builder.http2Option;
         this.mTLSEnabled = builder.mTLSEnabled;
         this.name = builder.name;
@@ -122,6 +127,13 @@ public class CreateDomainRequest extends Request {
      */
     public Boolean getForceHttps() {
         return this.forceHttps;
+    }
+
+    /**
+     * @return gatewayType
+     */
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     /**
@@ -185,6 +197,7 @@ public class CreateDomainRequest extends Request {
         private String certIdentifier; 
         private String clientCACert; 
         private Boolean forceHttps; 
+        private String gatewayType; 
         private String http2Option; 
         private Boolean mTLSEnabled; 
         private String name; 
@@ -204,6 +217,7 @@ public class CreateDomainRequest extends Request {
             this.certIdentifier = request.certIdentifier;
             this.clientCACert = request.clientCACert;
             this.forceHttps = request.forceHttps;
+            this.gatewayType = request.gatewayType;
             this.http2Option = request.http2Option;
             this.mTLSEnabled = request.mTLSEnabled;
             this.name = request.name;
@@ -263,6 +277,15 @@ public class CreateDomainRequest extends Request {
         public Builder forceHttps(Boolean forceHttps) {
             this.putBodyParameter("forceHttps", forceHttps);
             this.forceHttps = forceHttps;
+            return this;
+        }
+
+        /**
+         * gatewayType.
+         */
+        public Builder gatewayType(String gatewayType) {
+            this.putBodyParameter("gatewayType", gatewayType);
+            this.gatewayType = gatewayType;
             return this;
         }
 
