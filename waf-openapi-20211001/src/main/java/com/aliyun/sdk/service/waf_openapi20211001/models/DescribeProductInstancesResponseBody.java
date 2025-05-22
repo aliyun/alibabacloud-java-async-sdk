@@ -121,16 +121,120 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeProductInstancesResponseBody</p>
      */
+    public static class AccessPortAndProtocols extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CertificateIds")
+        private java.util.List<String> certificateIds;
+
+        @com.aliyun.core.annotation.NameInMap("Port")
+        private Integer port;
+
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private String protocol;
+
+        private AccessPortAndProtocols(Builder builder) {
+            this.certificateIds = builder.certificateIds;
+            this.port = builder.port;
+            this.protocol = builder.protocol;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccessPortAndProtocols create() {
+            return builder().build();
+        }
+
+        /**
+         * @return certificateIds
+         */
+        public java.util.List<String> getCertificateIds() {
+            return this.certificateIds;
+        }
+
+        /**
+         * @return port
+         */
+        public Integer getPort() {
+            return this.port;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> certificateIds; 
+            private Integer port; 
+            private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessPortAndProtocols model) {
+                this.certificateIds = model.certificateIds;
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
+
+            /**
+             * CertificateIds.
+             */
+            public Builder certificateIds(java.util.List<String> certificateIds) {
+                this.certificateIds = certificateIds;
+                return this;
+            }
+
+            /**
+             * Port.
+             */
+            public Builder port(Integer port) {
+                this.port = port;
+                return this;
+            }
+
+            /**
+             * Protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            public AccessPortAndProtocols build() {
+                return new AccessPortAndProtocols(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeProductInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductInstancesResponseBody</p>
+     */
     public static class Certificates extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppliedType")
+        private String appliedType;
+
         @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
 
         @com.aliyun.core.annotation.NameInMap("CertificateName")
         private String certificateName;
 
+        @com.aliyun.core.annotation.NameInMap("Domain")
+        private String domain;
+
         private Certificates(Builder builder) {
+            this.appliedType = builder.appliedType;
             this.certificateId = builder.certificateId;
             this.certificateName = builder.certificateName;
+            this.domain = builder.domain;
         }
 
         public static Builder builder() {
@@ -139,6 +243,13 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
 
         public static Certificates create() {
             return builder().build();
+        }
+
+        /**
+         * @return appliedType
+         */
+        public String getAppliedType() {
+            return this.appliedType;
         }
 
         /**
@@ -155,17 +266,36 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             return this.certificateName;
         }
 
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
+        }
+
         public static final class Builder {
+            private String appliedType; 
             private String certificateId; 
             private String certificateName; 
+            private String domain; 
 
             private Builder() {
             } 
 
             private Builder(Certificates model) {
+                this.appliedType = model.appliedType;
                 this.certificateId = model.certificateId;
                 this.certificateName = model.certificateName;
+                this.domain = model.domain;
             } 
+
+            /**
+             * AppliedType.
+             */
+            public Builder appliedType(String appliedType) {
+                this.appliedType = appliedType;
+                return this;
+            }
 
             /**
              * <p>The ID of the certificate.</p>
@@ -186,6 +316,14 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
              */
             public Builder certificateName(String certificateName) {
                 this.certificateName = certificateName;
+                return this;
+            }
+
+            /**
+             * Domain.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
                 return this;
             }
 
@@ -309,8 +447,23 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
      * <p>DescribeProductInstancesResponseBody</p>
      */
     public static class ProductInstances extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessInstanceId")
+        private String accessInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("AccessPortAndProtocols")
+        private java.util.List<AccessPortAndProtocols> accessPortAndProtocols;
+
+        @com.aliyun.core.annotation.NameInMap("AccessPorts")
+        private java.util.List<Integer> accessPorts;
+
         @com.aliyun.core.annotation.NameInMap("OwnerUserId")
         private String ownerUserId;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceInstanceAccessStatus")
+        private String resourceInstanceAccessStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceInstanceEdition")
+        private String resourceInstanceEdition;
 
         @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
         private String resourceInstanceId;
@@ -339,7 +492,12 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         private String resourceRegionId;
 
         private ProductInstances(Builder builder) {
+            this.accessInstanceId = builder.accessInstanceId;
+            this.accessPortAndProtocols = builder.accessPortAndProtocols;
+            this.accessPorts = builder.accessPorts;
             this.ownerUserId = builder.ownerUserId;
+            this.resourceInstanceAccessStatus = builder.resourceInstanceAccessStatus;
+            this.resourceInstanceEdition = builder.resourceInstanceEdition;
             this.resourceInstanceId = builder.resourceInstanceId;
             this.resourceInstanceIp = builder.resourceInstanceIp;
             this.resourceInstanceName = builder.resourceInstanceName;
@@ -359,10 +517,45 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return accessInstanceId
+         */
+        public String getAccessInstanceId() {
+            return this.accessInstanceId;
+        }
+
+        /**
+         * @return accessPortAndProtocols
+         */
+        public java.util.List<AccessPortAndProtocols> getAccessPortAndProtocols() {
+            return this.accessPortAndProtocols;
+        }
+
+        /**
+         * @return accessPorts
+         */
+        public java.util.List<Integer> getAccessPorts() {
+            return this.accessPorts;
+        }
+
+        /**
          * @return ownerUserId
          */
         public String getOwnerUserId() {
             return this.ownerUserId;
+        }
+
+        /**
+         * @return resourceInstanceAccessStatus
+         */
+        public String getResourceInstanceAccessStatus() {
+            return this.resourceInstanceAccessStatus;
+        }
+
+        /**
+         * @return resourceInstanceEdition
+         */
+        public String getResourceInstanceEdition() {
+            return this.resourceInstanceEdition;
         }
 
         /**
@@ -422,7 +615,12 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accessInstanceId; 
+            private java.util.List<AccessPortAndProtocols> accessPortAndProtocols; 
+            private java.util.List<Integer> accessPorts; 
             private String ownerUserId; 
+            private String resourceInstanceAccessStatus; 
+            private String resourceInstanceEdition; 
             private String resourceInstanceId; 
             private String resourceInstanceIp; 
             private String resourceInstanceName; 
@@ -436,7 +634,12 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             } 
 
             private Builder(ProductInstances model) {
+                this.accessInstanceId = model.accessInstanceId;
+                this.accessPortAndProtocols = model.accessPortAndProtocols;
+                this.accessPorts = model.accessPorts;
                 this.ownerUserId = model.ownerUserId;
+                this.resourceInstanceAccessStatus = model.resourceInstanceAccessStatus;
+                this.resourceInstanceEdition = model.resourceInstanceEdition;
                 this.resourceInstanceId = model.resourceInstanceId;
                 this.resourceInstanceIp = model.resourceInstanceIp;
                 this.resourceInstanceName = model.resourceInstanceName;
@@ -448,6 +651,30 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             } 
 
             /**
+             * AccessInstanceId.
+             */
+            public Builder accessInstanceId(String accessInstanceId) {
+                this.accessInstanceId = accessInstanceId;
+                return this;
+            }
+
+            /**
+             * AccessPortAndProtocols.
+             */
+            public Builder accessPortAndProtocols(java.util.List<AccessPortAndProtocols> accessPortAndProtocols) {
+                this.accessPortAndProtocols = accessPortAndProtocols;
+                return this;
+            }
+
+            /**
+             * AccessPorts.
+             */
+            public Builder accessPorts(java.util.List<Integer> accessPorts) {
+                this.accessPorts = accessPorts;
+                return this;
+            }
+
+            /**
              * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
              * 
              * <strong>example:</strong>
@@ -455,6 +682,22 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
+                return this;
+            }
+
+            /**
+             * ResourceInstanceAccessStatus.
+             */
+            public Builder resourceInstanceAccessStatus(String resourceInstanceAccessStatus) {
+                this.resourceInstanceAccessStatus = resourceInstanceAccessStatus;
+                return this;
+            }
+
+            /**
+             * ResourceInstanceEdition.
+             */
+            public Builder resourceInstanceEdition(String resourceInstanceEdition) {
+                this.resourceInstanceEdition = resourceInstanceEdition;
                 return this;
             }
 

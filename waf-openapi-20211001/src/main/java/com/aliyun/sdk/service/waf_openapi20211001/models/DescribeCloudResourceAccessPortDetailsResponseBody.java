@@ -311,6 +311,235 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
      *
      * <p>DescribeCloudResourceAccessPortDetailsResponseBody</p>
      */
+    public static class SubStatusDetails extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppliedType")
+        private String appliedType;
+
+        @com.aliyun.core.annotation.NameInMap("CertId")
+        private String certId;
+
+        @com.aliyun.core.annotation.NameInMap("CertName")
+        private String certName;
+
+        @com.aliyun.core.annotation.NameInMap("CommonName")
+        private String commonName;
+
+        @com.aliyun.core.annotation.NameInMap("Domain")
+        private String domain;
+
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
+        private Long expireTime;
+
+        @com.aliyun.core.annotation.NameInMap("ProductCertId")
+        private String productCertId;
+
+        @com.aliyun.core.annotation.NameInMap("ProductCertName")
+        private String productCertName;
+
+        @com.aliyun.core.annotation.NameInMap("ReasonCode")
+        private String reasonCode;
+
+        private SubStatusDetails(Builder builder) {
+            this.appliedType = builder.appliedType;
+            this.certId = builder.certId;
+            this.certName = builder.certName;
+            this.commonName = builder.commonName;
+            this.domain = builder.domain;
+            this.expireTime = builder.expireTime;
+            this.productCertId = builder.productCertId;
+            this.productCertName = builder.productCertName;
+            this.reasonCode = builder.reasonCode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SubStatusDetails create() {
+            return builder().build();
+        }
+
+        /**
+         * @return appliedType
+         */
+        public String getAppliedType() {
+            return this.appliedType;
+        }
+
+        /**
+         * @return certId
+         */
+        public String getCertId() {
+            return this.certId;
+        }
+
+        /**
+         * @return certName
+         */
+        public String getCertName() {
+            return this.certName;
+        }
+
+        /**
+         * @return commonName
+         */
+        public String getCommonName() {
+            return this.commonName;
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
+        }
+
+        /**
+         * @return expireTime
+         */
+        public Long getExpireTime() {
+            return this.expireTime;
+        }
+
+        /**
+         * @return productCertId
+         */
+        public String getProductCertId() {
+            return this.productCertId;
+        }
+
+        /**
+         * @return productCertName
+         */
+        public String getProductCertName() {
+            return this.productCertName;
+        }
+
+        /**
+         * @return reasonCode
+         */
+        public String getReasonCode() {
+            return this.reasonCode;
+        }
+
+        public static final class Builder {
+            private String appliedType; 
+            private String certId; 
+            private String certName; 
+            private String commonName; 
+            private String domain; 
+            private Long expireTime; 
+            private String productCertId; 
+            private String productCertName; 
+            private String reasonCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubStatusDetails model) {
+                this.appliedType = model.appliedType;
+                this.certId = model.certId;
+                this.certName = model.certName;
+                this.commonName = model.commonName;
+                this.domain = model.domain;
+                this.expireTime = model.expireTime;
+                this.productCertId = model.productCertId;
+                this.productCertName = model.productCertName;
+                this.reasonCode = model.reasonCode;
+            } 
+
+            /**
+             * <p>The type of the HTTPS certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: default certificate.</li>
+             * <li><strong>extension</strong>: additional certificate.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
+             */
+            public Builder appliedType(String appliedType) {
+                this.appliedType = appliedType;
+                return this;
+            }
+
+            /**
+             * CertId.
+             */
+            public Builder certId(String certId) {
+                this.certId = certId;
+                return this;
+            }
+
+            /**
+             * CertName.
+             */
+            public Builder certName(String certName) {
+                this.certName = certName;
+                return this;
+            }
+
+            /**
+             * CommonName.
+             */
+            public Builder commonName(String commonName) {
+                this.commonName = commonName;
+                return this;
+            }
+
+            /**
+             * Domain.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
+             * ExpireTime.
+             */
+            public Builder expireTime(Long expireTime) {
+                this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * ProductCertId.
+             */
+            public Builder productCertId(String productCertId) {
+                this.productCertId = productCertId;
+                return this;
+            }
+
+            /**
+             * ProductCertName.
+             */
+            public Builder productCertName(String productCertName) {
+                this.productCertName = productCertName;
+                return this;
+            }
+
+            /**
+             * ReasonCode.
+             */
+            public Builder reasonCode(String reasonCode) {
+                this.reasonCode = reasonCode;
+                return this;
+            }
+
+            public SubStatusDetails build() {
+                return new SubStatusDetails(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCloudResourceAccessPortDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudResourceAccessPortDetailsResponseBody</p>
+     */
     public static class AccessPortDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Certificates")
         private java.util.List<Certificates> certificates;
@@ -354,6 +583,12 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
+        @com.aliyun.core.annotation.NameInMap("SubStatus")
+        private String subStatus;
+
+        @com.aliyun.core.annotation.NameInMap("SubStatusDetails")
+        private java.util.List<SubStatusDetails> subStatusDetails;
+
         @com.aliyun.core.annotation.NameInMap("TLSVersion")
         private String TLSVersion;
 
@@ -384,6 +619,8 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
             this.protocol = builder.protocol;
             this.readTimeout = builder.readTimeout;
             this.status = builder.status;
+            this.subStatus = builder.subStatus;
+            this.subStatusDetails = builder.subStatusDetails;
             this.TLSVersion = builder.TLSVersion;
             this.writeTimeout = builder.writeTimeout;
             this.xffHeaderMode = builder.xffHeaderMode;
@@ -498,6 +735,20 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         }
 
         /**
+         * @return subStatus
+         */
+        public String getSubStatus() {
+            return this.subStatus;
+        }
+
+        /**
+         * @return subStatusDetails
+         */
+        public java.util.List<SubStatusDetails> getSubStatusDetails() {
+            return this.subStatusDetails;
+        }
+
+        /**
          * @return TLSVersion
          */
         public String getTLSVersion() {
@@ -547,6 +798,8 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
             private String protocol; 
             private Integer readTimeout; 
             private Integer status; 
+            private String subStatus; 
+            private java.util.List<SubStatusDetails> subStatusDetails; 
             private String TLSVersion; 
             private Integer writeTimeout; 
             private Integer xffHeaderMode; 
@@ -571,6 +824,8 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
                 this.protocol = model.protocol;
                 this.readTimeout = model.readTimeout;
                 this.status = model.status;
+                this.subStatus = model.subStatus;
+                this.subStatusDetails = model.subStatusDetails;
                 this.TLSVersion = model.TLSVersion;
                 this.writeTimeout = model.writeTimeout;
                 this.xffHeaderMode = model.xffHeaderMode;
@@ -756,6 +1011,22 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * SubStatus.
+             */
+            public Builder subStatus(String subStatus) {
+                this.subStatus = subStatus;
+                return this;
+            }
+
+            /**
+             * SubStatusDetails.
+             */
+            public Builder subStatusDetails(java.util.List<SubStatusDetails> subStatusDetails) {
+                this.subStatusDetails = subStatusDetails;
                 return this;
             }
 

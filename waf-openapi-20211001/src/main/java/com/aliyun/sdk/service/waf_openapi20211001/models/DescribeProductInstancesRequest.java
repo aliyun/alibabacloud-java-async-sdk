@@ -40,6 +40,10 @@ public class DescribeProductInstancesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceInstanceAccessStatus")
+    private String resourceInstanceAccessStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
     private String resourceInstanceId;
 
@@ -80,6 +84,7 @@ public class DescribeProductInstancesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceInstanceAccessStatus = builder.resourceInstanceAccessStatus;
         this.resourceInstanceId = builder.resourceInstanceId;
         this.resourceInstanceIp = builder.resourceInstanceIp;
         this.resourceInstanceName = builder.resourceInstanceName;
@@ -136,6 +141,13 @@ public class DescribeProductInstancesRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return resourceInstanceAccessStatus
+     */
+    public String getResourceInstanceAccessStatus() {
+        return this.resourceInstanceAccessStatus;
     }
 
     /**
@@ -200,6 +212,7 @@ public class DescribeProductInstancesRequest extends Request {
         private Long pageNumber; 
         private Long pageSize; 
         private String regionId; 
+        private String resourceInstanceAccessStatus; 
         private String resourceInstanceId; 
         private String resourceInstanceIp; 
         private String resourceInstanceName; 
@@ -220,6 +233,7 @@ public class DescribeProductInstancesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceInstanceAccessStatus = request.resourceInstanceAccessStatus;
             this.resourceInstanceId = request.resourceInstanceId;
             this.resourceInstanceIp = request.resourceInstanceIp;
             this.resourceInstanceName = request.resourceInstanceName;
@@ -295,6 +309,15 @@ public class DescribeProductInstancesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceInstanceAccessStatus.
+         */
+        public Builder resourceInstanceAccessStatus(String resourceInstanceAccessStatus) {
+            this.putQueryParameter("ResourceInstanceAccessStatus", resourceInstanceAccessStatus);
+            this.resourceInstanceAccessStatus = resourceInstanceAccessStatus;
             return this;
         }
 
