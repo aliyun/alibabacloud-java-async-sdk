@@ -731,6 +731,9 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
 
+        @com.aliyun.core.annotation.NameInMap("IsMatch")
+        private Boolean isMatch;
+
         @com.aliyun.core.annotation.NameInMap("Pid")
         private Integer pid;
 
@@ -747,6 +750,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
             this.cid = builder.cid;
             this.customizeCode = builder.customizeCode;
             this.from = builder.from;
+            this.isMatch = builder.isMatch;
             this.pid = builder.pid;
             this.tid = builder.tid;
             this.to = builder.to;
@@ -783,6 +787,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
 
         /**
+         * @return isMatch
+         */
+        public Boolean getIsMatch() {
+            return this.isMatch;
+        }
+
+        /**
          * @return pid
          */
         public Integer getPid() {
@@ -814,6 +825,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private String cid; 
             private String customizeCode; 
             private Integer from; 
+            private Boolean isMatch; 
             private Integer pid; 
             private String tid; 
             private Integer to; 
@@ -826,6 +838,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
                 this.cid = model.cid;
                 this.customizeCode = model.customizeCode;
                 this.from = model.from;
+                this.isMatch = model.isMatch;
                 this.pid = model.pid;
                 this.tid = model.tid;
                 this.to = model.to;
@@ -853,6 +866,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
              */
             public Builder from(Integer from) {
                 this.from = from;
+                return this;
+            }
+
+            /**
+             * IsMatch.
+             */
+            public Builder isMatch(Boolean isMatch) {
+                this.isMatch = isMatch;
                 return this;
             }
 
@@ -1436,6 +1457,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionHitInfoList")
         private ConditionHitInfoList conditionHitInfoList;
 
+        @com.aliyun.core.annotation.NameInMap("MachineHitResult")
+        private Integer machineHitResult;
+
+        @com.aliyun.core.annotation.NameInMap("ReviewHitResult")
+        private Integer reviewHitResult;
+
         @com.aliyun.core.annotation.NameInMap("ReviewInfo")
         private ReviewInfo reviewInfo;
 
@@ -1462,6 +1489,8 @@ public class GetResultToReviewResponseBody extends TeaModel {
             this.complainHistories = builder.complainHistories;
             this.complainable = builder.complainable;
             this.conditionHitInfoList = builder.conditionHitInfoList;
+            this.machineHitResult = builder.machineHitResult;
+            this.reviewHitResult = builder.reviewHitResult;
             this.reviewInfo = builder.reviewInfo;
             this.rid = builder.rid;
             this.ruleName = builder.ruleName;
@@ -1505,6 +1534,20 @@ public class GetResultToReviewResponseBody extends TeaModel {
          */
         public ConditionHitInfoList getConditionHitInfoList() {
             return this.conditionHitInfoList;
+        }
+
+        /**
+         * @return machineHitResult
+         */
+        public Integer getMachineHitResult() {
+            return this.machineHitResult;
+        }
+
+        /**
+         * @return reviewHitResult
+         */
+        public Integer getReviewHitResult() {
+            return this.reviewHitResult;
         }
 
         /**
@@ -1561,6 +1604,8 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private HitRuleReviewInfoComplainHistories complainHistories; 
             private Boolean complainable; 
             private ConditionHitInfoList conditionHitInfoList; 
+            private Integer machineHitResult; 
+            private Integer reviewHitResult; 
             private ReviewInfo reviewInfo; 
             private Long rid; 
             private String ruleName; 
@@ -1577,6 +1622,8 @@ public class GetResultToReviewResponseBody extends TeaModel {
                 this.complainHistories = model.complainHistories;
                 this.complainable = model.complainable;
                 this.conditionHitInfoList = model.conditionHitInfoList;
+                this.machineHitResult = model.machineHitResult;
+                this.reviewHitResult = model.reviewHitResult;
                 this.reviewInfo = model.reviewInfo;
                 this.rid = model.rid;
                 this.ruleName = model.ruleName;
@@ -1615,6 +1662,22 @@ public class GetResultToReviewResponseBody extends TeaModel {
              */
             public Builder conditionHitInfoList(ConditionHitInfoList conditionHitInfoList) {
                 this.conditionHitInfoList = conditionHitInfoList;
+                return this;
+            }
+
+            /**
+             * MachineHitResult.
+             */
+            public Builder machineHitResult(Integer machineHitResult) {
+                this.machineHitResult = machineHitResult;
+                return this;
+            }
+
+            /**
+             * ReviewHitResult.
+             */
+            public Builder reviewHitResult(Integer reviewHitResult) {
+                this.reviewHitResult = reviewHitResult;
                 return this;
             }
 
