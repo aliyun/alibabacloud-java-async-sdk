@@ -53,6 +53,10 @@ public class AttachVscMountPointRequest extends Request {
     private java.util.List<String> vscIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VscName")
+    private String vscName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VscType")
     private String vscType;
 
@@ -66,6 +70,7 @@ public class AttachVscMountPointRequest extends Request {
         this.mountPointId = builder.mountPointId;
         this.useAssumeRoleChkServerPerm = builder.useAssumeRoleChkServerPerm;
         this.vscIds = builder.vscIds;
+        this.vscName = builder.vscName;
         this.vscType = builder.vscType;
     }
 
@@ -139,6 +144,13 @@ public class AttachVscMountPointRequest extends Request {
     }
 
     /**
+     * @return vscName
+     */
+    public String getVscName() {
+        return this.vscName;
+    }
+
+    /**
      * @return vscType
      */
     public String getVscType() {
@@ -154,6 +166,7 @@ public class AttachVscMountPointRequest extends Request {
         private String mountPointId; 
         private Boolean useAssumeRoleChkServerPerm; 
         private java.util.List<String> vscIds; 
+        private String vscName; 
         private String vscType; 
 
         private Builder() {
@@ -170,6 +183,7 @@ public class AttachVscMountPointRequest extends Request {
             this.mountPointId = request.mountPointId;
             this.useAssumeRoleChkServerPerm = request.useAssumeRoleChkServerPerm;
             this.vscIds = request.vscIds;
+            this.vscName = request.vscName;
             this.vscType = request.vscType;
         } 
 
@@ -253,6 +267,15 @@ public class AttachVscMountPointRequest extends Request {
             String vscIdsShrink = shrink(vscIds, "VscIds", "json");
             this.putQueryParameter("VscIds", vscIdsShrink);
             this.vscIds = vscIds;
+            return this;
+        }
+
+        /**
+         * VscName.
+         */
+        public Builder vscName(String vscName) {
+            this.putQueryParameter("VscName", vscName);
+            this.vscName = vscName;
             return this;
         }
 

@@ -119,6 +119,9 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VscId")
         private String vscId;
 
+        @com.aliyun.core.annotation.NameInMap("VscName")
+        private String vscName;
+
         @com.aliyun.core.annotation.NameInMap("VscStatus")
         private String vscStatus;
 
@@ -127,6 +130,7 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
 
         private Vscs(Builder builder) {
             this.vscId = builder.vscId;
+            this.vscName = builder.vscName;
             this.vscStatus = builder.vscStatus;
             this.vscType = builder.vscType;
         }
@@ -147,6 +151,13 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
         }
 
         /**
+         * @return vscName
+         */
+        public String getVscName() {
+            return this.vscName;
+        }
+
+        /**
          * @return vscStatus
          */
         public String getVscStatus() {
@@ -162,6 +173,7 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String vscId; 
+            private String vscName; 
             private String vscStatus; 
             private String vscType; 
 
@@ -170,6 +182,7 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
 
             private Builder(Vscs model) {
                 this.vscId = model.vscId;
+                this.vscName = model.vscName;
                 this.vscStatus = model.vscStatus;
                 this.vscType = model.vscType;
             } 
@@ -179,6 +192,14 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
              */
             public Builder vscId(String vscId) {
                 this.vscId = vscId;
+                return this;
+            }
+
+            /**
+             * VscName.
+             */
+            public Builder vscName(String vscName) {
+                this.vscName = vscName;
                 return this;
             }
 
