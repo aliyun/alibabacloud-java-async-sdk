@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.companyreg20200306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloseIntentionForPartnerRequest} extends {@link RequestModel}
  *
  * <p>CloseIntentionForPartnerRequest</p>
  */
 public class CloseIntentionForPartnerRequest extends Request {
-    @Query
-    @NameInMap("BizType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizType;
 
-    @Query
-    @NameInMap("IntentionBizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntentionBizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String intentionBizId;
 
-    @Query
-    @NameInMap("Note")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Note")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String note;
 
     private CloseIntentionForPartnerRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class CloseIntentionForPartnerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,10 @@ public class CloseIntentionForPartnerRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esp.beian_assist</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -94,7 +102,10 @@ public class CloseIntentionForPartnerRequest extends Request {
         }
 
         /**
-         * IntentionBizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I20211105230733000001</p>
          */
         public Builder intentionBizId(String intentionBizId) {
             this.putQueryParameter("IntentionBizId", intentionBizId);
@@ -103,7 +114,7 @@ public class CloseIntentionForPartnerRequest extends Request {
         }
 
         /**
-         * Note.
+         * <p>This parameter is required.</p>
          */
         public Builder note(String note) {
             this.putQueryParameter("Note", note);

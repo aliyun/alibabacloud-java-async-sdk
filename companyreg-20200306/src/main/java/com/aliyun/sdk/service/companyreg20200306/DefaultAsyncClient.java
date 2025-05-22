@@ -96,6 +96,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of BindProduceAuthorization  BindProduceAuthorizationRequest
+     * @return BindProduceAuthorizationResponse
+     */
     @Override
     public CompletableFuture<BindProduceAuthorizationResponse> bindProduceAuthorization(BindProduceAuthorizationRequest request) {
         try {
@@ -110,6 +114,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CloseIntentionForPartner  CloseIntentionForPartnerRequest
+     * @return CloseIntentionForPartnerResponse
+     */
     @Override
     public CompletableFuture<CloseIntentionForPartnerResponse> closeIntentionForPartner(CloseIntentionForPartnerRequest request) {
         try {
@@ -124,6 +132,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CloseUserIntention  CloseUserIntentionRequest
+     * @return CloseUserIntentionResponse
+     */
     @Override
     public CompletableFuture<CloseUserIntentionResponse> closeUserIntention(CloseUserIntentionRequest request) {
         try {
@@ -138,6 +150,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateBusinessOpportunity  CreateBusinessOpportunityRequest
+     * @return CreateBusinessOpportunityResponse
+     */
     @Override
     public CompletableFuture<CreateBusinessOpportunityResponse> createBusinessOpportunity(CreateBusinessOpportunityRequest request) {
         try {
@@ -152,6 +168,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateProduceForPartner  CreateProduceForPartnerRequest
+     * @return CreateProduceForPartnerResponse
+     */
     @Override
     public CompletableFuture<CreateProduceForPartnerResponse> createProduceForPartner(CreateProduceForPartnerRequest request) {
         try {
@@ -166,6 +186,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePartnerConfig  DescribePartnerConfigRequest
+     * @return DescribePartnerConfigResponse
+     */
     @Override
     public CompletableFuture<DescribePartnerConfigResponse> describePartnerConfig(DescribePartnerConfigRequest request) {
         try {
@@ -180,6 +204,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GenerateUploadFilePolicy  GenerateUploadFilePolicyRequest
+     * @return GenerateUploadFilePolicyResponse
+     */
     @Override
     public CompletableFuture<GenerateUploadFilePolicyResponse> generateUploadFilePolicy(GenerateUploadFilePolicyRequest request) {
         try {
@@ -194,6 +222,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAlipayUrl  GetAlipayUrlRequest
+     * @return GetAlipayUrlResponse
+     */
     @Override
     public CompletableFuture<GetAlipayUrlResponse> getAlipayUrl(GetAlipayUrlRequest request) {
         try {
@@ -208,6 +240,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIntentionNote  ListIntentionNoteRequest
+     * @return ListIntentionNoteResponse
+     */
     @Override
     public CompletableFuture<ListIntentionNoteResponse> listIntentionNote(ListIntentionNoteRequest request) {
         try {
@@ -222,6 +258,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProduceAuthorization  ListProduceAuthorizationRequest
+     * @return ListProduceAuthorizationResponse
+     */
     @Override
     public CompletableFuture<ListProduceAuthorizationResponse> listProduceAuthorization(ListProduceAuthorizationRequest request) {
         try {
@@ -236,6 +276,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserDetailSolutions  ListUserDetailSolutionsRequest
+     * @return ListUserDetailSolutionsResponse
+     */
     @Override
     public CompletableFuture<ListUserDetailSolutionsResponse> listUserDetailSolutions(ListUserDetailSolutionsRequest request) {
         try {
@@ -250,6 +294,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserIntentionNotes  ListUserIntentionNotesRequest
+     * @return ListUserIntentionNotesResponse
+     */
     @Override
     public CompletableFuture<ListUserIntentionNotesResponse> listUserIntentionNotes(ListUserIntentionNotesRequest request) {
         try {
@@ -264,6 +312,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserIntentions  ListUserIntentionsRequest
+     * @return ListUserIntentionsResponse
+     */
     @Override
     public CompletableFuture<ListUserIntentionsResponse> listUserIntentions(ListUserIntentionsRequest request) {
         try {
@@ -278,6 +330,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserProduceOperateLogs  ListUserProduceOperateLogsRequest
+     * @return ListUserProduceOperateLogsResponse
+     */
     @Override
     public CompletableFuture<ListUserProduceOperateLogsResponse> listUserProduceOperateLogs(ListUserProduceOperateLogsRequest request) {
         try {
@@ -292,6 +348,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserSolutions  ListUserSolutionsRequest
+     * @return ListUserSolutionsResponse
+     */
     @Override
     public CompletableFuture<ListUserSolutionsResponse> listUserSolutions(ListUserSolutionsRequest request) {
         try {
@@ -306,6 +366,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateProduceForPartner  OperateProduceForPartnerRequest
+     * @return OperateProduceForPartnerResponse
+     */
     @Override
     public CompletableFuture<OperateProduceForPartnerResponse> operateProduceForPartner(OperateProduceForPartnerRequest request) {
         try {
@@ -320,6 +384,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PutMeasureData  PutMeasureDataRequest
+     * @return PutMeasureDataResponse
+     */
     @Override
     public CompletableFuture<PutMeasureDataResponse> putMeasureData(PutMeasureDataRequest request) {
         try {
@@ -334,6 +402,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PutMeasureReadyFlag  PutMeasureReadyFlagRequest
+     * @return PutMeasureReadyFlagResponse
+     */
     @Override
     public CompletableFuture<PutMeasureReadyFlagResponse> putMeasureReadyFlag(PutMeasureReadyFlagRequest request) {
         try {
@@ -348,6 +420,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAvailableNumbers  QueryAvailableNumbersRequest
+     * @return QueryAvailableNumbersResponse
+     */
     @Override
     public CompletableFuture<QueryAvailableNumbersResponse> queryAvailableNumbers(QueryAvailableNumbersRequest request) {
         try {
@@ -362,6 +438,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryBagRemaining  QueryBagRemainingRequest
+     * @return QueryBagRemainingResponse
+     */
     @Override
     public CompletableFuture<QueryBagRemainingResponse> queryBagRemaining(QueryBagRemainingRequest request) {
         try {
@@ -376,20 +456,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<QueryCommodityConfigResponse> queryCommodityConfig(QueryCommodityConfigRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryCommodityConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryCommodityConfigResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<QueryCommodityConfigResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of QueryInstance  QueryInstanceRequest
+     * @return QueryInstanceResponse
+     */
     @Override
     public CompletableFuture<QueryInstanceResponse> queryInstance(QueryInstanceRequest request) {
         try {
@@ -404,6 +474,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryPartnerIntentionList  QueryPartnerIntentionListRequest
+     * @return QueryPartnerIntentionListResponse
+     */
     @Override
     public CompletableFuture<QueryPartnerIntentionListResponse> queryPartnerIntentionList(QueryPartnerIntentionListRequest request) {
         try {
@@ -418,6 +492,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryPartnerProduceList  QueryPartnerProduceListRequest
+     * @return QueryPartnerProduceListResponse
+     */
     @Override
     public CompletableFuture<QueryPartnerProduceListResponse> queryPartnerProduceList(QueryPartnerProduceListRequest request) {
         try {
@@ -432,6 +510,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUserNeedAuth  QueryUserNeedAuthRequest
+     * @return QueryUserNeedAuthResponse
+     */
     @Override
     public CompletableFuture<QueryUserNeedAuthResponse> queryUserNeedAuth(QueryUserNeedAuthRequest request) {
         try {
@@ -446,6 +528,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecordPostBack  RecordPostBackRequest
+     * @return RecordPostBackResponse
+     */
     @Override
     public CompletableFuture<RecordPostBackResponse> recordPostBack(RecordPostBackRequest request) {
         try {
@@ -460,6 +546,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RejectSolution  RejectSolutionRequest
+     * @return RejectSolutionResponse
+     */
     @Override
     public CompletableFuture<RejectSolutionResponse> rejectSolution(RejectSolutionRequest request) {
         try {
@@ -474,6 +564,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RejectUserSolution  RejectUserSolutionRequest
+     * @return RejectUserSolutionResponse
+     */
     @Override
     public CompletableFuture<RejectUserSolutionResponse> rejectUserSolution(RejectUserSolutionRequest request) {
         try {
@@ -488,6 +582,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleaseProduceAuthorization  ReleaseProduceAuthorizationRequest
+     * @return ReleaseProduceAuthorizationResponse
+     */
     @Override
     public CompletableFuture<ReleaseProduceAuthorizationResponse> releaseProduceAuthorization(ReleaseProduceAuthorizationRequest request) {
         try {
@@ -502,6 +600,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartBackToBackCall  StartBackToBackCallRequest
+     * @return StartBackToBackCallResponse
+     */
     @Override
     public CompletableFuture<StartBackToBackCallResponse> startBackToBackCall(StartBackToBackCallRequest request) {
         try {
@@ -516,6 +618,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitIntentionForPartner  SubmitIntentionForPartnerRequest
+     * @return SubmitIntentionForPartnerResponse
+     */
+    @Override
+    public CompletableFuture<SubmitIntentionForPartnerResponse> submitIntentionForPartner(SubmitIntentionForPartnerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitIntentionForPartner").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitIntentionForPartnerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitIntentionForPartnerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitIntentionNote  SubmitIntentionNoteRequest
+     * @return SubmitIntentionNoteResponse
+     */
     @Override
     public CompletableFuture<SubmitIntentionNoteResponse> submitIntentionNote(SubmitIntentionNoteRequest request) {
         try {
@@ -530,6 +654,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitSolution  SubmitSolutionRequest
+     * @return SubmitSolutionResponse
+     */
     @Override
     public CompletableFuture<SubmitSolutionResponse> submitSolution(SubmitSolutionRequest request) {
         try {
@@ -544,6 +672,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TransferIntentionOwner  TransferIntentionOwnerRequest
+     * @return TransferIntentionOwnerResponse
+     */
     @Override
     public CompletableFuture<TransferIntentionOwnerResponse> transferIntentionOwner(TransferIntentionOwnerRequest request) {
         try {
@@ -558,6 +690,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TransferProduceOwner  TransferProduceOwnerRequest
+     * @return TransferProduceOwnerResponse
+     */
     @Override
     public CompletableFuture<TransferProduceOwnerResponse> transferProduceOwner(TransferProduceOwnerRequest request) {
         try {

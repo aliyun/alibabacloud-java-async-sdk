@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.companyreg20200306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateUploadFilePolicyResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateUploadFilePolicyResponseBody</p>
  */
 public class GenerateUploadFilePolicyResponseBody extends TeaModel {
-    @NameInMap("AccessId")
+    @com.aliyun.core.annotation.NameInMap("AccessId")
     private String accessId;
 
-    @NameInMap("EncodedPolicy")
+    @com.aliyun.core.annotation.NameInMap("EncodedPolicy")
     private String encodedPolicy;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @NameInMap("FileDir")
+    @com.aliyun.core.annotation.NameInMap("FileDir")
     private String fileDir;
 
-    @NameInMap("FileUrl")
+    @com.aliyun.core.annotation.NameInMap("FileUrl")
     private String fileUrl;
 
-    @NameInMap("Host")
+    @com.aliyun.core.annotation.NameInMap("Host")
     private String host;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Signature")
+    @com.aliyun.core.annotation.NameInMap("Signature")
     private String signature;
 
     private GenerateUploadFilePolicyResponseBody(Builder builder) {
@@ -53,6 +58,10 @@ public class GenerateUploadFilePolicyResponseBody extends TeaModel {
 
     public static GenerateUploadFilePolicyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -121,8 +130,25 @@ public class GenerateUploadFilePolicyResponseBody extends TeaModel {
         private String requestId; 
         private String signature; 
 
+        private Builder() {
+        } 
+
+        private Builder(GenerateUploadFilePolicyResponseBody model) {
+            this.accessId = model.accessId;
+            this.encodedPolicy = model.encodedPolicy;
+            this.expireTime = model.expireTime;
+            this.fileDir = model.fileDir;
+            this.fileUrl = model.fileUrl;
+            this.host = model.host;
+            this.requestId = model.requestId;
+            this.signature = model.signature;
+        } 
+
         /**
-         * OSSAccessKeyId
+         * <p>OSSAccessKeyId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hObpgEXoca42qH3V</p>
          */
         public Builder accessId(String accessId) {
             this.accessId = accessId;
@@ -162,7 +188,10 @@ public class GenerateUploadFilePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * OSS Endpoint。
+         * <p>OSS Endpoint。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>//companyapply.oss-cn-zhangjiakou.aliyuncs.com/</p>
          */
         public Builder host(String host) {
             this.host = host;

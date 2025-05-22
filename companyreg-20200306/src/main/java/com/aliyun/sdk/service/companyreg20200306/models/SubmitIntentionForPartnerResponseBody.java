@@ -12,19 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link TransferIntentionOwnerResponseBody} extends {@link TeaModel}
+ * {@link SubmitIntentionForPartnerResponseBody} extends {@link TeaModel}
  *
- * <p>TransferIntentionOwnerResponseBody</p>
+ * <p>SubmitIntentionForPartnerResponseBody</p>
  */
-public class TransferIntentionOwnerResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("Data")
-    private Boolean data;
-
-    @com.aliyun.core.annotation.NameInMap("ErrorCode")
-    private String errorCode;
-
+public class SubmitIntentionForPartnerResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ErrorMsg")
     private String errorMsg;
+
+    @com.aliyun.core.annotation.NameInMap("IntentionBizId")
+    private String intentionBizId;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -32,10 +29,9 @@ public class TransferIntentionOwnerResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private TransferIntentionOwnerResponseBody(Builder builder) {
-        this.data = builder.data;
-        this.errorCode = builder.errorCode;
+    private SubmitIntentionForPartnerResponseBody(Builder builder) {
         this.errorMsg = builder.errorMsg;
+        this.intentionBizId = builder.intentionBizId;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -44,7 +40,7 @@ public class TransferIntentionOwnerResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static TransferIntentionOwnerResponseBody create() {
+    public static SubmitIntentionForPartnerResponseBody create() {
         return builder().build();
     }
 
@@ -53,24 +49,17 @@ public class TransferIntentionOwnerResponseBody extends TeaModel {
     }
 
     /**
-     * @return data
-     */
-    public Boolean getData() {
-        return this.data;
-    }
-
-    /**
-     * @return errorCode
-     */
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    /**
      * @return errorMsg
      */
     public String getErrorMsg() {
         return this.errorMsg;
+    }
+
+    /**
+     * @return intentionBizId
+     */
+    public String getIntentionBizId() {
+        return this.intentionBizId;
     }
 
     /**
@@ -88,38 +77,20 @@ public class TransferIntentionOwnerResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Boolean data; 
-        private String errorCode; 
         private String errorMsg; 
+        private String intentionBizId; 
         private String requestId; 
         private Boolean success; 
 
         private Builder() {
         } 
 
-        private Builder(TransferIntentionOwnerResponseBody model) {
-            this.data = model.data;
-            this.errorCode = model.errorCode;
+        private Builder(SubmitIntentionForPartnerResponseBody model) {
             this.errorMsg = model.errorMsg;
+            this.intentionBizId = model.intentionBizId;
             this.requestId = model.requestId;
             this.success = model.success;
         } 
-
-        /**
-         * Data.
-         */
-        public Builder data(Boolean data) {
-            this.data = data;
-            return this;
-        }
-
-        /**
-         * ErrorCode.
-         */
-        public Builder errorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
 
         /**
          * ErrorMsg.
@@ -130,7 +101,18 @@ public class TransferIntentionOwnerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * IntentionBizId.
+         */
+        public Builder intentionBizId(String intentionBizId) {
+            this.intentionBizId = intentionBizId;
+            return this;
+        }
+
+        /**
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A603AA0-73BA-52B3-AC7D-0F846ECF7A9D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,8 +127,8 @@ public class TransferIntentionOwnerResponseBody extends TeaModel {
             return this;
         }
 
-        public TransferIntentionOwnerResponseBody build() {
-            return new TransferIntentionOwnerResponseBody(this);
+        public SubmitIntentionForPartnerResponseBody build() {
+            return new SubmitIntentionForPartnerResponseBody(this);
         } 
 
     } 

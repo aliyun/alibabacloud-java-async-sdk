@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.companyreg20200306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecordPostBackRequest} extends {@link RequestModel}
  *
  * <p>RecordPostBackRequest</p>
  */
 public class RecordPostBackRequest extends Request {
-    @Query
-    @NameInMap("bizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("bizType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bizType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizType;
 
-    @Query
-    @NameInMap("contactor")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("contactor")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactor;
 
-    @Query
-    @NameInMap("content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Query
-    @NameInMap("entityKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("entityKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String entityKey;
 
     private RecordPostBackRequest(Builder builder) {
@@ -54,7 +59,7 @@ public class RecordPostBackRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -115,7 +120,10 @@ public class RecordPostBackRequest extends Request {
         } 
 
         /**
-         * bizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P111111111111</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("bizId", bizId);
@@ -124,7 +132,10 @@ public class RecordPostBackRequest extends Request {
         }
 
         /**
-         * bizType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esp.zhangsan</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("bizType", bizType);
@@ -133,7 +144,7 @@ public class RecordPostBackRequest extends Request {
         }
 
         /**
-         * contactor.
+         * <p>This parameter is required.</p>
          */
         public Builder contactor(String contactor) {
             this.putQueryParameter("contactor", contactor);
@@ -142,7 +153,7 @@ public class RecordPostBackRequest extends Request {
         }
 
         /**
-         * content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("content", content);
@@ -151,7 +162,10 @@ public class RecordPostBackRequest extends Request {
         }
 
         /**
-         * entityKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esp_produce</p>
          */
         public Builder entityKey(String entityKey) {
             this.putQueryParameter("entityKey", entityKey);

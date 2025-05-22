@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.companyreg20200306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserDetailSolutionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserDetailSolutionsResponseBody</p>
  */
 public class ListUserDetailSolutionsResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private ListUserDetailSolutionsResponseBody(Builder builder) {
@@ -47,6 +52,10 @@ public class ListUserDetailSolutionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPageNum
      */
@@ -57,7 +66,7 @@ public class ListUserDetailSolutionsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,11 +100,23 @@ public class ListUserDetailSolutionsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPageNum; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserDetailSolutionsResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * CurrentPageNum.
@@ -108,7 +129,7 @@ public class ListUserDetailSolutionsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -151,41 +172,47 @@ public class ListUserDetailSolutionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserDetailSolutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserDetailSolutionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DeliveryOrderBizId")
+        @com.aliyun.core.annotation.NameInMap("DeliveryOrderBizId")
         private String deliveryOrderBizId;
 
-        @NameInMap("ExtInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
         private String extInfo;
 
-        @NameInMap("IntentionAssignBizId")
+        @com.aliyun.core.annotation.NameInMap("IntentionAssignBizId")
         private String intentionAssignBizId;
 
-        @NameInMap("IntentionBizId")
+        @com.aliyun.core.annotation.NameInMap("IntentionBizId")
         private String intentionBizId;
 
-        @NameInMap("PartnerCode")
+        @com.aliyun.core.annotation.NameInMap("PartnerCode")
         private String partnerCode;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Data(Builder builder) {
@@ -308,6 +335,24 @@ public class ListUserDetailSolutionsResponseBody extends TeaModel {
             private Integer status; 
             private Long updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bizId = model.bizId;
+                this.bizType = model.bizType;
+                this.createTime = model.createTime;
+                this.deliveryOrderBizId = model.deliveryOrderBizId;
+                this.extInfo = model.extInfo;
+                this.intentionAssignBizId = model.intentionAssignBizId;
+                this.intentionBizId = model.intentionBizId;
+                this.partnerCode = model.partnerCode;
+                this.reason = model.reason;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * BizId.

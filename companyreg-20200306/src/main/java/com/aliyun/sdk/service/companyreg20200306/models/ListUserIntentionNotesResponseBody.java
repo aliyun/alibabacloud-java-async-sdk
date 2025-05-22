@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.companyreg20200306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserIntentionNotesResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserIntentionNotesResponseBody</p>
  */
 public class ListUserIntentionNotesResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private ListUserIntentionNotesResponseBody(Builder builder) {
@@ -51,10 +56,14 @@ public class ListUserIntentionNotesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -101,7 +110,7 @@ public class ListUserIntentionNotesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer pageNum; 
         private Integer pageSize; 
         private String requestId; 
@@ -109,10 +118,23 @@ public class ListUserIntentionNotesResponseBody extends TeaModel {
         private Integer totalItemNum; 
         private Integer totalPageNum; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListUserIntentionNotesResponseBody model) {
+            this.data = model.data;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
+
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -171,11 +193,17 @@ public class ListUserIntentionNotesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserIntentionNotesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserIntentionNotesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Note")
+        @com.aliyun.core.annotation.NameInMap("Note")
         private String note;
 
         private Data(Builder builder) {
@@ -208,6 +236,14 @@ public class ListUserIntentionNotesResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private String note; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.note = model.note;
+            } 
 
             /**
              * CreateTime.

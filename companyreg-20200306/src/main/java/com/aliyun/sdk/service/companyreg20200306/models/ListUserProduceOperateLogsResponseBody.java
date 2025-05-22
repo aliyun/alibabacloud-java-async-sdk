@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.companyreg20200306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserProduceOperateLogsResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserProduceOperateLogsResponseBody</p>
  */
 public class ListUserProduceOperateLogsResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private ListUserProduceOperateLogsResponseBody(Builder builder) {
@@ -51,10 +56,14 @@ public class ListUserProduceOperateLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -101,7 +110,7 @@ public class ListUserProduceOperateLogsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer pageNum; 
         private Integer pageSize; 
         private String requestId; 
@@ -109,10 +118,23 @@ public class ListUserProduceOperateLogsResponseBody extends TeaModel {
         private Integer totalItemNum; 
         private Integer totalPageNum; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListUserProduceOperateLogsResponseBody model) {
+            this.data = model.data;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
+
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -171,29 +193,35 @@ public class ListUserProduceOperateLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserProduceOperateLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserProduceOperateLogsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("BizStatus")
+        @com.aliyun.core.annotation.NameInMap("BizStatus")
         private Integer bizStatus;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("Note")
+        @com.aliyun.core.annotation.NameInMap("Note")
         private String note;
 
-        @NameInMap("OperateName")
+        @com.aliyun.core.annotation.NameInMap("OperateName")
         private String operateName;
 
-        @NameInMap("OperateTime")
+        @com.aliyun.core.annotation.NameInMap("OperateTime")
         private Long operateTime;
 
-        @NameInMap("OperateUserType")
+        @com.aliyun.core.annotation.NameInMap("OperateUserType")
         private String operateUserType;
 
-        @NameInMap("ToBizStatus")
+        @com.aliyun.core.annotation.NameInMap("ToBizStatus")
         private Integer toBizStatus;
 
         private Data(Builder builder) {
@@ -280,6 +308,20 @@ public class ListUserProduceOperateLogsResponseBody extends TeaModel {
             private Long operateTime; 
             private String operateUserType; 
             private Integer toBizStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bizId = model.bizId;
+                this.bizStatus = model.bizStatus;
+                this.bizType = model.bizType;
+                this.note = model.note;
+                this.operateName = model.operateName;
+                this.operateTime = model.operateTime;
+                this.operateUserType = model.operateUserType;
+                this.toBizStatus = model.toBizStatus;
+            } 
 
             /**
              * BizId.

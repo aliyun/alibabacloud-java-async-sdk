@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.companyreg20200306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPartnerIntentionListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPartnerIntentionListResponseBody</p>
  */
 public class QueryPartnerIntentionListResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Long currentPageNum;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Long totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Long totalPageNum;
 
     private QueryPartnerIntentionListResponseBody(Builder builder) {
@@ -47,6 +52,10 @@ public class QueryPartnerIntentionListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPageNum
      */
@@ -57,7 +66,7 @@ public class QueryPartnerIntentionListResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,11 +100,23 @@ public class QueryPartnerIntentionListResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long currentPageNum; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Long pageSize; 
         private String requestId; 
         private Long totalItemNum; 
         private Long totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPartnerIntentionListResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * CurrentPageNum.
@@ -108,7 +129,7 @@ public class QueryPartnerIntentionListResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -151,14 +172,20 @@ public class QueryPartnerIntentionListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPartnerIntentionListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPartnerIntentionListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
         private Data(Builder builder) {
@@ -200,6 +227,15 @@ public class QueryPartnerIntentionListResponseBody extends TeaModel {
             private String bizId; 
             private String bizType; 
             private String mobile; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bizId = model.bizId;
+                this.bizType = model.bizType;
+                this.mobile = model.mobile;
+            } 
 
             /**
              * BizId.

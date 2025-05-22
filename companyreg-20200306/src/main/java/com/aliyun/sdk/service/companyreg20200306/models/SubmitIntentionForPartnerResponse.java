@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.companyreg20200306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryCommodityConfigResponse} extends {@link TeaModel}
+ * 
+ * {@link SubmitIntentionForPartnerResponse} extends {@link TeaModel}
  *
- * <p>QueryCommodityConfigResponse</p>
+ * <p>SubmitIntentionForPartnerResponse</p>
  */
-public class QueryCommodityConfigResponse extends Response {
-    @NameInMap("headers")
-    private java.util.Map < String, String > headers;
+public class SubmitIntentionForPartnerResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    private QueryCommodityConfigResponseBody body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private SubmitIntentionForPartnerResponseBody body;
 
-    private QueryCommodityConfigResponse(BuilderImpl builder) {
+    private SubmitIntentionForPartnerResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static QueryCommodityConfigResponse create() {
+    public static SubmitIntentionForPartnerResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -40,7 +45,7 @@ public class QueryCommodityConfigResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,35 +59,35 @@ public class QueryCommodityConfigResponse extends Response {
     /**
      * @return body
      */
-    public QueryCommodityConfigResponseBody getBody() {
+    public SubmitIntentionForPartnerResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<QueryCommodityConfigResponse, Builder> {
+    public interface Builder extends Response.Builder<SubmitIntentionForPartnerResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(QueryCommodityConfigResponseBody body);
+        Builder body(SubmitIntentionForPartnerResponseBody body);
 
         @Override
-        QueryCommodityConfigResponse build();
+        SubmitIntentionForPartnerResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<QueryCommodityConfigResponse, Builder>
+            extends Response.BuilderImpl<SubmitIntentionForPartnerResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private QueryCommodityConfigResponseBody body; 
+        private SubmitIntentionForPartnerResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(QueryCommodityConfigResponse response) {
+        private BuilderImpl(SubmitIntentionForPartnerResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -93,7 +98,7 @@ public class QueryCommodityConfigResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,14 +116,14 @@ public class QueryCommodityConfigResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(QueryCommodityConfigResponseBody body) {
+        public Builder body(SubmitIntentionForPartnerResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public QueryCommodityConfigResponse build() {
-            return new QueryCommodityConfigResponse(this);
+        public SubmitIntentionForPartnerResponse build() {
+            return new SubmitIntentionForPartnerResponse(this);
         } 
 
     } 

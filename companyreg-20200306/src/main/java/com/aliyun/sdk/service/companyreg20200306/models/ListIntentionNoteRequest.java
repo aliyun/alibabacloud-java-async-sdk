@@ -1,41 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.companyreg20200306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIntentionNoteRequest} extends {@link RequestModel}
  *
  * <p>ListIntentionNoteRequest</p>
  */
 public class ListIntentionNoteRequest extends Request {
-    @Query
-    @NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
     private Long beginTime;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    private String bizType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("IntentionBizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntentionBizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String intentionBizId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private ListIntentionNoteRequest(Builder builder) {
         super(builder);
         this.beginTime = builder.beginTime;
+        this.bizType = builder.bizType;
         this.endTime = builder.endTime;
         this.intentionBizId = builder.intentionBizId;
         this.pageNumber = builder.pageNumber;
@@ -50,7 +60,7 @@ public class ListIntentionNoteRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,6 +70,13 @@ public class ListIntentionNoteRequest extends Request {
      */
     public Long getBeginTime() {
         return this.beginTime;
+    }
+
+    /**
+     * @return bizType
+     */
+    public String getBizType() {
+        return this.bizType;
     }
 
     /**
@@ -92,6 +109,7 @@ public class ListIntentionNoteRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListIntentionNoteRequest, Builder> {
         private Long beginTime; 
+        private String bizType; 
         private Long endTime; 
         private String intentionBizId; 
         private Integer pageNumber; 
@@ -104,6 +122,7 @@ public class ListIntentionNoteRequest extends Request {
         private Builder(ListIntentionNoteRequest request) {
             super(request);
             this.beginTime = request.beginTime;
+            this.bizType = request.bizType;
             this.endTime = request.endTime;
             this.intentionBizId = request.intentionBizId;
             this.pageNumber = request.pageNumber;
@@ -120,6 +139,15 @@ public class ListIntentionNoteRequest extends Request {
         }
 
         /**
+         * BizType.
+         */
+        public Builder bizType(String bizType) {
+            this.putQueryParameter("BizType", bizType);
+            this.bizType = bizType;
+            return this;
+        }
+
+        /**
          * EndTime.
          */
         public Builder endTime(Long endTime) {
@@ -129,7 +157,10 @@ public class ListIntentionNoteRequest extends Request {
         }
 
         /**
-         * IntentionBizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I20210420142416000001</p>
          */
         public Builder intentionBizId(String intentionBizId) {
             this.putQueryParameter("IntentionBizId", intentionBizId);

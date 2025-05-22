@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.companyreg20200306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSolutionResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitSolutionResponseBody</p>
  */
 public class SubmitSolutionResponseBody extends TeaModel {
-    @NameInMap("ConfirmUrl")
+    @com.aliyun.core.annotation.NameInMap("ConfirmUrl")
     private String confirmUrl;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMsg")
+    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
     private String errorMsg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SolutionBizId")
+    @com.aliyun.core.annotation.NameInMap("SolutionBizId")
     private String solutionBizId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private SubmitSolutionResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class SubmitSolutionResponseBody extends TeaModel {
 
     public static SubmitSolutionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class SubmitSolutionResponseBody extends TeaModel {
         private String requestId; 
         private String solutionBizId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitSolutionResponseBody model) {
+            this.confirmUrl = model.confirmUrl;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.solutionBizId = model.solutionBizId;
+            this.success = model.success;
+        } 
 
         /**
          * ConfirmUrl.

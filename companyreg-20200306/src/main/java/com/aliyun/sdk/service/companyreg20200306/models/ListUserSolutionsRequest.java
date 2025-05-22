@@ -1,35 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.companyreg20200306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserSolutionsRequest} extends {@link RequestModel}
  *
  * <p>ListUserSolutionsRequest</p>
  */
 public class ListUserSolutionsRequest extends Request {
-    @Query
-    @NameInMap("ExistStatus")
-    private java.util.List < Long > existStatus;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    private String bizType;
 
-    @Query
-    @NameInMap("IntentionBizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExistStatus")
+    private java.util.List<Long> existStatus;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntentionBizId")
     private String intentionBizId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private ListUserSolutionsRequest(Builder builder) {
         super(builder);
+        this.bizType = builder.bizType;
         this.existStatus = builder.existStatus;
         this.intentionBizId = builder.intentionBizId;
         this.pageNum = builder.pageNum;
@@ -44,15 +54,22 @@ public class ListUserSolutionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
 
     /**
+     * @return bizType
+     */
+    public String getBizType() {
+        return this.bizType;
+    }
+
+    /**
      * @return existStatus
      */
-    public java.util.List < Long > getExistStatus() {
+    public java.util.List<Long> getExistStatus() {
         return this.existStatus;
     }
 
@@ -78,7 +95,8 @@ public class ListUserSolutionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListUserSolutionsRequest, Builder> {
-        private java.util.List < Long > existStatus; 
+        private String bizType; 
+        private java.util.List<Long> existStatus; 
         private String intentionBizId; 
         private Integer pageNum; 
         private Integer pageSize; 
@@ -89,6 +107,7 @@ public class ListUserSolutionsRequest extends Request {
 
         private Builder(ListUserSolutionsRequest request) {
             super(request);
+            this.bizType = request.bizType;
             this.existStatus = request.existStatus;
             this.intentionBizId = request.intentionBizId;
             this.pageNum = request.pageNum;
@@ -96,9 +115,18 @@ public class ListUserSolutionsRequest extends Request {
         } 
 
         /**
+         * BizType.
+         */
+        public Builder bizType(String bizType) {
+            this.putQueryParameter("BizType", bizType);
+            this.bizType = bizType;
+            return this;
+        }
+
+        /**
          * ExistStatus.
          */
-        public Builder existStatus(java.util.List < Long > existStatus) {
+        public Builder existStatus(java.util.List<Long> existStatus) {
             String existStatusShrink = shrink(existStatus, "ExistStatus", "json");
             this.putQueryParameter("ExistStatus", existStatusShrink);
             this.existStatus = existStatus;

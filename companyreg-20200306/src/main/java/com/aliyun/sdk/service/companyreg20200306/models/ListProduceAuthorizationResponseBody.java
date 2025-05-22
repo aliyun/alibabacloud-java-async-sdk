@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.companyreg20200306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProduceAuthorizationResponseBody} extends {@link TeaModel}
  *
  * <p>ListProduceAuthorizationResponseBody</p>
  */
 public class ListProduceAuthorizationResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private ListProduceAuthorizationResponseBody(Builder builder) {
@@ -51,6 +56,10 @@ public class ListProduceAuthorizationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPageNum
      */
@@ -61,7 +70,7 @@ public class ListProduceAuthorizationResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -102,12 +111,25 @@ public class ListProduceAuthorizationResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPageNum; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer pageSize; 
         private String requestId; 
         private Boolean success; 
         private Integer totalItemNum; 
         private Integer totalPageNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProduceAuthorizationResponseBody model) {
+            this.currentPageNum = model.currentPageNum;
+            this.data = model.data;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalItemNum = model.totalItemNum;
+            this.totalPageNum = model.totalPageNum;
+        } 
 
         /**
          * CurrentPageNum.
@@ -120,7 +142,7 @@ public class ListProduceAuthorizationResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -171,11 +193,17 @@ public class ListProduceAuthorizationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProduceAuthorizationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProduceAuthorizationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AuthorizedUserId")
+        @com.aliyun.core.annotation.NameInMap("AuthorizedUserId")
         private String authorizedUserId;
 
-        @NameInMap("AuthorizedUserName")
+        @com.aliyun.core.annotation.NameInMap("AuthorizedUserName")
         private String authorizedUserName;
 
         private Data(Builder builder) {
@@ -208,6 +236,14 @@ public class ListProduceAuthorizationResponseBody extends TeaModel {
         public static final class Builder {
             private String authorizedUserId; 
             private String authorizedUserName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.authorizedUserId = model.authorizedUserId;
+                this.authorizedUserName = model.authorizedUserName;
+            } 
 
             /**
              * AuthorizedUserId.

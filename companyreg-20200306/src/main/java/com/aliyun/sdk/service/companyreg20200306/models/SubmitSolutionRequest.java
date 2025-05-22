@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.companyreg20200306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSolutionRequest} extends {@link RequestModel}
  *
  * <p>SubmitSolutionRequest</p>
  */
 public class SubmitSolutionRequest extends Request {
-    @Query
-    @NameInMap("BizType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizType;
 
-    @Query
-    @NameInMap("IntentionBizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntentionBizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String intentionBizId;
 
-    @Query
-    @NameInMap("OperateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperateType")
     private String operateType;
 
-    @Query
-    @NameInMap("Solution")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Solution")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String solution;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private SubmitSolutionRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class SubmitSolutionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +118,10 @@ public class SubmitSolutionRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esp.wangwen</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -122,7 +130,10 @@ public class SubmitSolutionRequest extends Request {
         }
 
         /**
-         * IntentionBizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I20211223101045000001</p>
          */
         public Builder intentionBizId(String intentionBizId) {
             this.putQueryParameter("IntentionBizId", intentionBizId);
@@ -140,7 +151,7 @@ public class SubmitSolutionRequest extends Request {
         }
 
         /**
-         * Solution.
+         * <p>This parameter is required.</p>
          */
         public Builder solution(String solution) {
             this.putQueryParameter("Solution", solution);

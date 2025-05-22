@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.companyreg20200306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePartnerConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePartnerConfigResponseBody</p>
  */
 public class DescribePartnerConfigResponseBody extends TeaModel {
-    @NameInMap("Contact")
+    @com.aliyun.core.annotation.NameInMap("Contact")
     private String contact;
 
-    @NameInMap("PartnerCode")
+    @com.aliyun.core.annotation.NameInMap("PartnerCode")
     private String partnerCode;
 
-    @NameInMap("PartnerName")
+    @com.aliyun.core.annotation.NameInMap("PartnerName")
     private String partnerName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePartnerConfigResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class DescribePartnerConfigResponseBody extends TeaModel {
 
     public static DescribePartnerConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +81,16 @@ public class DescribePartnerConfigResponseBody extends TeaModel {
         private String partnerCode; 
         private String partnerName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePartnerConfigResponseBody model) {
+            this.contact = model.contact;
+            this.partnerCode = model.partnerCode;
+            this.partnerName = model.partnerName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Contact.

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.companyreg20200306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloseUserIntentionRequest} extends {@link RequestModel}
  *
  * <p>CloseUserIntentionRequest</p>
  */
 public class CloseUserIntentionRequest extends Request {
-    @Query
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
-    @Query
-    @NameInMap("IntentionBizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntentionBizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String intentionBizId;
 
-    @Query
-    @NameInMap("Note")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Note")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String note;
 
     private CloseUserIntentionRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class CloseUserIntentionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -93,7 +98,10 @@ public class CloseUserIntentionRequest extends Request {
         }
 
         /**
-         * IntentionBizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I20201027162033000001</p>
          */
         public Builder intentionBizId(String intentionBizId) {
             this.putQueryParameter("IntentionBizId", intentionBizId);
@@ -102,7 +110,7 @@ public class CloseUserIntentionRequest extends Request {
         }
 
         /**
-         * Note.
+         * <p>This parameter is required.</p>
          */
         public Builder note(String note) {
             this.putQueryParameter("Note", note);

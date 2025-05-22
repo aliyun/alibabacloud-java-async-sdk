@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.companyreg20200306.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindProduceAuthorizationResponseBody} extends {@link TeaModel}
  *
  * <p>BindProduceAuthorizationResponseBody</p>
  */
 public class BindProduceAuthorizationResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMsg")
+    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
     private String errorMsg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BindProduceAuthorizationResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class BindProduceAuthorizationResponseBody extends TeaModel {
 
     public static BindProduceAuthorizationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +81,16 @@ public class BindProduceAuthorizationResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMsg; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BindProduceAuthorizationResponseBody model) {
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -111,14 +130,20 @@ public class BindProduceAuthorizationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BindProduceAuthorizationResponseBody} extends {@link TeaModel}
+     *
+     * <p>BindProduceAuthorizationResponseBody</p>
+     */
     public static class AuthorizedUserList extends TeaModel {
-        @NameInMap("AccountValidType")
+        @com.aliyun.core.annotation.NameInMap("AccountValidType")
         private Integer accountValidType;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private AuthorizedUserList(Builder builder) {
@@ -161,6 +186,15 @@ public class BindProduceAuthorizationResponseBody extends TeaModel {
             private String userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthorizedUserList model) {
+                this.accountValidType = model.accountValidType;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * AccountValidType.
              */
@@ -192,14 +226,20 @@ public class BindProduceAuthorizationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BindProduceAuthorizationResponseBody} extends {@link TeaModel}
+     *
+     * <p>BindProduceAuthorizationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AuthorizedUserList")
-        private java.util.List < AuthorizedUserList> authorizedUserList;
+        @com.aliyun.core.annotation.NameInMap("AuthorizedUserList")
+        private java.util.List<AuthorizedUserList> authorizedUserList;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Data(Builder builder) {
@@ -219,7 +259,7 @@ public class BindProduceAuthorizationResponseBody extends TeaModel {
         /**
          * @return authorizedUserList
          */
-        public java.util.List < AuthorizedUserList> getAuthorizedUserList() {
+        public java.util.List<AuthorizedUserList> getAuthorizedUserList() {
             return this.authorizedUserList;
         }
 
@@ -238,14 +278,23 @@ public class BindProduceAuthorizationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AuthorizedUserList> authorizedUserList; 
+            private java.util.List<AuthorizedUserList> authorizedUserList; 
             private String message; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.authorizedUserList = model.authorizedUserList;
+                this.message = model.message;
+                this.success = model.success;
+            } 
 
             /**
              * AuthorizedUserList.
              */
-            public Builder authorizedUserList(java.util.List < AuthorizedUserList> authorizedUserList) {
+            public Builder authorizedUserList(java.util.List<AuthorizedUserList> authorizedUserList) {
                 this.authorizedUserList = authorizedUserList;
                 return this;
             }
