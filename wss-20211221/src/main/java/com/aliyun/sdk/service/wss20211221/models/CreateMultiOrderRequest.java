@@ -235,6 +235,9 @@ public class CreateMultiOrderRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AutoRenew")
         private Boolean autoRenew;
 
+        @com.aliyun.core.annotation.NameInMap("BuyChange")
+        private Boolean buyChange;
+
         @com.aliyun.core.annotation.NameInMap("Components")
         private java.util.List<Components> components;
 
@@ -258,6 +261,7 @@ public class CreateMultiOrderRequest extends Request {
             this.amount = builder.amount;
             this.autoPay = builder.autoPay;
             this.autoRenew = builder.autoRenew;
+            this.buyChange = builder.buyChange;
             this.components = builder.components;
             this.period = builder.period;
             this.periodUnit = builder.periodUnit;
@@ -293,6 +297,13 @@ public class CreateMultiOrderRequest extends Request {
          */
         public Boolean getAutoRenew() {
             return this.autoRenew;
+        }
+
+        /**
+         * @return buyChange
+         */
+        public Boolean getBuyChange() {
+            return this.buyChange;
         }
 
         /**
@@ -341,6 +352,7 @@ public class CreateMultiOrderRequest extends Request {
             private Integer amount; 
             private Boolean autoPay; 
             private Boolean autoRenew; 
+            private Boolean buyChange; 
             private java.util.List<Components> components; 
             private Integer period; 
             private String periodUnit; 
@@ -355,6 +367,7 @@ public class CreateMultiOrderRequest extends Request {
                 this.amount = model.amount;
                 this.autoPay = model.autoPay;
                 this.autoRenew = model.autoRenew;
+                this.buyChange = model.buyChange;
                 this.components = model.components;
                 this.period = model.period;
                 this.periodUnit = model.periodUnit;
@@ -384,6 +397,14 @@ public class CreateMultiOrderRequest extends Request {
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
+                return this;
+            }
+
+            /**
+             * BuyChange.
+             */
+            public Builder buyChange(Boolean buyChange) {
+                this.buyChange = buyChange;
                 return this;
             }
 
