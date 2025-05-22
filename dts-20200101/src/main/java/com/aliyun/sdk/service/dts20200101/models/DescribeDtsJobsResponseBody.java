@@ -1296,6 +1296,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
      * <p>DescribeDtsJobsResponseBody</p>
      */
     public static class FullDataCheckStatus extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CanSwitch")
+        private Boolean canSwitch;
+
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
@@ -1309,6 +1312,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         private String status;
 
         private FullDataCheckStatus(Builder builder) {
+            this.canSwitch = builder.canSwitch;
             this.errorMessage = builder.errorMessage;
             this.percent = builder.percent;
             this.progress = builder.progress;
@@ -1321,6 +1325,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         public static FullDataCheckStatus create() {
             return builder().build();
+        }
+
+        /**
+         * @return canSwitch
+         */
+        public Boolean getCanSwitch() {
+            return this.canSwitch;
         }
 
         /**
@@ -1352,6 +1363,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean canSwitch; 
             private String errorMessage; 
             private String percent; 
             private String progress; 
@@ -1361,11 +1373,20 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             } 
 
             private Builder(FullDataCheckStatus model) {
+                this.canSwitch = model.canSwitch;
                 this.errorMessage = model.errorMessage;
                 this.percent = model.percent;
                 this.progress = model.progress;
                 this.status = model.status;
             } 
+
+            /**
+             * CanSwitch.
+             */
+            public Builder canSwitch(Boolean canSwitch) {
+                this.canSwitch = canSwitch;
+                return this;
+            }
 
             /**
              * <p>The error message returned if the task failed.</p>
@@ -1578,6 +1599,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IncDataCheck")
         private Boolean incDataCheck;
 
+        @com.aliyun.core.annotation.NameInMap("StructureDataCheck")
+        private Boolean structureDataCheck;
+
         @com.aliyun.core.annotation.NameInMap("StructureInitialization")
         private Boolean structureInitialization;
 
@@ -1586,6 +1610,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             this.dataSynchronization = builder.dataSynchronization;
             this.fullDataCheck = builder.fullDataCheck;
             this.incDataCheck = builder.incDataCheck;
+            this.structureDataCheck = builder.structureDataCheck;
             this.structureInitialization = builder.structureInitialization;
         }
 
@@ -1626,6 +1651,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return structureDataCheck
+         */
+        public Boolean getStructureDataCheck() {
+            return this.structureDataCheck;
+        }
+
+        /**
          * @return structureInitialization
          */
         public Boolean getStructureInitialization() {
@@ -1637,6 +1669,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private Boolean dataSynchronization; 
             private Boolean fullDataCheck; 
             private Boolean incDataCheck; 
+            private Boolean structureDataCheck; 
             private Boolean structureInitialization; 
 
             private Builder() {
@@ -1647,6 +1680,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
                 this.dataSynchronization = model.dataSynchronization;
                 this.fullDataCheck = model.fullDataCheck;
                 this.incDataCheck = model.incDataCheck;
+                this.structureDataCheck = model.structureDataCheck;
                 this.structureInitialization = model.structureInitialization;
             } 
 
@@ -1707,6 +1741,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
              */
             public Builder incDataCheck(Boolean incDataCheck) {
                 this.incDataCheck = incDataCheck;
+                return this;
+            }
+
+            /**
+             * StructureDataCheck.
+             */
+            public Builder structureDataCheck(Boolean structureDataCheck) {
+                this.structureDataCheck = structureDataCheck;
                 return this;
             }
 
@@ -3152,6 +3194,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
      * <p>DescribeDtsJobsResponseBody</p>
      */
     public static class ReverseJobFullDataCheckStatus extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CanSwitch")
+        private Boolean canSwitch;
+
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
@@ -3165,6 +3210,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         private String status;
 
         private ReverseJobFullDataCheckStatus(Builder builder) {
+            this.canSwitch = builder.canSwitch;
             this.errorMessage = builder.errorMessage;
             this.percent = builder.percent;
             this.progress = builder.progress;
@@ -3177,6 +3223,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         public static ReverseJobFullDataCheckStatus create() {
             return builder().build();
+        }
+
+        /**
+         * @return canSwitch
+         */
+        public Boolean getCanSwitch() {
+            return this.canSwitch;
         }
 
         /**
@@ -3208,6 +3261,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean canSwitch; 
             private String errorMessage; 
             private String percent; 
             private String progress; 
@@ -3217,11 +3271,20 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             } 
 
             private Builder(ReverseJobFullDataCheckStatus model) {
+                this.canSwitch = model.canSwitch;
                 this.errorMessage = model.errorMessage;
                 this.percent = model.percent;
                 this.progress = model.progress;
                 this.status = model.status;
             } 
+
+            /**
+             * CanSwitch.
+             */
+            public Builder canSwitch(Boolean canSwitch) {
+                this.canSwitch = canSwitch;
+                return this;
+            }
 
             /**
              * <p>The error message returned if the task failed.</p>
@@ -3434,6 +3497,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IncDataCheck")
         private Boolean incDataCheck;
 
+        @com.aliyun.core.annotation.NameInMap("StructureDataCheck")
+        private Boolean structureDataCheck;
+
         @com.aliyun.core.annotation.NameInMap("StructureInitialization")
         private Boolean structureInitialization;
 
@@ -3442,6 +3508,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             this.dataSynchronization = builder.dataSynchronization;
             this.fullDataCheck = builder.fullDataCheck;
             this.incDataCheck = builder.incDataCheck;
+            this.structureDataCheck = builder.structureDataCheck;
             this.structureInitialization = builder.structureInitialization;
         }
 
@@ -3482,6 +3549,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return structureDataCheck
+         */
+        public Boolean getStructureDataCheck() {
+            return this.structureDataCheck;
+        }
+
+        /**
          * @return structureInitialization
          */
         public Boolean getStructureInitialization() {
@@ -3493,6 +3567,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private Boolean dataSynchronization; 
             private Boolean fullDataCheck; 
             private Boolean incDataCheck; 
+            private Boolean structureDataCheck; 
             private Boolean structureInitialization; 
 
             private Builder() {
@@ -3503,6 +3578,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
                 this.dataSynchronization = model.dataSynchronization;
                 this.fullDataCheck = model.fullDataCheck;
                 this.incDataCheck = model.incDataCheck;
+                this.structureDataCheck = model.structureDataCheck;
                 this.structureInitialization = model.structureInitialization;
             } 
 
@@ -3563,6 +3639,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
              */
             public Builder incDataCheck(Boolean incDataCheck) {
                 this.incDataCheck = incDataCheck;
+                return this;
+            }
+
+            /**
+             * StructureDataCheck.
+             */
+            public Builder structureDataCheck(Boolean structureDataCheck) {
+                this.structureDataCheck = structureDataCheck;
                 return this;
             }
 
@@ -4247,6 +4331,142 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
      *
      * <p>DescribeDtsJobsResponseBody</p>
      */
+    public static class StructureDataCheckStatus extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+        private String errorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("Percent")
+        private String percent;
+
+        @com.aliyun.core.annotation.NameInMap("Progress")
+        private String progress;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private StructureDataCheckStatus(Builder builder) {
+            this.errorMessage = builder.errorMessage;
+            this.percent = builder.percent;
+            this.progress = builder.progress;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StructureDataCheckStatus create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return percent
+         */
+        public String getPercent() {
+            return this.percent;
+        }
+
+        /**
+         * @return progress
+         */
+        public String getProgress() {
+            return this.progress;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String errorMessage; 
+            private String percent; 
+            private String progress; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(StructureDataCheckStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
+            /**
+             * <p>The error message returned if the precheck failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK__ERROR_SAME_OBJ.</p>
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * <p>The precheck progress. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder percent(String percent) {
+                this.percent = percent;
+                return this;
+            }
+
+            /**
+             * <p>The progress of the incremental data verification task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1 rows/s (row: 5/5, table: 1/1)</p>
+             */
+            public Builder progress(String progress) {
+                this.progress = progress;
+                return this;
+            }
+
+            /**
+             * <p>The precheck state. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The precheck is not started. </li>
+             * <li><strong>Suspending</strong>: The precheck is paused. </li>
+             * <li><strong>Checking</strong>: The precheck is in progress. </li>
+             * <li><strong>Failed</strong>: The precheck failed. </li>
+             * <li><strong>Finished</strong>: The precheck is complete.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public StructureDataCheckStatus build() {
+                return new StructureDataCheckStatus(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class StructureInitializationStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -4476,6 +4696,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("StructureDataCheckStatus")
+        private StructureDataCheckStatus structureDataCheckStatus;
+
         @com.aliyun.core.annotation.NameInMap("StructureInitializationStatus")
         private StructureInitializationStatus structureInitializationStatus;
 
@@ -4511,6 +4734,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             this.reserved = builder.reserved;
             this.sourceEndpoint = builder.sourceEndpoint;
             this.status = builder.status;
+            this.structureDataCheckStatus = builder.structureDataCheckStatus;
             this.structureInitializationStatus = builder.structureInitializationStatus;
         }
 
@@ -4740,6 +4964,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return structureDataCheckStatus
+         */
+        public StructureDataCheckStatus getStructureDataCheckStatus() {
+            return this.structureDataCheckStatus;
+        }
+
+        /**
          * @return structureInitializationStatus
          */
         public StructureInitializationStatus getStructureInitializationStatus() {
@@ -4778,6 +5009,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String reserved; 
             private SourceEndpoint sourceEndpoint; 
             private String status; 
+            private StructureDataCheckStatus structureDataCheckStatus; 
             private StructureInitializationStatus structureInitializationStatus; 
 
             private Builder() {
@@ -4815,6 +5047,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
                 this.reserved = model.reserved;
                 this.sourceEndpoint = model.sourceEndpoint;
                 this.status = model.status;
+                this.structureDataCheckStatus = model.structureDataCheckStatus;
                 this.structureInitializationStatus = model.structureInitializationStatus;
             } 
 
@@ -5146,6 +5379,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
+             * StructureDataCheckStatus.
+             */
+            public Builder structureDataCheckStatus(StructureDataCheckStatus structureDataCheckStatus) {
+                this.structureDataCheckStatus = structureDataCheckStatus;
+                return this;
+            }
+
+            /**
              * <p>The state of initial schema synchronization.</p>
              */
             public Builder structureInitializationStatus(StructureInitializationStatus structureInitializationStatus) {
@@ -5437,6 +5678,135 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
             public DtsJobListSourceEndpoint build() {
                 return new DtsJobListSourceEndpoint(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
+    public static class DtsJobListStructureDataCheckStatus extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+        private String errorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("Percent")
+        private String percent;
+
+        @com.aliyun.core.annotation.NameInMap("Progress")
+        private String progress;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private DtsJobListStructureDataCheckStatus(Builder builder) {
+            this.errorMessage = builder.errorMessage;
+            this.percent = builder.percent;
+            this.progress = builder.progress;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DtsJobListStructureDataCheckStatus create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return percent
+         */
+        public String getPercent() {
+            return this.percent;
+        }
+
+        /**
+         * @return progress
+         */
+        public String getProgress() {
+            return this.progress;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String errorMessage; 
+            private String percent; 
+            private String progress; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DtsJobListStructureDataCheckStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
+            /**
+             * <p>The error message returned if the task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * <p>The progress of initial schema synchronization. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder percent(String percent) {
+                this.percent = percent;
+                return this;
+            }
+
+            /**
+             * <p>The number of tables that have been synchronized during initial schema synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder progress(String progress) {
+                this.progress = progress;
+                return this;
+            }
+
+            /**
+             * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter <strong>Status</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Synchronizing</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public DtsJobListStructureDataCheckStatus build() {
+                return new DtsJobListStructureDataCheckStatus(this);
             } 
 
         } 
@@ -5821,6 +6191,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("StructureDataCheckStatus")
+        private DtsJobListStructureDataCheckStatus structureDataCheckStatus;
+
         @com.aliyun.core.annotation.NameInMap("StructureInitializationStatus")
         private DtsJobListStructureInitializationStatus structureInitializationStatus;
 
@@ -5880,6 +6253,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             this.reverseJob = builder.reverseJob;
             this.sourceEndpoint = builder.sourceEndpoint;
             this.status = builder.status;
+            this.structureDataCheckStatus = builder.structureDataCheckStatus;
             this.structureInitializationStatus = builder.structureInitializationStatus;
             this.tagList = builder.tagList;
         }
@@ -6257,6 +6631,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return structureDataCheckStatus
+         */
+        public DtsJobListStructureDataCheckStatus getStructureDataCheckStatus() {
+            return this.structureDataCheckStatus;
+        }
+
+        /**
          * @return structureInitializationStatus
          */
         public DtsJobListStructureInitializationStatus getStructureInitializationStatus() {
@@ -6323,6 +6704,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private ReverseJob reverseJob; 
             private DtsJobListSourceEndpoint sourceEndpoint; 
             private String status; 
+            private DtsJobListStructureDataCheckStatus structureDataCheckStatus; 
             private DtsJobListStructureInitializationStatus structureInitializationStatus; 
             private java.util.List<TagList> tagList; 
 
@@ -6382,6 +6764,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
                 this.reverseJob = model.reverseJob;
                 this.sourceEndpoint = model.sourceEndpoint;
                 this.status = model.status;
+                this.structureDataCheckStatus = model.structureDataCheckStatus;
                 this.structureInitializationStatus = model.structureInitializationStatus;
                 this.tagList = model.tagList;
             } 
@@ -6952,6 +7335,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StructureDataCheckStatus.
+             */
+            public Builder structureDataCheckStatus(DtsJobListStructureDataCheckStatus structureDataCheckStatus) {
+                this.structureDataCheckStatus = structureDataCheckStatus;
                 return this;
             }
 
