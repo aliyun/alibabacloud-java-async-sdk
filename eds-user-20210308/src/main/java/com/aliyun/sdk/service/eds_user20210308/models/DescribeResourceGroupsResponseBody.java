@@ -115,6 +115,102 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
      *
      * <p>DescribeResourceGroupsResponseBody</p>
      */
+    public static class AppRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private Integer type;
+
+        private AppRules(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AppRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public Integer getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String name; 
+            private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppRules model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(Integer type) {
+                this.type = type;
+                return this;
+            }
+
+            public AppRules build() {
+                return new AppRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeResourceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceGroupsResponseBody</p>
+     */
     public static class Policies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -212,15 +308,23 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
      * <p>DescribeResourceGroupsResponseBody</p>
      */
     public static class Timers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BindStatus")
+        private String bindStatus;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("TimerStatus")
+        private String timerStatus;
+
         private Timers(Builder builder) {
+            this.bindStatus = builder.bindStatus;
             this.id = builder.id;
             this.name = builder.name;
+            this.timerStatus = builder.timerStatus;
         }
 
         public static Builder builder() {
@@ -229,6 +333,13 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
 
         public static Timers create() {
             return builder().build();
+        }
+
+        /**
+         * @return bindStatus
+         */
+        public String getBindStatus() {
+            return this.bindStatus;
         }
 
         /**
@@ -245,17 +356,36 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return timerStatus
+         */
+        public String getTimerStatus() {
+            return this.timerStatus;
+        }
+
         public static final class Builder {
+            private String bindStatus; 
             private String id; 
             private String name; 
+            private String timerStatus; 
 
             private Builder() {
             } 
 
             private Builder(Timers model) {
+                this.bindStatus = model.bindStatus;
                 this.id = model.id;
                 this.name = model.name;
+                this.timerStatus = model.timerStatus;
             } 
+
+            /**
+             * BindStatus.
+             */
+            public Builder bindStatus(String bindStatus) {
+                this.bindStatus = bindStatus;
+                return this;
+            }
 
             /**
              * Id.
@@ -273,6 +403,14 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * TimerStatus.
+             */
+            public Builder timerStatus(String timerStatus) {
+                this.timerStatus = timerStatus;
+                return this;
+            }
+
             public Timers build() {
                 return new Timers(this);
             } 
@@ -287,6 +425,9 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
      * <p>DescribeResourceGroupsResponseBody</p>
      */
     public static class ResourceGroup extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppRules")
+        private java.util.List<AppRules> appRules;
+
         @com.aliyun.core.annotation.NameInMap("AuthCount")
         private String authCount;
 
@@ -309,6 +450,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         private java.util.List<Timers> timers;
 
         private ResourceGroup(Builder builder) {
+            this.appRules = builder.appRules;
             this.authCount = builder.authCount;
             this.createTime = builder.createTime;
             this.policies = builder.policies;
@@ -324,6 +466,13 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
 
         public static ResourceGroup create() {
             return builder().build();
+        }
+
+        /**
+         * @return appRules
+         */
+        public java.util.List<AppRules> getAppRules() {
+            return this.appRules;
         }
 
         /**
@@ -376,6 +525,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<AppRules> appRules; 
             private String authCount; 
             private String createTime; 
             private java.util.List<Policies> policies; 
@@ -388,6 +538,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             } 
 
             private Builder(ResourceGroup model) {
+                this.appRules = model.appRules;
                 this.authCount = model.authCount;
                 this.createTime = model.createTime;
                 this.policies = model.policies;
@@ -396,6 +547,14 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
                 this.resourceGroupName = model.resourceGroupName;
                 this.timers = model.timers;
             } 
+
+            /**
+             * AppRules.
+             */
+            public Builder appRules(java.util.List<AppRules> appRules) {
+                this.appRules = appRules;
+                return this;
+            }
 
             /**
              * AuthCount.

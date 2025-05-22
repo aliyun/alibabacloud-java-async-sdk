@@ -73,7 +73,15 @@ public class DeleteResourceGroupRequest extends Request {
         } 
 
         /**
-         * ResourceGroupId.
+         * <blockquote>
+         * <p> The ID of the resource group that you want to delete.</p>
+         * </blockquote>
+         * <ul>
+         * <li>If you also specify ResourceGroupIds, both parameters take effect.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aj01tck67a0szp***</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -82,7 +90,12 @@ public class DeleteResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupIds.
+         * <blockquote>
+         * <p> The IDs of the resource groups that you want to delete.</p>
+         * </blockquote>
+         * <ul>
+         * <li>If you also specify ResourceGroupId, both parameters take effect.</li>
+         * </ul>
          */
         public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.putQueryParameter("ResourceGroupIds", resourceGroupIds);
