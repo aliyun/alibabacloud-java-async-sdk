@@ -29,9 +29,21 @@ public class PriceEstimateFeature extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String cpuStrategy;
 
+    @com.aliyun.core.annotation.NameInMap("CpuUtilLevel")
+    private String cpuUtilLevel;
+
+    @com.aliyun.core.annotation.NameInMap("CpuUtilMetrics")
+    private java.util.List<Float> cpuUtilMetrics;
+
+    @com.aliyun.core.annotation.NameInMap("EnableCpuIdle")
+    private Boolean enableCpuIdle;
+
     @com.aliyun.core.annotation.NameInMap("EnvType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String envType;
+
+    @com.aliyun.core.annotation.NameInMap("EphemeralStorageGiB")
+    private Long ephemeralStorageGiB;
 
     @com.aliyun.core.annotation.NameInMap("HighLoadInstanceCount")
     private Long highLoadInstanceCount;
@@ -67,6 +79,9 @@ public class PriceEstimateFeature extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MinInstanceCount")
     private Long minInstanceCount;
 
+    @com.aliyun.core.annotation.NameInMap("NewSaeVersion")
+    private String newSaeVersion;
+
     @com.aliyun.core.annotation.NameInMap("NoneLoadInstanceCount")
     private Long noneLoadInstanceCount;
 
@@ -77,11 +92,18 @@ public class PriceEstimateFeature extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
     private PriceEstimateFeature(Builder builder) {
         this.appType = builder.appType;
         this.cpuCore = builder.cpuCore;
         this.cpuStrategy = builder.cpuStrategy;
+        this.cpuUtilLevel = builder.cpuUtilLevel;
+        this.cpuUtilMetrics = builder.cpuUtilMetrics;
+        this.enableCpuIdle = builder.enableCpuIdle;
         this.envType = builder.envType;
+        this.ephemeralStorageGiB = builder.ephemeralStorageGiB;
         this.highLoadInstanceCount = builder.highLoadInstanceCount;
         this.highLoadQps = builder.highLoadQps;
         this.highLoadSeconds = builder.highLoadSeconds;
@@ -93,9 +115,11 @@ public class PriceEstimateFeature extends TeaModel {
         this.maxInstanceCount = builder.maxInstanceCount;
         this.memoryGiB = builder.memoryGiB;
         this.minInstanceCount = builder.minInstanceCount;
+        this.newSaeVersion = builder.newSaeVersion;
         this.noneLoadInstanceCount = builder.noneLoadInstanceCount;
         this.noneLoadSeconds = builder.noneLoadSeconds;
         this.regionId = builder.regionId;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -132,10 +156,38 @@ public class PriceEstimateFeature extends TeaModel {
     }
 
     /**
+     * @return cpuUtilLevel
+     */
+    public String getCpuUtilLevel() {
+        return this.cpuUtilLevel;
+    }
+
+    /**
+     * @return cpuUtilMetrics
+     */
+    public java.util.List<Float> getCpuUtilMetrics() {
+        return this.cpuUtilMetrics;
+    }
+
+    /**
+     * @return enableCpuIdle
+     */
+    public Boolean getEnableCpuIdle() {
+        return this.enableCpuIdle;
+    }
+
+    /**
      * @return envType
      */
     public String getEnvType() {
         return this.envType;
+    }
+
+    /**
+     * @return ephemeralStorageGiB
+     */
+    public Long getEphemeralStorageGiB() {
+        return this.ephemeralStorageGiB;
     }
 
     /**
@@ -216,6 +268,13 @@ public class PriceEstimateFeature extends TeaModel {
     }
 
     /**
+     * @return newSaeVersion
+     */
+    public String getNewSaeVersion() {
+        return this.newSaeVersion;
+    }
+
+    /**
      * @return noneLoadInstanceCount
      */
     public Long getNoneLoadInstanceCount() {
@@ -236,11 +295,22 @@ public class PriceEstimateFeature extends TeaModel {
         return this.regionId;
     }
 
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
     public static final class Builder {
         private String appType; 
         private Float cpuCore; 
         private String cpuStrategy; 
+        private String cpuUtilLevel; 
+        private java.util.List<Float> cpuUtilMetrics; 
+        private Boolean enableCpuIdle; 
         private String envType; 
+        private Long ephemeralStorageGiB; 
         private Long highLoadInstanceCount; 
         private Float highLoadQps; 
         private Long highLoadSeconds; 
@@ -252,9 +322,11 @@ public class PriceEstimateFeature extends TeaModel {
         private Long maxInstanceCount; 
         private Float memoryGiB; 
         private Long minInstanceCount; 
+        private String newSaeVersion; 
         private Long noneLoadInstanceCount; 
         private Long noneLoadSeconds; 
         private String regionId; 
+        private String resourceType; 
 
         private Builder() {
         } 
@@ -263,7 +335,11 @@ public class PriceEstimateFeature extends TeaModel {
             this.appType = model.appType;
             this.cpuCore = model.cpuCore;
             this.cpuStrategy = model.cpuStrategy;
+            this.cpuUtilLevel = model.cpuUtilLevel;
+            this.cpuUtilMetrics = model.cpuUtilMetrics;
+            this.enableCpuIdle = model.enableCpuIdle;
             this.envType = model.envType;
+            this.ephemeralStorageGiB = model.ephemeralStorageGiB;
             this.highLoadInstanceCount = model.highLoadInstanceCount;
             this.highLoadQps = model.highLoadQps;
             this.highLoadSeconds = model.highLoadSeconds;
@@ -275,9 +351,11 @@ public class PriceEstimateFeature extends TeaModel {
             this.maxInstanceCount = model.maxInstanceCount;
             this.memoryGiB = model.memoryGiB;
             this.minInstanceCount = model.minInstanceCount;
+            this.newSaeVersion = model.newSaeVersion;
             this.noneLoadInstanceCount = model.noneLoadInstanceCount;
             this.noneLoadSeconds = model.noneLoadSeconds;
             this.regionId = model.regionId;
+            this.resourceType = model.resourceType;
         } 
 
         /**
@@ -314,6 +392,30 @@ public class PriceEstimateFeature extends TeaModel {
         }
 
         /**
+         * CpuUtilLevel.
+         */
+        public Builder cpuUtilLevel(String cpuUtilLevel) {
+            this.cpuUtilLevel = cpuUtilLevel;
+            return this;
+        }
+
+        /**
+         * CpuUtilMetrics.
+         */
+        public Builder cpuUtilMetrics(java.util.List<Float> cpuUtilMetrics) {
+            this.cpuUtilMetrics = cpuUtilMetrics;
+            return this;
+        }
+
+        /**
+         * EnableCpuIdle.
+         */
+        public Builder enableCpuIdle(Boolean enableCpuIdle) {
+            this.enableCpuIdle = enableCpuIdle;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -321,6 +423,14 @@ public class PriceEstimateFeature extends TeaModel {
          */
         public Builder envType(String envType) {
             this.envType = envType;
+            return this;
+        }
+
+        /**
+         * EphemeralStorageGiB.
+         */
+        public Builder ephemeralStorageGiB(Long ephemeralStorageGiB) {
+            this.ephemeralStorageGiB = ephemeralStorageGiB;
             return this;
         }
 
@@ -416,6 +526,14 @@ public class PriceEstimateFeature extends TeaModel {
         }
 
         /**
+         * NewSaeVersion.
+         */
+        public Builder newSaeVersion(String newSaeVersion) {
+            this.newSaeVersion = newSaeVersion;
+            return this;
+        }
+
+        /**
          * NoneLoadInstanceCount.
          */
         public Builder noneLoadInstanceCount(Long noneLoadInstanceCount) {
@@ -439,6 +557,14 @@ public class PriceEstimateFeature extends TeaModel {
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.resourceType = resourceType;
             return this;
         }
 

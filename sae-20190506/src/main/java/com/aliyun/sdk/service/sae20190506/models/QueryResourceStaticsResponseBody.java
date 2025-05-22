@@ -347,6 +347,12 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EphemeralStorage")
         private Float ephemeralStorage;
 
+        @com.aliyun.core.annotation.NameInMap("GpuA10")
+        private Float gpuA10;
+
+        @com.aliyun.core.annotation.NameInMap("GpuPpu810e")
+        private Float gpuPpu810e;
+
         @com.aliyun.core.annotation.NameInMap("IdleCpu")
         private Float idleCpu;
 
@@ -358,6 +364,8 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             this.cpu = builder.cpu;
             this.cu = builder.cu;
             this.ephemeralStorage = builder.ephemeralStorage;
+            this.gpuA10 = builder.gpuA10;
+            this.gpuPpu810e = builder.gpuPpu810e;
             this.idleCpu = builder.idleCpu;
             this.memory = builder.memory;
         }
@@ -399,6 +407,20 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return gpuA10
+         */
+        public Float getGpuA10() {
+            return this.gpuA10;
+        }
+
+        /**
+         * @return gpuPpu810e
+         */
+        public Float getGpuPpu810e() {
+            return this.gpuPpu810e;
+        }
+
+        /**
          * @return idleCpu
          */
         public Float getIdleCpu() {
@@ -417,6 +439,8 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
             private Float cpu; 
             private Float cu; 
             private Float ephemeralStorage; 
+            private Float gpuA10; 
+            private Float gpuPpu810e; 
             private Float idleCpu; 
             private Float memory; 
 
@@ -428,6 +452,8 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
                 this.cpu = model.cpu;
                 this.cu = model.cu;
                 this.ephemeralStorage = model.ephemeralStorage;
+                this.gpuA10 = model.gpuA10;
+                this.gpuPpu810e = model.gpuPpu810e;
                 this.idleCpu = model.idleCpu;
                 this.memory = model.memory;
             } 
@@ -464,6 +490,22 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
              */
             public Builder ephemeralStorage(Float ephemeralStorage) {
                 this.ephemeralStorage = ephemeralStorage;
+                return this;
+            }
+
+            /**
+             * GpuA10.
+             */
+            public Builder gpuA10(Float gpuA10) {
+                this.gpuA10 = gpuA10;
+                return this;
+            }
+
+            /**
+             * GpuPpu810e.
+             */
+            public Builder gpuPpu810e(Float gpuPpu810e) {
+                this.gpuPpu810e = gpuPpu810e;
                 return this;
             }
 

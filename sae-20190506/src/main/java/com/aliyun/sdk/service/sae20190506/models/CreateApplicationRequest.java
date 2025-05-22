@@ -111,6 +111,10 @@ public class CreateApplicationRequest extends Request {
     private String envs;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuConfig")
+    private String gpuConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImagePullSecrets")
     private String imagePullSecrets;
 
@@ -342,6 +346,7 @@ public class CreateApplicationRequest extends Request {
         this.enableNewArms = builder.enableNewArms;
         this.enableSidecarResourceIsolated = builder.enableSidecarResourceIsolated;
         this.envs = builder.envs;
+        this.gpuConfig = builder.gpuConfig;
         this.imagePullSecrets = builder.imagePullSecrets;
         this.imageUrl = builder.imageUrl;
         this.initContainersConfig = builder.initContainersConfig;
@@ -567,6 +572,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getEnvs() {
         return this.envs;
+    }
+
+    /**
+     * @return gpuConfig
+     */
+    public String getGpuConfig() {
+        return this.gpuConfig;
     }
 
     /**
@@ -950,6 +962,7 @@ public class CreateApplicationRequest extends Request {
         private Boolean enableNewArms; 
         private Boolean enableSidecarResourceIsolated; 
         private String envs; 
+        private String gpuConfig; 
         private String imagePullSecrets; 
         private String imageUrl; 
         private java.util.List<InitContainerConfig> initContainersConfig; 
@@ -1031,6 +1044,7 @@ public class CreateApplicationRequest extends Request {
             this.enableNewArms = request.enableNewArms;
             this.enableSidecarResourceIsolated = request.enableSidecarResourceIsolated;
             this.envs = request.envs;
+            this.gpuConfig = request.gpuConfig;
             this.imagePullSecrets = request.imagePullSecrets;
             this.imageUrl = request.imageUrl;
             this.initContainersConfig = request.initContainersConfig;
@@ -1331,6 +1345,15 @@ public class CreateApplicationRequest extends Request {
         public Builder envs(String envs) {
             this.putQueryParameter("Envs", envs);
             this.envs = envs;
+            return this;
+        }
+
+        /**
+         * GpuConfig.
+         */
+        public Builder gpuConfig(String gpuConfig) {
+            this.putQueryParameter("GpuConfig", gpuConfig);
+            this.gpuConfig = gpuConfig;
             return this;
         }
 

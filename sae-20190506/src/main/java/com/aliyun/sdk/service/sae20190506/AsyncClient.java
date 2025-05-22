@@ -184,6 +184,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteIngressResponse> deleteIngress(DeleteIngressRequest request);
 
     /**
+     * @param request the request parameters of DeleteInstances  DeleteInstancesRequest
+     * @return DeleteInstancesResponse
+     */
+    CompletableFuture<DeleteInstancesResponse> deleteInstances(DeleteInstancesRequest request);
+
+    /**
      * @param request the request parameters of DeleteJob  DeleteJobRequest
      * @return DeleteJobResponse
      */
