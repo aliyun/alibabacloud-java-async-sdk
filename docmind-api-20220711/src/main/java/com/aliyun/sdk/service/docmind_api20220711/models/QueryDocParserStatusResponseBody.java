@@ -149,6 +149,9 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParagraphCount")
         private Integer paragraphCount;
 
+        @com.aliyun.core.annotation.NameInMap("Processing")
+        private Float processing;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -163,6 +166,7 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
             this.numberOfSuccessfulParsing = builder.numberOfSuccessfulParsing;
             this.pageCountEstimate = builder.pageCountEstimate;
             this.paragraphCount = builder.paragraphCount;
+            this.processing = builder.processing;
             this.status = builder.status;
             this.tableCount = builder.tableCount;
             this.tokens = builder.tokens;
@@ -205,6 +209,13 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return processing
+         */
+        public Float getProcessing() {
+            return this.processing;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -230,6 +241,7 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
             private Integer numberOfSuccessfulParsing; 
             private Integer pageCountEstimate; 
             private Integer paragraphCount; 
+            private Float processing; 
             private String status; 
             private Integer tableCount; 
             private Long tokens; 
@@ -242,6 +254,7 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
                 this.numberOfSuccessfulParsing = model.numberOfSuccessfulParsing;
                 this.pageCountEstimate = model.pageCountEstimate;
                 this.paragraphCount = model.paragraphCount;
+                this.processing = model.processing;
                 this.status = model.status;
                 this.tableCount = model.tableCount;
                 this.tokens = model.tokens;
@@ -276,6 +289,14 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
              */
             public Builder paragraphCount(Integer paragraphCount) {
                 this.paragraphCount = paragraphCount;
+                return this;
+            }
+
+            /**
+             * Processing.
+             */
+            public Builder processing(Float processing) {
+                this.processing = processing;
                 return this;
             }
 

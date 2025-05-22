@@ -1,3 +1,6 @@
+2025-05-22 Version: 1.0.19
+- Generated java-async 2022-07-11 for docmind-api.
+
 2025-03-17 Version: 1.0.17
 - Generated java-async 2022-07-11 for docmind-api.
 
