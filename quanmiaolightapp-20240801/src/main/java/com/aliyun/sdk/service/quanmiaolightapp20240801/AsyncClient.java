@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetVideoAnalysisTaskResponse> getVideoAnalysisTask(GetVideoAnalysisTaskRequest request);
 
     /**
+     * @param request the request parameters of HotNewsRecommend  HotNewsRecommendRequest
+     * @return HotNewsRecommendResponse
+     */
+    CompletableFuture<HotNewsRecommendResponse> hotNewsRecommend(HotNewsRecommendRequest request);
+
+    /**
      * @param request the request parameters of ListAnalysisTagDetailByTaskId  ListAnalysisTagDetailByTaskIdRequest
      * @return ListAnalysisTagDetailByTaskIdResponse
      */

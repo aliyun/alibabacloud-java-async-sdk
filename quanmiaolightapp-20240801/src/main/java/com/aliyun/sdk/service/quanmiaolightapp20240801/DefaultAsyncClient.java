@@ -185,6 +185,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of HotNewsRecommend  HotNewsRecommendRequest
+     * @return HotNewsRecommendResponse
+     */
+    @Override
+    public CompletableFuture<HotNewsRecommendResponse> hotNewsRecommend(HotNewsRecommendRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("HotNewsRecommend").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/hotNewsRecommend").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(HotNewsRecommendResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<HotNewsRecommendResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListAnalysisTagDetailByTaskId  ListAnalysisTagDetailByTaskIdRequest
      * @return ListAnalysisTagDetailByTaskIdResponse
      */
