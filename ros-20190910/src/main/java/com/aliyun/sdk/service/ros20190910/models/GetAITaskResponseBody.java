@@ -172,7 +172,10 @@ public class GetAITaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Forbidden</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -180,7 +183,10 @@ public class GetAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -188,7 +194,10 @@ public class GetAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to complete this action.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -196,7 +205,10 @@ public class GetAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +216,17 @@ public class GetAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The state of the AI task.</p>
+         * <ul>
+         * <li>PENDING</li>
+         * <li>WAITING</li>
+         * <li>RUNNING</li>
+         * <li>SUCCESS</li>
+         * <li>FAILURE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FAILURE</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -212,7 +234,10 @@ public class GetAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * StatusReason.
+         * <p>The reason why the AI task is in the state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Handler execution unexpected failure</p>
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
@@ -220,7 +245,14 @@ public class GetAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -228,7 +260,10 @@ public class GetAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the AI task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-asasas*****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -236,7 +271,15 @@ public class GetAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskOutput.
+         * <p>The outputs of the AI task. The outputs include the template.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Result&quot;: {
+         *     &quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;,
+         * }</p>
          */
         public Builder taskOutput(java.util.Map<String, ?> taskOutput) {
             this.taskOutput = taskOutput;
@@ -244,6 +287,11 @@ public class GetAITaskResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The type of the AI task.</p>
+         * <ul>
+         * <li>GenerateTemplate: The AI task is used to generate a template.</li>
+         * <li>FixTemplate: The AI task is used to fix a template.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

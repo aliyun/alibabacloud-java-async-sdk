@@ -73,7 +73,17 @@ public class GetAITaskRequest extends Request {
         } 
 
         /**
-         * OutputOption.
+         * <p>Specifies whether to return the TaskOutput parameter. The TaskOutput parameter specifies the outputs of the AI task. Valid values:</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p> The value of TaskOutput may be excessively long. If you do not require the outputs of the task, we recommend that you set OutputOption to Disabled to improve the response speed of the API operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder outputOption(String outputOption) {
             this.putQueryParameter("OutputOption", outputOption);
@@ -82,7 +92,10 @@ public class GetAITaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the AI task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-asasas*****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

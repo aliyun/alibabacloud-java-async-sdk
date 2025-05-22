@@ -159,7 +159,10 @@ public class ListAITaskEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Forbidden</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -167,7 +170,7 @@ public class ListAITaskEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Events.
+         * <p>The events.</p>
          */
         public Builder events(java.util.List<Events> events) {
             this.events = events;
@@ -175,7 +178,10 @@ public class ListAITaskEventsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -183,6 +189,7 @@ public class ListAITaskEventsResponseBody extends TeaModel {
         }
 
         /**
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +201,10 @@ public class ListAITaskEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +212,14 @@ public class ListAITaskEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -210,7 +227,10 @@ public class ListAITaskEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the AI task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-asasas*****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -218,7 +238,17 @@ public class ListAITaskEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * <p>The state of the AI task.</p>
+         * <ul>
+         * <li>PENDING</li>
+         * <li>WAITING</li>
+         * <li>RUNNING</li>
+         * <li>SUCCESS</li>
+         * <li>FAILURE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -226,7 +256,14 @@ public class ListAITaskEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the AI task.</p>
+         * <ul>
+         * <li>GenerateTemplate: The AI task is used to generate a template.</li>
+         * <li>FixTemplate: The AI task is used to fix a template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GenerateTemplate</p>
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;
@@ -344,7 +381,15 @@ public class ListAITaskEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentType.
+             * <p>The type of the agent that is used to execute the AI task.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>GenerateTemplateAgent</li>
+             * <li>FixUserTemplateAgent</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>GenerateTemplateAgent</p>
              */
             public Builder agentType(String agentType) {
                 this.agentType = agentType;
@@ -352,7 +397,10 @@ public class ListAITaskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the event was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-01T04:07:39</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -360,7 +408,10 @@ public class ListAITaskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EstimatedProcessingTime.
+             * <p>The estimated execution time of the handler. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder estimatedProcessingTime(String estimatedProcessingTime) {
                 this.estimatedProcessingTime = estimatedProcessingTime;
@@ -368,7 +419,10 @@ public class ListAITaskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventData.
+             * <p>The details of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Document template generator started.</p>
              */
             public Builder eventData(String eventData) {
                 this.eventData = eventData;
@@ -376,7 +430,16 @@ public class ListAITaskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * HandlerProcessStatus.
+             * <p>The execution state of the handler that process the AI task.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>SUCCESS</li>
+             * <li>RUNNING</li>
+             * <li>FAILURE</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder handlerProcessStatus(String handlerProcessStatus) {
                 this.handlerProcessStatus = handlerProcessStatus;
@@ -384,7 +447,29 @@ public class ListAITaskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * HandlerType.
+             * <p>The type of the handler that is used to execute the task.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>TerraformTemplateGenerator</li>
+             * <li>TemplateGenerator</li>
+             * <li>ROSTemplateModifier</li>
+             * <li>TerraformTemplateStaticFixer</li>
+             * <li>TerraformTemplateDynamicFixer</li>
+             * <li>DocumentTemplateGenerator</li>
+             * <li>TerraformTemplateModifier</li>
+             * <li>TemplateModifier</li>
+             * <li>FixTemplateInputPreprocessor</li>
+             * <li>TemplateStaticFixer</li>
+             * <li>GenerateTemplateInputPreprocessor</li>
+             * <li>ROSTemplateGenerator</li>
+             * <li>TemplateDynamicFixer</li>
+             * <li>BaseDynamicFixer</li>
+             * <li>ROSTemplateStaticFixer</li>
+             * <li>ROSTemplateDynamicFixer</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ROSTemplateGenerator</p>
              */
             public Builder handlerType(String handlerType) {
                 this.handlerType = handlerType;

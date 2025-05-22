@@ -101,7 +101,14 @@ public class CreateAITaskRequest extends Request {
         } 
 
         /**
-         * Prompt.
+         * <p>The input description for the AI task.</p>
+         * <ul>
+         * <li>When the task type is Generate Template, this parameter specifies the functionality of the template to be generated.</li>
+         * <li>When the task type is FixTemplate, this parameter can describe how the template should be repaired.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>创建一台ECS，部署nignx服务</p>
          */
         public Builder prompt(String prompt) {
             this.putQueryParameter("Prompt", prompt);
@@ -110,7 +117,14 @@ public class CreateAITaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of AI task. Values:</p>
+         * <ul>
+         * <li>GenerateTemplate: AI template generation</li>
+         * <li>FixTemplate: AI template repair</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GenerateTemplate</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -119,7 +133,10 @@ public class CreateAITaskRequest extends Request {
         }
 
         /**
-         * Template.
+         * <p>When the task type is AI template repair, specify the original template that needs to be fixed or modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</p>
          */
         public Builder template(String template) {
             this.putBodyParameter("Template", template);
@@ -128,7 +145,10 @@ public class CreateAITaskRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * <p>The type of the template to be generated or repaired. Default is ROS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ROS</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

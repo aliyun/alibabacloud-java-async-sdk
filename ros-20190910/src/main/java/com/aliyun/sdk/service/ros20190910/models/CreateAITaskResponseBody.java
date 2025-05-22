@@ -119,7 +119,10 @@ public class CreateAITaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Forbidden</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CreateAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class CreateAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to complete this action.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class CreateAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,14 @@ public class CreateAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Values:</p>
+         * <ul>
+         * <li>true: Call succeeded.</li>
+         * <li>false: Call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -159,7 +178,10 @@ public class CreateAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>AI task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-asas*****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

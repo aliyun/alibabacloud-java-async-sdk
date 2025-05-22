@@ -87,7 +87,12 @@ public class ListAITaskEventsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to be returned from a single query when the NextToken parameter is used in the query.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -96,7 +101,10 @@ public class ListAITaskEventsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****w==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -105,7 +113,10 @@ public class ListAITaskEventsRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the AI task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-asasas*****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

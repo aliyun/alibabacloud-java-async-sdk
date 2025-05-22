@@ -41,6 +41,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ContinueCreateStackResponse> continueCreateStack(ContinueCreateStackRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API allows users to create an AI task based on the specified task type, covering a range of capabilities from natural language understanding to resource stack deployment. Users need to provide the task type and any required parameters, and the API will return a unique TaskId for tracking the status and results of the task.</p>
+     * 
      * @param request the request parameters of CreateAITask  CreateAITaskRequest
      * @return CreateAITaskResponse
      */
