@@ -190,12 +190,112 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
      *
      * <p>UpdateServiceInstanceAttributeRequest</p>
      */
+    public static class ResponseInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
+        private String errorCode;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+        private String errorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("UpdateResponse")
+        private Boolean updateResponse;
+
+        private ResponseInfo(Builder builder) {
+            this.errorCode = builder.errorCode;
+            this.errorMessage = builder.errorMessage;
+            this.updateResponse = builder.updateResponse;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResponseInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return updateResponse
+         */
+        public Boolean getUpdateResponse() {
+            return this.updateResponse;
+        }
+
+        public static final class Builder {
+            private String errorCode; 
+            private String errorMessage; 
+            private Boolean updateResponse; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResponseInfo model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.updateResponse = model.updateResponse;
+            } 
+
+            /**
+             * ErrorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * ErrorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * UpdateResponse.
+             */
+            public Builder updateResponse(Boolean updateResponse) {
+                this.updateResponse = updateResponse;
+                return this;
+            }
+
+            public ResponseInfo build() {
+                return new ResponseInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateServiceInstanceAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateServiceInstanceAttributeRequest</p>
+     */
     public static class LicenseData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomData")
         private String customData;
 
+        @com.aliyun.core.annotation.NameInMap("ResponseInfo")
+        private ResponseInfo responseInfo;
+
         private LicenseData(Builder builder) {
             this.customData = builder.customData;
+            this.responseInfo = builder.responseInfo;
         }
 
         public static Builder builder() {
@@ -213,14 +313,23 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
             return this.customData;
         }
 
+        /**
+         * @return responseInfo
+         */
+        public ResponseInfo getResponseInfo() {
+            return this.responseInfo;
+        }
+
         public static final class Builder {
             private String customData; 
+            private ResponseInfo responseInfo; 
 
             private Builder() {
             } 
 
             private Builder(LicenseData model) {
                 this.customData = model.customData;
+                this.responseInfo = model.responseInfo;
             } 
 
             /**
@@ -231,6 +340,14 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
              */
             public Builder customData(String customData) {
                 this.customData = customData;
+                return this;
+            }
+
+            /**
+             * ResponseInfo.
+             */
+            public Builder responseInfo(ResponseInfo responseInfo) {
+                this.responseInfo = responseInfo;
                 return this;
             }
 
